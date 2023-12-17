@@ -422,6 +422,40 @@ var cEncoded: ?[*:0]u8 = null;
 ustreamer.us_base64_encode(input.ptr, input.len, &cEncoded, &allocatedSize);
 ```
 
+The issue was that in C, a type of `char**` can be `null`, whereas a Zig type of `[*:0]u8` cannot be null. That's why Zig refused to let me pass in my previous attempt.
+
+`?[*:0]u8` means:
+
+- a null-terminated slice of bytes
+- of unknown length
+- that might be null
+
+So, that compiles, but if I try to print the value of `cEncoded`, I get what appears to be a memory address rather than a string:
+
+```bash
+$ zig build run
+input:       hello, world!
+output:      u8@2b12a0      # << whoops, not what I expected
+output size: 21
+```
+
+In order to convert `cEncoded` back to a printable string, I have to unwrap it from its optional variable by verifying in code that its value is non-null:
+
+```zig
+var cEncoded: ?[*:0]u8 = null;
+ustreamer.us_base64_encode(input.ptr, input.len, &cEncoded, &allocatedSize);
+const output: [*:0]u8 = cEncoded orelse return error.UnexpectedNull;
+std.debug.print("output:      {s}\n", .{output});
+```
+
+```bash
+$ zig build run
+input: hello, world!
+output: aGVsbG8sIHdvcmxkIQ==
+output size: 21
+
+```
+
 ### Completing the call to C from Zig
 
 Here's the full `src/main.zig` file:
@@ -523,8 +557,7 @@ At this point, I've got the string as a `[*c]u8` (C-pointer, unknown length buff
 In [my previous post](/notes/zig-strings-call-c-code/#improving-the-wrapper-with-zig-managed-buffers), I converted a C string to a Zig string with this process:
 
 1. Create a Zig slice of the C string using `std.mem.span`.
-1. Allocate a Zig-managed memory slice with `allocSentinel`.
-1. Use `@memcpy` to copy the contents of the C string into the Zig slice.
+1. Use `allocator.dupeZ` to copy the contents of the slice into a newly allocated Zig slice.
 
 That process would work here, but I'd be doing a useless work in step (1). `std.mem.span` has to iterate the string to find the null terminator. In this code, I already know where the null terminator is because `us_base64_encode` stores that information in the `allocated` parameter.
 
@@ -533,22 +566,10 @@ In practice, I wouldn't worry about the extra string iteration unless this was a
 Here's my conversion function:
 
 ```zig
-fn cStringToZigString(allocator: std.mem.Allocator, cString: [*c]const u8, cStringLength: usize) ![:0]u8 {
-    // Allocate a Zig-managed buffer to contain the contents of cString.
-    const zigString = try allocator.allocSentinel(u8, cStringLength, 0);
-
-    // If we can't return the result, free the memory we allocated.
-    errdefer allocator.free(zigString);
-
-    // Create a Zig slice of cString, and declare to Zig that the slice ends
-    // with a null terminator.
-    const cStringSlice = cString[0..cStringLength :0];
-
-    // Copy the contents of the C string into the Zig slice.
-    @memcpy(zigString.ptr, cStringSlice);
-
-    return zigString;
-}
+// The allocatedSize includes the null terminator, so subtract 1 to get the
+// number of non-null characters in the string.
+const cEncodedLength = allocatedSize - 1;
+return allocator.dupeZ(u8, cEncoded[0..cEncodedLength :0]);
 ```
 
 At this point, I can complete the implementation of my wrapper function:
