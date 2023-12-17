@@ -308,9 +308,9 @@ Here's the official Zig documentation:
 >
 > This type is to be avoided whenever possible. The only valid reason for using a C pointer is in auto-generated code from translating C code.
 >
-> When importing C header files, it is ambiguous whether pointers should be translated as single-item pointers (_T) or many-item pointers ([_]T). C pointers are a compromise so that Zig code can utilize translated header files directly.
+> When importing C header files, it is ambiguous whether pointers should be translated as single-item pointers (\*T) or many-item pointers ([\*]T). C pointers are a compromise so that Zig code can utilize translated header files directly.
 >
-> https://ziglang.org/documentation/0.11.0/#C-Pointers
+> <https://ziglang.org/documentation/0.11.0/#C-Pointers>
 
 I didn't understand this explanation, but more [Kagi](https://kagi.com)'ing led me to this explanation on reddit, which I found more accessible:
 
@@ -390,7 +390,41 @@ var allocatedSize: usize = 0;
 ustreamer.us_base64_encode(input.ptr, input.len, &cEncoded, &allocatedSize);
 ```
 
-And it compiles successfully! Here's the full `src/main.zig` file:
+And it compiles successfully!
+
+### Can I do better than C pointers?
+
+But recall what the Zig documentation [said about C pointers](https://ziglang.org/documentation/0.11.0/#C-Pointers):
+
+> The only valid reason for using a C pointer is in auto-generated code from translating C code.
+
+The C pointer type (`[*c]u8`) is ambiguous &mdash; it can either refer to a single item or the _first_ item in an array of many items. Zig allows this ambiguity when auto-generating code from C, as it can't infer the difference, but a human developer should be able to read the C code and understand which kind of pointer it is.
+
+In this case, I know that the third parameter to `us_base64_encode` is a pointer to a string. How do I represent that in Zig?
+
+My first thought was to do this:
+
+```zig
+var cEncoded: [*:0]u8 = undefined;
+ustreamer.us_base64_encode(input.ptr, input.len, &cEncoded, &allocatedSize);
+```
+
+That seemed reasonable. I know that `us_base64_encode` will populate `cEncoded` with a string, and `[*:0]u8` represents a null-terminated string of unkown length. But when I compile, Zig said no:
+
+```text
+error: expected type '[*c][*c]u8', found '*[*:0]u8'
+```
+
+I was stumped, so I asked for help on Ziggit, a Zig discussion forum. Within an hour, another user [showed me a solution](https://ziggit.dev/t/improving-on-c-u8-when-calling-a-c-function-that-allocates-a-string/2489/4?u=mtlynch):
+
+```zig
+var cEncoded: ?[*:0]u8 = null;
+ustreamer.us_base64_encode(input.ptr, input.len, &cEncoded, &allocatedSize);
+```
+
+### Completing the call to C from Zig
+
+Here's the full `src/main.zig` file:
 
 ```zig
 // src/main.zig
@@ -407,18 +441,21 @@ pub fn main() !void {
     const input = "hello, world!";
 
     // Create variables to store the ouput parameters of us_base64_encode.
-    var cEncoded: [*c]u8 = null;
+    var cEncoded: ?[*:0]u8 = null;
     var allocatedSize: usize = 0;
 
     // Call the uStreamer C function from Zig.
     ustreamer.us_base64_encode(input.ptr, input.len, &cEncoded, &allocatedSize);
+
+    // Get the output as a non-optional type.
+    const output: [*:0]u8 = cEncoded orelse return error.UnexpectedNull;
 
     // Free the memory that the C function allocated when this function exits.
     defer std.c.free(cEncoded);
 
     // Print the input and output of the base64 encode operation.
     std.debug.print("input:       {s}\n", .{input});
-    std.debug.print("output:      {s}\n", .{cEncoded});
+    std.debug.print("output:      {s}\n", .{output});
     std.debug.print("output size: {d}\n", .{allocatedSize});
 }
 ```
@@ -590,7 +627,13 @@ The complete example at this stage [is on Github](https://github.com/tiny-pilot/
 
 ## Creating the first unit test
 
+Now that I can call the C `us_base64_encode` function through a nice Zig wrapper, I'm ready to start writing unit tests to verify that the C implementation of base64 encoding is correct.
+
+The first thing I need to do is make a couple of small adjustments to my `build.zig` file so that the unit tests can access libc and uStreamer's C source files:
+
 ```zig
+// build.zig
+
     const unit_tests = b.addTest(.{
         .root_source_file = .{ .path = "src/main.zig" },
         .target = target,
@@ -600,7 +643,11 @@ The complete example at this stage [is on Github](https://github.com/tiny-pilot/
     unit_tests.addIncludePath(.{ .path = "src" });  // Search src path for includes.
 ```
 
+Now, it's time for my first unit test. I've already done the heavy lifting here by writing my Zig wrapper function, so my unit test is straightforward:
+
 ```zig
+// src/main.zig
+
 test "encode simple string as base64" {
     const allocator = std.testing.allocator;
     const actual = try base64Encode(allocator, "hello, world!");
@@ -617,7 +664,42 @@ test success
    └─ zig test Debug native success 2s MaxRSS:211M
 ```
 
+Success! My first unit test is working and exercising the C code.
+
 The complete example at this stage [is on Github](https://github.com/tiny-pilot/ustreamer/tree/zig-30-unit-test).
+
+I want to ensure that my test is truly executing the C code and not just returning a false positive. I can verify this by intentionally introducing a bug into the C code.
+
+This is a snippet from the implementation of `base64.c`:
+
+```c
+#		define OCTET(_name) unsigned _name = (data_index < size ? (uint8_t)data[data_index++] : 0)
+		OCTET(octet_a);
+		OCTET(octet_b);
+		OCTET(octet_c);
+#		undef OCTET
+```
+
+Let me try swapping the order of these two lines:
+
+```c
+		OCTET(octet_a);
+		OCTET(octet_c); // I've swapped these
+		OCTET(octet_b); // two lines.
+```
+
+And here's what happens when I try re-running my unit test on the C function after my tampering:
+
+```bash
+$ zig build test --summary all
+run test: error: 'test.encode simple string as base64' failed: ====== expected this output: =========
+aGVsbG8sIHdvcmxkIQ==␃
+
+======== instead found this: =========
+aGxlbCxvIG93cmRsIQ==␃
+```
+
+Cool, the test is working! It correctly identifies that my changes caused `us_base64_encode`'s output to become incorrect.
 
 ## Adding multiple unit tests
 
