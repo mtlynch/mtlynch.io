@@ -3,6 +3,9 @@ title: "Using Zig to Unit Test a C Application"
 date: 2023-12-18T00:00:00-05:00
 tags:
   - zig
+discuss_urls:
+  hacker_news: https://news.ycombinator.com/item?id=38683852
+  reddit: https://www.reddit.com/r/Zig/comments/18lbqi0/using_zig_to_unit_test_a_c_application/
 ---
 
 [Zig](https://ziglang.org/) is a new, independently developed low-level programming language. It's a modern reimagining of C that attempts to retain C's performance while embracing improvements from the last 30 years of tooling and language design.
