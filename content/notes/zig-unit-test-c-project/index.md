@@ -1,6 +1,6 @@
 ---
-title: "Using Zig to Unit Test a C Project"
-date: 2023-12-21T00:00:00-05:00
+title: "Using Zig to Unit Test a C Application"
+date: 2023-12-18T00:00:00-05:00
 tags:
   - zig
 ---
@@ -9,26 +9,19 @@ tags:
 
 Because it's designed to replace C, Zig makes it easier than any other language I've used to call into C code from Zig. In [my previous Zig post](/notes/zig-call-c-simple/), I wrote a dummy library in C and then called it from Zig.
 
-Today, I'd like to show a more practical example of using Zig to call C. I'm going to use Zig to call a real world C application that I use daily.
+Zig treats unit testing as a first-class feature, whereas most C projects lack any unit test coverage. This creates an interesting opportunity: you can use Zig to add unit tests to existing C code. You don't have to rewrite any of your C code, either.
 
-## Other examples of calling C code from Zig
-
-In my previous post, I shared a few examples of good blog posts about using Zig to extend C applications:
-
-- ["C/C++/Zig"](https://zig.news/kristoff/compile-a-c-c-project-with-zig-368j) by Loris Cro
-- ["Extending a C Project with Zig" (2023)](https://nivethan.dev/devlog/extending-a-c-project-with-zig.html)
-
-These resources were helpful, but to reproduce the results on a new codebase, you need to know how to port the entire C build system to Zig. As a Zig beginner, I have no idea how to do that. I want a shortcut that allows me to call just a piece of a C application from Zig without figuring out how to build the entire codebase in Zig.
+To explore whether it's possible to drop in Zig to test existing C code, I added unit tests to a real world C application that I use daily.
 
 ## The real world C application: uStreamer
 
-For the past three years, I've been working on [TinyPilot](https://tinypilotkvm.com), an open-source KVM over IP. TinyPilot allows your to [plug a Raspberry Pi into any computer](/tinypilot) and then control that computer remotely.
+For the past three years, I've been working on [TinyPilot](https://tinypilotkvm.com), an open-source KVM over IP. TinyPilot allows you to [plug a Raspberry Pi into any computer](/tinypilot) and then control that computer remotely.
 
 To stream the target computer's display, TinyPilot uses [uStreamer](https://github.com/pikvm/ustreamer), a video streaming app that's optimized for Raspberry Pi's hardware.
 
 {{<img src="ustreamer-display.webp" max-width="800px" alt="Screenshot of TinyPilot in a browser window displaying a Dell boot screen" caption="TinyPilot uses the C uStreamer application to stream video">}}
 
-I've been working with uStreamer for several years, but I find the codebase difficult to approach. It's all in C, and it doesn't have much in the way of documentation or tests.
+I've been working with uStreamer for several years, but I find the codebase difficult to approach. It's implemented in C, and it doesn't have any automated tests.
 
 I learn best by tinkering with code, so exercising uStreamer's C code through Zig feels like a good way to learn more about both uStreamer and Zig.
 
@@ -573,7 +566,7 @@ At this point, I've got the string as a `[*:0]u8` (unknown length, zero-terminat
 In [my previous post](/notes/zig-strings-call-c-code/#improving-the-wrapper-with-zig-managed-buffers), I converted a C string to a Zig string with this process:
 
 1. Create a Zig slice of the C string using `std.mem.span`.
-1. Use `allocator.dupeZ` to copy the contents of the slice into a newly allocated Zig slice.
+1. Use [`allocator.dupeZ`](https://ziglang.org/documentation/master/std/#A;std:mem.Allocator.dupeZ) to copy the contents of the slice into a newly allocated Zig slice.
 
 That process would work here, but I'd be doing a useless work in step (1). `std.mem.span` has to iterate the string to find the null terminator. In this code, I already know where the null terminator is because `us_base64_encode` stores that information in the `allocatedSize` parameter.
 
@@ -610,7 +603,31 @@ fn base64Encode(allocator: std.mem.Allocator, data: []const u8) ![:0]u8 {
 }
 ```
 
+To call `dupeZ`, I need a Zig allocator, so I adjusted the semantics of my `base64Encode` wrapper to accept a `std.mem.Allocator` type.
+
 ### Tying it all together
+
+With my Zig wrapper in place, it's now trivial to exercise the C `us_base64_encode` function from Zig.
+
+Recall that my previous code looked like this:
+
+```zig
+const input = "hello, world!";
+var cEncoded: ?[*:0]u8 = null;
+var allocatedSize: usize = 0;
+ustreamer.us_base64_encode(input.ptr, input.len, &cEncoded, &allocatedSize);
+const output: [*:0]u8 = cEncoded orelse return error.UnexpectedNull;
+defer std.c.free(cEncoded);
+```
+
+With my Zig wrapper, the semantics simplify to two lines:
+
+```zig
+const output = try base64Encode(allocator, "hello, world!");
+defer allocator.free(output);
+```
+
+Here's the full example:
 
 ```zig
 const std = @import("std");
@@ -661,7 +678,7 @@ The complete example at this stage [is on Github](https://github.com/tiny-pilot/
 
 ## Creating the first unit test
 
-Now that I can call the C `us_base64_encode` function through a nice Zig wrapper, I'm ready to start writing unit tests to verify that the C implementation of base64 encoding is correct.
+Now that I can call the C `us_base64_encode` function through a nice Zig wrapper, I'm ready to start writing unit tests to verify that the C implementation is correct.
 
 The first thing I need to do is make a couple of small adjustments to my `build.zig` file so that the unit tests can access libc and uStreamer's C source files:
 
@@ -677,7 +694,7 @@ The first thing I need to do is make a couple of small adjustments to my `build.
     unit_tests.addIncludePath(.{ .path = "src" });  // Search src path for includes.
 ```
 
-Now, it's time for my first unit test. I've already done the heavy lifting here by writing my Zig wrapper function, so my unit test is straightforward:
+I've already done the heavy lifting here by writing my Zig wrapper function, so writing my first unit test is straightforward:
 
 ```zig
 // src/main.zig
@@ -689,6 +706,8 @@ test "encode simple string as base64" {
     try std.testing.expectEqualStrings("aGVsbG8sIHdvcmxkIQ==", actual);
 }
 ```
+
+The `zig build test` command runs my unit test:
 
 ```bash
 $ zig build test --summary all
@@ -702,7 +721,9 @@ Success! My first unit test is working and exercising the C code.
 
 The complete example at this stage [is on Github](https://github.com/tiny-pilot/ustreamer/tree/zig-30-unit-test).
 
-I want to ensure that my test is truly executing the C code and not just returning a false positive. I can verify this by intentionally introducing a bug into the C code.
+## Checking for false positive test results
+
+My unit test is succeeding, but I want to ensure that the test is truly executing the C code and not just returning a false positive. I can verify this by intentionally introducing a bug into the C code.
 
 This is a snippet from the implementation of `base64.c`:
 
@@ -733,9 +754,15 @@ aGVsbG8sIHdvcmxkIQ==␃
 aGxlbCxvIG93cmRsIQ==␃
 ```
 
-Cool, the test is working! It correctly identifies that my changes caused `us_base64_encode`'s output to become incorrect.
+Cool, the test works!
+
+When I introduced a bug into `us_base64_encode`, my test failed and revealed the bug.
 
 ## Adding multiple unit tests
+
+I'd like to extend my single test case into many test cases to increase my confidence that I'm exercising more of the C function's logic.
+
+Half of the lines in my first unit tests were boilerplate around managing memory, so I'd like to avoid repeating that for each test. I wrote a utility function to simplify the tests:
 
 ```zig
 fn testBase64Encode(
@@ -749,14 +776,19 @@ fn testBase64Encode(
 }
 ```
 
+My test utility function allows me to add new tests easily:
+
 ```zig
-test "encode simple data as base64" {
+test "encode strings as base64" {
     try testBase64Encode("", "");
     try testBase64Encode("h", "aA==");
     try testBase64Encode("he", "aGU=");
     try testBase64Encode("hel", "aGVs");
     try testBase64Encode("hell", "aGVsbA==");
     try testBase64Encode("hello, world!", "aGVsbG8sIHdvcmxkIQ==");
+}
+
+test "encode raw bytes as base64" {
     try testBase64Encode(&[_]u8{0}, "AA==");
     try testBase64Encode(&[_]u8{ 0, 0 }, "AAA=");
     try testBase64Encode(&[_]u8{ 0, 0, 0 }, "AAAA");
@@ -768,18 +800,22 @@ test "encode simple data as base64" {
 
 ```bash
 $ zig build test --summary all
-Build Summary: 3/3 steps succeeded; 1/1 tests passed
+Build Summary: 3/3 steps succeeded; 2/2 tests passed
 test success
-└─ run test 1 passed 2ms MaxRSS:2M
-   └─ zig test Debug native success 2s MaxRSS:194M
+└─ run test 2 passed 2ms MaxRSS:2M
+   └─ zig test Debug native success 2s MaxRSS:195M
 ```
 
 The complete example at this stage [is on Github](https://github.com/tiny-pilot/ustreamer/tree/zig-40-multi-test).
 
 ## Wrap up
 
-Zig makes it possible to add unit tests to C functions, and I didn't have to make any changes to the underlying C code. The C code doesn't have to care about Zig at all and can continue running as-is with no changes to its existing `Makefile`.
+Because of Zig's excellent interoperability with C, it's possible to add unit tests to an existing C application without modifying any of the C code or build process.
+
+In the example I showed, the C code doesn't know about Zig at all, and it continues to work as-is with no changes to its existing `Makefile`.
+
+Using Zig to add unit tests is a great way to add value to existing C code. I found this exercise a useful way of learning more about both the Zig language and the C code I'm testing.
 
 ---
 
-_Excerpts from uStreamer are used under the GPLv3 license._
+_Thanks to the Ziggit community for [their help with this blog post](https://ziggit.dev/t/improving-on-c-u8-when-calling-a-c-function-that-allocates-a-string/2489?u=mtlynch). Excerpts from uStreamer are used under [the GPLv3 license](https://github.com/pikvm/ustreamer/blob/v5.45/LICENSE)._
