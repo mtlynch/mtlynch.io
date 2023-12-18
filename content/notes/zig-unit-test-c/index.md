@@ -118,7 +118,7 @@ If I look into `src/libs/tools.h`, I see that all the errors are around a single
 DEBUG: Temporarily delete this function to get the build working again.
 INLINE char *us_signum_to_string(int signum) {
 ...
-	return buf;
+  return buf;
 }
 */
 ```
@@ -732,19 +732,19 @@ My unit test is succeeding, but I want to ensure that the test is truly executin
 This is a snippet from the implementation of [`base64.c`](https://github.com/pikvm/ustreamer/blob/v5.45/src/libs/base64.c):
 
 ```c
-#		define OCTET(_name) unsigned _name = (data_index < size ? (uint8_t)data[data_index++] : 0)
-		OCTET(octet_a);
-		OCTET(octet_b);
-		OCTET(octet_c);
-#		undef OCTET
+#    define OCTET(_name) unsigned _name = (data_index < size ? (uint8_t)data[data_index++] : 0)
+    OCTET(octet_a);
+    OCTET(octet_b);
+    OCTET(octet_c);
+#    undef OCTET
 ```
 
 Let me try swapping the order of these two lines:
 
 ```c
-		OCTET(octet_a);
-		OCTET(octet_c); // I've swapped these
-		OCTET(octet_b); // two lines.
+    OCTET(octet_a);
+    OCTET(octet_c); // I've swapped these
+    OCTET(octet_b); // two lines.
 ```
 
 And here's what happens when I try re-running my unit test on the C function after my tampering:
