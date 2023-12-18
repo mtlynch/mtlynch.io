@@ -5,19 +5,19 @@ tags:
   - zig
 ---
 
-[Zig](https://ziglang.org/) is a new, independently developed low-level programming language. It's a modern reimagining of C that attempts to retain all of C's performance benefits while also taking advantage of improvements in tooling and language design from the last 30 years.
+[Zig](https://ziglang.org/) is a new, independently developed low-level programming language. It's a modern reimagining of C that attempts to retain C's performance while embracing improvements from the last 30 years of tooling and language design.
 
-Because it's designed to replace C, Zig makes it easier than any other language I've used to call into C code from Zig. In [my previous Zig post](/notes/zig-call-c-simple/), I wrote a dummy library in C and then called it from Zig.
+Zig makes calling into C code easier than any other language I've used. Zig also treats unit testing as a first-class feature, which the C language certainly does not.
 
-Zig treats unit testing as a first-class feature, whereas most C projects lack any unit test coverage. This creates an interesting opportunity: you can use Zig to add unit tests to existing C code. You don't have to rewrite any of your C code, either.
+These two properties of Zig create an interesting opportunity: Zig allows you to add unit tests to existing C code. You can do this without rewriting any of your C code or build logic.
 
-To explore whether it's possible to drop in Zig to test existing C code, I added unit tests to a real world C application that I use daily.
+To demonstrate how to use Zig to test existing C code, I added unit tests to a real-world C application that I use daily.
 
-## The real world C application: uStreamer
+## The real-world C application: uStreamer
 
 For the past three years, I've been working on [TinyPilot](https://tinypilotkvm.com), an open-source KVM over IP. TinyPilot allows you to [plug a Raspberry Pi into any computer](/tinypilot) and then control that computer remotely.
 
-To stream the target computer's display, TinyPilot uses [uStreamer](https://github.com/pikvm/ustreamer), a video streaming app that's optimized for Raspberry Pi's hardware.
+To stream the target computer's display, TinyPilot uses [uStreamer](https://github.com/pikvm/ustreamer), a video streaming utility that's optimized for Raspberry Pi's hardware.
 
 {{<img src="ustreamer-display.webp" max-width="800px" alt="Screenshot of TinyPilot in a browser window displaying a Dell boot screen" caption="TinyPilot uses the C uStreamer application to stream video">}}
 
@@ -42,7 +42,7 @@ For this exercise, the challenge is going to be using Zig, so I want the C part 
 
 I want to find a dead simple function in uStreamer's C code &mdash; something that I can feed some input, and it gives me some output that I can inspect easily.
 
-Scanning through the filenames, I noticed [`base64.c`](https://github.com/pikvm/ustreamer/blob/v5.45/src/libs/base64.c). That sounded promising. I know that [base64](https://en.wikipedia.org/wiki/Base64) is a scheme for encoding arbitrary binary data as a string with printable characters.
+Scanning through the filenames, I noticed [`base64.c`](https://github.com/pikvm/ustreamer/blob/v5.45/src/libs/base64.c). That sounded promising. I know that [base64](https://en.wikipedia.org/wiki/Base64) is a scheme for encoding arbitrary data as a printable string.
 
 For example, if I read 10 bytes from `/dev/random` into my terminal, I get some unprintable bytes:
 
@@ -110,7 +110,7 @@ src/libs/tools.h:194:34: warning: implicit declaration of function ‘sigabbrev_
 
 Hmm, the code compiles, but I'm getting a lot of compiler warnings about a `tools.h` header that the uStreamer code includes.
 
-If I look into `src/libs/tools.h`, I see that all the errors are around a single function: [`us_signum_to_string`](https://github.com/pikvm/ustreamer/blob/v5.45/src/libs/tools.h#L192-L210). Let me see if I can just comment out that function to get the build working.
+If I look into `src/libs/tools.h`, I see that all the errors are around a single function: [`us_signum_to_string`](https://github.com/pikvm/ustreamer/blob/v5.45/src/libs/tools.h#L192-L210). Let me see if I can just comment out that function to clear away the irrelevant warnings.
 
 ```c
 
@@ -132,7 +132,9 @@ output:       aGVsbG8sIHdvcmxkIQ==
 output bytes: 21
 ```
 
-Hooray, no more compiler warnings. If I were trying to compile all of uStreamer, I'd have to figure out how to get `us_signum_to_string` to compile. Since I'm just trying to call `us_base64_encode` from Zig, I don't need `us_signum_to_string`.
+Hooray, no more compiler warnings.
+
+If I were trying to compile all of uStreamer, I'd have to figure out how to get `us_signum_to_string` to compile. For this exercise, I'm just calling `us_base64_encode` from Zig, so I don't need `us_signum_to_string`.
 
 If I compare my `test.c` program's output to my system's built-in `base64` utility, I can verify that I'm producing the correct result:
 
@@ -275,11 +277,11 @@ What does that mean?
 
 ### Understanding the type I used
 
-Going from right to left:
+According to the Zig compiler, I passed in a parameter of type `'*const *const [13:0]u8`. To understand what this means, I'll go from right to left:
 
 `u8` is an unsigned byte, which is how Zig represents characters in a string.
 
-`[13:0]` means a null-terminated array. The `13` is the length of the array, which Zig calculates at compile-time. `:0` means that the array has an extra byte with a value of `0` to indicate the end of the string. For more details about the mechanics of null-terminated string in Zig, see [my previous post](/notes/zig-strings-call-c-code/).
+`[13:0]` means a null-terminated array. The `13` is the length of the array, which Zig calculates at compile-time. `:0` means that the array has an extra byte with a value of `0` to indicate the end of the string. For more details about the mechanics of null-terminated strings in Zig, see [my previous post](/notes/zig-strings-call-c-code/).
 
 `*const` means a constant pointer. A pointer is an address in memory, and the `const` means that subsequent code may not reassign the variable.
 
@@ -293,7 +295,9 @@ Okay, now I understand how Zig views the string that I passed. What did Zig _wan
 expected type '[*c]const u8'
 ```
 
-What the heck does `[*c]` mean? This was surprisingly hard to figure out. I eventually pieced it together from a few different sources.
+What the heck does `[*c]` mean?
+
+This was surprisingly hard to figure out. I eventually pieced it together from a few different sources.
 
 Here's the official Zig documentation:
 
@@ -305,7 +309,9 @@ Here's the official Zig documentation:
 >
 > <https://ziglang.org/documentation/0.11.0/#C-Pointers>
 
-I didn't understand this explanation, but more [Kagi](https://kagi.com)'ing led me to this explanation on reddit, which I found more accessible:
+I didn't understand the documentation, as it seemed to be a warning against using C pointers rather than an explanation of what they are.
+
+More [Kagi](https://kagi.com)'ing led me to this explanation on reddit, which I found more accessible:
 
 > `[*c]T` is just a C pointer to type T, it says that it doesn't know whether there are multiple elements in that pointer or not. There could be, there could not be. We also don't know the length of it (it's not a slice which has pointer+length, it's just a pointer). And if there are multiple elements, we don't know if it is say null-terminated or not.
 >
@@ -313,7 +319,9 @@ I didn't understand this explanation, but more [Kagi](https://kagi.com)'ing led 
 
 Okay, that makes more sense.
 
-It sounds like in Zig, the compiler "knows" more about pointer types, whereas C pointers carry less context. The `[*c]` type represents a pointer that Zig got from C, so Zig knows less about this pointer than it normally would for Zig-native pointers.
+In C, a pointer is just a memory address and a data type. A C type of `char*` could point to a single character like `'A'`, or it could point to the first character in a sequence like `"ABCD"`.
+
+In Zig, a pointer to a slice or array is a different data type than a pointer to a single element. When Zig has to infer a data type from C code, Zig can't tell whether the C code is referring to a single element or a sequence, so the C pointer type (`[*c]T`) is Zig's way of saying, "I don't know. I got this from C."
 
 Through trial and error, I figured out that Zig wanted me to get a pointer to `input` by referencing `input.ptr` rather than using the address-of operator `&`.
 
@@ -393,9 +401,7 @@ Recall what the Zig documentation [said about C pointers](https://ziglang.org/do
 
 I'm writing this code by hand, so I guess I shouldn't be using a type reserved for auto-generated code.
 
-The C pointer type (`[*c]u8`) is ambiguous &mdash; it can refer to either a single item or the first item in an array of many items. Zig allows this ambiguity when auto-generating code from C, as it can't infer the difference, but a human developer should be able to read the C code and understand which kind of pointer it is.
-
-In this case, I know that the third parameter to `us_base64_encode` is a pointer to a string. How do I represent that in Zig?
+I know that the third parameter to `us_base64_encode` is a pointer to a null-terminated string. How do I represent that in Zig?
 
 My first thought was to do this:
 
@@ -410,7 +416,7 @@ That seemed reasonable. I know that `us_base64_encode` will populate `cEncoded` 
 error: expected type '[*c][*c]u8', found '*[*:0]u8'
 ```
 
-I was stumped, so I asked for help on Ziggit, a Zig discussion forum. Within an hour, another user [showed me a solution](https://ziggit.dev/t/improving-on-c-u8-when-calling-a-c-function-that-allocates-a-string/2489/4?u=mtlynch):
+I was stumped, so I asked for help on [Ziggit](https://ziggit.dev/), a Zig discussion forum. Within an hour, another user [showed me a solution](https://ziggit.dev/t/improving-on-c-u8-when-calling-a-c-function-that-allocates-a-string/2489/4?u=mtlynch):
 
 ```zig
 var cEncoded: ?[*:0]u8 = null;
@@ -419,7 +425,7 @@ ustreamer.us_base64_encode(input.ptr, input.len, &cEncoded, &allocatedSize);
 
 The issue was that in C, a type of `char**` can be `null`, whereas a Zig type of `[*:0]u8` cannot be null. That's why Zig refused to let me pass in my previous attempt.
 
-`?[*:0]u8` means:
+Breaking down the correct type of `?[*:0]u8`, I see that it's:
 
 - a null-terminated slice of bytes (`:0]u8`)
 - of unknown length (`[*`)
@@ -445,6 +451,8 @@ const output: [*:0]u8 = cEncoded orelse return error.UnexpectedNull;
 
 std.debug.print("output:      {s}\n", .{output});
 ```
+
+And then it prints the correct result:
 
 ```bash
 $ zig build run
@@ -507,22 +515,18 @@ The complete example at this stage [is on Github](https://github.com/tiny-pilot/
 
 At this point, I can successfully call the C `us_base64_encode` function from Zig, but the code is a bit messy. Most of my `main()` function is dealing with translating values to and from C code.
 
-One way to improve the code is to add a Zig wrapper function for `us_base64_encode`. That way, I could encapsulate all the Zig to C interop logic to that function, and callers of my wrapper wouldn't have to even know or care that I'm calling C.
+One way to improve the code is to add a Zig wrapper function for `us_base64_encode`. That way, I could encapsulate all the Zig to C interop logic, and callers of my wrapper wouldn't have to know or care that I'm calling C.
 
 What should my wrapper function look like?
 
-It should accept arbitrary bytes, and it should give back a null-terminated string, so my Zig-native wrapper should look something like this:
+It should accept arbitrary bytes and return a null-terminated string, so the function signature should look something like this:
 
 ```zig
 fn base64Encode(data: []const u8) [:0]u8 {...}
 ```
 
-It's possible for the function to fail, so I should change the return type to `![:0]u8`.
-
-I already know the start of my implementation because I did it in my `main()` function above:
-
 ```zig
-fn base64Encode(data: []const u8) ![:0]u8 {
+fn base64Encode(data: []const u8) [:0]u8 {
   var cEncoded: ?[*:0]u8 = null;
   var allocatedSize: usize = 0;
 
@@ -542,7 +546,7 @@ I want to abstract away the C implementation details, so callers shouldn't have 
 That tells me what I need to do to complete the implementation of my Zig wrapper. I use `defer std.c.free` to free the C-allocated memory, and then I'll need to copy it into a Zig-managed slice:
 
 ```zig
-fn base64Encode(data: []const u8) [:0]u8 {
+fn base64Encode(data: []const u8) ![:0]u8 {
   var cEncodedOptional: ?[*:0]u8 = null;
   var allocatedSize: usize = 0;
 
@@ -565,12 +569,12 @@ At this point, I've got the string as a `[*:0]u8` (unknown length, zero-terminat
 
 In [my previous post](/notes/zig-strings-call-c-code/#improving-the-wrapper-with-zig-managed-buffers), I converted a C string to a Zig string with this process:
 
-1. Create a Zig slice of the C string using `std.mem.span`.
-1. Use [`allocator.dupeZ`](https://ziglang.org/documentation/master/std/#A;std:mem.Allocator.dupeZ) to copy the contents of the slice into a newly allocated Zig slice.
+1. Create a Zig slice of the C string using [`std.mem.span`](https://ziglang.org/documentation/0.11.0/std/#A;std:mem.span).
+1. Use [`allocator.dupeZ`](https://ziglang.org/documentation/0.11.0/std/#A;std:mem.Allocator.dupeZ) to copy the contents of the slice into a newly allocated Zig slice.
 
 That process would work here, but I'd be doing a useless work in step (1). `std.mem.span` has to iterate the string to find the null terminator. In this code, I already know where the null terminator is because `us_base64_encode` stores that information in the `allocatedSize` parameter.
 
-I can create a length-aware Zig slice of the `cEncoded` slice like this:
+Instead, I create a length-aware Zig slice of the `cEncoded` slice like this:
 
 ```zig
 // The allocatedSize includes the null terminator, so subtract 1 to get the
@@ -672,13 +676,13 @@ output:      aGVsbG8sIHdvcmxkIQ==
 output size: 20
 ```
 
-The output size is now `20` instead of `21` because `.len` does not include the null terminator, whereas previously the output included the null terminator.
+The output size is now `20` instead of `21` because the underlying data type changed. Previously, I was printing the output size parameter that `us_base64_encode` populated, which included the null terminator. Now, I'm using the `.len` property of the output string, which does not include the null terminator.
 
 The complete example at this stage [is on Github](https://github.com/tiny-pilot/ustreamer/tree/zig-20-wrapper-fn).
 
 ## Creating the first unit test
 
-Now that I can call the C `us_base64_encode` function through a nice Zig wrapper, I'm ready to start writing unit tests to verify that the C implementation is correct.
+Now that I can call the C `us_base64_encode` function through a convenient Zig wrapper, I'm ready to start writing unit tests to verify that the C implementation is correct.
 
 The first thing I need to do is make a couple of small adjustments to my `build.zig` file so that the unit tests can access libc and uStreamer's C source files:
 
@@ -725,7 +729,7 @@ The complete example at this stage [is on Github](https://github.com/tiny-pilot/
 
 My unit test is succeeding, but I want to ensure that the test is truly executing the C code and not just returning a false positive. I can verify this by intentionally introducing a bug into the C code.
 
-This is a snippet from the implementation of `base64.c`:
+This is a snippet from the implementation of [`base64.c`](https://github.com/pikvm/ustreamer/blob/v5.45/src/libs/base64.c):
 
 ```c
 #		define OCTET(_name) unsigned _name = (data_index < size ? (uint8_t)data[data_index++] : 0)
@@ -762,7 +766,7 @@ When I introduced a bug into `us_base64_encode`, my test failed and revealed the
 
 I'd like to extend my single test case into many test cases to increase my confidence that I'm exercising more of the C function's logic.
 
-Half of the lines in my first unit tests were boilerplate around managing memory, so I'd like to avoid repeating that for each test. I wrote a utility function to simplify the tests:
+Half of the lines in my first unit test were boilerplate around managing memory, so I'd like to avoid repeating that for each test. I wrote a utility function to capture the boilerplate:
 
 ```zig
 fn testBase64Encode(
@@ -814,7 +818,7 @@ Because of Zig's excellent interoperability with C, it's possible to add unit te
 
 In the example I showed, the C code doesn't know about Zig at all, and it continues to work as-is with no changes to its existing `Makefile`.
 
-Using Zig to add unit tests is a great way to add value to existing C code. I found this exercise a useful way of learning more about both the Zig language and the C code I'm testing.
+I found this exercise a useful way of learning more about both the Zig language and the C code I'm testing.
 
 ---
 
