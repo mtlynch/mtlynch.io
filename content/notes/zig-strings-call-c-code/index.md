@@ -381,18 +381,8 @@ The function takes as input a null-terminated string. The return value is `![*:0
 Now that I've explained the inputs and outputs to this function, let me take a try at implementing it:
 
 ```zig
-const StrdupError = error{
-    StrdupFailure,
-};
-
 fn strdup(str: [:0]const u8) ![*:0]u8 {
-    const copy = cString.strdup(str);
-    if (copy == null) {
-        // Maybe we can return a better error by calling std.os.errno(), but for
-        // now, return a generic error.
-        return error.StrdupFailure;
-    }
-    return copy;
+    return cString.strdup(str) orelse error.OutOfMemory;
 }
 ```
 
@@ -405,18 +395,8 @@ const cString = @cImport({
     @cInclude("string.h");
 });
 
-const StrdupError = error{
-    StrdupFailure,
-};
-
 fn strdup(str: [:0]const u8) ![*:0]u8 {
-    const copy = cString.strdup(str);
-    if (copy == null) {
-        // Maybe we can return a better error by calling std.os.errno(), but for
-        // now, return a generic error.
-        return error.StrdupFailure;
-    }
-    return copy;
+    return cString.strdup(str) orelse error.OutOfMemory;
 }
 
 pub fn main() !void {
@@ -450,26 +430,15 @@ Here's a revision of my `strdup` wrapper that allocates a Zig-native buffer and 
 
 ```zig
 fn strdup(allocator: std.mem.Allocator, str: [:0]const u8) ![:0]u8 {
-    const cCopy: [*c]u8 = cString.strdup(str);
-    if (cCopy == null) {
-        // Maybe we can return a better error by calling std.os.errno(), but for
-        // now, return a generic error.
-        return error.StrdupFailure;
-    }
+    const cCopy: [*:0]u8 = cString.strdup(str) orelse return error.OutOfMemory;
     defer std.c.free(cCopy);
 
     // Create a Zig slice of the C buffer that's length-aware.
     const zCopy: [:0]u8 = std.mem.span(cCopy);
 
-    // Allocate a new null-terminated slice with a Zig-native memory allocator.
-    const copy: [:0]u8 = try allocator.allocSentinel(u8, zCopy.len, 0);
-
-    // Copy the contents of the C string from the C-managed memory into the Zig-
-    // managed buffer.
-    @memcpy(copy, zCopy);
-
-    // Return the Zig-native slice to the caller.
-    return copy;
+    // Allocate a new null-terminated Zig-managed slice and copy in the contents
+    // of zCopy.
+    return allocator.dupeZ(u8, zCopy);
 }
 ```
 
@@ -490,23 +459,11 @@ const cString = @cImport({
     @cInclude("string.h");
 });
 
-const StrdupError = error{
-    StrdupFailure,
-};
-
 fn strdup(allocator: std.mem.Allocator, str: [:0]const u8) ![:0]u8 {
-    const cCopy: [*c]u8 = cString.strdup(str);
-    if (cCopy == null) {
-        // Maybe we can return a better error by calling std.os.errno(), but for
-        // now, return a generic error.
-        return error.StrdupFailure;
-    }
+    const cCopy: [*:0]u8 = cString.strdup(str) orelse return error.OutOfMemory;
     defer std.c.free(cCopy);
     const zCopy: [:0]u8 = std.mem.span(cCopy);
-    const copy: [:0]u8 = try allocator.allocSentinel(u8, zCopy.len, 0);
-    @memcpy(copy, zCopy);
-
-    return copy;
+    return allocator.dupeZ(u8, zCopy);
 }
 
 pub fn main() !void {
@@ -532,7 +489,7 @@ I can't figure out why the size of `sCopy` is 16. The size remains the same rega
 
 I know that `s` is an array whose size Zig knows at compile time, whereas `sCopy` is a slice whose size Zig doesn't know until runtime. Still, Zig knows the length of the slice and should therefore know how many bytes it takes up, but I can't figure out how to query that information.
 
-**Update**: [/u/paulstelian97](https://www.reddit.com/user/paulstelian97) on reddit [explains](https://www.reddit.com/r/Zig/comments/18j13tu/using_zig_to_call_c_code_strings/kdgx3df/) that slices are "fat pointers," which contain a memory address and a length. Now I understand why it's two times the size of a regular pointer, but I still don't know how to ask Zig for the size of the slice in bytes.
+**Update**: [/u/paulstelian97](https://www.reddit.com/user/paulstelian97) on reddit [explains](https://www.reddit.com/r/Zig/comments/18j13tu/using_zig_to_call_c_code_strings/kdgx3df/) that slices are ["fat pointers,"](https://ziglang.org/documentation/0.11.0/#Pointers) which contain a memory address and a length. Now I understand why it's two times the size of a regular pointer, but I still don't know how to ask Zig for the size of the slice in bytes.
 
 ## Wrap up
 
@@ -543,3 +500,7 @@ Zig's type system is stronger than C, which allows developers to write Zig-nativ
 ## Further reading
 
 - [Zig Strings in Five Minutes](https://www.huy.rocks/everyday/01-04-2022-zig-strings-in-5-minutes)
+
+---
+
+_Thanks to [efjimm](https://ziggit.dev/u/efjimm/summary) for [offering suggestions](https://ziggit.dev/t/using-zig-to-call-c-code-strings/2470/4?u=mtlynch) that helped me simplify this solution._
