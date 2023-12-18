@@ -463,7 +463,7 @@ output size: 21
 
 ### Completing the call to C from Zig
 
-Here's the full `src/main.zig` file:
+At this point, I now have complete working code for calling the C `us_base64_encode` from Zig. Here's the full `src/main.zig` file:
 
 ```zig
 // src/main.zig
@@ -512,7 +512,9 @@ The complete example at this stage [is on Github](https://github.com/tiny-pilot/
 
 ## Creating a Zig wrapper for the native C implementation
 
-At this point, I can successfully call the C `us_base64_encode` function from Zig, but it would be cleaner if I abstracted away the C parts with a Zig wrapper function. That way, I could encapsulate all the Zig to C interop logic to that function, and callers of my wrapper wouldn't have to even know or care that I'm calling C.
+At this point, I can successfully call the C `us_base64_encode` function from Zig, but the code is a bit messy. Most of my `main()` function is dealing with translating values to and from C code.
+
+One way to improve the code is to add a Zig wrapper function for `us_base64_encode`. That way, I could encapsulate all the Zig to C interop logic to that function, and callers of my wrapper wouldn't have to even know or care that I'm calling C.
 
 What should my wrapper function look like?
 
@@ -522,24 +524,29 @@ It should accept arbitrary bytes, and it should give back a null-terminated stri
 fn base64Encode(data: []const u8) [:0]u8 {...}
 ```
 
+It's possible for the function to fail, so I should change the return type to `![:0]u8`.
+
 I already know the start of my implementation because I did it in my `main()` function above:
 
 ```zig
-fn base64Encode(data: []const u8) [:0]u8 {
+fn base64Encode(data: []const u8) ![:0]u8 {
   var cEncoded: ?[*:0]u8 = null;
   var allocatedSize: usize = 0;
 
   ustreamer.us_base64_encode(data.ptr, input.len, &cEncoded, &allocatedSize);
-  ...
+
+  // TODO: Complete the implementation.
 ```
 
 ### Who's responsible for freeing the memory C allocated?
 
-There's a problem I haven't addressed yet. `us_base64_encode` allocated memory (`cEncoded`). Now, I, the caller, am responsible for either freeing that memory myself or telling all of _my_ callers that it's their responsibility to free the memory.
+There's a problem I haven't addressed yet. `us_base64_encode` allocated memory into the `cEncoded` pointer. The caller is responsible for either freeing that memory myself or passing off that responsibility to its callers.
 
-Normally, it's fine to tell a caller that they're responsible for freeing memory for a function result, but this case is a little trickier. This isn't a normal Zig-allocated memory buffer &mdash; it's a C-allocated buffer that requires a special free function (`std.c.free`).
+Normally, it's fine to document in a function that the caller is responsible for freeing a function result, but this case is a little trickier. This isn't a normal Zig-allocated memory buffer &mdash; it's a C-allocated buffer that requires a special free function (`std.c.free`).
 
-My goal is to abstract away the C implementation details, so I don't want to ask my callers to use a C-specific memory freeing function. I use `defer std.c.free` to free the C-allocated memory before returning from my wrapper:
+I want to abstract away the C implementation details, so callers shouldn't have to use a C-specific memory freeing function.
+
+That tells me what I need to do to complete the implementation of my Zig wrapper. I use `defer std.c.free` to free the C-allocated memory, and then I'll need to copy it into a Zig-managed slice:
 
 ```zig
 fn base64Encode(data: []const u8) [:0]u8 {
@@ -548,6 +555,9 @@ fn base64Encode(data: []const u8) [:0]u8 {
 
   ustreamer.us_base64_encode(data.ptr, data.len, &cEncodedOptional, &allocatedSize);
   const cEncoded: [*:0]u8 = cEncodedOptional orelse return error.UnexpectedNull;
+
+  // Get the output as a non-optional type.
+  const output: [*:0]u8 = cEncoded orelse return error.UnexpectedNull;
 
   // Free the C-allocated memory buffer before exiting the function.
   defer std.c.free(cEncoded);
@@ -558,24 +568,24 @@ fn base64Encode(data: []const u8) [:0]u8 {
 
 ### Converting a C string to a Zig string
 
-At this point, I've got the string as a `[*c]u8` (C-pointer, unknown length buffer), but I want to return `[:0]u8` (null-terminated, length-counted Zig slice). How do I convert a C-style string to a Zig slice?
+At this point, I've got the string as a `[*:0]u8` (unknown length, zero-terminated Zig slice), but I want to return `[:0]u8` (length-aware, null-terminated Zig slice). How do I convert a C-style string to a Zig slice?
 
 In [my previous post](/notes/zig-strings-call-c-code/#improving-the-wrapper-with-zig-managed-buffers), I converted a C string to a Zig string with this process:
 
 1. Create a Zig slice of the C string using `std.mem.span`.
 1. Use `allocator.dupeZ` to copy the contents of the slice into a newly allocated Zig slice.
 
-That process would work here, but I'd be doing a useless work in step (1). `std.mem.span` has to iterate the string to find the null terminator. In this code, I already know where the null terminator is because `us_base64_encode` stores that information in the `allocated` parameter.
+That process would work here, but I'd be doing a useless work in step (1). `std.mem.span` has to iterate the string to find the null terminator. In this code, I already know where the null terminator is because `us_base64_encode` stores that information in the `allocatedSize` parameter.
 
-In practice, I wouldn't worry about the extra string iteration unless this was a hot spot in my code. I still have to copy every character in the string, so it's [an `O(N)` operation](https://en.wikipedia.org/wiki/Time_complexity#Linear_time) no matter what. Still, part of the fun of Zig is fine-grained control over performance, so I'll try to do the conversion more efficiently.
-
-Here's my conversion function:
+I can create a length-aware Zig slice of the `cEncoded` slice like this:
 
 ```zig
 // The allocatedSize includes the null terminator, so subtract 1 to get the
 // number of non-null characters in the string.
 const cEncodedLength = allocatedSize - 1;
-return allocator.dupeZ(u8, cEncoded[0..cEncodedLength :0]);
+
+// Convert cEncoded (unknown length slice) to a length-aware slice.
+const outputLengthAware: [:0] = cEncoded[0..cEncodedLength :0];
 ```
 
 At this point, I can complete the implementation of my wrapper function:
@@ -586,11 +596,17 @@ fn base64Encode(allocator: std.mem.Allocator, data: []const u8) ![:0]u8 {
     var allocatedSize: usize = 0;
 
     ustreamer.us_base64_encode(data.ptr, data.len, &cEncoded, &allocatedSize);
+
+    // Get the output as a non-optional type.
+    const output: [*:0]u8 = cEncoded orelse return error.UnexpectedNull;
+
+    // Free the C-allocated memory buffer before exiting the function.
     defer std.c.free(cEncoded);
 
-    // The length of the string excludes the null-terminator, so subtract 1.
+    // The allocatedSize includes the null terminator, so subtract 1 to get the
+    // number of non-null characters in the string.
     const cEncodedLength = allocatedSize - 1;
-    return cStringToZigString(allocator, cEncoded, cEncodedLength);
+    return allocator.dupeZ(u8, cEncoded[0..cEncodedLength :0]);
 }
 ```
 
@@ -605,25 +621,15 @@ const ustreamer = @cImport({
 });
 
 fn base64Encode(allocator: std.mem.Allocator, data: []const u8) ![:0]u8 {
-    var cEncoded: [*c]u8 = null;
+    var cEncodedOptional: ?[*:0]u8 = null;
     var allocatedSize: usize = 0;
 
-    ustreamer.us_base64_encode(data.ptr, data.len, &cEncoded, &allocatedSize);
-    defer std.c.free(cEncoded);
+    ustreamer.us_base64_encode(data.ptr, data.len, &cEncodedOptional, &allocatedSize);
+    const cEncoded: [*:0]u8 = cEncodedOptional orelse return error.UnexpectedNull;
+    defer std.c.free(cEncodedOptional);
 
-    // The length of the string excludes the null-terminator, so subtract 1.
     const cEncodedLength = allocatedSize - 1;
-    return cStringToZigString(allocator, cEncoded, cEncodedLength);
-}
-
-fn cStringToZigString(allocator: std.mem.Allocator, cString: [*c]const u8, cStringLength: usize) ![:0]u8 {
-    const zigString = try allocator.allocSentinel(u8, cStringLength, 0);
-    errdefer allocator.free(zigString);
-
-    const cStringSlice = cString[0..cStringLength :0];
-    @memcpy(zigString.ptr, cStringSlice);
-
-    return zigString;
+    return allocator.dupeZ(u8, cEncoded[0..cEncodedLength :0]);
 }
 
 pub fn main() !void {
@@ -635,6 +641,7 @@ pub fn main() !void {
     const output = try base64Encode(allocator, input);
     defer allocator.free(output);
 
+    // Print the input and output of the base64 encode operation.
     std.debug.print("input:       {s}\n", .{input});
     std.debug.print("output:      {s}\n", .{output});
     std.debug.print("output size: {d}\n", .{output.len});
