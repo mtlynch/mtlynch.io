@@ -394,11 +394,13 @@ And it compiles successfully!
 
 ### Can I do better than C pointers?
 
-But recall what the Zig documentation [said about C pointers](https://ziglang.org/documentation/0.11.0/#C-Pointers):
+Recall what the Zig documentation [said about C pointers](https://ziglang.org/documentation/0.11.0/#C-Pointers):
 
-> The only valid reason for using a C pointer is in auto-generated code from translating C code.
+> The only valid reason for using a C pointer is in auto-generated code...
 
-The C pointer type (`[*c]u8`) is ambiguous &mdash; it can either refer to a single item or the _first_ item in an array of many items. Zig allows this ambiguity when auto-generating code from C, as it can't infer the difference, but a human developer should be able to read the C code and understand which kind of pointer it is.
+I'm writing this code by hand, so I guess I shouldn't be using a type reserved for auto-generated code.
+
+The C pointer type (`[*c]u8`) is ambiguous &mdash; it can refer to either a single item or the first item in an array of many items. Zig allows this ambiguity when auto-generating code from C, as it can't infer the difference, but a human developer should be able to read the C code and understand which kind of pointer it is.
 
 In this case, I know that the third parameter to `us_base64_encode` is a pointer to a string. How do I represent that in Zig?
 
@@ -426,11 +428,11 @@ The issue was that in C, a type of `char**` can be `null`, whereas a Zig type of
 
 `?[*:0]u8` means:
 
-- a null-terminated slice of bytes
-- of unknown length
-- that might be null
+- a null-terminated slice of bytes (`:0]u8`)
+- of unknown length (`[*`)
+- that [might be null](https://ziglang.org/documentation/0.11.0/#Optionals) (`?`)
 
-So, that compiles, but if I try to print the value of `cEncoded`, I get what appears to be a memory address rather than a string:
+The new type allows me to compile the code, but if I try to print the value of `cEncoded`, I get what appears to be a memory address rather than a string:
 
 ```bash
 $ zig build run
@@ -445,6 +447,9 @@ In order to convert `cEncoded` back to a printable string, I have to unwrap it f
 var cEncoded: ?[*:0]u8 = null;
 ustreamer.us_base64_encode(input.ptr, input.len, &cEncoded, &allocatedSize);
 const output: [*:0]u8 = cEncoded orelse return error.UnexpectedNull;
+
+...
+
 std.debug.print("output:      {s}\n", .{output});
 ```
 
@@ -521,7 +526,7 @@ I already know the start of my implementation because I did it in my `main()` fu
 
 ```zig
 fn base64Encode(data: []const u8) [:0]u8 {
-  var cEncoded: [*c]u8 = null;
+  var cEncoded: ?[*:0]u8 = null;
   var allocatedSize: usize = 0;
 
   ustreamer.us_base64_encode(data.ptr, input.len, &cEncoded, &allocatedSize);
@@ -538,10 +543,11 @@ My goal is to abstract away the C implementation details, so I don't want to ask
 
 ```zig
 fn base64Encode(data: []const u8) [:0]u8 {
-  var cEncoded: [*c]u8 = null;
+  var cEncodedOptional: ?[*:0]u8 = null;
   var allocatedSize: usize = 0;
 
-  ustreamer.us_base64_encode(data.ptr, input.len, &cEncoded, &allocatedSize);
+  ustreamer.us_base64_encode(data.ptr, data.len, &cEncodedOptional, &allocatedSize);
+  const cEncoded: [*:0]u8 = cEncodedOptional orelse return error.UnexpectedNull;
 
   // Free the C-allocated memory buffer before exiting the function.
   defer std.c.free(cEncoded);
