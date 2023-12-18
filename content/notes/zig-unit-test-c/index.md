@@ -537,16 +537,16 @@ fn base64Encode(data: []const u8) [:0]u8 {
   var cEncoded: ?[*:0]u8 = null;
   var allocatedSize: usize = 0;
 
-  ustreamer.us_base64_encode(data.ptr, input.len, &cEncoded, &allocatedSize);
+  ustreamer.us_base64_encode(data.ptr, data.len, &cEncoded, &allocatedSize);
 
   // TODO: Complete the implementation.
 ```
 
 ### Who's responsible for freeing the memory C allocated?
 
-There's a problem I haven't addressed yet. `us_base64_encode` allocated memory into the `cEncoded` pointer. The caller is responsible for either freeing that memory myself or passing off that responsibility to its callers.
+There's a problem I haven't addressed yet. `us_base64_encode` allocated memory into the `cEncoded` pointer. The caller is responsible for either freeing that memory or passing off that responsibility to its callers.
 
-Normally, it's fine to document in a function that the caller is responsible for freeing a function result, but this case is a little trickier. This isn't a normal Zig-allocated memory buffer &mdash; it's a C-allocated buffer that requires a special free function (`std.c.free`).
+Normally, it's fine for a function to declare that the caller is responsible for freeing an output value, but this case is a little trickier. This isn't a normal Zig-allocated memory buffer &mdash; it's a C-allocated buffer that requires a special free function (`std.c.free`).
 
 I want to abstract away the C implementation details, so callers shouldn't have to use a C-specific memory freeing function.
 
