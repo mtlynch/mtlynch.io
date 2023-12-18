@@ -309,7 +309,7 @@ Here's the official Zig documentation:
 >
 > <https://ziglang.org/documentation/0.11.0/#C-Pointers>
 
-I didn't understand the documentation, as it seemed to be a warning against using C pointers rather than an explanation of what they are.
+I didn't understand the documentation, as it seemed to be warning against using C pointers rather than explaining what they are.
 
 More [Kagi](https://kagi.com)'ing led me to this explanation on reddit, which I found more accessible:
 
@@ -321,7 +321,7 @@ Okay, that makes more sense.
 
 In C, a pointer is just a memory address and a data type. A C type of `char*` could point to a single character like `'A'`, or it could point to the first character in a sequence like `"ABCD"`.
 
-In Zig, a pointer to a slice or array is a different data type than a pointer to a single element. When Zig has to infer a data type from C code, Zig can't tell whether the C code is referring to a single element or a sequence, so the C pointer type (`[*c]T`) is Zig's way of saying, "I don't know. I got this from C."
+In Zig, a pointer to an array is a different type than a pointer to a single element. When Zig has to infer a data type from C code, Zig can't tell whether the C code is referring to a single element or an array, so the C pointer type (`[*c]T`) is Zig's way of saying, "I don't know. I got this from C."
 
 Through trial and error, I figured out that Zig wanted me to get a pointer to `input` by referencing `input.ptr` rather than using the address-of operator `&`.
 
@@ -339,6 +339,8 @@ input     is type *const [13:0]u8
 &input    is type *const *const [13:0]u8
 input.ptr is type [*]const u8
 ```
+
+Recall that Zig wants me to pass `us_base64_encode` a parameter of type `[*c]const u8`, so it looks like it can convert `[*]const u8` to that type.
 
 Okay, let me try calling `us_base64_encode` again:
 
@@ -524,6 +526,8 @@ It should accept arbitrary bytes and return a null-terminated string, so the fun
 ```zig
 fn base64Encode(data: []const u8) [:0]u8 {...}
 ```
+
+I already have the first few lines of my implementation based on my `main()` function [above](#completing-the-call-to-c-from-zig):
 
 ```zig
 fn base64Encode(data: []const u8) [:0]u8 {
