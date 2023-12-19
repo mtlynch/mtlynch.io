@@ -119,10 +119,10 @@ It seemed like I'd get the best of both worlds: the performance of a pre-rendere
 
 I _thought_ that the browser would just render all the pre-generated HTML and then evaluate the JavaScript in the background. It turns out that browsers _really_ want to evaluate JavaScript before doing anything else. Even though on Is It Keto, my `<script>` tags are at the very bottom of my HTML and they have the `defer` attribute, they still tank my performance metrics:
 
-{{< gallery caption="If I delete the `<script>` tags on Is It Keto, its [Lighthouse score](https://developers.google.com/web/tools/lighthouse) jumps 40 points, but then the site becomes non-functional.">}}
+{{<gallery caption="If I delete the `<script>` tags on Is It Keto, its [Lighthouse score](https://developers.google.com/web/tools/lighthouse) jumps 40 points, but then the site becomes non-functional.">}}
 {{<img src="with-scripts.png" alt="Lighthouse score of 47 with scripts enabled" has-border="true">}}
 {{<img src="without-scripts.png" alt="Lighthouse score of 87 with scripts deleted" has-border="true">}}
-{{</ gallery >}}
+{{</gallery>}}
 
 Vue 3, due out in the next few months, is supposed to improve performance due to [tree shaking](https://vueschool.io/articles/vuejs-tutorials/faster-web-applications-with-vue-3/). That means it will be able to reduce the size of your JavaScript payload by eliminating unused framework code. Gridsome claims that [their 1.0 release will be Vue 3 compatible](https://twitter.com/gridsome/status/1265742280805285896), but they seem so constrained by developer resources that I'm worried that it could be years before they ever get there.
 
@@ -136,11 +136,11 @@ For my next server, I've dreamed about getting some sort of virtual console. The
 
 For the past few weeks, I've been trying to build the poor-man's remote console with a [Raspberry Pi 4](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/). The keyboard part works great over the network:
 
-{{< video src="keyboard-demo_2020-05-28.mp4" caption="I got a Raspberry Pi to work as a browser-controlled keyboard">}}
+{{<video src="keyboard-demo_2020-05-28.mp4" caption="I got a Raspberry Pi to work as a browser-controlled keyboard">}}
 
 Displaying video from the target machine is trickier, but I have it working now with about 1 second of latency. Here's what that looks like:
 
-{{< video src="kvmpi-demo.mp4" caption="I got a Raspberry Pi to work as a browser-controlled keyboard">}}
+{{<video src="kvmpi-demo.mp4" caption="I got a Raspberry Pi to work as a browser-controlled keyboard">}}
 
 Right now, the video appears in a separate window, but I'm working on embedding it directly in the webpage.
 

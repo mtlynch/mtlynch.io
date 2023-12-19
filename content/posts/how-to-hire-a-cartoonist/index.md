@@ -119,11 +119,11 @@ And Loraine sent me this initial draft:
 
 Right off the bat, it was pretty close to what I wanted. I asked her to proceed with that sketch, and she sent me a more detailed version. We went a few rounds on minor fixes, but you can see the changes get smaller and smaller as we converge on the final design.
 
-{{< gallery caption="Evolution of \"Offer sincere praise\" cartoon from [How to do Code Reviews Like a Human](/human-code-reviews-2/#offer-sincere-praise)">}}
+{{<gallery caption="Evolution of \"Offer sincere praise\" cartoon from [How to do Code Reviews Like a Human](/human-code-reviews-2/#offer-sincere-praise)">}}
 {{<img src="mma-v1.png" alt="MMA cartoon v1">}}
 {{<img src="mma-v2.png" alt="MMA cartoon v2">}}
 {{<img src="mma-v3.png" alt="Final version of MMA cartoon">}}
-{{< /gallery >}}
+{{</gallery>}}
 
 ## Results
 

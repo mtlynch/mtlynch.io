@@ -62,17 +62,17 @@ As an example web app to test, I present Sentimentalyzer: the world's dumbest te
 
 If you enter the text `It's a nice day today`, Sentimentalyzer deduces that you're happy:
 
-{{< gallery caption="Sentimentalyzer analyzing happy text">}}
+{{<gallery caption="Sentimentalyzer analyzing happy text">}}
 {{<img src="sentimentalyzer-analyze-content.png" alt="Entering text in Sentimentalyzer">}}
 {{<img src="sentimentalyzer-results-content.png" alt="Sentimentalyzer produces results">}}
-{{</ gallery >}}
+{{</gallery>}}
 
 If you enter the text `Who ate ALL MY WAFFLES?`, Sentimentalyzer assumes that you're angry:
 
-{{< gallery caption="Sentimentalyzer analyzing angry text">}}
+{{<gallery caption="Sentimentalyzer analyzing angry text">}}
 {{<img src="sentimentalyzer-analyze-angry.png" alt="Entering text in Sentimentalyzer">}}
 {{<img src="sentimentalyzer-results-angry.png" alt="Sentimentalyzer produces results">}}
-{{</ gallery >}}
+{{</gallery>}}
 
 The algorithm is simple: if more than 50% of the characters are uppercase, the user is yelling, so they must be mad. Otherwise, Sentimentalyzer assumes the user feels okay.
 
@@ -126,7 +126,7 @@ To write your first Cypress end-to-end test, you only need three files:
 
 This file specifies Cypress' [configuration options](https://docs.cypress.io/guides/references/configuration.html):
 
-{{< inline-file filename="cypress.json" language="javascript">}}
+{{<inline-file filename="cypress.json" language="javascript">}}
 
 These settings aren't terribly interesting, but I set them to `false` to prevent Cypress from auto-generating unnecessary helper files.
 
@@ -134,7 +134,7 @@ These settings aren't terribly interesting, but I set them to `false` to prevent
 
 This file defines a Docker container for Sentimentalyzer and a Docker container for Cypress and allows them to talk to each other:
 
-{{< inline-file filename="docker-compose.yml" language="yml">}}
+{{<inline-file filename="docker-compose.yml" language="yml">}}
 
 A few lines are worth calling out:
 
@@ -174,7 +174,7 @@ The `working_dir` line ensures that Cypress treats the `/e2e` directory as its c
 
 Now that the configuration is out of the way, it's time for the fun part: writing tests.
 
-{{< inline-file filename="spec.js" language="javascript">}}
+{{<inline-file filename="spec.js" language="javascript">}}
 
 Even if you're unfamiliar with [the Cypress API](https://docs.cypress.io/api/api/table-of-contents.html), its semantics are readable enough that you probably understand the tests intuitively. In plain English, both tests follow the same sequence:
 
@@ -239,7 +239,7 @@ Here's what the whole process looks like from the console:
 
 Cypress creates a video recording of every test run. This is my favorite feature, as it's a tremendous help in diagnosing test failures:
 
-{{< video src="spec.js.mp4" caption="Cypress recording of end-to-end tests (slowed down to 1/4 speed)">}}
+{{<video src="spec.js.mp4" caption="Cypress recording of end-to-end tests (slowed down to 1/4 speed)">}}
 
 ## Test failure screenshots
 

@@ -14,7 +14,7 @@ It was a fun trip, and I learned a lot. It was also expensive, both financially 
 
 ### Intentional Deployment: Best Practices for Feature Flag Management
 
-{{< youtube AD8LSdy7b2s >}}
+{{<youtube AD8LSdy7b2s>}}
 
 **Speaker**: [Caitlin Rubin](https://www.linkedin.com/in/caitlin-rubin-a3b1a2103/) from Optimizely
 
@@ -22,7 +22,7 @@ Feature flags allow a software team to change an application's behavior at runti
 
 Feature flags suffer from the [tragedy of the commons](https://en.wikipedia.org/wiki/Tragedy_of_the_commons) problem. It's easy for any individual developer to add a flag for their new feature, but if everyone constantly puts in new feature flags, the application accrues so many different execution paths that it becomes difficult to reason about the program's behavior. Further, once the team enables a feature globally, the developer has little incentive to do the grungy work of removing the branching logic and eliminating the flag.
 
-This talk succinctly explained feature flags, why they can cause problems, and shared concrete steps for preventing those issues. In particular, I liked Caitlin's suggestion of a ["WIP limit"](https://kanbanize.com/kanban-resources/getting-started/what-is-wip/) - a work in progress limit. If your team sets a WIP limit of two, then only two feature flags can exist at a given time. This encourages developers to be thoughtful about when to use feature flags and ensures that developers remove the flags when the application no longer requires the branching feature logic.
+This talk succinctly explained feature flags, why they can cause problems, and shared concrete steps for preventing those issues. In particular, I liked Caitlin's suggestion of a "WIP limit" - a work in progress limit. If your team sets a WIP limit of two, then only two feature flags can exist at a given time. This encourages developers to be thoughtful about when to use feature flags and ensures that developers remove the flags when the application no longer requires the branching feature logic.
 
 Other things I liked:
 
@@ -33,7 +33,7 @@ Other things I liked:
 
 ### Free yourself from your ORM with mypy!
 
-{{< youtube oLvEXiV0L-Q >}}
+{{<youtube oLvEXiV0L-Q>}}
 
 **Speaker**: Thomas Stephens from uStudio
 
@@ -51,7 +51,7 @@ Other things I liked:
 
 ### When Booleans Are Not Enough... State Machines?
 
-{{< youtube I1Mzx_tSpew >}}
+{{<youtube I1Mzx_tSpew>}}
 
 **Speaker**: [Harrington Joseph](https://twitter.com/harph) from Netflix
 
@@ -148,7 +148,7 @@ Several people spoke glowingly of PyCon. PyTexas is a small, regional conference
 
 ## Critiquing my own talk
 
-{{< youtube hM_ex4-xu4E >}}
+{{<youtube hM_ex4-xu4E>}}
 
 **Speaker**: Michael Lynch (me)
 
