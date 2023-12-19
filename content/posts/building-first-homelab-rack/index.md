@@ -1,6 +1,6 @@
 ---
 title: "Building My First Homelab Server Rack"
-date: 2023-11-12T09:20:48-04:00
+date: 2024-01-12T00:00:00-05:00
 tags:
   - homelab
 ---
@@ -164,7 +164,7 @@ I set my minimum to be 2x my current networking hosts. I currently have eight wi
 | **TP-Link** | [**TL-SG3428X**](https://www.newegg.com/tp-link-tl-sg3428x-24-x-rj45-4-x-sfp/p/0XP-0054-00091?Item=0XP-0054-00091&SoldByNewegg=1) | **24** | **4x10Gbps 24x1Gbps**        | **Yes** | **Yes**   | **No** | **$299.00** |                             |
 | Netgear     | [GS108LP](https://www.amazon.com/gp/product/B07G5XBM3V/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&th=1)                           | 8      | 1 Gbps                       | No      | Yes       | Yes    | $91.72      |                             |
 | Qnap        | [QSW-1105-5T-US](https://www.newegg.com/qnap-qsw-1105-5t-us-5-x-rj45/p/N82E16833831027)                                           | 5      | 2.5 Gbps                     | No      | Yes       | No     | $138.27     |                             |
-| TP-Link     | [no model name](https://www.aliexpress.us/item/3256804686136282.html)                                                             | 16     | 2x10 Gbps SFP+ 16 x 2.5 Gbps | No      | Yes       | No     | $499.90     | Chinese, no warranty for US |
+| TP-Link     | [Unnamed Chinese Model](https://www.aliexpress.us/item/3256804686136282.html)                                                     | 18     | 2x10 Gbps SFP+ 16 x 2.5 Gbps | No      | Yes       | No     | $499.90     | Chinese, no warranty for US |
 | Microtik    | [CRS305](https://www.amazon.com/MikroTik-CRS305-1G-4S-Gigabit-Ethernet-RouterOS/dp/B07LFKGP1L)                                    | 5      | 4x10 Gbps SFP+               | Yes     | No        | No     | $157.72     |                             |
 | Microtik    | [CRS328-24P-4S+RM](https://mikrotik.com/product/crs328_24p_4s_rm#fndtn-gallery)                                                   | 28     | 4x10 Gbps SFP+ 24x1Gbps      | Yes     | Yes       | Yes    | $490.50     | Hate Microtik UI            |
 | TP-Link     | [T1600G-28TS](https://www.amazon.com/TP-Link-Jetstream-24-Port-T1600G-28TS-TL-SG2424/dp/B016M1QTS2)                               | 24     | 4x10 Gbps SFP 24x1Gbps       | Yes     | Yes       | No     | $299.00     | Old?                        |
@@ -216,7 +216,11 @@ TODO: Link to TrueNAS forums
 
 ## Choosing a UPS (battery backup)
 
-When I lived in Manhattan, I'd experience around five power outages per year. They were all brief, but they were long enough to reboot my computer, so I bought a battery backup system.
+When I lived in Manhattan, I'd experience around five power outages per year. They were all brief, but they were long enough to power cycle my computer, so I bought a battery backup system.
+
+I've used that same battery backup for XX years. It's been a good investment. For short power outages, the battery keeps my systems online. For extended outages, the battery gives me enough time to gracefully shutdown my systems to avoid data loss.
+
+My battery backup was also one of the main sources of cables in my office. Before I got my rack, a single UPS was powering my desktop PC, two servers, a router, and a switch all in different corners of my office. I wanted a rack-mounted UPS so that all the power cabling could be limited to just the rack.
 
 ### Does it need to send alerts?
 
@@ -255,13 +259,13 @@ I originally purchased the Tripp Lite SMART1500LCD, but it was incredibly noisy.
 
 I didn't even realize battery backups could _be_ noisy. I had my previous APC battery backup for XX years, and it's completely silent except when it loses power and fails over to battery backup.
 
-The Tripp Lite UPS was instantly the loudest thing in my rack, maybe the loudest thing in my whole house. It was like a hair dryer running on low. My wife could hear it in my office from our bedroom upstairs.
+The Tripp Lite UPS was instantly the loudest thing in my rack, maybe the loudest thing in my whole house. It was like a hair dryer running on low. The UPS fans were so loud that my wife could hear my server rack a floor away in our house.
 
 I thought maybe it was defective, so I reached out to Tripp Lite and sent them a video, and they said that it was working as intended.
 
 I considered just dealing with it, but it was so painfully loud that I decided I couldn't keep it.
 
-To my surprise, I realized Newegg's return policy was "replacement only." I'd always had an easy return policy with Newegg so I didn't even think to check. Fortunately, I begged them, and they refunded me.
+To my surprise, I realized Newegg's return policy was "replacement only." I'd always had an easy return policy with Newegg so I didn't even think to check. Fortunately, I begged them, and they refunded me. Score once again for Newegg.
 
 ### Review: CyberPower CP1500PFCRM2U
 
@@ -273,9 +277,11 @@ I really like the CyberPower UPS. It has a nice display, user-friendly.
 
 ## Choosing a power strip
 
-Even though my rack has a UPS, I find it useful to have a simple power strip as well. Some of the components in my rack are non-essential and don't need to stay online during a power outage.
+Even though my rack has a UPS with many power outlets, I find it useful to have a simple power strip as well.
 
-For example, I keep a little IoT device in my rack that [monitors performance of my solar panels](/notes/debugging-vlans-tp-link/#mistake-2-forgetting-to-add-my-router-to-the-vlan). That device is not at all critical, so I'm fine if it goes offline during a power failure. In fact, I prefer it to go offline because I don't want it eating up my scarce battery life in an outage.
+Some of the components in my rack are non-essential and don't need to stay online during a power outage.
+
+For example, I keep a little IoT device in my rack that [monitors performance of my solar panels](/notes/debugging-vlans-tp-link/#mistake-2-forgetting-to-add-my-router-to-the-vlan). That device is totally extraneous, so I'm fine if it goes offline during a power failure. In fact, I prefer it to go offline because I don't want to squander my limited battery life in an outage on a solar monitor.
 
 ### Candidates
 
@@ -290,17 +296,21 @@ Power strips are, frankly, not so exciting, so I didn't shop around very much. I
 
 - Grade: C
 
-I bought this strip a few years ago for the TinyPilot office (TODO: link). I decided not to buy it again because the outlets are too close together. A lot of the things I plug in at the office are bricks, so they cover two outlets.
+I bought this power strip a few years ago for the TinyPilot office (TODO: link). My main issue is that the outlets are too close together. A lot of the things I plug in at the office are bricks, so they cover two outlets.
 
 ### Review: Tripp Lite RS-1215-RA
 
 - Grade: B+
 
-More important to have more rear outlets. I occasionally use the front outlets, but I've only ever used two at a time at maximum. If I were doing it again, I'd choose a strip that has more rear outlets and fewer front outlets.
+This power strip has worked well. The rear outlets are spaced apart so that brick-style power plugs still only take up one outlet.
+
+The front outlets are all unused, but I find them useful occasionally if I have a device I want to test for a few hours, and I don't want to route it to the UPS or rear of the rack.
 
 ## Choosing a Raspberry Pi rack mount
 
-I do a lot of professional and hobby projects with Raspberry Pis. I thought it would be fun to have a Raspberry Pi rack in my server. I didn't choose a PoE switch, but I had a 5-port PoE switch from my previous setup that I could chain together.
+I do a lot of professional and hobby projects with the Raspberry Pi, a small, inexpensive single-board computer.
+
+I'd seen rack mounts for the Raspberry Pi, so I thought it would be fun to add one to my rack.
 
 ### Review: UCTRONICS Ultimate Rack with PoE Functionality
 
@@ -308,19 +318,15 @@ I do a lot of professional and hobby projects with Raspberry Pis. I thought it w
 
 - Grade: C+
 
-It's fine. PoE HATs for a Raspberry Pi 4 are generally around $XX, so the fact that you're getting four included means there's not a ton of money left over.
+The rack mount is okay not great. It's a decent value for the price. PoE HATs for a Raspberry Pi 4 are generally around $XX, so that alone is like XX% of the price.
 
-The pieces don't fit together that well. There are gaps around the HDMI ports. The HDMI ports are also secured poorly, so they strain and bend when you actually plug in an HDMI cable, so I worry they're going to snap off.
+The craftsmanship on the rack mount itself is mediocre. The pieces don't fit together that well. There are substantial gaps around the HDMI ports.
 
-PoE fan is super loud, but you can turn it off
+The HDMI ports are also secured poorly to the mount. When I plug in an HDMI cable, the connector bends and strains. I worry they're going to snap off one day.
 
-The instructions were pretty bad. Step one is to screw in the OLED. Okay, that's fine.
+PoE tends to generate a lot of heat, so it's good that these come with an integrated fan, but the fan is loud. It's too loud for me, and I've disabled them on each of my Pis. That works fine as long as I don't do anything CPU-intensive on the Pi.
 
-Step two is to screw in the power button. Sure, easy peasy.
-
-TODO: Photo
-
-Step three is: okay, put together five other things!
+Lastly, the instructions are terrible. Step one is to screw in the OLED. Okay, that's fine. Step two is to screw in the power button. Sure, easy peasy. Step three is: okay, put together five other things simultaneously!
 
 TODO: Photo
 
@@ -342,33 +348,51 @@ It's about two 2U shelves of stuff, though I could theoretically cram it into on
 
 I originally purchased the Star-Tech shelves because Star-Tech has such a good reputation in the server world.
 
-When I installed them into my rack, I thought I was making a mistake. They have a bottom lip that bends downward into the next rack slot. So it either means that you have to allocate 3U to each of your 2U shelves or you have to shift everything down by 0.5U. Or maybe you conveniently have something in your rack that takes up 0.8 U, but that would be weird.
+When I installed them into my rack, I thought I must be misunderstanding how they work. They have a bottom lip that bends downward into the next rack slot.
 
-It was so bizarre that I thought I must be doing something wrong.
+This downward lip forces you to either allocate 3U to each of your 2U shelves or you have to shift everything down by 0.5U.
 
 I couldn't even figure out a purpose for the lip. It would make sense if it curved up because that would protect items on the shelf from slipping off, but why bend down? It didn't look like it provided any structural support to the shelf either.
 
-I scoured reviews of this shelf to see if anyone mentioned it, and people did, but nobody seemed to mind that much. They were just like, "Oh, yeah, it extends to the bottom a bit." Huh? Why would anyone accept that?
+I scoured reviews of this shelf to see if anyone else was talking about this bizarre design choice. When other reviewers mentioned it, they didn't seem to mind that much. They were just like, "Oh, yeah, it extends past the bottom a bit." Huh? Why would anyone accept that?
+
+I'm still wondering if I'm crazy or there's something I'm missing about why Star-Tech's downward-facing lips are a good idea, but I promptly returned mine and found alternative rack shelves on Amazon.
 
 ### Review: XX shelves
 
 - Grade: A
 
-I found these no-name shelves on Amazon, and they worked great. They have a lip, but it bends _upward_ to be _useful_.
+I found these no-name shelves on Amazon, and they worked great.
 
-I like these shelves. They were easy to install, they're low in price, and they keep themselves within the 2U space they promise.
+These shelves have a lip, but it bends upward, which is actually useful. Bending upward means that the lip acts as a guard to prevent components from sliding off the rack.
+
+Other than that, they were easy to install, they're low in price, and they keep themselves within the 2U space they promise.
 
 ## Choosing a patch panel
 
 ### What the heck is a patch panel?
 
-From reading a lot of homelab blog posts, I noticed a lot of other homelabbers building a patch panel.
+From reading a lot of homelab blog posts, I noticed a lot of other homelabbers integrating a patch panel into their racks.
 
 When it came time to finally build my server rack, I finally had to ask the question, "What the heck is a patch panel?"
 
 Shopping around for patch panels made me even more confused. It's just a row of empty spaces? Huh? What's the point of that?
 
-From continued reading, it seems like the point of patch panels is just to keep things tidy. If you just allowed every node in your server rack to connect its network cable to the networking switch, then it would be a mess of wires from all different directions. The patch panel hides this mayhem in the back of your rack, and then the front side looks neat and tidy. And then you label everything.
+The point of a patch panel didn't truly click for me until I built the rack. In short, the patch panel keeps the clutter of your networking cables in the rear of your rack rather than in
+
+For example, without a patch panel, connecting my managed switch to my PoE switch would look like this:
+
+TODO: Photo
+
+Instead, the patch panel lets me route networking cables into the rear of my rack.
+
+TODO: Photo
+
+{{<notice type="info">}}
+**Tip**: I recommend having a patch panel immediately adjacent to every switch in your rack.
+{{</notice>}}
+
+I still haven't worked up the will power to label all my patch panels.
 
 ### Candidates
 
@@ -383,6 +407,20 @@ From continued reading, it seems like the point of patch panels is just to keep 
 | Short Ethernet cable                                                                                                        | [https://www.amazon.com/GearIT-24-Pack-Ethernet-Cable-Snagless/dp/B00XIFJSEI/ref=sr_1_3?crid=225JPQXBCDGMB&keywords=rj45+patch+cable+6%22&qid=1685499709&s=industrial&sprefix=rj45+patch+cable+6+%2Cindustrial%2C100&sr=1-3](https://www.amazon.com/GearIT-24-Pack-Ethernet-Cable-Snagless/dp/B00XIFJSEI/ref=sr_1_3?crid=225JPQXBCDGMB&keywords=rj45+patch+cable+6%22&qid=1685499709&s=industrial&sprefix=rj45+patch+cable+6+%2Cindustrial%2C100&sr=1-3) |
 |                                                                                                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | Seems like you can't get DAC keystone, so you have to convert to either RJ45 or Fiber. Fiber converters seem to be cheaper. |                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+
+### Review: New York Patch Panel
+
+- Grade: B
+
+It's fine. One of the reasons I chose it was that I saw in reviews it has a rear bar that helps support Ethernet cables. In my rack, the rear bar doesn't do anything. It's too close to the Ethernet ports to provide support, and they don't seem to need it anyway.
+
+My complaint is with the labels. It's slips of paper under plastic, like a landline phone would have for speed dial in the 90s. That's too permanent. What if I change
+
+### Review: 16-port patch panel
+
+- Grade: B
+
+I like that the labels are little whiteboard panels. I had whiteboard markers on hand, but they were too big to write in such tiny spaces. I bought ultra fine tip whiteboard markers and...
 
 ## Choosing cage nuts
 
@@ -574,3 +612,7 @@ Actually, the correct way is from the back, like this:
 {{<img src="key-right.webp" max-width="400px">}}
 {{<img src="key-back-right.webp" max-width="400px">}}
 {{</gallery>}}
+
+I had them like this for three months before I realized that was incorrect too. They go in from the back and click in. You'll hear a little click when they slot into the correct position. The front face should be roughly flush with the front of the patch panel.
+
+TODO: Photos
