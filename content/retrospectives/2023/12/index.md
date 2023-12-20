@@ -54,16 +54,14 @@ My new plan is to wait until we're close to moving out and advertise a time when
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric                   | October 2023   | November 2023    | Change                                           |
-| ------------------------ | -------------- | ---------------- | ------------------------------------------------ |
-| Unique Visitors          | 8,700          | 6,400            | <font color="red">-2,300 (-26%)</font>           |
-| Sales Revenue            | $98,896.81     | $84,055.05       | <font color="red">-$14,841.76 (-15%)</font>      |
-| Enterprise Subscriptions | $290.70        | $290.70          | 0                                                |
-| Royalties                | $2,609.84      | $2,824.46        | <font color="green">+$214.62 (+8%)</font>        |
-| Total Revenue            | $101,797.35    | $87,170.21       | <font color="red">-$14,627.14 (-14%)</font>      |
-| **Profit**               | **$69,280.58** | **-$6,467.98**\* | **<font color="red">-$75,748.56 (-109%)</font>** |
-
-\* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
+| Metric                   | October 2023   | November 2023  | Change                                           |
+| ------------------------ | -------------- | -------------- | ------------------------------------------------ |
+| Unique Visitors          | 8,700          | 6,400          | <font color="red">-2,300 (-26%)</font>           |
+| Sales Revenue            | $98,896.81     | $84,055.05     | <font color="red">-$14,841.76 (-15%)</font>      |
+| Enterprise Subscriptions | $290.70        | $290.70        | 0                                                |
+| Royalties                | $2,609.84      | $2,824.46      | <font color="green">+$214.62 (+8%)</font>        |
+| Total Revenue            | $101,797.35    | $87,170.21     | <font color="red">-$14,627.14 (-14%)</font>      |
+| **Profit**               | **$69,280.58** | **-$5,407.96** | **<font color="red">-$74,688.54 (-inf%)</font>** |
 
 Profit looks scary, but it's just because transitioning to a contract manufacturer has made my expenses more "bursty." In October, I didn't have any bills for raw materials, but in November, I had $57k in raw materials expenses. I should really start reporting these as cost of goods sold, but for now, I'm just reporting the simple cash delta.
 

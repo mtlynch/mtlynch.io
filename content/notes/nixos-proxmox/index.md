@@ -119,7 +119,8 @@ curl \
 Apply the new configuration by running the following commands:
 
 ```bash
-sudo nixos-rebuild boot && \
+nix-channel --update && \
+  sudo nixos-rebuild boot && \
   echo "install complete, rebooting..." && \
   sudo poweroff --reboot
 ```
