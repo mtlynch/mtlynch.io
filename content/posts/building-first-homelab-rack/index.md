@@ -49,35 +49,43 @@ They don't explain their thought process or why they rejected alternatives. They
 
 ## Choosing a rack
 
-Obviously, if you're going to build a server rack, it seems like the first thing you'd decide is which rack to buy.
+Obviously, if you're going to build a server rack, it seems like the first thing you'd choose is the rack itself.
 
 It's not that simple.
 
-Choosing a rack is an iterative process. First, you need to understand what the options are, then you need to figure out what you'd like to put in the rack now and in the future, then you need to buy.
+Choosing a rack is an iterative process. You can't decide what type of rack to buy until you know what will go into your rack. But knowing what type of racks are available also informs what components make sense to buy.
+
+I found it helpful to begin by browsing racks to get a sense of pricing, features, and size options. After that, I made a rough list of components I wanted, counted up how much space they'd take up, and then returned to my rack candidates to decide which rack fit my needs.
 
 ### How many rack units?
 
-Racks have capacity measured in rack units (RUs). A rack unit is XX ".
+Racks have capacity measured in rack units (RUs). A rack unit is XX ". Most network switches are 1U, battery backups are usually 2U, servers are typically 2U.
 
-The taller the rack, the more vertical space it takes up.
+You don't want to buy too short a rack and run out of room for your components, but you also don't want a rack that's too tall and takes up a lot of space for no reason.
+
+As you pick components, add up how many rack units they'll take up, then add some buffer depending on how much you might want to expand your rack in the next few years.
 
 ### How deep does it need to be?
 
-Depth also has a huge impact on how much space it takes up. I have a relatively small office. I didn't want the rack server to dominate the space.
+Server racks vary in depth. Most server racks are designed for enterprise-grade servers, which are up to XX" long.
+
+I have a Dell XX servers at my office, and it's a huge hassle. It's XX" long and XX lbs. It was a pain to mount, and it will be a pain when I need to sell it. I decided that all the components in this rack would be small and require only front mounts.
+
+I have a relatively small office, and I didn't want the rack server to dominate the space.
 
 I looked at small rack-mountable chassis for servers, and the smallest ones were about XX" in depth, so I set that as my minimum.
 
 ### Does it need four posts or two?
 
-Some racks are smaller
+Racks come in two different styles: two-post or four-post. On four-post racks, you can mount components to both the front and back.
 
-If you buy data center style servers, they're XX" to XX" long, so you definitely need to secure them from the front and back.
-
-I have one of those servers at my office, and it's a huge hassle. It's very heavy and hard to move around. I decided that all the components in this rack would be small and require only front mounts.
+If you plan to buy long, heavy servers, you definitely need to secure them from the front and back. If you want to minimize space, a two-post rack might be sufficient.
 
 Still, four posts feels sturdier, so I figured why not.
 
 ### Does it need wheels?
+
+Some server racks have wheels to allow you to move the entire structure around.
 
 For me, wheels were a critical feature. I wanted to be able to clean behind the rack, so having wheels made it easy to move around for cleaning.
 
@@ -99,15 +107,21 @@ The rack came with a grounding cable, but I can't figure out how to use it.
 
 ## Choosing a network switch
 
-The hardest choice for me in building my server rack was picking a network switch. Network switches get fairly pricey, so I didn't want to spend $300 on something only to have to supplement it with another component or replace it later on. And rack space is precious, so I don't want to buy a switch and then have to buy another one in a year or two and totally rearrange my rack.
+Choosing a networking switch ended up being the hardest decision of my whole rack.
+
+Network switches get fairly pricey, so I didn't want to spend $300 on something only to have to supplement it with another component or replace it later on. And rack space is precious, so I don't want to buy a switch and then have to buy another one in a year or two and totally rearrange my rack.
 
 ### What speed do you need?
 
-Every rack-mountable switch you can find on the market is going to support gigabit Ethernet (1 Gbps bandwidth). But there's also 2.5 Gbps, 10 Gbps, and even higher.
+Unless you're buying something very exotic, the speeds available for a rack-mounted switch are:
 
-For as long as I can remember, I've just had 1 Gbps Ethernet speed, and that's been fine. I do most of my work online, so the bottleneck is almost always my ISP rather than my home network.
+- 1 Gbps
+- 2.5 Gbps
+- 10 Gbps
 
-But lately, I've been pushing the limits on my home storage server, and I've thought it would be nice to bump up the speeds.
+For as long as I can remember, I've had 1 Gbps Ethernet speed in my house, and that's been fine. I do most of my work online, so the bottleneck is almost always my ISP rather than my home network.
+
+Lately, I've been finding that the bottleneck on my home storage server is my 1 Gbps network link, so I've been interested in a network upgrade.
 
 The next steps up are either 2.5 Gbps or 10 Gbps. Given that I've been fairly satisfied with 1 Gbps, I thought 10 Gbps would probably be too big a jump, so I might as well take a smaller step to 2.5 Gbps.
 
@@ -131,15 +145,17 @@ There are two kinds of network switches you can purchase: managed or unmanaged.
 
 Personally, I wanted a plain old unmanaged switch. I've never used a managed switch, and I didn't expect to have a use for it. I have an opnsense firewall with four Ethernet ports, and I could have been using that device at any point to create VLANs, and I never did. So why would I start now?
 
-But I actually couldn't find any unmanaged network switches that met my criteria, so I went with a managed switch. I planned to just leave all the basic options and not configure VLANs, but once I got it, I found that it's pretty fun to configure VLANs, and now I want to configure VLANs for everything.
+It turns out, none of the network switches that met my criteria were unmanaged, so I went with a managed switch.
+
+I planned to accept all the default settings and not configure VLANs. Once I got my managed switch, I found that it's pretty fun to configure VLANs. Now I want to configure VLANs for everything!
 
 ### PoE or standard Ethernet?
 
-The other major choice in networking switchies is whether you want power over Ethernet (PoE) or just plain old Ethernet.
-
 Certain low-power devices can run entirely from power they draw from the Ethernet cable. For example, my home WiFi access point, the Ruckus RXX (TODO: link) supports PoE, so my access point conveniently needs only a single cable for both power and network connectivity. And I have PoE HATs for my Raspberry Pis, which enables them to run without a dedicated USB-C power cable.
 
-So if you have PoE devices or you may purchase some in the future, you may want a PoE switch. And then the other question is how many PoE devices do you need to support? Most PoE switches only support PoE on a subset of their ports (TODO: is this true), so make sure your switch has enough PoE ports for your devices now and in to the future.
+For you to power a PoE-capable device over Ethernet, you need a switch that supports PoE. If you have PoE devices or you may purchase some in the future, you may want a PoE switch.
+
+If you want a PoE swtich, the next question is how many PoE devices do you need to support? Most PoE switches only support PoE on a subset of their ports (TODO: is this true?), so make sure your switch has enough PoE ports for your devices now and in to the future.
 
 The downside of PoE switches is that they consume more power and they're more expensive (TODO: check). If you buy a PoE switch but have no PoE devices, you're wasting money and power on features you can't use.
 
@@ -153,7 +169,7 @@ Obviously, you need at least as many ports as you have wired networking devices.
 
 The harder question is figuring out how many extra ports to buy beyond your current needs. This is going to vary a lot depending on your needs and your plans for growing your homelab in the next few years.
 
-You can buy additional switches later, but if you're buying an expensive switch, you want it to cover you for the next few years.
+You can buy additional switches later, but if you're buying an expensive switch, you'll want it to cover you for the next few years.
 
 I set my minimum to be 2x my current networking hosts. I currently have eight wired networking devices, so I looked for switches with at least 16 ports.
 
@@ -186,45 +202,81 @@ Took forever to [get VLANs right](/notes/debugging-vlans-tp-link/). I've seen ho
 
 I regret not looking around more for a managed switch that supported PoE without a noise problem. My ideal would be to have a managed switch where at least eight of the ports have PoE without sacrificing fanless operation.
 
+### Review: Netgear XX Unmanaged PoE Switch
+
+I only have a handful of PoE devices, so I originally planned to power them with a small 5-port PoE switch I'd keep on a shelf. But then I ended up getting rid of the Netgear PoE switch at my office, and I adopted it into my home server rack.
+
+It's a bit silly that I now have 2U of network switches and 2U of patch panels, and I'm only using 11 of the 44 ports, but I guess better to have too much available than too little.
+
 ## Choosing 10G NICs
 
-If you choose a 10G switch, your work isn't over. Because now you have to buy 10G networking adapters for all the systems you want to enjoy 10G speeds.
+If you choose a 10G switch, your work isn't over. In order to achieve 10 Gbps speeds, you need a 10G NIC for each device you want to enjoy the 10G speed. A regular 1 Gbps NIC will still work with a 10G switch, but it will be limited to 1 Gbps Ethernet speeds.
 
-Michael Stapelberg is an excellent blogger, and he's my idol in terms of maximizing network speed in his house. He was homelab blogger I saw who explained how he upgraded his entire house to 10G and got a 10G link to the Internet too.
+Michael Stapelberg is an excellent blogger, and he's my idol in terms of maximizing home networking speeds. He was the first homelab blogger I saw who explained how he upgraded his entire house to 10G, and now he's upgraded to 25G.
 
 Michael Stapelberg uses Mellanox (TODO: link), so I figured that it would be good enough for me.
 
-### Installing a 10G NIC on my Windows Desktop
+### Installing a XX NIC on my Windows Desktop
 
-I wasn't able to get the NIC working in Windows. The activity lights didn't flash at all, and Windows didn't recognize anything in the PCI slot at all. In searching for solutions, I found someone mention that switching the Mellanox NIC to another PCI slot on their motherboard solved the problem. Dubious, I tried it, and to my surprise, that fixed the issue. Windows immediately recognized the NIC and got a network connection.
+I bought a XX NIC from eBay and installed it in my Windows desktop, but it didn't work at all. The activity lights didn't flash at all, and Windows didn't recognize anything in the PCI slot at all.
+
+In searching for solutions, I found someone mention that switching the Mellanox NIC to another PCI slot on their motherboard solved the problem. I was skeptical, but I tried it, and to my surprise, that fixed the issue. Windows immediately recognized the NIC and got a network connection.
 
 The downside is that it now adds about five seconds to my boot because my BIOS hands control over to my Mellanox NIC as a boot device. I've tried tinkering with BIOS settings, but I can't find a way to skip it.
 
 ### Installing a 10G NIC on my TrueNAS server
 
-I tried installing the same Mellanox NIC on my TrueNAS storage server, and it didn't work. TrueNAS could see the Mellanox NIC, but I couldn't get a network connection.
+I tried installing a XX NIC on my TrueNAS storage server, but it didn't work. TrueNAS could see the Mellanox NIC, but I couldn't get a network connection.
 
-I tried swapping it back to my Windows desktop, updating the firmware from there, and swapping it back, but no luck.
+To see if my new NIC was a dud, I borrowed the working NIC from my Windows machine and tried it on TrueNAS, but I got the same results.
+
+I tried swapping the NIC back to my Windows desktop. Windows recognized it, so I updated the firmware and swapped it back to my TrueNAS server, but it still couldn't get a network connection.
 
 I bought another 10G NIC from eBay, the Chelsio 520. The Chelsio brand is one of the most common for TrueNAS servers, and Serve the Home's buyer's guide listed it as a recommended option, so I knew from the software side that TrueNAS should support it.
 
 https://www.servethehome.com/buyers-guides/top-hardware-components-for-truenas-freenas-nas-servers/top-picks-freenas-nics-networking/
 
-No dice, unfortunately. I couldn't find "Chelsio" in the dmesg output. I did notice it was incredibly hot to the touch, so I thought maybe I got a defective NIC that was overheating. I bought yet another Chelsio NIC, but I got the same results, and it was similarly hot within a few seconds of my server booting.
+No dice, unfortunately. I couldn't find "Chelsio" in the dmesg output. I did notice it was incredibly hot to the touch, so I thought maybe I got a defective NIC that was overheating.
 
 TODO: Link to TrueNAS forums
 
+So, I bought yet another Chelsio NIC (the fourth 10G NIC I purchased, if you're keeping score). I got the same results, and it was similarly hot within a few seconds of my server booting.
+
+My best guess is that the issue is motherboard incompatibility. My TrueNAS server uses a consumer-grade XX motherboard, so it may not support these Enterprise-oriented 10G NICs. I'm planning to build a new server in the next few months, so I'll try a fancier motherboard to see if that lets me use one of the three 10G NICs I have lying around.
+
+## Choosing 10G networking cables
+
+Another surprise choice.
+
+The 10G ports on my switch are XX, so I either needed to convert them to Ethernet or fiber.
+
+TODO
+
+| Component             | Link                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Cat6 Coupler          | [https://www.amazon.com/dp/B075ZPGV1H/ref=cm_sw_r_apan_glt_i_PRBW9D3G2M39V7DD42QQ?\_encoding=UTF8&psc=1](https://www.amazon.com/dp/B075ZPGV1H/ref=cm_sw_r_apan_glt_i_PRBW9D3G2M39V7DD42QQ?_encoding=UTF8&psc=1)                                                                                                                                                                                                                                          |
+| Fiber coupler         | [https://www.amazon.com/gp/product/B01B5AG0TI?redirectFromSmile=1](https://www.amazon.com/gp/product/B01B5AG0TI?redirectFromSmile=1)                                                                                                                                                                                                                                                                                                                     |
+| SFP+ to LC Fiber      | [https://www.amazon.com/Cable-Matters-10GBASE-LR-Transceiver-Supermicro/dp/B07TTKHG6T](https://www.amazon.com/Cable-Matters-10GBASE-LR-Transceiver-Supermicro/dp/B07TTKHG6T)                                                                                                                                                                                                                                                                             |
+| LC to LC Fiber cables |                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Short Ethernet cable  | [https://www.amazon.com/GearIT-24-Pack-Ethernet-Cable-Snagless/dp/B00XIFJSEI/ref=sr_1_3?crid=225JPQXBCDGMB&keywords=rj45+patch+cable+6%22&qid=1685499709&s=industrial&sprefix=rj45+patch+cable+6+%2Cindustrial%2C100&sr=1-3](https://www.amazon.com/GearIT-24-Pack-Ethernet-Cable-Snagless/dp/B00XIFJSEI/ref=sr_1_3?crid=225JPQXBCDGMB&keywords=rj45+patch+cable+6%22&qid=1685499709&s=industrial&sprefix=rj45+patch+cable+6+%2Cindustrial%2C100&sr=1-3) |
+
+Note: Seems like you can't get DAC keystone, so you have to convert to either RJ45 or Fiber. Fiber converters seem to be cheaper.
+
 ## Choosing a UPS (battery backup)
 
-When I lived in Manhattan, I'd experience around five power outages per year. They were all brief, but they were long enough to power cycle my computer, so I bought a battery backup system.
+When I lived in Manhattan, I'd experience around five power outages per year. They were all brief, but they were long enough to power cycle my computer.
 
-I've used that same battery backup for XX years. It's been a good investment. For short power outages, the battery keeps my systems online. For extended outages, the battery gives me enough time to gracefully shutdown my systems to avoid data loss.
+To avoid surprise shutdowns, I bought a battery backup system, also known as an uninterruptible power supply (UPS). It was an APC XX, and I've used that same battery backup for XX years.
+
+I've been happy with the APC. It's been a good investment. For short power outages, the battery keeps my systems online. For extended outages, the battery gives me enough time to gracefully shutdown my systems to avoid data loss.
+
+The downside of the battery backup is that it's responsible for a lot of cable messiness in my office. My desktop, servers, and router were all in different corners of my office, so big, unsightly power cables had to run all around my office to connect those components to the UPS.
 
 My battery backup was also one of the main sources of cables in my office. Before I got my rack, a single UPS was powering my desktop PC, two servers, a router, and a switch all in different corners of my office. I wanted a rack-mounted UPS so that all the power cabling could be limited to just the rack.
 
 ### Does it need to send alerts?
 
-After I set up my rack, I was talking to a co-worker who mentioned that most modern UPS systems can send alerts to devices on the local network to tell them to shut down gracefully.
+After I set up my rack, a co-worker mentioned that most modern UPS systems can send alerts to devices on the local network to tell them to shut down gracefully.
 
 I actually never looked into that and didn't set that up.
 
@@ -232,17 +284,17 @@ TODO: Does my UPS support it?
 
 In my experience over the past five years, extended power outages are rare. There have only been three that lasted longer a minute, and in all but one case, I was at home and able to just walk over to my desk and manually shut down my machines.
 
-For me personally, automating shutdowns from my UPS isn't worth the trouble, but you might choose differently if your systems are more sensitive to hard power cuts or if you're in an area where power outages are more frequent.
+For me, automating shutdowns from my UPS isn't worth the trouble, but you might choose differently if your systems are more sensitive to hard power cuts or if you're in an area where power outages are more frequent.
 
 ### How much time do you need for a graceful shutdown?
 
-If your power outage lasts longer than the UPS' battery, then you'll need to gracefully shut down all your systems to avoid losing unsaved data and to limit the risk of filesystem corruption.
+For extended power outages, you'll need enough time to shut down your systems gracefully before they exhaust your UPS' battery. The amount of time you need depends on the size of your UPS' battery and the power draw of the systems attached to it.
 
-I theoretically could have used my Kill-A-Watt to measure the wattage of each of my devices during normal operation and then used that to find a battery, but I was too lazy for that level of rigor. Instead, I estimated based on my previous UPS.
+I theoretically could have used my Kill-A-Watt to measure the wattage of each of my devices during normal operation and then used that to find a battery. I was too lazy for that level of rigor, so I estimated based on metrics from my previous UPS.
 
-My previous UPS had a XX battery and it reported 12 minutes of battery life while powering a desktop computer, a VM server, a storage server, a firewall, and a networking switch.
+My APC UPS had a XX battery, and it reported 12 minutes of battery life while powering a desktop computer, a VM server, a storage server, a firewall, and a networking switch.
 
-The UPS I ended up buying has a XX battery, and it reports 30 minutes of battery life while powering a VM server, a storage server, a firewall, and a networking switch (my old UPS now powers my desktop exclusively).
+The UPS I ended up buying has a XX battery. It reports 30 minutes of battery life while powering a VM server, a storage server, a firewall, and a networking switch. The total power draw of all these systems in a typical workload is XX to XX. My old UPS now powers my desktop exclusively, so each UPS has a smaller load to support.
 
 ### Candidates
 
@@ -255,25 +307,31 @@ The UPS I ended up buying has a XX battery, and it reports 30 minutes of battery
 
 ### Review: Tripp Lite SMART1500LCD
 
+- Grade: D
+
 I originally purchased the Tripp Lite SMART1500LCD, but it was incredibly noisy.
 
-I didn't even realize battery backups could _be_ noisy. I had my previous APC battery backup for XX years, and it's completely silent except when it loses power and fails over to battery backup.
+I didn't even realize battery backups could _be_ noisy. My APC UPS was completely silent except when it loses power and fails over to battery backup.
 
 The Tripp Lite UPS was instantly the loudest thing in my rack, maybe the loudest thing in my whole house. It was like a hair dryer running on low. The UPS fans were so loud that my wife could hear my server rack a floor away in our house.
 
-I thought maybe it was defective, so I reached out to Tripp Lite and sent them a video, and they said that it was working as intended.
+Did I just get a defective unit? Surely, a UPS can't be designed to be this loud all the time, right?
 
-I considered just dealing with it, but it was so painfully loud that I decided I couldn't keep it.
+I reached out to Tripp Lite customer support with a video of the UPS' noise level. They said that it was working as intended, and it's supposed to be that loud.
+
+I tried to accept the noise for a few days, but it was so distracting that I gave up after day two.
 
 To my surprise, I realized Newegg's return policy was "replacement only." I'd always had an easy return policy with Newegg so I didn't even think to check. Fortunately, I begged them, and they refunded me. Score once again for Newegg.
 
 ### Review: CyberPower CP1500PFCRM2U
 
+- Grade: A
+
 When I realized the Tripp Lite UPS was a no-go, I ordered the other UPS I considered: the CyberPower CP1500PFCRM2U.
 
-The first thing I did was turn it on and listen for noise. Nothing! It was completely silent. It makes a noise when there's a power outage and it cuts over to battery, but that's fine.
+The first thing I did was turn it on and listen for noise. Nothing! It was completely silent. It generates noise when there's a power cut as it fails over to battery, but that's tolerable.
 
-I really like the CyberPower UPS. It has a nice display, user-friendly.
+The CyberPower UPS has performed great. I love that it's silent. The LCD is user-friendly and has useful metrics about power consumption. You can also turns the display off to have fewer flashing lights on your rack. It reports XX minutes of battery life when I cut power, which is plenty of time for me to shut my systems down.
 
 ## Choosing a power strip
 
@@ -305,30 +363,6 @@ I bought this power strip a few years ago for the TinyPilot office (TODO: link).
 This power strip has worked well. The rear outlets are spaced apart so that brick-style power plugs still only take up one outlet.
 
 The front outlets are all unused, but I find them useful occasionally if I have a device I want to test for a few hours, and I don't want to route it to the UPS or rear of the rack.
-
-## Choosing a Raspberry Pi rack mount
-
-I do a lot of professional and hobby projects with the Raspberry Pi, a small, inexpensive single-board computer.
-
-I'd seen rack mounts for the Raspberry Pi, so I thought it would be fun to add one to my rack.
-
-### Review: UCTRONICS Ultimate Rack with PoE Functionality
-
-[UCTRONICS Ultimate Rack with PoE Functionality](https://www.uctronics.com/raspberry-pi/1u-rack-mount/raspberry-pi-4b-rack-mount-19-inch-1u-with-poe-and-oled-screen.html) - $189.99
-
-- Grade: C+
-
-The rack mount is okay not great. It's a decent value for the price. PoE HATs for a Raspberry Pi 4 are generally around $XX, so that alone is like XX% of the price.
-
-The craftsmanship on the rack mount itself is mediocre. The pieces don't fit together that well. There are substantial gaps around the HDMI ports.
-
-The HDMI ports are also secured poorly to the mount. When I plug in an HDMI cable, the connector bends and strains. I worry they're going to snap off one day.
-
-PoE tends to generate a lot of heat, so it's good that these come with an integrated fan, but the fan is loud. It's too loud for me, and I've disabled them on each of my Pis. That works fine as long as I don't do anything CPU-intensive on the Pi.
-
-Lastly, the instructions are terrible. Step one is to screw in the OLED. Okay, that's fine. Step two is to screw in the power button. Sure, easy peasy. Step three is: okay, put together five other things simultaneously!
-
-TODO: Photo
 
 ## Choosing rack shelves
 
@@ -392,21 +426,12 @@ TODO: Photo
 **Tip**: I recommend having a patch panel immediately adjacent to every switch in your rack.
 {{</notice>}}
 
-I still haven't worked up the will power to label all my patch panels.
-
 ### Candidates
 
 ###
 
-| Patch Panel                                                                                                                 | [https://www.amazon.com/dp/B08LLDCRCV/ref=cm_sw_r_apan_glt_i_2AEKK799CAJQ591DCSWS?\_encoding=UTF8&th=1](https://www.amazon.com/dp/B08LLDCRCV/ref=cm_sw_r_apan_glt_i_2AEKK799CAJQ591DCSWS?_encoding=UTF8&th=1)                                                                                                                                                                                                                                            |
-| --------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Cat6 Coupler                                                                                                                | [https://www.amazon.com/dp/B075ZPGV1H/ref=cm_sw_r_apan_glt_i_PRBW9D3G2M39V7DD42QQ?\_encoding=UTF8&psc=1](https://www.amazon.com/dp/B075ZPGV1H/ref=cm_sw_r_apan_glt_i_PRBW9D3G2M39V7DD42QQ?_encoding=UTF8&psc=1)                                                                                                                                                                                                                                          |
-| Fiber coupler                                                                                                               | [https://www.amazon.com/gp/product/B01B5AG0TI?redirectFromSmile=1](https://www.amazon.com/gp/product/B01B5AG0TI?redirectFromSmile=1)                                                                                                                                                                                                                                                                                                                     |
-| SFP+ to LC Fiber                                                                                                            | [https://www.amazon.com/Cable-Matters-10GBASE-LR-Transceiver-Supermicro/dp/B07TTKHG6T](https://www.amazon.com/Cable-Matters-10GBASE-LR-Transceiver-Supermicro/dp/B07TTKHG6T)                                                                                                                                                                                                                                                                             |
-| LC to LC Fiber cables                                                                                                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Short Ethernet cable                                                                                                        | [https://www.amazon.com/GearIT-24-Pack-Ethernet-Cable-Snagless/dp/B00XIFJSEI/ref=sr_1_3?crid=225JPQXBCDGMB&keywords=rj45+patch+cable+6%22&qid=1685499709&s=industrial&sprefix=rj45+patch+cable+6+%2Cindustrial%2C100&sr=1-3](https://www.amazon.com/GearIT-24-Pack-Ethernet-Cable-Snagless/dp/B00XIFJSEI/ref=sr_1_3?crid=225JPQXBCDGMB&keywords=rj45+patch+cable+6%22&qid=1685499709&s=industrial&sprefix=rj45+patch+cable+6+%2Cindustrial%2C100&sr=1-3) |
-|                                                                                                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Seems like you can't get DAC keystone, so you have to convert to either RJ45 or Fiber. Fiber converters seem to be cheaper. |                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Patch Panel | [https://www.amazon.com/dp/B08LLDCRCV/ref=cm_sw_r_apan_glt_i_2AEKK799CAJQ591DCSWS?\_encoding=UTF8&th=1](https://www.amazon.com/dp/B08LLDCRCV/ref=cm_sw_r_apan_glt_i_2AEKK799CAJQ591DCSWS?_encoding=UTF8&th=1) |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ### Review: New York Patch Panel
 
@@ -421,6 +446,30 @@ My complaint is with the labels. It's slips of paper under plastic, like a landl
 - Grade: B
 
 I like that the labels are little whiteboard panels. I had whiteboard markers on hand, but they were too big to write in such tiny spaces. I bought ultra fine tip whiteboard markers and...
+
+## Choosing a Raspberry Pi rack mount
+
+I do a lot of professional and hobby projects with the Raspberry Pi, a small, inexpensive single-board computer.
+
+I'd seen rack mounts for the Raspberry Pi, so I thought it would be fun to add one to my rack.
+
+### Review: UCTRONICS Ultimate Rack with PoE Functionality
+
+[UCTRONICS Ultimate Rack with PoE Functionality](https://www.uctronics.com/raspberry-pi/1u-rack-mount/raspberry-pi-4b-rack-mount-19-inch-1u-with-poe-and-oled-screen.html) - $189.99
+
+- Grade: C+
+
+The rack mount is okay not great. It's a decent value for the price. PoE HATs for a Raspberry Pi 4 are generally around $XX, so that alone is like XX% of the price.
+
+The craftsmanship on the rack mount itself is mediocre. The pieces don't fit together that well. There are substantial gaps around the HDMI ports.
+
+The HDMI ports are also secured poorly to the mount. When I plug in an HDMI cable, the connector bends and strains. I worry they're going to snap off one day.
+
+PoE tends to generate a lot of heat, so it's good that these come with an integrated fan, but the fan is loud. It's too loud for me, and I've disabled them on each of my Pis. That works fine as long as I don't do anything CPU-intensive on the Pi.
+
+Lastly, the instructions are terrible. Step one is to screw in the OLED. Okay, that's fine. Step two is to screw in the power button. Sure, easy peasy. Step three is: okay, put together five other things simultaneously!
+
+TODO: Photo
 
 ## Choosing cage nuts
 
@@ -540,9 +589,9 @@ With everything now physically adjacent, it's easy for me to quickly plug TinyPi
 
 ## Next steps in my rack
 
-You may have noticed that my server rack is missing one common feature: servers.
+You may have noticed that my server rack is conspicuously missing one common component: a server.
 
-I still have my VM server and storage server that I rebuilty in the last few years. I'm planning to migrate them to rack-mounted chassis the next time I do some upgrades, but I've punted that task since building the rack was a significant enough project on its own.
+I still have my VM server and storage server that I rebuilt in the last few years. I'm planning to migrate them to rack-mounted chassis the next time I do some upgrades, but I've punted that task since building the rack was a significant enough project on its own.
 
 ## Avoiding mistakes I made
 
