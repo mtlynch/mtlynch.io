@@ -244,24 +244,6 @@ So, I bought yet another Chelsio NIC (the fourth 10G NIC I purchased, if you're 
 
 My best guess is that the issue is motherboard incompatibility. My TrueNAS server uses a consumer-grade XX motherboard, so it may not support these Enterprise-oriented 10G NICs. I'm planning to build a new server in the next few months, so I'll try a fancier motherboard to see if that lets me use one of the three 10G NICs I have lying around.
 
-## Choosing 10G networking cables
-
-Another surprise choice.
-
-The 10G ports on my switch are XX, so I either needed to convert them to Ethernet or fiber.
-
-TODO
-
-| Component             | Link                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Cat6 Coupler          | [https://www.amazon.com/dp/B075ZPGV1H/ref=cm_sw_r_apan_glt_i_PRBW9D3G2M39V7DD42QQ?\_encoding=UTF8&psc=1](https://www.amazon.com/dp/B075ZPGV1H/ref=cm_sw_r_apan_glt_i_PRBW9D3G2M39V7DD42QQ?_encoding=UTF8&psc=1)                                                                                                                                                                                                                                          |
-| Fiber coupler         | [https://www.amazon.com/gp/product/B01B5AG0TI?redirectFromSmile=1](https://www.amazon.com/gp/product/B01B5AG0TI?redirectFromSmile=1)                                                                                                                                                                                                                                                                                                                     |
-| SFP+ to LC Fiber      | [https://www.amazon.com/Cable-Matters-10GBASE-LR-Transceiver-Supermicro/dp/B07TTKHG6T](https://www.amazon.com/Cable-Matters-10GBASE-LR-Transceiver-Supermicro/dp/B07TTKHG6T)                                                                                                                                                                                                                                                                             |
-| LC to LC Fiber cables |                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Short Ethernet cable  | [https://www.amazon.com/GearIT-24-Pack-Ethernet-Cable-Snagless/dp/B00XIFJSEI/ref=sr_1_3?crid=225JPQXBCDGMB&keywords=rj45+patch+cable+6%22&qid=1685499709&s=industrial&sprefix=rj45+patch+cable+6+%2Cindustrial%2C100&sr=1-3](https://www.amazon.com/GearIT-24-Pack-Ethernet-Cable-Snagless/dp/B00XIFJSEI/ref=sr_1_3?crid=225JPQXBCDGMB&keywords=rj45+patch+cable+6%22&qid=1685499709&s=industrial&sprefix=rj45+patch+cable+6+%2Cindustrial%2C100&sr=1-3) |
-
-Note: Seems like you can't get DAC keystone, so you have to convert to either RJ45 or Fiber. Fiber converters seem to be cheaper.
-
 ## Choosing a UPS (battery backup)
 
 When I lived in Manhattan, I'd experience around five power outages per year. They were all brief, but they were long enough to power cycle my computer.
@@ -445,7 +427,7 @@ My complaint is with the labels. It's slips of paper under plastic, like a landl
 
 - Grade: B
 
-I like that the labels are little whiteboard panels. I had whiteboard markers on hand, but they were too big to write in such tiny spaces. I bought ultra fine tip whiteboard markers and...
+I like that the labels are little whiteboard panels. I had whiteboard markers on hand, but they were too big to write in such tiny spaces. I bought ultra fine tip whiteboard markers (TODO: link), and those worked well.
 
 ## Choosing a Raspberry Pi rack mount
 
@@ -473,25 +455,25 @@ TODO: Photo
 
 ## Choosing cage nuts
 
-You need cage nuts to secure rack components to your rack. Most rack-mountable components come with their own cage nuts, but enough don't that you'll need some extras.
+Rack-monted components attach to your rack with a standard screw and nut. Most rack-mountable components come with their own cage nuts, but you'll need some extras for the ones that don't.
 
-Fortunately, they're small and cheap.
+I read recommendations to buy a special tool for inserting and removing cage nuts. It might make sense if you work in a data center and are working with cage nuts all the time. For occasional work, a small flathead screwdriver is fine.
 
 ### Review: XX Cage nuts
 
 - Grade: D
 
-These were the only ones I tried, but I don't recommend them. They were worse quality than the cage nuts that came free with other components.
+These were the only cage nuts I tried, but I don't recommend them. They were worse quality than the cage nuts that came free with other components.
 
 Other cage nuts I've tried are shaped so that you can screw them in most of the way just using your fingers. These ones, you couldn't. I also found that the screw heads were made of a weak metal, so tightening the screws quickly began stripping the heads.
 
-I read recommendations online to buy a special tool for inserting and removing cage nuts. It might make sense if you work in a data center, but to just mess with cage nuts a few times a year, I don't think a dedicated tool makes sense. I got by just fine with a small flathead screwdriver.
+The washers are too wide, so they take up a lot of unnecessary space. In my rack, the washers were so wide that they'd collide with washers in adjacent rack slots, making it hard to screw in components next to each other.
 
 ## Choosing Ethernet cables
 
 If you're converting an existing setup to a server rack, you'll likely need new Ethernet cables. If you're including a patch panel, remember to buy short (6-12") cables (sometimes called "patch cables") to connect the patch panel to your switch.
 
-Depending on your patch panel and switch layout, you may need a mix of different cable lengths. For example, on my rack, port 16 on my switch is just XX" from port 16 on my patchpanel, but port 1 on my switch is XX" from its corresponding patch panel port.
+You'll need a mix of different cable lengths. For example, on my rack, port 16 on my switch is just XX" from port 16 on my patchpanel, but port 1 on my switch is XX" from its corresponding patch panel port.
 
 I bought 6", 12", and 3' Ethernet cables at a ratio of about 5:2:1.
 
@@ -507,17 +489,69 @@ Once you go above that, you have to choose between Ethernet or fiber cables.
 
 With Ethernet, it's pretty simple. Your Ethernet adapter has an Ethernet port, so you plug in an Ethernet cable. Easy peasy!
 
-With fiber, it gets more complicated. You have an SFP or SFP+ port, and you have to decide what adapter you want to conver it to something else. You can convert it to DAC or fiber. But then there's a few types of fiber.
+With fiber, it gets more complicated. You have an SFP or SFP+ port, and you have to decide what adapter you want to convert it to something else. You can convert it to DAC or fiber. But then there's a few types of fiber.
 
-I chose fiber over DAC because I couldn't figure out how to get DAC through a patch panel. There are Ethernet keys and Fiber keys, but no DAC keys.
+In my case, my network switch's 10G ports were SFP+, so I knew the connection had to end in SFP+. And my 10G NICs had SFP+ ports, so the connection had to start with SFP+ as well.
+
+So my connection would look like:
+
+1. SFP+ port on my network swtich
+1. SFP+ to _something_ Transceiver
+1. _something_ cable
+1. SFP+ to _something_ Transceiver
+1. SFP+ port on my 10G NIC
+
+I'd need to convert SFP+ to something else to connect the two ends. The options were:
+
+1. RJ45 (Ethernet)
+1. LC (Fiber)
+1. DAC (Copper)
+
+The problem was that the connection had to run through my patch panel. I was able to find patch keys for Ethernet and fiber, but nothing for DAC. I still don't understand why DAC fiber keys don't exist or if I just am not seeing how to connect DAC through a patch panel.
+
+That reduced my options to just to just RJ45 or LC.
+
+### Ethernet vs. fiber
+
+I couldn't find many practical differences between RJ45 and LC. LC is thinner, so I find it a bit more visually appealing. But it means a different type of cable than all my other components, which are Ethernet. The price of all the components together was surprising as well. Either route I chose, I needed:
+
+- Three transceivers (for my switch, desktop, and storage server)
+- One 16' cable (desktop to switch)
+- One 3' cable (storage server to switch)
+- Two XX" patch cables
+- Four patch keys
 
 The other surprise with fiber is how expensive the cabling is. SFP+ to fiber adapters cost $XX, and you need them at either end of the connection. I bought a box of XX" fiber patch cables not really paying attention to the price, and then I realized I spent $XX. On little cables!
+
+| Component                                                       | Ethernet price | Fiber price |
+| --------------------------------------------------------------- | -------------- | ----------- |
+| Three transceivers (for my switch, desktop, and storage server) | $150           | $60         |
+| One XX' cable (desktop to switch)                               | $XX            | $15         |
+| One XX' cable (storage server to switch)                        | $XX            | $10         |
+| Two XX" patch cables                                            | $0\*           | $30         |
+| Four patch keys                                                 | $0\*           | $15         |
+| Total                                                           | **$XX**        | **$XX**     |
+
+\* These effectively would cost no extra money because I had to buy these anyway for the rest of the ports in my switch.
 
 {{<notice type="info">}}
 
 **Gotcha**: If you use fiber, make sure that all your SFP+ cables match in "mode." You can't mix single-mode fiber with multimode fiber.
 
 {{</notice>}}
+
+| Component                                                                                                   | Price  |
+| ----------------------------------------------------------------------------------------------------------- | ------ |
+| [Cat6 Coupler (25-pack)](https://www.amazon.com/dp/B075ZPGV1H)                                              | $22.99 |
+| [**Fiber LC coupler (5-pack)**](https://www.amazon.com/dp/B01B5AG0TI)                                       | $18.99 |
+| [**Cable Matters SFP+ to LC Multi Mode Fiber Transceiver**](https://www.amazon.com/dp/B07TTKHG6T/) (2-pack) | $40.49 |
+| [**LC to LC Fiber patch cables (0.2m)**](https://www.amazon.com/dp/B08MCPBCFD)                              | $29.99 |
+| [12" Ethernet Cables (10-pack)](https://www.amazon.com/dp/B07MVT1P2P/)                                      | $18.99 |
+| [6" Ethernet Cables (25-pack)](https://www.amazon.com/dp/B00XIFJSEI)                                        | $33.99 |
+| [16' Fiber Cable](https://www.amazon.com/dp/B00U7UP1UM/)                                                    | $14.49 |
+| [3' Fiber Cable](https://www.amazon.com/dp/B00T5796DQ/)                                                     | $9.99  |
+
+Note: Seems like you can't get DAC keystone, so you have to convert to either RJ45 or Fiber. Fiber converters seem to be cheaper.
 
 ## Choosing cable ties
 
@@ -647,21 +681,27 @@ Then I went back and looked at whether there was some sort of incompatibility be
 
 I bought a new set of SFP+ multimode fiber cables, and the problem went away. Unfortunately, I discovered the problem three days after the return window for my $XX box of SFP+ single mode fiber cables had closed, so if anyone wants some single mode SFP+ patch cables, let me know.
 
-### Don't install fiber keys backwards
+### Don't install patch keys backwards
 
-One of the first surprises I got of the patch panel was that the keys kept popping out of the frame. It was easy to insert an Ethernet cable, but whenever I removed one, it would wiggle the key out of the frame with it.
+I'm going to sound like a moron here, but I installed my patch panel keys incorrectly twice before I realized how to do it the correct way. Now that I've seen the correct way, what I thought was correct before looks absurd, but it's my first rack!
 
-From some experimentation, I realized I installed the keys backwards. I installed them from the front, like this:
+So, my first attempt was like this:
+
+It fit snugly, and it was easy to plug Ethernet cables into it like that, so I thought that was right. But I quickly noticed it was popping out of the patch panel every time I removed an Ethernet cable.
+
+"I must have done this backwards," I thought. So I plugged the keys in from the rear. It was tougher to get them in, but they stayed in place better.
+
+I had them like this for six months!
+
+It wasn't until I bought my second patch panel and experimented with installing the keys before I installed the patch panel that I realized there was a different method.
+
+It turns out that the little ridge on the top isn't for decoration. I had them like this for three months before I realized that was incorrect too. They go in from the back and click in. You'll hear a little click when they slot into the correct position. The front face should be roughly flush with the front of the patch panel.
 
 {{<img src="key-wrong.webp" max-width="500px">}}
-
-Actually, the correct way is from the back, like this:
 
 {{<gallery caption="Correct way">}}
 {{<img src="key-right.webp" max-width="400px">}}
 {{<img src="key-back-right.webp" max-width="400px">}}
 {{</gallery>}}
-
-I had them like this for three months before I realized that was incorrect too. They go in from the back and click in. You'll hear a little click when they slot into the correct position. The front face should be roughly flush with the front of the patch panel.
 
 TODO: Photos
