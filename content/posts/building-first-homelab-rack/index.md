@@ -127,7 +127,7 @@ The next steps up are either 2.5 Gbps or 10 Gbps. Given that I've been fairly sa
 
 But the more I read about 2.5 Gbps gear, the more complaints I saw that it's flaky and unreliable. The consensus seemed to be that it's about equally difficult to move to 2.5 Gbps or 10 Gbps, so you might as well go for 10 Gbps. So, I thought, fine! I'll do 10 Gbps.
 
-I did run into headaches, but I'll cover that more below (TOOD: link)
+I did run into headaches, but I'll cover that more below (TODO: link)
 
 {{<notice type="info">}}
 
@@ -139,9 +139,9 @@ I did run into headaches, but I'll cover that more below (TOOD: link)
 
 There are two kinds of network switches you can purchase: managed or unmanaged.
 
-**Unmanaged switches** offer no configuration. They're just dumb boxes that route network traffic. Any host connected to the switch can send network traffic to any other port on the switch.
+- **Unmanaged switches** offer no configuration. They're just dumb boxes that route network traffic. Any host connected to the switch can send network traffic to any other port on the switch.
 
-**Managed switches** allow you to add advanced configuration. The most common use for a managed port is to create virtual networks (VLANs)
+- **Managed switches** allow you to add advanced configuration. The most common use for a managed port is to create virtual networks (VLANs)
 
 Personally, I wanted a plain old unmanaged switch. I've never used a managed switch, and I didn't expect to have a use for it. I have an opnsense firewall with four Ethernet ports, and I could have been using that device at any point to create VLANs, and I never did. So why would I start now?
 
@@ -563,6 +563,24 @@ I've tried two styles of cable ties: velcro and rubber.
 
 The velcro ones are secure, but they're a bit too secure. They take me about 5 seconds to attach or detach, whereas the rubber ones I can detach almost instantly, and I can attach them in a second or two.
 
+### Choosing
+
+[UMUST Silicone Cable Ties](https://www.amazon.com/dp/B0B5RM6NLP/) - $8.99
+
+## What I already had
+
+### Router: XX with opnsense
+
+I built a router a few years ago. I bought a cheap XX unit from China and installed opnsense. If I were doing it again, I'd have bought a Protectli unit since they're investing more in open firmware and trusted hardware.
+
+### Out-of-band Management: TinyPilot Voyager 2a
+
+I generally connect to components in my rack over SSH or web interfaces. In times where I need to reinstall the OS, change boot settings, or when I screw up the network settings, I need to type
+
+I created a product called TinyPilot to provide remote access. It's built on top of a Raspberry Pi, and it uses the Pi to emulate a keyboard, mouse, and USB drive. It also captures display output from the target computer. So instead of having to drag a keyboard and monitor over to my rack, I can plug in TinyPilot when I need hardware-level access.
+
+I'm obviously a bit biased because it's my product, but I've been happy with TinyPilot.
+
 ## How do I arrange components in a rack?
 
 Once I selected my rack components, the next step was figuring out how to lay everything out. I tried to find guides for how you're supposed to do it, and I didn't find much guidance.
@@ -579,7 +597,7 @@ The rack has a lot of expensive equipment. You don't want it to fall over and da
 
 The heaviest component in my rack by far is the UPS, weighing in at a whopping XX lbs (XX kg).
 
-The rest of the components are relatively light. I don't yet have a rack-mount chassis for my TrueNAS server, but that will be the next heaviest thing, as hard disk drives are heavy.
+I haven't built my rack-mounted storage server yet, but I'm leaving space for it on the bottom, as it will be the next heaviest thing after the UPS, as disks are heavy.
 
 Patch panels weigh almost nothing, and networking switches are fairly light as well. For this reason, most server racks keep these components in the top two slots of the rack.
 
@@ -589,43 +607,49 @@ It wasn't obvious to me until I built my server, but it's important to closely a
 
 ### Rear cables don't matter so much
 
-Some of the guidance I read said to arrange components so that you can minimize the length of your power cables. I didn't see the point of this guidance.
+Some of the guidance I read said to arrange components so that you can minimize the length of your power cables. I didn't see the point.
 
-It might be important to minimize the length of power cables in a data center where you're replicating the same setup hundreds of times. In a home environment, I don't see the difference between connect connecting my server to my UPS with a 2 ft. power cable instead of a 6 ft. power cable.
+Maybe minimizing cable length is important in a data center where you're replicating the same setup hundreds of times. In a home environment, I don't see the difference between connecting my server to my UPS with a 2 ft. power cable vs. a 4 ft. power cable.
 
 ### Make sure back ports aren't blocked
 
-I had to make sure shelves didn't block access to rear power strip ports.
+One gotcha I didn't anticipate is that some components have rear ports that you can accidentally block if you put them between components that are much deeper.
+
+I initially considered putting my rack shelf in the slot above my power strip, but I realized that would make it hard for me to reach my power strip's rear outlets. Instead, I put the power strip below my Pi rack, as they're both shallow components, so I still can reach the power strip's rear outlets easily.
 
 ## My final rack setup
 
 TODO: List of components and prices
 
-| Component      | Choice        | Price | Satisfaction |
-| -------------- | ------------- | ----- | ------------ |
-| Server rack    | XX            | XX    | B+           |
-| Network switch | XX            | XX    | C+           |
-| UPS            | CyberPower XX | XX    | A+           |
-| Power strip    | XX            | XX    | A            |
-| Patch keys     | XX            | XX    | ??           |
+| Component                       | Choice        | Price | Satisfaction |
+| ------------------------------- | ------------- | ----- | ------------ |
+| Server rack                     | XX            | XX    | B+           |
+| Network switch (managed)        | XX            | XX    | C+           |
+| Network switch (PoE, unmanaged) | XX            | XX    | C+           |
+| UPS                             | CyberPower XX | XX    | A+           |
+| Rack shelves                    | XX            | XX    | A            |
+| Raspberry Pi rack mount         | XX            | XX    | B            |
+| Power strip                     | XX            | XX    | A            |
+| RJ45 Patch keys                 | XX            | XX    | ??           |
+| LC Patch keys                   | XX            | XX    | ??           |
 
 TODO: Photos
 
-## Thoughts on my life with a rack
-
-Nice to have everything close together.
-
-I'm very happy with my new rack. No regrets. It definitely beats my old setup of having bits and pieces of infrastructure scattered around my office. Now everything is in in one location that's organized decently.
-
-I underestimated how nice it would be to have my TinyPilot physically close to all of my devices. Before the rack, I used to keep my TinyPilot on the floor next to my desk. If I ever needed to debug something on a server or a Raspberry Pi on the other side of my office, I avoided it because it involved shutting down the TinyPilot, disconnecting a lot of wires, then reconnecting them on the other side of the room.
-
-With everything now physically adjacent, it's easy for me to quickly plug TinyPilot in to any misbehaving device for low-level access. It came in handy for things like exploring NixOS and figuring out how to install NixOS on a Raspberry Pi.
-
 ## Next steps in my rack
+
+### Rack-mounted server
 
 You may have noticed that my server rack is conspicuously missing one common component: a server.
 
 I still have my VM server and storage server that I rebuilt in the last few years. I'm planning to migrate them to rack-mounted chassis the next time I do some upgrades, but I've punted that task since building the rack was a significant enough project on its own.
+
+### Are there hats for my rack?
+
+One of the things I've been searching for without success is a "hat" for my rack. The top of my rack is just open space.
+
+I'd love to find some top that fits securely into the open space on top of my rack and lets me put things on top of it. It would be convenient extra storage if I could find something sturdy and easy to remove, but I can't find anything like that.
+
+If you know a solution to this, let me know in the comments.
 
 ## Avoiding mistakes I made
 
@@ -647,17 +671,29 @@ Some UPS devices are totally silent and some produce constant noise. If it's any
 
 ### Cage nuts aren't supposed to hurt
 
-Didn't understand
+When you install components into your rack, you screw special cage screws through the mounting holes of whatever you're installing, and the cage screw goes into a cage nut.
 
-If something requires a lot of physical force or pain, you're probably doing something wrong. In building computers or homelab components, every time I've thought, "Wow, this design requires so much force!" I've quickly realized that I misunderstood the design and I'm applying force to something that shouldn't have to be forced.
+Cage nuts have a clever design in that they clip into the rack. That way, you don't have to hold the nut in place while you're screwing the component into your rack.
+
+But... nobody told me about these clips. I thought cage nuts worked like other nuts where you just hold them behind the thing you're screwing into, and then you tighten it by hand.
+
+It was only after installing about eight cage nuts and cursing the terrible design of this thing that has sharp corners that cut into my fingertips that I thought I may be doing something wrong.
+
+{{<notice type="info">}}
+**Tip**: If you find yourself exerting a lot of force or feeling physical pain while building computer hardware, you're probably doing something wrong. Server equipment is designed so that middle-aged, out-of-shape IT people can build them, so you're not expected to be in peak physical condition.
+{{</notice>}}
 
 ### Some PCI slots don't like 10G NICs
 
-When I installed the first 10G NIC into my desktop, Windows didn't detect the card installed. I tried re-seating it, and I saw the same results. I tried downloading drivers, but Windows wasn't seeing the device at all in Device Manager.
+When I installed my Mellanox 10G NIC into my desktop, Windows didn't detect it at all. I tried re-seating it, and I saw the same results. I tried downloading the latest drivers, but Windows still wasn't seeing the device at all in Device Manager.
 
-Finally, I stumbled across a forum post where someone reported that their XX card worked when they switched it to a different PCI slot. I tried a different PCI slot on my motherboard, and voila! It worked perfectly.
+Finally, I stumbled across a forum post where someone reported that their Mellanox card worked when they switched it to a different PCI slot. I tried a different PCI slot on my motherboard, and voila! It worked perfectly.
+
+I still don't understand why the PCI slot mattered. According to my motherboard's documentation, the two PCI slots are supposed to be identical, but one worked, and the other didn't.
 
 ### Flash Mellanox cards to latest firmware on a Windows system
+
+I found that management software for 10G NICs only works on Windows. When I was trying to install a NIC on my TrueNAS Core server (FreeBSD),
 
 Didn't flash Mellanox card before installing it in TrueNAS.
 
@@ -687,9 +723,16 @@ I'm going to sound like a moron here, but I installed my patch panel keys incorr
 
 So, my first attempt was like this:
 
+{{<img src="key-wrong.webp" max-width="500px">}}
+
 It fit snugly, and it was easy to plug Ethernet cables into it like that, so I thought that was right. But I quickly noticed it was popping out of the patch panel every time I removed an Ethernet cable.
 
 "I must have done this backwards," I thought. So I plugged the keys in from the rear. It was tougher to get them in, but they stayed in place better.
+
+{{<gallery caption="Embarrassingly, I thought this was how RJ45 patch keys were supposed to work for about six months.">}}
+{{<img src="key-right.webp" max-width="400px">}}
+{{<img src="key-back-right.webp" max-width="400px">}}
+{{</gallery>}}
 
 I had them like this for six months!
 
@@ -697,11 +740,12 @@ It wasn't until I bought my second patch panel and experimented with installing 
 
 It turns out that the little ridge on the top isn't for decoration. I had them like this for three months before I realized that was incorrect too. They go in from the back and click in. You'll hear a little click when they slot into the correct position. The front face should be roughly flush with the front of the patch panel.
 
-{{<img src="key-wrong.webp" max-width="500px">}}
-
-{{<gallery caption="Correct way">}}
-{{<img src="key-right.webp" max-width="400px">}}
-{{<img src="key-back-right.webp" max-width="400px">}}
-{{</gallery>}}
-
 TODO: Photos
+
+## Thoughts on my life with a rack
+
+I'm happy with my new rack, and I have no regrets about the investment. It definitely beats my old setup of having bits and pieces of infrastructure scattered around my office. Now everything is in one location with clear organization.
+
+I underestimated how nice it would be to have my TinyPilot physically close to all of my devices. Before the rack, I used to keep my TinyPilot on the floor next to my desk. If I ever needed to debug something on a server or a Raspberry Pi on the other side of my office, I avoided it because it involved shutting down the TinyPilot, disconnecting a lot of wires, then reconnecting them on the other side of the room.
+
+With everything now physically adjacent, it's easy for me to quickly plug TinyPilot in to any misbehaving device for low-level access. It came in handy for things like exploring NixOS and figuring out how to install NixOS on a Raspberry Pi.
