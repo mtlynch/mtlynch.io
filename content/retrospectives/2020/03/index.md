@@ -207,7 +207,7 @@ I'm liking WakaTime more than expected, and I'm even considering it for my non-b
 
 ### DK the Human
 
-[DK](https://www.dkthehuman.com) is an indie developer working on a Chrome extension called [Hide Feed](https://www.hidefeed.com/), which helps you control distractions on social media sites. Every day, he updates his [daily log](https://namukang.notion.site/Road-to-Ramen-c3be0bb060774c8ba296b3819ac2407b) to share progress on his business or to think through a problem. If you want a peek into the day-to-day life of a solo developer, his blog is illuminating.
+[DK](https://www.dkthehuman.com) is an indie developer working on a Chrome extension called [Hide Feed](https://www.hidefeed.com/), which helps you control distractions on social media sites. Every day, he updates his [daily log](https://www.notion.so/dkthehuman/Maker-Log-c3be0bb060774c8ba296b3819ac2407b) to share progress on his business or to think through a problem. If you want a peek into the day-to-day life of a solo developer, his blog is illuminating.
 
 DK kindly made a "Feedback Friday" video for my tool, [What Got Done](https://whatgotdone.com), in which he recorded himself using the website for the first time and narrating his thought process aloud to identify parts of the app that are confusing or need improvement:
 
