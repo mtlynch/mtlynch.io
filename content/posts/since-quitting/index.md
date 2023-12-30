@@ -70,7 +70,7 @@ After I spoke to Stephanie, I felt like I had permission to take my time. I shif
 
 {{<notice type="info">}}
 **Sidenote**: Stephanie _said_ it was okay to delay responses for a month, but she wrote me a thoughtful three-paragraph reply within minutes of my question. It's possible that she's tricking me so that she can maintain her position as the most helpful person on Twitter.
-{{< /notice >}}
+{{</notice>}}
 
 Stephanie also pointed out that it's not realistic to respond to every single message. I still feel guilty when I ignore an email, but I found that getting out of the mindset of prompt responses helped me detach a bit and make rational choices about which messages to answer. For example, if someone writes me with questions about [finding a blog cartoonist](/how-to-hire-a-cartoonist/), that's fun for me to talk about because not many bloggers work with cartoonists. I'll answer that email ahead of one that asks me more general questions about getting hired at Google.
 

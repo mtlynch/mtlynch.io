@@ -66,10 +66,10 @@ The process went very smoothly. She cooked for a little over two hours. I took a
 
 When she was done, she told me I could take the pork tenderloin out of the oven in ten minutes, the pepper and broccoli were finished on the stove, and that the neapolitan fat bombs were in the freezer. She had wiped down my countertops and cleaned my dishes. When the tenderloin was ready, I took it out and was delighted. It looked great and tasted fantastic.
 
-{{< gallery caption="Bacon Wrapped Stuffed Pork Tenderloin: finished product.">}}
+{{<gallery caption="Bacon Wrapped Stuffed Pork Tenderloin: finished product.">}}
 {{<img src="IMG_20161115_212108.jpg" alt="Finished pork tenderloin and side">}}
 {{<img src="IMG_20161115_212144.jpg" alt="Finished pork tenderloin on baking sheet">}}
-{{</ gallery >}}
+{{</gallery>}}
 
 The experience went pretty much exactly as I had wanted it to. I've hired Leah to cook three more times since then, and I've been pleased with the results every time.
 

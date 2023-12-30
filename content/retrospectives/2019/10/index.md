@@ -123,7 +123,7 @@ Now that I've had that experience, I'm gravitating more toward ideas that have b
 
 {{<notice type="info">}}
 **Note**: I'm not complaining about $300/mo. I'm thrilled to have reached this point, and it's exciting to afford a part-time writer and still run profitably, but I'm interested in what I can do with higher margins.
-{{< /notice >}}
+{{</notice>}}
 
 ## Wrap up
 

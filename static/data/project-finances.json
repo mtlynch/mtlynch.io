@@ -148,6 +148,18 @@
     "2023-08": {
       "profit": 28454.42,
       "totalRevenue": 94930.78
+    },
+    "2023-09": {
+      "profit": 8644.82,
+      "totalRevenue": 85727.02
+    },
+    "2023-10": {
+      "profit": 69280.58,
+      "totalRevenue": 101797.35
+    },
+    "2023-11": {
+      "profit": -5407.96,
+      "totalRevenue": 87170.21
     }
   },
   "htfp": {
@@ -249,6 +261,15 @@
     },
     "2023-08": {
       "totalRevenue": 106.2
+    },
+    "2023-09": {
+      "totalRevenue": 53.1
+    },
+    "2023-10": {
+      "totalRevenue": 0
+    },
+    "2023-11": {
+      "totalRevenue": 0
     }
   },
   "isitketo": {
@@ -409,16 +430,25 @@
       "totalRevenue": 117.49
     },
     "2023-05": {
-      "totalRevenue": 41.54
+      "totalRevenue": 120.91
     },
     "2023-06": {
-      "totalRevenue": 41.54
+      "totalRevenue": 95.61
     },
     "2023-07": {
-      "totalRevenue": 41.54
+      "totalRevenue": 112.58
     },
     "2023-08": {
-      "totalRevenue": 41.54
+      "totalRevenue": 94.97
+    },
+    "2023-09": {
+      "totalRevenue": 116.08
+    },
+    "2023-10": {
+      "totalRevenue": 141.58
+    },
+    "2023-11": {
+      "totalRevenue": 141.48
     }
   },
   "zestful": {
@@ -462,7 +492,7 @@
       "totalRevenue": 45.97
     },
     "2019-08": {
-      "totalRevenue": 728.07
+      "totalRevenue": 1478.07
     },
     "2019-09": {
       "totalRevenue": 3.2
@@ -474,7 +504,7 @@
       "totalRevenue": 63.13
     },
     "2019-12": {
-      "totalRevenue": 3934.13
+      "totalRevenue": 7934.13
     },
     "2020-01": {
       "totalRevenue": 79.67
@@ -492,7 +522,7 @@
       "totalRevenue": 6.48
     },
     "2020-06": {
-      "totalRevenue": 685.26
+      "totalRevenue": 1385.26
     },
     "2020-07": {
       "totalRevenue": 18.05
@@ -507,7 +537,7 @@
       "totalRevenue": 35.05
     },
     "2020-11": {
-      "totalRevenue": 901
+      "totalRevenue": 1800
     },
     "2020-12": {
       "totalRevenue": 103.33
@@ -607,6 +637,15 @@
     },
     "2023-08": {
       "totalRevenue": 177.9
+    },
+    "2023-09": {
+      "totalRevenue": 191.24
+    },
+    "2023-10": {
+      "totalRevenue": 120.8
+    },
+    "2023-11": {
+      "totalRevenue": 107.33
     }
   }
 }
