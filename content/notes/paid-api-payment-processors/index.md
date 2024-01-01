@@ -7,6 +7,10 @@ Supports usage based billing / metered billing
 
 Acts as merchant of record
 
+Nice to have:
+
+- Provider has their own sign-up flow so I don't have to implement it.
+
 ## Overview
 
 | Provider     | Fees | Support for metered billing | Onboarding experience | Overall experience |
@@ -127,6 +131,114 @@ Bizarre bank payout process where they need my bank's address rather than auto-p
 Even though calling the API seems to work, it doesn't do anything, at least in Sandbox. Only the preview announces the problem.
 
 Made me have to add a database to my app
+
+```bash
+curl \
+  --request POST \
+  --url "https://sandbox-api.paddle.com/subscriptions/${PADDLE_SUBSCRIPTION_ID}/charge/preview" \
+  --header "Authorization: Bearer ${PADDLE_AUTH_CODE}" \
+  --header 'Content-Type: application/json' \
+  --header 'Accept: application/json' \
+  --data '{
+  "items": [
+    {
+      "price_id": '"${PADDLE_INGREDIENT_PARSE_PRICE_ID}"',
+      "quantity": 1
+    }
+  ],
+  "effective_from": "next_billing_period"
+}' | python3 -m json.tool
+```
+
+```json
+{
+  "error": {
+    "type": "request_error",
+    "code": "subscription_update_transaction_balance_less_than_charge_limit",
+    "detail": "Unable to charge for Subscription update: Transaction balance is less than what we can charge. Transaction balance: 2, Minimum payment amount: 70, Currency code: USD",
+    "documentation_url": "https://developer.paddle.com/v1/errors/subscriptions/subscription_update_transaction_balance_less_than_charge_limit"
+  },
+  "meta": {
+    "request_id": "f020a3ce-d207-476a-ae20-0bc88256c73e"
+  }
+}
+```
+
+```json
+{
+  "data": {
+    "id": "sub_01hjxmy7m33j3jmhn9wzpqmx83",
+    "status": "active",
+    "customer_id": "ctm_01hgvsdw65p09cj9t7hv2sky3d",
+    "address_id": "add_01hgvsemy48jwcqdpvfwbyrcj5",
+    "business_id": null,
+    "currency_code": "USD",
+    "created_at": "2023-12-30T15:19:33.763Z",
+    "updated_at": "2023-12-30T15:47:58.02Z",
+    "started_at": "2023-12-30T15:19:33.763Z",
+    "first_billed_at": "2023-12-30T15:19:33.763Z",
+    "next_billed_at": "2024-01-30T15:19:33.763Z",
+    "paused_at": null,
+    "canceled_at": null,
+    "collection_mode": "manual",
+    "billing_details": {
+      "enable_checkout": true,
+      "purchase_order_number": "",
+      "additional_information": "",
+      "payment_terms": {
+        "frequency": 2,
+        "interval": "week"
+      }
+    },
+    "current_billing_period": {
+      "starts_at": "2023-12-30T15:19:33.763Z",
+      "ends_at": "2024-01-30T15:19:33.763Z"
+    },
+    "billing_cycle": {
+      "frequency": 1,
+      "interval": "month"
+    },
+    "scheduled_change": null,
+    "items": [
+      {
+        "status": "active",
+        "quantity": 1,
+        "recurring": true,
+        "created_at": "2023-12-30T15:19:33.763Z",
+        "updated_at": "2023-12-30T15:19:33.763Z",
+        "previously_billed_at": "2023-12-30T15:19:33.763Z",
+        "next_billed_at": "2024-01-30T15:19:33.763Z",
+        "trial_dates": null,
+        "price": {
+          "id": "pri_01hcq71ae5f3n7nchmd8axgr7n",
+          "product_id": "pro_01hcq59kyq4cvz3d1pv4w2ytbt",
+          "description": "API access",
+          "tax_mode": "account_setting",
+          "billing_cycle": {
+            "frequency": 1,
+            "interval": "month"
+          },
+          "trial_period": null,
+          "unit_price": {
+            "amount": "99",
+            "currency_code": "USD"
+          }
+        }
+      }
+    ],
+    "custom_data": null,
+    "management_urls": {
+      "update_payment_method": null,
+      "cancel": "https://sandbox-buyer-portal.paddle.com/subscriptions/sub_01hjxmy7m33j3jmhn9wzpqmx83/cancel?token=pga_eyJhbGciOiJFZERTQSIsImtpZCI6Imp3a18wMWhkazBuOHF3OG55NTJ5cGNocGNhazA1ayIsInR5cCI6IkpXVCJ9.eyJpZCI6InBnYV8wMWhqeHBqOHRtNWNyMGJtZjJ4Y2oyZWNhcyIsInNlbGxlci1pZCI6IjE1MDYyIiwidHlwZSI6InN0YW5kYXJkIiwidmVyc2lvbiI6IjEiLCJ1c2FnZSI6Im1hbmFnZW1lbnRfdXJsIiwic2NvcGUiOiJjdXN0b21lci5zdWJzY3JpcHRpb24tcGF5bWVudC51cGRhdGUgY3VzdG9tZXIuc3Vic2NyaXB0aW9uLXBheW1lbnQucmVhZCBjdXN0b21lci5zdWJzY3JpcHRpb24tY2FuY2VsLmNyZWF0ZSBjdXN0b21lci5zdWJzY3JpcHRpb24ucmVhZCIsImlzcyI6Imd1ZXN0YWNjZXNzLXNlcnZpY2UiLCJzdWIiOiJjdG1fMDFoZ3ZzZHc2NXAwOWNqOXQ3aHYyc2t5M2QiLCJleHAiOjE3MzU1NzM2NzgsImlhdCI6MTcwMzk1MTI3OH0.Q-OW8H9at4Sxp9bbmq-14DRGIXV_t6gI7gqu4fZcclK43LwUdoBtXD_GIbo6kjvp62pOchg1tnuMO04lYNOaAQ"
+    },
+    "discount": null,
+    "import_meta": null
+  },
+  "meta": {
+    "request_id": "35f1f073-b160-4aa0-92e0-7319ec55e99f"
+  }
+}
+```
 
 ## Other providers that don't meet my criteria
 
