@@ -50,11 +50,25 @@ TODO
 
 ## Topic 1
 
-## Can I outsource more?
+## Can I delegate more?
 
-Documentation
+### Delegating documentation
 
-Vision
+I'm particular about documentation. If I see ways to improve it, I don't want to publish it until we've integrated the improvements.
+
+It takes [years for writing skills to improve](/guides/hiring-content-writers/3-screening-candidates/).
+
+I have the same problem in code reviews, and I've had to restrain myself. It's okay if the code isn't what I would do because users can't see it. But documentation, everyone can see it. There's a tangible difference between A-grade writing and B-grade writing.
+
+### Delegating tasks that depend on product vision
+
+It's hard to articulate. Like ideally, I could show them a graph and say that . Even if they could, they don't really know the implementation cost. It's short-term cost, long-term maintenance burden,
+
+If you can't confirm the change after the change. Whoops, now there's another problem. On my network (but nobody else's), my computer cached the IP address for `tinypilot.local`, so it keeps trying to contact `10.0.0.100` even though the device has moved to `10.0.0.200`. And there's a workaround where instead of trying to go to `tinypilot.local`, we go to the IP address directly. But now there's a new problem because we signed the TLS certificate to be associated with `tinypilot.local` and not `10.0.0.200`.
+
+So, all these things require a delicate balancing of guesses about costs, guesses about how many people this will affect, guesses about how angry users will be if they hit the degraded experience. So I end up being pretty involved. I can't really just give them a graph and tell them to land somewhere above the curve.
+
+It feels high-fallutin (sp?) to say, but the only way I can articulate the confluence of all those factors is the person who has the product vision. For TinyPilot, that's me. The developers aren't in a position to decide if something is worth $10k in dev costs to improve a feature by 10%.
 
 ## Learing Nix vs. learning Zig
 
@@ -75,6 +89,10 @@ https://discourse.nixos.org/t/expanding-the-nixos-foundation/19929
 One of the complaints I've heard about Zig is that it has poor documentation. And I understand that criticism. I've found the documentation to be pretty terse and written more from the perspective of a compiler designer than a developer. But I'm still able to scour discussions and experiment until I have an accurate mental model of how Zig works.
 
 After XX months of using Nix, I still have a terrible mental model of how Nix works. I've read explanations of Nix, but it still hasn't clicked for me. When I create Nix files, I can only do it by copying an existing example and adjusting it to match what I want. Most of the file is just cargo-cult copy/paste, and I don't understand why it is the way it is.
+
+### Nix feels high abstraction, Nix feels low abstraction
+
+Nix things where I want to try building a Python package.
 
 ### Developer experience on Zig feels narrow but deep,
 
