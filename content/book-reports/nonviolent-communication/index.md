@@ -46,7 +46,6 @@ _Nonviolent Communication_ is a bit mushier in that it focuses on vulnerability 
 > **Nonviolent communication (NVC)**: a way of communicating that leads us to give from the heart.
 
 - NVC is a way of communicating more thoughtfully by focusing on our own emotions and withholding judgment.
-
 - NVC process:
   1. Observe concrete events that have affected your mood.
   1. Identify the feelings that arise in yourself in relation to those events.
@@ -159,7 +158,6 @@ It's possible to correct these speech patterns by connecting our feeling with th
 
 - People often fail to be fully present when hearing others' feelings.
 - Common anti-patterns to listening with true empathy:
-
   > - Advising: "I think you should..." "How come you didn't...?"
   > - One-upping: "That's nothing; wait'll you hear what happened to me."
   > - Educating: "This could turn into a very positive experience for you if you just..."
@@ -170,14 +168,11 @@ It's possible to correct these speech patterns by connecting our feeling with th
   > - Interrogating: "When did this begin?"
   > - Explaining: "I would have called, but..."
   > - Correcting: "That's not how it happened."
-
 - To listen empathically, identify what the speaker is:
-
   1. Observing
   1. Feeling
   1. Needing
   1. Requesting
-
 - One way to uncover these four things is by making guesses and checking in with the person to learn if they're correct.
   - "Are you feeling unhappy because you need to be heard?"
   - "Are you reacting to how many evenings I was gone last week?"
