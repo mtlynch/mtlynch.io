@@ -145,7 +145,7 @@ Even if I'm the only Nix user on my team, the `flake.nix` still provides great v
 
 Zig, on the other hand, requires commitment and full-team buy-in. If you've got a C or C++ project, and you decide you want to switch to Zig, you can't just enjoy your better tooling and wait for your teammates to join you. As soon as you introduce Zig code into your project, everyone has to build it with the Zig compiler rather than a C/C++ compiler.
 
-The only way to make Zig as portable as Nix is if Zig made every C and C++ compiler Zig-compatible as well, which is not possible. But it means that I'm only exposed to Zig when I visit Zig-land by tinkering with code or looking at a Zig project, whereas I now bring Nix with me everywhere I go.
+The only way to make Zig as portable as Nix is if Zig retrofitted every C and C++ compiler for Zig compatibility, but that's not realistic. But it means that I'm only exposed to Zig when I visit Zig-land by tinkering with code or looking at a Zig project, whereas I now bring Nix with me everywhere I go.
 
 ## Wrap up
 
