@@ -131,10 +131,6 @@ I'd expect Eelco Dolstra to be Nix's BDFL, but he doesn't seem to be, at least n
 
 https://discourse.nixos.org/t/expanding-the-nixos-foundation/19929
 
-### Nix feels high abstraction, Nix feels low abstraction
-
-Nix things where I want to try building a Python package.
-
 ### Older solutions usually don't work in Nix or Zig
 
 Zig hasn't declared a stable 1.0 release yet, so it's typical for compiler updates to make breaking changes. Code that was valid in Zig 0.8.0 might not still be valid in Zig 0.11.0. In my experience, Zig tooling is pretty good at fixing the code automatically, but it's not 100% accurate.
@@ -145,11 +141,11 @@ In Nix, I've similarly run into problems with older examples. Nix is in the midd
 
 One nice property of Nix is that it's self-contained. I can drop a `flake.nix` into one of my projects to [automatically manage dependencies](/notes/nix-dev-environment/) without changing anything else or asking anything of my teammates.
 
-Even if I'm the only one Nix user on my team, the `flake.nix` still provides great value to me without costing anyone else anything or requiring them to use a new tool. It's like adding a `.vscode` directory to your project: helpful for people who use VS Code, doesn't really bother anyone else.
+Even if I'm the only Nix user on my team, the `flake.nix` still provides great value to me without costing anyone else anything or requiring them to use a new tool. It's like adding a `.vscode` directory to your project: helpful for people who use VS Code, doesn't really bother anyone else.
 
-Zig, on the other hand, requires commitment and full-team buy-in. If you've got a C or C++ project, and you decide you want to switch to Zig, you can't just enjoy your better tooling and wait for your teammates to join you.
+Zig, on the other hand, requires commitment and full-team buy-in. If you've got a C or C++ project, and you decide you want to switch to Zig, you can't just enjoy your better tooling and wait for your teammates to join you. As soon as you introduce Zig code into your project, everyone has to build it with the Zig compiler rather than a C/C++ compiler.
 
-As soon as you introduce Zig code into your project, everyone has to build it with the Zig compiler rather than a C/C++ compiler. That's not a knock on Zig, as they obviously can't force every C compiler to also compile Zig, but it means that I'm only exposed to Zig when I visit Zig-land by tinkering with code or looking at a Zig project, whereas I now bring Nix with me everywhere I go.
+The only way to make Zig as portable as Nix is if Zig made every C and C++ compiler Zig-compatible as well, which is not possible. But it means that I'm only exposed to Zig when I visit Zig-land by tinkering with code or looking at a Zig project, whereas I now bring Nix with me everywhere I go.
 
 ## Wrap up
 
