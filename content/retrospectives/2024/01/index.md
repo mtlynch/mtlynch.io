@@ -72,17 +72,15 @@ When I think about where my time is going these days, I spend a large portion of
 
 I've tried to find ways to delegate more hard product decisons to my team, but I haven't made much progress.
 
-It would be great if I could just create a chart showing how much a feature costs vs. how much it will satisfy users, draw a curve showing what a good tradeoff looks like, and then tell the team to stay above the line.
+It would be great if I could simply create a chart showing how much a feature costs vs. how much it will satisfy users, draw a curve showing what a good tradeoff looks like, and then tell the team to stay above the line.
 
 {{<img src="csat-v-dev-cost.webp" max-width="600px" has-border="true" caption="I wish I could just define a curve of customer satisfaction vs. development cost and advise the team to just stay above the curve.">}}
 
-The problem with pre-computing a graph of customer satisfaction vs. development cost is that until you ship the feature, all the numbers are just noisy estimates. One smart person might think that feature X will cost $10k and generate 100 customer happy units. Another smart person might estimate that the feature will cost $40k and generate only 50 happy units.
+The problem with pre-computing a graph of customer satisfaction vs. development cost is that all the numbers are just noisy estimates. You don't know the real numbers until you ship the feature and hear feedback from customers.
 
-If you can't confirm the change after the change. Whoops, now there's another problem. On my network (but nobody else's), my computer cached the IP address for `tinypilot.local`, so it keeps trying to contact `10.0.0.100` even though the device has moved to `10.0.0.200`. And there's a workaround where instead of trying to go to `tinypilot.local`, we go to the IP address directly. But now there's a new problem because we signed the TLS certificate to be associated with `tinypilot.local` and not `10.0.0.200`.
+And it's usually not even a binary decision of "should we build this feature or not?" It's, "how polished should this feature be?" And then the work still isn't over because we usually hit some wrinkle during development that reveals the feature won't work well unless we invest 1.5-3x the dev cost we expected.
 
-So, all these things require a delicate balancing of guesses about costs, guesses about how many people this will affect, guesses about how angry users will be if they hit the degraded experience. So I end up being pretty involved. I can't really just give them a graph and tell them to land somewhere above the curve.
-
-It feels high-fallutin (sp?) to say, but the only way I can articulate the confluence of all those factors is the person who has the product vision. For TinyPilot, that's me. The developers aren't in a position to decide if something is worth $10k in dev costs to improve a feature by 10%.
+It feels highfalutin to say, but the only way I can articulate the confluence of all those factors is the person who has the product vision. For TinyPilot, that's me. The developers aren't in a position to decide if something is worth $10k in dev costs to improve a feature by 10%. I'm involved in the design phase when we're choosing between different options, and I have to pop back in and get a sense of where things are at midway through the project if it looks like it's ballooning in complexity.
 
 ## Can I do a better job of delegating documentation?
 
@@ -124,19 +122,25 @@ Nix seems very inspired by Haskell and other functional languages, which I've ne
 
 ### Developer experience on Zig feels narrow but deep, whereas Nix feels wide and shallow
 
-Zig doesn't have tooling for [package management](https://news.ycombinator.com/item?id=38837410) or code coverage. One of my disappointments with Zig so far has been that its support for microcrontrollers seems mostly absent.
+Zig doesn't have tooling for [package management](https://news.ycombinator.com/item?id=38837410) or code coverage. One of my disappointments with Zig so far has been that its support for microcrontrollers seems [mostly absent](https://github.com/ZigEmbeddedGroup).
+
+{{<img src="zig-embedded-support.png" max-width="550px" has-border="true" caption="Zig has immature or non-existent support for all popular microcontrollers except the Raspberry Pi Pico.">}}
 
 But when Zig claims it can do something, it does it well. I was skeptical of its claims that it can be a drop-in replacement for `gcc`, but every time I've swapped out `gcc` for `zig`, everything just works. Zig claims that you can just import a `.c` file into a Zig file, and [you can](/notes/zig-call-c-simple/).
 
-My experience with Nix is that Nix attemps to do a much broader set of things, from [managing your entire OS](https://nixos.org/) to [building your Node.js project](https://nixos.wiki/wiki/Node.js) project for you. If my project perfectly matches what the Nix tooling expects, then everything works great. But I frequently run into situations where my setup is slightly different from what the Nix tooling expects, and I hit a brick wall. For example, I [still can't figure out](https://github.com/nix-community/pyproject.nix/issues/46) how to run arbitrary Python projects under Nix.
+My experience with Nix is that Nix attemps to do a much broader set of things, from simple things like [building a Node.js project](https://nixos.wiki/wiki/Node.js) to grand things like [building and managing an entire OS](https://nixos.org/).
+
+When my project perfectly matches what the Nix tooling expects, then everything works great. But I frequently run into situations where my setup is slightly different from what the Nix tooling expects, and I hit a brick wall. For example, I [still can't figure out](https://github.com/nix-community/pyproject.nix/issues/46#issuecomment-1869238745) how to run arbitrary Python projects under Nix.
 
 One of the most surprising gaps in Nix is that [there's no official way to specify a package version](https://github.com/NixOS/nixpkgs/issues/9682) you want to install. There have been eight years of discussion, and [there doesn't seem to be a solution](https://github.com/NixOS/nixpkgs/issues/93327) or even an official acknowledgement that this will or won't be fixed.
 
 ### Nix leadership is decentralized, Zig has a BDFL
 
-Andrew Kelly is the original creator of Zig, and while others have joined the project [Andrew still effectively acts as the benevolent dictator for life (BDFL)](https://kristoff.it/blog/interfacing-with-zig/). When I'd search for Zig documentation or help, I'd frequently encounter Andrew or someone official from the project giving an authoritative answer in a Github issue or forum discussion.
+Andrew Kelly is the original creator of Zig. Several others have joined the project, but [Andrew is effectively still the benevolent dictator for life (BDFL)](https://kristoff.it/blog/interfacing-with-zig/). When I'd search for Zig documentation or help, I'd frequently encounter Andrew or someone official from the project giving an authoritative answer in a Github issue or forum discussion.
 
-When I first heard about the project, I assumed [Eelco Dolstra](https://edolstra.github.io/) would be Nix's BDFL, but he doesn't seem to be, at least not publicly. Nix is Eelco's brainchild, as it came out of his [2006 PhD thesis](https://edolstra.github.io/pubs/phd-thesis.pdf). Eelco is [president of the Nix Foundation](https://discourse.nixos.org/t/expanding-the-nixos-foundation/19929), but he also works for Determinate Systems, a third-party consulting firm that promotes Nix. But they're decidedly third-party and not core to Nix. They release things that sometimes [clash](https://discourse.nixos.org/t/introducing-flakehub/32044/3?u=mtlynch) [controversially](https://discourse.nixos.org/t/parting-from-the-documentation-team/24900?u=mtlynch) with work from internal Nix teams.
+When I first heard about the project, I assumed [Eelco Dolstra](https://edolstra.github.io/) would be Nix's BDFL. He doesn't seem to be, at least not publicly.
+
+Nix is Eelco's brainchild, as it came out of his [2006 PhD thesis](https://edolstra.github.io/pubs/phd-thesis.pdf). Eelco is [president of the Nix Foundation](https://discourse.nixos.org/t/expanding-the-nixos-foundation/19929), but he also works for [Determinate Systems](https://determinate.systems/), a third-party consulting firm that promotes Nix. But they're decidedly third-party and not core to Nix. They release things that sometimes [clash](https://discourse.nixos.org/t/introducing-flakehub/32044/3?u=mtlynch) [controversially](https://discourse.nixos.org/t/parting-from-the-documentation-team/24900?u=mtlynch) with work from internal Nix teams.
 
 While Zig feels centrally-planned, Nix feels rudderless. When I can't figure something out, my searches often bring me to the Nix Discourse forum or Github issues, and it's like people are discussing an alien technology that we've discovered by mistake. I never see someone from the Nix core team weigh in, and I don't even know if there is a core team.
 
