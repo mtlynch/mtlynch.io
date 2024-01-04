@@ -60,19 +60,27 @@ This is now complete, and I now have a better understanding of who needs to give
 | Total Revenue            | $87,170.21     | $77,281.21      | <font color="red">-$9,889.00 (-11%)</font>       |
 | **Profit**               | **-$5,407.96** | **-$59,117.41** | **<font color="red">-$53,709.45 (-inf%)</font>** |
 
-Revenue is down slightly from November, but that's a seasonal trend that happens every year.
+Revenue is down slightly from November, but that's a seasonal trend that happens every year. The
 
-Profit looks scary because I'm still doing bookkeeping on a cash basis even though we're spending a lot more on manufacturing up front due to shifting to a third-party contract manufacturer. In the fourth quarter, TinyPilot spent $150k on materials and manufacturing, the most we've ever spent in a quarter. On a cost of goods sold (COGS) basis, TinyPilot's profit for December was actually around positive $8k.
+Profit looks scary because I'm still doing bookkeeping on a cash basis even though we're spending a lot more on manufacturing up front due to shifting to a third-party contract manufacturer. In the fourth quarter, TinyPilot spent $150k on materials and manufacturing, the most we've ever spent in a quarter. On a cost of goods sold (COGS) basis, TinyPilot's profit for December was actually $9k (as in, positive $9k).
+
+Still, I've been neglecting marketing as I focus on managing our transition to external manufacturing and fulfillment vendors. TinyPilot has fortunately grown without much investment in marketing the past few months, but I can't bank on that forever, so one of my goals in January is to explore some new marketing channels.
 
 ## Can I delegate hard product decisions?
 
-It's hard to articulate. Like ideally, I could show them a graph and say that . Even if they could, they don't really know the implementation cost. It's short-term cost, long-term maintenance burden,
+When I think about where my time is going these days, I spend a large portion of it on what I'd call "hard product decisions." These are instances where I decide which features to build taking into account how happy users will be about the feature, how difficult it will be to build and maintain, and how it impacts our support teams.
+
+I've tried to find ways to delegate more hard product decisons to my team, but I haven't made much progress.
+
+It would be great if I could just create a chart showing how much a feature costs vs. how much it will satisfy users, draw a curve showing what a good tradeoff looks like, and then tell the team to stay above the line.
+
+{{<img src="csat-v-dev-cost.webp" max-width="600px" has-border="true" caption="I wish I could just define a curve of customer satisfaction vs. development cost and advise the team to just stay above the curve.">}}
+
+The problem with pre-computing a graph of customer satisfaction vs. development cost is that until you ship the feature, all the numbers are just noisy estimates. One smart person might think that feature X will cost $10k and generate 100 customer happy units. Another smart person might estimate that the feature will cost $40k and generate only 50 happy units.
 
 If you can't confirm the change after the change. Whoops, now there's another problem. On my network (but nobody else's), my computer cached the IP address for `tinypilot.local`, so it keeps trying to contact `10.0.0.100` even though the device has moved to `10.0.0.200`. And there's a workaround where instead of trying to go to `tinypilot.local`, we go to the IP address directly. But now there's a new problem because we signed the TLS certificate to be associated with `tinypilot.local` and not `10.0.0.200`.
 
 So, all these things require a delicate balancing of guesses about costs, guesses about how many people this will affect, guesses about how angry users will be if they hit the degraded experience. So I end up being pretty involved. I can't really just give them a graph and tell them to land somewhere above the curve.
-
-{{<img src="csat-v-dev-cost.webp" max-width="600px" has-border="true" caption="I wish I could just define a curve of customer satisfaction vs. development cost and advise the team to just stay above the curve.">}}
 
 It feels high-fallutin (sp?) to say, but the only way I can articulate the confluence of all those factors is the person who has the product vision. For TinyPilot, that's me. The developers aren't in a position to decide if something is worth $10k in dev costs to improve a feature by 10%.
 
