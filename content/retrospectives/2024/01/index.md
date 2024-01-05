@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 42"
-date: 2024-01-01T00:00:00-05:00
+date: 2024-01-08T00:00:00-05:00
 description: TODO - One-line summary
 tags:
   - nix
@@ -68,19 +68,27 @@ Still, I've been neglecting marketing as I focus on managing our transition to e
 
 ## Can I delegate hard product decisions?
 
-When I think about where my time is going these days, I spend a large portion of it on what I'd call "hard product decisions." These are instances where I decide which features to build taking into account how happy users will be about the feature, how difficult it will be to build and maintain, and how it impacts our support teams.
+When I think about where my time is going these days, I spend a large portion of it on what I'd call "hard product decisions." These are instances where I decide which features to build, how much to invest in them, and how to reprioritize when we run into surprises.
 
-I've tried to find ways to delegate more hard product decisons to my team, but I haven't made much progress.
+I've tried to delegate more hard product decisons to the TinyPilot team, but I haven't made much progress.
 
 It would be great if I could simply create a chart showing how much a feature costs vs. how much it will satisfy users, draw a curve showing what a good tradeoff looks like, and then tell the team to stay above the line.
 
 {{<img src="csat-v-dev-cost.webp" max-width="600px" has-border="true" caption="I wish I could just define a curve of customer satisfaction vs. development cost and advise the team to just stay above the curve.">}}
 
-The problem with pre-computing a graph of customer satisfaction vs. development cost is that all the numbers are just noisy estimates. You don't know the real numbers until you ship the feature and hear feedback from customers.
+But there are many more factors for deciding how much to invest in a new feature, including:
 
-And it's usually not even a binary decision of "should we build this feature or not?" It's, "how polished should this feature be?" And then the work still isn't over because we usually hit some wrinkle during development that reveals the feature won't work well unless we invest 1.5-3x the dev cost we expected.
+- Will this feature cause confusion / clutter for users who don't need it?
+- What will the long-term burden be of maintaining this feature?
+- How will this feature impact our support teams?
 
-It feels highfalutin to say, but the only way I can articulate the confluence of all those factors is the person who has the product vision. For TinyPilot, that's me. The developers aren't in a position to decide if something is worth $10k in dev costs to improve a feature by 10%. I'm involved in the design phase when we're choosing between different options, and I have to pop back in and get a sense of where things are at midway through the project if it looks like it's ballooning in complexity.
+It feels highfalutin to say, but the person who answers those questions needs to have "product vision." They need to be connected with customers, the dev team, and the support teams. And for TinyPilot, the only person in that position is me.
+
+One possible solution is to hire a product manager whose job is to take high level strategy, turn that into a plan, and execute it with the team. That's not very practical, as it's an additional person to manage and loop into communications with the team. I'm currently managing six people, and that feels like my upper bound on how many people I can manage effectively.
+
+Another possible solution would be to give an existing team member product manager responsibilities. The problem is I can't figure out a sensible path to that solution.
+
+Nobody on the dev team wants the role, and anyone outside the dev team would have a hard time making decisions about how costly things are to implement.
 
 ## Can I do a better job of delegating documentation?
 
@@ -101,6 +109,10 @@ I have a model in my head of what the typical TinyPilot customer is like, and I 
 This is complicated enough that it requires a screenshot or diagram to explain what's happening. You're assuming that our customers will recognize this term, but I think too many of them won't.
 
 {{<img src="write-for-the-average.png" alt="Write for the average TinyPilot customer. The average TinyPilot customer understands these terms: Ethernet, WiFi, Local network, Keyboard / mouse input, USB / USB-C / USB 3.0, AC adapter, HDMI / VGA, Router / switch, Web browser, SSH. We assume that the average TinyPilot customer **does not** understand these terms / concepts: cached , PCB / HAT , audio breakout board , VPN , EDID , virtual display , NTP server. The best way to avoid confusing customers is to speak in terms they already understand. If that’s not possible, you can still use terms that customers might not recognize, but you should first define them." has-border="true" caption="Exceprt from TinyPilot's internal style guide about level of technical jargon to use" max-width="500px">}}
+
+We have a team subscription to Grammarly, but it doesn't fit well with our workflows. People maybe use it on the first draft, but nobody wants to keep copy pasting an entire article into Grammarly after every edit.
+
+I've looked at [Vale](https://vale.sh), which is developer-oriented, but it seems too primitive relative to Grammarly. But I just revisited it, and it looks like we could configure some low-noise rules, so it's worth investigating.
 
 ## Learing Nix vs. learning Zig
 
