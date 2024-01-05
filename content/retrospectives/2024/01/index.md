@@ -68,7 +68,7 @@ Still, I've been neglecting marketing as I focus on managing our transition to e
 
 ## Can I delegate hard product decisions?
 
-When I think about where my time is going these days, I spend a large portion of it on what I'd call "hard product decisions." These are instances where I decide which features to build, how much to invest in them, and how to reprioritize when we run into surprises.
+When I think about where my time is going these days, I spend a large portion of it on what I'd call "hard product decisions." This is the time I spend thinking about which features TinyPilot needs, how much to invest in them, and how to reprioritize when we run into surprises.
 
 I've tried to delegate more hard product decisons to the TinyPilot team, but I haven't made much progress.
 
@@ -82,15 +82,23 @@ But there are many more factors for deciding how much to invest in a new feature
 - What will the long-term burden be of maintaining this feature?
 - How will this feature impact our support teams?
 
+And even if I could create this multidimensional chart, it's hard to make meaningful estimates about all the variables. One person might think that 5% of users will benefit from a feature, while another equally intelligent teammate might guess that it's 15%. How do you make accurate decisions when variance in estimates from a single factor can change the return on investment by a factor of three?
+
 It feels highfalutin to say, but the person who answers those questions needs to have "product vision." They need to be connected with customers, the dev team, and the support teams. And for TinyPilot, the only person in that position is me.
 
 One possible solution is to hire a product manager whose job is to take high level strategy, turn that into a plan, and execute it with the team. That's not very practical, as it's an additional person to manage and loop into communications with the team. I'm currently managing six people, and that feels like my upper bound on how many people I can manage effectively.
 
-Another possible solution would be to give an existing team member product manager responsibilities. The problem is I can't figure out a sensible path to that solution.
+Another possible solution would be to give an existing team member product manager responsibilities. I can't figure out a sensible path to that solution. It's not just another chore like bringing in the mail in the morning &mdash; they'd have to be looped in on almost all of the customer and team interactions that I see, so it's another 10-20 hours per week of work. And even if we did that, I'm not sure I could train someone to the point where they're making sound product decisions.
 
-Nobody on the dev team wants the role, and anyone outside the dev team would have a hard time making decisions about how costly things are to implement.
+My plan now is to continue giving the dev team high-level strategy and a rough budget of dev hours for bugs and feature work. That's been working, but I'm still searching for ways to facilitate them making more decisions autonomously.
 
 ## Can I do a better job of delegating documentation?
+
+Another area where I spend a lot of time is reviewing documentation.
+
+And it's not so much that I spend so much wall time on it, but I use a lot of my "deep thinking" budget on reviewing documentation. I find that I'm capable of about one hour of writing per day. Sometimes, I'm more focused and can write for two or three hours, but I typically tap out after an hour and don't make useful progress.
+
+I find that reviewing writing for other people is even more draining. Because not only am I thinking about how I'd express an idea, I have to think about why I'm choosing to express it that way and why I feel like that's stronger than what I'm reviewing.
 
 I'm particular about documentation. If I see ways to improve it, I don't want to publish it until we've integrated the improvements.
 
