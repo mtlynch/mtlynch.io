@@ -39,14 +39,14 @@ We now have a plan in place for how we'll check that TinyPilot customers still h
 
 This is partially due to time constraints. I had to unexpectedly work around a few issues with our vendors, and that took up a bit of my time.
 
-The other issue is that this is an unpleasant task, so I procrastinated. It's an important thing to do because we want to catch manufacturing errors early, but it requires making an ask of our 3PL, who historically hasn't been so cooperative.
+The other issue is that this is an unpleasant task, so I procrastinated. It's an important thing to do because we want to catch manufacturing errors early, but it requires making a special request to our 3PL, who historically hasn't been so cooperative.
 
 ### Handle TinyPilot's end-of-year tax chores
 
 - **Result**: We collected W-9 forms from all of our vendors.
 - **Grade**: A-
 
-This is now complete, and have a better understanding of who needs to give us W-9 forms. I can avoid making it a last-minute task in the future.
+This is now complete, and I have a better understanding of who needs to give us W-9 forms. I can avoid making it a last-minute task in the future.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -61,17 +61,17 @@ This is now complete, and have a better understanding of who needs to give us W-
 | Total Revenue            | $87,170.21     | $77,281.21      | <font color="red">-$9,889.00 (-11%)</font>       |
 | **Profit**               | **-$5,407.96** | **-$59,117.41** | **<font color="red">-$53,709.45 (-inf%)</font>** |
 
-Revenue is down slightly from November, but that's a seasonal trend that happens every year. Our normal range seems to be $75-90k/month, so we're at the low end of our normal but not worryingly so.
+Revenue is down slightly from November, but that's a seasonal trend that happens every year. Our normal range seems to be $75-90k/month, so we're at the low end of our normal, but not worryingly so.
 
-Profit looks scary because I'm still doing bookkeeping on a cash basis even though we're spending a lot more on manufacturing up front due to shifting to a third-party contract manufacturer. In the fourth quarter, TinyPilot spent $150k on materials and manufacturing, the most we've ever spent in a quarter. On a cost of goods sold (COGS) basis, TinyPilot's profit for December was actually $9k (as in, positive $9k).
+Profit looks scary because I'm still doing bookkeeping on a cash basis, even though we're spending a lot more on manufacturing up front due to shifting to a third-party contract manufacturer. In the fourth quarter, TinyPilot spent $150k on materials and manufacturing, the most we've ever spent in a quarter. On a cost of goods sold (COGS) basis, TinyPilot's profit for December was actually $9k (as in, positive $9k).
 
-Still, I've been neglecting marketing as I focus on managing our transition to external manufacturing and fulfillment vendors. TinyPilot has fortunately grown without much investment in marketing the past few months, but I can't bank on that forever, so one of my goals in January is to explore some new marketing channels.
+Still, I've been neglecting marketing as I focus on managing our transition to external manufacturing and fulfillment vendors. TinyPilot has fortunately grown without much investment in marketing over the past few months, but I can't bank on that forever, so one of my goals in January is to explore some new marketing channels.
 
 ## Can I delegate hard product decisions?
 
 When I think about where my time is going these days, I see a large portion of it going to what I'd call "hard product decisions." This is the time I spend thinking about which features TinyPilot needs, how much to invest in them, and how to reprioritize resources when we run into surprises.
 
-I've tried to delegate hard product decisons to the TinyPilot team, but I haven't made much progress.
+I've tried to delegate hard product decisions to the TinyPilot team, but I haven't made much progress.
 
 It would be great if I could create a chart showing how much a feature costs vs. how much it will satisfy users, and then tell the team to stay above the line.
 
@@ -87,7 +87,7 @@ And even if I could create this multidimensional chart, it's hard to make meanin
 
 It feels highfalutin to say, but the person who makes the final call has to have "product vision." They need to be connected with customers, the dev team, and the support teams. And for TinyPilot, the only person in that position is me.
 
-One possible solution is to hire a product manager whose job is to take high level strategy, turn that into a plan, and execute it with the team. That's not very practical, as it's an additional person to manage and loop into communications with the team. I'm currently managing six people, and that feels like my upper bound on how many people I can manage effectively.
+One possible solution is to hire a product manager whose job is to take high-level strategy, turn that into a plan, and execute it with the team. That's not very practical, as it's an additional person to manage and loop into communications with the team. I'm currently managing six people, and that feels like my upper bound on how many people I can manage effectively.
 
 Another possibility is to give an existing team member product manager responsibilities, but that also feels impractical. It's not just another chore like bringing in the mail in the morning &mdash; they'd have to be looped in on almost all of the customer and team interactions, so it's another 10-20 hours per week of work. And even if we did that, I'm not sure I could train someone to the point where they're making sound product decisions.
 
@@ -129,7 +129,7 @@ After six months of using Nix, I still have a terrible mental model of Nix. I've
 
 When I hit an error in Zig, I can usually [reason through it](/notes/zig-unit-test-c/#calling-ustreamer-code-from-zig) to understand what the compiler is telling me. When I hit an error in Nix, I feel completely helpless.
 
-I think one major difference is that I have a lot of development experience in C-style languages and no experience in pure functional languages. Zig is aimed at C and C++ developers, so the concepts make sense to me as someone who worked in those languages for ten years.
+I think one major difference is that I have a lot of development experience in C-style languages and no experience in pure functional languages. Zig is aimed at C and C++ developers, so the concepts make sense to me as someone who has worked in those languages for ten years.
 
 Nix seems very inspired by Haskell and other functional languages, which I've never learned. For a Haskell developer, Nix would probably feel more intuitive, and they might be confused by Zig's focus on pointers and memory allocators, which are not as prominent in functional languages.
 
