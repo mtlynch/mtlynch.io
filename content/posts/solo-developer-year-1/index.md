@@ -71,7 +71,7 @@ Despite my best efforts, the blog earned more than all of my other projects comb
 | Domain                                                                  | -$60        |
 | **Net profit**                                                          | **-$3,835** |
 
-\* I work with an [excellent developer](https://www.andrewwnewhouse.com/) who handles all the coding and web design so that I can just write.
+\* I work with an [excellent developer](https://web.archive.org/web/20190205122131/https://www.andrewwnewhouse.com/) who handles all the coding and web design so that I can just write.
 
 ### [Is It Keto](https://isitketo.org)
 
