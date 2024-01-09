@@ -160,6 +160,10 @@
     "2023-11": {
       "profit": -5407.96,
       "totalRevenue": 87170.21
+    },
+    "2023-12": {
+      "profit": -59117.41,
+      "totalRevenue": 77281.21
     }
   },
   "htfp": {
@@ -269,6 +273,9 @@
       "totalRevenue": 0
     },
     "2023-11": {
+      "totalRevenue": 0
+    },
+    "2023-12": {
       "totalRevenue": 0
     }
   },
@@ -449,6 +456,9 @@
     },
     "2023-11": {
       "totalRevenue": 141.48
+    },
+    "2023-12": {
+      "totalRevenue": 99.82
     }
   },
   "zestful": {
@@ -646,6 +656,9 @@
     },
     "2023-11": {
       "totalRevenue": 107.33
+    },
+    "2023-12": {
+      "totalRevenue": 148.4
     }
   }
 }
