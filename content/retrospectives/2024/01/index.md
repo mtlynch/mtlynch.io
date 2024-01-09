@@ -117,7 +117,7 @@ Perhaps one way of improving this is to revisit past reviews and look for patter
 
 We have a team subscription to Grammarly, but it doesn't fit well with our workflows. People maybe use it on the first draft, but nobody wants to keep copy/pasting an entire article into Grammarly after every edit. I've looked at [Vale](https://vale.sh), which is developer-oriented, but it seems primitive relative to Grammarly. Maybe we could configure Vale with some low-noise checks, so I'll give it a shot.
 
-## Learing Nix vs. learning Zig
+## Learning Nix vs. learning Zig
 
 One of the results of shifting TinyPilot's manufacturing and fulfillment to third-party vendors is that I've had more time and mental bandwidth to learn new technologies. The two technologies I've been eyeing from afar for the past two years are [Nix](/tags/nix/) and [Zig](/tags/zig/), and I finally got to experiment with both of them toward the end of 2023.
 
