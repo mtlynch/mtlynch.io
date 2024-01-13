@@ -57,6 +57,12 @@ IGNORE_PATTERNS+=("/www.servicenow.com/")
 
 URL_IGNORE="$(join_by , "${IGNORE_PATTERNS[@]}")"
 
+IGNORED_FILES_ARR=()
+IGNORED_FILES_ARR+=("public/collect-debt/full-emails/index.html")
+IGNORED_FILES_ARR+=("public/notes/archivebox/reddit-singlefile.html")
+
+IGNORED_FILES="$(join_by , "${IGNORED_FILES_ARR[@]}")"
+
 # Run HTMLProofer
 htmlproofer \
   --only-4xx \
@@ -65,7 +71,7 @@ htmlproofer \
   --allow-hash-href \
   --ignore-empty-alt \
   --ignore-missing-alt \
-  --ignore-files "public/collect-debt/full-emails/index.html" \
+  --ignore-files "${IGNORED_FILES}" \
   `# Swap URLs https://mtlynch.io/ for / so that htmlproofer checks the local` \
   `# build rather than the production URLs. At the time this check runs, the` \
   `# site has not yet deployed, so htmlproofer shouldn't try to hit the real` \
