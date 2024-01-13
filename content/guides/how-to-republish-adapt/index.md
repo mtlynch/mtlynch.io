@@ -40,4 +40,4 @@ If you translate an article from this site into another language, you can use an
 
 If you republish an article from this site but make changes to the writing or images, you can use an attribution notice like the following, which makes it clear that you've diverged from the original:
 
-> This article, "Tips for Great Code Reviews," is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) by \<Your Name\>. It was adapted from ["How to Make Your Code Reviewer Fall in Love with You"](https://mtlynch.io/code-review-love/) by Michael Lynch, used under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+> This article, "Tips for Great Code Reviews," is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) by \<Your Name\>. It was adapted from ["How to Make Your Code Reviewer Fall in Love with You,"](https://mtlynch.io/code-review-love/) by Michael Lynch, used under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
