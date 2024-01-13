@@ -74,7 +74,17 @@ When we shifted to the 3PL, we saved less time than I hoped, but it was a major 
 
 I hired a third part-time employee on a temporary basis. And even with three people, it was tough to keep up with orders.
 
-### XX
+Getting the new manufacturer up and running took XX months. They've worked out even better than we hoped. Our previous manufacturing partners have all been companies based in China. We found a US-based company with facilities overseas. They've been really hands-on in working with to improve aspects of the product, and they designed a retail box for us.
+
+### TinyPilot looks like a real product now
+
+It's been a 3D-printed case. I'd tried to find people to design a nicer box for the product, but it never came together, and it was never my top priority. But it definitely felt a little amateur that we shipped our product in a plain box with the device and all the cables just globbed together in a bubble-wrap pouch.
+
+But now, it looks like a real thing. If someone were to do an unboxing video, I'd be happy to see them open it.
+
+Retail box
+
+Metal case
 
 ## Lessons learned
 
