@@ -80,9 +80,9 @@ It's so cool to read reddit threads this way because it's so _fast_. I've just g
 
 ## Archiving YouTube videos
 
-There are more specialized tools for archiving YouTube videos like, but ArchiveBox also bundles [yt-dlp](https://github.com/yt-dlp/yt-dlp), so you can just hand it a YouTube URL, and it will archive the page and the video.
+There are more specialized tools for archiving YouTube videos, but ArchiveBox also bundles [yt-dlp](https://github.com/yt-dlp/yt-dlp), so you can just hand it a YouTube URL, and it will archive the page and the video.
 
-So if I want to make sure I always have a copy of the _Lonely Island_ / _SNL_ classic, ["Like a Boss,"](https://www.youtube.com/watch?v=NisCkxU544c) I can hand it to ArchiveBox like any other website.
+If I want to make sure I always have a copy of the _Lonely Island_ / _SNL_ classic, ["Like a Boss,"](https://www.youtube.com/watch?v=NisCkxU544c) I can hand it to ArchiveBox like any other website.
 
 {{<img src="youtube-archived.png" has-border="true" caption="ArchiveBox downloaded the YouTube video">}}
 
@@ -98,7 +98,7 @@ ArchiveBox isn't able to perfectly recreate the real YouTube experience, but it 
 
 ## Why does this feel so familiar?
 
-When I looked at the contributor list for ArchiveBox, I noticed a familiar name, [Nick Sweeting](https://nicksweeting.com/). I know him! I met him at PyGotham in 2019.
+When I looked at the contributor list for ArchiveBox, I noticed a familiar name at the top, [Nick Sweeting](https://nicksweeting.com/). I know him! I met him at PyGotham in 2019.
 
 I scrubbed through the video of Nick's talk and realized Nick actually demo'ed ArchiveBox at that same conference five years ago. I [wrote about his talk](/retrospectives/pygotham-2019-notes/#archiving-the-internet-before-it-all-rots-away) at the time, but I guess ArchiveBox didn't stick with me for whatever reason.
 
