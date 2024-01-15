@@ -3,6 +3,7 @@ node_modules/
 public/
 resources/
 static/third-party/
+content/notes/archivebox/reddit-singlefile.html
 
 # TODO: Make these play nicely with prettier
 layouts/shortcodes/
