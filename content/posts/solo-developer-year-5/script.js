@@ -176,5 +176,5 @@ document.addEventListener("DOMContentLoaded", () => {
   document
     .querySelectorAll('[blog-purpose="delta"]')
     .forEach(populateDeltaCell);
-  drawCharts("2023-01");
+  drawCharts(parseDate("2023-01"));
 });
