@@ -14,9 +14,9 @@ Six years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to 
 
 For the first few years, all of my businesses flopped. None of them earned more than a few hundred dollars per month in revenue, and they all had negative profits.
 
-Halfway through my third year, I created a device called [TinyPilot](https://tinypilotkvm.com) that allows users to control their computers remotely without installing any software. The product quickly caught on, and it's been my main focus ever since.
+Halfway through my third year, I created a device called [TinyPilot](https://tinypilotkvm.com) that allows users to control their computers remotely. The product quickly caught on, and it's been my main focus ever since.
 
-In 2023, TinyPilot earned $200k in profit, a 10x increase from 2022. The business also generated $997k in profit, which, if you squint slightly, is a million dolllars.
+In 2023, TinyPilot earned $200k in profit, a 10x increase from 2022. The business also generated $997k in revenue, which, can we just all agree it's basically $1M?
 
 In this post, I'll share what I've learned about being a bootstrapped founder from my sixth year doing it.
 
@@ -36,17 +36,17 @@ In this post, I'll share what I've learned about being a bootstrapped founder fr
 
 ### My most terrifying moment
 
-In XX, I was getting ready. It was a lazy Saturday morning, and I heard a knock on my door. I opened it in my pajamas to see a guy in his mid-fifties. I didn't recognize him, but he was in jeans and a jacket.
+One lazy Saturday afternoon in February, I heard a knock on my door. I opened it in my pajamas to see a guy in his mid-forties on my porch.
 
 "Are you the TinyPilot guy?" he asked me.
 
 "Uh oh," I thought.
 
-Was this a disgruntled customer who was mad about some product decision or team interaction? Was I about to be served a court order by a process server?
+Was this a disgruntled customer? Was I about to be served a court order by a process server?
 
 "Yes..." I said cautiously.
 
-"I'm the handyman at the office. A sprinkler burst, and it flooded your office! You gotta get down there."
+"I'm the handyman at the office. A pipe burst, and we can't get into your suite. Can you come down?"
 
 I got in my car and did the three-minute drive to the office, wondering if this was the end of my business. We assembled all of our hardware in that office, and we fulfilled all of our orders from there. I had insurance, but I had chosen coverage a year before when we carried lower inventory. And even if insurance paid out, TinyPilot would be dead in the water for three to six months until we could get replacement materials from our overseas manufacturers and start the whole manufacturing pipeline up again.
 
@@ -88,7 +88,17 @@ Metal case
 
 ## Lessons learned
 
-### Lesson 1
+### There's a hidden-stress in being responsible for low-latency responses
+
+Deliberately designed not to be a low-latency business. Nobody carries a pager. Nothing has to happen within minutes.
+
+There's such a big difference between having to make sure the office can run every day to not.
+
+Our responsibility became building enough devicees. And then when we switched over to the manufacturer, the low-latency part became support, and there are fewer single-points of failure. And very few that we manage ourselves.
+
+Two people could be unavailable.
+
+Buffer of about a week's worth of devices.
 
 ### Lesson 2
 
