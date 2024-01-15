@@ -131,6 +131,10 @@ I published a lot more on my blog
 - **Result**: We still have the office but it's non-critical
 - **Grade**: B
 
+I originally gave our landlord notice that we'd be moving out on XX. Then when things ran late, I asked if we could have another two months. And then I realized we needed to inspect the shipments, and I asked if we could go month-to-month.
+
+So, if a pipe burst in our office tomorrow and destroyed everything, it would be inconvenient, but we'd be fine. The most important thing we do there now is process returns, but we're in the process of handing that job over to our manufacturer.
+
 ## Goals for year seven
 
 ### Manage TinyPilot on 20 hours per week
