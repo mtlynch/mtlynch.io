@@ -117,6 +117,10 @@ It's not 20 hours, but it's . I got married, took time off for my bachelor party
 
 There were several week-long stretches where I was like, "Here's my emergency number if someone is physially injured or in danger." And fortunately, the phone never rang.
 
+In 2022, I only wrote four blog posts outside of monthly retrospectives. In 2023, I wrote four new blog posts but 15 new "notes" posts, which is what I started doing when I wanted to share something but I didn't want to polish it enough for a blog post.
+
+I published a lot more on my blog
+
 ### Earn $100k in profit
 
 - **Result**: Earned $200k in profit
@@ -127,41 +131,21 @@ There were several week-long stretches where I was like, "Here's my emergency nu
 - **Result**: We still have the office but it's non-critical
 - **Grade**: B
 
-## Goals for year six
+## Goals for year seven
 
 ### Manage TinyPilot on 20 hours per week
 
-I failed miserably at reducing my hours last year, but it's now my top priority. I'm hopeful about my chances this year. A lot of my 2022 work laid the groundwork to remove me from the critical path in 2023.
+### Goal 2
 
-### Earn $100k in profit
-
-For TinyPilot's first two and a half years, I focused on growth. I pay the same in hardware and software engineering costs whether I'm selling 20 devices per month or 2,000, so I needed to reach a certain scale to make the business viable.
-
-For most of 2023, TinyPilot's production will be [constrained by supply](/retrospectives/2023/01/#losing-450k-in-a-single-email). It was disappointing to find out I'd have no chance at growing sales, but the silver lining is that I can slow down and focus on profit rather than growth.
-
-TinyPilot has always roughly broken even, but I think I can reach $100k in profit this year if I avoid further hardware redesigns. Without the hardware redesigns in 2022, I would have saved around $100k on engineering and $20k on materials. If I keep sales steady and run leaner on the hardware side, 2023 should be a profitable year.
-
-### Close the TinyPilot office
-
-I've leased an office for TinyPilot [since early 2021](/retrospectives/2021/05/#tinypilots-new-office-the-fun-stuff). We use it for assembling devices, fulfilling orders, and storing inventory.
-
-Having our own local office has helped us adapt quickly to changes in our hardware and processes, but it's a lot of extra overhead. This year, I hope to transition assembly to China, where all of our parts originate. I'm also in the process of moving our fulfillment to a third-party logistics warehouse.
-
-Eliminating the TinyPilot office would spare us the work of maintaining a physical space, managing inventory, and tracking in-person shifts. Outsourcing manufacturing and fulfillment will also give the team more flexibility in time and location.
+### Goal 3
 
 ## Do I still love it?
 
 Every year, when I write these blog posts, I ask myself whether I still love what I'm doing.
 
-2022 was a hard year &mdash; certainly my hardest since going off on my own. I wasn't miserable, but I can't say I _loved_ it.
-
-The global chip shortage meant we could never manufacture a batch of products the same way twice. There was always some missing component or manufacturing issue, so we were constantly racing to fix issues and adapt our processes before we ran out of stock. We got through it, and there were only a handful of days that I had to mark any product as sold out, but it was stressful.
-
-That said, there were certainly many things to appreciate about the year. I had a relatively small amount of time for writing and software development, but I'm proud of what I produced. Expanding the TinyPilot organization and figuring out how teams work together grew my skills as a manager. It's been gratifying to see the team grow in their roles and expand their skills as the company evolves.
+I always felt like, "Worse comes to worst, I just go back to working at a big tech company." But now I feel grateful that I'm more protected from layoffs and I've spent the last six years building skills around making money without an employer.
 
 I still prefer working for myself to having an employer. I still feel grateful for the freedom to have my own company. And I still want to do it forever.
-
-{{<tweet user="deliberatecoder" id="1624058991205658626">}}
 
 ---
 
