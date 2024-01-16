@@ -102,15 +102,19 @@ Two people could be unavailable.
 
 Buffer of about a week's worth of devices.
 
-### As a project matures, more time goes to
+### As a project matures, more time goes to maintenance
 
 I felt frustrated that we were making such slow progress on features and we were getting bogged down with maintenance tasks.
 
 But what's the pattern.
 
-### Encourage my teammates to escalate in parallel
+### Encourage teammates to escalate in parallel
 
 Escalate in parallel. Now I'm stuck holding the baton. The ticket is stuck on me. We try to respond to customers within one business day, so . A lot of the time, they knew the right answer anyway. I was just holding things up to say, "Yes, that sounds reasonable."
+
+Same thing was happening on development work. I did X, and Y. I think the next step is to do Z. Does that sound good?
+
+Instead to just keep going and declare what's going on. The majority of the time, I agree with their approach. In the minority of cases where I think they're headed in a heinously backwards path, it's easy for me to say, "Hang on before you do that because I think Z is going to be impractical. Let me think about what makes sense here."
 
 I changed the guidance to be that people should do the best they can and escalate to me if they're unsure. They should only stop responding in the cases where they just have no idea.
 
