@@ -138,6 +138,12 @@ In 2023, I found more time for writing wrote four new blog posts but 15 new "not
 - **Result**: Earned $200k in profit
 - **Grade**: A+
 
+This caught me by surprise.
+
+I anticipated spending a lot more on electrical engineering. Last year, I thought we were going to move manufacturing to China, so I thought I'd have to manage that process through my EE vendor. I ended up getting lucky and finding a US-based contract manufacturer with facilities in Vietnam, so I was mostly able to work with them directly rather than needing my EE vendor to bridge the gap.
+
+I also underestimated how much the metal case would increase the value. I didn't experiment much with price before, but we were selling the 3D-printed version for $XX. When I switched to the metal case, I discovered that customers were willing to buy even at a higher price (TODO: link).
+
 ### Close the TinyPilot office
 
 - **Result**: We still have the office but it's non-critical
