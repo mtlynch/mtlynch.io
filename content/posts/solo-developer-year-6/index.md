@@ -34,6 +34,8 @@ In this post, I'll share what I've learned about being a bootstrapped founder fr
 
 {{<revenue-graph project="tinypilot">}}
 
+Show cash profit vs. COGS profit
+
 ### My most terrifying moment
 
 One lazy Saturday afternoon in February, I heard a knock on my door. I opened it in my pajamas to see a guy in his mid-forties on my porch.
@@ -78,7 +80,7 @@ Getting the new manufacturer up and running took XX months. They've worked out e
 
 ### TinyPilot looks like a real product now
 
-It's been a 3D-printed case. I'd tried to find people to design a nicer box for the product, but it never came together, and it was never my top priority. But it definitely felt a little amateur that we shipped our product in a plain box with the device and all the cables just globbed together in a bubble-wrap pouch.
+It's been a 3D-printed case. I'd tried to find people to design a nicer box for the product, but it never came together, and it was never my top priority. But it definitely felt a little amateur that we shipped our product in a plain brown box with the device and all the cables just globbed together in a bubble-wrap pouch.
 
 But now, it looks like a real thing. If someone were to do an unboxing video, I'd be happy to see them open it.
 
@@ -100,9 +102,19 @@ Two people could be unavailable.
 
 Buffer of about a week's worth of devices.
 
-### Lesson 2
+### As a project matures, more time goes to
 
-### Lesson 3
+I felt frustrated that we were making such slow progress on features and we were getting bogged down with maintenance tasks.
+
+But what's the pattern.
+
+### Encourage my teammates to escalate in parallel
+
+Escalate in parallel. Now I'm stuck holding the baton. The ticket is stuck on me. We try to respond to customers within one business day, so . A lot of the time, they knew the right answer anyway. I was just holding things up to say, "Yes, that sounds reasonable."
+
+I changed the guidance to be that people should do the best they can and escalate to me if they're unsure. They should only stop responding in the cases where they just have no idea.
+
+TODO: Talk about
 
 ## Grading last year's goals
 
@@ -110,16 +122,16 @@ Last year, I set [three high-level goals](/solo-developer-year-5/#goals-for-year
 
 ### Manage TinyPilot on 20 hours per week
 
-- **Result**: I mostly worked 40-hour weeks, a reduction from, and took a lot of time off
+- **Result**: I worked 35-40 hours per week, a reduction from previous years, and traveled more than ever
 - **Grade**: B-
 
-It's not 20 hours, but it's . I got married, took time off for my bachelor party and honeymoon, attended other family and friends' weddings. I attended Microconf and Handmade Seattle.
+It's not 20 hours, but it's . I got married, I attended three conferences. I was out of the office for about five weeks, and things went smoothly.
+
+My workday used to start whenever I woke up, usually 7 or 8am, and end when I ate dinner at 6:30pm, with breaks for breakfast, lunch, and exercise. This year, I moved the end time up to 5:30pm, and . In 2022, it frequently felt like I was ending the day without getting to everything I wanted, whereas in 2023, I frequently felt like I got to everything I needred to.
 
 There were several week-long stretches where I was like, "Here's my emergency number if someone is physially injured or in danger." And fortunately, the phone never rang.
 
-In 2022, I only wrote four blog posts outside of monthly retrospectives. In 2023, I wrote four new blog posts but 15 new "notes" posts, which is what I started doing when I wanted to share something but I didn't want to polish it enough for a blog post.
-
-I published a lot more on my blog
+In 2023, I found more time for writing wrote four new blog posts but 15 new "notes" posts, which is what I started doing when I wanted to share something but I didn't want to polish it enough for a blog post.
 
 ### Earn $100k in profit
 
