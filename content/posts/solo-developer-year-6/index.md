@@ -106,7 +106,7 @@ Buffer of about a week's worth of devices.
 
 I felt frustrated that we were making such slow progress on features and we were getting bogged down with maintenance tasks.
 
-But what's the pattern.
+We can make this fix, but what's the pattern? On page X, we do it this way, but on page Y, we do it this way.
 
 ### Encourage teammates to escalate in parallel
 
