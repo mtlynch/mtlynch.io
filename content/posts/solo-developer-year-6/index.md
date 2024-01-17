@@ -104,21 +104,31 @@ Buffer of about a week's worth of devices.
 
 ### As a project matures, more time goes to maintenance
 
+Why does it feel like we're just running in place? In the early days, we'd release huge features every month. Now, it felt like every release, I was struggling to write the release announcement because there was nothing that exciting in it.
+
+So, I looked back at what work we had done, and I didn't regret any of the decisions.
+
+Every line of code takes time to maintain. So if we had two developers three years ago, and we have two developers today, but our codebase is three times larger, then more of our time will go to maintenance. And new feature work is just going to take longer because it's harder to design around existing infrastructure than it is to do pure greenfield development.
+
+We tested rigorously, we . We're not shipping a web app where we control everything server-side. We're shipping updates to software that our customers run locally. We deal with things like filesystem corruption
+
 I felt frustrated that we were making such slow progress on features and we were getting bogged down with maintenance tasks.
 
 We can make this fix, but what's the pattern? On page X, we do it this way, but on page Y, we do it this way.
 
-### Encourage teammates to escalate in parallel
+### Encourage asynchronous escalation
 
-Escalate in parallel. Now I'm stuck holding the baton. The ticket is stuck on me. We try to respond to customers within one business day, so . A lot of the time, they knew the right answer anyway. I was just holding things up to say, "Yes, that sounds reasonable."
+I try to give the team as much autonomy as possible. I want them to feel empowered to make their own decisions. At the same time, I want to make sure they feel comfortable asking for support when they get stuck, so I say that anyone can always escalate issues or questions to me.
 
-Same thing was happening on development work. I did X, and Y. I think the next step is to do Z. Does that sound good?
+But I was finding that escalation was quickly becoming a source of stress for me. For a while, I thought that was just the nature of esclating issues. I'm only seeing the really tough customer questions, so they're going to feel more stressful, but I tried to think of ways to reduce the pressure on me.
 
-Instead to just keep going and declare what's going on. The majority of the time, I agree with their approach. In the minority of cases where I think they're headed in a heinously backwards path, it's easy for me to say, "Hang on before you do that because I think Z is going to be impractical. Let me think about what makes sense here."
+The first change I made was to adjust our process for escalation. Instead of presenting a problem and saying, "Okay, now what?" escalation involved proposing a strategy too. Like, if I wasn't available and you were the last line of support, what would you tell the customer?
 
-I changed the guidance to be that people should do the best they can and escalate to me if they're unsure. They should only stop responding in the cases where they just have no idea.
+That worked well because it turned out that about 80% of the time, the team came up with the same solution that I would have recommended. And the more they did this, the better they became at tackling hard cases.
 
-TODO: Talk about
+But then I realized I still felt stressed out, and part of it was the time pressure. We aim to respond to customers on our support forum within one business day. By the time a question was escalated to me, we were usually 8-12 hours into our response window. There wasn't a lot of time for me to think of a response, my teammate to read the response, then get the answer back to the customer within our target window.
+
+I realized they don't really need to wait on an answer from me to continue helping the customer. If 80% of the time, I'm just saying, "Yes, do that," then they could do that immediately. And in the 20% of cases where I can think of a better approach, the suggested path was never disastrous. Like they're never saying, "My idea is they pop their device in the microwave for two minutes on high." So if they said to try changing setting X and I thought they'd have more luck changing setting Y, that was fixable later.
 
 ## Grading last year's goals
 
@@ -129,11 +139,9 @@ Last year, I set [three high-level goals](/solo-developer-year-5/#goals-for-year
 - **Result**: I worked 35-40 hours per week, a reduction from previous years, and traveled more than ever
 - **Grade**: B-
 
-It's not 20 hours, but it's . I got married, I attended three conferences. I was out of the office for about five weeks, and things went smoothly.
+It's not 20 hours, but I did work significantly less in 2023 than 2022. I did a lot of personal and work travel, so I was "out of the office" for about five weeks, and things still went smoothly.
 
-My workday used to start whenever I woke up, usually 7 or 8am, and end when I ate dinner at 6:30pm, with breaks for breakfast, lunch, and exercise. This year, I moved the end time up to 5:30pm, and . In 2022, it frequently felt like I was ending the day without getting to everything I wanted, whereas in 2023, I frequently felt like I got to everything I needred to.
-
-There were several week-long stretches where I was like, "Here's my emergency number if someone is physially injured or in danger." And fortunately, the phone never rang.
+My workday used to start whenever I woke up, usually 7 or 8am, and end when I ate dinner at 6:30pm, with breaks for breakfast, lunch, and exercise. This year, I moved the end time up to 5:30pm, and that made a big difference in feeling like I had time to unwind and do non-work things in the evening. In 2022, it frequently felt like I was ending the day without getting to everything I wanted, whereas in 2023, I frequently felt like I got to everything I needred to.
 
 In 2023, I found more time for writing wrote four new blog posts but 15 new "notes" posts, which is what I started doing when I wanted to share something but I didn't want to polish it enough for a blog post.
 
@@ -142,26 +150,38 @@ In 2023, I found more time for writing wrote four new blog posts but 15 new "not
 - **Result**: Earned $200k in profit
 - **Grade**: A+
 
-This caught me by surprise.
+This caught me by surprise. My first two years running TinyPilot, I was basically at breakeven. Sales were going well, but I was also spending a ton on electrical engineering and software development, and a lot of my cash was tied up in inventory.
 
-I anticipated spending a lot more on electrical engineering. Last year, I thought we were going to move manufacturing to China, so I thought I'd have to manage that process through my EE vendor. I ended up getting lucky and finding a US-based contract manufacturer with facilities in Vietnam, so I was mostly able to work with them directly rather than needing my EE vendor to bridge the gap.
+One of the major changes was that my electrical engineering costs dropped drastically. In previous years, I had to iterate on our hardware design as the supply chain evolved and as we learned new things from manufacturing. But by 2023, we'd been manufacturing the same hardware for about a year, so we didn't have to do as much redesigning.
 
-I also underestimated how much the metal case would increase the value. I didn't experiment much with price before, but we were selling the 3D-printed version for $XX. When I switched to the metal case, I discovered that customers were willing to buy even at a higher price (TODO: link).
+I also underestimated how much the metal case would increase the value. I didn't experiment much with price before, but we were selling the 3D-printed version for $XX. When I switched to the metal case, I discovered that customers were willing to buy at higher prices (TODO: link).
 
 ### Close the TinyPilot office
 
 - **Result**: We still have the office but it's non-critical
 - **Grade**: B
 
-I originally gave our landlord notice that we'd be moving out on XX. Then when things ran late, I asked if we could have another two months. And then I realized we needed to inspect the shipments, and I asked if we could go month-to-month.
+I felt like we were past the point where it made sense to do a lot of our tasks in-house. Even though it went smoothly, there were lots of risks that could seriously disrupt business, such as pipes exploding.
+
+It is awfully convenient. The team likes having a quiet place to work rather than working from home. And rent is only $600/month, so it's not a huge expense.
 
 So, if a pipe burst in our office tomorrow and destroyed everything, it would be inconvenient, but we'd be fine. The most important thing we do there now is process returns, but we're in the process of handing that job over to our manufacturer.
+
+I didn't think our landlord would let us go month-to-month, but he ended up being fine with it. So if there's no long-term commitment, and we're using it out of convenience rather than necessity, I'm happy to keep it.
 
 ## Goals for year seven
 
 ### Manage TinyPilot on 20 hours per week
 
-### Goal 2
+I know I set this as a goal in 2022 and 2023, but third time's the charm! My management time is definitely trending downward, so I think this year I can get to 20 hours per week.
+
+### Publish a course or book
+
+I created a course about blogging, and I'm proud of the material. I wish I'd done more of that.
+
+When I look around at technology that I find exciting like Zig or Nix, I see such a dearth of long-form educational materials. Something I've realized over the years is that I enjoy teaching much more than most developers do. I also write so much publicly that I feel more comfortable writing material than most people do. Looking back on a lot of the blog posts I wrote this year.
+
+Also, in 2021, I said I'd write a book, and I still want to write it.
 
 ### Goal 3
 
@@ -175,7 +195,7 @@ I still prefer working for myself to having an employer. I still feel grateful f
 
 ---
 
-_Cover image by [Loraine Yow](https://www.lolo-ology.com/). Thanks to my lovely fiancé and the [Blogging for Devs community](https://bloggingfordevs.com/) for providing early feedback on this post._
+_Cover image by [Loraine Yow](https://www.lolo-ology.com/)._
 
 <script src="/third-party/chart.js/2.9.4/Chart.min.js"></script>
 <script src="script.js"></script>
