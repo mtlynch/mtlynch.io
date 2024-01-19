@@ -230,7 +230,7 @@ The uStreamer C file I want to call [depends on the C standard library](https://
 
 Now, I want to call the `us_base64_encode` C function from Zig.
 
-As a reminder, here's the C function I'm trying to call from Zig, which I explained [above](http://blog.local:1313/notes/zig-unit-test-c/#whats-the-simplest-c-function-in-ustreamer):
+As a reminder, here's the C function I'm trying to call from Zig, which I explained [above](/notes/zig-unit-test-c/#whats-the-simplest-c-function-in-ustreamer):
 
 ```c
 // src/libs/base64.h
