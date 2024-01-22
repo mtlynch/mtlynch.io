@@ -44,3 +44,5 @@ Where are WiFi settings stored?
 Compilation v. slow. Meassure this..
 
 Arduino silently casts floats to ints.
+
+Official source treated humidity as an integer, but it's actually a float.
