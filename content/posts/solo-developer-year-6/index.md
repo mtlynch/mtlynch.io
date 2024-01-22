@@ -28,23 +28,19 @@ In this post, I'll share what I've learned about being a bootstrapped founder fr
 - [My Fourth Year as a Bootstrapped Founder](/solo-developer-year-4/)
 - [My Fifth Year as a Bootstrapped Founder](/solo-developer-year-5/)
 
-## Highlights from the year
-
-### TinyPilot became 10x more profitable
+## TinyPilot became 10x more profitable
 
 {{<revenue-graph project="tinypilot">}}
 
 Show cash profit vs. COGS profit
 
-### My most terrifying moment
+## The most terrifying 10 minutes of 2023
 
 One lazy Saturday afternoon in February, I heard a knock on my door. I opened it in my pajamas to see a guy in his mid-forties on my porch.
 
 "Are you the TinyPilot guy?" he asked me.
 
-"Uh oh," I thought.
-
-Was this a disgruntled customer? Was I about to be served a court order by a process server?
+"Uh oh," I thought. Was this a disgruntled customer ready to punch me?
 
 "Yes..." I said cautiously.
 
@@ -66,7 +62,7 @@ Fortunately, the landlord had a spare office in the same building, so I had just
 
 The experience made me never want to be in that situation again, and it illustrated sharply just how much risk I was taking on by managing so much of TinyPilot's operations in a tiny office with just two part-time employees.
 
-### A year of outsourcing
+## A year of outsourcing
 
 In XX, TinyPilot migrated its fulfillment to a third-party logistics (3PL) warehouse. They took over for
 
@@ -78,7 +74,7 @@ I hired a third part-time employee on a temporary basis. And even with three peo
 
 Getting the new manufacturer up and running took XX months. They've worked out even better than we hoped. Our previous manufacturing partners have all been companies based in China. We found a US-based company with facilities overseas. They've been really hands-on in working with to improve aspects of the product, and they designed a retail box for us.
 
-### TinyPilot looks like a real product now
+## Making TinyPilot look like a real product
 
 It's been a 3D-printed case. I'd tried to find people to design a nicer box for the product, but it never came together, and it was never my top priority. But it definitely felt a little amateur that we shipped our product in a plain brown box with the device and all the cables just globbed together in a bubble-wrap pouch.
 
@@ -139,7 +135,7 @@ Last year, I set [three high-level goals](/solo-developer-year-5/#goals-for-year
 - **Result**: I worked 35-40 hours per week, a reduction from previous years, and traveled more than ever
 - **Grade**: B-
 
-It's not 20 hours, but I did work significantly less in 2023 than 2022. I did a lot of personal and work travel, so I was "out of the office" for about five weeks, and things still went smoothly.
+It's not 20 hours, but I did work significantly less in 2023 than 2022. I did a lot of personal and work travel, so I was "out of the office" for about five weeks cumulatively, and things still went smoothly.
 
 My workday used to start whenever I woke up, usually 7 or 8am, and end when I ate dinner at 6:30pm, with breaks for breakfast, lunch, and exercise. This year, I moved the end time up to 5:30pm, and that made a big difference in feeling like I had time to unwind and do non-work things in the evening. In 2022, it frequently felt like I was ending the day without getting to everything I wanted, whereas in 2023, I frequently felt like I got to everything I needred to.
 
@@ -158,7 +154,7 @@ I also underestimated how much the metal case would increase the value. I didn't
 
 ### Close the TinyPilot office
 
-- **Result**: We still have the office but it's non-critical
+- **Result**: We still have the office for non-critical workflows
 - **Grade**: B
 
 I felt like we were past the point where it made sense to do a lot of our tasks in-house. Even though it went smoothly, there were lots of risks that could seriously disrupt business, such as pipes exploding.
@@ -183,15 +179,27 @@ When I look around at technology that I find exciting like Zig or Nix, I see suc
 
 Also, in 2021, I said I'd write a book, and I still want to write it.
 
-### Goal 3
+### Write software for ten working hours per week
+
+Writing code is still one of my favorite ways to spend time. For the past few years of TinyPilot, I've enjoyed coding, but it's never been a sensible way to spend my limited working hours. With a team of six people, several critical vendors, and many moving pieces, the most pressing parts of TinyPilot have always been management.
+
+I hope that by outsourcing and delegating more of TinyPilot's operational side, I can free up enough of my time that coding is, if not the optimal use of my time, at least a positive use of my time.
 
 ## Do I still love it?
 
 Every year, when I write these blog posts, I ask myself whether I still love what I'm doing.
 
-I always felt like, "Worse comes to worst, I just go back to working at a big tech company." But now I feel grateful that I'm more protected from layoffs and I've spent the last six years building skills around making money without an employer.
+2022 was the roughest year I've had running my own business. I still preferred it to working for an employer, but it was stressful adjusting to a lot of TinyPilot's growth.
 
-I still prefer working for myself to having an employer. I still feel grateful for the freedom to have my own company. And I still want to do it forever.
+2023 was a restructuring year. I deliberately shifted focus away from sales growth, product redesigns, and new features so that TinyPilot could focus on the long-term. So, in that way, 2023 was a major improvement over 2022. Still, I find myself having a hard time getting excited about it.
+
+So, I'll say that 2023 was fine. I enjoyed lots of it, I didn't _love_ it. It's kind of hard to love. I spent a lot of time designing new processes. I think I'm good at it, but it's not something I love doing.
+
+It's interesting being a bootstrapped founder after a year of tech layoffs. When I quit my job, my safety net was to just go get another big tech job. And now it's seeming like my safety net is gone.
+
+But I'm grateful that for the past six years, I've been practicing how to make money without an employer. And so at this point, I feel like what I'm doing now maybe is the safer choice.
+
+I always felt like, "Worse comes to worst, I just go back to working at a big tech company." But now I feel grateful that I'm more protected from layoffs and I've spent the last six years building skills around making money without an employer.
 
 ---
 
