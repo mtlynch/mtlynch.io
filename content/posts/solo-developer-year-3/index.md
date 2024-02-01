@@ -184,9 +184,9 @@ I love comedy, but I've missed countless opportunities to see comedians perform 
 
 My plan was to make money through affiliate deals with theaters, but nobody ever used my discount codes. Once COVID hit, I [shuttered the site](/retrospectives/2020/04/#putting-wanderjest-on-hold).
 
-### [Portfolio Rebalancer](https://assetrebalancer.com/)
+### [Portfolio Rebalancer](https://rebalancer.mtlynch.io/)
 
-{{<img src="rebalancer-screenshot.png" alt="Screenshot of Is It Keto website" has-border="true" max-width="550px" caption="[Portfolio Rebalancer](https://assetrebalancer.com/) helps passive investors manage their investments.">}}
+{{<img src="rebalancer-screenshot.png" alt="Screenshot of Is It Keto website" has-border="true" max-width="550px" caption="[Portfolio Rebalancer](https://rebalancer.mtlynch.io/) helps passive investors manage their investments.">}}
 
 My investment portfolio is a mix of stocks and bonds of different categories with a target percentage for each asset type. As prices fluctuate, the balance of my investments changes, so I have to move money around to get back to my target ratios. I do this a few times per year by tediously plugging numbers into a spreadsheet until everything looks right.
 

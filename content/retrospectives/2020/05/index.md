@@ -214,7 +214,7 @@ Ahrefs [is undecided](https://twitter.com/slagter/status/1240197698525028352) ab
 
 - Published two blog posts that reached the front page of Hacker News.
   - This continues my lucky streak on Hacker News with [five frontpage articles in the last four months](https://news.ycombinator.com/from?site=mtlynch.io).
-- Launched the paid version of [Portfolio Rebalancer](https://assetrebalancer.com).
+- Launched the paid version of [Portfolio Rebalancer](https://rebalancer.mtlynch.io).
 - Put infrastructure in place to generate new [Is It Keto](https://isitketo.org) articles automatically.
 
 ### Lessons learned
