@@ -30,7 +30,7 @@ Stripe collects this data on your website if either of the following is true:
 
 ## The discovery
 
-I discovered this by accident while adding paid plans to my [portfolio rebalancer](https://assetrebalancer.com). As part of development, I was using [an HTTP proxy](https://portswigger.net/burp) that allows me to inspect HTTP traffic from my browser.
+I discovered this by accident while adding paid plans to my [portfolio rebalancer](https://rebalancer.mtlynch.io). As part of development, I was using [an HTTP proxy](https://portswigger.net/burp) that allows me to inspect HTTP traffic from my browser.
 
 After successfully implementing my app's payment flow with Stripe, I noticed that every page navigation generated a new HTTP POST request to a Stripe URL:
 

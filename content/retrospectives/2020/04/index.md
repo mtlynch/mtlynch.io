@@ -93,9 +93,9 @@ And because of the recent market volatility, interest in portfolio rebalancing i
 
 <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2152_RC02/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"rebalance portfolio","geo":"US","time":"2015-04-01 2020-04-01"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&geo=US&q=rebalance%20portfolio","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
 
-I spent the last two weeks making a minimum viable product of [Portfolio Rebalancer](https://assetrebalancer.com), a web app that shows you the trades you need to make in your [Vanguard](https://vanguard.com) account to achieve your desired asset allocation strategy:
+I spent the last two weeks making a minimum viable product of [Portfolio Rebalancer](https://rebalancer.mtlynch.io), a web app that shows you the trades you need to make in your [Vanguard](https://vanguard.com) account to achieve your desired asset allocation strategy:
 
-{{<gallery caption="Prototype of my [portfolio rebalancer](https://assetrebalancer.com), which helps investors adjust their holdings based on their investment strategy">}}
+{{<gallery caption="Prototype of my [portfolio rebalancer](https://rebalancer.mtlynch.io), which helps investors adjust their holdings based on their investment strategy">}}
 {{<img src="rebalancer-current-holdings.png" alt="Screenshot of Portfolio Rebalancer showing current holdings" has-border="true">}}
 {{<img src="rebalancer-rebalanced.png" alt="Screenshot of Portfolio Rebalancer showing rebalanced assets" has-border="true">}}
 {{</gallery>}}
@@ -192,7 +192,7 @@ My one [enterprise client](/retrospectives/2020/01/#zestfulhttpszestfuldatacom) 
 
 ### What got done?
 
-- Created a minimum viable product of the [Portfolio Rebalancer](https://assetrebalancer.com).
+- Created a minimum viable product of the [Portfolio Rebalancer](https://rebalancer.mtlynch.io).
 - Presented my talk at NERD Summit: ["How I Used Python to Steal Money."](https://decks.mtlynch.io/nerds-2020/#/)
   - There's a [recording](https://youtu.be/W05vGbi8B4A), but the audio quality is pretty bad.
 - Updated my blog newsletter so that subscribers can choose what type of updates to receive.
