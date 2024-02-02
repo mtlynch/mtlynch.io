@@ -17,7 +17,9 @@ For the first few years, all of my businesses flopped. None of them earned more 
 
 Halfway through my third year, I created a device called [TinyPilot](https://tinypilotkvm.com) that allows users to control their computers remotely. The product quickly caught on, and it's been my main focus ever since.
 
-In 2023, TinyPilot earned $200k in profit, a 10x increase from 2022. The business also generated $997k in revenue, which, can we just all agree it's basically $1M?
+TODO: Photo of TinyPilot device with screenshot
+
+In 2023, TinyPilot earned $200k in profit, a 10x increase from 2022. The business also generated $997k in revenue, which I'll generously round up to $1M.
 
 In this post, I'll share what I've learned about being a bootstrapped founder from my sixth year doing it.
 
@@ -33,31 +35,25 @@ In this post, I'll share what I've learned about being a bootstrapped founder fr
 
 {{<revenue-graph project="tinypilot">}}
 
-Outer pipes Cell padding
+| Income/Expense                    | 2022         | 2023         | Change               |
+| --------------------------------- | ------------ | ------------ | -------------------- |
+| Sales Revenue                     | $807,458     | $992,597     | {{<delta-cell>}}     |
+| Credit Card Rewards               | $4,327       | $4,379       | {{<delta-cell>}}     |
+| **Total Income**                  | **$811,785** | **$996,976** | **{{<delta-cell>}}** |
+| Advertising                       | $51,764      | $39,270      | {{<delta-cell>}}     |
+| Cloud Services                    | $9,151       | $16,408      | {{<delta-cell>}}     |
+| Design Consulting                 | $30,215      | $950         | {{<delta-cell>}}     |
+| Electrical Engineering Consulting | $124,643     | $23,427      | {{<delta-cell>}}     |
+| Fulfillment Vendors               | $0           | $28,321      | {{<delta-cell>}}     |
+| Office Rent                       | $6,600       | $6,310       | {{<delta-cell>}}     |
+| Payroll                           | $205,984     | $255,779     | {{<delta-cell>}}     |
+| Postage                           | $28,324      | $16,853      | {{<delta-cell>}}     |
+| Raw Materials                     | $324,140     | $358,457     | {{<delta-cell>}}     |
+| Everything Else                   | $25,398      | $31,404      | {{<delta-cell>}}     |
+| **Total Expenses**                | **$806,219** | **$777,179** | **{{<delta-cell>}}** |
+| **Net Profit**                    | **$10,447**  | **$235,568** | **{{<delta-cell>}}** |
 
-| Income/Expense                    | 2022      | 2023     | Change           |
-| --------------------------------- | --------- | -------- | ---------------- |
-| Sales Revenue                     | $807,458  | $992,597 | {{<delta-cell>}} |
-| Credit Card Rewards               | $4,327    | $4,379   | {{<delta-cell>}} |
-| Advertising                       | $51,764   | $39,270  | {{<delta-cell>}} |
-| Cloud Services                    | $9,151    | $16,408  | {{<delta-cell>}} |
-| Design Consulting                 | $30,215   | $950     | {{<delta-cell>}} |
-| Electrical Engineering Consulting | $124,643  | $23,427  | {{<delta-cell>}} |
-| Fulfillment Vendors               | $0        | $28,321  | {{<delta-cell>}} |
-| Legal Counsel                     | $3,406    | $1,433   | {{<delta-cell>}} |
-| Office Equipment                  | $6,312    | $1,241   | {{<delta-cell>}} |
-| Office Rent                       | $6,600    | $6,310   | {{<delta-cell>}} |
-| Payroll                           | $$205,984 | $255,779 | {{<delta-cell>}} |
-| Postage                           | $28,324   | $16,853  | {{<delta-cell>}} |
-| Raw Materials                     | $324,140  | $358,457 | {{<delta-cell>}} |
-| Tariffs                           | $10,478   | $7,978   | {{<delta-cell>}} |
-| Tax Preparation                   | $595      | $10,487  | {{<delta-cell>}} |
-| Travel                            | $1,115    | $2,660   | {{<delta-cell>}} |
-| Everything else                   | $3,492    | $7,605   | {{<delta-cell>}} |
-| Net Profit (cash)                 | $10,447   | $235,568 | {{<delta-cell>}} |
-| Net Profit (COGS)                 | $XX       | $XX      | {{<delta-cell>}} |
-
-Show cash profit vs. COGS profit
+I don't draw a salary, so $236k is the full amount I earned from TinyPilot in 2023.
 
 ## The most terrifying 10 minutes of 2023
 
@@ -65,27 +61,27 @@ One lazy Saturday afternoon in February, I heard a knock on my door. I opened it
 
 "Are you the TinyPilot guy?" he asked me.
 
-"Uh oh," I thought. Was this a disgruntled customer ready to punch me?
+"Uh oh," I thought. Did a disgruntled customer find my house?
 
 "Yes..." I said cautiously.
 
-"I'm the handyman at the office. A pipe burst, and we can't get into your suite. Can you come down?"
+"I'm the handyman at the office. A fire sprinkler burst, and we can't get into your suite. Can you come down?"
 
-I got in my car and did the three-minute drive to the office, wondering if this was the end of my business. We assembled all of our hardware in that office, and we fulfilled all of our orders from there. I had insurance, but I had chosen coverage a year before when we carried lower inventory. And even if insurance paid out, TinyPilot would be dead in the water for three to six months until we could get replacement materials from our overseas manufacturers and start the whole manufacturing pipeline up again.
+During the three-minute drive to the office, I worried this was the end of my business. That office was where we kept all of our inventory, assembled our products, and shipped our orders to customers. A fire sprinkler could easily destroy everything in our office.
 
-I got to the building and saw that, as the handyman said, the building was flooded. I walked to the second floor and saw that the carpets were soaked. But I noticed that the water had flowed not from TinyPilot's office but the conference room next door. I opened the door to TinyPilot's office, and everything was bone dry. The water hadn't even trickled past the door.
+TinyPilot had insurance, but I chose coverage a year before when our inventory was lower. And even if insurance paid out, TinyPilot would be dead in the water for months until we could start our whole manufacturing pipeline up again.
 
-I breathed a sigh of relief. It seemed like instead of being out $100k and out of commission for a few days, we'd be shut down for maybe a week as they cleaned up the mess and fixed the sprinklers.
+I got to the building and saw that, as the handyman said, everything was flooded. I walked up soaked carpeting to TinyPilot's office on the second floor, bracing myself for the worst.
 
-On Monday, I called our landlord to ask when we'd be able to get back into the office. He said casually that they were working on it, but we might have to move temporarily because the flood may have damaged our wall. I asked when the move would have to happen, and just as casually, he said it would probably be in the next few days, and he'd let me know.
+I unlocked TinyPilot's suite. Everything was bone dry. The water hadn't even trickled under our door.
 
-Normally, being forced to move my entire office on a few days' notice would be disruptive, but it was _especially_ disruptive this week, as I was planning to take a two-week trip out of the country, my longest travel, by far, since starting TinyPilot. How was the team supposed to find a new office and move there while I was away?
+The sight of an untouched office was an incredible relief, but then I found out we wouldn't be able to use our office for a few days due to fire safety rules. A few days later, the landlord told me they might have to repair the wall we shared with the office that flooded. If that happened, we'd have to move to a smaller spare office for "weeks to months."
 
-Further, the office IT guy was me &mdash; nobody else knew how to set up our router, desktop, or print server if we were to move. And if they can't print shipping labels, they can't fulfill orders.
+Normally, being forced to move my entire office on a few days' notice would be disruptive, but it was _especially_ disruptive this week. I was about to take a two-week trip to Europe, my longest trip since starting TinyPilot.
 
-Fortunately, the landlord had a spare office in the same building, so I had just enough time before I left to move all of our computer equipment and get it set up before I left. And it turned out that they never had to tear down our wall anyway, so when I returned, I just put everything back.
+The office IT guy was me &mdash; nobody else knew how to set up our router, desktop, or print server if we were to move. And if the team can't print shipping labels, they can't fulfill orders.
 
-The experience made me never want to be in that situation again, and it illustrated sharply just how much risk I was taking on by managing so much of TinyPilot's operations in a tiny office with just two part-time employees.
+We ended up not having to move, but the experience made me never want to be in that situation again. It illustrated sharply how much risk I was taking on by centralizing so much of TinyPilot's operations in a single, small office.
 
 ## A year of outsourcing
 
