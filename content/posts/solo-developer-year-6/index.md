@@ -31,7 +31,7 @@ In this post, I'll share what I've learned about being a bootstrapped founder fr
 - [My Fourth Year as a Bootstrapped Founder](/solo-developer-year-4/)
 - [My Fifth Year as a Bootstrapped Founder](/solo-developer-year-5/)
 
-## TinyPilot became 10x more profitable
+## TinyPilot became 20x more profitable
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -81,7 +81,7 @@ Normally, being forced to move my entire office on a few days' notice would be d
 
 The office IT guy was me &mdash; nobody else knew how to set up our router, desktop, or print server if we were to move. And if the team can't print shipping labels, they can't fulfill orders.
 
-We ended up not having to move, but the experience made me never want to be in that situation again. It illustrated sharply how much risk I was taking on by centralizing so much of TinyPilot's operations in a single, small office.
+We ended up not having to move, but the experience made me never want to be in that situation again. It illustrated how risky it was to centralize so much of TinyPilot's operations in a single, small office.
 
 ## A year of outsourcing
 
@@ -97,13 +97,21 @@ Getting the new manufacturer up and running took XX months. They've worked out e
 
 ## Making TinyPilot look like a real product
 
-It's been a 3D-printed case. I'd tried to find people to design a nicer box for the product, but it never came together, and it was never my top priority. But it definitely felt a little amateur that we shipped our product in a plain brown box with the device and all the cables just globbed together in a bubble-wrap pouch.
+It's been a 3D-printed case. It was an especially high-quality 3D printed case made with carbon fiber, but it was still 3D-printed. When I looked at it alongside all the alumnium-cased items in my server rack, TinyPilot's plastic casing stuck out.
 
-But now, it looks like a real thing. If someone were to do an unboxing video, I'd be happy to see them open it.
+TODO: Photo of old device
 
-Retail box
+We actually did most of the heavy lifting last year, but we finally were able to begin shipping with metal cases this year.
 
-Metal case
+TODO: Photo of metal case
+
+The unboxing experience was something I also felt like hadn't matured with the rest of the product. I'd had a few conversations with designers about making a nice retail box for the product, but it never came together, and it was never my top priority. Still, it definitely felt amateurish that we shipped our product in a plain brown box with the device and all the cables just globbed together in a bubble-wrap pouch.
+
+TODO: Photos of bubble wrap glob
+
+When we switched to our contract manufacturer, they offered to make a retail box for us as part of the project. And they ended up designing a box I like a lot. If someone were to make a TinyPilot unboxing video now, I'd be happy to see them open it.
+
+TODO: Photo of Retail box, metal case
 
 ## Lessons learned
 
@@ -133,19 +141,21 @@ I felt frustrated that we were making such slow progress on features and we were
 
 We can make this fix, but what's the pattern? On page X, we do it this way, but on page Y, we do it this way.
 
-### Encourage asynchronous escalation
+### Most support escalation can happpen asynchronously
 
-I try to give the team as much autonomy as possible. I want them to feel empowered to make their own decisions. At the same time, I want to make sure they feel comfortable asking for support when they get stuck, so I say that anyone can always escalate issues or questions to me.
+I try to give the team as much autonomy as possible. I want them to feel empowered to make their own decisions. At the same time, I want to make sure they feel comfortable asking me for help when they get stuck, so I say that anyone can always escalate issues or questions to me.
 
-But I was finding that escalation was quickly becoming a source of stress for me. For a while, I thought that was just the nature of esclating issues. I'm only seeing the really tough customer questions, so they're going to feel more stressful, but I tried to think of ways to reduce the pressure on me.
+But I was finding that escalation was quickly becoming a source of stress for me. For a while, I thought that was just the nature of esclating issues. I'm only seeing the really tough customer questions, so they're going to feel more stressful. But thinking about it more, I realized there were ways for me to reduce the stress.
 
-The first change I made was to adjust our process for escalation. Instead of presenting a problem and saying, "Okay, now what?" escalation involved proposing a strategy. Like, if I wasn't available and you were the last line of support, what would you tell the customer?
+First, I adjusted our process for escalation. The style of escalation had been, "Michael, here's a problem we've never seen before. How do you want us to handle it?" Instead, I encouraged the team to propose a solution when they escalated. If I wasn't available, and they were the last line of support, what would they tell the customer?
 
-That worked well because it turned out that about 80% of the time, the team came up with the same solution that I would have recommended. And the more they did this, the better they became at tackling hard cases.
+That worked well because 80% of the time, the team came up with the same solution that I would have recommended. And the more they did this, the better they became at tackling hard cases.
 
-But then I realized I still felt stressed out, and part of it was the time pressure. We aim to respond to customers on our support forum within one business day. By the time a question was escalated to me, we were usually 8-12 hours into our response window. There wasn't a lot of time for me to think of a response, my teammate to read the response, then get the answer back to the customer within our target window.
+That change helped a lot, but I realized another source of stress in escalations was the time pressure. We aim to respond to customers within one business day. By the time a question was escalated to me, we had generally burned half the response window, and we risked burning the other half due to variations in the team's daily work schedules. Whenever a question escalated to me, I felt like I had to respond NOW NOW NOW to avoid being the bottleneck.
 
-I realized they don't really need to wait on an answer from me to continue helping the customer. If 80% of the time, I'm just saying, "Yes, do that," then they could do that immediately. And in the 20% of cases where I can think of a better approach, the suggested path was never disastrous. Like they're never saying, "My idea is they pop their device in the microwave for two minutes on high." So if they said to try changing setting X and I thought they'd have more luck changing setting Y, that was fixable later.
+I realized they don't really need to wait on an answer from me to continue helping the customer. If 80% of the time, I'm just saying, "Yes, do that," then they could do that immediately.
+
+In the minority of cases where I had a better idea for solving a support issue, it was almost always something the customer could try in addition to my team's suggestion. We never ran into a situation where I said, "Oh, I think they'll have better luck trying X," and my team said, "Oh, we wish you'd said that earlier because we suggested hitting the device with a sledgehammer."
 
 ## Grading last year's goals
 
@@ -153,18 +163,18 @@ Last year, I set [three high-level goals](/solo-developer-year-5/#goals-for-year
 
 ### Manage TinyPilot on 20 hours per week
 
-- **Result**: I worked 35-40 hours per week, a reduction from previous years, and traveled more than ever
+- **Result**: I worked 35-40 hours per week, a reduction from previous years, and traveled more than any previous year.
 - **Grade**: B-
 
 It's not 20 hours, but I did work significantly less in 2023 than 2022. I did a lot of personal and work travel, so I was "out of the office" for about five weeks cumulatively, and things still went smoothly.
 
-My workday used to start whenever I woke up, usually 7 or 8am, and end when I ate dinner at 6:30pm, with breaks for breakfast, lunch, and exercise. This year, I moved the end time up to 5:30pm, and that made a big difference in feeling like I had time to unwind and do non-work things in the evening. In 2022, it frequently felt like I was ending the day without getting to everything I wanted, whereas in 2023, I frequently felt like I got to everything I needred to.
+My workday used to start whenever I woke up, usually 7 or 8am, and end when I ate dinner at 6:30pm, with breaks for breakfast, lunch, and exercise. This year, I moved the end time up to 5:30pm, and that made a big difference in feeling like I had time to unwind and do non-work things in the evening. In 2022, it frequently felt like I was ending the day without getting to everything I wanted, whereas in 2023, I frequently felt like I got to everything I needed to.
 
 In 2023, I found more time for writing wrote four new blog posts but 15 new "notes" posts, which is what I started doing when I wanted to share something but I didn't want to polish it enough for a blog post.
 
 ### Earn $100k in profit
 
-- **Result**: Earned $200k in profit
+- **Result**: I earned $236k in profit.
 - **Grade**: A+
 
 This caught me by surprise. My first two years running TinyPilot, I was basically at breakeven. Sales were going well, but I was also spending a ton on electrical engineering and software development, and a lot of my cash was tied up in inventory.
@@ -175,14 +185,14 @@ I also underestimated how much the metal case would increase the value. I didn't
 
 ### Close the TinyPilot office
 
-- **Result**: We still have the office for non-critical workflows
+- **Result**: We still have the office for non-critical workflows.
 - **Grade**: B
 
-I felt like we were past the point where it made sense to do a lot of our tasks in-house. Even though it went smoothly, there were lots of risks that could seriously disrupt business, such as pipes exploding.
+I felt like we were past the point where it made sense to do a lot of our tasks in-house. Even though it went smoothly, there were lots of risks that could seriously disrupt business, such as sprinklers exploding.
 
 It is awfully convenient. The team likes having a quiet place to work rather than working from home. And rent is only $600/month, so it's not a huge expense.
 
-So, if a pipe burst in our office tomorrow and destroyed everything, it would be inconvenient, but we'd be fine. The most important thing we do there now is process returns, but we're in the process of handing that job over to our manufacturer.
+So, if a pipe burst in our office tomorrow and destroyed everything, it would be inconvenient, but we'd be fine. The most important thing we do there now is processing returns, but we're handing that job over to our manufacturer.
 
 I didn't think our landlord would let us go month-to-month, but he ended up being fine with it. So if there's no long-term commitment, and we're using it out of convenience rather than necessity, I'm happy to keep it.
 
@@ -210,9 +220,11 @@ I hope that by outsourcing and delegating more of TinyPilot's operational side, 
 
 Every year, when I write these blog posts, I ask myself whether I still love what I'm doing.
 
-2022 was the roughest year I've had running my own business. I still preferred it to working for an employer, but it was stressful adjusting to a lot of TinyPilot's growth.
+2022 was the roughest year I've had running my own business. I still preferred it to working for an employer, but the growing pains were stressful.
 
-2023 was a restructuring year. I deliberately shifted focus away from sales growth, product redesigns, and new features so that TinyPilot could focus on the long-term. So, in that way, 2023 was a major improvement over 2022. Still, I find myself having a hard time getting excited about it.
+2023 was a restructuring year. I deliberately shifted focus away from sales growth, product redesigns, and new features so that TinyPilot could focus on the long-term. So, in that way, 2023 was a major improvement over 2022.
+
+The downside to 2023 is that I find myself having a hard time getting excited about it.
 
 So, I'll say that 2023 was fine. I enjoyed lots of it, I didn't _love_ it. It's kind of hard to love. I spent a lot of time designing new processes. I think I'm good at it, but it's not something I love doing.
 
