@@ -4,6 +4,7 @@ tags:
   - annual review
   - tinypilot
 date: 2024-02-10T00:00:00-05:00
+custom_css: true
 description: Six years ago today, I quit my job as a developer at Google to create my own self-funded software business. This is a review of my last year and what I've learned so far about bootstrapping software businesses.
 ---
 
@@ -31,6 +32,30 @@ In this post, I'll share what I've learned about being a bootstrapped founder fr
 ## TinyPilot became 10x more profitable
 
 {{<revenue-graph project="tinypilot">}}
+
+Outer pipes Cell padding
+
+| Income/Expense                    | 2022      | 2023     | Change           |
+| --------------------------------- | --------- | -------- | ---------------- |
+| Sales Revenue                     | $807,458  | $992,597 | {{<delta-cell>}} |
+| Credit Card Rewards               | $4,327    | $4,379   | {{<delta-cell>}} |
+| Advertising                       | $51,764   | $39,270  | {{<delta-cell>}} |
+| Cloud Services                    | $9,151    | $16,408  | {{<delta-cell>}} |
+| Design Consulting                 | $30,215   | $950     | {{<delta-cell>}} |
+| Electrical Engineering Consulting | $124,643  | $23,427  | {{<delta-cell>}} |
+| Fulfillment Vendors               | $0        | $28,321  | {{<delta-cell>}} |
+| Legal Counsel                     | $3,406    | $1,433   | {{<delta-cell>}} |
+| Office Equipment                  | $6,312    | $1,241   | {{<delta-cell>}} |
+| Office Rent                       | $6,600    | $6,310   | {{<delta-cell>}} |
+| Payroll                           | $$205,984 | $255,779 | {{<delta-cell>}} |
+| Postage                           | $28,324   | $16,853  | {{<delta-cell>}} |
+| Raw Materials                     | $324,140  | $358,457 | {{<delta-cell>}} |
+| Tariffs                           | $10,478   | $7,978   | {{<delta-cell>}} |
+| Tax Preparation                   | $595      | $10,487  | {{<delta-cell>}} |
+| Travel                            | $1,115    | $2,660   | {{<delta-cell>}} |
+| Everything else                   | $3,492    | $7,605   | {{<delta-cell>}} |
+| Net Profit (cash)                 | $10,447   | $235,568 | {{<delta-cell>}} |
+| Net Profit (COGS)                 | $XX       | $XX      | {{<delta-cell>}} |
 
 Show cash profit vs. COGS profit
 
@@ -86,7 +111,7 @@ Metal case
 
 ## Lessons learned
 
-### There's a hidden-stress in being responsible for low-latency responses
+### There's a hidden-stress in low-latency responses
 
 Deliberately designed not to be a low-latency business. Nobody carries a pager. Nothing has to happen within minutes.
 
@@ -118,7 +143,7 @@ I try to give the team as much autonomy as possible. I want them to feel empower
 
 But I was finding that escalation was quickly becoming a source of stress for me. For a while, I thought that was just the nature of esclating issues. I'm only seeing the really tough customer questions, so they're going to feel more stressful, but I tried to think of ways to reduce the pressure on me.
 
-The first change I made was to adjust our process for escalation. Instead of presenting a problem and saying, "Okay, now what?" escalation involved proposing a strategy too. Like, if I wasn't available and you were the last line of support, what would you tell the customer?
+The first change I made was to adjust our process for escalation. Instead of presenting a problem and saying, "Okay, now what?" escalation involved proposing a strategy. Like, if I wasn't available and you were the last line of support, what would you tell the customer?
 
 That worked well because it turned out that about 80% of the time, the team came up with the same solution that I would have recommended. And the more they did this, the better they became at tackling hard cases.
 
