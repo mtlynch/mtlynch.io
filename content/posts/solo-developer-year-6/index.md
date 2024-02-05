@@ -19,7 +19,7 @@ Halfway through my third year, I created a device called [TinyPilot](https://tin
 
 TODO: Photo of TinyPilot device with screenshot
 
-In 2023, TinyPilot generated $997k in revenue, which I'll generously round up to a cool million. More importantly, the business earned $200k in profit, a 10x increase from 2022.
+In 2023, TinyPilot generated $997k in revenue, which I'll generously round up to a cool million. More importantly, the business earned $236k in profit, a 20x increase from 2022.
 
 In this post, I'll share what I've learned about being a bootstrapped founder from my sixth year doing it.
 
@@ -57,7 +57,7 @@ Several of my costs were way down. My design consulting shrunk to nearly zero, a
 
 Payroll went up, but that's largely due to having more staff in 2023. I hired an extra person temporarily to help with assembling device until we completed our shift to the manufacturer. Other than that, I didnt' add staff, but the support engineers I hired midway through (TODO: link) 2022 were around for the full year in 2023.
 
-My personal earnings are always a point of confusion in these updates, so I'll try to clarify this year. Payroll does not include me, as I don't draw a salary. The full amount I earned from TinyPilot in 2023 was $236k. Before the business was generating a survivable income, I got by because I live in an area with a low cost of living, and I had investment income from my time in big tech.
+Payroll does not include me, as I don't draw a salary from TinyPilot. The full amount I earned from TinyPilot in 2023 was $236k. Before the business was generating a meaningful income, I survived by living in a low cost of living area and taking dividends from my index fund investments.
 
 ## The most terrifying 10 minutes of 2023
 
@@ -107,23 +107,45 @@ Shifting to the 3PL did significantly reduce stress, much more strongly than I a
 
 ### Outsourcing manufacturing
 
-I hired a third part-time employee on a temporary basis. And even with three people, it was tough to keep up with orders.
+The hard part of scaling up TinyPilot was finding a contract manufacturer.
 
-Getting the new manufacturer up and running took XX months. They've worked out even better than we hoped. Our previous manufacturing partners have all been companies based in China. We found a US-based company with facilities overseas. They've been really hands-on in working with to improve aspects of the product, and they designed a retail box for us.
+They've been great. Even before they started their production pipeline for us, we asked for their help in figuring out a fan issue. The fans we were buying suddenly were making a loud buzzing sound on every third build.
+
+It's scary to have this part of production abstracted so much away from me. When we were building in-house, we all shared access to the instructions in Notion. If we ran into an issue or found a better way of doing something, we just updated the page, and everyone had the latest instructions.
+
+With the contract manufacturer, we give them the instructions, they translate them to Vietnamese for their employees in Vietnam, and then. I can't read Vietnamese, so I'm relying on them to get it right.
+
+They kind of had to start from scratch on making our cases, and making our circuit boards.
+
+Getting the new manufacturer up and running took XX months. They've worked out even better than we hoped. Our previous manufacturing partners have all been companies based in China. Our experience was fine. The quality and price were usually good, but it was pretty much a black box. You gave them your designs and a few weeks later, you'd get the physical . And we had to stay vigilant to prevent drops in quality or counterfeit parts.
+
+communication was difficult. We found a US-based company with facilities overseas. They've been really hands-on in working with to improve the product. and they designed a retail box for us.
+
+It's incredibly demoralizing to be in the position where I'm rooting against sales of my own product because we're supply limited. I'd open Shopify and see that we had a record-setting sales day, and think, "Damn! Why'd this have to happen?"
+
+Now we have a healthy manufacturing pipeline and we always have at least six weeks of inventory in stock. If there's a strong sales day, I can celebrate appropriately.
 
 ## Making TinyPilot look like a real product
 
-It's been a 3D-printed case. It was an especially high-quality 3D printed case made with carbon fiber, but it was still 3D-printed. When I looked at it alongside all the alumnium-cased items in my server rack, TinyPilot's plastic casing stuck out.
+One of the biggest user-visible changes to TinyPilot this year has been how the physical product has matured visually.
+
+At the end of last year, we were still making TinyPilot's cases with a fleet of 3D printers running nonstop. They were especially high-quality 3D-printed cases that we made with carbon fiber material, but they still had the "just a prototype" feel of a 3D printed product. When I looked at TinyPilot's 3D-printed case alongside all the alumnium-cased items in my server rack, TinyPilot's plastic casing stuck out.
 
 TODO: Photo of old device
 
-We actually did most of the heavy lifting last year, but we finally were able to begin shipping with metal cases this year.
+In XX, we introduced the TinyPilot Voyager 2a, which has a metal case.
 
 TODO: Photo of metal case
 
-The unboxing experience was something I also felt like hadn't matured with the rest of the product. I'd had a few conversations with designers about making a nice retail box for the product, but it never came together, and it was never my top priority. Still, it definitely felt amateurish that we shipped our product in a plain brown box with the device and all the cables just globbed together in a bubble-wrap pouch.
+The new case made a big difference. When we were constrained by supply, I tried increasing the price of our devices by XX%, but users continued buying at the same rate. I realized that the metal case had a huge impact on how customers perceived TinyPilot's value.
+
+The other change we made was in our packaging. By the end of 2022, we were still shipping TinyPilot in a plain brown box with the device and all the cables bunched together in a bubble-wrap pouch.
 
 TODO: Photos of bubble wrap glob
+
+Every time someone made a video review of TinyPilot, I prayed that they wouldn't show how ugly the unboxing process looked, but they usually did.
+
+I'd had a few conversations with designers about making a nice retail box for the product, but it never came together, and it was never my top priority. But especially when we switched to metal cases, TinyPilot's packaging felt amateurish and embarrassing.
 
 When we switched to our contract manufacturer, they offered to make a retail box for us as part of the project. And they ended up designing a box I like a lot. If someone were to make a TinyPilot unboxing video now, I'd be happy to see them open it.
 
@@ -131,17 +153,21 @@ TODO: Photo of Retail box, metal case
 
 ## Lessons learned
 
-### There's a hidden-stress in low-latency responses
+### There's hidden-stress in low-latency responses
 
-Deliberately designed not to be a low-latency business. Nobody carries a pager. Nothing has to happen within minutes.
+I carried a pager for my last job, and I hated it. I intentionally designed TinyPilot to avoid being latency-sensitive. Nobody carries a pager. There are no critical servers that need to stay online. There are very few events that would require anyone on the team to react faster than one business day.
 
-There's such a big difference between having to make sure the office can run every day to not.
+When TinyPilot transitioned from fulfilling orders in-house to using a 3PL, I thought the main impact would be on freeing up time. But it was actually on reducing stress.
 
-Our responsibility became building enough devicees. And then when we switched over to the manufacturer, the low-latency part became support, and there are fewer single-points of failure. And very few that we manage ourselves.
+Before the transition, someone had to be in the TinyPilot office six days per week to fulfill orders. The timing was flexible, as the only thing that had to happen urgently is that packages get a shipping label and put out for the mail carrier.
 
-Two people could be unavailable.
+Instead of having to work at least an hour three days a week, the team mostly didn't have to work any particular day. They needed to be in the office to build devices, but it didn't matter if they built ten devices a day for five days or fifty devices in one marathon session.
 
-Buffer of about a week's worth of devices.
+There was a big change for me as well. I didn't realize how much mental real estate I was devoting to readiness for possible interruptions. What if the Internet goes out? What if the office desktop suddenly can't talk to the printer?
+
+There were dozens of things that could block us from fulfilling orders, and most of them required me to fix them.
+
+Now that we've switched to the contract manufacturer, there are even fewer things we need to worry about. The thing we're responsible for reacting to quickly is support requests, but we have five people available to do that across four cities. There are very few things that prevent all of us from responding to support requests.
 
 ### As a project matures, more time goes to maintenance
 
