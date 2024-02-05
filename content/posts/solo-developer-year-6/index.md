@@ -92,9 +92,7 @@ The office IT guy was me &mdash; nobody else knew how to set up our router, desk
 
 Long story short, we ended up not having to move, but the experience made me never want to be in that situation again. It illustrated how risky it was to centralize so much of TinyPilot's operations in a single, small office.
 
-## A year of outsourcing
-
-### Outsourcing fulfillment
+## Outsourcing fulfillment
 
 For all of TinyPilot's history, we've been fulfilling orders in-house. When I started the business, I'd assemble devices every day and drive orders to the post office. When that job grew to several hours per day, I hired my then-girlfriend-now-wife. In early 2021, my wife started grad school, so I leased office space and hired two local part-time employees to take over assembling products and fulfilling orders.
 
@@ -107,26 +105,6 @@ At the time of the shift to the 3PL, we were in "urgent mode." We were strugglin
 Shifting to the 3PL actually didn't save the team much time. It turned out that slapping a shipping label on a box and putting it out for the mail carrier was a pretty small percentage of the team's hours.
 
 Shifting to the 3PL did significantly reduce stress, much more strongly than I anticipated. I knew that there was stress in keeping the office staffed six days a week, but I didn't realize how much more stress I carried about all the things that could block us from fulfilling orders. The office Internet could go down, a disk on the office desktop could fail. These were all things that I'd have to deal with immediately. A 3PL is subject to all of the same issues, but it's their problem. If their printer suddenly dies, it's them who has to furiously drive to Best Buy, not me.
-
-### Outsourcing manufacturing
-
-The hard part of scaling up TinyPilot was finding a contract manufacturer.
-
-They've been great. Even before they started their production pipeline for us, we asked for their help in figuring out a fan issue. The fans we were buying suddenly were making a loud buzzing sound on every third build.
-
-It's scary to have this part of production abstracted so much away from me. When we were building in-house, we all shared access to the instructions in Notion. If we ran into an issue or found a better way of doing something, we just updated the page, and everyone had the latest instructions.
-
-With the contract manufacturer, we give them the instructions, they translate them to Vietnamese for their employees in Vietnam, and then. I can't read Vietnamese, so I'm relying on them to get it right.
-
-They kind of had to start from scratch on making our cases, and making our circuit boards.
-
-Getting the new manufacturer up and running took XX months. They've worked out even better than we hoped. Our previous manufacturing partners have all been companies based in China. Our experience was fine. The quality and price were usually good, but it was pretty much a black box. You gave them your designs and a few weeks later, you'd get the physical . And we had to stay vigilant to prevent drops in quality or counterfeit parts.
-
-communication was difficult. We found a US-based company with facilities overseas. They've been really hands-on in working with to improve the product. and they designed a retail box for us.
-
-It's incredibly demoralizing to be in the position where I'm rooting against sales of my own product because we're supply limited. I'd open Shopify and see that we had a record-setting sales day, and think, "Damn! Why'd this have to happen?"
-
-Now we have a healthy manufacturing pipeline and we always have at least six weeks of inventory in stock. If there's a strong sales day, I can celebrate appropriately.
 
 ## Making TinyPilot look like a real product
 
