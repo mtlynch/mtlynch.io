@@ -13,13 +13,13 @@ description: Six years ago today, I quit my job as a developer at Google to crea
 
 Six years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own bootstrapped software company.
 
-For the first few years, all of my businesses flopped. None of them earned more than a few hundred dollars per month in revenue, and they all had negative profits.
+For the first few years, all of my businesses flopped. The best of them earned a few hundred dollars per month in revenue, but none of them were profitable.
 
 Halfway through my third year, I created a device called [TinyPilot](https://tinypilotkvm.com) that allows users to control their computers remotely. The product quickly caught on, and it's been my main focus ever since.
 
 TODO: Photo of TinyPilot device with screenshot
 
-In 2023, TinyPilot earned $200k in profit, a 10x increase from 2022. The business also generated $997k in revenue, which I'll generously round up to $1M.
+In 2023, TinyPilot generated $997k in revenue, which I'll generously round up to a cool million. More importantly, the business earned $200k in profit, a 10x increase from 2022.
 
 In this post, I'll share what I've learned about being a bootstrapped founder from my sixth year doing it.
 
@@ -53,11 +53,15 @@ In this post, I'll share what I've learned about being a bootstrapped founder fr
 | **Total Expenses**                | **$806,219** | **$777,179** | **{{<delta-cell>}}** |
 | **Net Profit**                    | **$10,447**  | **$235,568** | **{{<delta-cell>}}** |
 
-I don't draw a salary, so $236k is the full amount I earned from TinyPilot in 2023.
+Several of my costs were way down. My design consulting shrunk to nearly zero, as I [stopped paying a design agency $6k/mo to tweak my logo](/tinypilot-redesign/). And I focused on scaling my existing product rather than iterating on the hardware design, which saved me $100k in electrical engineering costs.
+
+Payroll went up, but that's largely due to having more staff in 2023. I hired an extra person temporarily to help with assembling device until we completed our shift to the manufacturer. Other than that, I didnt' add staff, but the support engineers I hired midway through (TODO: link) 2022 were around for the full year in 2023.
+
+My personal earnings are always a point of confusion in these updates, so I'll try to clarify this year. Payroll does not include me, as I don't draw a salary. The full amount I earned from TinyPilot in 2023 was $236k. Before the business was generating a survivable income, I got by because I live in an area with a low cost of living, and I had investment income from my time in big tech.
 
 ## The most terrifying 10 minutes of 2023
 
-One lazy Saturday afternoon in February, I heard a knock on my door. I opened it in my pajamas to see a guy in his mid-forties on my porch.
+One lazy Saturday afternoon in February, I heard a knock on my door. On my porch was a guy in his mid-forties, and he was wearing jeans and a windbreaker. I opened the door, still in my pajamas.
 
 "Are you the TinyPilot guy?" he asked me.
 
@@ -65,31 +69,43 @@ One lazy Saturday afternoon in February, I heard a knock on my door. I opened it
 
 "Yes..." I said cautiously.
 
-"I'm the handyman at the office. A fire sprinkler burst, and we can't get into your suite. Can you come down?"
+"I'm the handyman at the office. A sprinkler burst, and we can't get into your suite. Can you come down?"
 
-During the three-minute drive to the office, I worried this was the end of my business. That office was where we kept all of our inventory, assembled our products, and shipped our orders to customers. A fire sprinkler could easily destroy everything in our office.
+That didn't sound good.
+
+During the five-minute drive to the office, I convinced myself that this was the end of my business. We we kept all of our inventory in TinyPilot's office, and it's where we assembled our products and shipped them to customers. Would circuit boards still work after being drenched? Probably not.
 
 TinyPilot had insurance, but I chose coverage a year before when our inventory was lower. And even if insurance paid out, TinyPilot would be dead in the water for months until we could start our whole manufacturing pipeline up again.
 
-I got to the building and saw that, as the handyman said, everything was flooded. I walked up soaked carpeting to TinyPilot's office on the second floor, bracing myself for the worst.
+I got to the building and walked up soaked carpeting to TinyPilot's office on the second floor, bracing myself for the worst.
 
 I unlocked TinyPilot's suite. Everything was bone dry. The water hadn't even trickled under our door.
 
-The sight of an untouched office was an incredible relief, but then I found out we wouldn't be able to use our office for a few days due to fire safety rules. A few days later, the landlord told me they might have to repair the wall we shared with the office that flooded. If that happened, we'd have to move to a smaller spare office for "weeks to months."
+The sight of an untouched office was an incredible relief, but then I found out we wouldn't be able to use our office for a few days due to fire safety concerns. A few days later, the landlord told me they might have to repair the wall we shared with the office that flooded. If that happened, we'd have to move to a smaller spare office for "weeks to months."
 
 Normally, being forced to move my entire office on a few days' notice would be disruptive, but it was _especially_ disruptive this week. I was about to take a two-week trip to Europe, my longest trip since starting TinyPilot.
 
 The office IT guy was me &mdash; nobody else knew how to set up our router, desktop, or print server if we were to move. And if the team can't print shipping labels, they can't fulfill orders.
 
-We ended up not having to move, but the experience made me never want to be in that situation again. It illustrated how risky it was to centralize so much of TinyPilot's operations in a single, small office.
+Long story short, we ended up not having to move, but the experience made me never want to be in that situation again. It illustrated how risky it was to centralize so much of TinyPilot's operations in a single, small office.
 
 ## A year of outsourcing
 
-In XX, TinyPilot migrated its fulfillment to a third-party logistics (3PL) warehouse. They took over for
+### Outsourcing fulfillment
 
-Our fulfillment had always been extremely smooth, which was why it took me so long to outsource it. In the past two years, the team had made maybe three total shipping errors out of about 3,500 orders. We advertised three business days of handling time, but 97% of orders went out within one business day.
+For all of TinyPilot's history, we've been fulfilling orders in-house. When I started the business, I'd assemble devices every day and drive orders to the post office. When that job grew to several hours per day, I hired my then-girlfriend-now-wife. In early 2021, my wife started grad school, so I leased office space and hired two local part-time employees to take over assembling products and fulfilling orders.
 
-When we shifted to the 3PL, we saved less time than I hoped, but it was a major reduction in stress. I didn't realize until we did it how stressful it was to make sure that the office was staffed and nothing was blocking us from fulfilling orders like an Internet outage, a disk failure on the office desktop, etc.
+Our fulfillment had always been extremely smooth, which was why it took me so long to outsource it. Out of about 3,500 orders in the past two years, there were maybe three total where we shipped a customer the wrong item or quantity. We advertised three business days of handling time, but 97% of orders went out within one business day.
+
+In March 2023, TinyPilot [transitioned its fulfillment to a third-party logistics (3PL) warehouse](/retrospectives/2023/04/). We were still assembling devices in-house, but we'd ship our products to the 3PL, and they'd ship them to customers as orders arrived.
+
+At the time of the shift to the 3PL, we were in "urgent mode." We were struggling to keep up with orders because we still just had a local team of two-part time employees, and we could only build devices at about the same rate customers bought. I hoped outsourcing fulfillment would be our ticket out of urgent mode.
+
+Shifting to the 3PL actually didn't save the team much time. It turned out that slapping a shipping label on a box and putting it out for the mail carrier was a pretty small percentage of the team's hours.
+
+Shifting to the 3PL did significantly reduce stress, much more strongly than I anticipated. I knew that there was stress in keeping the office staffed six days a week, but I didn't realize how much more stress I carried about all the things that could block us from fulfilling orders. The office Internet could go down, a disk on the office desktop could fail. These were all things that I'd have to deal with immediately. A 3PL is subject to all of the same issues, but it's their problem. If their printer suddenly dies, it's them who has to furiously drive to Best Buy, not me.
+
+### Outsourcing manufacturing
 
 I hired a third part-time employee on a temporary basis. And even with three people, it was tough to keep up with orders.
 
