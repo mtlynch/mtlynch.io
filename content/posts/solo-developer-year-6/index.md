@@ -15,9 +15,12 @@ Six years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to 
 
 For the first few years, all of my businesses flopped. The best of them earned a few hundred dollars per month in revenue, but none of them were profitable.
 
-Halfway through my third year, I created a device called [TinyPilot](https://tinypilotkvm.com) that allows users to control their computers remotely. The product quickly caught on, and it's been my main focus ever since.
+Halfway through my third year, I created a device called [TinyPilot](https://tinypilotkvm.com). It allows users to control their computers remotely. The product quickly caught on, and it's been my main focus ever since.
 
-TODO: Photo of TinyPilot device with screenshot
+{{<gallery caption="TinyPilot is a small device that allows users to control their computers remotely.">}}
+{{<img src="2a-front.webp" max-width="400px">}}
+{{<img src="tinypilot-bios-menu-2.webp" max-width="500px">}}
+{{</gallery>}}
 
 In 2023, TinyPilot generated $997k in revenue, which I'll generously round up to a cool million. More importantly, the business earned $236k in profit, a 20x increase from 2022.
 
@@ -131,7 +134,7 @@ One of the biggest user-visible changes to TinyPilot this year has been how the 
 
 At the end of last year, we were still making TinyPilot's cases with a fleet of 3D printers running nonstop. They were especially high-quality 3D-printed cases that we made with carbon fiber material, but they still had the "just a prototype" feel of a 3D printed product. When I looked at TinyPilot's 3D-printed case alongside all the alumnium-cased items in my server rack, TinyPilot's plastic casing stuck out.
 
-TODO: Photo of old device
+{{<img src="voyager2-angled.webp" max-width="500px" caption="TinyPilot's previous 3D-printed case">}}
 
 In XX, we introduced the TinyPilot Voyager 2a, which has a metal case.
 
@@ -141,7 +144,10 @@ The new case made a big difference. When we were constrained by supply, I tried 
 
 The other change we made was in our packaging. By the end of 2022, we were still shipping TinyPilot in a plain brown box with the device and all the cables bunched together in a bubble-wrap pouch.
 
-TODO: Photos of bubble wrap glob
+{{<gallery caption="Our previous packaging for TinyPilot was just neatly wrapping the device, cables, and instructions in a bubble pouch.">}}
+{{<img src="labeled-blob.webp" max-width="500px">}}
+{{<img src="bundle-stacked.webp" max-width="370px">}}
+{{</gallery>}}
 
 Every time someone made a video review of TinyPilot, I prayed that they wouldn't show how ugly the unboxing process looked, but they usually did.
 
