@@ -86,6 +86,8 @@ I unlocked TinyPilot's suite. Everything was bone dry. The water hadn't even tri
 
 The sight of an untouched office was an incredible relief, but then I found out we wouldn't be able to use our office for a few days due to fire safety concerns. A few days later, the landlord told me they might have to repair the wall we shared with the office that flooded. If that happened, we'd have to move to a smaller spare office for "weeks to months."
 
+{{<img src="office-damage.webp" max-width="450px" caption="A sprinkler burst in the office adjacent to TinyPilot's, destroying everything inside." alt="Photo of a room with ceiling, carpets, and furniture all removed">}}
+
 Normally, being forced to move my entire office on a few days' notice would be disruptive, but it was _especially_ disruptive this week. I was about to take a two-week trip to Europe, my longest trip since starting TinyPilot.
 
 The office IT guy was me &mdash; nobody else knew how to set up our router, desktop, or print server if we were to move. And if the team can't print shipping labels, they can't fulfill orders.
