@@ -345,6 +345,6 @@ It's too early to tell, but I'm optimistic about earning a positive return on th
 
 ---
 
-_Doghouse illustration by [Loraine Yow](https://www.lolo-ology.com/)._
+_Doghouse illustration by [Loraine Yow](https://www.loraineyow.com/)._
 
 _Thanks to the members of the [Blogging for Devs Community](https://bloggingfordevs.com) for providing early feedback on this post._

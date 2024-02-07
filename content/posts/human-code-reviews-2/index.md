@@ -246,4 +246,4 @@ Dr. Karl Wiegers is the only author I found who gave due attention to the social
 
 ---
 
-_This article was edited by [Samantha Mason](https://www.samanthamasonfreelancer.com). Illustrations by [Loraine Yow](https://www.lolo-ology.com/). Thanks to [@global4g](https://twitter.com/global4g) for providing valuable feedback on an early draft of this post._
+_This article was edited by [Samantha Mason](https://www.samanthamasonfreelancer.com). Illustrations by [Loraine Yow](https://www.loraineyow.com/). Thanks to [@global4g](https://twitter.com/global4g) for providing valuable feedback on an early draft of this post._

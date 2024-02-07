@@ -148,4 +148,4 @@ For the next few weeks, I'm going to focus on reaching out to different app deve
 
 ---
 
-_Illustrations by [Loraine Yow](https://www.lolo-ology.com/). Space Duck logo by [Marina Mocanu](https://pour-trait.ro/)._
+_Illustrations by [Loraine Yow](https://www.loraineyow.com/). Space Duck logo by [Marina Mocanu](https://pour-trait.ro/)._
