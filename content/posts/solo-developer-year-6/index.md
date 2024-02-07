@@ -111,19 +111,19 @@ I had hoped that outsourcing would free up enough of the team's time to produce 
 
 So, outsourcing fulfillment didn't free up a ton of time, but it did grant us a lot more flexibility. I had thought the local team already had flexibility because they could come in whenever they want as long as orders were packed and ready for USPS pickup the next day.
 
-Switching to the 3PL eliminated the daily deadline of USPS pickup. Instead, we had a weekly deadline to ship assembled products to our warehouse. And that reduced to biweekly and monthly as we built up enough buffer at the warehouse.
+Switching to the 3PL eliminated the daily deadline of USPS pickup. Instead, we had a weekly deadline to ship assembled products to our warehouse. That relaxed even more to biweekly and then monthly as we built up enough buffer at the warehouse.
 
-The reduction in flexibility reduced a lot of stress. If you're taking vacation for four days, you can shift your time and still . Or you could not, and you'd know it wasn't adding work for the rest of the team because we had spare capacity again.
+The reduction in flexibility reduced a lot of stress. If you're taking vacation for four days, you can shift your time and still do all your work that week. Or you could not, and you'd know it wasn't adding work for the rest of the team because we [had spare capacity again](/solo-developer-year-5/#run-at-50-capacity).
 
 ## Making TinyPilot look like a real product
 
-One of the biggest user-visible changes to TinyPilot this year has been how the physical product has matured visually.
+One of the most obvious changes to TinyPilot this year has been how we improved the product's physical appearance.
 
-At the end of last year, we were still making TinyPilot's cases with a fleet of 3D printers running nonstop. They were especially high-quality 3D-printed cases that we made with carbon fiber material, but they still had the "just a prototype" feel of a 3D printed product. When I looked at TinyPilot's 3D-printed case alongside all the alumnium-cased items in my server rack, TinyPilot's plastic casing stuck out.
+At the end of last year, we were still making TinyPilot's cases with a fleet of 3D printers running nonstop. As far as 3D-printing goes, our cases were especially nice, but they still had the "just a prototype" feel of a 3D printed product.
 
 {{<img src="voyager2-angled.webp" max-width="500px" caption="Before: TinyPilot's 3D-printed case">}}
 
-In February 2023, we [introduced the TinyPilot Voyager 2a](https://tinypilotkvm.com/blog/introducing-voyager-2a), which has a metal case.
+In February 2023, we [switched to a metal case](https://tinypilotkvm.com/blog/introducing-voyager-2a).
 
 TODO: Photo of metal case
 
