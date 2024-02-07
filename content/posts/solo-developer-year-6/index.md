@@ -5,6 +5,9 @@ tags:
   - tinypilot
 date: 2024-02-10T00:00:00-05:00
 custom_css: true
+hero_image: cover.webp
+images:
+  - solo-developer-year-5/og-cover.webp
 description: Six years ago today, I quit my job as a developer at Google to create my own self-funded software business. This is a review of my last year and what I've learned so far about bootstrapping software businesses.
 ---
 
@@ -56,15 +59,17 @@ In this post, I'll share what I've learned about being a bootstrapped founder fr
 | **Total Expenses**                | **$806,219** | **$777,179** | **{{<delta-cell>}}** |
 | **Net Profit**                    | **$10,447**  | **$235,568** | **{{<delta-cell>}}** |
 
-Several of my costs were way down. My design consulting shrunk to nearly zero, as I [stopped paying a design agency $6k/mo to tweak my logo](/tinypilot-redesign/). And I focused on scaling my existing product rather than iterating on the hardware design, which saved me $100k in electrical engineering costs.
+After two years of basically breaking even, TinyPilot finally earned a meaningful profit.
 
-Payroll went up, but that's largely due to having more staff in 2023. I hired an extra person temporarily to help with assembling device until we completed our shift to the manufacturer. Other than that, I didnt' add staff, but the support engineers I hired midway through (TODO: link) 2022 were around for the full year in 2023.
+Most of the change is due to stronger sales. We switched to metal cases this year, which both increased the price customers were willing to pay and increased manufacturing speed.
 
-Payroll does not include me, as I don't draw a salary from TinyPilot. The full amount I earned from TinyPilot in 2023 was $236k. Before the business was generating a meaningful income, I survived by living in a low cost of living area and taking dividends from my index fund investments.
+Expenses shifted around but stayed roughly the same overall. Design costs shrunk to nearly zero, as I [stopped paying a design agency $6k/mo to tweak my logo](/tinypilot-redesign/). And I focused on scaling my existing product rather than iterating on the hardware design, which saved $100k in electrical engineering.
+
+I don't draw a salary from TinyPilot, so the full amount I earned from TinyPilot in 2023 was $236k. This often surprises people as they can't understand how I survived for so long on the meager earnings of my first five bootstrapper years. The answer is that I live in Western Massachusetts, where the cost of living is low. From years in big tech, I had index fund investments, which generated enough dividend income to sustain me.
 
 ## The most terrifying 10 minutes of 2023
 
-One lazy Saturday afternoon in February, I heard a knock on my door. On my porch was a guy in his mid-forties, and he was wearing jeans and a windbreaker. I opened the door, still in my pajamas.
+One lazy Saturday afternoon in February, I heard a knock on my door. On my porch was a mid-forties guy in jeans and a windbreaker. I opened the door, still in my pajamas.
 
 "Are you the TinyPilot guy?" he asked me.
 
@@ -76,37 +81,39 @@ One lazy Saturday afternoon in February, I heard a knock on my door. On my porch
 
 That didn't sound good.
 
-During the five-minute drive to the office, I convinced myself that this was the end of my business. We we kept all of our inventory in TinyPilot's office, and it's where we assembled our products and shipped them to customers. Would circuit boards still work after being drenched? Probably not.
+During the five-minute drive to the office, I became increasingly worried that this was the end of my business. We we kept all of our inventory in TinyPilot's office. Would circuit boards still work after being drenched? Probably not.
 
-TinyPilot had insurance, but I chose coverage a year before when our inventory was lower. And even if insurance paid out, TinyPilot would be dead in the water for months until we could start our whole manufacturing pipeline up again.
+TinyPilot had insurance, but I chose coverage a year before when we kept half as much inventory. And even if insurance paid out, TinyPilot would be dead in the water for months until we could start our whole manufacturing pipeline up again.
 
-I got to the building and walked up soaked carpeting to TinyPilot's office on the second floor, bracing myself for the worst.
+I arrived at our office building and walked up to TinyPilot's office on the second floor, the carpet squishing damply with every step I took.
 
-I unlocked TinyPilot's suite. Everything was bone dry. The water hadn't even trickled under our door.
+I unlocked TinyPilot's suite. Everything was bone dry. The water hadn't even trickled under our door. I was incredibly relieved.
 
-The sight of an untouched office was an incredible relief, but then I found out we wouldn't be able to use our office for a few days due to fire safety concerns. A few days later, the landlord told me they might have to repair the wall we shared with the office that flooded. If that happened, we'd have to move to a smaller spare office for "weeks to months."
+A few days later, the landlord told me he might have to repair the wall we shared with the room that flooded. If that happened, we'd have to move to a smaller office for "weeks to months."
 
 {{<img src="office-damage.webp" max-width="450px" caption="A sprinkler burst in the office adjacent to TinyPilot's, destroying everything inside." alt="Photo of a room with ceiling, carpets, and furniture all removed">}}
 
 Normally, being forced to move my entire office on a few days' notice would be disruptive, but it was _especially_ disruptive this week. I was about to take a two-week trip to Europe, my longest trip since starting TinyPilot.
 
-The office IT guy was me &mdash; nobody else knew how to set up our router, desktop, or print server if we were to move. And if the team can't print shipping labels, they can't fulfill orders.
+If the team had to move while I was away, no one would be able to set up the computers or printers &mdash; the office IT guy was me. And if the team couldn't print shipping labels, they couldn't fulfill orders.
 
-Long story short, we ended up not having to move, but the experience made me never want to be in that situation again. It illustrated how risky it was to centralize so much of TinyPilot's operations in a single, small office.
+Long story short, we ended up not having to move, but the experience made me never want to be in that situation again. It sharply illustrated how much was at risk when we centralized so much of TinyPilot's operations in a single, small office.
 
-## Outsourcing fulfillment
+## Outsourcing order fulfillment
 
-For all of TinyPilot's history, we've been fulfilling orders in-house. When I started the business, I'd assemble devices every day and drive orders to the post office. When that job grew to several hours per day, I hired my then-girlfriend-now-wife. In early 2021, my wife started grad school, so I leased office space and hired two local part-time employees to take over assembling products and fulfilling orders.
+TinyPilot's order fulfillment had always been extremely smooth, which was why it took me so long to outsource it. Out of 3,500+ orders in the past two years, there were maybe five total where we shipped the wrong item.
 
-Our fulfillment had always been extremely smooth, which was why it took me so long to outsource it. Out of about 3,500 orders in the past two years, there were maybe three total where we shipped a customer the wrong item or quantity. We advertised three business days of handling time, but 97% of orders went out within one business day.
+In March 2023, TinyPilot switched from fulfilling orders in house to [using a third-party logistics (3PL) warehouse](/retrospectives/2023/04/). We were still assembling devices at our office, but we'd ship customer-ready packages to the warehouse, and the 3PL shipped packages to customers as orders arrived.
 
-In March 2023, TinyPilot [transitioned its fulfillment to a third-party logistics (3PL) warehouse](/retrospectives/2023/04/). We were still assembling devices in-house, but we'd ship our products to the 3PL, and they'd ship them to customers as orders arrived.
+At the time of the shift to the 3PL, we were in ["urgent mode."](/retrospectives/2023/05/#getting-out-of-ldquourgent-moderdquo) Our team of two part-time employees could assemble about fifty devices per week, but customers were buying at the same rate. It was a stressful situation to be in because any interruption in the week would put us at risk of pausing sales.
 
-At the time of the shift to the 3PL, we were in "urgent mode." We were struggling to keep up with orders because we still just had a local team of two-part time employees, and we could only build devices at about the same rate customers bought. I hoped outsourcing fulfillment would be our ticket out of urgent mode.
+I had hoped that outsourcing would free up enough of the team's time to produce about 100 devices per week. It turned out that our full capacity was still only about 70 devices per week, which would mean we'd still be scrambling for months to build up a healthy inventory at the warehouse. I ended up hiring a third employee temporarily to get us through the summer.
 
-Shifting to the 3PL actually didn't save the team much time. It turned out that slapping a shipping label on a box and putting it out for the mail carrier was a pretty small percentage of the team's hours.
+So, outsourcing fulfillment didn't free up a ton of time, but it did grant us a lot more flexibility. I had thought the local team already had flexibility because they could come in whenever they want as long as orders were packed and ready for USPS pickup the next day.
 
-Shifting to the 3PL did significantly reduce stress, much more strongly than I anticipated. I knew that there was stress in keeping the office staffed six days a week, but I didn't realize how much more stress I carried about all the things that could block us from fulfilling orders. The office Internet could go down, a disk on the office desktop could fail. These were all things that I'd have to deal with immediately. A 3PL is subject to all of the same issues, but it's their problem. If their printer suddenly dies, it's them who has to furiously drive to Best Buy, not me.
+Switching to the 3PL eliminated the daily deadline of USPS pickup. Instead, we had a weekly deadline to ship assembled products to our warehouse. And that reduced to biweekly and monthly as we built up enough buffer at the warehouse.
+
+The reduction in flexibility reduced a lot of stress. If you're taking vacation for four days, you can shift your time and still . Or you could not, and you'd know it wasn't adding work for the rest of the team because we had spare capacity again.
 
 ## Making TinyPilot look like a real product
 
@@ -114,15 +121,15 @@ One of the biggest user-visible changes to TinyPilot this year has been how the 
 
 At the end of last year, we were still making TinyPilot's cases with a fleet of 3D printers running nonstop. They were especially high-quality 3D-printed cases that we made with carbon fiber material, but they still had the "just a prototype" feel of a 3D printed product. When I looked at TinyPilot's 3D-printed case alongside all the alumnium-cased items in my server rack, TinyPilot's plastic casing stuck out.
 
-{{<img src="voyager2-angled.webp" max-width="500px" caption="TinyPilot's previous 3D-printed case">}}
+{{<img src="voyager2-angled.webp" max-width="500px" caption="Before: TinyPilot's 3D-printed case">}}
 
-In XX, we introduced the TinyPilot Voyager 2a, which has a metal case.
+In February 2023, we [introduced the TinyPilot Voyager 2a](https://tinypilotkvm.com/blog/introducing-voyager-2a), which has a metal case.
 
 TODO: Photo of metal case
 
 The new case made a big difference. When we were constrained by supply, I tried increasing the price of our devices by XX%, but users continued buying at the same rate. I realized that the metal case had a huge impact on how customers perceived TinyPilot's value.
 
-The other change we made was in our packaging. By the end of 2022, we were still shipping TinyPilot in a plain brown box with the device and all the cables bunched together in a bubble-wrap pouch.
+The other change we made was in our packaging. Until late last year, we were still shipping TinyPilot in a plain brown box with the device and all the cables bunched together in a bubble-wrap pouch.
 
 {{<gallery caption="Our previous packaging for TinyPilot was just neatly wrapping the device, cables, and instructions in a bubble pouch.">}}
 {{<img src="labeled-blob.webp" max-width="500px">}}
@@ -131,7 +138,9 @@ The other change we made was in our packaging. By the end of 2022, we were still
 
 Every time someone made a video review of TinyPilot, I prayed that they wouldn't show how ugly the unboxing process looked, but they usually did.
 
-I'd had a few conversations with designers about making a nice retail box for the product, but it never came together, and it was never my top priority. But especially when we switched to metal cases, TinyPilot's packaging felt amateurish and embarrassing.
+TODO: Show unboxing video
+
+I'd had a few conversations with designers about making a nice retail box for the product, but it never came together, and it was never my top priority. But especially when we switched to metal cases, TinyPilot's packaging felt embarrassingly behind the rest of the product.
 
 When we switched to our contract manufacturer, they offered to make a retail box for us as part of the project. And they ended up designing a box I like a lot. If someone were to make a TinyPilot unboxing video now, I'd be happy to see them open it.
 
@@ -139,19 +148,21 @@ TODO: Photo of Retail box, metal case
 
 ## Lessons learned
 
-### There's hidden-stress in low-latency responses
+### There's hidden-stress in low-latency responsibility
 
-I carried a pager for my last job, and I hated it. I intentionally designed TinyPilot to avoid being latency-sensitive. Nobody carries a pager. There are no critical servers that need to stay online. There are very few events that would require anyone on the team to react faster than one business day.
+Above, I explained how [switching to a 3PL](#outsourcing-order-fulfillment) gave the local team more flexibility and reduced stress.
 
-When TinyPilot transitioned from fulfilling orders in-house to using a 3PL, I thought the main impact would be on freeing up time. But it was actually on reducing stress.
+That was the part I expected. The part I didn't expect was how much stress it relieved for me. I had been carrying around so much "what if?" stress, and I didn't even realize it.
 
-Before the transition, someone had to be in the TinyPilot office six days per week to fulfill orders. The timing was flexible, as the only thing that had to happen urgently is that packages get a shipping label and put out for the mail carrier.
+Until we switched to the 3PL, I didn't realize how much my mind was occupied by worried like, "What
 
-Instead of having to work at least an hour three days a week, the team mostly didn't have to work any particular day. They needed to be in the office to build devices, but it didn't matter if they built ten devices a day for five days or fifty devices in one marathon session.
+I anticipated that. I knew we were getting more flexibility. The thing that caught me by surprise was how much "what if?" stress it freed up for me.
 
-There was a big change for me as well. I didn't realize how much mental real estate I was devoting to readiness for possible interruptions. What if the Internet goes out? What if the office desktop suddenly can't talk to the printer?
+I didn't realize until it went away, but there was always a worry in the back of my mind about all the things that could go wrong that would block fulfillment and require me to react urgently. What if the router crashes and breaks Internet for the office? What if the office desktop suddenly can't talk to the printer?
 
-There were dozens of things that could block us from fulfilling orders, and most of them required me to fix them.
+Shifting to the 3PL did significantly reduce stress, much more strongly than I anticipated. I knew that there was stress in keeping the office staffed six days a week, but I didn't realize how much more stress I carried about all the things that could block us from fulfilling orders. The office Internet could go down, a disk on the office desktop could fail. These were all things that I'd have to deal with immediately. A 3PL is subject to all of the same issues, but it's their problem. If their printer suddenly dies, it's them who has to furiously drive to Best Buy, not me.
+
+Those worries are now all things the 3PL has to deal with quickly rather than me.
 
 Now that we've switched to the contract manufacturer, there are even fewer things we need to worry about. The thing we're responsible for reacting to quickly is support requests, but we have five people available to do that across four cities. There are very few things that prevent all of us from responding to support requests.
 
@@ -175,7 +186,7 @@ I try to give the team as much autonomy as possible. I want them to feel empower
 
 But I was finding that escalation was quickly becoming a source of stress for me. For a while, I thought that was just the nature of esclating issues. I'm only seeing the really tough customer questions, so they're going to feel more stressful. But thinking about it more, I realized there were ways for me to reduce the stress.
 
-First, I adjusted our process for escalation. The style of escalation had been, "Michael, here's a problem we've never seen before. How do you want us to handle it?" Instead, I encouraged the team to propose a solution when they escalated. If I wasn't available, and they were the last line of support, what would they tell the customer?
+First, I adjusted our process for escalation. The style of escalation had been, "Michael, here's a problem we've never seen before. How do you want us to handle it?" Instead, I encouraged the team to propose a solution to me. If I wasn't available, and they were the last line of support, what would they tell the customer?
 
 That worked well because 80% of the time, the team came up with the same solution that I would have recommended. And the more they did this, the better they became at tackling hard cases.
 
@@ -264,7 +275,7 @@ I always felt like, "Worse comes to worst, I just go back to working at a big te
 
 ---
 
-_Cover image by [Loraine Yow](https://www.lolo-ology.com/)._
+_Cover image by [Loraine Yow](https://www.loraineyow.com/)._
 
 <script src="/third-party/chart.js/2.9.4/Chart.min.js"></script>
 <script src="script.js"></script>
