@@ -324,7 +324,7 @@ Overall, I'm still happy to be working for myself, and I hope to sustain it for 
 
 ---
 
-_Cover image by [Loraine Yow](https://www.lolo-ology.com/). Thanks to the [Blogging for Devs community](https://bloggingfordevs.com/) for providing early feedback for this post._
+_Cover image by [Loraine Yow](https://www.loraineyow.com/). Thanks to the [Blogging for Devs community](https://bloggingfordevs.com/) for providing early feedback for this post._
 
 <script src="/third-party/chart.js/2.9.4/Chart.min.js"></script>
 <script src="script.js"></script>

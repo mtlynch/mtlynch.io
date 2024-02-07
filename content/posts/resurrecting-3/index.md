@@ -343,4 +343,4 @@ If you'd like to see Zestful in action, check out the [live demo](https://zestfu
 
 ---
 
-_Cover illustration by [Loraine Yow](https://www.lolo-ology.com/). My fork of the ingredient-phrase-tagger library is available on [Github](https://github.com/mtlynch/ingredient-phrase-tagger). I offer a managed service based on this library called [Zestful](https://zestfuldata.com)._
+_Cover illustration by [Loraine Yow](https://www.loraineyow.com/). My fork of the ingredient-phrase-tagger library is available on [Github](https://github.com/mtlynch/ingredient-phrase-tagger). I offer a managed service based on this library called [Zestful](https://zestfuldata.com)._

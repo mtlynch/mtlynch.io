@@ -360,4 +360,4 @@ Here's what I hope to accomplish in my third year as a solo developer:
 
 ---
 
-_Cover art by [Loraine Yow](https://www.lolo-ology.com/). Go gopher adapted from a design by [Renee French](http://reneefrench.blogspot.com/)._
+_Cover art by [Loraine Yow](https://www.loraineyow.com/). Go gopher adapted from a design by [Renee French](http://reneefrench.blogspot.com/)._

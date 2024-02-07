@@ -154,4 +154,4 @@ While that logic still feels valid, I failed to consider the value of "no." If t
 
 ---
 
-_Edited by [Samantha Mason](https://www.samanthamasonfreelancer.com). Illustrations by [Loraine Yow](https://www.lolo-ology.com/)._
+_Edited by [Samantha Mason](https://www.samanthamasonfreelancer.com). Illustrations by [Loraine Yow](https://www.loraineyow.com/)._
