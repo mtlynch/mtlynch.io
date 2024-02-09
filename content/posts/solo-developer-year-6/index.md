@@ -168,17 +168,23 @@ Now that we've switched to the contract manufacturer, there are even fewer thing
 
 ### As a project matures, more time goes to maintenance
 
-Why does it feel like we're just running in place? In the early days, we'd release huge features every month. Now, it felt like every release, I was struggling to write the release announcement because there was nothing that exciting in it.
+In June, I sat down to write [the changelog](https://tinypilotkvm.com/pro/changes#260) for the latest TinyPilot software update. It was surprisingly difficult to explain how any of the work we did benefitted our users. I figured I just went a little too heavy on internal refactoring work that cycle, so the next release, I'd make sure more of our work was visible to end-users.
 
-So, I looked back at what work we had done, and I didn't regret any of the decisions.
+But then the [next release](https://tinypilotkvm.com/pro/changes#261), I had the same problem. Most of the changes were just small, cosmetic improvements.
 
-Every line of code takes time to maintain. So if we had two developers three years ago, and we have two developers today, but our codebase is three times larger, then more of our time will go to maintenance. And new feature work is just going to take longer because it's harder to design around existing infrastructure than it is to do pure greenfield development.
+What happened to the early days when we were releasing major features every couple of months? Was I prioritizing tasks poorly? Had the team lost their enthusiasm? Had we taken on too much technical debt?
 
-We tested rigorously, we . We're not shipping a web app where we control everything server-side. We're shipping updates to software that our customers run locally. We deal with things like filesystem corruption
+I reviewed the full list of tasks for the release, including all the work that wasn't visible to end-users. Even with the benefit of hindsight, I felt like I had chosen the right tasks. And the time we invested in each task felt reasonable as well.
 
-I felt frustrated that we were making such slow progress on features and we were getting bogged down with maintenance tasks.
+{{<img src="three-category-2.6.1.webp" max-width="350px" has-border="true" caption="The tasks in TinyPilot's [2.6.1 release](https://tinypilotkvm.com/pro/changes#261), colored according to improving the product (green), automation and reducing complexity (blue), and regular maintenance (red)">}}
 
-We can make this fix, but what's the pattern? On page X, we do it this way, but on page Y, we do it this way.
+So, how could our progress be so much slower when we're prioritizing well and working efficiently?
+
+I realized that the dominant factor was [the size of our codebase](/retrospectives/2023/09/#how-do-we-reduce-accidental-difficulty). We have three times as much code as we did three years ago. And every line of code requires time to maintain. So, if I keep the number of developers fixed but increase the size of the codebase, then a higher proportion of our time must go to maintaining old code.
+
+And even beyond maintenance, more code means that new features are more expensive to build. If your app has zero features, it's very easy to build the first one. If your app already has 20 features, you have to put a lot more thought into how your 21st feature integrates with everything else.
+
+So, I haven't figured out a way for us to go significantly faster, but I've learned to adjust my expecations about feature pace. And I've learned to adjust my planning to take into account that a new feature is going to take longer today than it did three years ago.
 
 ### Most support escalation can happpen asynchronously
 
@@ -247,13 +253,13 @@ I created a course about blogging, and I'm proud of the material. I wish I'd don
 
 When I look around at technology that I find exciting like Zig or Nix, I see such a dearth of long-form educational materials. Something I've realized over the years is that I enjoy teaching much more than most developers do. I also write so much publicly that I feel more comfortable writing material than most people do. Looking back on a lot of the blog posts I wrote this year.
 
-Also, in 2021, I said I'd write a book, and I still want to write it.
+In 2021, I [said](/solo-developer-year-3/#publish-six-blog-posts-and-one-book) I'd [write a book](https://refactoringenglish.com/) to help developers improve their writing. I got 80% through the first chapter, and then TinyPilot absorbed all of my free time that year. I still want to write that book.
 
 ### Write software for ten working hours per week
 
-Writing code is still one of my favorite ways to spend time. For the past few years of TinyPilot, I've enjoyed coding, but it's never been a sensible way to spend my limited working hours. With a team of six people, several critical vendors, and many moving pieces, the most pressing parts of TinyPilot have always been management.
+Writing code is still one of my favorite activities. For the past few years of TinyPilot, I've enjoyed coding, but it's never been a sensible way to spend my limited working hours. With a team of six people, several critical vendors, and many moving pieces, the most pressing parts of TinyPilot have always been management.
 
-I hope that by outsourcing and delegating more of TinyPilot's operational side, I can free up enough of my time that coding is, if not the optimal use of my time, at least a positive use of my time.
+I hope that by outsourcing and delegating more of TinyPilot's operational side, I can free up enough of my time that coding is, if not the optimal use of my time, at least a reasonable use of my time.
 
 ## Do I still love it?
 
