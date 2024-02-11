@@ -9,19 +9,21 @@ The justification for skipping code reviews is usually accompanied by a claim th
 
 > We have a high-trust team, so we don't need code reviews.
 
-To me, it's like hearing someone tell me that they have a high-trust car, so they don't need seatbelts.
+To me, it's like hearing someone tell me that they have a high-trust carpool group, so they don't use seatbelts.
 
-## Trust has nothing to do with it
+## It's not about trust
 
-Stephen King is one of the world's most talented and successful writers. But everything Stephen King writes goes through an editor.
+Stephen King is one of the world's most talented and successful writers. But everything Stephen King writes goes through an editor who reviews his work.
 
 Why does Stephen King need an editor?
 
-Does Stephen King's publisher not trust Stephen King? If King didn't have an editor supervising him, would he write a 400-line sentence? Would he slip in a bunch of syntax errors?
+Does Stephen King's publisher not trust Stephen King? If King didn't have an editor, would he sneak in a 400-line sentence? Would he make a bunch of syntax errors?
 
 Obviously, the answer to all of those questions is, "no."
 
 Stephen King, along with virtually every other successful author, works with an editor because it elevates the quality of their work.
+
+## How can you communicate with humans without feedback from humans?
 
 Stephen King has characters, stories, and feelings in his mind, and his novels are a his medium for transmitting those ideas to other humans. Writing is an imperfect medium, so the best way for any writer to learn whether their work is having the intended effect is to have real people read the book and provide feedback.
 
@@ -41,6 +43,8 @@ So what's the value of code reviews? Why does anyone invest time into them when 
 
 The most important result of code reviews in my experience is improving code quality. Just like Stephen King's editor increases the quality of his novels, there's tremendous value in having another developer read the code and let you know the parts that they struggled to understand and hear their ideas for improving it.
 
+AI coding assistants can't do it well, at least not yet.
+
 ### Spreading knowledge across the team
 
 It's the best technique I've seen for spreading knowledge. I think you can do trainings, but nothing beats showing you a technique in exactly the context where it matters in your work.
@@ -57,11 +61,11 @@ Often, I'm not identifying bugs but the risk of a bug in the future. For example
 
 ### Identifying style violations
 
-This is the one people always bemoan about code reviews. I think it is a legitimate value. Consistent code is easier to read and maintain.
+This is the benefit people always complain about, so I'll mention it. People who crticize code reviews complain talk as though this is the only purpose of code reviews, and I see it as the least valuable part of code reviews, but it still has value.
 
-Objections to code reviews seem to miss the point of code reviews or
+Most style discussion should be automated with linters and formatters. But there are still style conventions that automated tools can't catch.
 
-All of these situations, talented, well-meaning people can make disastrous mistakes. And the main value of code reviews isn't even to prevent disastrous mistakes, it's to improve quality and share knowledge.
+one people always bemoan about code reviews. I think it is a legitimate value. Consistent code is easier to read and maintain.
 
 ## If you dislike code reviews, you probably haven't experienced code reviews done well
 
@@ -119,7 +123,7 @@ Dev velocity at any cost. Want to keep building because you might go bust in six
 
 You work by yourself. It's not worth the cost of pulling some other person in or doing one of those code review services. The quality can never be as good as someone who has skin in the game and feels a shared sense of ownership over the codebase.
 
-## You need a reviewer because important communication requires review
+### You need a reviewer because important communication requires review
 
 Jerry Seinfeld is one of the most talented comedians. When he records a comedy special, he doesn't just write a list of jokes by himself and then tell them for the first time on the special. When Seinfeld records a special, he's told those jokes dozens of times, honing the wording. For every joke you hear in the special, there are probably fifty that he thought would be funny until he tried to tell them on stage and got a poor response from the audience.
 
@@ -129,7 +133,7 @@ The payoff to a code review is actually even higher. When your teammates review 
 
 The worst thing that would happen if Stephen King or Jerry Seinfeld skipped reviews is that audiences wouldn't have a good time. If you skip reviews, maybe you accidentally wipe your database or introduce a vulnerability that allows exposes all of your customers' data.
 
-## We just do asynchronous, optional reviews
+### We just do asynchronous, optional reviews
 
 It would be like doing asynchronous, optional fact checking on a news story or asynchronous, optional identity checks when crossing a country's border. How about asynchronous, optional identity checks when crossing a border. You go on by, and we might verify your identity, and if it turns out that you're a criminal, we'll email you and ask you to leave.
 
@@ -138,3 +142,13 @@ But this attitude makes sense to people who think that code reviews exist to pre
 If your feedback is that you think the code would be easier to understand if the author broke this 20-method class into four separate classes with more tightly-scoped responsibilities, why would they bother? Their version is already live in production and working fine.
 
 The dynamics are skewed in the wrong way.
+
+### If you hate code reviews, you probably have a crappy team
+
+> Why would I do code reviews? They're just a way for abrasive senior devs to inflict their style choices on junior devs.
+
+No, that's not an indictment of code reviews. That's a problem with your team's culture. The senior dev shouldn't be bullying people in the first place, and style nitpicks should rarely even be part of a code review discussion in the first place.
+
+> They take so long. I have to wait a week just to check in a simple feature?
+
+I agree that they add time and friction. There's certainly a cost.
