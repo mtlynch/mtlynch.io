@@ -293,11 +293,11 @@ This book complements [_Happy City_](/book-reports/happy-city/) in that both boo
   1.  A single-family home worth $200k
   2.  A vacant lot
   3.  A 20-story building worth $10M
-  - What is the value of lot (2)?
-    - A $10M property implies the underlying property is worth around $1.5M.
-    - The owner of the vacant lot would want to sell to another 20-story developer for $1.5M.
-    - Actually, it's a trick question because if a vacant lot is worth $1.5M, then the single-family home's lot must also be worth \~$1.5M.
-      - A developer can purchase the house, demolish it, then build a $10M building for a profit.
+- What is the value of lot (2)?
+  - A $10M property implies the underlying property is worth around $1.5M.
+  - The owner of the vacant lot would want to sell to another 20-story developer for $1.5M.
+  - Actually, it's a trick question because if a vacant lot is worth $1.5M, then the single-family home's lot must also be worth \~$1.5M.
+    - A developer can purchase the house, demolish it, then build a $10M building for a profit.
 - In reality, $10M buildings exist next to $200k homes, so how can that be?
 - Regulation artifically limits development.
   - It's roughly the same regulatory difficulty to build a 5-story building as a 20-story building, so development is pushed to the extremes.
