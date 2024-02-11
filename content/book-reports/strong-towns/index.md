@@ -290,9 +290,9 @@ This book complements [_Happy City_](/book-reports/happy-city/) in that both boo
 - US cities often have wildly different building types next to each other in ways that seem irrational.
   - e.g., a 20-story building will be next to a one-story building.
 - Thought experiment: three lots are in a row and are the same size.
-  1.  A single-family home worth $200k
-  2.  A vacant lot
-  3.  A 20-story building worth $10M
+  1. A single-family home worth $200k
+  2. A vacant lot
+  3. A 20-story building worth $10M
 - What is the value of lot (2)?
   - A $10M property implies the underlying property is worth around $1.5M.
   - The owner of the vacant lot would want to sell to another 20-story developer for $1.5M.
