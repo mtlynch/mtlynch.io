@@ -30,11 +30,11 @@ Stripe collects this data on your website if either of the following is true:
 
 ## The discovery
 
-I discovered this by accident while adding paid plans to my [portfolio rebalancer](https://assetrebalancer.com). As part of development, I was using [an HTTP proxy](https://portswigger.net/burp) that allows me to inspect HTTP traffic from my browser.
+I discovered this by accident while adding paid plans to my [portfolio rebalancer](https://rebalancer.mtlynch.io). As part of development, I was using [an HTTP proxy](https://portswigger.net/burp) that allows me to inspect HTTP traffic from my browser.
 
 After successfully implementing my app's payment flow with Stripe, I noticed that every page navigation generated a new HTTP POST request to a Stripe URL:
 
-{{< video src="stripe-phone-home.mp4" caption="The Stripe.js library reports back to Stripe every time I visit a new page in my app">}}
+{{<video src="stripe-phone-home.mp4" caption="The Stripe.js library reports back to Stripe every time I visit a new page in my app">}}
 
 This was strange because none of the pages I visited contained any calls to Stripe's library. In fact, my app doesn't collect payment information from users until they create an account, but Stripe was making HTTP requests when I landed on my app's homepage as a brand new user with no cookies or stored credentials.
 
@@ -147,9 +147,9 @@ import { loadStripe } from "@stripe/stripe-js";
 
 Note that my app never even _calls_ the `loadStripe` function. Stripe.js begins tracking user behavior as soon as the client app imports the library. For a single-page app, this occurs the moment the end-user loads any page of the website.
 
-{{< notice type="info">}}
+{{<notice type="info">}}
 **Note**: `loadStripe` is a misleading name because Stripe loads before the client application ever calls that function. A more appropriate name would be `ensureStripeIsLoaded` because the function's real job is to queue any of the app's API calls until the Stripe library has finished loading.
-{{</ notice >}}
+{{</notice>}}
 
 ## Reporting this to Stripe
 
@@ -230,9 +230,9 @@ beforeRouteLeave(to) {
 
 ### (New) Disable user tracking
 
-{{< notice type="info">}}
+{{<notice type="info">}}
 **Added**: April 30, 2020
-{{</ notice >}}
+{{</notice>}}
 
 After the initial publication of my article, Stripe updated its JavaScript library to include [a new parameter to disable tracking entirely](https://github.com/stripe/stripe-js/blob/ef32028d0e1f8381b3b4ecca8bc74bf659e7153e/README.md#disabling-advanced-fraud-detection-signals). This option is available as of `@stripe/stripe-js` v1.5.0:
 
@@ -299,15 +299,15 @@ There are several actions Stripe can take to rectify this situation:
 - Grant client applications control over what data to share via opt-in.
   - Stripe clients bear the cost of chargebacks against their application, so they should decide how much information to share with Stripe to reduce those chargebacks.
 
-{{< notice type="info">}}
+{{<notice type="info">}}
 **Update: April 21, 2020 - 2:47pm ET**
 
 Stripe co-founder Patrick Collison [responded to this article](https://news.ycombinator.com/item?id=22937303) reasserting Stripe's commitment to use the data collected exclusively for fraud detection. He added that Stripe will soon clarify language in its terms of service around their data collection practices.
 
 **Correction**: The article originally said, "Websites that use Stripe to collect payment **must** include Stripe's JavaScript library," but Collison points out that this is inaccurate, as it is possible for websites to integrate with Stripe without using the Stripe JS library.
-{{</ notice >}}
+{{</notice>}}
 
-{{< notice type="info">}}
+{{<notice type="info">}}
 **Update: April 30, 2020**
 
 Stripe has [revised their privacy policy and developer documentation](https://stripe.com/blog/advanced-fraud-detection-updates) and added functionality to their JavaScript library that empowers integrators to limit tracking behavior.
@@ -315,4 +315,4 @@ Stripe has [revised their privacy policy and developer documentation](https://st
 I published a follow-up post that discusses how Stripe's changes address the concerns I raised:
 
 - [Update: Stripe's Response Regarding User Tracking](/stripe-update/)
-  {{</ notice >}}
+  {{</notice>}}

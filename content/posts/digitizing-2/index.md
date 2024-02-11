@@ -205,6 +205,6 @@ If you want the nitty-gritty of how I did this, I created a [tutorial](/digitizi
 
 ---
 
-_Illustrations by [Loraine Yow](https://www.lolo-ology.com/)._
+_Illustrations by [Loraine Yow](https://www.loraineyow.com/)._
 
 _Special thanks to my family for allowing me to share a selection of these clips and stills, for recording everything in the first place, and for being so supportive throughout this process._

@@ -107,10 +107,10 @@ My discovery about auto-generated content got me excited about Is It Keto again.
 
 Page generation would be a gamechanger because it substantially lowers my costs. The cost would be _so_ low that I could produce articles in the "long tail" of Google queries that nobody else would bother creating. For example, if you Google "are pringles keto?" none of the results directly address the question.
 
-{{< gallery caption="Nobody has written articles about whether pringles are keto because the search volume is too low.">}}
+{{<gallery caption="Nobody has written articles about whether pringles are keto because the search volume is too low.">}}
 {{<img src="pringles-search.png" alt="Google search result for 'are pringles keto?'" max-width="375px" has-border="true">}}
 {{<img src="pringles-planner.png" alt="Google keywords planner results for pringles and keto related searches" max-width="450px" has-border="true">}}
-{{</ gallery >}}
+{{</gallery>}}
 
 According to Google's [keyword planner](https://ads.google.com/home/tools/keyword-planner/), there are only ~70 searches per month for searches like "are pringles keto?" Whoever took the #1 spot would only get ~50 clicks per month. Is It Keto earns ~$0.01 per visitor, meaning the Pringles article would bring in about $6 per year. It's hard to justify the time or cost of crafting a dedicated article for so few readers.
 
@@ -214,7 +214,7 @@ Ahrefs [is undecided](https://twitter.com/slagter/status/1240197698525028352) ab
 
 - Published two blog posts that reached the front page of Hacker News.
   - This continues my lucky streak on Hacker News with [five frontpage articles in the last four months](https://news.ycombinator.com/from?site=mtlynch.io).
-- Launched the paid version of [Portfolio Rebalancer](https://assetrebalancer.com).
+- Launched the paid version of [Portfolio Rebalancer](https://rebalancer.mtlynch.io).
 - Put infrastructure in place to generate new [Is It Keto](https://isitketo.org) articles automatically.
 
 ### Lessons learned

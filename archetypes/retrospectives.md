@@ -8,7 +8,7 @@ description: TODO - One-line summary
 
 **New here?**
 
-Hi, I'm Michael. I'm a software developer and the founder of [TinyPilot](https://tinypilotkvm.com), an independent computer hardware company. I started the company in 2020, and it now earns $60-80k/month in revenue and employs seven other people.
+Hi, I'm Michael. I'm a software developer and the founder of [TinyPilot](https://tinypilotkvm.com), an independent computer hardware company. I started the company in 2020, and it now earns $80-100k/month in revenue and employs six other people.
 
 Every month, I publish a retrospective like this one to share how things are going with my business and my professional life overall.
 {{</notice>}}
@@ -71,11 +71,5 @@ TODO
 -
 
 ### Requests for help
-
-{{<notice type="info">}}
-
-I'm trying a new idea this month where I announce ways readers can help me. If you're a fan of this blog and can connect me with people that are a match for what I'm looking for, [email me](/about/).
-
-{{</notice>}}
 
 TODO

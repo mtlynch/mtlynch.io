@@ -43,7 +43,7 @@ See ["Critiquing my talk"](#critiquing-my-talk) (below).
 
 ### Archiving the Internet Before it All Rots Away
 
-{{< youtube 7eoz_EU6-wQ >}}
+{{<youtube 7eoz_EU6-wQ>}}
 
 **Speaker**: [Nick Sweeting](https://nicksweeting.com/) from Monadical
 
@@ -77,7 +77,7 @@ wget \
 
 {{<notice type="info">}}
 **Note**: If you're on Ubuntu/Debian, take out the `--compression=auto` flag, since your version of wget [doesn't support it](https://unix.stackexchange.com/a/464375/152974).
-{{< /notice >}}
+{{</notice>}}
 
 Other things I liked:
 
@@ -86,7 +86,7 @@ Other things I liked:
 
 ### Maintaining a Python Project When It’s Not Your Job
 
-{{< youtube OvUsbGpKp64 >}}
+{{<youtube OvUsbGpKp64>}}
 
 **Speaker**: [Hynek Schlawack](https://hynek.me/)
 
@@ -113,7 +113,7 @@ Other things I liked:
 
 ### Make You An Async For Great Good!
 
-{{< youtube XEkuqe7tSlA >}}
+{{<youtube XEkuqe7tSlA>}}
 
 **Speaker**: [Mark Smith](https://twitter.com/judy2k) from Nexmo
 
@@ -123,7 +123,7 @@ I was impressed at how much of `asyncio`'s functionality Mark was able to reimpl
 
 ## Critiquing my talk
 
-{{< youtube ElzBGwyDzCc >}}
+{{<youtube ElzBGwyDzCc>}}
 
 **Speaker**: Michael Lynch (me)
 

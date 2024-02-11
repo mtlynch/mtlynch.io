@@ -59,7 +59,7 @@ I knew the [TinyPilot blog post](/tinypilot/) would be different before I publis
 
 Fortunately, the blog post got a positive response. It reached the #1 spot on Hacker News and stayed there for most of the day. It attracted 22k readers on its first day and 52k total since then.
 
-{{< gallery caption="My TinyPilot blog post received a positive reception on Hacker News and several popular subreddits.">}}
+{{<gallery caption="My TinyPilot blog post received a positive reception on Hacker News and several popular subreddits.">}}
 {{<img src="hn-no-1.png" alt="Screenshot of TinyPilot blog post at #1 slot" has-border="true">}}
 {{<img src="reddit-submissions.png" alt="Screenshot of TinyPilot submissions on reddit" has-border="true">}}
 {{</gallery>}}

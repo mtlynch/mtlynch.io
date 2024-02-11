@@ -97,10 +97,10 @@ I tried that with 10 separate reporters, and my success rate was still small, bu
 
 Promoting the contest on social media also turned out to be harder than I expected. Groups that welcomed my initial WanderJest announcement with open arms totally ignored my announcement about the scavenger hunt:
 
-{{< gallery caption="My post in a local Facebook group about launching WanderJest earned 33 likes, 12 comments, whereas my later scavenger hunt post received only 6 likes and no comments.">}}
+{{<gallery caption="My post in a local Facebook group about launching WanderJest earned 33 likes, 12 comments, whereas my later scavenger hunt post received only 6 likes and no comments.">}}
 {{<img src="fb-announce-1.jpg" alt="Screenshot of initial WanderJest announcement on Facebook">}}
 {{<img src="fb-announce-2.jpg" alt="Screenshot of scavenger hunt announcement on Facebook">}}
-{{</ gallery >}}
+{{</gallery>}}
 
 One of the ways users can earn a chance at the $200 grand prize is by re-sharing WanderJest's contest announcement post, but not a single person has done that, save for a few performers, and they're ineligible for the grand prize.
 
@@ -207,11 +207,11 @@ I'm liking WakaTime more than expected, and I'm even considering it for my non-b
 
 ### DK the Human
 
-[DK](https://www.dkthehuman.com) is an indie developer working on a Chrome extension called [Hide Feed](https://www.hidefeed.com/), which helps you control distractions on social media sites. Every day, he updates his [daily log](https://dkthehuman.notion.site/ae3a709e9e2145239cec77eef5b37f2a?v=79be77df48454dc393f69902f8aa9e96) to share progress on his business or to think through a problem. If you want a peek into the day-to-day life of a solo developer, his blog is illuminating.
+[DK](https://www.dkthehuman.com) is an indie developer working on a Chrome extension called [Hide Feed](https://www.hidefeed.com/), which helps you control distractions on social media sites. Every day, he updates his [daily log](https://www.notion.so/dkthehuman/Maker-Log-c3be0bb060774c8ba296b3819ac2407b) to share progress on his business or to think through a problem. If you want a peek into the day-to-day life of a solo developer, his blog is illuminating.
 
 DK kindly made a "Feedback Friday" video for my tool, [What Got Done](https://whatgotdone.com), in which he recorded himself using the website for the first time and narrating his thought process aloud to identify parts of the app that are confusing or need improvement:
 
-{{< youtube JnAAkjS4x6k >}}
+{{<youtube JnAAkjS4x6k>}}
 
 The video was tremendously valuable and turned up [13 new bugs](https://github.com/mtlynch/whatgotdone/issues?utf8=%E2%9C%93&q=label%3Adk+), many of which I've since fixed.
 

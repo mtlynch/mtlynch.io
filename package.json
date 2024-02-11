@@ -1,11 +1,7 @@
 {
   "name": "mtlynch-io-dev",
   "version": "1.0.0",
-  "description": "mtlynch.io dev scripts",
-  "scripts": {
-    "check-format": "prettier --check .",
-    "format": "prettier --write ."
-  },
+  "description": "mtlynch.io dev environment",
   "author": "Michael Lynch",
   "devDependencies": {
     "prettier": "2.8.7",

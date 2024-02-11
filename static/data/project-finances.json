@@ -122,16 +122,48 @@
       "totalRevenue": 72401.15
     },
     "2023-02": {
-      "profit": 32905.55,
+      "profit": 33455.55,
       "totalRevenue": 76811.58
     },
     "2023-03": {
-      "profit": 43952.1,
+      "profit": 44502.1,
       "totalRevenue": 88640.85
     },
     "2023-04": {
       "profit": 10295.55,
       "totalRevenue": 84720.62
+    },
+    "2023-05": {
+      "profit": 24034.74,
+      "totalRevenue": 92457.9
+    },
+    "2023-06": {
+      "profit": 30744.96,
+      "totalRevenue": 93068.81
+    },
+    "2023-07": {
+      "profit": 26359.62,
+      "totalRevenue": 83703.24
+    },
+    "2023-08": {
+      "profit": 28454.42,
+      "totalRevenue": 94930.78
+    },
+    "2023-09": {
+      "profit": 8644.82,
+      "totalRevenue": 85727.02
+    },
+    "2023-10": {
+      "profit": 69280.58,
+      "totalRevenue": 101797.35
+    },
+    "2023-11": {
+      "profit": -5407.96,
+      "totalRevenue": 87170.21
+    },
+    "2023-12": {
+      "profit": -59117.41,
+      "totalRevenue": 77281.21
     }
   },
   "htfp": {
@@ -221,6 +253,30 @@
     },
     "2023-04": {
       "totalRevenue": 80.4
+    },
+    "2023-05": {
+      "totalRevenue": 35.1
+    },
+    "2023-06": {
+      "totalRevenue": 88.2
+    },
+    "2023-07": {
+      "totalRevenue": 35.1
+    },
+    "2023-08": {
+      "totalRevenue": 106.2
+    },
+    "2023-09": {
+      "totalRevenue": 53.1
+    },
+    "2023-10": {
+      "totalRevenue": 0
+    },
+    "2023-11": {
+      "totalRevenue": 0
+    },
+    "2023-12": {
+      "totalRevenue": 0
     }
   },
   "isitketo": {
@@ -379,6 +435,30 @@
     },
     "2023-04": {
       "totalRevenue": 117.49
+    },
+    "2023-05": {
+      "totalRevenue": 120.91
+    },
+    "2023-06": {
+      "totalRevenue": 95.61
+    },
+    "2023-07": {
+      "totalRevenue": 112.58
+    },
+    "2023-08": {
+      "totalRevenue": 94.97
+    },
+    "2023-09": {
+      "totalRevenue": 116.08
+    },
+    "2023-10": {
+      "totalRevenue": 141.58
+    },
+    "2023-11": {
+      "totalRevenue": 141.48
+    },
+    "2023-12": {
+      "totalRevenue": 99.82
     }
   },
   "zestful": {
@@ -422,7 +502,7 @@
       "totalRevenue": 45.97
     },
     "2019-08": {
-      "totalRevenue": 728.07
+      "totalRevenue": 1478.07
     },
     "2019-09": {
       "totalRevenue": 3.2
@@ -434,7 +514,7 @@
       "totalRevenue": 63.13
     },
     "2019-12": {
-      "totalRevenue": 3934.13
+      "totalRevenue": 7934.13
     },
     "2020-01": {
       "totalRevenue": 79.67
@@ -452,7 +532,7 @@
       "totalRevenue": 6.48
     },
     "2020-06": {
-      "totalRevenue": 685.26
+      "totalRevenue": 1385.26
     },
     "2020-07": {
       "totalRevenue": 18.05
@@ -467,7 +547,7 @@
       "totalRevenue": 35.05
     },
     "2020-11": {
-      "totalRevenue": 901
+      "totalRevenue": 1800
     },
     "2020-12": {
       "totalRevenue": 103.33
@@ -555,6 +635,30 @@
     },
     "2023-04": {
       "totalRevenue": 135.61
+    },
+    "2023-05": {
+      "totalRevenue": 94.39
+    },
+    "2023-06": {
+      "totalRevenue": 118.99
+    },
+    "2023-07": {
+      "totalRevenue": 234.67
+    },
+    "2023-08": {
+      "totalRevenue": 177.9
+    },
+    "2023-09": {
+      "totalRevenue": 191.24
+    },
+    "2023-10": {
+      "totalRevenue": 120.8
+    },
+    "2023-11": {
+      "totalRevenue": 107.33
+    },
+    "2023-12": {
+      "totalRevenue": 148.4
     }
   }
 }

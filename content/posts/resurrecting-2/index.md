@@ -39,7 +39,7 @@ To integrate with Travis, I added [my fork of ingredient-phrase-tagger](https://
 
 Then, I created a file called `.travis.yml`, which told Travis how to build the library:
 
-{{< inline-file filename="travis.yml" language="yml">}}
+{{<inline-file filename="travis.yml" language="yml">}}
 
 I pushed my commit to Github, created a [pull request](https://github.com/mtlynch/ingredient-phrase-tagger/pull/4), and Travis [built it](https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/362818282) successfully:
 
@@ -167,11 +167,11 @@ After copying these files to `tests/golden`, I saved them to source control as a
 
 After all my modifications to `roundtrip.sh`, I saved it as a new file called `build.sh`, which looked like this:
 
-{{< inline-file filename="build.sh" language="bash">}}
+{{<inline-file filename="build.sh" language="bash">}}
 
 I then added a simple wrapper around that script called `docker_build` that ran the end-to-end test within the library's custom Docker container:
 
-{{< inline-file filename="docker_build" language="bash">}}
+{{<inline-file filename="docker_build" language="bash">}}
 
 With the `docker_build` script, my end-to-end test could run on any system that supported Docker. Naturally, I wanted to run it in my continuous integration environment.
 
@@ -296,4 +296,4 @@ Read on for [part three](/resurrecting-3/) of this series, where I describe how 
 
 ---
 
-_Cover illustration by [Loraine Yow](https://www.lolo-ology.com/). My fork of the ingredient-phrase-tagger library is available on [Github](https://github.com/mtlynch/ingredient-phrase-tagger). I offer a managed service based on this library called [Zestful](https://zestfuldata.com)._
+_Cover illustration by [Loraine Yow](https://www.loraineyow.com/). My fork of the ingredient-phrase-tagger library is available on [Github](https://github.com/mtlynch/ingredient-phrase-tagger). I offer a managed service based on this library called [Zestful](https://zestfuldata.com)._

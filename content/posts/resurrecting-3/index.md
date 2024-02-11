@@ -284,7 +284,7 @@ In the documentation for `coverage`, I noticed that it supported a [`paths` opti
 
 To use these options, I created the following `.coveragerc` file:
 
-{{< inline-file filename="coveragerc" language="ini">}}
+{{<inline-file filename="coveragerc" language="ini">}}
 
 My new solution ran the `coverage` command within the Docker container, then executed the [`coverage combine` feature](https://coverage.readthedocs.io/en/latest/cmd.html#cmd-combining) in the Travis environment, which canonicalized all of the paths to the Travis filesystem.
 
@@ -339,10 +339,8 @@ If you'd like to see Zestful in action, check out the [live demo](https://zestfu
 
 {{<img src="zestful-screenshot.png" alt="Screenshot of Zestful ingredient parsing demo" max-width="800px" has-border="true" href="https://zestfuldata.com/demo">}}
 
-If you're a developer and you work on software that handles recipe ingredients, let's talk. Shoot me an email at [michael@mtlynch.io](mailto:michael@mtlynch.io).
-
 {{<zestful-ad>}}
 
 ---
 
-_Cover illustration by [Loraine Yow](https://www.lolo-ology.com/). My fork of the ingredient-phrase-tagger library is available on [Github](https://github.com/mtlynch/ingredient-phrase-tagger). I offer a managed service based on this library called [Zestful](https://zestfuldata.com)._
+_Cover illustration by [Loraine Yow](https://www.loraineyow.com/). My fork of the ingredient-phrase-tagger library is available on [Github](https://github.com/mtlynch/ingredient-phrase-tagger). I offer a managed service based on this library called [Zestful](https://zestfuldata.com)._

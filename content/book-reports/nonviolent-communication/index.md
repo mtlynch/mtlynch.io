@@ -13,7 +13,7 @@ One of the biggest takeaways for me was how commonplace it is for people to say,
 
 The distinction between "I must do X" and "I'm choosing to do X because..." seemed silly at first, but it grew more reasonable the more I thought about it. Now, I default to, "I _want to_ do X." If I don't want to do it, I evaluate whether it's an intermediate step to something I ultimately want or if it's something I don't need to do at all.
 
-The book bears many similarities to [_Crucial Conversations_](https://www.indiebound.org/book/9780071771320). Both emphasize the importance of separating judgments from facts during high stakes conversations. They also both advocate making everyone feel comfortable and heard.
+The book bears many similarities to [_Crucial Conversations_](https://bookshop.org/p/books/crucial-conversations-tools-for-talking-when-stakes-are-high-emily-gregory/17346582). Both emphasize the importance of separating judgments from facts during high stakes conversations. They also both advocate making everyone feel comfortable and heard.
 
 _Nonviolent Communication_ is a bit mushier in that it focuses on vulnerability and feelings, whereas _Crucial Conversations_ is more clinical and process-oriented. Although both books advocate using their techniques in all contexts, I view _Crucial Conversations_ as best-suited for professional relationships and _Nonviolent Communication_ as a good match for friends and loved ones.
 
@@ -46,7 +46,6 @@ _Nonviolent Communication_ is a bit mushier in that it focuses on vulnerability 
 > **Nonviolent communication (NVC)**: a way of communicating that leads us to give from the heart.
 
 - NVC is a way of communicating more thoughtfully by focusing on our own emotions and withholding judgment.
-
 - NVC process:
   1. Observe concrete events that have affected your mood.
   1. Identify the feelings that arise in yourself in relation to those events.
@@ -89,15 +88,15 @@ _Nonviolent Communication_ is a bit mushier in that it focuses on vulnerability 
 - People are more open to feedback that's objective and indisputable rather than feedback based on our opinions or judgments.
   - We can separate the objective and subjective parts of our feedback.
 
-| Communication                                                                                                                  | Example of mixing observation and judgment                     | Example of separating observation from judgment                                              |
-| ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| Use of verb _to be_ without indication that the evaluator takes responsibility for the evaluation                              | You are too generous.                                          | When I see you give all your lunch money to others, I think you are being too generous.      |
-| Use of verbs with evaluative connotations                                                                                      | Doug procrastinates.                                           | Doug only studies for exams the night before.                                                |
-| Implication that one's inferences about another person's thoughts, feelings, intentions, or desires are the only ones possible | She won't get her work in.                                     | I don't think she'll get her work in.<br><br>_or_<br><br>She said, "I won't get my work in." |
-| Confusion of prediction with certainty                                                                                         | If you don't eat balanced meals, your health will be impaired. | If you don't eat balanced meals, I fear your health may be impaired.                         |
-| Failure to be specific about referents                                                                                         | Immigrants don't take care of their property.                  | I have not seen the immigrant family living at 1679 Ross shovel the snow on their sidewalk.  |
-| Use of words denoting ability without indicating that an evaluation is being made                                              | Hank Smith is a poor soccer player.                            | Hank Smith has not scored a goal in twenty games.                                            |
-| Use of adverbs and adjectives in ways that do not indicate an evaluation has been made                                         | Jim is ugly.                                                   | Jim's looks don't appeal to me.                                                              |
+> | Communication                                                                                                                  | Example of mixing observation and judgment                     | Example of separating observation from judgment                                              |
+> | ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+> | Use of verb _to be_ without indication that the evaluator takes responsibility for the evaluation                              | You are too generous.                                          | When I see you give all your lunch money to others, I think you are being too generous.      |
+> | Use of verbs with evaluative connotations                                                                                      | Doug procrastinates.                                           | Doug only studies for exams the night before.                                                |
+> | Implication that one's inferences about another person's thoughts, feelings, intentions, or desires are the only ones possible | She won't get her work in.                                     | I don't think she'll get her work in.<br><br>_or_<br><br>She said, "I won't get my work in." |
+> | Confusion of prediction with certainty                                                                                         | If you don't eat balanced meals, your health will be impaired. | If you don't eat balanced meals, I fear your health may be impaired.                         |
+> | Failure to be specific about referents                                                                                         | Immigrants don't take care of their property.                  | I have not seen the immigrant family living at 1679 Ross shovel the snow on their sidewalk.  |
+> | Use of words denoting ability without indicating that an evaluation is being made                                              | Hank Smith is a poor soccer player.                            | Hank Smith has not scored a goal in twenty games.                                            |
+> | Use of adverbs and adjectives in ways that do not indicate an evaluation has been made                                         | Jim is ugly.                                                   | Jim's looks don't appeal to me.                                                              |
 
 Words like "always," "never," "frequently," and "seldom" often accompany evaluations:
 
@@ -127,7 +126,7 @@ Words like "always," "never," "frequently," and "seldom" often accompany evaluat
 - Impersonal language like "it or "that"
   - "It really infuriates me when spelling mistakes appear in our brochures."
   - "That bugs me a lot."
-- "I feel **\_** because **\_\_\_**"
+- "I feel \_\_\_ because \_\_\_"
   - "I feel hurt because you said you don't love me."
 - Mentioning only the actions of others
   - "When you don't call me on my birthday, I feel hurt."
@@ -159,7 +158,6 @@ It's possible to correct these speech patterns by connecting our feeling with th
 
 - People often fail to be fully present when hearing others' feelings.
 - Common anti-patterns to listening with true empathy:
-
   > - Advising: "I think you should..." "How come you didn't...?"
   > - One-upping: "That's nothing; wait'll you hear what happened to me."
   > - Educating: "This could turn into a very positive experience for you if you just..."
@@ -170,14 +168,11 @@ It's possible to correct these speech patterns by connecting our feeling with th
   > - Interrogating: "When did this begin?"
   > - Explaining: "I would have called, but..."
   > - Correcting: "That's not how it happened."
-
 - To listen empathically, identify what the speaker is:
-
   1. Observing
   1. Feeling
   1. Needing
   1. Requesting
-
 - One way to uncover these four things is by making guesses and checking in with the person to learn if they're correct.
   - "Are you feeling unhappy because you need to be heard?"
   - "Are you reacting to how many evenings I was gone last week?"

@@ -64,9 +64,9 @@ The code for GreenPiThumb is open-source and features:
 
 ## Hardware architecture
 
-{{< figure src="https://raw.githubusercontent.com/JeetShetty/GreenPiThumb/master/doc/greenpithumb_wiring.png" alt="GreenPiThumb wiring diagram" caption="GreenPiThumb wiring diagram ([downloadable file](https://github.com/JeetShetty/GreenPiThumb/tree/master/doc))">}}
+{{<figure src="https://raw.githubusercontent.com/JeetShetty/GreenPiThumb/master/doc/greenpithumb_wiring.png" alt="GreenPiThumb wiring diagram" caption="GreenPiThumb wiring diagram ([downloadable file](https://github.com/JeetShetty/GreenPiThumb/tree/master/doc))">}}
 
-The Raspberry Pi reads _digital_ signals, so it's not capable of reading analog sensors directly. We use the [MCP3008 analog-to-digital converter](https://smile.amazon.com/dp/B00EU1PY06/) to produce digital readings from the analog [soil moisture sensor](https://www.sparkfun.com/products/13322) and [light sensor](https://smile.amazon.com/gp/product/B0157PFTS0/).
+The Raspberry Pi reads _digital_ signals, so it's not capable of reading analog sensors directly. We use the [MCP3008 analog-to-digital converter](https://smile.amazon.com/dp/B00EU1PY06/) to produce digital readings from the analog [soil moisture sensor](https://www.sparkfun.com/products/13322) and light sensor.
 
 The [DHT11 sensor](https://smile.amazon.com/HiLetgo-Temperature-Humidity-Arduino-Raspberry/dp/B01DKC2GQ0/) detects temperature and humidity in the air. It produces a digital signal, so it can plug right into the Raspberry Pi.
 
@@ -74,7 +74,7 @@ Lastly, we have a [12V water pump](https://smile.amazon.com/gp/product/B00PRM9UZ
 
 ## Software architecture
 
-{{< figure src="https://docs.google.com/drawings/d/1vY9YU9fFoyrKUh8pRe6gN0bLD1JFDq5ngkTh7yOQrOA/export/png" alt="GreenPiThumb software architecture" caption="GreenPiThumb software architecture">}}
+{{<figure src="https://docs.google.com/drawings/d/1vY9YU9fFoyrKUh8pRe6gN0bLD1JFDq5ngkTh7yOQrOA/export/png" alt="GreenPiThumb software architecture" caption="GreenPiThumb software architecture">}}
 
 ### GreenPiThumb back end
 
@@ -120,14 +120,14 @@ We ultimately settled on "spray and pray." It was a solution borne out of lookin
 
 We turned on the pump, and the severed finger of the glove immediately shot off the tubing, spraying water all over my apartment's wall. We reattached everything, but this time, stuck a safety pin just in front of the rubber bands so that they couldn't slide forward.
 
-{{< gallery caption="Kitchen glove turned water distributor">}}
+{{<gallery caption="Kitchen glove turned water distributor">}}
 {{<img src="sprayer-front.jpg" alt="Water sprayer (front)">}}
 {{<img src="sprayer-side.jpg" alt="Water sprayer (side)">}}
-{{</ gallery >}}
+{{</gallery>}}
 
 It's not the most _elegant_ solution, but it mostly works.
 
-{{< youtube bI6UaJjYZ00 >}}
+{{<youtube bI6UaJjYZ00>}}
 
 ### The gardening part wasn't supposed to be hard
 
@@ -135,7 +135,7 @@ Electronics were supposed to be the big challenge of GreenPiThumb. Gardening did
 
 It turned out that we didn't have basic gardening skills. GreenPiThumb is intended to automate the human part of tending an indoor garden, but to automate anything, a human has to know what "correct" looks like. It was hard to decide whether GreenPiThumb was watering too much or too little because we ourselves had no idea how much water to use. That's how we ended up accidentally making this horticultural snuff film:
 
-{{< youtube TYAdw6BwYyQ >}}
+{{<youtube TYAdw6BwYyQ>}}
 
 ### How hard can it be to measure moisture?
 
@@ -179,24 +179,24 @@ We ultimately decided to switch to a hybrid system. GreenPiThumb now waters the 
 
 Below are some images of our completed GreenPiThumb build:
 
-{{< gallery >}}
+{{<gallery>}}
 {{<img src="greenpithumb-side-full.jpg" alt="GreenPiThumb full system">}}
 {{<img src="greenpithumb-front.jpg" alt="GreenPiThumb full system">}}
-{{</ gallery >}}
+{{</gallery>}}
 
-{{< gallery >}}
+{{<gallery>}}
 {{<img src="greenpithumb-just-electronics.jpg" alt="GreenPiThumb electronics">}}
 {{<img src="greenpithumb-pump.jpg" alt="GreenPiThumb pump">}}
 {{<img src="greenpithumb-reservoir.jpg" alt="GreenPiThumb reservoir">}}
-{{</ gallery >}}
+{{</gallery>}}
 
 The timelapses have been the most fun part of this process. This one is from our first batch of green beans (R.I.P.). We didn't realize how quickly the plants would outgrow the [close overhead angle](/greenpithumb/greenpithumb-overhead-mount.jpg). We eventually switched to a [larger bendy mount](https://smile.amazon.com/gp/product/B00FZAY86C/), which gets a better angle on the plant's full lifecycle, but our original setup caught a great timelapse of the first few days of growth:
 
-{{< video src="timelapse.mp4">}}
+{{<video src="timelapse.mp4">}}
 
 For the second batch, we kept the camera in the exact same position throughout growth. This is the progress of batch two so far:
 
-{{< youtube 6bvb2EvKQ58 >}}
+{{<youtube 6bvb2EvKQ58>}}
 
 ## Lessons learned
 
@@ -251,7 +251,7 @@ The tables below show the equipment we used to build GreenPiThumb. We're sharing
 - [Soil moisture sensor](https://www.sparkfun.com/products/13322)
 - [Rubber glove](https://smile.amazon.com/gp/product/B0002XJZME/)
 - [Molex to SATA power cable adapter](https://smile.amazon.com/Cable-Matters-Molex-Power-Adapter/dp/B00STNUB04/)
-- [Light-dependent photoresistor](https://smile.amazon.com/gp/product/B0157PFTS0/)
+- Light-dependent photoresistor
 - 1-gallon plastic water jug (for reservoir)
 - Safety pin
 - Rubber bands

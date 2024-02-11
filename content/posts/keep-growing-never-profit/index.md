@@ -61,7 +61,7 @@ At the end of each month, I wrote a [retrospective](/retrospectives/) detailing 
 
 {{<notice type="info">}}
 My inspiration for assigning letter grades to my goals came from [Cory Zue](http://www.coryzue.com/writing/), whose blog posts and retrospectives I recommend highly.
-{{< /notice >}}
+{{</notice>}}
 
 When you're launching a new project, it's easy to go down a rabbit hole and forget to revisit your strategy or assumptions. Writing a retrospective forces you to take a step back and reassess what you're doing.
 
@@ -171,4 +171,4 @@ While I'm disappointed that Is It Keto never produced positive returns, it was a
 
 ---
 
-_Cover art by [Loraine Yow](https://www.lolo-ology.com/)._
+_Cover art by [Loraine Yow](https://www.loraineyow.com/)._

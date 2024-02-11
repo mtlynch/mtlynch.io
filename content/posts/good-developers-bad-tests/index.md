@@ -34,7 +34,7 @@ Test code is a different beast. A good unit test is often small enough that a de
 
 {{<notice type="info">}}
 **Good production code is well-factored; good test code is _obvious_.**
-{{< /notice >}}
+{{</notice>}}
 
 {{<img src="dane-deaner-272363-unsplash-cropped.jpg" alt="Image of a ruler" max-width="325px" align="right" href="https://unsplash.com/photos/JNpmCYZID68">}}
 
@@ -101,7 +101,7 @@ All I did was inline the code from the `setUp` method, but it made a world of di
 
 {{<notice type="info">}}
 **The reader should understand your test without reading any other code.**
-{{< /notice >}}
+{{</notice>}}
 
 ## Dare to violate DRY
 
@@ -133,7 +133,7 @@ Before blindly applying DRY to your tests, think about what will make the proble
 
 {{<notice type="info">}}
 **Accept redundancy if it supports simplicity.**
-{{< /notice >}}
+{{</notice>}}
 
 ## Think twice before adding helper methods
 
@@ -184,7 +184,7 @@ In this case, refactoring `AccountManager` solves the root problem whereas addin
 
 {{<notice type="info">}}
 **When tempted to write test helper methods, try refactoring your production code instead.**
-{{< /notice >}}
+{{</notice>}}
 
 ## If you need helper methods, write them responsibly
 
@@ -248,7 +248,7 @@ It still buries values in the helper method, but they're irrelevant to the test.
 
 {{<notice type="info">}}
 **Keep helper methods free of any information the reader needs to understand the test.**
-{{< /notice >}}
+{{</notice>}}
 
 ## Go crazy with long test names
 
@@ -293,7 +293,7 @@ A function called `ReturnsNullptrWhenStreamIsEmpty` would feel overly verbose in
 
 {{<notice type="info">}}
 **Name your tests so well that others can diagnose failures from the name alone.**
-{{< /notice >}}
+{{</notice>}}
 
 ## Embrace magic numbers
 
@@ -346,11 +346,11 @@ When I see developers define constants in test code, it's usually due to a misgu
 
 {{<notice type="info">}}
 **Prefer magic numbers to named constants in test code.**
-{{< /notice >}}
+{{</notice>}}
 
 {{<notice type="warning">}}
 **Note**: It's okay for unit tests to _reference_ constants that the production code exposes. They just shouldn't define their own.
-{{< /notice >}}
+{{</notice>}}
 
 ## Conclusion
 
@@ -358,4 +358,4 @@ To write excellent tests, a developer must align their engineering decisions wit
 
 ---
 
-_Cover art by [Loraine Yow](https://www.lolo-ology.com/)_
+_Cover art by [Loraine Yow](https://www.loraineyow.com/)_

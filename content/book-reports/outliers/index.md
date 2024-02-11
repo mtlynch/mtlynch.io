@@ -53,7 +53,7 @@ In the past few years, I've noticed people increasingly mocking Gladwell and his
 ### Exceptionalism and opportunity
 
 - Exceptionally successful people have talent and drive, but they're often born in circumstances that allow them to capitalize on rare opportunities.
-- Of the 75 [richest people in history](https://en.wikipedia.org/wiki/List_of_wealthiest_historical_figures), 14 were born in the US within nine years of each other (1831-1839).
+- Of the 75 [richest people in history](https://web.archive.org/web/20230726160326/https://en.wikipedia.org/wiki/List_of_wealthiest_historical_figures), 14 were born in the US within nine years of each other (1831-1839).
   - The industrial revolution took place in the 1860s-1870s, so men born in the 1830s were poised to capitalize on it. It meant that when they reached the 1860s, they were the young entrepreneurs hungry to launch disruptive new businesses.
 - A disproportionate number of modern tech giants were born between 1953-1956.
   - The digital revolution happened in the 1970s, so people born in the 1950s were the young entrepreneurs best positioned to capitalize on it.

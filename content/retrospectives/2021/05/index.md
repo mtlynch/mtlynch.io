@@ -183,7 +183,7 @@ It's too hard to switch away from JustWorks at this point, but I plan to evaluat
 
 Inspired by re-watching Mike Monteiro's famous talk, ["F--- You, Pay Me,"](https://www.youtube.com/watch?v=jVkLVRt6c1U) I hired a lawyer to review a business contract for the first time ever.
 
-{{< youtube jVkLVRt6c1U >}}
+{{<youtube jVkLVRt6c1U>}}
 
 Monteiro's advice is primarily for consultants and contractors, but the bulk of his talk applies to founders as well. He argues that you forfeit a tremendous amount of power by letting the other party define all terms of a contract without a lawyer on your side. A good lawyer pays for themselves in protecting you from bad deals, even if your business seems too small to afford a lawyer.
 
@@ -195,7 +195,7 @@ The result turned out to be fun, though. Getting to say, "I'll have to review th
 
 Will Yarborough was one of the first YouTubers to [review TinyPilot](https://www.youtube.com/watch?v=jq2X2ofedyQ), and I was interested in collaborating with him on more interesting use-cases for a TinyPilot.
 
-{{< youtube jq2X2ofedyQ >}}
+{{<youtube jq2X2ofedyQ>}}
 
 We got on a video call to brainstorm ideas, and Will suggested using TinyPilot to control DSLR cameras. Nearly all DSLRs have an HDMI output and expose a simple electronic interface for firing the camera shutter.
 
@@ -209,7 +209,7 @@ When I sat down to implement the software portion, I quickly realized that there
 
 All told, I spent about six hours of development time on this. It sounds small, but I'm lucky if I get a few hours per week to write code these days. This project absorbed all of my coding time for over a week.
 
-{{< youtube YUQ9VVuMOZs >}}
+{{<youtube YUQ9VVuMOZs>}}
 
 Will put together a great video, but we were both underwhelmed by the response. Here are the stats as of this writing:
 
