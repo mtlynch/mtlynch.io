@@ -65,7 +65,9 @@ This is the benefit people always complain about, so I'll mention it. People who
 
 Most style discussion should be automated with linters and formatters. But there are still style conventions that automated tools can't catch.
 
-one people always bemoan about code reviews. I think it is a legitimate value. Consistent code is easier to read and maintain.
+Consistent code is easier to read and maintain. And some style rules aren't just about superficial decisions like tabs vs. spaces, they're about protecting the codebase from anti-patterns.
+
+For example, one rule in Google's C++ style guide is [Avoid complicated template programming](https://google.github.io/styleguide/cppguide.html#Template_metaprogramming). You can't really automate that check because a linter can't decide perfectly what's complicated and what's reasonable, so a human has to do it. But if that weren't in the style guide, people would feel more emboldened to do crazy template metaprogramming that reviewers might _think_ they understand but they actually don't.
 
 ## If you dislike code reviews, you probably haven't experienced code reviews done well
 
