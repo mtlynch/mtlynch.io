@@ -114,6 +114,12 @@ But maybe you're not worried about the one expert on a component leaving unexpec
 
 Although, seriously, I can think of two situations where code reviews aren't worth it.
 
+Software development is engineering, and there's no one right technique in engineering for every situation. I don't think code review is always the answer.
+
+You fully gain the benefits of code reviews over a 1-3 year time horizon. If you're an early-stage startup, a year from now, you could be bankrupt or developing an entirely different product. In those cases, I get why you'd skip code reviews.
+
+Similarly, if you're a one-person dev team, I'd skip code reviews. I wouldn't bother with code review as a service or getting reviews from external teams. The value just isn't there if your reviewer isn't someone with skin in the game who's thinking about whether they feel comfortable maintaining this code with you.
+
 ### Early-stage startup
 
 The first is if you're an ultra fast-paced startup. Early-stage startups are almost always in a race against time. Their options are to either experience hypergrowth or flame out trying. So, for them, it doesn't matter so much if they end up with a bunch of code nobody knows how to maintain. Their goal isn't long-term maintainability. If you got 100M users in two years, maybe it's okay that your code is all nonsense that your developers vomited out on adderall-fueled coding marathons. You've got investors clamoring to throw millions of dollars at you, so maybe you can use some of that money to untangle your code and throw in some automated tests.
