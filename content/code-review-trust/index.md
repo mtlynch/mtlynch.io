@@ -63,7 +63,9 @@ Often, I'm not identifying bugs but the risk of a bug in the future. For example
 
 This is the benefit people always complain about, so I'll mention it. People who crticize code reviews complain talk as though this is the only purpose of code reviews, and I see it as the least valuable part of code reviews, but it still has value.
 
-Most style discussion should be automated with linters and formatters. But there are still style conventions that automated tools can't catch.
+I think style violations get a bad rap.
+
+Most style discussion should be automated with linters and formatters. If you're arguing about tabs vs. spaces or where to put the curly braces, that's a waste of code review resources. But there are still style conventions that automated tools can't catch.
 
 Consistent code is easier to read and maintain. And some style rules aren't just about superficial decisions like tabs vs. spaces, they're about protecting the codebase from anti-patterns.
 
