@@ -1,11 +1,13 @@
 ---
 title: "Strong Towns"
-date: 2023-09-01T00:00:00-04:00
+date: 2024-02-11T00:00:00-04:00
 rating: 8
 purchase_url: https://bookshop.org/p/books/strong-towns-a-bottom-up-revolution-to-rebuild-american-prosperity-charles-l-marohn/7390111
 ---
 
-TODO: Short summary
+I found it eye-opening in terms of understanding how municipal governments work in practice and how perverse incentives lead to poor community outcomes. It had a huge impact on the way that I think about where to live and what policies I support in local government.
+
+This book complements [_Happy City_](/book-reports/happy-city/) in that both books explore what characteristics of a city make it attractive for residents to live there but also how legislation often yields the opposite results.
 
 <!--more-->
 
@@ -13,7 +15,9 @@ TODO: Short summary
 
 ## What I Liked
 
--
+- I learned a lot about how municipal policy affects everyday life in American cities.
+- It changed the way I think about what local government policies to support and what to look for in city government.
+- It made municipal government interesting and engaging, which is quite difficult.
 
 ## What I Disliked
 
@@ -55,12 +59,8 @@ TODO: Short summary
 ### Zoning manages complexity poorly
 
 - People traditionally manage cities with zoning for ease of legislation.
-- Zoning is too simple and limits tap the city from adapting naturally.
-
-### Postwar period corrupted city management
-
-- Postwar WWII wealth screwed up city management.
-- The US had an abundance of wealth, so we stopped designing cities with financial constraints in mind.
+- Zoning is too crude a tool for managing something as complex as a city.
+  - Zoning laws prevent the city from adapting naturally to new conditions.
 
 ### Evolution of Brainerd, MN
 
@@ -69,7 +69,7 @@ TODO: Short summary
   - 30 years later, there were roads, and the makeshift stores were replaced by well-constructed to buildings two or three stories high.
   - 30 years after that, they replaced wood structures with buildings made of stone.
 - First generation: pop-up shacks, no sewage or sidewalks
-- Second generation'. Two-and three- story wood buildings, sidewalks, gravel streets
+- Second generation'. Two-and three-story wood buildings, sidewalks, gravel streets
 - Third generation: Brick and granite buildings, concrete sidewalks, asphalt streets.
 
 ### Private investment should precede public infrastructure
@@ -99,7 +99,7 @@ TODO: Short summary
 
 - The amount you'd invest in a building is a function of the value of its underlying land.
   - If a building in Manhattan costs $10m to build, the result is worth far more than $10m because land in Manhattan is so valuable.
-  - If you spent $10m to build a building in outer detroit, the result would be worth less than $10m, which indicates the land has negative value.
+  - If you spent $10m to build a building in outer Detroit, the result would be worth less than $10m, which indicates the land has negative value.
   - You'd never buy land in Manhattan to park a mobile home because there are much more lucrative structures to put on such valuable land.
 - When building value is high relative to the land, it drives up the value of the surrounding land.
   - e.g., a fancy hotel makes the surrounding area more valuable.
@@ -110,37 +110,28 @@ TODO: Short summary
 
 - The property value equation guides the natural growth of cities:
   1. A few people build shacks together in a new area.
-  1. More people join then and build more shacks nearby.
+  1. More people join them and build more shacks nearby.
   1. The land becomes more valuable because it has more buildings clustered together.
   1. Redevelopment pressure pushes some owners to renovate their shacks into better structures.
-  1. The nicer buildings have incentive to invest in shared infrastructure like reads and fire protection.
-  1. The info structure increases land value, incentivizing more redevelopment.
+  1. The nicer buildings have incentive to invest in shared infrastructure like roads and fire protection.
+  1. The infrastructure increases land value, incentivizing more redevelopment.
 - The flaw in this pattern is that it limits social mobility.
   - As a town is growing, poorer residents can grow with it.
   - Once a city reaches maturity, land is only affordable to the entrenched elites.
-
-### Automobiles' impact on cities
-
-- Cars influenced urban design in the 50s with the idea that connecting two places with roads and highways would increase the value of both.
-  - A more connected city is more valuable.
-- Instead, it drove down land prices because suburbanization meant people could live much farther from city centers.
-  - Tons of new land opened up for housing.
-- Cars upended the traditional pattern for growing and sustaining cities.
-  - As land values in city centers dropped, there was insufficient tax revenue to pay for maintenance.
 
 ### Public and private investment
 
 - Today in the US, public investment precedes private investment.
 - The government takes on most of the risk in developing cities.
-  - When private developers make initial investment, the government still often finances the deal and assumes the risk if development fails.
+  - When private developers make initial investment, the government often finances the deal and assumes the risk if development fails.
 - The government also assumes long-term maintenance responsibilities in cities.
 - When development is built to a finished state instead of growing organically and incrementally, early residents have incentive to constrain growth.
-  - Every additional resident means more people using limited resources like roads, parks, and libraries.
+  - Every new neighbor is another person with whom you have to share limited resources like roads, parks, and libraries.
 
 ### Cities must profit
 
 - A city must earn a profit in the long term to continue existing.
-  - A city that runs a long-term deficit will eventually fail to provide its expected services.
+  - A city that runs a long-term deficit will eventually fail to provide necessary services because there will be no money to pay for them.
 - Cities must make investments that earn a positive return.
   - e.g., if a city invests $1m in repairing a street, the street must generate at least $1m over its lifetime for the investment to be worthwhile.
 
@@ -159,13 +150,13 @@ TODO: Short summary
 ### Jobs don't benefit a city
 
 - Infrastructure proponents often cite job creation as a reason to take on infrastructure projects.
-- Cities generally don't benefit financially for creating jobs around infrastructure projects.
+- Creating jobs for infrastructure projects don't really benefit cities that create them.
   - Income taxes go to the state, not local government.
 - Thought experiment: Job City vs. House City
   - Imagine two cities: Job City and House City.
   - 1,000 people live in House City, and nobody lives in Job City.
-  - Every day, every resident of House City commutes to Job city to work in small tents.
-  - Even though Job city has all the jobs, it would have nearly zero tax revenue because only House City collects taxes from the homeowners.
+  - Every day, every resident of House City commutes to Job City to work for the day, then return at night to House City.
+  - Even though Job City has all the jobs, it would have nearly zero tax revenue because only House City collects taxes from the homeowners.
 
 ### Growth-driven city financing
 
@@ -173,9 +164,9 @@ TODO: Short summary
   - An investor puts up all the money, but the city is responsible for infrastructure maintenance.
   - Cash flow will be positive for first 15-20 years as city collects tax revenue from new residents.
   - As soon as the development requires maintenance (e.g., road repair, sewage repair), cash flow goes severely negative because infrastructure built around the same time will require repair around the same time.
-  - Cities try to solve the cash flow problem by soliciting ne - development, but that just delays & intensifies the problem.
+  - Cities try to solve the cash flow problem by soliciting new development, but that just delays and intensifies the problem.
 - Case study: Detroit
-  - Many see the downfall of Detroit as result of government corruption.
+  - Many see the downfall of Detroit as a result of government corruption.
   - Author sees Detroit's failure as the same that will befall most US cities.
   - Detroit was the first city designed around cars.
   - Detroit spread residents out to the suburbs and ran roadways through cities,
@@ -187,11 +178,11 @@ TODO: Short summary
 
 - Investing in public infrastructure is popular politically, but it's often irrational.
 - Cities spend millions on new roads while they're struggling to maintain their existing roads.
-- Failure to Act
+- Failure to Act report
   - In their 2011 report, [Failure to Act](https://www.asce.org/advocacy/infrastructure/failure-to-act-reports/), the American Society of Civil Engineers (ASCE) made illogical claims about America's need to invest in infrastructure.
   - The report claimed that weaknesses is infrastructure would cost $1T over the next 10 yrs.
-  - The report recommended that the US spend an extra $220B/re to prevent infrastructure from deteriorating,
-  - i.e., the US should spend $2.2T to avoid a loss of $1T.
+  - The report recommended that the US spend an extra $220B/yr to prevent infrastructure from deteriorating,
+    - i.e., the US should spend $2.2T to avoid a loss of $1T.
 
 ### Infrastructure projects exaggerate their returns
 
@@ -205,34 +196,44 @@ TODO: Short summary
   - Ignores time it costs drivers due to construction and maintenance.
   - People don't necessarily use an extra 30s to work more.
     - They might sleep in longer.
-    - They might move farther for their job.
+    - They might move farther from their job.
 
 ### Irrational municipal accounting
 
 - Cities have balance sheets listing assets and liabilities.
 - According to generally accepted accounting principles, infrastructure is considered an asset.
   - This makes no sense because a city can't sell a road and it doesn't directly earn revenue from it.
-- Even though the city earns reverse from properties in its city, the tax base does not count as an asset.
+- Even though the city earns revenue from properties in its city, the tax base does not count as an asset.
 - Cities add infrastructure because it makes their balance sheets look stronger.
   - In reality, infrastructure drains money.
 
-### Post WWII
+### Postwar period corrupted city management
 
-- US experienced unprecedented prosperity after WWII.
+- Postwar WWII wealth screwed up city management.
+- The US had an abundance of wealth, so we stopped designing cities with financial constraints in mind.
 - It was a period of rapid suburban expansion.
 - Prosperity changed urban planning.
   - Cities could expand without caring about costs because so much money was flowing into the economy.
+
+### Automobiles' impact on cities
+
+- Cars influenced urban design in the 50s with the idea that connecting two places with roads and highways would increase the value of both.
+  - A more connected city is more valuable.
+- Instead, it drove down land prices because suburbanization meant people could live much farther from city centers.
+  - Tons of new land opened up for housing.
+- Cars upended the traditional pattern for growing and sustaining cities.
+  - As land values in city centers dropped, there was insufficient tax revenue to pay for maintenance.
 
 ### Funding growth through debt
 
 - After the economy slowed down in the 60s, cities took on debt as a way to fund growth.
   - This only works if the economy grows in the future, as infrastructure investments rarely earn a positive return.
-  - Cities get stuck in a cycle of relying on debt to pay for infrastruct. then needing even more debt to keep going.
+  - Cities get stuck in a cycle of relying on debt to pay for infrastructure, then needing even more debt to survive.
 - Case study: Lafayette, LA
-  - Between 1949 and 2015, infrastructure. growth far outstripped income.
+  - Between 1949 and 2015, infrastructure growth far outstripped income.
   - 1,000% increase in pipes per capita.
   - 2,140% increase in fire hydrants per capita.
-  - 160% increase in average inflation-adjusted income.
+  - Only 160% increase in average inflation-adjusted income.
 
 ### Old and blighted vs. new and shiny
 
@@ -244,12 +245,12 @@ TODO: Short summary
   - New and shiny: $620k
   - Old and blighted generates 77% more revenue for the city.
 - Comparing impact on community:
-  - Businesses in the old and blighted block hire employees locally and use local vendors for things like accounting, sign making, legal services.
-  - New block's franchise wouldn't give author information, but they likely created fewer full-time jobs and use out-of-state vendors for most services.
+  - Businesses in the old and blighted block hire employees locally and use local vendors for things like accounting, sign making, and legal services.
+  - New block's franchise wouldn't disclose information to the author, but they likely created fewer full-time jobs and use out-of-state vendors for most services.
 - Tax incentives
-  - The franchise restaurant at read had a location in town 3 blocks from the new location,
+  - The franchise restaurant already had a location in town three blocks from the new location,
   - The franchise built the additional location because the city offered them a tax rebate to redevelop a blighted block.
-  - In effect, the city paid the franchise t tear down a block that likely generated more revenue than the franchise would ever generate.
+  - In effect, the city paid the franchise to tear down a block that likely generated more revenue than the franchise would ever generate.
     - The city can't even start collecting taxes from the new block for 20+ years due to the rebate.
 
 ### Big box stores vs. downtown businesses
@@ -281,7 +282,8 @@ TODO: Short summary
 - Rationale: Invest in areas that are profitable so that maintenance is sustainable.
   - Residents will respond to public investment with private investment because they have more confidence the city will continue investing in them.
 - Infrastructure will fail in low value per acre areas, causing those neighborhoods to contract.
-  - This is a calculated loss, as most cities sprawl unsustainably. They have to shed some infrastructure and concentrate the population into an area that generates enough tax revenue to sustainably fund infrastructure maintenance.
+  - This is a calculated loss, as most cities sprawl unsustainably.
+  - Cities have to shed some infrastructure and concentrate the population into an area that generates enough tax revenue to sustainably fund infrastructure maintenance.
 
 ### Why is a 20-story building next to a one-story building?
 
@@ -292,10 +294,10 @@ TODO: Short summary
   2.  A vacant lot
   3.  A 20-story building worth $10M
   - What is the value of lot (2)?
-  - A $10M property implies the underlying property is worth around $1.5M.
-  - The owner of the vacant lot would want to sell to another 20-story developer for $1.5M.
-  - Actually, it's a trick question because if a vacant lot is worth $1.5M, then the single-family home's lot must also be worth \~$1.5M.
-    - A developer can purchase the house, demolish it, then build a $10M building for a profit.
+    - A $10M property implies the underlying property is worth around $1.5M.
+    - The owner of the vacant lot would want to sell to another 20-story developer for $1.5M.
+    - Actually, it's a trick question because if a vacant lot is worth $1.5M, then the single-family home's lot must also be worth \~$1.5M.
+      - A developer can purchase the house, demolish it, then build a $10M building for a profit.
 - In reality, $10M buildings exist next to $200k homes, so how can that be?
 - Regulation artifically limits development.
   - It's roughly the same regulatory difficulty to build a 5-story building as a 20-story building, so development is pushed to the extremes.
