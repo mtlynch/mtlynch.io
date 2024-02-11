@@ -69,7 +69,12 @@ Consistent code is easier to read and maintain. And some style rules aren't just
 
 For example, one rule in Google's C++ style guide is [Avoid complicated template programming](https://google.github.io/styleguide/cppguide.html#Template_metaprogramming). You can't really automate that check because a linter can't decide perfectly what's complicated and what's reasonable, so a human has to do it. But if that weren't in the style guide, people would feel more emboldened to do crazy template metaprogramming that reviewers might _think_ they understand but they actually don't.
 
-## If you dislike code reviews, you probably haven't experienced code reviews done well
+## Are code reviews terrible? Or do you have a crappy team?
+
+When I talk to people about code reviews who dislike code reviews, what I consistently find is that they're in one of two scenarios:
+
+- They're on an engineering team that's either immature or toxic
+- They have trouble collaborating with other people in general
 
 Rubber duck debugging where just explaining the problem to someone, even a rubber duck, allows you to solve the problem. Same thing with code reviews. Before I send my code to a reviewer, I review it myself and try to put myself in the reviewer's shoes.
 
