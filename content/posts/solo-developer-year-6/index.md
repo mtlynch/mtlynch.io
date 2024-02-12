@@ -3,7 +3,7 @@ title: "My Sixth Year as a Bootstrapped Founder"
 tags:
   - annual review
   - tinypilot
-date: 2024-02-10T00:00:00-05:00
+date: 2024-02-13T00:00:00-05:00
 custom_css: true
 hero_image: cover.webp
 images:
@@ -188,7 +188,9 @@ So, I haven't figured out a way for us to go significantly faster, but I've lear
 
 ### Most support escalation can happpen asynchronously
 
-I try to give the team as much autonomy as possible. I want them to feel empowered to make their own decisions. At the same time, I want to make sure they feel comfortable asking me for help when they get stuck, so I say that anyone can always escalate issues or questions to me.
+Six people work at TinyPilot in addition to me. I try to give the team as much autonomy as possible, as I want them to feel [empowered to make their own decisions](/solo-developer-year-4/#good-leadership-means-helping-teammates-grow).
+
+At the same time, I want to make sure they feel comfortable asking me for help when they get stuck, so I say that anyone can always escalate issues or questions to me.
 
 But I was finding that escalation was quickly becoming a source of stress for me. For a while, I thought that was just the nature of esclating issues. I'm only seeing the really tough customer questions, so they're going to feel more stressful. But thinking about it more, I realized there were ways for me to reduce the stress.
 
@@ -213,33 +215,27 @@ Last year, I set [three high-level goals](/solo-developer-year-5/#goals-for-year
 
 It's not 20 hours, but I did work significantly less in 2023 than 2022. I did a lot of personal and work travel, so I was "out of the office" for about five weeks cumulatively, and things still went smoothly.
 
-My workday used to start whenever I woke up, usually 7 or 8am, and end when I ate dinner at 6:30pm, with breaks for breakfast, lunch, and exercise. This year, I moved the end time up to 5:30pm, and that made a big difference in feeling like I had time to unwind and do non-work things in the evening. In 2022, it frequently felt like I was ending the day without getting to everything I wanted, whereas in 2023, I frequently felt like I got to everything I needed to.
-
-In 2023, I found more time for writing wrote four new blog posts but 15 new "notes" posts, which is what I started doing when I wanted to share something but I didn't want to polish it enough for a blog post.
+In 2022, it frequently felt like I was ending every day with lots of loose ends. In 2023, when I signed off in the evenings, my work day usually felt complete.
 
 ### Earn $100k in profit
 
 - **Result**: I earned $236k in profit.
 - **Grade**: A+
 
-This caught me by surprise. My first two years running TinyPilot, I was basically at breakeven. Sales were going well, but I was also spending a ton on electrical engineering and software development, and a lot of my cash was tied up in inventory.
+I expected this year to be profitable, as I knew I'd be spending less on hardware engineering, but I underestimated how much additional revenue TinyPilot would earn from the switch to metal cases.
 
-One of the major changes was that my electrical engineering costs dropped drastically. In previous years, I had to iterate on our hardware design as the supply chain evolved and as we learned new things from manufacturing. But by 2023, we'd been manufacturing the same hardware for about a year, so we didn't have to do as much redesigning.
-
-I also underestimated how much the metal case would increase the value. I didn't experiment much with price before, but we were selling the 3D-printed version for $XX. When I switched to the metal case, I discovered that customers were willing to buy at higher prices (TODO: link).
+I was pleasantly surprised to exceed my goal here.
 
 ### Close the TinyPilot office
 
 - **Result**: We still have the office for non-critical workflows.
 - **Grade**: B
 
-I felt like we were past the point where it made sense to do a lot of our tasks in-house. Even though it went smoothly, there were lots of risks that could seriously disrupt business, such as sprinklers exploding.
+When I made this goal, I didn't expect our landlord to go month-to-month on our lease. Without a long-term commitment, I felt less rushed to get out of the office.
 
-It is awfully convenient. The team likes having a quiet place to work rather than working from home. And rent is only $600/month, so it's not a huge expense.
+We've successfully moved all critical operations like manufacturing and fulfillment out of our office, but it's still convenient to have a home base.
 
-So, if a pipe burst in our office tomorrow and destroyed everything, it would be inconvenient, but we'd be fine. The most important thing we do there now is processing returns, but we're handing that job over to our manufacturer.
-
-I didn't think our landlord would let us go month-to-month, but he ended up being fine with it. So if there's no long-term commitment, and we're using it out of convenience rather than necessity, I'm happy to keep it.
+So, if the handyman knocked on my door tomorrow to report some disaster destroyed all of our office property and made the space unusable, it would be inconvenient but not catastrophic.
 
 ## Goals for year seven
 
@@ -249,11 +245,9 @@ I know I set this as a goal in 2022 and 2023, but third time's the charm! My man
 
 ### Publish a course or book
 
-I created a course about blogging, and I'm proud of the material. I wish I'd done more of that.
+In 2021, I [said](/solo-developer-year-3/#publish-six-blog-posts-and-one-book) I'd [write a book](https://refactoringenglish.com/) to help developers improve their writing. I got 80% through the first chapter, and then TinyPilot absorbed all of my free time that year. I still want to write that book, so if I can reduce my management time, maybe I'll free up writing time.
 
-When I look around at technology that I find exciting like Zig or Nix, I see such a dearth of long-form educational materials. Something I've realized over the years is that I enjoy teaching much more than most developers do. I also write so much publicly that I feel more comfortable writing material than most people do. Looking back on a lot of the blog posts I wrote this year.
-
-In 2021, I [said](/solo-developer-year-3/#publish-six-blog-posts-and-one-book) I'd [write a book](https://refactoringenglish.com/) to help developers improve their writing. I got 80% through the first chapter, and then TinyPilot absorbed all of my free time that year. I still want to write that book.
+I've also been experimenting with [Nix](/tags/nix/) and [Zig](/tags/zig), two technologies that I find exciting but lacking in educational resources. Creating a course for technology like that could be a fun way to build my own understanding and to smooth down the learning curve for others entering the community.
 
 ### Write software for ten working hours per week
 
