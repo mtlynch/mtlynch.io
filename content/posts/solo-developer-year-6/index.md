@@ -69,7 +69,7 @@ I don't draw a salary from TinyPilot, so the full amount I earned from TinyPilot
 
 ## The most terrifying 10 minutes of 2023
 
-One lazy Saturday afternoon in February, I heard a knock on my door. On my porch was a mid-forties guy in jeans and a windbreaker. I opened the door, still in my pajamas.
+One lazy Saturday afternoon in February, I heard a knock on my door. Standing on my porch was a mid-forties guy in jeans and a windbreaker. I opened the door, still in my pajamas.
 
 "Are you the TinyPilot guy?" he asked me.
 
@@ -81,11 +81,13 @@ One lazy Saturday afternoon in February, I heard a knock on my door. On my porch
 
 That didn't sound good.
 
-During the five-minute drive to the office, I became increasingly worried that this was the end of my business. We we kept all of our inventory in TinyPilot's office. Would circuit boards still work after being drenched? Probably not.
+During the five-minute drive to the office, I wondered if this was the end of my business. We we kept all of our inventory in TinyPilot's office. Would circuit boards still work after being drenched? Probably not.
 
 TinyPilot had insurance, but I chose coverage a year before when we kept half as much inventory. And even if insurance paid out, TinyPilot would be dead in the water for months until we could start our whole manufacturing pipeline up again.
 
 I arrived at our office building and walked up to TinyPilot's office on the second floor, the carpet squishing damply with every step I took.
+
+When I reached my floor, I saw that the sprinkler had burst in the conference room next to TinyPilot's office,
 
 I unlocked TinyPilot's suite. Everything was bone dry. The water hadn't even trickled under our door. I was incredibly relieved.
 
