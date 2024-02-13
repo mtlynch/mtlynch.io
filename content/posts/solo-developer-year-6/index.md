@@ -61,7 +61,7 @@ In this post, I'll share what I've learned about being a bootstrapped founder fr
 
 After two years of basically breaking even, TinyPilot finally earned a meaningful profit.
 
-Most of the change is due to stronger sales. We switched to metal cases this year, which both increased the price customers were willing to pay and increased manufacturing speed.
+Most of the change is due to stronger sales. We switched to metal cases this year, which both increased the price customers were willing to pay and increased our manufacturing capacity.
 
 Expenses shifted around but stayed roughly the same overall. Design costs shrunk to nearly zero, as I [stopped paying a design agency $6k/mo to tweak my logo](/tinypilot-redesign/). And I focused on scaling my existing product rather than iterating on the hardware design, which saved $100k in electrical engineering.
 
@@ -148,7 +148,7 @@ In the second half of 2023, we worked with a contract manufacturer to take over 
 
 TODO: Photo of Retail box, open, closed
 
-Our contract manufacturer did a great job on the box. It's not going to grab your eye if you saw it on the shelf at Best Buy, but it matches customer expectations of professional networking hardware they ordered online.
+Our contract manufacturer did a great job on the box. It's not going to grab your eye if you saw it on the shelf at Best Buy, but it feels like reasonable packaging for professional networking hardware.
 
 If someone were to make a TinyPilot unboxing video now, I'd be happy to see them open it.
 
@@ -166,11 +166,7 @@ I anticipated that. I knew we were getting more flexibility. The thing that caug
 
 I didn't realize until it went away, but there was always a worry in the back of my mind about all the things that could go wrong that would block fulfillment and require me to react urgently. What if the router crashes and breaks Internet for the office? What if the office desktop suddenly can't talk to the printer?
 
-Shifting to the 3PL did significantly reduce stress, much more strongly than I anticipated. I knew that there was stress in keeping the office staffed six days a week, but I didn't realize how much more stress I carried about all the things that could block us from fulfilling orders. The office Internet could go down, a disk on the office desktop could fail. These were all things that I'd have to deal with immediately. A 3PL is subject to all of the same issues, but it's their problem. If their printer suddenly dies, it's them who has to furiously drive to Best Buy, not me.
-
-Those worries are now all things the 3PL has to deal with quickly rather than me.
-
-Now that we've switched to the contract manufacturer, there are even fewer things we need to worry about. The thing we're responsible for reacting to quickly is support requests, but we have five people available to do that across four cities. There are very few things that prevent all of us from responding to support requests.
+Now that we've shifted to a 3PL and a contract manufacturer, there are still many things that can go wrong, but I'm outside the critical path on most day-to-day operations. If a printer breaks at our warehouse, someone else will fix it, and I'll hopefully never even hear about it.
 
 ### As a project matures, more time goes to maintenance
 
@@ -194,25 +190,19 @@ So, I haven't figured out a way for us to go significantly faster, but I've lear
 
 ### Most support escalation can happpen asynchronously
 
-Aside from me, six people work at TinyPilot in part-time roles. I try to give the team as much autonomy as possible, as I want them to feel [empowered to make their own decisions](/solo-developer-year-4/#good-leadership-means-helping-teammates-grow). At the same time, I want to make sure everyone feels comfortable asking me for help when they get stuck.
+I try to give the TinyPilot team [as much autonomy as possible](/solo-developer-year-4/#good-leadership-means-helping-teammates-grow). At the same time, I want to make sure everyone feels comfortable asking me for help when they get stuck.
 
-I found that one of my main sources of stress was support tickets that had escalated to me.
+The problem was that I realized one of my main sources of stress was support tickets that had escalated to me.
 
-For a while, I thought that was just the nature of escalated support issues. I'm only seeing the toughest customer questions, so of course they're going to feel stressful. But thinking about it more, I realized there were ways for me to reduce the stress.
+For a while, I thought that was just the nature of escalated support issues. I'm only seeing the toughest customer questions, so of course they're going to feel stressful. Thinking about it more, I found that some of it was fixable.
 
-First, I adjusted our process for escalation. The style of escalation had been, "Michael, here's a problem we've never seen before. How do you want us to handle it?" I encouraged the team to propose a solution as part of escalating to me. If I wasn't available, and they were the last line of support, what would they tell the customer?
+First, I adjusted our process for escalation. Most escalation took the form of, "Michael, here's a problem we've never seen before. How do you want us to handle it?" I encouraged the team to tweak this by proposing a solution as part of escalating to me. If I wasn't available, and they were the last line of support, what would they tell the customer?
 
-That worked well because 80% of the time, the team came up with the same solution that I would have recommended. And the more they did this, the better they became at tackling hard cases.
+That worked well because 80% of the time, the team came up with the same solution that I would have recommended. And the more they did this, the better they got at tackling hard cases.
 
-That change helped a lot, but I realized another source of stress in escalations was the time pressure. We aim to respond to customers within one business day. By the time a question was escalated to me, we had generally burned half the response window, and we risked burning the other half due to variations in the team's daily work schedules. Whenever a question escalated to me, I felt like I had to respond NOW NOW NOW to avoid being the bottleneck.
+Once I saw how close the team's answers were to my own, I realized there was no need to block the process on an answer from me. If 80% of the time, my only contribution is, "Yes, do that," why not just do their plan immediately and check with me asynchronously about alternatives?
 
-I realized they don't really need to wait on an answer from me to continue helping the customer. If 80% of the time, I'm just saying, "Yes, do that," then they could do that immediately.
-
-In the minority of cases where I had a better idea for solving a support issue, it was almost always something the customer could try in addition to my team's suggestion. We never ran into a situation where my team said, "Oh, we wish you'd said that earlier because we suggested putting their device in the microwave, and now both are broken."
-
-When an issue escalates to me, it usually indicates that there's knowledge trapped in my head that the whole team should have. When I'm thinking clearly, I respond to escalations by updating our internal documentation with the answer so that it's reusable in the future. When I'm feeling rushed, I skip that step and just answer in the email, where the information is more likely to be lost and forgotten.
-
-Asynchronous support escalations helped the team develop their skills faster, reduced stress for me, and improved our documentation.
+In the minority of cases where I had a better idea for solving a support issue, it was almost always something the customer could try in addition to my team's suggestion. We never ran into a situation where my team told me, "Oh, we wish you'd intervened earlier because we suggested putting their device in the microwave, and now both are broken."
 
 ## Grading last year's goals
 
@@ -225,7 +215,7 @@ Last year, I set [three high-level goals](/solo-developer-year-5/#goals-for-year
 
 It's not 20 hours, but I did work significantly less in 2023 than 2022. I did a lot of travel for both personal and work reasons, so I was "out of the office" for about five weeks cumulatively, and everything was fine.
 
-In 2022, it frequently felt like I was ending every day with lots of loose ends. In 2023, when I signed off in the evenings, my work day usually felt complete.
+When I signed off in the evenings, my work day usually felt complete, whereas in 2022, I always felt like there were loose ends I failed to resolve.
 
 ### Earn $100k in profit
 
@@ -245,7 +235,7 @@ When I made this goal, I didn't expect our landlord to agree to a month-to-month
 
 We've successfully moved the critical operations of manufacturing and fulfillment out of our office. So, we don't strictly need the office, but it's still convenient to have a home base.
 
-If the handyman knocked on my door tomorrow to report some disaster destroyed all of our office property and made the space unusable, it would be, at worst, annoying but not catastrophic.
+If the handyman knocked on my door tomorrow to announce that some disaster destroyed all of our office property and made the space unusable, it would be frustrating but not catastrophic.
 
 ## Goals for year seven
 
@@ -283,13 +273,15 @@ While I can't say that I loved the year, I still prefer it to working for an emp
 
 ## Is it riskier to be a bootstrapped founder or a big tech employee?
 
-I always felt like the entrepreneurial path was highly risky, but, if all else failed, I could go get another job at another Google or Microsoft. After seeing layoffs for the last year at most tech companies, I feel like my safety net disappeared.
+This year has changed my perspective on being a founder.
 
-Instead of feeling panicked to be without a fallback plan, I feel like I actually took the lower-risk path.
+I always felt like the entrepreneurial path was highly risky, but, if all else failed, I could always get a job at Google or someplace like it. After seeing layoffs for the last year at most tech companies, I feel like my safety net disappeared.
+
+Instead of feeling panicked to be without a fallback plan, I feel relieved that I quit my old job when I did.
 
 If I continued as an employee and got laid off in the middle of a down economy, what's my fallback? Spending months on job applications and phone screens where I'm competing with thousands of other desperate candidates with similar skills?
 
-If TinyPilot were to go bankrupt tomorrow, my fallback is to start another company. There's always risk in starting a new company, but I'd feel good about my odds because I've had the last six years to practice.
+If TinyPilot were to go bankrupt tomorrow, I have a fallback. I could start another company. Any new business is risky, but I'd feel good about my odds of eventually landing on another success because I've had the last six years to practice.
 
 ---
 
