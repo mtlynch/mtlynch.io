@@ -150,21 +150,15 @@ TODO: Photo of Retail box, open, closed
 
 Our contract manufacturer did a great job on the box. It's not going to grab your eye if you saw it on the shelf at Best Buy, but it feels like reasonable packaging for professional networking hardware.
 
-If someone were to make a TinyPilot unboxing video now, I'd be happy to see them open it.
+If someone were to make a TinyPilot unboxing video now, I'd be proud to watch them open our packaging.
 
 ## Lessons learned
 
 ### There's hidden-stress in low-latency responsibility
 
-Switching TinyPilot's order fulfillment to a 3PL [reduced stress and increased flexibility](#outsourcing-order-fulfillment-and-reducing-stress) for TinyPilot's local team. The side-effect that surprised me most was how much stress it relieved for me.
+Switching TinyPilot's order fulfillment to a 3PL [reduced stress and increased flexibility](#outsourcing-order-fulfillment-and-reducing-stress) for TinyPilot's local team, but I was most surprised at how much stress it relieved for me.
 
-I had been carrying around so much "what if?" stress, and I didn't even realize it.
-
-Until we switched to the 3PL, I didn't realize how much my mind was occupied by worried like, "What
-
-I anticipated that. I knew we were getting more flexibility. The thing that caught me by surprise was how much "what if?" stress it freed up for me.
-
-I didn't realize until it went away, but there was always a worry in the back of my mind about all the things that could go wrong that would block fulfillment and require me to react urgently. What if the router crashes and breaks Internet for the office? What if the office desktop suddenly can't talk to the printer?
+I had been carrying around so much "what if?" anxiety, and I wasn't even aware of it until it went away. Before we switched to the 3PL, there was always a worry in the back of my mind about all the things that could block order fulfillment. What if the router crashes and breaks Internet for the office? What if the office desktop suddenly can't talk to the printer? There were dozens of ways I might be urgently called to unblock a critical process.
 
 Now that we've shifted to a 3PL and a contract manufacturer, there are still many things that can go wrong, but I'm outside the critical path on most day-to-day operations. If a printer breaks at our warehouse, someone else will fix it, and I'll hopefully never even hear about it.
 
