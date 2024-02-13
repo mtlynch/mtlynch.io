@@ -271,18 +271,6 @@ The downside to 2023 is that I find myself having a hard time getting excited ab
 
 While I can't say that I loved the year, I still prefer it to working for an employer. I'm still grateful to be in a position where I can make a living working for myself and making a product I'm proud of.
 
-## Is it riskier to be a bootstrapped founder or a big tech employee?
-
-This year has changed my perspective on being a founder.
-
-I always felt like the entrepreneurial path was highly risky, but, if all else failed, I could always get a job at Google or someplace like it. After seeing layoffs for the last year at most tech companies, I feel like my safety net disappeared.
-
-Instead of feeling panicked to be without a fallback plan, I feel relieved that I quit my old job when I did.
-
-If I continued as an employee and got laid off in the middle of a down economy, what's my fallback? Spending months on job applications and phone screens where I'm competing with thousands of other desperate candidates with similar skills?
-
-If TinyPilot were to go bankrupt tomorrow, I have a fallback. I could start another company. Any new business is risky, but I'd feel good about my odds of eventually landing on another success because I've had the last six years to practice.
-
 ---
 
 _Cover image by [Loraine Yow](https://www.loraineyow.com/)._
