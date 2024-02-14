@@ -107,23 +107,21 @@ In March 2023, TinyPilot switched from fulfilling orders in-house to [using a th
 
 At the time of the 3PL shift, we were in ["urgent mode."](/retrospectives/2023/05/#getting-out-of-ldquourgent-moderdquo) Our team of two part-time employees could assemble about fifty devices per week, but customers were buying at the same rate. It was a stressful situation because any interruption put us at risk of halting sales.
 
-<!-- Continue pulling from Remarkable here. -->
-
-I had hoped that outsourcing fulfillment would free up enough of the team's time to produce about 100 devices per week. It turned out that our full capacity was still only about 70 devices per week, which would mean we'd still be scrambling for months to build up a healthy inventory at the warehouse. I ended up hiring a third employee temporarily to get us through the summer.
+I had hoped that outsourcing fulfillment would free up enough of the team's time to produce about 100 devices per week. It turned out that our full capacity was still only about 70 devices per week. At that rate, it would take months of working at maximum capacity to build up a healthy inventory at the warehouse. I ended up hiring a third employee temporarily to get us through the summer.
 
 So, outsourcing fulfillment didn't free up a ton of time, but it did win us a lot more flexibility.
 
-I had thought the local team already had flexibility because they could come in whenever they wanted. As long as orders were packed and ready for USPS pickup the next day, they could take their shifts at 3 AM if they felt like it.
+I had thought the local team already had flexibility because they could come in whenever they wanted. As long as orders were packed and ready for mail pickup the next day, they could take their shifts at 3 AM if they felt like it.
 
-Switching to the 3PL eliminated the daily deadline of USPS pickup. Instead, we had a weekly deadline to ship assembled products to our warehouse. That later relaxed further to a biweekly task.
+Switching to the 3PL eliminated the daily deadline of mail pickup. Instead, we had a weekly deadline to ship assembled products to our warehouse.
 
-The reduction in flexibility reduced a lot of stress. If an employee wanted to take a four-day weekend, they could shift their schedule around and still work their normal 15 hours that week. Or they could take a few days off and not feel like it was overloading the rest of the team because we [had spare capacity again](/solo-developer-year-5/#run-at-50-capacity).
+The reduction in flexibility reduced a lot of stress. If an employee wanted to take a four-day weekend, they could shift their schedule around and still work their normal 15 hours that week. Or they could take a few days off and [not feel like it was overloading the rest of the team](/solo-developer-year-5/#run-at-50-capacity).
 
 ## Making TinyPilot look like a real product
 
-One of the most notable changes to TinyPilot this year has been how we improved the product's physical appearance.
+One of the most notable changes to TinyPilot in 2023 was how we improved the product's physical appearance.
 
-At the end of last year, we were still making TinyPilot's cases with a fleet of seven high-end 3D printers running nonstop. As far as 3D-printing goes, our cases were especially nice, but they still had the "just a prototype" feel of a 3D-printed product.
+At the end of 2022, we were still making TinyPilot's cases with a fleet of seven high-end 3D printers running nonstop. As far as 3D-printing goes, our cases were especially nice, but they still had the "just a prototype" feel of a 3D-printed product.
 
 {{<img src="voyager2-angled.webp" max-width="500px" caption="Before: TinyPilot's 3D-printed case">}}
 
@@ -133,14 +131,14 @@ TODO: Photo of metal case
 
 I was surprised at how much the metal case impacted sales. Not only did it increase the absolute number of sales, it increased the price customers were willing to pay. After [experimenting with pricing](/retrospectives/2023/05/#what-price-maximizes-profits), I ended up increasing our price by 10%, and our monthly sales were still higher than when we had a 3D-printed case.
 
-We also updated TinyPilot's packaging. Until late last year, we were still bunching together the device and all the cables in a bubble-wrap pouch and dropping that into a plain brown box.
+We also updated TinyPilot's packaging. Until late last year, we were still bunching the device and all the cables together in a bubble-wrap pouch and dropping that into a plain brown box.
 
 {{<gallery caption="Our previous packaging for TinyPilot was just neatly wrapping the device, cables, and instructions in a bubble pouch.">}}
 {{<img src="labeled-blob.webp" max-width="500px">}}
 {{<img src="bundle-stacked.webp" max-width="370px">}}
 {{</gallery>}}
 
-Every time someone reviewed TinyPilot, I crossed my fingers for them to skip over the unboxing process because of how much our packaging embarrassed me.
+Every time a reviewer shared their experience unboxing TinyPilot, I winced a bit.
 
 {{<img src="unboxing.webp" max-width="700px" caption="A [homelab reviewer](https://noted.lol/tinypilot-voyager-2a-2/) shows TinyPilot's old, embarassing packaging in a review" >}}
 
@@ -150,7 +148,7 @@ In the second half of 2023, we worked with a contract manufacturer to take over 
 
 TODO: Photo of Retail box, open, closed
 
-Our contract manufacturer did a great job on the box. It's not going to catch your eye if it was on the shelf at Best Buy, but it feels like reasonable packaging for professional networking hardware.
+Our contract manufacturer did a great job on the box. It's not going to catch your eye if it was on the shelf at Best Buy, but it feels like professional packaging for a quality networking product.
 
 ## Lessons learned
 
@@ -158,17 +156,17 @@ Our contract manufacturer did a great job on the box. It's not going to catch yo
 
 Switching TinyPilot's order fulfillment to a 3PL [reduced stress and increased flexibility](#outsourcing-order-fulfillment-and-reducing-stress) for TinyPilot's local team, but I was most surprised at how much stress it relieved for me.
 
-I'd been carrying around so much "what if?" anxiety for years, and I wasn't even aware of it until it went away.
+I'd been carrying around so much "what if?" anxiety for years without even realizing it.
 
-Before we switched to the 3PL, there was always a worry in the back of my mind about all the things that could block order fulfillment. What if the router crashes and breaks Internet for the office? What if the office desktop suddenly can't talk to the printer? There were dozens of ways I might be called to unblock a critical process urgently.
+Before we switched to the 3PL, there was always a worry in the back of my mind about all the things that could block order fulfillment. What if our office router crashes and breaks prevents anyone from accessing the Internet? What if the desktop suddenly can't talk to the printer? There were dozens of ways I might be called to unblock a critical process urgently.
 
-Now that we've shifted to a 3PL and a contract manufacturer, there are still many things that can go wrong, but I'm outside the critical path on most day-to-day operations. If a printer breaks at our warehouse, someone else will fix it, and I'll hopefully never even hear about it.
+Now that we've shifted to a 3PL and a contract manufacturer, there are still many things that can go wrong, but I'm outside the critical path of most day-to-day operations. If a printer breaks at our warehouse, someone else will fix it, and I'll hopefully never even hear about it.
 
 ### As a project matures, more time goes to maintenance
 
-In June, when I sat down to write [the changelog](https://tinypilotkvm.com/pro/changes#260) for the latest TinyPilot software update, I struggled to explain how any of the work we did benefitted our users. Assuming I overdid it on refactoring work, I resolved to make sure our next release impacted end-users more directly.
+In June, when I sat down to write [the changelog](https://tinypilotkvm.com/pro/changes#260) for the latest TinyPilot software update, I struggled to explain how any of the work we did benefitted our users. Assuming I overdid it on refactoring work, I resolved to make our next release more user-focused.
 
-The [next release](https://tinypilotkvm.com/pro/changes#261), I had the same problem. After two and a half months of development, all we had to show for it were small, cosmetic improvements.
+The [next update](https://tinypilotkvm.com/pro/changes#261), I had the same problem. After two and a half months of development, all we had to show for it were small, cosmetic improvements.
 
 Our current pace felt glacial compared to the early days when we were releasing major features every couple of months. Was I prioritizing tasks poorly? Had the team lost their enthusiasm? Had we taken on too much technical debt?
 
@@ -182,23 +180,23 @@ I realized that the dominant factor was [the size of our codebase](/retrospectiv
 
 Beyond maintenance, more code means that new features are more expensive to build. If your app has zero features, it's easy to build the first one. If your app already has 20 features, you have to put a lot more thought into how your 21st feature integrates with everything else.
 
-So, I haven't figured out a way for us to go significantly faster, but I've learned to temper my expecations about feature pace. And I've adjusted how I estimate dev costs to account for our more complex codebase.
+So, I haven't figured out a way for us to go significantly faster, but I've learned to temper my expecations around feature pace. And I've adjusted how I estimate dev costs to account for our more complex codebase.
 
 ### Most support escalation can happpen asynchronously
 
 I try to give the TinyPilot team [as much autonomy as possible](/solo-developer-year-4/#good-leadership-means-helping-teammates-grow). At the same time, I want to make sure everyone feels comfortable asking me for help when they get stuck.
 
-The problem was that I realized one of my main sources of stress was support tickets that had escalated to me.
+The problem was that when support tickets escalated to me, they felt particularly stressful.
 
-For a while, I thought that was just the nature of support escalation. I'm only seeing the toughest customer questions, so of course they're going to feel stressful. Thinking about it more, I found that most of it was fixable.
+For a while, I thought that was just the nature of support escalation. I'm only seeing the toughest customer questions, so of course they're going to feel stressful. It turned out that most of it was fixable.
 
-First, I adjusted our process for escalation. Most escalation took the form of, "Michael, here's a problem we've never seen before. How do you want us to handle it?" I encouraged the team to tweak this by proposing a solution as part of escalating to me. If I wasn't available, and they were the last line of support, what would they tell the customer?
+First, I adjusted our process for escalation. Most escalation took the form of, "Michael, here's a problem we've never seen before. How do you want us to handle it?" I encouraged the team to tweak their approach by proposing a solution as part of escalating to me. If I wasn't available, and they were the last line of support, what would they tell the customer?
 
 80% of the time, the team came up with the same solution that I would have recommended. And the more they did this, the better they got at tackling hard cases.
 
-Once I saw how close the team's answers were to my own, I realized there was no need to block a support ticket on an answer from me. If 80% of the time, my only contribution is, "Yes, do that," why not just do their plan immediately and check with me about alternatives in parallel?
+Once I saw how close the team's answers were to my own, I realized there was no need to block a support ticket on an answer from me. If my only contribution to 80% of cases is, "Yes, do that," why not just do their plan immediately and check with me in parallel about alternatives?
 
-In the minority of cases where I had a better idea for solving a support issue, it was almost always something the customer could try in addition to my team's suggestion. We never ran into a situation where my team told me, "Oh, we wish you'd intervened earlier because we suggested putting their device in the microwave, and now both are broken."
+In the minority of cases where I had a better idea for solving a support issue, it was almost always something the customer could try in addition to my team's suggestion. We never ran into a situation where my team told me, "Oh, we wish you'd intervened earlier because we suggested putting their device in the microwave, and now their house is on fire."
 
 ## Grading last year's goals
 
@@ -209,9 +207,9 @@ Last year, I set [three high-level goals](/solo-developer-year-5/#goals-for-year
 - **Result**: I worked 35-40 hours per week, a reduction from previous years, and traveled more than any previous year.
 - **Grade**: B-
 
-It's not 20 hours, but I did work significantly less in 2023 than 2022. I did a lot of travel for both work and non-work. I was "out of the office" for about five weeks cumulatively, and everything was fine.
+It's not 20 hours, but I did work significantly less in 2023 than 2022. I did a lot of travel for both work and non-work. I was "out of the office" for about five weeks cumulatively, and everything went fine.
 
-When I signed off in the evenings, my work day usually felt complete, whereas in 2022, I always felt like I was leaving behind loose ends.
+When I signed off in the evenings, my work day usually felt complete, whereas in 2022, I frequently felt like I was leaving behind loose ends.
 
 ### Earn $100k in profit
 
@@ -253,17 +251,17 @@ Writing code is still one of my favorite activities.
 
 For the past few years of TinyPilot, I've enjoyed programming, but it's never been a sensible way to spend my limited working hours. With a team of six people, several critical vendors, and many moving pieces, the most pressing parts of TinyPilot have always been management.
 
-I hope that by outsourcing and delegating more of TinyPilot's operational side, I can free up enough of my time that coding is, if not the optimal use of my time, at least a reasonable use of my time.
+I hope that by outsourcing and delegating more of TinyPilot's operational side, I can free up enough of my time that programming is, if not the optimal use of my time, at least a reasonable use of my time.
 
 ## Do I still love it?
 
 Every year, when I write these blog posts, I ask myself whether I still love what I'm doing.
 
-2022 remains the toughest year I've had. I still preferred it to working for an employer, but it was a massive challenge to onboard new people while also navigating around the chip shortage.
+2022 remains the toughest year I've had. I still preferred it to working for an employer, but it was a massive challenge to onboard new teammates while also navigating around the chip shortage.
 
 2023 was a major improvement from the previous year. There were fewer fires to put out, and it felt good to shift critical workflows to specialized vendors.
 
-The downside to 2023 is that I have a hard time getting excited about it. It was a restructuring year, and I spent a lot of time redefining TinyPilot's processes and shifting around team responsibities. TinyPilot has shown me that I'm better than the average developer at designing team processes, but I still find it painfully boring to spend so much time thinking about process.
+The downside to 2023 is that I have a hard time getting excited about it. It was a restructuring year, so I spent a lot of time redefining TinyPilot's processes and shifting around team responsibities. TinyPilot has shown me that I'm better than the average developer at designing organizational processes, but I still find it painfully boring.
 
 While I can't say that I loved the year, I still enjoyed most of it, and I preferred it to working for an employer. I'm grateful to be in a position where I can earn a living working for myself and creating a product I'm proud of.
 
