@@ -164,7 +164,7 @@ Now that we've shifted to a 3PL and a contract manufacturer, there are still man
 
 ### As a project matures, more time goes to maintenance
 
-In June, I sat down to write [the changelog](https://tinypilotkvm.com/pro/changes#260) for the latest TinyPilot software update. It was surprisingly difficult to explain how any of the work we did benefitted our users. I figured I just went a little too heavy on internal refactoring work that cycle, so the next release, I'd make sure more of our work directly impacted end-users.
+In June, I sat down to write [the changelog](https://tinypilotkvm.com/pro/changes#260) for the latest TinyPilot software update. It was surprisingly difficult to explain how any of the work we did benefitted our users. I figured I focused too much on refactoring work that cycle, so the next release, I'd make sure more of our work directly impacted end-users.
 
 The [next release](https://tinypilotkvm.com/pro/changes#261), I had the same problem. After two and a half months of development, all we had to show for it were small, cosmetic improvements.
 
@@ -178,9 +178,9 @@ So, how could our progress be so much slower when we were prioritizing well and 
 
 I realized that the dominant factor was [the size of our codebase](/retrospectives/2023/09/#how-do-we-reduce-accidental-difficulty). We have three times as much code as we did three years ago. And every line of code requires time to maintain. So, if I keep the number of developers fixed but increase the size of the codebase, then a higher proportion of our time must go to maintaining old code.
 
-And even beyond maintenance, more code means that new features are more expensive to build. If your app has zero features, it's very easy to build the first one. If your app already has 20 features, you have to put a lot more thought into how your 21st feature integrates with everything else.
+Beyond maintenance, more code means that new features are more expensive to build. If your app has zero features, it's easy to build the first one. If your app already has 20 features, you have to put a lot more thought into how your 21st feature integrates with everything else.
 
-So, I haven't figured out a way for us to go significantly faster, but I've learned to adjust my expecations about feature pace. And I've learned to adjust my planning to take into account that a new feature is going to take longer today than it did three years ago.
+So, I haven't figured out a way for us to go significantly faster, but I've learned to adjust my expecations about feature pace. And I've adjusted how I estimate dev costs to account for our more complex codebase.
 
 ### Most support escalation can happpen asynchronously
 
@@ -188,13 +188,13 @@ I try to give the TinyPilot team [as much autonomy as possible](/solo-developer-
 
 The problem was that I realized one of my main sources of stress was support tickets that had escalated to me.
 
-For a while, I thought that was just the nature of escalated support issues. I'm only seeing the toughest customer questions, so of course they're going to feel stressful. Thinking about it more, I found that some of it was fixable.
+For a while, I thought that was just the nature of support escalation. I'm only seeing the toughest customer questions, so of course they're going to feel stressful. Thinking about it more, I found that some of it was fixable.
 
 First, I adjusted our process for escalation. Most escalation took the form of, "Michael, here's a problem we've never seen before. How do you want us to handle it?" I encouraged the team to tweak this by proposing a solution as part of escalating to me. If I wasn't available, and they were the last line of support, what would they tell the customer?
 
-That worked well because 80% of the time, the team came up with the same solution that I would have recommended. And the more they did this, the better they got at tackling hard cases.
+80% of the time, the team came up with the same solution that I would have recommended. And the more they did this, the better they got at tackling hard cases.
 
-Once I saw how close the team's answers were to my own, I realized there was no need to block the process on an answer from me. If 80% of the time, my only contribution is, "Yes, do that," why not just do their plan immediately and check with me asynchronously about alternatives?
+Once I saw how close the team's answers were to my own, I realized there was no need to block a support ticket on an answer from me. If 80% of the time, my only contribution is, "Yes, do that," why not just do their plan immediately and check with me about alternatives in parallel?
 
 In the minority of cases where I had a better idea for solving a support issue, it was almost always something the customer could try in addition to my team's suggestion. We never ran into a situation where my team told me, "Oh, we wish you'd intervened earlier because we suggested putting their device in the microwave, and now both are broken."
 
