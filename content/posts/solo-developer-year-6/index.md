@@ -267,7 +267,7 @@ While I can't say that I loved the year, I still enjoyed most of it, and I prefe
 
 ---
 
-_Cover image by [Loraine Yow](https://www.loraineyow.com/)._
+_Cover image by [Loraine Yow](https://www.loraineyow.com/). After [six years](/how-to-hire-a-cartoonist/) as this blog's official illustrator, Loraine [has changed careers](https://www.loraineyow.com/post/how-accounting-blew-my-mind) but graciously agreed to make one last illustration for this post._
 
 <script src="/third-party/chart.js/2.9.4/Chart.min.js"></script>
 <script src="script.js"></script>
