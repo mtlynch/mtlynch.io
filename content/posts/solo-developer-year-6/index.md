@@ -65,7 +65,7 @@ Most of the change is due to stronger sales. We switched to metal cases this yea
 
 Expenses shifted around but stayed roughly the same overall. Design costs shrunk to nearly zero, as I [stopped paying a design agency $6k/mo to tweak my logo](/tinypilot-redesign/). And I focused on scaling my existing product rather than iterating on the hardware design, which reduced my electrical engineering costs by $100k.
 
-I don't draw a salary from TinyPilot, so the full amount I earned from TinyPilot in 2023 was $236k. People often wonder how I survived for so long on the meager earnings of my first five bootstrapper years. The answer is that I live in Western Massachusetts, where the cost of living is low. From years in big tech, I had index fund investments, which generated enough dividend income to sustain me.
+I don't draw a salary, so the full amount I earned from TinyPilot in 2023 was $236k. People often wonder how I survived for so long on the meager earnings of my first five bootstrapper years. The answer is that I live in Western Massachusetts, where the cost of living is low. I had savings in index funds from years working in big tech, and those investments generated enough dividend income to sustain me.
 
 ## The most terrifying 10 minutes of 2023
 
@@ -81,31 +81,33 @@ One lazy Saturday afternoon in February, I heard a knock on my door. Standing on
 
 That didn't sound good.
 
-During the five-minute drive to the office, I wondered if this was the end of my business. We we kept all of our inventory in TinyPilot's office. Would circuit boards still work after being drenched? Probably not.
+During my five-minute drive to the office, I wondered if this was the end of my business. We we kept all of our inventory in TinyPilot's office. Would circuit boards work after being drenched? Probably not.
 
-TinyPilot had insurance, but I chose coverage a year before when we kept half as much inventory. And even if insurance paid out, TinyPilot would be dead in the water for months until we could start our whole manufacturing pipeline up again.
+TinyPilot had insurance, but I chose coverage a year before when we carried half as much inventory. And even if insurance paid out, TinyPilot would be dead in the water for months until we could restart our whole manufacturing pipeline.
 
 I arrived at our office building and walked up to TinyPilot's office on the second floor, the carpet squishing damply with every step I took.
 
-When I reached my floor, I saw that the sprinkler had burst in the conference room, not TinyPilot's office. I unlocked TinyPilot's suite and found everything was bone dry. The water hadn't even trickled under our door.
+When I reached my floor, I was relieved to see that the sprinkler had actually burst in the shared conference room, not TinyPilot's suite. I unlocked our office and found everything was bone dry. The water hadn't even trickled under our door.
 
-My relief was short lived, as the landlord told me he might have to kick us out of our office for "weeks to months" to repair the wall we shared with the room that flooded.
+My relief was short lived, as the landlord told me he might have to kick us out for "weeks to months" to repair the wall we shared with the conference room.
 
 {{<img src="office-damage.webp" max-width="450px" caption="A sprinkler burst in the office adjacent to TinyPilot's, destroying everything inside." alt="Photo of a room with ceiling, carpets, and furniture all removed">}}
 
-Normally, being forced to move my entire office on a few days' notice would be disruptive, but it was _especially_ disruptive this week. I was about to take a two-week trip to Europe, my longest trip since starting TinyPilot.
+Normally, being forced to move my entire office on a few days' notice would be disruptive, but it was _especially_ disruptive this week. I was about to take a two-week trip to Europe, my longest travel since starting TinyPilot.
 
 If the team had to move while I was away, no one would be able to set up the computers or printers &mdash; the office IT guy was me. And if the team couldn't print shipping labels, they couldn't fulfill orders.
 
-Long story short, we ended up not having to move, but the experience made me never want to be in that situation again. Our near-miss illustrated just how much we risked by centralizing so much of TinyPilot's operations in a single, small office.
+Long story short, we ended up not having to move, but the experience made me never want to be in that situation again. I was risking so much by centralizing TinyPilot's operations in a single, small office.
 
 ## Outsourcing order fulfillment and reducing stress
 
-TinyPilot's order fulfillment had always been extremely smooth, which was why I resisted outsourcing. Out of 3,500+ orders in the past two years, there were only about five total where we made an error.
+TinyPilot's order fulfillment had always been extremely smooth, which was why I'd always procrastinated outsourcing it. Out of 3,500+ orders in the past two years, there were only about five where we sent a customer the wrong item or quantity.
 
-In March 2023, TinyPilot switched from fulfilling orders in house to [using a third-party logistics (3PL) warehouse](/retrospectives/2023/04/). We were still assembling devices at our office, but we'd ship customer-ready packages to the warehouse, and the 3PL shipped packages to customers on-demand as orders arrived.
+In March 2023, TinyPilot switched from fulfilling orders in-house to [using a third-party logistics (3PL) warehouse](/retrospectives/2023/04/). We were still assembling devices at our office, but we'd send customer-ready packages to the warehouse in bulk, and the 3PL would handle the final step of shipping orders to customers.
 
-At the time of the shift to the 3PL, we were in ["urgent mode."](/retrospectives/2023/05/#getting-out-of-ldquourgent-moderdquo) Our team of two part-time employees could assemble about fifty devices per week, but customers were buying at the same rate. It was a stressful situation because any interruption in the week would put us at risk of pausing sales.
+At the time of the 3PL shift, we were in ["urgent mode."](/retrospectives/2023/05/#getting-out-of-ldquourgent-moderdquo) Our team of two part-time employees could assemble about fifty devices per week, but customers were buying at the same rate. It was a stressful situation because any interruption put us at risk of halting sales.
+
+<!-- Continue pulling from Remarkable here. -->
 
 I had hoped that outsourcing fulfillment would free up enough of the team's time to produce about 100 devices per week. It turned out that our full capacity was still only about 70 devices per week, which would mean we'd still be scrambling for months to build up a healthy inventory at the warehouse. I ended up hiring a third employee temporarily to get us through the summer.
 
