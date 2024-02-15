@@ -16,7 +16,7 @@ description: Six years ago, I quit my job as a developer at Google to create my 
 
 Six years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own bootstrapped software company.
 
-For the first few years, all of my businesses flopped. The best of them earned a few hundred dollars per month in revenue, but none of them were profitable.
+For the first few years, all of my businesses flopped. The best of them earned a few hundred dollars per month in revenue, but none were profitable.
 
 Halfway through my third year, I created a device called [TinyPilot](https://tinypilotkvm.com). It allows users to control their computers remotely. The product quickly caught on, and it's been my main focus ever since.
 
@@ -63,9 +63,9 @@ After two years of basically breaking even, TinyPilot finally earned a meaningfu
 
 Most of the change is due to stronger sales. We switched to metal cases this year, which both increased the price customers were willing to pay and increased our manufacturing capacity.
 
-Expenses shifted around but stayed roughly the same overall. Design costs shrunk to nearly zero, as I [stopped paying a design agency $6k/mo to tweak my logo](/tinypilot-redesign/). And I focused on scaling my existing product rather than iterating on the hardware design, which reduced my electrical engineering costs by $100k.
+Expenses shifted around but stayed roughly the same overall. Design costs shrunk to nearly zero, as I [stopped paying a design agency $6k/mo to tweak my logo](/tinypilot-redesign/). I focused on scaling my existing product rather than iterating on the hardware design, which reduced my electrical engineering costs by $100k.
 
-I don't draw a salary, so the full amount I earned from TinyPilot in 2023 was $236k. People often wonder how I survived for so long on the meager earnings of my first five bootstrapper years. The answer is that I live in Western Massachusetts, where the cost of living is low. I had savings in index funds from years working in big tech, and those investments generated enough dividend income to sustain me.
+I don't draw a salary, so the total amount I earned from TinyPilot in 2023 was $236k. People often wonder how I survived on the meager earnings of my first five bootstrapper years. The answer is that I live in Western Massachusetts, where the cost of living is low. I had savings in index funds from years working in big tech, and those investments generated enough dividend income to sustain me.
 
 ## The most terrifying 10 minutes of 2023
 
@@ -81,7 +81,7 @@ One lazy Saturday afternoon in February, I heard a knock on my door. Standing on
 
 That didn't sound good.
 
-During my five-minute drive to the office, I wondered if this was the end of my business. We we kept all of our inventory in TinyPilot's office. Would circuit boards work after being drenched? Probably not.
+During my five-minute drive to the office, I wondered if this was the end of my business. We kept all of our inventory in TinyPilot's office. Would circuit boards work after being drenched? Probably not.
 
 TinyPilot had insurance, but I chose coverage a year before when we carried half as much inventory. And even if insurance paid out, TinyPilot would be dead in the water for months until we could restart our whole manufacturing pipeline.
 
@@ -89,7 +89,7 @@ I arrived at our office building and walked up to TinyPilot's office on the seco
 
 When I reached my floor, I was relieved to see that the sprinkler had actually burst in the shared conference room, not TinyPilot's suite. I unlocked our office and found everything was bone dry. The water hadn't even trickled under our door.
 
-My relief was short lived, as the landlord told me he might have to kick us out for "weeks to months" to repair the wall we shared with the conference room.
+My relief was short-lived, as the landlord told me he might have to kick us out for "weeks to months" to repair the wall we shared with the conference room.
 
 {{<img src="office-damage.webp" max-width="450px" caption="A sprinkler burst in the office adjacent to TinyPilot's, destroying everything inside." alt="Photo of a room with ceiling, carpets, and furniture all removed">}}
 
@@ -121,17 +121,17 @@ The reduction in flexibility reduced a lot of stress. If an employee wanted to t
 
 One of the most notable changes to TinyPilot in 2023 was how we improved the product's physical appearance.
 
-At the end of 2022, we were still making TinyPilot's cases with a fleet of seven high-end 3D printers running nonstop. As far as 3D-printing goes, our cases were especially nice, but they still had the "just a prototype" feel of a 3D-printed product.
+At the end of 2022, we were still making TinyPilot's cases with a fleet of seven high-end 3D printers running nonstop. As far as 3D printing goes, our cases were especially nice, but they still had the "just a prototype" feel of a 3D-printed product.
 
 {{<img src="voyager2-angled.webp" max-width="500px" caption="Before: TinyPilot's 3D-printed case" alt="TinyPilot in a black plastic 3D-printed case">}}
 
 In February 2023, we [switched to a metal case](https://tinypilotkvm.com/blog/introducing-voyager-2a).
 
-TODO: Photo of metal case
+{{<img src="metal-case.webp" max-width="500px" caption="After: TinyPilot's metal case case" alt="TinyPilot in a new metal case">}}
 
 I was surprised at how much the metal case impacted sales. Not only did it increase the absolute number of sales, it increased the price customers were willing to pay. After [experimenting with pricing](/retrospectives/2023/05/#what-price-maximizes-profits), I ended up increasing our price by 10%, and our monthly sales were still higher than when we had a 3D-printed case.
 
-We also updated TinyPilot's packaging. Until late last year, we were still bunching the device and all the cables together in a bubble-wrap pouch and dropping that into a plain brown box.
+We also updated TinyPilot's packaging. Until late last year, we were still bunching the device and all the cables together in a bubble wrap pouch and dropping that into a plain brown box.
 
 {{<gallery caption="Our previous packaging for TinyPilot was just neatly wrapping the device, cables, and instructions in a bubble pouch.">}}
 {{<img src="labeled-blob.webp" max-width="500px" alt="Overhead view of TinyPilot, instructions, and cables in a bubble pouch">}}
@@ -140,37 +140,40 @@ We also updated TinyPilot's packaging. Until late last year, we were still bunch
 
 Every time a reviewer shared their experience unboxing TinyPilot, I winced a bit.
 
-{{<img src="unboxing.webp" max-width="700px" caption="A [homelab reviewer](https://noted.lol/tinypilot-voyager-2a-2/) shows TinyPilot's old, embarassing packaging in a review" alt="Screenshot of review from noted.lol showing TinyPilot's old packaging in plain brown box" >}}
+{{<img src="unboxing.webp" max-width="700px" caption="A [homelab reviewer](https://noted.lol/tinypilot-voyager-2a-2/) shows TinyPilot's old, embarrassing packaging in a review" alt="Screenshot of review from noted.lol showing TinyPilot's old packaging in plain brown box" >}}
 
 I'd had a few conversations with designers about making a nice retail box for the product, but it never came together, and it was never my top priority. After we switched to metal cases, TinyPilot's packaging stood out as particularly immature.
 
-In the second half of 2023, we worked with a contract manufacturer to take over our full prodution process. As part of that work, they offered to make a retail box for us.
+In the second half of 2023, we worked with a contract manufacturer to take over our entire production process. As part of that work, they offered to make a retail box for us.
 
-TODO: Photo of Retail box, open, closed
+{{<gallery caption="TinyPilot's new contract manufacturer made a branded retail box for our product.">}}
+{{<img src="box-angled.webp" max-width="400px" alt="Angled view of TinyPilot branded box, closed">}}
+{{<img src="box-open.webp" max-width="400px" alt="Front view of TinyPilot box open with components organized inside">}}
+{{</gallery>}}
 
-Our contract manufacturer did a great job on the box. It's not going to catch your eye if it was on the shelf at Best Buy, but it feels like professional packaging for a quality networking product.
+Our contract manufacturer did a great job on the box. It's not going to catch your eye if it was on the shelf at Best Buy, but it feels like professional packaging for a networking hardware product.
 
 ## Lessons learned
 
-### There's hidden-stress in low-latency responsibility
+### There's hidden stress in low-latency responsibility
 
 Switching TinyPilot's order fulfillment to a 3PL [reduced stress and increased flexibility](#outsourcing-order-fulfillment-and-reducing-stress) for TinyPilot's local team, but I was most surprised at how drastically it relieved stress for me.
 
 I'd been carrying around so much "what if?" anxiety for years without even realizing it.
 
-Before we switched to the 3PL, there was always a worry in the back of my mind about all the things that could block order fulfillment. What if our office router crashes and breaks prevents anyone from accessing the Internet? What if the desktop suddenly can't talk to the printer? There were dozens of ways I might be called to unblock a critical process urgently.
+Before we switched to the 3PL, there was always a worry in the back of my mind about all the things that could block order fulfillment. What if our office router crashes and prevents anyone from accessing the Internet? What if the desktop suddenly can't talk to the printer? There were dozens of ways I might be called to unblock a critical process urgently.
 
 Now that we've shifted to a 3PL and a contract manufacturer, there are still many things that can go wrong, but I'm outside the critical path of most day-to-day operations. If a printer breaks at our warehouse, someone else will fix it, and I'll hopefully never even hear about it.
 
-### As a project matures, more time goes to maintenance
+### As a project matures, more time goes into maintenance
 
 In June, when I sat down to write [the changelog](https://tinypilotkvm.com/pro/changes#260) for the latest TinyPilot software update, I struggled to explain how any of the work we did benefitted our users. Assuming I overdid it on refactoring work, I resolved to make our next release more user-focused.
 
-The [next update](https://tinypilotkvm.com/pro/changes#261), I had the same problem. After two and a half months of development, all we had to show for it were small, cosmetic improvements.
+For the [next update](https://tinypilotkvm.com/pro/changes#261), I had the same problem. After two and a half months of development, all we had to show for it were small, cosmetic improvements.
 
 Our current pace felt glacial compared to the early days when we were releasing major features every couple of months. Was I prioritizing tasks poorly? Had the team lost their enthusiasm? Had we taken on too much technical debt?
 
-I reviewed the full list of tasks for the release, including all the work that wasn't visible to end-users. Even with the benefit of hindsight, I felt like I had chosen the right tasks. And the time we invested in each task felt reasonable as well.
+I reviewed the complete list of tasks for the release, including all the work that wasn't visible to end-users. Even with the benefit of hindsight, I felt like I had chosen the right tasks. And the time we invested in each task felt reasonable as well.
 
 {{<img src="three-category-2.6.1.webp" max-width="350px" has-border="true" caption="The tasks in TinyPilot's [2.6.1 release](https://tinypilotkvm.com/pro/changes#261), colored according to improving the product (green), automation and reducing complexity (blue), and regular maintenance (red)" alt="A screenshot of TinyPilot's dev tasks for 2.6.1 release">}}
 
@@ -178,11 +181,11 @@ So, how could our progress be so much slower when we were prioritizing well and 
 
 I realized that the dominant factor was [the size of our codebase](/retrospectives/2023/09/#how-do-we-reduce-accidental-difficulty). We have three times the code we did three years ago. And every line of code requires time to maintain. So, if I keep the number of developers fixed but increase the size of the codebase, then a higher proportion of our time must go to maintaining old code.
 
-Beyond maintenance, more code means that new features are more expensive to build. If your app has zero features, it's easy to build the first one. If your app already has 20 features, you have to put a lot more thought into how your 21st feature integrates with everything else.
+Beyond maintenance, more code means that new features are more expensive to build. If your app has zero features, building the first one is easy. If your app already has 20 features, you have to put a lot more thought into how your 21st feature integrates with everything else.
 
-So, I haven't figured out a way for us to go significantly faster, but I've learned to temper my expecations around feature pace. And I've adjusted how I estimate dev costs to account for our more complex codebase.
+So, I haven't figured out a way for us to go significantly faster, but I've learned to temper my expectations around feature pace. And I've adjusted how I estimate dev costs to account for our more complex codebase.
 
-### Most support escalation can happpen asynchronously
+### Most support escalation can happen asynchronously
 
 I try to give the TinyPilot team [as much autonomy as possible](/solo-developer-year-4/#good-leadership-means-helping-teammates-grow). At the same time, I want to make sure everyone feels comfortable asking me for help when they get stuck.
 
@@ -192,7 +195,7 @@ For a while, I thought that was the nature of support escalation. I'm only seein
 
 First, I adjusted our process for escalation. Most escalation took the form of, "Michael, here's a problem we've never seen before. How do you want us to handle it?" I encouraged the team to tweak their approach by proposing a solution as part of escalating to me. If I wasn't available, and they were the last line of support, what would they tell the customer?
 
-80% of the time, the team came up with the same solution that I would have recommended. And the more they did this, the better they got at tackling hard cases.
+80% of the time, the team came up with the same solution that I would have recommended. The more the support team did this, the better they became at tackling hard cases.
 
 Once I saw how close the team's answers were to my own, I realized there was no need to block a support ticket on an answer from me. If my only contribution to 80% of cases is, "Yes, do that," why not just do their plan immediately and check with me in parallel about alternatives?
 
@@ -207,7 +210,7 @@ Last year, I set [three high-level goals](/solo-developer-year-5/#goals-for-year
 - **Result**: I worked 35-40 hours per week, a reduction from previous years, and traveled more than any previous year.
 - **Grade**: B-
 
-It's not 20 hours, but I did work significantly less in 2023 than 2022. I did a lot of travel for both work and non-work. I was "out of the office" for about five weeks cumulatively, and everything went fine.
+It's not 20 hours, but I did work significantly less in 2023 than in 2022. I did a lot of travel for both work and non-work. I was "out of the office" for about five weeks cumulatively, and everything went fine.
 
 When I signed off in the evenings, my work day usually felt complete, whereas in 2022, I frequently felt like I was leaving behind loose ends.
 
@@ -235,13 +238,13 @@ If the handyman knocked on my door tomorrow to announce that some disaster destr
 
 ### Manage TinyPilot on 20 hours per week
 
-I know I set this as a goal in [2022](/solo-developer-year-4/#manage-tinypilot-on-20-hours-per-week) and again in [2023](/solo-developer-year-5/#manage-tinypilot-on-20-hours-per-week), but third time's the charm! My management time is definitely trending downward, so this could be my year.
+I know I set this as a goal in [2022](/solo-developer-year-4/#manage-tinypilot-on-20-hours-per-week) and again in [2023](/solo-developer-year-5/#manage-tinypilot-on-20-hours-per-week), but the third time's the charm! My management time is trending downward, so this could be my year.
 
 ### Publish a course or book
 
 In 2021, I [said](/solo-developer-year-3/#publish-six-blog-posts-and-one-book) I'd [write a book](https://refactoringenglish.com/) to help developers improve their writing. I got 80% through the first chapter, and then TinyPilot absorbed all of my free time that year.
 
-I still want to write that book, so if I reduce my management time, hopefully I can use the free time to write more.
+I still want to write that book, so if I reduce my management time, hopefully, I can use the free time to write more.
 
 I've also been experimenting with [Nix](/tags/nix/) and [Zig](/tags/zig), two technologies that I find exciting but lacking in educational resources. Creating a course for one of those technologies could be a fun way to build my own expertise while also making these tools more accessible to others.
 
@@ -257,13 +260,13 @@ I hope that by outsourcing and delegating more of TinyPilot's operational side, 
 
 Every year, when I write these blog posts, I ask myself whether I still love what I'm doing.
 
-2022 remains the toughest year I've had. I still preferred it to working for an employer, but it was a massive challenge to onboard new teammates while also navigating around the chip shortage.
+2022 remains the toughest year I've had. I still preferred it to working for an employer, but it was a massive challenge to onboard new teammates while navigating [the global chip shortage](<https://en.wikipedia.org/wiki/Global_chip_shortage_(2020%E2%80%932023)>).
 
 2023 was a major improvement from the previous year. There were fewer fires to put out, and it felt good to shift critical workflows to specialized vendors.
 
-The downside to 2023 is that I have a hard time getting excited about it. It was a restructuring year, so I spent a lot of time redefining TinyPilot's processes and shifting around team responsibities. TinyPilot has shown me that I'm better than the average developer at designing organizational processes, but I still find it painfully boring.
+The downside to 2023 is that I have a hard time getting excited about it. It was a restructuring year, so I spent a lot of time redefining TinyPilot's processes and shifting around team responsibilities. TinyPilot has shown me that I'm better than the average developer at designing organizational processes, but I still find it painfully boring.
 
-While I can't say that I loved the year, I still enjoyed most of it, and I preferred it to working for an employer. I'm grateful to be in a position where I can earn a living working for myself and creating a product I'm proud of.
+While I can't say that I loved the year, I still enjoyed most of it and preferred it to working for an employer. I'm grateful to be in a position where I can earn a living working for myself and creating a product I'm proud of.
 
 ---
 
