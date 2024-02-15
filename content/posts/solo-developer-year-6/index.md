@@ -21,8 +21,8 @@ For the first few years, all of my businesses flopped. The best of them earned a
 Halfway through my third year, I created a device called [TinyPilot](https://tinypilotkvm.com). It allows users to control their computers remotely. The product quickly caught on, and it's been my main focus ever since.
 
 {{<gallery caption="TinyPilot is a small device that allows users to control their computers remotely.">}}
-{{<img src="2a-front.webp" max-width="400px">}}
-{{<img src="tinypilot-bios-menu-2.webp" max-width="500px">}}
+{{<img src="2a-front.webp" alt="Front view of TinyPilot Voyager 2a device" max-width="400px">}}
+{{<img src="tinypilot-bios-menu-2.webp" alt="Screenshot of TinyPilot web interface" max-width="500px">}}
 {{</gallery>}}
 
 In 2023, TinyPilot generated $997k in revenue, which I'll generously round up to a cool million. More importantly, the business earned $236k in profit, a 20x increase from 2022.
@@ -105,7 +105,7 @@ TinyPilot's order fulfillment had always been extremely smooth, which was why I'
 
 In March 2023, TinyPilot switched from fulfilling orders in-house to [using a third-party logistics (3PL) warehouse](/retrospectives/2023/04/). We were still assembling devices at our office, but we'd send customer-ready packages to the warehouse in bulk, and the 3PL would handle the final step of shipping orders to customers.
 
-At the time of the 3PL shift, we were in ["urgent mode."](/retrospectives/2023/05/#getting-out-of-ldquourgent-moderdquo) Our team of two part-time employees could assemble about fifty devices per week, but customers were buying at the same rate. It was a stressful situation because any interruption put us at risk of halting sales.
+At the time of the 3PL shift, we were in ["urgent mode."](/retrospectives/2023/05/#getting-out-of-ldquourgent-moderdquo) Our team of two part-time employees assembled about fifty devices per week, but customers were buying at the same rate. It was a stressful situation because any interruption put us at risk of halting sales.
 
 I had hoped that outsourcing fulfillment would free up enough of the team's time to produce about 100 devices per week. It turned out that our full capacity was still only about 70 devices per week. At that rate, it would take months of working at maximum capacity to build up a healthy inventory at the warehouse. I ended up hiring a third employee temporarily to get us through the summer.
 
@@ -123,7 +123,7 @@ One of the most notable changes to TinyPilot in 2023 was how we improved the pro
 
 At the end of 2022, we were still making TinyPilot's cases with a fleet of seven high-end 3D printers running nonstop. As far as 3D-printing goes, our cases were especially nice, but they still had the "just a prototype" feel of a 3D-printed product.
 
-{{<img src="voyager2-angled.webp" max-width="500px" caption="Before: TinyPilot's 3D-printed case">}}
+{{<img src="voyager2-angled.webp" max-width="500px" caption="Before: TinyPilot's 3D-printed case" alt="TinyPilot in a black plastic 3D-printed case">}}
 
 In February 2023, we [switched to a metal case](https://tinypilotkvm.com/blog/introducing-voyager-2a).
 
@@ -134,13 +134,13 @@ I was surprised at how much the metal case impacted sales. Not only did it incre
 We also updated TinyPilot's packaging. Until late last year, we were still bunching the device and all the cables together in a bubble-wrap pouch and dropping that into a plain brown box.
 
 {{<gallery caption="Our previous packaging for TinyPilot was just neatly wrapping the device, cables, and instructions in a bubble pouch.">}}
-{{<img src="labeled-blob.webp" max-width="500px">}}
-{{<img src="bundle-stacked.webp" max-width="370px">}}
+{{<img src="labeled-blob.webp" max-width="500px" alt="Overhead view of TinyPilot, instructions, and cables in a bubble pouch">}}
+{{<img src="bundle-stacked.webp" max-width="370px" alt="Stack of TinyPilot bubble pouches on a shelf">}}
 {{</gallery>}}
 
 Every time a reviewer shared their experience unboxing TinyPilot, I winced a bit.
 
-{{<img src="unboxing.webp" max-width="700px" caption="A [homelab reviewer](https://noted.lol/tinypilot-voyager-2a-2/) shows TinyPilot's old, embarassing packaging in a review" >}}
+{{<img src="unboxing.webp" max-width="700px" caption="A [homelab reviewer](https://noted.lol/tinypilot-voyager-2a-2/) shows TinyPilot's old, embarassing packaging in a review" alt="Screenshot of review from noted.lol showing TinyPilot's old packaging in plain brown box" >}}
 
 I'd had a few conversations with designers about making a nice retail box for the product, but it never came together, and it was never my top priority. After we switched to metal cases, TinyPilot's packaging stood out as particularly immature.
 
@@ -154,7 +154,7 @@ Our contract manufacturer did a great job on the box. It's not going to catch yo
 
 ### There's hidden-stress in low-latency responsibility
 
-Switching TinyPilot's order fulfillment to a 3PL [reduced stress and increased flexibility](#outsourcing-order-fulfillment-and-reducing-stress) for TinyPilot's local team, but I was most surprised at how much stress it relieved for me.
+Switching TinyPilot's order fulfillment to a 3PL [reduced stress and increased flexibility](#outsourcing-order-fulfillment-and-reducing-stress) for TinyPilot's local team, but I was most surprised at how drastically it relieved stress for me.
 
 I'd been carrying around so much "what if?" anxiety for years without even realizing it.
 
@@ -172,11 +172,11 @@ Our current pace felt glacial compared to the early days when we were releasing 
 
 I reviewed the full list of tasks for the release, including all the work that wasn't visible to end-users. Even with the benefit of hindsight, I felt like I had chosen the right tasks. And the time we invested in each task felt reasonable as well.
 
-{{<img src="three-category-2.6.1.webp" max-width="350px" has-border="true" caption="The tasks in TinyPilot's [2.6.1 release](https://tinypilotkvm.com/pro/changes#261), colored according to improving the product (green), automation and reducing complexity (blue), and regular maintenance (red)">}}
+{{<img src="three-category-2.6.1.webp" max-width="350px" has-border="true" caption="The tasks in TinyPilot's [2.6.1 release](https://tinypilotkvm.com/pro/changes#261), colored according to improving the product (green), automation and reducing complexity (blue), and regular maintenance (red)" alt="A screenshot of TinyPilot's dev tasks for 2.6.1 release">}}
 
 So, how could our progress be so much slower when we were prioritizing well and working efficiently?
 
-I realized that the dominant factor was [the size of our codebase](/retrospectives/2023/09/#how-do-we-reduce-accidental-difficulty). We have three times as much code as we did three years ago. And every line of code requires time to maintain. So, if I keep the number of developers fixed but increase the size of the codebase, then a higher proportion of our time must go to maintaining old code.
+I realized that the dominant factor was [the size of our codebase](/retrospectives/2023/09/#how-do-we-reduce-accidental-difficulty). We have three times the code we did three years ago. And every line of code requires time to maintain. So, if I keep the number of developers fixed but increase the size of the codebase, then a higher proportion of our time must go to maintaining old code.
 
 Beyond maintenance, more code means that new features are more expensive to build. If your app has zero features, it's easy to build the first one. If your app already has 20 features, you have to put a lot more thought into how your 21st feature integrates with everything else.
 
@@ -188,7 +188,7 @@ I try to give the TinyPilot team [as much autonomy as possible](/solo-developer-
 
 The problem was that when support tickets escalated to me, they felt particularly stressful.
 
-For a while, I thought that was just the nature of support escalation. I'm only seeing the toughest customer questions, so of course they're going to feel stressful. It turned out that most of it was fixable.
+For a while, I thought that was the nature of support escalation. I'm only seeing the toughest customer questions, so of course they're going to feel stressful. It turned out that most of it was fixable.
 
 First, I adjusted our process for escalation. Most escalation took the form of, "Michael, here's a problem we've never seen before. How do you want us to handle it?" I encouraged the team to tweak their approach by proposing a solution as part of escalating to me. If I wasn't available, and they were the last line of support, what would they tell the customer?
 
@@ -241,7 +241,7 @@ I know I set this as a goal in [2022](/solo-developer-year-4/#manage-tinypilot-o
 
 In 2021, I [said](/solo-developer-year-3/#publish-six-blog-posts-and-one-book) I'd [write a book](https://refactoringenglish.com/) to help developers improve their writing. I got 80% through the first chapter, and then TinyPilot absorbed all of my free time that year.
 
-I still want to write that book, so if I can reduce my management time, hopefully I can use the free time to write more.
+I still want to write that book, so if I reduce my management time, hopefully I can use the free time to write more.
 
 I've also been experimenting with [Nix](/tags/nix/) and [Zig](/tags/zig), two technologies that I find exciting but lacking in educational resources. Creating a course for one of those technologies could be a fun way to build my own expertise while also making these tools more accessible to others.
 
