@@ -142,7 +142,7 @@ Revisiting the last release through that lens, we had:
 | Automation and reducing complexity | 26         | 70%        |
 | Regular maintenance                | 3          | 8%         |
 
-{{<img src="three-category-2.6.1.webp" max-width="350px" has-border="true" caption="The tasks in TinyPilot's 2.6.1, colored according to improving the product (green), automation and reducing complexity (blue), and regular maintenance (red)">}}
+{{<img src="three-category-2.6.1.webp" max-width="350px" has-border="true" caption="The tasks in TinyPilot's [2.6.1 release](https://tinypilotkvm.com/pro/changes#261), colored according to improving the product (green), automation and reducing complexity (blue), and regular maintenance (red)">}}
 
 We were skewed toward automation because we made a big push to eliminate Ansible, but we were closer to my ideal split than I realized.
 
