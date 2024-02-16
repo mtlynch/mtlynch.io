@@ -107,15 +107,15 @@ In March 2023, TinyPilot switched from fulfilling orders in-house to [using a th
 
 At the time of the 3PL shift, we were in ["urgent mode."](/retrospectives/2023/05/#getting-out-of-ldquourgent-moderdquo) Our team of two part-time employees assembled about fifty devices per week, but customers were buying at the same rate. It was a stressful situation because any interruption put us at risk of halting sales.
 
-I had hoped that outsourcing fulfillment would free up enough of the team's time to produce about 100 devices per week. It turned out that our full capacity was still only about 70 devices per week. At that rate, it would take months of working at maximum capacity to build up a healthy inventory at the warehouse. I ended up hiring a third employee temporarily to get us through the summer.
+I hoped that outsourcing fulfillment would free up enough of the team's time to produce about 100 devices per week. It turned out that our full capacity was only about 70. At that rate, it would take months of working at maximum capacity to build up a healthy inventory at the warehouse. I ended up hiring a third employee temporarily to get us through the summer.
 
 So, outsourcing fulfillment didn't free up a ton of time, but it did win us a lot more flexibility.
 
-I had thought the local team already had flexibility because they could come in whenever they wanted. As long as orders were packed and ready for mail pickup the next day, they could take their shifts at 3 AM if they felt like it.
+The local team seemed to have lots of flexibility because they could come in whenever they wanted. As long as orders were packed and ready for mail pickup the next day, they could take their shifts at 3 AM if they felt like it.
 
-Switching to the 3PL eliminated the daily deadline of mail pickup. Instead, we had a weekly deadline to ship assembled products to our warehouse.
+Switching to the 3PL eliminated the daily deadline of mail pickup. Instead, we only had to ship assembled products to our warehouse once a week.
 
-The reduction in flexibility reduced a lot of stress. If an employee wanted to take a four-day weekend, they could shift their schedule around and still work their normal 15 hours that week. Or they could take a few days off and [not feel like it was overloading the rest of the team](/solo-developer-year-5/#run-at-50-capacity).
+The increase in flexibility reduced a lot of stress. If an employee wanted to take a four-day weekend, they could shift their schedule around and still work their normal 15 hours that week. Or they could take a few days off and [not feel like it was overloading the rest of the team](/solo-developer-year-5/#run-at-50-capacity).
 
 ## Making TinyPilot look like a real product
 
