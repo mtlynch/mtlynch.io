@@ -18,7 +18,7 @@ I used this workflow to edit and share my family's home videos at a cost of only
 - Docker
 - ffmpeg
 - A video player
-  - Ideally one with an edit timeline like [Adobe Premiere Elements](https://www.adobe.com/products/premiere-elements.html) or [OpenShot](https://www.openshot.org/).
+  - Ideally one with an edit timeline like Adobe Premiere Elements or [OpenShot](https://www.openshot.org/).
 - A free Heroku account
   - And the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 - A Google Cloud Platform account (with billing enabled)
@@ -62,7 +62,7 @@ That creates a copy of the video that looks like this:
 
 Now, it's time to catalog the footage on the tape. You'll go through the video to identify individual scenes, who appears in them, and what's happening.
 
-Open up your favorite video player. I think [Adobe Premiere Elements](https://www.adobe.com/products/premiere-elements.html) is best for this, but you can also try the free [OpenShot editor](https://www.openshot.org/). Any video player will technically work, but you'll save time if you choose one that supports stepping through frame by frame and a zoomable timeline.
+Open up your favorite video player. I think Adobe Premiere Elements is best for this, but you can also try the free [OpenShot editor](https://www.openshot.org/). Any video player will technically work, but you'll save time if you choose one that supports stepping through frame by frame and a zoomable timeline.
 
 Next, create a spreadsheet. You can start with [mine](https://docs.google.com/spreadsheets/d/1kuamVFEYBrOI097IWBQ8sB0q37ZRACYe2o389Ag92zI/edit?usp=sharing). I'll explain the fields below:
 

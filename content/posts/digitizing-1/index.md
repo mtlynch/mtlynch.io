@@ -164,7 +164,7 @@ With home videos, about 90% of the footage is boring, 8% is entertaining, and 2%
 
 VHS tapes contain a long stream of video clips mixed with dead air. To edit a tape, you have to identify where each clip starts and ends.
 
-For my editing, I used [Adobe Premiere Elements](https://www.adobe.com/products/premiere-elements.html), which costs less than $100 for a lifetime license. Its crucial feature for editing VHS tapes is the zoomable timeline. It allows you to find rough scene boundaries quickly and then zoom in to find the exact video frame where a clip starts or ends.
+For my editing, I used Adobe Premiere Elements, which costs less than $100 for a lifetime license. Its crucial feature for editing VHS tapes is the zoomable timeline. It allows you to find rough scene boundaries quickly and then zoom in to find the exact video frame where a clip starts or ends.
 
 {{<img src="premiere-elements-timeline.jpg" alt="Screenshot of Adobe Premiere Elements' zoomable edit feature" caption="The invaluable zoomable edit timeline in Adobe Premiere Elements" max-width="1000px" has-border="true">}}
 
