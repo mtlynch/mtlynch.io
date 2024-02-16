@@ -203,7 +203,7 @@ In the minority of cases where I had a better idea for solving a support issue, 
 
 ## Grading last year's goals
 
-Last year, I set [three high-level goals](/solo-developer-year-5/#goals-for-year-four) that I wanted to achieve during the year. Here's how I did against those goals:
+Last year, I set [three high-level goals](/solo-developer-year-5/#goals-for-year-six) that I wanted to achieve during the year. Here's how I did against those goals:
 
 ### Manage TinyPilot on 20 hours per week
 
