@@ -270,6 +270,8 @@ The downside to 2023 is that I have a hard time getting excited about it. It was
 
 While I can't say that I loved the year, I still enjoyed most of it and preferred it to working for an employer. I'm grateful to be in a position where I can earn a living working for myself and creating a product I'm proud of.
 
+{{<tweet user="deliberatecoder" id="1758511480238985701">}}
+
 ---
 
 _Cover image by [Loraine Yow](https://www.loraineyow.com/). After [six years](/how-to-hire-a-cartoonist/) as this blog's official illustrator, Loraine [has changed careers](https://www.loraineyow.com/post/how-accounting-blew-my-mind) but graciously agreed to make one last illustration for this post._
