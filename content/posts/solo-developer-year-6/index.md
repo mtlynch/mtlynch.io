@@ -69,7 +69,7 @@ I don't draw a salary, so the total amount I earned from TinyPilot in 2023 was $
 
 ## The most terrifying 10 minutes of 2023
 
-One lazy Saturday afternoon in February, I heard a knock on my door. Standing on my porch was a mid-forties guy in jeans and a windbreaker. I opened the door, still in my pajamas.
+One lazy Saturday afternoon in February, I heard a knock on my door. Standing on my porch was a mid-fifties guy in jeans and a windbreaker. I opened the door, still in my pajamas.
 
 "Are you the TinyPilot guy?" he asked me.
 
@@ -85,7 +85,7 @@ During my five-minute drive to the office, I wondered if this was the end of my 
 
 TinyPilot had insurance, but I chose coverage a year before when we carried half as much inventory. And even if insurance paid out, TinyPilot would be dead in the water for months until we could restart our whole manufacturing pipeline.
 
-I arrived at our office building and walked up to TinyPilot's office on the second floor, the carpet squishing damply with every step I took.
+I arrived at the building and walked up to TinyPilot's office on the second floor, the carpet squishing damply with every step I took.
 
 When I reached my floor, I was relieved to see that the sprinkler had actually burst in the shared conference room, not TinyPilot's suite. I unlocked our office and found everything was bone dry. The water hadn't even trickled under our door.
 
@@ -101,7 +101,7 @@ Long story short, we ended up not having to move, but the experience made me nev
 
 ## Outsourcing order fulfillment and reducing stress
 
-TinyPilot's order fulfillment had always been extremely smooth, which was why I'd always procrastinated outsourcing it. Out of 3,500+ orders in the past two years, there were only about five where we sent a customer the wrong item or quantity.
+TinyPilot's order fulfillment had always been extremely smooth, which was why I'd always procrastinated outsourcing it. Out of 3,500+ orders in the past two years, there were only about five where we sent a customer the wrong item.
 
 In March 2023, TinyPilot switched from fulfilling orders in-house to [using a third-party logistics (3PL) warehouse](/retrospectives/2023/04/). We were still assembling devices at our office, but we'd send customer-ready packages to the warehouse in bulk, and the 3PL would handle the final step of shipping orders to customers.
 
@@ -111,9 +111,9 @@ I hoped that outsourcing fulfillment would free up enough of the team's time to 
 
 So, outsourcing fulfillment didn't free up a ton of time, but it did win us a lot more flexibility.
 
-The local team seemed to have lots of flexibility because they could come in whenever they wanted. As long as orders were packed and ready for mail pickup the next day, they could take their shifts at 3 AM if they felt like it.
+The local team seemed to have flexibility already because they could come in whenever they wanted. As long as orders were packed and ready for mail pickup the next day, they could take their shifts at 3 AM if they felt like it.
 
-Switching to the 3PL eliminated the daily deadline of mail pickup. Instead, we only had to ship assembled products to our warehouse once a week.
+Switching to the 3PL eliminated the daily deadline of mail pickup. Instead, our only deadline was to ship assembled products to our warehouse once a week.
 
 The increase in flexibility reduced a lot of stress. If an employee wanted to take a four-day weekend, they could shift their schedule around and still work their normal 15 hours that week. Or they could take a few days off and [not feel like it was overloading the rest of the team](/solo-developer-year-5/#run-at-50-capacity).
 
@@ -138,7 +138,7 @@ We also updated TinyPilot's packaging. Until late last year, we were still bunch
 {{<img src="bundle-stacked.webp" max-width="370px" alt="Stack of TinyPilot bubble pouches on a shelf">}}
 {{</gallery>}}
 
-Every time a reviewer shared their experience unboxing TinyPilot, I winced a bit.
+Every time a reviewer shared their experience unboxing TinyPilot, I winced a little.
 
 {{<img src="unboxing.webp" max-width="700px" caption="A [homelab reviewer](https://noted.lol/tinypilot-voyager-2a-2/) shows TinyPilot's old, embarrassing packaging in a review" alt="Screenshot of review from noted.lol showing TinyPilot's old packaging in plain brown box" >}}
 
@@ -169,7 +169,7 @@ Now that we've shifted to a 3PL and a contract manufacturer, there are still man
 
 In June, when I sat down to write [the changelog](https://tinypilotkvm.com/pro/changes#260) for the latest TinyPilot software update, I struggled to explain how any of the work we did benefitted our users. Assuming I overdid it on refactoring work, I resolved to make our next release more user-focused.
 
-For the [next update](https://tinypilotkvm.com/pro/changes#261), I had the same problem. After two and a half months of development, all we had to show for it were small, cosmetic improvements.
+When it came time to announce the [next update](https://tinypilotkvm.com/pro/changes#261), I had the same problem. After two and a half months of development, all we had to show for it were small, cosmetic improvements.
 
 Our current pace felt glacial compared to the early days when we were releasing major features every couple of months. Was I prioritizing tasks poorly? Had the team lost their enthusiasm? Had we taken on too much technical debt?
 
@@ -179,7 +179,7 @@ I reviewed the complete list of tasks for the release, including all the work th
 
 So, how could our progress be so much slower when we were prioritizing well and working efficiently?
 
-I realized that the dominant factor was [the size of our codebase](/retrospectives/2023/09/#how-do-we-reduce-accidental-difficulty). We have three times the code we did three years ago. And every line of code requires time to maintain. So, if I keep the number of developers fixed but increase the size of the codebase, then a higher proportion of our time must go to maintaining old code.
+I realized that the dominant factor was [the size of our codebase](/retrospectives/2023/09/#how-do-we-reduce-accidental-difficulty). We have three times the code that we did three years ago. And every line of code requires time to maintain. So, if I keep the number of developers fixed but increase the size of the codebase, then a higher proportion of our time must go to maintaining old code.
 
 Beyond maintenance, more code means that new features are more expensive to build. If your app has zero features, building the first one is easy. If your app already has 20 features, you have to put a lot more thought into how your 21st feature integrates with everything else.
 
@@ -254,7 +254,7 @@ Writing code is still one of my favorite activities.
 
 For the past few years of TinyPilot, I've enjoyed programming, but it's never been a sensible way to spend my limited working hours. With a team of six people, several critical vendors, and many moving pieces, the most pressing parts of TinyPilot have always been management.
 
-I hope that by outsourcing and delegating more of TinyPilot's operational side, I can free up enough of my time that programming is, if not the optimal use of my time, at least a reasonable use of my time.
+I hope that by outsourcing and delegating more of TinyPilot's operational side, I can free up enough bandwidth that programming is, if not the optimal use of my time, at least a reasonable use of my time.
 
 ## Do I still love it?
 
