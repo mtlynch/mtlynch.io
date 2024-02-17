@@ -43,23 +43,23 @@ In this post, I'll share what I've learned about being a bootstrapped founder fr
 
 {{<revenue-graph project="tinypilot">}}
 
-| Income/Expense                    | 2022         | 2023         | Change               |
-| --------------------------------- | ------------ | ------------ | -------------------- |
-| Sales Revenue                     | $807,458     | $992,597     | {{<delta-cell>}}     |
-| Credit Card Rewards               | $4,327       | $4,379       | {{<delta-cell>}}     |
-| **Total Income**                  | **$811,785** | **$996,976** | **{{<delta-cell>}}** |
-| Advertising                       | $51,764      | $39,270      | {{<delta-cell>}}     |
-| Cloud Services                    | $9,151       | $16,408      | {{<delta-cell>}}     |
-| Design Consulting                 | $30,215      | $950         | {{<delta-cell>}}     |
-| Electrical Engineering Consulting | $124,643     | $23,427      | {{<delta-cell>}}     |
-| Fulfillment Vendors               | $0           | $28,321      | {{<delta-cell>}}     |
-| Office Rent                       | $6,600       | $6,310       | {{<delta-cell>}}     |
-| Payroll                           | $205,984     | $255,779     | {{<delta-cell>}}     |
-| Postage                           | $28,324      | $16,853      | {{<delta-cell>}}     |
-| Raw Materials                     | $324,140     | $358,457     | {{<delta-cell>}}     |
-| Everything Else                   | $25,398      | $31,404      | {{<delta-cell>}}     |
-| **Total Expenses**                | **$806,219** | **$777,179** | **{{<delta-cell>}}** |
-| **Net Profit**                    | **$10,447**  | **$235,568** | **{{<delta-cell>}}** |
+| Income/Expense                    | 2022          | 2023          | Change               |
+| --------------------------------- | ------------- | ------------- | -------------------- |
+| Sales Revenue                     | $807,458      | $992,597      | {{<delta-cell>}}     |
+| Credit Card Rewards               | $4,327        | $4,379        | {{<delta-cell>}}     |
+| **Total Income**                  | **$811,785**  | **$996,976**  | **{{<delta-cell>}}** |
+| Advertising                       | -$51,764      | -$39,270      | {{<delta-cell>}}     |
+| Cloud Services                    | -$9,151       | -$16,408      | {{<delta-cell>}}     |
+| Design Consulting                 | -$30,215      | -$950         | {{<delta-cell>}}     |
+| Electrical Engineering Consulting | -$124,643     | -$23,427      | {{<delta-cell>}}     |
+| Fulfillment Vendors               | -$0           | -$28,321      | {{<delta-cell>}}     |
+| Office Rent                       | -$6,600       | -$6,310       | {{<delta-cell>}}     |
+| Payroll                           | -$205,984     | -$255,779     | {{<delta-cell>}}     |
+| Postage                           | -$28,324      | -$16,853      | {{<delta-cell>}}     |
+| Raw Materials                     | -$324,140     | -$358,457     | {{<delta-cell>}}     |
+| Everything Else                   | -$25,398      | -$31,404      | {{<delta-cell>}}     |
+| **Total Expenses**                | **-$806,219** | **-$777,179** | **{{<delta-cell>}}** |
+| **Net Profit**                    | **$10,447**   | **$235,568**  | **{{<delta-cell>}}** |
 
 After two years of basically breaking even, TinyPilot finally earned a meaningful profit.
 
