@@ -74,9 +74,10 @@ PUSH1 0x01
 PUSH1 0x00
   Stack: push 0x0
 ---
+MSTORE
   Stack: pop 0x0
   Stack: pop 0x1
-MSTORE offset=0, value=0x1
+  Memory: Writing value=0x1 to memory offset=0
   Memory: 0x00000000000000000000000000000001
 ---
 PUSH1 0x20
@@ -85,13 +86,14 @@ PUSH1 0x20
 PUSH1 0x00
   Stack: push 0x0
 ---
+RETURN
   Stack: pop 0x0
   Stack: pop 0x20
-RETURN offset=0, size=32
+  Memory: reading size=32 bytes from offset=0
   Return value: 0x0000000000000000000000000000000000000000000000000000000000000001
 ---
 EVM gas used:    18
-execution time:  845.017µs
+execution time:  792.395µs
 0x0000000000000000000000000000000000000000000000000000000000000001
 ```
 
