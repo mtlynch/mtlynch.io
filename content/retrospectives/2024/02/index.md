@@ -1,7 +1,7 @@
 ---
 title: "TinyPilot: Month 43"
-date: 2024-02-19T07:24:06-05:00
-description: TODO - One-line summary
+date: 2024-02-20T00:00:00-05:00
+description: I'm accidentally hoarding a lot of TinyPilot's release process
 tags:
   - zig
 ---
@@ -15,50 +15,79 @@ Hi, I'm Michael. I'm a software developer and the founder of [TinyPilot](https:/
 Every month, I publish a retrospective like this one to share how things are going with my business and my professional life overall.
 {{</notice>}}
 
-## Abbreviated retro this month
-
-This month, I'm only publishing an abbreviated retrospective.
-
-I spent most of my writing time this month on my [sixth year retrospective](/solo-developer-year-6), and we're already close to March.
-
 ## Goal Grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
 ### Publish annual retrospective
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: Published ["My Sixth Year as a Bootstrapped Founder"](/solo-developer-year-6/)
+- **Grade**: A
 
-TODO
+I published this a few weeks late, but I was happy with how it came out.
+
+The response was positive, but it also highlights how talking about money is a double-edged sword. Readers are much more interested and excited when you share numbers, but then 90% of the conversation is just about the numbers.
 
 ### Reach out to five bloggers about TinyPilot collaborations
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: Reached out to two bloggers
+- **Grade**: C
 
-TODO
+I ended up spending more time than I expected documenting TinyPilot's release process, so I had less available bandwidth for reaching out to bloggers. I did reach out to two, but I didn't hear back from either of them.
 
 ### Get records ready for 2023 taxes
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: Got all my tax documents ready
+- **Grade**: A
 
-TODO
+Taxes are always boring, but everything is on schedule this year.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
 {{<revenue-graph project="tinypilot">}}
 
+| Metric                   | December 2023   | January 2024   | Change                                              |
+| ------------------------ | --------------- | -------------- | --------------------------------------------------- |
+| Unique Visitors          | 6,700           | 7,800          | <font color="green">+1,100 (+16%)</font>            |
+| Sales Revenue            | $75,198.00      | $100,008.98    | <font color="green">+$24,810.98 (+33%)</font>       |
+| Enterprise Subscriptions | $290.70         | $290.70        | 0                                                   |
+| Royalties                | $1,792.51       | $3,313.11      | <font color="green">+$1,520.60 (+85%)</font>        |
+| Total Revenue            | $77,281.21      | $103,612.79    | <font color="green">+$26,331.58 (+34%)</font>       |
+| **Profit**               | **$-59,117.41** | **$79,764.14** | **<font color="green">+$138,881.55 (+inf%)</font>** |
+
+TinyPilot had its second-highest revenue month in history. I don't have an explanation except for just regular variation in our sales. Our typical month tends to fall in the $75-95k range, and I think we caught the high side of variance, and a few large orders pushed us over $100k.
+
+Profit was absurdly high, but it's again due to how bursty TinyPilot's expenses are for raw materials after we've switched to the contract manufacturer. I'm happy to see three-month trailing average is positive, albeit lower than usual.
+
+## I'm accidentally hoarding a lot of TinyPilot's release process
+
+When I sold the first few TinyPilot devices, I couldn't get microSD duplication working correctly on my development machine. So, I prepared each customer's device one-by-one by flashing Linux onto a microSD, then running the TinyPilot install script manually on that device.
+
+Since then, I've learned a lot more about the process of releasing software for a hardware device. Our release process has become more mature with more extensive testing, better reproducibility, and additional automation.
+
+I documented our release process in TinyPilot's shared Notion workspace, and I've delegated most of the process to teammates so that new TinyPilot releases aren't blocked on me.
+
+Or, at least, I _thought_ had documented most of the release process.
+
+For the latest release, I challenged myself to refrain from performing any of the steps in the release myself. Instead, I asked teammates to perform the release process based on my documentation.
+
+Before I could even ask a teammate to perform the first task in the release, I realized how much of the process I'd been hoarding and keeping silo'ed in my head. All of the steps in the release were documented, but there was nothing explaining how everything fit together.
+
+I also realized that some tasks in the process like "update [the changelog](https://tinypilotkvm.com/pro/changes)," or "write [the release announcement](https://tinypilotkvm.com/blog/whats-new-in-2023-11)," were significantly more complicated than those short phrases implied. What features do we highlight in our announcments? What are the unwritten rules about how we explain features without getting bogged down in the boring details?
+
+The benefit of documenting my process is that it forces me to think deliberately about all of my decisions. There were a lot of cases where I looked through past releases and tried to extrapolate patterns only to realize that my decisions had been inconsistent. In other cases, I'd done something consistently, but when I had to explain why, I realized there was a better strategy.
+
+Delegating the entire release has been slower than when I did it myself, but it's been a valuable exercise, as it makes our release process less dependent on me, gives us a chance to improve our process, and makes it easier to parallelize parts of the process in the future.
+
 ## Side projects
 
 ### Implementing a bytecode interpreter in Zig
 
-I've been exploring Zig for the past few months, and one of the biggest obstacles to learning more is finding projects that are a good match for Zig.
+I've been [exploring Zig](/tags/zig/) for the past few months, and one of the biggest obstacles to learning more is finding projects that are a good match for Zig.
 
-Most of my ideas for projects are web apps. Go was designed for building web apps, whereas Zig was designed to be a more general-purpose replacement for C. But the result is that for 99% of web apps, Go is going to be a better tool than Zig.
+Most of my ideas for projects are web apps, which usually leads me to Go, as it was designed for building web apps, whereas Zig was designed to be a more general-purpose replacement for C.
 
-Over the past few months, I've also been dipping into the books [_Crafting Interpreters_ by Bob Nystrom](https://craftinginterpreters.com/) and [_Mastering Ethereum_ by Andreas M. Antonopoulos and Gavin Wood](https://github.com/ethereumbook/ethereumbook). _Crafting Interpreters_ demonstrates how to implement a bytecode interpreter in C, and _Matering Ethereum_ describes how the core of Ethereum is a bytecode interpreter called the Ethereum Virtual Machine (EVM).
+Over the past few months, I've been occasionally reading [_Crafting Interpreters_ by Bob Nystrom](https://craftinginterpreters.com/) and [_Mastering Ethereum_ by Andreas M. Antonopoulos and Gavin Wood](https://github.com/ethereumbook/ethereumbook). _Crafting Interpreters_ demonstrates [how to implement a bytecode interpreter](https://craftinginterpreters.com/chunks-of-bytecode.html) in C, and _Mastering Ethereum_ describes how the core of Ethereum is a bytecode interpreter called the Ethereum Virtual Machine (EVM).
 
 So, I realized I could combine a few different interests by writing an implementation of the Ethereum Virtual Machine in Zig, so I started a project called [eth-zvm](https://github.com/mtlynch/eth-zvm).
 
@@ -112,10 +141,11 @@ I don't know how far I'll take the project, but it's serving as a practical way 
 ### What got done?
 
 - Published ["My Sixth Year as a Bootstrapped Founder"](/solo-developer-year-6/), which reached [the #1 spot on Hacker News](https://news.ycombinator.com/item?id=39398009) for the day.
+- Began documenting TinyPilot's release process.
 
 ### Lessons learned
 
--
+- A process isn't really documented until someone has actually used the documentation to follow the process.
 
 ### Goals for next month
 
