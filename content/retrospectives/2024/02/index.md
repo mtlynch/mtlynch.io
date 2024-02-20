@@ -1,7 +1,9 @@
 ---
 title: "TinyPilot: Month 43"
 date: 2024-02-20T00:00:00-05:00
-description: I accidentally hoarded TinyPilot's release process
+description: I accidentally hoarded TinyPilot's release process.
+images:
+  - /retrospectives/2024/02/eth-zvm-benchmarks.png
 tags:
   - zig
 ---
