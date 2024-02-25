@@ -23,8 +23,8 @@ This book complements [_Happy City_](/book-reports/happy-city/) in that both boo
 
 - There were lots of careless grammar and spelling errors.
 - Marohn uses a non-standard format for citing sources, which made me question his research methods.
-- I wish there was a better representation of objection to his ideas.
-  - The way he presents it, all of the policies he advocates for are a no-brainer, and the reason towns haven't adopted them already are inertia and stubbornness.
+- Marohn doesn't present any alternative viewpoints to the policies he advocates for.
+  - The way he presents it, each of his policies is a no-brainer, and the reason towns haven't adopted them already are inertia and stubbornness.
   - I have to imagine that there are stronger objections that he's not presenting.
 - The book is heavy on hypotheticals and light on case studies where towns actually adopt these policies.
 - Marohn introduces a metric for evaluating a town's financial health: tax revenue per acre.
