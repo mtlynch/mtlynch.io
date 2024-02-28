@@ -209,7 +209,7 @@ Last year, I set [three high-level goals](/solo-developer-year-5/#goals-for-year
 
 ### Manage TinyPilot on 20 hours per week
 
-- **Result**: I significantly reduced hours from previous years, and traveled more than any previous year.
+- **Result**: I significantly reduced hours from previous years and traveled more than any previous year.
 - **Grade**: B-
 
 I did worked much less in 2023 than in 2022. I did a lot of travel for both work and non-work. I was "out of the office" for about five weeks cumulatively, and everything went fine.
