@@ -183,13 +183,10 @@ Several indie services I use use Paddle.
 
 ### Learning from a previous bootstrapper's experience
 
-I like his product and I've used it in the past.
+Michal Mazurek wrote two articles about his experience as a bootstrapped SaaS founder working with payment vendors.
 
-Michal Mazurek
-
-https://jasminek.net/blog/post/paddle-problems/
-
-https://jasminek.net/blog/post/payment-solutions/
+- [Paddle.com Woes with Solutions](https://jasminek.net/blog/post/paddle-problems/)
+- [Which Subscription Payment Service Should A Bootstrapping SaaS Choose?](https://jasminek.net/blog/post/payment-solutions/)
 
 ### An intense and confusing onboarding process
 
@@ -264,6 +261,12 @@ $ curl \ --request POST \
     }
 }
 ```
+
+If I called the non-preview API with the exact same data, everything worked as expected. I could see in my management portal that Paddle correctly incremented the customer’s bill from $0.99 to $1.01:
+
+{{<img src="paddle-101.png" max-width="550px" has-border="true">}}
+
+I reported the apparent bug to customer support to ask what was going on, and they said they'd confer with the team to make sense of the behavior I was seeing. I never heard back, and that was two months ago.
 
 ### Paddle summary
 
