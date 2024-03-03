@@ -1,57 +1,178 @@
 ---
-title: "Trying to find a payment processor for a paid API"
-date: 2023-10-14T07:42:34-04:00
+title: "All the Payment Platforms Suck for Small-Scale Paid APIs"
+date: 2024-03-03T00:00:00-04:00
 ---
 
-Supports usage based billing / metered billing
+In 2018, I created [a simple API](https://zestfuldata.com) that converts plain recipe ingredients into software-friendly structured data. If you give it an ingredient like `"2 1/2 tablespoons finely chopped parsley"`, my API parses it into this:
 
-Acts as merchant of record
+```json
+{
+  "quantity": 2.5,
+  "unit": "tablespoon",
+  "product": "parsley",
+  "preparationNotes": "finely chopped",
+  "usdaInfo": {
+    "fdcId": "170416",
+    "matchMethod": "exact",
+    "category": "Vegetables and Vegetable Products",
+    "description": "Parsley, fresh"
+  }
+}
+```
 
-Nice to have:
+It's not much, but the API has generated $22k in total revenue over the past six years (after platform fees). I put it into maintenance mode back in 2020, but the API still brings in about $150/month of passive income.
 
-- Provider has their own sign-up flow so I don't have to implement it.
+Customers purchase access to my API through a service called RapidAPI. I've always been dissatisfied with that platform. Their user interface is atrocious, they do a terrible job at preventing abuse, and their customer service is rarely helpful.
 
-## Overview
+In September 2023, RapidAPI allowed a user to rack up [$14k in usage fees](/retrospectives/2023/10/#i-need-to-migrate-away-from-rapidapi-for-spite) against my service but didn't try to bill them at all until two months later. Naturally, they collected nothing at all from the user. Worse, RapidAPI didn't even ban the abusive user or deactivate their account.
+
+RapidAPI's terrible handling of the abuse situation prompted me to search for alternative payment processors that are compatible with a paid API service. I sadly couldn't find any attractive option, but I'm sharing my the results of my investigation in case they're helpful to other indie API vendors.
+
+## What I want from a payment processor
+
+### Must-haves
+
+- Provider acts as a merchant of record for tax purposes.
+  - Otherwise, I'm responsible for calculating sales tax and filing taxes in potentially hundreds of tax jurisdictions.
+  - If the provider is a merchant of record, they are responsible for paying all sales tax, and you're just responsible for paying income tax on the revenue they collect for you.
+- Provider supports usage-based billing ("metered billing").
+  - Some customers want to make hundreds of API calls per day, and others want to make hundreds of thousands, so I want to let customers pay for exactly what they use.
+- Provider publishes their pricing.X
+  - No "call us for pricing."
+- Provider allows you to use their services in a self-serve flow.
+  - No "contact us to book a demo."
+
+### Nice-to-haves
+
+- Provider offers a built-in sign-up flow for end-users, so I don't have to implement it.
+- Provider can proxy my API and do their own usage calculations and authentication rather than me reporting usage to them.
+
+## Summary
+
+### Providers who meet my criteria
 
 | Provider     | Fees | Support for metered billing | Onboarding experience | Overall experience |
 | ------------ | ---- | --------------------------- | --------------------- | ------------------ |
+| Paddle       | 5%   | B-                          | C+                    | C                  |
 | RapidAPI     | 23%  | C                           | A-                    | D                  |
-| LemonSqueezy | 5%   | B                           | C                     | XX                 |
-| Paddle       | 5%   | B-                          | C+                    | XX                 |
+| LemonSqueezy | 5%   | B                           | C                     | D-                 |
+
+### Payment gateways who don't meet my criteria
+
+- Stripe
+  - They're not a merchant of record.
+  - I wish they were because they seem to meet all my other criteria well.
+  - They can [calculate and collect sales tax](https://stripe.com/tax) for you and show you what you owe, but you're still responsible for filing and paying sales tax in every jurisdiction where you have customers.
+- Lago
+  - They're not a merchange of record.
+  - They're not even a payment gateway, but they can integrate with other payment gateways.
+  - They have no published pricing for their product. You have to book a demo with them.
+- FastSpring
+  - They don't support suport usage-based billing.
+  - I theoretically could force usage-based billing in that FastSpring allows me to bill the customer every time they use my service, but my service is $0.02 per parse, so I'd have to charge my customers' credit cards hundreds or thousands of times per month for tiny amounts.
+- Chargebee
+  - I couldn't find anything on their website saying whether they are or are not a merchant of record, which means they're probably not.
+  - Their [docs say](https://www.chargebee.com/docs/2.0/us-sales-tax.html) you have to figure out your own tax rate, which strongly implies they're not a merchant of record.
+- [Reach](https://www.withreach.com/)
+  - They don't support metered billing.
 
 ## LemonSqueezy
 
-Seems indie friendly.
+LemonSqueezy initially seemed like they'd be a great match for me. They cater to small-scale vendors, and they have simple options to match my simple needs.
 
-I contacted them through their support portal asking about payment thresholds, and they said they'd get back to me in a few hours, and I never heard back.
+### Confusing support for metered billing
 
-Setup was pretty straightforward. Requires manual review before my store can be approved.
+LemonSqueezy's UI seemed to support metered billing exactly how I want. It took me a few tries to figure out how to map my intended usage onto LemonSqueezy's UI semantics. I eventually figured out that I could do what I want by choosing a "Subscription" pricing mode with "Volume pricing" as my model. Then I selected "$0.02" as the price for each unit, which would be the price for each ingredient conversion through my API.
 
-I like the automatic subscription management portal and that I can host on a custom domain.
+{{<img src="lemonsqueezy-settings.png" max-width="550px" has-border="true" caption="LemonSqueezy makes it easy for vendors to set up metered billing.">}}
 
-{{<img src="lemonsqueezy-settings.png" max-width="550px" has-border="true">}}
+The problem with LemonSqueezy is that they're bad at conveying to end-users that my service is billed by usage. When a customer signs up for my API through LemonSqueezy, the checkout page erroneously tells them that the cost is $0.00:
 
-Doesn't make it obvious to the user that they're paying for usage. It tells them they have a $0 bill.
+{{<img src="zero-dollar-bill.webp" max-width="550px" has-border="true" caption="LemonSqueezy incorrectly tells usage-based API customers that their bill will be $0.00.">}}
 
-{{<img src="zero-dollar-bill.png" max-width="550px" has-border="true">}}
-
-Email confirmation is better:
+LemonSqueezy sends customers an email confirmation after they sign up, and that makes it clearer that the bill depends on usage and is not always $0:
 
 {{<img src="email-confirmation.png" max-width="550px" has-border="true">}}
 
-No language SDKs, but their APIs do confirm to json:api, so it's a little easier to use them.
+One of
 
-Not seeing usage thresholds, but you can manually invoice a customer midway through a billing cycle or set billing to weekly.
+When I signed up as an end-user through LemonSqueezy, I couldn't find anything in the user portal to show me what my usage charges were, so I think the API provider is responsible for creating that UI for their end users.
+
+### Slow response from customer support
+
+I contacted them through their support portal asking about payment thresholds, and they said they'd get back to me in a few hours. I didn't hear back for a full month, though when I did, it was from Gilbert Pellegrom, LemonSqueezy's CTO and co-founder.
+
+### Onboarding
+
+Setup was pretty straightforward. Requires manual review before my store can be approved, but that process only took one day.
+
+I like the automatic subscription management portal and that I can host on a custom domain.
+
+### Billing thresholds
+
+LemonSqueezy's CTO confirmed that they don't support billing thresholds (i.e., charge the customer's card every $500), but you can manually invoice a customer midway through a billing cycle or set billing to weekly.
 
 {{<img src="manual-invoice.png" max-width="550px" has-border="true">}}
 
-No dev support in the web dashboard. Stripe is very dev-oriented and shows API identifiers for customers and subscriptions, but LemonSqueezy doesn't show that anywhere in the UI, so I'd have to write custom code to find these identifiers.
+### Developer experience
 
-JSONAPI is ugly
+LemonSqueezy's main focus is as a simple checkout for digital goods. If you have a PDF or a video you want to sell, LemonSqueezy
 
-Was able to make usage based API calls okay.
+LemonSqueezy's support for developer-focused products (e.g., paid API services) is much less mature. And you see it very distinctly in the admin UI. If you've used a dev-oriented service like Stripe or Paddle, you're used to a UI that shows you programmatic identifiers for everything you can see in the admin UI.
 
-Currently trying to figure out if user can see their usage anywhere or if I'm responsible for showing that. Would be no worse than RapidAPI.
+{{<img src="paddle-ids.png" max-width="800px" has-border="true" caption="Paddle's admin UI makes it easy to access programmatic IDs for every object available through the web interface.">}}
+
+In LemonSqueezy's admin UI, certain identifiers are just not available. LemonSqueezy will show you customers and subscriptions in the admin UI, but there's no way to find out a customer's subscription ID from the
+
+{{<img src="jane-test.webp" max-width="500px" has-border="true" caption="LemonSqueezy shows me customers and subscriptions in the admin UI, but there's no way to find their programmatic identifiers via the web interface.">}}
+
+To work around LemonSqueezy omitting identifiers in the web UI, to get customer's subscription IDs, I have to do it programmatically, like this:
+
+```bash
+curl "https://api.lemonsqueezy.com/v1/subscriptions" \
+  -H 'Accept: application/vnd.api+json' \
+  -H 'Content-Type: application/vnd.api+json' \
+  -H "Authorization: Bearer ${LEMONSQUEEZY_API_KEY}" | python3 -m json.tool
+```
+
+LemonSqueezy's API is also a bit awkward. With most other vendors, to bill customer `12345` for 25 units of service, I'd expect to POST something like `{ "subscriptionID": 12345, "usage": 25}`.
+
+Here's what the API call looks like in LemonSqueezy:
+
+```bash
+curl "https://api.lemonsqueezy.com/v1/usage-records" \
+     -H 'Accept: application/vnd.api+json' \
+     -H 'Content-Type: application/vnd.api+json' \
+     -H "Authorization: Bearer ${LEMONSQUEEZY_API_KEY}" \
+     -d '{
+  "data": {
+    "type": "usage-records",
+    "attributes": {
+      "quantity": 25,
+      "action": "increment"
+    },
+    "relationships": {
+      "subscription-item": {
+        "data": {
+          "type": "subscription-items",
+          "id": "12345"
+        }
+      }
+    }
+  }
+}'
+```
+
+### LemonSqueezy summary
+
+- Pros
+  - They have a simpler interface than most other vendors.
+  - They seem to be rapidly iterating and adding functionality.
+  - I did get a response directly from their CTO, albeit a month late.
+- Cons
+  - Their focus is on one-time sales and not subscriptions or metered billing.
+  - They don't show end-users what usage they've accrued on their bill. In some places, they incorrectly tell customers their bill is $0.
+  - Their developer experience for vendors is a bit weak.
 
 ## Paddle
 
@@ -77,7 +198,10 @@ https://github.com/Fakerr/go-paddle
 
 I like his product and I've used it in the past.
 
+Michal Mazurek
+
 https://jasminek.net/blog/post/paddle-problems/
+
 https://jasminek.net/blog/post/payment-solutions/
 
 ```bash
@@ -240,32 +364,16 @@ curl \
 }
 ```
 
-## Other providers that don't meet my criteria
+### Paddle summary
 
-### Stripe
+- Pros
+- Cons
 
-They seem to have very nice support for metered billing, including a customer dashboard that shows metered usage and allowing you to set billing thresholds, but they're not a merchant of record.
+## RapidAPI
 
-### Lago
+### RapidAPI summary
 
-Not self-serve, need to book a demo with them. No published pricing for hosted version.
+- Pros
+- Cons
 
-Not merchant of record, not even a payment gateway. They can integrate with Paddle and have Paddle act as merchant of record.
-
-### FastSpring
-
-Doesn't suport usage-based billing.
-
-They kind of do in that you're allowed to bill the customer every time they use a service, but my service is $0.02 per parse, so they'd be charged thousands of times for smaller than the minimum probably.
-
-### Chargebee
-
-Doesn't say whether they're merchant of record, so they're probably not.
-
-Docs say you have to figure out your own tax rate: https://www.chargebee.com/docs/2.0/us-sales-tax.html
-
-### Reach
-
-https://www.withreach.com/
-
-Doesn't support metered billing.
+## Conclusion: Begrudgingly stick with RapidAPI
