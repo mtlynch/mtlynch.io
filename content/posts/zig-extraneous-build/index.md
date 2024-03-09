@@ -89,13 +89,49 @@ My program is measuring its own runtime, so the overhead of compiling it first s
 
 What was going on?
 
-## What is bytecode interpreter?
+## Asking the Zig community for help
 
-I vaguely understood what . Compilers like gcc and clang transform a language like C into assembly code, so they run
+I [asked on Ziggit](https://ziggit.dev/t/zig-build-run-is-10x-faster-than-compiled-binary/3446?u=mtlynch), a discussion forum for Zig.
 
-Compilers like Java or C# compile the language into bytecode. And then as long as a bytecode interpreter is available for that platform, the
+The first few responses said "input buffering" but they didn't have concrete suggestions to fix it or investigate further.
 
-##
+Andrew Kelly, Zig's founder and lead developer made [a surprise appearance in the thread](https://ziggit.dev/t/zig-build-run-is-10x-faster-than-compiled-binary/3446/8?u=mtlynch) and pointed out that I was making a different performance mistake, but he couldn't explain the phenomenon I was seeing.
+
+> Looks like you’re doing 1 syscall per byte read? That’s going to perform extremely poorly. My guess is that the extra steps of using the build system incidentally introduced some buffering. Not sure why though. The build system is making the child process inherit the file descriptors directly.
+>
+> -Andrew Kelly, Zig founder
+
+Finally, my friend [Andrew Ayer](https://www.agwa.name) saw my post about this on Mastodon and [had a clear explanation](https://m.mtlynch.io/@agwa@agwa.name/112039058255070708) to explain the mysterious performance measurement:
+
+> Do you still see the 10x disparity with significantly larger inputs (i.e. > 1MB)? Do you still the disparity if you redirect stdin from a file instead of a pipe?
+>
+> My guess is that when you execute the program directly, xxd and count-bytes start at the same time, so the pipe buffer is empty when count-bytes first tries to read from stdin, requiring it to wait until xxd fills it. But when you use zig build run, xxd gets a head start while the program is compiling, so by the time count-bytes reads from stdin, the pipe buffer has been filled.
+
+Incidentally, Andrew Ayer also had the key insight that [solved my last performance mystery](/notes/picoshare-perf/#ram-bloat-is-fine-but-crashes-are-not).
+
+## My mental model of bash pipelines is wrong
+
+I had never thought too carefully about bash pipelines, but Andrew's comment made me realize my mental model was wrong.
+
+Imagine a simple bash pipeline like the following:
+
+```bash
+./jobA | ./jobB
+```
+
+My mental model was that `jobA` would start and run to completion, then `jobB` would start with `jobA`'s output as its input.
+
+It turns out that in a bash pipline command, all the commands in the pipeline start at the same time.
+
+```bash
+printf '#!/usr/bin/env bash\necho 'hello''
+```
+
+## Fixing my benchmark
+
+It can read directly from a file.
+
+## Applying Andrew Kelly's performance fix
 
 As a way of teaching myself about the Zig programming language, I've been working on a bytecode interpreter for the Ethereum virtual machine.
 
