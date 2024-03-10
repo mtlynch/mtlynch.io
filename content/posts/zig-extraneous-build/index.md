@@ -6,13 +6,13 @@ tags:
   - ethereum
 ---
 
-I'm interested in learning the Zig programming language, and I think Ethereum sounds neat, so to learn about both, I started a hobby project of implementing a bytecode interpreter for the Ethereum Virtual Machine in Zig.
+For the past few months, I've had a curiousity about two new technologies: the Zig programming language and the Ethereum cryptocurrency. To learn more about both, I've been using Zig to write a bytecode interpreter for the Ethereum Virtual Machine.
 
-Zig is a great language for performance optimization, as it gives you fine-grained control over memory and control flow. To make my project more fun, I've been benchmarking my implementation against the official Go implementation of Ethereum.
+Zig is a great language for performance optimization, as it gives you fine-grained control over memory and control flow. To motivate myself, I've been benchmarking my Ethereum implementation against the official Go implementation.
 
 TODO: Show benchmarks
 
-I got a surprise when I wrote a convenience script to automate the benchmarking process, and my app's performance tanked. Through experimentation, I narrowed it down to the difference between the following two commands:
+Recently, I made what I thought was a simple refactoring to my benchmarking script, and my app's performance tanked. Through trial and error, I narrowed the change down to the difference between these two commands:
 
 ```bash
 $ echo '60016000526001601ff3' | xxd -r -p | zig build run -Doptimize=ReleaseFast
@@ -24,15 +24,18 @@ $ echo '60016000526001601ff3' | xxd -r -p | ./zig-out/bin/eth-zvm
 execution time:  438.059µs
 ```
 
-But `zig build run` is just a convenience tool for building the binary and executing it.
+`zig build run` is just a convenience tool for building a binary and executing it. In fact, it should be completely equivalent to the following commands:
+
+```bash
+zig build
+./zig-out/bin/eth-zvm
+```
 
 How could my program be running almost 10x _faster_ with an extra build step?
 
 ## Creating a minimal reproduction of the phenomenon
 
-At first, I tried performance
-
-Then, I just tried chopping parts out of my app until it was no longer a bytecode interpreter and was just a program that counted the number of bytes you gave it.
+To debug the performance mystery, I tried trimming out parts out of my app until it was no longer a bytecode interpreter and was just a program that counted the number of bytes it read from standard input:
 
 ```zig
 // src/main.zig
@@ -71,29 +74,35 @@ pub fn main() !void {
 
 And I could still see the performance difference I was seeing with my more complex interpreter. When I ran the bye counter with `zig build run`, it ran in 13 microseconds:
 
-```
+```bash
 $ echo '00010203040506070809' | xxd -r -p | zig build run -Doptimize=ReleaseFast
 bytes:           10
 execution time:  13.549µs
 ```
 
-When I ran the compiled binary directly, it ran over 10x slower, completing in 162 microseconds:
+The test command runs three commands:
 
-```
+1. Use `echo` to print a sequence of ten hex-encoded bytes (`0x00`, `0x01`, ...).
+1. Use `xxd` to convert `echo`'s hex-encoded bytes to binary-encoded bytes.
+1. Use `zig build run` to compile my byte counter program and run it, counting the number of binary-encoded bytes that `xxd` emitted.
+
+`zig build run` compiles the source code into a `count-bytes` binary executable, but when I ran the compiled binary directly, it took 12x as long to run, completing in 162 microseconds:
+
+```bash
 $ echo '00010203040506070809' | xxd -r -p | ./zig-out/bin/count-bytes
 bytes:           10
 execution time:  162.195µs
 ```
 
-My program is measuring its own runtime, so the overhead of compiling it first shouldn't make it faster or slower. So, it was surprising to see that it ran 10x slower without the `zig build run` syntax.
-
-What was going on?
+How could cutting out an extra compilation step make the program _slower_?
 
 ## Asking the Zig community for help
 
-I [asked on Ziggit](https://ziggit.dev/t/zig-build-run-is-10x-faster-than-compiled-binary/3446?u=mtlynch), a discussion forum for Zig.
+At this point, I was stumped. I had read my source code over and over, and I couldn't understand the behavior I was seeting.
 
-The first few responses said "input buffering" but they didn't have concrete suggestions to fix it or investigate further.
+Zig is still a new and fairly niche language, so my best hypothesis was that there was something about Zig I wasn't understanding. I thought experienced Zig programmers would look at my program and point out something I misunderstood about the language.
+
+I [posted my question on Ziggit](https://ziggit.dev/t/zig-build-run-is-10x-faster-than-compiled-binary/3446?u=mtlynch), a discussion forum for Zig. The first few responses said "input buffering" but they didn't have concrete suggestions to fix it or investigate further.
 
 Andrew Kelly, Zig's founder and lead developer made [a surprise appearance in the thread](https://ziggit.dev/t/zig-build-run-is-10x-faster-than-compiled-binary/3446/8?u=mtlynch) and pointed out that I was making a different performance mistake, but he couldn't explain the phenomenon I was seeing.
 
