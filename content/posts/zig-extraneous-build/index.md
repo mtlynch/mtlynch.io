@@ -133,17 +133,48 @@ My mental model was that `jobA` would start and run to completion, then `jobB` w
 It turns out that in a bash pipline command, all the commands in the pipeline start at the same time.
 
 ```bash
-printf '#!/usr/bin/env bash\necho 'hello''
+#!/usr/bin/env bash
+
+echo 'jobA is starting' >&2
+
+sleep 3
+
+echo 'result of jobA is...'
+
+sleep 2
+
+echo '42'
+
+echo 'jobA is terminating' >&2
+```
+
+```bash
+#!/usr/bin/env bash
+
+echo 'jobB is starting' >&2
+
+echo 'jobB is waiting on input' >&2
+while read line
+do
+  echo "jobB read '${line}' from input"
+done < /dev/stdin
+echo 'jobB is done reading input' >&2
+
+echo 'jobB is terminating' >&2
 ```
 
 ## Fixing my benchmark
 
 It can read directly from a file.
 
+Hooray, now I'm
+
 ## Applying Andrew Kelly's performance fix
 
-As a way of teaching myself about the Zig programming language, I've been working on a bytecode interpreter for the Ethereum virtual machine.
+## Cheating my way to maximum performance
 
-Zig gives the developer fine-grained control over performance, so I've been benchmarking my hobby interpreter's performance against the official Ethereum implementation, written in Go. So far, my implementation is doing pretty well against Go, but I haven't done a ton to optimize performance yet.
+The slowest part of my program is probably memory allocation. Zig has a memory allocator called the fixed buffer allocator. Instead of the memory allocator requesting memory from the operating system, the fixed-buffer allocator allocates memory from a fixed buffer of bytes.
 
-I got a strange surprise when I
+This is extremely fast because you avoid asking the OS for memory, but it also requires you to know how much memory you need up front.
+
+We can cheat because I know my benchmarks don't require more than about 1 KB of memory (though there are valid Ethereum bytecode sequences that require more). But just for fun, let's see what performance looks like if I know my max memory requirement at compile time:
