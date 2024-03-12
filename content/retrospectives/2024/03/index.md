@@ -23,24 +23,24 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Publish TinyPilot Pro 2.6.3
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: We published the release.
+- **Grade**: A
 
-TODO
+We were trying to expose any release steps that are accidentally silo'ed with me, so this was the first release where I didn't perform any release step directly. The team performed every step based on shared documentation, including things like writing [the changelist](https://tinypilotkvm.com/pro/changes#263) and the [release announcement](https://tinypilotkvm.com/blog/whats-new-in-2024-03).
 
 ### Document TinyPilot Pro's release process internally
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: I documented enough to cover the release, but there are still areas to improve.
+- **Grade**: B+
 
-TODO
+Documenting the release process was a great exercise in that exposed not only undocumented processes but also weaknesses in our process. In documenting our release workflow, I realized that we hadn't critically examined much of it, so there were lots of places that were unnecessarily labor-intensive, error-prone, or pushed us to reinvent the wheel.
 
 ### File 2023 taxes
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: Gathered most documents, but I haven't filed yet.
+- **Grade**: B
 
-TODO
+I ended up getting sidetracked by the TinyPilot release, but I still think it's probably a good idea to file my taxes this year.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -55,17 +55,26 @@ TODO
 | Total Revenue            | $103,612.79    | $86,181.77     | <font color="red">-$17,431.02 (-17%)</font>     |
 | **Profit**               | **$79,764.14** | **$24,199.09** | **<font color="red">-$55,565.05 (-70%)</font>** |
 
-## Do we need a 26-step release process?
+We saw a big surge in visitors due to the attention [my annual review](/solo-developer-year-6/) generated, but it didn't seem to impact TinyPilot sales much. There was a 17% drop in sales, but that's mainly due to January being an atypically strong month. $75-95k/month in sales is our typical range.
 
-I had delegated the hardest tasks, but I was still juggling a lot of them. Out of 26 release tasks, I was still responsible for 23 of them.
+I need a new way to report monthly profit because switching to the contract manufacturer has made our cash profit numbers basically meaningless at the one-month resolution. Our profit each month is dominated by the timing of manufacturing bills pay every three to four months.
 
-Until no
+That said, our three-month trailing average profit is back in the $10-20k range I like to see.
 
-I felt like I wasn't doing that much, but I was still doing
+## It turns out we have a 25-step release process
+
+Originally, TinyPilot software releases were entirely my job. As the product matured and we added more steps to the process, releases grew to be 10-20 hours of work.
+
+About 18 months in, I delegated the hardest release tasks &mdash; most of the manual testing. That cut my time down to three to five hours per release, and I felt like I'd done a good job delegating.
+
+This last release, I challenged myself to delegate _everything_. I wanted to make sure releases could move forward at times when I'm not available.
+
+I started writing instructions for the tasks I still owned, expecting to document just a handful of steps.
+
+When I enumerated everything I was still doing every release, I realized we had 25 distinct subtasks as part of every release:
 
 > ### Testing a release candidate
 >
-> 1. Assign a release captain
 > 1. Create a release candidate build
 > 1. Draft the changelog
 > 1. Draft security advisories (if applicable)
@@ -76,13 +85,13 @@ I felt like I wasn't doing that much, but I was still doing
 > 1. Test release candidate on a DIY device
 > 1. Run automated end-to-end tests
 > 1. Review test results
-> 1. Decide whether to publish based on tests
+> 1. Decide whether to publish the release
 >
 > ### Publishing the release
 >
 > 1. Publish security advisories (if applicable)
 > 1. Publish the changelog
-> 1. Publish the production release
+> 1. Publish TinyPilot Pro production release
 > 1. Perform post-release tests
 > 1. Announce release to TinyPilot team
 > 1. Add image hashes to changelog
@@ -98,20 +107,37 @@ I felt like I wasn't doing that much, but I was still doing
 > 1. Send release announcement to mailing list
 > 1. Share blog post on TinyPilot’s Twitter
 
+I had only documented and delegated three of them: the ones that required manual testing. But I was still doing the other 22 tasks.
+
+Until no
+
+I felt like I wasn't doing that much, but I was still doing
+
 ## Some release tasks are deceptively hard to delegate
 
-If there's a question about the code, I generally can figure out the answer because I follow all of TinyPilot's software changes. If there's a question about users, I know that without asking anyone.
+Some tasks turned out to be much harder to delegate than I expected. I was kind of "cheating" in that I have context across teams, whereas other TinyPilot team members generally do not.
 
 ### Making a go vs. no-go decision
 
-1. What is the user impact of this bug?
-1. How much time would it take to fix this bug?
-1. How difficult is it to re-perform the tests that verify this fix?
-1. What is the probability that the bugfix accidentally breaks another feature?
+There are a few distinct roles. There's the product owner, who represents . There's the developer, who understands how TinyPilot's code works. And there's the release captain, who's responsible for driving the release.
+
+If we discover a bug during testing, a few things need to happen:
+
+1. The person performing the test or reviewing the test footage needs to recognize the bug.
+1. The dev team needs to estimate how long it will take to fix the bug and how risky the fix is.
+1. The product owner needs to weigh the cost and risk of fixing the bug and re-testing vs. the cost of shipping with the bug as-is.
+
+When I'm performing all the release steps, that process is relatively easy. I'm comfortable with TinyPilot's codebase, so I have a pretty good estimate of how difficult and risky it is to fix a bug without waiting for feedback from them. And I'm the product owner, so I can decide how much it matters if we ship with this bug vs. fixing it pre-release.
+
+When I delegate the release, these tasks suddenly become much more complicated. Suddenly, information is spread across multiple people on multiple teams. How should the relase manager get information from the dev team, and then how does the product owner get all the information they need to decide if the bug is worth fixing?
 
 ### Writing security advisories
 
 We'd only had three security advisories, and I've written all of them. At first, I thought it would be easy. Just look at our previous three advisories, and write a new one like that.
+
+- How do we decide what's a Low vs. Medium vs. High severity issue?
+- What kinds of bugs merit a security advisory at all?
+- How do we responsibly inform customers about risks without panicking them about unlikely attack scenarios?
 
 ### Recognizing when features misbehave
 
@@ -121,21 +147,25 @@ I'm planning in future release to have the support engineering team work with th
 
 ### I've written the world's fastest (incomplete) Ethereum implementation
 
-{{<img src="eth-benchmarks-before.webp" max-width="600px" has-border="true" caption="After fixing a few simple bugs, my Zig Ethereum implementation outperforms the official implementation by 30-40% (lower is better)">}}
+I mentioned last month that I'd found a fun way to learn more about Zig, interpreters, and Ethereum &mdash; I'm writing an Ethereum bytecode interpreter in Zig.
 
-It turned out I was performing a syscall for every byte read, and I had a separate bug in my benchmarking measurement.
+One of the advantages to working in Zig is that I have a high degree of control over performance. One of my earliest tasks on my interpreter was to set up benchmarks in continuous integration to compare my implementation to the official Go implementation.
 
-Once I fixed the bugs, my Zig implementation now outperforms the Go implementation by 30-40%.
+For a while, my Zig version was slightly underperforming the Go version, but then I refactored my benchmarking scripts and my performance mysteriously tanked.
+
+{{<img src="eth-benchmarks-before.webp" max-width="600px" has-border="true" caption="The official Go implementation was pummeling my Zig implementation (lower is better)">}}
+
+I [asked for help on Ziggit](https://ziggit.dev/t/zig-build-run-is-10x-faster-than-compiled-binary/3446?u=mtlynch), a Zig forum, and it turned out I had a bug in both [my benchmarking scripts](https://ziggit.dev/t/zig-build-run-is-10x-faster-than-compiled-binary/3446/12?u=mtlynch) and [in my Zig code](https://ziggit.dev/t/zig-build-run-is-10x-faster-than-compiled-binary/3446/8?u=mtlynch). Once I fixed those two simple bugs, my Zig version zoomed past the Go version. My implementation now outperforms the official implementation by 30-40%.
 
 {{<img src="eth-benchmarks-after.webp" max-width="600px" has-border="true" caption="After fixing a few simple bugs, my Zig Ethereum implementation outperforms the official implementation by 30-40% (lower is better)">}}
 
-To be fair, my version only implements about 3% of Ethereum, so I have a massive unfair advantage, but it continues to be a fun project.
+To be fair, my version only implements about 3% of Ethereum, so I have an unfair advantage, but it continues to be a fun project.
 
 ## Wrap up
 
 ### What got done?
 
--
+- Published [TinyPilot Pro 2.6.3](https://tinypilotkvm.com/blog/whats-new-in-2024-03)
 
 ### Lessons learned
 
@@ -143,5 +173,5 @@ To be fair, my version only implements about 3% of Ethereum, so I have a massive
 
 ### Goals for next month
 
-- Fill in all gaps in TinyPilot's release documentation.
+- Fill the gaps in TinyPilot's release documentation.
 - Complete 2023 taxes.
