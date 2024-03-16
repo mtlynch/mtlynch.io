@@ -7,11 +7,22 @@ tags:
   - bash
 ---
 
+<style>
+  .chart-container {
+    max-width: 800px;
+    max-height: 300px;
+    display: flex;
+    justify-content: center;
+  }
+</style>
+
 For the past few months, I've been curious about two technologies: the Zig programming language and the Ethereum cryptocurrency. To learn more about both, I've been using Zig to write a bytecode interpreter for the Ethereum Virtual Machine.
 
 Zig is a great language for performance optimization, as it gives you fine-grained control over memory and control flow. To motivate myself, I've been benchmarking my Ethereum implementation against the official Go implementation.
 
-TODO: Show benchmarks
+<div class="chart-container">
+  <canvas id="count-to-1000-by-1-v0"></canvas>
+</div>
 
 Recently, I made what I thought was a simple refactoring to my benchmarking script, and my app's performance tanked. I identified the relevant change as the difference between these two commands:
 
@@ -189,7 +200,9 @@ $ ./zig-out/bin/eth-zvm < "${INPUT_FILE_BINARY}"
 execution time:  67.378µs
 ```
 
-TODO: Graph of performance improvement
+<div class="chart-container">
+  <canvas id="benchmark-fix"></canvas>
+</div>
 
 ## Applying Andrew Kelly's performance fix
 
@@ -266,3 +279,6 @@ This is extremely fast because you avoid asking the OS for memory, but it also r
 We can cheat because I know my benchmarks don't require more than about 1 KB of memory (though there are valid Ethereum bytecode sequences that require more). But just for fun, let's see what performance looks like if I know my max memory requirement at compile time:
 
 TODO: Chart of performance
+
+<script src="chart.umd.js"></script>
+<script src="script.js"></script>
