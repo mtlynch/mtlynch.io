@@ -1,6 +1,5 @@
 function populateGraph(graphId, values, labels) {
   const ctx = document.getElementById(graphId);
-  console.log("values", values);
   new Chart(ctx, {
     type: "bar",
     data: {
@@ -12,9 +11,14 @@ function populateGraph(graphId, values, labels) {
           backgroundColor: [
             "rgba(75, 192, 192, 0.2)",
             "rgba(54, 162, 235, 0.2)",
+            "rgba(24, 24, 255, 0.2)",
           ],
 
-          borderColor: ["rgb(75, 192, 192)", "rgb(54, 162, 235)"],
+          borderColor: [
+            "rgb(75, 192, 192)",
+            "rgb(54, 162, 235)",
+            "rgb(24, 24, 255)",
+          ],
           borderWidth: 1,
         },
       ],
@@ -39,9 +43,28 @@ function populateGraph(graphId, values, labels) {
 }
 
 populateGraph(
-  "count-to-1000-by-1-v0",
-  [40.338, 24.217],
-  ["eth-zvm (My Zig implementation)", "evm (Official Go implementation)"]
+  "demo-command",
+  [24.217, 40.338],
+  ["evm (Official Go implementation)", "eth-zvm (My Zig implementation)"]
+);
+
+populateGraph(
+  "count-to-1000-by-1-v2",
+  [95.423, 58.076],
+  [
+    "evm (Official Go implementation)",
+    "eth-zvm (My Zig implementation, after fixes)",
+  ]
+);
+
+populateGraph(
+  "count-to-1000-by-1-v3",
+  [95.423, 58.076, 34.457],
+  [
+    "evm (Official Go implementation)",
+    "eth-zvm (My Zig implementation, after fixes)",
+    "eth-zvm (My Zig implementation, no memory allocation)",
+  ]
 );
 
 populateGraph(

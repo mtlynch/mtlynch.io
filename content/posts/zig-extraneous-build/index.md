@@ -1,5 +1,5 @@
 ---
-title: "Why does an extraeous build step make my Zig app 10x faster?"
+title: "Why does an extraneous build step make my Zig app 10x faster?"
 date: 2024-03-16T00:00:00-05:00
 tags:
   - zig
@@ -21,7 +21,7 @@ For the past few months, I've been curious about two technologies: the Zig progr
 Zig is a great language for performance optimization, as it gives you fine-grained control over memory and control flow. To motivate myself, I've been benchmarking my Ethereum implementation against the official Go implementation.
 
 <div class="chart-container">
-  <canvas id="count-to-1000-by-1-v0"></canvas>
+  <canvas id="demo-command"></canvas>
 </div>
 
 Recently, I made what I thought was a simple refactoring to my benchmarking script, and my app's performance tanked. I identified the relevant change as the difference between these two commands:
@@ -36,14 +36,14 @@ $ echo '60016000526001601ff3' | xxd -r -p | ./zig-out/bin/eth-zvm
 execution time:  438.059µs
 ```
 
-`zig build run` is just a convenience tool for building a binary and executing it. It should be completely equivalent to the following commands:
+`zig build run` is just a shortcut command for building a binary and executing it. It should be completely equivalent to the following commands:
 
 ```bash
 zig build
 ./zig-out/bin/eth-zvm
 ```
 
-How could my program be running almost 10x _faster_ with an extra build step?
+How could an additional build step cause my program to run almost 10x _faster_?
 
 ## Creating a minimal reproduction of the phenomenon
 
@@ -92,13 +92,7 @@ bytes:           10
 execution time:  13.549µs
 ```
 
-The test command runs three commands:
-
-1. Use `echo` to print a sequence of ten hex-encoded bytes (`0x00`, `0x01`, ...).
-1. Use `xxd` to convert `echo`'s hex-encoded bytes to binary-encoded bytes.
-1. Use `zig build run` to compile my byte counter program and run it, counting the number of binary-encoded bytes that `xxd` emitted.
-
-`zig build run` compiles the source code into a `count-bytes` binary executable, but when I ran the compiled binary directly, it took 12x as long to run, completing in 162 microseconds:
+When I ran the compiled binary directly, it took 12x as long to run, completing in 162 microseconds:
 
 ```bash
 $ echo '00010203040506070809' | xxd -r -p | ./zig-out/bin/count-bytes
@@ -106,13 +100,23 @@ bytes:           10
 execution time:  162.195µs
 ```
 
-How could cutting out an extra compilation step make the program _slower_?
+My test consisted of three commands in a bash pipeline:
+
+1. `echo` prints a sequence of ten hex-encoded bytes (`0x00`, `0x01`, ...).
+1. `xxd` converts `echo`'s hex-encoded bytes to binary-encoded bytes.
+1. `zig build run` compiles and executes my byte counter program, counting the number of binary-encoded bytes that `xxd` emitted.
+
+The only difference between `zig build run` and `./zig-oug/bin/count-bytes` was that the second command runs the already-compile app, whereas the first one recompiles the app.
+
+Again, I was dumbfounded.
+
+How could does an extra compilation step make the program _faster_?
 
 ## Asking the Zig community for help
 
-At this point, I was stumped. I had read my source code over and over, and I couldn't understand the behavior I was seeting.
+At this point, I was stumped. I had read my source code over and over, and I couldn't understand how compiling and running an application could be faster than running the already-compiled binary.
 
-Zig is still a new language, so my hypothesis was that there was something about Zig I wasn't understanding. I thought experienced Zig programmers would look at my program and immediately spot something I'd overlooked.
+Zig is still a new language, so my hypothesis was that there was something about Zig I'd misunderstood. Surely, if experienced Zig programmers looked at my program, they'd immediately spot my error.
 
 I [posted my question on Ziggit](https://ziggit.dev/t/zig-build-run-is-10x-faster-than-compiled-binary/3446?u=mtlynch), a discussion forum for Zig. The first few responses said I had a problem with "input buffering" but they didn't have concrete suggestions to fix it or investigate further.
 
@@ -142,7 +146,9 @@ My mental model was that `jobA` would start and run to completion, then `jobB` w
 
 It turns out that in a bash pipline command, all the commands in the pipeline start at the same time.
 
-I wrote a proof of concept with two simple bash scripts. `jobA` starts, sleeps for three seconds, prints to stdout, sleeps for two more seconds, then exits:
+To demonstrate parallel execution in a bash pipeline, I wrote a proof of concept with two simple bash scripts.
+
+`jobA` starts, sleeps for three seconds, prints to stdout, sleeps for two more seconds, then exits:
 
 {{<inline-file filename="jobA" language="bash">}}
 
@@ -150,7 +156,7 @@ I wrote a proof of concept with two simple bash scripts. `jobA` starts, sleeps f
 
 {{<inline-file filename="jobB" language="bash">}}
 
-If I run `jobA` and `jobB` in a bash pipeline, I can see that they both start at the same time, but there's a 3.004 second delay between when `jobB` starts and when it produces its first line of output, as `jobB` has to wait on output from `jobA`:
+If I run `jobA` and `jobB` in a bash pipeline, exactly 5.009 seconds elapse between the `jobB is starting` and `jobB is terminating` messages:
 
 ```bash
 $ ./jobA | ./jobB
@@ -164,9 +170,23 @@ $ ./jobA | ./jobB
 09:11:58.335 jobB is terminating
 ```
 
+If I adjust the execution so that `jobA` and `jobB` run in sequence instead of a pipeline, only 0.008 seconds elapse between `jobB`'s "starting" and "terminating" messages:
+
+```bash
+$ ./jobA > /tmp/output && ./jobB < /tmp/output
+16:52:10.406 jobA is starting
+16:52:15.410 jobA is terminating
+16:52:15.415 jobB is starting
+16:52:15.417 jobB is waiting on input
+16:52:15.418 jobB read 'result of jobA is...' from input
+16:52:15.420 jobB read '42' from input
+16:52:15.421 jobB is done reading input
+16:52:15.423 jobB is terminating
+```
+
 ## Revisiting my byte counter
 
-Knowing that all commands in a bash pipeline run at the same time, the behavior I was seeing in my byte counter suddenly makes sense:
+Once I understood that all commands in a bash pipeline run in parallel, the behavior I was seeing in my byte counter made sense:
 
 ```bash
 $ echo '00010203040506070809' | xxd -r -p | zig build run -Doptimize=ReleaseFast
@@ -264,11 +284,15 @@ ADD
 ADD
 ```
 
+When the above code terminates, the stack would contain the number `0x03`.
+
 The largest application I tested in my benchmarks was Ethereum bytecode that counted to 1,000 by adding `1` values together.
 
 When I got rid of all the unnecessary syscalls with Andrew Kelly's fix, my "count to 1,000" runtime dropped from 2,024 microseconds to just 58 microseconds, a 35x speedup. I was now beating the official Ethereum implmentation by almost a factor of two.
 
-TODO: Chart of performance
+<div class="chart-container">
+  <canvas id="count-to-1000-by-1-v2"></canvas>
+</div>
 
 ## Cheating my way to maximum performance
 
@@ -276,9 +300,38 @@ The slowest part of my program is probably memory allocation. Zig has a memory a
 
 This is extremely fast because you avoid asking the OS for memory, but it also requires you to know how much memory you need up front.
 
-We can cheat because I know my benchmarks don't require more than about 1 KB of memory (though there are valid Ethereum bytecode sequences that require more). But just for fun, let's see what performance looks like if I know my max memory requirement at compile time:
+We can cheat because I know my benchmarks don't require more than about 1 KB of memory (though there are valid Ethereum bytecode sequences that require more).
 
-TODO: Chart of performance
+```diff
+diff --git a/src/main.zig b/src/main.zig
+index a46f8fa..9e462fe 100644
+--- a/src/main.zig
++++ b/src/main.zig
+@@ -3,9 +3,9 @@ const stack = @import("stack.zig");
+ const vm = @import("vm.zig");
+
+ pub fn main() !void {
+-    var gpa = std.heap.GeneralPurposeAllocator(.{}){};
+-    const allocator = gpa.allocator();
+-    defer _ = gpa.deinit();
++    var buffer: [2000]u8 = undefined;
++    var fba = std.heap.FixedBufferAllocator.init(&buffer);
++    const allocator = fba.allocator();
+
+     const in = std.io.getStdIn();
+     var buf = std.io.bufferedReader(in.reader());
+```
+
+But just for fun, let's see what performance looks like if I know my max memory requirement at compile time:
+
+```bash
+$ ./zig-out/bin/eth-zvm < "${COUNT_TO_1000_INPUT_BYTECODE_FILE}"
+execution time:  34.4578µs
+```
+
+<div class="chart-container">
+  <canvas id="count-to-1000-by-1-v3"></canvas>
+</div>
 
 <script src="chart.umd.js"></script>
 <script src="script.js"></script>
