@@ -272,19 +272,17 @@ execution time:  56.602µs
 
 ## Benchmarking a larger input
 
-I've only put a few hours of work into my Ethereum interpreter, so it only supports a few opcodes. The most complex computation my interpreter can do at this point is add numbers together.
+My Ethereum interpreter currently only supports a small subset of the full set of Ethereum's opcodes. The most complex computation my interpreter can do at this point is add numbers together.
 
-For example, here's an Ethereum application that counts to the number three by pushing three `1` values onto the stack and then adding them together:
+Here's an Ethereum application that counts to three by pushing `1` to the three times and then adding the values together:
 
 ```text
-PUSH1 0x01
-PUSH1 0x01
-PUSH1 0x01
-ADD
-ADD
+PUSH1 1    # Stack now contains [1]
+PUSH1 1    # Stack now contains [1, 1]
+PUSH1 1    # Stack now contains [1, 1, 1]
+ADD        # Stack now contains [2, 1]
+ADD        # Stack now contains [3]
 ```
-
-When the above code terminates, the stack would contain the number `0x03`.
 
 The largest application I tested in my benchmarks was Ethereum bytecode that counted to 1,000 by adding `1` values together.
 
