@@ -23,7 +23,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 I released it! It had a muted reception at first, but now sales seem to be picking up.
 
-### Release the first version of [TinyPilot Pro](https://tinypilotkvm.com/pro?ref=mtlynch.io)
+### Release the first version of [TinyPilot Pro](https://tinypilotkvm.com/product/tinypilot-pro?ref=mtlynch.io)
 
 - **Result**: I haven't even figured out how to distribute TinyPilot Pro.
 - **Grade**: F
@@ -181,6 +181,6 @@ Zestful had a nice jump this month. One of my longtime pay-as-you go customers u
 
 ### Goals for next month
 
-- Release the first version of [TinyPilot Pro](https://tinypilotkvm.com/pro?ref=mtlynch.io).
+- Release the first version of [TinyPilot Pro](https://tinypilotkvm.com/product/tinypilot-pro?ref=mtlynch.io).
 - Receive TinyPilot reviews from two bloggers or YouTubers with a relevant audience.
 - Record five out of seven parts to my [Hacker News course](https://hitthefrontpage.com/).
