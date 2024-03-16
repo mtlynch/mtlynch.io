@@ -1,18 +1,19 @@
 ---
 title: "Why does an extraeous build step make my Zig app 10x faster?"
-date: 2024-03-09T08:15:20-05:00
+date: 2024-03-16T00:00:00-05:00
 tags:
   - zig
   - ethereum
+  - bash
 ---
 
-For the past few months, I've had a curiousity about two new technologies: the Zig programming language and the Ethereum cryptocurrency. To learn more about both, I've been using Zig to write a bytecode interpreter for the Ethereum Virtual Machine.
+For the past few months, I've been curious about two technologies: the Zig programming language and the Ethereum cryptocurrency. To learn more about both, I've been using Zig to write a bytecode interpreter for the Ethereum Virtual Machine.
 
 Zig is a great language for performance optimization, as it gives you fine-grained control over memory and control flow. To motivate myself, I've been benchmarking my Ethereum implementation against the official Go implementation.
 
 TODO: Show benchmarks
 
-Recently, I made what I thought was a simple refactoring to my benchmarking script, and my app's performance tanked. Through trial and error, I narrowed the change down to the difference between these two commands:
+Recently, I made what I thought was a simple refactoring to my benchmarking script, and my app's performance tanked. I identified the relevant change as the difference between these two commands:
 
 ```bash
 $ echo '60016000526001601ff3' | xxd -r -p | zig build run -Doptimize=ReleaseFast
@@ -24,7 +25,7 @@ $ echo '60016000526001601ff3' | xxd -r -p | ./zig-out/bin/eth-zvm
 execution time:  438.059µs
 ```
 
-`zig build run` is just a convenience tool for building a binary and executing it. In fact, it should be completely equivalent to the following commands:
+`zig build run` is just a convenience tool for building a binary and executing it. It should be completely equivalent to the following commands:
 
 ```bash
 zig build
@@ -35,7 +36,7 @@ How could my program be running almost 10x _faster_ with an extra build step?
 
 ## Creating a minimal reproduction of the phenomenon
 
-To debug the performance mystery, I tried trimming out parts out of my app until it was no longer a bytecode interpreter and was just a program that counted the number of bytes it read from standard input:
+To debug the performance mystery, I tried simplifying my app until it was no longer a bytecode interpreter and was just a program that counted the number of bytes it read from stdin:
 
 ```zig
 // src/main.zig
@@ -72,7 +73,7 @@ pub fn main() !void {
 }
 ```
 
-And I could still see the performance difference I was seeing with my more complex interpreter. When I ran the bye counter with `zig build run`, it ran in 13 microseconds:
+With the simplified app, I could still see the performance difference. When I ran the bye counter with `zig build run`, it ran in 13 microseconds:
 
 ```bash
 $ echo '00010203040506070809' | xxd -r -p | zig build run -Doptimize=ReleaseFast
@@ -100,23 +101,21 @@ How could cutting out an extra compilation step make the program _slower_?
 
 At this point, I was stumped. I had read my source code over and over, and I couldn't understand the behavior I was seeting.
 
-Zig is still a new and fairly niche language, so my best hypothesis was that there was something about Zig I wasn't understanding. I thought experienced Zig programmers would look at my program and point out something I misunderstood about the language.
+Zig is still a new language, so my hypothesis was that there was something about Zig I wasn't understanding. I thought experienced Zig programmers would look at my program and immediately spot something I'd overlooked.
 
-I [posted my question on Ziggit](https://ziggit.dev/t/zig-build-run-is-10x-faster-than-compiled-binary/3446?u=mtlynch), a discussion forum for Zig. The first few responses said "input buffering" but they didn't have concrete suggestions to fix it or investigate further.
+I [posted my question on Ziggit](https://ziggit.dev/t/zig-build-run-is-10x-faster-than-compiled-binary/3446?u=mtlynch), a discussion forum for Zig. The first few responses said I had a problem with "input buffering" but they didn't have concrete suggestions to fix it or investigate further.
 
-Andrew Kelly, Zig's founder and lead developer made [a surprise appearance in the thread](https://ziggit.dev/t/zig-build-run-is-10x-faster-than-compiled-binary/3446/8?u=mtlynch) and pointed out that I was making a different performance mistake, but he couldn't explain the phenomenon I was seeing.
+Andrew Kelly, Zig's founder and lead developer made [a surprise appearance in the thread](https://ziggit.dev/t/zig-build-run-is-10x-faster-than-compiled-binary/3446/8?u=mtlynch). He couldn't explain the phenomenon I was seeing, but he pointed out that I was making a different performance mistake:
 
-> Looks like you’re doing 1 syscall per byte read? That’s going to perform extremely poorly. My guess is that the extra steps of using the build system incidentally introduced some buffering. Not sure why though. The build system is making the child process inherit the file descriptors directly.
->
-> -Andrew Kelly, Zig founder
+{{<img src="akelly-post.png"  alt="Looks like you’re doing 1 syscall per byte read? That’s going to perform extremely poorly. My guess is that the extra steps of using the build system incidentally introduced some buffering. Not sure why though. The build system is making the child process inherit the file descriptors directly.">}}
 
-Finally, my friend [Andrew Ayer](https://www.agwa.name) saw my post about this on Mastodon and [had a clear explanation](https://m.mtlynch.io/@agwa@agwa.name/112039058255070708) to explain the mysterious performance measurement:
+Finally, my friend [Andrew Ayer](https://www.agwa.name) saw my post about this on Mastodon and [solved the mystery](https://m.mtlynch.io/@agwa@agwa.name/112039058255070708):
 
-> Do you still see the 10x disparity with significantly larger inputs (i.e. > 1MB)? Do you still the disparity if you redirect stdin from a file instead of a pipe?
->
-> My guess is that when you execute the program directly, xxd and count-bytes start at the same time, so the pipe buffer is empty when count-bytes first tries to read from stdin, requiring it to wait until xxd fills it. But when you use zig build run, xxd gets a head start while the program is compiling, so by the time count-bytes reads from stdin, the pipe buffer has been filled.
+{{<img src="agwa-masto.png" alt="Do you still see the 10x disparity with significantly larger inputs (i.e. > 1MB)? Do you still the disparity if you redirect stdin from a file instead of a pipe? My guess is that when you execute the program directly, xxd and count-bytes start at the same time, so the pipe buffer is empty when count-bytes first tries to read from stdin, requiring it to wait until xxd fills it. But when you use zig build run, xxd gets a head start while the program is compiling, so by the time count-bytes reads from stdin, the pipe buffer has been filled.">}}
 
-Incidentally, Andrew Ayer also had the key insight that [solved my last performance mystery](/notes/picoshare-perf/#ram-bloat-is-fine-but-crashes-are-not).
+Andrew Ayer got it exactly right, and I'll break it down below.
+
+Sidenote: Andrew Ayer also had the key insight that [solved my last performance mystery](/notes/picoshare-perf/#ram-bloat-is-fine-but-crashes-are-not).
 
 ## My mental model of bash pipelines is wrong
 
@@ -132,44 +131,131 @@ My mental model was that `jobA` would start and run to completion, then `jobB` w
 
 It turns out that in a bash pipline command, all the commands in the pipeline start at the same time.
 
-```bash
-#!/usr/bin/env bash
+I wrote a proof of concept with two simple bash scripts. `jobA` starts, sleeps for three seconds, prints to stdout, sleeps for two more seconds, then exits:
 
-echo 'jobA is starting' >&2
+{{<inline-file filename="jobA" language="bash">}}
 
-sleep 3
+`jobB` starts, waits for input on stdin, then prints everything it can read from stdin until stdin closes:
 
-echo 'result of jobA is...'
+{{<inline-file filename="jobB" language="bash">}}
 
-sleep 2
-
-echo '42'
-
-echo 'jobA is terminating' >&2
-```
+If I run `jobA` and `jobB` in a bash pipeline, I can see that they both start at the same time, but there's a 3.004 second delay between when `jobB` starts and when it produces its first line of output, as `jobB` has to wait on output from `jobA`:
 
 ```bash
-#!/usr/bin/env bash
-
-echo 'jobB is starting' >&2
-
-echo 'jobB is waiting on input' >&2
-while read line
-do
-  echo "jobB read '${line}' from input"
-done < /dev/stdin
-echo 'jobB is done reading input' >&2
-
-echo 'jobB is terminating' >&2
+$ ./jobA | ./jobB
+09:11:53.326 jobA is starting
+09:11:53.326 jobB is starting
+09:11:53.328 jobB is waiting on input
+09:11:56.330 jobB read 'result of jobA is...' from input
+09:11:58.331 jobA is terminating
+09:11:58.331 jobB read '42' from input
+09:11:58.333 jobB is done reading input
+09:11:58.335 jobB is terminating
 ```
+
+## Revisiting my byte counter
+
+Knowing that all commands in a bash pipeline run at the same time, the behavior I was seeing in my byte counter suddenly makes sense:
+
+```bash
+$ echo '00010203040506070809' | xxd -r -p | zig build run -Doptimize=ReleaseFast
+bytes:           10
+execution time:  13.549µs
+
+$ echo '00010203040506070809' | xxd -r -p | ./zig-out/bin/count-bytes
+bytes:           10
+execution time:  162.195µs
+```
+
+It looks like the time to run the `echo '00010203040506070809' | xxd -r -p` part of the pipeline takes about 150 microseconds. The extra Zig build step must also take at least 150 microseconds.
+
+By the time the `count-bytes` application actually begins in the `zig build` version, it doesn't have to wait on the previous jobs to complete. The input is already waiting on stdin.
+
+When I skip the `zig build` step and run the compiled binary directly, `count-bytes` starts immediately and the timer begins, but it wastes 150 microseconds waiting for the `echo` and `xxd` commands to deliver input to stdin.
+
+TODO: Gantt chart of sequences
 
 ## Fixing my benchmark
 
-It can read directly from a file.
+With that [fix](https://github.com/mtlynch/eth-zvm/pull/27), my benchmark dropped from the 438 microseconds I was seeing before down to just 67 microseconds:
 
-Hooray, now I'm
+```bash
+# Convert the hex-encoded input to binary encoding.
+$ INPUT_FILE_BINARY="$(mktemp)"
+$ echo '60016000526001601ff3' | xxd -r -p > "${INPUT_FILE_BINARY}"
+
+# Read the binary-encoded input into the virtual machine.
+$ ./zig-out/bin/eth-zvm < "${INPUT_FILE_BINARY}"
+execution time:  67.378µs
+```
+
+TODO: Graph of performance improvement
 
 ## Applying Andrew Kelly's performance fix
+
+Recall that Andrew Kelly [pointed out](https://ziggit.dev/t/zig-build-run-is-10x-faster-than-compiled-binary/3446/8?u=mtlynch) that I was doing one syscall for every byte I read.
+
+```zig
+var reader = std.io.getStdIn().reader();
+...
+while (true) {
+      _ = reader.readByte() catch |err| switch (err) {
+          ...
+      };
+      ...
+  }
+```
+
+So, every time my application called `readByte` in the loop, it had to halt execution, request an input read from the operating system, then resume when the OS delivered the single byte.
+
+The fix [was simple](https://github.com/mtlynch/eth-zvm/pull/26). I had to use a buffered reader. Instead of reading a single byte at a time from the OS, I'd use Zig's built-in `std.io.bufferedReader`, which causes my application to read large chunks of data from the OS. That way, I only have to make a fraction of the syscalls.
+
+Here's the entire change:
+
+```diff
+diff --git a/src/main.zig b/src/main.zig
+index d6e50b2..a46f8fa 100644
+--- a/src/main.zig
++++ b/src/main.zig
+@@ -7,7 +7,9 @@ pub fn main() !void {
+     const allocator = gpa.allocator();
+     defer _ = gpa.deinit();
+
+-    var reader = std.io.getStdIn().reader();
++    const in = std.io.getStdIn();
++    var buf = std.io.bufferedReader(in.reader());
++    var reader = buf.reader();
+
+     var evm = vm.VM{};
+     evm.init(allocator);
+```
+
+I re-ran my example, and it sped up performance by another 11 microseconds, a modest 16% speedup.
+
+```bash
+$ zig build -Doptimize=ReleaseFast && ./zig-out/bin/eth-zvm < "${INPUT_FILE_BINARY}"
+execution time:  56.602µs
+```
+
+## Benchmarking a larger input
+
+I've only put a few hours of work into my Ethereum interpreter, so it only supports a few opcodes. The most complex computation my interpreter can do at this point is add numbers together.
+
+For example, here's an Ethereum application that counts to the number three by pushing three `1` values onto the stack and then adding them together:
+
+```
+PUSH1 0x01
+PUSH1 0x01
+PUSH1 0x01
+ADD
+ADD
+```
+
+The largest application I tested in my benchmarks was Ethereum bytecode that counted to 1,000 by adding `1` values together.
+
+When I got rid of all the unnecessary syscalls with Andrew Kelly's fix, my "count to 1,000" runtime dropped from 2,024 microseconds to just 58 microseconds, a 35x speedup. I was now beating the official Ethereum implmentation by almost a factor of two.
+
+TODO: Chart of performance
 
 ## Cheating my way to maximum performance
 
@@ -178,3 +264,5 @@ The slowest part of my program is probably memory allocation. Zig has a memory a
 This is extremely fast because you avoid asking the OS for memory, but it also requires you to know how much memory you need up front.
 
 We can cheat because I know my benchmarks don't require more than about 1 KB of memory (though there are valid Ethereum bytecode sequences that require more). But just for fun, let's see what performance looks like if I know my max memory requirement at compile time:
+
+TODO: Chart of performance
