@@ -243,7 +243,7 @@ I've only put a few hours of work into my Ethereum interpreter, so it only suppo
 
 For example, here's an Ethereum application that counts to the number three by pushing three `1` values onto the stack and then adding them together:
 
-```
+```text
 PUSH1 0x01
 PUSH1 0x01
 PUSH1 0x01
