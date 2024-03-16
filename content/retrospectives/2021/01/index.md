@@ -16,7 +16,7 @@ images:
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
-### Release the first version of [TinyPilot Pro](https://tinypilotkvm.com/pro?ref=mtlynch.io)
+### Release the first version of [TinyPilot Pro](https://tinypilotkvm.com/product/tinypilot-pro?ref=mtlynch.io)
 
 - **Result**: Released a beta version of TinyPilot Pro
 - **Grade**: B

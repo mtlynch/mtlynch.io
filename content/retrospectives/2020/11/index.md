@@ -123,7 +123,7 @@ Next was **power management**. People wanted a way to power a machine on and off
 
 The last feature that people asked for was **drive mounting**. Some KVMs allow you to upload a disk image, and then the KVM makes that disk appear as a removable drive on the target computer. Only a couple of interviewees mentioned this, but it's also a common request among my existing users.
 
-The good news is that my intuitions were correct. These were all features I teased a few months ago when advertising a possible paid version of TinyPilot's software called [TinyPilot Pro](https://tinypilotkvm.com/pro?ref=mtlynch.io). Without my prompting, these interviewees often brought up these same features independently.
+The good news is that my intuitions were correct. These were all features I teased a few months ago when advertising a possible paid version of TinyPilot's software called [TinyPilot Pro](https://tinypilotkvm.com/product/tinypilot-pro?ref=mtlynch.io). Without my prompting, these interviewees often brought up these same features independently.
 
 ## Experimenting with paid reddit ads
 
@@ -294,5 +294,5 @@ I received an inquiry from a large customer about an enterprise package for Zest
 ### Goals for next month
 
 - Release a high-end version of TinyPilot that arrives pre-assembled in a custom case.
-- Release the first version of [TinyPilot Pro](https://tinypilotkvm.com/pro?ref=mtlynch.io).
+- Release the first version of [TinyPilot Pro](https://tinypilotkvm.com/product/tinypilot-pro?ref=mtlynch.io).
 - Figure out how to properly track the source of customers who end up completing purchases.

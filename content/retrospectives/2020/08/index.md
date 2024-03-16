@@ -126,7 +126,7 @@ I'm looking for ways to make what I offer to customers more valuable than what t
 
 Because I'm a software developer, I'm leaning toward (3).
 
-Last Friday, I put up a teaser for [TinyPilot Pro](https://tinypilotkvm.com/pro?ref=mtlynch.io) and braced myself for a backlash from people who felt betrayed that I'm not staying pure and open source, but there's been no pushback yet.
+Last Friday, I put up a teaser for [TinyPilot Pro](https://tinypilotkvm.com/product/tinypilot-pro?ref=mtlynch.io) and braced myself for a backlash from people who felt betrayed that I'm not staying pure and open source, but there's been no pushback yet.
 
 Several customers have asked for cloud management features, which sound lucrative but also require major adjustments to my lifestyle. The idea is that TinyPilots could phone home to a cloud server, and then customers would be able to access their devices anywhere on the Internet without configuring VPNs or firewall rules. This would be an obvious way to collect recurring revenue because users would likely pay upwards of $50/month for TinyPilot cloud management.
 
