@@ -149,11 +149,11 @@ Imagine a simple bash pipeline like the following:
 
 My mental model was that `jobA` would start and run to completion, then `jobB` would start with `jobA`'s output as its input.
 
-{{<img src="jobs-serial.webp" has-border="true" caption="My incorrect mental model of how jobs in a bash pipeline work">}}
+{{<img src="jobs-serial.webp" has-border="true" alt="Gantt chart of jobB starting after jobA finishes" caption="My incorrect mental model of how jobs in a bash pipeline work">}}
 
 It turns out that in a bash pipline command, all the commands in the pipeline start at the same time.
 
-{{<img src="jobs-parallel.webp" has-border="true" caption="The actual way that jobs in a bash pipeline work">}}
+{{<img src="jobs-parallel.webp" has-border="true" alt="Gantt chart of jobA and jobB starting simultaneously, but jobB is longer because it has to wait on jobA's results" caption="The actual way that jobs in a bash pipeline work">}}
 
 To demonstrate parallel execution in a bash pipeline, I wrote a proof of concept with two simple bash scripts.
 
@@ -211,11 +211,11 @@ It looks like the time to run the `echo '00010203040506070809' | xxd -r -p` part
 
 By the time the `count-bytes` application actually begins in the `zig build` version, it doesn't have to wait on the previous jobs to complete. The input is already waiting on stdin.
 
-{{<img src="count-bytes-zig-run.webp" has-border="true" caption="With `zig build run`, there's a delay before my application executes, so previous jobs in the pipeline have already completed by the time `count-bytes` starts.">}}
+{{<img src="count-bytes-zig-run.webp" has-border="true" alt="Gantt chart where echo, xxd, and zig build run start at the same time, but the execute phase of zig build run starts after echo and xxd are complete" caption="With `zig build run`, there's a delay before my application executes, so previous jobs in the pipeline have already completed by the time `count-bytes` starts.">}}
 
 When I skip the `zig build` step and run the compiled binary directly, `count-bytes` starts immediately and the timer begins. The problem is that `count-bytes` has to sit around waiting ~150 microseconds for the `echo` and `xxd` commands to deliver input to stdin.
 
-{{<img src="count-bytes-compiled.webp" has-border="true" caption="When I run `count-bytes` directly, it has to wait around for ~150 microseconds until `echo` and `xxd` feed input to stdin.">}}
+{{<img src="count-bytes-compiled.webp" has-border="true" alt="Gantt chart where echo, xxd, and count-bytes all start at the same time, but count-bytes can't begin processing input until 150 microseconds after starting, as it's waiting on results from xxd" caption="When I run `count-bytes` directly, it has to wait around for ~150 microseconds until `echo` and `xxd` feed input to stdin.">}}
 
 ## Fixing my benchmark
 
@@ -309,22 +309,22 @@ ADD        # Stack now contains [3]
 
 The largest application I tested in my benchmarks was Ethereum bytecode that counted to 1,000 by adding `1` values together.
 
-When I got rid of all the unnecessary syscalls with Andrew Kelly's fix, my "count to 1,000" runtime dropped from 2,024 microseconds to just 58 microseconds, a 35x speedup. I was now beating the official Ethereum implmentation by almost a factor of two.
+After Andrew Kelly's tip helped me [reduce syscalls](https://github.com/mtlynch/eth-zvm/pull/26), my "count to 1,000" application's runtime dropped from 2,024 microseconds to just 58 microseconds, a 35x speedup. I was now beating the official Ethereum implmentation by almost a factor of two.
 
 <figure>
   <div class="chart-container">
     <canvas id="count-to-1000-by-1-v2"></canvas>
   </div>
-  <figcaption><p>Buffering my input reads allowed my Zig implementation to run about 2x faster than the official Ethereum implementation.</p></figcaption>
+  <figcaption><p>Buffering my input reads allowed my Zig implementation to run about 2x faster than the official Ethereum implementation on the largest Ethereum application in my test set.</p></figcaption>
 </figure>
 
 ## Cheating my way to maximum performance
 
-The slowest part of my program is probably memory allocation. Zig has a memory allocator called the fixed buffer allocator. Instead of the memory allocator requesting memory from the operating system, the fixed-buffer allocator allocates memory from a fixed buffer of bytes.
+I was excited to see my Zig implementation finally outperforming the official Go version, but I wanted to see just how much I could leverage Zig to improve performance.
 
-This is extremely fast because you avoid asking the OS for memory, but it also requires you to know how much memory you need up front.
+One common bottleneck in software is memory allocation. The program has to stop and wait for the OS to allocate RAM, which may involve shuffling around data to make room.
 
-We can cheat because I know my benchmarks don't require more than about 1 KB of memory (though there are valid Ethereum bytecode sequences that require more).
+Zig has a memory allocator called the fixed buffer allocator. Instead of the memory allocator requesting memory from the operating system, you provide the allocator a fixed buffer of bytes, and it uses only those bytes to allocate memory.
 
 ```diff
 diff --git a/src/main.zig b/src/main.zig
@@ -345,6 +345,12 @@ index a46f8fa..9e462fe 100644
      const in = std.io.getStdIn();
      var buf = std.io.bufferedReader(in.reader());
 ```
+
+This is extremely fast because you avoid asking the OS for memory, but it also requires you to know how much memory you need up front.
+
+I can cheat my benchmarks by compiling a version of my Ethereum interpreter that's limited to 2 KB of memory. If hardcode a memory limit at compile time, my app can avoid ever requesting dynamic memory from the operating system at runtime.
+
+I call this a "cheat" as I'm optimizing for my specific benchmarks. There are certainly valid Ethereum programs that require &gt;2 KB of memory, but I'm just curious how fast I can go with this optimization.
 
 But just for fun, let's see what performance looks like if I know my max memory requirement at compile time:
 
