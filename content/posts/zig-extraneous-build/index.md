@@ -359,6 +359,8 @@ $ ./zig-out/bin/eth-zvm < "${COUNT_TO_1000_INPUT_BYTECODE_FILE}"
 execution time:  34.4578µs
 ```
 
+Cool! With a fixed memory buffer, my Ethereum implementation runs my "count to 1,000" bytecode in 34 microseconds, nearly 3x faster than the official implementation.
+
 <figure>
   <div class="chart-container">
     <canvas id="count-to-1000-by-1-v3"></canvas>
