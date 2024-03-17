@@ -362,9 +362,9 @@ execution time:  34.4578µs
 
 ## Conclusion
 
-Benchmark early and often.
+The lesson I'm getting from this is to benchmark early and often. By adding a benchmarking script to my continuous integration and archiving the results, it was easy for me to identify when my measurements changed. If benchmarking were just a manual, periodic task, it would have been difficult for me to identify exactly what changed caused the difference in my measurements.
 
-Put care into your performance measurement logic. There are a lot of ways to get it subtly wrong.
+This also underscores the importance of thinking carefully about what a benchmark measures. I didn't consider that my benchmark included the time waiting for other processes to fill stdin.
 
 <script src="chart.umd.js"></script>
 <script src="script.js"></script>
