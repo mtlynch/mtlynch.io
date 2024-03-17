@@ -49,6 +49,22 @@ populateGraph(
 );
 
 populateGraph(
+  "benchmark-fix",
+  [438.059, 67.378],
+  ["eth-zvm (Before benchmark fix)", "eth-zvm (After benchmark fix)"]
+);
+
+populateGraph(
+  "benchmark-fix-buffered",
+  [438.059, 67.378, 56.602],
+  [
+    "eth-zvm (Before benchmark fix)",
+    "eth-zvm (After benchmark fix)",
+    "eth-zvm (After benchmark fix + buffering)",
+  ]
+);
+
+populateGraph(
   "count-to-1000-by-1-v2",
   [95.423, 58.076],
   [
@@ -65,10 +81,4 @@ populateGraph(
     "eth-zvm (My Zig implementation, after fixes)",
     "eth-zvm (My Zig implementation, no memory allocation)",
   ]
-);
-
-populateGraph(
-  "benchmark-fix",
-  [438.059, 67.378],
-  ["eth-zvm (Before benchmark fix)", "eth-zvm (After benchmark fix)"]
 );

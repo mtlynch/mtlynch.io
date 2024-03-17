@@ -1,6 +1,8 @@
 ---
 title: "Why does an extraneous build step make my Zig app 10x faster?"
 date: 2024-03-16T00:00:00-05:00
+images:
+  - zig-extraneous-build/count-bytes-zig-run.webp
 tags:
   - zig
   - ethereum
@@ -20,9 +22,12 @@ For the past few months, I've been curious about two technologies: the Zig progr
 
 Zig is a great language for performance optimization, as it gives you fine-grained control over memory and control flow. To motivate myself, I've been benchmarking my Ethereum implementation against the official Go implementation.
 
-<div class="chart-container">
-  <canvas id="demo-command"></canvas>
-</div>
+<figure>
+  <div class="chart-container">
+    <canvas id="demo-command"></canvas>
+  </div>
+  <figcaption><p>At the beginning of this process, my hobby Ethereum Zig implementation underperformed the official Go implementation by about 40%.</p></figcaption>
+</figure>
 
 Recently, I made what I thought was a simple refactoring to my benchmarking script, and my app's performance tanked. I identified the relevant change as the difference between these two commands:
 
@@ -144,7 +149,11 @@ Imagine a simple bash pipeline like the following:
 
 My mental model was that `jobA` would start and run to completion, then `jobB` would start with `jobA`'s output as its input.
 
+{{<img src="jobs-serial.webp" has-border="true" caption="My incorrect mental model of how jobs in a bash pipeline work">}}
+
 It turns out that in a bash pipline command, all the commands in the pipeline start at the same time.
+
+{{<img src="jobs-parallel.webp" has-border="true" caption="The actual way that jobs in a bash pipeline work">}}
 
 To demonstrate parallel execution in a bash pipeline, I wrote a proof of concept with two simple bash scripts.
 
@@ -170,7 +179,7 @@ $ ./jobA | ./jobB
 09:11:58.335 jobB is terminating
 ```
 
-If I adjust the execution so that `jobA` and `jobB` run in sequence instead of a pipeline, only 0.008 seconds elapse between `jobB`'s "starting" and "terminating" messages:
+If I adjust the execution so that `jobA` and `jobB` run in sequence instead of a pipeline, only 0.008 seconds elapse between `jobB`'s `starting` and `terminating` messages:
 
 ```bash
 $ ./jobA > /tmp/output && ./jobB < /tmp/output
@@ -198,17 +207,19 @@ bytes:           10
 execution time:  162.195µs
 ```
 
-It looks like the time to run the `echo '00010203040506070809' | xxd -r -p` part of the pipeline takes about 150 microseconds. The extra Zig build step must also take at least 150 microseconds.
+It looks like the time to run the `echo '00010203040506070809' | xxd -r -p` part of the pipeline takes about 150 microseconds. The `zig build run` step must take at least 150 microseconds.
 
 By the time the `count-bytes` application actually begins in the `zig build` version, it doesn't have to wait on the previous jobs to complete. The input is already waiting on stdin.
 
-When I skip the `zig build` step and run the compiled binary directly, `count-bytes` starts immediately and the timer begins, but it wastes 150 microseconds waiting for the `echo` and `xxd` commands to deliver input to stdin.
+{{<img src="count-bytes-zig-run.webp" has-border="true" caption="With `zig build run`, there's a delay before my application executes, so previous jobs in the pipeline have already completed by the time `count-bytes` starts.">}}
 
-TODO: Gantt chart of sequences
+When I skip the `zig build` step and run the compiled binary directly, `count-bytes` starts immediately and the timer begins. The problem is that `count-bytes` has to sit around waiting ~150 microseconds for the `echo` and `xxd` commands to deliver input to stdin.
+
+{{<img src="count-bytes-compiled.webp" has-border="true" caption="When I run `count-bytes` directly, it has to wait around for ~150 microseconds until `echo` and `xxd` feed input to stdin.">}}
 
 ## Fixing my benchmark
 
-With that [fix](https://github.com/mtlynch/eth-zvm/pull/27), my benchmark dropped from the 438 microseconds I was seeing before down to just 67 microseconds:
+Fixing my benchmark was [simple](https://github.com/mtlynch/eth-zvm/pull/27). Instead of running my application as part of a bash pipeline, I split the preparation stage and the execution stage into separate commands:
 
 ```bash
 # Convert the hex-encoded input to binary encoding.
@@ -220,9 +231,14 @@ $ ./zig-out/bin/eth-zvm < "${INPUT_FILE_BINARY}"
 execution time:  67.378µs
 ```
 
-<div class="chart-container">
-  <canvas id="benchmark-fix"></canvas>
-</div>
+My benchmark dropped from the 438 microseconds I was seeing before down to just 67 microseconds.
+
+<figure>
+  <div class="chart-container">
+    <canvas id="benchmark-fix"></canvas>
+  </div>
+  <figcaption><p>Difference in measured performance of my Zig app after I fixed my benchmarking script</p></figcaption>
+</figure>
 
 ## Applying Andrew Kelly's performance fix
 
@@ -270,6 +286,13 @@ $ zig build -Doptimize=ReleaseFast && ./zig-out/bin/eth-zvm < "${INPUT_FILE_BINA
 execution time:  56.602µs
 ```
 
+<figure>
+  <div class="chart-container">
+    <canvas id="benchmark-fix-buffered"></canvas>
+  </div>
+  <figcaption><p>Buffering input reads increased performance by another 16%.</p></figcaption>
+</figure>
+
 ## Benchmarking a larger input
 
 My Ethereum interpreter currently only supports a small subset of the full set of Ethereum's opcodes. The most complex computation my interpreter can do at this point is add numbers together.
@@ -288,9 +311,12 @@ The largest application I tested in my benchmarks was Ethereum bytecode that cou
 
 When I got rid of all the unnecessary syscalls with Andrew Kelly's fix, my "count to 1,000" runtime dropped from 2,024 microseconds to just 58 microseconds, a 35x speedup. I was now beating the official Ethereum implmentation by almost a factor of two.
 
-<div class="chart-container">
-  <canvas id="count-to-1000-by-1-v2"></canvas>
-</div>
+<figure>
+  <div class="chart-container">
+    <canvas id="count-to-1000-by-1-v2"></canvas>
+  </div>
+  <figcaption><p>Buffering my input reads allowed my Zig implementation to run about 2x faster than the official Ethereum implementation.</p></figcaption>
+</figure>
 
 ## Cheating my way to maximum performance
 
@@ -327,9 +353,18 @@ $ ./zig-out/bin/eth-zvm < "${COUNT_TO_1000_INPUT_BYTECODE_FILE}"
 execution time:  34.4578µs
 ```
 
-<div class="chart-container">
-  <canvas id="count-to-1000-by-1-v3"></canvas>
-</div>
+<figure>
+  <div class="chart-container">
+    <canvas id="count-to-1000-by-1-v3"></canvas>
+  </div>
+  <figcaption><p>If I know the maximum memory requirements of my Ethereum interpreter at compile time, I can outperform the official implementation by 3x.</p></figcaption>
+</figure>
+
+## Conclusion
+
+Benchmark early and often.
+
+Put care into your performance measurement logic. There are a lot of ways to get it subtly wrong.
 
 <script src="chart.umd.js"></script>
 <script src="script.js"></script>
