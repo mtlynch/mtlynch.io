@@ -35,7 +35,9 @@ We were trying to expose any release steps that are accidentally silo'ed with me
 - **Result**: I documented enough to cover the release, but there are still areas to improve.
 - **Grade**: B+
 
-Documenting the release process was a great exercise in that exposed not only undocumented processes but also weaknesses in our process. In documenting our release workflow, I realized that we hadn't critically examined much of it, so there were lots of places that were unnecessarily labor-intensive, error-prone, or pushed us to reinvent the wheel.
+Documenting the release process was a great exercise. It exposed not only undocumented processes but also weaknesses in our process.
+
+There were many parts to our release process that we hadn't examined critically. When I sat down to document them, I found that they were unnecessarily labor-intensive, error-prone, or pushed us to reinvent the wheel.
 
 ### File 2023 taxes
 
@@ -94,7 +96,7 @@ When I enumerated everything I was still doing every release, I realized we had 
 > 1. Publish security advisories (if applicable)
 > 1. Publish the changelog
 > 1. Publish TinyPilot Pro production release
-> 1. Perform post-release tests
+> 1. Verify that updates to latest version work cleanly
 > 1. Announce release to TinyPilot team
 > 1. Add image hashes to changelog
 > 1. Monitor bug reports for at least 48 hours
@@ -113,21 +115,17 @@ I had only documented and delegated three of them: the ones that required manual
 
 Looking at the list, 25 steps just to do a release sounds like a lot. And really, it's far more than 25 steps because there are dozens of substeps within the testing steps.
 
-There are two types of costs in our release process. The simplest is just the wall time. If a single person did all 25 steps, it would probably take 20 hours, so we want to find opportunities to reduce the effort needed to publish a release.
+When there are this many manual steps, it feels like the answer is to automate more, but I don't see any obvious candidates for automation. We could automate a step like adding the image hashes to our changelog or updating links in our internal playbooks, but it would probably take about 10 hours of automation work to save two manual hours per year.
 
-The second type of cost is managing the complexity. If multiple people work together on the release, there's complexity in how they share results with each other and decide when to proceed to the next step.
+The more important takeaway for me is to be picky about adding tasks to our release and to question the necessity of what's currently there.
 
 ## How do we catch pre-release bugs?
-
-Some tasks turned out to be much harder to delegate than I expected.
-
-Usually, when I delegate a task, I document what I do. Often, this is a difficult process, as it's hard to take a step back from my process and try to explain how I make decisions.
 
 Delegating release tasks turned out to be harder than normal delegation because I realized that even if I could explain how I made my decisions, my teammates were missing context to make those decisions.
 
 As an example, I'll share a bug we encountered during final testing.
 
-Usually, when you plug a device into your network, it accepts whatever local IP address the router assigns. But some users want their devices to request a fixed, predictable IP address, so we added support to that in TinyPilot's web interface.
+Usually, when you plug a device into your network, it accepts whatever local IP address the router assigns. Some users want their devices to request a static, predictable IP address. This last release, we added support in TinyPilot's web interface for adding a static IP address.
 
 Here's what the feature looked like during our pre-release testing:
 
@@ -141,7 +139,7 @@ I reviewed the video and saw a major problem. For a few moments before the web i
 
 When I showed the dev team, they were heartbroken.
 
-We had invested weeks of dev time into giving users a smooth transition from their dynamic IP to their static IP. This turned out to be particularly challenging due to complexity around DNS caching, local TLS certificates, and browser security protections for cross-domain requests. After a lot of testing and orchestration code, the dev team thought they finally had it right, but it turned out it didn't work smoothly in TinyPilot's office.
+We had invested weeks of dev time into transitioning users from their dynamic IP to their static IP. This turned out to be particularly challenging due to complexity around DNS caching, local TLS certificates, and browser security protections for cross-domain requests. After a lot of testing and orchestration code, the dev team thought they finally had it right, but it turned out it didn't work smoothly in TinyPilot's office.
 
 So, how do we catch bugs like that without me micromanaging the process? How do we avoid the disconnect between how different teams expected the feature to work?
 
@@ -149,13 +147,13 @@ We've decided to adjust the process so that when the dev team releases a new fea
 
 ## How do we decide which bugs to fix?
 
-The next challenge in delegating the release process was figuring out what the release manager does with bugs they discover at release testing time. Do they postpone the release or ship with the bug as-is?
+The next challenge in delegating the release process was figuring out what the release manager does with bugs they discover during pre-release testing. Do they postpone the release? Or do they ship the release with the bug as-is?
 
-When the release was centralized on me, ship vs. fix decisions were easier, as I had context across teams. I'm looped in to the dev team, so I know how long it would take to fix the bug and how much risk there is of breaking something else in the process. I'm also the product owner, so I understand how much this bug would impact customers. If it's an important enough feature relative to the costs of fixing the bug, I'll delay the release so we can fix the bug.
+When the release was centralized on me, ship vs. fix decisions were easier, as I had context across teams. I'm looped in to the dev team, so I knew how long it would take to fix the bug and how much risk there was of breaking something else in the process. I'm also the product owner, so I understood how much the bug would impact customers. If it's an important enough feature relative to the costs of fixing the bug, I'd delay the release so we could fix the bug.
 
 If the release manager is not me, how do they decide when to delay a release to fix a bug?
 
-Our new strategy is that the release manager doesn't make the decision, but they gather all the information from the other teams to let the product owner decide. That way, the decision that requires the product owner's call is still in the product owner's hands, but we're minimizing the amount of work that only I can do.
+Our new strategy is that the release manager doesn't make the decision, but they gather all the information from the other teams to let the product owner decide. That way, we separate the process of gathering inputs to the decision from the decision itself. It serves our goal of minimizing the release tasks that only I can do.
 
 ## Side projects
 
@@ -163,7 +161,7 @@ Our new strategy is that the release manager doesn't make the decision, but they
 
 I [mentioned last month](retrospectives/2024/02/#side-projects) that I'd found a fun way to learn more about Zig, interpreters, and Ethereum &mdash; I'm writing an Ethereum bytecode interpreter in Zig.
 
-Zig gives me a high degree of control over performance, so one of my earliest tasks on my interpreter was to set up benchmarks in continuous integration to compare my implementation to the official Go implementation.
+Zig gives developers a high degree of control over performance, so one of my earliest tasks on my interpreter was to set up benchmarks in continuous integration to compare my implementation to the official Go implementation.
 
 For a while, my Zig version was slightly underperforming the Go version. Then, I [refactored my benchmarking scripts](https://github.com/mtlynch/eth-zvm/pull/24), and my performance mysteriously tanked.
 
@@ -186,7 +184,8 @@ To be fair, my version only implements about 3% of Ethereum, so I have an unfair
 
 ### Lessons learned
 
--
+- Delegating tasks becomes harder when the work requires cross-team collaboration.
+  - Some decisions ultimately need to be made by the product owner, but teams can adjust processes so that gathering relevant information for the decision is a separate process from making the decision.
 
 ### Goals for next month
 
