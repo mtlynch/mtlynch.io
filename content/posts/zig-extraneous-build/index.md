@@ -29,7 +29,7 @@ Zig is a great language for performance optimization, as it gives you fine-grain
   <figcaption><p>At the beginning of this process, my hobby Ethereum Zig implementation underperformed the official Go implementation by about 40%.</p></figcaption>
 </figure>
 
-Recently, I made what I thought was a simple refactoring to my benchmarking script, and my app's performance tanked. I identified the relevant change as the difference between these two commands:
+Recently, I made what I thought was a simple refactoring to my benchmarking script, but my app's performance tanked. I identified the relevant change as the difference between these two commands:
 
 ```bash
 $ echo '60016000526001601ff3' | xxd -r -p | zig build run -Doptimize=ReleaseFast
@@ -115,7 +115,7 @@ The only difference between `zig build run` and `./zig-oug/bin/count-bytes` was 
 
 Again, I was dumbfounded.
 
-How could does an extra compilation step make the program _faster_?
+How could does an extra compilation step make the program _faster_? Does a Zig app somehow run quicker when it's fresh out of the oven?
 
 ## Asking the Zig community for help
 
@@ -151,7 +151,7 @@ My mental model was that `jobA` would start and run to completion, then `jobB` w
 
 {{<img src="jobs-serial.webp" has-border="true" alt="Gantt chart of jobB starting after jobA finishes" caption="My incorrect mental model of how jobs in a bash pipeline work">}}
 
-It turns out that in a bash pipline command, all the commands in the pipeline start at the same time.
+It turns out that all commands in a bash pipline start at the same time.
 
 {{<img src="jobs-parallel.webp" has-border="true" alt="Gantt chart of jobA and jobB starting simultaneously, but jobB is longer because it has to wait on jobA's results" caption="The actual way that jobs in a bash pipeline work">}}
 
@@ -248,14 +248,14 @@ Recall that Andrew Kelly [pointed out](https://ziggit.dev/t/zig-build-run-is-10x
 var reader = std.io.getStdIn().reader();
 ...
 while (true) {
-      _ = reader.readByte() catch |err| switch (err) {
+      _ = reader.readByte() { // Slow! One syscall per byte
           ...
       };
       ...
   }
 ```
 
-So, every time my application called `readByte` in the loop, it had to halt execution, request an input read from the operating system, then resume when the OS delivered the single byte.
+So, every time my application called `readByte` in the loop, it had to halt execution, request an input read from the OS, then resume when the OS delivered the single byte.
 
 The fix [was simple](https://github.com/mtlynch/eth-zvm/pull/26). I had to use a buffered reader. Instead of reading a single byte at a time from the OS, I'd use Zig's built-in `std.io.bufferedReader`, which causes my application to read large chunks of data from the OS. That way, I only have to make a fraction of the syscalls.
 
@@ -297,7 +297,7 @@ execution time:  56.602µs
 
 My Ethereum interpreter currently only supports a small subset of the full set of Ethereum's opcodes. The most complex computation my interpreter can do at this point is add numbers together.
 
-Here's an Ethereum application that counts to three by pushing `1` to the three times and then adding the values together:
+For example, here's an Ethereum application that counts to three by pushing `1` to the stack three times and then adding the values together:
 
 ```text
 PUSH1 1    # Stack now contains [1]
@@ -322,9 +322,11 @@ After Andrew Kelly's tip helped me [reduce syscalls](https://github.com/mtlynch/
 
 I was excited to see my Zig implementation finally outperforming the official Go version, but I wanted to see just how much I could leverage Zig to improve performance.
 
-One common bottleneck in software is memory allocation. The program has to stop and wait for the OS to allocate RAM, which may involve shuffling around data to make room.
+One common bottleneck in software is memory allocation. The program has to stop and wait for the OS to allocate RAM, which may involve shuffling around data to find enough contiguous space.
 
-Zig has a memory allocator called the fixed buffer allocator. Instead of the memory allocator requesting memory from the operating system, you provide the allocator a fixed buffer of bytes, and it uses only those bytes to allocate memory.
+Zig has a memory allocator called the fixed buffer allocator. Instead of the memory allocator requesting memory from the OS, you provide the allocator a fixed buffer of bytes, and it uses only those bytes to allocate memory.
+
+I can cheat my benchmarks by compiling a version of my Ethereum interpreter that's limited to 2 KB of memory, allocated from the stack:
 
 ```diff
 diff --git a/src/main.zig b/src/main.zig
@@ -346,20 +348,16 @@ index a46f8fa..9e462fe 100644
      var buf = std.io.bufferedReader(in.reader());
 ```
 
-This is extremely fast because you avoid asking the OS for memory, but it also requires you to know how much memory you need up front.
+I call this a "cheat" as I'm optimizing for my specific benchmarks. There are certainly valid Ethereum programs that require more than 2 KB of memory, but I'm just curious how fast I can go with this optimization.
 
-I can cheat my benchmarks by compiling a version of my Ethereum interpreter that's limited to 2 KB of memory. If hardcode a memory limit at compile time, my app can avoid ever requesting dynamic memory from the operating system at runtime.
-
-I call this a "cheat" as I'm optimizing for my specific benchmarks. There are certainly valid Ethereum programs that require &gt;2 KB of memory, but I'm just curious how fast I can go with this optimization.
-
-But just for fun, let's see what performance looks like if I know my max memory requirement at compile time:
+Let's see what performance looks like if I know my max memory requirement at compile time:
 
 ```bash
 $ ./zig-out/bin/eth-zvm < "${COUNT_TO_1000_INPUT_BYTECODE_FILE}"
 execution time:  34.4578µs
 ```
 
-Cool! With a fixed memory buffer, my Ethereum implementation runs my "count to 1,000" bytecode in 34 microseconds, nearly 3x faster than the official implementation.
+Cool! With a fixed memory buffer, my Ethereum implementation runs my "count to 1,000" bytecode in 34 microseconds, nearly 3x faster than the official Go implementation.
 
 <figure>
   <div class="chart-container">
@@ -370,7 +368,7 @@ Cool! With a fixed memory buffer, my Ethereum implementation runs my "count to 1
 
 ## Conclusion
 
-The lesson I'm getting from this is to benchmark early and often. By adding a benchmarking script to my continuous integration and archiving the results, it was easy for me to identify when my measurements changed. If benchmarking were just a manual, periodic task, it would have been difficult for me to identify exactly what changed caused the difference in my measurements.
+My experience with this bug highlights the importance of benchmarking performance early and often. By adding a benchmarking script to my continuous integration and archiving the results, it was easy for me to identify when my measurements changed. If benchmarking were just a manual, periodic task, it would have been difficult for me to identify exactly what changed caused the difference in my measurements.
 
 This also underscores the importance of thinking carefully about what a benchmark measures. I didn't consider that my benchmark included the time waiting for other processes to fill stdin.
 
