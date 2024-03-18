@@ -372,5 +372,5 @@ My experience with this bug highlights the importance of benchmarking performanc
 
 This also underscores the importance of thinking carefully about what a benchmark measures. I didn't consider that my benchmark included the time waiting for other processes to fill stdin.
 
-<script src="chart.umd.js"></script>
+<script src="third-party/chart.umd.js"></script>
 <script src="script.js"></script>
