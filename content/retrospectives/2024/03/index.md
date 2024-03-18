@@ -1,7 +1,7 @@
 ---
 title: "TinyPilot: Month 44"
 date: 2024-03-14T00:00:00-04:00
-description: TODO - One-line summary
+description: Eliminating myself from the critical path on releases
 ---
 
 {{<notice type="info">}}
@@ -15,7 +15,9 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 ## Highlights
 
--
+- We completed the first-ever TinyPilot release where I didn't perform any release task directly.
+- Publishing a release through delegation helped identify many undocumented or poorly conceived steps in our release process.
+- I'm continuing to enjoy writing a bytecode interpreter in Zig.
 
 ## Goal Grades
 
@@ -40,7 +42,7 @@ Documenting the release process was a great exercise in that exposed not only un
 - **Result**: Gathered most documents, but I haven't filed yet.
 - **Grade**: B
 
-I ended up getting sidetracked by the TinyPilot release, so I haven't filed yet. Still, I should probably file my taxes at some point this year.
+I ended up getting sidetracked by the TinyPilot release, so I haven't filed yet. Still, I think the government would appreciate me filing at some point this year, so I should probably do that.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -125,7 +127,7 @@ Delegating release tasks turned out to be harder than normal delegation because 
 
 As an example, I'll share a bug we encountered during final testing.
 
-Usually, when you plug a device into your network, it requests whatever IP address the router assigns it. But some users want their devices to request a fixed, predictable IP address, so we added support to that in TinyPilot's web interface.
+Usually, when you plug a device into your network, it accepts whatever local IP address the router assigns. But some users want their devices to request a fixed, predictable IP address, so we added support to that in TinyPilot's web interface.
 
 Here's what the feature looked like during our pre-release testing:
 
@@ -133,25 +135,27 @@ Here's what the feature looked like during our pre-release testing:
 
 The customer service team ran the test, and they reported no issues. The page loaded at the new IP address, as expected in the test plan. The support engineering team reviewed the video of the test, and they reported that the feature worked correctly.
 
-I reviewed the video, and I saw there was a big problem. For a few moments before the web interface loaded at the new address, the user saw this scary error screen:
+I reviewed the video and saw a major problem. For a few moments before the web interface loaded at the new address, the user saw this scary error screen:
 
 {{<img src="site-cannot-be-reached.webp" max-width="600px" has-border="true" caption="The dev team did not want the user to hit this error message, even briefly">}}
 
 When I showed the dev team, they were heartbroken.
 
-We had invested weeks of dev time into giving users a smooth transition from their dynamic IP to their static IP. This turned out to be particularly challenging due to complexity around DNS caching and browser security protections for cross-domain requests. After a lot of testing and orchestration code, the dev team thought they finally had it right, but it turned out it didn't work smoothly in TinyPilot's office.
+We had invested weeks of dev time into giving users a smooth transition from their dynamic IP to their static IP. This turned out to be particularly challenging due to complexity around DNS caching, local TLS certificates, and browser security protections for cross-domain requests. After a lot of testing and orchestration code, the dev team thought they finally had it right, but it turned out it didn't work smoothly in TinyPilot's office.
 
 So, how do we catch bugs like that without me micromanaging the process? How do we avoid the disconnect between how different teams expected the feature to work?
 
-One adjustment we've made to our release process is that now the dev team reviews testing footage for new features. I hope that better syncs up the team on how behavior will work between development and testing.
+We've decided to adjust the process so that when the dev team releases a new feature or changes old behavior, they review our pre-release testing footage to make sure it works how they expect.
 
 ## How do we decide which bugs to fix?
 
-The next challenge is what the release manager does with a bug if they discover it at release testing time. Do they postpone the release or ship with the bug as-is?
+The next challenge in delegating the release process was figuring out what the release manager does with bugs they discover at release testing time. Do they postpone the release or ship with the bug as-is?
 
-When I was hogging more of the release tasks, deciding whether or not to fix last-minute bugs was a bit more straightforward. I'm looped in to the dev team, so I know how long it would take to fix the bug and how much risk there is of breaking something else in the process. I'm also the product owner, so I understand how much this bug would impact customers. If it's an important enough feature relative to the costs of fixing the bug, I'll delay the release so we can fix the bug.
+When the release was centralized on me, ship vs. fix decisions were easier, as I had context across teams. I'm looped in to the dev team, so I know how long it would take to fix the bug and how much risk there is of breaking something else in the process. I'm also the product owner, so I understand how much this bug would impact customers. If it's an important enough feature relative to the costs of fixing the bug, I'll delay the release so we can fix the bug.
 
-If the release manager is not me, how do they make that decision? The best idea we've come up with is that the release manager doesn't make the decision, but they gather all the information from the other teams to let the product manager decide. That way, the decision that requires the product owner's call is still in the product owner's hands, but we're minimizing the amount of work that only I can do.
+If the release manager is not me, how do they decide when to delay a release to fix a bug?
+
+Our new strategy is that the release manager doesn't make the decision, but they gather all the information from the other teams to let the product owner decide. That way, the decision that requires the product owner's call is still in the product owner's hands, but we're minimizing the amount of work that only I can do.
 
 ## Side projects
 
@@ -159,7 +163,7 @@ If the release manager is not me, how do they make that decision? The best idea 
 
 I [mentioned last month](retrospectives/2024/02/#side-projects) that I'd found a fun way to learn more about Zig, interpreters, and Ethereum &mdash; I'm writing an Ethereum bytecode interpreter in Zig.
 
-One of the advantages to working in Zig is that I have a high degree of control over performance. One of my earliest tasks on my interpreter was to set up benchmarks in continuous integration to compare my implementation to the official Go implementation.
+Zig gives me a high degree of control over performance, so one of my earliest tasks on my interpreter was to set up benchmarks in continuous integration to compare my implementation to the official Go implementation.
 
 For a while, my Zig version was slightly underperforming the Go version. Then, I [refactored my benchmarking scripts](https://github.com/mtlynch/eth-zvm/pull/24), and my performance mysteriously tanked.
 
@@ -177,7 +181,8 @@ To be fair, my version only implements about 3% of Ethereum, so I have an unfair
 
 ### What got done?
 
-- Published [TinyPilot Pro 2.6.3](https://tinypilotkvm.com/blog/whats-new-in-2024-03)
+- Published [TinyPilot Pro 2.6.3](https://tinypilotkvm.com/blog/whats-new-in-2024-03).
+- Identified undocumented steps in TinyPilot's release process and documented most of them.
 
 ### Lessons learned
 
