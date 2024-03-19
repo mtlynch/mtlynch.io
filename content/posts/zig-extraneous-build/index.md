@@ -1,5 +1,5 @@
 ---
-title: "Why does a extraneous build step make my Zig app 10x faster?"
+title: "Why does an extraneous build step make my Zig app 10x faster?"
 date: 2024-03-19T00:00:00-05:00
 images:
   - zig-extraneous-build/count-bytes-zig-run.webp
