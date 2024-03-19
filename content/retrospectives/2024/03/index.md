@@ -28,7 +28,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: We published the release.
 - **Grade**: A
 
-We were trying to expose any release steps that were accidentally silo'ed with me, so this was the first release where I didn't perform any release step directly. The team performed every step based on shared documentation, including things like writing [the changelist](https://tinypilotkvm.com/pro/changes#263) and the [release announcement](https://tinypilotkvm.com/blog/whats-new-in-2024-03).
+We were trying to expose any release steps that were accidentally silo'ed with me, so this was the first release where I didn't perform any release steps directly. The team performed every step based on shared documentation, including things like writing [the changelist](https://tinypilotkvm.com/pro/changes#263) and the [release announcement](https://tinypilotkvm.com/blog/whats-new-in-2024-03).
 
 ### Document TinyPilot Pro's release process internally
 
@@ -37,7 +37,7 @@ We were trying to expose any release steps that were accidentally silo'ed with m
 
 Documenting the release process was a great exercise. It exposed not only undocumented processes but also weaknesses in our process.
 
-There were many parts to our release process that we hadn't examined critically. When I sat down to document them, I found that they were unnecessarily labor-intensive, error-prone, or pushed us to reinvent the wheel.
+There were many parts to our release process that we hadn't examined critically. When I sat down to document them, I found several steps that were unnecessarily labor-intensive, error-prone, or reinvented the wheel.
 
 ### File 2023 taxes
 
@@ -75,7 +75,7 @@ For the last TinyPilot release, I challenged myself to delegate _everything_. I 
 
 I started writing instructions for the tasks I still owned, expecting to document just a handful of steps.
 
-When I enumerated everything I was still doing every release, I realized we had 25 distinct subtasks as part of every release:
+When I enumerated everything I was still doing every release, I realized we had 25 distinct tasks as part of every release:
 
 > ### Testing a release candidate
 >
@@ -111,9 +111,9 @@ When I enumerated everything I was still doing every release, I realized we had 
 > 1. Send release announcement to public mailing list
 > 1. Share blog post on TinyPilot’s Twitter
 
-I had only documented and delegated three of them: the ones that required manual testing. But I was still doing the other 22 tasks.
+I had only documented and delegated three tasks: the ones that required manual testing. But I was still doing the other 22.
 
-Looking at the list, 25 steps just to do a release sounds like a lot. And really, it's far more than 25 steps because there are dozens of substeps within the testing steps.
+Looking at the list, 25 steps just to do a release sounds like a lot. And really, it's far more than 25 steps because there are dozens of substeps within certain tasks.
 
 When there are so many manual steps, it feels like the answer is to automate more, but I don't see any obvious candidates for automation. We could automate a step like adding the image hashes to our changelog or updating links in our internal playbooks, but it would probably take about 10 hours of automation work to save two manual hours per year.
 
@@ -125,7 +125,7 @@ Delegating release tasks turned out to be harder than normal delegation because 
 
 As an example, I'll share a bug we encountered during final testing.
 
-Usually, when you plug a device into your network, it accepts whatever local IP address the router assigns. Some users want their devices to request a static, predictable IP address. This last release, we added support in TinyPilot's web interface for adding a static IP address.
+Usually, when you plug a device into your network, it accepts whatever local IP address the router assigns. Some TinyPilot users want their devices to request a static, predictable IP address. This last release, we added support in TinyPilot's web interface for assigning a static IP address.
 
 Here's what the feature looked like during our pre-release testing:
 
@@ -139,7 +139,7 @@ I reviewed the video and saw a major problem. For a few moments before the web i
 
 When I showed the dev team, they were heartbroken.
 
-We had invested weeks of dev time into transitioning users from their dynamic IP to their static IP. This turned out to be particularly challenging due to complexity around DNS caching, local TLS certificates, and browser security protections for cross-domain requests. After a lot of testing and orchestration code, the dev team thought they finally had it right, but it turned out it didn't work smoothly in TinyPilot's office.
+We had invested weeks of dev time into the UI that guides users from their dynamic IP to their static IP. This turned out to be particularly challenging due to complexity around DNS caching, local TLS certificates, and browser security protections for cross-domain requests. After a lot of testing and orchestration code, the dev team thought they finally had it right, but it turned out it didn't work smoothly in TinyPilot's office.
 
 So, how do we catch bugs like that without me micromanaging the process? How do we avoid the disconnect between how different teams expect the feature to work?
 
