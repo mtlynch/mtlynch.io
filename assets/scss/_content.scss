@@ -60,6 +60,11 @@
     font-size: 1.6rem;
     margin: 0;
   }
+  figcaption code {
+    font-size: 1.5rem;
+    background-color: unset;
+    padding: 0;
+  }
 }
 
 .avatar img {
