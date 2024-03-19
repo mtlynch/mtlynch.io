@@ -167,7 +167,7 @@ For a while, my Zig version was slightly underperforming the Go version. Then, I
 
 {{<img src="eth-benchmarks-before.webp" max-width="600px" has-border="true" caption="The official Go implementation was pummeling my Zig implementation (lower is better)">}}
 
-I [asked for help on Ziggit](https://ziggit.dev/t/zig-build-run-is-10x-faster-than-compiled-binary/3446?u=mtlynch), a Zig forum, and it turned out I had a bug in both [my benchmarking scripts](https://ziggit.dev/t/zig-build-run-is-10x-faster-than-compiled-binary/3446/12?u=mtlynch) and [in my Zig code](https://ziggit.dev/t/zig-build-run-is-10x-faster-than-compiled-binary/3446/8?u=mtlynch). Once I fixed those two simple bugs, my Zig version zoomed past the Go version.
+I [asked for help on Ziggit](https://ziggit.dev/t/zig-build-run-is-10x-faster-than-compiled-binary/3446?u=mtlynch), a Zig forum, and it turned out I had a bug in both [my benchmarking scripts and in my Zig code](/zig-extraneous-build/). Once I fixed those two simple bugs, my Zig version zoomed past the Go version.
 
 My Zig Ethereum implementation now outperforms the official Go implementation by 30-40%.
 
