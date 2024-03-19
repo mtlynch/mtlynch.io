@@ -7,6 +7,9 @@ tags:
   - zig
   - ethereum
   - bash
+discuss_urls:
+  hacker_news: https://news.ycombinator.com/item?id=39755390
+  reddit: https://www.reddit.com/r/Zig/comments/1bik01m/why_does_a_extraneous_build_step_make_my_zig_app/
 ---
 
 <style>
