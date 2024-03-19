@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 44"
-date: 2024-03-14T00:00:00-04:00
+date: 2024-03-19T00:00:00-04:00
 description: Eliminating myself from the critical path on releases
 ---
 
@@ -28,7 +28,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: We published the release.
 - **Grade**: A
 
-We were trying to expose any release steps that are accidentally silo'ed with me, so this was the first release where I didn't perform any release step directly. The team performed every step based on shared documentation, including things like writing [the changelist](https://tinypilotkvm.com/pro/changes#263) and the [release announcement](https://tinypilotkvm.com/blog/whats-new-in-2024-03).
+We were trying to expose any release steps that were accidentally silo'ed with me, so this was the first release where I didn't perform any release step directly. The team performed every step based on shared documentation, including things like writing [the changelist](https://tinypilotkvm.com/pro/changes#263) and the [release announcement](https://tinypilotkvm.com/blog/whats-new-in-2024-03).
 
 ### Document TinyPilot Pro's release process internally
 
@@ -61,7 +61,7 @@ I ended up getting sidetracked by the TinyPilot release, so I haven't filed yet.
 
 We saw a big surge in visitors due to the attention [my annual review](/solo-developer-year-6/) generated, but it didn't seem to impact TinyPilot sales much. There was a 17% drop in sales, but that's mainly due to January being an atypically strong month. $75-95k/month in sales is our typical range.
 
-I need a new way to report monthly profit because switching to the contract manufacturer has made our cash profit numbers basically meaningless at the one-month resolution. Our profit each month is dominated by the timing of manufacturing bills pay every three to four months.
+I need a new way to report monthly profit because switching to the contract manufacturer has made our cash profit numbers basically meaningless at the one-month resolution. Our profit each month is dominated by the timing of manufacturing bills I pay every three to four months.
 
 That said, our three-month trailing average profit is back in the $10-20k range I like to see.
 
@@ -115,9 +115,9 @@ I had only documented and delegated three of them: the ones that required manual
 
 Looking at the list, 25 steps just to do a release sounds like a lot. And really, it's far more than 25 steps because there are dozens of substeps within the testing steps.
 
-When there are this many manual steps, it feels like the answer is to automate more, but I don't see any obvious candidates for automation. We could automate a step like adding the image hashes to our changelog or updating links in our internal playbooks, but it would probably take about 10 hours of automation work to save two manual hours per year.
+When there are so many manual steps, it feels like the answer is to automate more, but I don't see any obvious candidates for automation. We could automate a step like adding the image hashes to our changelog or updating links in our internal playbooks, but it would probably take about 10 hours of automation work to save two manual hours per year.
 
-The more important takeaway for me is to be picky about adding tasks to our release and to question the necessity of what's currently there.
+The more important takeaway for me is to be conservative about adding tasks to our release and to challenge the necessity of what's currently there.
 
 ## How do we catch pre-release bugs?
 
@@ -141,7 +141,7 @@ When I showed the dev team, they were heartbroken.
 
 We had invested weeks of dev time into transitioning users from their dynamic IP to their static IP. This turned out to be particularly challenging due to complexity around DNS caching, local TLS certificates, and browser security protections for cross-domain requests. After a lot of testing and orchestration code, the dev team thought they finally had it right, but it turned out it didn't work smoothly in TinyPilot's office.
 
-So, how do we catch bugs like that without me micromanaging the process? How do we avoid the disconnect between how different teams expected the feature to work?
+So, how do we catch bugs like that without me micromanaging the process? How do we avoid the disconnect between how different teams expect the feature to work?
 
 We've decided to adjust the process so that when the dev team releases a new feature or changes old behavior, they review our pre-release testing footage to make sure it works how they expect.
 
