@@ -1,6 +1,6 @@
 ---
-title: "Why does an extraneous build step make my Zig app 10x faster?"
-date: 2024-03-16T00:00:00-05:00
+title: "Why does a extraneous build step make my Zig app 10x faster?"
+date: 2024-03-19T00:00:00-05:00
 images:
   - zig-extraneous-build/count-bytes-zig-run.webp
 tags:
@@ -147,13 +147,13 @@ Imagine a simple bash pipeline like the following:
 ./jobA | ./jobB
 ```
 
-My mental model was that `jobA` would start and run to completion, then `jobB` would start with `jobA`'s output as its input.
+My mental model was that `jobA` would start and run to completion and then `jobB` would start with `jobA`'s output as its input.
 
 {{<img src="jobs-serial.webp" has-border="true" alt="Gantt chart of jobB starting after jobA finishes" caption="My incorrect mental model of how jobs in a bash pipeline work">}}
 
-It turns out that all commands in a bash pipline start at the same time.
+It turns out that all commands in a bash pipeline start at the same time.
 
-{{<img src="jobs-parallel.webp" has-border="true" alt="Gantt chart of jobA and jobB starting simultaneously, but jobB is longer because it has to wait on jobA's results" caption="The actual way that jobs in a bash pipeline work">}}
+{{<img src="jobs-parallel.webp" has-border="true" alt="Gantt chart of jobA and jobB starting simultaneously, but jobB is longer because it has to wait for jobA's results" caption="The actual way that jobs in a bash pipeline work">}}
 
 To demonstrate parallel execution in a bash pipeline, I wrote a proof of concept with two simple bash scripts.
 
@@ -209,7 +209,7 @@ execution time:  162.195µs
 
 It looks like the time to run the `echo '00010203040506070809' | xxd -r -p` part of the pipeline takes about 150 microseconds. The `zig build run` step must take at least 150 microseconds.
 
-By the time the `count-bytes` application actually begins in the `zig build` version, it doesn't have to wait on the previous jobs to complete. The input is already waiting on stdin.
+By the time the `count-bytes` application actually begins in the `zig build` version, it doesn't have to wait for the previous jobs to complete. The input is already waiting on stdin.
 
 {{<img src="count-bytes-zig-run.webp" has-border="true" alt="Gantt chart where echo, xxd, and zig build run start at the same time, but the execute phase of zig build run starts after echo and xxd are complete" caption="With `zig build run`, there's a delay before my application executes, so previous jobs in the pipeline have already completed by the time `count-bytes` starts.">}}
 
@@ -255,7 +255,7 @@ while (true) {
   }
 ```
 
-So, every time my application called `readByte` in the loop, it had to halt execution, request an input read from the OS, then resume when the OS delivered the single byte.
+So, every time my application called `readByte` in the loop, it had to halt execution, request an input read from the OS and then resume when the OS delivered the single byte.
 
 The fix [was simple](https://github.com/mtlynch/eth-zvm/pull/26). I had to use a buffered reader. Instead of reading a single byte at a time from the OS, I'd use Zig's built-in `std.io.bufferedReader`, which causes my application to read large chunks of data from the OS. That way, I only have to make a fraction of the syscalls.
 
@@ -309,7 +309,7 @@ ADD        # Stack now contains [3]
 
 The largest application I tested in my benchmarks was Ethereum bytecode that counted to 1,000 by adding `1` values together.
 
-After Andrew Kelly's tip helped me [reduce syscalls](https://github.com/mtlynch/eth-zvm/pull/26), my "count to 1,000" application's runtime dropped from 2,024 microseconds to just 58 microseconds, a 35x speedup. I was now beating the official Ethereum implmentation by almost a factor of two.
+After Andrew Kelly's tip helped me [reduce syscalls](https://github.com/mtlynch/eth-zvm/pull/26), my "count to 1,000" application's runtime dropped from 2,024 microseconds to just 58 microseconds, a 35x speedup. I was now beating the official Ethereum implementation by almost a factor of two.
 
 <figure>
   <div class="chart-container">
@@ -326,7 +326,7 @@ One common bottleneck in software is memory allocation. The program has to stop 
 
 Zig has a memory allocator called the fixed buffer allocator. Instead of the memory allocator requesting memory from the OS, you provide the allocator a fixed buffer of bytes, and it uses only those bytes to allocate memory.
 
-I can cheat my benchmarks by compiling a version of my Ethereum interpreter that's limited to 2 KB of memory, allocated from the stack:
+I can cheat my benchmarks by compiling a version of my Ethereum interpreter that's limited to 2 KB of memory allocated from the stack:
 
 ```diff
 diff --git a/src/main.zig b/src/main.zig
@@ -368,9 +368,11 @@ Cool! With a fixed memory buffer, my Ethereum implementation runs my "count to 1
 
 ## Conclusion
 
-My experience with this bug highlights the importance of benchmarking performance early and often. By adding a benchmarking script to my continuous integration and archiving the results, it was easy for me to identify when my measurements changed. If benchmarking were just a manual, periodic task, it would have been difficult for me to identify exactly what changed caused the difference in my measurements.
+My takeaway from this experience is to benchmark performance early and often.
 
-This also underscores the importance of thinking carefully about what a benchmark measures. I didn't consider that my benchmark included the time waiting for other processes to fill stdin.
+By adding a benchmarking script to my continuous integration and archiving the results, it was easy for me to identify when my measurements changed. Had I relegated benchmarking to a manual, periodic task, it would have been difficult for me to identify exactly what caused the difference in my measurements.
+
+This experience also underscores the importance of understanding your metrics. Before hitting this bug, I hadn't considered that my benchmark included the time waiting for other processes to fill stdin.
 
 <script src="third-party/chart.umd.js"></script>
 <script src="script.js"></script>
