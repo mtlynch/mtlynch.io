@@ -159,7 +159,7 @@ Our new strategy is that the release manager doesn't make the decision, but they
 
 ### I've written the world's fastest (incomplete) Ethereum implementation
 
-I [mentioned last month](retrospectives/2024/02/#side-projects) that I'd found a fun way to learn more about Zig, interpreters, and Ethereum &mdash; I'm writing an Ethereum bytecode interpreter in Zig.
+I [mentioned last month](/retrospectives/2024/02/#side-projects) that I'd found a fun way to learn more about Zig, interpreters, and Ethereum &mdash; I'm writing an Ethereum bytecode interpreter in Zig.
 
 Zig gives developers a high degree of control over performance, so one of my earliest tasks on my interpreter was to set up benchmarks in continuous integration to compare my implementation to the official Go implementation.
 
