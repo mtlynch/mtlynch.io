@@ -18,7 +18,7 @@ tags:
   }
 </style>
 
-For the past few months, I've been curious about two technologies: the Zig programming language and the Ethereum cryptocurrency. To learn more about both, I've been using Zig to write a bytecode interpreter for the Ethereum Virtual Machine.
+For the past few months, I've been curious about two technologies: the Zig programming language and Ethereum cryptocurrency. To learn more about both, I've been using Zig to write a bytecode interpreter for the Ethereum Virtual Machine.
 
 Zig is a great language for performance optimization, as it gives you fine-grained control over memory and control flow. To motivate myself, I've been benchmarking my Ethereum implementation against the official Go implementation.
 
@@ -41,7 +41,7 @@ $ echo '60016000526001601ff3' | xxd -r -p | ./zig-out/bin/eth-zvm
 execution time:  438.059µs
 ```
 
-`zig build run` is just a shortcut command for building a binary and executing it. It should be completely equivalent to the following commands:
+`zig build run` is just a shortcut command for building a binary and executing it. It should be equivalent to the following two commands:
 
 ```bash
 zig build
@@ -89,7 +89,7 @@ pub fn main() !void {
 }
 ```
 
-With the simplified app, I could still see the performance difference. When I ran the bye counter with `zig build run`, it ran in 13 microseconds:
+With the simplified app, I could still see the performance difference. When I ran the byte counter with `zig build run`, it ran in 13 microseconds:
 
 ```bash
 $ echo '00010203040506070809' | xxd -r -p | zig build run -Doptimize=ReleaseFast
@@ -111,7 +111,7 @@ My test consisted of three commands in a bash pipeline:
 1. `xxd` converts `echo`'s hex-encoded bytes to binary-encoded bytes.
 1. `zig build run` compiles and executes my byte counter program, counting the number of binary-encoded bytes that `xxd` emitted.
 
-The only difference between `zig build run` and `./zig-oug/bin/count-bytes` was that the second command runs the already-compile app, whereas the first one recompiles the app.
+The only difference between `zig build run` and `./zig-out/bin/count-bytes` was that the second command runs the already-compile app, whereas the first one recompiles the app.
 
 Again, I was dumbfounded.
 
@@ -121,7 +121,7 @@ How could does an extra compilation step make the program _faster_? Does a Zig a
 
 At this point, I was stumped. I had read my source code over and over, and I couldn't understand how compiling and running an application could be faster than running the already-compiled binary.
 
-Zig is still a new language, so my hypothesis was that there was something about Zig I'd misunderstood. Surely, if experienced Zig programmers looked at my program, they'd immediately spot my error.
+Zig is still a new language, so there had to be something about Zig I'd misunderstood. Surely, if experienced Zig programmers looked at my code, they'd spot my error instantly.
 
 I [posted my question on Ziggit](https://ziggit.dev/t/zig-build-run-is-10x-faster-than-compiled-binary/3446?u=mtlynch), a discussion forum for Zig. The first few responses said I had a problem with "input buffering" but they didn't have concrete suggestions to fix it or investigate further.
 
@@ -295,7 +295,7 @@ execution time:  56.602µs
 
 ## Benchmarking a larger input
 
-My Ethereum interpreter currently only supports a small subset of the full set of Ethereum's opcodes. The most complex computation my interpreter can do at this point is add numbers together.
+My Ethereum interpreter currently only supports a small subset of Ethereum's opcodes. The most complex computation my interpreter can do at this point is add numbers together.
 
 For example, here's an Ethereum application that counts to three by pushing `1` to the stack three times and then adding the values together:
 
