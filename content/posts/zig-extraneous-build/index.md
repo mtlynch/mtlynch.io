@@ -44,7 +44,7 @@ $ echo '60016000526001601ff3' | xxd -r -p | ./zig-out/bin/eth-zvm
 execution time:  438.059µs
 ```
 
-`zig build run` is just a shortcut command for building a binary and executing it. It should be equivalent to the following two commands:
+`zig build run` is just a shortcut command for compiling a binary and executing it. It should be equivalent to the following two commands:
 
 ```bash
 zig build
@@ -114,7 +114,7 @@ My test consisted of three commands in a bash pipeline:
 1. `xxd` converts `echo`'s hex-encoded bytes to binary-encoded bytes.
 1. `zig build run` compiles and executes my byte counter program, counting the number of binary-encoded bytes that `xxd` emitted.
 
-The only difference between `zig build run` and `./zig-out/bin/count-bytes` was that the second command runs the already-compile app, whereas the first one recompiles the app.
+The only difference between `zig build run` and `./zig-out/bin/count-bytes` was that the second command runs the already-compiled app, whereas the first one recompiles the app.
 
 Again, I was dumbfounded.
 
