@@ -1,31 +1,25 @@
 ---
 title: "Building My First Homelab Server Rack"
-date: 2024-01-12T00:00:00-05:00
+date: 2024-04-12T00:00:00-05:00
 tags:
   - homelab
 ---
 
 TODO: Table of contents
 
-Six years ago, I built my [first home server](/building-a-vm-homelab-2017/). In a given week, I generally worked on four or five programming projects, and I was tired of restarting a bunch of services whenever I had to restart my main Windows desktop. I built a second PC running Linux, and I designated that as my home server. Whenever I wanted to do software development, I created a virtual machine on that server and accessed it remotely over SSH.
-
-That first server served me well, so over the years, I've gotten more into the homelab scene and added custom NAS, firewall, and more advanced switches. And I work with Raspberry Pis so I had several Raspberry Pis everywhere.
+Six years ago, I built my [first home server](/building-a-vm-homelab-2017/). That first server served me well, so over the years, I've gotten more into the homelab scene and added custom-built storage server, a dedicated firewall, and more advanced switches. And I work with Raspberry Pis so I had several Raspberry Pis everywhere.
 
 My wife has expressed frustration at how I never clean certain parts of my office because of all the wires. I felt like, "It's not that many wires." And then I really looked and realized, it's kind of a lot of wires.
 
 TODO: Photo of wires
 
+I knew a lot of tech enthusiasts were buying server racks for their home, but I never thought of myself as a server rack guy. I had some components, but there was just a VM server here, a data server there. A few switches scattered around.
+
+But then I realized that if I bought a rack, it would consolidate a lot of the equipment I had around my office into one space. My wife was also happy about the idea of almost all the wires living in one self-contained unit.
+
 ## I don't want your life story &mdash; just show me the rack
 
 If you want to skip the explanations and jump to my rack, click below.
-
-## But I'm not a server rack guy
-
-I had never considered buying a rack. I didn't think I was that seriously into homelab. I had some components, but there was just a VM server here, a data server there. A few switches scattered around.
-
-People with server racks just felt way more intense than I was. They were building 50 TB backup servers, and I was just a mild homelab person.
-
-But then I realized that if I bought a rack, it would consolidate a lot of the equipment I had around my office into one space. My wife was also happy about the idea of almost all the wires living in one self-contained unit.
 
 ## Why build a server rack at home?
 
@@ -93,7 +87,7 @@ For me, wheels were a critical feature. I wanted to be able to clean behind the 
 
 - **StarTech XX 18U rack**
 
-I have a StarTech rack at my office. It's nothing exciting, but it does what it's supposed to do. It was striaghtforward to assemble, it feels sturdy, and the wheels make it easy to move around. StarTech also has a good reputation and a decent website, so I just chose between different StarTech racks.
+StarTech also has a good reputation and a decent website, so I just chose between different StarTech racks.
 
 ### Review: StarTech XX 18U rack
 
