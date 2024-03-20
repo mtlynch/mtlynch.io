@@ -158,4 +158,4 @@ A less wasteful solution would be to buy a new keyboard and offer the old one fo
 
 ---
 
-_Cover art by [Loraine Yow](https://www.lolo-ology.com/)._
+_Cover art by [Loraine Yow](https://www.loraineyow.com/)._

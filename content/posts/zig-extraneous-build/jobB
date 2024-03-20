@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+function print_status() {
+    local message="$1"
+    local timestamp=$(date +"%T.%3N")
+    echo "$timestamp $message" >&2
+}
+
+print_status 'jobB is starting'
+
+print_status 'jobB is waiting on input'
+while read line; do
+  print_status "jobB read '${line}' from input"
+done < /dev/stdin
+print_status 'jobB is done reading input'
+
+print_status 'jobB is terminating'

@@ -128,7 +128,7 @@ So, to find the version string for Python 2.7.18.7, I [searched Nixhub for `pyth
 
 {{<img src="nixhub-info.webp" max-width="600px" has-border="true" alt="Screenshot of NixHub results showing that the human-readable version string appears first, followed by the nixpkgs version string, followed by the package name" caption="NixHub allows me to translate the human-friendly version string to a nixpkgs reference and package name.">}}
 
-Pinning exact package versions is, honestly, a huge pain. I hope that Nix tooling evolves to the point where you can just specify that you want version `2.7.18.7` rather than go through this roundabout dance of looking up the git commit hash that corresponds to the version you want. But for now, this is the best way I know of for
+Pinning exact package versions is, honestly, [a huge pain](https://github.com/NixOS/nixpkgs/issues/9682). I hope that Nix tooling evolves to the point where you can just specify that you want version `2.7.18.7` rather than go through this roundabout dance of looking up the git commit hash that corresponds to the version you want. But for now, this is the best way I know of for
 pinning versions.
 
 ## Understanding the `flake.nix` file
