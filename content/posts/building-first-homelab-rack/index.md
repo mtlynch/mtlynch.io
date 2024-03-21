@@ -7,7 +7,7 @@ tags:
 
 TODO: Table of contents
 
-Six years ago, I built my [first home server](/building-a-vm-homelab-2017/). That first server served me well, so over the years, I've gotten more into the homelab scene and added custom-built storage server, a dedicated firewall, and more advanced switches. And I work with Raspberry Pis so I had several Raspberry Pis everywhere.
+Six years ago, I built my [first home server](/building-a-vm-homelab-2017/). It made a huge difference to my software development workflow, so over the years, I've gotten more into the homelab scene and added custom-built storage server, a dedicated firewall, and more advanced switches. And I work with Raspberry Pis so I had several Raspberry Pis everywhere.
 
 My wife has expressed frustration at how I never clean certain parts of my office because of all the wires. I felt like, "It's not that many wires." And then I really looked and realized, it's kind of a lot of wires.
 
@@ -31,15 +31,21 @@ A homelab is a place in your home where you can experiment with IT hardware or s
 
 ## Why this guide?
 
-I'm a beginner, so I don't have the curse of knowledge.
+### By a beginner for beginners
 
-This is not affiliate spam. Some are honest, but all of them are inherently biased. They have a vested interest in you purchasing more expensive gear because they make more money that way. They also have an interest in directing you to merchants
+I'm a beginner, and this is a beginner-level guide.
 
-The first issue with a lot of guides to building any kind of home server equipment is that the author is almost always an affiliate partner. There's nothing inherently wrong with affiliates, but they have a bias. They make money when you buy through their links. That means that they have incentive to push you toward more expensive equipment. That's not to say that they're dishonest or that they only care about money, but they care
+I've read a lot of other homelab guides, and they seem like the author is building their 20th rack. They don't explain their thought process or why they rejected alternatives. They just say that they chose X component, and it's a great component, and you should buy it too.
+
+Because this is my first time building a server rack, I'm walking you through how I approached it as a beginner so you can understand my thought process.
+
+### No affiliate links
+
+Most posts about homelab are funded by affiliate links.
+
+Some of them give helpful information regardless, but affiliate links make the author inherently biased. They have a vested interest in you purchasing more expensive gear because they make more money that way. They also have an interest in directing you to merchants that pay them the most rather than the merchants that serve customers best.
 
 I'm writing this out of vanity. I do have financial interest in that I sell a product that's in the homelab space, but I've been writing homelab posts long before that.
-
-They don't explain their thought process or why they rejected alternatives. They just say that they chose X component, and it's a great component, and you should buy it too.
 
 ## Choosing a rack
 
@@ -63,7 +69,7 @@ As you pick components, add up how many rack units they'll take up, then add som
 
 Server racks vary in depth. Most server racks are designed for enterprise-grade servers, which are up to XX" long.
 
-I have a Dell XX servers at my office, and it's a huge hassle. It's XX" long and XX lbs. It was a pain to mount, and it will be a pain when I need to sell it. I decided that all the components in this rack would be small and require only front mounts.
+I have a Dell XX server at my office, and it's a huge hassle. It's XX" long and XX lbs. It was a pain to mount, and it will be a pain when I need to sell it. I decided that all the components in this rack would be small and require only front mounts.
 
 I have a relatively small office, and I didn't want the rack server to dominate the space.
 
@@ -115,11 +121,11 @@ Unless you're buying something very exotic, the speeds available for a rack-moun
 
 For as long as I can remember, I've had 1 Gbps Ethernet speed in my house, and that's been fine. I do most of my work online, so the bottleneck is almost always my ISP rather than my home network.
 
-Lately, I've been finding that the bottleneck on my home storage server is my 1 Gbps network link, so I've been interested in a network upgrade.
+Lately, I've been finding that the bottleneck on my home storage server is my 1 Gbps network link, so I've been interested in a network upgrade. (TODO: Link)
 
 The next steps up are either 2.5 Gbps or 10 Gbps. Given that I've been fairly satisfied with 1 Gbps, I thought 10 Gbps would probably be too big a jump, so I might as well take a smaller step to 2.5 Gbps.
 
-But the more I read about 2.5 Gbps gear, the more complaints I saw that it's flaky and unreliable. The consensus seemed to be that it's about equally difficult to move to 2.5 Gbps or 10 Gbps, so you might as well go for 10 Gbps. So, I thought, fine! I'll do 10 Gbps.
+The more I read about 2.5 Gbps gear, the more complaints I saw that it's flaky and unreliable. The consensus seemed to be that it's just as hard to build a 10 Gbps network as it is to build a 2.5 Gbps, so you might as well go for 10 Gbps.
 
 I did run into headaches, but I'll cover that more below (TODO: link)
 
@@ -133,21 +139,27 @@ I did run into headaches, but I'll cover that more below (TODO: link)
 
 There are two kinds of network switches you can purchase: managed or unmanaged.
 
-- **Unmanaged switches** offer no configuration. They're just dumb boxes that route network traffic. Any host connected to the switch can send network traffic to any other port on the switch.
+- **Managed switches** allow you to configure rules and settings for your switch. The most common reason you'd want a managed switch is to create virtual networks (VLANs) to improve network security.
 
-- **Managed switches** allow you to add advanced configuration. The most common use for a managed port is to create virtual networks (VLANs)
+- **Unmanaged switches** offer no configuration. They're just dumb boxes that route network traffic. Any host connected to the switch can send network traffic to any other port on the switch.
 
 Personally, I wanted a plain old unmanaged switch. I've never used a managed switch, and I didn't expect to have a use for it. I have an opnsense firewall with four Ethernet ports, and I could have been using that device at any point to create VLANs, and I never did. So why would I start now?
 
-It turns out, none of the network switches that met my criteria were unmanaged, so I went with a managed switch.
-
-I planned to accept all the default settings and not configure VLANs. Once I got my managed switch, I found that it's pretty fun to configure VLANs. Now I want to configure VLANs for everything!
+It turned out, none of the network switches that met my criteria were unmanaged, so I went with a managed switch. I planned to accept all the default settings and not configure VLANs. Once I got my managed switch, I found that it's pretty fun to configure VLANs. Now I want to configure VLANs for everything!
 
 ### PoE or standard Ethernet?
 
-Certain low-power devices can run entirely from power they draw from the Ethernet cable. For example, my home WiFi access point, the Ruckus RXX (TODO: link) supports PoE, so my access point conveniently needs only a single cable for both power and network connectivity. And I have PoE HATs for my Raspberry Pis, which enables them to run without a dedicated USB-C power cable.
+Certain low-power devices can run entirely from power they draw from the Ethernet cable.
 
-For you to power a PoE-capable device over Ethernet, you need a switch that supports PoE. If you have PoE devices or you may purchase some in the future, you may want a PoE switch.
+My home WiFi access point, the Ruckus RXX (TODO: link) supports PoE, so my access point conveniently needs only a single cable for both power and network connectivity.
+
+TODO: Photo
+
+I have PoE HATs for my Raspberry Pis, which enables them to run without a dedicated USB-C power cable.
+
+TODO: Photo
+
+To power a device over PoE, you need a PoE-enabled switch. So, if you have PoE devices or you may purchase some in the future, you may want a PoE switch.
 
 If you want a PoE swtich, the next question is how many PoE devices do you need to support? Most PoE switches only support PoE on a subset of their ports (TODO: is this true?), so make sure your switch has enough PoE ports for your devices now and in to the future.
 
@@ -194,13 +206,9 @@ Overall, I like the TP-Link XX switch pretty well. It's silent, which is a big p
 The TP-Link UI is not very user-friendly. I concede that some networking concepts are hard to represent in a web UI, but TP-Link has done a particularly bad job of it.
 Took forever to [get VLANs right](/notes/debugging-vlans-tp-link/). I've seen how other brands like QNAP represent VLAN controls, and I think they did a much better job than TP-Link.
 
-I regret not looking around more for a managed switch that supported PoE without a noise problem. My ideal would be to have a managed switch where at least eight of the ports have PoE without sacrificing fanless operation.
-
 ### Review: Netgear XX Unmanaged PoE Switch
 
 I only have a handful of PoE devices, so I originally planned to power them with a small 5-port PoE switch I'd keep on a shelf. But then I ended up getting rid of the Netgear PoE switch at my office, and I adopted it into my home server rack.
-
-It's a bit silly that I now have 2U of network switches and 2U of patch panels, and I'm only using 11 of the 44 ports, but I guess better to have too much available than too little.
 
 ## Choosing 10G NICs
 
@@ -662,6 +670,14 @@ on Newegg: I'd never seen anything on Newegg before that was replacement-only, s
 ### Check UPS reviews for noise complaints
 
 Some UPS devices are totally silent and some produce constant noise. If it's anywhere near you, take noise into consideration.
+
+### Get a PoE-enabled switch
+
+It's a bit silly that I now have 2U of network switches and 2U of patch panels, and I'm only using 11 of the 44 ports, but I guess better to have too much available than too little.
+
+I regret not looking around more for a managed switch that supported PoE without a noise problem. My ideal would be to have a managed switch where at least eight of the ports have PoE without sacrificing fanless operation.
+
+I want to be able to add rules to devices plugged into my PoE switch, but because it's unmanaged, they all have to share the same rules.
 
 ### Cage nuts aren't supposed to hurt
 
