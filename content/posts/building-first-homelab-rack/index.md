@@ -9,13 +9,18 @@ TODO: Table of contents
 
 Six years ago, I built my [first home server](/building-a-vm-homelab-2017/). It made a huge difference to my software development workflow, so over the years, I've gotten more into the homelab scene and added custom-built storage server, a dedicated firewall, and more advanced switches. And I work with Raspberry Pis so I had several Raspberry Pis everywhere.
 
-My wife has expressed frustration at how I never clean certain parts of my office because of all the wires. I felt like, "It's not that many wires." And then I really looked and realized, it's kind of a lot of wires.
+My wife has pointed out that I never clean certain parts of my office because of all the wires. I thought, "What? No, this is a normal amount of wires." But then I started looking at them and realized it was kind of a lot of wires...
 
-TODO: Photo of wires
+{{<gallery caption="My office, upon closer inspection, kind of had a lot of wires">}}
+{{<img src="office-wires-1.webp" max-width="300px" alt="Photo of lots of wires in my office">}}
+{{<img src="office-wires-2.webp" max-width="300px" alt="Photo of lots of wires in my office">}}
+{{</gallery>}}
 
 I knew a lot of tech enthusiasts were buying server racks for their home, but I never thought of myself as a server rack guy. I had some components, but there was just a VM server here, a data server there. A few switches scattered around.
 
 But then I realized that if I bought a rack, it would consolidate a lot of the equipment I had around my office into one space. My wife was also happy about the idea of almost all the wires living in one self-contained unit.
+
+TODO: Photo of finished rack
 
 ## I don't want your life story &mdash; just show me the rack
 
@@ -39,9 +44,9 @@ I've read a lot of other homelab guides, and they seem like the author is buildi
 
 Because this is my first time building a server rack, I'm walking you through how I approached it as a beginner so you can understand my thought process.
 
-### No affiliate links
+### No conflict of interest
 
-Most posts about homelab are funded by affiliate links.
+Most posts about homelab are funded by affiliate links. I'm not getting paid by anyone or receiving any free products.
 
 Some of them give helpful information regardless, but affiliate links make the author inherently biased. They have a vested interest in you purchasing more expensive gear because they make more money that way. They also have an interest in directing you to merchants that pay them the most rather than the merchants that serve customers best.
 
@@ -91,11 +96,13 @@ For me, wheels were a critical feature. I wanted to be able to clean behind the 
 
 ### Candidates
 
-- **StarTech XX 18U rack**
+- **[StarTech 4POSTRACK18U 18U rack](https://www.startech.com/en-us/server-management/4postrack18u)**: $315.99
 
 StarTech also has a good reputation and a decent website, so I just chose between different StarTech racks.
 
-### Review: StarTech XX 18U rack
+### Review: StarTech 4POSTRACK18U 18U rack
+
+{{<img src="star-tech-rack.webp" max-width="400px">}}
 
 I'm happy with the choice.
 
@@ -214,37 +221,22 @@ I only have a handful of PoE devices, so I originally planned to power them with
 
 If you choose a 10G switch, your work isn't over. In order to achieve 10 Gbps speeds, you need a 10G NIC for each device you want to enjoy the 10G speed. A regular 1 Gbps NIC will still work with a 10G switch, but it will be limited to 1 Gbps Ethernet speeds.
 
-Michael Stapelberg is an excellent blogger, and he's my idol in terms of maximizing home networking speeds. He was the first homelab blogger I saw who explained how he upgraded his entire house to 10G, and now he's upgraded to 25G.
+I ended up buying
 
-Michael Stapelberg uses Mellanox (TODO: link), so I figured that it would be good enough for me.
-
-### Installing a XX NIC on my Windows Desktop
-
-I bought a XX NIC from eBay and installed it in my Windows desktop, but it didn't work at all. The activity lights didn't flash at all, and Windows didn't recognize anything in the PCI slot at all.
-
-In searching for solutions, I found someone mention that switching the Mellanox NIC to another PCI slot on their motherboard solved the problem. I was skeptical, but I tried it, and to my surprise, that fixed the issue. Windows immediately recognized the NIC and got a network connection.
-
-The downside is that it now adds about five seconds to my boot because my BIOS hands control over to my Mellanox NIC as a boot device. I've tried tinkering with BIOS settings, but I can't find a way to skip it.
-
-### Installing a 10G NIC on my TrueNAS server
-
-I tried installing a XX NIC on my TrueNAS storage server, but it didn't work. TrueNAS could see the Mellanox NIC, but I couldn't get a network connection.
-
-To see if my new NIC was a dud, I borrowed the working NIC from my Windows machine and tried it on TrueNAS, but I got the same results.
-
-I tried swapping the NIC back to my Windows desktop. Windows recognized it, so I updated the firmware and swapped it back to my TrueNAS server, but it still couldn't get a network connection.
-
-I bought another 10G NIC from eBay, the Chelsio 520. The Chelsio brand is one of the most common for TrueNAS servers, and Serve the Home's buyer's guide listed it as a recommended option, so I knew from the software side that TrueNAS should support it.
-
-https://www.servethehome.com/buyers-guides/top-hardware-components-for-truenas-freenas-nas-servers/top-picks-freenas-nics-networking/
-
-No dice, unfortunately. I couldn't find "Chelsio" in the dmesg output. I did notice it was incredibly hot to the touch, so I thought maybe I got a defective NIC that was overheating.
-
-TODO: Link to TrueNAS forums
-
-So, I bought yet another Chelsio NIC (the fourth 10G NIC I purchased, if you're keeping score). I got the same results, and it was similarly hot within a few seconds of my server booting.
+- Mellanox XX NIC
+  - On my Windows desktop, the activity lights didn't flash at all, and Windows didn't recognize anything in the PCI slot.
+  - I found a forum post where somemeone mentioned that switching to another PCI slot on their motherboard solved the problem. I was skeptical, but that fixed it.
+- Mellanox XX NIC
+  - My TrueNAS server couldn't recognize it, but it worked on my Windows desktop.
+- Chelsio 520 NIC
+  - Chelsio is one of the most common brands for TrueNAS servers, and [Serve the Home's buyer's guide](https://www.servethehome.com/buyers-guides/top-hardware-components-for-truenas-freenas-nas-servers/top-picks-freenas-nics-networking/) listed it as a recommended option
+  - My TrueNAS server couldn't recognize it. (TODO: Link to TrueNAS forums)
+- Chelsio XX NIC
+  - My TrueNAS server couldn't recognize this one, either.
 
 My best guess is that the issue is motherboard incompatibility. My TrueNAS server uses a consumer-grade XX motherboard, so it may not support these Enterprise-oriented 10G NICs. I'm planning to build a new server in the next few months, so I'll try a fancier motherboard to see if that lets me use one of the three 10G NICs I have lying around.
+
+So, currently, my Windows desktop can talk to my managed switch at 10 Gbps speeds, but it can't talk to anything else. But if I need to access TP-Link's dumb admin web UI, I know that bandwidth won't be an issue.
 
 ## Choosing a UPS (battery backup)
 
@@ -252,23 +244,11 @@ When I lived in Manhattan, I'd experience around five power outages per year. Th
 
 To avoid surprise shutdowns, I bought a battery backup system, also known as an uninterruptible power supply (UPS). It was an APC XX, and I've used that same battery backup for XX years.
 
-I've been happy with the APC. It's been a good investment. For short power outages, the battery keeps my systems online. For extended outages, the battery gives me enough time to gracefully shutdown my systems to avoid data loss.
+TODO: Photo
 
-The downside of the battery backup is that it's responsible for a lot of cable messiness in my office. My desktop, servers, and router were all in different corners of my office, so big, unsightly power cables had to run all around my office to connect those components to the UPS.
+For short power outages, the battery keeps my systems online. For extended outages, the battery gives me enough time to gracefully shutdown my systems to avoid data loss.
 
-My battery backup was also one of the main sources of cables in my office. Before I got my rack, a single UPS was powering my desktop PC, two servers, a router, and a switch all in different corners of my office. I wanted a rack-mounted UPS so that all the power cabling could be limited to just the rack.
-
-### Does it need to send alerts?
-
-After I set up my rack, a co-worker mentioned that most modern UPS systems can send alerts to devices on the local network to tell them to shut down gracefully.
-
-I actually never looked into that and didn't set that up.
-
-TODO: Does my UPS support it?
-
-In my experience over the past five years, extended power outages are rare. There have only been three that lasted longer a minute, and in all but one case, I was at home and able to just walk over to my desk and manually shut down my machines.
-
-For me, automating shutdowns from my UPS isn't worth the trouble, but you might choose differently if your systems are more sensitive to hard power cuts or if you're in an area where power outages are more frequent.
+The downside of the battery backup is that it added a lot of cabling to my office. My desktop, servers, and router were all in different corners of my office, so big, unsightly power cables had to run all around my office to connect those components to the UPS.
 
 ### How much time do you need for a graceful shutdown?
 
@@ -278,7 +258,19 @@ I theoretically could have used my Kill-A-Watt to measure the wattage of each of
 
 My APC UPS had a XX battery, and it reported 12 minutes of battery life while powering a desktop computer, a VM server, a storage server, a firewall, and a networking switch.
 
-The UPS I ended up buying has a XX battery. It reports 30 minutes of battery life while powering a VM server, a storage server, a firewall, and a networking switch. The total power draw of all these systems in a typical workload is XX to XX. My old UPS now powers my desktop exclusively, so each UPS has a smaller load to support.
+The UPS I ended up buying has a XX battery. It reports 30 minutes of battery life while powering a VM server, a storage server, a firewall, and a networking switch. The total power draw of all these systems in a typical workload is XX to XX.
+
+My old UPS now powers my desktop exclusively, so each UPS has a smaller load to support.
+
+### Does it need to send alerts?
+
+After I set up my rack, a co-worker mentioned that most modern UPS systems can send alerts to devices on the local network to tell them to shut down gracefully.
+
+I actually never looked into that and didn't set that up.
+
+TODO: Does my UPS support it?
+
+For me, automating shutdowns from my UPS isn't worth the trouble, but you might choose differently if your systems are more sensitive to hard power cuts or if you're in an area where power outages are more frequent.
 
 ### Candidates
 
@@ -289,33 +281,35 @@ The UPS I ended up buying has a XX battery. It reports 30 minutes of battery lif
 | CyberPower     | [CPS1500AVR](https://www.newegg.com/cyberpower-cps1500avr/p/N82E16842102006)                                                        | 1500 VA | 8       | $459.95 |
 | CyberPower     | [OR700LCDRM1U](https://www.newegg.com/cyberpower-or700lcdrm1u/p/N82E16842102088)                                                    | 700 VA  | 4       | $299.00 |
 
+### Review: CyberPower CP1500PFCRM2U
+
+- Grade: A
+
+I've been happy with the CyberPower CP1500PFCRM2U.
+
+The LCD is user-friendly and has useful metrics about power consumption. You can also turns the display off to have fewer flashing lights on your rack. It reports XX minutes of battery life when I cut power, which is plenty of time for me to shut my systems down.
+
+It's also completely silent, which I thought was a given for a battery backups, but it turns out it's not...
+
 ### Review: Tripp Lite SMART1500LCD
 
 - Grade: D
 
-I originally purchased the Tripp Lite SMART1500LCD, but it was incredibly noisy.
+The first UPS I purchased for my rack was the Tripp Lite SMART1500LCD, but it was incredibly noisy.
 
-I didn't even realize battery backups could _be_ noisy. My APC UPS was completely silent except when it loses power and fails over to battery backup.
+I didn't even realize battery backups could _be_ noisy. My APC UPS was completely silent except when it lost power and failed over to battery backup.
 
-The Tripp Lite UPS was instantly the loudest thing in my rack, maybe the loudest thing in my whole house. It was like a hair dryer running on low. The UPS fans were so loud that my wife could hear my server rack a floor away in our house.
+The Tripp Lite UPS was not only the the loudest thing in my rack; it was the loudest thing in my whole house. It was like constantly having a hair dryer running in my office. The UPS fans were so loud that my wife could hear my server rack a floor away in our house.
 
 Did I just get a defective unit? Surely, a UPS can't be designed to be this loud all the time, right?
 
 I reached out to Tripp Lite customer support with a video of the UPS' noise level. They said that it was working as intended, and it's supposed to be that loud.
 
-I tried to accept the noise for a few days, but it was so distracting that I gave up after day two.
+I tried to get used to the noise, but it was so distracting that I gave up after day two.
 
-To my surprise, I realized Newegg's return policy was "replacement only." I'd always had an easy return policy with Newegg so I didn't even think to check. Fortunately, I begged them, and they refunded me. Score once again for Newegg.
+To my surprise, I realized Newegg's return policy was "replacement only." I'd always had an easy return experience with Newegg so I didn't even think to check the return policy beforehand, but I guess they're more strict about these XX lb units.
 
-### Review: CyberPower CP1500PFCRM2U
-
-- Grade: A
-
-When I realized the Tripp Lite UPS was a no-go, I ordered the other UPS I considered: the CyberPower CP1500PFCRM2U.
-
-The first thing I did was turn it on and listen for noise. Nothing! It was completely silent. It generates noise when there's a power cut as it fails over to battery, but that's tolerable.
-
-The CyberPower UPS has performed great. I love that it's silent. The LCD is user-friendly and has useful metrics about power consumption. You can also turns the display off to have fewer flashing lights on your rack. It reports XX minutes of battery life when I cut power, which is plenty of time for me to shut my systems down.
+Fortunately, I asked Newegg customer service nicely for a refund, and they granted it. Score one for Newegg!
 
 ## Choosing a power strip
 
@@ -334,12 +328,6 @@ Power strips are, frankly, not so exciting, so I didn't shop around very much. I
 | **Tripp Lite** | [**RS-1215-RA**](https://www.newegg.com/black-tripp-lite-12-outlets-power-strip/p/N82E16812120265?Item=9SIAFVF75F0869) | **12**  | **$78.11** |
 | CyberPower     | [CPS1215RMS](https://www.newegg.com/cyberpower-cps1215rms-12-outlets-nema-5-15r/p/N82E16842102076)                     | 12      | $59.84     |
 
-### Review: CyberPower CPS1215RMS
-
-- Grade: C
-
-I bought this power strip a few years ago for the TinyPilot office (TODO: link). My main issue is that the outlets are too close together. A lot of the things I plug in at the office are bricks, so they cover two outlets.
-
 ### Review: Tripp Lite RS-1215-RA
 
 - Grade: B+
@@ -348,33 +336,23 @@ This power strip has worked well. The rear outlets are spaced apart so that bric
 
 The front outlets are all unused, but I find them useful occasionally if I have a device I want to test for a few hours, and I don't want to route it to the UPS or rear of the rack.
 
+### Review: CyberPower CPS1215RMS
+
+- Grade: C
+
+I bought this power strip a few years ago for the TinyPilot office (TODO: link). My main issue is that the outlets are too close together. A lot of the things I plug in at the office are bricks, so they cover two outlets.
+
 ## Choosing rack shelves
 
-Some of my existing office infrastructure has no rack mounting option, so I needed a shelf:
+Some of my existing office infrastructure has no rack mounting option, so I needed 2U of shelf space:
 
 - My OPNsense firewall server (running on a XX mini PC)
 - My TinyPilot
 - Dell XX mini PC (I use it for testing)
 
-It's about two 2U shelves of stuff, though I could theoretically cram it into one shelf if I really wanted.
-
 ### Candidates
 
-### Review: Star-Tech shelves
-
-- Grade: D
-
-I originally purchased the Star-Tech shelves because Star-Tech has such a good reputation in the server world.
-
-When I installed them into my rack, I thought I must be misunderstanding how they work. They have a bottom lip that bends downward into the next rack slot.
-
-This downward lip forces you to either allocate 3U to each of your 2U shelves or you have to shift everything down by 0.5U.
-
-I couldn't even figure out a purpose for the lip. It would make sense if it curved up because that would protect items on the shelf from slipping off, but why bend down? It didn't look like it provided any structural support to the shelf either.
-
-I scoured reviews of this shelf to see if anyone else was talking about this bizarre design choice. When other reviewers mentioned it, they didn't seem to mind that much. They were just like, "Oh, yeah, it extends past the bottom a bit." Huh? Why would anyone accept that?
-
-I'm still wondering if I'm crazy or there's something I'm missing about why Star-Tech's downward-facing lips are a good idea, but I promptly returned mine and found alternative rack shelves on Amazon.
+- [StarTech CABSHELFV 2U 16"](https://www.startech.com/en-us/server-management/cabshelfv)
 
 ### Review: XX shelves
 
@@ -382,9 +360,25 @@ I'm still wondering if I'm crazy or there's something I'm missing about why Star
 
 I found these no-name shelves on Amazon, and they worked great.
 
-These shelves have a lip, but it bends upward, which is actually useful. Bending upward means that the lip acts as a guard to prevent components from sliding off the rack.
+They were easy to install, they're low in price, and they keep themselves within the 2U space they promise. These shelves have a lip acts as a guard to prevent components from sliding off the rack.
 
-Other than that, they were easy to install, they're low in price, and they keep themselves within the 2U space they promise.
+### Review: StarTech CABSHELFV 2U shelves
+
+- Grade: D
+
+I originally purchased the StarTech shelves because StarTech has such a good reputation in the server world.
+
+When I installed them into my rack, I thought I must be misunderstanding how they work. They have a bottom lip that bends downward into the next rack slot.
+
+{{<img src="star-tech-shelf-lip.webp" max-width="600px" caption="StarTech shelves have a downward facing lip whose sole purpose seems to be messing up your rack layout.">}}
+
+This downward lip forces you to either allocate 3U to each of your 2U shelves or shift everything down by 0.5U.
+
+I couldn't even figure out a purpose for the lip. It would make sense if it curved up because that would protect items on the shelf from slipping off, but why bend down? It didn't look like it provided any structural support to the shelf either.
+
+I scoured reviews of this shelf to see if anyone else was talking about this bizarre design choice. When other reviewers mentioned it, they didn't seem to mind that much. They were just like, "Oh, yeah, it extends past 2U a bit." Huh? Why would anyone accept that?
+
+I'm still wondering if I'm crazy or there's something I'm missing about why StarTech's downward-facing lips are a good idea, but I promptly returned mine and found alternative rack shelves on Amazon.
 
 ## Choosing a patch panel
 
@@ -394,9 +388,9 @@ From reading a lot of homelab blog posts, I noticed a lot of other homelabbers i
 
 When it came time to finally build my server rack, I finally had to ask the question, "What the heck is a patch panel?"
 
-Shopping around for patch panels made me even more confused. It's just a row of empty spaces? Huh? What's the point of that?
+Shopping around for patch panels made me even more confused. It's just a row of empty spaces? What's the point?
 
-The point of a patch panel didn't truly click for me until I built the rack. In short, the patch panel keeps the clutter of your networking cables in the rear of your rack rather than in
+The point of a patch panel didn't truly click for me until I built the rack. In short, the patch panel keeps the clutter of your networking cables behind your rack rather than in front of it.
 
 For example, without a patch panel, connecting my managed switch to my PoE switch would look like this:
 
@@ -414,10 +408,12 @@ TODO: Photo
 
 ###
 
-| Patch Panel | [https://www.amazon.com/dp/B08LLDCRCV/ref=cm_sw_r_apan_glt_i_2AEKK799CAJQ591DCSWS?\_encoding=UTF8&th=1](https://www.amazon.com/dp/B08LLDCRCV/ref=cm_sw_r_apan_glt_i_2AEKK799CAJQ591DCSWS?_encoding=UTF8&th=1) |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Brand          | Model                                                                                                                      | Price  |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------- | ------ |
+| NewYork Cables | [24-Port 1U](https://www.amazon.com/dp/B08LLDCRCV/ref=cm_sw_r_apan_glt_i_2AEKK799CAJQ591DCSWS?_encoding=UTF8&th=1)         | $18.99 |
+| Tripp Lite     | [16-Port 1U](https://tripplite.eaton.com/16-port-1u-rack-mount-unshielded-blank-keystone-multimedia-patch-panel~N062016KJ) | $12.87 |
 
-### Review: New York Patch Panel
+### Review: NewYork Cables 24-Port 1U Patch Panel
 
 - Grade: B
 
@@ -425,7 +421,7 @@ It's fine. One of the reasons I chose it was that I saw in reviews it has a rear
 
 My complaint is with the labels. It's slips of paper under plastic, like a landline phone would have for speed dial in the 90s. That's too permanent. What if I change
 
-### Review: 16-port patch panel
+### Review: Tripp Lite 16-port 1U Patch Panel
 
 - Grade: B
 
@@ -443,13 +439,13 @@ I'd seen rack mounts for the Raspberry Pi, so I thought it would be fun to add o
 
 - Grade: C+
 
-The rack mount is okay not great. It's a decent value for the price. PoE HATs for a Raspberry Pi 4 are generally around $XX, so that alone is like XX% of the price.
+The rack mount is okay, not great. It's a decent value for the price. PoE HATs for a Raspberry Pi 4 are generally around $XX, so that alone is like XX% of the price.
 
 The craftsmanship on the rack mount itself is mediocre. The pieces don't fit together that well. There are substantial gaps around the HDMI ports.
 
 The HDMI ports are also secured poorly to the mount. When I plug in an HDMI cable, the connector bends and strains. I worry they're going to snap off one day.
 
-PoE tends to generate a lot of heat, so it's good that these come with an integrated fan, but the fan is loud. It's too loud for me, and I've disabled them on each of my Pis. That works fine as long as I don't do anything CPU-intensive on the Pi.
+PoE tends to generate a lot of heat, so it's good that these come with an integrated fan, but the fan is too loud for me. It's a constant high-pitch whirring, so I've disabled the fans on each of my Pis. They could overheat without the fans, but it just means the CPU throttles or shuts down, which isn't a big deal for my hobby projects.
 
 Lastly, the instructions are terrible. Step one is to screw in the OLED. Okay, that's fine. Step two is to screw in the power button. Sure, easy peasy. Step three is: okay, put together five other things simultaneously!
 
@@ -457,7 +453,7 @@ TODO: Photo
 
 ## Choosing cage nuts
 
-Rack-monted components attach to your rack with a standard screw and nut. Most rack-mountable components come with their own cage nuts, but you'll need some extras for the ones that don't.
+Rack-monted components attach to your rack with a special type of screw and nut called cage nuts. Most rack-mountable components come with their own cage nuts, but you'll need some extras for the ones that don't.
 
 I read recommendations to buy a special tool for inserting and removing cage nuts. It might make sense if you work in a data center and are working with cage nuts all the time. For occasional work, a small flathead screwdriver is fine.
 
@@ -491,11 +487,11 @@ Once you go above that, you have to choose between Ethernet or fiber cables.
 
 With Ethernet, it's pretty simple. Your Ethernet adapter has an Ethernet port, so you plug in an Ethernet cable. Easy peasy!
 
-With fiber, it gets more complicated. You have an SFP or SFP+ port, and you have to decide what adapter you want to convert it to something else. You can convert it to DAC or fiber. But then there's a few types of fiber.
+With fiber, cabling is more complicated.
 
-In my case, my network switch's 10G ports were SFP+, so I knew the connection had to end in SFP+. And my 10G NICs had SFP+ ports, so the connection had to start with SFP+ as well.
+A fiber networking device will have an SFP or SFP+ port, but there's no such thing as an SFP or SFP+ cable. You need to convert SFP/SFP+ to something else.
 
-So my connection would look like:
+In my case, my network switch and 10G NICs all had SFP+ ports, so I knew the connections had to start and end with SFP+. That meant my connection would look like:
 
 1. SFP+ port on my network swtich
 1. SFP+ to _something_ Transceiver
@@ -509,7 +505,7 @@ I'd need to convert SFP+ to something else to connect the two ends. The options 
 1. LC (Fiber)
 1. DAC (Copper)
 
-The problem was that the connection had to run through my patch panel. I was able to find patch keys for Ethernet and fiber, but nothing for DAC. I still don't understand why DAC fiber keys don't exist or if I just am not seeing how to connect DAC through a patch panel.
+The connection had to run through my patch panel. I was able to find patch keys for Ethernet and fiber, but nothing for DAC. I still don't understand why DAC fiber keys don't exist or if I just am not seeing how to connect DAC through a patch panel.
 
 That reduced my options to just to just RJ45 or LC.
 
@@ -538,7 +534,7 @@ The other surprise with fiber is how expensive the cabling is. SFP+ to fiber ada
 
 {{<notice type="info">}}
 
-**Gotcha**: If you use fiber, make sure that all your SFP+ cables match in "mode." You can't mix single-mode fiber with multimode fiber.
+**Gotcha**: If you use fiber, make sure that all your SFP+ cables match in "mode." You can't mix single-mode fiber with multimode fiber. (TODO: Link)
 
 {{</notice>}}
 
@@ -552,8 +548,6 @@ The other surprise with fiber is how expensive the cabling is. SFP+ to fiber ada
 | [6" Ethernet Cables (25-pack)](https://www.amazon.com/dp/B00XIFJSEI)                                        | $33.99 |
 | [16' Fiber Cable](https://www.amazon.com/dp/B00U7UP1UM/)                                                    | $14.49 |
 | [3' Fiber Cable](https://www.amazon.com/dp/B00T5796DQ/)                                                     | $9.99  |
-
-Note: Seems like you can't get DAC keystone, so you have to convert to either RJ45 or Fiber. Fiber converters seem to be cheaper.
 
 ## Choosing cable ties
 
@@ -585,11 +579,11 @@ I'm obviously a bit biased because it's my product, but I've been happy with Tin
 
 ## How do I arrange components in a rack?
 
-Once I selected my rack components, the next step was figuring out how to lay everything out. I tried to find guides for how you're supposed to do it, and I didn't find much guidance.
-
-Surprisingly, I couldn't find reliable guidance on how to arrange the components in a server rack, so I just reasoned out what made sense to me.
+Once I selected my rack components, the next step was figuring out how to lay everything out. I tried to find guides for how you're supposed to do it, and I didn't find much guidance. Instead, I just reasoned out what made sense to me.
 
 To plan the layout, I used a Google Sheets document and color coded it. This was also helpful in thinking about what size rack to purchase. I wanted the rack to contain everything I wanted now plus a little room to grow.
+
+TODO: Photo
 
 ### Place heavy components on the bottom of your rack
 
@@ -612,12 +606,6 @@ It wasn't obvious to me until I built my server, but it's important to closely a
 Some of the guidance I read said to arrange components so that you can minimize the length of your power cables. I didn't see the point.
 
 Maybe minimizing cable length is important in a data center where you're replicating the same setup hundreds of times. In a home environment, I don't see the difference between connecting my server to my UPS with a 2 ft. power cable vs. a 4 ft. power cable.
-
-### Make sure back ports aren't blocked
-
-One gotcha I didn't anticipate is that some components have rear ports that you can accidentally block if you put them between components that are much deeper.
-
-I initially considered putting my rack shelf in the slot above my power strip, but I realized that would make it hard for me to reach my power strip's rear outlets. Instead, I put the power strip below my Pi rack, as they're both shallow components, so I still can reach the power strip's rear outlets easily.
 
 ## My final rack setup
 
@@ -671,7 +659,7 @@ on Newegg: I'd never seen anything on Newegg before that was replacement-only, s
 
 Some UPS devices are totally silent and some produce constant noise. If it's anywhere near you, take noise into consideration.
 
-### Get a PoE-enabled switch
+### Get a PoE-enabled switch if you have any PoE components
 
 It's a bit silly that I now have 2U of network switches and 2U of patch panels, and I'm only using 11 of the 44 ports, but I guess better to have too much available than too little.
 
@@ -693,43 +681,11 @@ It was only after installing about eight cage nuts and cursing the terrible desi
 **Tip**: If you find yourself exerting a lot of force or feeling physical pain while building computer hardware, you're probably doing something wrong. Server equipment is designed so that middle-aged, out-of-shape IT people can build them, so you're not expected to be in peak physical condition.
 {{</notice>}}
 
-### Some PCI slots don't like 10G NICs
-
-When I installed my Mellanox 10G NIC into my desktop, Windows didn't detect it at all. I tried re-seating it, and I saw the same results. I tried downloading the latest drivers, but Windows still wasn't seeing the device at all in Device Manager.
-
-Finally, I stumbled across a forum post where someone reported that their Mellanox card worked when they switched it to a different PCI slot. I tried a different PCI slot on my motherboard, and voila! It worked perfectly.
-
-I still don't understand why the PCI slot mattered. According to my motherboard's documentation, the two PCI slots are supposed to be identical, but one worked, and the other didn't.
-
-### Flash Mellanox cards to latest firmware on a Windows system
-
-I found that management software for 10G NICs only works on Windows. When I was trying to install a NIC on my TrueNAS Core server (FreeBSD),
-
-Didn't flash Mellanox card before installing it in TrueNAS.
-
-https://network.nvidia.com/products/adapter-software/ethernet/windows/winof-2/
-
-### Incorrect length Ethernet cables
-
-Patch cables
-
-### Don't mix SFP+ multimode and single mode fiber cables
-
-The first day that I installed my Mellanox NIC on my Windows desktop, everything worked fine.
-
-After around 24 hours of use, I noticed my Ethernet connection suddenly disconnecting and reconnecting every few seconds. I rebooted, and the problem went away.
-
-24 hours later, I saw the same issue. This time, I tried disconnecting and reconnecting the fiber cable from the switch, and the problem persisted. I tried instead skipping the patch panel and connecting the cable from my desktop directly to the switch.
-
-That worked, and the connection stayed stable for several days. That suggested the problem was either in the patch cable or the patch panel key. I tried a different set of patch keys and patch cables, and the problem came back within a day.
-
-Then I went back and looked at whether there was some sort of incompatibility between my patch cables or patch keys. And then I spotted it: my patch cables were SFP+ single mode, whereas my long fiber cables were SFP+ multimode. I didn't even know there was a difference in fiber cables, but apparently there is, and they don't get along.
-
-I bought a new set of SFP+ multimode fiber cables, and the problem went away. Unfortunately, I discovered the problem three days after the return window for my $XX box of SFP+ single mode fiber cables had closed, so if anyone wants some single mode SFP+ patch cables, let me know.
-
 ### Don't install patch keys backwards
 
-I'm going to sound like a moron here, but I installed my patch panel keys incorrectly twice before I realized how to do it the correct way. Now that I've seen the correct way, what I thought was correct before looks absurd, but it's my first rack!
+I'm going to sound like a moron here, but I installed my patch panel keys incorrectly twice before I realized how to do it the correct way.
+
+Now that I've seen the correct way, what I thought was correct before looks absurd, but it's my first rack!
 
 So, my first attempt was like this:
 
@@ -748,9 +704,43 @@ I had them like this for six months!
 
 It wasn't until I bought my second patch panel and experimented with installing the keys before I installed the patch panel that I realized there was a different method.
 
-It turns out that the little ridge on the top isn't for decoration. I had them like this for three months before I realized that was incorrect too. They go in from the back and click in. You'll hear a little click when they slot into the correct position. The front face should be roughly flush with the front of the patch panel.
+It turns out that the little ridge on the top isn't for decoration. They go in from the back and click in. You'll hear a little click when they slot into the correct position. The front face should be roughly flush with the front of the patch panel.
 
 TODO: Photos
+
+### Flash Mellanox cards to latest firmware on a Windows system
+
+I found that management software for 10G NICs is only available on Windows. When I was trying to install a NIC on my TrueNAS Core server (FreeBSD),
+
+Didn't flash Mellanox card before installing it in TrueNAS.
+
+https://network.nvidia.com/products/adapter-software/ethernet/windows/winof-2/
+
+### If the motherboard doesn't detect a 10G NIC, try a different PCI slot
+
+When I installed my Mellanox 10G NIC into my desktop, Windows didn't detect it at all. I tried re-seating it, and I saw the same results. I tried downloading the latest drivers, but Windows still wasn't seeing the device at all in Device Manager.
+
+Finally, I stumbled across a forum post where someone reported that their Mellanox card worked when they switched it to a different PCI slot. I tried a different PCI slot on my motherboard, and voila! It worked perfectly.
+
+I still don't understand why the PCI slot mattered. According to my motherboard's documentation, the two PCI slots are supposed to be identical, but one worked, and the other didn't.
+
+### Incorrect length Ethernet cables
+
+Patch cables
+
+### Don't mix SFP+ multimode and single mode fiber cables
+
+The first day that I installed my Mellanox NIC on my Windows desktop, everything worked fine.
+
+After around 24 hours of use, I noticed my Ethernet connection suddenly disconnecting and reconnecting every few seconds. I rebooted, and the problem went away.
+
+24 hours later, I saw the same issue. This time, I tried disconnecting and reconnecting the fiber cable from the switch, and the problem persisted. I tried instead skipping the patch panel and connecting the cable from my desktop directly to the switch.
+
+That worked, and the connection stayed stable for several days. That suggested the problem was either in the patch cable or the patch panel key. I tried a different set of patch keys and patch cables, and the problem came back within a day.
+
+Then I went back and looked at whether there was some sort of incompatibility between my patch cables or patch keys. And then I spotted it: my patch cables were SFP+ single mode, whereas my long fiber cables were SFP+ multimode. I didn't even know there was a difference in fiber cables, but apparently there is, and they don't get along.
+
+I bought a new set of SFP+ multimode fiber cables, and the problem went away. Unfortunately, I discovered the problem three days after the return window for my $XX box of SFP+ single mode fiber cables had closed.
 
 ## Thoughts on my life with a rack
 
@@ -758,4 +748,4 @@ I'm happy with my new rack, and I have no regrets about the investment. It defin
 
 I underestimated how nice it would be to have my TinyPilot physically close to all of my devices. Before the rack, I used to keep my TinyPilot on the floor next to my desk. If I ever needed to debug something on a server or a Raspberry Pi on the other side of my office, I avoided it because it involved shutting down the TinyPilot, disconnecting a lot of wires, then reconnecting them on the other side of the room.
 
-With everything now physically adjacent, it's easy for me to quickly plug TinyPilot in to any misbehaving device for low-level access. It came in handy for things like exploring NixOS and figuring out how to install NixOS on a Raspberry Pi.
+With everything now physically adjacent, it's easy for me to quickly plug TinyPilot in to any misbehaving device for low-level access. It came in handy for things like exploring NixOS and figuring out how to install NixOS on a Raspberry Pi. (TODO: Link)
