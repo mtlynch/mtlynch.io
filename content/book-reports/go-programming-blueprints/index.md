@@ -26,8 +26,8 @@ I'm a fan of [Mat Ryer](https://twitter.com/matryer)'s work, and his blog posts 
   - Many of the examples went deeply into the minutiae of a particular library rather than the Go-relevant parts of the solution.
 - Recommends several horribly insecure software practices:
   - Advises developers to [use `0777` as the default bitmask](https://github.com/matryer/goblueprints/issues/78) when they don't know what permissions to assign.
-  - Fails to protect against directory traversal, leading to an arbitrary write vulnerability in an example application that can [gain remote code execution](https://github.com/matryer/goblueprints/issues/79)
-  - Fails to protect against trivial [denial of service attacks on user uploads](https://github.com/matryer/goblueprints/issues/80)
+  - Fails to protect against directory traversal, leading to an arbitrary write vulnerability in an example application that can [gain remote code execution](https://github.com/matryer/goblueprints/issues/79).
+  - Fails to protect against trivial [denial of service attacks on user uploads](https://github.com/matryer/goblueprints/issues/80).
 - Poor editing in the prose and error checking in the code.
   - There were a high number of careless grammar and code mistakes.
   - Users have [submitted fixes](https://github.com/matryer/goblueprints/pulls?q=is%3Aopen+is%3Apr), but they've been ignored for years.
@@ -209,7 +209,7 @@ var contextKeyAPIKey = &contextKey{"api-key"}
 
 ~~For reasons I still can't totally grok, the key needs to be a struct containing a string rather than a simple string.~~
 
-**Update (2023-01-02)**: I was confused at first why they `contextKey` is a struct containing a string rather than just a string. In the book, Ryer explains that this decision is prevents collisions with other keys that have the same value, but I didn't understand why the developer wouldn't just avoid re-using the same key for different purposes. Matthew Riley [clarified this behavior](https://twitter.com/mdriley25519/status/1609988055989116928) for me and helped me realize that the local type prevents collisions across packages, whereas a simple string wouldn't.
+**Update (2023-01-02)**: I was confused at first why they `contextKey` is a struct containing a string rather than just a string. In the book, Ryer explains that this decision prevents collisions with other keys that have the same value, but I didn't understand why the developer wouldn't just avoid re-using the same key for different purposes. Matthew Riley [clarified this behavior](https://twitter.com/mdriley25519/status/1609988055989116928) for me and helped me realize that the local type prevents collisions across packages, whereas a simple string wouldn't.
 
 If you used a context key like `const contextKeyToken := "token"` and another package processed the same request and also used the key `"token"`, then you'd scribble over each other's context values. By defining a custom type local to your package, you're guaranteed that `Context` won't evaluate tokens from any other package as equal to yours because they'll have different types.
 
