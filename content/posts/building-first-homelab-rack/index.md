@@ -5,9 +5,7 @@ tags:
   - homelab
 ---
 
-TODO: Table of contents
-
-Six years ago, I built my [first home server](/building-a-vm-homelab-2017/). It made a huge difference to my software development workflow, so over the years, I've gotten more into the homelab scene and added custom-built storage server, a dedicated firewall, and more advanced switches. And I work with Raspberry Pis so I had several Raspberry Pis everywhere.
+Six years ago, I built my [first home server](/building-a-vm-homelab-2017/). It made a huge difference to my software development workflow, so over the years, I've gotten more into the homelab scene and added custom-built storage server, a dedicated firewall, and more advanced switches.
 
 My wife has pointed out that I never clean certain parts of my office because of all the wires. I thought, "What? No, this is a normal amount of wires." But then I started looking at them and realized it was kind of a lot of wires...
 
@@ -16,15 +14,17 @@ My wife has pointed out that I never clean certain parts of my office because of
 {{<img src="office-wires-2.webp" max-width="300px" alt="Photo of lots of wires in my office">}}
 {{</gallery>}}
 
-I knew a lot of tech enthusiasts were buying server racks for their home, but I never thought of myself as a server rack guy. I had some components, but there was just a VM server here, a data server there. A few switches scattered around.
+I saw a lot of tech enthusiasts buy server racks for their home, but I never thought of myself as a server rack guy. I just had a VM server here, a data server there. Maybe a few switches scattered around. Having a server rack felt like an admission that I wasn't just a casual home server guy, but an intense homelab maniac.
 
-But then I realized that if I bought a rack, it would consolidate a lot of the equipment I had around my office into one space. My wife was also happy about the idea of almost all the wires living in one self-contained unit.
+But then I gave in and bought a rack, and I'm now embracing being a homelab weirdo. It's so much better having all of my computers in one place where the wiring can be semi-organized.
 
 TODO: Photo of finished rack
 
 ## I don't want your life story &mdash; just show me the rack
 
 If you want to skip the explanations and jump to my rack, click below.
+
+TODO: Table of contents
 
 ## Why build a server rack at home?
 
@@ -38,29 +38,41 @@ A homelab is a place in your home where you can experiment with IT hardware or s
 
 ### By a beginner for beginners
 
-I'm a beginner, and this is a beginner-level guide.
+Even though I've been doing homelab stuff for the past few years, I still consider myself a beginner, and this is a beginner-level guide.
 
-I've read a lot of other homelab guides, and they seem like the author is building their 20th rack. They don't explain their thought process or why they rejected alternatives. They just say that they chose X component, and it's a great component, and you should buy it too.
+I've read a lot of other homelab guides where the author sounds like they're building their 20th rack. They don't explain their thought process for choosing components or why they rejected alternatives. At this point, they probably don't even know. They've been doing it so long that the decisions have become unconscious.
 
-Because this is my first time building a server rack, I'm walking you through how I approached it as a beginner so you can understand my thought process.
+Because this is my first time building a server rack, I'm free from the curse of knowledge (TODO: link). I'm walking you through how I approached the process for the first time so that you can follow along.
 
 ### No conflict of interest
 
-Most posts about homelab are funded by affiliate links. I'm not getting paid by anyone or receiving any free products.
+The uncomfortable truth about most homelab blog posts is that they're funded by affiliate links.
 
-Some of them give helpful information regardless, but affiliate links make the author inherently biased. They have a vested interest in you purchasing more expensive gear because they make more money that way. They also have an interest in directing you to merchants that pay them the most rather than the merchants that serve customers best.
+If you're not familiar with affiliate links, it means that if a blog post links to a product, and the reader makes a purchase through that link, the author of the blog post receives a commission.
 
-I'm writing this out of vanity. I do have financial interest in that I sell a product that's in the homelab space, but I've been writing homelab posts long before that.
+Authors can still provide valuable information despite using affiliate links, but it creates a clear conflict of interest. An author is inherently biased if they get paid by merchants they recommend. And it incentivizes recommending expensive products, as commissions are usually percentage-based.
+
+I'm not getting paid by anyone or receiving any free products.
+
+I write my blog out of vanity. My payment is hearing people tell me that they found the article interesting or useful.
+
+My one bias is that my rack contains a TinyPilot, a hardware device that I created, but I'll disclose that whenever it's mentioned.
 
 ## Choosing a rack
 
-Obviously, if you're going to build a server rack, it seems like the first thing you'd choose is the rack itself.
+If you're buildig a server rack, it seems like the first thing you'd choose is the rack itself.
 
 It's not that simple.
 
-Choosing a rack is an iterative process. You can't decide what type of rack to buy until you know what will go into your rack. But knowing what type of racks are available also informs what components make sense to buy.
+Choosing a rack is an iterative process. You can't decide what type of rack to buy until you know what will go into your rack. But knowing what type of racks are available also informs what components to buy.
 
-I found it helpful to begin by browsing racks to get a sense of pricing, features, and size options. After that, I made a rough list of components I wanted, counted up how much space they'd take up, and then returned to my rack candidates to decide which rack fit my needs.
+Here's the process I followed to pick a server rack:
+
+1. Browse racks casually to get a high-level view of pricing, features, and size options.
+1. Make a rough list of components I want for my rack.
+1. Calculate how much height and depth I'll need for the components I want.
+1. Narrow the list of racks that meet my needs.
+1. Repeat steps 2-4 as needed.
 
 ### How many rack units?
 
@@ -68,15 +80,15 @@ Racks have capacity measured in rack units (RUs). A rack unit is XX ". Most netw
 
 You don't want to buy too short a rack and run out of room for your components, but you also don't want a rack that's too tall and takes up a lot of space for no reason.
 
-As you pick components, add up how many rack units they'll take up, then add some buffer depending on how much you might want to expand your rack in the next few years.
+As you pick components, add up how many rack units they'll take up. Leave some extra buffer based on how much you might want to expand your rack in the next few years.
 
 ### How deep does it need to be?
 
 Server racks vary in depth. Most server racks are designed for enterprise-grade servers, which are up to XX" long.
 
-I have a Dell XX server at my office, and it's a huge hassle. It's XX" long and XX lbs. It was a pain to mount, and it will be a pain when I need to sell it. I decided that all the components in this rack would be small and require only front mounts.
+My office has a XX server, and it's a huge hassle. It's XX" long and XX lbs. It was a pain to mount, and it will be a pain when I need to sell it.
 
-I have a relatively small office, and I didn't want the rack server to dominate the space.
+I have a relatively small office, and I didn't want the rack server to dominate the space. For my home rack, I decided to limit myself to components that are shallow enough to only need front mounts.
 
 I looked at small rack-mountable chassis for servers, and the smallest ones were about XX" in depth, so I set that as my minimum.
 
@@ -86,7 +98,7 @@ Racks come in two different styles: two-post or four-post. On four-post racks, y
 
 If you plan to buy long, heavy servers, you definitely need to secure them from the front and back. If you want to minimize space, a two-post rack might be sufficient.
 
-Still, four posts feels sturdier, so I figured why not.
+For my rack, four posts felt a bit sturdier, so I figured why not.
 
 ### Does it need wheels?
 
@@ -104,19 +116,21 @@ StarTech also has a good reputation and a decent website, so I just chose betwee
 
 {{<img src="star-tech-rack.webp" max-width="400px">}}
 
-I'm happy with the choice.
+- Grade: A
 
-Assembling the rack was pretty straightforward. From start to finish, it took me about two and a half hours. One minor complaint is that none of the parts are labeled. The parts are distinctively shaped enough that you can match the part in the instructions to the part sitting in front of you.
+This rack is working out well. It feels sturdy, and the wheels make it easy to move around.
 
-The rack is depth-adjustable, and I chose the shallowest depth. But one design flaw is that when the rack is adjusted to that depth, the adjustable bridge between the back and front blocks some screw holes for the casters and other parts of the rack. The workaround was that I expanded the depth, finished screwing the casters and the base, then adjusted the depth back down. Not a huge deal, but it was an annoying design flaw.
+Assembly was straightforward. From start to finish, it took me about two and a half hours. One minor complaint is that none of the parts are labeled, but I could match them to the instructions based on shape.
+
+The rack is depth-adjustable, and I chose the shallowest depth. The rack does have a design flaw in that the shortest depth makes some screw holes inaccessible. I worked around this by expanding the depth, screwing in the spots that are unreachable at shallow depth, then adjusting the depth back down.
 
 The rack came with a grounding cable, but I can't figure out how to use it.
 
 ## Choosing a network switch
 
-Choosing a networking switch ended up being the hardest decision of my whole rack.
+The networking switch ended up being the hardest decision of my whole rack.
 
-Network switches get fairly pricey, so I didn't want to spend $300 on something only to have to supplement it with another component or replace it later on. And rack space is precious, so I don't want to buy a switch and then have to buy another one in a year or two and totally rearrange my rack.
+Network switches get expensive fast, so I didn't want to spend $300 on something only to have to supplement it with another component or replace it later on. And rack space is precious, so I don't want to buy a switch and then have to buy another one in a year or two and totally rearrange my rack.
 
 ### What speed do you need?
 
@@ -130,9 +144,9 @@ For as long as I can remember, I've had 1 Gbps Ethernet speed in my house, and t
 
 Lately, I've been finding that the bottleneck on my home storage server is my 1 Gbps network link, so I've been interested in a network upgrade. (TODO: Link)
 
-The next steps up are either 2.5 Gbps or 10 Gbps. Given that I've been fairly satisfied with 1 Gbps, I thought 10 Gbps would probably be too big a jump, so I might as well take a smaller step to 2.5 Gbps.
+Given that I've been fairly satisfied with 1 Gbps, I thought 10 Gbps would probably be too big a jump, so I might as well take a smaller step to 2.5 Gbps.
 
-The more I read about 2.5 Gbps gear, the more complaints I saw that it's flaky and unreliable. The consensus seemed to be that it's just as hard to build a 10 Gbps network as it is to build a 2.5 Gbps, so you might as well go for 10 Gbps.
+The more I read about 2.5 Gbps gear, the more complaints I saw that it's flaky and unreliable. The consensus seemed to be that it's just as hard to level up to 10 Gbps as it is to 2.5 Gbps, so you might as well go for 10 Gbps.
 
 I did run into headaches, but I'll cover that more below (TODO: link)
 
@@ -146,33 +160,31 @@ I did run into headaches, but I'll cover that more below (TODO: link)
 
 There are two kinds of network switches you can purchase: managed or unmanaged.
 
-- **Managed switches** allow you to configure rules and settings for your switch. The most common reason you'd want a managed switch is to create virtual networks (VLANs) to improve network security.
+- **Managed switches** allow you to configure rules and settings for your switch. The most common reason you'd want a managed switch is to create virtual networks (VLANs) to increase security on your network.
 
 - **Unmanaged switches** offer no configuration. They're just dumb boxes that route network traffic. Any host connected to the switch can send network traffic to any other port on the switch.
 
-Personally, I wanted a plain old unmanaged switch. I've never used a managed switch, and I didn't expect to have a use for it. I have an opnsense firewall with four Ethernet ports, and I could have been using that device at any point to create VLANs, and I never did. So why would I start now?
+Personally, I wanted a plain old unmanaged switch. I've never used a managed switch, and I didn't want a whole bunch of extra configuration to manage. I just wanted the network to work.
 
-It turned out, none of the network switches that met my criteria were unmanaged, so I went with a managed switch. I planned to accept all the default settings and not configure VLANs. Once I got my managed switch, I found that it's pretty fun to configure VLANs. Now I want to configure VLANs for everything!
+It turned out, none of the network switches that met my criteria were unmanaged, so I went with a managed switch. I planned to accept all the default settings and not configure VLANs.
+
+Once I got my managed switch, I found that it's pretty fun to have VLANs for different devices on my network. Now I want to configure VLANs for everything!
 
 ### PoE or standard Ethernet?
 
-Certain low-power devices can run entirely from power they draw from the Ethernet cable.
+Certain low-power devices can run entirely from the power they draw from the Ethernet cable.
 
 My home WiFi access point, the Ruckus RXX (TODO: link) supports PoE, so my access point conveniently needs only a single cable for both power and network connectivity.
 
 TODO: Photo
 
-I have PoE HATs for my Raspberry Pis, which enables them to run without a dedicated USB-C power cable.
+To power a device over PoE, you need a PoE-enabled switch.
 
-TODO: Photo
-
-To power a device over PoE, you need a PoE-enabled switch. So, if you have PoE devices or you may purchase some in the future, you may want a PoE switch.
-
-If you want a PoE swtich, the next question is how many PoE devices do you need to support? Most PoE switches only support PoE on a subset of their ports (TODO: is this true?), so make sure your switch has enough PoE ports for your devices now and in to the future.
+If you want a PoE swtich, the next question is how many PoE devices do you need to support? Most PoE switches only support PoE on a subset of their ports (TODO: is this true?), so make sure your switch has enough PoE ports for devices you own now or may add in the future.
 
 The downside of PoE switches is that they consume more power and they're more expensive (TODO: check). If you buy a PoE switch but have no PoE devices, you're wasting money and power on features you can't use.
 
-I've also seen reviews that claim PoE switches are noisier. I haven't experienced this, but it's something to look out for, as all my switches have been silent and fanless.
+I've also seen reviews that claim PoE switches are noisier. I haven't experienced this, as all my switches have been silent and fanless. But noise is now something I check reviews for when picking a switch.
 
 ### How many ports do you need?
 
@@ -182,9 +194,9 @@ Obviously, you need at least as many ports as you have wired networking devices.
 
 The harder question is figuring out how many extra ports to buy beyond your current needs. This is going to vary a lot depending on your needs and your plans for growing your homelab in the next few years.
 
-You can buy additional switches later, but if you're buying an expensive switch, you'll want it to cover you for the next few years.
+You can buy additional switches later, but if you're buying an expensive switch, you don't want to have to just replace the entire thing in a couple years. And you don't want to lose another 1U of rack real estate to an additional switch when you could have bought a single switch with more ports.
 
-I set my minimum to be 2x my current networking hosts. I currently have eight wired networking devices, so I looked for switches with at least 16 ports.
+I searched for switches that had a minimum of 2x my current wired devices. I currently have eight devices with Ethernet ports, so I looked for switches with at least 16 ports.
 
 ### Candidates
 
@@ -202,20 +214,28 @@ I set my minimum to be 2x my current networking hosts. I currently have eight wi
 
 I've tried Microtik in the past, and I want to like them. They're open-source (TODO: check this), and they're a small, independent hardware company. And there are people who love their weird 90s style UI, but I found it confusing and difficult to navigate.
 
-I've had great experience with unmanaged TP-Link switches, so I felt good about the brand. There was one in particular that had 10 2.5 Gbps ports, but it's only available in China. I could have imported it, but the device isn't tested to meet US regulations, so I didn't want the safety risk of running it in my home.
+{{<img src="microtik-interface.webp" max-width="700px" has-border="true" caption="I want to like Microtik, but I can't get over their weird 90s-style admin UI">}}
+
+I've had great experience with unmanaged TP-Link switches, so I felt good about the brand.
 
 I considered the T1600G-28PS, which was like everything good about the TL-SG3428X, except it _also_ had PoE. But I read several reviews that said the fans are loud, and I didn't want a noisy switch. I went with the TL-SG3428X and figured I could get a cheaper, silent unmanaged PoE switch, as I didn't actually need 24 PoE ports.
 
-### Review: TP-Link
+### Review: TP-Link TL-SG3428X
 
-Overall, I like the TP-Link XX switch pretty well. It's silent, which is a big plus. I haven't had any issues with reliability.
+- Grade: B-
+
+Overall, I like the TP-Link TL-SG3428X switch pretty well. It's silent, which is a big plus. I haven't had any issues with reliability.
 
 The TP-Link UI is not very user-friendly. I concede that some networking concepts are hard to represent in a web UI, but TP-Link has done a particularly bad job of it.
-Took forever to [get VLANs right](/notes/debugging-vlans-tp-link/). I've seen how other brands like QNAP represent VLAN controls, and I think they did a much better job than TP-Link.
+Took forever to [get VLANs right](/notes/debugging-vlans-tp-link/). I've seen how other [brands like QNAP represent VLAN controls](https://www.youtube.com/watch?v=XdqP14NclZ0), and I think they did a much better job than TP-Link.
+
+I originally expected to only have a handful of PoE devices, so I was going to power them with a 5-port PoE switch I already owned. In retrospect, I wish I'd looked harder for a single PoE switch to handle everything.
 
 ### Review: Netgear XX Unmanaged PoE Switch
 
 I only have a handful of PoE devices, so I originally planned to power them with a small 5-port PoE switch I'd keep on a shelf. But then I ended up getting rid of the Netgear PoE switch at my office, and I adopted it into my home server rack.
+
+- Grade: A
 
 ## Choosing 10G NICs
 
