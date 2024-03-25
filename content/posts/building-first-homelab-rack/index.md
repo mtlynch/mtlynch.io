@@ -560,26 +560,18 @@ That reduced my options to just to just RJ45 or LC.
 
 I couldn't find many practical differences between RJ45 and LC. LC is thinner, so I find it a bit more visually appealing. But it means a different type of cable than all my other components, which are Ethernet.
 
-The price of all the components together was surprising as well. Either route I chose, I needed:
+I was surprised at the difference in pricing between Ethernet and fiber. For the options I saw, SFP+ to RJ45 transceivers were significantly more expensive than SFP+ to fiber, but Ethernet cables are cheaper than fiber cables.
 
-- Three transceivers (for my switch, desktop, and storage server)
-- One 16' cable (desktop to switch)
-- One 3' cable (storage server to switch)
-- Two XX" patch cables
-- Four patch keys
-
-The other surprise with fiber is how expensive the cabling is. SFP+ to fiber adapters cost $XX, and you need them at either end of the connection. I bought a box of XX" fiber patch cables not really paying attention to the price, and then I realized I spent $XX. On little cables!
-
-SFP+ to Ethernet transceivers were significantly more expensive than SFP+ to LC (Fiber), but Ethernet cables were cheaper than fiber cables. In total, I found better pricing for fiber:
+When I priced everything out, pricing was significantly better for fiber:
 
 | Component                                                       | Ethernet price | Fiber price |
 | --------------------------------------------------------------- | -------------- | ----------- |
 | Three transceivers (for my switch, desktop, and storage server) | $150           | $60         |
-| One XX' cable (desktop to switch)                               | $XX            | $15         |
-| One XX' cable (storage server to switch)                        | $XX            | $10         |
-| Two XX" patch cables                                            | $0\*           | $30         |
-| Four patch keys                                                 | $0\*           | $15         |
-| Total                                                           | **$XX**        | **$XX**     |
+| One 16' cable (desktop to switch)                               | $9             | $15         |
+| One 3' cable (storage server to switch)                         | $7             | $10         |
+| Two 7" patch cables                                             | $0\*           | $30         |
+| Four patch keys                                                 | $0\*           | $19         |
+| **Total**                                                       | **$163**       | **$134**    |
 
 \* These effectively would cost no extra money because I had to buy these anyway for the rest of the ports in my switch.
 
@@ -589,16 +581,18 @@ SFP+ to Ethernet transceivers were significantly more expensive than SFP+ to LC 
 
 {{</notice>}}
 
-| Component                                                                                                   | Price  |
-| ----------------------------------------------------------------------------------------------------------- | ------ |
-| [Cat6 Coupler (25-pack)](https://www.amazon.com/dp/B075ZPGV1H)                                              | $22.99 |
-| [**Fiber LC coupler (5-pack)**](https://www.amazon.com/dp/B01B5AG0TI)                                       | $18.99 |
-| [**Cable Matters SFP+ to LC Multi Mode Fiber Transceiver**](https://www.amazon.com/dp/B07TTKHG6T/) (2-pack) | $40.49 |
-| [**LC to LC Fiber patch cables (0.2m)**](https://www.amazon.com/dp/B08MCPBCFD)                              | $29.99 |
-| [12" Ethernet Cables (10-pack)](https://www.amazon.com/dp/B07MVT1P2P/)                                      | $18.99 |
-| [6" Ethernet Cables (25-pack)](https://www.amazon.com/dp/B00XIFJSEI)                                        | $33.99 |
-| [16' Fiber Cable](https://www.amazon.com/dp/B00U7UP1UM/)                                                    | $14.49 |
-| [3' Fiber Cable](https://www.amazon.com/dp/B00T5796DQ/)                                                     | $9.99  |
+Here were the final components I chose:
+
+| Component                                                                                               | Price  |
+| ------------------------------------------------------------------------------------------------------- | ------ |
+| [Cable Matters SFP+ to LC Multi Mode Fiber Transceiver](https://www.amazon.com/dp/B07TTKHG6T/) (2-pack) | $40.49 |
+| [Cat6 Keystone Coupler (25-pack)](https://www.amazon.com/dp/B075ZPGV1H)                                 | $22.99 |
+| [Fiber LC coupler (5-pack)](https://www.amazon.com/dp/B01B5AG0TI)                                       | $18.99 |
+| [LC to LC Fiber patch cables (0.2m)](https://www.amazon.com/dp/B08MCPBCFD)                              | $29.99 |
+| [12" Ethernet Cables (10-pack)](https://www.amazon.com/dp/B07MVT1P2P/)                                  | $18.99 |
+| [6" Ethernet Cables (25-pack)](https://www.amazon.com/dp/B00XIFJSEI)                                    | $33.99 |
+| [16' Fiber Cable](https://www.amazon.com/dp/B00U7UP1UM/)                                                | $14.49 |
+| [3' Fiber Cable](https://www.amazon.com/dp/B00T5796DQ/)                                                 | $9.99  |
 
 ## Choosing cable ties
 
@@ -616,25 +610,25 @@ The velcro ones are secure, but they're a bit too secure. They take me about 5 s
 
 ## What I already had
 
-### Router: XX with opnsense
+### Router: Qotom Q355G4 with OPNsense
 
-I built a router a few years ago. I bought a cheap XX unit from China and installed opnsense. If I were doing it again, I'd have bought a Protectli unit since they're investing more in open firmware and trusted hardware.
+I built a router a few years ago. I bought a cheap Qotom Q355G4 unit from China and installed OPNsense.
 
-### Out-of-band Management: TinyPilot Voyager 2a
+### Out-of-band Management: TinyPilot Voyager 2a PoE
+
+Full disclosure: This is a product [I created](/tinypilot/) and now [sell](https://tinypilotkvm.com).
 
 I generally connect to components in my rack over SSH or web interfaces. In times where I need to reinstall the OS, change boot settings, or when I screw up the network settings, I need to type
 
 I created a product called TinyPilot to provide remote access. It's built on top of a Raspberry Pi, and it uses the Pi to emulate a keyboard, mouse, and USB drive. It also captures display output from the target computer. So instead of having to drag a keyboard and monitor over to my rack, I can plug in TinyPilot when I need hardware-level access.
 
-I'm obviously a bit biased because it's my product, but I've been happy with TinyPilot.
-
 ## How do I arrange components in a rack?
 
 Once I selected my rack components, the next step was figuring out how to lay everything out. I tried to find guides for how you're supposed to do it, and I didn't find much guidance. Instead, I just reasoned out what made sense to me.
 
-To plan the layout, I used a Google Sheets document and color coded it. This was also helpful in thinking about what size rack to purchase. I wanted the rack to contain everything I wanted now plus a little room to grow.
+To plan the layout, I used a spreadsheet and color coded it. This was also helpful in thinking about what size rack to purchase. I wanted the rack to contain everything I wanted now plus a little room to grow.
 
-TODO: Photo
+{{<img src="rack-spreadsheet.webp" max-width="200px" has-border="true" caption="I considered different rack layouts by just swapping elements in a spreadsheet.">}}
 
 ### Place heavy components on the bottom of your rack
 
@@ -792,6 +786,10 @@ That worked, and the connection stayed stable for several days. That suggested t
 Then I went back and looked at whether there was some sort of incompatibility between my patch cables or patch keys. And then I spotted it: my patch cables were SFP+ single mode, whereas my long fiber cables were SFP+ multimode. I didn't even know there was a difference in fiber cables, but apparently there is, and they don't get along.
 
 I bought a new set of SFP+ multimode fiber cables, and the problem went away. Unfortunately, I discovered the problem three days after the return window for my $XX box of SFP+ single mode fiber cables had closed.
+
+I bought a box of five 7" fiber patch cables not really paying attention to the price, and then I realized I spent $70. On tiny cables! to add insult to injury, I realized two days after the return window had closed that they were the wrong "mode" of fiber.
+
+{{<img src="14usd-cable.webp" max-width="600px" caption="I accidentally spent $70 on a box of five 7&quot; fiber cables.">}}
 
 ## Thoughts on my life with a rack
 
