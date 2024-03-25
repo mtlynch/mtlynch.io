@@ -5,9 +5,9 @@ tags:
   - homelab
 ---
 
-Six years ago, I built my [first home server](/building-a-vm-homelab-2017/). It made a huge difference to my software development workflow, so over the years, I've gotten more into the homelab scene and added custom-built storage server, a dedicated firewall, and more advanced switches.
+Seven years ago, I built my [first home server](/building-a-vm-homelab-2017/). It made a huge difference to my software development workflow, so over the years, I've gotten more into the homelab scene and added custom-built storage server, a dedicated firewall, and more advanced switches.
 
-My wife has pointed out that I never clean certain parts of my office because of all the wires. I thought, "What? No, this is a normal amount of wires." But then I started looking at them and realized it was kind of a lot of wires...
+My wife has pointed out that I never clean certain parts of my office because of all the wires. I thought, "What? This is a normal amount of wires." But then I started looking at them and realized it was kind of a lot of wires...
 
 {{<gallery caption="My office, upon closer inspection, kind of had a lot of wires">}}
 {{<img src="office-wires-1.webp" max-width="300px" alt="Photo of lots of wires in my office">}}
@@ -44,6 +44,8 @@ I've read a lot of other homelab guides where the author sounds like they're bui
 
 Because this is my first time building a server rack, I'm free from the curse of knowledge (TODO: link). I'm walking you through how I approached the process for the first time so that you can follow along.
 
+I made mistakes in this process, and I didn't build the ideal rack, but I think readers learn better by seeing mistakes instead of seeing only perfect racks where the author says they did everything perfectly.
+
 ### No conflict of interest
 
 The uncomfortable truth about most homelab blog posts is that they're funded by affiliate links.
@@ -56,13 +58,11 @@ I'm not getting paid by anyone or receiving any free products.
 
 I write my blog out of vanity. My payment is hearing people tell me that they found the article interesting or useful.
 
-My one bias is that my rack contains a TinyPilot, a hardware device that I created, but I'll disclose that whenever it's mentioned.
+My rack does contain a TinyPilot, a hardware device that I created, but I'll disclose that whenever it's mentioned.
 
 ## Choosing a rack
 
-If you're buildig a server rack, it seems like the first thing you'd choose is the rack itself.
-
-It's not that simple.
+If you're buildig a server rack, it seems like the first thing you'd choose is the rack itself, but it's not that simple.
 
 Choosing a rack is an iterative process. You can't decide what type of rack to buy until you know what will go into your rack. But knowing what type of racks are available also informs what components to buy.
 
@@ -70,9 +70,9 @@ Here's the process I followed to pick a server rack:
 
 1. Browse racks casually to get a high-level view of pricing, features, and size options.
 1. Make a rough list of components I want for my rack.
-1. Calculate how much height and depth I'll need for the components I want.
+1. Calculate how much rack height and depth I'll need for those components.
 1. Narrow the list of racks that meet my needs.
-1. Repeat steps 2-4 as needed.
+1. Repeat steps 2-4 until I've made a final selection.
 
 ### How many rack units?
 
@@ -200,25 +200,27 @@ I searched for switches that had a minimum of 2x my current wired devices. I cur
 
 ### Candidates
 
-| Brand       | Model                                                                                                                             | Ports  | Speed                        | Managed | Rackmount | PoE    | Price       | Notes                       |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------------- | ------ | ---------------------------- | ------- | --------- | ------ | ----------- | --------------------------- |
-| **TP-Link** | [**TL-SG3428X**](https://www.newegg.com/tp-link-tl-sg3428x-24-x-rj45-4-x-sfp/p/0XP-0054-00091?Item=0XP-0054-00091&SoldByNewegg=1) | **24** | **4x10Gbps 24x1Gbps**        | **Yes** | **Yes**   | **No** | **$299.00** |                             |
-| Netgear     | [GS108LP](https://www.amazon.com/gp/product/B07G5XBM3V/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&th=1)                           | 8      | 1 Gbps                       | No      | Yes       | Yes    | $91.72      |                             |
-| Qnap        | [QSW-1105-5T-US](https://www.newegg.com/qnap-qsw-1105-5t-us-5-x-rj45/p/N82E16833831027)                                           | 5      | 2.5 Gbps                     | No      | Yes       | No     | $138.27     |                             |
-| TP-Link     | [Unnamed Chinese Model](https://www.aliexpress.us/item/3256804686136282.html)                                                     | 18     | 2x10 Gbps SFP+ 16 x 2.5 Gbps | No      | Yes       | No     | $499.90     | Chinese, no warranty for US |
-| Microtik    | [CRS305](https://www.amazon.com/MikroTik-CRS305-1G-4S-Gigabit-Ethernet-RouterOS/dp/B07LFKGP1L)                                    | 5      | 4x10 Gbps SFP+               | Yes     | No        | No     | $157.72     |                             |
-| Microtik    | [CRS328-24P-4S+RM](https://mikrotik.com/product/crs328_24p_4s_rm#fndtn-gallery)                                                   | 28     | 4x10 Gbps SFP+ 24x1Gbps      | Yes     | Yes       | Yes    | $490.50     | Hate Microtik UI            |
-| TP-Link     | [T1600G-28TS](https://www.amazon.com/TP-Link-Jetstream-24-Port-T1600G-28TS-TL-SG2424/dp/B016M1QTS2)                               | 24     | 4x10 Gbps SFP 24x1Gbps       | Yes     | Yes       | No     | $299.00     | Old?                        |
-| TP-Link     | [T1600G-28PS](https://www.amazon.com/TP-Link-JetStream-T1600G-28PS-24-Port-Gigabit/dp/B0196RGV50)                                 | 24     | 4x10 Gbps SFP 24x1Gbps       | Yes     | Yes       | Yes    | $295.99     | Reviews say fans are loud   |
-| TP-Link     | [T1700G-28TQ](https://www.amazon.com/TP-Link-JetStream-24-Port-Ethernet-T1700G-28TQ/dp/B01CHP5IAC)                                | 24     | 4x10 Gbps SFP 24x1Gbps       | Yes     | Yes       | No     | $958.40     |                             |
+| Brand       | Model                                                                                                                             | Ports  | Speed                        | Managed | PoE    | Price       |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------------- | ------ | ---------------------------- | ------- | ------ | ----------- |
+| **TP-Link** | [**TL-SG3428X**](https://www.newegg.com/tp-link-tl-sg3428x-24-x-rj45-4-x-sfp/p/0XP-0054-00091?Item=0XP-0054-00091&SoldByNewegg=1) | **24** | **4x10Gbps 24x1Gbps**        | **Yes** | **No** | **$299.00** |
+| Netgear     | [GS108LP](https://www.amazon.com/gp/product/B07G5XBM3V/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&th=1)                           | 8      | 1 Gbps                       | No      | Yes    | $91.72      |
+| Qnap        | [QSW-1105-5T-US](https://www.newegg.com/qnap-qsw-1105-5t-us-5-x-rj45/p/N82E16833831027)                                           | 5      | 2.5 Gbps                     | No      | No     | $138.27     |
+| TP-Link     | [Unnamed Chinese Model](https://www.aliexpress.us/item/3256804686136282.html)                                                     | 18     | 2x10 Gbps SFP+ 16 x 2.5 Gbps | No      | No     | $499.90     |
+| Microtik    | [CRS305](https://www.amazon.com/MikroTik-CRS305-1G-4S-Gigabit-Ethernet-RouterOS/dp/B07LFKGP1L)                                    | 5      | 4x10 Gbps SFP+               | Yes     | No     | $157.72     |
+| Microtik    | [CRS328-24P-4S+RM](https://mikrotik.com/product/crs328_24p_4s_rm#fndtn-gallery)                                                   | 28     | 4x10 Gbps SFP+ 24x1Gbps      | Yes     | Yes    | $490.50     |
+| TP-Link     | [T1600G-28TS](https://www.amazon.com/TP-Link-Jetstream-24-Port-T1600G-28TS-TL-SG2424/dp/B016M1QTS2)                               | 24     | 4x10 Gbps SFP 24x1Gbps       | Yes     | No     | $299.00     |
+| TP-Link     | [T1600G-28PS](https://www.amazon.com/TP-Link-JetStream-T1600G-28PS-24-Port-Gigabit/dp/B0196RGV50)                                 | 24     | 4x10 Gbps SFP 24x1Gbps       | Yes     | Yes    | $295.99     |
+| TP-Link     | [T1700G-28TQ](https://www.amazon.com/TP-Link-JetStream-24-Port-Ethernet-T1700G-28TQ/dp/B01CHP5IAC)                                | 24     | 4x10 Gbps SFP 24x1Gbps       | Yes     | No     | $958.40     |
 
-I've tried Microtik in the past, and I want to like them. They're open-source (TODO: check this), and they're a small, independent hardware company. And there are people who love their weird 90s style UI, but I found it confusing and difficult to navigate.
+I've tried Microtik in the past, and I want to like them. They're a small, independent hardware company. And there are people who love their weird 90s style UI, but I found it confusing and difficult to navigate.
 
 {{<img src="microtik-interface.webp" max-width="700px" has-border="true" caption="I want to like Microtik, but I can't get over their weird 90s-style admin UI">}}
 
 I've had great experience with unmanaged TP-Link switches, so I felt good about the brand.
 
-I considered the T1600G-28PS, which was like everything good about the TL-SG3428X, except it _also_ had PoE. But I read several reviews that said the fans are loud, and I didn't want a noisy switch. I went with the TL-SG3428X and figured I could get a cheaper, silent unmanaged PoE switch, as I didn't actually need 24 PoE ports.
+I almost went with [this 16 x 2.5 Gbps port TP-Link unit](https://www.aliexpress.us/item/3256804686136282.html), but it's only available from China, and it doesn't seem to have any US safety or compliance certification, so I decided not to risk it.
+
+I considered the TP-Link T1600G-28PS, which was like everything good about the TL-SG3428X, except it _also_ had PoE. But I read several reviews that said the fans are loud, and I didn't want a noisy switch. I went with the TL-SG3428X and figured I could get a cheaper, silent unmanaged PoE switch, as I didn't actually need 24 PoE ports.
 
 ### Review: TP-Link TL-SG3428X
 
@@ -226,26 +228,32 @@ I considered the T1600G-28PS, which was like everything good about the TL-SG3428
 
 Overall, I like the TP-Link TL-SG3428X switch pretty well. It's silent, which is a big plus. I haven't had any issues with reliability.
 
-The TP-Link UI is not very user-friendly. I concede that some networking concepts are hard to represent in a web UI, but TP-Link has done a particularly bad job of it.
-Took forever to [get VLANs right](/notes/debugging-vlans-tp-link/). I've seen how other [brands like QNAP represent VLAN controls](https://www.youtube.com/watch?v=XdqP14NclZ0), and I think they did a much better job than TP-Link.
+My experience with the TP-Link web admin UI has been poor, but most networking admin interfaces are pretty weak. Some networking concepts are hard to represent in a web UI, but TP-Link has done a particularly bad job of it.
 
-I originally expected to only have a handful of PoE devices, so I was going to power them with a 5-port PoE switch I already owned. In retrospect, I wish I'd looked harder for a single PoE switch to handle everything.
+TODO: Screenshot of web UI
+
+It took me a long time to figure out [how to configure VLANs](/notes/debugging-vlans-tp-link/). I've seen how other [brands like QNAP represent VLAN controls](https://www.youtube.com/watch?v=XdqP14NclZ0), and I think they did a much better job than TP-Link.
 
 ### Review: Netgear XX Unmanaged PoE Switch
 
-I only have a handful of PoE devices, so I originally planned to power them with a small 5-port PoE switch I'd keep on a shelf. But then I ended up getting rid of the Netgear PoE switch at my office, and I adopted it into my home server rack.
-
 - Grade: A
+
+I only have a handful of PoE devices, so I originally planned to power them with a small 5-port PoE switch I'd keep on a shelf. But late last year, I began prepping my office for our move-out (TODO: link), and I decided to adopt the Netgear XX switch that was installed there.
+
+As an unmanaged switch, it does what I need. It connects my devices, and
+
+In retrospect, I should have tried harder to find a single managed switch with PoE ports instead of having two separate switches. (TODO: link to mistakes)
 
 ## Choosing 10G NICs
 
-If you choose a 10G switch, your work isn't over. In order to achieve 10 Gbps speeds, you need a 10G NIC for each device you want to enjoy the 10G speed. A regular 1 Gbps NIC will still work with a 10G switch, but it will be limited to 1 Gbps Ethernet speeds.
+If you choose a 10G switch, your work isn't over. In order to achieve 10 Gbps speeds, you need a 10G NIC (TODO: define acronym) for each device you want to enjoy the 10G speed. A regular 1 Gbps NIC will still work with a 10G switch, but it will be limited to 1 Gbps Ethernet speeds.
 
-I ended up buying
+I had a lot of trouble finding 10G NICs for my systems. I was able to get 10G working on my Windows desktop after a bit of tinkering, but I tested four different NICs on my TrueNAS storage server, and I couldn't get any of them to work.
 
 - Mellanox XX NIC
   - On my Windows desktop, the activity lights didn't flash at all, and Windows didn't recognize anything in the PCI slot.
   - I found a forum post where somemeone mentioned that switching to another PCI slot on their motherboard solved the problem. I was skeptical, but that fixed it.
+  - My TrueNAS server couldn't recognize it, but it worked on my Windows desktop.
 - Mellanox XX NIC
   - My TrueNAS server couldn't recognize it, but it worked on my Windows desktop.
 - Chelsio 520 NIC
@@ -254,9 +262,11 @@ I ended up buying
 - Chelsio XX NIC
   - My TrueNAS server couldn't recognize this one, either.
 
-My best guess is that the issue is motherboard incompatibility. My TrueNAS server uses a consumer-grade XX motherboard, so it may not support these Enterprise-oriented 10G NICs. I'm planning to build a new server in the next few months, so I'll try a fancier motherboard to see if that lets me use one of the three 10G NICs I have lying around.
+My best guess is that the issue is motherboard incompatibility. My TrueNAS server uses a consumer-grade XX motherboard, so it may not support these enterprise-oriented 10G NICs.
 
-So, currently, my Windows desktop can talk to my managed switch at 10 Gbps speeds, but it can't talk to anything else. But if I need to access TP-Link's dumb admin web UI, I know that bandwidth won't be an issue.
+I'm planning to build a new storage server in the next few months, so I'll try a fancier motherboard to see if that lets me use one of the three 10G NICs I have lying around.
+
+Currently, my Windows desktop can talk to my managed switch at 10 Gbps speeds, but it's limited to 1 Gbps bandwidth for everything else. That's not ideal, but if I need to click a checkbox on my switch's web UI, I can do it at blazing 10 Gbps speeds.
 
 ## Choosing a UPS (battery backup)
 
@@ -372,7 +382,10 @@ Some of my existing office infrastructure has no rack mounting option, so I need
 
 ### Candidates
 
-- [StarTech CABSHELFV 2U 16"](https://www.startech.com/en-us/server-management/cabshelfv)
+| Brand       | Model                                                                          | Price |
+| ----------- | ------------------------------------------------------------------------------ | ----- |
+| TODO: Other | XX                                                                             | $XX   |
+| StarTech    | [CABSHELFV 2U 16"](https://www.startech.com/en-us/server-management/cabshelfv) | $XX   |
 
 ### Review: XX shelves
 
@@ -380,7 +393,7 @@ Some of my existing office infrastructure has no rack mounting option, so I need
 
 I found these no-name shelves on Amazon, and they worked great.
 
-They were easy to install, they're low in price, and they keep themselves within the 2U space they promise. These shelves have a lip acts as a guard to prevent components from sliding off the rack.
+They were easy to install, they're low in price, and they have a lip that prevents components from sliding off the rack.
 
 ### Review: StarTech CABSHELFV 2U shelves
 
@@ -398,7 +411,7 @@ I couldn't even figure out a purpose for the lip. It would make sense if it curv
 
 I scoured reviews of this shelf to see if anyone else was talking about this bizarre design choice. When other reviewers mentioned it, they didn't seem to mind that much. They were just like, "Oh, yeah, it extends past 2U a bit." Huh? Why would anyone accept that?
 
-I'm still wondering if I'm crazy or there's something I'm missing about why StarTech's downward-facing lips are a good idea, but I promptly returned mine and found alternative rack shelves on Amazon.
+I'm still trying to figure out if I'm crazy or if there's something I'm missing about why StarTech's downward-facing lips are a good idea. I promptly returned mine and found alternative rack shelves on Amazon.
 
 ## Choosing a patch panel
 
@@ -421,12 +434,10 @@ Instead, the patch panel lets me route networking cables into the rear of my rac
 TODO: Photo
 
 {{<notice type="info">}}
-**Tip**: I recommend having a patch panel immediately adjacent to every switch in your rack.
+**Tip**: I recommend having a patch panel adjacent to every switch in your rack.
 {{</notice>}}
 
-### Candidates
-
-###
+### Candidate
 
 | Brand          | Model                                                                                                                      | Price  |
 | -------------- | -------------------------------------------------------------------------------------------------------------------------- | ------ |
