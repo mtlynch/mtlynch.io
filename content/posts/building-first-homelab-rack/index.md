@@ -304,12 +304,12 @@ For me, automating shutdowns from my UPS isn't worth the trouble, but you might 
 
 ### Candidates
 
-| Brand          | Model                                                                                                                               | Power   | Outlets | Price   |
-| -------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------- | ------- | ------- |
-| **CyberPower** | [**CP1500PFCRM2U**](https://www.bhphotovideo.com/c/product/1709939-REG/cyberpower_cp1500pfcrm2u_cp15_1500va_100w_2u_rackmount.html) | 1500 VA | 8       | $334.95 |
-| Tripp Lite     | [SMART1500LCD](https://www.newegg.com/tripp-lite-smart1500lcd-5-15r/p/N82E16842111052)                                              | 1500 VA | 8       | $298.00 |
-| CyberPower     | [CPS1500AVR](https://www.newegg.com/cyberpower-cps1500avr/p/N82E16842102006)                                                        | 1500 VA | 8       | $459.95 |
-| CyberPower     | [OR700LCDRM1U](https://www.newegg.com/cyberpower-or700lcdrm1u/p/N82E16842102088)                                                    | 700 VA  | 4       | $299.00 |
+| Brand          | Model                                                                                                                               | Power   | Outlets | Price |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------- | ------- | ----- |
+| **CyberPower** | [**CP1500PFCRM2U**](https://www.bhphotovideo.com/c/product/1709939-REG/cyberpower_cp1500pfcrm2u_cp15_1500va_100w_2u_rackmount.html) | 1500 VA | 8       | $335  |
+| Tripp Lite     | [SMART1500LCD](https://www.newegg.com/tripp-lite-smart1500lcd-5-15r/p/N82E16842111052)                                              | 1500 VA | 8       | $298  |
+| CyberPower     | [CPS1500AVR](https://www.newegg.com/cyberpower-cps1500avr/p/N82E16842102006)                                                        | 1500 VA | 8       | $460  |
+| CyberPower     | [OR700LCDRM1U](https://www.newegg.com/cyberpower-or700lcdrm1u/p/N82E16842102088)                                                    | 700 VA  | 4       | $299  |
 
 ### Review: CyberPower CP1500PFCRM2U
 
@@ -335,7 +335,7 @@ I reached out to Tripp Lite customer support with a video of the UPS' noise leve
 
 I tried to get used to the noise, but it was so distracting that I gave up after day two.
 
-To my surprise, I realized Newegg's return policy was "replacement only." I'd always had an easy return experience with Newegg so I didn't even think to check the return policy beforehand, but I guess they're more strict about these XX lb units.
+To my surprise, I realized Newegg's return policy was "replacement only." I'd always had an easy return experience with Newegg so I didn't even think to check the return policy beforehand, but I guess they're more strict about these 29 lb units.
 
 Fortunately, I asked Newegg customer service nicely for a refund, and they granted it, which is another reason I keep coming back to Newegg.
 
@@ -374,22 +374,22 @@ I bought this power strip a few years ago for the TinyPilot office (TODO: link).
 
 Some of my existing office infrastructure has no rack mounting option, so I needed 2U of shelf space for:
 
-- OPNsense firewall server (running on a XX mini PC)
+- OPNsense firewall server (running on a Qotom mini PC)
 - TinyPilot
 - Dell XX mini PC, which I use for testing
 
 ### Candidates
 
-| Brand       | Model                                                                          | Price |
-| ----------- | ------------------------------------------------------------------------------ | ----- |
-| TODO: Other | XX                                                                             | $XX   |
-| StarTech    | [CABSHELFV 2U 16"](https://www.startech.com/en-us/server-management/cabshelfv) | $XX   |
+| Brand    | Model                                                                          | Price |
+| -------- | ------------------------------------------------------------------------------ | ----- |
+| Pyle     | [PLRSTN62U 19" 2U](https://pyleusa.com/products/plrstn62u)                     | $64   |
+| StarTech | [CABSHELFV 2U 16"](https://www.startech.com/en-us/server-management/cabshelfv) | $XX   |
 
 ### Review: XX shelves
 
 - Grade: A
 
-I found these no-name shelves on Amazon, and they worked great.
+I found these shelves on Amazon. I'd never heard of the manufacturer, but they looked right for my needs. They worked great.
 
 They were easy to install, they're low in price, and they have a lip that prevents components from sliding off the rack.
 
@@ -636,7 +636,7 @@ The one piece of guidance around server rack layouts that everyone seemed to agr
 
 The rack has a lot of expensive equipment. You don't want it to fall over and damage things or, worse, injure someone. So, you want it to have a low center of gravity to maximize stability.
 
-The heaviest component in my rack by far is the UPS, weighing in at a whopping XX lbs (XX kg).
+The heaviest component in my rack by far is the UPS, weighing in at a whopping 27 lbs.
 
 I haven't built my rack-mounted storage server yet, but I'm leaving space for it on the bottom, as it will be the next heaviest thing after the UPS, as disks are heavy.
 
@@ -656,17 +656,17 @@ Maybe minimizing cable length is important in a data center where you're replica
 
 TODO: List of components and prices
 
-| Component                       | Choice        | Price | Satisfaction |
-| ------------------------------- | ------------- | ----- | ------------ |
-| Server rack                     | XX            | XX    | B+           |
-| Network switch (managed)        | XX            | XX    | C+           |
-| Network switch (PoE, unmanaged) | XX            | XX    | C+           |
-| UPS                             | CyberPower XX | XX    | A+           |
-| Rack shelves                    | XX            | XX    | A            |
-| Raspberry Pi rack mount         | XX            | XX    | B            |
-| Power strip                     | XX            | XX    | A            |
-| RJ45 Patch keys                 | XX            | XX    | ??           |
-| LC Patch keys                   | XX            | XX    | ??           |
+| Component                       | Choice                                                                                                                                     | Price | Satisfaction |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ----- | ------------ |
+| Server rack                     | XX                                                                                                                                         | XX    | B+           |
+| Network switch (managed)        | [TP-Link TL-SG3428X](https://www.newegg.com/tp-link-tl-sg3428x-24-x-rj45-4-x-sfp/p/0XP-0054-00091?Item=0XP-0054-00091&SoldByNewegg=1)      | $299  | C+           |
+| Network switch (PoE, unmanaged) | XX                                                                                                                                         | XX    | C+           |
+| UPS                             | [CyberPower CP1500PFCRM2U](https://www.bhphotovideo.com/c/product/1709939-REG/cyberpower_cp1500pfcrm2u_cp15_1500va_100w_2u_rackmount.html) | $335  | A+           |
+| Rack shelves                    | XX                                                                                                                                         | XX    | A            |
+| Raspberry Pi rack mount         | XX                                                                                                                                         | XX    | B            |
+| Power strip                     | XX                                                                                                                                         | XX    | A            |
+| RJ45 Patch keys                 | XX                                                                                                                                         | XX    | ??           |
+| LC Patch keys                   | XX                                                                                                                                         | XX    | ??           |
 
 TODO: Photos
 
