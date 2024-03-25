@@ -276,13 +276,13 @@ To avoid surprise shutdowns, I bought a battery backup system, also known as an 
 
 TODO: Photo
 
-For short power outages, the battery keeps my systems online. For extended outages, the battery gives me enough time to gracefully shutdown my systems to avoid data loss.
+For short power outages, the battery saves me from any downtime. For extended outages, the battery gives me enough time to gracefully shutdown my systems to avoid data loss.
 
 The downside of the battery backup is that it added a lot of cabling to my office. My desktop, servers, and router were all in different corners of my office, so big, unsightly power cables had to run all around my office to connect those components to the UPS.
 
 ### How much time do you need for a graceful shutdown?
 
-For extended power outages, you'll need enough time to shut down your systems gracefully before they exhaust your UPS' battery. The amount of time you need depends on the size of your UPS' battery and the power draw of the systems attached to it.
+For extended power outages, you'll need enough time to shut down your systems before they exhaust your UPS' battery. The amount of time you need depends on the size of your UPS' battery and the power draw of the systems attached to it.
 
 I theoretically could have used my Kill-A-Watt to measure the wattage of each of my devices during normal operation and then used that to find a battery. I was too lazy for that level of rigor, so I estimated based on metrics from my previous UPS.
 
@@ -315,8 +315,6 @@ For me, automating shutdowns from my UPS isn't worth the trouble, but you might 
 
 - Grade: A
 
-I've been happy with the CyberPower CP1500PFCRM2U.
-
 The LCD is user-friendly and has useful metrics about power consumption. You can also turns the display off to have fewer flashing lights on your rack. It reports XX minutes of battery life when I cut power, which is plenty of time for me to shut my systems down.
 
 It's also completely silent, which I thought was a given for a battery backups, but it turns out it's not...
@@ -329,7 +327,7 @@ The first UPS I purchased for my rack was the Tripp Lite SMART1500LCD, but it wa
 
 I didn't even realize battery backups could _be_ noisy. My APC UPS was completely silent except when it lost power and failed over to battery backup.
 
-The Tripp Lite UPS was not only the the loudest thing in my rack; it was the loudest thing in my whole house. It was like constantly having a hair dryer running in my office. The UPS fans were so loud that my wife could hear my server rack a floor away in our house.
+Not only was the Tripp Lite UPS the loudest thing in my rack, it was the loudest thing in my whole house. It was like constantly having a hair dryer running in my office. My wife could hear it from her office a floor away.
 
 Did I just get a defective unit? Surely, a UPS can't be designed to be this loud all the time, right?
 
@@ -339,7 +337,7 @@ I tried to get used to the noise, but it was so distracting that I gave up after
 
 To my surprise, I realized Newegg's return policy was "replacement only." I'd always had an easy return experience with Newegg so I didn't even think to check the return policy beforehand, but I guess they're more strict about these XX lb units.
 
-Fortunately, I asked Newegg customer service nicely for a refund, and they granted it. Score one for Newegg!
+Fortunately, I asked Newegg customer service nicely for a refund, and they granted it, which is another reason I keep coming back to Newegg.
 
 ## Choosing a power strip
 
@@ -374,11 +372,11 @@ I bought this power strip a few years ago for the TinyPilot office (TODO: link).
 
 ## Choosing rack shelves
 
-Some of my existing office infrastructure has no rack mounting option, so I needed 2U of shelf space:
+Some of my existing office infrastructure has no rack mounting option, so I needed 2U of shelf space for:
 
-- My OPNsense firewall server (running on a XX mini PC)
-- My TinyPilot
-- Dell XX mini PC (I use it for testing)
+- OPNsense firewall server (running on a XX mini PC)
+- TinyPilot
+- Dell XX mini PC, which I use for testing
 
 ### Candidates
 
@@ -409,7 +407,7 @@ This downward lip forces you to either allocate 3U to each of your 2U shelves or
 
 I couldn't even figure out a purpose for the lip. It would make sense if it curved up because that would protect items on the shelf from slipping off, but why bend down? It didn't look like it provided any structural support to the shelf either.
 
-I scoured reviews of this shelf to see if anyone else was talking about this bizarre design choice. When other reviewers mentioned it, they didn't seem to mind that much. They were just like, "Oh, yeah, it extends past 2U a bit." Huh? Why would anyone accept that?
+I scoured reviews of this shelf to see if anyone else was talking about this bizarre design choice. When other reviewers mentioned it, they didn't seem to mind that much. The comments had the tone of, "Oh, yeah, it extends past 2U a bit." Huh? Why would anyone accept that?
 
 I'm still trying to figure out if I'm crazy or if there's something I'm missing about why StarTech's downward-facing lips are a good idea. I promptly returned mine and found alternative rack shelves on Amazon.
 
@@ -417,13 +415,13 @@ I'm still trying to figure out if I'm crazy or if there's something I'm missing 
 
 ### What the heck is a patch panel?
 
-From reading a lot of homelab blog posts, I noticed a lot of other homelabbers integrating a patch panel into their racks.
+From reading a lot of homelab blog posts, I noticed a lot of other homelabbers integrating a patch panel into their racks. When it came time to finally build my server rack, I finally had to ask the question that had been on my mind for years:
 
-When it came time to finally build my server rack, I finally had to ask the question, "What the heck is a patch panel?"
+- "What the heck is a patch panel?"
 
 Shopping around for patch panels made me even more confused. It's just a row of empty spaces? What's the point?
 
-The point of a patch panel didn't truly click for me until I built the rack. In short, the patch panel keeps the clutter of your networking cables behind your rack rather than in front of it.
+The concept didn't click for me until I built my rack. In short, the patch panel keeps the clutter of your networking cables behind your rack rather than in front of it.
 
 For example, without a patch panel, connecting my managed switch to my PoE switch would look like this:
 
@@ -437,7 +435,7 @@ TODO: Photo
 **Tip**: I recommend having a patch panel adjacent to every switch in your rack.
 {{</notice>}}
 
-### Candidate
+### Candidates
 
 | Brand          | Model                                                                                                                      | Price  |
 | -------------- | -------------------------------------------------------------------------------------------------------------------------- | ------ |
@@ -446,17 +444,29 @@ TODO: Photo
 
 ### Review: NewYork Cables 24-Port 1U Patch Panel
 
-- Grade: B
+- Grade: B+
 
-It's fine. One of the reasons I chose it was that I saw in reviews it has a rear bar that helps support Ethernet cables. In my rack, the rear bar doesn't do anything. It's too close to the Ethernet ports to provide support, and they don't seem to need it anyway.
+This works fine. At the end of the day, it's basically just a metal and plastic panel, so there's not much to do well or poorly. But it feels sturdy and installs into the rack well.
 
-My complaint is with the labels. It's slips of paper under plastic, like a landline phone would have for speed dial in the 90s. That's too permanent. What if I change
+One of the reasons I chose the NewYork brand patch panel was that I saw in reviews it has a rear bar that helps support Ethernet cables. In my rack, the rear bar doesn't do anything. It's too close to the Ethernet ports to provide support, and they don't seem to need it anyway.
+
+TODO: Show photos of rear
+
+My complaint is with the port labels. They're slips of paper under plastic, like a landline phone would have for speed dial in the 90s. That's too permanent. I don't like the idea of pulling out the entire paper strip and erasing and rewriting every time I rearrange cables.
+
+TODO: Photo of labels
 
 ### Review: Tripp Lite 16-port 1U Patch Panel
 
-- Grade: B
+- Grade: A
 
-I like that the labels are little whiteboard panels. I had whiteboard markers on hand, but they were too big to write in such tiny spaces. I bought ultra fine tip whiteboard markers (TODO: link), and those worked well.
+As with the NewYork cables patch panel, it's fine, but there's not much to get excited about with patch panels.
+
+TODO: Photo
+
+I like that the labels are tiny whiteboards. I had whiteboard markers on hand, but they were too big to write in such tiny spaces, so I bought ultra fine-tip whiteboard markers (TODO: link), and those worked well.
+
+TODO: Photo
 
 ## Choosing a Raspberry Pi rack mount
 
@@ -470,13 +480,15 @@ I'd seen rack mounts for the Raspberry Pi, so I thought it would be fun to add o
 
 - Grade: C+
 
-The rack mount is okay, not great. It's a decent value for the price. PoE HATs for a Raspberry Pi 4 are generally around $XX, so that alone is like XX% of the price.
+The rack mount is okay, not great. It's a decent value for the price. PoE HATs for a Raspberry Pi 4 are generally around $XX, so getting four of those is already basically a $XX value.
 
-The craftsmanship on the rack mount itself is mediocre. The pieces don't fit together that well. There are substantial gaps around the HDMI ports.
+The craftsmanship on the rack mount itself is mediocre. The pieces don't fit together that well. There are noticeable gaps around the HDMI ports.
+
+TODO: Photo
 
 The HDMI ports are also secured poorly to the mount. When I plug in an HDMI cable, the connector bends and strains. I worry they're going to snap off one day.
 
-PoE tends to generate a lot of heat, so it's good that these come with an integrated fan, but the fan is too loud for me. It's a constant high-pitch whirring, so I've disabled the fans on each of my Pis. They could overheat without the fans, but it just means the CPU throttles or shuts down, which isn't a big deal for my hobby projects.
+PoE tends to generate a lot of heat, so it's good that these come with an integrated fan, but they create a constant high-pitch whirring. I've disabled the fans on each of my Pis. They could overheat without the fans, but it just means the CPU throttles or shuts down, which isn't a big deal for my hobby projects.
 
 Lastly, the instructions are terrible. Step one is to screw in the OLED. Okay, that's fine. Step two is to screw in the power button. Sure, easy peasy. Step three is: okay, put together five other things simultaneously!
 
@@ -484,9 +496,9 @@ TODO: Photo
 
 ## Choosing cage nuts
 
-Rack-monted components attach to your rack with a special type of screw and nut called cage nuts. Most rack-mountable components come with their own cage nuts, but you'll need some extras for the ones that don't.
+Rack-monted components attach to your rack with a special type of screw and nut called cage nuts. Most rack-mountable components come with their own cage nuts, but you'll need some extras for any components that don't include their own.
 
-I read recommendations to buy a special tool for inserting and removing cage nuts. It might make sense if you work in a data center and are working with cage nuts all the time. For occasional work, a small flathead screwdriver is fine.
+I read recommendations to buy a special tool for inserting and removing cage nuts. It might make sense if you work in a data center and are working with cage nuts all the time. I only plan to install cage nuts a few times per year, so small flathead screwdriver is good enough for my needs.
 
 ### Review: XX Cage nuts
 
@@ -494,7 +506,9 @@ I read recommendations to buy a special tool for inserting and removing cage nut
 
 These were the only cage nuts I tried, but I don't recommend them. They were worse quality than the cage nuts that came free with other components.
 
-Other cage nuts I've tried are shaped so that you can screw them in most of the way just using your fingers. These ones, you couldn't. I also found that the screw heads were made of a weak metal, so tightening the screws quickly began stripping the heads.
+Other cage nuts I've tried are shaped so that you can screw them in most of the way just using your fingers. With these cage nuts, I couldn't get enough of a grip to tighten them with my fingers.
+
+The screws are made from some soft type of metal, so I had to tighten lightly to avoid stripping the heads.
 
 The washers are too wide, so they take up a lot of unnecessary space. In my rack, the washers were so wide that they'd collide with washers in adjacent rack slots, making it hard to screw in components next to each other.
 
@@ -502,7 +516,9 @@ The washers are too wide, so they take up a lot of unnecessary space. In my rack
 
 If you're converting an existing setup to a server rack, you'll likely need new Ethernet cables. If you're including a patch panel, remember to buy short (6-12") cables (sometimes called "patch cables") to connect the patch panel to your switch.
 
-You'll need a mix of different cable lengths. For example, on my rack, port 16 on my switch is just XX" from port 16 on my patchpanel, but port 1 on my switch is XX" from its corresponding patch panel port.
+You'll likely need a mix of different patch cable lengths. For example, on my rack, port 16 on my switch is just XX" from port 16 on my patchpanel, but port 1 on my switch is XX" from its corresponding patch panel port.
+
+TODO: Photo
 
 I bought 6", 12", and 3' Ethernet cables at a ratio of about 5:2:1.
 
@@ -512,9 +528,9 @@ Some people are creative and buy different colors to represent different functio
 
 ### Ethernet, DAC, or fiber?
 
-If you're just getting 1 Gbps speeds, you don't have to choose anything.
+If you're building a 1 Gbps network, you can just by regular RJ45 Ethernet cables and call it a day.
 
-Once you go above that, you have to choose between Ethernet or fiber cables.
+If you go above 1 Gbps speeds, you have to choose between Ethernet or fiber cables.
 
 With Ethernet, it's pretty simple. Your Ethernet adapter has an Ethernet port, so you plug in an Ethernet cable. Easy peasy!
 
@@ -542,7 +558,9 @@ That reduced my options to just to just RJ45 or LC.
 
 ### Ethernet vs. fiber
 
-I couldn't find many practical differences between RJ45 and LC. LC is thinner, so I find it a bit more visually appealing. But it means a different type of cable than all my other components, which are Ethernet. The price of all the components together was surprising as well. Either route I chose, I needed:
+I couldn't find many practical differences between RJ45 and LC. LC is thinner, so I find it a bit more visually appealing. But it means a different type of cable than all my other components, which are Ethernet.
+
+The price of all the components together was surprising as well. Either route I chose, I needed:
 
 - Three transceivers (for my switch, desktop, and storage server)
 - One 16' cable (desktop to switch)
@@ -551,6 +569,8 @@ I couldn't find many practical differences between RJ45 and LC. LC is thinner, s
 - Four patch keys
 
 The other surprise with fiber is how expensive the cabling is. SFP+ to fiber adapters cost $XX, and you need them at either end of the connection. I bought a box of XX" fiber patch cables not really paying attention to the price, and then I realized I spent $XX. On little cables!
+
+SFP+ to Ethernet transceivers were significantly more expensive than SFP+ to LC (Fiber), but Ethernet cables were cheaper than fiber cables. In total, I found better pricing for fiber:
 
 | Component                                                       | Ethernet price | Fiber price |
 | --------------------------------------------------------------- | -------------- | ----------- |
