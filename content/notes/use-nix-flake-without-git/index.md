@@ -1,6 +1,8 @@
 ---
 title: "Use a Nix Flake without Adding it to Git"
 date: 2023-12-29T00:00:00-05:00
+tags:
+  - nix
 ---
 
 When I work in my own repositories these days, I always [add a Nix flake to the repo](/notes/nix-dev-environment/) so that I can spin up a working development environment on any system with a single command.
