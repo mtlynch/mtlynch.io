@@ -111,13 +111,13 @@ As you pick components, add up how many rack units they'll take up. Leave some e
 
 ### How deep does it need to be?
 
-Server racks vary in depth. Most server racks are designed for enterprise-grade servers, which are up to XX" long.
+Server racks vary in depth. Most server racks are designed for enterprise-grade servers, which are up to 50" long.
 
-My office has a XX server, and it's a huge hassle. It's XX" long and XX lbs. It was a pain to mount, and it will be a pain when I need to sell it.
+My office has an HP ProLiant DL380 G7 server, and it's a huge hassle. It's 29" long and 50 lbs. It was a pain to mount, and it will be a pain when I need to sell it.
 
-I have a relatively small office, and I didn't want the rack server to dominate the space. For my home rack, I decided to limit myself to components that are shallow enough to only need front mounts.
+I have a relatively small home office, and I didn't want the rack server to dominate the space. For my home rack, I decided to limit myself to components that are shallow enough to only need front mounts.
 
-I looked at small rack-mountable chassis for servers, and the smallest ones were about XX" in depth, so I set that as my minimum.
+I looked at small rack-mountable chassis for servers, and the smallest ones were about 15" in depth, so I set that as my minimum.
 
 ### Does it need four posts or two?
 
@@ -201,7 +201,7 @@ Once I got my managed switch, I found that it's pretty fun to have VLANs for dif
 
 Certain low-power devices can run entirely from the power they draw from the Ethernet cable.
 
-My home WiFi access point, the Ruckus RXX (TODO: link) supports PoE, so my access point conveniently needs only a single cable for both power and network connectivity.
+My home WiFi access point, the [Ruckus R310](https://support.ruckuswireless.com/products/88-ruckus-r310) supports PoE, so my access point conveniently needs only a single cable for both power and network connectivity.
 
 TODO: Photo
 
