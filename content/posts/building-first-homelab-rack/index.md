@@ -24,7 +24,30 @@ TODO: Photo of finished rack
 
 If you want to skip the explanations and jump to my rack, click below.
 
-TODO: Table of contents
+## Table of contents
+
+- [What's a homelab?](#)
+- [Why build a server rack at home?](#)
+- [Why this guide?](#)
+- [Choosing a rack](#)
+- [Choosing a network switch](#)
+- [Choosing 10G NICs](#)
+- [Choosing a UPS (battery backup)](#)
+- [Choosing a power strip](#)
+- [Choosing rack shelves](#)
+- [Choosing a patch panel](#)
+- [Choosing a Raspberry Pi rack mount](#)
+- [Choosing cage nuts](#)
+- [Choosing Ethernet cables](#)
+- [Choosing fiber cables](#)
+- [What I already had](#)
+- [How do I arrange components in a rack?](#)
+- [My final rack setup](#)
+- [Next steps in my rack](#)
+- [Avoiding mistakes I made](#)
+- [My life with a rack](#)
+
+TODO: Finish table of contents
 
 ## What's a homelab?
 
@@ -34,9 +57,11 @@ A homelab is a place in your home where you can experiment with IT hardware or s
 
 ## Why build a server rack at home?
 
-- A dedicated server for virtual machines allows me to run several services 2
+If you have a bunch of servers, it seems logical to put them into a server rack, but if you're not from the homelab world, you might wonder why I'd have all these servers to begin with.
+
+- A dedicated server for virtual machines allows me to isolate software projects to different virtual machines, and it requires reboots less frequently than my main Windows workstation.
 - Having a storage server means that all of my devices can store data in one place that has good fault tolerance and backups.
-- I prefer running my choice of software on my router rather than crappy Linksys code
+- Building my own router with open-source software gives me more control over my network and saves me from running the buggy software that's in most consumer-grade routers.
 
 ## Why this guide?
 
@@ -52,13 +77,11 @@ I made mistakes in this process, and I didn't build the ideal rack, but I think 
 
 ### No conflict of interest
 
-The uncomfortable truth about most homelab blog posts is that they're funded by affiliate links.
+I'm not getting paid by anyone or receiving free products to write this post.
 
-If you're not familiar with affiliate links, it means that if a blog post links to a product, and the reader makes a purchase through that link, the author of the blog post receives a commission.
+The uncomfortable truth about most homelab blog posts is that they're funded by affiliate links. That means if a reader purchases something through a link in the article, the author receives a commission.
 
 Authors can still provide valuable information despite using affiliate links, but it creates a clear conflict of interest. An author is inherently biased if they get paid by merchants they recommend. And it incentivizes recommending expensive products, as commissions are usually percentage-based.
-
-I'm not getting paid by anyone or receiving any free products.
 
 I write my blog out of vanity. My payment is hearing people tell me that they found the article interesting or useful.
 
@@ -389,15 +412,15 @@ Some of my existing office infrastructure has no rack mounting option, so I need
 | Pyle     | [PLRSTN62U 19" 2U](https://pyleusa.com/products/plrstn62u)                     | $64   |
 | StarTech | [CABSHELFV 2U 16"](https://www.startech.com/en-us/server-management/cabshelfv) | $XX   |
 
-### Review: XX shelves
+### Review: Pyle PLRSTN62U rack shelves
 
 - Grade: A
 
-I found these shelves on Amazon. I'd never heard of the manufacturer, but they looked right for my needs. They worked great.
+I had never heard of Pyle as a brand, but I found the shelves online, and they seemed like a match for what I wanted. They've worked out well.
 
 They were easy to install, they're low in price, and they have a lip that prevents components from sliding off the rack.
 
-### Review: StarTech CABSHELFV 2U shelves
+### Review: StarTech CABSHELFV 2U rack shelves
 
 - Grade: D
 
@@ -411,17 +434,17 @@ This downward lip forces you to either allocate 3U to each of your 2U shelves or
 
 I couldn't even figure out a purpose for the lip. It would make sense if it curved up because that would protect items on the shelf from slipping off, but why bend down? It didn't look like it provided any structural support to the shelf either.
 
-I scoured reviews of this shelf to see if anyone else was talking about this bizarre design choice. When other reviewers mentioned it, they didn't seem to mind that much. The comments had the tone of, "Oh, yeah, it extends past 2U a bit." Huh? Why would anyone accept that?
+I scoured reviews of this shelf to see if anyone else was talking about this bizarre design choice. When other reviewers mentioned it, they didn't seem to mind that much. The comments had the tone of, "Oh, yeah, it extends past 2U a bit." I'm baffled that anyone would accept that.
 
-I'm still trying to figure out if I'm crazy or if there's something I'm missing about why StarTech's downward-facing lips are a good idea. I promptly returned mine and found alternative rack shelves on Amazon.
+I'm still trying to figure out if I'm crazy or if there's something I'm missing about why StarTech's downward-facing lips are a good idea. I promptly returned mine and bought the Pyle shelves instead.
 
 ## Choosing a patch panel
 
+From reading a lot of homelab blog posts, I noticed a lot of other homelabbers integrating a patch panel into their racks.
+
+When it came time to finally build my server rack, I finally had to ask the question that had been on my mind for years.
+
 ### What the heck is a patch panel?
-
-From reading a lot of homelab blog posts, I noticed a lot of other homelabbers integrating a patch panel into their racks. When it came time to finally build my server rack, I finally had to ask the question that had been on my mind for years:
-
-- "What the heck is a patch panel?"
 
 Shopping around for patch panels made me even more confused. It's just a row of empty spaces? What's the point?
 
@@ -456,7 +479,7 @@ One of the reasons I chose the NewYork brand patch panel was that I saw in revie
 
 TODO: Show photos of rear
 
-My complaint is with the port labels. They're slips of paper under plastic, like a landline phone would have for speed dial in the 90s. That's too permanent. I don't like the idea of pulling out the entire paper strip and erasing and rewriting every time I rearrange cables.
+My one complaint is with the port labels. They're slips of paper under plastic, like a landline phone would have for speed dial in the 90s. Other patch panels have little whiteboard strips for easy erasing, and I prefer that style to strips of paper.
 
 TODO: Photo of labels
 
@@ -476,11 +499,13 @@ TODO: Photo
 
 I do a lot of professional and hobby projects with the Raspberry Pi, a small, inexpensive single-board computer.
 
-I'd seen rack mounts for the Raspberry Pi, so I thought it would be fun to add one to my rack.
+I'd seen rack mounts for the Raspberry Pi, so I thought it would be fun to add one to my rack. I didn't shop around for Pi racks, so I just bought the first one that looked decent.
 
-### Review: UCTRONICS Ultimate Rack with PoE Functionality
+| Brand     | Model                                                                                                                                                            | Price |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- |
+| UCTRONICS | [Ultimate Rack with PoE Functionality](https://www.uctronics.com/raspberry-pi/1u-rack-mount/raspberry-pi-4b-rack-mount-19-inch-1u-with-poe-and-oled-screen.html) | $190  |
 
-[UCTRONICS Ultimate Rack with PoE Functionality](https://www.uctronics.com/raspberry-pi/1u-rack-mount/raspberry-pi-4b-rack-mount-19-inch-1u-with-poe-and-oled-screen.html) - $189.99
+### Review: UCTRONICS Ultimate Rack
 
 - Grade: C+
 
@@ -577,7 +602,7 @@ When I priced everything out, pricing was significantly better for fiber:
 | Four patch keys                                                 | $0\*           | $19         |
 | **Total**                                                       | **$163**       | **$134**    |
 
-\* These effectively would cost no extra money because I had to buy these anyway for the rest of the ports in my switch.
+\* These effectively would cost no extra money because I had to buy these for the rest of the ports in my switch.
 
 {{<notice type="info">}}
 
@@ -598,33 +623,33 @@ Here were the final components I chose:
 | [16' Fiber Cable](https://www.amazon.com/dp/B00U7UP1UM/)                                                | $14.49 |
 | [3' Fiber Cable](https://www.amazon.com/dp/B00T5796DQ/)                                                 | $9.99  |
 
-## Choosing cable ties
-
-Cable ties are optional, but if you want to keep everything clean, you either need to cut your own cables or wrap up the excess with cable ties. You can also join groups of wires together with cable ties.
-
-### Velcro vs. rubber cable ties
-
-I've tried two styles of cable ties: velcro and rubber.
-
-The velcro ones are secure, but they're a bit too secure. They take me about 5 seconds to attach or detach, whereas the rubber ones I can detach almost instantly, and I can attach them in a second or two.
-
-### Choosing
-
-[UMUST Silicone Cable Ties](https://www.amazon.com/dp/B0B5RM6NLP/) - $8.99
-
 ## What I already had
 
 ### Router: Qotom Q355G4 with OPNsense
 
 I built a router a few years ago. I bought a cheap Qotom Q355G4 unit from China and installed OPNsense.
 
-### Out-of-band Management: TinyPilot Voyager 2a PoE
+### WiFi access point: Ruckus RXX
 
-Full disclosure: This is a product [I created](/tinypilot/) and now [sell](https://tinypilotkvm.com).
+This doesn't technically live in my rack, but it plugs in to my PoE switch. It's a nice access point, and it allows me to create multiple WiFi networks with different VLAN tags, so my guest WiFi has Internet access but can't reach any of my other devices.
 
-I generally connect to components in my rack over SSH or web interfaces. In times where I need to reinstall the OS, change boot settings, or when I screw up the network settings, I need to type
+### Out-of-band management: TinyPilot Voyager 2a PoE
 
-I created a product called TinyPilot to provide remote access. It's built on top of a Raspberry Pi, and it uses the Pi to emulate a keyboard, mouse, and USB drive. It also captures display output from the target computer. So instead of having to drag a keyboard and monitor over to my rack, I can plug in TinyPilot when I need hardware-level access.
+{{<notice type="info">}}
+**Full disclosure**: This is a product [I created](/tinypilot/) and now [sell](https://tinypilotkvm.com).
+{{</notice>}}
+
+I generally connect to components in my rack over SSH or web interfaces. In times where I need to reinstall an OS, change boot settings, or fix network settings, I need a tool that gives me control at a physical level.
+
+Instead of having to drag a keyboard and monitor over to my rack, I can plug in my TinyPilot Voyager 2a when I need hardware-level access:
+
+TODO: Screenshot
+
+### Software testing: Dell XX Mini PC
+
+TODO
+
+For development work on TinyPilot, I often test changes against a real device, so I use this Dell mini PC as a spare device where I can blow away the OS or restart it frequently without disrupting any other work.
 
 ## How do I arrange components in a rack?
 
@@ -688,33 +713,33 @@ One of the things I've been searching for without success is a "hat" for my rack
 
 I'd love to find some top that fits securely into the open space on top of my rack and lets me put things on top of it. It would be convenient extra storage if I could find something sturdy and easy to remove, but I can't find anything like that.
 
-If you know a solution to this, let me know in the comments.
+If you know a solution to this, let me know, and I'll update the post.
 
 ## Avoiding mistakes I made
 
 ### Test the UPS before mounting it
 
-The UPS was, by far, the hardest component to mount in the rack. I don't understand how people do it. It's a XX lb device, and you need at least one hand holding it in place and one hand securing the screws. I eventually decided it was a two-person job and called my wife in for reinforcements.
+The UPS was, by far, the hardest component to mount in the rack. I don't understand how people do it. It's about half the size and weight of a window air conditioner, but to install it, you one hand holding it perfectly level and another hand screwing it in. I eventually decided it was a two-person job and called my wife in for reinforcements.
 
 But you don't want to go through all that work and find out, like I did, that the UPS is too loud to earn a permanent place in your rack. Or it could just be a dead device, and you don't want to find that out after you mount it.
 
 So before you mount your UPS, remember to test it for functionality and noise before you go to the trouble of mounting it.
 
-### Check return policies
-
-on Newegg: I'd never seen anything on Newegg before that was replacement-only, so I took it for granted that I'd be able to return it if I didn't like it.
-
 ### Check UPS reviews for noise complaints
 
 Some UPS devices are totally silent and some produce constant noise. If it's anywhere near you, take noise into consideration.
 
+### Check return policies
+
+I'd never seen anything on Newegg before that was replacement-only, so I took it for granted that I'd be able to return my UPS if I didn't like it. I was surprised to find it was a replacement-only item
+
+Luckily, Newegg customer service was helpful and accepted the return for a refund.
+
 ### Get a PoE-enabled switch if you have any PoE components
 
-It's a bit silly that I now have 2U of network switches and 2U of patch panels, and I'm only using 11 of the 44 ports, but I guess better to have too much available than too little.
+Currently, I have 2U of network switches and 2U of patch panels, and I'm only using 11 of the 44 ports.
 
-I regret not looking around more for a managed switch that supported PoE without a noise problem. My ideal would be to have a managed switch where at least eight of the ports have PoE without sacrificing fanless operation.
-
-I want to be able to add rules to devices plugged into my PoE switch, but because it's unmanaged, they all have to share the same rules.
+I regret not looking around more for a managed switch that supported PoE while still offering quiet operation. My ideal would be to have a fanless managed switch where at least eight of the ports have PoE and at least three have 10 Gbps speeds.
 
 ### Cage nuts aren't supposed to hurt
 
@@ -722,9 +747,13 @@ When you install components into your rack, you screw special cage screws throug
 
 Cage nuts have a clever design in that they clip into the rack. That way, you don't have to hold the nut in place while you're screwing the component into your rack.
 
+TODO: Photo of properly installed cage nut
+
 But... nobody told me about these clips. I thought cage nuts worked like other nuts where you just hold them behind the thing you're screwing into, and then you tighten it by hand.
 
-It was only after installing about eight cage nuts and cursing the terrible design of this thing that has sharp corners that cut into my fingertips that I thought I may be doing something wrong.
+TODO: Photo of how I was installing cage nuts
+
+After installing about eight cage nuts, I cursed the stupidity of whoever decided to put sharp corners on a thing that required me to squeeze it between my fingertips. And then I realized I might be doing something wrong.
 
 {{<notice type="info">}}
 **Tip**: If you find yourself exerting a lot of force or feeling physical pain while building computer hardware, you're probably doing something wrong. Server equipment is designed so that middle-aged, out-of-shape IT people can build them, so you're not expected to be in peak physical condition.
@@ -751,19 +780,11 @@ It fit snugly, and it was easy to plug Ethernet cables into it like that, so I t
 
 I had them like this for six months!
 
-It wasn't until I bought my second patch panel and experimented with installing the keys before I installed the patch panel that I realized there was a different method.
+It wasn't until I bought my second patch panel and experimented with the keys that I realized there was a different method.
 
-It turns out that the little ridge on the top isn't for decoration. They go in from the back and click in. You'll hear a little click when they slot into the correct position. The front face should be roughly flush with the front of the patch panel.
+It turns out that the little ridge on the top isn't for decoration. The patch keys go in from the back and click in. You'll hear a little click when they slot into the correct position. The front face should be roughly flush with the front of the patch panel.
 
 TODO: Photos
-
-### Flash Mellanox cards to latest firmware on a Windows system
-
-I found that management software for 10G NICs is only available on Windows. When I was trying to install a NIC on my TrueNAS Core server (FreeBSD),
-
-Didn't flash Mellanox card before installing it in TrueNAS.
-
-https://network.nvidia.com/products/adapter-software/ethernet/windows/winof-2/
 
 ### If the motherboard doesn't detect a 10G NIC, try a different PCI slot
 
@@ -773,31 +794,25 @@ Finally, I stumbled across a forum post where someone reported that their Mellan
 
 I still don't understand why the PCI slot mattered. According to my motherboard's documentation, the two PCI slots are supposed to be identical, but one worked, and the other didn't.
 
-### Incorrect length Ethernet cables
-
-Patch cables
-
 ### Don't mix SFP+ multimode and single mode fiber cables
 
 The first day that I installed my Mellanox NIC on my Windows desktop, everything worked fine.
 
-After around 24 hours of use, I noticed my Ethernet connection suddenly disconnecting and reconnecting every few seconds. I rebooted, and the problem went away.
+24 hours of use, my desktop's Ethernet connection suddenly disconnecting and reconnecting every few seconds. I rebooted, and the problem went away.
 
-24 hours later, I saw the same issue. This time, I tried disconnecting and reconnecting the fiber cable from the switch, and the problem persisted. I tried instead skipping the patch panel and connecting the cable from my desktop directly to the switch.
+A day later, the problem came back. I tried instead skipping the patch panel and connecting the cable from my desktop directly to the switch. That fixed the issue, which narrowed the problem to either the patch cable or the patch panel key.
 
-That worked, and the connection stayed stable for several days. That suggested the problem was either in the patch cable or the patch panel key. I tried a different set of patch keys and patch cables, and the problem came back within a day.
+Finally, I spotted it: my patch cables were SFP+ single mode, whereas my long fiber cables were SFP+ multimode. I didn't even know there was a difference in fiber cables, but apparently there is, and they don't get along.
 
-Then I went back and looked at whether there was some sort of incompatibility between my patch cables or patch keys. And then I spotted it: my patch cables were SFP+ single mode, whereas my long fiber cables were SFP+ multimode. I didn't even know there was a difference in fiber cables, but apparently there is, and they don't get along.
+I bought a new set of SFP+ multimode fiber cables, and the problem went away. Unfortunately, I discovered the problem three days after the return window for my $70 box of SFP+ single mode fiber cables had closed.
 
-I bought a new set of SFP+ multimode fiber cables, and the problem went away. Unfortunately, I discovered the problem three days after the return window for my $XX box of SFP+ single mode fiber cables had closed.
+{{<img src="14usd-cable.webp" max-width="600px" caption="I accidentally spent $70 on a box of five 7&quot; fiber cables, and they weren't even compatible with my network.">}}
 
-I bought a box of five 7" fiber patch cables not really paying attention to the price, and then I realized I spent $70. On tiny cables! to add insult to injury, I realized two days after the return window had closed that they were the wrong "mode" of fiber.
+## My life with a rack
 
-{{<img src="14usd-cable.webp" max-width="600px" caption="I accidentally spent $70 on a box of five 7&quot; fiber cables.">}}
+I'm happy with my new rack, and I have no regrets about the investment. It definitely beats my old setup of having bits and pieces of infrastructure scattered around my office.
 
-## Thoughts on my life with a rack
-
-I'm happy with my new rack, and I have no regrets about the investment. It definitely beats my old setup of having bits and pieces of infrastructure scattered around my office. Now everything is in one location with clear organization.
+Now everything is in one location with clear organization. When people visit my house, I look like a kooky nerd rather than just a messy guy with cables everywhere.
 
 I underestimated how nice it would be to have my TinyPilot physically close to all of my devices. Before the rack, I used to keep my TinyPilot on the floor next to my desk. If I ever needed to debug something on a server or a Raspberry Pi on the other side of my office, I avoided it because it involved shutting down the TinyPilot, disconnecting a lot of wires, then reconnecting them on the other side of the room.
 
