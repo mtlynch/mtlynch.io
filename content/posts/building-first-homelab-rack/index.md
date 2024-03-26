@@ -5,18 +5,18 @@ tags:
   - homelab
 ---
 
-Seven years ago, I built my [first home server](/building-a-vm-homelab-2017/). It made a huge difference to my software development workflow, so over the years, I've gotten more into the homelab scene and added custom-built storage server, a dedicated firewall, and more advanced switches.
+Seven years ago, I built my [first home server](/building-a-vm-homelab-2017/). It greatly improved my software development workflows, so over the years, I've gotten more into the home server scene. I built [a custom storage server](/budget-nas/), [another development server](/building-a-vm-homelab/), and a dedicated firewall.
 
-My wife has pointed out that I never clean certain parts of my office because of all the wires. I thought, "What? This is a normal amount of wires." But then I started looking at them and realized it was kind of a lot of wires...
+Over time, my wife grew concerned that my office was filling with unsightly wires. I thought, "What? This is a normal amount of wires." But then I started looking at them and realized it was kind of a lot of wires...
 
 {{<gallery caption="My office, upon closer inspection, kind of had a lot of wires">}}
 {{<img src="office-wires-1.webp" max-width="300px" alt="Photo of lots of wires in my office">}}
 {{<img src="office-wires-2.webp" max-width="300px" alt="Photo of lots of wires in my office">}}
 {{</gallery>}}
 
-I saw a lot of tech enthusiasts buy server racks for their home, but I never thought of myself as a server rack guy. I just had a VM server here, a data server there. Maybe a few switches scattered around. Having a server rack felt like an admission that I wasn't just a casual home server guy, but an intense homelab maniac.
+A lot of home server enthusiasts buy server racks, but I never thought of myself as a server rack guy. I wasn't _so_ into servers that I needed a whole rack; I just had a VM server here, a data server there. Maybe a few switches scattered around. Having a server rack felt like an admission that I wasn't just a casual home server guy, but an intense homelab maniac.
 
-But then I gave in and bought a rack, and I'm now embracing being a homelab weirdo. It's so much better having all of my computers in one place where the wiring can be semi-organized.
+One day, I gave in and bought a rack. I'm now embracing being a homelab weirdo, and I'm better off. Having a server rack makes everything so much easier to work with, and it cleans up all the sprawling wires.
 
 TODO: Photo of finished rack
 
@@ -26,13 +26,17 @@ If you want to skip the explanations and jump to my rack, click below.
 
 TODO: Table of contents
 
-## Why build a server rack at home?
+## What's a homelab?
 
-### What's a homelab?
-
-"Homelab" is a colloquial term that's grown in popularity in the last few years.
+"Homelab" is a colloquial term that's grown in popularity in the last decade.
 
 A homelab is a place in your home where you can experiment with IT hardware or software that you'd typically find in an office or data center. It can serve as a practice environment for new professional skills, or it can just be a place to play with interesting technology.
+
+## Why build a server rack at home?
+
+- A dedicated server for virtual machines allows me to run several services 2
+- Having a storage server means that all of my devices can store data in one place that has good fault tolerance and backups.
+- I prefer running my choice of software on my router rather than crappy Linksys code
 
 ## Why this guide?
 
