@@ -8,8 +8,8 @@ tags:
   - ethereum
   - bash
 discuss_urls:
-  hacker_news: https://news.ycombinator.com/item?id=39755390
-  reddit: https://www.reddit.com/r/Zig/comments/1bik01m/why_does_a_extraneous_build_step_make_my_zig_app/
+  hacker_news: https://news.ycombinator.com/item?id=39764287
+  reddit: https://www.reddit.com/r/programming/comments/1bijziq/why_does_a_extraneous_build_step_make_my_zig_app/
 ---
 
 <style>
@@ -21,7 +21,7 @@ discuss_urls:
   }
 </style>
 
-For the past few months, I've been curious about two technologies: the Zig programming language and Ethereum cryptocurrency. To learn more about both, I've been using Zig to write a bytecode interpreter for the Ethereum Virtual Machine.
+For the past few months, I've been curious about two technologies: the Zig programming language and Ethereum cryptocurrency. To learn more about both, I've been using Zig to write [a bytecode interpreter for the Ethereum Virtual Machine](https://github.com/mtlynch/eth-zvm).
 
 Zig is a great language for performance optimization, as it gives you fine-grained control over memory and control flow. To motivate myself, I've been benchmarking my Ethereum implementation against the official Go implementation.
 
@@ -44,7 +44,7 @@ $ echo '60016000526001601ff3' | xxd -r -p | ./zig-out/bin/eth-zvm
 execution time:  438.059µs
 ```
 
-`zig build run` is just a shortcut command for building a binary and executing it. It should be equivalent to the following two commands:
+`zig build run` is just a shortcut command for compiling a binary and executing it. It should be equivalent to the following two commands:
 
 ```bash
 zig build
@@ -114,7 +114,7 @@ My test consisted of three commands in a bash pipeline:
 1. `xxd` converts `echo`'s hex-encoded bytes to binary-encoded bytes.
 1. `zig build run` compiles and executes my byte counter program, counting the number of binary-encoded bytes that `xxd` emitted.
 
-The only difference between `zig build run` and `./zig-out/bin/count-bytes` was that the second command runs the already-compile app, whereas the first one recompiles the app.
+The only difference between `zig build run` and `./zig-out/bin/count-bytes` was that the second command runs the already-compiled app, whereas the first one recompiles the app.
 
 Again, I was dumbfounded.
 
@@ -376,6 +376,10 @@ My takeaway from this experience is to benchmark performance early and often.
 By adding a benchmarking script to my continuous integration and archiving the results, it was easy for me to identify when my measurements changed. Had I relegated benchmarking to a manual, periodic task, it would have been difficult for me to identify exactly what caused the difference in my measurements.
 
 This experience also underscores the importance of understanding your metrics. Before hitting this bug, I hadn't considered that my benchmark included the time waiting for other processes to fill stdin.
+
+## Source code
+
+- [eth-zvm](https://github.com/mtlynch/eth-zvm): My hobby Ethereum Virtual Machine, implemented in Zig
 
 <script src="third-party/chart.umd.js"></script>
 <script src="script.js"></script>
