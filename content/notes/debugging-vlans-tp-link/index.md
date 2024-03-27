@@ -212,7 +212,7 @@ I'm sure there are better ways, but I didn't find them.
 
 ### Using a remote management tool
 
-I'm biased because TinyPilot is [my product](/tinypilot/), but I found TinyPilo helpful in debugging VLAN issues.
+I'm biased because TinyPilot is [my product](/tinypilot/), but I found TinyPilot helpful in debugging VLAN issues.
 
 I originally tried debugging my VLANs in a VM on my Proxmox VM server, but that was too different from the actual IoT device I was trying to simulate. The Proxmox server is VLAN-aware, whereas I was trying to test a non-VLAN-aware device. Treating the Proxmox server as an untagged port would lock me out of the Proxmox server entirely.
 
