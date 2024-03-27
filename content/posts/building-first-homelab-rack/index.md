@@ -7,7 +7,7 @@ tags:
 
 Seven years ago, I built my [first home server](/building-a-vm-homelab-2017/). It greatly improved my software development workflows, so over the years, I've gotten more into the home server scene. I built [a custom storage server](/budget-nas/), [another development server](/building-a-vm-homelab/), and a dedicated firewall.
 
-Over time, my wife grew concerned that my office was filling with unsightly wires. I thought, "What? This is a normal amount of wires." But then I started looking at them and realized it was kind of a lot of wires...
+Over time, my wife grew concerned that my office was filling with unsightly wires. I thought, "What? This is a normal amount of wires." But then I realized it was kind of a lot of wires...
 
 {{<gallery caption="My office, upon closer inspection, kind of had a lot of wires">}}
 {{<img src="office-wires-1.webp" max-width="300px" alt="Photo of lots of wires in my office">}}
@@ -16,7 +16,7 @@ Over time, my wife grew concerned that my office was filling with unsightly wire
 
 A lot of home server enthusiasts buy server racks, but I never thought of myself as a server rack guy. I wasn't _so_ into servers that I needed a whole rack; I just had a VM server here, a data server there. Maybe a few switches scattered around. Having a server rack felt like an admission that I wasn't just a casual home server guy, but an intense homelab maniac.
 
-One day, I gave in and bought a rack. I'm now embracing being a homelab weirdo, and I'm better off. Having a server rack makes everything so much easier to work with, and it cleans up all the sprawling wires.
+One day, I gave in and bought a rack. I'm now embracing being a homelab weirdo, and I'm better off for it. Having a server rack makes everything so much easier to work with, and it eliminated my sprawling mess of wires.
 
 TODO: Photo of finished rack
 
@@ -85,7 +85,7 @@ Authors can still provide valuable information despite using affiliate links, bu
 
 I write my blog out of vanity. My payment is hearing people tell me that they found the article interesting or useful.
 
-My rack does contain a TinyPilot, a hardware device that [I created](/tinypilot/), but it doesn't affect any of the decisions about how to build my rack. I'll disclose my ownership of TinyPilot whenever it's mentioned
+My rack does contain a TinyPilot, a hardware device that [I created](/tinypilot/), but it doesn't affect any other hardware choice. I'll disclose my ownership of TinyPilot whenever it's mentioned.
 
 ## Choosing a rack
 
@@ -141,9 +141,9 @@ For me, wheels were a critical feature. I wanted to be able to clean behind the 
 
 StarTech also has a good reputation and a decent website, so I just chose between different StarTech racks.
 
-| Brand        | Model                                                                                      | Price    |
-| ------------ | ------------------------------------------------------------------------------------------ | -------- |
-| **StarTech** | [**4POSTRACK18U 18U rack**](https://www.startech.com/en-us/server-management/4postrack18u) | **$316** |
+| Brand        | Model                                                                             | Min Depth | Max Depth | Height | Price    |
+| ------------ | --------------------------------------------------------------------------------- | --------- | --------- | ------ | -------- |
+| **StarTech** | [**4POSTRACK18U**](https://www.startech.com/en-us/server-management/4postrack18u) | 22"       | 40"       | 18U    | **$316** |
 
 ### Review: StarTech 4POSTRACK18U 18U rack
 
@@ -189,7 +189,7 @@ I did run into headaches, but I'll cover that more [below](#choosing-10g-nics).
 
 ### Managed or unmanaged network switch?
 
-There are two kinds of network switches you can purchase: managed or unmanaged.
+There are two kinds of network switches: managed or unmanaged.
 
 - **Managed switches** allow you to configure rules and settings for your switch. The most common reason you'd want a managed switch is to create virtual networks (VLANs) to increase security on your network.
 
@@ -197,25 +197,19 @@ There are two kinds of network switches you can purchase: managed or unmanaged.
 
 Personally, I wanted a plain old unmanaged switch. I've never used a managed switch, and I didn't want a whole bunch of extra configuration to manage. I just wanted the network to work.
 
-It turned out, none of the network switches that met my criteria were unmanaged, so I went with a managed switch. I planned to accept all the default settings and not configure VLANs.
-
-Once I got my managed switch, I found that it's pretty fun to have VLANs for different devices on my network. Now I want to configure VLANs for everything!
+It turned out, none of the network switches that met my criteria were unmanaged, so I went with a managed switch. Once I got my managed switch, I found that it's pretty fun to have VLANs for different devices on my network. Now I want to configure VLANs for everything!
 
 ### PoE or standard Ethernet?
 
-Certain low-power devices can run entirely from the power they draw from the Ethernet cable.
+Certain low-power devices can run entirely from the power they draw from the Ethernet cable. This is called [power over Ethernet (PoE)](https://en.wikipedia.org/wiki/Power_over_Ethernet).
 
-My home WiFi access point, the [Ruckus R310](https://support.ruckuswireless.com/products/88-ruckus-r310) supports PoE, so my access point conveniently needs only a single cable for both power and network connectivity.
+For example, my home WiFi access point, the [Ruckus R310](https://support.ruckuswireless.com/products/88-ruckus-r310) supports PoE, so it only needs only a single Ethernet cable for both power and network connectivity.
 
-TODO: Photo
+{{<img src="ruckus-r310.webp" max-width="400px" caption="My Ruckus R310 WiFi access point supports PoE, so it only needs a single Ethernet cable for both power and data.">}}
 
-To power a device over PoE, you need a PoE-enabled switch.
+To power PoE devices, you'll either need a PoE-enabled networking switch.
 
-If you want a PoE swtich, the next question is how many PoE devices do you need to support? Most PoE switches only support PoE on a subset of their ports (TODO: is this true?), so make sure your switch has enough PoE ports for devices you own now or may add in the future.
-
-The downside of PoE switches is that they consume more power and they're more expensive (TODO: check). If you buy a PoE switch but have no PoE devices, you're wasting money and power on features you can't use.
-
-I've also seen reviews that claim PoE switches are noisier. I haven't experienced this, as all my switches have been silent and fanless. But noise is now something I check reviews for when picking a switch.
+The downside of PoE switches is that they consume more power and they're more expensive. If you buy a PoE switch but have no PoE devices, non-PoE devices will still work, but you're wasting money and power on features you can't use.
 
 ### How many ports do you need?
 
@@ -251,7 +245,7 @@ I've had great experience with unmanaged TP-Link switches, so I felt good about 
 
 I almost went with [this 16 x 2.5 Gbps port TP-Link unit](https://www.aliexpress.us/item/3256804686136282.html), but it's only available from China, and it doesn't seem to have any US safety or compliance certification, so I decided not to risk it.
 
-I considered the TP-Link T1600G-28PS, which was like everything good about the TL-SG3428X, except it _also_ had PoE. But I read several reviews that said the fans are loud, and I didn't want a noisy switch. I went with the TL-SG3428X and figured I could get a cheaper, silent unmanaged PoE switch, as I didn't actually need 24 PoE ports.
+I considered the [TP-Link T1600G-28PS](https://www.amazon.com/TP-Link-JetStream-T1600G-28PS-24-Port-Gigabit/dp/B0196RGV50), which was like everything good about the [TL-SG3428X](https://www.newegg.com/tp-link-tl-sg3428x-24-x-rj45-4-x-sfp/p/0XP-0054-00091?Item=0XP-0054-00091&SoldByNewegg=1), except it _also_ had PoE. But I read several reviews that said the fans are loud, and I didn't want a noisy switch. I went with the TL-SG3428X and figured I could get a cheaper, silent unmanaged PoE switch, as I didn't actually need 24 PoE ports.
 
 ### Review: TP-Link TL-SG3428X
 
