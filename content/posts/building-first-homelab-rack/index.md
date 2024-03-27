@@ -255,49 +255,47 @@ Overall, I like the TP-Link TL-SG3428X switch pretty well. It's silent, which is
 
 My experience with the TP-Link web admin UI has been poor, but most networking admin interfaces are pretty weak. Some networking concepts are hard to represent in a web UI, but TP-Link has done a particularly bad job of it.
 
-TODO: Screenshot of web UI
+{{<img src="tp-link-web-ui.webp" max-width="650px" has-border="true" caption="This page in the TP-Link web UI shows which ports are members of the `Guest` VLAN, but it always takes me a few minutes to remember how to interpret the screen.">}}
 
 It took me a long time to figure out [how to configure VLANs](/notes/debugging-vlans-tp-link/). I've seen how other [brands like QNAP represent VLAN controls](https://www.youtube.com/watch?v=XdqP14NclZ0), and I think they did a much better job than TP-Link.
 
-### Review: Netgear XX Unmanaged PoE Switch
+### Review: Netgear GS116LP 16-Port unmanaged PoE switch
 
 - Grade: A
 
-I only have a handful of PoE devices, so I originally planned to power them with a small 5-port PoE switch I'd keep on a shelf. But late last year, I began prepping my office for our move-out (TODO: link), and I decided to adopt the Netgear XX switch that was installed there.
+I only have a handful of PoE devices, so I originally planned to power them with a small 5-port PoE switch on a shelf. But late last year, I began [prepping my work office for our move-out](/solo-developer-year-6/#close-the-tinypilot-office), and I decided to adopt the Netgear GS116LP switch that was installed there.
 
-As an unmanaged switch, it does what I need. It connects my devices, and
+As an unmanaged switch, it does what I need. It powers my devices, it was easy to install, and it's silent.
 
-In retrospect, I should have tried harder to find a single managed switch with PoE ports instead of having two separate switches. (TODO: link to mistakes)
+In retrospect, I should have tried harder to find a single managed switch with PoE ports instead of having two separate switches. I'll elaborate more [below](#get-a-poe-enabled-switch-if-you-have-any-poe-components)
 
 ## Choosing 10G NICs
 
-If you choose a 10G switch, your work isn't over. In order to achieve 10 Gbps speeds, you need a 10G NIC (TODO: define acronym) for each device you want to enjoy the 10G speed. A regular 1 Gbps NIC will still work with a 10G switch, but it will be limited to 1 Gbps Ethernet speeds.
+If you choose a 10G switch, your work isn't over. In order to achieve 10 Gbps speeds, you need a 10G Network interface controller (NIC) for each device you want to enjoy the 10G speed. A regular 1 Gbps NIC will still work with a 10G switch, but it will be limited to 1 Gbps Ethernet speeds.
 
-I had a lot of trouble finding 10G NICs for my systems. I was able to get 10G working on my Windows desktop after a bit of tinkering, but I tested four different NICs on my TrueNAS storage server, and I couldn't get any of them to work.
+I had a lot of trouble finding 10G NICs for my systems. I was able to get 10G working on my Windows desktop after a bit of tinkering, but I tested three different NICs on my TrueNAS storage server, and I couldn't get any of them to work.
 
-- Mellanox XX NIC
+- Mellanox ConnextX-3 CX311A
   - On my Windows desktop, the activity lights didn't flash at all, and Windows didn't recognize anything in the PCI slot.
   - I found a forum post where somemeone mentioned that switching to another PCI slot on their motherboard solved the problem. I was skeptical, but that fixed it.
   - My TrueNAS server couldn't recognize it, but it worked on my Windows desktop.
-- Mellanox XX NIC
-  - My TrueNAS server couldn't recognize it, but it worked on my Windows desktop.
-- Chelsio 520 NIC
+- Chelsio T520-LL-CR
   - Chelsio is one of the most common brands for TrueNAS servers, and [Serve the Home's buyer's guide](https://www.servethehome.com/buyers-guides/top-hardware-components-for-truenas-freenas-nas-servers/top-picks-freenas-nics-networking/) listed it as a recommended option
-  - My TrueNAS server couldn't recognize it. (TODO: Link to TrueNAS forums)
-- Chelsio XX NIC
-  - My TrueNAS server couldn't recognize this one, either.
+  - My TrueNAS server [couldn't recognize it](https://www.truenas.com/community/threads/no-success-with-three-different-10-gb-nics.111026/).
+- Chelsio Dual Port T520-CR
+  - My TrueNAS server [couldn't recognize this one, either](https://www.truenas.com/community/threads/no-success-with-three-different-10-gb-nics.111026/).
 
-My best guess is that the issue is motherboard incompatibility. My TrueNAS server uses a consumer-grade XX motherboard, so it may not support these enterprise-oriented 10G NICs.
+My best guess is that the issue is motherboard incompatibility. My TrueNAS server [uses a consumer-grade ASUS Prime A320I-K motherboard](/budget-nas/#motherboard), so it may not support these enterprise-oriented 10G NICs.
 
-I'm planning to build a new storage server in the next few months, so I'll try a fancier motherboard to see if that lets me use one of the three 10G NICs I have lying around.
+I'm planning to build a new storage server in the next few months, so I'll try a fancier motherboard to see if that lets me use one of the three spare 10G NICs I have lying around.
 
-Currently, my Windows desktop can talk to my managed switch at 10 Gbps speeds, but it's limited to 1 Gbps bandwidth for everything else. That's not ideal, but if I need to click a checkbox on my switch's web UI, I can do it at blazing 10 Gbps speeds.
+Currently, my Windows desktop can talk to my managed switch at 10 Gbps speeds, but it's limited to 1 Gbps bandwidth for everything else. If I need to click a checkbox on TP-Link's medicore web UI, I can do it at blazing 10 Gbps speeds.
 
 ## Choosing a UPS (battery backup)
 
 When I lived in Manhattan, I'd experience around five power outages per year. They were all brief, but they were long enough to power cycle my computer.
 
-To avoid surprise shutdowns, I bought a battery backup system, also known as an uninterruptible power supply (UPS). It was an APC XX, and I've used that same battery backup for XX years.
+To avoid surprise shutdowns, I bought a battery backup system, also known as an uninterruptible power supply (UPS). It was an APC BR1500G, and I've used that same battery backup for six years.
 
 TODO: Photo
 
@@ -311,9 +309,7 @@ For extended power outages, you'll need enough time to shut down your systems be
 
 I theoretically could have used my Kill-A-Watt to measure the wattage of each of my devices during normal operation and then used that to find a battery. I was too lazy for that level of rigor, so I estimated based on metrics from my previous UPS.
 
-My APC UPS had a XX battery, and it reported 12 minutes of battery life while powering a desktop computer, a VM server, a storage server, a firewall, and a networking switch.
-
-The UPS I ended up buying has a XX battery. It reports 30 minutes of battery life while powering a VM server, a storage server, a firewall, and a networking switch. The total power draw of all these systems in a typical workload is XX to XX.
+My APC UPS had a 865 W battery, and it reported 12 minutes of battery life while powering a desktop computer, a VM server, a storage server, a firewall, and a networking switch.
 
 My old UPS now powers my desktop exclusively, so each UPS has a smaller load to support.
 
@@ -329,18 +325,20 @@ For me, automating shutdowns from my UPS isn't worth the trouble, but you might 
 
 ### Candidates
 
-| Brand          | Model                                                                                                                               | Power   | Outlets | Price |
-| -------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------- | ------- | ----- |
-| **CyberPower** | [**CP1500PFCRM2U**](https://www.bhphotovideo.com/c/product/1709939-REG/cyberpower_cp1500pfcrm2u_cp15_1500va_100w_2u_rackmount.html) | 1500 VA | 8       | $335  |
-| Tripp Lite     | [SMART1500LCD](https://www.newegg.com/tripp-lite-smart1500lcd-5-15r/p/N82E16842111052)                                              | 1500 VA | 8       | $298  |
-| CyberPower     | [CPS1500AVR](https://www.newegg.com/cyberpower-cps1500avr/p/N82E16842102006)                                                        | 1500 VA | 8       | $460  |
-| CyberPower     | [OR700LCDRM1U](https://www.newegg.com/cyberpower-or700lcdrm1u/p/N82E16842102088)                                                    | 700 VA  | 4       | $299  |
+| Brand          | Model                                                                                                                               | Power  | Outlets | Price |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------ | ------- | ----- |
+| **CyberPower** | [**CP1500PFCRM2U**](https://www.bhphotovideo.com/c/product/1709939-REG/cyberpower_cp1500pfcrm2u_cp15_1500va_100w_2u_rackmount.html) | 1000 W | 8       | $335  |
+| Tripp Lite     | [SMART1500LCD](https://www.newegg.com/tripp-lite-smart1500lcd-5-15r/p/N82E16842111052)                                              | 900 W  | 8       | $298  |
+| CyberPower     | [CPS1500AVR](https://www.newegg.com/cyberpower-cps1500avr/p/N82E16842102006)                                                        | 950 W  | 8       | $460  |
+| CyberPower     | [OR700LCDRM1U](https://www.newegg.com/cyberpower-or700lcdrm1u/p/N82E16842102088)                                                    | 400 W  | 4       | $299  |
 
 ### Review: CyberPower CP1500PFCRM2U
 
 - Grade: A
 
-The LCD is user-friendly and has useful metrics about power consumption. You can also turns the display off to have fewer flashing lights on your rack. It reports XX minutes of battery life when I cut power, which is plenty of time for me to shut my systems down.
+The LCD is user-friendly and has useful metrics about power consumption. You can also turns the display off to have fewer flashing lights on your rack.
+
+It reports 30 minutes of battery life while powering a VM server, a storage server, a firewall, and a networking switch. The total power draw of all these systems in a typical workload is 200 W.
 
 It's also completely silent, which I thought was a given for a battery backups, but it turns out it's not...
 
@@ -401,14 +399,14 @@ Some of my existing office infrastructure has no rack mounting option, so I need
 
 - OPNsense firewall server (running on a Qotom mini PC)
 - TinyPilot
-- Dell XX mini PC, which I use for testing
+- Dell Optiplex 7040 mini PC, which I use for testing
 
 ### Candidates
 
-| Brand    | Model                                                                          | Price |
-| -------- | ------------------------------------------------------------------------------ | ----- |
-| Pyle     | [PLRSTN62U 19" 2U](https://pyleusa.com/products/plrstn62u)                     | $64   |
-| StarTech | [CABSHELFV 2U 16"](https://www.startech.com/en-us/server-management/cabshelfv) | $XX   |
+| Brand    | Model                                                                          | Price       |
+| -------- | ------------------------------------------------------------------------------ | ----------- |
+| Pyle     | [PLRSTN62U 19" 2U](https://pyleusa.com/products/plrstn62u)                     | $64 for two |
+| StarTech | [CABSHELFV 2U 16"](https://www.startech.com/en-us/server-management/cabshelfv) | $88 for two |
 
 ### Review: Pyle PLRSTN62U rack shelves
 
@@ -434,6 +432,8 @@ I couldn't even figure out a purpose for the lip. It would make sense if it curv
 
 I scoured reviews of this shelf to see if anyone else was talking about this bizarre design choice. When other reviewers mentioned it, they didn't seem to mind that much. The comments had the tone of, "Oh, yeah, it extends past 2U a bit." I'm baffled that anyone would accept that.
 
+{{<img src="3u-shelf.webp" has-border="true" caption="Reviewer acknowledgeds that StarTech's 2U rack shelf takes up 3U of space, still rates it 4 out of 5.">}}
+
 I'm still trying to figure out if I'm crazy or if there's something I'm missing about why StarTech's downward-facing lips are a good idea. I promptly returned mine and bought the Pyle shelves instead.
 
 ## Choosing a patch panel
@@ -447,12 +447,6 @@ When it came time to finally build my server rack, I finally had to ask the ques
 Shopping around for patch panels made me even more confused. It's just a row of empty spaces? What's the point?
 
 The concept didn't click for me until I built my rack. In short, the patch panel keeps the clutter of your networking cables behind your rack rather than in front of it.
-
-For example, without a patch panel, connecting my managed switch to my PoE switch would look like this:
-
-TODO: Photo
-
-Instead, the patch panel lets me route networking cables into the rear of my rack.
 
 TODO: Photo
 
@@ -643,7 +637,7 @@ Instead of having to drag a keyboard and monitor over to my rack, I can plug in 
 
 TODO: Screenshot
 
-### Software testing: Dell XX Mini PC
+### Software testing: Dell Optiplex 7040 mini PC
 
 TODO
 
@@ -687,7 +681,7 @@ TODO: List of components and prices
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ----- | ------------ |
 | Server rack                     | XX                                                                                                                                         | XX    | B+           |
 | Network switch (managed)        | [TP-Link TL-SG3428X](https://www.newegg.com/tp-link-tl-sg3428x-24-x-rj45-4-x-sfp/p/0XP-0054-00091?Item=0XP-0054-00091&SoldByNewegg=1)      | $299  | C+           |
-| Network switch (PoE, unmanaged) | XX                                                                                                                                         | XX    | C+           |
+| Network switch (PoE, unmanaged) | [Netgear GS116LP](https://www.netgear.com/business/wired/switches/unmanaged/gs116lp/)                                                      | $139  | A            |
 | UPS                             | [CyberPower CP1500PFCRM2U](https://www.bhphotovideo.com/c/product/1709939-REG/cyberpower_cp1500pfcrm2u_cp15_1500va_100w_2u_rackmount.html) | $335  | A+           |
 | Rack shelves                    | XX                                                                                                                                         | XX    | A            |
 | Raspberry Pi rack mount         | XX                                                                                                                                         | XX    | B            |
