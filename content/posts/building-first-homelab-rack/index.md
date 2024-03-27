@@ -57,23 +57,23 @@ A homelab is a place in your home where you can experiment with IT hardware or s
 
 ## Why build a server rack at home?
 
-If you have a bunch of servers, it seems logical to put them into a server rack, but if you're not from the homelab world, you might wonder why I'd have all these servers to begin with.
+If you've never played with servers, you might wonder why anyone would build put a bunch of them in their house, much less build a little shrine to house all of them.
 
-- A dedicated server for virtual machines allows me to isolate software projects to different virtual machines, and it requires reboots less frequently than my main Windows workstation.
-- Having a storage server means that all of my devices can store data in one place that has good fault tolerance and backups.
-- Building my own router with open-source software gives me more control over my network and saves me from running the buggy software that's in most consumer-grade routers.
+Everyone has their own reasons for getting into homelab, but here's why I enjoy it:
+
+- **Software development**: I use a dedicated server for virtual machines, so rebooting or upgrading my main workstation doesn't affect what's running on my server, and it's easy for me to spin up new experimental VMs.
+- **Storage**: It's much more convenient having a huge amount of storage that all of my devices share rather than buying large hard drives for each device and scattering my data everywhere. The storage server uses ZFS, which reduces the risk of data corruption and can survive a hard drive failure without losing data.
+- **Networking**: Building my own router with open-source software gives me more control over my network and saves me from running the buggy software that's in most consumer-grade routers.
 
 ## Why this guide?
 
 ### By a beginner for beginners
 
-Even though I've been doing homelab stuff for the past few years, I still consider myself a beginner, and this is a beginner-level guide.
+Even though I've been experimenting with homelab for the past few years, I still consider myself a beginner, and this is a beginner-level guide.
 
-I've read a lot of other homelab guides where the author sounds like they're building their 20th rack. They don't explain their thought process for choosing components or why they rejected alternatives. At this point, they probably don't even know. They've been doing it so long that the decisions have become unconscious.
+Most other homelab authors write like they're building their 20th rack. They don't explain their thought process for choosing components or why they rejected alternatives. They've been doing it so long that the decisions have become unconscious.
 
-Because this is my first time building a server rack, I'm free from the curse of knowledge (TODO: link). I'm walking you through how I approached the process for the first time so that you can follow along.
-
-I made mistakes in this process, and I didn't build the ideal rack, but I think readers learn better by seeing mistakes instead of seeing only perfect racks where the author says they did everything perfectly.
+Because this is my first time building a server rack, I'm free from the [curse of knowledge](https://en.wikipedia.org/wiki/Curse_of_knowledge). I'm walking you through how I approached the process for the first time so that you can follow along.
 
 ### No conflict of interest
 
@@ -81,17 +81,17 @@ I'm not getting paid by anyone or receiving free products to write this post.
 
 The uncomfortable truth about most homelab blog posts is that they're funded by affiliate links. That means if a reader purchases something through a link in the article, the author receives a commission.
 
-Authors can still provide valuable information despite using affiliate links, but it creates a clear conflict of interest. An author is inherently biased if they get paid by merchants they recommend. And it incentivizes recommending expensive products, as commissions are usually percentage-based.
+Authors can still provide valuable information despite using affiliate links, but it creates a clear conflict of interest. If merchants are paying the author to link to their products, it incentivizes recommending expensive products and subpar merchants.
 
 I write my blog out of vanity. My payment is hearing people tell me that they found the article interesting or useful.
 
-My rack does contain a TinyPilot, a hardware device that I created, but I'll disclose that whenever it's mentioned.
+My rack does contain a TinyPilot, a hardware device that [I created](/tinypilot/), but it doesn't affect any of the decisions about how to build my rack. I'll disclose my ownership of TinyPilot whenever it's mentioned
 
 ## Choosing a rack
 
-If you're buildig a server rack, it seems like the first thing you'd choose is the rack itself, but it's not that simple.
+If you're building a server rack, it seems like the first thing you'd choose is the rack itself, but it's not that simple.
 
-Choosing a rack is an iterative process. You can't decide what type of rack to buy until you know what will go into your rack. But knowing what type of racks are available also informs what components to buy.
+Selecting your rack is an iterative process. You can't decide what type of rack to buy until you know what will go into your rack. But knowing what type of racks are available also informs what components to buy.
 
 Here's the process I followed to pick a server rack:
 
@@ -103,7 +103,11 @@ Here's the process I followed to pick a server rack:
 
 ### How many rack units?
 
-Racks have capacity measured in rack units (RUs). A rack unit is XX ". Most network switches are 1U, battery backups are usually 2U, servers are typically 2U.
+Racks have capacity measured in rack units (RUs). A rack unit is 1.75".
+
+TODO: Photo of 1U
+
+Most network switches are 1U, battery backups are usually 2U, servers are typically 2U.
 
 You don't want to buy too short a rack and run out of room for your components, but you also don't want a rack that's too tall and takes up a lot of space for no reason.
 
@@ -113,11 +117,11 @@ As you pick components, add up how many rack units they'll take up. Leave some e
 
 Server racks vary in depth. Most server racks are designed for enterprise-grade servers, which are up to 50" long.
 
-My office has an HP ProLiant DL380 G7 server, and it's a huge hassle. It's 29" long and 50 lbs. It was a pain to mount, and it will be a pain when I need to sell it.
+At work, my office has an HP ProLiant DL380 G7 server, and it's a huge hassle. It's 29" long and 50 lbs. It was a pain to mount, and it will be a pain when I need to sell it.
 
 I have a relatively small home office, and I didn't want the rack server to dominate the space. For my home rack, I decided to limit myself to components that are shallow enough to only need front mounts.
 
-I looked at small rack-mountable chassis for servers, and the smallest ones were about 15" in depth, so I set that as my minimum.
+I looked for racks that were at least 19" in depth. That gave me enough depth to mount rack shelves and front-mounted server chassis without taking up a lot of extra space.
 
 ### Does it need four posts or two?
 
@@ -125,7 +129,7 @@ Racks come in two different styles: two-post or four-post. On four-post racks, y
 
 If you plan to buy long, heavy servers, you definitely need to secure them from the front and back. If you want to minimize space, a two-post rack might be sufficient.
 
-For my rack, four posts felt a bit sturdier, so I figured why not.
+I only wanted front-mounting components, so I could have gotten away with two posts, but four posts felt a bit sturdier, so I figured why not.
 
 ### Does it need wheels?
 
@@ -135,9 +139,11 @@ For me, wheels were a critical feature. I wanted to be able to clean behind the 
 
 ### Candidates
 
-- **[StarTech 4POSTRACK18U 18U rack](https://www.startech.com/en-us/server-management/4postrack18u)**: $315.99
-
 StarTech also has a good reputation and a decent website, so I just chose between different StarTech racks.
+
+| Brand        | Model                                                                                      | Price    |
+| ------------ | ------------------------------------------------------------------------------------------ | -------- |
+| **StarTech** | [**4POSTRACK18U 18U rack**](https://www.startech.com/en-us/server-management/4postrack18u) | **$316** |
 
 ### Review: StarTech 4POSTRACK18U 18U rack
 
@@ -157,7 +163,7 @@ The rack came with a grounding cable, but I can't figure out how to use it.
 
 The networking switch ended up being the hardest decision of my whole rack.
 
-Network switches get expensive fast, so I didn't want to spend $300 on something only to have to supplement it with another component or replace it later on. And rack space is precious, so I don't want to buy a switch and then have to buy another one in a year or two and totally rearrange my rack.
+Network switches get expensive fast, so I didn't want to spend $300 on something only to have to supplement it with another component or replace it later on.
 
 ### What speed do you need?
 
@@ -169,13 +175,11 @@ Unless you're buying something very exotic, the speeds available for a rack-moun
 
 For as long as I can remember, I've had 1 Gbps Ethernet speed in my house, and that's been fine. I do most of my work online, so the bottleneck is almost always my ISP rather than my home network.
 
-Lately, I've been finding that the bottleneck on my home storage server is my 1 Gbps network link, so I've been interested in a network upgrade. (TODO: Link)
+Lately, I've been finding that the bottleneck on my home storage server [is my 1 Gbps switch](/budget-nas/#performance-benchmarks), so I've been interested in a network upgrade.
 
-Given that I've been fairly satisfied with 1 Gbps, I thought 10 Gbps would probably be too big a jump, so I might as well take a smaller step to 2.5 Gbps.
+Given that I've been fairly satisfied with 1 Gbps, I thought 10 Gbps would be an unnecessarily large jump. But the more I read about 2.5 Gbps hardware, the more complaints I saw that it's flaky and unreliable. The consensus seemed to be that it's just as hard to level up to 10 Gbps as it is to 2.5 Gbps, so you might as well go for 10 Gbps.
 
-The more I read about 2.5 Gbps gear, the more complaints I saw that it's flaky and unreliable. The consensus seemed to be that it's just as hard to level up to 10 Gbps as it is to 2.5 Gbps, so you might as well go for 10 Gbps.
-
-I did run into headaches, but I'll cover that more below (TODO: link)
+I did run into headaches, but I'll cover that more [below](#choosing-10g-nics).
 
 {{<notice type="info">}}
 
