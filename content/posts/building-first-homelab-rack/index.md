@@ -374,10 +374,10 @@ For example, I keep a little IoT device in my rack that [monitors performance of
 
 Power strips are, frankly, not so exciting, so I didn't shop around very much. I just looked at two.
 
-| Brand          | Model                                                                                                                  | Outlets | Price      |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------- | ------- | ---------- |
-| **Tripp Lite** | [**RS-1215-RA**](https://www.newegg.com/black-tripp-lite-12-outlets-power-strip/p/N82E16812120265?Item=9SIAFVF75F0869) | **12**  | **$78.11** |
-| CyberPower     | [CPS1215RMS](https://www.newegg.com/cyberpower-cps1215rms-12-outlets-nema-5-15r/p/N82E16842102076)                     | 12      | $59.84     |
+| Brand          | Model                                                                                                                  | Outlets | Price   |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------- | ------- | ------- |
+| **Tripp Lite** | [**RS-1215-RA**](https://www.newegg.com/black-tripp-lite-12-outlets-power-strip/p/N82E16812120265?Item=9SIAFVF75F0869) | **12**  | **$78** |
+| CyberPower     | [CPS1215RMS](https://www.newegg.com/cyberpower-cps1215rms-12-outlets-nema-5-15r/p/N82E16842102076)                     | 12      | $60     |
 
 ### Review: Tripp Lite RS-1215-RA
 
@@ -456,10 +456,10 @@ TODO: Photo
 
 ### Candidates
 
-| Brand          | Model                                                                                                                      | Price  |
-| -------------- | -------------------------------------------------------------------------------------------------------------------------- | ------ |
-| NewYork Cables | [24-Port 1U](https://www.amazon.com/dp/B08LLDCRCV/ref=cm_sw_r_apan_glt_i_2AEKK799CAJQ591DCSWS?_encoding=UTF8&th=1)         | $18.99 |
-| Tripp Lite     | [16-Port 1U](https://tripplite.eaton.com/16-port-1u-rack-mount-unshielded-blank-keystone-multimedia-patch-panel~N062016KJ) | $12.87 |
+| Brand          | Model                                                                                                                      | Price |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------- | ----- |
+| NewYork Cables | [24-Port 1U](https://www.amazon.com/dp/B08LLDCRCV/ref=cm_sw_r_apan_glt_i_2AEKK799CAJQ591DCSWS?_encoding=UTF8&th=1)         | $19   |
+| Tripp Lite     | [16-Port 1U](https://tripplite.eaton.com/16-port-1u-rack-mount-unshielded-blank-keystone-multimedia-patch-panel~N062016KJ) | $13   |
 
 ### Review: NewYork Cables 24-Port 1U Patch Panel
 
@@ -501,7 +501,9 @@ I'd seen rack mounts for the Raspberry Pi, so I thought it would be fun to add o
 
 - Grade: C+
 
-The rack mount is okay, not great. It's a decent value for the price. PoE HATs for a Raspberry Pi 4 are generally around $XX, so getting four of those is already basically a $XX value.
+The rack mount is okay, not great.
+
+It's a decent value for the price. PoE HATs for a Raspberry Pi 4 are generally around $20, so getting four PoE HATs is already an $80 value. And then you're also getting the rack mount itself, four microSD extenders, four HDMI extenders, four OLED screens, and four fans.
 
 The craftsmanship on the rack mount itself is mediocre. The pieces don't fit together that well. There are noticeable gaps around the HDMI ports.
 
@@ -509,11 +511,11 @@ TODO: Photo
 
 The HDMI ports are also secured poorly to the mount. When I plug in an HDMI cable, the connector bends and strains. I worry they're going to snap off one day.
 
-PoE tends to generate a lot of heat, so it's good that these come with an integrated fan, but they create a constant high-pitch whirring. I've disabled the fans on each of my Pis. They could overheat without the fans, but it just means the CPU throttles or shuts down, which isn't a big deal for my hobby projects.
+PoE tends to generate a lot of heat, so it's good that these come with an integrated fan, but they create a constant high-pitch whirring. I keep all the fans powered off. The Pis could overheat without the fans, but it just means the CPU throttles or shuts down, which isn't a big deal for my hobby projects.
 
-Lastly, the instructions are terrible. Step one is to screw in the OLED. Okay, that's fine. Step two is to screw in the power button. Sure, easy peasy. Step three is: okay, put together five other things simultaneously!
+The instructions are terrible. Step one is to screw in the OLED. Okay, that's fine. Step two is to screw in the power button. Sure, easy peasy. Step three is to put together the five remaining components simultaneously.
 
-TODO: Photo
+{{<img src="pi-rack-instructions.webp" max-width="700px" caption="The UCTRONICS Pi rack mount instructions rapidly increase in difficulty">}}
 
 ## Choosing cage nuts
 
@@ -521,7 +523,7 @@ Rack-monted components attach to your rack with a special type of screw and nut 
 
 I read recommendations to buy a special tool for inserting and removing cage nuts. It might make sense if you work in a data center and are working with cage nuts all the time. I only plan to install cage nuts a few times per year, so small flathead screwdriver is good enough for my needs.
 
-### Review: XX Cage nuts
+### Review: [NavePoint M6 cage nuts](https://www.amazon.com/gp/product/B0060RUVDS/)
 
 - Grade: D
 
@@ -604,24 +606,13 @@ When I priced everything out, pricing was significantly better for fiber:
 
 Here were the final components I chose:
 
-| Component                                                                                               | Price  |
-| ------------------------------------------------------------------------------------------------------- | ------ |
-| [Cable Matters SFP+ to LC Multi Mode Fiber Transceiver](https://www.amazon.com/dp/B07TTKHG6T/) (2-pack) | $40.49 |
-| [Cat6 Keystone Coupler (25-pack)](https://www.amazon.com/dp/B075ZPGV1H)                                 | $22.99 |
-| [Fiber LC coupler (5-pack)](https://www.amazon.com/dp/B01B5AG0TI)                                       | $18.99 |
-| [LC to LC Fiber patch cables (0.2m)](https://www.amazon.com/dp/B08MCPBCFD)                              | $29.99 |
-| [12" Ethernet Cables (10-pack)](https://www.amazon.com/dp/B07MVT1P2P/)                                  | $18.99 |
-| [6" Ethernet Cables (25-pack)](https://www.amazon.com/dp/B00XIFJSEI)                                    | $33.99 |
-| [16' Fiber Cable](https://www.amazon.com/dp/B00U7UP1UM/)                                                | $14.49 |
-| [3' Fiber Cable](https://www.amazon.com/dp/B00T5796DQ/)                                                 | $9.99  |
-
 ## What I already had
 
 ### Router: Qotom Q355G4 with OPNsense
 
 I built a router a few years ago. I bought a cheap Qotom Q355G4 unit from China and installed OPNsense.
 
-### WiFi access point: Ruckus RXX
+### WiFi access point: Ruckus R310
 
 This doesn't technically live in my rack, but it plugs in to my PoE switch. It's a nice access point, and it allows me to create multiple WiFi networks with different VLAN tags, so my guest WiFi has Internet access but can't reach any of my other devices.
 
@@ -639,7 +630,7 @@ TODO: Screenshot
 
 ### Software testing: Dell Optiplex 7040 mini PC
 
-TODO
+TODO: Photo
 
 For development work on TinyPilot, I often test changes against a real device, so I use this Dell mini PC as a spare device where I can blow away the OS or restart it frequently without disrupting any other work.
 
@@ -675,19 +666,32 @@ Maybe minimizing cable length is important in a data center where you're replica
 
 ## My final rack setup
 
-TODO: List of components and prices
+| Component                       | Choice                                                                                                                                                                     | Price  | Satisfaction |
+| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | ------------ |
+| Server rack                     | [StarTech 4POSTRACK18U](https://www.startech.com/en-us/server-management/4postrack18u)                                                                                     | $316   | A            |
+| Network switch (managed)        | [TP-Link TL-SG3428X](https://www.newegg.com/tp-link-tl-sg3428x-24-x-rj45-4-x-sfp/p/0XP-0054-00091?Item=0XP-0054-00091&SoldByNewegg=1)                                      | $299   | C+           |
+| Network switch (PoE, unmanaged) | [Netgear GS116LP](https://www.netgear.com/business/wired/switches/unmanaged/gs116lp/)                                                                                      | $139   | A            |
+| UPS                             | [CyberPower CP1500PFCRM2U](https://www.bhphotovideo.com/c/product/1709939-REG/cyberpower_cp1500pfcrm2u_cp15_1500va_100w_2u_rackmount.html)                                 | $335   | A+           |
+| Power strip                     | [Tripp Lite RS-1215-RA](https://www.newegg.com/black-tripp-lite-12-outlets-power-strip/p/N82E16812120265?Item=9SIAFVF75F0869)                                              | $78    | B+           |
+| Rack shelves                    | [Pyle PLRSTN62U 19" 2U](https://pyleusa.com/products/plrstn62u)                                                                                                            | $64    | A            |
+| Patch panel (24-port)           | [NewYork Cables 1U](https://www.amazon.com/dp/B08LLDCRCV/ref=cm_sw_r_apan_glt_i_2AEKK799CAJQ591DCSWS?_encoding=UTF8&th=1)                                                  | $19    | B+           |
+| Patch panel (16-port)           | [Tripp Lite 1U](https://tripplite.eaton.com/16-port-1u-rack-mount-unshielded-blank-keystone-multimedia-patch-panel~N062016KJ)                                              | $13    | A            |
+| Raspberry Pi rack mount         | [UCTRONICS Ultimate Rack with PoE Functionality](https://www.uctronics.com/raspberry-pi/1u-rack-mount/raspberry-pi-4b-rack-mount-19-inch-1u-with-poe-and-oled-screen.html) | $190   | C+           |
+| **Total**                       |                                                                                                                                                                            | $1,453 |              |
 
-| Component                       | Choice                                                                                                                                     | Price | Satisfaction |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ----- | ------------ |
-| Server rack                     | XX                                                                                                                                         | XX    | B+           |
-| Network switch (managed)        | [TP-Link TL-SG3428X](https://www.newegg.com/tp-link-tl-sg3428x-24-x-rj45-4-x-sfp/p/0XP-0054-00091?Item=0XP-0054-00091&SoldByNewegg=1)      | $299  | C+           |
-| Network switch (PoE, unmanaged) | [Netgear GS116LP](https://www.netgear.com/business/wired/switches/unmanaged/gs116lp/)                                                      | $139  | A            |
-| UPS                             | [CyberPower CP1500PFCRM2U](https://www.bhphotovideo.com/c/product/1709939-REG/cyberpower_cp1500pfcrm2u_cp15_1500va_100w_2u_rackmount.html) | $335  | A+           |
-| Rack shelves                    | XX                                                                                                                                         | XX    | A            |
-| Raspberry Pi rack mount         | XX                                                                                                                                         | XX    | B            |
-| Power strip                     | XX                                                                                                                                         | XX    | A            |
-| RJ45 Patch keys                 | XX                                                                                                                                         | XX    | ??           |
-| LC Patch keys                   | XX                                                                                                                                         | XX    | ??           |
+And here were the smaller items:
+
+| Component                                                                                               | Price |
+| ------------------------------------------------------------------------------------------------------- | ----- |
+| [Cable Matters SFP+ to LC Multi Mode Fiber Transceiver](https://www.amazon.com/dp/B07TTKHG6T/) (2-pack) | $40   |
+| [Cat6 Keystone Coupler (25-pack)](https://www.amazon.com/dp/B075ZPGV1H)                                 | $23   |
+| [Fiber LC coupler (5-pack)](https://www.amazon.com/dp/B01B5AG0TI)                                       | $19   |
+| [LC to LC Fiber patch cables (0.2m)](https://www.amazon.com/dp/B08MCPBCFD)                              | $30   |
+| [12" Ethernet Cables (10-pack)](https://www.amazon.com/dp/B07MVT1P2P/)                                  | $19   |
+| [6" Ethernet Cables (25-pack)](https://www.amazon.com/dp/B00XIFJSEI)                                    | $34   |
+| [16' Fiber Cable](https://www.amazon.com/dp/B00U7UP1UM/)                                                | $14   |
+| [3' Fiber Cable](https://www.amazon.com/dp/B00T5796DQ/)                                                 | $10   |
+| [NavePoint M6 cage nuts](https://www.amazon.com/gp/product/B0060RUVDS/)                                 | $XX   |
 
 TODO: Photos
 
