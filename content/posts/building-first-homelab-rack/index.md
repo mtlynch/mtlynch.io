@@ -116,7 +116,7 @@ As you pick components, add up how many rack units they'll take up. Leave some e
 
 Server racks vary in depth. Most server racks are designed for enterprise-grade servers, which are up to 50" long.
 
-At work, my office has an HP ProLiant DL380 G7 server, and it's a huge hassle. It's 29" long and 50 lbs. It was a pain to mount, and it will be a pain when I need to sell it.
+At work, my office has an HP ProLiant DL380 G7 server, and it's a huge hassle. It's 29" long and weighs 50 lbs. It was a pain to mount, and it will be a pain when I need to sell it.
 
 I have a relatively small home office, and I didn't want the rack server to dominate the space. For my home rack, I decided to limit myself to components that are shallow enough to only need front mounts.
 
