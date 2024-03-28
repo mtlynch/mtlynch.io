@@ -37,7 +37,6 @@ If you want to skip the explanations and jump to my rack, click below.
 - [Choosing rack shelves](#)
 - [Choosing a patch panel](#)
 - [Choosing a Raspberry Pi rack mount](#)
-- [Choosing cage nuts](#)
 - [Choosing Ethernet cables](#)
 - [Choosing fiber cables](#)
 - [What I already had](#)
@@ -505,9 +504,9 @@ The rack mount is okay, not great.
 
 It's a decent value for the price. PoE HATs for a Raspberry Pi 4 are generally around $20, so getting four PoE HATs is already an $80 value. And then you're also getting the rack mount itself, four microSD extenders, four HDMI extenders, four OLED screens, and four fans.
 
-The craftsmanship on the rack mount itself is mediocre. The pieces don't fit together that well. There are noticeable gaps around the HDMI ports.
+The craftsmanship on the rack mount itself is mediocre. The pieces don't fit together that well. There are noticeable gaps around the HDMI and microSD ports.
 
-TODO: Photo
+{{<img src="uctronics-gaps.webp" max-width="400px" caption="The UCTRONICS Pi rack mount had significant gaps around the HDMI and microSD ports.">}}
 
 The HDMI ports are also secured poorly to the mount. When I plug in an HDMI cable, the connector bends and strains. I worry they're going to snap off one day.
 
@@ -516,24 +515,6 @@ PoE tends to generate a lot of heat, so it's good that these come with an integr
 The instructions are terrible. Step one is to screw in the OLED. Okay, that's fine. Step two is to screw in the power button. Sure, easy peasy. Step three is to put together the five remaining components simultaneously.
 
 {{<img src="pi-rack-instructions.webp" max-width="700px" caption="The UCTRONICS Pi rack mount instructions rapidly increase in difficulty">}}
-
-## Choosing cage nuts
-
-Rack-monted components attach to your rack with a special type of screw and nut called cage nuts. Most rack-mountable components come with their own cage nuts, but you'll need some extras for any components that don't include their own.
-
-I read recommendations to buy a special tool for inserting and removing cage nuts. It might make sense if you work in a data center and are working with cage nuts all the time. I only plan to install cage nuts a few times per year, so small flathead screwdriver is good enough for my needs.
-
-### Review: [NavePoint M6 cage nuts](https://www.amazon.com/gp/product/B0060RUVDS/)
-
-- Grade: D
-
-These were the only cage nuts I tried, but I don't recommend them. They were worse quality than the cage nuts that came free with other components.
-
-Other cage nuts I've tried are shaped so that you can screw them in most of the way just using your fingers. With these cage nuts, I couldn't get enough of a grip to tighten them with my fingers.
-
-The screws are made from some soft type of metal, so I had to tighten lightly to avoid stripping the heads.
-
-The washers are too wide, so they take up a lot of unnecessary space. In my rack, the washers were so wide that they'd collide with washers in adjacent rack slots, making it hard to screw in components next to each other.
 
 ## Choosing Ethernet cables
 
@@ -600,7 +581,7 @@ When I priced everything out, pricing was significantly better for fiber:
 
 {{<notice type="info">}}
 
-**Gotcha**: If you use fiber, make sure that all your SFP+ cables match in "mode." You can't mix single-mode fiber with multimode fiber. (TODO: Link)
+**Gotcha**: If you use fiber, make sure that all your SFP+ cables match in "mode." You [can't mix single-mode fiber with multimode fiber](https://community.fs.com/article/single-mode-cabling-cost-vs-multimode-cabling-cost.html).
 
 {{</notice>}}
 
@@ -691,7 +672,7 @@ And here were the smaller items:
 | [6" Ethernet Cables (25-pack)](https://www.amazon.com/dp/B00XIFJSEI)                                    | $34   |
 | [16' Fiber Cable](https://www.amazon.com/dp/B00U7UP1UM/)                                                | $14   |
 | [3' Fiber Cable](https://www.amazon.com/dp/B00T5796DQ/)                                                 | $10   |
-| [NavePoint M6 cage nuts](https://www.amazon.com/gp/product/B0060RUVDS/)                                 | $XX   |
+| [NavePoint M6 cage nuts](https://www.amazon.com/gp/product/B0060RUVDS/)                                 | $16   |
 
 TODO: Photos
 
@@ -770,8 +751,8 @@ It fit snugly, and it was easy to plug Ethernet cables into it like that, so I t
 "I must have done this backwards," I thought. So I plugged the keys in from the rear. It was tougher to get them in, but they stayed in place better.
 
 {{<gallery caption="Embarrassingly, I thought this was how RJ45 patch keys were supposed to work for about six months.">}}
-{{<img src="key-right.webp" max-width="400px">}}
-{{<img src="key-back-right.webp" max-width="400px">}}
+{{<img src="still-wrong1.webp" max-width="420px">}}
+{{<img src="still-wrong2.webp" max-width="380px">}}
 {{</gallery>}}
 
 I had them like this for six months!
@@ -780,7 +761,10 @@ It wasn't until I bought my second patch panel and experimented with the keys th
 
 It turns out that the little ridge on the top isn't for decoration. The patch keys go in from the back and click in. You'll hear a little click when they slot into the correct position. The front face should be roughly flush with the front of the patch panel.
 
-TODO: Photos
+{{<gallery caption="Patch keys should be flush with the face of the patch panel, and their tabs click into place in the rear.">}}
+{{<img src="patch-panel-correct-1.webp" max-width="380px">}}
+{{<img src="patch-panel-correct-2.webp" max-width="380px">}}
+{{</gallery>}}
 
 ### If the motherboard doesn't detect a 10G NIC, try a different PCI slot
 
@@ -800,9 +784,9 @@ A day later, the problem came back. I tried instead skipping the patch panel and
 
 Finally, I spotted it: my patch cables were SFP+ single mode, whereas my long fiber cables were SFP+ multimode. I didn't even know there was a difference in fiber cables, but apparently there is, and they don't get along.
 
-I bought a new set of SFP+ multimode fiber cables, and the problem went away. Unfortunately, I discovered the problem three days after the return window for my $70 box of SFP+ single mode fiber cables had closed.
+{{<img src="single-mode-multi-mode.webp" max-width="400px" caption="TODO">}}
 
-{{<img src="14usd-cable.webp" max-width="600px" caption="I accidentally spent $70 on a box of five 7&quot; fiber cables, and they weren't even compatible with my network.">}}
+I bought a new set of SFP+ multimode fiber cables, and the problem went away. Unfortunately, I discovered the problem three days after the return window for my $70 box of SFP+ single mode fiber cables had closed.
 
 ## My life with a rack
 
@@ -812,4 +796,4 @@ Now everything is in one location with clear organization. When people visit my 
 
 I underestimated how nice it would be to have my TinyPilot physically close to all of my devices. Before the rack, I used to keep my TinyPilot on the floor next to my desk. If I ever needed to debug something on a server or a Raspberry Pi on the other side of my office, I avoided it because it involved shutting down the TinyPilot, disconnecting a lot of wires, then reconnecting them on the other side of the room.
 
-With everything now physically adjacent, it's easy for me to quickly plug TinyPilot in to any misbehaving device for low-level access. It came in handy for things like exploring NixOS and figuring out how to install NixOS on a Raspberry Pi. (TODO: Link)
+With everything now physically adjacent, it's easy for me to quickly plug TinyPilot in to any misbehaving device for low-level access. It came in handy for things like [exploring NixOS](/notes/nix-first-impressions/) and figuring out [how to install NixOS on a Raspberry Pi](/nixos-pi4/).
