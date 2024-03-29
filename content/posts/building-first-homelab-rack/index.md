@@ -339,7 +339,15 @@ The LCD is user-friendly and has useful metrics about power consumption. You can
 
 It reports 30 minutes of battery life while powering a VM server, a storage server, a firewall, and a networking switch. The total power draw of all these systems in a typical workload is 200 W.
 
-It's also completely silent, which I thought was a given for a battery backups, but it turns out it's not...
+CyberPower offers [PowerPanel Business](https://www.cyberpowersystems.com/products/software/power-panel-business/), a free management tool for controlling the UPS. To use it, you need to connect a computer to the UPS via a USB cable. It's the kind of job that would be a great match for a Raspberry Pi, but CyberPower sadly doesn't offer a way to install PowerPanel on ARM systems.
+
+{{<img src="powerpanel-webui.webp" max-width="600px" has-border="true" caption="I rate CyberPower's UPS management software as &quot;okay.&quot;">}}
+
+I played around with PowerPanel for a few minutes, and I thought it was okay but unnecessary. The software is the quality you'd expect for closed-source, vendor-specific hardware management software. The physical controls on the UPS are good enough for me.
+
+Presumably, there's some way to configure PowerPanel to tell my devices to shut down gracefully in the event of a power cut, but I don't consider it worth the trouble in my environment.
+
+The UPS is completely silent, which I thought was a given for a battery backups, but it turns out it's not...
 
 ### Review: Tripp Lite SMART1500LCD
 
