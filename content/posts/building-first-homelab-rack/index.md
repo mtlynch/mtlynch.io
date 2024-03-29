@@ -402,11 +402,9 @@ I bought this power strip a few years ago for the TinyPilot office (TODO: link).
 
 ## Choosing rack shelves
 
-Some of my existing office infrastructure has no rack mounting option, so I needed 2U of shelf space for:
+TODO: Rephrase
 
-- OPNsense firewall server (running on a Qotom mini PC)
-- TinyPilot
-- Dell Optiplex 7040 mini PC, which I use for testing
+Some of my existing office infrastructure has no rack mounting option, so I needed 2U of shelf space for [my existing components](#what-i-already-had).
 
 ### Candidates
 
