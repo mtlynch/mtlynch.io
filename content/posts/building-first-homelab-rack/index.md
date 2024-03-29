@@ -316,10 +316,6 @@ My old UPS now powers my desktop exclusively, so each UPS has a smaller load to 
 
 After I set up my rack, a co-worker mentioned that most modern UPS systems can send alerts to devices on the local network to tell them to shut down gracefully.
 
-I actually never looked into that and didn't set that up.
-
-TODO: Does my UPS support it?
-
 For me, automating shutdowns from my UPS isn't worth the trouble, but you might choose differently if your systems are more sensitive to hard power cuts or if you're in an area where power outages are more frequent.
 
 ### Candidates
@@ -345,9 +341,9 @@ CyberPower offers [PowerPanel Business](https://www.cyberpowersystems.com/produc
 
 I played around with PowerPanel for a few minutes, and I thought it was okay but unnecessary. The software is the quality you'd expect for closed-source, vendor-specific hardware management software. The physical controls on the UPS are good enough for me.
 
-Presumably, there's some way to configure PowerPanel to tell my devices to shut down gracefully in the event of a power cut, but I don't consider it worth the trouble in my environment.
+PowerPanel can run custom scripts when the UPS loses power, so I could theoretically automate shutdowns of the other devices in my rack on power cuts, but it's not worth the trouble in my environment.
 
-The UPS is completely silent, which I thought was a given for a battery backups, but it turns out it's not...
+Another plus is that the UPS is completely silent, which I thought was a given for a battery backups, but it turns out it's not...
 
 ### Review: Tripp Lite SMART1500LCD
 
@@ -398,7 +394,7 @@ The front outlets are all unused, but I find them useful occasionally if I have 
 
 - Grade: C
 
-I bought this power strip a few years ago for the TinyPilot office (TODO: link). My main issue is that the outlets are too close together. A lot of the things I plug in at the office are bricks, so they cover two outlets.
+I bought this power strip a few years ago [for the rack at my work office](/retrospectives/2021/05/). My main issue is that the outlets are too close together. A lot of the things I plug in at the office are bricks, so they cover two outlets.
 
 ## Choosing rack shelves
 
@@ -790,7 +786,7 @@ A day later, the problem came back. I tried instead skipping the patch panel and
 
 Finally, I spotted it: my patch cables were SFP+ single mode, whereas my long fiber cables were SFP+ multimode. I didn't even know there was a difference in fiber cables, but apparently there is, and they don't get along.
 
-{{<img src="single-mode-multi-mode.webp" max-width="400px" caption="TODO">}}
+{{<img src="single-mode-multi-mode.webp" max-width="400px" caption="My network connection was going into a reset loop every 24 hours because I accidentally mixed multimode patch cables with single mode fiber cables.">}}
 
 I bought a new set of SFP+ multimode fiber cables, and the problem went away. Unfortunately, I discovered the problem three days after the return window for my $70 box of SFP+ single mode fiber cables had closed.
 
@@ -802,4 +798,4 @@ Now everything is in one location with clear organization. When people visit my 
 
 I underestimated how nice it would be to have my TinyPilot physically close to all of my devices. Before the rack, I used to keep my TinyPilot on the floor next to my desk. If I ever needed to debug something on a server or a Raspberry Pi on the other side of my office, I avoided it because it involved shutting down the TinyPilot, disconnecting a lot of wires, then reconnecting them on the other side of the room.
 
-With everything now physically adjacent, it's easy for me to quickly plug TinyPilot in to any misbehaving device for low-level access. It came in handy for things like [exploring NixOS](/notes/nix-first-impressions/) and figuring out [how to install NixOS on a Raspberry Pi](/nixos-pi4/).
+With everything now physically adjacent, it's easy for me to quickly plug TinyPilot in to any misbehaving device for low-level access. It came in handy for things like figuring out [how to install NixOS on a Raspberry Pi](/nixos-pi4/) and upgrading my VM server to the latest version of Proxmox.
