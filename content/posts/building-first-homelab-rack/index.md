@@ -76,21 +76,21 @@ Because this is my first time building a server rack, I'm free from the [curse o
 
 ### No conflict of interest
 
-I'm not getting paid by anyone or receiving free products to write this post.
+I'm not getting paid by anyone or receiving free products to write this post. I have no advertisers to satisfy or partnerships to maintain.
 
 The uncomfortable truth about most homelab blog posts is that they're funded by affiliate links. That means if a reader purchases something through a link in the article, the author receives a commission.
 
-Authors can still provide valuable information despite using affiliate links, but it creates a clear conflict of interest. If merchants are paying the author to link to their products, it incentivizes recommending expensive products and subpar merchants.
+Authors can still provide valuable information while using affiliate links, and some of the best homelab bloggers fund their that way. Nevertheless, affiliate links create a clear conflict of interest between the author and their readers. If merchants are paying an author a percentage commission to link to their products, it incentivizes the author to recommend expensive products and subpar merchants.
 
-I write my blog out of vanity. My payment is hearing people tell me that they found the article interesting or useful.
+I'm not claiming that I'm pure of heart and everyone who writes for money is evil, but I think my incentives are more aligned with my readers'. I write my blog out of vanity, as I like when people tell me that they find my articles interesting or useful. Writing out my thought process also helps me improve my approach and elicits useful feedback from readers.
 
-My rack does contain a TinyPilot, a hardware device that [I created](/tinypilot/), but it doesn't affect any other hardware choice. I'll disclose my ownership of TinyPilot whenever it's mentioned.
+My rack does contain a TinyPilot, a hardware device that [I created](/tinypilot/), but it doesn't affect of my other choices. I'll disclose my relationship with TinyPilot whenever mentioning it.
 
 ## Choosing a rack
 
-If you're building a server rack, it seems like the first thing you'd choose is the rack itself, but it's not that simple.
+If you're building a server rack, it seems like the first thing you'd choose is the rack itself. It's not that simple.
 
-Selecting your rack is an iterative process. You can't decide what type of rack to buy until you know what will go into your rack. But knowing what type of racks are available also informs what components to buy.
+Selecting your rack is an iterative process. You can't decide what type of rack to buy until you know what components your rack will hold. But knowing what type of racks are available also informs what components to buy.
 
 Here's the process I followed to pick a server rack:
 
@@ -102,13 +102,13 @@ Here's the process I followed to pick a server rack:
 
 ### How many rack units?
 
-Racks have capacity measured in rack units (RUs). A rack unit is 1.75".
+Racks have capacity measured in rack units (RUs, usually shortened to just Us). 1 rack unit is 1.75". You'll typically see racks sized as a number followed by a U, so an 8U rack would have 8 rack units or 8 x 1.75" = 14" of height for components.
 
 TODO: Photo of 1U
 
 Most network switches are 1U, battery backups are usually 2U, servers are typically 2U.
 
-You don't want to buy too short a rack and run out of room for your components, but you also don't want a rack that's too tall and takes up a lot of space for no reason.
+You don't want to buy too short a rack and run out of room for your components, but you also don't want an enormous rack that occupies more vertical space than you'd ever use.
 
 As you pick components, add up how many rack units they'll take up. Leave some extra buffer based on how much you might want to expand your rack in the next few years.
 
@@ -140,9 +140,13 @@ For me, wheels were a critical feature. I wanted to be able to clean behind the 
 
 StarTech also has a good reputation and a decent website, so I just chose between different StarTech racks.
 
-| Brand        | Model                                                                             | Min Depth | Max Depth | Height | Price    |
-| ------------ | --------------------------------------------------------------------------------- | --------- | --------- | ------ | -------- |
-| **StarTech** | [**4POSTRACK18U**](https://www.startech.com/en-us/server-management/4postrack18u) | 22"       | 40"       | 18U    | **$316** |
+| Brand        | Model                                                                             | Min Depth | Posts | Wheels | Height | Price    |
+| ------------ | --------------------------------------------------------------------------------- | --------- | ----- | ------ | ------ | -------- |
+| **StarTech** | [**4POSTRACK18U**](https://www.startech.com/en-us/server-management/4postrack18u) | 22"       | 4     | Yes    | 18U    | **$316** |
+| StarTech     | [4POSTRACK15U](https://www.startech.com/en-us/server-management/4postrack15u)     | 22"       | 4     | Yes    | 15U    | $301     |
+| StarTech     | [2POSTRACK16](https://www.startech.com/en-us/server-management/2postrack16)       | 12"       | 2     | No     | 16U    | $165     |
+
+15U seemed like it would be enough, but the cost of 18U was so close that I figured I might as well get the extra 3U of space.
 
 ### Review: StarTech 4POSTRACK18U 18U rack
 
@@ -155,8 +159,6 @@ This rack is working out well. It feels sturdy, and the wheels make it easy to m
 Assembly was straightforward. From start to finish, it took me about two and a half hours. One minor complaint is that none of the parts are labeled, but I could match them to the instructions based on shape.
 
 The rack is depth-adjustable, and I chose the shallowest depth. The rack does have a design flaw in that the shortest depth makes some screw holes inaccessible. I worked around this by expanding the depth, screwing in the spots that are unreachable at shallow depth, then adjusting the depth back down.
-
-The rack came with a grounding cable, but I can't figure out how to use it.
 
 ## Choosing a network switch
 
