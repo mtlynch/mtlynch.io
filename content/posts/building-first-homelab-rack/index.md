@@ -174,7 +174,7 @@ Unless you're buying something very exotic, the speeds available for a rack-moun
 - 2.5 Gbps
 - 10 Gbps
 
-For as long as I can remember, I've had 1 Gbps Ethernet speed in my house, and that's been fine. I do most of my work online, so the bottleneck is almost always my ISP rather than my home network.
+I've had 1 Gbps Ethernet speed in my house for the past 10+ years, and that's been fine. I do most of my work online, so the bottleneck was almost always my ISP rather than my home network.
 
 Lately, I've been finding that the bottleneck on my home storage server [is my 1 Gbps switch](/budget-nas/#performance-benchmarks), so I've been interested in a network upgrade.
 
@@ -198,7 +198,7 @@ There are two kinds of network switches: managed or unmanaged.
 
 Personally, I wanted a plain old unmanaged switch. I've never used a managed switch, and I didn't want a whole bunch of extra configuration to manage. I just wanted the network to work.
 
-It turned out, none of the network switches that met my criteria were unmanaged, so I went with a managed switch. Once I got my managed switch, I found that it's pretty fun to have VLANs for different devices on my network. Now I want to configure VLANs for everything!
+It turned out that none of the network switches that met my criteria were unmanaged, so I went with a managed switch. Once I got my managed switch, I found that it's pretty fun to have VLANs for different devices on my network. Now I want to configure VLANs for everything!
 
 ### PoE or standard Ethernet?
 
@@ -208,9 +208,9 @@ For example, my home WiFi access point, the [Ruckus R310](https://support.ruckus
 
 {{<img src="ruckus-r310.webp" max-width="400px" caption="My Ruckus R310 WiFi access point supports PoE, so it only needs a single Ethernet cable for both power and data.">}}
 
-To power PoE devices, you'll either need a PoE-enabled networking switch.
+To use PoE devices, you need a PoE-enabled networking switch.
 
-The downside of PoE switches is that they consume more power and they're more expensive. If you buy a PoE switch but have no PoE devices, non-PoE devices will still work, but you're wasting money and power on features you can't use.
+The downside of PoE switches is that they consume more power and they're more expensive. If you buy a PoE switch but have no PoE devices, non-PoE devices will still work, but you're wasting money and power on unnecessary features.
 
 ### How many ports do you need?
 
@@ -229,24 +229,21 @@ I searched for switches that had a minimum of 2x my current wired devices. I cur
 | Brand       | Model                                                                                                                             | Ports  | Speed                        | Managed | PoE    | Price       |
 | ----------- | --------------------------------------------------------------------------------------------------------------------------------- | ------ | ---------------------------- | ------- | ------ | ----------- |
 | **TP-Link** | [**TL-SG3428X**](https://www.newegg.com/tp-link-tl-sg3428x-24-x-rj45-4-x-sfp/p/0XP-0054-00091?Item=0XP-0054-00091&SoldByNewegg=1) | **24** | **4x10Gbps 24x1Gbps**        | **Yes** | **No** | **$299.00** |
-| Netgear     | [GS108LP](https://www.amazon.com/gp/product/B07G5XBM3V/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&th=1)                           | 8      | 1 Gbps                       | No      | Yes    | $91.72      |
-| Qnap        | [QSW-1105-5T-US](https://www.newegg.com/qnap-qsw-1105-5t-us-5-x-rj45/p/N82E16833831027)                                           | 5      | 2.5 Gbps                     | No      | No     | $138.27     |
-| TP-Link     | [Unnamed Chinese Model](https://www.aliexpress.us/item/3256804686136282.html)                                                     | 18     | 2x10 Gbps SFP+ 16 x 2.5 Gbps | No      | No     | $499.90     |
-| Microtik    | [CRS305](https://www.amazon.com/MikroTik-CRS305-1G-4S-Gigabit-Ethernet-RouterOS/dp/B07LFKGP1L)                                    | 5      | 4x10 Gbps SFP+               | Yes     | No     | $157.72     |
 | Microtik    | [CRS328-24P-4S+RM](https://mikrotik.com/product/crs328_24p_4s_rm#fndtn-gallery)                                                   | 28     | 4x10 Gbps SFP+ 24x1Gbps      | Yes     | Yes    | $490.50     |
+| TP-Link     | [Unnamed Chinese Model](https://www.aliexpress.us/item/3256804686136282.html)                                                     | 18     | 2x10 Gbps SFP+ 16 x 2.5 Gbps | No      | No     | $499.90     |
 | TP-Link     | [T1600G-28TS](https://www.amazon.com/TP-Link-Jetstream-24-Port-T1600G-28TS-TL-SG2424/dp/B016M1QTS2)                               | 24     | 4x10 Gbps SFP 24x1Gbps       | Yes     | No     | $299.00     |
 | TP-Link     | [T1600G-28PS](https://www.amazon.com/TP-Link-JetStream-T1600G-28PS-24-Port-Gigabit/dp/B0196RGV50)                                 | 24     | 4x10 Gbps SFP 24x1Gbps       | Yes     | Yes    | $295.99     |
 | TP-Link     | [T1700G-28TQ](https://www.amazon.com/TP-Link-JetStream-24-Port-Ethernet-T1700G-28TQ/dp/B01CHP5IAC)                                | 24     | 4x10 Gbps SFP 24x1Gbps       | Yes     | No     | $958.40     |
 
 I've tried Microtik in the past, and I want to like them. They're a small, independent hardware company. And there are people who love their weird 90s style UI, but I found it confusing and difficult to navigate.
 
-{{<img src="microtik-interface.webp" max-width="700px" has-border="true" caption="I want to like Microtik, but I can't get over their weird 90s-style admin UI">}}
+{{<img src="microtik-interface.webp" max-width="800px" has-border="true" caption="I want to like Microtik, but I can't get over their weird 90s-style admin UI">}}
 
 I've had great experience with unmanaged TP-Link switches, so I felt good about the brand.
 
 I almost went with [this 16 x 2.5 Gbps port TP-Link unit](https://www.aliexpress.us/item/3256804686136282.html), but it's only available from China, and it doesn't seem to have any US safety or compliance certification, so I decided not to risk it.
 
-I considered the [TP-Link T1600G-28PS](https://www.amazon.com/TP-Link-JetStream-T1600G-28PS-24-Port-Gigabit/dp/B0196RGV50), which was like everything good about the [TL-SG3428X](https://www.newegg.com/tp-link-tl-sg3428x-24-x-rj45-4-x-sfp/p/0XP-0054-00091?Item=0XP-0054-00091&SoldByNewegg=1), except it _also_ had PoE. But I read several reviews that said the fans are loud, and I didn't want a noisy switch. I went with the TL-SG3428X and figured I could get a cheaper, silent unmanaged PoE switch, as I didn't actually need 24 PoE ports.
+I considered the [TP-Link T1600G-28PS](https://www.amazon.com/TP-Link-JetStream-T1600G-28PS-24-Port-Gigabit/dp/B0196RGV50), which had everything I liked about the [TL-SG3428X](https://www.newegg.com/tp-link-tl-sg3428x-24-x-rj45-4-x-sfp/p/0XP-0054-00091?Item=0XP-0054-00091&SoldByNewegg=1), except it _also_ had PoE. But I read several reviews that said the fans are loud, and I didn't want a noisy switch. I went with the TL-SG3428X and figured I could get a cheaper, silent unmanaged PoE switch, as I didn't actually need 24 PoE ports.
 
 ### Review: TP-Link TL-SG3428X
 
@@ -272,37 +269,37 @@ In retrospect, I should have tried harder to find a single managed switch with P
 
 ## Choosing 10G NICs
 
-If you choose a 10G switch, your work isn't over. In order to achieve 10 Gbps speeds, you need a 10G Network interface controller (NIC) for each device you want to enjoy the 10G speed. A regular 1 Gbps NIC will still work with a 10G switch, but it will be limited to 1 Gbps Ethernet speeds.
+If you choose a 10G switch, your work isn't over. In order to achieve 10 Gbps speeds, you need a 10G Network interface controller (NIC) for each device you want to run at 10G speeds. A regular 1 Gbps NIC will still work with a 10G switch, but it will be limited to 1 Gbps Ethernet.
 
 I had a lot of trouble finding 10G NICs for my systems. I was able to get 10G working on my Windows desktop after a bit of tinkering, but I tested three different NICs on my TrueNAS storage server, and I couldn't get any of them to work.
 
 - Mellanox ConnextX-3 CX311A
   - On my Windows desktop, the activity lights didn't flash at all, and Windows didn't recognize anything in the PCI slot.
   - I found a forum post where somemeone mentioned that switching to another PCI slot on their motherboard solved the problem. I was skeptical, but that fixed it.
-  - My TrueNAS server couldn't recognize it, but it worked on my Windows desktop.
+  - My TrueNAS server couldn't recognize it at all.
 - Chelsio T520-LL-CR
   - Chelsio is one of the most common brands for TrueNAS servers, and [Serve the Home's buyer's guide](https://www.servethehome.com/buyers-guides/top-hardware-components-for-truenas-freenas-nas-servers/top-picks-freenas-nics-networking/) listed it as a recommended option
   - My TrueNAS server [couldn't recognize it](https://www.truenas.com/community/threads/no-success-with-three-different-10-gb-nics.111026/).
 - Chelsio Dual Port T520-CR
   - My TrueNAS server [couldn't recognize this one, either](https://www.truenas.com/community/threads/no-success-with-three-different-10-gb-nics.111026/).
 
-My best guess is that the issue is motherboard incompatibility. My TrueNAS server [uses a consumer-grade ASUS Prime A320I-K motherboard](/budget-nas/#motherboard), so it may not support these enterprise-oriented 10G NICs.
+My best guess is that the issue on my TrueNAS server is motherboard incompatibility. My TrueNAS server [uses a consumer-grade ASUS Prime A320I-K motherboard](/budget-nas/#motherboard), so it may not support these enterprise-oriented 10G NICs.
 
 I'm planning to build a new storage server in the next few months, so I'll try a fancier motherboard to see if that lets me use one of the three spare 10G NICs I have lying around.
 
-Currently, my Windows desktop can talk to my managed switch at 10 Gbps speeds, but it's limited to 1 Gbps bandwidth for everything else. If I need to click a checkbox on TP-Link's medicore web UI, I can do it at blazing 10 Gbps speeds.
+Currently, the only 10 Gbps link in my network is the connection between my Windows desktop and my managed switch. If I need to click a checkbox on TP-Link's crummy web UI, I can do it at blazing 10 Gbps speeds.
 
 ## Choosing a UPS (battery backup)
 
 When I lived in Manhattan, I'd experience around five power outages per year. They were all brief, but they were long enough to power cycle my computer.
 
-To avoid surprise shutdowns, I bought a battery backup system, also known as an uninterruptible power supply (UPS). It was an APC BR1500G, and I've used that same battery backup for six years.
+To avoid surprise shutdowns, I bought a battery backup system, also known as an uninterruptible power supply (UPS). It was an [APC BR1500G](https://www.apc.com/us/en/product/BR1500G/apc-backups-pro-1500va-865w-tower-120v-10x-nema-515r-outlets-avr-lcd-user-replaceable-battery/), and I've used that same battery backup for six years.
 
 TODO: Photo
 
 For short power outages, the battery saves me from any downtime. For extended outages, the battery gives me enough time to gracefully shutdown my systems to avoid data loss.
 
-The downside of the battery backup is that it added a lot of cabling to my office. My desktop, servers, and router were all in different corners of my office, so big, unsightly power cables had to run all around my office to connect those components to the UPS.
+The downside of the battery backup is that it added a lot of cabling to my office. My desktop, servers, and router were all in different corners of my office, so bulky, unsightly power cables had to run all around my office to connect those components to the UPS.
 
 ### How much time do you need for a graceful shutdown?
 
@@ -310,9 +307,7 @@ For extended power outages, you'll need enough time to shut down your systems be
 
 I theoretically could have used my Kill-A-Watt to measure the wattage of each of my devices during normal operation and then used that to find a battery. I was too lazy for that level of rigor, so I estimated based on metrics from my previous UPS.
 
-My APC UPS had a 865 W battery, and it reported 12 minutes of battery life while powering a desktop computer, a VM server, a storage server, a firewall, and a networking switch.
-
-My old UPS now powers my desktop exclusively, so each UPS has a smaller load to support.
+My APC UPS had a 865 W battery, and it reported 12 minutes of battery life while powering a desktop computer, a VM server, a storage server, a firewall, and a networking switch, so I thought 800 W would be a good minimum for the battery.
 
 ### Does it need to send alerts?
 
@@ -327,7 +322,6 @@ For me, automating shutdowns from my UPS isn't worth the trouble, but you might 
 | **CyberPower** | [**CP1500PFCRM2U**](https://www.bhphotovideo.com/c/product/1709939-REG/cyberpower_cp1500pfcrm2u_cp15_1500va_100w_2u_rackmount.html) | 1000 W | 8       | $335  |
 | Tripp Lite     | [SMART1500LCD](https://www.newegg.com/tripp-lite-smart1500lcd-5-15r/p/N82E16842111052)                                              | 900 W  | 8       | $298  |
 | CyberPower     | [CPS1500AVR](https://www.newegg.com/cyberpower-cps1500avr/p/N82E16842102006)                                                        | 950 W  | 8       | $460  |
-| CyberPower     | [OR700LCDRM1U](https://www.newegg.com/cyberpower-or700lcdrm1u/p/N82E16842102088)                                                    | 400 W  | 4       | $299  |
 
 ### Review: CyberPower CP1500PFCRM2U
 
@@ -341,7 +335,7 @@ CyberPower offers [PowerPanel Business](https://www.cyberpowersystems.com/produc
 
 {{<img src="powerpanel-webui.webp" max-width="600px" has-border="true" caption="I rate CyberPower's UPS management software as &quot;okay.&quot;">}}
 
-I played around with PowerPanel for a few minutes, and I thought it was okay but unnecessary. The software is the quality you'd expect for closed-source, vendor-specific hardware management software. The physical controls on the UPS are good enough for me.
+I played around with PowerPanel for a few minutes, and I thought it was okay but unnecessary. The quality is what you'd expect for closed-source, vendor-specific hardware management software. The physical controls on the UPS are good enough for me.
 
 PowerPanel can run custom scripts when the UPS loses power, so I could theoretically automate shutdowns of the other devices in my rack on power cuts, but it's not worth the trouble in my environment.
 
@@ -363,7 +357,7 @@ I reached out to Tripp Lite customer support with a video of the UPS' noise leve
 
 I tried to get used to the noise, but it was so distracting that I gave up after day two.
 
-To my surprise, I realized Newegg's return policy was "replacement only." I'd always had an easy return experience with Newegg so I didn't even think to check the return policy beforehand, but I guess they're more strict about these 29 lb units.
+To my surprise, Newegg's return policy for the UPS was "replacement only." I'd always had an easy return experience with Newegg so I didn't even think to check the return policy beforehand, but I guess they're more strict about these 29 lb units.
 
 Fortunately, I asked Newegg customer service nicely for a refund, and they granted it, which is another reason I keep coming back to Newegg.
 
@@ -373,7 +367,7 @@ Even though my rack has a UPS with many power outlets, I find it useful to have 
 
 Some of the components in my rack are non-essential and don't need to stay online during a power outage.
 
-For example, I keep a little IoT device in my rack that [monitors performance of my solar panels](/notes/debugging-vlans-tp-link/#mistake-2-forgetting-to-add-my-router-to-the-vlan). That device is totally extraneous, so I'm fine if it goes offline during a power failure. In fact, I prefer it to go offline because I don't want to squander my limited battery life in an outage on a solar monitor.
+For example, I keep a little IoT device in my rack that [monitors performance of my solar panels](/notes/debugging-vlans-tp-link/#mistake-2-forgetting-to-add-my-router-to-the-vlan). That device is totally extraneous, so I'm fine if it goes offline during a power failure. In fact, I prefer it to go offline because I don't want to squander limited battery capacity on a solar monitor.
 
 ### Candidates
 
@@ -400,9 +394,7 @@ I bought this power strip a few years ago [for the rack at my work office](/retr
 
 ## Choosing rack shelves
 
-TODO: Rephrase
-
-Some of my existing office infrastructure has no rack mounting option, so I needed 2U of shelf space for [my existing components](#what-i-already-had).
+I already had a few [existing components](#what-i-already-had) from my pre-rack life that I planned to bring into my rack, so I needed at least 2U of rack shelves for those components.
 
 ### Candidates
 
@@ -415,7 +407,9 @@ Some of my existing office infrastructure has no rack mounting option, so I need
 
 - Grade: A
 
-I had never heard of Pyle as a brand, but I found the shelves online, and they seemed like a match for what I wanted. They've worked out well.
+I had never heard of Pyle as a brand, but they seemed like a match for what I wanted, and they've worked out well.
+
+TODO: Photo
 
 They were easy to install, they're low in price, and they have a lip that prevents components from sliding off the rack.
 
@@ -433,7 +427,7 @@ This downward lip forces you to either allocate 3U to each of your 2U shelves or
 
 I couldn't even figure out a purpose for the lip. It would make sense if it curved up because that would protect items on the shelf from slipping off, but why bend down? It didn't look like it provided any structural support to the shelf either.
 
-I scoured reviews of this shelf to see if anyone else was talking about this bizarre design choice. When other reviewers mentioned it, they didn't seem to mind that much. The comments had the tone of, "Oh, yeah, it extends past 2U a bit." I'm baffled that anyone would accept that.
+I scoured reviews to see if anyone else was talking about this shelf's bizarre design choice. When other reviewers mentioned it, they didn't seem to mind. The comments had the tone of, "Oh, yeah, it extends past 2U a bit. Whatevs." I'm baffled that anyone would accept that.
 
 {{<img src="3u-shelf.webp" has-border="true" caption="Reviewer acknowledgeds that StarTech's 2U rack shelf takes up 3U of space, still rates it 4 out of 5.">}}
 
