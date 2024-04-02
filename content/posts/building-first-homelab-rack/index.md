@@ -5,24 +5,24 @@ tags:
   - homelab
 ---
 
-Seven years ago, I built my [first home server](/building-a-vm-homelab-2017/). It greatly improved my software development workflows, so over the years, I've gotten more into the home server scene. I built [a custom storage server](/budget-nas/), [another development server](/building-a-vm-homelab/), and a dedicated firewall.
+Seven years ago, I built my [first home server](/building-a-vm-homelab-2017/). It greatly improved my software development workflows, so I've gotten more into the home server scene. I built [a custom storage server](/budget-nas/), [another development server](/building-a-vm-homelab/), and a dedicated firewall.
 
-Over time, my wife grew concerned that my office was filling with unsightly wires. I thought, "What? This is a normal amount of wires." But then I realized it was kind of a lot of wires...
+At some point, my wife gently commented that my office was filling with unsightly wires. "What?" I asked. "This is a _normal_ amount of wires." But then I looked and realized it was kind of a lot of wires...
 
 {{<gallery caption="My office, upon closer inspection, kind of had a lot of wires">}}
-{{<img src="office-wires-1.webp" max-width="300px" alt="Photo of lots of wires in my office">}}
-{{<img src="office-wires-2.webp" max-width="300px" alt="Photo of lots of wires in my office">}}
+{{<img src="office-wires-1.webp" max-width="350px" alt="Photo of lots of wires in my office">}}
+{{<img src="office-wires-2.webp" max-width="350px" alt="Photo of lots of wires in my office">}}
 {{</gallery>}}
 
-A lot of home server enthusiasts buy server racks, but I never thought of myself as a server rack guy. I wasn't _so_ into servers that I needed a whole rack; I just had a VM server here, a data server there. Maybe a few switches scattered around. Having a server rack felt like an admission that I wasn't just a casual home server guy, but an intense homelab maniac.
+A lot of home server enthusiasts buy server racks, but I never thought of myself as a rack guy. I wasn't _so_ into servers that I needed a whole rack; I just had a VM server here, a data server there. Maybe a few switches scattered around. Buying a rack felt like an admission that I wasn't just a casual home server guy but an intense homelab maniac.
 
-One day, I gave in and bought a rack. I'm now embracing being a homelab weirdo, and I'm better off for it. Having a server rack makes everything so much easier to work with, and it eliminated my sprawling mess of wires.
+One day, I gave in and bought a rack. I'm now embracing being a homelab weirdo, and I'm better off for it. Having a rack made my servers easier to work with and eliminated my sprawling mess of wires.
 
 TODO: Photo of finished rack
 
 ## I don't want your life story &mdash; just show me the rack
 
-If you want to skip the explanations and jump to my rack, click below.
+If you want to skip the explanations and jump to my rack, see [my final setup](#my-final-rack-setup) below.
 
 ## Table of contents
 
@@ -41,7 +41,7 @@ If you want to skip the explanations and jump to my rack, click below.
 - [Choosing fiber cables](#)
 - [What I already had](#)
 - [How do I arrange components in a rack?](#)
-- [My final rack setup](#)
+- [My final rack setup](#my-final-rack-setup)
 - [Next steps in my rack](#)
 - [Avoiding mistakes I made](#)
 - [My life with a rack](#)
@@ -56,13 +56,13 @@ A homelab is a place in your home where you can experiment with IT hardware or s
 
 ## Why build a server rack at home?
 
-If you've never played with servers, you might wonder why anyone would build put a bunch of them in their house, much less build a little shrine to house all of them.
+If you've never played with servers, you might wonder why anyone would keep a bunch of them in their house, much less build a little shrine for them.
 
 Everyone has their own reasons for getting into homelab, but here's why I enjoy it:
 
-- **Software development**: I use a dedicated server for virtual machines, so rebooting or upgrading my main workstation doesn't affect what's running on my server, and it's easy for me to spin up new experimental VMs.
-- **Storage**: It's much more convenient having a huge amount of storage that all of my devices share rather than buying large hard drives for each device and scattering my data everywhere. The storage server uses ZFS, which reduces the risk of data corruption and can survive a hard drive failure without losing data.
-- **Networking**: Building my own router with open-source software gives me more control over my network and saves me from running the buggy software that's in most consumer-grade routers.
+- **Software development**: I use a dedicated server for virtual machines, so rebooting or upgrading my main workstation doesn't affect what's running on my server. It's easy for me to spin up new experimental VMs that don't affect my other projects.
+- **Storage**: It's more convenient to have a huge amount of storage that all of my devices share rather than buying large hard drives for each device and scattering my data everywhere. The storage server uses ZFS, which reduces the risk of data corruption and can survive a hard drive failure without losing data.
+- **Networking**: Building my own router with open-source software gives me more control over my network and saves me from the buggy software that lives on most consumer-grade routers.
 
 ## Why this guide?
 
@@ -70,21 +70,21 @@ Everyone has their own reasons for getting into homelab, but here's why I enjoy 
 
 Even though I've been experimenting with homelab for the past few years, I still consider myself a beginner, and this is a beginner-level guide.
 
-Most other homelab authors write like they're building their 20th rack. They don't explain their thought process for choosing components or why they rejected alternatives. They've been doing it so long that the decisions have become unconscious.
+Most other homelab authors write like they're building their 20th rack. They don't explain their thought process for choosing components or why they rejected alternatives. They've been doing it for so long that the decisions have become unconscious.
 
-Because this is my first time building a server rack, I'm free from the [curse of knowledge](https://en.wikipedia.org/wiki/Curse_of_knowledge). I'm walking you through how I approached the process for the first time so that you can follow along.
+Because this is my first time building a server rack, I'm free from the [curse of knowledge](https://en.wikipedia.org/wiki/Curse_of_knowledge). I'm walking you through how I approached the process for the first time so you can follow along.
 
 ### No conflict of interest
 
 I'm not getting paid by anyone or receiving free products to write this post. I have no advertisers to satisfy or partnerships to maintain.
 
-The uncomfortable truth about most homelab blog posts is that they're funded by affiliate links. That means if a reader purchases something through a link in the article, the author receives a commission.
+The uncomfortable truth about most homelab blog posts is that they're funded by affiliate links. That means the author receives a commission when readers purchase products through links in the article.
 
-Authors can still provide valuable information while using affiliate links, and some of the best homelab bloggers fund their that way. Nevertheless, affiliate links create a clear conflict of interest between the author and their readers. If merchants are paying an author a percentage commission to link to their products, it incentivizes the author to recommend expensive products and subpar merchants.
+Authors can still provide valuable information while using affiliate links, and some of the best homelab bloggers fund their work that way. Nevertheless, affiliate links create a clear conflict of interest between the author and their readers. If merchants pay an author a percentage commission to link to their products, it incentivizes the author to recommend expensive products and subpar merchants.
 
-I'm not claiming that I'm pure of heart and everyone who writes for money is evil, but I think my incentives are more aligned with my readers'. I write my blog out of vanity, as I like when people tell me that they find my articles interesting or useful. Writing out my thought process also helps me improve my approach and elicits useful feedback from readers.
+I'm not claiming that I'm pure of heart and that everyone who writes for money is evil, but my incentives are more aligned with my readers'. I write my blog out of vanity &mdash; I like when people tell me that they find my articles interesting or useful. Writing out my thought process also helps me improve my approach and elicits useful feedback from readers.
 
-My rack does contain a TinyPilot, a hardware device that [I created](/tinypilot/), but it doesn't affect of my other choices. I'll disclose my relationship with TinyPilot whenever mentioning it.
+My rack does contain a TinyPilot, a hardware device that [I created](/tinypilot/), but it doesn't affect my other choices. I'll disclose my relationship with TinyPilot whenever mentioning it.
 
 ## Choosing a rack
 
@@ -102,11 +102,11 @@ Here's the process I followed to pick a server rack:
 
 ### How many rack units?
 
-Racks have capacity measured in rack units (RUs, usually shortened to just Us). 1 rack unit is 1.75". You'll typically see racks sized as a number followed by a U, so an 8U rack would have 8 rack units or 8 x 1.75" = 14" of height for components.
+Racks have capacity measured in rack units (RUs, usually shortened to just Us). 1 rack unit is 1.75". You'll typically see racks sized as a number followed by a U, so an 8U rack would have eight rack units or 8 x 1.75" = 14" of height for components.
 
 TODO: Photo of 1U
 
-Most network switches are 1U, battery backups are usually 2U, servers are typically 2U.
+Most network switches are 1U, battery backups are usually 2U, and servers are typically 2U.
 
 You don't want to buy too short a rack and run out of room for your components, but you also don't want an enormous rack that occupies more vertical space than you'd ever use.
 
@@ -116,7 +116,7 @@ As you pick components, add up how many rack units they'll take up. Leave some e
 
 Server racks vary in depth. Most server racks are designed for enterprise-grade servers, which are up to 50" long.
 
-At work, my office has an HP ProLiant DL380 G7 server, and it's a huge hassle. It's 29" long and weighs 50 lbs. It was a pain to mount, and it will be a pain when I need to sell it.
+At work, my office has an HP ProLiant DL380 G7 server, and it's a huge hassle. It's 29" long and weighs 50 lbs. It was a pain to mount and will be a pain when I sell it.
 
 I have a relatively small home office, and I didn't want the rack server to dominate the space. For my home rack, I decided to limit myself to components that are shallow enough to only need front mounts.
 
@@ -132,9 +132,9 @@ I only wanted front-mounting components, so I could have gotten away with two po
 
 ### Does it need wheels?
 
-Some server racks have wheels to allow you to move the entire structure around.
+Some server racks have wheels that move the entire structure around.
 
-For me, wheels were a critical feature. I wanted to be able to clean behind the rack, so having wheels made it easy to move around for cleaning.
+Wheels were a critical feature for me, as I wanted to clean behind the rack easily.
 
 ### Candidates
 
@@ -178,33 +178,33 @@ I've had 1 Gbps Ethernet speed in my house for the past 10+ years, and that's be
 
 Lately, I've been finding that the bottleneck on my home storage server [is my 1 Gbps switch](/budget-nas/#performance-benchmarks), so I've been interested in a network upgrade.
 
-Given that I've been fairly satisfied with 1 Gbps, I thought 10 Gbps would be an unnecessarily large jump. But the more I read about 2.5 Gbps hardware, the more complaints I saw that it's flaky and unreliable. The consensus seemed to be that it's just as hard to level up to 10 Gbps as it is to 2.5 Gbps, so you might as well go for 10 Gbps.
+Given that I've been satisfied with 1 Gbps, I thought 10 Gbps would be an unnecessarily large jump. But the more I read about 2.5 Gbps hardware, the more complaints I saw that it's flaky and unreliable. The consensus seemed to be that it's just as hard to level up to 10 Gbps as 2.5 Gbps, so you might as well go for 10 Gbps.
 
 I did run into headaches, but I'll cover that more [below](#choosing-10g-nics).
 
 {{<notice type="info">}}
 
-**Gotcha**: If you see a 10G switch, check how many of the ports support 10G. Often a 10G switch will only offer 10G speeds on a subset of ports, and the rest will be 1 Gbps.
+**Gotcha**: If you see a 10G switch, check how many ports support 10G. Often, a 10G switch will only offer 10G speeds on a subset of ports, and the rest will be 1 Gbps.
 
 {{</notice>}}
 
 ### Managed or unmanaged network switch?
 
-There are two kinds of network switches: managed or unmanaged.
+There are two kinds of network switches: managed and unmanaged.
 
 - **Managed switches** allow you to configure rules and settings for your switch. The most common reason you'd want a managed switch is to create virtual networks (VLANs) to increase security on your network.
 
 - **Unmanaged switches** offer no configuration. They're just dumb boxes that route network traffic. Any host connected to the switch can send network traffic to any other port on the switch.
 
-Personally, I wanted a plain old unmanaged switch. I've never used a managed switch, and I didn't want a whole bunch of extra configuration to manage. I just wanted the network to work.
+I wanted a plain old unmanaged switch. I've never used a managed switch, and I didn't want a whole bunch of extra configuration to manage. I just wanted the network to work.
 
-It turned out that none of the network switches that met my criteria were unmanaged, so I went with a managed switch. Once I got my managed switch, I found that it's pretty fun to have VLANs for different devices on my network. Now I want to configure VLANs for everything!
+It turned out that none of the network switches that met my criteria were unmanaged, so I went with a managed switch. Once I got my managed switch, I found that it was pretty fun to have VLANs for different devices on my network. Now, I want to configure VLANs for everything!
 
 ### PoE or standard Ethernet?
 
 Certain low-power devices can run entirely from the power they draw from the Ethernet cable. This is called [power over Ethernet (PoE)](https://en.wikipedia.org/wiki/Power_over_Ethernet).
 
-For example, my home WiFi access point, the [Ruckus R310](https://support.ruckuswireless.com/products/88-ruckus-r310) supports PoE, so it only needs only a single Ethernet cable for both power and network connectivity.
+For example, my home WiFi access point, the [Ruckus R310](https://support.ruckuswireless.com/products/88-ruckus-r310), supports PoE, so it only needs a single Ethernet cable for both power and network connectivity.
 
 {{<img src="ruckus-r310.webp" max-width="400px" caption="My Ruckus R310 WiFi access point supports PoE, so it only needs a single Ethernet cable for both power and data.">}}
 
