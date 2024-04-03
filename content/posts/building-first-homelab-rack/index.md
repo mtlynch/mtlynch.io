@@ -516,7 +516,7 @@ The instructions are terrible. Step one is to screw in the OLED. Okay, that's fi
 
 If you're converting an existing setup to a server rack, you'll likely need new Ethernet cables. If you're including a patch panel, remember to buy short (6-12") cables (sometimes called "patch cables") to connect the patch panel to your switch.
 
-You'll likely need a mix of different patch cable lengths. For example, on my rack, port 16 on my switch is just XX" from port 16 on my patch panel, but port 1 on my switch is XX" from its corresponding patch panel port.
+You'll likely need a mix of different patch cable lengths. For example, on my rack, port 16 on my switch is just 1.5" from port 16 on my patch panel, but port 1 on my switch is 6" from its corresponding patch panel port.
 
 TODO: Photo
 
@@ -633,7 +633,7 @@ Patch panels weigh almost nothing, and networking switches are fairly light as w
 
 ### Keep components with front-facing connections close together
 
-It wasn't obvious to me until I built my server, but it's important to arrange components closely that connect through front-facing ports. For example, my patch panel and networking switch go in adjacent rack slots because I'd otherwise have Ethernet cables stretched over other components in the rack.
+It wasn't obvious until I built my server, but it's important to cluster components that connect through front-facing ports. For example, my patch panel and networking switch go in adjacent rack slots, because I'd otherwise have Ethernet cables stretched over other components in the rack.
 
 ### Rear cables don't matter so much
 
@@ -656,19 +656,19 @@ Maybe minimizing cable length is important in a data center where you're replica
 | Raspberry Pi rack mount         | [UCTRONICS Ultimate Rack with PoE Functionality](https://www.uctronics.com/raspberry-pi/1u-rack-mount/raspberry-pi-4b-rack-mount-19-inch-1u-with-poe-and-oled-screen.html) | $190   | C+           |
 | **Total**                       |                                                                                                                                                                            | $1,453 |              |
 
-And here were the smaller items:
+And here are the smaller items:
 
-| Component                                                                                               | Price |
-| ------------------------------------------------------------------------------------------------------- | ----- |
-| [Cable Matters SFP+ to LC Multi Mode Fiber Transceiver](https://www.amazon.com/dp/B07TTKHG6T/) (2-pack) | $40   |
-| [Cat6 Keystone Coupler (25-pack)](https://www.amazon.com/dp/B075ZPGV1H)                                 | $23   |
-| [Fiber LC coupler (5-pack)](https://www.amazon.com/dp/B01B5AG0TI)                                       | $19   |
-| [LC to LC Fiber patch cables (0.2m)](https://www.amazon.com/dp/B08MCPBCFD)                              | $30   |
-| [12" Ethernet Cables (10-pack)](https://www.amazon.com/dp/B07MVT1P2P/)                                  | $19   |
-| [6" Ethernet Cables (25-pack)](https://www.amazon.com/dp/B00XIFJSEI)                                    | $34   |
-| [16' Fiber Cable](https://www.amazon.com/dp/B00U7UP1UM/)                                                | $14   |
-| [3' Fiber Cable](https://www.amazon.com/dp/B00T5796DQ/)                                                 | $10   |
-| [NavePoint M6 cage nuts](https://www.amazon.com/gp/product/B0060RUVDS/)                                 | $16   |
+| Component                                                                                              | Price |
+| ------------------------------------------------------------------------------------------------------ | ----- |
+| [Cable Matters SFP+ to LC Multimode Fiber Transceiver](https://www.amazon.com/dp/B07TTKHG6T/) (2-pack) | $40   |
+| [Cat6 Keystone Coupler (25-pack)](https://www.amazon.com/dp/B075ZPGV1H)                                | $23   |
+| [Fiber LC coupler (5-pack)](https://www.amazon.com/dp/B01B5AG0TI)                                      | $19   |
+| [LC to LC Fiber patch cables (0.2m)](https://www.amazon.com/dp/B08MCPBCFD)                             | $30   |
+| [12" Ethernet Cables (10-pack)](https://www.amazon.com/dp/B07MVT1P2P/)                                 | $19   |
+| [6" Ethernet Cables (25-pack)](https://www.amazon.com/dp/B00XIFJSEI)                                   | $34   |
+| [16' Fiber Cable](https://www.amazon.com/dp/B00U7UP1UM/)                                               | $14   |
+| [3' Fiber Cable](https://www.amazon.com/dp/B00T5796DQ/)                                                | $10   |
+| [NavePoint M6 cage nuts](https://www.amazon.com/gp/product/B0060RUVDS/)                                | $16   |
 
 TODO: Photos
 
@@ -678,13 +678,13 @@ TODO: Photos
 
 You may have noticed that my server rack is conspicuously missing one common component: a server.
 
-I still have my VM server and storage server that I rebuilt in the last few years. I'm planning to migrate them to rack-mounted chassis the next time I do some upgrades, but I've punted that task since building the rack was a significant enough project on its own.
+I still have my pre-rack VM and storage servers. I'm planning to migrate them to rack-mounted chassis the next time I do some upgrades, but I've punted that task since building the rack was a significant enough project on its own.
 
 ### Are there hats for my rack?
 
 One of the things I've been searching for without success is a "hat" for my rack. The top of my rack is just open space.
 
-I'd love to find some top that fits securely into the open space on top of my rack and lets me put things on top of it. It would be convenient extra storage if I could find something sturdy and easy to remove, but I can't find anything like that.
+I'd love to find a top that fits securely into the open space on top of my rack and lets me store things on it. It would be convenient extra storage if I could find something sturdy and easy to remove, but I can't find anything like that.
 
 If you know a solution to this, let me know, and I'll update the post.
 
@@ -692,19 +692,19 @@ If you know a solution to this, let me know, and I'll update the post.
 
 ### Test the UPS before mounting it
 
-The UPS was, by far, the hardest component to mount in the rack. I don't understand how people do it. It's about half the size and weight of a window air conditioner, but to install it, you one hand holding it perfectly level and another hand screwing it in. I eventually decided it was a two-person job and called my wife in for reinforcements.
+The UPS was, by far, the most difficult component to mount in the rack. I don't understand how people do it. It's about half the size and weight of a window air conditioner, but to install it, you need one hand holding it perfectly level and another hand screwing it in. I eventually decided it was a two-person job and called my wife in for reinforcements.
 
-But you don't want to go through all that work and find out, like I did, that the UPS is too loud to earn a permanent place in your rack. Or it could just be a dead device, and you don't want to find that out after you mount it.
+But you don't want to go through all that work and find out like I did, that the UPS is too loud to earn a permanent place in your rack. Or it could just be a dead device, and you don't want to find that out after you mount it.
 
 So before you mount your UPS, remember to test it for functionality and noise before you go to the trouble of mounting it.
 
 ### Check UPS reviews for noise complaints
 
-Some UPS devices are totally silent and some produce constant noise. If it's anywhere near you, take noise into consideration.
+Some UPS devices are totally silent, and some produce constant noise. If it's anywhere near you, take noise into consideration.
 
 ### Check return policies
 
-I'd never seen anything on Newegg before that was replacement-only, so I took it for granted that I'd be able to return my UPS if I didn't like it. I was surprised to find it was a replacement-only item
+I'd never seen anything on Newegg before that was replacement-only, so I took it for granted that I'd be able to return my UPS if I didn't like it. I was surprised to find it was a replacement-only item.
 
 Luckily, Newegg customer service was helpful and accepted the return for a refund.
 
@@ -732,7 +732,7 @@ After installing about eight cage nuts, I cursed the stupidity of whoever decide
 **Tip**: If you find yourself exerting a lot of force or feeling physical pain while building computer hardware, you're probably doing something wrong. Server equipment is designed so that middle-aged, out-of-shape IT people can build them, so you're not expected to be in peak physical condition.
 {{</notice>}}
 
-### Don't install patch keys backwards
+### Don't install patch keys backward
 
 I'm going to sound like a moron here, but I installed my patch panel keys incorrectly twice before I realized how to do it the correct way.
 
@@ -742,9 +742,9 @@ So, my first attempt was like this:
 
 {{<img src="key-wrong.webp" max-width="500px">}}
 
-It fit snugly, and it was easy to plug Ethernet cables into it like that, so I thought that was right. But I quickly noticed it was popping out of the patch panel every time I removed an Ethernet cable.
+It fit snugly, and it was easy to plug Ethernet cables into it, so I thought that was right. But I quickly noticed it was popping out of the patch panel every time I removed an Ethernet cable.
 
-"I must have done this backwards," I thought. So I plugged the keys in from the rear. It was tougher to get them in, but they stayed in place better.
+"I must have done this backward," I thought. So I plugged the keys in from the rear. It was tougher to get them in, but they stayed in place better.
 
 {{<gallery caption="Embarrassingly, I thought this was how RJ45 patch keys were supposed to work for about six months.">}}
 {{<img src="still-wrong1.webp" max-width="420px">}}
@@ -764,7 +764,7 @@ It turns out that the little ridge on the top isn't for decoration. The patch ke
 
 ### If the motherboard doesn't detect a 10G NIC, try a different PCI slot
 
-When I installed my Mellanox 10G NIC into my desktop, Windows didn't detect it at all. I tried re-seating it, and I saw the same results. I tried downloading the latest drivers, but Windows still wasn't seeing the device at all in Device Manager.
+When I installed my Mellanox 10G NIC into my desktop, Windows didn't detect it at all. I tried re-seating it, and I saw the same results. I tried downloading the latest drivers, but Windows didn't show the NIC in Device Manager.
 
 Finally, I stumbled across a forum post where someone reported that their Mellanox card worked when they switched it to a different PCI slot. I tried a different PCI slot on my motherboard, and voila! It worked perfectly.
 
@@ -774,22 +774,22 @@ I still don't understand why the PCI slot mattered. According to my motherboard'
 
 The first day that I installed my Mellanox NIC on my Windows desktop, everything worked fine.
 
-24 hours of use, my desktop's Ethernet connection suddenly disconnecting and reconnecting every few seconds. I rebooted, and the problem went away.
+After about 24 hours of use, my desktop's Ethernet connection suddenly began disconnecting and reconnecting every few seconds. I rebooted, and the problem went away.
 
 A day later, the problem came back. I tried instead skipping the patch panel and connecting the cable from my desktop directly to the switch. That fixed the issue, which narrowed the problem to either the patch cable or the patch panel key.
 
 Finally, I spotted it: my patch cables were SFP+ single mode, whereas my long fiber cables were SFP+ multimode. I didn't even know there was a difference in fiber cables, but apparently there is, and they don't get along.
 
-{{<img src="single-mode-multi-mode.webp" max-width="400px" caption="My network connection was going into a reset loop every 24 hours because I accidentally mixed multimode patch cables with single mode fiber cables.">}}
+{{<img src="single-mode-multi-mode.webp" max-width="400px" caption="My network connection went into a reset loop every 24 hours because I accidentally mixed multimode patch cables with single mode fiber cables.">}}
 
 I bought a new set of SFP+ multimode fiber cables, and the problem went away. Unfortunately, I discovered the problem three days after the return window for my $70 box of SFP+ single mode fiber cables had closed.
 
 ## My life with a rack
 
-I'm happy with my new rack, and I have no regrets about the investment. It definitely beats my old setup of having bits and pieces of infrastructure scattered around my office.
+I'm happy with my new rack and have no regrets about the investment. It definitely beats my old setup of having bits and pieces of infrastructure scattered around my office.
 
-Now everything is in one location with clear organization. When people visit my house, I look like a kooky nerd rather than just a messy guy with cables everywhere.
+Now, everything lives in one efficient, organized location. When people visit my house, I look like a quirky nerd rather than a weird slob with cables everywhere.
 
-I underestimated how nice it would be to have my TinyPilot physically close to all of my devices. Before the rack, I used to keep my TinyPilot on the floor next to my desk. If I ever needed to debug something on a server or a Raspberry Pi on the other side of my office, I avoided it because it involved shutting down the TinyPilot, disconnecting a lot of wires, then reconnecting them on the other side of the room.
+I underestimated how nice it would be to have my TinyPilot physically close to all of my devices (disclosure again: TinyPilot is a product I created). Before the rack, I used to keep my TinyPilot on the floor next to my desk. If I ever needed to debug something on a server or a Raspberry Pi on the other side of my office, I avoided it because it involved shutting down the TinyPilot, disconnecting a lot of wires, and then reconnecting them on the other side of the room.
 
 With everything now physically adjacent, it's easy for me to quickly plug TinyPilot in to any misbehaving device for low-level access. It came in handy for things like figuring out [how to install NixOS on a Raspberry Pi](/nixos-pi4/) and upgrading my VM server to the latest version of Proxmox.
