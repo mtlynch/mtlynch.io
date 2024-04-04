@@ -1,9 +1,11 @@
 ---
 title: "Building My First Homelab Server Rack"
-date: 2024-04-12T00:00:00-05:00
+date: 2024-04-05T00:00:00-05:00
 tags:
   - homelab
 ---
+
+TODO: Alt text
 
 Seven years ago, I built my [first home server](/building-a-vm-homelab-2017/). It greatly improved my software development workflows, so I've gotten more into the home server scene. I built [a custom storage server](/budget-nas/), [another development server](/building-a-vm-homelab/), and a dedicated firewall.
 
@@ -68,11 +70,11 @@ Everyone has their own reasons for getting into homelab, but here's why I enjoy 
 
 ### By a beginner for beginners
 
-Even though I've been experimenting with homelab for the past few years, I still consider myself a beginner, and this is a beginner-level guide.
+Even though I've been experimenting with homelab for the past few years, this was my first time building a server rack, so this is a beginner-level guide.
 
-Most other homelab authors write like they're building their 20th rack. They don't explain their thought process for choosing components or why they rejected alternatives. They've been doing it for so long that the decisions have become unconscious.
+Every other guide I've read sbout server racks reads like someone explaining their 20th rack. They don't explain how they chose components or why they rejected alternatives. They've been doing it for so long that the decisions are either unconscious or feel unworthy of mention.
 
-Because this is my first time building a server rack, I'm free from the [curse of knowledge](https://en.wikipedia.org/wiki/Curse_of_knowledge). I'm walking you through how I approached the process for the first time so you can follow along.
+Because this is my first time building a server rack, I'm free from the [curse of knowledge](https://en.wikipedia.org/wiki/Curse_of_knowledge). I'm walking you through how I approached the process for the first time.
 
 ### No conflict of interest
 
@@ -110,7 +112,7 @@ Most network switches are 1U, battery backups are usually 2U, and servers are ty
 
 You don't want to buy too short a rack and run out of room for your components, but you also don't want an enormous rack that occupies more vertical space than you'd ever use.
 
-As you pick components, add up how many rack units they'll take up. Leave some extra buffer based on how much you might want to expand your rack in the next few years.
+As you pick components, add up how many rack units they'll take up. Leave some extra buffer based on how much you want to expand your rack in the next few years.
 
 ### How deep does it need to be?
 
@@ -132,13 +134,11 @@ I only wanted front-mounting components, so I could have gotten away with two po
 
 ### Does it need wheels?
 
-Some server racks have wheels that move the entire structure around.
-
-Wheels were a critical feature for me, as I wanted to clean behind the rack easily.
+Some server racks have wheels that move the entire structure around. Wheels were a critical feature for me, as I wanted to clean behind the rack easily.
 
 ### Candidates
 
-StarTech also has a good reputation and a decent website, so I just chose between different StarTech racks.
+StarTech is a popular brand for server racks. They have a good reputation and a decent website, so I chose between different StarTech racks.
 
 | Brand        | Model                                                                             | Min Depth | Posts | Wheels | Height | Price    |
 | ------------ | --------------------------------------------------------------------------------- | --------- | ----- | ------ | ------ | -------- |
@@ -245,6 +245,8 @@ I considered the [TP-Link T1600G-28PS](https://www.amazon.com/TP-Link-JetStream-
 
 ### Review: TP-Link TL-SG3428X
 
+{{<img src="switch-patch-panel.webp" max-width="600px">}}
+
 - Grade: B-
 
 Overall, I like the TP-Link TL-SG3428X switch pretty well. It's silent, which is a big plus. I haven't had any issues with reliability.
@@ -256,6 +258,8 @@ My experience with the TP-Link web admin UI has been poor, but that's about stan
 It took me a long time to figure out [how to configure VLANs](/notes/debugging-vlans-tp-link/). I've seen how other [brands like QNAP represent VLAN controls](https://www.youtube.com/watch?v=XdqP14NclZ0), and I think they did a much better job than TP-Link.
 
 ### Review: Netgear GS116LP 16-Port unmanaged PoE switch
+
+{{<img src="poe-switch.webp" max-width="600px">}}
 
 - Grade: A
 
@@ -293,7 +297,7 @@ When I lived in Manhattan, I'd experience around five power outages per year. Th
 
 To avoid surprise shutdowns, I bought a battery backup system, also known as an uninterruptible power supply (UPS). It was an [APC BR1500G](https://www.apc.com/us/en/product/BR1500G/apc-backups-pro-1500va-865w-tower-120v-10x-nema-515r-outlets-avr-lcd-user-replaceable-battery/), and I've used that same battery backup for six years.
 
-TODO: Photo
+{{<img src="apc-ups.webp" max-width="350px">}}
 
 For short power outages, the battery saves me from any downtime. For extended outages, the battery gives me enough time to shut down my systems to avoid data loss.
 
@@ -323,6 +327,8 @@ For me, automating shutdowns from my UPS isn't worth the trouble, but you might 
 
 ### Review: CyberPower CP1500PFCRM2U
 
+{{<img src="cyberpower-ups.webp" max-width="800px">}}
+
 - Grade: A
 
 The LCD is user-friendly and has useful metrics about power consumption. You can also turn the display off to have fewer flashing lights on your rack.
@@ -340,6 +346,8 @@ PowerPanel can run custom scripts when the UPS loses power, so I could theoretic
 Another plus is that the UPS is silent, which I thought was a given for battery backups, but it turns out it's not...
 
 ### Review: Tripp Lite SMART1500LCD
+
+{{<img src="tripp-lite-ups.webp" max-width="800px">}}
 
 - Grade: D
 
@@ -464,11 +472,11 @@ At the end of the day, it's just a metal and plastic panel, so there's not much 
 
 One of the reasons I chose the NewYork brand patch panel was that I saw reviews mention a rear bar that helps support Ethernet cables. In my rack, the rear bar doesn't do anything. It's too close to the Ethernet ports to provide support, and they don't seem to need it anyway.
 
-TODO: Show photos of rear
+{{<img src="panel-rear.webp" max-width="600px">}}
 
 My one complaint is with the port labels. They're slips of paper under plastic, like a landline phone would have for speed dial in the 90s. Other patch panels have little whiteboard strips for easy erasing, and I prefer that style to strips of paper.
 
-TODO: Photo of labels
+{{<img src="patch-panel-labels.webp" max-width="550px">}}
 
 ### Review: Tripp Lite 16-port 1U Patch Panel
 
@@ -587,23 +595,35 @@ I've included all the cables I purchased [below](#my-final-rack-setup).
 
 ### Router: Qotom Q355G4 with OPNsense
 
-I built a router a few years ago. I bought a cheap Qotom Q355G4 unit from China and installed OPNsense.
+My home router is a cheap Qotom Q355G4 unit running OPNsense:
+
+TODO: Replace photo
+
+{{<gallery caption="My OPNsense firewall running on Qotom Q355G4 mini PC">}}
+{{<img src="opnsense-dashboard.webp" max-width="300px">}}
+{{<img src="opnsense-dashboard.webp" max-width="300px">}}
+{{</gallery>}}
 
 ### WiFi access point: Ruckus R310
 
 This doesn't technically live in my rack, but it plugs in to my PoE switch. It's a nice access point, and it allows me to create multiple WiFi networks with different VLAN tags, so my guest WiFi has Internet access but can't reach any of my other devices.
 
+{{<gallery caption="My Ruckus R310 WiFi access point">}}
+{{<img max-width="300px" src="ruckus-r310.webp">}}
+{{<img max-width="315px" src="ruckus-dashboard.webp">}}
+{{</gallery>}}
+
 ### Out-of-band management: TinyPilot Voyager 2a PoE
 
 {{<notice type="info">}}
-**Full disclosure**: This is a product [I created](/tinypilot/) and now [sell](https://tinypilotkvm.com).
+**Full disclosure**: TinyPilot is a product [I created](/tinypilot/) and now [sell](https://tinypilotkvm.com).
 {{</notice>}}
 
 I generally connect to components in my rack over SSH or web interfaces. When I reinstall an OS, change boot settings, or fix network settings, I need a tool that gives me control at a physical level.
 
 Instead of having to drag a keyboard and monitor over to my rack, I can plug in my TinyPilot Voyager 2a when I need hardware-level access:
 
-TODO: Screenshot
+{{<img src="tinypilot-bios-menu-2.webp" max-width="600px" caption="I use TinyPilot to get physical-level access to my homelab servers through the  browser.">}}
 
 ### Software testing: Dell Optiplex 7040 mini PC
 
@@ -692,9 +712,9 @@ If you know a solution to this, let me know, and I'll update the post.
 
 ### Test the UPS before mounting it
 
-The UPS was, by far, the most difficult component to mount in the rack. I don't understand how people do it. It's about half the size and weight of a window air conditioner, but to install it, you need one hand holding it perfectly level and another hand screwing it in. I eventually decided it was a two-person job and called my wife in for reinforcements.
+The UPS was, by far, the most difficult component to mount in the rack. I don't understand how people do it. It's about half the size of a window air conditioner, but to install it, you need one hand holding it perfectly level and another hand screwing it in. I eventually decided it was a two-person job and called my wife in for reinforcements.
 
-But you don't want to go through all that work and find out like I did, that the UPS is too loud to earn a permanent place in your rack. Or it could just be a dead device, and you don't want to find that out after you mount it.
+But you don't want to go through all that work and find out like I did that the UPS is too loud to earn a permanent place in your rack. Or it could just be a dead device, and you don't want to find that out after you mount it.
 
 So before you mount your UPS, remember to test it for functionality and noise before you go to the trouble of mounting it.
 
@@ -716,13 +736,7 @@ I regret not looking around more for a managed switch that supported PoE while s
 
 ### Cage nuts aren't supposed to hurt
 
-When you install components into your rack, you screw special cage screws through the mounting holes of whatever you're installing, and the cage screw goes into a cage nut.
-
-Cage nuts have a clever design in that they clip into the rack. That way, you don't have to hold the nut in place while you're screwing the component into your rack.
-
-TODO: Photo of properly installed cage nut
-
-But... nobody told me about these clips. I thought cage nuts worked like other nuts where you just hold them behind the thing you're screwing into, and then you tighten it by hand.
+I thought cage nuts worked like other nuts where you just hold them behind the thing you're screwing into, and then you tighten it by hand.
 
 TODO: Photo of how I was installing cage nuts
 
@@ -732,6 +746,12 @@ After installing about eight cage nuts, I cursed the stupidity of whoever decide
 **Tip**: If you find yourself exerting a lot of force or feeling physical pain while building computer hardware, you're probably doing something wrong. Server equipment is designed so that middle-aged, out-of-shape IT people can build them, so you're not expected to be in peak physical condition.
 {{</notice>}}
 
+When you install components into your rack, you screw special cage screws through the mounting holes of whatever you're installing, and the cage screw goes into a cage nut.
+
+Cage nuts have a clever design in that they clip into the rack. That way, you don't have to hold the nut in place while you're screwing the component into your rack.
+
+TODO: Photo of properly installed cage nut
+
 ### Don't install patch keys backward
 
 I'm going to sound like a moron here, but I installed my patch panel keys incorrectly twice before I realized how to do it the correct way.
@@ -740,15 +760,15 @@ Now that I've seen the correct way, what I thought was correct before looks absu
 
 So, my first attempt was like this:
 
-{{<img src="key-wrong.webp" max-width="500px">}}
+{{<img src="key-wrong.webp" max-width="400px">}}
 
 It fit snugly, and it was easy to plug Ethernet cables into it, so I thought that was right. But I quickly noticed it was popping out of the patch panel every time I removed an Ethernet cable.
 
 "I must have done this backward," I thought. So I plugged the keys in from the rear. It was tougher to get them in, but they stayed in place better.
 
 {{<gallery caption="Embarrassingly, I thought this was how RJ45 patch keys were supposed to work for about six months.">}}
-{{<img src="still-wrong1.webp" max-width="420px">}}
-{{<img src="still-wrong2.webp" max-width="380px">}}
+{{<img src="still-wrong1.webp" max-width="398px">}}
+{{<img src="still-wrong2.webp" max-width="360px">}}
 {{</gallery>}}
 
 I had them like this for six months!
@@ -790,6 +810,6 @@ I'm happy with my new rack and have no regrets about the investment. It definite
 
 Now, everything lives in one efficient, organized location. When people visit my house, I look like a quirky nerd rather than a weird slob with cables everywhere.
 
-I underestimated how nice it would be to have my TinyPilot physically close to all of my devices (disclosure again: TinyPilot is a product I created). Before the rack, I used to keep my TinyPilot on the floor next to my desk. If I ever needed to debug something on a server or a Raspberry Pi on the other side of my office, I avoided it because it involved shutting down the TinyPilot, disconnecting a lot of wires, and then reconnecting them on the other side of the room.
+I underestimated how nice it would be to have my TinyPilot physically close to all of my devices (disclosure again: TinyPilot is a product I created). Before the rack, I used to keep my TinyPilot on the floor next to my desk. There was a lot of friction in using my TinyPilot to fix server issues: I had to shut down the TinyPilot, disconnect a bunch of wires, reconnect it on the other side of the room, then undo everything after I was done.
 
 With everything now physically adjacent, it's easy for me to quickly plug TinyPilot in to any misbehaving device for low-level access. It came in handy for things like figuring out [how to install NixOS on a Raspberry Pi](/nixos-pi4/) and upgrading my VM server to the latest version of Proxmox.
