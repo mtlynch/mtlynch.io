@@ -20,7 +20,7 @@ A lot of home server enthusiasts buy server racks, but I never thought of myself
 
 One day, I gave in and bought a rack. I'm now embracing being a homelab weirdo, and I'm better off for it. Having a rack made my servers easier to work with and eliminated my sprawling mess of wires.
 
-TODO: Photo of finished rack
+{{<img src="full-rack.webp" max-width="400px">}}
 
 ## I don't want your life story &mdash; just show me the rack
 
@@ -106,7 +106,7 @@ Here's the process I followed to pick a server rack:
 
 Racks have capacity measured in rack units (RUs, usually shortened to just Us). 1 rack unit is 1.75". You'll typically see racks sized as a number followed by a U, so an 8U rack would have eight rack units or 8 x 1.75" = 14" of height for components.
 
-TODO: Photo of 1U
+{{<img src="1ru.webp" max-width="600px">}}
 
 Most network switches are 1U, battery backups are usually 2U, and servers are typically 2U.
 
@@ -415,7 +415,7 @@ I already had a few [existing components](#what-i-already-had) from my pre-rack 
 
 I had never heard of Pyle as a brand, but I found these racks online, and they've worked out well.
 
-TODO: Photo
+{{<img src="rack-shelves.webp" max-width="600px">}}
 
 They're easy to install, decently priced, and they have a lip that prevents components from sliding off the rack.
 
@@ -451,7 +451,7 @@ Shopping around for patch panels made me even more confused. It's just a row of 
 
 The concept didn't click for me until I built my rack. In short, the patch panel keeps the clutter of your networking cables behind your rack rather than in front of it.
 
-TODO: Photo
+{{<img src="switch-patch-panel.webp" max-width="600px">}}
 
 {{<notice type="info">}}
 **Tip**: I recommend having a patch panel adjacent to every switch in your rack.
@@ -526,7 +526,7 @@ If you're converting an existing setup to a server rack, you'll likely need new 
 
 You'll likely need a mix of different patch cable lengths. For example, on my rack, port 16 on my switch is just 1.5" from port 16 on my patch panel, but port 1 on my switch is 6" from its corresponding patch panel port.
 
-TODO: Photo
+{{<img src="switch-patch-panel-gap.webp" max-width="600px">}}
 
 I bought 6", 12", and 3' Ethernet cables at a ratio of about 5:2:1.
 
@@ -595,13 +595,11 @@ I've included all the cables I purchased [below](#my-final-rack-setup).
 
 ### Router: Qotom Q355G4 with OPNsense
 
-My home router is a cheap Qotom Q355G4 unit running OPNsense:
-
-TODO: Replace photo
+My home router is a cheap Qotom Q355G4 unit running OPNsense.
 
 {{<gallery caption="My OPNsense firewall running on Qotom Q355G4 mini PC">}}
-{{<img src="opnsense-dashboard.webp" max-width="300px">}}
-{{<img src="opnsense-dashboard.webp" max-width="300px">}}
+{{<img src="qotom-router.webp" max-width="520px">}}
+{{<img src="opnsense-dashboard.webp" max-width="350px" has-border="true">}}
 {{</gallery>}}
 
 ### WiFi access point: Ruckus R310
@@ -623,11 +621,14 @@ I generally connect to components in my rack over SSH or web interfaces. When I 
 
 Instead of having to drag a keyboard and monitor over to my rack, I can plug in my TinyPilot Voyager 2a when I need hardware-level access:
 
-{{<img src="tinypilot-bios-menu-2.webp" max-width="600px" caption="I use TinyPilot to get physical-level access to my homelab servers through the  browser.">}}
+{{<gallery caption="I use TinyPilot to get physical-level access to my homelab servers through the  browser.">}}
+{{<img src="tinypilot-rack.webp" max-width="330px">}}
+{{<img src="tinypilot-bios-menu-2.webp" max-width="400px">}}
+{{</gallery>}}
 
 ### Software testing: Dell Optiplex 7040 mini PC
 
-TODO: Photo
+{{<img src="dell-mini-pc.webp" max-width="400px">}}
 
 For development work on TinyPilot, I often test changes against a real device. I use this Dell mini PC as a spare device because I can frequently reboot it or blow away the OS without disrupting any other work.
 
@@ -663,6 +664,10 @@ Maybe minimizing cable length is important in a data center where you're replica
 
 ## My final rack setup
 
+{{<img src="full-rack.webp" max-width="800px">}}
+
+{{<img src="rack-side.webp" max-width="800px">}}
+
 | Component                       | Choice                                                                                                                                                                     | Price  | Satisfaction |
 | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | ------------ |
 | Server rack                     | [StarTech 4POSTRACK18U](https://www.startech.com/en-us/server-management/4postrack18u)                                                                                     | $316   | A            |
@@ -689,8 +694,6 @@ And here are the smaller items:
 | [16' Fiber Cable](https://www.amazon.com/dp/B00U7UP1UM/)                                               | $14   |
 | [3' Fiber Cable](https://www.amazon.com/dp/B00T5796DQ/)                                                | $10   |
 | [NavePoint M6 cage nuts](https://www.amazon.com/gp/product/B0060RUVDS/)                                | $16   |
-
-TODO: Photos
 
 ## Next steps in my rack
 
@@ -738,7 +741,7 @@ I regret not looking around more for a managed switch that supported PoE while s
 
 I thought cage nuts worked like other nuts where you just hold them behind the thing you're screwing into, and then you tighten it by hand.
 
-TODO: Photo of how I was installing cage nuts
+{{<img src="cage-nuts-wrong.webp" max-width="600px">}}
 
 After installing about eight cage nuts, I cursed the stupidity of whoever decided to put sharp corners on a thing that required me to squeeze it between my fingertips. And then I realized I might be doing something wrong.
 
@@ -750,7 +753,7 @@ When you install components into your rack, you screw special cage screws throug
 
 Cage nuts have a clever design in that they clip into the rack. That way, you don't have to hold the nut in place while you're screwing the component into your rack.
 
-TODO: Photo of properly installed cage nut
+{{<img src="cage-nuts-right.webp" max-width="600px">}}
 
 ### Don't install patch keys backward
 
