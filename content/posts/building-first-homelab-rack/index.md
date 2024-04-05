@@ -8,20 +8,18 @@ images:
   - building-first-homelab-rack/og-cover.webp
 ---
 
-TODO: Alt text
+Seven years ago, I built my [first home server](/building-a-vm-homelab-2017/). It made my software development work faster and more enjoyable, so I've gotten more into the home server scene. I built [a custom storage server](/budget-nas/), [another development server](/building-a-vm-homelab/), and a dedicated firewall.
 
-Seven years ago, I built my [first home server](/building-a-vm-homelab-2017/). It greatly improved my software development workflows, so I've gotten more into the home server scene. I built [a custom storage server](/budget-nas/), [another development server](/building-a-vm-homelab/), and a dedicated firewall.
-
-At some point, my wife gently observed that my office was filling with unsightly wires. "What?" I asked. "This is a _normal_ amount of wires." But then I looked and realized it was kind of a lot of wires...
+At some point, my wife gently observed that my office was filling with unsightly wires. "What?" I asked. "This is a _normal_ amount of wires." But then I looked around and realized it was kind of a lot of wires...
 
 {{<gallery caption="My office, upon closer inspection, kind of had a lot of wires">}}
 {{<img src="office-wires-1.webp" max-width="350px" alt="Photo of lots of wires in my office">}}
 {{<img src="office-wires-2.webp" max-width="350px" alt="Photo of lots of wires in my office">}}
 {{</gallery>}}
 
-A lot of home server enthusiasts buy server racks, but I never thought of myself as a rack guy. I wasn't _so_ into servers that I needed a whole rack; I just had a VM server here, a data server there. Maybe a few switches scattered around. Buying a rack felt like an admission that I wasn't just a casual home server guy but an intense homelab weirdo.
+A lot of home server enthusiasts buy server racks, but I never thought of myself as a rack guy. I wasn't _so_ into servers that I needed a whole rack; I just had a VM server here, a data server there. Maybe a few switches scattered around. Buying a rack meant admitting that I wasn't just a casual home server guy but an intense homelab weirdo.
 
-One day, I gave in and bought a rack, and I'm better off for it. Having a rack makes my servers more pleasant to work with and eliminates my sprawling mess of wires.
+One day, I gave in and bought a rack, and I'm better for it. It makes my servers more pleasant to work with and eliminates my sprawling mess of wires.
 
 {{<img src="full-rack.webp" max-width="400px">}}
 
@@ -53,13 +51,13 @@ If you want to skip the explanations and jump to my rack, see [my final setup](#
 
 ## What's a homelab?
 
-"Homelab" is a colloquial term that's grown in popularity in the last decade.
+"Homelab" is a colloquial term that's grown in popularity over the last decade.
 
-A homelab is a place in your home where you can experiment with IT hardware and software that you'd typically find in an office or a data center. You can use it as a practice environment for new professional skills or just a way to play with cool technology.
+A homelab is a place in your home where you can experiment with IT hardware and software that you'd typically find in an office or a data center. You can use it as a practice environment for new professional skills or as a place to play with cool technology.
 
 ## Why build a server rack at home?
 
-If you've never played with servers, you might wonder why anyone would keep a bunch of them in their house, much less build a little shrine for them.
+If you've never worked with servers, you might wonder why anyone would keep a bunch of them in their house, much less build a little shrine for them.
 
 Everyone has their own reasons for getting into homelab, but here are mine:
 
@@ -73,7 +71,7 @@ Everyone has their own reasons for getting into homelab, but here are mine:
 
 Even though I've been experimenting with homelab for the past few years, this was my first time building a server rack, so this is a beginner-level guide.
 
-Every other article I've read about server racks reads like someone explaining their 20th rack. They don't explain how they chose components or why they rejected alternatives. They've been doing it for so long that their decisions are either unconscious or feel unworthy of mention.
+Every other article I've read about server racks reads like someone explaining their 20th rack. They don't explain how they chose components or why they rejected alternatives. They've been doing it for so long that their decisions are unconscious.
 
 Because this is my first time building a server rack, I'm free from the [curse of knowledge](https://en.wikipedia.org/wiki/Curse_of_knowledge). I'm walking you through how I approached this process for the first time.
 
@@ -81,13 +79,13 @@ Because this is my first time building a server rack, I'm free from the [curse o
 
 I'm not getting paid by anyone or receiving free products to write this post. I have no advertisers to satisfy or partnerships to maintain.
 
-The uncomfortable truth about most homelab blog posts is that they're funded by affiliate links. This means the author receives a commission when readers purchase products through links in the article.
+The uncomfortable truth about most homelab blogs is that they're funded by affiliate links. This means the author receives a commission when their readers purchase products through links in the article.
 
-Authors can still provide valuable information while using affiliate links, and some of the best homelab bloggers fund their work that way. Nevertheless, affiliate links create a clear conflict of interest between the author and their readers. If merchants pay the author a percentage commission to link to their products, it incentivizes the author to recommend expensive products and subpar merchants.
+Authors can still provide valuable information while using affiliate links, and some of the best homelab bloggers fund their work that way. Nevertheless, affiliate links create a conflict of interest between the author and their readers. If merchants pay the author a percentage commission to link to their products, it incentivizes the author to recommend expensive products and subpar merchants.
 
-I'm not claiming that to be pure of heart or denouncing anyone who writes for money, but my incentives are more aligned with my readers'. I write my blog out of vanity &mdash; I like when people tell me that they find my posts interesting or useful. Writing out my thought process also helps me improve my approach and elicits useful feedback from readers.
+I'm not claiming to be pure of heart or denouncing anyone who writes for money, but my incentives are more aligned with my readers'. I write my blog out of vanity &mdash; I like when people tell me that they find my posts interesting or useful. Writing out my thought process also helps me improve my approach and elicits useful feedback from readers.
 
-My rack does contain a TinyPilot, a hardware device that [I created](/tinypilot/), but it doesn't affect my other choices. I'll disclose my relationship with TinyPilot whenever mentioning it.
+My rack does contain a TinyPilot, a hardware device that [I created](/tinypilot/), but it doesn't affect my other choices. I'll disclose my relationship with TinyPilot whenever I mention it.
 
 ## Choosing a rack
 
@@ -109,7 +107,7 @@ Racks have capacity measured in rack units (RUs). 1 rack unit is 1.75". You typi
 
 {{<img src="1ru.webp" max-width="600px">}}
 
-Most network switches are 1U, battery backups are usually 2U, and servers are typically 2U.
+If a component is designed to mount in a rack, its height will be some multiple of a rack unit. Most network switches are 1U, battery backups are usually 2U, and servers are typically 2U.
 
 You don't want to buy too short a rack and run out of room for your components, but you also don't want an enormous rack that occupies more vertical space than you'd ever use.
 
@@ -127,9 +125,9 @@ I looked for racks that were at least 19" in depth. That gave me enough depth to
 
 ### Does it need four posts or two?
 
-Racks come in two different styles: two-post or four-post. On four-post racks, you can mount components to both the front and back.
+Racks come in two different styles: two-post or four-post. On four-post racks, you can mount components to both the front and the back.
 
-If you plan to buy long, heavy servers, you definitely need to secure them from the front and back. If you want to minimize space, a two-post rack might be sufficient.
+If you plan to buy long, heavy servers, you definitely need to secure them from both ends. If you want to minimize space, a two-post rack might be sufficient.
 
 I only wanted front-mounting components, so I could have gotten away with two posts, but four posts felt a bit sturdier, so I figured why not.
 
@@ -197,7 +195,7 @@ There are two kinds of network switches: managed and unmanaged.
 
 - **Unmanaged switches** offer no configuration. They're just dumb boxes that route network traffic. Any host connected to the switch can send network traffic to any other port on the switch.
 
-I wanted a plain old unmanaged switch. I've never used a managed switch, and I didn't want a whole bunch of extra configuration to manage. I just wanted the network to work.
+I wanted a plain old unmanaged switch. I've never used a managed switch, and I didn't want extra configuration to manage.
 
 It turned out that none of the network switches that met my criteria were unmanaged, so I went with a managed switch. Once I got my managed switch, I found that it was pretty fun to have VLANs for different devices on my network. Now, I want to configure VLANs for everything!
 
@@ -234,13 +232,13 @@ I currently have eight devices with Ethernet ports, so I looked for switches wit
 | TP-Link     | [T1600G-28PS](https://www.amazon.com/TP-Link-JetStream-T1600G-28PS-24-Port-Gigabit/dp/B0196RGV50)                                 | 24     | 4x10 Gbps SFP 24x1Gbps       | Yes     | Yes    | $295.99     |
 | TP-Link     | [T1700G-28TQ](https://www.amazon.com/TP-Link-JetStream-24-Port-Ethernet-T1700G-28TQ/dp/B01CHP5IAC)                                | 24     | 4x10 Gbps SFP 24x1Gbps       | Yes     | No     | $958.40     |
 
-I've tried Microtik in the past, and I want to like them. They're a small, independent hardware company. And some people love their weird 90s-style UI, but I found it confusing and difficult to navigate.
+I've tried Microtik in the past, and I want to like them. They're a small, independent hardware company. Some people love their weird 90s-style UI, but I found it confusing and difficult to navigate.
 
 {{<img src="microtik-interface.webp" max-width="800px" has-border="true" caption="I want to like Microtik, but I can't get over their weird 90s-style admin UI">}}
 
 I've had great experience with unmanaged TP-Link switches, so I felt good about the brand.
 
-I almost went with [this 16 x 2.5 Gbps port TP-Link unit](https://www.aliexpress.us/item/3256804686136282.html), but it's only available from China, and it doesn't seem to have any US safety or compliance certification, so I decided not to risk it.
+I almost went with [a 16 x 2.5 Gbps port TP-Link unit](https://www.aliexpress.us/item/3256804686136282.html), but it's only available from China, and it doesn't seem to have any US safety or compliance certification. I decided not to risk it.
 
 I considered the [TP-Link T1600G-28PS](https://www.amazon.com/TP-Link-JetStream-T1600G-28PS-24-Port-Gigabit/dp/B0196RGV50), which had everything I liked about the [TL-SG3428X](https://www.newegg.com/tp-link-tl-sg3428x-24-x-rj45-4-x-sfp/p/0XP-0054-00091?Item=0XP-0054-00091&SoldByNewegg=1), except it _also_ had PoE. But I read several reviews that said the fans are loud, and I didn't want a noisy switch. I went with the TL-SG3428X and figured I could get a cheaper, silent unmanaged PoE switch, as I didn't need 24 PoE ports.
 
@@ -270,25 +268,27 @@ In retrospect, I should have tried harder to find one managed switch with PoE po
 
 ## Choosing 10G NICs
 
-If you choose a 10G switch, your work isn't over. To achieve 10 Gbps speeds, you need a 10G network interface controller (NIC) for each device you want to run at 10G speeds. A regular 1 Gbps NIC will still work with a 10G switch, but it will be limited to 1 Gbps Ethernet.
+If you choose a 10 Gbps switch, your work isn't over. To achieve 10 Gbps speeds, you need a 10G network interface controller (NIC) for each device you want to run at 10 Gbps speeds. A regular 1 Gbps NIC will still work with a 10 Gbps switch, but it will be limited to 1 Gbps Ethernet.
 
-I had a lot of trouble finding 10G NICs for my systems. I got 10G working on my Windows desktop after a bit of tinkering, but I tested three different NICs on my TrueNAS storage server, and I couldn't get any of them to work.
+I had a lot of trouble finding 10G NICs for my systems. First, the market for 10G NICs is almost entirely enterprise-grade data centers, so they cost nearly $1k each. I was able to find used NICs for under $100, but I had to scour forum posts for reports of buying different NICs used.
+
+I got a 10G NIC working on my Windows desktop after a bit of tinkering, but I tested three different NICs on my TrueNAS storage server, and I couldn't get any of them to work.
 
 - Mellanox ConnextX-3 CX311A
   - On my Windows desktop, the activity lights didn't flash, and Windows didn't recognize anything in the PCI slot.
   - I found a forum post where someone mentioned that switching to another PCI slot on their motherboard solved the problem. I was skeptical, but that fixed it.
   - My TrueNAS server couldn't recognize it at all.
 - Chelsio T520-LL-CR
-  - Chelsio is one of the most common brands for TrueNAS servers, and [Serve the Home's buyer's guide](https://www.servethehome.com/buyers-guides/top-hardware-components-for-truenas-freenas-nas-servers/top-picks-freenas-nics-networking/) listed it as a recommended option.
+  - Chelsio is one of the most common brands for TrueNAS servers, and [Serve the Home](https://www.servethehome.com/buyers-guides/top-hardware-components-for-truenas-freenas-nas-servers/top-picks-freenas-nics-networking/) listed it as a recommended option.
   - My TrueNAS server [couldn't recognize it](https://www.truenas.com/community/threads/no-success-with-three-different-10-gb-nics.111026/).
 - Chelsio Dual Port T520-CR
   - My TrueNAS server [couldn't recognize this one, either](https://www.truenas.com/community/threads/no-success-with-three-different-10-gb-nics.111026/).
 
-My best guess is that the motherbord on my TrueNAS server has limited compatibility. It's [a consumer-grade ASUS Prime A320I-K motherboard](/budget-nas/#motherboard), so it may not support these enterprise-oriented 10G NICs.
+My best guess is that the motherbord on my TrueNAS server has limited compatibility. It's [a consumer-grade ASUS motherboard](/budget-nas/#motherboard), so it may not support these enterprise-oriented 10G NICs.
 
 I plan to build a new storage server in the next few months, so I'll try a fancier motherboard to see if that lets me use one of the three spare 10G NICs I've now accrued.
 
-Currently, the only 10 Gbps link in my network between my Windows desktop and my managed switch. If I need to click a checkbox on TP-Link's crummy web UI, I can do it at blazing 10 Gbps speeds.
+Currently, the only 10 Gbps link in my network is between my Windows desktop and my managed switch. If I need to click a checkbox on TP-Link's crummy web UI, I can do it at blazing 10 Gbps speeds.
 
 ## Choosing a UPS (battery backup)
 
@@ -338,9 +338,9 @@ CyberPower offers [PowerPanel Business](https://www.cyberpowersystems.com/produc
 
 {{<img src="powerpanel-webui.webp" max-width="600px" has-border="true" caption="I rate CyberPower's UPS management software as &quot;okay.&quot;">}}
 
-I played with PowerPanel for a few minutes, and I thought it was okay but unnecessary. The quality is what you'd expect for closed-source, vendor-specific hardware management software. The physical controls on the UPS are good enough for me.
+I played with PowerPanel for a few minutes, and I thought it was okay but unnecessary. The quality is what you'd expect from closed-source, vendor-specific hardware management software. The physical controls on the UPS are good enough for me.
 
-PowerPanel can run custom scripts when the UPS loses power, so I could theoretically automate shutdowns of the other devices in my rack, but it's not worth the trouble in my environment.
+PowerPanel can run custom scripts when the UPS loses power, so I could theoretically automate shutdowns of the devices in my rack, but it's not worth the trouble in my environment.
 
 Another plus is that the UPS is silent, which I thought was a given for battery backups, but it turns out it's not...
 
@@ -358,7 +358,7 @@ Not only was the Tripp Lite UPS the loudest thing in my rack, it was the loudest
 
 Did I just get a defective unit? Surely, a UPS can't be designed to be this loud all the time, right?
 
-I reached out to Tripp Lite customer support with a video of the UPS making noise. They said that it was working as intended, and it's supposed to be that loud.
+I reached out to Tripp Lite customer support with a video of the UPS making noise. They said that it was working as intended.
 
 I tried to get used to the noise, but it was so distracting that I gave up after day two.
 
@@ -391,13 +391,13 @@ Power strips are, frankly, not so exciting, so I didn't shop around very much. I
 
 This power strip has worked well. The rear outlets have wide enough spacing that brick-style power plugs don't block adjacent outlets.
 
-Noting in my rack plugs into the front outlets, but I occasionally find them useful when I have a device I want to test for a few hours.
+Nothing in my rack plugs into the front outlets, but I occasionally find them useful when I have a device I want to test for a few hours.
 
 ### Review: CyberPower CPS1215RMS
 
 - Grade: C
 
-I bought this power strip a few years ago [for the rack at my work office](/retrospectives/2021/05/). My main issue is that the outlets are too close together. A lot of the things I plug in at the office are bricks, so they cover two outlets.
+I bought this power strip a few years ago [for the rack at my work office](/retrospectives/2021/05/). My main issue is that the outlets are too close together. A lot of the things I plug in at the office have wide power bricks, so they cover two outlets.
 
 ## Choosing rack shelves
 
@@ -414,11 +414,11 @@ I already had a few [existing components](#what-i-already-had) from my pre-rack 
 
 - Grade: A
 
-I had never heard of Pyle as a brand, but I found these racks online, and they've worked out well.
+I had never heard of Pyle as a brand, but I found these shelves online, and they've worked out well.
 
 {{<img src="rack-shelves.webp" max-width="600px" caption="I keep non-mountable components on two 2U Pyle rack shelves.">}}
 
-They're easy to install, decently priced, and they have a lip that prevents components from sliding off the rack.
+They're easy to install, decently priced, and they have a lip that prevents components from sliding off the shelf.
 
 ### Review: StarTech CABSHELFV 2U rack shelves
 
@@ -444,7 +444,7 @@ I'm baffled that anyone would accept a 2U shelf that takes up 3U of space. I pro
 
 From reading homelab blogs over the years, I noticed a lot of other homelabbers integrating a patch panel into their racks.
 
-When it came time to build my server rack, I finally had to ask the question that had been on my mind for ages.
+When it finally came time to build my server rack, I had to ask the question that had been on my mind for ages.
 
 ### What the heck is a patch panel?
 
@@ -515,7 +515,7 @@ The craftsmanship on the rack mount itself is mediocre. The pieces don't fit tog
 
 The HDMI ports are also secured poorly to the mount. When I plug in an HDMI cable, the connector bends and strains. I worry they're going to snap off one day.
 
-PoE tends to generate a lot of heat, so it's good that these come with an integrated fan, but they create a constant high-pitch whirring. I keep all the fans powered off. The Pis could overheat without the fans, but it just means the CPU throttles or shuts down, which isn't a big deal for my hobby projects.
+PoE generates extra heat, so it's good that these come with an integrated fan, but they create a constant high-pitch whirring. I keep all the fans powered off. The Pi could overheat without the fan, but it just means the CPU throttles or shuts down, which isn't a big deal for my hobby projects.
 
 The instructions are terrible. Step one is to screw in the OLED. Okay, that's fine. Step two is to screw in the power button. Sure, easy peasy. Step three is to put together the five remaining components simultaneously.
 
@@ -567,9 +567,9 @@ That reduced my options to just to just RJ45 or LC.
 
 ### Ethernet vs. fiber
 
-I couldn't find many practical differences between RJ45 and LC. LC is thinner, so I find it a bit more visually appealing. But it means a different type of cable than all my other components, which are Ethernet.
+I couldn't find many practical differences between RJ45 and LC. LC is thinner, so I find it a bit more visually appealing, but it means a different type of cable than all my other components, which are Ethernet.
 
-I was surprised at the difference in pricing between Ethernet and fiber. For the options I saw, SFP+ to RJ45 transceivers were significantly more expensive than SFP+ to fiber, but Ethernet cables are cheaper than fiber cables.
+I was surprised at the difference in pricing between Ethernet and fiber. SFP+ to RJ45 transceivers were significantly more expensive than SFP+ to fiber, but Ethernet cables are cheaper than fiber cables.
 
 When I priced everything out, cost was significantly lower for fiber:
 
@@ -586,7 +586,7 @@ When I priced everything out, cost was significantly lower for fiber:
 
 {{<notice type="info">}}
 
-**Gotcha**: If you use fiber, make sure that all your SFP+ cables match in "mode." You [can't mix single-mode fiber with multimode fiber](https://community.fs.com/article/single-mode-cabling-cost-vs-multimode-cabling-cost.html).
+**Gotcha**: If you use fiber, make sure that your cables and transceivers match in "mode." You [can't mix single-mode fiber with multimode fiber](https://community.fs.com/article/single-mode-cabling-cost-vs-multimode-cabling-cost.html).
 
 {{</notice>}}
 
@@ -618,7 +618,7 @@ My access point doesn't technically live in my rack, but it plugs in to my PoE s
 **Full disclosure**: TinyPilot is a product [I created](/tinypilot/) and now [sell](https://tinypilotkvm.com).
 {{</notice>}}
 
-I generally connect to components in my rack over SSH or web interfaces. When I reinstall an OS, change boot settings, or fix network settings, I need a tool that gives me control at a physical level.
+I generally connect to components in my rack over SSH or web interfaces. When I reinstall an OS, change boot settings, or fix network settings, I need control at the physical level.
 
 Instead of having to drag a keyboard and monitor over to my rack, I can plug in my TinyPilot Voyager 2a when I need hardware-level access:
 
@@ -684,14 +684,14 @@ And here are the smaller items:
 
 | Component                                                                                              | Price |
 | ------------------------------------------------------------------------------------------------------ | ----- |
-| [Cable Matters SFP+ to LC Multimode Fiber Transceiver](https://www.amazon.com/dp/B07TTKHG6T/) (2-pack) | $40   |
-| [Cat6 Keystone Coupler (25-pack)](https://www.amazon.com/dp/B075ZPGV1H)                                | $23   |
+| [Cable Matters SFP+ to LC multimode fiber transceiver (2-pack)](https://www.amazon.com/dp/B07TTKHG6T/) | $40   |
+| [Cat6 keystone coupler (25-pack)](https://www.amazon.com/dp/B075ZPGV1H)                                | $23   |
 | [Fiber LC coupler (5-pack)](https://www.amazon.com/dp/B01B5AG0TI)                                      | $19   |
-| [LC to LC Fiber patch cables (0.2m)](https://www.amazon.com/dp/B08MCPBCFD)                             | $30   |
-| [12" Ethernet Cables (10-pack)](https://www.amazon.com/dp/B07MVT1P2P/)                                 | $19   |
-| [6" Ethernet Cables (25-pack)](https://www.amazon.com/dp/B00XIFJSEI)                                   | $34   |
-| [16' Fiber Cable](https://www.amazon.com/dp/B00U7UP1UM/)                                               | $14   |
-| [3' Fiber Cable](https://www.amazon.com/dp/B00T5796DQ/)                                                | $10   |
+| [12" Ethernet cables (10-pack)](https://www.amazon.com/dp/B07MVT1P2P/)                                 | $19   |
+| [6" Ethernet cables (25-pack)](https://www.amazon.com/dp/B00XIFJSEI)                                   | $34   |
+| [16' fiber LC mulitmode cable](https://www.amazon.com/dp/B00U7UP1UM/)                                  | $14   |
+| [3' fiber LC multimode cable](https://www.amazon.com/dp/B00T5796DQ/)                                   | $10   |
+| [8" fiber LC mulitmode patch cables (5-pack)](https://www.amazon.com/dp/B08MCPBCFD)                    | $30   |
 | [NavePoint M6 cage nuts](https://www.amazon.com/gp/product/B0060RUVDS/)                                | $16   |
 
 ## Next steps in my rack
@@ -700,7 +700,7 @@ And here are the smaller items:
 
 You may have noticed that my server rack is conspicuously missing one common component: a server.
 
-I still have my pre-rack VM and storage servers. I'm planning to migrate them to rack-mounted chassis the next time I do some upgrades, but I've punted that task since building the rack was a significant enough project on its own.
+I still have my pre-rack VM and storage servers. I'll migrate them to rack-mounted chassis the next time I do some upgrades, but I've punted that task since building the rack was a significant enough project on its own.
 
 ### Are there hats for my rack?
 
@@ -738,7 +738,7 @@ I regret not looking around more for a managed switch that supported PoE while s
 
 When you install components into your rack, you secure it to your rack using a cage screw and cage nut.
 
-I thought cage nuts worked like other nuts where you just hold them behind the thing you're screwing into, and then you tighten it by hand.
+I thought cage nuts worked like all other nuts I've ever encountered &mdash; I hold them behind the thing I'm screwing into and then tighten the screw into the nut.
 
 {{<img src="cage-nuts-wrong.webp" max-width="600px" caption="How I was incorrectly installing cage nuts">}}
 
@@ -748,15 +748,15 @@ After installing about eight cage nuts, I cursed the stupidity of whoever decide
 **Tip**: If you find yourself exerting a lot of force or feeling physical pain while building computer hardware, you're probably doing something wrong. Server equipment is designed so that middle-aged, out-of-shape IT people can use it, so you don't need peak physical fitness.
 {{</notice>}}
 
-Cage nuts have a clever design in that they clip into the rack. That way, you don't have to hold the nut in place while you're screwing the component into your rack.
+Cage nuts have a clever design in that they clip into the rack. That way, you don't have to hold the nut in place when screwing the component into your rack.
 
 {{<img src="cage-nuts-right.webp" max-width="600px" caption="The correct way to install cage nuts is to let them clip in from behind the hole in the rack post.">}}
 
 ### Don't install patch keys backward
 
-I'm going to sound like a moron here, but I installed my patch panel keys incorrectly twice before I realized how to do it the correct way.
+I'm going to sound like a moron here, but I installed my patch panel keys incorrectly twice before I realized how to do it correctly.
 
-Now that I've seen the correct way, what I thought was correct before looks absurd, but it's my first rack!
+Now that I've seen the right way, what I thought was correct before looks absurd, but it's my first rack!
 
 So, my first attempt was like this:
 
@@ -775,7 +775,7 @@ I had them like this for six months!
 
 It wasn't until I bought my second patch panel and experimented with the keys that I realized there was a different method.
 
-It turns out that the little ridge on the top isn't for decoration. The patch keys go in from the back and click in. You'll hear a little click when they slot into the correct position. The front face should be roughly flush with the front of the patch panel.
+It turns out that the little notch on the top isn't for decoration. You'll hear a little click when the notch clicks into the correct position. The front face should be roughly flush with the front of the patch panel.
 
 {{<gallery caption="Patch keys should be flush with the face of the patch panel, and their tabs click into place in the rear.">}}
 {{<img src="patch-panel-correct-1.webp" max-width="380px">}}
@@ -798,17 +798,17 @@ After about 24 hours, my desktop's Ethernet connection suddenly began disconnect
 
 A day later, the problem came back. I tried connecting the cable from my desktop directly to the switch, skipping the patch panel. That fixed the issue, which narrowed the problem to either the patch cable or the patch panel key.
 
-Finally, I spotted it: my patch cables were SFP+ single mode, whereas my long fiber cables were SFP+ multimode. I didn't even know there was a difference in fiber cables, but apparently there is, and they don't get along.
+Finally, I spotted it: my patch cables were single mode, whereas the rest of my system was multimode. I didn't even know there were different "modes" of fiber cables, but [apparently there are](https://community.fs.com/article/single-mode-cabling-cost-vs-multimode-cabling-cost.html), and they don't get along.
 
-{{<img src="single-mode-multi-mode.webp" max-width="400px" caption="My network connection went into a reset loop every 24 hours because I accidentally mixed multimode patch cables with single mode fiber cables.">}}
+{{<img src="single-mode-multi-mode.webp" max-width="400px" caption="My network connection went into a reset loop every 24 hours because I accidentally used multimode patch cables in a single mode fiber system.">}}
 
-I bought a new set of SFP+ multimode fiber cables, and the problem went away. Unfortunately, I discovered the problem three days after the return window for my $70 box of SFP+ single mode fiber cables had closed.
+I bought a new set of multimode fiber cables, and the problem went away. Unfortunately, I discovered the problem three days after the return window for my $70 box of single mode fiber cables had closed.
 
 ### Consider used equipment
 
-One blind spot in this guide is that I didn't consider purchasing used equipment.
+One blind spot in this guide is that I didn't explore used equipment aside from the 10G NICs.
 
-It's not exactly a mistake for me to buy new equipment, as I did it consciously and am happy with the choice. I'm optimizing for time more than money, and it's faster for me to search for components that meet my criteria at retailers like Newegg rather than looking for used equipment on eBay, Facebook, or craigslist.
+It's not exactly a mistake to buy new equipment, as I did it consciously and am happy with the choice. I optimized for time over money, and it's faster for me to search for components at retailers like Newegg rather than on marketplaces for used equipment like eBay, Facebook, or craigslist.
 
 If you're willing to invest a bit more time, you can dramatically reduce the cost of your rack by finding used equipment.
 
