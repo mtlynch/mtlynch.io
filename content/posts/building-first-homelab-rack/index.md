@@ -1,8 +1,11 @@
 ---
 title: "Building My First Homelab Server Rack"
 date: 2024-04-05T00:00:00-05:00
+description: What I learned building a rack for my home server infrastructure.
 tags:
   - homelab
+images:
+  - building-first-homelab-rack/og-cover.webp
 ---
 
 TODO: Alt text
@@ -482,11 +485,11 @@ My one complaint is with the port labels. They're slips of paper under plastic, 
 
 As with the NewYork cables patch panel, the Tripp Lite model is fine, but there's not much to get excited about with patch panels.
 
-TODO: Photo
+{{<img src="tripp-lite-patch-panel.webp" max-width="600px">}}
 
 I like that the labels are tiny whiteboards. I had whiteboard markers on hand, but they were too big to write in such tight spaces, so I bought [ultra fine-tip whiteboard markers](https://www.amazon.com/gp/product/B0C9WH9LPV/), and those worked well.
 
-TODO: Photo
+{{<img src="tripp-lite-labels.webp" max-width="600px" caption="The Tripp Lite patch panel features tiny labels you can write on with ultra fine-tip whiteboard markers.">}}
 
 ## Choosing a Raspberry Pi rack mount
 
