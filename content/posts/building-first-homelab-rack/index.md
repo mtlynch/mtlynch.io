@@ -28,27 +28,25 @@ If you want to skip the explanations and jump to my rack, see [my final setup](#
 
 ## Table of contents
 
-- [What's a homelab?](#)
-- [Why build a server rack at home?](#)
-- [Why this guide?](#)
-- [Choosing a rack](#)
-- [Choosing a network switch](#)
-- [Choosing 10G NICs](#)
-- [Choosing a UPS (battery backup)](#)
-- [Choosing a power strip](#)
-- [Choosing rack shelves](#)
-- [Choosing a patch panel](#)
-- [Choosing a Raspberry Pi rack mount](#)
-- [Choosing Ethernet cables](#)
-- [Choosing fiber cables](#)
-- [What I already had](#)
-- [How do I arrange components in a rack?](#)
+- [What's a homelab?](#whats-a-homelab)
+- [Why build a server rack at home?](#why-build-a-server-rack-at-home)
+- [Why this guide?](#why-this-guide)
+- [Choosing a rack](#choosing-a-rack)
+- [Choosing a network switch](#choosing-a-network-switch)
+- [Choosing 10G NICs](#choosing-10g-nics)
+- [Choosing a UPS (battery backup)](#choosing-a-ups-battery-backup)
+- [Choosing a power strip](#choosing-a-power-strip)
+- [Choosing rack shelves](#choosing-rack-shelves)
+- [Choosing a patch panel](#choosing-a-patch-panel)
+- [Choosing a Raspberry Pi rack mount](#choosing-a-raspberry-pi-rack-mount)
+- [Choosing Ethernet cables](#choosing-ethernet-cables)
+- [Choosing fiber cables](#choosing-fiber-cables)
+- [What I already had](#what-i-already-had)
+- [How do I arrange components in a rack?](#how-do-i-arrange-components-in-a-rack)
 - [My final rack setup](#my-final-rack-setup)
-- [Next steps in my rack](#)
-- [Avoiding mistakes I made](#)
-- [My life with a rack](#)
-
-TODO: Finish table of contents
+- [Next steps in my rack](#next-steps-in-my-rack)
+- [Avoiding mistakes I made](#avoiding-mistakes-i-made)
+- [My life with a rack](#my-life-with-a-rack)
 
 ## What's a homelab?
 
@@ -384,6 +382,8 @@ Power strips are, frankly, not so exciting, so I didn't shop around very much. I
 
 ### Review: Tripp Lite RS-1215-RA
 
+{{<img src="tripp-lite-strip.webp" max-width="800px" caption="Tripp Lite power strip">}}
+
 - Grade: B+
 
 This power strip has worked well. The rear outlets have wide enough spacing that brick-style power plugs don't block adjacent outlets.
@@ -413,7 +413,7 @@ I already had a few [existing components](#what-i-already-had) from my pre-rack 
 
 I had never heard of Pyle as a brand, but I found these racks online, and they've worked out well.
 
-{{<img src="rack-shelves.webp" max-width="600px">}}
+{{<img src="rack-shelves.webp" max-width="600px" caption="I keep non-mountable components on two 2U Pyle rack shelves.">}}
 
 They're easy to install, decently priced, and they have a lip that prevents components from sliding off the rack.
 
