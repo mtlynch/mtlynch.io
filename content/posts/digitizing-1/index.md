@@ -146,7 +146,7 @@ Fast forward to 2018. I had dragged these videotapes and tons of equipment to fo
 
 I asked my family if they'd be comfortable with me sending the tapes to a digitization company. Fortunately, nobody minded &mdash; they were all much more interested in seeing the footage again.
 
-> **Me**: But it means some company has access to all of our home videos. You're okay with that?<br> >**My sister**: Yeah, I don't care. You're the only one who worries about that. Wait, you could have just paid someone to do that from the start?<br> >**Me**: Uh...
+> **Me**: But it means some company has access to all of our home videos. You're okay with that?<br>**My sister**: Yeah, I don't care. You're the only one who worries about that. Wait, you could have just paid someone to do that from the start?<br>**Me**: Uh...
 
 It cost $750 to digitize all 45 tapes. That may sound expensive, but by that point, I would have paid anything to avoid another minute of troubleshooting video equipment.
 
