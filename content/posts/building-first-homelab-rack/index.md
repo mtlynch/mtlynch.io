@@ -474,7 +474,7 @@ One of the reasons I chose the NewYork brand patch panel was that I saw reviews 
 
 My one complaint is with the port labels. They're slips of paper under plastic, like a landline phone would have for speed dial in the 90s. Other patch panels have little whiteboard strips for easy erasing, and I prefer that style to strips of paper.
 
-{{<img src="patch-panel-labels.webp" max-width="550px">}}
+{{<img src="patch-panel-labels.webp" max-width="550px" caption="The labels on the NewYork patch panel are like the little speed dial labels that landline phones had in the 90s.">}}
 
 ### Review: Tripp Lite 16-port 1U Patch Panel
 
@@ -524,7 +524,7 @@ If you're converting an existing setup to a server rack, you'll likely need new 
 
 You'll likely need a mix of different patch cable lengths. For example, on my rack, port 16 on my switch is just 1.5" from port 16 on my patch panel, but port 1 on my switch is 6" from its corresponding patch panel port.
 
-{{<img src="switch-patch-panel-gap.webp" max-width="600px">}}
+{{<img src="switch-patch-panel-gap.webp" max-width="600px" caption="Consider that the distance between ports on your switch and patch panel may vary depending on the port layout of each component.">}}
 
 I bought 6", 12", and 3' Ethernet cables at a ratio of about 5:2:1.
 
@@ -620,8 +620,8 @@ I generally connect to components in my rack over SSH or web interfaces. When I 
 Instead of having to drag a keyboard and monitor over to my rack, I can plug in my TinyPilot Voyager 2a when I need hardware-level access:
 
 {{<gallery caption="I use TinyPilot to get physical-level access to my homelab servers through the  browser.">}}
-{{<img src="tinypilot-rack.webp" max-width="330px">}}
-{{<img src="tinypilot-bios-menu-2.webp" max-width="400px">}}
+{{<img src="tinypilot-rack.webp" max-width="364px">}}
+{{<img src="tinypilot-dell-bios.webp" max-width="400px">}}
 {{</gallery>}}
 
 ### Software testing: Dell Optiplex 7040 mini PC
@@ -737,7 +737,7 @@ When you install components into your rack, you secure it to your rack using a c
 
 I thought cage nuts worked like other nuts where you just hold them behind the thing you're screwing into, and then you tighten it by hand.
 
-{{<img src="cage-nuts-wrong.webp" max-width="600px">}}
+{{<img src="cage-nuts-wrong.webp" max-width="600px" caption="How I was incorrectly installing cage nuts">}}
 
 After installing about eight cage nuts, I cursed the stupidity of whoever decided to put sharp corners on a thing that required me to squeeze it between my fingertips. And then I realized I might be doing something wrong.
 
@@ -747,7 +747,7 @@ After installing about eight cage nuts, I cursed the stupidity of whoever decide
 
 Cage nuts have a clever design in that they clip into the rack. That way, you don't have to hold the nut in place while you're screwing the component into your rack.
 
-{{<img src="cage-nuts-right.webp" max-width="600px">}}
+{{<img src="cage-nuts-right.webp" max-width="600px" caption="The correct way to install cage nuts is to let them clip in from behind the hole in the rack post.">}}
 
 ### Don't install patch keys backward
 
