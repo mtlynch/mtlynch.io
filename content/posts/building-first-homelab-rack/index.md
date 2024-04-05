@@ -804,6 +804,14 @@ Finally, I spotted it: my patch cables were SFP+ single mode, whereas my long fi
 
 I bought a new set of SFP+ multimode fiber cables, and the problem went away. Unfortunately, I discovered the problem three days after the return window for my $70 box of SFP+ single mode fiber cables had closed.
 
+### Consider used equipment
+
+One blind spot in this guide is that I didn't consider purchasing used equipment.
+
+It's not exactly a mistake for me to buy new equipment, as I did it consciously and am happy with the choice. I'm optimizing for time more than money, and it's faster for me to search for components that meet my criteria at retailers like Newegg rather than looking for used equipment on eBay, Facebook, or craigslist.
+
+If you're willing to invest a bit more time, you can dramatically reduce the cost of your rack by finding used equipment.
+
 ## My life with a rack
 
 I'm happy with my new rack and have no regrets about the investment. It definitely beats my old setup of having bits and pieces of infrastructure scattered around my office.
