@@ -6,6 +6,9 @@ tags:
   - homelab
 images:
   - building-first-homelab-rack/og-cover.webp
+discuss_urls:
+  hacker_news: https://news.ycombinator.com/item?id=39942350
+  reddit: https://www.reddit.com/r/homelab/comments/1bwikka/building_my_first_homelab_server_rack/
 ---
 
 Seven years ago, I built my [first home server](/building-a-vm-homelab-2017/). It made my software development work faster and more enjoyable, so I've gotten more into the home server scene. I built [a custom storage server](/budget-nas/), [another development server](/building-a-vm-homelab/), and a dedicated firewall.
