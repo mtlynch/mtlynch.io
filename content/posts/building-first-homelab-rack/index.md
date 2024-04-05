@@ -105,7 +105,7 @@ Here's the process I followed to pick a server rack:
 
 Racks have capacity measured in rack units (RUs). 1 rack unit is 1.75". You typically see racks sized as a number followed by a U, so an 8U rack would have eight RUs or 8 x 1.75" = 14" of height for components.
 
-{{<img src="1ru.webp" max-width="600px">}}
+{{<img src="1ru.webp" max-width="600px" caption="Server racks are sized in rack units where each rack unit is 1.75&quot;.">}}
 
 If a component is designed to mount in a rack, its height will be some multiple of a rack unit. Most network switches are 1U, battery backups are usually 2U, and servers are typically 2U.
 
@@ -385,7 +385,7 @@ Power strips are, frankly, not so exciting, so I didn't shop around very much. I
 
 ### Review: Tripp Lite RS-1215-RA
 
-{{<img src="tripp-lite-strip.webp" max-width="800px" caption="Tripp Lite power strip">}}
+{{<img src="tripp-lite-strip.webp" max-width="800px">}}
 
 - Grade: B+
 
@@ -452,7 +452,7 @@ Shopping around for patch panels made me even more confused. It's just a row of 
 
 The concept didn't click for me until I built my rack. In short, the patch panel keeps the clutter of your networking cables behind your rack rather than in front of it.
 
-{{<img src="switch-patch-panel.webp" max-width="600px">}}
+{{<img src="switch-patch-panel.webp" max-width="600px" caption="Patch panels keep the front of your rack clean by routing network cables to the rear of the rack.">}}
 
 {{<notice type="info">}}
 **Tip**: I recommend having a patch panel adjacent to every switch in your rack.
@@ -473,7 +473,7 @@ At the end of the day, a patch panel is just some metal and plastic, so there's 
 
 One of the reasons I chose the NewYork brand patch panel was that I saw reviews mention a rear bar that helps support Ethernet cables. In my rack, the rear bar doesn't do anything. It's too close to the Ethernet ports to provide support, and they don't seem to need it anyway.
 
-{{<img src="panel-rear.webp" max-width="600px">}}
+{{<img src="panel-rear.webp" max-width="600px" caption="I thought the rear bar of the patch panel would help support my Ethernet cables, but they turned out not to need it.">}}
 
 My one complaint is with the port labels. They're slips of paper under plastic, like a landline phone would have for speed dial in the 90s. Other patch panels have little whiteboard strips for easy erasing, and I prefer that style to strips of paper.
 
@@ -481,11 +481,11 @@ My one complaint is with the port labels. They're slips of paper under plastic, 
 
 ### Review: Tripp Lite 16-port 1U Patch Panel
 
+{{<img src="tripp-lite-patch-panel.webp" max-width="600px">}}
+
 - Grade: A
 
 As with the NewYork cables patch panel, the Tripp Lite model is fine, but there's not much to get excited about with patch panels.
-
-{{<img src="tripp-lite-patch-panel.webp" max-width="600px">}}
 
 I like that the labels are tiny whiteboards. I had whiteboard markers on hand, but they were too big to write in such tight spaces, so I bought [ultra fine-tip whiteboard markers](https://www.amazon.com/gp/product/B0C9WH9LPV/), and those worked well.
 
@@ -502,6 +502,8 @@ I'd seen rack mounts for the Raspberry Pi, so I thought it would be fun to add o
 | UCTRONICS | [Ultimate Rack with PoE Functionality](https://www.uctronics.com/raspberry-pi/1u-rack-mount/raspberry-pi-4b-rack-mount-19-inch-1u-with-poe-and-oled-screen.html) | $190  |
 
 ### Review: UCTRONICS Ultimate Rack
+
+{{<img src="uctronics-pi-mount.webp" max-width="700px">}}
 
 - Grade: C+
 
@@ -586,7 +588,7 @@ When I priced everything out, cost was significantly lower for fiber:
 
 {{<notice type="info">}}
 
-**Gotcha**: If you use fiber, make sure that your cables and transceivers match in "mode." You [can't mix single-mode fiber with multimode fiber](https://community.fs.com/article/single-mode-cabling-cost-vs-multimode-cabling-cost.html).
+**Gotcha**: If you use fiber, make sure that your cables and transceivers match in "mode." You [can't mix single mode fiber with multimode fiber](https://community.fs.com/article/single-mode-cabling-cost-vs-multimode-cabling-cost.html). I recommend building a multimode system, as it supports 10 Gbps speeds and is significantly less expensive than single mode.
 
 {{</notice>}}
 
@@ -808,7 +810,7 @@ I bought a new set of multimode fiber cables, and the problem went away. Unfortu
 
 One blind spot in this guide is that I didn't explore used equipment aside from the 10G NICs.
 
-It's not exactly a mistake to buy new equipment, as I did it consciously and am happy with the choice. I optimized for time over money, and it's faster for me to search for components at retailers like Newegg rather than on marketplaces for used equipment like eBay, Facebook, or craigslist.
+It wasn't exactly a "mistake" to buy new equipment, as I did it consciously and am happy with the choice. I optimized for time over money, and it was faster for me to search for components at retailers like Newegg rather than on marketplaces for used equipment like eBay, Facebook, or craigslist.
 
 If you're willing to invest a bit more time, you can dramatically reduce the cost of your rack by finding used equipment.
 
