@@ -345,6 +345,8 @@ I played with PowerPanel for a few minutes, and I thought it was okay but unnece
 
 PowerPanel can run custom scripts when the UPS loses power, so I could theoretically automate shutdowns of the devices in my rack, but it's not worth the trouble in my environment.
 
+**Update (2024-04-07)**: A few readers have recommended the [Network UPS Tools (NUT) project](https://networkupstools.org/), the open-source alternative to proprietary UPS vendor software. I haven't tested it yet, but it looks interesting.
+
 Another plus is that the UPS is silent, which I thought was a given for battery backups, but it turns out it's not...
 
 ### Review: Tripp Lite SMART1500LCD
