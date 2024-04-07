@@ -325,7 +325,7 @@ After Andrew Kelly's tip helped me [reduce syscalls](https://github.com/mtlynch/
 
 I was excited to see my Zig implementation finally outperforming the official Go version, but I wanted to see just how much I could leverage Zig to improve performance.
 
-One common bottleneck in software is memory allocation. The program has to stop and wait for the OS to allocate RAM, which may involve shuffling around data to find enough contiguous space.
+One common bottleneck in software is memory allocation, as the program must request memory from the operating system and wait while the OS satisfies the request.
 
 Zig has a memory allocator called the fixed buffer allocator. Instead of the memory allocator requesting memory from the OS, you provide the allocator a fixed buffer of bytes, and it uses only those bytes to allocate memory.
 
