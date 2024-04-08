@@ -71,7 +71,7 @@ My mental model of the visitors was that they'd fall in two buckets depending on
 
 Even now, I don't understand why I was seeing a Firebase certificate error.
 
-As a workaround, I configured Firebase to redirect visitors to `netlify-next.tinypilotkvm.com` (TODO: Check). That worked, so customers stopped seeing the TLS error, but they might have found the URL a bit strange. Still, it was signed correctly.
+As a workaround, I configured Firebase to redirect visitors to `netlify-preview.tinypilotkvm.com`. That worked, so customers stopped seeing the TLS error. I wish I'd chosen a less weird staging domain than `netlify-preview` because it strongly suggests to customers that something is wonky, but it was better than a TLS error.
 
 For a full day after, the old site was still receiving traffic, but after a few days, Firebase stopped receiving any traffic for `tinypilotkvm.com`.
 
