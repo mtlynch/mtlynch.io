@@ -439,7 +439,7 @@ This downward lip forces you to either allocate 3U to each of your 2U shelves or
 
 I couldn't even figure out a purpose for the lip. It would make sense if it curved up because that would protect items on the shelf from slipping off, but why bend down? ~~It didn't look like it provided any structural support to the shelf, either.~~
 
-**Update (2024-04-09)** Several helpful readers have pointed out that this lip does indeed improve the shelf's structural integrity by preventing bends toward the middle of the shelf.
+**Update (2024-04-09)**: Several helpful readers have pointed out that this lip does indeed improve the shelf's structural integrity by preventing bends toward the middle of the shelf.
 
 I scoured reviews to see if anyone else was talking about this shelf's bizarre design choice. When other reviewers mentioned it, they didn't seem to mind. The comments had the tone of, "Oh, yeah, it extends past 2U a bit. Whatevs."
 
