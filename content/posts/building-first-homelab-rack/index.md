@@ -433,11 +433,13 @@ I originally purchased the StarTech shelves because StarTech has such a good rep
 
 When I installed them into my rack, I thought I must be misunderstanding how they work. They have a bottom lip that bends downward into the next rack slot.
 
-{{<img src="star-tech-shelf-lip.webp" max-width="600px" caption="StarTech shelves have a downward-facing lip whose sole purpose seems to be messing up your rack layout.">}}
+{{<img src="star-tech-shelf-lip.webp" max-width="600px" caption="StarTech shelves have a downward-facing lip that messes up the rest of the rack layout.">}}
 
 This downward lip forces you to either allocate 3U to each of your 2U shelves or shift everything down by 0.5U.
 
-I couldn't even figure out a purpose for the lip. It would make sense if it curved up because that would protect items on the shelf from slipping off, but why bend down? It didn't look like it provided any structural support to the shelf, either.
+I couldn't even figure out a purpose for the lip. It would make sense if it curved up because that would protect items on the shelf from slipping off, but why bend down? ~~It didn't look like it provided any structural support to the shelf, either.~~
+
+**Update (2024-04-09)**: Several helpful readers have pointed out that this lip does indeed improve the shelf's structural integrity by preventing bends toward the middle of the shelf.
 
 I scoured reviews to see if anyone else was talking about this shelf's bizarre design choice. When other reviewers mentioned it, they didn't seem to mind. The comments had the tone of, "Oh, yeah, it extends past 2U a bit. Whatevs."
 
