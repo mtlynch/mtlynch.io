@@ -433,7 +433,7 @@ I originally purchased the StarTech shelves because StarTech has such a good rep
 
 When I installed them into my rack, I thought I must be misunderstanding how they work. They have a bottom lip that bends downward into the next rack slot.
 
-{{<img src="star-tech-shelf-lip.webp" max-width="600px" caption="StarTech shelves have a downward-facing lip whose sole purpose seems to be messing up your rack layout.">}}
+{{<img src="star-tech-shelf-lip.webp" max-width="600px" caption="StarTech shelves have a downward-facing lip that messes up the rest of the rack layout.">}}
 
 This downward lip forces you to either allocate 3U to each of your 2U shelves or shift everything down by 0.5U.
 
