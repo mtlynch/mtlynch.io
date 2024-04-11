@@ -148,7 +148,7 @@ The day before the migration, I dialed down the TTL on the `logs.tinypilotkvm.co
 
 I also deployed a staging version of LogPaste to Fly.io under the domain name `logs2.tinypilotkvm.com`. That way, if I had to pull a redirect trick like I did with the TinyPilot website, I'd have a not-too-weird URL to point users to.
 
-I also prepared a migration script I could run to move data from the old LightSail version to the new Fly.io version. It was a simple bash script that [downloaded the production database](https://github.com/mtlynch/logpaste/blob/5509d61613f0bbba709ab9f093930c9696c318a8/dev-scripts/download-prod-db) from the Amazon S3 bucket and [uploaded it](https://github.com/mtlynch/logpaste/blob/master/dev-scripts/upload-prod-db) to the new Backblaze bucket backing the new Fly.io server.
+I also prepared a migration script I could run to move data from the old LightSail version to the new Fly.io version. It was a simple bash script that [downloaded the production database](https://github.com/mtlynch/logpaste/blob/5509d61613f0bbba709ab9f093930c9696c318a8/dev-scripts/download-prod-db) from the Amazon S3 bucket and [uploaded it](https://github.com/mtlynch/logpaste/blob/master/dev-scripts/upload-prod-db) to the storage bucket backing the new Fly.io server.
 
 On deployment day, I ran the migration as soon as I woke up at 7 AM. That way, slightly fewer people would be affected if there were a temporary outage.
 
@@ -162,11 +162,13 @@ I left the LightSail version up for another week and then deleted it when I conf
 **Note**: This is probably not the optimal strategy for migrating services. I suspect that there are better practices for minimizing certificate errors, but this is better than what I was doing before.
 {{</notice>}}
 
-Next time I have to move a service between hosts, I'm going to follow the process that I learned this month. As a general example, imagine that you're moving a service that you host at the URL `example.com` from platform A to platform B.
+Next time I have to move a service between hosts, I'm going to follow the process that I learned this month.
+
+As a general example, imagine that you're moving a service that you host at the URL `example.com` from platform A to platform B.
 
 #### Preparation day
 
-A day or two before your plan to migrate, perform these steps:
+A day or two before you plan to migrate, perform these steps:
 
 1. Deploy your service to platform B.
 1. Create a certificate for your service on platform B under a subdomain.
@@ -216,7 +218,7 @@ I'd written [performance benchmarks for eth-zvm](/zig-extraneous-build/), but th
 
 That bytecode is difficult to edit. When I wanted to modify my tests, I had to decompile the bytecode to something human-readable, make my changes, then recompile everything back to raw bytes.
 
-Ethereum has a human representation of bytecode called mnemonic format, so the mnemonic equivalent of the bytecode above looks like this:
+Ethereum has a human-readable representation of bytecode called mnemonic format, so the mnemonic equivalent of the bytecode above looks like this:
 
 ```bash
 PUSH1 0x01
@@ -278,9 +280,9 @@ $ ./mnc "${tempfile}" /dev/stdout
 60016000526001601ff3
 ```
 
-So, now eth-zvm's benchmark examples are in source code in human-readable mnemonic format, and I [compile them to bytecode on-demand](https://github.com/mtlynch/eth-zvm/blob/b21747c6873cc2187c83298032e2869d45da5274/.circleci/config.yml#L22-L41) to run the benchmarks.
+I now store eth-zvm's benchmark examples in human-readable mnemonic format and [compile them to bytecode on-demand](https://github.com/mtlynch/eth-zvm/blob/b21747c6873cc2187c83298032e2869d45da5274/.circleci/config.yml#L22-L41) to run the benchmarks.
 
-It was fun to write a compiler, even a very simple one. My compiler currently accepts code that's semantically incorrect like `PUSH1 RETURN`, but it's good enough for my purposes. The project continues to be a fun way to teach myself about how programming languages work at a deeper level.
+It was fun to write a compiler, even a simple one. My compiler currently accepts code that's semantically incorrect like `PUSH1 RETURN`, but it's good enough for my purposes. The project continues to be a fun way to teach myself about how programming languages work at a deeper level.
 
 ## Wrap up
 
