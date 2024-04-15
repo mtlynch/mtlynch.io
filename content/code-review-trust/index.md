@@ -11,6 +11,8 @@ The justification for skipping code reviews is usually accompanied by a claim th
 
 To me, it's like hearing someone tell me that they have a high-trust carpool group, so they don't use seatbelts.
 
+https://www.raycast.com/blog/no-code-reviews-by-default
+
 ## It's not about trust
 
 Stephen King is one of the world's most talented and successful writers. But everything Stephen King writes goes through an editor who reviews his work.
@@ -86,7 +88,7 @@ In cases where people say they still have reviews, but they water them down to s
 
 ### Why not make reviews optional?
 
-Skipping reviews accures debt, both for your codebase and your team.
+Skipping reviews accrues debt, both for your codebase and your team.
 
 Skipping reviews might speed up feature velocity in the short term, but how good is quality if you've never gotten feedback on it from anyone else? And how difficult is it going to be to maintain it a year from now when you've left the team?
 
