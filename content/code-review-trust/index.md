@@ -13,6 +13,10 @@ To me, it's like hearing someone tell me that they have a high-trust carpool gro
 
 https://www.raycast.com/blog/no-code-reviews-by-default
 
+> Many issues reveal themselves only after extensive use, which doesn't happen during code reviews. We rely on fast iterations with user feedback.
+
+Shifting costs to users.
+
 ## It's not about trust
 
 Stephen King is one of the world's most talented and successful writers. But everything Stephen King writes goes through an editor who reviews his work.
@@ -85,6 +89,8 @@ Rubber duck debugging where just explaining the problem to someone, even a rubbe
 ## Code reviews should be required and blocking
 
 In cases where people say they still have reviews, but they water them down to speed things up, I still think those are bad ideas.
+
+Should be a high-priority. Should start within minutes or hours.
 
 ### Why not make reviews optional?
 
