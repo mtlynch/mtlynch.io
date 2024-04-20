@@ -59,6 +59,10 @@ I'll give each candidate a paid trial job at your normal hourly rate, capped to 
 
 At the end, I'll pick the candidate that's the strongest fit. I will pay you for the work in the trial even if I choose not to move forward with you.
 
+## Credit
+
+Your name and link will appear at the bottom of the page. You won't be able to include a signature in the images themselves.
+
 ## How to apply
 
 Please don't email outside of the application link because it makes it hard for me to keep track of applicants that way.
