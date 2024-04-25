@@ -1,51 +1,41 @@
 ---
-title: "Seeking to Hire: Blog Illustrator"
-date: 2024-04-19T08:47:41-04:00
+title: "Hiring: Freelance Blog Illustrator"
+date: 2024-04-25T00:00:00-04:00
 ---
 
-## Overview
+I'm a blogger, and I often commission custom illustrations for my blog posts like this one:
 
-I'm hiring an illustrator for this blog.
+{{<img src="year-6-cover.webp" max-width="700px" caption="An example of an illustration I commissioned for the blog, part of my [year-in-review series](/tags/annual-review/)">}}
 
-- link to previous post
-- link to posts about hiring developers
-- link to example job specs
-
-## Background
-
-I'm a blogger, and I often commission custom illustrations for my blog posts. My [annual review posts](/tags/annual-review/) are a good showcase of
-
-I worked with an illustrator for six years and I loved working with her, but she changed careers earlier this year. I'm looking for someone who can take over as the blog's official illustrator.
+The blog's previous illustrator was the awesome [Loraine Yow](https://www.loraineyow.com/), who worked with me for six years. She recently changed careers, so I'm looking for someone who can take over as the blog's official illustrator.
 
 ## Benefits
 
 - Long-term client relationship
 - Wide variety of subjects
 - Room to bring your own creativity and style
-- Competitive pay
-- Your work will be featured with credit on a popular technology blog
-  - My blog receives 250k-450k unique readers annually.
+- Transparent, competitive pay
+- Relaxed, flexible timelines
+- Publicity with credit on a popular technology blog
+  - Blog receives 250k-450k unique readers annually.
 
 ## What it's like working with me
 
-I value communication.
-
-Everything is asynchronous.
-
-## Working process
+For each blog post, I use the following process to work with an artist on illustrations:
 
 1. I create a written spec
-   - Examples
+   - [Example spec](code-review-love-illustration.pdf) and [result](/code-review-love/)
 1. You show me an initial sketch
 1. I give notes about the draft
 1. You show me a revision
-1. We repeat steps 3 and 4 until the piece is complete (usually two to four rounds of feedback total)
+1. We repeat steps 3 and 4 until the piece is complete
+   - Usually two to four rounds of feedback
 
-I wrote about this process in [a previous blog post](/how-to-hire-a-cartoonist/#the-process-end-to-end)
+I wrote about this process in [a previous blog post](/how-to-hire-a-cartoonist/#the-process-end-to-end).
 
-## Testimonials
+The most important part of working together is clear communication. I put a lot of effort into communicating clearly, and I work best with people who communicate thoughtfully and pay attention to details.
 
-TODO
+Our communication is entirely asynchronous over email. I don't require you to have meetings or calls with me.
 
 ## What style I'm looking for
 
@@ -55,64 +45,84 @@ The words I'd like readers to think of when they read my blog are:
 
 - Lighthearted
 - Knowledgeable
-- Funny
+- Simple
 - Trustworthy
 - Doesn't take itself too seriously
 
-## Pay structure
-
-I pay by the hour rather than a flat fee per article or per illustration.
-
-### Why not pay a flat fee for every illustration?
-
-The problem with paying a flat fee for every illustration is that if I want a more elaborate illustration sometimes, then the artist is getting underpaid. It also discourages me from requesting a set of simple, quick illustrations if I'm paying the same fee regardless of complexity.
-
-### Why not pay a flat fee on a per-illustration basis?
-
-If we have to decide on a fee on a per-illustration basis, we both end up spending a lot of our time thinking about price instead of just working.
-
 ## Pay rate
 
-I'll pay you your hourly rate, but I'm aiming to pay roughly $75 per illustration.
+I'll pay you your hourly rate. I'm aiming to pay roughly $75 per illustration.
 
 If you charge $80/hr and each illustration takes you three hours, it's probably not going to work.
 
 If you charge $50/hr and each illustration takes you about 90 minutes, that would work great. It also works fine if you charge $25/hr and each illustration takes three hours. You get how math works.
 
-Keep in mind that your illustrations don't have to be as detailed as what's currently on the blog. I'd be fine with a simpler style if that allows us to hit a $75/illustration target.
+Keep in mind that your illustrations don't have to be as detailed as what's currently on the blog. I'd be fine with a simpler style that allows us to hit a $75/illustration target.
+
+### Why not pay a flat fee for every illustration?
+
+The problem with paying a flat fee for every illustration is that if I occasionally want a more elaborate illustration, then the artist is getting underpaid. It also discourages me from requesting a set of simple, quick illustrations if I'm paying the same fee regardless of complexity.
+
+### Why not pay a flat fee on a per-illustration basis?
+
+If we have to decide the fee on a per-illustration basis, we both end up spending a lot of our time thinking about price instead of collaborating on the art itself.
+
+## Time tracking
+
+I trust you to report your hours honestly. I'll never ask you to "prove" your hours to me, and I'll definitely never ask you to run any software that monitors your computer.
+
+Early in our work together, I'll ask you to timebox tasks to a set number of hours to make sure we're working together at the expected pace. As we get more experience working together, I'll skip the timeboxing and trust you to let me know if I'm asking for work that's going to be especially expensive.
 
 ## Payment
 
-I'll pay your invoice for work when each set of illustrations is complete. Expect payment within five business days of the invoice, usually sooner.
+I'll pay your invoice for work when you complete the set of illustrations for an article. Expect payment within five business days of the invoice, usually sooner.
 
 I don't pay bonuses or tips. I want your compensation to be transparent, so you don't have to wonder about undefined pay left to my discretion.
 
-I pay via PayPal, Payoneer, ACH transfer (US only), or a mailed check (US only), depending on your preference. If you have an invoicing service that takes online payments, I'm happy to pay that way.
+If you use an invoicing service that accepts online payments, I'm happy to pay that way. I can also pay via PayPal, Payoneer, ACH transfer (US only), or a mailed check (US only), depending on your preference.
 
 ## Credit
 
-Your name and link will appear at the bottom of the page. You won't be able to include a signature in the images themselves.
+I will credit you for your work by including your name and a link to your portfolio or website at the bottom of each article you work on.
+
+The images themselves will not contain a credit or signature.
+
+## Work frequency
+
+I expect to commission 10-15 illustrations per year in 7-10 separate projects.
+
+## Project timelines
+
+I typically send you the spec two to three weeks before I plan to publish an article.
+
+Most articles only have a single illustrations. If they have more than three, I can give more lead time.
 
 ## Hiring process
 
-I will shortlist the applications to 3-5 candidates.
-
-I'll give each candidate a paid trial job at your normal hourly rate, capped to five hours of work.
-
-At the end, I'll pick the candidate that's the strongest fit. I will pay you for the work in the trial even if I choose not to move forward with you.
+1. You submit an application (15-30 minutes).
+1. I pick 3-5 candidates from the applicant pool.
+1. I give you a paid trial job of a single illustration and pay your normal hourly rate.
+   - I pay you for this work even if I choose not to hire you.
+   - We'll timebox this to a maximum of five hours.
+1. If you're the best match, I offer you the job, and we begin working together immediately.
 
 ## How to apply
 
-Please don't email outside of the application link because it makes it hard for me to keep track of applicants that way.
+If this sounds like a good fit for you, please apply through the link below:
+
+- [I'd like to be this blog's next illustrator](#) (TODO: link to application form)
+
+Please don't email outside of the application link above, as that makes it difficult for me to track applications.
+
+### Application questions
 
 {{<notice type="info">}}
 **Note to Loraine**: I'm going to move these questions to an application form, but I'm including them here so it's easy for you to see them.
 {{</notice>}}
 
-### Questions
-
 - Why would you be a good fit for this job?
-- What kind of work have you done that's similar to this?
-- What is your hourly rate (in US dollars)?
+- Can you tell me about previous projects you've had that are similar to this work?
+- What's your hourly rate? (in US dollars)
 - Please share a link to your portfolio.
 - Please share links to one to three pieces that will help me understand the style you'd like to bring to this work.
+- Is there anything else you'd like to share? (optional)
