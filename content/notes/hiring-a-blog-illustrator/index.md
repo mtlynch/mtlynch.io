@@ -121,7 +121,7 @@ Please don't email outside of the application link above, as that makes it diffi
 {{</notice>}}
 
 - Why would you be a good fit for this job?
-- Can you tell me about previous projects you've had that are similar to this work?
+- Can you tell me about previous projects you've done that are similar to this work?
 - What's your hourly rate? (in US dollars)
 - Please share a link to your portfolio.
 - Please share links to one to three pieces that will help me understand the style you'd like to bring to this work.
