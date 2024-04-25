@@ -27,7 +27,7 @@ I'm going to share some approaches to deploying Syncthing that failed. If you wa
 
 ## Prior work: Syncthing + Tailscale on Fly.io
 
-For the past two years, [Fly.io](https://fly.io) has been my preferred cloud hosting provider, so I checked if anyone had written about Syncthing on Fly.io. It turned out that [Andrew Katz had written a nice tutorial](https://akatz.org/running-syncthing-on-fly.io-with-tailscale/) less than a year ago.
+For the past two years, [Fly.io](https://fly.io) has been my preferred cloud hosting provider, so I checked if anyone had written about Syncthing on Fly.io. It turned out that [Andrew Katz had written a nice tutorial](https://akatz.org/running-syncthing-on-fly-io-with-tailscale/) less than a year ago.
 
 {{<img src="akatz-tutorial.png" has-border="true" max-width="600px" alt="Screenshot of post 'Running Syncthing on Fly.io with Tailscale'">}}
 
