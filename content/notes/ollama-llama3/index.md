@@ -15,7 +15,7 @@ I don't have much experience running open-source AI models, and I didn't see a l
 
 To run this experiment, I provisioned the following server on [Scaleway](https://scaleway.com):
 
-- Server: GPU-3070-S
+- Server instance type: GPU-3070-S
 - OS: Ubuntu Focal
 - Disk size: 100 GB (needed because the model is large)
 
