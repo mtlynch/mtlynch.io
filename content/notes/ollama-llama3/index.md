@@ -11,7 +11,7 @@ I saw that Meta [released the Llama 3](https://llama.meta.com/llama3/) AI model,
 
 I don't have much experience running open-source AI models, and I didn't see a lot of documentation about how to run them. I tinkered with it for a few hours and got Llama 3 working with [Ollama](https://ollama.com/), so I wanted to share my instructions.
 
-### Provisioning a cloud server with a GPU
+## Provisioning a cloud server with a GPU
 
 To run this experiment, I provisioned the following server on [Scaleway](https://scaleway.com):
 
@@ -73,7 +73,7 @@ docker run hello-world
 I adapted the standard [Open-WebUI](https://github.com/open-webui/open-webui) Docker Compose file to make one for Ollama, which you can download and run with the following command:
 
 ```bash
-wget {{<baseurl>}}ollama-llama3/docker-compose.yml && \
+wget {{<baseurl>}}/ollama-llama3/docker-compose.yml && \
   docker-compose up
 ```
 
@@ -97,6 +97,12 @@ I don't know the differences between the models, but Llama 3 is the newest one t
 
 {{<img src="open-webui-download-model.webp" has-border="true">}}
 
-It's going to sit at 100% for a while, but it's not done until you see..
+It's going to sit at 100% for a while, but it's not done until you see a popup announcing the model is fully downloaded.
 
-`llama3:70b` was too slow, so I had to switch to `llama3`.
+Once that's downloaded, close the settings dialog and select `llama3:latest` from the dropdown:
+
+{{<img src="llama3-model.webp" has-border="true">}}
+
+From there, you can start playing with Llama 3. Here's me having a conversation with Llama 3 as it pretends to be Nathan Fielder:
+
+{{<img src="llama3-answer.webp" has-border="true">}}
