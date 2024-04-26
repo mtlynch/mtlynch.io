@@ -73,7 +73,7 @@ docker run hello-world
 I adapted the standard [Open-WebUI](https://github.com/open-webui/open-webui) Docker Compose file to make one for Ollama, which you can download and run with the following command:
 
 ```bash
-wget {{<baseurl>}}/ollama-llama3/docker-compose.yml && \
+wget {{<baseurl>}}/notes/ollama-llama3/docker-compose.yml && \
   docker-compose up
 ```
 
