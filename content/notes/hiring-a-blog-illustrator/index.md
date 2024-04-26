@@ -49,6 +49,13 @@ The words I'd like readers to think of when they read my blog are:
 - Trustworthy
 - Doesn't take itself too seriously
 
+### Example styles I like
+
+- [The Oatmeal](https://theoatmeal.com/comics/pens_as_printers)
+- [System32Comics](https://www.webtoons.com/en/canvas/system32comics/computers-are-amazing-at-reading/viewer?title_no=235074&episode_no=110)
+- [Goomics](https://goomics.net/239/)
+- [F/OSS Comics](https://fosscomics.com/8.%20The%20Origins%20of%20Unix%20and%20the%20C%20Language/)
+
 ## Pay rate
 
 I'll pay you your hourly rate. I'm aiming to pay roughly $75 per illustration.
