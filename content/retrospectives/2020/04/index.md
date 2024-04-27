@@ -196,7 +196,7 @@ My one [enterprise client](/retrospectives/2020/01/#zestfulhttpszestfuldatacom) 
 - Presented my talk at NERD Summit: ["How I Used Python to Steal Money."](https://decks.mtlynch.io/nerds-2020/#/)
   - There's a [recording](https://youtu.be/W05vGbi8B4A), but the audio quality is pretty bad.
 - Updated my blog newsletter so that subscribers can choose what type of updates to receive.
-  - If you're on my [mailing list](#subscribe-form), you'll see a link at the bottom of each email.
+  - If you're on my mailing list, you'll see a link at the bottom of each email.
 
 ### Lessons learned
 
