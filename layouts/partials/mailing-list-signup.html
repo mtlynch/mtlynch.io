@@ -18,21 +18,21 @@
   <div class="subscribe-container-inner">
     <h3>Be the first to know when I post cool stuff</h3>
     <p>Subscribe to get my latest posts by email.</p>
-
-    <form id="subscribe-form">
-      <!-- honeypot to prevent bot signups -->
-      <input class="ninja" name="ninja" type="text" />
-
-      <input name="email" type="email" placeholder="Email address" required />
+    <form
+      action="https://buttondown.email/api/emails/embed-subscribe/mtlynch"
+      method="post"
+      target="popupwindow"
+    >
+      <input type="email" name="email" id="bd-email" required />
 
       {{ if (eq $currentPageType "notes") }}
-        <input name="topic" type="hidden" value="all" />
+        <input name="tag" type="hidden" value="all" />
       {{ else }}
         <div class="subscribe-topic">
           <div>
             <input
               id="blogposts"
-              name="topic"
+              name="tag"
               type="radio"
               value="{{ $currentPageType }}"
             />
@@ -42,7 +42,7 @@
           <div>
             <input
               id="all-updates"
-              name="topic"
+              name="tag"
               type="radio"
               value="all"
               checked
@@ -59,86 +59,5 @@
         <input type="submit" value="Subscribe" class="subscribe-btn" />
       </div>
     </form>
-
-    <div class="success">
-      <p>
-        Thanks for signing up! Check your email to confirm your subscription.
-      </p>
-    </div>
-
-    <div class="error">
-      <p>Whoops, we weren't able to process your signup.</p>
-      <p class="message"></p>
-    </div>
   </div>
 </div>
-
-<script>
-  function jsonifyFormData(formData) {
-    var data = {};
-    formData.forEach((value, key) => {
-      data[key] = value;
-    });
-    return JSON.stringify(data);
-  }
-
-  function showSuccess() {
-    document.getElementById("subscribe-form").style.display = "none";
-    document.querySelector(".subscribe-container .error").style.display =
-      "none";
-    document.querySelector(".subscribe-container .success").style.display =
-      "inline-block";
-  }
-
-  function showError(error) {
-    if (error) {
-      document.querySelector(".subscribe-container .error .message").innerText =
-        error;
-    }
-    document.querySelector(".subscribe-container .success").style.display =
-      "none";
-    document.querySelector(".subscribe-container .error").style.display =
-      "inline-block";
-  }
-
-  window.addEventListener("load", function () {
-    const form = document.getElementById("subscribe-form");
-
-    function sendData(formData) {
-      const xhr = new XMLHttpRequest();
-
-      xhr.addEventListener("load", function (event) {
-        if (!event || !event.target || !event.target.response) {
-          showError(null);
-          return;
-        }
-        if (event.target.status === 200) {
-          showSuccess();
-          return;
-        }
-        const response = JSON.parse(event.target.response);
-        if (!response) {
-          showError(null);
-          return;
-        }
-        showError(response.error);
-      });
-      xhr.addEventListener("error", function (event) {
-        document.querySelector(".subscribe-container .error").style.display =
-          "inline-block";
-        document.querySelector(".subscribe-container .success").style.display =
-          "none";
-      });
-
-      xhr.open("POST", "https://subscriptions.mtlynch.io/subscribe");
-
-      xhr.setRequestHeader("Content-Type", "application/json");
-      xhr.send(jsonifyFormData(formData));
-    }
-
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      sendData(new FormData(form));
-    });
-  });
-</script>
