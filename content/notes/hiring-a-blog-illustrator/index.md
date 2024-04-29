@@ -1,6 +1,8 @@
 ---
 title: "Hiring: Freelance Blog Illustrator"
-date: 2024-04-25T00:00:00-04:00
+date: 2024-04-29T00:00:00-04:00
+images:
+  - /notes/hiring-a-blog-illustrator/og-cover.webp
 ---
 
 I'm a blogger, and I often commission custom illustrations for my blog posts like this one:
@@ -118,19 +120,8 @@ Most articles only have a single illustrations. If they have more than three, I 
 
 If this sounds like a good fit for you, please apply through the link below:
 
-- [I'd like to be this blog's next illustrator](#) (TODO: link to application form)
+- [I'd like to be this blog's next illustrator](https://mtlynchio.homerun.co/blog-illustrator/en/apply?token=3cba74f9eadb2b09c8fcf75c7cceb18c)
+
+I will personally review every application I receive. If you put honest effort into applying, I will send a personalized response back, even if I decide not to move forward with your application.
 
 Please don't email outside of the application link above, as that makes it difficult for me to track applications.
-
-### Application questions
-
-{{<notice type="info">}}
-**Note to Loraine**: I'm going to move these questions to an application form, but I'm including them here so it's easy for you to see them.
-{{</notice>}}
-
-- Why would you be a good fit for this job?
-- Can you tell me about previous projects you've done that are similar to this work?
-- What's your hourly rate? (in US dollars)
-- Please share a link to your portfolio.
-- Please share links to one to three pieces that will help me understand the style you'd like to bring to this work.
-- Is there anything else you'd like to share? (optional)
