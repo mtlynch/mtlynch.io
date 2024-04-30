@@ -1,15 +1,15 @@
 ---
-title: "Hiring: Freelance Blog Illustrator"
+title: "Hiring: Freelance Blog Cartoonist"
 date: 2024-04-29T00:00:00-04:00
 images:
   - /notes/hiring-a-blog-illustrator/og-cover.webp
 ---
 
-I'm a blogger, and I often commission custom illustrations for my blog posts like this one:
+I'm a blogger, and I often commission custom cartoons for my blog posts like this one:
 
-{{<img src="year-6-cover.webp" max-width="700px" caption="An example of an illustration I commissioned for the blog, part of my [year-in-review series](/tags/annual-review/)">}}
+{{<img src="year-6-cover.webp" max-width="700px" caption="An example of a cartoon I commissioned for the blog, part of my [year-in-review series](/tags/annual-review/)">}}
 
-The blog's previous illustrator was the awesome [Loraine Yow](https://www.loraineyow.com/), who worked with me for six years. She recently changed careers, so I'm looking for someone who can take over as the blog's official illustrator.
+The blog's previous cartoonist was the awesome [Loraine Yow](https://www.loraineyow.com/), who worked with me for six years. She recently changed careers, so I'm looking for someone who can take over as the blog's official cartoonist.
 
 ## Benefits
 
@@ -23,7 +23,7 @@ The blog's previous illustrator was the awesome [Loraine Yow](https://www.lorain
 
 ## What it's like working with me
 
-For each blog post, I use the following process to work with an artist on illustrations:
+For each blog post, I use the following process to work with an artist on cartoons:
 
 1. I create a written spec
    - [Example spec](code-review-love-illustration.pdf) and [result](/code-review-love/)
@@ -41,7 +41,7 @@ Our communication is entirely asynchronous over email. I don't require you to ha
 
 ## What style I'm looking for
 
-My previous illustrator had a distinctive style that I liked, but I don't want you to just mimic the existing style. I'd like you to bring your own style to the work.
+My previous cartoonist had a distinctive style that I liked, but I don't want you to just mimic the existing style. I'd like you to bring your own style to the work.
 
 The words I'd like readers to think of when they read my blog are:
 
@@ -61,21 +61,21 @@ The words I'd like readers to think of when they read my blog are:
 
 ## Pay rate
 
-I'll pay you your hourly rate. I'm aiming to pay roughly $75 per illustration.
+I'll pay you your hourly rate. I'm aiming to pay roughly $75 per cartoon.
 
-If you charge $80/hr and each illustration takes you three hours, it's probably not going to work.
+If you charge $80/hr and each cartoon takes you three hours, it's probably not going to work.
 
-If you charge $50/hr and each illustration takes you about 90 minutes, that would work great. It also works fine if you charge $25/hr and each illustration takes three hours. You get how math works.
+If you charge $50/hr and each cartoon takes you about 90 minutes, that would work great. It also works fine if you charge $25/hr and each cartoon takes three hours. You get how math works.
 
-Keep in mind that your illustrations don't have to be as detailed as what's currently on the blog. I'd be fine with a simpler style that allows us to hit a $75/illustration target.
+Keep in mind that your cartoons don't have to be as detailed as what's currently on the blog. I'd be fine with a simpler style that allows us to hit a $75/cartoon target.
 
-### Why not pay a flat fee for every illustration?
+### Why not pay a flat fee for every cartoon?
 
-The problem with paying a flat fee for every illustration is that if I occasionally want a more elaborate illustration, then the artist is getting underpaid. It also discourages me from requesting a set of simple, quick illustrations if I'm paying the same fee regardless of complexity.
+The problem with paying a flat fee for every cartoon is that if I occasionally want a more elaborate cartoon, then the artist is getting underpaid. It also discourages me from requesting a set of simple, quick cartoons if I'm paying the same fee regardless of complexity.
 
-### Why not pay a flat fee on a per-illustration basis?
+### Why not pay a flat fee on a per-cartoon basis?
 
-If we have to decide the fee on a per-illustration basis, we both end up spending a lot of our time thinking about price instead of collaborating on the art itself.
+If we have to decide the fee on a per-cartoon basis, we both end up spending a lot of our time thinking about price instead of collaborating on the art itself.
 
 ## Time tracking
 
@@ -85,7 +85,7 @@ Early in our work together, I'll ask you to timebox tasks to a set number of hou
 
 ## Payment
 
-I'll pay your invoice for work when you complete the set of illustrations for an article. Expect payment within five business days of the invoice, usually sooner.
+I'll pay your invoice for work when you complete the set of cartoons for an article. Expect payment within five business days of the invoice, usually sooner.
 
 I don't pay bonuses or tips. I want your compensation to be transparent, so you don't have to wonder about undefined pay left to my discretion.
 
@@ -99,19 +99,19 @@ The images themselves will not contain a credit or signature.
 
 ## Work frequency
 
-I expect to commission 10-15 illustrations per year in 7-10 separate projects.
+I expect to commission 10-15 cartoons per year in 7-10 separate projects.
 
 ## Project timelines
 
 I typically send you the spec two to three weeks before I plan to publish an article.
 
-Most articles only have a single illustrations. If they have more than three, I can give more lead time.
+Most articles only have a single cartoons. If they have more than three, I can give more lead time.
 
 ## Hiring process
 
 1. You submit an application (15-30 minutes).
 1. I pick 3-5 candidates from the applicant pool.
-1. I give you a paid trial job of a single illustration and pay your normal hourly rate.
+1. I give you a paid trial job of a single cartoon and pay your normal hourly rate.
    - I pay you for this work even if I choose not to hire you.
    - We'll timebox this to a maximum of five hours.
 1. If you're the best match, I offer you the job, and we begin working together immediately.
@@ -120,7 +120,7 @@ Most articles only have a single illustrations. If they have more than three, I 
 
 If this sounds like a good fit for you, please apply through the link below:
 
-- [I'd like to be this blog's next illustrator](https://mtlynchio.homerun.co/blog-illustrator/en/apply?token=3cba74f9eadb2b09c8fcf75c7cceb18c)
+- [I'd like to be this blog's next cartoonist](https://mtlynchio.homerun.co/blog-illustrator/en/apply?token=3cba74f9eadb2b09c8fcf75c7cceb18c)
 
 I will personally review every application I receive. If you put honest effort into applying, I will send a personalized response back, even if I decide not to move forward with your application.
 
