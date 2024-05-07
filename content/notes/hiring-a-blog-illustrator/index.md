@@ -5,6 +5,16 @@ images:
   - /notes/hiring-a-blog-illustrator/og-cover.webp
 ---
 
+## Applications closed
+
+{{<notice type="warning">}}
+
+**Update**: Applications are now **closed**.
+
+{{</notice>}}
+
+## Previous overview
+
 I'm a blogger, and I often commission custom cartoons for my blog posts like this one:
 
 {{<img src="year-6-cover.webp" max-width="700px" caption="An example of a cartoon I commissioned for the blog, part of my [year-in-review series](/tags/annual-review/)">}}
@@ -120,7 +130,7 @@ Most articles only have a single cartoons. If they have more than three, I can g
 
 If this sounds like a good fit for you, please apply through the link below:
 
-- [I'd like to be this blog's next cartoonist](https://mtlynchio.homerun.co/blog-illustrator/en/apply?token=3cba74f9eadb2b09c8fcf75c7cceb18c)
+- ~~I'd like to be this blog's next cartoonist~~ (applications are now closed)
 
 I will personally review every application I receive. If you put honest effort into applying, I will send a personalized response back, even if I decide not to move forward with your application.
 
