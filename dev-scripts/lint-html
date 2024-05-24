@@ -84,8 +84,8 @@ htmlproofer \
   --swap-urls "https\://mtlynch.io/:/" \
   --ignore-urls "${URL_IGNORE}" \
   `# Some sites return HTTP 400/429 - No Error when HTMLProofer sends ` \
-  `# requests, so ignore those.` \
-  --ignore-status-codes "400,429" \
+  `# requests, so ignore those. Ignore 403s because it's mostly CI noise.` \
+  --ignore-status-codes "400,403,429" \
   --no-enforce-https \
   "$htmlproofer_args_extra" \
   "${BUILD_DIR}"
