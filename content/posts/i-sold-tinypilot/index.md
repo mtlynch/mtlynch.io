@@ -1,7 +1,7 @@
 ---
 title: "I Sold TinyPilot, My First Successful Business"
 date: 2024-05-24T00:00:00-04:00
-hero_image: cover.jpg
+hero_image: cover.webp
 tags:
   - tinypilot
 ---
@@ -184,7 +184,7 @@ When you sell a business at TinyPilot's scale, there's no deposit. You could hav
 
 As due diligence stretched on, I felt my negotiating position becoming markedly weaker. Before I signed the LOI, I could easily move on to the next buyer. By month two of due diligence, walking away from the deal meant restarting this costly and time-consuming process from zero. I'd also run the risk of TinyPilot's sales slipping after so many months distracted from the business.
 
-{{<img src="due-diligence.png">}}
+{{<img src="due-diligence.webp">}}
 
 ### Closing week
 
