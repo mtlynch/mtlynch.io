@@ -228,4 +228,4 @@ Because this configuration keeps all of Sia's persistent state outside of the co
 
 This guide showed you how to get your host up and running, but there's more you need do to configure your host and optimize it to maximize your profits. Sia community member RBZL has written an excellent guide:
 
-- [Sia Hosting Guide](https://siasetup.info/guides/hosting_on_sia)
+- [Sia Hosting Guide](https://web.archive.org/web/20221222160421/https://siasetup.info/guides/hosting-on-sia)
