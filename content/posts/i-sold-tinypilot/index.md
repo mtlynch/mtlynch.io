@@ -6,15 +6,15 @@ tags:
   - tinypilot
 ---
 
-My first two years as a bootstrapped founder went poorly. I could barely find paying customers, and all of my businesses lost money. I was questioning whether I should have [quit my cushy developer job](/why-i-quit-google) at Google.
+My first two years as a bootstrapped founder went poorly. I could barely find any paying customers, and all of my businesses lost money. I began questioning whether I should have [quit my cushy developer job](/why-i-quit-google) at Google.
 
 In mid-2020, yet another of my businesses [had flopped](/retrospectives/2020/04/), and it was only kind of COVID's fault. Desperate for a distraction, I made a little contraption that allowed me to control my home servers from my web browser. I called it [TinyPilot](https://tinypilot.com).
 
-{{<img src="tinypilot-prototype.webp" alt="Photo of a laptop open with 'Hello, World' printed on the screen. On another laptop, the same desktop is displayed within a TinyPilot web interface." max-width="450px" caption="The first prototype of TinyPilot, which allowed me to control computers in my home remotely without installing any software">}}
+{{<img src="tinypilot-prototype.webp" alt="Photo of a laptop open with 'Hello, World' printed on the screen. On another laptop, the same desktop is displayed within a TinyPilot web interface." max-width="450px" caption="The prototype of TinyPilot, which allowed me to control computers in my home remotely without installing any software">}}
 
 I [blogged about the process of creating TinyPilot](/tinypilot/), and I immediately knew I was onto something. The post reached the [#1 spot on Hacker News](https://news.ycombinator.com/item?id=23927380) and [several](https://www.reddit.com/r/programming/comments/hwt1it/tinypilot_build_a_kvm_over_ip_for_under_100/) [popular](https://www.reddit.com/r/HomeServer/comments/jeoc74/tinypilot_build_a_kvm_over_ip_for_under_100/) [subreddits](https://www.reddit.com/r/homelab/comments/hwimys/tinypilot_build_a_kvm_over_ip_for_under_100/).
 
-I started offering pre-packaged kits to allow readers to build their own TinyPilots, and they immediately sold out. With every other project, I had to beg and plead people to even try my product. With TinyPilot, so many people wanted to buy that I was struggling to keep the product stocked.
+I started offering pre-packaged kits to allow readers to build their own TinyPilots, and they immediately sold out. With every other project, I had to beg and plead with people even to try my product. With TinyPilot, there was so much demand that I struggled to keep the product stocked.
 
 For the next four years, I focused full-time on building TinyPilot into a business and improving the product. I grew the company to a team of seven people and [$1M in annual revenue](/solo-developer-year-6/#tinypilot-became-20x-more-profitable).
 
@@ -39,9 +39,9 @@ A month ago, I sold the company for $600k.
 
 ## What am I allowed to say?
 
-I specifically negotiated in the sale agreement that I can discuss the terms of the sale and the process of selling the business.
+I specifically negotiated in the sale agreement that I could discuss the terms of the sale and the process of selling the business.
 
-I can't say anything disparaging about TinyPilot, and I can't reveal anything about TinyPilot that would give its competitors a meaningful advantage.
+I can't say anything disparaging about TinyPilot or reveal anything about TinyPilot that would give its competitors a meaningful advantage.
 
 ## Part 1: Preparing to sell
 
@@ -49,7 +49,7 @@ I can't say anything disparaging about TinyPilot, and I can't reveal anything ab
 
 After years of flops, I was finally earning a consistent profit, selling a product I was proud of, and working with a great team. Wasn't that exactly what I wanted?
 
-I missed writing code. TinyPilot is a hardware business, so there were tons of moving parts beyond just the software. I was the sole manager of six people on three distinct teams, and I managed relationships with our key vendors. I rarely had uninterrupted time for deep focus, and when I did, I felt too exhausted from juggling everything else.
+I missed writing code. TinyPilot is a hardware business, so there were tons of moving parts beyond the software. I was the sole manager of six people on three distinct teams and managed relationships with our key vendors. I rarely had uninterrupted time for deep focus, and when I did, I felt too exhausted from juggling everything else.
 
 My wife and I also wanted to start a family. TinyPilot only occupied about 20% of my time, but it occupied 90% of my stress. I would have done a terrible job juggling founder stress with new parent stress.
 
@@ -57,7 +57,7 @@ My wife and I also wanted to start a family. TinyPilot only occupied about 20% o
 
 TinyPilot fell into an odd, in-between business category. It was a hardware manufacturer, a software company, and an eCommerce store. How would I find a buyer comfortable with all three?
 
-I had larger competitors who were selling equivalent devices for twice the price of a TinyPilot. I considered approaching enterprise competitors and saying, "Give me a million dollars, and I'll never build another TinyPilot."
+There were larger competitors selling equivalent devices to TinyPilot for twice the price. I considered approaching enterprise competitors and saying, "Give me a million dollars, and I'll never build another TinyPilot."
 
 {{<img src="aten.webp" max-width="500px" has-border="true" alt="Screenshot of ATEN KVM over IP device selling for $929.95" caption="TinyPilot's enterprise competitors sell similar devices for twice the price.">}}
 
@@ -67,13 +67,13 @@ I wanted a buyer who would keep investing in the company, not a competitor who w
 
 ### FE International: The wrong broker for TinyPilot
 
-In October 2022, I reached out to [FE International](https://feinternational.com/), the only brokerage I'd ever heard of that catered to bootstrapped founders. I wasn't ready to sell at that point, but I wanted to understand the path to an exit.
+In October 2022, I reached out to [FE International](https://feinternational.com/), the only brokerage I'd ever heard of that catered to bootstrapped founders. I wasn't ready to sell, but I wanted to understand the path to an exit.
 
 FE initially seemed interested. Then, after a few email exchanges and seeing my financials, they gave me a soft brushoff:
 
 > Unfortunately, with the current set up of two main SKUs generating roughly 98% of your revenue, this would not be a good fit for most buyers. Buyers typically want to see that a business has a minimum of 10 SKUs, and that none of these SKUs generate more than 30% of revenue.
 >
-> At this time we would advise, in preparation for a sale. to start to consider increasing your product offering. These don’t always have to be completely new products, and this could also be USB-C cables, wall plugs, ethernet cables, servers, display ports, HDMI cables etc, this would also help to increase your AOV.
+> At this time we would advise, in preparation for a sale to start to consider increasing your product offering. These don’t always have to be completely new products, and this could also be USB-C cables, wall plugs, ethernet cables, servers, display ports, HDMI cables etc, this would also help to increase your AOV.
 
 After FE's rejection, I felt trapped and panicked.
 
@@ -81,9 +81,9 @@ I had invested hundreds of thousands of dollars into software and hardware engin
 
 ### If you can't get out, get comfortable
 
-I didn't want to just shut down the company and lay everyone off, but I also didn't want to carry the stress of running TinyPilot for the rest of my life. So, I looked for ways to make the business less stressful.
+I didn't want to shut down the company and lay everyone off, but I also didn't want to carry the stress of running TinyPilot for the rest of my life. So, I looked for ways to make the business less stressful.
 
-One of the most difficult parts of TinyPilot was hardware revisions. We were always redesigning TinyPilot's hardware to make improvements, but that meant constantly finding new suppliers and rethinking our manufacturing pipeline. In 2023, I decided to just keep the design we had and stop fiddling with the hardware.
+One of the most difficult parts of TinyPilot was hardware revisions. We were always redesigning TinyPilot's hardware to make improvements, but that meant constantly finding new suppliers and rethinking our manufacturing pipeline. In 2023, I decided to keep the design we had and stop fiddling with the hardware.
 
 The other source of complexity was TinyPilot's office. We were still doing everything in-house: managing inventory, assembling devices, and fulfilling orders. I worked with TinyPilot's in-person team to migrate the office's core functions to external vendors. It was a major challenge to outsource so many delicate processes, but it eliminated an enormous amount of management overhead and stress.
 
@@ -93,11 +93,11 @@ The happy side-effect of making TinyPilot easier to manage was that it also made
 
 ### The strategic acquirer
 
-With the company in stronger shape, I decided to take another shot at searching for a buyer. Going through a broker didn't work, so I began reaching out to buyers on my own.
+With the company in stronger shape, I decided to take another shot at searching for a buyer. Going through a broker didn't work, so I began contacting buyers on my own.
 
 In his book [_The Art of Selling Your Business_](https://books.builttosell.com/sp/the-art-of-selling-your-business-free-book-landing-page/), John Warrilow encourages founders to seek acquisitions from "strategic buyers," companies that could use your business as part of their growth strategy.
 
-For example, if you're a salsa company that consistently makes $100k/year, a typical buyer might acquire you for $300k. But a buyer who already manufactures tortilla chips, would see obvious synergy between the two businesses, so your salsa company would be worth $400k-600k to them.
+For example, if you're a salsa company that consistently makes $100k/year, a typical buyer might acquire you for $300k. But a buyer who already manufactures tortilla chips would see obvious synergy between the two businesses, so your salsa company would be worth $400k-600k to them.
 
 {{<img src="synergy.webp" alt="Screencap of Jack Donaghy from 30 Rock saying 'First of all, never badmouth synergy.'" max-width="400px">}}
 
@@ -160,7 +160,7 @@ Scott made the first formal offer, but it was for $500k, a steep $99k drop from 
 
 We awaited an offer from the founder duo, who had sounded eager to move forward. Two days later, they backed out without making an offer at all.
 
-Uh oh. Did I just blow the deal? What if $500k was the best I was going to get, and I just rejected it? I still had the option of re-launching on Quiet Light, but seeing both buyers reject the asking price shook my confidence.
+Uh oh. Did I blow the deal? What if $500k was the best I was going to get, and I just rejected it? I still had the option of re-launching on Quiet Light, but seeing both buyers reject the asking price shook my confidence.
 
 Fortunately, the next day, Scott sent a new LOI for my $599k asking price, and I accepted.
 
@@ -172,17 +172,17 @@ It was great to negotiate an extra $99k, but that would be the last point in the
 
 One of the biggest surprises in this process was how much closing time matters.
 
-Chris from Quiet Light had recommended selling, if at all possible, to a buyer with cash on hand rather than someone who needs a loan. When the buyer finances the purchase with a bank loan, due diligence takes longer, and there are more decision makers who can kill the deal.
+Chris from Quiet Light had recommended selling, if at all possible, to a buyer with cash on hand rather than someone who needs a loan. When the buyer finances the purchase with a bank loan, due diligence takes longer, and there are more decision-makers who can kill the deal.
 
 At the time, I thought, "Faster would be better, but I'm a patient person. What's an extra two months?"
 
-I quickly learned that a slower closing isn't just about a few months of patience &mdash; it's about how much additional risk and work the seller absorbs with each passing week of due diligence.
+I quickly learned that a slower closing isn't about a few months of patience &mdash; it's about how much additional risk and work the seller absorbs with each passing week of due diligence.
 
 When you sell a house, the buyer has to put down a deposit of 1-5% to hold their claim on the house. If financing falls through or the buyer changes their mind, the seller keeps the money as compensation for the time they lost.
 
 When you sell a business at TinyPilot's scale, there's no deposit. You can invest hundreds of hours into preparing reports during due diligence, reveal all your confidential business secrets, and spend thousands negotiating legal documents and still walk away with nothing if the buyer backs out.
 
-As due diligence stretched on, I felt my negotiating position becoming markedly weaker. Before I signed the LOI, I could easily move on to the next buyer. By month two of due diligence, walking away from the deal meant restarting this costly and time-consuming process from zero. I'd also run the risk of TinyPilot's sales slipping after so many months distracted from the business.
+As due diligence stretched on, my negotiating position became markedly weaker. Before I signed the LOI, I could easily move on to the next buyer. By month two of due diligence, walking away from the deal meant restarting this costly and time-consuming process from zero. I'd also risk TinyPilot's sales slipping after so many months being distracted from the business.
 
 {{<img src="due-diligence.webp" alt="Cartoon of a man growing increasingly weak as he receives due diligence requests over several weeks">}}
 
@@ -192,11 +192,11 @@ By April, we'd been in due diligence for what felt like a year but was actually 
 
 The week of closing felt like the longest week of my life. I didn't know what to do with myself.
 
-The only thing I could find motivation for was ruminating about all the things could go wrong. What if the buyer got cold feet? What if Google announced an identical product and gave it away for free? What if our manufacturer spontaneously went out of business?
+The only thing I could find motivation for was ruminating about all the things that could go wrong. What if the buyer got cold feet? What if Google announced an identical product and gave it away for free? What if our manufacturer spontaneously went out of business?
 
 It felt like I was on my way to my retirement party, but there was a 5% chance that when I got there, my boss would say, "Gotcha! You're not really retiring. Now, work extra hard to make up for all the time you wasted preparing to leave."
 
-On closing day, I couldn't focus on anything at all. I woke up at 4am and couldn't fall back to sleep, so I just started checking my email obsessively. I couldn't do anything that required even basic thinking, and I couldn't even relax enough to watch TV, so I started disassembling some old TinyPilot devices that were in my closet.
+On closing day, I couldn't focus on anything at all. I woke up at 4 AM and couldn't fall back to sleep, so I started checking my email obsessively. I couldn't do anything that required even basic thinking, and I couldn't even relax enough to watch TV, so I started disassembling some old TinyPilot devices that were in my closet.
 
 At 2 PM, the escrow company confirmed that they had the money ready to wire, so I signed the closing documents. TinyPilot was no longer my company.
 
@@ -204,11 +204,11 @@ At 2 PM, the escrow company confirmed that they had the money ready to wire, so 
 
 The first thing I did after I got the money was eat dessert.
 
-My wife and I were at dinner the night of the closing, and I got the email confirmation of the wire transfer just before our dessert arrived.
+My wife and I were at dinner the night of the closing, and I got the email confirmation of the wire transfer right before our dessert arrived.
 
 {{<img src="final-wire.webp" max-width="700px" has-border="true" alt="Screenshot of email confirming receipt of $610,147.83 in wire transfer payment" caption="The payment is sale price + cost of inventory - broker's fee.">}}
 
-Over the next 48 hours, I had celebratory meals with friends and family in different parts of Massachusetts during which I ate the following desserts (in order):
+Over the next 48 hours, I had celebratory meals with friends and family in different parts of Massachusetts, during which I ate the following desserts (in order):
 
 1. Chocolate tort and vanilla ice cream
 1. Oreo cheesecake
@@ -217,7 +217,7 @@ Over the next 48 hours, I had celebratory meals with friends and family in diffe
 1. Crème brûlée
 1. Pizookie Trio (Strawberry Shortcake, Sugar Cookie, Salted Caramel)
 
-### Did it feel like relief?
+### Did I feel relief?
 
 When I talked to friends about the sale, the most common question was whether I felt relieved to be done.
 
@@ -227,7 +227,7 @@ I got more relaxed each week and probably felt Officially Relaxed™ by week thr
 
 ### Do I feel a loss of identity?
 
-I've heard other founders say they struggled with a loss of identify after they sold their business. Others say it feels like they've given up their baby.
+I've heard other founders say they struggled with a loss of identity after they sold their business. Others say it feels like they've given up their baby.
 
 I didn't feel a change in identity or a sense of deep loss.
 
@@ -235,23 +235,23 @@ I always ran TinyPilot like a modest small business rather than a startup that w
 
 ## Timeline
 
-- Oct. 3, 2023 - I sign engagement letter with Quiet Light.
+- Oct. 3, 2023 - I sign an engagement letter with Quiet Light.
 - Oct. 17, 2023 - Quiet Light lists TinyPilot on their website.
 - Dec. 15, 2023 - I have my first conversation with Scott.
 - Jan. 16, 2023 - I receive the first LOI.
-- Jan. 23, 2024 - I sign LOI with target close date of April 16.
-- Feb. 23, 2024 - I get first draft of the APA.
+- Jan. 23, 2024 - I sign the LOI with target close date of April 16.
+- Feb. 23, 2024 - I get the first draft of the APA.
 - March 7th, 2024 - Lender approves the loan.
 - March 20th, 2024 - Scott and I finalize the APA.
 - March 25th, 2024 - Lender finishes legal review and submits loan package to SBA.
-- April 3rd, 2024 - Lender notifies buyer of SBA approval, suggests a closing date of April 12th.
-- April 12th, 2024 - We sign final legal agreements, I receive payment.
+- April 3rd, 2024 - Lender notifies buyer of SBA approval and suggests a closing date of April 12th.
+- April 12th, 2024 - We sign final legal agreements, and I receive payment.
 
 ## What's next?
 
 My wife and I are expecting our first child in August, so that's been the main thing I'm preparing for. I'm trying to keep plans loose until I see what my life is like with a baby.
 
-In the short-term, I'm looking for simple projects that I can step away from abruptly when the baby arrives. Beyond that, I'd like to find a way to build a virtuous cycle between my blog and my business. I'd love it if I could write about what I'm interested in, the writing brings people to my business, and the business funds the time I spend writing.
+In the short term, I'm looking for simple projects that I can step away from abruptly when the baby arrives. Beyond that, I'd like to find a way to build a virtuous cycle between my blog and my business. I'd love it if I could write about what I'm interested in, the writing brings people to my business, and the business funds the time I spend writing.
 
 If you're a reader of my blog, let me know what you're interested in seeing me do next, and maybe I'll do it:
 
