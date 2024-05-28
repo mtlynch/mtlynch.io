@@ -229,7 +229,7 @@ I got more relaxed each week and probably felt Officially Relaxed™ by week thr
 
 I've heard other founders say they struggled with a loss of identify after they sold their business. Others say it feels like they've given up their baby.
 
-I didn't feel any change in identity, and I think it's because I always ran TinyPilot like an unambitious small business rather than a startup that was going to change the world. I'm proud of TinyPilot and put a lot of care into the company, but it was never a blood, sweat, and tears kind of business.
+I didn't feel a change in identity or a sense of deep loss. I think it's because I always ran TinyPilot like a modest small business rather than a startup that was going to change the world. I'm proud of TinyPilot and put a lot of care into the company, but it was never a blood, sweat, and tears thing for me.
 
 ## Timeline
 
@@ -249,15 +249,13 @@ I didn't feel any change in identity, and I think it's because I always ran Tiny
 
 My wife and I are expecting our first child in August, so that's been the main thing I'm preparing for. I'm trying to keep plans loose until I see what my life is like with a baby.
 
-In the short-term, I'm looking for simple projects that I can step away from abruptly. I'd also like to find something where I get to write about what I'm interested in, and it brings people to my business, so maybe a course or a tool that aligns with what my readers find interesting.
+In the short-term, I'm looking for simple projects that I can step away from abruptly when the baby arrives. Beyond that, I'd like to find a way to build a virtuous cycle between my blog and my business. I'd love it if I could write about what I'm interested in, the writing brings people to my business, and the business funds the time I spend writing.
 
 If you're a reader of my blog, let me know what you're interested in seeing me do next, and maybe I'll do it:
 
-- [What should Michael do next?](https://tally.so/forms/nr6Pyv/edit) (TODO: Change to public link)
+- [What should Michael do next?](https://tally.so/r/nr6Pyv)
 
 As for TinyPilot, Scott plans to keep improving the TinyPilot product and bring it to a wider audience. Everyone on the team received offers to stay on, and they all accepted. The company will continue to publish updates on [TinyPilot's blog](https://tinypilotkvm.com/blog), and Scott is continuing my tradition of sharing his behind-the-scenes strategy [on his personal blog](https://www.aftertheladder.com).
-
-TODO: Squash change history
 
 ---
 
