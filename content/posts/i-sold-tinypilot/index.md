@@ -1,6 +1,6 @@
 ---
 title: "I Sold TinyPilot, My First Successful Business"
-date: 2024-05-24T00:00:00-04:00
+date: 2024-05-29T00:00:00-04:00
 hero_image: cover.webp
 tags:
   - tinypilot
@@ -10,7 +10,7 @@ My first two years as a bootstrapped founder went poorly. I could barely find pa
 
 In mid-2020, yet another of my businesses [had flopped](/retrospectives/2020/04/), and it was only kind of COVID's fault. Desperate for a distraction, I made a little contraption that allowed me to control my home servers from my web browser. I called it [TinyPilot](https://tinypilot.com).
 
-{{<img src="tinypilot-prototype.webp" max-width="450px" caption="The first prototype of TinyPilot, which allowed me to control computers in my home remotely without installing any software">}}
+{{<img src="tinypilot-prototype.webp" alt="Photo of a laptop open with 'Hello, World' printed on the screen. On another laptop, the same desktop is displayed within a TinyPilot web interface." max-width="450px" caption="The first prototype of TinyPilot, which allowed me to control computers in my home remotely without installing any software">}}
 
 I [blogged about the process of creating TinyPilot](/tinypilot/), and I immediately knew I was onto something. The post reached the [#1 spot on Hacker News](https://news.ycombinator.com/item?id=23927380) and [several](https://www.reddit.com/r/programming/comments/hwt1it/tinypilot_build_a_kvm_over_ip_for_under_100/) [popular](https://www.reddit.com/r/HomeServer/comments/jeoc74/tinypilot_build_a_kvm_over_ip_for_under_100/) [subreddits](https://www.reddit.com/r/homelab/comments/hwimys/tinypilot_build_a_kvm_over_ip_for_under_100/).
 
@@ -59,7 +59,7 @@ TinyPilot fell into an odd, in-between business category. It was a hardware manu
 
 I had larger competitors who were selling equivalent devices for twice the price of a TinyPilot. I considered approaching enterprise competitors and saying, "Give me a million dollars, and I'll never build another TinyPilot."
 
-{{<img src="aten.webp" max-width="500px" has-border="true" caption="TinyPilot's enterprise competitors sell similar devices for twice the price.">}}
+{{<img src="aten.webp" max-width="500px" has-border="true" alt="Screenshot of ATEN KVM over IP device selling for $929.95" caption="TinyPilot's enterprise competitors sell similar devices for twice the price.">}}
 
 But I didn't want to sell out. I'd asked customers to take a chance on me as a new, unproven hardware manufacturer. Running off with the cash would have felt like a massive betrayal to our customers and the TinyPilot team.
 
@@ -99,7 +99,7 @@ In his book [_The Art of Selling Your Business_](https://books.builttosell.com/s
 
 For example, if you're a salsa company that consistently makes $100k/year, a typical buyer might acquire you for $300k. But a buyer who already manufactures tortilla chips, would see obvious synergy between the two businesses, so your salsa company would be worth $400k-600k to them.
 
-{{<img src="synergy.webp" max-width="400px">}}
+{{<img src="synergy.webp" alt="Screencap of Jack Donaghy from 30 Rock saying 'First of all, never badmouth synergy.'" max-width="400px">}}
 
 I emailed the CEOs of five companies that complemented TinyPilot in some way. Most ignored me or gave polite brushoffs, but one company showed immediate interest. I'll call them ServerCo.
 
@@ -132,7 +132,7 @@ At the event, I spoke with Chris Guthrie, an advisor at Quiet Light. He seemed o
 
 Chris recommened presenting TinyPilot mainly as an eCommerce business with an asking price of around 3x the last twelve months of earnings. At the time, earnings were $208k, so we agreed to list at $599k, which was 2.9x the last 12 months of earnings.
 
-{{<img src="quiet-light-launch.png" has-border="true" caption="TinyPilot's listing card on Quiet Light's website">}}
+{{<img src="quiet-light-launch.png" has-border="true" alt="Listing card for TinyPilot showing $599,000 asking price on $1,022,090 in revenue and $207,816 in income" caption="TinyPilot's listing card on Quiet Light's website">}}
 
 For the first two months, things looked bleak. Chris received a handful of inquiries, but they were from buyers who either wanted me to stay on as a co-founder or wanted me to finance the majority of the purchase.
 
@@ -184,7 +184,7 @@ When you sell a business at TinyPilot's scale, there's no deposit. You can inves
 
 As due diligence stretched on, I felt my negotiating position becoming markedly weaker. Before I signed the LOI, I could easily move on to the next buyer. By month two of due diligence, walking away from the deal meant restarting this costly and time-consuming process from zero. I'd also run the risk of TinyPilot's sales slipping after so many months distracted from the business.
 
-{{<img src="due-diligence.webp">}}
+{{<img src="due-diligence.webp" alt="Cartoon of a man growing increasingly weak as he receives due diligence requests over several weeks">}}
 
 ### Closing week
 
@@ -206,7 +206,7 @@ The first thing I did after I got the money was eat dessert.
 
 My wife and I were at dinner the night of the closing, and I got the email confirmation of the wire transfer just before our dessert arrived.
 
-{{<img src="final-wire.webp" max-width="700px" has-border="true" caption="The payment is sale price + cost of inventory - broker's fee.">}}
+{{<img src="final-wire.webp" max-width="700px" has-border="true" alt="Screenshot of email confirming receipt of $610,147.83 in wire transfer payment" caption="The payment is sale price + cost of inventory - broker's fee.">}}
 
 Over the next 48 hours, I had celebratory meals with friends and family in different parts of Massachusetts during which I ate the following desserts (in order):
 
