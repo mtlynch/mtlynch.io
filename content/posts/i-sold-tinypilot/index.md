@@ -229,7 +229,9 @@ I got more relaxed each week and probably felt Officially Relaxed™ by week thr
 
 I've heard other founders say they struggled with a loss of identify after they sold their business. Others say it feels like they've given up their baby.
 
-I didn't feel a change in identity or a sense of deep loss. I think it's because I always ran TinyPilot like a modest small business rather than a startup that was going to change the world. I'm proud of TinyPilot and put a lot of care into the company, but it was never a blood, sweat, and tears thing for me.
+I didn't feel a change in identity or a sense of deep loss.
+
+I always ran TinyPilot like a modest small business rather than a startup that was going to change the world. I'm proud of TinyPilot and put a lot of care into the company, but it was never a blood, sweat, and tears thing for me.
 
 ## Timeline
 
