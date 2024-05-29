@@ -106,7 +106,7 @@ I emailed the CEOs of five companies that complemented TinyPilot in some way. Mo
 
 ServerCo was an attractive buyer. They were bootstrapped as well, they seemed culturally aligned with TinyPilot, and we sold complementary products to similar customers. Having never participated in an acquisition before, they were cautious but enthusiastic about buying TinyPilot.
 
-ServerCo had a lot of detailed questions about TinyPilot's finances and risks. They'd email me a round of detailed questions, I'd answer in a day or two, then there'd be weeks of silence. Finally, they'd respond with a new round of questions, and we'd start the cycle again.
+ServerCo would email me a list of detailed questions about TinyPilot's finances and risks, I'd answer in a day or two, and then there'd be weeks of silence. Finally, they'd respond with a new round of questions, and we'd start the cycle again.
 
 After four months of intermittent discussions, ServerCo finally presented me with an offer:
 
@@ -205,7 +205,7 @@ Finally, at 2 PM, I received the email I'd been waiting for all day. The escrow 
 
 The first thing I did after I got the money was eat dessert.
 
-My wife and I were at dinner the night of the closing, and I got the email confirmation of the wire transfer right before our dessert arrived.
+My wife and I were at dinner the night of the closing, and the email confirmation of the wire transfer arrived right before the server brought over our desserts.
 
 {{<img src="final-wire.webp" max-width="700px" has-border="true" alt="Screenshot of email confirming receipt of $610,147.83 in wire transfer payment" caption="The payment is sale price + cost of inventory - broker's fee.">}}
 
@@ -224,7 +224,7 @@ When I talked to friends about the sale, the most common question was whether I 
 
 For the first few weeks, I still felt anxious. Consciously, I knew that the deal had closed, but my body was still stuck in high-alert mode from months of urgent due diligence requests.
 
-I got more relaxed each week and probably felt Officially Relaxed™ by week three. By that point, I'd transferred all of TinyPilot's accounts to Scott, and he was comfortable taking the reins. I felt like the company was in good hands.
+I felt a bit more relaxed each week and probably felt Officially Relaxed™ by week three. By that point, I'd transferred all of TinyPilot's accounts to Scott, and he was comfortable taking the reins. I felt like the company was in good hands.
 
 ### Do I feel a loss of identity?
 
