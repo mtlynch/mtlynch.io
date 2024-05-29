@@ -4,6 +4,7 @@ date: 2024-05-29T00:00:00-04:00
 hero_image: cover.webp
 tags:
   - tinypilot
+description: Four years after starting TinyPilot from scratch, I've sold the company and handed complete control over to a new owner.
 ---
 
 My first two years as a bootstrapped founder went poorly. I could barely find any paying customers, and all of my businesses lost money. I began questioning my decision to [quit my cushy Google job](/why-i-quit-google).
@@ -124,7 +125,7 @@ I politely told ServerCo we were too far apart on price to continue negotiating,
 
 ### Attending Microconf and meeting Quiet Light Brokerage
 
-In 2023, I attended [Microconf](https://microconf.com/), a small conference for bootstrapped founders. I hoped that I could either find a potential buyer there or at least get advice from other founders about what to do with TinyPilot.
+In 2023, I attended [Microconf](https://microconf.com/), a small conference for bootstrapped founders. I hoped that to either find a potential buyer there or at least get advice from other founders about what to do with TinyPilot.
 
 One of the sponsors of the conference was a brokerage I'd never heard of, [Quiet Light](https://quietlight.com/). They piqued my interest because not only did they cater to bootstrapped founders, they worked with a lot of eCommerce companies.
 
@@ -164,7 +165,7 @@ Uh oh. Did I blow the deal? What if $500k was the best I was going to get, and I
 
 Fortunately, the next day, Scott sent a new LOI for my $599k asking price, and I accepted.
 
-It was great to bump the price by $99k, but that would be the last point in the process that felt like I was negotiating from a position of strength.
+It was great to bump the price by $99k, but that was the last point in the process that felt like I was negotiating from a position of strength.
 
 ## Part 3: Closing
 
@@ -192,7 +193,7 @@ By April, we'd been in due diligence for what felt like a year but was actually 
 
 That final week was the longest week of my life. I didn't know what to do with myself.
 
-The only thing I could find motivation for was ruminating about all the things that could go wrong. What if the buyer got cold feet? What if Google announced an identical product and gave it away for free? What if our manufacturer spontaneously went out of business?
+The only thing I could find motivation for was ruminating about all the things that might go wrong. What if the buyer got cold feet? What if Google announced an identical product and gave it away for free? What if our manufacturer spontaneously went out of business?
 
 It felt like I was on my way to my retirement party, but there was a 5% chance that when I got there, my boss would say, "Gotcha! You're not really retiring. Now, work extra hard to make up for all the time you wasted preparing to leave."
 
@@ -251,7 +252,7 @@ I always ran TinyPilot like a modest small business rather than a world-changing
 
 My wife and I are expecting our first child in August, so that's been the main thing I'm preparing for. I'm trying to keep plans loose until I see what my life is like with a baby.
 
-In the short term, I'm looking for simple projects that I can step away from abruptly when the baby arrives. Beyond that, I'd like to find a way to build a virtuous cycle between my blog and my business. I'd love it if I could write about what I'm interested in, then attract cusomers to my product through my writing and fund my writing from the business.
+In the short term, I'm looking for simple projects that I can step away from abruptly when the baby arrives. Beyond that, I'd like to find a way to build a virtuous cycle between my blog and my business. I'd love to write about what interests me, then attract cusomers to my product through my writing and fund my writing from the business.
 
 If you're a reader of my blog, let me know what you're interested in seeing me do next, and maybe I'll do it:
 
