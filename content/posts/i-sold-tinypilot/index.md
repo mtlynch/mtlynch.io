@@ -262,6 +262,8 @@ If you're a reader of my blog, let me know what you're interested in seeing me d
 
 As for TinyPilot, Scott plans to keep improving the product and bring it to a wider audience. Everyone on the team received offers to stay on, and they all accepted. The company will continue to publish updates on [TinyPilot's blog](https://tinypilotkvm.com/blog), and Scott is continuing my tradition of [blogging about TinyPilot's behind-the-scenes strategy](https://www.aftertheladder.com).
 
+{{<tweet user="deliberatecoder" id="1795832878783496702">}}
+
 ---
 
 _Original illustrations by [Piotr Letachowicz](https://cartoony.eu). Thanks to other founders who shared their acquisition stories, especially [Josh Pigford](https://baremetrics.com/blog/i-sold-baremetrics), [Kareem Mayan](https://blog.codetree.com/articles/what-its-like-buying-a-128k-side-project.html), and [Laura Roeder](https://lauraroeder.com/exactly-how-i-cold-emailed-my-way-to-a-life-changing-exit-and-you-can-too-165d8eaf8306)._
