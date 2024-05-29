@@ -6,15 +6,15 @@ tags:
   - tinypilot
 ---
 
-My first two years as a bootstrapped founder went poorly. I could barely find any paying customers, and all of my businesses lost money. I began questioning whether I should have [quit my cushy developer job](/why-i-quit-google) at Google.
+My first two years as a bootstrapped founder went poorly. I could barely find any paying customers, and all of my businesses lost money. I began questioning my decision to [quit my cushy Google job](/why-i-quit-google).
 
-In mid-2020, yet another of my businesses [had flopped](/retrospectives/2020/04/), and it was only kind of COVID's fault. Desperate for a distraction, I made a little contraption that allowed me to control my home servers from my web browser. I called it [TinyPilot](https://tinypilot.com).
+In mid-2020, yet another of my businesses [had flopped](/retrospectives/2020/04/), and it was only kind of COVID's fault. Desperate for a distraction, I made a little contraption that controlled my home servers through my web browser. I called it [TinyPilot](https://tinypilot.com).
 
 {{<img src="tinypilot-prototype.webp" alt="Photo of a laptop open with 'Hello, World' printed on the screen. On another laptop, the same desktop is displayed within a TinyPilot web interface." max-width="450px" caption="The prototype of TinyPilot, which allowed me to control computers in my home remotely without installing any software">}}
 
-I [blogged about the process of creating TinyPilot](/tinypilot/), and I immediately knew I was onto something. The post reached the [#1 spot on Hacker News](https://news.ycombinator.com/item?id=23927380) and [several](https://www.reddit.com/r/programming/comments/hwt1it/tinypilot_build_a_kvm_over_ip_for_under_100/) [popular](https://www.reddit.com/r/HomeServer/comments/jeoc74/tinypilot_build_a_kvm_over_ip_for_under_100/) [subreddits](https://www.reddit.com/r/homelab/comments/hwimys/tinypilot_build_a_kvm_over_ip_for_under_100/).
+I [blogged about creating TinyPilot](/tinypilot/), and I immediately knew I was onto something. My post reached the [#1 spot on Hacker News](https://news.ycombinator.com/item?id=23927380) and [several](https://www.reddit.com/r/programming/comments/hwt1it/tinypilot_build_a_kvm_over_ip_for_under_100/) [popular](https://www.reddit.com/r/HomeServer/comments/jeoc74/tinypilot_build_a_kvm_over_ip_for_under_100/) [subreddits](https://www.reddit.com/r/homelab/comments/hwimys/tinypilot_build_a_kvm_over_ip_for_under_100/).
 
-I started offering pre-packaged kits to allow readers to build their own TinyPilots, and they immediately sold out. With every other project, I had to beg and plead with people even to try my product. With TinyPilot, there was so much demand that I struggled to keep the product stocked.
+I started offering pre-packaged kits so my readers could build their own TinyPilots, and they immediately sold out. With every other project, I had to beg and plead with people even to try my product. With TinyPilot, there was so much demand that I struggled for months to keep the product stocked.
 
 For the next four years, I focused full-time on building TinyPilot into a business and improving the product. I grew the company to a team of seven people and [$1M in annual revenue](/solo-developer-year-6/#tinypilot-became-20x-more-profitable).
 
@@ -30,7 +30,7 @@ A month ago, I sold the company for $600k.
 - Sale price: $598,000 (2.4x annual earnings)
 - Broker commission: $88,900
 - Legal fees: $18,297
-- My profit from sale: $490,803
+- My profit from the sale: $490,803
 - Payment terms: Full cash payment at closing (no earnout, no seller financing)
 - Seller obligations:
   - 30 days of free consulting (max of 40 hours/week, 80 hours total)
@@ -61,9 +61,9 @@ There were larger competitors selling equivalent devices to TinyPilot for twice 
 
 {{<img src="aten.webp" max-width="500px" has-border="true" alt="Screenshot of ATEN KVM over IP device selling for $929.95" caption="TinyPilot's enterprise competitors sell similar devices for twice the price.">}}
 
-But I didn't want to sell out. I'd asked customers to take a chance on me as a new, unproven hardware manufacturer. Running off with the cash would have felt like a massive betrayal to our customers and the TinyPilot team.
+But I didn't want to sell out. I'd asked customers to take a chance on me as a new, unproven hardware manufacturer. Running off with the cash would have felt like a massive betrayal to my customers and the TinyPilot team.
 
-I wanted a buyer who would keep investing in the company, not a competitor who would just shutter the product or bleed it dry.
+I wanted a buyer who would keep investing in the company, not a competitor who would just axe the product or bleed it dry.
 
 ### FE International: The wrong broker for TinyPilot
 
@@ -93,7 +93,7 @@ The happy side-effect of making TinyPilot easier to manage was that it also made
 
 ### The strategic acquirer
 
-With the company in stronger shape, I decided to take another shot at searching for a buyer. Going through a broker didn't work, so I began contacting buyers on my own.
+With the company in stronger shape, I decided to restart my search for a buyer. Going through a broker didn't work, so I began contacting buyers on my own.
 
 In his book [_The Art of Selling Your Business_](https://books.builttosell.com/sp/the-art-of-selling-your-business-free-book-landing-page/), John Warrilow encourages founders to seek acquisitions from "strategic buyers," companies that could use your business as part of their growth strategy.
 
@@ -105,7 +105,7 @@ I emailed the CEOs of five companies that complemented TinyPilot in some way. Mo
 
 ServerCo was an attractive buyer. They were bootstrapped as well, they seemed culturally aligned with TinyPilot, and we sold complementary products to similar customers. Having never participated in an acquisition before, they were cautious but enthusiastic about buying TinyPilot.
 
-SeverCo had a lot of detailed questions about TinyPilot's finances and risks. They'd email me a round of detailed questions, I'd answer in a day or two, then there'd be weeks of silence. Finally, they'd respond with a new round of questions, and we'd start the cycle again.
+ServerCo had a lot of detailed questions about TinyPilot's finances and risks. They'd email me a round of detailed questions, I'd answer in a day or two, then there'd be weeks of silence. Finally, they'd respond with a new round of questions, and we'd start the cycle again.
 
 After four months of intermittent discussions, ServerCo finally presented me with an offer:
 
@@ -118,7 +118,7 @@ They didn't intend it to be an insultingly bad offer, but it was a pretty bad of
 
 eCommerce companies typically sell for 2.5-3.5x earnings. The cash portiton of ServerCo's offer was 0.9x TinyPilot's earnings.
 
-As for the salary, $100k/yr is roughly what a software developer makes fresh out of college in the US. And that's without a 12-month commitment.
+As for the salary, $100k/year is roughly what a software developer makes fresh out of college in the US. And that's without a 12-month commitment.
 
 I politely told ServerCo we were too far apart on price to continue negotiating, but we both agreed to keep the door open in case things changed.
 
@@ -126,11 +126,11 @@ I politely told ServerCo we were too far apart on price to continue negotiating,
 
 In 2023, I attended [Microconf](https://microconf.com/), a small conference for bootstrapped founders. I hoped that I could either find a potential buyer there or at least get advice from other founders about what to do with TinyPilot.
 
-One of the sponsors of the conference was a brokerage I'd never heard of before, [Quiet Light](https://quietlight.com/). They piqued my interest because not only did they cater to bootstrapped founders, they worked with a lot of eCommerce companies.
+One of the sponsors of the conference was a brokerage I'd never heard of, [Quiet Light](https://quietlight.com/). They piqued my interest because not only did they cater to bootstrapped founders, they worked with a lot of eCommerce companies.
 
-At the event, I spoke with Chris Guthrie, an advisor at Quiet Light. He seemed optimistic about selling TinyPilot, so after the conference, he began working with me on a sales package. It was a set of documents and financial reports to show prospective buyers, including profit and loss statements for the past two years, a detailed questionnaire about the company, and a brief video interview with me.
+At the event, I spoke with Chris Guthrie, an advisor at Quiet Light. He seemed optimistic about selling TinyPilot, so after the conference, he began working with me on a sales package. It was a set of documents and financial reports to show prospective TinyPilot buyers. It included a profit and loss statement for the past two years, a detailed questionnaire about the company, and a brief video interview with me.
 
-Chris recommened presenting TinyPilot mainly as an eCommerce business with an asking price of around 3x the last twelve months of earnings. At the time, earnings were $208k, so we agreed to list at $599k, which was 2.9x the last 12 months of earnings.
+Chris recommened presenting TinyPilot mainly as an eCommerce business with an asking price of around 3x the last twelve months of earnings. At the time, earnings were $208k, so we agreed to list at $599k, roughly 2.9x earnings.
 
 {{<img src="quiet-light-launch.png" has-border="true" alt="Listing card for TinyPilot showing $599,000 asking price on $1,022,090 in revenue and $207,816 in income" caption="TinyPilot's listing card on Quiet Light's website">}}
 
@@ -150,7 +150,7 @@ The sales process officially starts with the letter of intent (LOI). The LOI lay
 
 Crucially, the LOI isn't binding. The document that really matters is the asset purchase agreement (APA), which you sign when the deal closes. But the LOI officially kicks off due diligence and the drafting of the APA.
 
-When we started LOI discussions, I was in an excellent negotiation position. I had two serious buyers competing against each other. Since listing on Quiet Light, the company's annual earnings had increased by $10k, and we received pre-qualification for an SBA loan, which meant buyers who didn't have $599k in cash could now get a government-backed loan to buy the business.
+When we started LOI discussions, I was in an excellent negotiation position. I had two serious buyers competing against each other. Since listing on Quiet Light, TinyPilot's annual earnings had increased by $10k, and we received pre-qualification for an SBA loan, which meant buyers who didn't have $599k in cash could now get a government-backed loan to buy the business.
 
 Chris told the two prospective buyers that we were planning to re-launch on Quiet Light at $625k but that I'd honor the original price if they made an offer within the next two weeks.
 
@@ -164,7 +164,7 @@ Uh oh. Did I blow the deal? What if $500k was the best I was going to get, and I
 
 Fortunately, the next day, Scott sent a new LOI for my $599k asking price, and I accepted.
 
-It was great to negotiate an extra $99k, but that would be the last point in the process that felt like I was negotiating from a position of strength.
+It was great to bump the price by $99k, but that would be the last point in the process that felt like I was negotiating from a position of strength.
 
 ## Part 3: Closing
 
@@ -180,9 +180,9 @@ I quickly learned that a slower closing isn't about a few months of patience &md
 
 When you sell a house, the buyer has to put down a deposit of 1-5% to hold their claim on the house. If financing falls through or the buyer changes their mind, the seller keeps the money as compensation for the time they lost.
 
-When you sell a business at TinyPilot's scale, there's no deposit. You can invest hundreds of hours into preparing reports during due diligence, reveal all your confidential business secrets, and spend thousands negotiating legal documents and still walk away with nothing if the buyer backs out.
+When you sell a business at TinyPilot's scale, there's no deposit. You can invest hundreds of hours into preparing reports for due diligence, reveal all your confidential business secrets, and spend thousands of dollars negotiating legal documents and still walk away with nothing if the buyer backs out.
 
-As due diligence stretched on, my negotiating position became markedly weaker. Before I signed the LOI, I could easily move on to the next buyer. By month two of due diligence, walking away from the deal meant restarting this costly and time-consuming process from zero. I'd also risk TinyPilot's sales slipping after so many months being distracted from the business.
+As due diligence stretched on, my negotiating position became markedly weaker. Before signing the LOI, I could easily move on to the next buyer. By month two of due diligence, walking away from the deal meant restarting this costly and time-consuming process from zero. I'd also risk TinyPilot's sales slipping after so many months being distracted from the business.
 
 {{<img src="due-diligence.webp" alt="Cartoon of a man growing increasingly weak as he receives due diligence requests over several weeks">}}
 
@@ -190,15 +190,15 @@ As due diligence stretched on, my negotiating position became markedly weaker. B
 
 By April, we'd been in due diligence for what felt like a year but was actually just three months. Finally, on April 3rd, Scott's bank approved the deal. They recommended a closing date of Friday, April 12th.
 
-The week of closing felt like the longest week of my life. I didn't know what to do with myself.
+That final week was the longest week of my life. I didn't know what to do with myself.
 
 The only thing I could find motivation for was ruminating about all the things that could go wrong. What if the buyer got cold feet? What if Google announced an identical product and gave it away for free? What if our manufacturer spontaneously went out of business?
 
 It felt like I was on my way to my retirement party, but there was a 5% chance that when I got there, my boss would say, "Gotcha! You're not really retiring. Now, work extra hard to make up for all the time you wasted preparing to leave."
 
-On closing day, I couldn't focus on anything at all. I woke up at 4 AM and couldn't fall back to sleep, so I started checking my email obsessively. I couldn't do anything that required even basic thinking, and I couldn't even relax enough to watch TV, so I started disassembling some old TinyPilot devices that were in my closet.
+On closing day, I couldn't focus on anything at all. I woke up at 4 AM and couldn't fall back to sleep. I couldn't do anything that required even basic thinking, and I couldn't relax enough to watch TV, so I started disassembling some old TinyPilot devices while checking my email every 90 seconds.
 
-At 2 PM, the escrow company confirmed that they had the money ready to wire, so I signed the closing documents. TinyPilot was no longer my company.
+Finally, at 2 PM, I received the email I'd been waiting for all day. The escrow company confirmed that they had the money ready to wire, so I signed the closing documents. TinyPilot was no longer my company.
 
 ## Part 4: After the sale
 
@@ -221,7 +221,7 @@ Over the next 48 hours, I had celebratory meals with friends and family in diffe
 
 When I talked to friends about the sale, the most common question was whether I felt relieved to be done.
 
-For the first few weeks, I still felt anxious. Rationally, I knew that the deal had closed, but my body was still stuck in high-alert mode from months of urgent due diligence requests.
+For the first few weeks, I still felt anxious. Consciously, I knew that the deal had closed, but my body was still stuck in high-alert mode from months of urgent due diligence requests.
 
 I got more relaxed each week and probably felt Officially Relaxed™ by week three. By that point, I'd transferred all of TinyPilot's accounts to Scott, and he was comfortable taking the reins. I felt like the company was in good hands.
 
@@ -231,7 +231,7 @@ I've heard other founders say they struggled with a loss of identity after they 
 
 I didn't feel a change in identity or a sense of deep loss.
 
-I always ran TinyPilot like a modest small business rather than a startup that was going to change the world. I'm proud of TinyPilot and put a lot of care into the company, but it was never a blood, sweat, and tears thing for me.
+I always ran TinyPilot like a modest small business rather than a world-changing startup. I'm proud of TinyPilot and put a lot of care into the company, but it was never a blood, sweat, and tears thing for me.
 
 ## Timeline
 
@@ -251,13 +251,13 @@ I always ran TinyPilot like a modest small business rather than a startup that w
 
 My wife and I are expecting our first child in August, so that's been the main thing I'm preparing for. I'm trying to keep plans loose until I see what my life is like with a baby.
 
-In the short term, I'm looking for simple projects that I can step away from abruptly when the baby arrives. Beyond that, I'd like to find a way to build a virtuous cycle between my blog and my business. I'd love it if I could write about what I'm interested in, the writing brings people to my business, and the business funds the time I spend writing.
+In the short term, I'm looking for simple projects that I can step away from abruptly when the baby arrives. Beyond that, I'd like to find a way to build a virtuous cycle between my blog and my business. I'd love it if I could write about what I'm interested in, then attract cusomers to my product through my writing and fund my writing from the business.
 
 If you're a reader of my blog, let me know what you're interested in seeing me do next, and maybe I'll do it:
 
 - [What should Michael do next?](https://tally.so/r/nr6Pyv)
 
-As for TinyPilot, Scott plans to keep improving the TinyPilot product and bring it to a wider audience. Everyone on the team received offers to stay on, and they all accepted. The company will continue to publish updates on [TinyPilot's blog](https://tinypilotkvm.com/blog), and Scott is continuing my tradition of sharing his behind-the-scenes strategy [on his personal blog](https://www.aftertheladder.com).
+As for TinyPilot, Scott plans to keep improving the product and bring it to a wider audience. Everyone on the team received offers to stay on, and they all accepted. The company will continue to publish updates on [TinyPilot's blog](https://tinypilotkvm.com/blog), and Scott is continuing my tradition of [blogging about TinyPilot's behind-the-scenes strategy](https://www.aftertheladder.com).
 
 ---
 
