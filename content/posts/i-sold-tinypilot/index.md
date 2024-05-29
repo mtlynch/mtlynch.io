@@ -5,6 +5,8 @@ hero_image: cover.webp
 tags:
   - tinypilot
 description: Four years after starting TinyPilot from scratch, I've sold the company and handed complete control over to a new owner.
+discuss_urls:
+  hacker_news: https://news.ycombinator.com/item?id=40512500
 ---
 
 My first two years as a bootstrapped founder went poorly. I could barely find any paying customers, and all of my businesses lost money. I began questioning my decision to [quit my cushy Google job](/why-i-quit-google).
