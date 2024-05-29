@@ -143,7 +143,7 @@ For the first two months, things looked bleak. Chris received a handful of inqui
 
 Finally, in January, two attractive buyers appeared around the same time.
 
-The first buyer was Scott, who worked a corporate job in media production but had grown disilussioned with big company culture, much like I had. He'd read my [public retrospectives about building TinyPilot](/retrospectives/) and saw potential to bring the product to a broader customer base.
+The first buyer was Scott, who worked a corporate job in media production but had grown disilussioned with big company culture, much like I had. After discovering TinyPilot through Quiet Light, Scott read my [public retrospectives about building the company](/retrospectives/) and saw potential to bring TinyPilot to a broader customer base.
 
 The other offer was from a pair of founders. They were initially TinyPilot customers and had reached out to me about building a managed services company on top of the product. When I told them I was selling the company, they were interested in buying.
 
