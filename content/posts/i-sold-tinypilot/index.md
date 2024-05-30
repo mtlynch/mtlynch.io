@@ -11,7 +11,7 @@ discuss_urls:
 
 My first two years as a bootstrapped founder went poorly. I could barely find any paying customers, and all of my businesses lost money. I began questioning my decision to [quit my cushy Google job](/why-i-quit-google).
 
-In mid-2020, yet another of my businesses [had flopped](/retrospectives/2020/04/), and it was only kind of COVID's fault. Desperate for a distraction, I made a little contraption that controlled my home servers through my web browser. I called it [TinyPilot](https://tinypilot.com).
+In mid-2020, yet another of my businesses [had flopped](/retrospectives/2020/04/), and it was only kind of COVID's fault. Desperate for a distraction, I made a little contraption that controlled my home servers through my web browser. I called it [TinyPilot](https://tinypilotkvm.com).
 
 {{<img src="tinypilot-prototype.webp" alt="Photo of a laptop open with 'Hello, World' printed on the screen. On another laptop, the same desktop is displayed within a TinyPilot web interface." max-width="450px" caption="The prototype of TinyPilot, which allowed me to control computers in my home remotely without installing any software">}}
 
