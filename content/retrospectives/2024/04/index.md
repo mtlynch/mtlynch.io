@@ -54,7 +54,7 @@ I had complicated taxes this year because it's my first year married filing join
 | Total Revenue            | $86,181.77     | $110,542.65   | <font color="green">+$24,360.88 (+28%)</font>   |
 | **Profit**               | **$23,599.09** | **$3,193.73** | **<font color="red">-$20,405.36 (-86%)</font>** |
 
-March was TinyPilot's strongest month of sales revenue in history, narrowly beating [our previous record](/retrospectives/2022/12/#tinypilothttpstinypilotkvmcomrefmtlynchio-stats) by $600. Profit at the one-month granularity is down, but the three-month average is the more meaningful metric, and that's looking strong.
+March was TinyPilot's strongest month of sales revenue in history, narrowly beating [our previous record](/retrospectives/2022/12/#tinypilothttpstinypilotkvmcom-stats) by $600. Profit at the one-month granularity is down, but the three-month average is the more meaningful metric, and that's looking strong.
 
 Visits are down from last month but only because February had an atypical surge in visits from my [year six review](/solo-developer-year-6/) post.
 

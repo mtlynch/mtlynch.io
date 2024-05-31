@@ -65,7 +65,7 @@ All of TinyPilot's previous record-breaking months were related to some one-time
 
 {{</notice>}}
 
-Site visitors are down relative to the previous month but only because May was [atypically high](/retrospectives/2022/06/#tinypilothttpstinypilotkvmcomrefmtlynchio-stats) due to my last blog post. Our overall visit count is still significantly higher than the first quarter. I credit the increase in visitors to our new marketing campaign.
+Site visitors are down relative to the previous month but only because May was [atypically high](/retrospectives/2022/06/#tinypilothttpstinypilotkvmcom-stats) due to my last blog post. Our overall visit count is still significantly higher than the first quarter. I credit the increase in visitors to our new marketing campaign.
 
 ## How do TinyPilot Pro users prove their license?
 

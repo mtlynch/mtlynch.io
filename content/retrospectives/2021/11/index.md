@@ -117,7 +117,7 @@ Trimming out the accessory products allowed me to focus the TinyPilot website ar
 
 Reducing to a single product offers a lot of benefits. There's less complexity for customer support, it gives us more room to store inventory, and it simplifies our order fulfillment process.
 
-Sales have been stronger since the change, but it's difficult to say whether there's a causal connection. There's definitely a trend upwards after the change, but it could just be trailing effects from last month's [positive press](/retrospectives/2021/10/#tinypilothttpstinypilotkvmcomrefmtlynchio-stats).
+Sales have been stronger since the change, but it's difficult to say whether there's a causal connection. There's definitely a trend upwards after the change, but it could just be trailing effects from last month's [positive press](/retrospectives/2021/10/#tinypilothttpstinypilotkvmcom-stats).
 
 {{<img src="sales-trends.png" alt="Screenshot of TinyPilot website, offering only one product" max-width="800px" caption="Total TinyPilot sales for the last 90 days">}}
 
