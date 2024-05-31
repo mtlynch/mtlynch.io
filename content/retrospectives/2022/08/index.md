@@ -37,7 +37,7 @@ Overhauling our update system is one of those things that keeps seeming like we'
 
 I thought it would be easy to write this since I'd written so much in my retros, but it took me about two months to complete. It got an unexpectedly strong response with 157k unique readers in its first week. It continues to ripple out and attract new visitors as people see it in other channels and then add it to things like design newsletters.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

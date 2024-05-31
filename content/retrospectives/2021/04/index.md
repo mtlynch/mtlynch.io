@@ -39,7 +39,7 @@ Two YouTubers signed on as affiliates, and one more is interested but hasn't yet
 
 I published a [preview](https://tinypilotkvm.com/blog/rackmount) of the rack mount and solicited feedback from readers and customers. The feedback was positive in that people seem excited about it. It was also valuable in identifying some incorrect assumptions.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

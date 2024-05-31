@@ -50,7 +50,7 @@ It used to be that I'd cut the release and then manually update the website to p
 
 The dev team has had less availability than I was expecting for October, so we ended up not making progress on a plan for license enforcement.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

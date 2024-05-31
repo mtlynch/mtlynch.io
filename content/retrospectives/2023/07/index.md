@@ -46,7 +46,7 @@ Our June release went smoothly but felt underwhelming. A lot of our dev effort i
 
 TinyPilot's earnings were fairly flat. A new review [came out](https://www.youtube.com/watch?v=tx724dhxGxc) but got a tepid response, so we saw fewer sales than I hoped.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

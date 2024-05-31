@@ -46,7 +46,7 @@ I ended up deciding to [stay in the office](#slowing-down-the-transition-to-full
 
 Our assembly went according to plan, and now all of our new devices are at the warehouse. We're on track to sell off our refurbished devices in the next few weeks.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

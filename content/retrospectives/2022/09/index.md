@@ -48,7 +48,7 @@ We've finalized a plan for managing TinyPilot licenses, and I think everyone inv
 
 I didn't make any progress here. I really should have made hiring one of my goals instead because that's what I spent most of the month doing.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

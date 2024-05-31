@@ -18,12 +18,12 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Release a high-end version of TinyPilot that arrives pre-assembled in a custom case
 
-- **Result**: Released [TinyPilot Voyager](https://tinypilotkvm.com/product/tinypilot-voyager?ref=mtlynch.io)
+- **Result**: Released [TinyPilot Voyager](https://tinypilotkvm.com/product/tinypilot-voyager)
 - **Grade**: A
 
 I released it! It had a muted reception at first, but now sales seem to be picking up.
 
-### Release the first version of [TinyPilot Pro](https://tinypilotkvm.com/product/tinypilot-pro?ref=mtlynch.io)
+### Release the first version of [TinyPilot Pro](https://tinypilotkvm.com/product/tinypilot-pro)
 
 - **Result**: I haven't even figured out how to distribute TinyPilot Pro.
 - **Grade**: F
@@ -35,13 +35,13 @@ Releasing Voyager took longer than I anticipated, so I punted this until Decembe
 - **Result**: I _think_ I'm doing this properly.
 - **Grade**: C-
 
-I figured out how to track sessions as users move between [tinypilotkvm.com](https://tinypilotkvm.com/?ref=mtlynch.io) and my Shopify domain for the checkout process (thanks to [this suggestion from reddit](https://www.reddit.com/r/SideProject/comments/jnkkzu/my_first_10k_month_selling_a_raspberry_pibased/gb3i0cz/?context=3)). Still, Google Analytics claims that 53% of visitors [arrived directly](ga-referrals.png), meaning that they typed the URL manually. That seems unlikely.
+I figured out how to track sessions as users move between [tinypilotkvm.com](https://tinypilotkvm.com/) and my Shopify domain for the checkout process (thanks to [this suggestion from reddit](https://www.reddit.com/r/SideProject/comments/jnkkzu/my_first_10k_month_selling_a_raspberry_pibased/gb3i0cz/?context=3)). Still, Google Analytics claims that 53% of visitors [arrived directly](ga-referrals.png), meaning that they typed the URL manually. That seems unlikely.
 
 Another founder made a compelling argument to me that my largely tech audience is probably using ad-blockers. That means a large percentage won't show up in analytics anyway. It's also common for people to come back to the site later rather than complete their purchase the instant they see an ad, so I might be putting too much faith in the accuracy of analytics.
 
 ## Stats
 
-### [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io)
+### [TinyPilot](https://tinypilotkvm.com/)
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -57,9 +57,9 @@ TinyPilot had another month of strong growth, with a $2k increase in overall rev
 
 ## New products require new habits
 
-The biggest TinyPilot event this past month was [the release of TinyPilot Voyager](https://tinypilotkvm.com/blog/introducing-voyager?ref=mtlynch.io). It's the new model that uses a higher-quality video capture device. I worked with a 3D printing lab to create a custom case that neatly packages together all the components.
+The biggest TinyPilot event this past month was [the release of TinyPilot Voyager](https://tinypilotkvm.com/blog/introducing-voyager). It's the new model that uses a higher-quality video capture device. I worked with a 3D printing lab to create a custom case that neatly packages together all the components.
 
-{{<img src="voyager-angled.jpg" max-width="600px" alt="3/4 view photo of TinyPilot Voyager" caption="[Voyager](https://tinypilotkvm.com/product/tinypilot-voyager?ref=mtlynch.io) is the new model of TinyPilot, aimed at business customers.">}}
+{{<img src="voyager-angled.jpg" max-width="600px" alt="3/4 view photo of TinyPilot Voyager" caption="[Voyager](https://tinypilotkvm.com/product/tinypilot-voyager) is the new model of TinyPilot, aimed at business customers.">}}
 
 Unlike my previous products, which ship as "some assembly required" kits, Voyager comes pre-assembled, so it's plug 'n play.
 
@@ -163,7 +163,7 @@ Zestful had a nice jump this month. One of my longtime pay-as-you go customers u
 
 ### What got done?
 
-- Launched [Voyager](https://tinypilotkvm.com/product/tinypilot-voyager?ref=mtlynch.io), the new model of TinyPilot aimed at business customers.
+- Launched [Voyager](https://tinypilotkvm.com/product/tinypilot-voyager), the new model of TinyPilot aimed at business customers.
 - Published a [new release](https://github.com/tiny-pilot/tinypilot/releases/tag/1.2.0) of TinyPilot that includes an on-screen keyboard and support for saving screenshots.
 - Launched pre-orders for my [Hacker News course](https://hitthefrontpage.com/).
 - Two of my blog posts reached the front page of Hacker News.
@@ -181,6 +181,6 @@ Zestful had a nice jump this month. One of my longtime pay-as-you go customers u
 
 ### Goals for next month
 
-- Release the first version of [TinyPilot Pro](https://tinypilotkvm.com/product/tinypilot-pro?ref=mtlynch.io).
+- Release the first version of [TinyPilot Pro](https://tinypilotkvm.com/product/tinypilot-pro).
 - Receive TinyPilot reviews from two bloggers or YouTubers with a relevant audience.
 - Record five out of seven parts to my [Hacker News course](https://hitthefrontpage.com/).

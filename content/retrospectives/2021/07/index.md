@@ -38,7 +38,7 @@ There wasn't as much progress here as I'd hoped. Even with me drastically increa
 
 We ultimately decided to drop PoE as a Voyager 2 feature and instead reduced the number of external wires and connectors. We likely won't have the first prototype until mid-July.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

@@ -39,7 +39,7 @@ I [published a preview](https://tinypilotkvm.com/blog/tinypilot-cloud-waitlist) 
 
 The rebrand is taking longer than I expected, but it should be ready in November. The new designs look really cool, so I'm eager to get them up.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

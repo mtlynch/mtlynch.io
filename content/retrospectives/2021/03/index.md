@@ -37,7 +37,7 @@ I added three new convenience features to TinyPilot, but I haven't yet cut an of
 - Change hostname through the web UI
 - View debug logs from the web UI
 
-I also added a [support forum](https://forum.tinypilotkvm.com) and [frequently asked questions pages](https://tinypilotkvm.com/faq?ref=mtlynch.io), both of which I should have added a long time ago. They both help users answer their own questions instead of relying on me for private email support.
+I also added a [support forum](https://forum.tinypilotkvm.com) and [frequently asked questions pages](https://tinypilotkvm.com/faq), both of which I should have added a long time ago. They both help users answer their own questions instead of relying on me for private email support.
 
 ### Collect feedback from 10 customers about a potential rack-mounted version of TinyPilot
 
@@ -46,7 +46,7 @@ I also added a [support forum](https://forum.tinypilotkvm.com) and [frequently a
 
 Sketching out a rack-mounted TinyPilot took longer than I expected. I'm days away from a preview document I can show customers to solicit feedback.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

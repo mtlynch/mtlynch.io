@@ -39,7 +39,7 @@ I've canceled the contract with the design agency, so they're wrapping up their 
 
 The month's theme is, "this took a little longer than I expected." The release is code complete, but I still have to wrap up some last manual tests before publishing the build to customers.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

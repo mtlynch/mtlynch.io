@@ -58,7 +58,7 @@ I ended up spending way more of my time on email than I expected. I had some vac
 
 Ultimately, I spent most of my time this month responding to emails and reviewing my teammates' work.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

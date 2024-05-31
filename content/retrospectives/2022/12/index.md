@@ -46,7 +46,7 @@ The support engineering team is becoming more effective than I expected. In addi
 
 Launching a new TinyPilot model always requires a lot of my time. I've been through this process enough to anticipate a lot of the work, but I also know that no matter how much planning I do, there will always be work I fail to anticipate. Even though there are days I feel like I have some spare bandwidth, I'm trying to keep as much of my time free as possible.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

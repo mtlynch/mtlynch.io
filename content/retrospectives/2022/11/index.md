@@ -50,7 +50,7 @@ I'm not sure if it's just greater difficulties of designing with metal or if the
 
 Of the six vendors I approached, two ended up being a good match for what I want. I'm hoping to transition fulfillment to one of these 3PL vendors in December.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

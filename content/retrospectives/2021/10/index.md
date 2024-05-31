@@ -37,7 +37,7 @@ I was hoping to start development by the end of the month, but there are more de
 
 We're running a little late on this, but we're still on track to ship the first Voyager 2 by the end of November. The electrical engineers have built several prototypes, and they've passed all tests. We're now in the process of ordering the first production batch from a PCB manufacturer.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

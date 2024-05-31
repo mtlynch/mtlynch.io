@@ -41,7 +41,7 @@ I held postmortems with the dev and support engineering teams to gather feedback
 
 I had complicated taxes this year because it's my first year married filing jointly, and I was waiting on a few tax forms, but everything is now in.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

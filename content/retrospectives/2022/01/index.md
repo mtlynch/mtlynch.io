@@ -37,7 +37,7 @@ I haven't quite finished the rebrand, but I've published TinyPilot's new logo, w
 
 I raised prices slightly on the Voyager 2, and that seems to have slowed down sales enough that we can catch up and build a small buffer of inventory.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

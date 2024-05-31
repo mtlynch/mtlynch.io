@@ -50,7 +50,7 @@ The problem with Amazon is that the only way to get them to show a "Buy" button 
 
 I reached out to three YouTubers. Two of them are interested and plan to feature TinyPilot in a video. The third doesn't do reviews but is open to giving TinyPilot a cameo if they can find a use for it.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

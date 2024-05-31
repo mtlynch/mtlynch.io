@@ -38,7 +38,7 @@ I thought the chip shortage was the last big hurdle to overcome, but the electri
 
 The thing about publishing a book about effective writing is that people expect you to be a good writer. That puts some pressure on me. I'm about 70% ready to publish a sample chapter to publish, but I still need to edit it more.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

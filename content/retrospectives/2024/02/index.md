@@ -44,7 +44,7 @@ I ended up spending more time than I expected documenting TinyPilot's release pr
 
 Taxes are always boring, but everything is on schedule this year.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

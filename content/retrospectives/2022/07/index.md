@@ -41,7 +41,7 @@ The digital marketing freelancer working with TinyPilot increased revenue on ad 
 
 Unfortunately, I can't just double ad spend and double sales, as costs increase as you try to capture a greater share of search impressions. Still, I'm happy with the performance so far, and we're continuing to explore new marketing channels.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

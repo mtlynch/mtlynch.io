@@ -37,7 +37,7 @@ This project is continuing to take longer than I expected. We're done with the d
 
 It took a long time to find the right engineer, but I'm happy this is working out. It's freeing up a significant amount of time for me already.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 
