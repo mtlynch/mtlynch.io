@@ -141,7 +141,7 @@ I aim for everyone at TinyPilot to run at around 50% capacity. That is, a balanc
 
 The technical support team is the clearest example of a 50/50 split: they spend half of their time responding to support requests and the other half finding ways to save users from needing support. The proactive tasks include fixing bugs in the product, writing documentation, and improving our diagnostic tools.
 
-Every TinyPilot team comprises two people. When one person is unavailable, the other can suspend their proactive work and handle time-sensitive tasks without feeling overwhelmed. If we get a rush of orders because a popular YouTube channel [mentions us](/retrospectives/2022/12/#tinypilothttpstinypilotkvmcomrefmtlynchio-stats), we have spare capacity to absorb it.
+Every TinyPilot team comprises two people. When one person is unavailable, the other can suspend their proactive work and handle time-sensitive tasks without feeling overwhelmed. If we get a rush of orders because a popular YouTube channel [mentions us](/retrospectives/2022/12/#tinypilothttpstinypilotkvmcom-stats), we have spare capacity to absorb it.
 
 | Team                | Reactive tasks                                                                             | Proactive tasks                                                                |
 | ------------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |

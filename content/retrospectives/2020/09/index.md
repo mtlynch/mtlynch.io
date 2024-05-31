@@ -37,7 +37,7 @@ For the same reasons as above, I postponed marketing efforts until I had a produ
 
 This ended up being more difficult than I expected, but I completed the feature right at the end of the month. Integrating the mouse improved the user experience more than I anticipated.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io)
+## [TinyPilot](https://tinypilotkvm.com/)
 
 {{<revenue-graph project="tinypilot">}}
 

@@ -39,7 +39,7 @@ Normally, you'd buy components in bulk after designing and printing a successful
 
 I wrote an outline that feels right to me, but I haven't yet collected feedback from readers. My next step is to survey the book's mailing list about whether the outline matches what they're hoping to learn.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

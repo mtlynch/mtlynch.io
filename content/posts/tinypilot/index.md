@@ -24,8 +24,6 @@ This post details my experience creating TinyPilot and shows how you can build y
 
 {{<img src="win-ubuntu.jpg" alt="Photo of TinyPilot connecting two computers" max-width="600px" caption="Using TinyPilot to control my Ubuntu laptop from Chrome on my Microsoft Surface">}}
 
-{{<tinypilot-ad headline="Want a pre-made TinyPilot?" copy="The TinyPilot Voyager 2a is a pre-assembled, plug 'n play KVM over IP that uses high-quality components and includes additional features.">}}
-
 ## I don't want your life story; just tell me how to build it
 
 If you're a grinch who wants to skip my fascinating tale of triumph and despair in developing TinyPilot, jump directly to the section, ["How to Build Your Own TinyPilot."](#how-to-build-your-own-tinypilot)
@@ -226,8 +224,6 @@ TinyPilot allowed me to manage the entire install from my browser. It was defini
 
 ## How to build your own TinyPilot
 
-{{<tinypilot-ad headline="Want a pre-made TinyPilot?" copy="The TinyPilot Voyager 2a is a pre-assembled, plug 'n play KVM over IP that uses high-quality components and includes additional features.">}}
-
 ### Parts list
 
 - [Raspberry Pi 4](https://smile.amazon.com/Raspberry-Model-2019-Quad-Bluetooth/dp/B07TD42S27/) (all variants work)
@@ -336,9 +332,9 @@ Further, The Pi 4 needs 3 Amps for stable operation, though it can run at lower 
 Jun 28 06:23:15 tinypilot kernel: Under-voltage detected! (0x00050005)
 ```
 
-To solve this problem, I worked with an engineering firm to create [a custom circuit board](https://tinypilotkvm.com/product/tinypilot-power-connector?ref=mtlynch.io) that splits the Pi's USB-C port into two. The first port accepts USB power, so you can still deliver a full 3 Amps to the Pi. The second accepts USB data out, so the Pi can still impersonate a USB keyboard.
+To solve this problem, I worked with an engineering firm to create [a custom circuit board](https://tinypilotkvm.com/product/tinypilot-power-connector) that splits the Pi's USB-C port into two. The first port accepts USB power, so you can still deliver a full 3 Amps to the Pi. The second accepts USB data out, so the Pi can still impersonate a USB keyboard.
 
-{{<gallery caption="The [TinyPilot Power Connector](https://tinypilotkvm.com/product/tinypilot-power-connector?ref=mtlynch.io) allows the Pi to receive 3 Amps of power through its USB-C port without losing USB OTG functionality.">}}
+{{<gallery caption="The [TinyPilot Power Connector](https://tinypilotkvm.com/product/tinypilot-power-connector) allows the Pi to receive 3 Amps of power through its USB-C port without losing USB OTG functionality.">}}
 {{<img src="power-connector.jpg" alt="Close-up of power connector" max-width="500px">}}
 {{<img src="power-connector-cables.jpg" alt="Power connector hooked up to Raspberry Pi and microUSB cables" max-width="500px">}}
 {{</gallery>}}
@@ -356,7 +352,9 @@ TinyPilot's software is open-source under the permissive [MIT license](https://o
 - [tinypilot](https://github.com/tiny-pilot/tinypilot.git): The TinyPilot web interface and backend.
 - [ansible-role-tinypilot](https://github.com/tiny-pilot/ansible-role-tinypilot): The Ansible role for installing TinyPilot and its dependencies as systemd services.
 
-{{<tinypilot-ad headline="Want a pre-made TinyPilot?" copy="The TinyPilot Voyager 2a is a pre-assembled, plug 'n play KVM over IP that uses high-quality components and includes additional features.">}}
+## Pre-made TinyPilot devices
+
+Pre-made TinyPilot devices are available for purchase at [the TinyPilot website](https://tinypilotkvm.com/). I was the original founder of TinyPilot, the company, but [I sold the business in April 2024](/i-sold-tinypilot/) and now have no relationship to the company except as an enthusiastic user.
 
 ---
 

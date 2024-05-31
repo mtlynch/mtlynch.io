@@ -141,8 +141,6 @@ The VM server's host OS should be as lightweight as possible. It needs to host a
 
 I tried a few different Linux distros, but Ubuntu server was the only one that worked out of the box on my hardware (successfully tested both 16.04 and 17.04) . I think [Ryzen's SMT functionality](https://www.phoronix.com/scan.php?page=news_item&px=AMD-Ryzen-Newer-Kernel) is what causes the installations to fail on other distros. I suspect I could work around this by disabling SMT in the BIOS, installing another distro, then upgrading the kernel to >= 4.10, then re-enabling SMT, but I decided to just stick with **Ubuntu 16.04 server** since it's the distro I'm most familiar with anyway.
 
-{{<tinypilot-ad headline="Install a new server OS right from your browser" copy="TinyPilot is an affordable, open-source solution that provides a remote console for your headless server.">}}
-
 ## Running virtual machines
 
 ### KVM
@@ -228,8 +226,6 @@ The power supply has sufficient wattage for the system, and it's pretty quiet. I
 The one downside is that it uses non-modular cabling. My system is so bare bones that I only need the 24-pin motherboard cable and 8-pin CPU cable. All the rest are clutter, but they hide away pretty cleanly in my case's 5.25" bay for an optical disc reader (obviously empty in my case).
 
 If I were to do it over, I'd consider a semi-modular or full-modular PSU so I could get rid of the extraneous PSU cables.
-
-{{<tinypilot-ad headline="BIOS-level access right in your browser" copy="TinyPilot is an easy-to-use, open source KVM over IP solution for homelab enthusiasts. Starting at $169.99.">}}
 
 ## Conclusion
 

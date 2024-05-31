@@ -48,7 +48,7 @@ I ended up letting a support engineer go, so I instead focused on hiring his rep
 
 This is a vague goal, as I'm still exploring options at this point. In the past, I'd [explored injection-molded cases](/retrospectives/2021/02/#scaling-manufacturing), which have a low per-unit cost but require an expensive upfront price. I'm now exploring metal cases, which don't require as much upfront cost and scale up efficiently.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

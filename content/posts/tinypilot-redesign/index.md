@@ -335,7 +335,7 @@ Over time, TinyPilot's purchase experience became more complex. I ended up expen
 
 I genuinely believe that DesignAgency tried their best on this project. I don't feel like they meant to deceive me or squeeze money out of me. We just didn't match. I was used to working with individual freelancers, and DesignAgency was accustomed to larger clients.
 
-If I had to do it over again, I wouldn't. But despite all the missteps and stress, the results might justify all the pain. I expected the new website to increase sales by 10-20%, but it's been closer to 40%. In July, the TinyPilot website [hit an all-time high of $72.5k in sales](/retrospectives/2022/07/#tinypilothttpstinypilotkvmcomrefmtlynchio-stats), 66% higher than before the redesign.
+If I had to do it over again, I wouldn't. But despite all the missteps and stress, the results might justify all the pain. I expected the new website to increase sales by 10-20%, but it's been closer to 40%. In July, the TinyPilot website [hit an all-time high of $72.5k in sales](/retrospectives/2022/07/#tinypilothttpstinypilotkvmcom-stats), 66% higher than before the redesign.
 
 It's too early to tell, but I'm optimistic about earning a positive return on the $46k I paid DesignAgency.
 

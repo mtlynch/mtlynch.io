@@ -52,7 +52,7 @@ There's still a chicken-and-egg problem with some of the equipment I want to sel
 
 I hoped to find a Shopify app that allowed me to sell [recurring subscriptions for TinyPilot Pro](/retrospectives/2023/08/#add-an-auto-renew-option), but I couldn't find any. More on this [below](#my-failed-attempts-at-recurring-subscriptions).
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

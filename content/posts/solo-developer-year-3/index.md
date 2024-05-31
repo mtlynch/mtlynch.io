@@ -42,9 +42,9 @@ I went into more detail about this [in last year's retrospective](/solo-develope
 
 ## Project by project
 
-### [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io)
+### [TinyPilot](https://tinypilotkvm.com/)
 
-{{<img src="voyager.jpg" max-width="550px" caption="[TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) is an inexpensive device I created to manage servers remotely.">}}
+{{<img src="voyager.jpg" max-width="550px" caption="[TinyPilot](https://tinypilotkvm.com/) is an inexpensive device I created to manage servers remotely.">}}
 
 For the past few years, I've done all my software development on a [home server](/building-a-vm-homelab/). It works great, except for when I screw up the network configuration or want to install a new operating system. My server has no monitor or keyboard attached, so I have to drag it over to my desk, swap all the cables with my workstation, and then swap everything back when I'm done.
 
@@ -93,7 +93,7 @@ TinyPilot ended the year with almost $54k in revenue. My net income is still neg
 | Hosting / Domains                 | -$64        |
 | **Net profit**                    | **-$5,681** |
 
-\* I write the vast majority of the code, but I hired a developer to help with the [sales page](https://tinypilotkvm.com/?ref=mtlynch.io).
+\* I write the vast majority of the code, but I hired a developer to help with the [sales page](https://tinypilotkvm.com/).
 
 ### [Hit the Front Page of Hacker News](https://hitthefrontpage.com)
 
@@ -263,7 +263,7 @@ I was on track to publish 10 posts, but I sacrificed my tenth in order to create
 
 I was hoping to find an excuse to learn Rust, but I never found a good match.
 
-Instead, I gained breadth and depth in JavaScript. I already knew [Vue](https://vuejs.org/), but this year, I learned [Gridsome](https://gridsome.org/), a Vue-based static site generator. I used it to build [my TinyPilot sales site](https://tinypilotkvm.com/?ref=mtlynch.io) and to [rewrite Is It Keto](https://whatgotdone.com/michael/2020-04-17).
+Instead, I gained breadth and depth in JavaScript. I already knew [Vue](https://vuejs.org/), but this year, I learned [Gridsome](https://gridsome.org/), a Vue-based static site generator. I used it to build [my TinyPilot sales site](https://tinypilotkvm.com/) and to [rewrite Is It Keto](https://whatgotdone.com/michael/2020-04-17).
 
 I also learned to use plain JavaScript more effectively. TinyPilot's web app [is pure JavaScript](https://github.com/tiny-pilot/tinypilot/tree/bf07bfe72941457cf068ca0a44c6b0d62dd9ef05/app/static/js) with no build or compilation steps. It's astonishing how much complexity you save by eschewing modern JavaScript frameworks.
 

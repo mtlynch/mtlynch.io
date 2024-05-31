@@ -46,7 +46,7 @@ I'm hopeful about this new 3PL. Once we hand over fulfillment to an external ven
 
 There's work that the developers and support engineers can collaborate on, but I was deferring it until the two teams could meet face-to-face. We had our first dev and support engineering crossover meeting, and now we're ready for the two teams to begin working together directly.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 
