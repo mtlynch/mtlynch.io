@@ -119,7 +119,7 @@ After four months of intermittent discussions, ServerCo finally presented me wit
 
 They didn't intend it to be an insultingly bad offer, but it was a pretty bad offer.
 
-eCommerce companies typically sell for 2.5-3.5x earnings. The cash portiton of ServerCo's offer was 0.9x TinyPilot's earnings.
+eCommerce companies typically sell for 2.5-3.5x earnings. The cash portion of ServerCo's offer was 0.9x TinyPilot's earnings.
 
 As for the salary, $100k/year is roughly what a software developer makes fresh out of college in the US. And that's without a 12-month commitment.
 
