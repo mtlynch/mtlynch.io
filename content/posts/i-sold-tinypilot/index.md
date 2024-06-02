@@ -127,7 +127,7 @@ I politely told ServerCo we were too far apart on price to continue negotiating,
 
 ### Attending Microconf and meeting Quiet Light Brokerage
 
-In 2023, I attended [Microconf](https://microconf.com/), a small conference for bootstrapped founders. I hoped that to either find a potential buyer there or at least get advice from other founders about what to do with TinyPilot.
+In 2023, I attended [Microconf](https://microconf.com/), a small conference for bootstrapped founders. I hoped to either find a potential buyer or at least get advice from other founders about what to do with TinyPilot.
 
 One of the sponsors of the conference was a brokerage I'd never heard of, [Quiet Light](https://quietlight.com/). They piqued my interest because not only did they cater to bootstrapped founders, they worked with a lot of eCommerce companies.
 
