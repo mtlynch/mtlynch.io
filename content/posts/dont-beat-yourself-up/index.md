@@ -92,6 +92,14 @@ It's not cheating to use your unfair advantages, and I encourage you to use ever
 
 ## Some businesses that seem successful are making the world worse
 
+A lot of the founders that achieve wild success are doing it because they're just extractive. They're doing the equivalent of producing a new chemical and dumping all the waste product into the town reservoir.
+
+I saw a successful founder last year ago decide he was so good at email marketing that he decided to sell a course about it. Part of his marketing was that every month, he generates $30k in revenue by sending 1.5 million emails. So, let's say that means something like 500 sales per month, so that's 1,499,500 emails per month that didn't go to someone happy to buy, just wasted their time. And if we say the cost of receiving an email you don't like is a $0.05, it means that he generated $30k in revenue while pushing a cost of about $75k onto his email list.
+
+That's not even the worst of it. That founder promotes the course and nobody bats an eye! It gets way worse. A few months ago, Neil Patel tweeted about the costs of . But it's all just garbage. Even the human-written work he's publishing is just slop he's shoveling onto the Internet to attract clicks.
+
+https://x.com/neilpatel/status/1749570322800759133
+
 ## How to get a more grounded reality
 
 If you want a more accurate picture, listen to interviews with people after they've moved on from their company. It's a very different picture, one filled with a lot of fear, stress, and anxiety.
