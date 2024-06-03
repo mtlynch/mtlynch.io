@@ -1,13 +1,15 @@
 ---
-title: "If Your Bootstrapped Business is Struggling, Don't Beat Yourself Up"
+title: "Don't Beat Yourself Up About Your Struggling Bootstrapped Business"
 date: 2024-06-03T09:11:10-04:00
 ---
 
 I've been in the world of bootstrapped founders for about seven years. I used to organize Indie Hacker meetups in New York City, and I continue to organize them in Western Massachusetts. I've worked full-time as a bootstrapped founder for the past six years and try as much as possible to connect with other founders.
 
-When people start a bootstrapped business, they're usually excited. They've read stories online of other founders like Pieter Levels or XX. And they're excited to build the business. And then it doesn't
+When people start a bootstrapped business, they're usually excited. They've read stories online of other founders like Pieter Levels or XX. And they're excited to build the business. And then they launch something and it flops, and they're crushed.
 
-##
+If you find yourself in this situation, know that it gets easier and you're probably holding yourself to unrealistic standards.
+
+## TODO
 
 I was at a meetup a few years ago and one of the people who attended had quit his job in big tech to pursue his own business. That was cool because it was exactly what I had done.
 
@@ -17,17 +19,19 @@ The way he was talking, he sounded like he'd been banging his head against the w
 
 I was floored. He was so grizzled, I thought for sure it would have been at least a year.
 
-## I haven't "made it"
-
-Before I go further, I just want to clarify that I'm not speaking as the bootstrapped founder who's got everything figured out and now can dole out advice. I have had one successful business out of about ten serious attempts, and it sold for a modest exit.
-
 ## The Instagram reality of bootstrapper media
 
-This is not to say that founders are lying or fabricating their numbers. But when you listen to interviews or watch videos about successful founders, there are a ton of biases at play that are distorting reality and your expectations.
+By now, people are familiar with the distinction between the reality of someone's lifestyle and the glamorized, highly polished version of themselves they present on Instagram.
 
-First, and most obviously, interviews that get attention are only with successful founders. An article called, "I launched my product three months ago, and I'm earning $50k/month" is going to receive much more attention than an article called, "I launched my product two years ago, and I'm not even covering my costs."
+I think people aren't yet aware that this dynamic is at play in interviews and blog posts about successful bootstrapped founders. This is not to say that founders are lying or fabricating their numbers, but there are a ton of biases at play that are distorting reality.
 
-Second, even when you listen to the founders who actually are successful, they're giving a glamorized version of their company. Being a founder is busy. The main reason a lot of founders
+First, and most obviously, there's a selection bias in what stories you see. If you browse social media or bootstrapper forums, the posts that get the most attention are the ones about atypical success. An article called, "I launched my product three months ago, and now I'm earning $50k/month" is going to receive much more attention than an article called, "I launched my product two years ago, and I'm not even covering my costs."
+
+Compare the response on Hacker News to my fifth year as a bootstrapper (when I barely broke even) to my sixth year (when I made $1M in revenue and $236k in profit):
+
+TODO: screenshots
+
+Even beyond the bias of whose stories you see, the stories themselves are glamorized and sugarcoated. Founders primarily do interviews or write articles about their lifestyle in the hopes that it will help their business. That means they often can't give a brutally honest account of how they're doing.
 
 Finally, the media outlets themselves want to focus on the positives. Occasionally, they'll have a Very Special Episode about mental health, but 99% of it is about how being a bootstrapped founder is fun and exciting. And being a bootstrapped founder is fun and exciting, but it's also a lot of other things that are hard to handle if you expect the experience to be 100% fun and exciting.
 
@@ -53,8 +57,45 @@ He probably doesn't see it as a wild success, and even if he does, nobody's goin
 
 So, what happens to Daniel Vassallo in that timeline? Daniel's smart, so maybe he keeps trying new things until he finds success, but it's easy to imagine the Daniel of that timeline following the path of so many other bootstrapped founders. His first few swings all miss, he assumes that he's not cut out for the bootstrapper lifestyle, and he goes back to his job in big tech.
 
+## The metric you never see: profit per founder
+
+Often inflate numbers. Report revenue instead of profit. And I'm guessing in a lot of cases, it's not even revenue they receive but revenue before fees. Also, nobody talks about revenue per founder, but $100k ARR for four founders + 4 freelencers is very different than a single founder working alone.
+
+They announce that they hit $100k ARR. And then you realize that it's two founders whose market rate would be $100-200k/yr each. And then you realize that's revenue not expenses, and they probably have a lot of expenses, including employees, marketing, cloud services, etc.
+
+You can inflate your revenue by spending a ton on marketing. e.g., spend $1000/mo on Google Ads and make $800/mo in revenue. Fake it till you make it.
+
+Patrick Campbell sold ProfitWell to Paddle for $200M, but the week before the close, he only had $15k in liquid assets because everything else was tied up in his business. (talked about on 2022 IH podcast)
+
+## Other tricks indie founders use to seem more successful
+
+When I was 17, I read _The Motley Fool's Guide to Investing_, and one thing I remember two decades later is this section of the book that laid out all the deceptive strategies other online investing advicors used to deceive readers into seeming more successful. Even though they publicly tracked their stock picks, they'd use sleight of hand to mislead readers about their performance.
+
+We need something similar with founders because a lot of founders are
+
+- Exclude fees
+  - I suspect that a lot of founders are reporting their revenues before fees. If you hear someone say they sold $100k on Gumroad, the amount they received is probably closer to $87k after Gumroad's fees and credit card processing fees.
+-
+
+## Other founders have unfair advantages
+
+They're not cheating, but if you look closely at a lot of wild founder success stories, they often have some massive advantage that you don't.
+
+- They have a romantic partner who quietly does unpaid work for the company that would cost six figures on the open market.
+- They have a romantic partner who does all domestic work for them.
+- They "bootstrapped" the business with hundreds of thousands of dollars of money they already had.
+- They have a friend in an influential position who brought them their critical early customers.
+
+In XX, the Indie Hackers podcast had a debate between DHH and Natalie Nagele, both wildly successful bootstrapped founders. DHH was arguing that founders can run a company on only 10 hours per week, as that's what his company did in the early days. When pressed, it became clear that DHH was spending a lot more than 10 hours per week on things like promoting the business on Twitter, answering support emails. And most importantly, he was running it on top of a successful consulting business. He already had all the team and infrastructure in place to start a small company with the unused hours from his consulting business.
+
+It's not cheating to use your unfair advantages, and I encourage you to use every advantage available to you. Just remember that when you see another founder boasting of wild success through their hard work and determination, if you look closely enough, you'll usually see that they're not emphasizing some advantage they had just by pure chance.
+
+## Some businesses that seem successful are making the world worse
+
 ## How to get a more grounded reality
 
 If you want a more accurate picture, listen to interviews with people after they've moved on from their company. It's a very different picture, one filled with a lot of fear, stress, and anxiety.
 
 Listen to founders who do interviews because they're business nerds and don't have anything to sell. I love every Jason Cohen interview because he clearly doesn't need to promote his businesses, but he enjoys sharing what he's learned.
+
+Go to conferences and meetups and talk to other attendees. It will be closer to reality, but even that's biased because the founders making money are more able to attend conferences.
