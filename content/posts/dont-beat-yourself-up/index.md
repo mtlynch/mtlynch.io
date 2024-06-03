@@ -96,9 +96,19 @@ A lot of the founders that achieve wild success are doing it because they're jus
 
 I saw a successful founder last year ago decide he was so good at email marketing that he decided to sell a course about it. Part of his marketing was that every month, he generates $30k in revenue by sending 1.5 million emails. So, let's say that means something like 500 sales per month, so that's 1,499,500 emails per month that didn't go to someone happy to buy, just wasted their time. And if we say the cost of receiving an email you don't like is a $0.05, it means that he generated $30k in revenue while pushing a cost of about $75k onto his email list.
 
+{{<img src="email-revenue.webp" max-width="600px">}}
+
 That's not even the worst of it. That founder promotes the course and nobody bats an eye! It gets way worse. A few months ago, Neil Patel tweeted about the costs of . But it's all just garbage. Even the human-written work he's publishing is just slop he's shoveling onto the Internet to attract clicks.
 
 https://x.com/neilpatel/status/1749570322800759133
+
+## Find the founders that resonate with you
+
+Oh no, they have to be great at YouTube and Twitter and Pinterest and TikTok. There are lots of different paths to success, and the vast majority of successful founders aren't publishing all their results (it's fine if you do or don't).
+
+- Justin Duke
+- Cory Zue
+- Jen Yip
 
 ## How to get a more grounded reality
 
