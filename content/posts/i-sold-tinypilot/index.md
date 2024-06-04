@@ -254,7 +254,7 @@ I always ran TinyPilot like a modest small business rather than a world-changing
 
 My wife and I are expecting our first child in August, so that's been the main thing I'm preparing for. I'm trying to keep plans loose until I see what my life is like with a baby.
 
-In the short term, I'm looking for simple projects that I can step away from abruptly when the baby arrives. Beyond that, I'd like to find a way to build a virtuous cycle between my blog and my business. I'd love to write about what interests me, then attract cusomers to my product through my writing and fund my writing from the business.
+In the short term, I'm looking for simple projects that I can step away from abruptly when the baby arrives. Beyond that, I'd like to find a way to build a virtuous cycle between my blog and my business. I'd love to write about what interests me, then attract customers to my product through my writing and fund my writing from the business.
 
 If you're a reader of my blog, let me know what you're interested in seeing me do next, and maybe I'll do it:
 
