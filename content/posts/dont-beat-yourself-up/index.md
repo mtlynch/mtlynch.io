@@ -1,5 +1,5 @@
 ---
-title: "Don't Beat Yourself Up About Your Struggling Bootstrapped Business"
+title: "Don't Beat Yourself Up If Your Bootstrapped Business is Struggling"
 date: 2024-06-03T09:11:10-04:00
 ---
 
@@ -9,15 +9,17 @@ When people start a bootstrapped business, they're usually excited. They've read
 
 If you find yourself in this situation, know that it gets easier and you're probably holding yourself to unrealistic standards.
 
-## TODO
+## Success rarely comes quickly
 
 I was at a meetup a few years ago and one of the people who attended had quit his job in big tech to pursue his own business. That was cool because it was exactly what I had done.
 
 He told me he regretted it. I was sad for him. He felt like he got taken in by the hype of bootstrapped businesses.
 
-The way he was talking, he sounded like he'd been banging his head against the walls for years. I asked him how long he'd been trying to build his business. "Almost three months," he told me.
+I asked him how long he'd been trying to build his business. He sounded so grizzled and worn out that my guess was that he'd been at it for somewhere between three to five years.
 
-I was floored. He was so grizzled, I thought for sure it would have been at least a year.
+"Almost three months," he told me.
+
+Cory Zue, Pieter Levels, Josh Pigford all had years of failure or, at best, marginal success before they started making enough to support themselves.
 
 ## The Instagram reality of bootstrapper media
 
@@ -36,6 +38,16 @@ Even beyond the bias of whose stories you see, the stories themselves are glamor
 Finally, the media outlets themselves want to focus on the positives. Occasionally, they'll have a Very Special Episode about mental health, but 99% of it is about how being a bootstrapped founder is fun and exciting. And being a bootstrapped founder is fun and exciting, but it's also a lot of other things that are hard to handle if you expect the experience to be 100% fun and exciting.
 
 TODO: Visualization of selection bias and exaggeration.
+
+## The metric you never see: profit per founder
+
+Often inflate numbers. Report revenue instead of profit. And I'm guessing in a lot of cases, it's not even revenue they receive but revenue before fees. Also, nobody talks about revenue per founder, but $100k ARR for four founders + 4 freelencers is very different than a single founder working alone.
+
+They announce that they hit $100k ARR. And then you realize that it's two founders whose market rate would be $100-200k/yr each. And then you realize that's revenue not expenses, and they probably have a lot of expenses, including employees, marketing, cloud services, etc.
+
+You can inflate your revenue by spending a ton on marketing. e.g., spend $1000/mo on Google Ads and make $800/mo in revenue. Fake it till you make it.
+
+Patrick Campbell sold ProfitWell to Paddle for $200M, but the week before the close, he only had $15k in liquid assets because everything else was tied up in his business. (talked about on 2022 IH podcast)
 
 ## Wild success is so close to abject failure
 
@@ -56,16 +68,6 @@ Let's imagine we rewind the story to just after Daniel publishes his AWS book, a
 He probably doesn't see it as a wild success, and even if he does, nobody's going to want to buy a course from someone who tweets all day and only managed to make $1.5k from it. And people certainly aren't going to pay money to join Daniel's private community when he has no success to show.
 
 So, what happens to Daniel Vassallo in that timeline? Daniel's smart, so maybe he keeps trying new things until he finds success, but it's easy to imagine the Daniel of that timeline following the path of so many other bootstrapped founders. His first few swings all miss, he assumes that he's not cut out for the bootstrapper lifestyle, and he goes back to his job in big tech.
-
-## The metric you never see: profit per founder
-
-Often inflate numbers. Report revenue instead of profit. And I'm guessing in a lot of cases, it's not even revenue they receive but revenue before fees. Also, nobody talks about revenue per founder, but $100k ARR for four founders + 4 freelencers is very different than a single founder working alone.
-
-They announce that they hit $100k ARR. And then you realize that it's two founders whose market rate would be $100-200k/yr each. And then you realize that's revenue not expenses, and they probably have a lot of expenses, including employees, marketing, cloud services, etc.
-
-You can inflate your revenue by spending a ton on marketing. e.g., spend $1000/mo on Google Ads and make $800/mo in revenue. Fake it till you make it.
-
-Patrick Campbell sold ProfitWell to Paddle for $200M, but the week before the close, he only had $15k in liquid assets because everything else was tied up in his business. (talked about on 2022 IH podcast)
 
 ## Other tricks indie founders use to seem more successful
 
