@@ -37,6 +37,10 @@ Even beyond the bias of whose stories you see, the stories themselves are glamor
 
 Finally, the media outlets themselves want to focus on the positives. Occasionally, they'll have a Very Special Episode about mental health, but 99% of it is about how being a bootstrapped founder is fun and exciting. And being a bootstrapped founder is fun and exciting, but it's also a lot of other things that are hard to handle if you expect the experience to be 100% fun and exciting.
 
+Public endorsements are fake, too. I've seen indie founders I like give glowing praise for some book or service, and then I check it out based on their recommendation only to find the thing to be low-quality. And on a few occasions, I've talked to founders privately, and they admit that their public endorsement is embellished or biased by wanting to support a fellow founder, or the endorsement is the result of some other relationship they have to the founder rather than the product itself.
+
+This isn't to sound sinister that there's a global conspiracy to trick you into becoming an indie founder! These biases are just sort of natural, and the problem isn't so much these distortions but newcomers mistaking these distortions as reality.
+
 TODO: Visualization of selection bias and exaggeration.
 
 ## The metric you never see: profit per founder
