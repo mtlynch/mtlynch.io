@@ -59,6 +59,8 @@ Treat the incentive awards as meaningless.
 
 ### Assume no control of the business post-close
 
+But a buyer who says they're going to gut the business is more likely to gut the business than one who says they plan to keep things going.
+
 ### Avoid buyers who want a long transition period
 
 One or two weeks of free work. After that, the buyer should be paying. If they push for a long transition period, it suggests they expect a lot of handholding and aren't capable of running a business themselves.
