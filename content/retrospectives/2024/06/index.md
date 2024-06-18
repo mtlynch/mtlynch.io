@@ -1,10 +1,81 @@
 ---
 title: "Lessons from my First Exit"
 date: 2024-06-18T06:53:53-04:00
-description: TODO - One-line summary
+description: My takeaways from selling TinyPilot
 ---
 
+## Overview
+
 These were my takeaways. For the story of the sale, see, ["I Sold TinyPilot."](/i-sold-tinypilot/)
+
+## What I'm glad I did
+
+### Created a transition checklist
+
+TinyPilot uses Notion for all internal documentation, so I kept the checklist in Notion. It defined the urgent things that had to happen the day of closing, things that should happen the week after closing, and the things that should happen a few weeks after that.
+
+-
+- Update banking information for these X accounts
+
+I created this checklist before we even began due diligence, so I kept it in mind in the months leading up to it. Any time I did something, I'd think about how I'd need to hand it off to the new owner.
+
+As I prepared for the transition, I'd realize something else needs to be updated quickly.
+
+There were things that I wanted the buyer to do quickly like disconnect my credit cards from all the paid accounts. And then there were lower priority things that I thought should be on his radar, like how he probably wants to update everything in our playbooks that says, "If this happens, escalate to Michael."
+
+### Worked with Quiet Light Brokerage
+
+Chris Guthrie was great
+
+Wish they used a better data room
+
+I think they kind of oversold the packet, but I don't know what it would have been like without the packet
+
+All fine, except I wish I objected to giving them a cut of inventory.
+
+Glad that I pushed back on owing everything at closing because it meant that they feel the pain if they negotiate deals with deferred payment.
+
+Idea was to front load all the due diligence into the packet.
+
+Packet is more public than I realized. Anyone can just check a box and get it.
+
+Wish they used some better tooling for data sharing. We just used Google Drive.
+
+If I were to do it again, I would have waited to involve a broker until I couldn't find a strategic buyer. QLB was helpful in working with strategic buyers, especially since it was my first time, but probably not worth 7.5%. I didn't really get what brokers do. I would have been happy to work with a broker for the first time, but now that I've seen it from start to finish, I think a good broker would still add value, but not enough to be worth 7.5% of the company. The more critical part is the M&A lawyer to make sure you're covered legally.
+
+### Don't do seller financing
+
+When we pitched to the strategic buyer, they said, "Interest rates at banks are so high right now, so we'd prefer to do seller financing."
+
+Banks have billions in resources dedicated to collecting loans. They have experience and special lawyers on staff and financial resources all ready. They have insights into a buyer's creditworthiness before the loan, and they have mechanisms to collect the debt after the sale.
+
+I have none of that. So if a bank needs to charge 7% interest on a loan to compensate for their risk, the right risk-adjusted interest for me is probably 15-25%.
+
+With seller financing, you work for the buyer.
+
+### Assume I'll get nothing after closing
+
+Treat the incentive awards as meaningless.
+
+### Assume no control of the business post-close
+
+### Avoid buyers who want a long transition period
+
+One or two weeks of free work. After that, the buyer should be paying. If they push for a long transition period, it suggests they expect a lot of handholding and aren't capable of running a business themselves.
+
+### Broker gets paid when I get paid
+
+Negotiate that quiet light gets paid when I do.
+
+### Discuss thorny issues without lawyers first
+
+- Met with buyer to talk through contentious issues in the contract to understand what the underlying thing was they were trying to protect/prevent.
+
+### Used dedicated accounts for the business
+
+- Used a dedicated account for managing domain names so I didn't have to transfer each domain name one-by-one. I just handed over the entire hosting account.
+- From the start, used a Twilio number for everything related to the business rather than my direct line, so I just handed over the Twilio account and the buyer changed to forward to his phone.
+- Used Bitwarden for credentials
 
 ## What I'll do differently in the future
 
@@ -97,70 +168,6 @@ Make sure buyer isn't controlling those bank accounts.
 ### Take even fewer dependencies on Google
 
 Google Drive and GCP couldn't transfer to the buyer without creating a paid Google Workspace account.
-
-## What I'm glad I did
-
-### Worked with Quiet Light Brokerage
-
-Chris Guthrie was great
-
-Wish they used a better data room
-
-I think they kind of oversold the packet, but I don't know what it would have been like without the packet
-
-All fine, except I wish I objected to giving them a cut of inventory.
-
-Glad that I pushed back on owing everything at closing because it meant that they feel the pain if they negotiate deals with deferred payment.
-
-Idea was to front load all the due diligence into the packet.
-
-Packet is more public than I realized. Anyone can just check a box and get it.
-
-Wish they used some better tooling for data sharing. We just used Google Drive.
-
-If I were to do it again, I would have waited to involve a broker until I couldn't find a strategic buyer. QLB was helpful in working with strategic buyers, especially since it was my first time, but probably not worth 7.5%. I didn't really get what brokers do. I would have been happy to work with a broker for the first time, but now that I've seen it from start to finish, I think a good broker would still add value, but not enough to be worth 7.5% of the company. The more critical part is the M&A lawyer to make sure you're covered legally.
-
-### Don't do seller financing
-
-When we pitched to the strategic buyer, they said, "Interest rates at banks are so high right now, so we'd prefer to do seller financing."
-
-Banks have billions in resources dedicated to collecting loans. They have experience and special lawyers on staff and financial resources all ready. They have insights into a buyer's creditworthiness before the loan, and they have mechanisms to collect the debt after the sale.
-
-I have none of that. So if a bank needs to charge 7% interest on a loan to compensate for their risk, the right risk-adjusted interest for me is probably 15-25%.
-
-With seller financing, you work for the buyer.
-
-### Assume I'll get nothing after closing
-
-Treat the incentive awards as meaningless.
-
-### You can't control anything the buyer does post-acquisition
-
-### Avoid buyers who want a long transition period
-
-One or two weeks of free work. After that, the buyer should be paying. If they push for a long transition period, it suggests they expect a lot of handholding and aren't capable of running a business themselves.
-
-### Broker gets paid when I get paid
-
-Negotiate that quiet light gets paid when I do.
-
-### Discuss thorny issues without lawyers first
-
-- Met with buyer to talk through contentious issues in the contract to understand what the underlying thing was they were trying to protect/prevent.
-
-### Created a checklist for the transition
-
-- created a checklist of everything that had to happen pre close, close day, and post closing.
-
-As I prepared for the transition, I'd realize something else needs to be updated quickly.
-
-There were things that I wanted the buyer to do quickly like disconnect my credit cards from all the paid accounts. And then there were lower priority things that I thought should be on his radar, like how he probably wants to update everything in our playbooks that says, "If this happens, escalate to Michael."
-
-### Used dedicated accounts for the business
-
-- Used a dedicated account for managing domain names so I didn't have to transfer each domain name one-by-one. I just handed over the entire hosting account.
-- From the start, used a Twilio number for everything related to the business rather than my direct line, so I just handed over the Twilio account and the buyer changed to forward to his phone.
-- Used Bitwarden for credentials
 
 ## What surprised me
 
