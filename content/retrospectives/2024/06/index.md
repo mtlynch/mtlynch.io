@@ -140,6 +140,18 @@ What's the worst I could do to the buyer? Not give him what I promised. But so w
 
 ### Announce the sale to the team later
 
+Deciding when to tell your team about an acquisition is extremely difficult, and I haven't seen anyone come up with a good solution to this problem.
+
+If you keep the sale a secret until the deal closes, you're effectively lying to your team. An acquisition is something that will have a major impact on their lives, and there are important decisions they might make where it would greatly benefit them to know about the sale.
+
+On the other hand, if you're completely transparent about the sale to your team, you take on a huge amount of risk. Members of the team might threaten to leave and put the sale in jeopardy unless you offer them bonuses or promotions. Or they might worry about the sale or lose motivation and their job performance might tank.
+
+In the case of TinyPilot, I had a good relationship with every member of the team, so I didn't think anyone would use the sale against me, but I also find that people to unexpected things when relationships end, so I did worry about that risk.
+
+In the end, I decided to tell the team as soon as I signed the agreement with the broker, but I ended up regretting it slightly. Nothing catastrophic happened, but there were things about the team knowing that made work more difficult.
+
+I had reasoned that I owed it to the team to tell them because I would want to know if I were in their position. The thing I didn't realize at the time was that we had very different levels of risk.
+
 Be more transparent from the start of the company to the team that an acquisition is possible and defer the actual acquisition announcement until it's close to closing.
 
 ### Don't catastrophize every setback
@@ -170,67 +182,62 @@ Review existing contracts that say what happens in a sale (look for terms like "
 
 Everything goes to the new buyer, including emails and agenda. My wife was employee #1 and our of 200 email threads, there were two inappropriate jokes in emails.
 
-### Think through the closing ahead of time
+### Define what happens to money flows around the time of closing
 
-- Define explicitly how things work around the borders of the closing
-  - How do you split bills for services that straddle the closing (e.g., a monthly bill that's charged a week after closing)?
-  - What happens to funds in sales platform accounts that haven't yet transferred to the bank?
-  - Who pays back customers who purchase before closing but request a refund after closing?
-  - Who receives revenue from sales on closing day?
-  - Who pays employees for work on closing day?
-  - Who receives pending payouts from orders before closing?
-- Define who pays the fees.
-  - Title company took $325 in fees out of my end, I asked for it back from buyer. Would have been good to just make that explicit upfront.
+I didn't realize until late in the process that there's a lot of ambiguity around who's entitled to certain money that's flowing in and out of the business around the time of the closing. The buyer and I were able to find amicable resolutions to all these questions, but I wish I'd thought about them earlier:
 
-### Disconnect business bank accounts from business email before closing
+- How do you split bills for services that straddle the closing (e.g., a monthly bill that's charged a week after closing)?
+- What happens to funds in sales platform accounts that haven't yet transferred to the bank?
+- Who pays when a customer purchases before closing but request a refund after closing?
+- Who receives revenue from sales on closing day?
+- Who pays employees for work on closing day?
+- Who pays fees associated with closing (e.g., escrow fees)?
 
-Make sure buyer isn't controlling those bank accounts.
+### Disconnect non-transferable accounts from business email before closing
+
+Sales below $1M are usually asset sales, meaning that the buyer is purchasing assets from the business but not the business itself. This is in contrast to a stock sale, where the buyer purchases the business and everything it owns.
+
+Because this was an asset sale, I retained control of TinyPilot's bank accounts and payroll. The problem was that I forgot to change the email address on those accounts before I handed over control of TinyPilot's email account to the new buyer. For example, I didn't want the email address associated with my bank account to be bank@tinypilotkvm.com when I no longer could receive email at that address.
+
+I worked with the new owner to fix up the email address on those accounts after the sale, and it wasn't a big deal, but I wish I'd done it myself while I still controlled the email account.
 
 ### Take even fewer dependencies on Google
 
-Google Drive and GCP couldn't transfer to the buyer without creating a paid Google Workspace account.
+Most account transitions were smooth. Everything was in Bitwarden, so I just added the new owner as an admin in our Bitwarden organization, and they were able to take possession of all the accounts.
+
+The one account that couldn't transfer over was Google. I used Google Cloud Platform for some TinyPilot services, but I never created a dedicated TinyPilot GCP account. I just used a dedicated TinyPilot GCP project within my normal GCP account. I figured that when the time came, I'd just transfer the project to the new owner. There's a big "Migrate" button at the top of my GCP project settings, so I planned to just push that button and specify the new owner's GCP account as the destination.
+
+{{<img src="gcp-migrate.webp" has-border="true">}}
+
+When closing was complete and I finally clicked that button, I saw this error message:
+
+{{<img src="gcp-error.png" has-border="true">}}
+
+Google Drive and GCP couldn't transfer to the buyer without creating a paid Google Workspace account. The link points to a maze of Google documentation, and the jist seemed to be that both the new owner and I would need to create paid Google Workspace accounts and go through some complicated process from there.
+
+We had a similar issue with some notes and old documents that I'd stored in Google Drive.
+
+The new owner decided it was too much hassle and the value of the data in our Google accounts was too low that I exported what I could, and we deleted the rest.
+
+In general, I've tried to minimize my dependencies on Google, both personally and professionally, as they frequently burn me with corner cases like these, so this is just a further reminder to depend on them even less.
 
 ## What surprised me
 
-### The due diligence period is when you're weakest
+### Selling the business is all the boring parts of entrepreneurship
 
-Buyer has a lot of power because the deal takes 3 months to close. That's SUCH a long time.
+You're constantly gathering documents and contracts and invoices and answering questions about decisions from years ago.
 
-Last time I bought a house, we asked for 10 days to do an inspection, and the buyer asked us to get it done in 7 days. And then the 5% deposit was due a few weeks later.
+### Optimizing for SDE sucks
 
-And that's a house! That's way less volatile than a business. With a business, a million things can happen that destroy the business. I remember my friend Cory Zue did an interview a few years ago where he said he had this irrational that his successful SaaS business would suddenly fail overnight. And then a month later, he lost 80% of his revenue due to COVID.
+Have to continue selling at the same rate or better
 
-I didn't understand how much I was sacrificing when I signed the LOI for a three-month due diligence period. The buyer doesn't put down a deposit, so they can walk away at any time. But your business is inevitably weaker because the founder had to divert a huge amount of attention from their business to focus on the acquisition.
+But also spending 5-25% of your time on due diligence, legal agreements, logistics of the sale
 
-When we got to the point of reviewing contracts with lawyers, we were already two months in.
+Wanted to redesign hardware to save costs but couldn't because it would make numbers look bad
 
-The negotiation itself keeps the business off the market for longer, which is bad for the seller.
+Every time you spend money, it costs you 4x as much. For example, suppose the multiple for your business is about 3x. If your SDE is $100k, you can sell for $300k.
 
-At launch, TTM was $215k (2.8x multiple)
-At LOI, TTM was $242k (2.5x multiple)
-At close, TTM was $248k (2.4x multiple)
-
-### Interest rates matter a lot
-
-Interest rates matter a lot. I never paid attention to them before, but it makes a big deal when you're selling a company. If you're an investor with $500k to put someplace, the safest investment is Treasury bonds or FDIC-insured CDs. For most of the last decade, interest rates on Treasury bonds and CDs has been pitifully low, like under 1%.
-
-So if you've got $500k to park someplace, 1% a year is not very attractive, so you'd look to more risky investments to get a better return. Buying a business at 4x earnings means that you're earning a 25% return on your investment every year. It's much riskier than a 0.1% CD, but the return is 250x higher, so it's probably a better bet.
-
-In 2023, interest rates jumped to 5%. So would you rather take a guaranteed 5% return or a much more risky 25% return? It also means that taking out loans to buy a business is much less attractive because instead of paying 1% interest on your bank loan, you're now paying 7-9%.
-
-### In the transition period, calendar duration matters more than hours
-
-I agreed to 40 hours per week, but I realized pretty quickly after the sale that it was impossible for the buyer to take.
-
-But I also had time off, so I agreed to extend the duration.
-
-### Buyers have strong incentive to keep the seller happy
-
-I worried that after the contract is over, maybe the buyer is going to start pushing me around because they already have all the assets. If they don't bother to update their billing information, and I get hit with a $2k charge, what leverage do I have to make the buyer pay me back?
-
-It turns out that the leverage is institutional knowledge. If the buyer screws over the seller, it's bad for everyone. You can't codify every little thing in the contract.
-
-The seller can be helpful or not helpful.
+Now imagine you decided to give one of your employees a $10k bonus. Now your SDE is $90k, so your sale price is $270k. So to give the employee the $10k bonus, it costs you $40k.
 
 ### Due diligence is unbounded work
 
@@ -242,13 +249,19 @@ The last time I bought a house, I offered a 10 day period for inspection. The se
 
 I didn't realize when I signed the LOI how much it costs me to take my business off the market for a full three months.
 
-### Optimizing for SDE sucks
+### In the transition period, calendar duration matters more than hours
 
-Wanted to redesign hardware to save costs but couldn't because it would make numbers look bad
+I agreed to 40 hours per week, but I realized pretty quickly after the sale that it was impossible for the buyer to take.
 
-Every time you spend money, it costs you 4x as much. For example, suppose the multiple for your business is about 3x. If your SDE is $100k, you can sell for $300k.
+But I also had time off, so I agreed to extend the duration.
 
-Now imagine you decided to give one of your employees a $10k bonus. Now your SDE is $90k, so your sale price is $270k. So to give the employee the $10k bonus, it costs you $40k.
+### Buyers have incentive to keep the seller happy
+
+I worried that after the contract is over, maybe the buyer is going to start pushing me around because they already have all the assets. If they don't bother to update their billing information, and I get hit with a $2k charge, what leverage do I have to make the buyer pay me back?
+
+It turns out that the leverage is institutional knowledge. If the buyer screws over the seller, it's bad for everyone. You can't codify every little thing in the contract.
+
+The seller can be helpful or not helpful.
 
 ### Lawyers insist on Microsoft Word but never learned to use it
 
@@ -261,11 +274,3 @@ If the non-compete is too restrictive, you're screwed.
 ### If there's no cap on liability, you're screwed.
 
 TODO
-
-### Selling the business is all the boring parts of entrepreneurship
-
-Have to continue selling at the same rate or better
-
-But also spending 5-25% of your time on due diligence, legal agreements, logistics of the sale
-
-You're constantly gathering documents and contracts and invoices and answering questions about decisions from years ago.
