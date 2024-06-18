@@ -41,7 +41,7 @@ I found an agency that seemed like a potential match, but I felt a little iffy a
 
 Fortunately, my electrical engineering partner firm recommended a digital marketing freelancer. From the first call, he was a much better match than anyone else I'd spoken to, so I hired him on the spot.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

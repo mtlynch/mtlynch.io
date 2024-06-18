@@ -151,7 +151,7 @@ I'm writing a blog post that will explain everything in more detail, but if you 
 
 I'm considering selling pre-configured kits for around $180. If you'd be interested in purchasing one, visit:
 
-- [Tiny Pilot KVM](https://tinypilotkvm.com/?ref=mtlynch.io)
+- [Tiny Pilot KVM](https://tinypilotkvm.com/)
 
 ## Legacy projects
 

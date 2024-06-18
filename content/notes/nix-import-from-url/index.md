@@ -151,7 +151,7 @@ Nix failed with this error:
  error: undefined variable 'MAIN_BRANCH'
 ```
 
-I need to [escape the `${`](https://nixos.org/manual/nix/stable/language/values.html?highlight=escape#primitives) by prepending it with two single quotes (`''`) like this:
+I need to [escape the `${`](https://web.archive.org/web/20231001024315/https://nixos.org/manual/nix/stable/language/values.html?highlight=escape#primitives) by prepending it with two single quotes (`''`) like this:
 
 ```bash
 git checkout "''${MAIN_BRANCH}"

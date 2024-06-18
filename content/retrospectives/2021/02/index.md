@@ -53,7 +53,7 @@ I tried [several different techniques](https://twitter.com/deliberatecoder/statu
 | Donations         | $9.00          | $0.00          | <font color="red">-$9.00 (-100%)</font>            |
 | **Total Revenue** | **$15,367.05** | **$41,992.92** | **<font color="green">+$26,625.87 (+173%)</font>** |
 
-This was a enormous month for [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io). Sales jumped from $15k to $42k.
+This was a enormous month for [TinyPilot](https://tinypilotkvm.com/). Sales jumped from $15k to $42k.
 
 Every month, I think, "Wow, that was a lucky month! I won't be able to do _that_ again." And then there's even more growth the following month, so here's hoping that luck continues.
 
@@ -229,7 +229,7 @@ Zestful is growing slightly, even though it's in maintenance mode. The growth se
 ### What got done?
 
 - [_Hit the Front Page of Hacker News_](https://hitthefrontpage.com/) launched.
-- [TinyPilot Pro](https://tinypilotkvm.com/product/tinypilot-pro?ref=mtlynch.io) graduated from beta to a real relase.
+- [TinyPilot Pro](https://tinypilotkvm.com/product/tinypilot-pro) graduated from beta to a real relase.
 - Conducted TinyPilot's first postmortem.
 - Hired two freelance developers on a trial basis.
 

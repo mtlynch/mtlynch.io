@@ -50,7 +50,7 @@ The other issue is that this is an unpleasant task, so I procrastinated. It's an
 
 This is now complete, and I have a better understanding of who needs to give us W-9 forms. I can avoid making it a last-minute task in the future.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

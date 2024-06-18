@@ -34,9 +34,6 @@
     {{ if .HasShortcode "zestful-ad" }}
       <link rel="stylesheet" href="/css/zestful.css" media="screen" />
     {{ end }}
-    {{ if .HasShortcode "tinypilot-ad" }}
-      <link rel="stylesheet" href="/css/tinypilot.css" media="screen" />
-    {{ end }}
 
     {{- if and .IsPage (eq .Type "retrospectives") (not (hasPrefix .Title "Notes from")) }}
       <script src="/third-party/chart.js/2.9.4/Chart.min.js"></script>

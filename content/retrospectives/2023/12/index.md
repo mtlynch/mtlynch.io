@@ -50,7 +50,7 @@ As an example, we have three used Arduino Uno boards. Each one retails for $28. 
 
 My new plan is to wait until we're close to moving out and advertise a time when people can come by and take what they want for free.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

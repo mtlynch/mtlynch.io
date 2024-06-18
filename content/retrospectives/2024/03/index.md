@@ -46,7 +46,7 @@ There were many parts to our release process that we hadn't examined critically.
 
 I ended up getting sidetracked by the TinyPilot release, so I haven't filed yet. Still, I think the government would appreciate me filing at some point this year, so I should probably do that.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

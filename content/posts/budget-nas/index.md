@@ -320,9 +320,9 @@ The total cost of my build is similar to off-the-shelf solutions, but I get more
 
 ## Building the server with TinyPilot
 
-Longtime readers of this blog may recall that I used the Raspberry Pi to create a tool specifically for building and managing servers. It's called [TinyPilot](/tinypilot/). This was the third server I've built with TinyPilot and the first I built with the new [TinyPilot Voyager 2](https://tinypilotkvm.com/product/tinypilot-voyager2?ref=mtlynch.io).
+Longtime readers of this blog may recall that I used the Raspberry Pi to create a tool specifically for building and managing servers. It's called [TinyPilot](/tinypilot/). This was the third server I've built with TinyPilot and the first I built with the new [TinyPilot Voyager 2](https://tinypilotkvm.com/product/tinypilot-voyager2).
 
-{{<img src="voyager2-install.jpg" alt="Photo of Voyager 2 PoE device on top of TrueNAS server" caption="Instead of connecting a keyboard, mouse, and monitor to the TrueNAS server, I managed the installation with a [TinyPilot Voyager 2](https://tinypilotkvm.com/product/tinypilot-voyager2?ref=mtlynch.io)." max-width="600px">}}
+{{<img src="voyager2-install.jpg" alt="Photo of Voyager 2 PoE device on top of TrueNAS server" caption="Instead of connecting a keyboard, mouse, and monitor to the TrueNAS server, I managed the installation with a [TinyPilot Voyager 2](https://tinypilotkvm.com/product/tinypilot-voyager2)." max-width="600px">}}
 
 I'm obviously biased, but building this server with the Voyager 2 was a lot of fun! I never had to connect a keyboard or monitor to the server. I could see video output, boot to BIOS, and mount the TrueNAS installer image all from my web browser.
 

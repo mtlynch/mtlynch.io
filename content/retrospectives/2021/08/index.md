@@ -46,7 +46,7 @@ This was another lucky breakthrough. The global chip shortage stymied my electri
 
 Fortunately, TinyPilot's existing electrical engineering partner managed to find a supply that should last us 6-12 months at a price less than 10% of what I was prepared to pay. They're currently working on a PCB design for a PoE adaptor and expect to have a prototype within the next 4-6 weeks.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

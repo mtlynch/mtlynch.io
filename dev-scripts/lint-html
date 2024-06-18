@@ -52,11 +52,13 @@ IGNORE_PATTERNS+=("/www.amd.com/")
 IGNORE_PATTERNS+=("/www.bls.gov/")
 IGNORE_PATTERNS+=("/www.bhphotovideo.com/")
 IGNORE_PATTERNS+=("/www.digitalfaq.com/")
+IGNORE_PATTERNS+=("/www.irs.gov/")
 IGNORE_PATTERNS+=("/www.raspberrypi.com/")
 IGNORE_PATTERNS+=("/www.raspberrypi.org/")
 IGNORE_PATTERNS+=("/www.reddit.com/")
 IGNORE_PATTERNS+=("/www.sciencedirect.com/")
 IGNORE_PATTERNS+=("/www.servicenow.com/")
+IGNORE_PATTERNS+=("/www.usta.com/")
 
 URL_IGNORE="$(join_by , "${IGNORE_PATTERNS[@]}")"
 
@@ -82,8 +84,8 @@ htmlproofer \
   --swap-urls "https\://mtlynch.io/:/" \
   --ignore-urls "${URL_IGNORE}" \
   `# Some sites return HTTP 400/429 - No Error when HTMLProofer sends ` \
-  `# requests, so ignore those.` \
-  --ignore-status-codes "400,429" \
+  `# requests, so ignore those. Ignore 403s because it's mostly CI noise.` \
+  --ignore-status-codes "400,403,429" \
   --no-enforce-https \
   "$htmlproofer_args_extra" \
   "${BUILD_DIR}"

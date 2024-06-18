@@ -41,7 +41,7 @@ People seemed more interested in the high-level tasks like "Write better blog po
 
 Exciting outcomes are naturally more attractive than fundamentals. If I wrote a book about creating a video game, people would be interested in chapters like "How to build enemies with intelligent AI" and probably not so interested in "the basics of linear algebra." That doesn't mean that I can just skip the fundamentals, but maybe it means I need to find ways to keep the lessons practical and easy to apply while teaching the fundamentals
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

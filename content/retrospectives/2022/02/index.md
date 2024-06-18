@@ -39,7 +39,7 @@ I was glad to publish this retrospective, as I'd been working on it for several 
 
 I was surprised the post didn't get more traction on Hacker News and reddit. Usually, my annual updates are popular there, but this year was a miss on both sites. As always, there's a lot of luck involved, so I can't draw too much from an individual post.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 
