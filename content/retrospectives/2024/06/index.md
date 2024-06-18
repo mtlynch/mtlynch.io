@@ -6,26 +6,40 @@ description: My takeaways from selling TinyPilot
 
 ## Overview
 
-These were my takeaways. For the story of the sale, see, ["I Sold TinyPilot."](/i-sold-tinypilot/)
+In April this year, [I sold TinyPilot](/i-sold-tinypilot/), the bootstrapped business I founded and ran for four years.
+
+My earlier post told the story of how the sale happened, but there are more details I want to share about the mechanics of the sale itself, what went well, what I want to improve in the future, and what surprised me.
 
 ## What I'm glad I did
 
+### Invested heavily into documentation
+
+Before I even started my first business, I read the book _Built to Sell_ by John Warrilow. The advice boils down to this: manage your company so that it doesn't depend on your day-to-day involvement. An effective company has a set of well-defined processes and teams that execute them.
+
+I've always been a fan of clear documentation, so when I started building out the team for TinyPilot, I invested a lot into documentation. Rather than train people in person or on video calls, I would always write a playbook and ask the team member to follow it. If we ran into issues or misunderstandings, we'd update the playbook. When new people would join, they'd onboard via the same playbooks, and we'd continuously improve them.
+
+After I sold TinyPilot, there was a 30-day period during which I would provide a maximum of 80 hours of consulting time to help the buyer with the transition. Most of my time post-transition was just introducing the new owner to the team and our key vendors. There was very little I had to answer outside of that because the buyer had access to all of our documentation, and the team already knew how to run the day-to-day of TinyPilot.
+
 ### Created a transition checklist
 
-TinyPilot uses Notion for all internal documentation, so I kept the checklist in Notion. It defined the urgent things that had to happen the day of closing, things that should happen the week after closing, and the things that should happen a few weeks after that.
+When I began serious discussions about selling TinyPilot, I started a checklist of all the things I wanted to do before I sold. It included things like deleting outdated information from our playbooks and ensuring that all of our account credentials were in the company Bitwarden account.
 
--
-- Update banking information for these X accounts
+As we entered due diligence, I expanded this checklist to include things that would need to happen during the transition. I split the checklist into four categories:
 
-I created this checklist before we even began due diligence, so I kept it in mind in the months leading up to it. Any time I did something, I'd think about how I'd need to hand it off to the new owner.
+- Things that should happen before closing
+- Things that should happen a day or two after closing
+- Things that should happen within the first week after closing
+- Things that should happen within the first month after closing
 
-As I prepared for the transition, I'd realize something else needs to be updated quickly.
+It was helpful to start this checklist several months before the actual closing because I added to it as new things came to mind as we approached the final closing date. For example, I'd send a letter to one of TinyPilot's affiliate partners and then remember to add, "Introduce buyer to affiliates" to the post-close checklist.
 
-There were things that I wanted the buyer to do quickly like disconnect my credit cards from all the paid accounts. And then there were lower priority things that I thought should be on his radar, like how he probably wants to update everything in our playbooks that says, "If this happens, escalate to Michael."
+The checklist turned out to be extremely valuable after the close. The week of closing is chaotic because so many workflows are changing, so it was helpful to have a checklist I created in calmer times.
 
-### Worked with Quiet Light Brokerage
+### Worked with a broker I trusted
 
-Chris Guthrie was great
+Worked with Microconf, heard positive things from another founder about them.
+
+Spoke to Chris Guthrie at the event, and I felt good about the conversation.
 
 Wish they used a better data room
 
@@ -43,7 +57,7 @@ Wish they used some better tooling for data sharing. We just used Google Drive.
 
 If I were to do it again, I would have waited to involve a broker until I couldn't find a strategic buyer. QLB was helpful in working with strategic buyers, especially since it was my first time, but probably not worth 7.5%. I didn't really get what brokers do. I would have been happy to work with a broker for the first time, but now that I've seen it from start to finish, I think a good broker would still add value, but not enough to be worth 7.5% of the company. The more critical part is the M&A lawyer to make sure you're covered legally.
 
-### Don't do seller financing
+### Avoided seller financing
 
 When we pitched to the strategic buyer, they said, "Interest rates at banks are so high right now, so we'd prefer to do seller financing."
 
@@ -99,7 +113,10 @@ The main issue was that I felt like I was in terrible negotiating position by th
 
 The ideal for me would be if the buyer had to present me with an APA before I sign an exclusive LOI with them, but the buyer isn't going to want to invest the time or money unless I'm exclusive with them.
 
-What I'll try next time is to put a few terms I care about into the LOI. I'd want to include things like transition time and confidentiality, since I do a lot of public writing.
+What I'll try next time is to put a few terms I care about into the LOI. I'd want to include things like:
+
+- Transition time
+- Restrictions on confidentiality
 
 ### Begin working with a lawyer earlier
 
@@ -107,7 +124,7 @@ I found a law firm when I started the process, and they reviewed the broker agre
 
 In retrospect, I think it would have been helpful to include a few key things in the LOI. It's still not binding, but it sets a baseline before the APA.
 
-### Create a separate, unofficial "small stuff" contract
+### Create an unofficial "small stuff" contract
 
 Look for opportunities to cut things out of the contract that don't matter. There were parts of the contract where we burned $1k in lawyer time on things that had a value of $500.
 
@@ -120,6 +137,10 @@ One example of this is selling the property in the TinyPilot office. The value o
 What's the worst the buyer could do to me? Not clear the office. So, I clear the office.
 
 What's the worst I could do to the buyer? Not give him what I promised. But so what? He misses out on a $200 desktop PC and lots of obsolete TinyPilot parts?
+
+### Announce the sale to the team later
+
+Be more transparent from the start of the company to the team that an acquisition is possible and defer the actual acquisition announcement until it's close to closing.
 
 ### Don't catastrophize every setback
 
@@ -143,20 +164,18 @@ We use H.264, which means we need a patent license from MPEG-LA. If the buyer co
 
 But fortunately, they did, and it worked out.
 
+Review existing contracts that say what happens in a sale (look for terms like "transfer" or "notice").
+
 ### Assume from the start that nothing written is private
 
 Everything goes to the new buyer, including emails and agenda. My wife was employee #1 and our of 200 email threads, there were two inappropriate jokes in emails.
 
-- Review existing contracts that say what happens in a sale (look for terms like "transfer" or "notice").
-- Be more transparent from the start of the company to the team that an acquisition is possible and defer the actual acquisition announcement until it's close to closing.
-  - Jason Cohen talked about this in interview
-- Define explicitly how to compensate for customers who buy before closing and request a refund after closing
-- Define who pays for ads around closing time.
-- Pending payouts and accounts receivable should default to seller.
-
 ### Think through the closing ahead of time
 
 - Define explicitly how things work around the borders of the closing
+  - How do you split bills for services that straddle the closing (e.g., a monthly bill that's charged a week after closing)?
+  - What happens to funds in sales platform accounts that haven't yet transferred to the bank?
+  - Who pays back customers who purchase before closing but request a refund after closing?
   - Who receives revenue from sales on closing day?
   - Who pays employees for work on closing day?
   - Who receives pending payouts from orders before closing?
