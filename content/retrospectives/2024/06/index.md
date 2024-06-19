@@ -225,7 +225,17 @@ In general, I've tried to minimize my dependencies on Google, both personally an
 
 ### Selling the business is all the boring parts of entrepreneurship
 
-You're constantly gathering documents and contracts and invoices and answering questions about decisions from years ago.
+There are so many parts of being a founder that are fun and exciting: launching a new product or feature, having full control over what tools you use, deciding exactly who you want to work with.
+
+But there are always parts of running a business that suck, like figuring out how complicated laws apply to your business or dealing with large banks who you desperately need but who don't care about your business at all.
+
+Most of the sales process is the unpleasant parts of running a business. You're constantly gathering contracts, invoices, statements and answering questions about decisions from years ago.
+
+### As you prepare to sell, everything costs 4x as much
+
+Every time you spend money, it costs you 4x as much. For example, suppose the multiple for your business is about 3x. If your SDE is $100k, you can sell for $300k.
+
+Now imagine you decided to give one of your employees a $10k bonus. Now your SDE is $90k, so your sale price is $270k. So to give the employee the $10k bonus, it costs you $40k.
 
 ### Optimizing for SDE sucks
 
@@ -235,13 +245,15 @@ But also spending 5-25% of your time on due diligence, legal agreements, logisti
 
 Wanted to redesign hardware to save costs but couldn't because it would make numbers look bad
 
-Every time you spend money, it costs you 4x as much. For example, suppose the multiple for your business is about 3x. If your SDE is $100k, you can sell for $300k.
-
-Now imagine you decided to give one of your employees a $10k bonus. Now your SDE is $90k, so your sale price is $270k. So to give the employee the $10k bonus, it costs you $40k.
-
 ### Due diligence is unbounded work
 
-I didn't feel like I could negotiate with the bank. The buyer isn't saying, "This is something I want." And I can't very well say, "Is this something you want or that the bank wants? Because if it's you, I'm going to say no."
+I greatly underestimated how labor-intensive the due diligence process would be.
+
+At the start, I thought due diligence would be somewhat tedious but still straightforward. I'd already shared monthly profit and loss statements before we even started the due diligence process. I thought maybe the buyer would need to see a few of my bank statements to prove that my profit and loss was real. Maybe they'd ask to see my bookkeeping ledger, of which I was quite proud.
+
+It turned out that the due diligence process required me to share _all_ of my bank statements from the last two years. And that was just part of the first round of requests. As we proceeded further, I needed to create lots of one-off reports to demonstrate some other aspect of my business, like how frequently our customers return or which platforms account for what percentage of our revenue.
+
+TODO: I didn't feel like I could negotiate with the bank. The buyer isn't saying, "This is something I want." And I can't very well say, "Is this something you want or that the bank wants? Because if it's you, I'm going to say no."
 
 ### Due diligence bound me to a single seller, even beyond the due diligence period
 
@@ -249,28 +261,38 @@ The last time I bought a house, I offered a 10 day period for inspection. The se
 
 I didn't realize when I signed the LOI how much it costs me to take my business off the market for a full three months.
 
+### Buyers have incentive to keep the seller happy
+
+One of my worries in the sale was that once I handed over all the accounts and domains to the seller, they'd lose incentive to cooperate with me. For example, what if the buyer forgets to update the billing information on one of the accounts I transferred, and I get hit with a $2k credit card charge? What leverage would I have to make the buyer reimburse me?
+
+I trusted the buyer in this case, but you also never know how people are going to behave when power shifts.
+
+It turned out that even if the buyer is devious and wants to take advantage of the seller, the seller still holds the leverage of institutional knowledge. The buyer doesn't want to screw over the seller for $2k if there's a chance that a month later, the buyer stumbles across some key account they don't know how to access or some workflow they don't understand because they won't be able to ask the seller for help.
+
+### Lawyers insist on Microsoft Word but never learned to use it
+
+I knew the lawyers were going to use Microsoft Word to send contract revisions back and forth, and I knew that was going to be bumpy, but I was surprised by just how bad lawyers are at Word.
+
+The lawyers would do things like manually numbering fields instead of using auto-numbering, so anytime we added or deleted from a list, someone had to manually re-number the list. They didn't know how to cross-reference within a document, so when they said "as mentioned in section 4.3.3," that reference would become invalid if we changed the section numbering.
+
+They also don't seem to know how to use page breaks. Instead, they fill the remainder of the page with dozens of line breaks, so as soon as you change any content, the layout gets screwed up.
+
+### If the non-compete is too restrictive, you're screwed
+
+One of the things my lawyer told me was that judges are less forgiving of a bad non-compete on an acquisition contract.
+
+If work as a rank-and-file developer at a big tech company, and then it turns out you signed a contract saying that you agree never to work for any other company writing software, a judge would likely reject that non-compete. If, however, you sell your company and the purchase agreement says that you agree to never work in software again, then a judge will likely enforce it.
+
+When reviewing TinyPilot's purchase agreement, we looked carefully at the non-compete to ensure that it was limited specifically to the domain of KVM over IP devices and not software or technology in general.
+
+### If there's no cap on liability, you're screwed
+
+When you run a business in the US as a corporation or an LLC, the most you can ever lose from the business is the value of the business itself. If your business is worth $50k and someone sues you for $1M, the most they can get is the assets from your business. The structure of the corporation or LLC should protect you from losing your home.
+
+When you sell a business, ensure that the purchase agreement specifies an explicit cap on liability that's limited to the purchase price, preferably less. Otherwise, you could sell a business for $500k, and the buyer can turn around and sue you for $10M, so you're taking on much more downside risk than you had before you sold.
+
 ### In the transition period, calendar duration matters more than hours
 
 I agreed to 40 hours per week, but I realized pretty quickly after the sale that it was impossible for the buyer to take.
 
 But I also had time off, so I agreed to extend the duration.
-
-### Buyers have incentive to keep the seller happy
-
-I worried that after the contract is over, maybe the buyer is going to start pushing me around because they already have all the assets. If they don't bother to update their billing information, and I get hit with a $2k charge, what leverage do I have to make the buyer pay me back?
-
-It turns out that the leverage is institutional knowledge. If the buyer screws over the seller, it's bad for everyone. You can't codify every little thing in the contract.
-
-The seller can be helpful or not helpful.
-
-### Lawyers insist on Microsoft Word but never learned to use it
-
-Lawyers insist on using Microsoft Word but they're surprisingly bad at it. They manually number fields instead of using auto-numbering, they don't know how to cross-reference within a document, they insert dozens of line breaks instead of page breaks (which screws up layout when anything changes).
-
-### If the non-compete is too restrictive, you're screwed
-
-If the non-compete is too restrictive, you're screwed.
-
-### If there's no cap on liability, you're screwed.
-
-TODO
