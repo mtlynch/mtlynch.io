@@ -67,23 +67,23 @@ I have none of that. So if a bank needs to charge 7% interest on a loan to compe
 
 With seller financing, you work for the buyer.
 
-### Assume I'll get nothing after closing
+### Assumed I'll get nothing after closing
 
 Treat the incentive awards as meaningless.
 
-### Assume no control of the business post-close
+### Expected no control of the business post-close
 
 But a buyer who says they're going to gut the business is more likely to gut the business than one who says they plan to keep things going.
 
-### Avoid buyers who want a long transition period
+### Arrange broker agreement so that they get paid when I get paid
 
-One or two weeks of free work. After that, the buyer should be paying. If they push for a long transition period, it suggests they expect a lot of handholding and aren't capable of running a business themselves.
+The orignal draft of the agreement that Quiet Light sent me said that they get a percentage of the purchase price, and it's due at closing. Keep in mind that at the point I sign the broker agreement, I don't even have a buyer, so I don't know what the deal will look like. But if the deal is structured such that I get some of the money after the initial closing, the language in Quiet Light's agreeement mean that I'd still owe the broker everything on closing day.
 
-### Broker gets paid when I get paid
+For example, if I had signed a deal saying that the sale is for $500k, but I get another $150k a year after the sale, I'd owe QuietLight a percentage on the full $650k at closing time. So, it's a problem in that I'm essentially fronting Quiet Light money at 0% interest. Worse, I might never be able to collect the full amount from the buyer, so I'd be paying Quiet Light a commission on money I never receive.
 
-Negotiate that quiet light gets paid when I do.
+I pushed back on the contract so that Quiet Light only gets paid when I get paid.
 
-### Discuss thorny issues without lawyers first
+### Discussed thorny issues without lawyers first
 
 - Met with buyer to talk through contentious issues in the contract to understand what the underlying thing was they were trying to protect/prevent.
 
