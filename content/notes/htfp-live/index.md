@@ -1,9 +1,13 @@
 ---
 title: "Join My Six-Week Blogging Course"
 date: 2024-06-20T00:00:00-04:00
+images:
+  - /htfp-live/cover.webp
 ---
 
 I'm teaching a live course about how I've found success sharing my blog posts on Hacker News. [Sign up](#sign-up) by Monday (June 24th) to to reserve your slot.
+
+{{<img src="cover.webp">}}
 
 ## Why take a class with me?
 
