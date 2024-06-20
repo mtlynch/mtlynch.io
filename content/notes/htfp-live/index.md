@@ -2,7 +2,7 @@
 title: "Join My Six-Week Blogging Course"
 date: 2024-06-20T00:00:00-04:00
 images:
-  - /htfp-live/cover.webp
+  - /notes/htfp-live/cover.webp
 ---
 
 I'm teaching a small-group, live course about attracting readers to your blog through Hacker News. [Sign up](#sign-up) by Monday (June 24th) to reserve your slot.
