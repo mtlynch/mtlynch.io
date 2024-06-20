@@ -5,7 +5,7 @@ images:
   - /htfp-live/cover.webp
 ---
 
-I'm teaching a live course about how I've found success sharing my blog posts on Hacker News. [Sign up](#sign-up) by Monday (June 24th) to to reserve your slot.
+I'm teaching a small-group, live course about attracting readers to your blog through Hacker News. [Sign up](#sign-up) by Monday (June 24th) to reserve your slot.
 
 {{<img src="cover.webp">}}
 
@@ -17,7 +17,7 @@ My blog receives 300k-500k unique readers per year. After Google, Hacker News is
 
 In the past five years, [40+ of my posts](https://hn.algolia.com/?dateRange=all&page=0&prefix=true&query=mtlynch.io&sort=byPopularity&type=story) have reached the front page of Hacker News. Seven of them have landed in the #1 spot.
 
-It wasn't always this way. I started blogging in 2016, and it took me years of sending my articles into the void before I figured out how to connect my writing with large audiences.
+It wasn't always this way. I [started blogging in 2016](/sia-via-docker/), and it took me years of sending my articles into the void before I figured out how to connect my writing with large audiences.
 
 I frequently see smart, talented writers who struggle to find an audience for their writing, so I want to teach you what I've spent the last eight years learning.
 
@@ -29,7 +29,7 @@ _Week of June 24th, 2024_
 
 Hacker News has its own distinctive culture. Before you can succeed there, it's important to understand its rules, etiquette, and conventions.
 
-In this lesson, I'll explain the culture of Hacker News, why it's a great platform for sharing writing related to software, hardware, or entrepreneurship, and how to avoid missteps that will get you banned.
+In this lesson, I'll explain the culture of Hacker News, why it's a great platform for sharing certain types of writing, and how to avoid missteps that will get you banned.
 
 ### Lesson 2: Choosing the Right Topics
 
@@ -37,7 +37,7 @@ _Week of July 1st, 2024_
 
 It doesn't matter how good your article is if you pick a topic that's a poor match for Hacker News.
 
-In this lesson, I'll share article topics that work well on Hacker News. I'll also show you how to avoid wasting time on articles that have a low probability of success on Hacker News.
+In this lesson, I'll share article topics that work well on Hacker News and show you how to avoid wasting time on articles that have a low probability of success.
 
 ### Lesson 3: Finding a Plan B
 
@@ -45,7 +45,7 @@ _Week of July 8th, 2024_
 
 If your only plan for sharing your writing is submitting it to Hacker News, you're going to get your heart broken a lot.
 
-In this lesson, I'll show how to find other channels in which to share your articles if they don't receive attention on Hacker News.
+In this lesson, I'll show how to find other channels for your articles if they don't receive attention on Hacker News.
 
 ### Lesson 4: Elevate Your Writing
 
@@ -53,19 +53,15 @@ _Week of July 15th, 2024_
 
 Want an unfair advantage over everyone else on Hacker News? Invest in your writing.
 
-You don't have to be born an amazing writer. You can improve your writing and make it more engaging simply by putting in more effort.
-
 In this lesson, I'll talk about simple techniques to make your writing more engaging, how to avoid common writing pitfalls, and how to continually improve your writing.
 
 ### Lesson 5: Submission Day
 
 _Week of July 22nd, 2024_
 
-In this section, I'll walk you through the process of submitting your post to Hacker News, how to make the most out of your time on the front page, and how to keep the comment thread civil and friendly.
+There's an art unto itself of submitting to Hacker News and participating in discussions there. You don't want to invest hours into an excellent article only to fumble your opportunity for a wide audience with a careless mistake on submission day.
 
-Even the best of posts sometimes get ignored by Hacker News.
-
-In this lesson, I'll show you what to do when your post fails to reach the front page, and why it's not always as hopeless as it may first appear.
+In this lesson, I'll walk you through the process of submitting your post to Hacker News, how to make the most out of your time on the front page, and how to keep the comment thread civil and friendly. I'll also show you how you can recover if your Hacker News submission fails to gain traction.
 
 ### Lesson 6: My Process from Start to Finish
 
@@ -73,19 +69,19 @@ _Week of July 29th, 2024_
 
 I've been developing an effective writing and publishing workflow for my blog over the past eight years.
 
-In this lesson, I'll show you all the tools I use in the process of coming up with ideas, writing a first draft, editing, publishing, and sharing.
+In this lesson, I'll show you all the tools I use in my writing process. I'll share my entire creative process, showing real examples of how my blog posts evolved from idea to first draft to front page success.
 
 ## What's not covered: Grammar
 
-While I do love grammar and try to obey its sometimes maddening rules, this is not a course about grammar.
+While I do love grammar and try to obey its maddening rules, this is not a course about grammar.
 
-In lesson four, I'll cover some techniques to strengthen your writing and catch careless errors, but this course is more about connecting your writing with an audience rather than the craft of writing itself.
+In lesson four, I'll cover techniques to strengthen your writing and catch careless errors, but this course is more about connecting your writing with an audience rather than the craft of writing itself.
 
 ## Class schedule
 
-The class will meet in one 90-minute session per week for six weeks.
+The class will meet once per week in 90-minute sessions. There are six sessions total.
 
-I'm going to finalize the schedule once I get everyone's availability, but we'll meet either Wednesdays, Thursdays, or Fridays at 10am, 1pm, or 4pm ET.
+I'm going to finalize the schedule once I get everyone's availability, but we'll meet either Wednesdays, Thursdays, or Fridays at 10 AM, 1 PM, or 4 PM ET.
 
 ## Class size
 
@@ -103,9 +99,9 @@ I'll present slides for 30-60 minutes, and I'll reserve 20-30 minutes for questi
 
 ## Who should take this course?
 
-The type of writing that succeeds on Hacker News is from authors who write about technical topics like software and hardware or about running a business related to those domains.
+The type of writing that succeeds on Hacker News is technical topics like software and hardware or about running a business related to those domains.
 
-This course is likely a good match for you if you fall in any of the following categories:
+This course is likely a good match for you if you fall into any of the following categories:
 
 - You're interested in writing articles about software, hardware, or entrepreneurship.
 - You've submitted articles to Hacker News in the past and can't understand why they didn't get attention when similar articles from other authors succeeded.
@@ -114,9 +110,9 @@ This course is likely a good match for you if you fall in any of the following c
 
 ## Who shouldn't take this course?
 
-If you're a marketer, influencer, VP, or "thought leader," who has lots of theories to share about what other people are doing without doing anything yourself, your writing probably won't succeed on Hacker News.
+If you're a marketer, influencer, VP, or "thought leader" with lots of brilliant theories to share about what other people are doing without doing anything yourself, your writing probably won't succeed on Hacker News.
 
-If you've become a LinkedIn sensation by writing [amazing broetry](https://www.buzzfeednews.com/article/ryanmac/why-are-these-posts-taking-over-your-linkedin-feed-because), I admit up front that I can't help you translate that skill to Hacker News.
+If you've become a LinkedIn sensation by writing [amazing broetry](https://www.buzzfeednews.com/article/ryanmac/why-are-these-posts-taking-over-your-linkedin-feed-because), I can't help you translate that skill to Hacker News.
 
 ## Requirements
 
@@ -124,20 +120,24 @@ There is no homework for this class, so most of the work is attending classes an
 
 Specifically, you need to:
 
-- Show up: I want to teach people who are interested in all of the topics. I expect you to show up to at least five of the six sessions, preferably 100% of them.
-- Give feedback: I'll send out surveys after each session asking for feedback. I'll use the feedback to guide the course material and teach in a way that best connects with you.
+- Show up
+  - I want to teach people who are interested in all of the topics. I expect you to show up to at least five of the six sessions, preferably all of them.
+- Give feedback
+  - I'll send out surveys after each session asking for feedback. I'll use the feedback to guide the course material and teach in a way that best connects with you.
 
 ## Cost
 
 The course is $180 per attendee ($30 per session).
 
-I accept credit payment via PayPal or through cryptocurrency (ETH or USDC).
+I accept credit payments via PayPal or cryptocurrency payments through Ethereum or USDC.
+
+If you need a certificate of completion or some other documentation to request reimbursement from your employer, I'm happy to work with you in getting whatever you need.
 
 ## Downloadable copy
 
-Following the live course, I'll record a pre-recorded version covering the same material. It will be an updated version of [_Hit the Front Page of Hacker News_](https://hitthefrontpage.com/), which I published in 2020.
+After the course ends, I'll record a downloadable video course covering the same material. It will be an updated version of [_Hit the Front Page of Hacker News_](https://hitthefrontpage.com/), which I published in 2020.
 
-When I publish the full course, you'll get a free copy of the highest-tier package.
+When I publish the full downloadable course, you'll get a free copy of the highest-tier package.
 
 ## Refund policy
 
@@ -147,10 +147,10 @@ If you decide after the first class that this course isn't right for you, I can 
 
 My wife and I are expecting our first child at the end of August.
 
-The class is scheduled to end well before the due date, but if the baby arrives early, I'll need to cancel remaining classes. If that happens, I'll refund your tuition at $30 per session that was not fulfilled.
+The class is scheduled to end well before the baby's due date, but if the baby arrives early, I'll need to cancel the remaining classes. If that happens, I'll refund your tuition at $30 per session that was not fulfilled.
 
 ## Sign up
 
-If you're interested in the class, sign up below and let me know which timeslots you're available. I'll finalize the schedule and send out payment links by 6pm ET on Monday, June 24th.
+If you're interested in the class, sign up below and let me know which timeslots you're available. I'll finalize the schedule and send out payment links by 6 PM ET on Monday, June 24th.
 
 - [Sign up for this course](https://tally.so/r/n0MzMy)
