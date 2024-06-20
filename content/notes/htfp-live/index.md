@@ -1,9 +1,21 @@
 ---
 title: "Join My Six-Week Blogging Course"
-date: 2024-06-20T10:13:18-04:00
+date: 2024-06-20T00:00:00-04:00
 ---
 
-tl;dr - I'm teaching a live course about how I write this blog.
+I'm teaching a live course about how I've found success sharing my blog posts on Hacker News. [Sign up](#sign-up) by Monday (June 24th) to to reserve your slot.
+
+## Why take a class with me?
+
+My blog receives 300k-500k unique readers per year. After Google, Hacker News is the primary way that new readers find my writing.
+
+{{<img src="blog-stats.png" max-width="600px" has-border="true" caption="My blog receives 300k-500k unique readers per year, with Hacker News largely connecting me with new readers.">}}
+
+In the past five years, [40+ of my posts](https://hn.algolia.com/?dateRange=all&page=0&prefix=true&query=mtlynch.io&sort=byPopularity&type=story) have reached the front page of Hacker News. Seven of them have landed in the #1 spot.
+
+It wasn't always this way. I started blogging in 2016, and it took me years of sending my articles into the void before I figured out how to connect my writing with large audiences.
+
+I frequently see smart, talented writers who struggle to find an audience for their writing, so I want to teach you what I've spent the last eight years learning.
 
 ## Curriculum
 
@@ -13,7 +25,7 @@ _Week of June 24th, 2024_
 
 Hacker News has its own distinctive culture. Before you can succeed there, it's important to understand its rules, etiquette, and conventions.
 
-In this lesson, I'll explain the culture of Hacker News, why it's a great platform for sharing writing related to software, hardware, or entrepreneurship, and how to avoid cultural missteps.
+In this lesson, I'll explain the culture of Hacker News, why it's a great platform for sharing writing related to software, hardware, or entrepreneurship, and how to avoid missteps that will get you banned.
 
 ### Lesson 2: Choosing the Right Topics
 
@@ -27,7 +39,7 @@ In this lesson, I'll share article topics that work well on Hacker News. I'll al
 
 _Week of July 8th, 2024_
 
-If your only plan for sharing your content is submitting it to Hacker News, you're going to get your heart broken a lot.
+If your only plan for sharing your writing is submitting it to Hacker News, you're going to get your heart broken a lot.
 
 In this lesson, I'll show how to find other channels in which to share your articles if they don't receive attention on Hacker News.
 
@@ -63,7 +75,7 @@ In this lesson, I'll show you all the tools I use in the process of coming up wi
 
 While I do love grammar and try to obey its sometimes maddening rules, this is not a course about grammar.
 
-In lesson four, I'll cover some techniques to strengthen your writing and to catch careless errors, but this course is more about connecting your writing with an audience rather than the craft of writing itself.
+In lesson four, I'll cover some techniques to strengthen your writing and catch careless errors, but this course is more about connecting your writing with an audience rather than the craft of writing itself.
 
 ## Class schedule
 
@@ -77,27 +89,28 @@ I'm aiming to have classes of 10-20 students. If there's enough demand, I may ad
 
 ## Venue
 
-The classes will meet online on Jitsi Meet.
+The classes will meet online on Jitsi Meet. You don't need to be on camera during the class, but you're welcome to be.
 
 ## Structure
 
-The classes will be lecture style lessons.
+The classes will be lecture-style lessons.
 
 I'll present slides for 30-60 minutes, and I'll reserve 20-30 minutes for questions.
 
 ## Who should take this course?
 
-The type of writing that succeeds on Hacker News is from people who are interested in learning more about technical topics like software and hardware or about running a business related to those domains.
+The type of writing that succeeds on Hacker News is from authors who write about technical topics like software and hardware or about running a business related to those domains.
 
 This course is likely a good match for you if you fall in any of the following categories:
 
 - You're interested in writing articles about software, hardware, or entrepreneurship.
-- You've submitted articles to Hacker News in the past and can't make sense of your results there.
+- You've submitted articles to Hacker News in the past and can't understand why they didn't get attention when similar articles from other authors succeeded.
 - You want to write articles to bring attention to your startup, side project, or small business.
+- You work in DevRel and want to write content that will appeal to smart developers.
 
 ## Who shouldn't take this course?
 
-If you're a marketer, influencer, VP, or "thought leader," who theorizes or observes what other people are doing without doing anything yourself, your writing probably won't succeed on Hacker News.
+If you're a marketer, influencer, VP, or "thought leader," who has lots of theories to share about what other people are doing without doing anything yourself, your writing probably won't succeed on Hacker News.
 
 If you've become a LinkedIn sensation by writing [amazing broetry](https://www.buzzfeednews.com/article/ryanmac/why-are-these-posts-taking-over-your-linkedin-feed-because), I admit up front that I can't help you translate that skill to Hacker News.
 
