@@ -1,112 +1,139 @@
 ---
-title: "Htfp Live"
+title: "Join My Six-Week Blogging Course"
 date: 2024-06-20T10:13:18-04:00
 ---
 
 tl;dr - I'm teaching a live course about how I write this blog.
 
-## Lesson 1: Understanding Hacker News
+## Curriculum
 
-60 mins
+### Lesson 1: Understanding Hacker News
 
-Week of June 24th, 2024
+_Week of June 24th, 2024_
 
-## Lesson 2: Choosing the Right Topics
+Hacker News has its own distinctive culture. Before you can succeed there, it's important to understand its rules, etiquette, and conventions.
 
-75 mins
+In this lesson, I'll explain the culture of Hacker News, why it's a great platform for sharing writing related to software, hardware, or entrepreneurship, and how to avoid cultural missteps.
 
-Week of July 1st, 2024
+### Lesson 2: Choosing the Right Topics
 
-## Lesson 3: Finding
+_Week of July 1st, 2024_
 
-75 mins
+It doesn't matter how good your article is if you pick a topic that's a poor match for Hacker News.
 
-Week of July 8th, 2024
+In this lesson, I'll share article topics that work well on Hacker News. I'll also show you how to avoid wasting time on articles that have a low probability of success on Hacker News.
 
-## Lesson 4: Elevate
+### Lesson 3: Finding a Plan B
 
-75 mins
+_Week of July 8th, 2024_
 
-Week of July 15th, 2024
+If your only plan for sharing your content is submitting it to Hacker News, you're going to get your heart broken a lot.
 
-## Lesson 5: Submission Day
+In this lesson, I'll show how to find other channels in which to share your articles if they don't receive attention on Hacker News.
 
-Week of July 22nd, 2024
+### Lesson 4: Elevate Your Writing
 
-## Lesson 6: My Process from Start to Finish
+_Week of July 15th, 2024_
 
-60 mins
+Want an unfair advantage over everyone else on Hacker News? Invest in your writing.
 
-Week of July 29th, 2024
+You don't have to be born an amazing writer. You can improve your writing and make it more engaging simply by putting in more effort.
 
-## What's not covered
+In this lesson, I'll talk about simple techniques to make your writing more engaging, how to avoid common writing pitfalls, and how to continually improve your writing.
 
-- English grammar or syntax
+### Lesson 5: Submission Day
 
----
+_Week of July 22nd, 2024_
 
-## Timing
+In this section, I'll walk you through the process of submitting your post to Hacker News, how to make the most out of your time on the front page, and how to keep the comment thread civil and friendly.
 
-The class meets once per week for six weeks.
+Even the best of posts sometimes get ignored by Hacker News.
 
-I'm going to finalize the schedule once I hear availability, but we'll meet either Wednesdays, Thursdays, or Fridays at 10am, 1pm, or 4pm ET.
+In this lesson, I'll show you what to do when your post fails to reach the front page, and why it's not always as hopeless as it may first appear.
+
+### Lesson 6: My Process from Start to Finish
+
+_Week of July 29th, 2024_
+
+I've been developing an effective writing and publishing workflow for my blog over the past eight years.
+
+In this lesson, I'll show you all the tools I use in the process of coming up with ideas, writing a first draft, editing, publishing, and sharing.
+
+## What's not covered: Grammar
+
+While I do love grammar and try to obey its sometimes maddening rules, this is not a course about grammar.
+
+In lesson four, I'll cover some techniques to strengthen your writing and to catch careless errors, but this course is more about connecting your writing with an audience rather than the craft of writing itself.
+
+## Class schedule
+
+The class will meet in one 90-minute session per week for six weeks.
+
+I'm going to finalize the schedule once I get everyone's availability, but we'll meet either Wednesdays, Thursdays, or Fridays at 10am, 1pm, or 4pm ET.
+
+## Class size
+
+I'm aiming to have classes of 10-20 students. If there's enough demand, I may add additional sections so that no class gets uncomfortably large.
 
 ## Venue
 
-The classes will be online on Jitsi Meet.
+The classes will meet online on Jitsi Meet.
 
 ## Structure
 
-Lectures with about 20-30 mins for Q&A.
+The classes will be lecture style lessons.
 
-## Perks
+I'll present slides for 30-60 minutes, and I'll reserve 20-30 minutes for questions.
 
-When I publish the full course, you'll get a free copy of
+## Who should take this course?
+
+The type of writing that succeeds on Hacker News is from people who are interested in learning more about technical topics like software and hardware or about running a business related to those domains.
+
+This course is likely a good match for you if you fall in any of the following categories:
+
+- You're interested in writing articles about software, hardware, or entrepreneurship.
+- You've submitted articles to Hacker News in the past and can't make sense of your results there.
+- You want to write articles to bring attention to your startup, side project, or small business.
+
+## Who shouldn't take this course?
+
+If you're a marketer, influencer, VP, or "thought leader," who theorizes or observes what other people are doing without doing anything yourself, your writing probably won't succeed on Hacker News.
+
+If you've become a LinkedIn sensation by writing [amazing broetry](https://www.buzzfeednews.com/article/ryanmac/why-are-these-posts-taking-over-your-linkedin-feed-because), I admit up front that I can't help you translate that skill to Hacker News.
 
 ## Requirements
 
-You
+There is no homework for this class, so most of the work is attending classes and actively participating.
+
+Specifically, you need to:
+
+- Show up: I want to teach people who are interested in all of the topics. I expect you to show up to at least five of the six sessions, preferably 100% of them.
+- Give feedback: I'll send out surveys after each session asking for feedback. I'll use the feedback to guide the course material and teach in a way that best connects with you.
 
 ## Cost
 
 The course is $180 per attendee ($30 per session).
 
-I can accept payment with credit cards via PayPal or through cryptocurrency (ETH or USDC).
+I accept credit payment via PayPal or through cryptocurrency (ETH or USDC).
+
+## Downloadable copy
+
+Following the live course, I'll record a pre-recorded version covering the same material. It will be an updated version of [_Hit the Front Page of Hacker News_](https://hitthefrontpage.com/), which I published in 2020.
+
+When I publish the full course, you'll get a free copy of the highest-tier package.
 
 ## Refund policy
 
-If you decide after the first class that it's not right for you, I can offer a 100% refund. After that, I won't offer refunds.
+If you decide after the first class that this course isn't right for you, I can offer a 100% refund. After that, I won't offer refunds for leaving the course.
 
-Wednesdays at 10am ET
-Wednesdays at 1pm ET
-Wednesdays at 4pm ET
-Thursdays at 10am
+## Heads up: Babies make things unpredictable
 
----
+My wife and I are expecting our first child at the end of August.
 
-Intro - 8 minutes
-Understand - 25 minutes
-Topics - 45 minutes
-Plan B - 40
-Elevate Your Writing - 40
-Submission Day - 27
-Recovering from Failure 16
-My Process from Start to Finish 35
+The class is scheduled to end well before the due date, but if the baby arrives early, I'll need to cancel remaining classes. If that happens, I'll refund your tuition at $30 per session that was not fulfilled.
 
-Day 1
-Intro + Understand
+## Sign up
 
-Day 2
-Topics
+If you're interested in the class, sign up below and let me know which timeslots you're available. I'll finalize the schedule and send out payment links by 6pm ET on Monday, June 24th.
 
-Day 3
-Plan B
-
-Day 4
-Elevate Your Writing
-
-Day 5
-Submission Day
-
-Day 6
-My Process from Start to Finish
+- [Sign up for this course](https://tally.so/r/n0MzMy)
