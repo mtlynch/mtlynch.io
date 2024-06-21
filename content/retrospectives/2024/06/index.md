@@ -8,17 +8,17 @@ description: My takeaways from selling TinyPilot
 
 In April this year, [I sold TinyPilot](/i-sold-tinypilot/), the bootstrapped business I founded and ran for four years.
 
-My earlier post told the story of how the sale happened, but there are more details I want to share about the mechanics of the sale itself, what went well, what I want to improve in the future, and what surprised me.
+My earlier post told the story of how the sale happened, so I'd like to dig a bit deeper into the nuts and bolts of the sale itself. Looking back, I'm going to share what went well, what I want to improve in the future, and what surprised me about the process of selling my business.
 
 ## What I'm glad I did
 
 ### Invested heavily into documentation
 
-Before I even started my first business, I read the book _Built to Sell_ by John Warrilow. The advice boils down to this: manage your company so that it doesn't depend on your day-to-day involvement. An effective company has a set of well-defined processes and teams that execute them.
+Before I even started my first business, I read the book _Built to Sell_ by John Warrilow. The book encourages founders to design their company so that it doesn't depend on their day-to-day involvement. An effective company has a set of well-defined processes and teams that execute them.
 
 I've always been a fan of clear documentation, so when I started building out the team for TinyPilot, I invested a lot into documentation. Rather than train people in person or on video calls, I would always write a playbook and ask the team member to follow it. If we ran into issues or misunderstandings, we'd update the playbook. When new people would join, they'd onboard via the same playbooks, and we'd continuously improve them.
 
-After I sold TinyPilot, there was a 30-day period during which I would provide a maximum of 80 hours of consulting time to help the buyer with the transition. Most of my time post-transition was just introducing the new owner to the team and our key vendors. There was very little I had to answer outside of that because the buyer had access to all of our documentation, and the team already knew how to run the day-to-day of TinyPilot.
+After I sold TinyPilot, the contract called for a 30-day period during which I would provide up to 80 hours of consulting time to help the buyer with the transition. Most of my time post-transition was just introducing the new owner to the team and our key vendors. There was very little I had to answer outside of that because the buyer had access to all of our documentation, and the team already knew how to run the day-to-day of TinyPilot.
 
 ### Created a transition checklist
 
@@ -26,8 +26,8 @@ When I began serious discussions about selling TinyPilot, I started a checklist 
 
 As we entered due diligence, I expanded this checklist to include things that would need to happen during the transition. I split the checklist into four categories:
 
-- Things that should happen before closing
-- Things that should happen a day or two after closing
+- Things that must happen before closing
+- Things that must happen a day or two after closing
 - Things that should happen within the first week after closing
 - Things that should happen within the first month after closing
 
@@ -36,6 +36,24 @@ It was helpful to start this checklist several months before the actual closing 
 The checklist turned out to be extremely valuable after the close. The week of closing is chaotic because so many workflows are changing, so it was helpful to have a checklist I created in calmer times.
 
 ### Worked with a broker I trusted
+
+Before I started the sales process for TinyPilot, I had a negative view of M&A brokers. I lumped them in with the finance bros I knew when I went to college in New York. The picture in my head of a broker was someone who just wanted to close deals as quickly as possible for the highest possible number and didn't care about anything else.
+
+When I attended Microconf in 2023, I met Chris Guthrie, who's an advisor at Quiet Light Brokerage. I appreciated Chris because he came across as laid back, low-pressure, and founder focused. He was a former founder himself, and he talked about finding the best deal for the founder, not necessarily the quickest payout.
+
+Throughout the process, I was glad to be working with Chris and Quiet Light. There are lots of people involved in the sales process, and many of them have opposing goals to mine. For example, both the buyer and I wanted a successful transition, but the buyer obviously wanted the sale price to be low while I wanted it to be high.
+
+The thing I appreciated about working with Quiet Light was that our incentives were aligned. Quiet Light wanted two things that were tightly aligned with my goals.
+
+First, they obviously want a high sale price because they get paid on commission.
+
+Quiet Light also depends on deal flow. They need to protect their reputation as a brokerage that serves founders well. There aren't that many brokerage for bootstrapped businesses, so if founders walked away from their deals feeling like Quiet Light served them poorly, word would get around.
+
+In discussions about the sale, some people balked at Quiet Light's $88.9k fee, as it represented 15% of the sale price. I still think that was a fair commission, as they found me a buyer that I couldn't have found one my own.
+
+The other big value from Quiet Light for me as a first-time seller was having someone exper
+
+If I were to sell a company to a strategic buyer in the future, I might forego a broker and just work with an M&A lawyer.
 
 Worked with Microconf, heard positive things from another founder about them.
 
@@ -193,6 +211,22 @@ I didn't realize until late in the process that there's a lot of ambiguity aroun
 - Who pays employees for work on closing day?
 - Who pays fees associated with closing (e.g., escrow fees)?
 
+### In the transition agreement, weigh calendar days higher than work hours
+
+Most acquisitions have terms around how much work the seller agrees to do after the sale to help the buyer with the post-close transition.
+
+My initial offer to the buyer was that I'd do free consulting after the closing for two weeks up to 40 hours per week, and after that, he could purchase consulting hours from me for $180/hr for up to 10 hours per week.
+
+The buyer counteroffered a 30-day free consulting period with a maximum of 80 hours per week, so it's the same total hours stretched over a longer period.
+
+I didn't realize until we did the transition that
+
+My initial offer to the buyer for
+
+I agreed to 40 hours per week, but I realized pretty quickly after the sale that it was impossible for the buyer to take.
+
+But I also had time off, so I agreed to extend the duration.
+
 ### Disconnect non-transferable accounts from business email before closing
 
 Sales below $1M are usually asset sales, meaning that the buyer is purchasing assets from the business but not the business itself. This is in contrast to a stock sale, where the buyer purchases the business and everything it owns.
@@ -291,8 +325,8 @@ When you run a business in the US as a corporation or an LLC, the most you can e
 
 When you sell a business, ensure that the purchase agreement specifies an explicit cap on liability that's limited to the purchase price, preferably less. Otherwise, you could sell a business for $500k, and the buyer can turn around and sue you for $10M, so you're taking on much more downside risk than you had before you sold.
 
-### In the transition period, calendar duration matters more than hours
+### You don't strictly need a broker to sell
 
-I agreed to 40 hours per week, but I realized pretty quickly after the sale that it was impossible for the buyer to take.
+The broker guides you through the process. I'm glad I worked with a broker, and I'd likely work with them again, but they're mainly an advisor.
 
-But I also had time off, so I agreed to extend the duration.
+My only other experience working with brokers is with realtors, but M&A brokers are outside the critical path. Once the broker finds you a buyer, the real heavy lifting is on the founders and the M&A lawyers to put together the asset purchase agreement. The M&A broker should and did provide guidance to keep the deal on track, but if they disappeared, the deal could still go through, whereas if your lawyer disappeared, you don't have anyone to review the closing documents.
