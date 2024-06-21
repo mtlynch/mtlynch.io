@@ -219,7 +219,7 @@ My initial offer to the buyer was that I'd do free consulting after the closing 
 
 The buyer counteroffered a 30-day free consulting period with a maximum of 80 hours per week, so it's the same total hours stretched over a longer period.
 
-I didn't realize until we did the transition that
+I didn't realize until we did the transition that the 30-day deal was actually much more work for me. Because the new buyer is taking over, they can't really find 80 hours of work for me to do in just two weeks.
 
 My initial offer to the buyer for
 
