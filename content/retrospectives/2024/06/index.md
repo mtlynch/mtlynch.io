@@ -148,7 +148,9 @@ I found a law firm when I started the process, and they reviewed the broker agre
 
 In retrospect, I think it would have been helpful to include a few key things in the LOI. It's still not binding, but it sets a baseline before the APA.
 
-### Create an unofficial "small stuff" contract
+### Create an unofficial "small stuff" agreement with the buyer
+
+At the time of the sale, TinyPilot had a physical office. We had about $1k worth of equipment there, but it was spread over so many distinct items that selling everything would be tedious and costly. For example, we could sell our printer for maybe $40, but the cost of pulling an employee away from their normal responsibilities to sell a printer would likely be higher than $40.
 
 Look for opportunities to cut things out of the contract that don't matter. There were parts of the contract where we burned $1k in lawyer time on things that had a value of $500.
 
