@@ -25,7 +25,7 @@ I frequently see smart, talented writers who struggle to find an audience for th
 
 ### Lesson 1: Understanding Hacker News
 
-_Week of June 24th, 2024_
+- _Thursday, June 27th, 2024 at 10 AM ET_
 
 Hacker News has its own distinctive culture. Before you can succeed there, it's important to understand its rules, etiquette, and conventions.
 
@@ -33,7 +33,8 @@ In this lesson, I'll explain the culture of Hacker News, why it's a great platfo
 
 ### Lesson 2: Choosing the Right Topics
 
-_Week of July 1st, 2024_
+- _Wednesday, July 3rd, 2024 at 10 AM ET_ (alternate session option due to holiday)
+- _Thursday, July 4th, 2024 at 10 AM ET_
 
 It doesn't matter how good your article is if you pick a topic that's a poor match for Hacker News.
 
@@ -41,7 +42,7 @@ In this lesson, I'll share article topics that work well on Hacker News and show
 
 ### Lesson 3: Finding a Plan B
 
-_Week of July 8th, 2024_
+- _Thursday, July 11th, 2024 at 10 AM ET_
 
 If your only plan for sharing your writing is submitting it to Hacker News, you're going to get your heart broken a lot.
 
@@ -49,7 +50,7 @@ In this lesson, I'll show how to find other channels for your articles if they d
 
 ### Lesson 4: Elevate Your Writing
 
-_Week of July 15th, 2024_
+- _Thursday, July 18th, 2024 at 10 AM ET_
 
 Want an unfair advantage over everyone else on Hacker News? Invest in your writing.
 
@@ -57,7 +58,7 @@ In this lesson, I'll talk about simple techniques to make your writing more enga
 
 ### Lesson 5: Submission Day
 
-_Week of July 22nd, 2024_
+- _Thursday, July 25th, 2024 at 10 AM ET_
 
 There's an art unto itself of submitting to Hacker News and participating in discussions there. You don't want to invest hours into an excellent article only to fumble your opportunity for a wide audience with a careless mistake on submission day.
 
@@ -65,7 +66,7 @@ In this lesson, I'll walk you through the process of submitting your post to Hac
 
 ### Lesson 6: My Process from Start to Finish
 
-_Week of July 29th, 2024_
+- _Thursday, August 1st, 2024 at 10 AM ET_
 
 I've been developing an effective writing and publishing workflow for my blog over the past eight years.
 
@@ -77,12 +78,6 @@ While I do love grammar and try to obey its maddening rules, this is not a cours
 
 In lesson four, I'll cover techniques to strengthen your writing and catch careless errors, but this course is more about connecting your writing with an audience rather than the craft of writing itself.
 
-## Class schedule
-
-The class will meet once per week in 90-minute sessions. There are six sessions total.
-
-I'm going to finalize the schedule once I get everyone's availability, but we'll meet either Wednesdays, Thursdays, or Fridays at 10 AM, 1 PM, or 4 PM ET.
-
 ## Class size
 
 I'm aiming to have classes of 10-20 students. If there's enough demand, I may add additional sections so that no class gets uncomfortably large.
@@ -93,7 +88,7 @@ The classes will meet online on Jitsi Meet. You don't need to be on camera durin
 
 ## Structure
 
-The classes will be lecture-style lessons.
+The classes will be lecture-style lessons in 90-minute slots.
 
 I'll present slides for 30-60 minutes, and I'll reserve 20-30 minutes for questions.
 
@@ -151,6 +146,6 @@ The class is scheduled to end well before the baby's due date, but if the baby a
 
 ## Sign up
 
-If you're interested in the class, sign up below and let me know which timeslots you're available. I'll finalize the schedule and send out payment links by 6 PM ET on Monday, June 24th.
+If you're interested in the class, sign up below. Sign ups close Wednesday, June 26th at 12pm ET.
 
-- [Sign up for this course](https://tally.so/r/n0MzMy)
+- [Sign up for this course](https://www.paypal.com/ncp/payment/BGC864F7TWTC4)
