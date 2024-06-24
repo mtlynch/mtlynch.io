@@ -77,17 +77,23 @@ If I were to do it again, I would have waited to involve a broker until I couldn
 
 ### Avoided seller financing
 
-When we pitched to the strategic buyer, they said, "Interest rates at banks are so high right now, so we'd prefer to do seller financing."
+When I started thinking about a sale, I didn't need cash desperately, so I would have been happy to sell to someone who wanted to fund the acquisition with profits from the business over a few years.
 
-Banks have billions in resources dedicated to collecting loans. They have experience and special lawyers on staff and financial resources all ready. They have insights into a buyer's creditworthiness before the loan, and they have mechanisms to collect the debt after the sale.
+When I spoke to other founders about seller financing, they warned me away from it. One founder had advice that stuck with me: "if you sell to a buyer and finance the purchase yourself, you now work for the buyer."
 
-I have none of that. So if a bank needs to charge 7% interest on a loan to compensate for their risk, the right risk-adjusted interest for me is probably 15-25%.
+I was puzzled. How does financing the sale mean I work for the buyer? The other founder explained that you don't get paid unless the business makes money, and the new owner knows that. The new owner can dump management responsibilities onto you. If you say no, the new owner can let the business fail, and they stop making payments to you.
 
-With seller financing, you work for the buyer.
+The other major risk of seller financing is that I, as a small time lender, don't have tools or experience to collect a loan if a buyer refuses to pay. The buyer might have plenty of cash to pay and simply decide not to pay me. For a deal that's under $1M, I'd probably spend more in legal fees than I could hope to collect from an unscrupulous buyer.
 
-### Assumed I'll get nothing after closing
+I would have been open to seller financing if there were no other options available, but it would be a major red flag to me that the buyer was unable to obtain a loan from a bank. Further, I'd need interest rates that are much higher than the prevailing rates banks offer because my risk would be so much higher than a bank's.
 
-Treat the incentive awards as meaningless.
+### Assumed I'd get nothing after closing
+
+From talking to other founders about acquisition stories, I frequently heard cautionary tales about disappointment with payments that were supposed to arrive after closing. In some cases, the buyer simply refused to pay and it was too small an amount to litigate. In other cases, the buyer was supposed to get a cut of profits for the first two years, so the new owner intentionally spent money on things that would bring profits after the bonus period.
+
+The advice I heard consistently was to structure the deal assuming that I'd get $0 after closing. It's certainly possible that I'd receive payments after closing, but I should treat that as a nice bonus.
+
+The buyer and I did send some money back and forth after closing to account for little costs that we forgot to include in the deal, and that went smoothly. But it was much easier knowing that these amounts were less than $5k. It would have been frustrating to not get the money, but it represented a relatively insignificant part of the total deal. If I hadn't been able to collect for some reason, I wouldn't have been too broken up about it.
 
 ### Expected no control of the business post-close
 
