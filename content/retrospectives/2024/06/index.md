@@ -115,6 +115,7 @@ I pushed back on the contract so that Quiet Light only gets paid when I get paid
 
 - Used a dedicated account for managing domain names so I didn't have to transfer each domain name one-by-one. I just handed over the entire hosting account.
 - From the start, used a Twilio number for everything related to the business rather than my direct line, so I just handed over the Twilio account and the buyer changed to forward to his phone.
+- I always emailed from the tinypilotkvm.com domain, but for the first two years, I was running it from the Fastmail account I share with my other businesses. It was hard to split out, but I did it around three years in, and I'm glad I did because it would have been so hard to untangle email accounts in the middle of the post-close process.
 - Used Bitwarden for credentials
 
 ## What I'll do differently in the future
@@ -148,9 +149,21 @@ I found a law firm when I started the process, and they reviewed the broker agre
 
 In retrospect, I think it would have been helpful to include a few key things in the LOI. It's still not binding, but it sets a baseline before the APA.
 
-### Create an unofficial "small stuff" agreement with the buyer
+They can review existing contracts and help you prepare the documents you'll need for standard due diligence so that you're not holding up the deal later.
 
-At the time of the sale, TinyPilot had a physical office. We had about $1k worth of equipment there, but it was spread over so many distinct items that selling everything would be tedious and costly. For example, we could sell our printer for maybe $40, but the cost of pulling an employee away from their normal responsibilities to sell a printer would likely be higher than $40.
+It's also a good time to see if you like working with this lawyer. Once you're in the middle of a contract negotiations, it's a big deal to fire your lawyer and pull in someone else.
+
+Review existing contracts that say what happens in a sale (look for terms like "transfer" or "notice").
+
+### Create an unofficial "small stuff agreement" with the buyer
+
+At the time of the sale, TinyPilot had a physical office. We had about $1k worth of equipment there, but it was spread over so many small items that selling everything would be tedious and costly. For example, we could sell our printer for $40, but the cost of interrupting an employee's normal work to sell a printer is higher than $40.
+
+Still, the stuff in TinyPilot's office was a business asset, so the buyer and I felt like we had to define in the asset purchase agreement what should happen to all that stuff. So we spent a few hours enumerating everything of value in the office, working out a timeline of when the buyer would clear it from the office, and how long I'd extend the lease to facilitate that. Between the two of us, we probably spent $2k on lawyer hours trying to work out how to handle this $1k of stuff that neither of us really wanted.
+
+If I were to do this again, I'd propose to the buyer a "small stuff agreement." This would sit outside of the official legal documents and maybe have some header at the top saying "Nothing in here is a legal contract." But it would be a place for the buyer and I to define expectations for small things that don't require lawyers. It would be good for things like office property where we need to decide _something_ but the stakes are so small that if one side
+
+Instead of the asset purchase agreement enumerating all the items in TinyPilot's office and working out how they'd transfer, we could say that the property in TinyPilot office is not part of the sale. And in our small stuff agreement, the buyer and I could privately work out a reasonable way to handle the office property.
 
 Look for opportunities to cut things out of the contract that don't matter. There were parts of the contract where we burned $1k in lawyer time on things that had a value of $500.
 
@@ -182,9 +195,13 @@ Be more transparent from the start of the company to the team that an acquisitio
 
 ### Don't catastrophize every setback
 
-Every time the buyer's lawyer would put something in the contract that I felt was unfair, I would spin out. I felt like the buyer knew that I was desperate to have this process over with and they were taking advantage, and then I'd talk to the buyer, and they were super collaborative it would be fine. And then a week later, something else would happen, and I'd think, "Oh, boy. Now the buyer's _really_ trying to push me around!" And it would go the same way.
+I found the due diligence process quite stressful and exhausting. There were so many hoops to jump through and so many approvals to win, so I was constantly worried something would blow up the deal and I'd have wasted so much time and money.
 
-So one thing I hope I do in the future is learn to take things in stride more and sleep on it before I flip out.
+One bad habit that made the closing process even more stressful was my tendency to catastrophize. Every time I recognized the potential for something to go awry, I started playing out what the effect would be if it happened. The more I thought about it, the more likely it seemed that the bad thing would happen.
+
+For example, TinyPilot had a license to use the H.264 video encoding algorithm, which is under patent. It turned out the license terms forbid us from transferring the license in an asset sale. I immediately started worrying that the patent owner would decline the new license or otherwise take too long to grant it and blow up the deal. But then a day after I told the buyer about the license, they had already heard back from the license holder and the wheels were in motion for a new license. I tore my hair out for nothing.
+
+If I sell a company in the future, I hope to worry less about potential disasters. I need to remember to sleep on things and see how they feel in the morning.
 
 ### Reveal vendors earlier, but put tighter restrictions in LOI
 
@@ -196,17 +213,22 @@ Forgetting to redact the vendor name in just one spot completely ruins hours of 
 
 Negotiate harder about QLB's cut of inventory. I'd rather give them a higher cut of the sale price and 0% of inventory because I make nothing on inventory and it's just a consequence of what's around when the deal closes. Perverse incentives because I'm selling everything to the buyer at cost, but I essentially pay a 10% tax to QLB anyway, so I'm incentivized to keep inventory dangerously low. Also, made it awkward for my manufacturer because they want me to fulfill my PO, and I have to keep stalling but I don't want to explain why in case the deal falls through.
 
-### Review contracts for non-transferability clauses
-
-We use H.264, which means we need a patent license from MPEG-LA. If the buyer couldn't get the patent license. Not that they would have anything against the buyer just that they don't care. Their fees start at 100,000 units per year, and we're very far from that, so they have not much incentive to get the paperwork squared away in time for the sale.
-
-But fortunately, they did, and it worked out.
-
-Review existing contracts that say what happens in a sale (look for terms like "transfer" or "notice").
-
 ### Assume from the start that nothing written is private
 
-Everything goes to the new buyer, including emails and agenda. My wife was employee #1 and our of 200 email threads, there were two inappropriate jokes in emails.
+Part of TinyPilot's sale included all of TinyPilot's emails. This seemed reasonable and standard to me, as a lot of institutional knowledge is buried in old emails.
+
+As I started thinking more about the sale, I realized that some of my email would be complicated to hand over. What if my employees had said something personal and private to me an email?
+
+As a fictional example, what if I had an email from an employee that said, "I've been feeling unproductive, as I've fallen into a depression since the death of my father." If someone shared something like that with me, it would be with me, Michael their human co-worker with whom they have a trusting relationship, not Michael the arbitrary owner of TinyPilot's business assets. It felt strange and cold to sell that email to the new buyer.
+
+Fortunately, I worked out an agreement between the buyer and the team that anyone could request that I purge emails before the handoff if they were about private, personal issues.
+
+There were also other sensitive emails, like emails where I'm working with my broker and lawyer on the sale. I didn't want the buyer to see our private discussions even after the sale was complete, so we agreed in the purchase agreement to exclude those from the sale.
+
+In the future, I'd make two changes in how I approach emails in my business:
+
+- Make sure everyone on the team understands that in the case of an acquisition, any emails and meeting notes will transfer to the new buyer.
+- When working with lawyers and brokers on the sale itself, do it from a separate email account from the business I'm selling.
 
 ### Define what happens to money flows around the time of closing
 
