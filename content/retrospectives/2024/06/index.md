@@ -112,13 +112,11 @@ After closing, handing over control was extremely straightforward. I just added 
 
 ### Offer incentives for a cash buyer
 
-Look for some opportunity to sell to a cash buyer even if it means selling at a 10% discount or so. Too much can change, and the buyer has way too much leverage by the end of the due diligence period.
+I mentioned in my previous post that one of the biggest surprises of the deal was [how much closing time matters](/i-sold-tinypilot/#due-diligence-makes-me-weaker-by-the-day). For a buyer financing the purchase with a SBA-backed bank loan, the typical closing time I've heard is three to five months. During that time, the seller bears most of the risk should the deal fall through or if their business drops in value.
 
-A lot of the stress of the due diligence was feeling like I couldn't push back on requests for documents because I didn't know if it was coming from the bank or the buyer. If it was just the buyer, I'd have felt a lot more comfortable telling the buyer that I'm giving them the raw data in the format that my systems output it, and they can transform it however they want.
+If I sell another business, I plan to offer incentives that make it easier for the buyer to purchase in cash. I could offer a discount for a cash purchase or make other accomodations to attract buyers who can purchase in cash and make a fast close.
 
-Banks hassled me a lot about addbacks, insisted on seeing invoices going back two years for certain categories of addback.
-
-SBA adds lawyer work, so I probably lost $5-10k in legal fees.
+The other subtlety of a buyer purchasing with a bank loan is that it makes the contract more complicated. Working through the requirements from the bank probably consumed $10-20k in lawyer time, so a discount for a cash buyer should somewhat offset lower closing fees.
 
 ### Shift contract negotiations to earlier in the process
 
