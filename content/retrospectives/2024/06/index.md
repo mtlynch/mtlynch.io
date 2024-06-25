@@ -8,7 +8,9 @@ description: My takeaways from selling TinyPilot
 
 In April this year, [I sold TinyPilot](/i-sold-tinypilot/), the bootstrapped business I founded and ran for four years.
 
-My earlier post told the story of how the sale happened, so I'd like to dig a bit deeper into the nuts and bolts of the sale itself. Looking back, I'm going to share what went well, what I want to improve in the future, and what surprised me about the process of selling my business.
+My earlier post told the story of how the sale happened, but I'd like to dig a bit deeper into the nuts and bolts of the sale itself.
+
+In this post, I'm sharing what went well, what I want to improve in the future, and what surprised me about the process of selling my business.
 
 ## What I'm glad I did
 
@@ -37,51 +39,21 @@ The checklist turned out to be extremely valuable after the close. The week of c
 
 ### Worked with a broker I trusted
 
-Before I started the sales process for TinyPilot, I had a negative view of M&A brokers. I lumped them in with the finance bros I knew when I went to college in New York. The picture in my head of a broker was someone who just wanted to close deals as quickly as possible for the highest possible number and didn't care about anything else.
+Before I started the sales process for TinyPilot, I had a negative view of M&A brokers. The picture in my head of a broker was someone who just wanted to close deals as quickly as possible for the highest possible number and didn't care about anything else. I imagined them saying things like, "Let's bottom line this," or "Time for some jager bombs!"
 
-When I attended Microconf in 2023, I met Chris Guthrie, who's an advisor at Quiet Light Brokerage. I appreciated Chris because he came across as laid back, low-pressure, and founder focused. He was a former founder himself, and he talked about finding the best deal for the founder, not necessarily the quickest payout.
+When I attended Microconf in 2023, I met Chris Guthrie, who's an advisor at Quiet Light Brokerage. He immediately came across as laid back, low-pressure, and founder focused. He was a former founder himself, and he talked about finding the best deal for the founder, not necessarily the quickest payout.
 
-Throughout the process, I was glad to be working with Chris and Quiet Light. There are lots of people involved in the sales process, and many of them have opposing goals to mine. For example, both the buyer and I wanted a successful transition, but the buyer obviously wanted the sale price to be low while I wanted it to be high.
-
-The thing I appreciated about working with Quiet Light was that our incentives were aligned. Quiet Light wanted two things that were tightly aligned with my goals.
-
-First, they obviously want a high sale price because they get paid on commission.
-
-Quiet Light also depends on deal flow. They need to protect their reputation as a brokerage that serves founders well. There aren't that many brokerage for bootstrapped businesses, so if founders walked away from their deals feeling like Quiet Light served them poorly, word would get around.
+I appreciated about working with Quiet Light because our incentives were aligned throughout the process. Quiet Light is incentivized to find me a large payout because their commissions is percentage-based. They also need deal flow, so they have care about ensuring the seller is satisfied with the overall sales experience, not just the final price. The pool of founders looking for M&A brokers is small and fairly tight-knit, so Quiet Light has to maintain a positive reputation.
 
 In discussions about the sale, some people balked at Quiet Light's $88.9k fee, as it represented 15% of the sale price. I still think that was a fair commission, as they found me a buyer that I couldn't have found one my own.
 
-The other big value from Quiet Light for me as a first-time seller was having someone exper
-
-If I were to sell a company to a strategic buyer in the future, I might forego a broker and just work with an M&A lawyer.
-
-Worked with Microconf, heard positive things from another founder about them.
-
-Spoke to Chris Guthrie at the event, and I felt good about the conversation.
-
-Wish they used a better data room
-
-I think they kind of oversold the packet, but I don't know what it would have been like without the packet
-
-All fine, except I wish I objected to giving them a cut of inventory.
-
-Glad that I pushed back on owing everything at closing because it meant that they feel the pain if they negotiate deals with deferred payment.
-
-Idea was to front load all the due diligence into the packet.
-
-Packet is more public than I realized. Anyone can just check a box and get it.
-
-Wish they used some better tooling for data sharing. We just used Google Drive.
-
-If I were to do it again, I would have waited to involve a broker until I couldn't find a strategic buyer. QLB was helpful in working with strategic buyers, especially since it was my first time, but probably not worth 7.5%. I didn't really get what brokers do. I would have been happy to work with a broker for the first time, but now that I've seen it from start to finish, I think a good broker would still add value, but not enough to be worth 7.5% of the company. The more critical part is the M&A lawyer to make sure you're covered legally.
-
 ### Avoided seller financing
 
-When I started thinking about a sale, I didn't need cash desperately, so I would have been happy to sell to someone who wanted to fund the acquisition with profits from the business over a few years.
+When I started thinking about a sale, I didn't need cash desperately, so I was open to receiving payments in installments over several years.
 
 When I spoke to other founders about seller financing, they warned me away from it. One founder had advice that stuck with me: "if you sell to a buyer and finance the purchase yourself, you now work for the buyer."
 
-I was puzzled. How does financing the sale mean I work for the buyer? The other founder explained that you don't get paid unless the business makes money, and the new owner knows that. The new owner can dump management responsibilities onto you. If you say no, the new owner can let the business fail, and they stop making payments to you.
+I was puzzled. How does financing the sale mean I work for the buyer? The founder explained that you don't get paid unless the business makes money, and the new owner knows that. The new owner can dump management responsibilities onto you. If you say no, the new owner can let the business fail, and they stop making payments to you.
 
 The other major risk of seller financing is that I, as a small time lender, don't have tools or experience to collect a loan if a buyer refuses to pay. The buyer might have plenty of cash to pay and simply decide not to pay me. For a deal that's under $1M, I'd probably spend more in legal fees than I could hope to collect from an unscrupulous buyer.
 
@@ -89,34 +61,52 @@ I would have been open to seller financing if there were no other options availa
 
 ### Assumed I'd get nothing after closing
 
-From talking to other founders about acquisition stories, I frequently heard cautionary tales about disappointment with payments that were supposed to arrive after closing. In some cases, the buyer simply refused to pay and it was too small an amount to litigate. In other cases, the buyer was supposed to get a cut of profits for the first two years, so the new owner intentionally spent money on things that would bring profits after the bonus period.
+From talking to other founders about acquisition stories, most people seemed disappointed with the payments they were supposed to receive after closing. In some cases, the buyer simply refused to pay and it was too small an amount to litigate. In other cases, the new owner used creative bookkeeping to avoid paying performance-based incentives to the seller.
 
-The advice I heard consistently was to structure the deal assuming that I'd get $0 after closing. It's certainly possible that I'd receive payments after closing, but I should treat that as a nice bonus.
+The advice I heard consistently was to structure the deal so that if I got nothing after closing, I'd still be happy. I should treat anything after closing as an unexpected bonus.
 
-The buyer and I did send some money back and forth after closing to account for little costs that we forgot to include in the deal, and that went smoothly. But it was much easier knowing that these amounts were less than $5k. It would have been frustrating to not get the money, but it represented a relatively insignificant part of the total deal. If I hadn't been able to collect for some reason, I wouldn't have been too broken up about it.
+The buyer and I did send some money back and forth after closing to account for little costs that we forgot to include in the deal, and that went smoothly. These amounts were a tiny part of the overall transaction, less than $5k. I would have been frustrated had the buyer not paid, but the amounts were so small that I never stressed about the buyer withholding payment.
 
-### Expected no control of the business post-close
+### Maintained realistic expectations about the business after closing
 
-But a buyer who says they're going to gut the business is more likely to gut the business than one who says they plan to keep things going.
+One of the most important aspects of the deal was that the new owner continued investing in the product, the team and our customers.
 
-### Arrange broker agreement so that they get paid when I get paid
+I asked other founders for advice about how to avoid a buyer who will simply gut the company and squeeze everything for short-term profits. The advice I heard was that I can't control what the new owner does after closing, so I shouldn't worry about it.
 
-The orignal draft of the agreement that Quiet Light sent me said that they get a percentage of the purchase price, and it's due at closing. Keep in mind that at the point I sign the broker agreement, I don't even have a buyer, so I don't know what the deal will look like. But if the deal is structured such that I get some of the money after the initial closing, the language in Quiet Light's agreeement mean that I'd still owe the broker everything on closing day.
+It's true that I can't control how the new owner runs their business, but I think it's possible to screen out buyers who had red flags. For example, if I was approached by a company like Idera, I'd notice that they have a history of buying companies and [laying off their staff](https://news.ycombinator.com/item?id=19218036), so I'd have a good guess about their plans for TinyPilot.
 
-For example, if I had signed a deal saying that the sale is for $500k, but I get another $150k a year after the sale, I'd owe QuietLight a percentage on the full $650k at closing time. So, it's a problem in that I'm essentially fronting Quiet Light money at 0% interest. Worse, I might never be able to collect the full amount from the buyer, so I'd be paying Quiet Light a commission on money I never receive.
+For the TinyPilot sale, I looked for buyers whose vision for the company aligned with mine, but I also maintained the attitude that after the sale, the company is no longer mine.
 
-I pushed back on the contract so that Quiet Light only gets paid when I get paid.
+### Arranged broker agreement so that they get paid when I get paid
 
-### Discussed thorny issues without lawyers first
+The broker agreement that Quiet Light initially sent me said that their broker fee is a percentage of the purchase price, and it's due at closing.
 
-- Met with buyer to talk through contentious issues in the contract to understand what the underlying thing was they were trying to protect/prevent.
+The problem I saw in that agreement was that I, as the seller, may not receive the full purchase price at closing. If the purchase agreement involved deferred payment, I'd have to pay Quiet Light upfront and wait for what could be years until I receive the full amount. Worse, if the buyer fails to make payment after closing, I'd have paid commissions on money I never received.
+
+I pushed back on the contract so that Quiet Light only gets paid when I get paid, and Quiet Light quickly agreed. I was glad for this revision because it kept incentives aligned between me and Quiet Light. They'd have just as much incentive to push back against deferred payments as I would, as it threatens payment for both of us.
+
+### Discussed contentious issues without lawyers first
+
+For this acquisition, the buyer drafted their own asset purchase agreement. For the most part, we agreed on the terms in the initial draft, but there were a few terms where we were far apart.
+
+I realized quickly that lawyers get expensive fast &mdash; mine was $550/hr. They also slow down the process and add complexity.
+
+When the buyer and I would run into disagreements in the contracts, we'd first talk directly. In these conversations, my goal was to go past the terms in the contract and find out the underlying need.
+
+For example, the first draft of the contract called for tight restrictions around publicly disclosing details of the sale or business. So, the buyer and I talked about why the clause was there, and it turned out that there were only a small number of things the buyer cared about me disclosing. We adjusted the wording from "you can't discuss anything publicly" to "you can't discuss [these two things](/i-sold-tinypilot/#what-am-i-allowed-to-say) publicly," and we both felt good about the compromise.
 
 ### Used dedicated accounts for the business
 
-- Used a dedicated account for managing domain names so I didn't have to transfer each domain name one-by-one. I just handed over the entire hosting account.
-- From the start, used a Twilio number for everything related to the business rather than my direct line, so I just handed over the Twilio account and the buyer changed to forward to his phone.
-- I always emailed from the tinypilotkvm.com domain, but for the first two years, I was running it from the Fastmail account I share with my other businesses. It was hard to split out, but I did it around three years in, and I'm glad I did because it would have been so hard to untangle email accounts in the middle of the post-close process.
-- Used Bitwarden for credentials
+One of the things that made ownership handoff particularly smooth was that TinyPilot's accounts and infrastructure were totally separate from my other businesses and personal accounts:
+
+- I always sent emails related to the business from my @tinypilotkvm.com email address.
+- I kept TinyPilot's email in a dedicated Fastmail account.
+  - This wasn't true at the beginning. TinyPilot originally shared a Fastmail account with my other businesses, but I eventually migrated it to its own standalone Fastmail account.
+- Every service TinyPilot used was associated with an @tinypilotkvm.com email address.
+- I never associated my personal phone number with TinyPilot, Instead, I always used a Twilio number that forwarded to my real number.
+- All account credentials were in Bitwarden.
+
+After closing, handing over control was extremely straightforward. I just added the new owner to Bitwarden, and they took over from there. There were a few hiccups around 2FA codes I'd forgotten to put in Bitwarden, but we worked those out quickly.
 
 ## What I'll do differently in the future
 
@@ -261,7 +251,7 @@ But I also had time off, so I agreed to extend the duration.
 
 Sales below $1M are usually asset sales, meaning that the buyer is purchasing assets from the business but not the business itself. This is in contrast to a stock sale, where the buyer purchases the business and everything it owns.
 
-Because this was an asset sale, I retained control of TinyPilot's bank accounts and payroll. The problem was that I forgot to change the email address on those accounts before I handed over control of TinyPilot's email account to the new buyer. For example, I didn't want the email address associated with my bank account to be bank@tinypilotkvm.com when I no longer could receive email at that address.
+Because this was an asset sale, I retained control of TinyPilot's bank accounts and payroll. The problem was that I forgot to change the email address on those accounts before I handed over control of TinyPilot's email account to the new buyer. For example, I didn't want the email address associated with my bank account to be `mybank@tinypilotkvm.com` when I no longer could receive email at that address.
 
 I worked with the new owner to fix up the email address on those accounts after the sale, and it wasn't a big deal, but I wish I'd done it myself while I still controlled the email account.
 
@@ -325,13 +315,13 @@ The last time I bought a house, I offered a 10 day period for inspection. The se
 
 I didn't realize when I signed the LOI how much it costs me to take my business off the market for a full three months.
 
-### Buyers have incentive to keep the seller happy
+### You don't strictly need a broker to sell
 
-One of my worries in the sale was that once I handed over all the accounts and domains to the seller, they'd lose incentive to cooperate with me. For example, what if the buyer forgets to update the billing information on one of the accounts I transferred, and I get hit with a $2k credit card charge? What leverage would I have to make the buyer reimburse me?
+The broker guides you through the process. I'm glad I worked with a broker, and I'd likely work with them again, but they're mainly an advisor.
 
-I trusted the buyer in this case, but you also never know how people are going to behave when power shifts.
+My only other experience working with brokers is with realtors, but M&A brokers are outside the critical path. Once the broker finds you a buyer, the real heavy lifting is on the founders and the M&A lawyers to put together the asset purchase agreement. The M&A broker should and did provide guidance to keep the deal on track, but if they disappeared, the deal could still go through, whereas if your lawyer disappeared, you don't have anyone to review the closing documents.
 
-It turned out that even if the buyer is devious and wants to take advantage of the seller, the seller still holds the leverage of institutional knowledge. The buyer doesn't want to screw over the seller for $2k if there's a chance that a month later, the buyer stumbles across some key account they don't know how to access or some workflow they don't understand because they won't be able to ask the seller for help.
+If I sell a business in the future, I may forego a broker if I can find a buyer independently. As a first-time seller, it was worth 15% to have an advisor on my side from start to finish. Now that I have experience selling, I might try a future deal using only an M&A lawyer, but I would still always consider working with a broker again to have that support all the way through the process.
 
 ### Lawyers insist on Microsoft Word but never learned to use it
 
@@ -355,8 +345,10 @@ When you run a business in the US as a corporation or an LLC, the most you can e
 
 When you sell a business, ensure that the purchase agreement specifies an explicit cap on liability that's limited to the purchase price, preferably less. Otherwise, you could sell a business for $500k, and the buyer can turn around and sue you for $10M, so you're taking on much more downside risk than you had before you sold.
 
-### You don't strictly need a broker to sell
+### Buyers have incentive to keep the seller happy
 
-The broker guides you through the process. I'm glad I worked with a broker, and I'd likely work with them again, but they're mainly an advisor.
+One of my worries in the sale was that once I handed over all the accounts and domains to the seller, they'd lose incentive to cooperate with me. For example, what if the buyer forgets to update the billing information on one of the accounts I transferred, and I get hit with a $2k credit card charge? What leverage would I have to make the buyer reimburse me?
 
-My only other experience working with brokers is with realtors, but M&A brokers are outside the critical path. Once the broker finds you a buyer, the real heavy lifting is on the founders and the M&A lawyers to put together the asset purchase agreement. The M&A broker should and did provide guidance to keep the deal on track, but if they disappeared, the deal could still go through, whereas if your lawyer disappeared, you don't have anyone to review the closing documents.
+I trusted the buyer in this case, but you also never know how people are going to behave when power shifts.
+
+It turned out that even if the buyer is devious and wants to take advantage of the seller, the seller still holds the leverage of institutional knowledge. The buyer doesn't want to screw over the seller for $2k if there's a chance that a month later, the buyer stumbles across some key account they don't know how to access or some workflow they don't understand because they won't be able to ask the seller for help.
