@@ -33,7 +33,6 @@ In this lesson, I'll explain the culture of Hacker News, why it's a great platfo
 
 ### Lesson 2: Choosing the Right Topics
 
-- _Wednesday, July 3rd, 2024 at 10 AM ET_ (alternate session option due to holiday)
 - _Thursday, July 4th, 2024 at 10 AM ET_
 
 It doesn't matter how good your article is if you pick a topic that's a poor match for Hacker News.
