@@ -112,11 +112,11 @@ After closing, handing over control was extremely straightforward. I just added 
 
 ### Offer incentives for a cash buyer
 
-I mentioned in my previous post that one of the biggest surprises of the deal was [how much closing time matters](/i-sold-tinypilot/#due-diligence-makes-me-weaker-by-the-day). For a buyer financing the purchase with a SBA-backed bank loan, the typical closing time I've heard is three to five months. During that time, the seller bears most of the risk should the deal fall through or if their business drops in value.
+I mentioned in my previous post that one of the biggest surprises of the deal was [how much closing time matters](/i-sold-tinypilot/#due-diligence-makes-me-weaker-by-the-day). For a buyer financing the purchase with a SBA-backed bank loan, the typical closing time I've heard is three to five months. During that time, the seller bears a substantial risk should the deal fall through or if their business falls in value.
 
 If I sell another business, I plan to offer incentives that make it easier for the buyer to purchase in cash. I could offer a discount for a cash purchase or make other accomodations to attract buyers who can purchase in cash and make a fast close.
 
-The other subtlety of a buyer purchasing with a bank loan is that it makes the contract more complicated. Working through the requirements from the bank probably consumed $10-20k in lawyer time, so a discount for a cash buyer should somewhat offset lower closing fees.
+The other subtlety of a buyer purchasing with a bank loan is that it makes the closing contract more complicated, which means more frictional loss to lawyers. Working through the requirements from the bank probably consumed $10-20k in lawyer time, so even if I accepted a lower price from a cash buyer, I'd make some of it back on lower closing costs.
 
 ### Shift contract negotiations to earlier in the process
 
@@ -173,13 +173,19 @@ If you keep the sale a secret until the deal closes, you're effectively lying to
 
 On the other hand, if you're completely transparent about the sale to your team, you take on a huge amount of risk. Members of the team might threaten to leave and put the sale in jeopardy unless you offer them bonuses or promotions. Or they might worry about the sale or lose motivation and their job performance might tank.
 
-In the case of TinyPilot, I had a good relationship with every member of the team, so I didn't think anyone would use the sale against me, but I also find that people to unexpected things when relationships end, so I did worry about that risk.
+In the case of TinyPilot, I had a good relationship with every member of the team, so I didn't think anyone would use the sale against me, but people do weird things when they know a relationship is about to end.
 
-In the end, I decided to tell the team as soon as I signed the agreement with the broker, but I ended up regretting it slightly. Nothing catastrophic happened, but there were things about the team knowing that made work more difficult.
+In the end, I decided to tell the team as soon as I signed the broker agreement, but I ended up regretting it slightly. Nothing catastrophic happened, but announcing the sale made certain parts of managing the team more difficult. I'm being intentionally vague on this point to protect the team's privacy.
 
-I had reasoned that I owed it to the team to tell them because I would want to know if I were in their position. The thing I didn't realize at the time was that we had very different levels of risk.
+What I didn't realize until we were in it was that the team and I faced different levels of risk. To the team, an acquisition meant the potential for the new owner to fire them or change their role in a way that makes them want to leave voluntarily. And job changes are stressful, but everyone worked part-time for hourly pay. Nobody was about to take out a mortgage on a new home with the expectation that they'd be working at TinyPilot for the next 20 years.
 
-Be more transparent from the start of the company to the team that an acquisition is possible and defer the actual acquisition announcement until it's close to closing.
+But if an employee wanted to interfere with the sale, that could mean scaring away a buyer and losing $50-100k off the valuation. Or worse, they could delay the sale and leave me in a position where I'm managing the company, trying to prepare it for sale, and [caring for a newborn](/i-sold-tinypilot/#whats-next) all at the same time.
+
+I didn't want a bad outcome for anyone, but the worst case for me was significantly worse than the worst case for the team.
+
+If I do this again, I'd wait to tell my team about the sale until it's a done deal, but I'd also disclose early on in working together that an acquisition is always a possibility. They won't necessarily have advanced notice, but I will be looking for a buyer that aligns with their interests, as I did with TinyPilot.
+
+I don't think this strategy is ideal or fair to everyone, but it's the best of a lot of bad options.
 
 ### Don't catastrophize every setback
 
@@ -199,7 +205,19 @@ Forgetting to redact the vendor name in just one spot completely ruins hours of 
 
 ### Eliminate inventory from the broker's commission
 
-Negotiate harder about QLB's cut of inventory. I'd rather give them a higher cut of the sale price and 0% of inventory because I make nothing on inventory and it's just a consequence of what's around when the deal closes. Perverse incentives because I'm selling everything to the buyer at cost, but I essentially pay a 10% tax to QLB anyway, so I'm incentivized to keep inventory dangerously low. Also, made it awkward for my manufacturer because they want me to fulfill my PO, and I have to keep stalling but I don't want to explain why in case the deal falls through.
+My only regret about my broker agreement with Quiet Light was that part of their commission was a percentage of the value of my inventory at the time of the sale.
+
+I didn't realize it at the beginning, but it makes no sense to me that that my inventory levels would affect the broker's cut.
+
+As an example, imagine that I place new orders with my manufacturer when the stock levels at my warehouse are worth about $50k. And suppose that I place orders in batches of $100k, so my inventory level can vary between around $50k and $150k.
+
+If the deal happens to close when my inventory is $150k, I owe the broker $10k (10% of $100k) more than if it closed at $50k. So the broker is getting $10k even though they didn't get .
+
+Worse, the extra $10k I pay the broker for inventory is a pure loss for me. In an asset sale, the buyer purchases the inventory at cost, so if I buy an extra $100k of inventory, the buyer reimburses me the extra $100k, but I still owe the broker $10k out of pocket.
+
+That said, I got lucky and the deal closed when TinyPilot's inventory levels were low but not so low that the new buyer was coming in understocked. And it turns out there's a lot of ambiguity in how to calculate the inventory on hand for the broker fee, and Quiet Light calculated it in a way that was especially generous to me.
+
+Still, the broker fee on inventory was a stressful layer around timing the close that I'd have rather not thought about. If I do this again, I'll push the broker on eliminating inventory from the fee, even if it means giving them a higher percentage of the sale price.
 
 ### Assume from the start that nothing written is private
 
@@ -207,9 +225,9 @@ Part of TinyPilot's sale included all of TinyPilot's emails. This seemed reasona
 
 As I started thinking more about the sale, I realized that some of my email would be complicated to hand over. What if my employees had said something personal and private to me an email?
 
-As a fictional example, what if I had an email from an employee that said, "I've been feeling unproductive, as I've fallen into a depression since the death of my father." If someone shared something like that with me, it would be with me, Michael their human co-worker with whom they have a trusting relationship, not Michael the arbitrary owner of TinyPilot's business assets. It felt strange and cold to sell that email to the new buyer.
+As a fictional example, what if I had an email from an employee that said, "I've been feeling unproductive, as I've fallen into a depression since my father died." If someone shared something like that with me, it would be with me, Michael their human co-worker with whom they have a trusting relationship, not Michael, who just so happens to be the current the owner of TinyPilot's business assets. It felt strange and cold to sell that email to the new buyer.
 
-Fortunately, I worked out an agreement between the buyer and the team that anyone could request that I purge emails before the handoff if they were about private, personal issues.
+Fortunately, I worked out an agreement between the buyer and the team that before closing, anyone could request that I purge any private, personal emails they prefer that I not share.
 
 There were also other sensitive emails, like emails where I'm working with my broker and lawyer on the sale. I didn't want the buyer to see our private discussions even after the sale was complete, so we agreed in the purchase agreement to exclude those from the sale.
 
@@ -220,16 +238,18 @@ In the future, I'd make two changes in how I approach emails in my business:
 
 ### Define what happens to money flows around the time of closing
 
-I didn't realize until late in the process that there's a lot of ambiguity around who's entitled to certain money that's flowing in and out of the business around the time of the closing. The buyer and I were able to find amicable resolutions to all these questions, but I wish I'd thought about them earlier:
+I didn't realize until late in the process that there's a lot of ambiguity around who's entitled to certain money that's flowing in and out of the business around the time of the closing.
 
 - How do you split bills for services that straddle the closing (e.g., a monthly bill that's charged a week after closing)?
-- What happens to funds in sales platform accounts that haven't yet transferred to the bank?
-- Who pays when a customer purchases before closing but request a refund after closing?
+- What happens to money in PayPal or Shopify that hasn't yet transferred to the bank?
+- Who pays when a customer purchases before closing but requests a refund after closing?
 - Who receives revenue from sales on closing day?
 - Who pays employees for work on closing day?
 - Who pays fees associated with closing (e.g., escrow fees)?
 
-### In the transition agreement, weigh calendar days higher than work hours
+The buyer and I were able to find amicable resolutions to all these questions, but I wish we had defined them more explicitly in the closing contract.
+
+### In the transition agreement, value calendar days more than work hours
 
 Most acquisitions have terms around how much work the seller agrees to do after the sale to help the buyer with the post-close transition.
 
@@ -237,13 +257,9 @@ My initial offer to the buyer was that I'd do free consulting after the closing 
 
 The buyer counteroffered a 30-day free consulting period with a maximum of 80 hours per week, so it's the same total hours stretched over a longer period.
 
-I didn't realize until we did the transition that the 30-day deal was actually much more work for me. Because the new buyer is taking over, they can't really find 80 hours of work for me to do in just two weeks.
+I knew a longer transition period would be a better deal for the buyer, but I didn't realize how good a deal until we actually did it. Because even though I was available for 40 hours per week, in practice, the buyer can't really use all of those hours. He's taking over a team of six employees and learning how to run everything, so it's hard for him to direct my time enough to fill 40 hours per week right out of the gate. In practice, I did everything he needed with only about 10 hours per week.
 
-My initial offer to the buyer for
-
-I agreed to 40 hours per week, but I realized pretty quickly after the sale that it was impossible for the buyer to take.
-
-But I also had time off, so I agreed to extend the duration.
+But even though I was officially only working 10 hours, there's still a high cost to me of being available every day for 30 days. There was nothing in the contract about how quickly I had to respond, but I wanted to avoid being the bottleneck on anything, so I was checking my TinyPilot email every hour or so. If I did two hours of work in a day, it was often spread into several 30-minute chunks, so I wasn't getting a lot else done.
 
 ### Disconnect non-transferable accounts from business email before closing
 
@@ -323,9 +339,9 @@ If I sell a business in the future, I may forego a broker if I can find a buyer 
 
 ### Lawyers insist on Microsoft Word but never learned to use it
 
-I knew the lawyers were going to use Microsoft Word to send contract revisions back and forth, and I knew that was going to be bumpy, but I was surprised by just how bad lawyers are at Word.
+I knew the lawyers were going to use Microsoft Word to send contract revisions back and forth, and I knew that was going to be frustrating, but I underestimated how bad lawyers are at Word.
 
-The lawyers would do things like manually numbering fields instead of using auto-numbering, so anytime we added or deleted from a list, someone had to manually re-number the list. They didn't know how to cross-reference within a document, so when they said "as mentioned in section 4.3.3," that reference would become invalid if we changed the section numbering.
+The lawyers would do things like manually numbering fields instead of using auto-numbering, so any time we added or deleted from a list, someone had to manually re-number the list. They didn't know how to cross-reference within a document, so when they said "as mentioned in section 4.3.3," that reference would become invalid if we changed the section numbering.
 
 They also don't seem to know how to use page breaks. Instead, they fill the remainder of the page with dozens of line breaks, so as soon as you change any content, the layout gets screwed up.
 
