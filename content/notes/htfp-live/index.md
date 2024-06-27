@@ -145,6 +145,4 @@ The class is scheduled to end well before the baby's due date, but if the baby a
 
 ## Sign up
 
-If you're interested in the class, sign up below. Sign ups close Wednesday, June 26th at 12pm ET.
-
-- [Sign up for this course](https://www.paypal.com/ncp/payment/BGC864F7TWTC4)
+_Signups for this course are now closed. Please reach out if you're interested in a future class._
