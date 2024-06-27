@@ -4,8 +4,6 @@ date: 2024-06-18T06:53:53-04:00
 description: My takeaways from selling TinyPilot
 ---
 
-## Overview
-
 In April this year, [I sold TinyPilot](/i-sold-tinypilot/), the bootstrapped business I founded and ran for four years.
 
 My earlier post told the story of how the sale happened, but I'd like to dig a bit deeper into the nuts and bolts of the sale itself.
@@ -71,33 +69,33 @@ The buyer and I did send some money back and forth after closing to account for 
 
 One of the most important aspects of the deal was that the new owner continued investing in the product, the team and our customers.
 
-I asked other founders for advice about how to avoid a buyer who will simply gut the company and squeeze everything for short-term profits. The advice I heard was that I can't control what the new owner does after closing, so I shouldn't worry about it.
+I asked other founders for advice about how to avoid a buyer who will simply gut the company and squeeze everything for short-term profits. The advice I heard was that I can't control what the new owner does after closing, so I shouldn't think about it.
 
-It's true that I can't control how the new owner runs their business, but I think it's possible to screen out buyers who had red flags. For example, if I was approached by a company like Idera, I'd notice that they have a history of buying companies and [laying off their staff](https://news.ycombinator.com/item?id=19218036), so I'd have a good guess about their plans for TinyPilot.
+It's true that I can't control how the new owner runs their business, but I think it's possible to screen out risky buyers. For example, if I was approached by a company like Idera, I'd notice that they have a history of buying companies and [laying off their staff](https://news.ycombinator.com/item?id=19218036), so I'd have a good guess about their plans for TinyPilot.
 
-For the TinyPilot sale, I looked for buyers whose vision for the company aligned with mine, but I also maintained the attitude that after the sale, the company is no longer mine.
+I looked for buyers whose vision for the company aligned with mine, but I also recognized that my control or desires for the company ended when the new owner took over.
 
-### Arranged broker agreement so that they get paid when I get paid
+### Revised the broker agreement so that they get paid when I get paid
 
 The broker agreement that Quiet Light initially sent me said that their broker fee is a percentage of the purchase price, and it's due at closing.
 
-The problem I saw in that agreement was that I, as the seller, may not receive the full purchase price at closing. If the purchase agreement involved deferred payment, I'd have to pay Quiet Light upfront and wait for what could be years until I receive the full amount. Worse, if the buyer fails to make payment after closing, I'd have paid commissions on money I never received.
+The problem I saw in that agreement was that I, as the seller, may not receive the full purchase price at closing. If the purchase agreement involved deferred payment, I'd have to pay Quiet Light upfront and wait for what could be years until I receive the full amount. Worse, if the buyer fails to make payment after closing, I'd have paid a broker commission on money I never received.
 
 I pushed back on the contract so that Quiet Light only gets paid when I get paid, and Quiet Light quickly agreed. I was glad for this revision because it kept incentives aligned between me and Quiet Light. They'd have just as much incentive to push back against deferred payments as I would, as it threatens payment for both of us.
 
 ### Discussed contentious issues without lawyers first
 
-For this acquisition, the buyer drafted their own asset purchase agreement. For the most part, we agreed on the terms in the initial draft, but there were a few terms where we were far apart.
+For this acquisition, the buyer drafted their own asset purchase agreement. For the most part, we agreed on the initial draft, but there were a few key terms where we were far apart.
 
-I realized quickly that lawyers get expensive fast &mdash; mine was $550/hr. They also slow down the process and add complexity.
+Lawyers get expensive fast &mdash; mine was $550/hr. They also slow down the process and add complexity.
 
-When the buyer and I would run into disagreements in the contracts, we'd first talk directly. In these conversations, my goal was to go past the terms in the contract and find out the underlying need.
+When the buyer and I would run into disagreements in the contracts, we'd first talk one-on-one. In these conversations, my goal was to go past the terms in the contract and find out the underlying need.
 
 For example, the first draft of the contract called for tight restrictions around publicly disclosing details of the sale or business. So, the buyer and I talked about why the clause was there, and it turned out that there were only a small number of things the buyer cared about me disclosing. We adjusted the wording from "you can't discuss anything publicly" to "you can't discuss [these two things](/i-sold-tinypilot/#what-am-i-allowed-to-say) publicly," and we both felt good about the compromise.
 
 ### Used dedicated accounts for the business
 
-One of the things that made ownership handoff particularly smooth was that TinyPilot's accounts and infrastructure were totally separate from my other businesses and personal accounts:
+One of the things that made ownership handoff particularly smooth was that TinyPilot's accounts and infrastructure were totally separate from my other business and personal accounts:
 
 - I always sent emails related to the business from my @tinypilotkvm.com email address.
 - I kept TinyPilot's email in a dedicated Fastmail account.
@@ -112,36 +110,38 @@ After closing, handing over control was extremely straightforward. I just added 
 
 ### Offer incentives for a cash buyer
 
-I mentioned in my previous post that one of the biggest surprises of the deal was [how much closing time matters](/i-sold-tinypilot/#due-diligence-makes-me-weaker-by-the-day). For a buyer financing the purchase with a SBA-backed bank loan, the typical closing time I've heard is three to five months. During that time, the seller bears a substantial risk should the deal fall through or if their business falls in value.
+I mentioned in my previous post that one of the biggest surprises of the deal was [how much closing time matters](/i-sold-tinypilot/#due-diligence-makes-me-weaker-by-the-day).
+
+For TinyPilot, it was three months between signing the letter of intent and finalizing the deal. I've heard the typical closing time for a buyer with an SBA-backed bank loan is three to five months. During that time, the seller bears a substantial risk should the deal fall through or if their business falls in value.
+
+Cash deals involve fewer decision-makers and require less paperwork and bureacracy. I've heard of cash deals closing in 30 days or less.
 
 If I sell another business, I plan to offer incentives that make it easier for the buyer to purchase in cash. I could offer a discount for a cash purchase or make other accomodations to attract buyers who can purchase in cash and make a fast close.
 
-The other subtlety of a buyer purchasing with a bank loan is that it makes the closing contract more complicated, which means more frictional loss to lawyers. Working through the requirements from the bank probably consumed $10-20k in lawyer time, so even if I accepted a lower price from a cash buyer, I'd make some of it back on lower closing costs.
+The other subtlety of a buyer purchasing with a bank loan is that it makes the closing contract more complicated, which means you spend more on lawyers. Working through the requirements from the bank probably consumed $10-20k in lawyer time, so even if I accepted a lower price from a cash buyer, I'd make some of it back by reducing closing costs.
 
 ### Shift contract negotiations to earlier in the process
 
-The contract negotiations were the part I found most unpleasant about the whole deal, and I'm still not sure how to do it better.
+The most stressful part of the sale were the contract negotiations, and I'm still not sure how to do it better.
 
-The main issue was that I felt like I was in terrible negotiating position by the time we got to the APA. By the time we got to serious negotiations over the contract, it was already five weeks into due diligence, so I didn't want to risk starting the whole process over with a new buyer.
+By the time we got to contract negotiations, I felt like I was in terrible negotiating. By that point, I'd already invested five weeks into due diligence, so I felt exhaused and afraid of starting the whole process over with a new buyer.
 
-The ideal for me would be if the buyer had to present me with an APA before I sign an exclusive LOI with them, but the buyer isn't going to want to invest the time or money unless I'm exclusive with them.
+It would be wonderful for the seller if the buyer had to present the purchase agreement along with the letter of intent. That way, if I saw terms I didn't like, I could request adjustments before ever taking TinyPilot off the market or participating in due diligence. The buyer would never agree to that, as they don't want to spend thousands of dollars drafting a legal agreement before they've gotten some commitment from the seller.
 
-What I'll try next time is to put a few terms I care about into the LOI. I'd want to include things like:
+What I'll try next time is to negotiate a few terms I care about at the LOI stage. I'd want to include things like:
 
-- Transition time
-- Restrictions on confidentiality
+- Short transition time
+- Limited restrictions on confidentiality
 
 ### Begin working with a lawyer earlier
 
-I found a law firm when I started the process, and they reviewed the broker agreement, but I didn't reach out to them again until I had the APA. It turned out that they wanted to review the LOI as well. At the time, I felt like the LOI didn't matter because it wasn't binding anyway, so why bother reviewing.
+I found an M&A law firm to represent me in the sale when I started talking with a broker. The lawyer reviewed the broker agreement, but I didn't reach out to them again until I had the purchase agreement from the buyer.
 
-In retrospect, I think it would have been helpful to include a few key things in the LOI. It's still not binding, but it sets a baseline before the APA.
+I never asked my lawyer to review the LOI. It wasn't binding anyway, so why bother spending money on a legal review? In retrospect, I think it would have been helpful to involve my lawyer at that stage, as the LOI sets a baseline for the APA.
 
-They can review existing contracts and help you prepare the documents you'll need for standard due diligence so that you're not holding up the deal later.
+Had I met with my lawyer earlier, they also would have helped me with prep work around reviewing my existing contracts and gathering the documents I'd need later to speed up due diligence.
 
-It's also a good time to see if you like working with this lawyer. Once you're in the middle of a contract negotiations, it's a big deal to fire your lawyer and pull in someone else.
-
-Review existing contracts that say what happens in a sale (look for terms like "transfer" or "notice").
+It's also a good time to see if you like working with this lawyer. Once you're in the middle of a contract negotiations, it's much more difficult to fire your lawyer and pull in someone else.
 
 ### Create an unofficial "small stuff agreement" with the buyer
 
