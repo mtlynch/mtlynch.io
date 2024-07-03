@@ -200,7 +200,7 @@ But obviously, I'd rather not have to add this extra command-line flag every tim
 I realized that this cruft is actually coming from my `nix.conf` file, which on my Debian system is at `/etc/nix/nix.conf`. I guess the [Determinate Systems Nix installer](https://github.com/DeterminateSystems/nix-installer) chose that prefix for me:
 
 ```bash
-$ grep bash-prompt-prefix /etc/nix/nix.conf
+$ grep 'bash-prompt-prefix' /etc/nix/nix.conf
 bash-prompt-prefix = (nix:$name)\040
 ```
 
