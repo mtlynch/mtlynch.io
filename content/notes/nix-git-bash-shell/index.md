@@ -7,8 +7,6 @@ tags:
   - bash
 ---
 
-## Git natively supports customizing your terminal shell
-
 I recently read Julia Evans' [latest zine about git](https://wizardzines.com/zines/git/), and one of her tips was to [configure your terminal shell prompt to show the git status](https://wizardzines.com/comics/knowing-where-you-are-in-git/).
 
 Julia's terminal prompt looks like this:
@@ -26,7 +24,7 @@ Julia's terminal prompt looks like this:
 ~/work/homepage (<span style="color: lightgreen">main</span>) $
 </div>
 
-`main` is the current git branch that Julia is on, and when she's in the middle of a git operation like bisect or merge, the terminal changes to this:
+`main` is Julia's current git branch. When she's in the middle of a git operation like bisect or merge, the terminal changes to this:
 
 <div class="terminal-example">
 ~/work/homepage (<span style="color: lightgreen">main|MERGING</span>) $
@@ -38,14 +36,14 @@ I constantly run `git status` to remember which branch I'm in, and I often forge
 
 ## Setting up git prompts in my terminal
 
-I wanted to customize my terminal shell to include my git status, but it wasn't obvious how. Apparently, I needed a file called `git-prompt.sh`, but it wasn't available in my Debian install with git 2.30.2:
+Julia's zine convinced me to customize my terminal shell to include my git status, but it wasn't obvious how to do it. Apparently, I needed a file called `git-prompt.sh`, but it wasn't available in my Debian install with git 2.30.2:
 
 ```bash
 $ find / -name 'git-prompt.sh' -type f -print
 # No results
 ```
 
-The other option was to download an official copy from Github:
+The other option was to download an official copy of `git-prompt.sh` from Github:
 
 ```bash
 # Download git-prompt.sh
@@ -66,7 +64,7 @@ mkdir examplerepo && \
   git init
 ```
 
-If everything works, the `__git_ps1` command should display the current git branch:
+If `git-prompt.sh` was working correctly, the `__git_ps1` command should display the current git branch:
 
 ```bash
 $ __git_ps1
@@ -110,7 +108,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 Cool, that looks like it's working.
 
-But I missed seeing my working directory in my shell prompt so I changed `PS1` to this:
+But I missed seeing my working directory in my shell prompt, so I changed `PS1` to this:
 
 ```bash
 $ export PS1='\w $(__git_ps1 "(%s)") \$ '
@@ -125,17 +123,17 @@ export PS1='\[\033[01;34m\]\w\[\033[00m\]\[\033[01;32m\]$(__git_ps1 " (%s)")\[\0
 
 At this point, editing the `PS1` command is complicated enough that I recommend using a free tool like [Bash Prompt Generator](https://bash-prompt-generator.org/) to create the command and add in the colors for you.
 
-But here's what my prompt looks like with colors and working directory:
+Here's what my final terminal prompt looks like:
 
 <div class="terminal-example">
 <span style="color: cyan">~/examplerepo</span> <span style="color: lightgreen">(branchB|MERGING)</span>$
 </div>
 
-To make that change permanent, I added my `export PS1` line to my `~/.bashrc` file, and now I have my custom terminal every time I start a new bash shell and `cd` into a git repo.
+To make that change permanent, I added my `export PS1` line to my `~/.bashrc` file, and now I have my custom terminal every time I start a new bash shell.
 
 ## Integrating git into the bash shell prompt on Nix
 
-The problem with all the steps above is that I use [Nix](https://nixos.org/) and [Home Manager](https://github.com/nix-community/home-manager) to manage my `.bashrc` file, so I can't simply add a line and have everything work.
+The problem with all the steps above is that I use [Nix](https://nixos.org/) and [Home Manager](https://github.com/nix-community/home-manager) which is nice but also makes everything about my bash configuration more complicated. I couldn't simply add a line to my `.bashrc` because Home Manager would blow away my changes next time I ran it.
 
 Fortunately, this [post by Jeff Kreeftmeijer](https://jeffkreeftmeijer.com/nix-home-manager-git-prompt/) helped me understand how to adapt the `git-prompt.sh` solution to Nix.
 
@@ -161,7 +159,9 @@ Once I updated the file, I ran `home-manager switch`, it updated my `.bashrc`, a
 
 ## Eliminating Nix terminal cruft in my development environments
 
-Still, there were further complications. I do all of my development in [per-project Nix shells](/notes/nix-dev-environment/). When I ran `nix develop` to load my development environment, I saw that Nix had added an extra prefix to my terminal:
+Still, there was one last wrinkle in my custom bash terminal prompt.
+
+I do all of my development in [per-project Nix shells](/notes/nix-dev-environment/). When I ran `nix develop` to load my development environment, I saw that Nix had added an extra prefix to my terminal:
 
 ```bash
 ~/examplerepo (branchB|MERGING) $ nix develop
@@ -170,7 +170,9 @@ Still, there were further complications. I do all of my development in [per-proj
 ^^^^^^^^^^^^^^^^^^^ why?
 ```
 
-That prefix ate up a lot of real estate. Almost half the terminal prompt was now just telling me that I'm in a Nix environment. In certain projects, the prefix was even longer. This is what I saw in PicoShare:
+That prefix ate up a lot of real estate. Almost half of the terminal prompt was now just telling me that I'm in a Nix environment.
+
+In certain projects, Nix's shell prompt prefix was even longer. This is what I saw in [PicoShare](https://github.com/mtlynch/picoshare):
 
 ```bash
 ~/examplerepo (branchB|MERGING) $ nix develop
@@ -195,7 +197,7 @@ $ nix develop --bash-prompt-prefix ''
 ~/picoshare (master)$
 ```
 
-But obviously, I'd rather not have to add this extra command-line flag every time I run `nix develop`.
+But obviously, I'd rather not add this extra command-line flag every time I run `nix develop`.
 
 I realized that this cruft is actually coming from my `nix.conf` file, which on my Debian system is at `/etc/nix/nix.conf`. I guess the [Determinate Systems Nix installer](https://github.com/DeterminateSystems/nix-installer) chose that prefix for me:
 
@@ -204,13 +206,13 @@ $ grep 'bash-prompt-prefix' /etc/nix/nix.conf
 bash-prompt-prefix = (nix:$name)\040
 ```
 
-I changed the line to the more concise `nix:`:
+I changed the line to the more concise `nix:` prefix:
 
 ```text
 bash-prompt-prefix = nix:
 ```
 
-And then I restarted Nix to apply the change:
+Then, I restarted Nix to apply the change:
 
 ```bash
 sudo systemctl restart nix-daemon
@@ -224,6 +226,6 @@ nix:<span style="color: cyan">~/picoshare</span> <span style="color: lightgreen"
 
 ## Summary
 
-When I do software development work, it's helpful to customize my terminal shell so that I can see the git status of my git repository on every shell prompt.
+When I do software development work, it's helpful to customize my terminal shell so that I can see the git status of my directory on every shell prompt.
 
 I hope this post helps others who want a similar configuration to mine on regular bash systems as well as on systems where Nix and Home Manager manage bash settings.
