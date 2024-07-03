@@ -133,7 +133,7 @@ To make that change permanent, I added my `export PS1` line to my `~/.bashrc` fi
 
 ## Integrating git into the bash shell prompt on Nix
 
-The problem with all the steps above is that I use [Nix](https://nixos.org/) and [Home Manager](https://github.com/nix-community/home-manager) which is nice but also makes everything about my bash configuration more complicated. I couldn't simply add a line to my `.bashrc` because Home Manager would blow away my changes next time I ran it.
+The problem with all the steps above is that I use [Nix](https://nixos.org/) and [Home Manager](https://github.com/nix-community/home-manager), which is nice but also makes everything about my bash configuration more complicated. I couldn't simply add a line to my `.bashrc` because Home Manager would blow away my changes next time I ran it.
 
 Fortunately, this [post by Jeff Kreeftmeijer](https://jeffkreeftmeijer.com/nix-home-manager-git-prompt/) helped me understand how to adapt the `git-prompt.sh` solution to Nix.
 
