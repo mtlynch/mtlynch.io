@@ -9,7 +9,7 @@ tags:
 
 ## Git natively supports customizing your terminal shell
 
-I recently read Julia Evans' latest zine about git, and one of her tips was to [configure your terminal shell prompt to show the git status](https://wizardzines.com/comics/knowing-where-you-are-in-git/).
+I recently read Julia Evans' [latest zine about git](https://wizardzines.com/zines/git/), and one of her tips was to [configure your terminal shell prompt to show the git status](https://wizardzines.com/comics/knowing-where-you-are-in-git/).
 
 Julia's terminal prompt looks like this:
 
@@ -38,7 +38,7 @@ I constantly run `git status` to remember which branch I'm in, and I often forge
 
 ## Setting up git prompts in my terminal
 
-I wanted to customize my terminal shell to include git status, but it wasn't obvious how. Apparently, I needed a file called `git-prompt.sh`, but it wasn't available in my Debian install with git 2.30.2:
+I wanted to customize my terminal shell to include my git status, but it wasn't obvious how. Apparently, I needed a file called `git-prompt.sh`, but it wasn't available in my Debian install with git 2.30.2:
 
 ```bash
 $ find / -name 'git-prompt.sh' -type f -print
@@ -110,14 +110,14 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 Cool, that looks like it's working.
 
-But I miss having the working directory show up in my shell prompt so I change it to this:
+But I missed seeing my working directory in my shell prompt so I changed `PS1` to this:
 
 ```bash
 $ export PS1='\w $(__git_ps1 "(%s)") \$ '
 ~/examplerepo (branchB|MERGING) $
 ```
 
-I also miss having nice colors, so I add them in like this:
+I also missed having nice colors, so I added them as well:
 
 ```bash
 export PS1='\[\033[01;34m\]\w\[\033[00m\]\[\033[01;32m\]$(__git_ps1 " (%s)")\[\033[00m\]\$ '
@@ -131,7 +131,7 @@ But here's what my prompt looks like with colors and working directory:
 <span style="color: cyan">~/examplerepo</span> <span style="color: lightgreen">(branchB|MERGING)</span>$
 </div>
 
-To make that change permanent, I added my `export PS1` line to my `~/.bashrc` file, and now I have my custom terminal every time I start a new bash shell.
+To make that change permanent, I added my `export PS1` line to my `~/.bashrc` file, and now I have my custom terminal every time I start a new bash shell and `cd` into a git repo.
 
 ## Integrating git into the bash shell prompt on Nix
 
@@ -224,4 +224,6 @@ nix:<span style="color: cyan">~/picoshare</span> <span style="color: lightgreen"
 
 ## Summary
 
-In this post
+When I do software development work, it's helpful to customize my terminal shell so that I can see the git status of my git repository on every shell prompt.
+
+I hope this post helps others who want a similar configuration to mine on regular bash systems as well as on systems where Nix and Home Manager manage bash settings.
