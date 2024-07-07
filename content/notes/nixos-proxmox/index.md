@@ -5,6 +5,10 @@ tags:
   - nix
 ---
 
+{{<notice type="warning">}}
+**Warning**: These instructions are for Proxmox 6.x and NixOS 23.11. They no longer work on Proxmox 8.x, but I'm [trying to find a fix](https://discourse.nixos.org/t/console-not-working-in-proxmox-lxc-container/30330/7?u=mtlynch).
+{{</notice>}}
+
 One of the stumbling blocks I ran into when trying out NixOS was that I couldn't run it under [Proxmox](https://www.proxmox.com/en/), my preferred virtual machine server.
 
 Through some trial and error, I figured out how to install NixOS as a Proxmox container.
