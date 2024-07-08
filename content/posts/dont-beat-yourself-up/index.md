@@ -1,5 +1,5 @@
 ---
-title: "Don't Beat Yourself Up If Your Bootstrapped Business is Struggling"
+title: "Don't Beat Yourself Up Over Your Failing Indie Business"
 date: 2024-06-03T09:11:10-04:00
 ---
 
@@ -9,7 +9,7 @@ When people start a bootstrapped business, they're usually excited. They've read
 
 If you find yourself in this situation, know that it gets easier and you're probably holding yourself to unrealistic standards.
 
-## Success rarely comes quickly
+## Success comes slowly
 
 I was at a meetup a few years ago and one of the people who attended had quit his job in big tech to pursue his own business. That was cool because it was exactly what I had done.
 
