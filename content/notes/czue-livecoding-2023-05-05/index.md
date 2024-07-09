@@ -1,6 +1,8 @@
 ---
 title: "Takeaways from Cory Zue's May 2023 Livecoding Session"
 date: 2023-06-03T16:08:02-04:00
+aliases:
+  - /notes/czue-livecoding-2020-05-05/
 ---
 
 My friend [Cory Zue](https://www.coryzue.com/) has been publishing his live coding sessions, so I decided to watch one and record my notes.
