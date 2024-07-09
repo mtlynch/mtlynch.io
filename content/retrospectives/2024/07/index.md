@@ -133,7 +133,14 @@ A good example of my rewrite was [reimplementing the notification preferences pa
 
 TODO: Screenshot
 
-The notifications page required a lot of custom JavaScript so that the form submit happeend over AJAX instead of a standard form submit, and it had extra boilerplate for converting to and from JSON.
+The notifications page required a lot of custom JavaScript to do the following:
+
+- Submit the form contents via `fetch` rather than reloading the page.
+- Disable the form for input while the request is in-flight.
+- Show a status spinner while the request is in-flight.
+- Show an error message if the request fails.
+
+https://github.com/mtlynch/screenjournal/blob/ed9b96223eb47ff48739ae04f916c1969d5e805e/handlers/templates/pages/account-notifications.html
 
 #### htmx adds an abstraction layer, but it's intuitive
 
