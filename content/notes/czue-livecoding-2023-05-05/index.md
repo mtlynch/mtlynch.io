@@ -2,6 +2,8 @@
 title: "Takeaways from Cory Zue's May 2023 Livecoding Session"
 date: 2023-06-03T16:08:02-04:00
 aliases:
+  # Accidentally published this with the wrong URL for a year. Keep the alias
+  # for any old links.
   - /notes/czue-livecoding-2020-05-05/
 ---
 
