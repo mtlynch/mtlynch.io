@@ -14,33 +14,52 @@ In 2020, I created a video course about blogging called ["Hit the Front Page of 
 
 When I released the course, TinyPilot was growing quickly at the time, and I didn't have time to market the course or try iterating on the material.
 
-In [my last blog post](/i-sold-tinypilot/), I surveyed readers about what they'd like to see me do next.
+In [my last blog post](/i-sold-tinypilot/), I surveyed readers about what they'd like to see me do next. Of the people who expressed interest in seeing me teach something, here were the results:
 
-{{<img src="survey-results.png" has-border="true">}}
+{{<img src="survey-results.png" has-border="true" alt="Stacked bar graph of interest in what I teach next. 'Helping developers improve their writing' is tied for first with 'Applying deliberate practice techniques to software development' with 32 interested. 'Blogging for an audience of developers' is in third with 31 interested." caption="Responses to the reader survey in my last blog post">}}
 
-## Class logistics
+There are different ways to interpret the data, but my takeaway is that people were especially interested in having me teach writing techniques. I was surprised that deliberate practice was a top answer as well, albeit with slightly less enthusiasm.
 
-- Emailed my mailing list
-- XX subscribers
-- XX filled out survey
+I decided that because my existing course was already so close to done and it ranked #2 or #3 depending on how you count, I should dust off that material and re-release an updated version for 2024.
+
+### Class logistics
+
+Rob Fitzpatrick's book _Write Useful Books_ heavily influenced my approach to educational products. He argues that you should always teach a topic live before releasing a book or a course because you want to iterate based on feedback from real students.
+
+I was unsure whether to teach "Hit the Front Page" live again because I'd already done that in 2020. My wife and I are also expecting our first baby at the end of August, and when that happens, I plan to disappear for a few months for family time.
+
+- Emailed my mailing list (XX subscribers)
+- XX filled out survey to express interest
 - XX purchased the course
 
-## Teaching a class
+### Teaching a class
 
 - Hard to find a video platform
 - Feels like it swallows my schedule
 
-## Should I not focus on Hacker News?
+### Should I not focus on Hacker News?
 
-One of the surprises in the live course is that
+One of the surprises in the live course is that about half the students who signed up said that they're not especially interested in Hacker News. A lot of them said they just liked my writing and wanted to learn more about my process, but it's almost in spite of the course focusing on Hacker News.
+
+Looking back at the survey data, there seems to be more interest in writing in general than there is for blogging in particular. And nobody requested Hacker News specifically.
+
+So, I'm wondering if I should pivot away from Hacker News and shift to something more general. The problem I have there is that I feel like I lose my edge that way. I'm the only person teaching a course about Hacker News specifically. There are a million people teaching about blogging or writing, so I don't feel like I can stand out in that pool.
+
+The other reason I'm drawn to writing about Hacker News is that I can demonstrate that I'm objectively good at writing for Hacker News. A lot of my writing succeeds on Hacker News, so I can point to that as a reason why people should pay money to listen to me talk. If I teach a more general writing course, I have less impressive credentials. I don't make money from my blog or have a massive subscriber count to boast about.
+
+At the same time, I think most people who purchased my course were people who found me first and then found my course. They probably didn't search for the world expert on blogging for Hacker News and decide I was most qualified.
+
+Maybe the takeaway is that I should worry less about competing with a large pool of other people because no matter what, the path to my course is probably going to be through me or through recommendations.
+
+But, I'm 95% done with this course, so I'm going to release this one focusing on Hacker News, but after that's done, I'll try to adapt the material for a more general course.
 
 ## Learning htmx
 
 For the past two years, [htmx](https://htmx.org) has been popping up on my radar more and more. I know [Cory Zue uses htmx](/notes/czue-livecoding-2023-05-05/#sharing-code-between-client-side-and-server-side-rendering), so it piqued my interest.
 
-For the longest time, the biggest hurdle was just that I didn't get htmx.
+For the longest time, the biggest hurdle was just that I didn't get the point of htmx.
 
-The landing page confused me. Its pitch was, "Why should `<form>` be the only element that can POST?" I thought that was a reasonable critique, but you can use a few lines of JavaScript to make any HTML element send any kind of request, so why do I need a library for that?
+One of the first lines in htmx's landing page is, "Why should only `<a>` &amp; `<form>` be able to make HTTP requests?" When I read that, I felt like, "Yeah, it'd be nice, but a few lines of JavaScript to make any HTML element send any kind of request." Do I need to adopt a whole new methodology to avoid a few lines of JavaScript?
 
 What finally made htmx click for me was the book, [_Hypermedia Systems_](https://hypermedia.systems). It's written by the same authors of htmx, and it explains the motivation for htmx and gives detailed explanations of several scenarios where you can use it.
 
@@ -90,7 +109,7 @@ document.body.addEventListener("DOMContentLoaded", () => {
 });
 ```
 
-It doesn't seem like a lot of JavaScript, but it's a lot of boilerplate every time. It's extra friction for every client interaction with the server.
+It's not a ton of JavaScript, but you rewrite it every time you need a form. And you can refactor the repeated code, but now you have logic spread across several files. It's extra friction for every client interaction with the server.
 
 Or maybe you'd turn to a heavy framework like React or Vue, and now there are countless layers of JavaScript abstraction between your code and what appears in the browser.
 
@@ -108,13 +127,13 @@ And then htmx makes everything just work without you having to write any custom 
 
 ### My experience with htmx so far
 
-To test out htmx, I've been [rewriting](https://www.whatgotdone.com/michael/2024-07-05) parts of [ScreenJournal](https://github.com/mtlynch/screenjournal) using htmx. ScreenJournal is my open-source movie review app. It's like Goodreads for movies or letterboxd, but open-source.
+To test out htmx, I've been [rewriting](https://www.whatgotdone.com/michael/2024-07-05) parts of [ScreenJournal](https://github.com/mtlynch/screenjournal) using htmx. ScreenJournal is my open-source movie review app. It's like Goodreads for movies. Or it's like letterboxd, but open-source and uglier.
 
 A good example of my rewrite was [reimplementing the notification preferences page with htmx](https://github.com/mtlynch/screenjournal/pull/291/files). I've got a page that allows users to specify which emails they'd like to receive:
 
 TODO: Screenshot
 
-And this page required a lot of custom JavaScript to override the browser default and manually
+The notifications page required a lot of custom JavaScript so that the form submit happeend over AJAX instead of a standard form submit, and it had extra boilerplate for converting to and from JSON.
 
 #### htmx adds an abstraction layer, but it's intuitive
 
