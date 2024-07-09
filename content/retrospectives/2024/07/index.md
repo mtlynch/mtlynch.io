@@ -18,6 +18,11 @@ In [my last blog post](/i-sold-tinypilot/), I surveyed readers about what they'd
 
 {{<img src="survey-results.png" has-border="true">}}
 
+## Teaching a class
+
+- Hard to find a video platform
+- Feels like it swallows my schedule
+
 ## Should I not focus on Hacker News?
 
 One of the surprises in the live course is that
