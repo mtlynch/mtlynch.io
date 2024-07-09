@@ -36,7 +36,7 @@ One of the surprises in the live course is that
 
 ## Learning htmx
 
-For the past two years, [htmx](https://htmx.org) has been popping up on my radar more and more. I know [Cory Zue uses htmx](/notes/czue-livecoding-2020-05-05/#sharing-code-between-client-side-and-server-side-rendering), so it piqued my interest.
+For the past two years, [htmx](https://htmx.org) has been popping up on my radar more and more. I know [Cory Zue uses htmx](/notes/czue-livecoding-2023-05-05/#sharing-code-between-client-side-and-server-side-rendering), so it piqued my interest.
 
 For the longest time, the biggest hurdle was just that I didn't get htmx.
 
@@ -115,8 +115,6 @@ A good example of my rewrite was [reimplementing the notification preferences pa
 TODO: Screenshot
 
 And this page required a lot of custom JavaScript to override the browser default and manually
-
-One of the best rewrites was [reimplementing "delete review" functionality with htmx](https://github.com/mtlynch/screenjournal/pull/289). My original implementation had a delete button that took the user to a dedicated page that just said, "Are you sure you want to delete this review?"
 
 #### htmx adds an abstraction layer, but it's intuitive
 
