@@ -36,7 +36,7 @@ One of the surprises in the live course is that
 
 ## Learning htmx
 
-For the past two years, [htmx](https://htmx.org) has been popping up on my radar more and more. I know [Cory Zue uses htmx](/notes/czue-livecoding-2020-05-05/index.md), so it piqued my interest.
+For the past two years, [htmx](https://htmx.org) has been popping up on my radar more and more. I know [Cory Zue uses htmx](/notes/czue-livecoding-2020-05-05/#sharing-code-between-client-side-and-server-side-rendering), so it piqued my interest.
 
 For the longest time, the biggest hurdle was just that I didn't get htmx.
 
