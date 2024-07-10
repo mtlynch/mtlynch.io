@@ -1,7 +1,7 @@
 ---
-title: "Returning to My Blogging Course"
+title: "Educational Products: Month 1"
 date: 2024-07-08T08:49:05-04:00
-description: TODO - One-line summary
+description: Returning to My Blogging Course
 ---
 
 ## Highlights
@@ -22,30 +22,48 @@ There are different ways to interpret the data, but my takeaway is that people w
 
 I decided that because my existing course was already so close to done and it ranked #2 or #3 depending on how you count, I should dust off that material and re-release an updated version for 2024.
 
-### Class logistics
+### Finding a group of pilot program students
 
 Rob Fitzpatrick's book _Write Useful Books_ heavily influenced my approach to educational products. He argues that you should always teach a topic live before releasing a book or a course because you want to iterate based on feedback from real students.
 
-I was unsure whether to teach "Hit the Front Page" live again because I'd already done that in 2020. My wife and I are also expecting our first baby at the end of August, and when that happens, I plan to disappear for a few months for family time.
+My wife and I are also expecting our first baby at the end of August, and when that happens, I plan to disappear for a few months for family time. At the time I was considering this, I had about 10 weeks until the due date, and the course was six weeks, so I didn't have much buffer.
 
-- Emailed my mailing list (XX subscribers)
-- XX filled out survey to express interest
-- XX purchased the course
+I wrote up [a short blurb about the course](/notes/htfp-live/) and emailed my blog subscribers asking people to fill out a short application asking if they were interested and what timeslots were available. I emailed each applicant individually responding to what they said in their application and sent them the payment link.
 
-### Teaching a class
+Here were the results:
 
-- Hard to find a video platform
-- Feels like it swallows my schedule
+- 1,944 subscribers received the email about my course.
+- 11 people filled out a survey to express interest.
+- 7 people purchased the course.
+  - Of the 4 who didn't sign up after the survey, 3 were because they weren't available at the timeslot I chose.
 
-### Should I not focus on Hacker News?
+### Finding a video platform
 
-One of the surprises in the live course is that about half the students who signed up said that they're not especially interested in Hacker News. A lot of them said they just liked my writing and wanted to learn more about my process, but it's almost in spite of the course focusing on Hacker News.
+I was surprised to find that there aren't really viable alternatives to Zoom for video calls. I've avoided Zoom ever since they were [caught lying about their security](https://arstechnica.com/tech-policy/2020/11/zoom-lied-to-users-about-end-to-end-encryption-for-years-ftc-says/), but they seem to be almost the only game in town.
+
+I've used Jitsi Meet for work meetings for the past few years, and I've had a mostly good experience with it, but I've noticed that quality is better when I attend Zoom meetings. I was hoping to find a paid tier of Jitsi Meet, but all of their paid options are priced at "Contact Us," which likely means at least $1k/month.
+
+So, Jitsi's fine albeit a little clunky. It doesn't support recording, so my workaround is to:
+
+1. Host the class video call on my laptop
+1. Join the call from my desktop
+1. From my desktop, record the call using regular screen-recording software
+
+It's more complex than I'd like, but it does have the side benefit that I can look at my desktop monitor and see everyone's faces even though the slides I'm presenting take up my whole screen.
+
+If you know of a better alternative to Jitsi Meet, [let me know](#requests-for-help).
+
+### Should I pivot away from Hacker News?
+
+One of the surprises in the live course is that about half the students who signed up said that they're not especially interested in Hacker News. They just liked my writing and wanted to learn more about my process, so they signed up in spite of the Hacker News focus.
 
 Looking back at the survey data, there seems to be more interest in writing in general than there is for blogging in particular. And nobody requested Hacker News specifically.
 
-So, I'm wondering if I should pivot away from Hacker News and shift to something more general. The problem I have there is that I feel like I lose my edge that way. I'm the only person teaching a course about Hacker News specifically. There are a million people teaching about blogging or writing, so I don't feel like I can stand out in that pool.
+So, I'm wondering if I should pivot away from Hacker News and shift to something more general.
 
-The other reason I'm drawn to writing about Hacker News is that I can demonstrate that I'm objectively good at writing for Hacker News. A lot of my writing succeeds on Hacker News, so I can point to that as a reason why people should pay money to listen to me talk. If I teach a more general writing course, I have less impressive credentials. I don't make money from my blog or have a massive subscriber count to boast about.
+My worry in pivoting from Hacker News is that I'll lose my edge. There are a million people teaching about blogging or writing, so I don't feel like I can stand out in that pool. If I teach Hacker News specifically, I'm the world's best teacher in that domain because nobody else is doing that.
+
+The other issue with pivoting away from Hacker News is that most of my evidence of blogging success is around Hacker News. Among personal bloggers, I've had unusual success on Hacker News that I can point to. If I teach a more general writing course, I have less impressive credentials. I don't make money from my blog or have a massive subscriber count to boast about.
 
 At the same time, I think most people who purchased my course were people who found me first and then found my course. They probably didn't search for the world expert on blogging for Hacker News and decide I was most qualified.
 
@@ -181,7 +199,9 @@ https://github.com/mtlynch/screenjournal/blob/ed9b96223eb47ff48739ae04f916c1969d
 
 ### Requests for help
 
-- Let me know if you have suggestions for a video call platform that meets these criteria:
-  - Must: Support up to 10 attendees for 90-minute calls.
-  - Must: Cost $80/mo or less.
-  - Nice to have: Allows me to record video calls.
+Let me know if you have suggestions for a video call platform that meets these criteria:
+
+- Must: Support up to 10 attendees for 90-minute calls.
+- Must: Allow participants to join the call without creating a new account or installing software on their device.
+- Must: Cost $80/mo or less.
+- Nice to have: Allows me to record video calls.
