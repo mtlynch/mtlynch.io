@@ -100,7 +100,7 @@ Today, you wouldn't write that because you want to avoid the full page reload. Y
 So, instead, you'd turn to JavaScript, and do something like this:
 
 ```javascript
-document.body.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("form").addEventListener("submit", (evt) => {
     evt.preventDefault(); // Block default submit.
     fetch(`/users`, {
@@ -147,9 +147,11 @@ And then htmx makes everything just work without you having to write any custom 
 
 To test out htmx, I've been [rewriting](https://www.whatgotdone.com/michael/2024-07-05) parts of [ScreenJournal](https://github.com/mtlynch/screenjournal) using htmx. ScreenJournal is my open-source movie review app. It's like Goodreads for movies. Or it's like letterboxd, but open-source and uglier.
 
+{{<img src="screenjournal.png" max-width="800px" has-border="true" caption="[ScreenJournal](https://github.com/mtlynch/screenjournal) is my hobby project web app for reviewing movies.">}}
+
 A good example of my rewrite was [reimplementing the notification preferences page with htmx](https://github.com/mtlynch/screenjournal/pull/291/files). I've got a page that allows users to specify which emails they'd like to receive:
 
-TODO: Screenshot
+{{<img src="screenjournal-notifications.png" has-border="true" caption="Page on ScrenJournal for controlling notifications">}}
 
 The notifications page required a lot of custom JavaScript to do the following:
 
@@ -158,7 +160,10 @@ The notifications page required a lot of custom JavaScript to do the following:
 - Show a status spinner while the request is in-flight.
 - Show an error message if the request fails.
 
-https://github.com/mtlynch/screenjournal/blob/ed9b96223eb47ff48739ae04f916c1969d5e805e/handlers/templates/pages/account-notifications.html
+And here's the transition from vanilla JavaScript to htmx:
+
+- [Before](https://github.com/mtlynch/screenjournal/blob/5852416173a5bb716a26e5351395ddffde5d384b/handlers/templates/pages/account-notifications.html) (113 lines)
+- [After](https://github.com/mtlynch/screenjournal/blob/ed9b96223eb47ff48739ae04f916c1969d5e805e/handlers/templates/pages/account-notifications.html) (85 lines, 25% smaller)
 
 #### htmx adds an abstraction layer, but it's intuitive
 
