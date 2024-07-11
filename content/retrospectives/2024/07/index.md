@@ -200,7 +200,8 @@ And here's the transition from vanilla JavaScript to htmx:
 
 ### Goals for next month
 
--
+- Record publishable versions of four lessons from the course.
+- Start selling the new version of the course.
 
 ### Requests for help
 
