@@ -33,6 +33,8 @@ I'd like to sell to someone who's:
 - Interested in entrepreneurship.
 - Comfortable working with JavaScript and HTML code, especially Vue 2.
 - Comfortable building and maintaining a SPA-style web app using Node.js.
+- Interested in growing the site.
+  - You don't have to make it your full-time job, but I'm hoping to sell to someone who wants to try new things with the site rather than just sit back and collect revenue.
 - Bonus: You have a history of building in public.
 
 I don't want to sell to someone who uses spammy tactics or deceives users for growth. A lot of other diet sites monetize by tricking users into purchasing snake oil, and I've always hated that.
