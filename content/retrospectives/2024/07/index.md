@@ -12,7 +12,7 @@ description: Returning to My Blogging Course
 
 In 2020, I created a video course about blogging called ["Hit the Front Page of Hacker News."](https://hitthefrontpage.com/) I was proud of the course material, and I heard positive feedback from students, but I felt like I never gave it the attention it deserved.
 
-When I released the course, TinyPilot was growing quickly at the time, and I didn't have time to market the course or try iterating on the material.
+When I released the course, TinyPilot was growing quickly, and I didn't have time to market the course or try iterating on the material.
 
 In [my last blog post](/i-sold-tinypilot/), I surveyed readers about what they'd like to see me do next. Of the people who expressed interest in seeing me teach something, here were the results:
 
@@ -24,22 +24,22 @@ I decided that because my existing course was already so close to done and it ra
 
 ### Finding a group of pilot program students
 
-Rob Fitzpatrick's book _Write Useful Books_ heavily influenced my approach to educational products. He argues that you should always teach a topic live before releasing a book or a course because you want to iterate based on feedback from real students.
+Rob Fitzpatrick's book [_Write Useful Books_](https://www.usefulbooks.com/) heavily influenced my approach to educational products. He argues that you should always teach a topic live before releasing a book or a course because you want to iterate based on feedback from real students.
 
 My wife and I are also expecting our first baby at the end of August, and when that happens, I plan to disappear for a few months for family time. At the time I was considering this, I had about 10 weeks until the due date, and the course was six weeks, so I didn't have much buffer.
 
-I wrote up [a short blurb about the course](/notes/htfp-live/) and emailed my blog subscribers asking people to fill out a short application asking if they were interested and what timeslots were available. I emailed each applicant individually responding to what they said in their application and sent them the payment link.
+I wrote up [a short blurb about the course](/notes/htfp-live/) and emailed my blog subscribers asking people to fill out a short application asking if they were interested. I emailed each applicant individually responding to what they said in their application and sent them the payment information.
 
 Here were the results:
 
 - 1,944 subscribers received the email about my course.
 - 11 people filled out a survey to express interest.
 - 7 people purchased the course.
-  - Of the 4 who didn't sign up after the survey, 3 were because they weren't available at the timeslot I chose.
+  - Of the 4 who didn't sign up after the survey, 3 were due to timeslot conflicts.
 
 ### Finding a video platform
 
-I was surprised to find that there aren't really viable alternatives to Zoom for video calls. I've avoided Zoom ever since they were [caught lying about their security](https://arstechnica.com/tech-policy/2020/11/zoom-lied-to-users-about-end-to-end-encryption-for-years-ftc-says/), but they seem to be almost the only game in town.
+I was surprised to find that there aren't really viable alternatives to Zoom for video calls. I've avoided Zoom ever since they were [caught lying about their security](https://arstechnica.com/tech-policy/2020/11/zoom-lied-to-users-about-end-to-end-encryption-for-years-ftc-says/), but they seem to be almost the only game in town for live courses.
 
 I've used Jitsi Meet for work meetings for the past few years, and I've had a mostly good experience with it, but I've noticed that quality is better when I attend Zoom meetings. I was hoping to find a paid tier of Jitsi Meet, but all of their paid options are priced at "Contact Us," which likely means at least $1k/month.
 
@@ -55,7 +55,7 @@ If you know of a better alternative to Jitsi Meet, [let me know](#requests-for-h
 
 ### Should I pivot away from Hacker News?
 
-One of the surprises in the live course is that about half the students who signed up said that they're not especially interested in Hacker News. They just liked my writing and wanted to learn more about my process, so they signed up in spite of the Hacker News focus.
+About half the students who joined the course said that they're not especially interested in Hacker News. They just liked my writing and wanted to learn more about my process, so they signed up in spite of the Hacker News focus.
 
 Looking back at the survey data, there seems to be more interest in writing in general than there is for blogging in particular. And nobody requested Hacker News specifically.
 
@@ -63,13 +63,13 @@ So, I'm wondering if I should pivot away from Hacker News and shift to something
 
 My worry in pivoting from Hacker News is that I'll lose my edge. There are a million people teaching about blogging or writing, so I don't feel like I can stand out in that pool. If I teach Hacker News specifically, I'm the world's best teacher in that domain because nobody else is doing that.
 
-The other issue with pivoting away from Hacker News is that most of my evidence of blogging success is around Hacker News. Among personal bloggers, I've had unusual success on Hacker News that I can point to. If I teach a more general writing course, I have less impressive credentials. I don't make money from my blog or have a massive subscriber count to boast about.
+The other issue with pivoting away from Hacker News is that most of my evidence of blogging success is around Hacker News. Among personal bloggers, I've had unusual success on Hacker News. If I teach a more general writing course, I have less impressive credentials. I don't make money from my blog or have a massive subscriber count to boast about.
 
-At the same time, I think most people who purchased my course were people who found me first and then found my course. They probably didn't search for the world expert on blogging for Hacker News and decide I was most qualified.
+At the same time, I think most people who purchased my course were people who found me first and then found my course. They probably didn't search for the world expert on blogging for Hacker News.
 
-Maybe the takeaway is that I should worry less about competing with a large pool of other people because no matter what, the path to my course is probably going to be through me or through recommendations.
+Maybe the takeaway is that I should worry less about competing with a large pool of other people because no matter what, the path to my course is probably going to be through me or through word of mouth.
 
-But, I'm 95% done with this course, so I'm going to release this one focusing on Hacker News, but after that's done, I'll try to adapt the material for a more general course.
+But, I'm 95% done with the course in its original Hacker News format, so I'm going to release this one focusing on Hacker News. After that's done, I'll adapt the material for a more general course.
 
 ## Learning htmx
 
