@@ -7,7 +7,7 @@ description: I'm coming back to my blogging course.
 ## Highlights
 
 - I'm rebooting my blogging course from 2020.
-- htmx is pretty good but not everything I wished it could be.
+- htmx is pretty good but not everything I wish it could be.
 - I'm [looking for a buyer for Is It Keto](/notes/buy-is-it-keto/), my old keto website.
 
 ## Rebooting Hit the Front Page
@@ -22,7 +22,7 @@ In [my last blog post](/i-sold-tinypilot/), I surveyed readers about what they'd
 
 There are different ways to interpret the data, but my takeaway is that people were especially interested in having me teach writing techniques. I was surprised that deliberate practice was a top answer as well, albeit with slightly less enthusiasm.
 
-I decided that because my existing course was already so close to done and it ranked #2 or #3 depending on how you count, I should dust off that material and re-release an updated version for 2024.
+I decided that because my existing course was already so close to done and it ranked #2 or #3, depending on how you count, I should dust off that material and re-release an updated version for 2024.
 
 ### Finding a group of pilot program students
 
@@ -30,9 +30,9 @@ Rob Fitzpatrick's book [_Write Useful Books_](https://www.usefulbooks.com/) heav
 
 My wife and I are also expecting our first baby at the end of August, and when that happens, I plan to disappear for a few months for family time. At the time I was considering this, I had about 10 weeks until our baby's due date, and the course was six weeks, so I didn't have much buffer.
 
-I wrote [a blurb about the course](/notes/htfp-live/) and emailed my blog subscribers asking people to fill out a short application asking if they were interested. When people filled out the application, I sent personalized replies about what they said in their application and sent them the link to payment to secure their spot.
+I wrote [a blurb about the course](/notes/htfp-live/) and emailed my blog subscribers, asking people to fill out a short application if they were interested. When people filled out the application, I sent personalized replies about what they said in their application and sent them the link to payment to secure their spot.
 
-Here were the results:
+Here are the results:
 
 - 1,944 subscribers received the email about my course.
 - 11 people filled out a survey to express interest.
@@ -45,7 +45,7 @@ I was surprised to find that there aren't really viable alternatives to Zoom for
 
 I've used Jitsi Meet for work meetings for the past few years, and I've had a mostly good experience with it, but I've noticed that quality is better when I attend Zoom meetings. I was hoping to find a paid tier of Jitsi Meet, but all of their paid options are priced at "Contact Us," which likely means at least $1k/month.
 
-So, Jitsi's fine albeit a little clunky. It doesn't support recording, so my workaround is to:
+So, Jitsi's fine, albeit a little clunky. It doesn't support recording, so my workaround is to:
 
 1. Host the class video call on my laptop.
 1. Join the call from my desktop.
@@ -65,7 +65,7 @@ Looking back at the survey data, there seems to be more interest in writing in g
 
 So, I'm wondering if I should pivot away from Hacker News and shift to something more general.
 
-My worry in pivoting from Hacker News is that I'll lose my edge. There are a million people teaching about blogging or writing, so I don't feel like I can stand out in that pool. If I teach Hacker News specifically, I'm the world's best teacher in that domain because nobody else is doing that.
+My worry about pivoting from Hacker News is that I'll lose my edge. There are a million people teaching about blogging or writing, so I don't feel like I can stand out in that pool. If I teach Hacker News specifically, I'm the world's best teacher in that domain because nobody else is doing that.
 
 The other issue with pivoting away from Hacker News is that most of my evidence of blogging success is around Hacker News. Among personal bloggers, I've had unusual success on Hacker News. If I teach a more general writing course, I have less impressive credentials. I don't make money from my blog or have a massive subscriber count to boast about.
 
@@ -73,7 +73,7 @@ At the same time, I think most people who purchased my course were people who fo
 
 Maybe the takeaway is that I should worry less about competing with a large pool of other people because no matter what, the path to my course is probably going to be through me or through word of mouth.
 
-But, I'm 95% done with the course in its original Hacker News format, so I'm going to release this one focusing on Hacker News. After that's done, I'll adapt the material for a more general course.
+I'm 95% done with the course in its original Hacker News format, so I'm going to release this one focusing on Hacker News. After that's done, I'll adapt the material for a more general course.
 
 ## Learning htmx
 
@@ -89,7 +89,7 @@ If I had to pitch htmx to myself four years ago, here's what I'd say.
 
 ### My pitch for htmx, to my past self
 
-You remember how when you first learned to program websites, you'd write HTML like this?
+Remember how when you first learned to program websites, you'd write HTML like this?
 
 ```html
 <form action="/users" method="POST">
@@ -99,9 +99,9 @@ You remember how when you first learned to program websites, you'd write HTML li
 </form>
 ```
 
-Today, you wouldn't write that because you want to avoid reloading the entire page when the user submitted the form. The full-page reload is slow and disorienting, especially if all you wanted to do is show a message that says, "User added successfully." And you don't want to blow away all the user's input if the server rejected the input.
+Today, you wouldn't write that because you want to avoid reloading the entire page when the user submitted the form. The full-page reload is slow and disorienting, especially if all you wanted to do is show a message that says, "User added successfully." And you don't want to blow away all the user's input if the server rejects the input.
 
-So, instead, you'd turn to JavaScript, and do something like this:
+So, instead, you'd turn to JavaScript and do something like this:
 
 ```javascript
 document.addEventListener("DOMContentLoaded", () => {
