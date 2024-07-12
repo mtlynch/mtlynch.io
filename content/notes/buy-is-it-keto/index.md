@@ -3,6 +3,10 @@ title: "Want to Buy Is It Keto?"
 date: 2024-07-11T00:00:00-04:00
 ---
 
+{{<notice type="warning">}}
+**Update (2024-07-12)**: I've received more inquiries than I expected, so I'm now closing applications.
+{{</notice>}}
+
 I'm looking for someone to take over my old content website, [Is It Keto](https://isitketo.org).
 
 {{<img src="isitketo-homepage.png" max-width="700px" has-border="true" caption="[Is It Keto](https://isitketo.org) is for sale">}}
@@ -112,4 +116,6 @@ I'll accept payment through an escrow service like [escrow.com](https://escrow.c
 
 ## Inquiries
 
-- [Offer to purchase Is It Keto](https://tally.so/r/w7ZVvA)
+{{<notice type="warning">}}
+**Update (2024-07-12)**: Applications are now closed
+{{</notice>}}
