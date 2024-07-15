@@ -23,6 +23,6 @@ Snover contrasts this with the reaction to seeing an impressive command-line scr
 >
 > And so it’s a social environment. Anyway. It really was this moment &mdash; like, "Man, we are having a blast!"
 
-I enjoyed Snover's framing because people often recognize the scriptable interfaces are more composable and reusable than GUIs but I hadn't thought about how scripting feels more human in certain ways.
+I enjoyed Snover's framing because people often recognize that scriptable interfaces are more composable and reusable than GUIs, but I hadn't thought about how scripting feels more human in certain ways.
 
 Scripting allows people to express creativity and ingenuity in a way that GUIs don't. And there's cross-pollination with scripting where people can have fun learning techniques from each other, which doesn't happen with GUIs.
