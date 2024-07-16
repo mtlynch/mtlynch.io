@@ -603,3 +603,13 @@ table + .img {
   font-size: 1.4em;
   text-decoration: none;
 }
+
+header .header-meta,
+header .tags {
+  margin-left: 0;
+  margin-right: 1.5rem;
+}
+
+header .tags {
+  display: inline;
+}
