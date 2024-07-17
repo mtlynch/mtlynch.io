@@ -11,14 +11,15 @@
         </div>
         <div class="post-meta">
           <span class="posted-on">
-            <i class="fas fa-calendar"></i>
-            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+            <i class="fas fa-calendar"></i>&nbsp;<time
+              datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}"
+            >
               {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
             </time>
           </span>
           <span class="reading-time">
-            <i class="fas fa-clock"></i>
-            {{ .ReadingTime }}-minute read
+            <i class="fas fa-clock"></i
+            >&nbsp;{{ .ReadingTime }}-minute&nbsp;read
           </span>
           {{ with .Page.Params.Tags }}
             {{ partial "taxonomy/tags.html" . }}
