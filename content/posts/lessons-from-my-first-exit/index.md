@@ -253,9 +253,9 @@ But even though I was officially only working 10 hours, there's still a high cos
 
 Sales below $1M are usually asset sales, meaning that the buyer is purchasing assets from the business but not the business itself. This is in contrast to a stock sale, where the buyer purchases the business and everything it owns.
 
-Because this was an asset sale, I retained control of TinyPilot's bank accounts and payroll. The problem was that I forgot to change the email address on those accounts before I handed over control of TinyPilot's email account to the new buyer. For example, I didn't want the email address associated with my bank account to be `mybank@tinypilotkvm.com` when I no longer could receive email at that address.
+Because this was an asset sale, I retained control of TinyPilot's bank accounts and payroll. The problem was that I forgot to change the email address on those accounts before I handed over control of TinyPilot's email account to the new buyer. For example, I didn't want the email address associated with my bank account to be `michael@tinypilotkvm.com` when I no longer could receive email at that address.
 
-I worked with the new owner to fix up the email address on those accounts after the sale, and it wasn't a big deal, but I wish I'd done it myself while I still controlled the email account.
+I worked with the new owner to fix up the email address on those accounts after the sale, but I wish I'd done it myself before I handed over the email accounts.
 
 ### Take even fewer dependencies on Google
 
@@ -269,7 +269,7 @@ When closing was complete and I finally clicked that button, I saw this error me
 
 {{<img src="gcp-error.png" has-border="true">}}
 
-Google Drive and GCP couldn't transfer to the buyer without creating a paid Google Workspace account. The link points to a maze of Google documentation, and the jist seemed to be that both the new owner and I would need to create paid Google Workspace accounts and go through some complicated process from there.
+Google Drive and GCP couldn't transfer to the buyer without creating a paid Google Workspace account. The [project migration docs](https://cloud.google.com/resource-manager/docs/project-migration) are a maze of confusing and incorrect instructions. The jist seemed to be that both the new owner and I would need to create paid Google Workspace accounts and go through some complicated process from there.
 
 We had a similar issue with some notes and old documents that I'd stored in Google Drive.
 
@@ -291,7 +291,9 @@ Most of the sales process is the unpleasant parts of running a business. You're 
 
 Every time you spend money, it costs you 4x as much. For example, suppose the multiple for your business is about 3x. If your SDE is $100k, you can sell for $300k.
 
-Now imagine you decided to give one of your employees a $10k bonus. Now your SDE is $90k, so your sale price is $270k. So to give the employee the $10k bonus, it costs you $40k.
+Now imagine you decided to give one of your employees a $10k bonus. Now your SDE is $90k, so your sale price is $270k. So to give the employee the $10k bonus, it costs you $40k: the initial $10k you paid plus another $30k in deflated valuation.
+
+It's not just bonuses. It's everything you buy. If you need to buy someone a new laptop, that $1k laptop now costs $4k.
 
 ### Optimizing for SDE sucks
 
