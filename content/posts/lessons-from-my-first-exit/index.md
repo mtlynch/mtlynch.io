@@ -317,6 +317,8 @@ The last time I bought a house, I offered a 10 day period for inspection. The se
 
 I didn't realize when I signed the LOI how much it costs me to take my business off the market for a full three months.
 
+Optimizing for the short-term, and I'm spending half my time on the sale itself.
+
 ### You don't strictly need a broker to sell
 
 The broker guides you through the process. I'm glad I worked with a broker, and I'd likely work with them again, but they're mainly an advisor.
@@ -329,7 +331,7 @@ If I sell a business in the future, I may forego a broker if I can find a buyer 
 
 I knew the lawyers were going to use Microsoft Word to send contract revisions back and forth, and I knew that was going to be frustrating, but I underestimated how bad lawyers are at Word.
 
-The lawyers would do things like manually numbering fields instead of using auto-numbering, so any time we added or deleted from a list, someone had to manually re-number the list. They didn't know how to cross-reference within a document, so when they said "as mentioned in section 4.3.3," that reference would become invalid if we changed the section numbering.
+The lawyers would do things like manually numbering fields instead of using auto-numbering, so any time we added or deleted from a list, someone had to manually re-number the list. They didn't know how to cross-reference within a document, so when they said "as mentioned in section 4.3.3," that reference would point to the wrong thing when anything changed the numbering.
 
 They also don't seem to know how to use page breaks. Instead, they fill the remainder of the page with dozens of line breaks, so as soon as you change any content, the layout gets screwed up.
 
@@ -337,20 +339,24 @@ They also don't seem to know how to use page breaks. Instead, they fill the rema
 
 One of the things my lawyer told me was that judges are less forgiving of a bad non-compete on an acquisition contract.
 
-If work as a rank-and-file developer at a big tech company, and then it turns out you signed a contract saying that you agree never to work for any other company writing software, a judge would likely reject that non-compete. If, however, you sell your company and the purchase agreement says that you agree to never work in software again, then a judge will likely enforce it.
+If work as a rank-and-file developer at a big tech company, and then it turns out you signed a contract saying that you agree never to write software for any other company, a judge would likely reject that non-compete.
+
+If, however, you sell your company and the purchase agreement says that you agree to never work in software again, then a judge will hold you to that promise. They assume that you had reasonable bargaining power and awareness of the agreement, so if you signed a bad deal, it's on you.
 
 When reviewing TinyPilot's purchase agreement, we looked carefully at the non-compete to ensure that it was limited specifically to the domain of KVM over IP devices and not software or technology in general.
 
 ### If there's no cap on liability, you're screwed
 
-When you run a business in the US as a corporation or an LLC, the most you can ever lose from the business is the value of the business itself. If your business is worth $50k and someone sues you for $1M, the most they can get is the assets from your business. The structure of the corporation or LLC should protect you from losing your home.
+When you run a business in the US as a corporation or an LLC, the most you can ever lose from the business is the value of the business itself. If your business is worth $50k and someone sues you for $1M, the worst that can happen is that they take your business. They can't take your house or car or first-born child because the structure of the corporation or LLC protects you. That's what "limited liability" means in LLC.
 
-When you sell a business, ensure that the purchase agreement specifies an explicit cap on liability that's limited to the purchase price, preferably less. Otherwise, you could sell a business for $500k, and the buyer can turn around and sue you for $10M, so you're taking on much more downside risk than you had before you sold.
+When you sell a business, ensure that the purchase agreement specifies an explicit cap on liability that's limited to the purchase price, preferably less. Otherwise, you could sell a business for $500k, and the buyer can turn around and sue you for $10M.
+
+Without a cap on liability, you're forfeiting the limited liability protection you had before you sold.
 
 ### Buyers have incentive to keep the seller happy
 
 One of my worries in the sale was that once I handed over all the accounts and domains to the seller, they'd lose incentive to cooperate with me. For example, what if the buyer forgets to update the billing information on one of the accounts I transferred, and I get hit with a $2k credit card charge? What leverage would I have to make the buyer reimburse me?
 
-I trusted the buyer in this case, but you also never know how people are going to behave when power shifts.
+I trusted the buyer, but you also never know how people are going to behave when power shifts.
 
 It turned out that even if the buyer is devious and wants to take advantage of the seller, the seller still holds the leverage of institutional knowledge. The buyer doesn't want to screw over the seller for $2k if there's a chance that a month later, the buyer stumbles across some key account they don't know how to access or some workflow they don't understand because they won't be able to ask the seller for help.
