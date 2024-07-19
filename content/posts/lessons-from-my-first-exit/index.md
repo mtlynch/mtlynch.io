@@ -205,7 +205,7 @@ Worse, the extra $10k I pay the broker for inventory is a pure loss for me. In a
 
 That said, I got lucky and the deal closed when TinyPilot's inventory levels were low but not so low that the new buyer was coming in understocked. And it turns out there's a lot of ambiguity in how to calculate the inventory on hand for the broker fee, and Quiet Light calculated it in a way that was especially generous to me.
 
-Still, the broker fee on inventory was a stressful layer around timing the close that I'd have rather not thought about. If I do this again, I'll push the broker on eliminating inventory from the fee, even if it means giving them a higher percentage of the sale price.
+Still, the broker fee on inventory was a stressful layer around timing the close. If I do this again, I'll push the broker to eliminate inventory from the fee, even if it means giving them a higher percentage of the sale price.
 
 ### Assume from the start that nothing written is private
 
@@ -213,11 +213,11 @@ Part of TinyPilot's sale included all of TinyPilot's emails. This seemed reasona
 
 As I started thinking more about the sale, I realized that some of my email would be complicated to hand over. What if my employees had said something personal and private to me an email?
 
-As a fictional example, what if I had an email from an employee that said, "I've been feeling unproductive, as I've fallen into a depression since my father died." If someone shared something like that with me, it would be with me, Michael their human co-worker with whom they have a trusting relationship, not Michael, the business figurehead who just so happens to be the current the owner of TinyPilot's business assets. It felt strange and cold to sell that email to the new buyer.
+As a fictional example, imagine an employee emailed me at some point and said, "I've been feeling unproductive, as I've fallen into a depression since my father died." If someone shared something like that with me, it would be with me, Michael their human co-worker with whom they have a trusting relationship, not Michael, the corporate owner of TinyPilot's business assets. It felt strange and cold to sell that email to the new buyer.
 
 Fortunately, I worked out an agreement between the buyer and the team that before closing, anyone could request that I purge any private, personal emails they prefer that I not share.
 
-There were also other sensitive emails, like emails where I'm working with my broker and lawyer on the sale. I didn't want the buyer to see our private discussions even after the sale was complete, so we agreed in the purchase agreement to exclude those from the sale.
+There were also other sensitive emails, like emails where I'm working with my lawyer on the sale. I didn't want the buyer to see our private discussions even after the sale was complete, so we agreed in the purchase agreement to exclude those from the sale.
 
 In the future, I'd make two changes in how I approach emails in my business:
 
@@ -228,14 +228,14 @@ In the future, I'd make two changes in how I approach emails in my business:
 
 I didn't realize until late in the process that there's a lot of ambiguity around who's entitled to money that's flowing in and out of the business around the time of the closing.
 
+The buyer and I were able to find amicable resolutions for everything, but I wish we had answered these questions more explicitly in the closing contract:
+
 - How do you split bills for services that straddle the closing (e.g., a monthly bill that's charged a week after closing)?
 - What happens to money in PayPal or Shopify that hasn't yet transferred to your bank?
 - Who pays when a customer purchases before closing but requests a refund after closing?
 - Who receives revenue from sales on closing day?
 - Who pays employees for work on closing day?
 - Who pays fees associated with closing (e.g., escrow fees)?
-
-The buyer and I were able to find amicable resolutions to all these questions, but I wish we had defined them more explicitly in the closing contract.
 
 ### In the transition agreement, value calendar days more than work hours
 
@@ -247,7 +247,7 @@ The buyer counteroffered a 30-day free consulting period with a maximum of 80 ho
 
 I knew a longer transition period would be a better deal for the buyer, but I didn't realize how good a deal until we actually did it. Because even though I was available for 40 hours per week, in practice, the buyer can't really use all of those hours. He's taking over a team of six employees and learning how to run everything, so it's hard for him to direct my time enough to fill 40 hours per week right out of the gate. In practice, I did everything he needed with only about 10 hours per week.
 
-But even though I was officially only working 10 hours, there's still a high cost to me of being available every day for 30 days. There was nothing in the contract about how quickly I had to respond, but I wanted to avoid being the bottleneck on anything, so I was checking my TinyPilot email every hour or so. If I did two hours of work in a day, it was often spread into several 30-minute chunks, so I wasn't getting a lot else done.
+But even though I was officially only working 10 hours, there's still a high cost to me of being available every workday for 30 days. There was nothing in the contract about how quickly I had to respond, but I was checking my TinyPilot email every hour or so. If I did two hours of transition work in a day, it was often spread into several 30-minute chunks, so I wasn't getting a lot else done.
 
 ### Disconnect non-transferable accounts from business email before closing
 
