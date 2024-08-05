@@ -22,27 +22,45 @@ TODO
 ### Start selling the new version of the course
 
 - **Result**: Decided to wait until the course is complete
-- **Grade**:
+- **Grade**: N/A
 
 TODO
 
 ## Improvements in making videos
 
-### Desk tripod
+As I started recording videos for the course, I quickly remembered all the annoying parts of making videos that plagued me in the first iteration of this course.
 
-### Shotcut
+One of the biggest challenges in making videos is all the friction involved in actually recording and all the disruptions that can prevent me from recording.
 
-### Aaron Francis
+For example, I find that I record best right after a workout. But that means that in addition to the 90-120-minute block of uninterrupted time for recording, I also need 60-90 minutes to exercise, shower, and shave. And I sometimes have uninterrupted blocks of three or four hours, but if those are the only times I can record, then it severely limits which days I can make progress.
+
+There's also
+
+### Get a desk tripod
+
+### Keep everthing connected
+
+### Record in chapters
+
+As part of my research for the course, I watched Aaron Francis' screencasting course. His focus is more on live-coding, but enough of the material translates to my course that it was worth the purchase.
+
+I found Aaron's course helpful, but some of the best lessons weren't even things that he said. I learned a lot simply from seeing how Aaron packaged his own course.
+
+One of the biggest changes I made after watching Aaron's course was to create shorter videos. The first iteration of my course consisted of seven lessons that were 30-60 minutes each. Aaron's lessons are roughly the same length, but he subdivides his lessons into separate chapters where each chapter is only a few minutes.
+
+As a student, I like the short chapter approach, as it lets me skip to the chapters I'm most interested in. As a course creator, I also like the short chapter approach because it's easier to record and edit 10 four-minute videos than it is a single 40-minute video. It's more satisfying to know that five chapters are complete rather than to be halfway through editing a 40-minute video.
+
+### Make lessons order-independent
+
+When I recorded this course in 2020, my videos all start with something like, "Welcome to part 2: Understanding Hacker News." And I'd end each video by saying, "In the next video, I'll talk about how to choose topics to write about."
+
+The problem with doing this is that it prevents me from reordering the lessons later. If I decide after recording that a particular lesson belongs earlier in the course, it messes up the ordering I've already annouced in the videos.
+
+After watching Aaron Francis' course and realizing he never implies an ordering in the video, I decided to remove the lesson numbers from my videos and to not refer to previous or subsequent lessons. When I reference something that's in another lesson, I just say, "I talk about that more in the Foo video," rather than saying "later"or "earlier."
+
+### Buy three of the same shirt
 
 ## Is Merchant of Record a scam?
-
-When I was running TinyPilot, I hated paying sales tax. I was only responsible for sales tax in two states: Massachusetts and North Carolina.
-
-Paying sales tax in Massachusetts was straightforward and took about 20 minutes every quarter. I just added up all my sales to customers in Massachusetts and gave 6.25% to the Massachusetts Department of Revenue.
-
-Paying sales tax in North Carolina was [tedious and infuriating](https://x.com/deliberatecoder/status/1712875215091286350). It took me anywhere from three to eight hours to figure out how to pay North Carolina sales tax, and I had to repeat that exercise every quarter. Tax rates in North Carolina vary by county and some counties have multiple, separate taxes. You can't just add up all your sales in the state and take a percentage. You can't even sum your taxes by county. They make _you_ calculate for each county how much you owe in each type of tax.
-
-Because of my experience with North Carolina, I decided I never wanted to sell in a way that forced me to pay per-state taxes again. So when I look for ways to accept payment for my course, I've been looking for services that offer Merchant of Record. That means that they pay the sales tax for you, and you just pay your income tax on profits.
 
 Last week, LemonSqueezy, one of the few payment processors that supported Merchant of Record, announced that Stripe had acquired the company. In the Hacker News thread, [one comment](https://news.ycombinator.com/item?id=41082681) caught my eye:
 
@@ -54,9 +72,9 @@ Last week, LemonSqueezy, one of the few payment processors that supported Mercha
 
 I asked my accountant, and he confirmed that for most US states, the [minimum threshold](https://www.salestaxinstitute.com/resources/economic-nexus-state-guide) I have to hit to owe sales tax is around $100k or 100 transactions per year depending on the state. In populous states like California or New York, the minimum is $500k. If I reach the point where I'm exceeding enough states' minimums that it's a pain for me to pay sales tax, I can hire an accountant with the hundreds of thousands of dollars I'm earning from sales.
 
-This is good news, as I'd been planning to sell on Gumroad, largely for their Merchant of Record feature. But Gumroad charges 10% of each transaction, and that doesn't even include payment processing fees.
+This is good news, as I'd been planning to sell on Gumroad, largely for their Merchant of Record feature. But Gumroad charges a 10% commission, and that doesn't even include payment processing fees.
 
-Given how unlikely it is for me to meet sales tax thresholds outside of my home state of Massachusetts, it means I can sell my courses outside of Gumroad and stop forfeiting 10%.
+Given how unlikely it is for me to meet sales tax thresholds outside of my home state of Massachusetts, it means I can sell my courses outside of Gumroad and save myself the 10%.
 
 ## Side projects
 
@@ -153,7 +171,7 @@ hx-target-error="#result-error"
 
 If the server responds with a status code outside of the 200-range, put the body of the server's response in the element with ID `result-error`.
 
-This attribute isn't part of htmx but from a an htmx extension called [response-targets](https://github.com/bigskysoftware/htmx-extensions/blob/c86568af52c98f0ae14ec70644ef868921ffabc9/src/response-targets/README.md).
+This attribute isn't part of the core htmx library but from an htmx extension called [response-targets](https://github.com/bigskysoftware/htmx-extensions/blob/c86568af52c98f0ae14ec70644ef868921ffabc9/src/response-targets/README.md).
 
 ```html
 hx-swap="textContent"
