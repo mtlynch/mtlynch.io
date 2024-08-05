@@ -38,7 +38,7 @@ There's also
 
 ### Get a desk tripod
 
-### Keep everthing connected
+### Keep equipment connected
 
 ### Record in chapters
 
