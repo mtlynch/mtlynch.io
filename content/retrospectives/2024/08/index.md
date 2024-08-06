@@ -1,12 +1,14 @@
 ---
 title: "Educational Products: Month 2"
 date: 2024-08-02T07:36:16-04:00
-description: TODO - One-line summary
+description: Making small improvements to my video recording workflow
 ---
 
 ## Highlights
 
--
+- I learned a few techniques that make it easier for me to record videos for my course.
+- I've decided I don't need to use a Merchant of Record service.
+- I've integrated htmx into my standard toolkit for making web applications.
 
 ## Goal Grades
 
@@ -26,7 +28,7 @@ TODO
 
 TODO
 
-## Improvements in making videos
+## Improvements in recording videos
 
 The biggest challenges in recording videos for a course are all the friction involved in recording and all the disruptions that can prevent me from recording.
 
@@ -52,7 +54,12 @@ Having the tripod means that when I want to record, I just drop the tripod and c
 
 The one downside of the tripod is that it partially obstructs my view of my slides, but by the time I'm recording, I've memorized them anway.
 
-### Keep equipment connected
+{{<gallery caption="Mounting the webcam on top of my monitor (left) vs on a desk tripod in front of my monitor (right). The tripod makes it easier for me to look directly into the camera.">}}
+{{<img src="mounted-on-monitor.webp" max-width="354px">}}
+{{<img src="mounted-on-tripod.webp" max-width="400px">}}
+{{</gallery>}}
+
+### Keep recording equipment connected
 
 I used to keep my webcam in a drawer between recording sessions. I'd keep the microphone and arm in another room. That meant that the first five minutes of every recording session were me just gathering equipment and setting it up on my desk.
 
@@ -64,29 +71,33 @@ As part of my research for the course, I watched Aaron Francis' [screencasting c
 
 I found Aaron's course helpful, but some of the best lessons weren't even things that he said. I learned a lot simply from seeing how Aaron packaged his own course.
 
-One of the biggest changes I made after watching Aaron's course was to create shorter videos. The first iteration of my course consisted of seven lessons that were 30-60 minutes each. Aaron's lessons are roughly the same length, but he subdivides his lessons into separate chapters where each chapter is only a few minutes.
+The first iteration of my course consisted of seven lessons that were 30-60 minutes each. Aaron's lessons are roughly the same length, but he subdivides his lessons into separate chapters where each chapter is only a few minutes.
 
-As a student, I like the short chapter approach, as it lets me skip to the chapters I'm most interested in. As a course creator, I also like the short chapter approach because it's easier to record and edit 10 four-minute videos than it is a single 40-minute video. It's more satisfying to know that five chapters are complete rather than to be halfway through editing a 40-minute video.
+{{<img src="aaron-chapters.png" max-width="600px" has-border="true" caption="Aaron Francis divides [his lessons](https://screencasting.com) into short chapters, where each chapter is only a few minutes long.">}}
+
+As a student, I like the short chapter approach, as it lets me skip to the chapters I'm most interested in.
+
+As a course creator, I also appreciate short chapters because it's easier to record and edit 10 four-minute videos than it is to make a larger, more unwieldy 40-minute video. Also, when I'm working on videos, it feels better to have five chapters that are 100% complete than to be halfway through editing a 40-minute video.
 
 ### Make lessons order-independent
 
-When I recorded this course in 2020, my videos all start with something like, "Welcome to part 2: Understanding Hacker News." And I'd end each video by saying, "In the next video, I'll talk about how to choose topics to write about."
+When I recorded my course in 2020, my videos all started with something like, "Welcome to part 2: Understanding Hacker News." And I'd end each video by saying, "In the next video, I'll talk about how to choose topics to write about."
 
-Announcing the order in the video prevents me from reordering the lessons later. If I decide after recording that a particular lesson belongs earlier in the course, I'm stuck because I've already said the lesson number and what follows and precedes it.
+During the recording for this course, after I divided the lessons into smaller chapters, it meant a larger quantity of videos. And with a larger quantity, I might reorder or delete chapters later in the proceess. If I announced the order in every video, changing the order of any videos would mean re-doing a bunch of intros and outros.
 
-After watching Aaron Francis' course and realizing he never implies an ordering in the video, I decided to remove the lesson numbers from my videos and to not refer to previous or subsequent lessons. When I reference something that's in another lesson, I just say, "I talk about that more in the Foo video," rather than saying "later"or "earlier."
+After watching Aaron Francis' course and realizing he never implies an ordering in the video, I decided to remove the lesson numbers from my videos and avoid implying an order when I speak. When I reference something that's in another lesson, I just say, "I talk about that more in the Foo video," rather than saying "a later video."
 
 ### Buy three of the same shirt
 
-One of the tips in Aaron Francis' videos is to keep a consistent look through all videos. He always wears a solid black t-shirt in all of his videos, and I though it was a nice touch.
+One of the tips in Aaron Francis' videos is to keep a consistent look through all videos. He wears a solid black t-shirt in all of his videos, and I though it was a nice touch.
 
 I originally set aside a shirt that I'd change into before each recording session and remove afterwards. I figured that I wear regular clothes for about 14 hours, so I should be able to do about 14 one-hour recording sessions in the shirt before it needs to be washed.
 
-It turned out that my mental model of shirt smelliness didn't match the real world. After just three recording sessions, the shirt desperately needed to go to the washing machine.
+It turned out that I had an inaccurate mental model of shirt smelliness. After just three recording sessions, my shirt began feeling gross.
 
-Instead, I just bought three of the same shirt:
+So, I just bought three of the same shirt:
 
-{{<img src="bonobos-tees.webp" has-border="true">}}
+{{<img src="bonobos-tees.webp" has-border="true" caption="I ordered three of the same t-shirt for video continuity.">}}
 
 It's just a solid navy Bonobos t-shirt, the same style that I'd wear on a normal day. I figure that having three will mean that at least one is available even if two are in the laundry.
 
@@ -100,9 +111,11 @@ Last week, LemonSqueezy, one of the few payment processors that supported Mercha
 >
 > Of the 1% those breaking through 7 digit MRR can simply hire in house to manage tax remittance and not confuse their customers with invoices labelled with MoR's branding
 
-I asked my accountant, and he confirmed that for most US states, the [minimum threshold](https://www.salestaxinstitute.com/resources/economic-nexus-state-guide) I have to hit to owe sales tax on a digital product is around $100k or 100 transactions per year depending on the state. In populous states like California or New York, the minimum is $500k. If I reach the point where I'm exceeding enough states' minimums that it's a pain for me to pay sales tax, I can hire an accountant with the hundreds of thousands of dollars I'm earning from sales.
+I asked my accountant, and he confirmed that for most US states, the [minimum threshold](https://www.salestaxinstitute.com/resources/economic-nexus-state-guide) I have to hit to owe sales tax on a digital product is around $100k or 100 transactions per year depending on the state.
 
-This is good news, as I'd been planning to sell on Gumroad, largely for their Merchant of Record feature. But Gumroad charges a 10% commission, and that doesn't even include payment processing fees.
+In populous states like California or New York, the minimum is $500k. If I reach the point where I'm exceeding enough states' minimums that it's a pain for me to pay sales tax, I can hire an accountant with the hundreds of thousands of dollars I'm earning from sales.
+
+I'd been planning to sell on Gumroad, largely for their Merchant of Record feature. But Gumroad charges a 10% commission, and that doesn't even include payment processing fees.
 
 Given how unlikely it is for me to meet sales tax thresholds outside of my home state of Massachusetts, it means I can sell my courses outside of Gumroad and save myself the 10%.
 
@@ -112,7 +125,9 @@ Given how unlikely it is for me to meet sales tax thresholds outside of my home 
 
 In my last retrospective, I talked about how I'd begun using htmx and liked it, but I found error handling awkward.
 
-As an example, here's a form on ScreenJournal, my movie review web app.
+As an example, here's a form on [ScreenJournal](https://github.com/mtlynch/screenjournal), my movie review web app.
+
+{{<img src="screenjournal-notifications.png" max-width="700px" has-border="true" caption="A simple HTML form from the [ScreenJournal](https://github.com/mtlynch/screenjournal) web app.">}}
 
 When the user submits the form, there can only be two results:
 
@@ -121,9 +136,9 @@ When the user submits the form, there can only be two results:
 
 The idiomatic way to handle a form like this in htmx is for the server to render the initial form and then when the browser sends the HTTP request, the server responds with the entire HTML of the form with the values the user selected and a message indicating success or failure.
 
-I find htmx's recommended pattern awkward and messy. Why does the server have to give the browser the entire form again when the only new information is whether the request succeeded or failed?
+I find htmx's recommended pattern for forms awkward and bug-prone. The browser already has the form populated correctly, so why would the server give the entire thing back and have the browser redraw it? The only new information is a success message or an error message.
 
-So, here's my slightly adjusted htmx pattern to make htmx forms more lightweight:
+[Here's my slightly adjusted htmx pattern](https://github.com/mtlynch/screenjournal/blob/6d3932de0db03429a6d70189348fe1283b6ef03d/handlers/templates/pages/account-notifications.html) to make htmx forms more lightweight:
 
 <!-- prettier-ignore -->
 ```html
@@ -171,7 +186,7 @@ The heavy lifting is in the `<form>` tag, so I'll break down what's happening:
 hx-put="/account/notifications"
 ```
 
-When the user submits the form, make an HTTP POST to the `/account/notifications` route on the server.
+When the user submits the form, make an HTTP PUT request to the `/account/notifications` route on the server.
 
 ```html
 hx-clear="#result-success, #result-error"
@@ -179,7 +194,7 @@ hx-clear="#result-success, #result-error"
 
 When the user submits the form, clear the contents of the elements with IDs `result-success` or `result-error`.
 
-This attribute isn't part of htmx but from a custom extension that I wrote called [clear-before-send](https://github.com/mtlynch/screenjournal/blob/f2f1b4420a5752314a2feb87a42c47147486e222/static/js/htmx-ext/clear-before-send.js). I use it in conjunction with the CSS rule `.alert:empty {  display: none }` to hide `<div>` tags with the `alert` class when they contain no text.
+This attribute isn't part of htmx but from a custom extension that I wrote called [clear-before-send](https://github.com/mtlynch/screenjournal/blob/f2f1b4420a5752314a2feb87a42c47147486e222/static/js/htmx-ext/clear-before-send.js). I use it in conjunction with [the CSS rule](https://github.com/mtlynch/screenjournal/blob/ad04f50cd8227783e4c2908da7de68f4cb531bf8/static/css/screenjournal.css#L55-L57) `.alert:empty {  display: none }` to hide `<div>` tags with the `alert` class when they contain no text.
 
 ```html
 hx-disabled-elt="input, .btn"
@@ -209,11 +224,23 @@ hx-swap="textContent"
 
 When populating the target of `hx-target` or `hx-target-error`, htmx should replace the `textContent` of the target element (as opposed to replacing its inner or outer HTML).
 
+Here's the result. I've adjusted the dev server so that it waits two seconds to respond, and every other request fails with an error message:
+
+{{<video src="htmx-form.mp4" max-width="700px" caption="Manage notifications screen on ScreenJournal">}}
+
+The things to note are:
+
+- When the request is in-flight, the form is disabled.
+- The previous success/error message disappears as soon as the user clicks "Save" again.
+- The success and error messages have different style.
+
+So, it's a pretty good amount of functionality without having to write custom JavaScript for each form. I wish this is the way HTML had moved instead of requiring third-party libraries for such common functionality, but I'm happy that htmx is filling the gap.
+
 ## Wrap up
 
 ### What got done?
 
--
+- I sold Is It Keto [through this blog](/notes/buy-is-it-keto/).
 
 ### Lessons learned
 
@@ -221,8 +248,5 @@ When populating the target of `hx-target` or `hx-target-error`, htmx should repl
 
 ### Goals for next month
 
--
-
-### Requests for help
-
-TODO
+- Finish recording my course.
+- Begin selling my course.
