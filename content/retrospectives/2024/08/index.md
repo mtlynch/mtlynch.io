@@ -240,11 +240,15 @@ So, it's a pretty good amount of functionality without having to write custom Ja
 
 ### What got done?
 
-- I sold Is It Keto [through this blog](/notes/buy-is-it-keto/).
+- Sold Is It Keto [through this blog](/notes/buy-is-it-keto/).
+- Completed teaching my live course about blogging.
+- Created my first [htmx extension](https://github.com/mtlynch/screenjournal/blob/9cf62daf59a43cc619b0e597f59ea4a4d4006403/static/js/htmx-ext/clear-before-send.js)
+- Created Personal Best, a marketing tool for my course.
 
 ### Lessons learned
 
--
+- Look for opportunities to reduce friction from the process of recording videos.
+- Most indie founders in the US probably don't need Merchant of Record.
 
 ### Goals for next month
 
