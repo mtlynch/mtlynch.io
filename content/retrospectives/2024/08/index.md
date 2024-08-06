@@ -19,14 +19,18 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: Recorded most of one lesson
 - **Grade**: D
 
-TODO
+I forgot how long it takes to record videos! And I underestimated the amount of work I had outside of recording. Most weeks, I didn't have time to record at all, but now I'm in the swing of recording.
+
+I can record five to ten minutes of usable footage per hour of recording, and I get exhausted from recording after 90-120 minutes. On a focused week, I recorded a complete 45-minute lesson, but I think I can go faster now that I've finished teaching my live course.
 
 ### Start selling the new version of the course
 
-- **Result**: Decided to wait until the course is complete
+- **Result**: Did a [waitlist](https://hitthefrontpage.com/#section-sign-up) instead of selling a partial course.
 - **Grade**: N/A
 
-TODO
+I decided to hold off on selling the new course. I initially thought I'd offer the new version saying that it was incomplete but the 2020 recordings were still available. Then I realized that it's hard to execute that in a clean way.
+
+I might not finish the course by the time my wife goes into labor. I want to take a few months of paternity leave without feeling like I owe students the rest of the material they purchased, so now there's [a waitlist](https://hitthefrontpage.com/#section-sign-up) for the course launch.
 
 ## Improvements in recording videos
 
