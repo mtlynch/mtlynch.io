@@ -36,9 +36,13 @@ For example, I find that I record best right after a workout. But that means tha
 
 There's also
 
+### Keep equipment connected
+
 ### Get a desk tripod
 
-### Keep equipment connected
+For video recording, I use a Razer Kiyo webcam that sits on top of my monitor. The problem is that getting the camera to a good height requires a lot of manual adjustment.
+
+I normally keep my desktop monitor so that the center of my monitor is roughly at my eye level. If I put my webcam on top of my monitor, when I look straight ahead, I'm looking down from the camera.
 
 ### Record in chapters
 
