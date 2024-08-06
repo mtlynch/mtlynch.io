@@ -28,25 +28,39 @@ TODO
 
 ## Improvements in making videos
 
-As I started recording videos for the course, I quickly remembered all the annoying parts of making videos that plagued me in the first iteration of this course.
+The biggest challenges in recording videos for a course are all the friction involved in recording and all the disruptions that can prevent me from recording.
 
-One of the biggest challenges in making videos is all the friction involved in actually recording and all the disruptions that can prevent me from recording.
-
-For example, I find that I record best right after a workout. But that means that in addition to the 90-120-minute block of uninterrupted time for recording, I also need 60-90 minutes to exercise, shower, and shave. And I sometimes have uninterrupted blocks of three or four hours, but if those are the only times I can record, then it severely limits which days I can make progress.
-
-There's also
-
-### Keep equipment connected
+I need an uninterrupted block of 60-90 minutes, I need to look presentable on camera, and I need it to be quiet outside my office. There are a lot of things that can come up that prevent me from recording, so I've been working on reducing the friction to start a recording session and obstacles to capturing good video.
 
 ### Get a desk tripod
 
 For video recording, I use a Razer Kiyo webcam that sits on top of my monitor. The problem is that getting the camera to a good height requires a lot of manual adjustment.
 
-I normally keep my desktop monitor so that the center of my monitor is roughly at my eye level. If I put my webcam on top of my monitor, when I look straight ahead, I'm looking down from the camera.
+{{<img src="razer-kiyo-webcam.webp" max-width="200px" has-border="true" caption="Razer Kiyo webcam">}}
+
+I normally keep my desktop monitor so that the center of my monitor is roughly at my eye level. But if my monitor is at eye level and the webcam sits on top of the monitor, then the camera angle is looking down on me.
+
+To get a good camera angle, I was adjusting my monitor arm and desk height to keep the camera level with my eyes. But moving my monitor around added a lot of friction to recording, and I couldn't ever reproduce the exact camera position from one recording session to the next.
+
+I solved my camera problem with a small, desk-sized tripod: the [SmallRig VT-20](https://www.bhphotovideo.com/c/product/1799670-REG/smallrig_aluminum_mini_tripod_vt_20.html).
+
+{{<img src="desk-tripod.webp" max-width="600px"  caption="I bought a desktop tripod so that I don't have to reposition my desk or monitor to begin recording.">}}
+
+I keep the tripod between me and my monitor during recording sessions. I marked the position of the legs on my desk with painter's tape so that I can reproduce the position each time.
+
+Having the tripod means that when I want to record, I just drop the tripod and camera on my desk, and the position is instantly correct. It's a big win in terms of reducing friction, and it's also nice to record in the same desk and monitor height I use for regular work.
+
+The one downside of the tripod is that it partially obstructs my view of my slides, but by the time I'm recording, I've memorized them anway.
+
+### Keep equipment connected
+
+I used to keep my webcam in a drawer between recording sessions. I'd keep the microphone and arm in another room. That meant that the first five minutes of every recording session were me just gathering equipment and setting it up on my desk.
+
+Instead, I now keep as much of my equipment connected and ready to record as possible. I keep my microphone on my desk with the mic already hooked up. And I keep my webcam open on my tripod ready to drop on my desk.
 
 ### Record in chapters
 
-As part of my research for the course, I watched Aaron Francis' screencasting course. His focus is more on live-coding, but enough of the material translates to my course that it was worth the purchase.
+As part of my research for the course, I watched Aaron Francis' [screencasting course](https://screencasting.com). His focus is more on live-coding, but enough of the material translates to my course that it was worth the purchase.
 
 I found Aaron's course helpful, but some of the best lessons weren't even things that he said. I learned a lot simply from seeing how Aaron packaged his own course.
 
@@ -58,11 +72,23 @@ As a student, I like the short chapter approach, as it lets me skip to the chapt
 
 When I recorded this course in 2020, my videos all start with something like, "Welcome to part 2: Understanding Hacker News." And I'd end each video by saying, "In the next video, I'll talk about how to choose topics to write about."
 
-The problem with doing this is that it prevents me from reordering the lessons later. If I decide after recording that a particular lesson belongs earlier in the course, it messes up the ordering I've already annouced in the videos.
+Announcing the order in the video prevents me from reordering the lessons later. If I decide after recording that a particular lesson belongs earlier in the course, I'm stuck because I've already said the lesson number and what follows and precedes it.
 
 After watching Aaron Francis' course and realizing he never implies an ordering in the video, I decided to remove the lesson numbers from my videos and to not refer to previous or subsequent lessons. When I reference something that's in another lesson, I just say, "I talk about that more in the Foo video," rather than saying "later"or "earlier."
 
 ### Buy three of the same shirt
+
+One of the tips in Aaron Francis' videos is to keep a consistent look through all videos. He always wears a solid black t-shirt in all of his videos, and I though it was a nice touch.
+
+I originally set aside a shirt that I'd change into before each recording session and remove afterwards. I figured that I wear regular clothes for about 14 hours, so I should be able to do about 14 one-hour recording sessions in the shirt before it needs to be washed.
+
+It turned out that my mental model of shirt smelliness didn't match the real world. After just three recording sessions, the shirt desperately needed to go to the washing machine.
+
+Instead, I just bought three of the same shirt:
+
+{{<img src="bonobos-tees.webp" has-border="true">}}
+
+It's just a solid navy Bonobos t-shirt, the same style that I'd wear on a normal day. I figure that having three will mean that at least one is available even if two are in the laundry.
 
 ## Is Merchant of Record a scam?
 
@@ -74,7 +100,7 @@ Last week, LemonSqueezy, one of the few payment processors that supported Mercha
 >
 > Of the 1% those breaking through 7 digit MRR can simply hire in house to manage tax remittance and not confuse their customers with invoices labelled with MoR's branding
 
-I asked my accountant, and he confirmed that for most US states, the [minimum threshold](https://www.salestaxinstitute.com/resources/economic-nexus-state-guide) I have to hit to owe sales tax is around $100k or 100 transactions per year depending on the state. In populous states like California or New York, the minimum is $500k. If I reach the point where I'm exceeding enough states' minimums that it's a pain for me to pay sales tax, I can hire an accountant with the hundreds of thousands of dollars I'm earning from sales.
+I asked my accountant, and he confirmed that for most US states, the [minimum threshold](https://www.salestaxinstitute.com/resources/economic-nexus-state-guide) I have to hit to owe sales tax on a digital product is around $100k or 100 transactions per year depending on the state. In populous states like California or New York, the minimum is $500k. If I reach the point where I'm exceeding enough states' minimums that it's a pain for me to pay sales tax, I can hire an accountant with the hundreds of thousands of dollars I'm earning from sales.
 
 This is good news, as I'd been planning to sell on Gumroad, largely for their Merchant of Record feature. But Gumroad charges a 10% commission, and that doesn't even include payment processing fees.
 
