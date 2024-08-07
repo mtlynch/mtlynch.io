@@ -8,7 +8,7 @@ description: Making small improvements to my video recording workflow
 
 - I learned a few techniques that make it easier for me to record videos for my course.
 - I've decided I don't need to use a Merchant of Record service.
-- I've integrated htmx into my standard toolkit for making web applications.
+- I've integrated [htmx](https://htmx.org) into my standard toolkit for making web applications.
 
 ## Goal Grades
 
@@ -28,15 +28,13 @@ I can record five to ten minutes of usable footage per hour of recording, and I 
 - **Result**: Did a [waitlist](https://hitthefrontpage.com/#section-sign-up) instead of selling a partial course.
 - **Grade**: N/A
 
-I decided to hold off on selling the new course. I initially thought I'd offer the new version saying that it was incomplete but the 2020 recordings were still available. Then I realized that it's hard to execute that in a clean way.
+I decided to hold off on selling the new course. I initially thought I'd offer the new version and advertise the course as discounted for early access while I work on it but offer the old 2020 recordings in the meantime. I realized that it's hard to package that in a clean way.
 
-I might not finish the course by the time my wife goes into labor. I want to take a few months of paternity leave without feeling like I owe students the rest of the material they purchased, so now there's [a waitlist](https://hitthefrontpage.com/#section-sign-up) for the course launch.
+I might not finish the course by the time my wife goes into labor, and I want to take a few months of paternity leave when the baby arrives. I don't want to feel like I owe students the rest of the material they purchased while I'm on leave, so I decided to offer [a waitlist](https://hitthefrontpage.com/#section-sign-up) instead of a pre-order.
 
 ## Improvements in recording videos
 
-The biggest challenges in recording videos for a course are all the friction involved in recording and all the disruptions that can prevent me from recording.
-
-I need an uninterrupted block of 60-90 minutes, I need to look presentable on camera, and I need it to be quiet outside my office. There are a lot of things that can come up that prevent me from recording, so I've been working on reducing the friction to start a recording session and obstacles to capturing good video.
+When I'm recording videos for my course, there are a lot of things that can interrupt a recording session or prevent me from recording at all. I've been working on reducing the friction to recording so that I can start recording more quickly and make myself less vulnerable to interruptions.
 
 ### Get a desk tripod
 
