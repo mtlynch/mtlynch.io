@@ -1,7 +1,7 @@
 ---
 title: "Educational Products: Month 2"
 date: 2024-08-07T00:00:00-04:00
-description: Making small improvements to my video recording workflow
+description: Improving my video recording workflow
 images:
   - /retrospectives/2024/08/og-cover.webp
 ---
