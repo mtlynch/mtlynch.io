@@ -42,7 +42,7 @@ I need an uninterrupted block of 60-90 minutes, I need to look presentable on ca
 
 For video recording, I use a Razer Kiyo webcam that sits on top of my monitor. The problem is that getting the camera to a good height requires a lot of manual adjustment.
 
-{{<img src="razer-kiyo-webcam.webp" max-width="200px" has-border="true" caption="Razer Kiyo webcam">}}
+{{<img src="razer-kiyo-webcam.webp" max-width="200px" has-border="true" caption="I use a Razer Kiyo webcam for recording">}}
 
 I normally keep my desktop monitor so that the center of my monitor is roughly at my eye level. But if my monitor is at eye level and the webcam sits on top of the monitor, then the camera angle is looking down on me.
 
