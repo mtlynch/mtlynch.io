@@ -21,7 +21,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 I forgot how long it takes to record videos! And I underestimated the amount of work I had outside of recording. Most weeks, I didn't have time to record at all, but now I'm in the swing of recording.
 
-I can record five to ten minutes of usable footage per hour of recording, and I get exhausted from recording after 90-120 minutes. On a focused week, I recorded a complete 45-minute lesson, but I think I can go faster now that I've finished teaching my live course.
+I can record five to ten minutes of usable footage per hour of recording, and I get exhausted from recording after 90-120 minutes. On a focused week, I recorded a complete 45-minute lesson, but I can speed up now that I've finished teaching my live course.
 
 ### Start selling the new version of the course
 
@@ -52,9 +52,9 @@ I solved my camera problem with a small, desk-sized tripod: the [SmallRig VT-20]
 
 I keep the tripod between me and my monitor during recording sessions. I marked the position of the legs on my desk with painter's tape so that I can reproduce the position each time.
 
-Having the tripod means that when I want to record, I just drop the tripod and camera on my desk, and the position is instantly correct. It's a big win in terms of reducing friction, and it's also nice to record with my normal desk setup rather than fiddling with heights of everything before and after each session.
+Having the tripod means that when I want to record, I just drop the tripod and camera on my desk, and the position is instantly correct. It's a big win in terms of reducing friction, and it's also nice to record with my normal desk setup rather than fiddling with the heights of everything before and after each session.
 
-The one downside of the tripod is that it partially obstructs my view of my slides, but by the time I'm recording, I've memorized them anway.
+The one downside of the tripod is that it partially obstructs my view of my slides, but by the time I'm recording, I've memorized them anyway.
 
 {{<gallery caption="Mounting the webcam on top of my monitor (left) vs on a desk tripod in front of my monitor (right). The tripod makes it easier for me to look directly into the camera.">}}
 {{<img src="mounted-on-monitor.webp" max-width="354px">}}
@@ -65,7 +65,7 @@ The one downside of the tripod is that it partially obstructs my view of my slid
 
 I used to keep my webcam in a drawer between recording sessions. I'd keep the microphone and arm in another room. That meant that the first five minutes of every recording session were me just gathering equipment and setting it up on my desk.
 
-Instead, I now keep as much of my equipment connected and ready to record as possible. I keep my microphone on my desk with the mic already hooked up. And I keep my webcam open on my tripod ready to drop on my desk.
+Instead, I now keep as much of my equipment connected and ready to record as possible. I keep my microphone on my desk with the mic already hooked up. And I keep my webcam set up on my tripod, ready to drop on my desk.
 
 ### Record in chapters
 
@@ -77,7 +77,7 @@ The first iteration of my course consisted of seven lessons that were 30-60 minu
 
 {{<img src="aaron-chapters.png" max-width="600px" has-border="true" caption="Aaron Francis divides [his lessons](https://screencasting.com) into short chapters, where each chapter is only a few minutes long.">}}
 
-As a student, I like the short chapter approach, as it lets me skip to the chapters I'm most interested in.
+As a student, I like the short-chapter approach, as it lets me skip to the chapters I'm most interested in.
 
 As a course creator, I also appreciate short chapters because it's easier to record and edit 10 four-minute videos than it is to make a larger, more unwieldy 40-minute video. Also, when I'm working on videos, it feels better to have five chapters that are 100% complete than to be halfway through editing a 40-minute video.
 
@@ -87,11 +87,11 @@ When I recorded my course in 2020, my videos all started with something like, "W
 
 Dividing the lessons into chapters for the new recordings naturally meant a larger quantity of videos. If I reorder or delete a video later in the editing process, that would mean re-doing a bunch of intros and outros to keep the numbering and links correct.
 
-After watching Aaron Francis' course, I realized he never implies an ordering in his videos. I decided to remove the lesson numbers from my videos and avoid mentioning any order. When I reference something that's in another lesson, I just say, "I talk about that more in the Foo video," rather than saying "a later video."
+After watching Aaron Francis' course, I realized he never implies an ordering in his videos. I decided to remove the lesson numbers from my videos and avoid mentioning any order. When I reference something that's in another lesson, I just say, "I talk about that more in the Foo video," rather than saying, "a later video."
 
 ### Buy three of the same shirt
 
-One of the tips from Aaron Francis' course is to keep a consistent look through every lesson. He wears a solid black t-shirt in all of his videos, and I though it was a nice touch.
+One of the tips from Aaron Francis' course is to keep a consistent look through every lesson. He wears a solid black T-shirt in all of his videos, and I thought it was a nice touch.
 
 I originally set aside a shirt that I'd change into before each recording session and remove afterwards. I figured that when I put on a shirt on a normal day, I wear it for about 14 hours before I put it in the laundry before bed. That meant I should be able to do about 14 one-hour recording sessions with the same shirt before I have to wash it.
 
@@ -99,9 +99,9 @@ It turned out that I had an inaccurate mental model of shirt smelliness. After j
 
 So, I just bought three of the same shirt:
 
-{{<img src="bonobos-tees.webp" has-border="true" caption="I ordered three of the same t-shirt for video continuity.">}}
+{{<img src="bonobos-tees.webp" has-border="true" caption="I ordered three of the same T-shirt for video continuity.">}}
 
-It's a simple navy Bonobos t-shirt, the same style that I'd wear on a normal day. I figure that having three will mean that at least one is available even if two are in the laundry.
+It's a simple navy Bonobos T-shirt, the same style that I'd wear on a normal day. I figure that having three will mean that at least one is available, even if two are in the laundry.
 
 ## Magic moments from the live course
 
@@ -121,9 +121,9 @@ I also felt an electricity from the students. The degree of enthusiasm actually 
 
 ### Live teardowns of actual posts
 
-During the course, some of the student asked if we could do an exercise where studnets shared their writing and we gave them feedback. Three students shared articles or drafts, and we critiqued them, and they asked if we could do more of that.
+During the course, some of the students asked if we could do an exercise where students shared their writing, and we gave them feedback. Three students shared articles or drafts, and we critiqued them, and they asked if we could do more of that.
 
-In the next class, I opened the floor up to volunteers but nobody had anything ready to share. As consolation, I offered to just visit Hacker News, pick an article, and break down its strengths and weaknesses. That was fun, but I was picking from the front page, which meant that the articles were already doing well. The class suggested I pick brand new submissions whose fate wasn't yet known.
+In the next class, I opened the floor to volunteers but nobody had anything ready to share. I offered to just visit Hacker News, pick an article, and break down its strengths and weaknesses. That was fun, but I was picking from the front page, which meant that the articles were already doing well. The class suggested I pick brand-new submissions whose fate wasn't yet known.
 
 The lesson really came alive for me when I started critiquing new submissions. Because it's easy to look at a submission that succeeded and explain why, but it's a bigger challenge to look at a submission whose fate is unknown and predict its performance. And because it's a stranger's post, and I'm presenting to a private group, I could just say whatever came to mind without worrying about offending the author or being overly picky.
 
@@ -137,7 +137,7 @@ For the live group Q&A, it's hard to make that repeatable unless I create a YouT
 
 Expert interviews are, uncoincidentally, something that Aaron Francis uses to promote his courses:
 
-{{<img src="aaron-youtube.webp" max-width="450px" has-border="true" caption="Aaron Francis publishes longform interviews with experts in the domain of SQLite as a way to build interest in his upcoming course about SQLite.">}}
+{{<img src="aaron-youtube.webp" max-width="450px" has-border="true" caption="Aaron Francis publishes long-form interviews with experts in the domain of SQLite as a way to build interest in his upcoming course about SQLite.">}}
 
 The live teardowns, on the other hand, are easy to replicate. I could just turn on my camera right now and record my stream of consciousness as I read Hacker News submissions. I'm not sure if that would be entertaining, but it's quick and easy to experiment with that idea.
 
@@ -151,7 +151,7 @@ Last week, LemonSqueezy, one of the few payment processors that supported Mercha
 >
 > Of the 1% those breaking through 7 digit MRR can simply hire in house to manage tax remittance and not confuse their customers with invoices labelled with MoR's branding
 
-I asked my accountant, and he confirmed that for most US states, the [minimum threshold](https://www.salestaxinstitute.com/resources/economic-nexus-state-guide) I have to hit to owe sales tax on a digital product is around $100k or 100 transactions per year depending on the state.
+I asked my accountant, and he confirmed that for most US states, the [minimum threshold](https://www.salestaxinstitute.com/resources/economic-nexus-state-guide) I have to hit to owe sales tax on a digital product is around $100k or 100 transactions per year, depending on the state.
 
 In populous states like California or New York, the minimum is $500k. If I reach the point where I'm exceeding enough states' minimums that it's a pain for me to pay sales tax, I can hire an accountant with the hundreds of thousands of dollars I'm earning from sales.
 
@@ -172,7 +172,7 @@ As an example, here's a form on [ScreenJournal](https://github.com/mtlynch/scree
 When the user submits the form, there can only be two results:
 
 - The settings are saved successfully.
-- There was an error in processing the request.
+- There was an error when processing the request.
 
 htmx's idiomatic way to handle this is that when the user submits the form, the server responds with the HTML for the entire form, repopulated with the values the user submitted and with any success or error message added.
 
@@ -240,7 +240,7 @@ This attribute isn't part of htmx but from a custom extension that I wrote calle
 hx-disabled-elt="input, .btn"
 ```
 
-During the HTTP request, disable all `<input>` tags and elements with the `.btn` CSS class so that the user can't double submit the same request.
+During the HTTP request, disable all `<input>` tags and elements with the `.btn` CSS class so that the user can't double-submit the same request.
 
 Sidenote: The htmx [documentation](https://htmx.org/attributes/hx-disable/) implies that `hx-disabled-elt="this"` should disable the whole form, but it doesn't seem to work. As a workaround, I have to use selectors that match all inputs in the form.
 
@@ -272,9 +272,9 @@ The things to note are:
 
 - When the request is in-flight, the form is disabled.
 - The previous success/error message disappears as soon as the user clicks "Save" again.
-- The success and error messages have different style.
+- The success and error messages have different styles.
 
-So, it's a pretty good amount of functionality without having to write custom JavaScript for each form. I wish this is the way HTML had moved instead of requiring third-party libraries for such common functionality, but I'm happy that htmx is filling the gap.
+So, it's a pretty good amount of functionality without having to write custom JavaScript for each form. I wish this was the way HTML had evolved instead of requiring third-party libraries for such common functionality, but I'm happy that htmx is filling the gap.
 
 ## Wrap up
 
