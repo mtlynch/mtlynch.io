@@ -103,6 +103,42 @@ So, I just bought three of the same shirt:
 
 It's just a solid navy Bonobos t-shirt, the same style that I'd wear on a normal day. I figure that having three will mean that at least one is available even if two are in the laundry.
 
+## Magic moments from the live course
+
+I've finished teaching all six sessions of my live version of the blogging course, and I had fun teaching it, but there were two moments in particular that stood out.
+
+### Bringing in a guest speaker
+
+As I was preparing for the first lecture of the course, I saw Adam Gordon Bell [announce on Twitter](https://x.com/adamgordonbell/status/1805266602096574673) that his employer had laid him off. Adam is the host of [CoRecursive](https://corecursive.com/), one of my favorite software podcasts. He's also a blogger, and he was responsible for [the most popular blog posts](https://hn.algolia.com/?dateRange=all&page=0&prefix=true&query=earthly.dev&sort=byPopularity&type=story) at his former employer.
+
+Adam had been part of the pilot group of students when I taught the same course in 2020. Seeing that his schedule had suddenly opened up, I asked if he'd like to return to the course as a special guest for a Q&A, and he graciously agreed to join the following week.
+
+The timing was incredible because at the moment he joined the video call in my course, "Hit the Front Page of Hacker News," Adam had just landed in the #1 slot on Hacker News for [his interview with Jeffrey Snover](https://news.ycombinator.com/item?id=40874013), the lead architect of PowerShell.
+
+The interview was fun for me because I've read a lot of Adam's writing, so it was fascinating to peek behind the curtain and hear more about his approach and how he's adjusted it over the years.
+
+I also felt an electricity from the students. The degree of enthusiasm actually surprised me because it was only our second class, so it wasn't like, "Oh, finally, a change of pace." My best explanation was that the students in the class all knew me, but not everyone knew Adam, so it was interesting to see someone else with a proven track record talk about concepts from the course with his own perspective.
+
+### Live teardowns of actual posts
+
+During the course, some of the student asked if we could do an exercise where studnets shared their writing and we gave them feedback. Three students shared articles or drafts, and we critiqued them, and they asked if we could do more of that.
+
+In the next class, I opened the floor up to volunteers but nobody had anything ready to share. As consolation, I offered to just visit Hacker News, pick an article, and break down its strengths and weaknesses. That was fun, but I was picking from the front page, which meant that the articles were already doing well. The class suggested I pick brand new submissions whose fate wasn't yet known.
+
+I felt like that was when it got really interesting because
+
+### How can I use magic moments?
+
+After each of the magic moments from class, I thought about how to lean into those more. How could I create more of that and integrate it into the final course?
+
+For the live group Q&A, it's hard to make that repeatable unless I create a YouTube channel with a team of eight rotating sidekicks. But a decent approximation is 1:1 video interviews with writers I like, and I think that's more achievable.
+
+Expert interviews are, uncoincidentally, something that Aaron Francis uses to promote his courses:
+
+{{<img src="aaron-youtube.webp" max-width="450px" has-border="true" caption="Aaron Francis publishes longform interviews with experts in the domain of SQLite as a way to build interest in his upcoming course about SQLite.">}}
+
+The live teardowns, on the other hand, are easy to replicate. I could just turn on my camera right now and make a video of my stream of consciousness as I read Hacker News submissions. I'm not sure if that would be entertaining, but it's quick and easy to experiment with that idea.
+
 ## Is Merchant of Record a scam?
 
 Last week, LemonSqueezy, one of the few payment processors that supported Merchant of Record, announced that Stripe had acquired the company. In the Hacker News thread, [one comment](https://news.ycombinator.com/item?id=41082681) caught my eye:
