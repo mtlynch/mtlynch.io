@@ -272,7 +272,7 @@ Here's the result. I've adjusted the dev server so that it waits two seconds to 
 
 The things to note are:
 
-- When the request is in-flight, the form is disabled.
+- When the request is in-flight, htmx disables the form.
 - The previous success/error message disappears as soon as the user clicks "Save" again.
 - The success and error messages have different styles.
 
