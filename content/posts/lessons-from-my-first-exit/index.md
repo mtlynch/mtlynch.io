@@ -41,7 +41,7 @@ Before I started the sales process for TinyPilot, I had a negative view of M&A b
 
 When I attended Microconf in 2023, I met Chris Guthrie, who's an advisor at Quiet Light Brokerage. He immediately came across as laid back, low-pressure, and founder focused. He was a former founder himself, and he talked about finding the best deal for the founder, not necessarily the quickest payout.
 
-I appreciated about working with Quiet Light because our incentives were aligned throughout the process. Quiet Light is incentivized to find me a large payout because their commissions is percentage-based. They also need deal flow, so they have care about ensuring the seller is satisfied with the overall sales experience, not just the final price. The pool of founders looking for M&A brokers is small and fairly tight-knit, so Quiet Light has to maintain a positive reputation.
+I appreciated about working with Quiet Light because our incentives were aligned throughout the process. Quiet Light is incentivized to find me a large payout because their commissions is percentage-based. They also need deal flow, so they have care about ensuring the seller is satisfied with the overall sales experience, not just the final price. The pool of founders looking for M&A brokers is small and fairly tight-knit, so Quiet Light natural pressure to maintain a positive reputation.
 
 In discussions about the sale, some people balked at Quiet Light's $88.9k fee, as it represented 15% of the sale price. I still think that was a fair commission, as they found me a buyer that I couldn't have found one my own.
 
@@ -51,7 +51,9 @@ When I started thinking about a sale, I didn't need cash desperately, so I was o
 
 When I spoke to other founders about seller financing, they warned me away from it. One founder had advice that stuck with me: "if you sell to a buyer and finance the purchase yourself, you now work for the buyer."
 
-I was puzzled. How does financing the sale mean I work for the buyer? The founder explained that you don't get paid unless the business makes money, and the new owner knows that. The new owner can dump management responsibilities onto you. If you say no, the new owner can let the business fail, and they stop making payments to you.
+I was puzzled. How does financing the sale mean I work for the buyer?
+
+The founder explained that you don't get paid unless the business makes money, and the new owner knows that. The new owner can dump management responsibilities onto you. If you say no, the new owner can let the business fail, and they stop making payments to you.
 
 The other major risk of seller financing is that I, as a small time lender, don't have tools or experience to collect a loan if a buyer refuses to pay. The buyer might have plenty of cash to pay and simply decide not to pay me. For a deal that's under $1M, I'd probably spend more in legal fees than I could hope to collect from an unscrupulous buyer.
 
@@ -87,11 +89,13 @@ I pushed back on the contract so that Quiet Light only gets paid when I get paid
 
 For this acquisition, the buyer drafted their own asset purchase agreement. For the most part, we agreed on the initial draft, but there were a few key terms where we were far apart.
 
-Lawyers get expensive fast &mdash; mine was $550/hr. They also slow down the process. The buyer and I could usually arrange to meet within one business day, whereas arranging a meeting with both of our lawyers would probably take a week.
+Lawyers get expensive fast &mdash; mine was $550/hr.
+
+Lawyers also slow down the process. The buyer and I could usually arrange to meet within one business day, whereas arranging a meeting with both of our lawyers would probably take a week. For a process that already felt long at three months, every day mattered.
 
 When the buyer and I would run into disagreements in the contracts, we'd first talk one-on-one. In these conversations, my goal was to go past the terms in the contract and find out the underlying need.
 
-For example, the first draft of the contract called for tight restrictions around publicly disclosing details of the sale or business. So, the buyer and I talked about why the clause was there, and it turned out that there were only a small number of things the buyer cared about me disclosing. We adjusted the wording from "you can't discuss anything publicly" to "you can't discuss [these two things](/i-sold-tinypilot/#what-am-i-allowed-to-say) publicly," and we both felt good about the compromise.
+For example, the first draft of the contract called for tight restrictions around publicly disclosing details of the sale or business. So, the buyer and I talked about why the clause was there, and it turned out that there were only a small number of things the buyer cared about me disclosing. We adjusted the wording from "you can't discuss anything publicly" to "you can't discuss [these two specific things](/i-sold-tinypilot/#what-am-i-allowed-to-say) publicly," and we both felt good about the compromise.
 
 ### Used dedicated accounts for the business
 
@@ -124,7 +128,7 @@ The other subtlety of a buyer purchasing with a bank loan is that it makes the c
 
 The most stressful part of the sale were the contract negotiations, and I'm still not sure how to do it better.
 
-By the time we got to contract negotiations, I felt like I was in terrible negotiating position. By that point, I'd already invested five weeks into due diligence, so I felt exhaused and afraid of starting the whole process over with a new buyer.
+By the time we got to contract negotiations, I felt like I was in terrible negotiating position. I'd already invested five weeks into due diligence, so I felt exhaused and afraid of starting the whole process over with a new buyer.
 
 It would be wonderful for the seller if the buyer had to present the purchase agreement along with the letter of intent. That way, if I saw terms I didn't like, I could request adjustments before ever taking TinyPilot off the market or participating in due diligence. The buyer would never agree to that, as they don't want to spend thousands of dollars drafting a legal agreement before they've gotten some commitment from the seller.
 
@@ -137,7 +141,9 @@ What I'll try next time is to negotiate a few terms I care about at the LOI stag
 
 I found an M&A law firm to represent me in the sale when I started talking with a broker. The lawyer reviewed the broker agreement, but I didn't reach out to them again until I had the purchase agreement from the buyer.
 
-I never asked my lawyer to review the LOI. It wasn't binding anyway, so why bother spending money on a legal review? In retrospect, I think it would have been helpful to involve my lawyer at that stage, as the LOI sets a baseline for the APA.
+I never asked my lawyer to review the LOI, as I figured there wasn't much value in paying a lawyer to review a non-binding document.
+
+In retrospect, I think it would have been helpful to involve my lawyer at that stage, as the LOI sets a baseline for the APA.
 
 Had I met with my lawyer earlier, they also would have helped me with prep work around reviewing my existing contracts and gathering the documents I'd need later to speed up due diligence.
 
@@ -149,9 +155,7 @@ At the time of the sale, TinyPilot had a physical office. We had about $1k worth
 
 Still, the stuff in TinyPilot's office was a business asset, so the buyer and I felt like we had to define in the asset purchase agreement what should happen to all that stuff. So we spent a few hours enumerating everything of value in the office, working out a timeline of when the buyer would clear it from the office, and how long I'd extend the lease to facilitate that. Between the two of us, we probably spent $2k on lawyer hours trying to work out how to handle this $1k of stuff that neither of us really wanted.
 
-If I were to do this again, I'd propose to the buyer a "small stuff agreement." This would sit outside of the official legal documents and maybe have some header at the top saying "Nothing in here is a legal contract." But it would be a place for the buyer and I to define expectations for small things that don't require lawyers. It would be good for things like office property where we need to decide _something_ but the stakes are so small that if one side breaches the agreement, it wouldn't actually matter.
-
-Instead of the asset purchase agreement enumerating all the items in TinyPilot's office and working out how they'd transfer, we could say that the property in TinyPilot office is not part of the sale. And in our small stuff agreement, the buyer and I could privately work out a reasonable way to handle the office property.
+If I were to do this again, I'd propose to the buyer a "small stuff agreement." This would sit outside of the official legal documents and maybe have some header at the top saying "Nothing in here is a legal contract." But it would be a place for the buyer and I to define expectations for small things that don't require lawyers. It would be good for things like office property where we need to decide _something_, but the stakes are so small that if one side breaches the agreement, it wouldn't actually matter.
 
 ### Announce the sale to the team later
 
@@ -159,21 +163,21 @@ Telling your team about an acquisition is extremely difficult, and I haven't see
 
 If you keep the sale a secret until the deal closes, you're effectively lying to your team. An acquisition is something that will have a major impact on their lives, and there are important decisions they might make where it would greatly benefit them to know about the sale.
 
-On the other hand, if you're completely transparent about the sale to your team, you take on a huge amount of risk. Members of the team might threaten to leave and put the sale in jeopardy unless you offer them bonuses or promotions. Or they might worry about the sale or lose motivation and their job performance might tank.
+On the other hand, if you're completely transparent about the sale to your team, you take on a huge amount of risk. Members of the team might threaten to leave and put the sale in jeopardy unless you offer them bonuses or promotions. Or they might lose motivation in the face of a looming sale and tank their job performance, either intentionally or unintentionally.
 
-In the case of TinyPilot, I had a good relationship with every member of the team, so I didn't think anyone would use the sale against me. At the same time, my experience throughout my life is that people do weird things when they know a relationship is about to end.
+In the case of TinyPilot, I had a good relationship with every member of the team, so I didn't think anyone would use the sale against me. At the same time, I've found that people do weird things at the ends of relationships, both personal and professional.
 
 I ultimately told the team as soon as I signed the broker agreement. I ended up regretting that decision slightly.
 
-Nothing catastrophic happened, but announcing the sale made certain parts of managing the team more difficult. I'm being intentionally vague on this point to protect the team's privacy.
+Nothing catastrophic happened, but announcing the sale made certain parts of managing the team more difficult. I'm being intentionally vague on this point to respect everyone's privacy.
 
 What I didn't realize until we were in it was that the team and I faced different levels of risk. To the team, an acquisition meant the potential for the new owner to fire them or change their role in a way that makes them want to leave. And job changes are stressful, but everyone worked part-time for hourly pay. Nobody was about to take out a mortgage on a new home with the expectation that they'd be working at TinyPilot for the next 20 years.
 
-But if an employee wanted to interfere with the sale, that could mean scaring away a buyer and losing $50-100k off the valuation. Or worse, they could delay the sale and leave me in a position where I'm managing the company, trying to prepare it for sale, and [caring for a newborn](/i-sold-tinypilot/#whats-next) all at the same time.
+But if an employee wanted to interfere with the sale, that could mean scaring away a buyer and slicing $50-100k off the valuation. Worse, they could delay the sale and leave me in a position where I'm managing the company, trying to prepare it for sale, and [caring for a newborn](/i-sold-tinypilot/#whats-next) all at the same time.
 
 I didn't want a bad outcome for anyone, but the worst case for me was significantly worse than the worst case for any other member of the team.
 
-If I do this again, I'd wait to tell my team about the sale until it's a done deal, but I'd also disclose early on in working together that an acquisition is always a possibility. I'd explain before I even start looking for a buyer that an acquisition might happen, and the team won't know it's happening, but I'll be looking for a buyer that aligns with their interests, as I did with TinyPilot.
+If I do this again, I'd wait to tell my team about the sale until it's a done deal, but I'd also disclose early on in working together that an acquisition is always a possibility. I'd explain before I even start looking for a buyer that an acquisition might happen, and the team won't know it's happening. I'd make it clear that if it did happen, I'd be looking for a buyer that aligns with their interests, as I did with TinyPilot.
 
 I don't think this strategy is ideal or fair to everyone, but it's the best of a lot of bad options.
 
@@ -309,7 +313,7 @@ I greatly underestimated how labor-intensive the due diligence process would be.
 
 At the start, I thought due diligence would be somewhat tedious but still straightforward. I'd already shared monthly profit and loss statements before we even started the due diligence process. I thought maybe the buyer would need to see a few of my bank statements to prove that my profit and loss was real. Maybe they'd ask to see my bookkeeping ledger, of which I was quite proud.
 
-It turned out that the due diligence process required me to share _all_ of my bank statements from the last two years. And that was just part of the first round of requests. As we proceeded further, I needed to create lots of one-off reports to demonstrate some other aspect of my business, like how frequently our customers return or which platforms account for what percentage of our revenue.
+It turned out that the due diligence process required me to share _all_ of my bank statements from the last two years. And that was just part of the first round of requests. As we proceeded further, I needed to create lots of one-off reports to demonstrate some other aspect of my business, like how frequently our customers make repeat purchases or which platforms account for what percentage of our revenue.
 
 TODO: I didn't feel like I could negotiate with the bank. The buyer isn't saying, "This is something I want." And I can't very well say, "Is this something you want or that the bank wants? Because if it's you, I'm going to say no."
 
@@ -349,7 +353,9 @@ When reviewing TinyPilot's purchase agreement, we looked carefully at the non-co
 
 ### If there's no cap on liability, you're screwed
 
-When you run a business in the US as a corporation or an LLC, the most you can ever lose from the business is the value of the business itself. If your business is worth $50k and someone sues you for $1M, the worst that can happen is that they take your business. They can't take your house or car or first-born child because the structure of the corporation or LLC protects you. That's what "limited liability" means in LLC.
+When you run a business in the US as a corporation or an LLC, the most you can ever lose from the business is the value of the business itself. If your business is worth $50k and someone sues you for $1M, the worst that can happen is that they take your business. They can't take your house or car or first-born child because the structure of the corporation or LLC protects you.
+
+LLC stands for "limited liability company," and the "limited liability" part refers to the fact that your losses are strictly limited to the business' assets.
 
 When you sell a business, ensure that the purchase agreement specifies an explicit cap on liability that's limited to the purchase price, preferably less. Otherwise, you could sell a business for $500k, and the buyer can turn around and sue you for $10M.
 
