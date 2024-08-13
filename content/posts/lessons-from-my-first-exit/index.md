@@ -1,6 +1,6 @@
 ---
 title: "Lessons from my First Exit"
-date: 2024-06-18T06:53:53-04:00
+date: 2024-08-18T06:53:53-04:00
 description: My takeaways from selling TinyPilot
 ---
 
@@ -136,6 +136,7 @@ What I'll try next time is to negotiate a few terms I care about at the LOI stag
 
 - Short transition time
 - Limited restrictions on confidentiality
+- Liability is limited to 50% of sale price
 
 ### Begin working with a lawyer earlier
 
@@ -299,37 +300,45 @@ Now imagine you decided to give one of your employees a $10k bonus. Now your SDE
 
 It's not just bonuses. It's everything you buy. If you need to buy someone a new laptop, that $1k laptop now costs $4k.
 
-### Optimizing for SDE sucks
-
-Have to continue selling at the same rate or better
-
-But also spending 5-25% of your time on due diligence, legal agreements, logistics of the sale
-
-Wanted to redesign hardware to save costs but couldn't because it would make numbers look bad
+And beyond just costs, the sale process made me care a lot about numbers. Before, I obviously cared about profits, but it was just for myself. If I had a slow month, I would be disappointed but take solace in the fact that there was a lot of random variance in results, and I'd probably do better next month. But now a slow month could mean $30k off my valuation.
 
 ### Due diligence is unbounded work
 
 I greatly underestimated how labor-intensive the due diligence process would be.
 
-At the start, I thought due diligence would be somewhat tedious but still straightforward. I'd already shared monthly profit and loss statements before we even started the due diligence process. I thought maybe the buyer would need to see a few of my bank statements to prove that my profit and loss was real. Maybe they'd ask to see my bookkeeping ledger, of which I was quite proud.
+At the start, I thought due diligence would be somewhat tedious but still straightforward. I'd already shared monthly profit and loss statements before the buyer even signed the LOI.
 
-It turned out that the due diligence process required me to share _all_ of my bank statements from the last two years. And that was just part of the first round of requests. As we proceeded further, I needed to create lots of one-off reports to demonstrate some other aspect of my business, like how frequently our customers make repeat purchases or which platforms account for what percentage of our revenue.
+I thought maybe the buyer would need to see a few of my bank statements to prove that my profit and loss was real. Perhaps I'd have an opportunity to show off my bookkeeping ledger, which I'd worked hard to make immaculate.
 
-TODO: I didn't feel like I could negotiate with the bank. The buyer isn't saying, "This is something I want." And I can't very well say, "Is this something you want or that the bank wants? Because if it's you, I'm going to say no."
+It turned out that the due diligence process required me to share _all_ of my bank statements from the last two years. And that was just part of the first round of requests.
+
+As we proceeded further into the due diligence process, I needed to create lots of one-off reports to demonstrate some other aspect of my business, like how frequently our customers make repeat purchases or which platforms account for what percentage of our revenue. And I didn't want to expose customer data, so I often had to do custom processing on our reports to avoid leaking private information.
+
+But the more I customized the reports, the more likely I was to make an error. And if I made an error, the buyer could come back after the deal and accuse me of fraud for providing false numbers during due diligence. So even for simple reports, I felt stressed about doing them perfectly.
+
+This is also a case where a non-cash buyer makes things more challenging. The buyer was presenting me with requests from both himself and the bank. And the bank felt harder to negotiate because they care a lot less about the deal going through. But I can't say, "Is this something you want or that the bank wants? Because if it's you, I'm going to say no."
 
 ### Due diligence bound me to a single seller, even beyond the due diligence period
 
-The last time I bought a house, I offered a 10 day period for inspection. The seller pushed back and asked me to reduce it to seven days because if the deal fell through, even three days of keeping the house off-market could make a difference. And that's a house!
+The last time I bought a house, I requested a 10-day inspection period. I wanted enough time to bring in a home inspector and electrician to identify red flags. The seller pushed back and asked me to limit the inspection period to seven days. If the deal fell through, even three days of keeping the house off-market could make a difference. And that's a house!
 
-I didn't realize when I signed the LOI how much it costs me to take my business off the market for a full three months.
+I didn't realize at the start of the process how much it costs me to take my business off the market for three whole months.
 
-Optimizing for the short-term, and I'm spending half my time on the sale itself.
+Three months of due diligence means three months where I'm distracted from the business and spending 50% of my time on the sale itself.
+
+A pending sale also prevents me from thinking about anything but the short-term future. If I could spend $20k to reduce my hardware costs by $50k over the next six months, I can't do that because it will look to the seller like my manufacturing costs are increasing with nothing to offset them.
+
+If the buyer withdraws from the deal, I'd be in a worse position to sell than when I started because I'd spent the last several months distracted by the sale and optimizing for the short term.
 
 ### You don't strictly need a broker to sell
 
-The broker guides you through the process. I'm glad I worked with a broker, and I'd likely work with them again, but they're mainly an advisor.
+I liked Quiet Light, and I have no regrets with using them as the broker to sell my business, but I was surprised at the end to see that I didn't strictly need a broker to sell the business.
 
-My only other experience working with brokers is with realtors, but M&A brokers are outside the critical path. Once the broker finds you a buyer, the real heavy lifting is on the founders and the M&A lawyers to put together the asset purchase agreement. The M&A broker should and did provide guidance to keep the deal on track, but if they disappeared, the deal could still go through, whereas if your lawyer disappeared, you don't have anyone to review the closing documents.
+My only frame of reference for a deal of this size is buying or selling a house. In that process, the broker does a lot of things I don't understand or know how to do like list on MLS (TODO: link) or ensure we're meeting municipal requirements for the sale.
+
+Quiet Light's main contribution was finding a buyer, as that's something I could not have done on my own. But outside of that, they're outside of the critical path of the deal. Once we found a buyer, then the work shifted to the M&A lawyer to review legal documents.
+
+The M&A broker should and did provide guidance to keep the deal on track. They found a new lender for the buyer when the buyer's original lender backed out. But if they disappeared, the deal could still go through, whereas if my lawyer disappeared midway through, I wouldn't have anyone to review the closing documents.
 
 If I sell a business in the future, I may forego a broker if I can find a buyer independently. As a first-time seller, it was worth 15% to have an advisor on my side from start to finish. Now that I have experience selling, I might try a future deal using only an M&A lawyer, but I would still always consider working with a broker again to have that support all the way through the process.
 
@@ -337,29 +346,35 @@ If I sell a business in the future, I may forego a broker if I can find a buyer 
 
 I knew the lawyers were going to use Microsoft Word to send contract revisions back and forth, and I knew that was going to be frustrating, but I underestimated how bad lawyers are at Word.
 
-The lawyers would do things like manually numbering fields instead of using auto-numbering, so any time we added or deleted from a list, someone had to manually re-number the list. They didn't know how to cross-reference within a document, so when they said "as mentioned in section 4.3.3," that reference would point to the wrong thing when anything changed the numbering.
+The lawyers would do things like number fields manually instead of using auto-numbering. Any time we added or deleted from a list, we had to re-number the list by hand.
+
+The lawyers didn't know how to cross-reference within a document, so when they said "as mentioned in section 4.3.3," that reference would point to the wrong thing when anything changed the numbering.
 
 They also don't seem to know how to use page breaks. Instead, they fill the remainder of the page with dozens of line breaks, so as soon as you change any content, the layout gets screwed up.
 
-### If the non-compete is too restrictive, you're screwed
+I guess they figure that if they're making $550/hour, why bother with Word's time-saving features?
+
+### If the non-compete is too restrictive, I'm screwed
 
 One of the things my lawyer told me was that judges are less forgiving of a bad non-compete on an acquisition contract.
 
-If work as a rank-and-file developer at a big tech company, and then it turns out you signed a contract saying that you agree never to write software for any other company, a judge would likely reject that non-compete.
+If I'm a big tech company hires me as a rank-and-file developer and has me sign a 500-page contract that buries a clause saying that I can never to write software for any other company, a judge would likely reject that non-compete.
 
-If, however, you sell your company and the purchase agreement says that you agree to never work in software again, then a judge will hold you to that promise. They assume that you had reasonable bargaining power and awareness of the agreement, so if you signed a bad deal, it's on you.
+If, however, I sell my company and the purchase agreement says that I agree to never work in software again, then a judge will hold me to that promise. They assume that I had reasonable bargaining power and awareness of the agreement, so if I signed a bad deal, it's on me.
 
 When reviewing TinyPilot's purchase agreement, we looked carefully at the non-compete to ensure that it was limited specifically to the domain of KVM over IP devices and not software or technology in general.
 
-### If there's no cap on liability, you're screwed
+### If there's no cap on liability, I'm screwed
 
-When you run a business in the US as a corporation or an LLC, the most you can ever lose from the business is the value of the business itself. If your business is worth $50k and someone sues you for $1M, the worst that can happen is that they take your business. They can't take your house or car or first-born child because the structure of the corporation or LLC protects you.
+When you run a business in the US as a corporation or an LLC, the most you can ever lose financially is the value of the business itself.
 
-LLC stands for "limited liability company," and the "limited liability" part refers to the fact that your losses are strictly limited to the business' assets.
+If your business is worth $50k, and someone sues you for $1M, the worst that can happen is that they take your business. They can't take your house or car or first-born child because the structure of the corporation or LLC protects you. LLC stands for "limited liability company," and the "limited liability" part refers to the fact that your losses are strictly limited to the business' assets.
 
-When you sell a business, ensure that the purchase agreement specifies an explicit cap on liability that's limited to the purchase price, preferably less. Otherwise, you could sell a business for $500k, and the buyer can turn around and sue you for $10M.
+One of the surprises in the sale process was that I lose limited liability protection in selling the business. If the asset purchase agreement didn't explicitly limit my liability to the value of the sale price, the buyer could theoretically sue me for a value that's much more than my business.
 
-Without a cap on liability, you're forfeiting the limited liability protection you had before you sold.
+My lawyer made sure we included a
+
+They actually wanted it to be higher, but my lawyer pushed back and said that was unusual and we wouldn't sign anything above the sale price. The lawyer suggested I push for below the sale price, but that feels like a hard thing to negotiate because it seems like the kind of thing you'd only care about if you were hiding something major about the business.
 
 ### Buyers have incentive to keep the seller happy
 
