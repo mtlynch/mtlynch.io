@@ -190,6 +190,17 @@ h4:hover .hanchor {
   text-decoration: none;
 }
 
+.btn-primary {
+  width: 100%;
+  float: none;
+  color: #fff;
+  background: #0d6db8;
+  border-radius: 3px;
+  cursor: pointer;
+  border: none;
+  text-shadow: none;
+}
+
 .subscribe-container {
   background: #f9f9f9;
   font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
@@ -219,7 +230,7 @@ h4:hover .hanchor {
 .subscribe-container .subscribe-container-inner {
   width: 100%;
   float: left;
-  padding: 5%;
+  padding: 3rem;
 }
 
 .subscribe-container input[type="text"],
@@ -246,18 +257,10 @@ h4:hover .hanchor {
   margin-top: 2rem;
 }
 
-.subscribe-container .subscribe-btn {
-  width: 100%;
-  float: none;
+.subscribe-container .btn-primary {
   margin-top: 5px;
-  color: #fff;
   padding: 11px 0px;
   font-size: 18px;
-  background: #0d6db8;
-  border-radius: 3px;
-  cursor: pointer;
-  border: none;
-  text-shadow: none;
   height: 42px;
 }
 
@@ -696,4 +699,76 @@ header .tags {
   .zestful-box .text p {
     font-size: 0.75em;
   }
+}
+
+.htfp-box {
+  background: #f7c9ad;
+  font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+  color: #5c4033;
+  border: 1px solid #ef5a00;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 10rem;
+}
+
+.htfp-box .logo {
+  min-width: 190px;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .htfp-box .logo {
+    max-height: 300px;
+  }
+}
+
+.htfp-box .logo a {
+  display: flex;
+  justify-content: center;
+}
+
+.htfp-box .logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.htfp-box .text {
+  padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .htfp-box .text {
+    margin-top: 0;
+    padding: 3rem;
+  }
+}
+
+.htfp-box .text h3 {
+  margin-top: 0.75rem;
+  font-size: 1.1em;
+  text-align: center;
+  color: #5c4033;
+}
+
+@media screen and (min-width: 768px) {
+  .htfp-box .text h3 {
+    font-size: 1.2em;
+  }
+}
+
+.htfp-box .text p {
+  margin-top: 2rem;
+  font-size: 0.9em;
+}
+
+.htfp-box .btn-primary {
+  font-size: 1.2em;
+  padding: 1.5rem;
+  display: block;
+  text-align: center;
+}
+
+.htfp-box a:hover {
+  text-decoration: none;
 }
