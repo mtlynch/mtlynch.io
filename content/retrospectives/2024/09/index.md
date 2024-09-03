@@ -37,11 +37,9 @@ TODO
 
 My wife and I had a baby in August. My wife and I are trying to be protective of our son's privacy, so I took a photo of the three of us shortly after the birh and ran it through a privacy-enhancing filter:
 
-## Topic 2
+## Making the Framework 13 AMD 7040 my daily driver
 
-## Topic 3
-
-## Side projects
+## What do I do with my Hacker News course?
 
 ## Wrap up
 
