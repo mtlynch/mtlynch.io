@@ -98,6 +98,8 @@ I was left wondering at the end of the video why Noah is building Stoke Fire on 
 
 Q: Why such large ints? Doesn't that increase gas fees?
 
+{{<img src="uint256.png">}}
+
 ### Why the underscores?
 
 Q: Why do his function arguments start with an underscore? I recognize this convention from Python and JavaScript to hint to the reader that the variable is private/protected, but aren't function argments already private?
