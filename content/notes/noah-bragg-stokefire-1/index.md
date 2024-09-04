@@ -65,7 +65,7 @@ At 91m45s, in order to assert that his production code threw an error, he has to
 ## What got done
 
 - Noah added support in the game for using wood to build huts.
-- He started to implement functionality to attract villagers based on what resources are available in the village.
+- He started to implement functionality to attract villagers based on what resources are available in the village, but he had to pause work because he was mentally exhausted.
 
 ## Streaming
 
@@ -78,8 +78,26 @@ At 91m45s, in order to assert that his production code threw an error, he has to
 
 ## Opportunities for improvement
 
-For difficult-to-remember command-line syntax like `forge test --match-contract BuildFacetTest -vvvv`, I suggest writing a convenience script and storing it in the repo so it would instead look like `./dev-scripts/run-single-test BuildFacetTest`. I do this with some repos. Noah is already using `make`, so these could instead be `make` commands.
+### Convenience dev scripts
+
+Noah at one point got stuck for seFor difficult-to-remember command-line syntax like `forge test --match-contract BuildFacetTest -vvvv`, I suggest writing a convenience script and storing it in the repo so it would instead look like `./dev-scripts/run-single-test BuildFacetTest`. I do this with some repos.
+
+Noah is already using `make`, so these could instead be `make` commands.
+
+### Mock randomness out of tests
 
 Randomness makes tests really hard to understand. Potentially dependency injection so you can see how much
 
+## Unanswered questions
+
+### Why blockchain?
+
+I was left wondering at the end of the video why Noah is building Stoke Fire on the blockchain. He mentioned that he wanted to try something more original on the blockchain, and that's what got me interested, but I still can't figure out how the blockchain helps. So far, it seems like the blockchain is making everything 10x more complicated.
+
+### My, what large ints you have!
+
 Q: Why such large ints? Doesn't that increase gas fees?
+
+### Why the underscores?
+
+Q: Why do his function arguments start with an underscore? I recognize this convention from Python and JavaScript to hint to the reader that the variable is private/protected, but aren't function argments already private?
