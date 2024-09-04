@@ -42,10 +42,14 @@ I've taken notes on my takeaways from
 
 ## Forge
 
-- Forge is how he runs tests
+- [Forge](https://book.getfoundry.sh/reference/forge/forge) is how he runs tests
 - Noah likes forge for testing
 - Likes testing in Solidity because he can reuse a lot of production code.
 - Easy to test different blockchain conditions like timestamps and wallet balance.
+
+74m172 - forge looks super complicated, can't control randomness, have to stick in arbitrary magic numbers to be at the right blockchain number.
+
+I found forge's output really convoluted. It's surprising that when an assert fails, it doesn't print the line number or even the source code that caused the failure. At 85m24s, the failure is just `1 != 2`, and it's on the developer to figure out where the assertion is in source. I've never seen a test framework _not_ print out the line number of where an assertion failed.
 
 ## Warpcast has a web app
 
@@ -53,6 +57,12 @@ I've taken notes on my takeaways from
 - Farcaster makes it look like Warpcast is mobile-only, but I realized from Noah's stream that Warpcast has [a web app](https://warpcast.com/).
 
   - I think you still need the mobile app to create your account.
+
+## Streaming
+
+- He had a peak of 270 viewers.
+- Most viewers came from Twitter.
+- He was admittedly rusty at livestreaming and had a lot of dead air during the stream.
 
 - He's using some streaming thing that unifies Twitter, Youtube , Warpcast
 
