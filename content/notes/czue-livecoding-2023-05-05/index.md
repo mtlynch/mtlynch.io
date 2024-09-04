@@ -5,6 +5,8 @@ aliases:
   # Accidentally published this with the wrong URL for a year. Keep the alias
   # for any old links.
   - /notes/czue-livecoding-2020-05-05/
+tags:
+  - livestream notes
 ---
 
 My friend [Cory Zue](https://www.coryzue.com/) has been publishing his live coding sessions, so I decided to watch one and record my notes.
