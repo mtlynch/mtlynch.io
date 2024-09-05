@@ -1,6 +1,6 @@
 ---
 title: "Paternity Leave: Month 1"
-date: 2024-09-03T09:00:43-04:00
+date: 2024-09-05T00:00:00-04:00
 description: TODO - One-line summary
 images:
   - /retrospectives/2024/09/baby-photo.webp
@@ -67,7 +67,7 @@ At the time, I felt like it was a sign to focus less on Hacker News, but I didn'
 
 The short-term problem is that it's hard for me to record videos right now. I found it hard before, but now I have a baby who might need my attention at any moment. But my wife and I are still finding our grooves as parents, and our routines are continuing to evolve. We might end up in a place where each of us have a few hours a day of solo time, and I'd be able to record then.
 
-In the meantime, I might try circling back to _Refactoring English_. Longtime readers may recognize that as the title of a developer-oriented ebook about effective writing that I [promised to write in 2021](/solo-developer-year-3/#publish-six-blog-posts-and-one-book). But then my business swallowed all of my time, and the book has been sitting on hold since then.
+In the meantime, I might try circling back to [_Refactoring English_](https://refactoringenglish.com). Longtime readers may recognize that as the title of a developer-oriented ebook about effective writing that I [promised to write in 2021](/solo-developer-year-3/#publish-six-blog-posts-and-one-book). But then my business swallowed all of my time, and the book has been sitting on hold since then.
 
 For now, here's a teaser from [my Hacker News course](https://hitthefrontpage.com). It's about why I think it's worth investing more effort in each article than most bloggers do.
 
