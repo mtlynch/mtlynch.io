@@ -18,7 +18,7 @@
         "type": "github"
       }
     },
-    "hugo_dep": {
+    "hugo-nixpkgs": {
       "locked": {
         "lastModified": 1698266953,
         "narHash": "sha256-jf72t7pC8+8h8fUslUYbWTX5rKsRwOzRMX8jJsGqDXA=",
@@ -34,7 +34,7 @@
         "type": "github"
       }
     },
-    "markdown_lint_dep": {
+    "markdown-lint-nixpkgs": {
       "locked": {
         "lastModified": 1697379843,
         "narHash": "sha256-RcnGuJgC2K/UpTy+d32piEoBXq2M+nVFzM3ah/ZdJzg=",
@@ -50,21 +50,7 @@
         "type": "github"
       }
     },
-    "nixpkgs": {
-      "locked": {
-        "lastModified": 1695978539,
-        "narHash": "sha256-lta5HToBZMWZ2hl5CautNSUgIZViR41QxN7JKbMAjgQ=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "bd9b686c0168041aea600222be0805a0de6e6ab8",
-        "type": "github"
-      },
-      "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
-      }
-    },
-    "nodejs_dep": {
+    "nodejs-nixpkgs": {
       "locked": {
         "lastModified": 1678347440,
         "narHash": "sha256-mMhmVy0AarJjc0sbV6EEE4MpLYIGoyusLcr7fqM49Vw=",
@@ -83,10 +69,9 @@
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "hugo_dep": "hugo_dep",
-        "markdown_lint_dep": "markdown_lint_dep",
-        "nixpkgs": "nixpkgs",
-        "nodejs_dep": "nodejs_dep"
+        "hugo-nixpkgs": "hugo-nixpkgs",
+        "markdown-lint-nixpkgs": "markdown-lint-nixpkgs",
+        "nodejs-nixpkgs": "nodejs-nixpkgs"
       }
     },
     "systems": {
