@@ -1,6 +1,8 @@
 ---
 title: "I'm Still Confused About Base"
 date: 2024-09-07T00:00:00-04:00
+tags:
+  - ethereum
 ---
 
 A year ago, I listented to [an interview with Jesse Pollak on an episode of _Into the Bytecode_](https://www.intothebytecode.com/jesse-pollak/).
