@@ -26,7 +26,7 @@ I watched [Noah's first stream](https://www.youtube.com/watch?v=iwYNWwHg_tY), an
   - Manor Lords, a total war simulation built by a solo dev over the past six years.
 - Game will be free to play to encourage participation.
 - Game will save state in NFTs to make it easier to transfer between wallets, but Noah doesn't anticipate people trading their game state NFTs the way they do with art NFTs.
-- He's building on the Base blockchain because he expects consumes to be there due to Coinbase's investment.
+- He's building on the Base blockchain because he expects consumers to be there due to Coinbase's investment.
 
 ### Early access
 
@@ -163,3 +163,7 @@ Noah is using a naming convention where he prepends all function parameter names
 {{<img src="underscores.webp" max-width="800px" caption="I've never seen the convention of preprending function paramter names with underscores, and I'm not sure why Noah is doing it.">}}
 
 I recognize this convention from Python and JavaScript to hint to the reader that the variable is private/protected, but aren't function argments already private? I've never seen this convention before in my admittedly limited reading of Solidity code.
+
+## Update (2024-09-07): Noah's response
+
+Noah was kind enough to record [a video response](https://www.loom.com/share/1f2bd594f3af4249a703bc403ae2338f?sid=8655e0f9-7f43-42ad-8271-c698048aa7d6) addressing some of my questions and suggestions in this post.
