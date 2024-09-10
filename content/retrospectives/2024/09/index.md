@@ -1,6 +1,6 @@
 ---
 title: "Paternity Leave: Month 1"
-date: 2024-09-05T00:00:00-04:00
+date: 2024-09-11T00:00:00-04:00
 description: TODO - One-line summary
 images:
   - /retrospectives/2024/09/baby-photo.webp
@@ -16,14 +16,14 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Finish recording my course
 
-- **Result**: XX
+- **Result**: Baby arrived too early, and I didn't finish.
 - **Grade**: N/A
 
 TODO
 
 ### Begin selling my course
 
-- **Result**: XX
+- **Result**: Baby arrived too early, and I didn't get to this.
 - **Grade**: N/A
 
 TODO
@@ -36,9 +36,21 @@ I took a photo of the three of us shortly after the birth. We're trying to be pr
 
 {{<img src="baby-photo.webp" has-border="true" max-width="450px" caption="Photo of me, my wife, and our child soon after birth, post-processed with a privacy-preserving photo filter">}}
 
-Why do people take such long parental leaves? Do babies really require 24/7 active attention from both parents?
+One of the things I wondered about before the baby arrived was how much time it takes to care for a newborn. People take family leave for six months, and that seemed so long to me. I understood wanting to spend time with your baby, but before the baby can really talk or interact with you, doesn't that get old?
 
-So, they don't. Babies only need things for like a cumulative two hours per day. The problem is that those two hours come in unpredictable spurts throughout the day.
+In terms of caring for your baby's needs, there's breastfeeding and changing diapers, so how long could that take? Three, maybe four hours per day?
+
+I thought we'd need a few days to adjust, and then we'd be back to most of our usual activities.
+
+But, it turns out that it actually does take a lot of time to care for a newborn in ways I didn't understand.
+
+Like breastfeeding was something I knew would be time-consuming. We also spend a lot of time figuring out what he needs. It's very unpredictable. Diaper changes can be two minutes, or things can get out of hand and require 20 minutes of cleaning things that have been sprayed or projectile-blasted with baby-related . Sometimes he's done breastfeeding in five minutes, and sometimes he's eating for 90 minutes.
+
+I knew breastfeeding would be time-consuming, but I also knew I was biologically exempt from that responsibility. But I didn't consider that while my wife is occupied breastfeeding, she also needs things and can't get up, so it ends up being something we both spend time on, though my responsibilities are admittedly much smaller.
+
+We're also frequently just down a person.
+
+But the activity that's baby-friendly is reading. I'm reading more than I ever have in my life. Because I can just read for a few minutes while he's breastfeeding, and most nights, I keep my son downstairs and read with him for a couple of hours so my wife can get some uninterrupted sleep.
 
 ## Making NixOS + Framework 13 AMD 7040 my daily driver
 
@@ -63,11 +75,15 @@ I also just keep a list of things I want to get working on NixOS that I haven't 
 
 Before my baby's birth, I taught [my Hacker News course](https://hitthefrontpage.com) live each week to a pilot group of students. The students liked the material on writing and finding places to share your blog posts, but they [didn't care that much about Hacker News in particular](/retrospectives/2024/07/#should-i-pivot-away-from-hacker-news).
 
-At the time, I felt like it was a sign to focus less on Hacker News, but I didn't have time to make such a large change with mere weeks before my son would be born. But now my son is born, and I've only recorded about 20% of the material for the course, and I'm wondering whether to keep going or take this opportunity to restructure the course.
+At the time, I felt like it was a sign to focus less on Hacker News, but I didn't have time to make such a large change with mere weeks left to complete the course before paternity leave. But now my son is born, and I've only recorded about 20% of the material for the course, and I'm wondering whether to keep going or take this opportunity to restructure the course.
 
-The short-term problem is that it's hard for me to record videos right now. I found it hard before, but now I have a baby who might need my attention at any moment. But my wife and I are still finding our grooves as parents, and our routines are continuing to evolve. We might end up in a place where each of us have a few hours a day of solo time, and I'd be able to record then.
+One other red flag I've noticed is that I put self-ads to my course all over my blog, and nobody is clicking them. I get about 500 visitors per day, and the ads have brought no significant change in visitors to the course website. And I have other ways of marketing the course, but I'd really like there to be large overlap between the kind of people who read my blog and the kind of people who would be interested in taking one of my courses.
 
-In the meantime, I might try circling back to [_Refactoring English_](https://refactoringenglish.com). Longtime readers may recognize that as the title of a developer-oriented ebook about effective writing that I [promised to write in 2021](/solo-developer-year-3/#publish-six-blog-posts-and-one-book). But then my business swallowed all of my time, and the book has been sitting on hold since then.
+Logistically, it's hard for me to record videos. I found it hard before, but now I have a baby who might need my attention at any moment. But my wife and I are still finding our grooves as parents, and our routines are continuing to evolve. We might end up in a place where each of us have a few hours a day of solo time, and I'd be able to record then.
+
+In the meantime, the thing that's feeling more appealing is to try circling back to [_Refactoring English_](https://refactoringenglish.com). Longtime readers may recognize that as the title of a developer-oriented ebook about effective writing that I [promised to write in 2021](/solo-developer-year-3/#publish-six-blog-posts-and-one-book). But then my business swallowed all of my time, and the book has been sitting on hold since then.
+
+My plan next month is to change my blog self-ad to be about _Refactoring English_ and see if more people visit.
 
 For now, here's a teaser from [my Hacker News course](https://hitthefrontpage.com). It's about why I think it's worth investing more effort in each article than most bloggers do.
 
