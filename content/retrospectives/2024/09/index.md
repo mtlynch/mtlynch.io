@@ -54,11 +54,13 @@ But the activity that's baby-friendly is reading. I'm reading more than I ever h
 
 ## Making NixOS + Framework 13 AMD 7040 my daily driver
 
-A few months ago, I purchased the Framework 13 AMD 7040 laptop.
+I've exclusively used Microsoft Surface tablets for my laptop needs for the past 10+ years, but I've finally gotten fed up enough with the direction Windows is taking that I'm preparing my complete exit from the ecosystem. So, I searched for a while for a laptop that treated Linux as a first-class citizen, and I settled on [Framework](https://frame.work).
 
-I've exclusively used Microsoft Surface tablets for my laptop needs for the past 10+ years, but I've finally gotten fed up enough with the direction Windows is taking that I'm preparing my complete exit from the ecosystem. So, I searched for a while for a laptop that treated Linux as a first-class citizen, and I settled on Framework.
+I resisted Framework for a while because the idea of building my own laptop sounded tedious, which is strange because I enjoy building desktops and servers. But I don't enjoy working in tiny spaces or with tiny tools, and building a laptop seemed like it would be a lot of that.
 
-I resisted Framework for a while because the idea of building my own laptop sounded tedious to me, which is strange because I enjoy building desktops and servers. But the experience of building my Framework laptop was surprisingly the best unboxing experience I've ever had with any technology. Building my laptop was incredibly easy. Most of the laptop is pre-assembled, so my part took less than 30 minutes, and the build instructions were outstanding. I experienced an "[IKEA effect"](https://en.wikipedia.org/wiki/IKEA_effect) where I feel more satisfied with my laptop from having assembled it myself.
+The experience of building my Framework laptop was surprisingly the best unboxing experience I've ever had with anything.
+
+Assembling my Framework was incredibly easy. I was expecting it to be like building a desktop from scratch where you're assembling the chassis, the motherboard, etc., but most of the Framework is actually pre-assembled. The user portion of the assembly only took me 30 minutes, and I was going very slowly. The build instructions were outstanding. I definitely experienced an "[IKEA effect"](https://en.wikipedia.org/wiki/IKEA_effect) where I feel more satisfied with my laptop from having assembled it myself.
 
 {{<gallery caption="The Framework 13 surprised me in having one of the best unboxing experiences I've had with any technology.">}}
 {{<img src="framework-unboxing-1.webp" max-width="550px">}}
