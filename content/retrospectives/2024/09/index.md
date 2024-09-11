@@ -10,6 +10,7 @@ images:
 
 - My wife and I became parents.
 - I realized that caring for a newborn takes more time than I expected.
+- I'm unsure what to do with my partially-finished Hacker News course.
 
 ## Goal Grades
 
@@ -41,39 +42,51 @@ I'm reading more than I ever have in my life. During the day, reading is a conve
 
 ## Caring for a newborn takes longer than two hours per day
 
-In preparing for the baby's arrival, I planned to take at least two months of paternity leave. I work for myself and don't have any active clients or customers, so my paternity leave is fairly flexible. I like my work and want to find time for it as long as it's not at the expense of being a new parent.
+In preparing for the baby's arrival, I planned to take two to three months of paternity leave, but I didn't really know what that would look like. My top priority would to be caring for my son and wife, but I couldn't understand how that would occupy entire days.
 
-Before the birth, I was asking my friends with kids how much time it _really_ takes to care for a newborn. I knew that newborns needed breastfeeding and diaper changes, but how long could that take? Three, maybe four hours per day split between two parents?
+I knew that newborns needed breastfeeding and diaper changes, but how long could that take? Three, maybe four hours per day split between two parents?
 
 As you may have guessed, caring for a newborn isn't like my normal day minus two hours. So far, it's like normal day minus 6-12 waking hours.
 
-The most obvious change in time is sleep. Our baby sleeps well for a newborn, but that means that on a good night, he'll do four sessions of sleep between 90-180 minutes long. And I'd heard that beforehand and thought, "Oh, sleeping in two-hour chunks through the night sounds fine." But it's not really two-hour chunks because
+If you're an expectant parent wondering like I did, here's my explanation for where the time goes.
 
-So, it just takes longer for us to get enough sleep. We usually need to nap during the day, too. And that's still usually less than our normal amount of sleep, so we're doing everything else more slowly because we're sleep deprived.
+The most obvious change in time is sleep. Our baby sleeps well for a newborn, but that means that on a good night, he'll do four sessions of sleep 90-180 minutes long.
 
-Until the baby arrived, I thought breastfeeding would mainly impact my wife. I didn't realize that breastfeeding is kind of a two-person task. My wife obviously performs the breastfeeding itself, but while she's doing it, she needs someone who can
+Before the baby, I thought, "Oh, sleeping in two-hour chunks through the night sounds fine." But I had a hidden assumption that it would be two hours of sleep, five minutes of diaper change, then back to sleep. In reality, nighttime diaper changes take anywhere from five minutes to an hour depending on how chaotic things get and how much soothing our son needs to get back to sleep.
 
-but I still need to be involved to bring her the things that she needs while she's pinned to a chair by a hungry baby.
+So, we get 5-7 hours of sleep per night, but it takes 10-12 hours of real-world time. We usually need to nap during the day, too, so that's just even fewer waking hours. And even after sleeping and napping we're still sleepy, so we're doing everything else more slowly than normal.
 
-The other thing about baby tasks is that they're unpredictable. Sometimes, our son sometimes seems satiated after a 10-minute breastfeeding session. Other times, he wants to keep nursing for 90 minutes, even when we calmly explain to him that it's 4 AM.
+The other unexpected impact on time is the feeling that our household is suddenly short one player. Before the birth, I knew I'd have to take on most of the household chores that my wife and I usually share. I thought, "Sure, I can do laundry, do dishes, and prepare two meals instead of one."
 
-Similarly, an easy diaper change can happen in a few minutes. A chaotic one can take ten minutes, plus another 20 to clean and sanitize collateral damage.
+What I didn't anticipate was that while my wife recovered from the birth and took on the new responsibility of breastfeeding for hours each day, she'd need support on things that we normally wouldn't even consider "chores" like picking up heavy jars, grabbing things from floor-level shelves, or just having a fresh glass of water next to her as she nurses.
+
+So, I'm glad that I kept my schedule open so that I wouldn't have any work responsibilities during this time. And each week, I feel like we get find our rhythm a bit more and are finding more and more free time so it doesn't feel like we're scrambling 24/7 to attend to our son's next need.
 
 ## What should I do with my Hacker News course?
 
-Before my baby's birth, I taught [my Hacker News course](https://hitthefrontpage.com) live each week to a pilot group of students. The students liked the material on writing and finding places to share your blog posts, but they [didn't care that much about Hacker News in particular](/retrospectives/2024/07/#should-i-pivot-away-from-hacker-news).
+Before my son's birth, I taught [my Hacker News course](https://hitthefrontpage.com) live each week to a pilot group of students. The students liked the material on writing and finding places to share your blog posts, but they [didn't care that much about Hacker News in particular](/retrospectives/2024/07/#should-i-pivot-away-from-hacker-news).
 
-At the time, I felt like it was a sign to focus less on Hacker News, but I didn't have time to make such a large change with mere weeks left to complete the course before paternity leave. But now my son is born, and I've only recorded about 20% of the material for the course, and I'm wondering whether to keep going or take this opportunity to restructure the course.
+At the time, I felt like it was a sign to focus less on Hacker News, but I didn't have time to make such a large change. I wanted to complete the course before my son's birth, but I knew I wouldn't have time to overhaul the curriculum and complete it in time.
 
-One other red flag I've noticed is that I put self-ads to my course all over my blog, and nobody is clicking them. I get about 500 visitors per day, and the ads have brought no significant change in visitors to the course website. And I have other ways of marketing the course, but I'd really like there to be large overlap between the kind of people who read my blog and the kind of people who would be interested in taking one of my courses.
+But my son arrived a bit early, so I'd only recorded 20% of the material for the course before he was born. Now, I'm wondering whether to keep going or take this opportunity to restructure the course.
 
-Logistically, it's hard for me to record videos. I found it hard before, but now I have a baby who might need my attention at any moment. But my wife and I are still finding our grooves as parents, and our routines are continuing to evolve. We might end up in a place where each of us have a few hours a day of solo time, and I'd be able to record then.
+One other red flag I've noticed is that I put self-ads to my course all over my blog, and nobody is clicking them.
 
-In the meantime, the thing that's feeling more appealing is to try circling back to [_Refactoring English_](https://refactoringenglish.com). Longtime readers may recognize that as the title of a developer-oriented ebook about effective writing that I [promised to write in 2021](/solo-developer-year-3/#publish-six-blog-posts-and-one-book). But then my business swallowed all of my time, and the book has been sitting on hold since then.
+{{<img src="self-ads.webp" max-width="700px" has-border="true" caption="I added self-ads from this blog to my blogging course.">}}
+
+I get about 500 visitors per day on this blog, and the ads have brought no significant change in visitors to the course website.
+
+{{<img src="no-new-visitors.webp" max-width="700px" has-border="true" caption="I started running self-ads on mtlynch.io for my blogging course, but they had no noticeable impact on visits.">}}
+
+I have other ways of marketing the course, but I'd like there to be large overlap between the kind of people who read my blog and the kind of people who would be interested in taking one of my courses.
+
+I found it hard to record videos before before, but now that I have a baby, it's even harder. The thing that's feeling more appealing is to try circling back to [_Refactoring English_](https://refactoringenglish.com).
+
+Longtime readers of this blog may recognize _Refactoring English_ as my oft-promised, never delivered book about how developers can improve their writing. I [promised to write in 2021](/solo-developer-year-3/#publish-six-blog-posts-and-one-book). But then my business swallowed all of my time, and the book has been sitting on hold since then.
 
 My plan next month is to change my blog self-ad to be about _Refactoring English_ and see if more people visit.
 
-For now, here's a teaser from [my Hacker News course](https://hitthefrontpage.com). It's about why I think it's worth investing more effort in each article than most bloggers do.
+For now, here's an excerpt from [my Hacker News course](https://hitthefrontpage.com). It's about why I invest more into each blog post than most other bloggers do.
 
 <div style="position:relative;padding-top:56.25%;"><iframe src="https://iframe.mediadelivery.net/embed/273218/f04d4f68-e5da-4886-a0f6-a3bedc62c399?autoplay=true&loop=false&muted=false&preload=true&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe></div>
 
