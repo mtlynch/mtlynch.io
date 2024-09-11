@@ -18,14 +18,14 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Finish recording my course
 
-- **Result**: Baby arrived too early, and I only recorded 20% of the material.
+- **Result**: Baby arrived early, and I only recorded 20% of the material.
 - **Grade**: N/A
 
-Recording the course took longer than I thought, and the baby arrived a few weeks earlier than we expected, so I didn't get to all the recordings.
+Recording the course took longer than I thought, and the baby arrived a few weeks earlier than we expected, so I didn't get to all the material.
 
 ### Begin selling my course
 
-- **Result**: Baby arrived too early, and I didn't get to this.
+- **Result**: Baby arrived early, so I didn't get to this.
 - **Grade**: N/A
 
 Same as above. I didn't want to do a pre-order because I was afraid of getting into a situation where I'm unsure when I could deliver the finished version.
@@ -40,7 +40,7 @@ We're trying to be protective of our son's privacy, so I took a photo of the thr
 
 ## Caring for a newborn takes longer than two hours per day
 
-In preparing for the baby's arrival, I planned to take two to three months of paternity leave, but I didn't really know what that would look like. My top priority would be caring for my son and wife, but I couldn't understand how that would occupy entire days.
+In preparing for the baby's arrival, I planned to take two to three months of paternity leave, but I didn't know what that would look like. My top priority would be caring for my son and wife, but I couldn't understand how that would occupy entire days.
 
 I knew that newborns needed breastfeeding and diaper changes, but how long could that take? Three, maybe four hours per day, split between two parents?
 
@@ -54,7 +54,7 @@ Before the baby, I thought, "Oh, sleeping in two-hour chunks through the night s
 
 So, we get 5-7 hours of sleep per night, but it takes 10-12 hours of real-world time to achieve that. We usually need to nap during the day, too, so that's just even fewer waking hours. And even after sleeping and napping, we're still sleepy, so we're doing everything else more slowly than normal.
 
-The other unexpected impact on time is the feeling that our household is suddenly short one player. Before the birth, I knew I'd have to take on most of the household chores that my wife and I usually share. But at the time, that didn't seem like such a big deal. I can do laundry and dishes and prepare two meals instead of one.
+The other unexpected impact on time is the feeling that our household is suddenly short one player. Before the birth, I knew I'd have to take on most of the household chores that my wife and I usually share. But at the time, that didn't seem like such a big deal. I can do all of thee laundry and dishes and prepare two meals instead of one.
 
 What I didn't anticipate was that while my wife recovered from the birth and took on the new responsibility of breastfeeding for hours each day, she'd need support with things that we normally wouldn't even consider "chores," like picking up heavy jars, grabbing things from floor-level shelves, or just having a fresh glass of water next to her as she nurses.
 
@@ -66,7 +66,7 @@ Before my son's birth, I taught [my Hacker News course](https://hitthefrontpage.
 
 At the time, I felt like it was a signal that I should focus less on Hacker News, but I didn't have time to overhaul the course. I wanted to record all the material before my son's birth, and I knew I wouldn't have time to make such a large change and complete everything in time.
 
-But my son arrived a bit early, so I'd only recorded 20% of the material for the course before he was born. Now, I'm wondering whether to keep going with the course or do that overhaul now.
+But my son arrived a bit early, so I'd only recorded 20% of the material for the course before he was born. Now, I'm wondering whether to keep going with the course or embrace that overhaul.
 
 One other red flag I've noticed is that I put self-ads to my course all over my blog, and they're not attracting any interest from my blog readers.
 
@@ -80,7 +80,7 @@ I have other ideas for marketing the course, but I'd like there to be a large ov
 
 I found it hard to record videos before, but now that I have a baby, it's even harder. The thing that's feeling more appealing is to try circling back to [_Refactoring English_](https://refactoringenglish.com).
 
-Longtime readers of this blog may recognize _Refactoring English_ as my oft-promised, never-delivered book about how developers can improve their writing. I [promised to write in 2021](/solo-developer-year-3/#publish-six-blog-posts-and-one-book). But then my business swallowed all of my time, and the book has been sitting on hold since then.
+Longtime readers of this blog may recognize _Refactoring English_ as my oft-promised, never-delivered book about how developers can improve their writing. I [promised to write in 2021](/solo-developer-year-3/#publish-six-blog-posts-and-one-book), but then my business swallowed all of my time, and the book has been sitting on hold ever since.
 
 My plan next month is to change my blog self-ad to be about _Refactoring English_ and see if more people visit.
 
@@ -110,10 +110,6 @@ Framework's [assembly instructions](<https://guides.frame.work/Guide/Framework+L
 I installed NixOS on my Framework, which has been satisfying but challenging.
 
 In NixOS, all configuration happens through plaintext files. This is amazing when I want to install a program, and all I have to do is add a line to a file and run `nixos rebuild`. It's less amazing when I just want to make the system clock display in AM/PM instead of 24-hour format, and I can't find the magic incantation to make that happen via NixOS config files.
-
-Configuring NixOS has become an unexpectedly nice paternity leave project. First, instead of spending most of my time in my office, I'm in my living room with my family most of the day. When I use my computer, it's my laptop, so I have extra motivation to get NixOS working well.
-
-I also just keep a list of things I want to get working on NixOS that I haven't yet figured out. Those quests are usually things that are friendly to interruptions because it's a lot of searching for answers and trial and error.
 
 At this point, I like being in NixOS more than I like being in Windows, and I've been primarily a Windows user since Windows 3.1.
 
