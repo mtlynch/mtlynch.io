@@ -37,21 +37,23 @@ I took a photo of the three of us shortly after the birth. We're trying to be pr
 
 {{<img src="baby-photo.webp" has-border="true" max-width="450px" caption="Photo of me, my wife, and our child soon after birth, post-processed with a privacy-preserving photo filter">}}
 
-But the activity that's baby-friendly is reading. I'm reading more than I ever have in my life. Because I can just read for a few minutes while he's breastfeeding, and most nights, I keep my son downstairs and read with him for a couple of hours so my wife can get some uninterrupted sleep.
+I'm reading more than I ever have in my life. During the day, reading is a convenient activity when I know there will be a . Andn at night, I keep my son downstairs and read with him for a couple of hours so my wife can get some uninterrupted sleep.
 
-## How much time does it take to attend to a newborn?
+## Caring for a newborn takes longer than two hours per day
 
-In preparing for the baby's arrival, I planned to take two months of paternity leave. I wanted to fit in work if I had time free, but I wanted to set things up in my life so that if I ended up having zero time for anything except family care and bonding, I could ignore work for at least three months before it caused problems.
+In preparing for the baby's arrival, I planned to take at least two months of paternity leave. I work for myself and don't have any active clients or customers, so my paternity leave is fairly flexible. I like my work and want to find time for it as long as it's not at the expense of being a new parent.
 
-Even though I was prepared to not work, I enjoy my work and hoped I'd find time for it. And I had a hard time imagining that a baby would require _that_ much attention for three months.
-
-I knew that newborns need breastfeeding and changing diapers, but how long could that take? Three, maybe four hours per day split between two parents? And there's also time to just enjoy being together as a new family, but I thought I could balance that with work.
+Before the birth, I was asking my friends with kids how much time it _really_ takes to care for a newborn. I knew that newborns needed breastfeeding and diaper changes, but how long could that take? Three, maybe four hours per day split between two parents?
 
 As you may have guessed, caring for a newborn isn't like my normal day minus two hours. So far, it's like normal day minus 6-12 waking hours.
 
-The most obvious change in time is sleep. Our baby sleeps well for a newborn, but that means that on a good night, he'll do four sessions of sleep between 90-180 minutes long, and he'll need nursing or diaper changes in between each session. So, it just takes longer for us to get enough sleep, and we usually need to nap during the day, too. And that's still usually less than our normal amount of sleep, so we're doing everything else more slowly because we're sleep deprived.
+The most obvious change in time is sleep. Our baby sleeps well for a newborn, but that means that on a good night, he'll do four sessions of sleep between 90-180 minutes long. And I'd heard that beforehand and thought, "Oh, sleeping in two-hour chunks through the night sounds fine." But it's not really two-hour chunks because
 
-I thought breastfeeding would mainly impact my wife,. Until the baby arrived, I didn't realize that breastfeeding is kind of a two-person task. Because my wife is doing the heavy lifting of the breastfeeding itself, but I still need to be involved to bring her the things that she needs while she's pinned to a chair by a hungry baby.
+So, it just takes longer for us to get enough sleep. We usually need to nap during the day, too. And that's still usually less than our normal amount of sleep, so we're doing everything else more slowly because we're sleep deprived.
+
+Until the baby arrived, I thought breastfeeding would mainly impact my wife. I didn't realize that breastfeeding is kind of a two-person task. My wife obviously performs the breastfeeding itself, but while she's doing it, she needs someone who can
+
+but I still need to be involved to bring her the things that she needs while she's pinned to a chair by a hungry baby.
 
 The other thing about baby tasks is that they're unpredictable. Sometimes, our son sometimes seems satiated after a 10-minute breastfeeding session. Other times, he wants to keep nursing for 90 minutes, even when we calmly explain to him that it's 4 AM.
 
@@ -92,9 +94,9 @@ Assembling my Framework was incredibly easy. I was expecting it to be like build
 
 I installed NixOS on my Framework, which has been satisfying but challenging.
 
-In NixOS, all configuration happens through plaintext files. This is amazing when I want to install a program, and all I have to do is add a line to a file and run `nixos rebuild`. It's less amazing when I just want to make the system clock display in AM/PM instead of 24-hour format, and I can't find the magic incantation that controls that in NixOS.
+In NixOS, all configuration happens through plaintext files. This is amazing when I want to install a program, and all I have to do is add a line to a file and run `nixos rebuild`. It's less amazing when I just want to make the system clock display in AM/PM instead of 24-hour format, and I can't find the magic incantation to control it in NixOS.
 
-Setting up the laptop has become an unexpectedly nice paternity leave project. First, instead of spending most of my time in my office, I'm in my living room with my family most of the day. When I use my computer, it's my laptop, so I have extra motivation to get NixOS working well.
+Configuring NixOS has become an unexpectedly nice paternity leave project. First, instead of spending most of my time in my office, I'm in my living room with my family most of the day. When I use my computer, it's my laptop, so I have extra motivation to get NixOS working well.
 
 I also just keep a list of things I want to get working on NixOS that I haven't yet figured out. And those quests are usually things that are friendly to interruptions, because it's a lot of searching for answers and trial and error.
 
@@ -104,6 +106,7 @@ I also just keep a list of things I want to get working on NixOS that I haven't 
 
 - Welcomed the birth of my son.
 - Recorded 10 chapters of my course and edited 9 of them.
+- Configured my Framework 13 laptop to be usable as a daily driver with NixOS.
 - Published [notes about a blockchain project](/notes/noah-bragg-stokefire-1/) and [why I'm confused about that particular blockchain](/notes/im-still-confused-about-base/).
 
 ### Lessons learned
