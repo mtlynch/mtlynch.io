@@ -1,7 +1,7 @@
 ---
 title: "Paternity Leave: Month 1"
 date: 2024-09-11T00:00:00-04:00
-description: TODO - One-line summary
+description: I have a son!
 images:
   - /retrospectives/2024/09/baby-photo.webp
 ---
@@ -18,27 +18,25 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Finish recording my course
 
-- **Result**: Baby arrived too early, and I didn't finish.
+- **Result**: Baby arrived too early, and I only recorded 20% of the material.
 - **Grade**: N/A
 
-TODO
+Recording the course took longer than I thought, and the baby arrived a few weeks earlier than we expected, so I didn't get to all the recordings.
 
 ### Begin selling my course
 
 - **Result**: Baby arrived too early, and I didn't get to this.
 - **Grade**: N/A
 
-TODO
+Same as above. I didn't want to do a pre-order because I was afraid of getting into a situation where I'm unsure when I can deliver the finished version.
 
 ## We had a baby
 
 In August, my wife and I became parents with the birth of our son.
 
-I took a photo of the three of us shortly after the birth. We're trying to be protective of our son's privacy, so I ran the photo through a hand-tuned Fast Fourier transform to remove identifying biometric details:
+We're trying to be protective of our son's privacy, so I took a photo of the three of us shortly after the birth and ran it through a hand-tuned Fast Fourier transform to remove identifying biometric details:
 
-{{<img src="baby-photo.webp" has-border="true" max-width="450px" caption="Photo of me, my wife, and our child soon after birth, post-processed with a privacy-preserving photo filter">}}
-
-I'm reading more than I ever have in my life. During the day, reading is a convenient activity when I know there will be a . Andn at night, I keep my son downstairs and read with him for a couple of hours so my wife can get some uninterrupted sleep.
+{{<img src="baby-photo.webp" has-border="true" max-width="450px" alt="Stick figure drawing of my family" caption="Photo of me, my wife, and our child soon after birth, post-processed with a privacy-preserving photo filter">}}
 
 ## Caring for a newborn takes longer than two hours per day
 
@@ -50,27 +48,27 @@ As you may have guessed, caring for a newborn isn't like my normal day minus two
 
 If you're an expectant parent wondering like I did, here's my explanation for where the time goes.
 
-The most obvious change in time is sleep. Our baby sleeps well for a newborn, but that means that on a good night, he'll do four sessions of sleep 90-180 minutes long.
+The most obvious change in time is sleep. Our baby sleeps well for a newborn, but that means that on a good night, he'll do four sessions of sleep, each 90-180 minutes long.
 
 Before the baby, I thought, "Oh, sleeping in two-hour chunks through the night sounds fine." But I had a hidden assumption that it would be two hours of sleep, five minutes of diaper change, then back to sleep. In reality, nighttime diaper changes take anywhere from five minutes to an hour depending on how chaotic things get and how much soothing our son needs to get back to sleep.
 
-So, we get 5-7 hours of sleep per night, but it takes 10-12 hours of real-world time. We usually need to nap during the day, too, so that's just even fewer waking hours. And even after sleeping and napping we're still sleepy, so we're doing everything else more slowly than normal.
+So, we get 5-7 hours of sleep per night, but it takes 10-12 hours of real-world time to achieve that. We usually need to nap during the day, too, so that's just even fewer waking hours. And even after sleeping and napping we're still sleepy, so we're doing everything else more slowly than normal.
 
-The other unexpected impact on time is the feeling that our household is suddenly short one player. Before the birth, I knew I'd have to take on most of the household chores that my wife and I usually share. I thought, "Sure, I can do laundry, do dishes, and prepare two meals instead of one."
+The other unexpected impact on time is the feeling that our household is suddenly short one player. Before the birth, I knew I'd have to take on most of the household chores that my wife and I usually share. But at the time, that didn't seem like such a big deal. I can do laundry and dishes and prepare two meals instead of one.
 
 What I didn't anticipate was that while my wife recovered from the birth and took on the new responsibility of breastfeeding for hours each day, she'd need support on things that we normally wouldn't even consider "chores" like picking up heavy jars, grabbing things from floor-level shelves, or just having a fresh glass of water next to her as she nurses.
 
-So, I'm glad that I kept my schedule open so that I wouldn't have any work responsibilities during this time. And each week, I feel like we get find our rhythm a bit more and are finding more and more free time so it doesn't feel like we're scrambling 24/7 to attend to our son's next need.
+So, I'm glad that I kept my schedule open so that I wouldn't have any work responsibilities during this time. And each week, I feel like we get find our rhythm a bit more and gain more free time so it doesn't feel like we're scrambling 24/7 to attend to our son's next need.
 
 ## What should I do with my Hacker News course?
 
 Before my son's birth, I taught [my Hacker News course](https://hitthefrontpage.com) live each week to a pilot group of students. The students liked the material on writing and finding places to share your blog posts, but they [didn't care that much about Hacker News in particular](/retrospectives/2024/07/#should-i-pivot-away-from-hacker-news).
 
-At the time, I felt like it was a sign to focus less on Hacker News, but I didn't have time to make such a large change. I wanted to complete the course before my son's birth, but I knew I wouldn't have time to overhaul the curriculum and complete it in time.
+At the time, I felt like it was a signal that I should focus less on Hacker News, but I didn't have time to overhaul the course. I wanted to record all the material before my son's birth, and I knew I wouldn't have time to make such a large change and complete everything in time.
 
-But my son arrived a bit early, so I'd only recorded 20% of the material for the course before he was born. Now, I'm wondering whether to keep going or take this opportunity to restructure the course.
+But my son arrived a bit early, so I'd only recorded 20% of the material for the course before he was born. Now, I'm wondering whether to keep going with the course or do that overhaul now.
 
-One other red flag I've noticed is that I put self-ads to my course all over my blog, and nobody is clicking them.
+One other red flag I've noticed is that I put self-ads to my course all over my blog, and they're not attracting any interest from my blog readers.
 
 {{<img src="self-ads.webp" max-width="700px" has-border="true" caption="I added self-ads from this blog to my blogging course.">}}
 
@@ -78,7 +76,7 @@ I get about 500 visitors per day on this blog, and the ads have brought no signi
 
 {{<img src="no-new-visitors.webp" max-width="700px" has-border="true" caption="I started running self-ads on mtlynch.io for my blogging course, but they had no noticeable impact on visits.">}}
 
-I have other ways of marketing the course, but I'd like there to be large overlap between the kind of people who read my blog and the kind of people who would be interested in taking one of my courses.
+I have other ideas for marketing the course, but I'd like there to be large overlap between the kind of people who read my blog and the kind of people who would be interested in taking one of my courses.
 
 I found it hard to record videos before before, but now that I have a baby, it's even harder. The thing that's feeling more appealing is to try circling back to [_Refactoring English_](https://refactoringenglish.com).
 
@@ -86,32 +84,38 @@ Longtime readers of this blog may recognize _Refactoring English_ as my oft-prom
 
 My plan next month is to change my blog self-ad to be about _Refactoring English_ and see if more people visit.
 
-For now, here's an excerpt from [my Hacker News course](https://hitthefrontpage.com). It's about why I invest more into each blog post than most other bloggers do.
+For now, here's an excerpt from [my Hacker News course](https://hitthefrontpage.com) that I recorded before my son was born. It's about why I invest more into each blog post than most other bloggers do.
 
 <div style="position:relative;padding-top:56.25%;"><iframe src="https://iframe.mediadelivery.net/embed/273218/f04d4f68-e5da-4886-a0f6-a3bedc62c399?autoplay=true&loop=false&muted=false&preload=true&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe></div>
 
 ## Making NixOS + Framework 13 AMD 7040 my daily driver
 
-I've exclusively used Microsoft Surface tablets for my laptop needs for the past 10+ years, but I've finally gotten fed up enough with the direction Windows is taking that I'm preparing my complete exit from the ecosystem. So, I searched for a while for a laptop that treated Linux as a first-class citizen, and I settled on [Framework](https://frame.work).
+I've exclusively used Microsoft Surface tablets for my laptop needs for the past 10+ years, but I've finally gotten fed up enough with the direction Windows is taking that I'm preparing my complete exit from the Windows ecosystem.
 
-I resisted Framework for a while because the idea of building my own laptop sounded tedious, which is strange because I enjoy building desktops and servers. But I don't enjoy working in tiny spaces or with tiny tools, and building a laptop seemed like it would be a lot of that.
+I searched for a while for a laptop that treated Linux as a first-class citizen, and I settled on [Framework](https://frame.work).
+
+I initially resisted Framework because the idea of building my own laptop sounded tedious, which is strange because I enjoy building desktops and servers. But I don't enjoy working in tiny spaces or with tiny tools, and building a laptop seemed like it would be a lot of that.
 
 The experience of building my Framework laptop was surprisingly the best unboxing experience I've ever had with anything.
-
-Assembling my Framework was incredibly easy. I was expecting it to be like building a desktop from scratch where you're assembling the chassis, the motherboard, etc., but most of the Framework is actually pre-assembled. The user portion of the assembly only took me 30 minutes, and I was going very slowly. The build instructions were outstanding. I definitely experienced an "[IKEA effect"](https://en.wikipedia.org/wiki/IKEA_effect) where I feel more satisfied with my laptop from having assembled it myself.
 
 {{<gallery caption="The Framework 13 surprised me in having one of the best unboxing experiences I've had with any technology.">}}
 {{<img src="framework-unboxing-1.webp" max-width="550px">}}
 {{<img src="framework-unboxing-2.webp" max-width="210px">}}
 {{</gallery>}}
 
+Assembling my Framework was incredibly easy. I was expecting it to be like building a desktop from scratch where you're assembling the chassis, the motherboard, etc., but most of the Framework is actually pre-assembled. The user portion of the assembly only took me 30 minutes, and I was going very slowly.
+
+Framework's [assembly instructions](<https://guides.frame.work/Guide/Framework+Laptop+13+(13th+Gen+Intel+Core)+DIY+Edition+Quick+Start+Guide/168>) are outstanding. I definitely experienced an "[IKEA effect"](https://en.wikipedia.org/wiki/IKEA_effect) where I feel more satisfied with my laptop from having assembled it myself.
+
 I installed NixOS on my Framework, which has been satisfying but challenging.
 
-In NixOS, all configuration happens through plaintext files. This is amazing when I want to install a program, and all I have to do is add a line to a file and run `nixos rebuild`. It's less amazing when I just want to make the system clock display in AM/PM instead of 24-hour format, and I can't find the magic incantation to control it in NixOS.
+In NixOS, all configuration happens through plaintext files. This is amazing when I want to install a program, and all I have to do is add a line to a file and run `nixos rebuild`. It's less amazing when I just want to make the system clock display in AM/PM instead of 24-hour format, and I can't find the magic incantation to make that happen via NixOS config files.
 
 Configuring NixOS has become an unexpectedly nice paternity leave project. First, instead of spending most of my time in my office, I'm in my living room with my family most of the day. When I use my computer, it's my laptop, so I have extra motivation to get NixOS working well.
 
 I also just keep a list of things I want to get working on NixOS that I haven't yet figured out. And those quests are usually things that are friendly to interruptions, because it's a lot of searching for answers and trial and error.
+
+At this point, I like being in NixOS more than I like being in Windows, and I've been primarily a Windows user since Windows 3.1.
 
 ## Wrap up
 
@@ -124,7 +128,7 @@ I also just keep a list of things I want to get working on NixOS that I haven't 
 
 ### Lessons learned
 
--
+- Caring for a newborn takes a long time.
 
 ### Goals for next month
 
