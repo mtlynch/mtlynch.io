@@ -54,7 +54,7 @@ Before the baby, I thought, "Oh, sleeping in two-hour chunks through the night s
 
 So, we get 5-7 hours of sleep per night, but it takes 10-12 hours of real-world time to achieve that. We usually need to nap during the day, too, so that's just even fewer waking hours. And even after sleeping and napping, we're still sleepy, so we're doing everything else more slowly than normal.
 
-The other unexpected impact on time is the feeling that our household is suddenly short one player. Before the birth, I knew I'd have to take on most of the household chores that my wife and I usually share. But at the time, that didn't seem like such a big deal. I can do all of thee laundry and dishes and prepare two meals instead of one.
+The other unexpected impact on time is the feeling that our household is suddenly short one player. Before the birth, I knew I'd have to take on most of the household chores that my wife and I usually share. But at the time, that didn't seem like such a big deal. I can do all of the laundry and dishes and prepare two meals instead of one.
 
 What I didn't anticipate was that while my wife recovered from the birth and took on the new responsibility of breastfeeding for hours each day, she'd need support with things that we normally wouldn't even consider "chores," like picking up heavy jars, grabbing things from floor-level shelves, or just having a fresh glass of water next to her as she nurses.
 
