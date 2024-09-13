@@ -617,74 +617,75 @@ header .tags {
   display: inline;
 }
 
-.htfp-box {
-  background: #f7c9ad;
+.refactoring-english-box {
+  background: #d3ffca;
   font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
   color: #5c4033;
-  border: 1px solid #ef5a00;
-  text-align: left;
+  border: 1px solid #a6ed99;
+  text-align: center;
   width: 100%;
   margin-bottom: 10rem;
-}
-
-.htfp-box .logo {
-  min-width: 190px;
-  display: flex;
-  justify-content: center;
-}
-
-@media screen and (min-width: 768px) {
-  .htfp-box .logo {
-    max-height: 300px;
-  }
-}
-
-.htfp-box .logo a {
-  display: flex;
-  justify-content: center;
-}
-
-.htfp-box .logo img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.htfp-box .text {
+  font-size: 1.05em;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
-  .htfp-box .text {
+  .refactoring-english-box {
     margin-top: 0;
     padding: 3rem;
   }
 }
 
-.htfp-box .text h3 {
+.refactoring-english-box h2 {
   margin-top: 0.75rem;
-  font-size: 1.1em;
-  text-align: center;
+  font-size: 1.5em;
   color: #5c4033;
 }
 
 @media screen and (min-width: 768px) {
-  .htfp-box .text h3 {
-    font-size: 1.2em;
+  .refactoring-english-box h2 {
+    font-size: 1.4em;
   }
 }
 
-.htfp-box .text p {
-  margin-top: 2rem;
+.refactoring-english-box p {
+  margin-top: 1rem;
   font-size: 0.9em;
 }
 
-.htfp-box .btn-primary {
+.refactoring-english-box ul {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1em;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.refactoring-english-box ul li {
+  list-style-type: none;
+  position: relative;
+  padding-left: 1.5em;
+}
+
+.refactoring-english-box ul li:before {
+  content: "✓";
+  color: green;
+  position: absolute;
+  left: 0;
+}
+
+.refactoring-english-box .btn-primary {
   font-size: 1.2em;
   padding: 1.5rem;
+  margin-top: 3rem;
   display: block;
   text-align: center;
 }
 
-.htfp-box a:hover {
+.refactoring-english-box a:hover {
   text-decoration: none;
 }
