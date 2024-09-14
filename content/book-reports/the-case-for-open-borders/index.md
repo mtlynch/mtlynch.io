@@ -15,9 +15,13 @@ I hoped the author would consider the benefits of borders and weight them agains
 
 Instead of evaluating pros and cons, the author enumerates all the harms of border control and concludes that we should abolish them because of these harms. This is basically like arguing that because you sometimes forget your keys and can't use your car, we should just get rid of car keys and make cars accessible to any person who wants to use one.
 
-The author also assumes that the reader shares his far-left worldview that capitalism shouldn't exist and that Western countries have an obligation to provide not just free passsage, but travel assistance and social welfare to any person anywhere in the world who wants to relocate to the US or Europe.
+> There exists in such a case a certain institution or law; let us say, for the sake of simplicity, a fence or gate erected across a road. The more modern type of reformer goes gaily up to it and says, “I don’t see the use of this; let us clear it away.” To which the more intelligent type of reformer will do well to answer: "If you don’t see the use of it, I certainly won’t let you clear it away. Go away and think. Then, when you can come back and tell me that you do see the use of it, I may allow you to destroy it."
+>
+> "Chesterton's Fence," by G.K. Chesterton
 
-I knew from the title that the book's argument would be radical, but I didn't realize that the arguments were for a fairly narrow audience of people who already want to eliminate capitalism, so eliminating borders is also a good idea.
+The author also assumes that the reader shares his far left worldview that capitalism shouldn't exist and that Western countries have an obligation to provide not just free passsage, but travel assistance and social welfare to any person anywhere in the world who wants to relocate to the US or Europe.
+
+I did learn some interesting details that improved my understanding of immigration, but overall, I felt like the author and I differed too much in fundamental beliefs about citizenship, so the arguments didn't resonate with me.
 
 ---
 
@@ -27,7 +31,8 @@ I knew from the title that the book's argument would be radical, but I didn't re
 
 ## What I Disliked
 
--
+- The arguments are lacking in nuance. The author only considers the harms of immigration policies and uses that to justify abolishing them without considering any benefits.
+- The author is uncharitable in painting proponents of immigration controls. They're presented as seething xenophobes or greedy elites.
 
 ## Key Takeaways
 
