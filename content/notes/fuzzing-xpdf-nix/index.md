@@ -6,11 +6,33 @@ tags:
   - fuzzing
 ---
 
-Fuzz testing is a cool technique for finding bugs in software, especially security critical bugs. To fuzz test an application, you take a valid input like a file and then randomly mutate it to change values, add data, or blah. You then try opening the mutated
+Fuzz testing is a cool technique for finding bugs in software, especially security critical bugs. To fuzz test an application, you take a valid input like a file and then randomly mutate it to change values, add data, or blah. You then try opening the mutated file and seeing if it crashes.'
 
-## Install Nix with support for flakes
+One of the biggest challenges of fuzzing is how difficult it is to set up. I recently discovered that Nix greatly alleviates some pain points of fuzzing and allows you to get up and running quickly.
 
-TODO: Zero to nix
+## Why fuzzing is hard
+
+One of the biggest obstacles to fuzz testing is that it's a pain to set up. I've been trying to learn fuzzing, but all the tutorials I've found make it so hard to get a working setup.
+
+```bash
+git clone https://gitlab.com/mtlynch/fuzz-xpdf.git && \
+  cd fuzz-xpdf && \
+  nix run
+```
+
+1. Compiles xpdf from source with proper instrumentation for fuzz testing
+1. Downloads a set of edge-case PDFs to use as a basis for generating inputs
+1. Begins the fuzzing process
+
+That's pretty good for three commands!
+
+What's more, if you want to change the compilation options or compile a different version of xpdf, you can make simple changes to a single file.
+
+## If you don't have Nix
+
+Install Nix using the Determinate Systems installer:
+
+TODO
 
 ## Building xpdf with Nix
 
