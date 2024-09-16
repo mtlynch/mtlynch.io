@@ -1,10 +1,12 @@
 ---
-title: "Fuzzing xpdf with Nix"
+title: "Nix Makes Fuzz Testing Easier"
 date: 2024-09-14T19:16:32-04:00
 tags:
   - nix
   - fuzzing
 ---
+
+Fuzz testing is a cool technique for finding bugs in software, especially security critical bugs. To fuzz test an application, you take a valid input like a file and then randomly mutate it to change values, add data, or blah. You then try opening the mutated
 
 ## Install Nix with support for flakes
 
@@ -146,3 +148,12 @@ Copyright 1996-2007 Glyph & Cog, LLC
     );
 }
 ```
+
+## Fuzzing
+
+```bash
+CRASHING_PDF='fuzz-output/default/crashes.2024-09-14-22:05:14/id:000000,sig:11,src:000862+000165,time:102771,execs:57754,op:splice,rep:13'
+gdb -ex run --args ./result/bin/pdftotext "${CRASHING_PDF}"
+```
+
+Type `bt` to see a backtrace (stacktrace).
