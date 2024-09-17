@@ -6,13 +6,9 @@ tags:
   - fuzzing
 ---
 
-Fuzz testing is a cool technique for finding bugs in software, especially security critical bugs. To fuzz test an application, you take a valid input like a file and then randomly mutate it to change values, add data, or blah. You then try opening the mutated file and seeing if it crashes.'
+Fuzz testing is a cool technique for finding bugs in software, especially security critical bugs. One of the biggest obstacles to fuzz testing is the difficulty of setting everything up. It turns out that you can use Nix to eliminate some crucial pain points from fuzz testing.
 
-One of the biggest challenges of fuzzing is how difficult it is to set up. I recently discovered that Nix greatly alleviates some pain points of fuzzing and allows you to get up and running quickly.
-
-## Why fuzzing is hard
-
-One of the biggest obstacles to fuzz testing is that it's a pain to set up. I've been trying to learn fuzzing, but all the tutorials I've found make it so hard to get a working setup.
+If you have a Linux system with Nix installed, the following three commands will start a fuzzing session
 
 ```bash
 git clone https://gitlab.com/mtlynch/fuzz-xpdf.git && \
@@ -24,9 +20,19 @@ git clone https://gitlab.com/mtlynch/fuzz-xpdf.git && \
 1. Downloads a set of edge-case PDFs to use as a basis for generating inputs
 1. Begins the fuzzing process
 
+So, that's neat! You don't have to hunt around for all the tools in the toolchain for compiling xpdf. You just run the command above, and it will install everything for you.
+
 That's pretty good for three commands!
 
 What's more, if you want to change the compilation options or compile a different version of xpdf, you can make simple changes to a single file.
+
+## What's fuzzing
+
+Fuzz testing or "fuzzing" is a way of finding bugs in program by randomly changing its input and looking for crashes. For example, if you were testing a program that reads decodes JSON, a fuzzer would take a valid JSON file, then randomly flip bits, change values.
+
+## Why fuzzing is hard
+
+One of the biggest obstacles to fuzz testing is that it's a pain to set up. I've been trying to learn fuzzing, but all the tutorials I've found make it so hard to get a working setup.
 
 ## If you don't have Nix
 
@@ -179,3 +185,7 @@ gdb -ex run --args ./result/bin/pdftotext "${CRASHING_PDF}"
 ```
 
 Type `bt` to see a backtrace (stacktrace).
+
+---
+
+_Thanks to XX for creating the tutorial series XX. This work builds on that foundation._
