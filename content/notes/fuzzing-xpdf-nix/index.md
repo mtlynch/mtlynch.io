@@ -46,13 +46,17 @@ TODO
 
 ## Building xpdf with Nix
 
+I want to compile the pdftotext utility. It exercises the PDF parsing code, but it's a simple command-line utility with no GUI component, so it should run quickly and be friendly to testing entirely from the terminal.
+
+To start the project, I create a new folder and make it a git repository.
+
 ```bash
 mkdir fuzz-xpdf \
   && cd fuzz-xpdf \
   && git init
 ```
 
-Next, create this file called `flake.nix`:
+Next, I create this file called `flake.nix`:
 
 ```nix
 {
@@ -81,21 +85,61 @@ Next, create this file called `flake.nix`:
 }
 ```
 
+This is a Nix "flake," which is a file that defines a set of Nix packages and applications.
+
+So far, this is just a boilerplate skeleton of a Nix flake. Most of it is not worth discussing except this line:
+
+```
+nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+```
+
+This tells Nix that when I want to pull in packages, I'm pulling them from the nixos-24.05 branch of the Nix package repository (TODO: link).
+
+But this is just a skeleton and won't successfully build yet. To compile xpdf using Nix, I need to add a few bits.
+
 ```bash
 git add --all
 ```
 
-TODO: Explain each part.
+```
+pname = "xpdf";
+version = "4.05";
+
+src = pkgs.fetchzip {
+  url = "https://dl.xpdfreader.com/${pname}-${version}.tar.gz";
+  hash = "sha256-LBxKSrXTdoulZDjPiyYMaJr63jFHHI+VCgVJx310i/w=";
+  extension = "tar.gz";
+};
+```
 
 ```
-$ URL='https://dl.xpdfreader.com/old/xpdf-3.02.tar.gz' && \
-  nix hash convert \
-  --hash-algo sha256 \
-  --to sri \
+$ URL='https://dl.xpdfreader.com/xpdf-4.05.tar.gz' && \
+  nix hash to-sri --type sha256 \
   "$(nix-prefetch-url --unpack "${URL}" | tail -n 1)"
-path is '/nix/store/n8p6c9c2r8wdiz7n8d5qvngdfck6mv71-xpdf-3.02.tar.gz'
-sha256-+CO+dS+WloYr2bDv8H4VWrtx9irszqVPk2orDVfk09s=
+path is '/nix/store/n7v30hkr7s18z714jgvvg4gxy1f3i94i-xpdf-4.05.tar.gz'
+sha256-LBxKSrXTdoulZDjPiyYMaJr63jFHHI+VCgVJx310i/w=
 ```
+
+```
+nativeBuildInputs = with pkgs; [
+  cmake
+];
+
+buildInputs = with pkgs; [
+  freetype
+];
+```
+
+```
+cmakeFlags = [
+  "-DCMAKE_BUILD_TYPE=Debug"
+  "-DCMAKE_INSTALL_PREFIX=${placeholder "out"}"
+  "-DFREETYPE_DIR=${pkgs.freetype.dev}"
+  "-DFREETYPE_LIBRARY=${pkgs.freetype.out}/lib/libfreetype.so"
+];
+```
+
+TODO: Explain each part.
 
 The final `flake.nix` file should look like this:
 
