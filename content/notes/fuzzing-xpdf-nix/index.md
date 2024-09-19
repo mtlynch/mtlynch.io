@@ -1,38 +1,42 @@
 ---
-title: "Nix Makes Fuzz Testing Easier"
+title: "Nix is Surprisingly Useful for Fuzz Testing"
 date: 2024-09-14T19:16:32-04:00
 tags:
   - nix
   - fuzzing
 ---
 
-Fuzz testing is a cool technique for finding bugs in software, especially security critical bugs. One of the biggest obstacles to fuzz testing is the difficulty of setting everything up. It turns out that you can use Nix to eliminate some crucial pain points from fuzz testing.
+Fuzz testing is a cool technique for finding bugs in software, especially security critical bugs. I recently discovered that Nix is a great way to perform fuzz testing, as it eliminates a lot of gruntwork that's normally part of the fuzz testing workflow.
 
-If you have a Linux system with Nix installed, the following three commands will start a fuzzing session
+I created a Nix configuration that lets you fuzz test an open-source PDF reader with a single command:
 
 ```bash
-git clone https://gitlab.com/mtlynch/fuzz-xpdf.git && \
-  cd fuzz-xpdf && \
-  nix run
+nix run gitlab:mtlynch/fuzz-xpdf
 ```
 
-1. Compiles xpdf from source with proper instrumentation for fuzz testing
+1. Compiles an open-source PDF reader from source with proper instrumentation for fuzz testing
 1. Downloads a set of edge-case PDFs to use as a basis for generating inputs
-1. Begins the fuzzing process
+1. Fuzz tests the PDF reader and reports PDFs that caused crashes
 
 So, that's neat! You don't have to hunt around for all the tools in the toolchain for compiling xpdf. You just run the command above, and it will install everything for you.
 
-That's pretty good for three commands!
-
 What's more, if you want to change the compilation options or compile a different version of xpdf, you can make simple changes to a single file.
 
-## What's fuzzing
+## What's fuzz testing?
 
-Fuzz testing or "fuzzing" is a way of finding bugs in program by randomly changing its input and looking for crashes. For example, if you were testing a program that reads decodes JSON, a fuzzer would take a valid JSON file, then randomly flip bits, change values.
+Fuzz testing or "fuzzing" is a way of finding bugs in program by randomly changing its input and checking if the program crashes trying to read the modified input.
 
-## Why fuzzing is hard
+For example, if you wanted to fuzz test a program that resized JPEG images, you could test it by starting with a valid JPEG, then randomly modifying the file and having your resizer open each version looking for crashes. If your program crashes, it reveals that your program is not robust against malformed input. These types of bugs often have security implications.
+
+### Why fuzzing is hard
 
 One of the biggest obstacles to fuzz testing is that it's a pain to set up. I've been trying to learn fuzzing, but all the tutorials I've found make it so hard to get a working setup.
+
+## What's Nix?
+
+Nix is a complex tool that does a lot of different things, many of which I don't quite understand, as I'm still a Nix beginner.
+
+For this article, it's sufficient to think of Nix as a hybrid build tool and package manager. I'll show how to use Nix to pull dependencies and tools into your development environment, and I'll also use Nix to create a sequence of steps that compile the application under test and execute fuzz tests.
 
 ## If you don't have Nix
 
@@ -52,10 +56,10 @@ Next, create this file called `flake.nix`:
 
 ```nix
 {
-  description = "xpdf built from source";
+  description = "compile xpdf from source for fuzzing";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -65,32 +69,20 @@ Next, create this file called `flake.nix`:
         pkgs = nixpkgs.legacyPackages.${system};
       in
       {
-        packages.default = pkgs.stdenv.mkDerivation rec {
-          pname = "xpdf";
-          version = "3.02";
+        packages = rec {
+          default = xpdf;
 
-          src = pkgs.fetchzip {
-            url = "https://dl.xpdfreader.com/old/${pname}-${version}.tar.gz";
-            hash = "sha256-+CO+dS+WloYr2bDv8H4VWrtx9irszqVPk2orDVfk09s=";
-            extension = "tar.gz";
+          xpdf = pkgs.stdenv.mkDerivation rec {
+            # TODO: I'll populate this next.
           };
-
-          buildInputs = with pkgs; [
-            freetype
-            motif
-          ];
-
-          configureFlags = [
-            "--with-freetype2-library=${pkgs.freetype.out}/lib"
-            "--with-freetype2-includes=${pkgs.freetype.dev}/include/freetype2"
-            "--prefix=${placeholder "out"}"
-          ];
         };
-
-        defaultPackage = self.packages.${system}.default;
       }
     );
 }
+```
+
+```bash
+git add --all
 ```
 
 TODO: Explain each part.
@@ -103,6 +95,57 @@ $ URL='https://dl.xpdfreader.com/old/xpdf-3.02.tar.gz' && \
   "$(nix-prefetch-url --unpack "${URL}" | tail -n 1)"
 path is '/nix/store/n8p6c9c2r8wdiz7n8d5qvngdfck6mv71-xpdf-3.02.tar.gz'
 sha256-+CO+dS+WloYr2bDv8H4VWrtx9irszqVPk2orDVfk09s=
+```
+
+The final `flake.nix` file should look like this:
+
+```nix
+{
+  description = "compile xpdf from source for fuzzing";
+
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+    flake-utils.url = "github:numtide/flake-utils";
+  };
+
+  outputs = { self, nixpkgs, flake-utils }:
+    flake-utils.lib.eachDefaultSystem (system:
+      let
+        pkgs = nixpkgs.legacyPackages.${system};
+      in
+      {
+        packages = rec {
+          default = xpdf;
+
+          xpdf = pkgs.stdenv.mkDerivation rec {
+            pname = "xpdf";
+            version = "4.05";
+
+            src = pkgs.fetchzip {
+              url = "https://dl.xpdfreader.com/${pname}-${version}.tar.gz";
+              hash = "sha256-LBxKSrXTdoulZDjPiyYMaJr63jFHHI+VCgVJx310i/w=";
+              extension = "tar.gz";
+            };
+
+            nativeBuildInputs = with pkgs; [
+              cmake
+            ];
+
+            buildInputs = with pkgs; [
+              freetype
+            ];
+
+            cmakeFlags = [
+              "-DCMAKE_BUILD_TYPE=Debug"
+              "-DCMAKE_INSTALL_PREFIX=${placeholder "out"}"
+              "-DFREETYPE_DIR=${pkgs.freetype.dev}"
+              "-DFREETYPE_LIBRARY=${pkgs.freetype.out}/lib/libfreetype.so"
+            ];
+          };
+        };
+      }
+    );
+}
 ```
 
 Finally, build the package from source with `nix build`:
