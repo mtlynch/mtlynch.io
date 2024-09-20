@@ -97,10 +97,6 @@ This tells Nix that when I want to pull in packages, I'm pulling them from the n
 
 But this is just a skeleton and won't successfully build yet. To compile xpdf using Nix, I need to add a few bits.
 
-```bash
-git add --all
-```
-
 ```
 pname = "xpdf";
 version = "4.05";
@@ -190,6 +186,17 @@ The final `flake.nix` file should look like this:
       }
     );
 }
+```
+
+```bash
+git add --all
+```
+
+For tidiness, create a `.gitignore`:
+
+```bash
+echo 'result
+fuzz-output' > .gitignore
 ```
 
 Finally, build the package from source with `nix build`:
