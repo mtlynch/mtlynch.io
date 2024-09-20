@@ -221,10 +221,6 @@ The final `flake.nix` file should look like this:
 }
 ```
 
-```bash
-git add --all
-```
-
 For tidiness, create a `.gitignore`:
 
 ```bash
@@ -232,19 +228,24 @@ echo 'result
 fuzz-output' > .gitignore
 ```
 
+And add everything to the git repository:
+
+```
+git add --all
+```
+
 Finally, build the package from source with `nix build`:
 
 ```bash
-git add -A
 nix build
 ```
 
 If everything worked, there should be a set of binaries under `./result/bin` that you can try running:
 
 ```bash
-$ ./result/bin/pdfinfo -v
-pdfinfo version 3.02
-Copyright 1996-2007 Glyph & Cog, LLC
+$ ./result/bin/pdftotext -v
+pdftotext version 4.05 [www.xpdfreader.com]
+Copyright 1996-2024 Glyph & Cog, LLC
 ```
 
 The full source at this stage is [available on Gitlab](https://gitlab.com/mtlynch/fuzz-xpdf/-/tree/01-compile-xpdf).
