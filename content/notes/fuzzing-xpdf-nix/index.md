@@ -98,33 +98,92 @@ This tells Nix that when I want to pull in packages, I'm pulling them from the n
 But this is just a skeleton and won't successfully build yet. To compile xpdf using Nix, I need to add a few bits.
 
 ```
-pname = "xpdf";
-version = "4.05";
-
-src = pkgs.fetchzip {
-  url = "https://dl.xpdfreader.com/${pname}-${version}.tar.gz";
-  hash = "sha256-LBxKSrXTdoulZDjPiyYMaJr63jFHHI+VCgVJx310i/w=";
-  extension = "tar.gz";
-};
+xpdf = pkgs.stdenv.mkDerivation rec {
+  pname = "xpdf";
+  version = "4.05";
+  ...
 ```
 
+First, I call []`mkDerivation`](https://nixos.org/manual/nixpkgs/stable/#sec-using-stdenv), which is how I define a build component in Nix. It requires a package name (`pname`) and version, so I specify `xpdf`, the package I want to fuzz and `4.05`, the latest published version of xpdf as of this writing.
+
+```nix
+xpdf = pkgs.stdenv.mkDerivation rec {
+  ...
+  src = pkgs.fetchzip {
+    url = "https://dl.xpdfreader.com/${pname}-${version}.tar.gz";
+    hash = "sha256-LBxKSrXTdoulZDjPiyYMaJr63jFHHI+VCgVJx310i/w=";
+    extension = "tar.gz";
+  };
 ```
+
+The other required field in `mkDerivation` is a `src` which specifies how Nix should retrieve the inputs for the build. In the case of xpdf, the source tarball is located at this URL:
+
+- https://dl.xpdfreader.com/xpdf-4.05.tar.gz
+
+I specify that URL in Nix using the `pname` and `version` variables to make it easier to fuzz other versions if I want to.
+
+Nix requires a hash of the tarball so that it can tell whether its cached result is valid, so I have to specify the SHA256 hash of the tarball. The easiest way to do this is to just provide a placeholder:
+
+Nix will then dutifully complain that the hash is wrong:
+
+```text
+error: hash mismatch in fixed-output derivation '/nix/store/dckwxnxplnzzbf1c5pa4jlspss2vwck9-source.drv':
+         specified: sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+            got:    sha256-LBxKSrXTdoulZDjPiyYMaJr63jFHHI+VCgVJx310i/w=
+```
+
+And then I just paste the `got` value back into my `flake.nix`.
+
+The slightly more elegant way to calculate the correct hash is to run this command:
+
+```bash
 $ URL='https://dl.xpdfreader.com/xpdf-4.05.tar.gz' && \
   nix hash to-sri --type sha256 \
-  "$(nix-prefetch-url --unpack "${URL}" | tail -n 1)"
+    "$(nix-prefetch-url --unpack "${URL}" | tail -n 1)"
 path is '/nix/store/n7v30hkr7s18z714jgvvg4gxy1f3i94i-xpdf-4.05.tar.gz'
 sha256-LBxKSrXTdoulZDjPiyYMaJr63jFHHI+VCgVJx310i/w=
 ```
 
-```
-nativeBuildInputs = with pkgs; [
-  cmake
-];
+The above command is pretty difficult to remember, so I recommend just using the placeholder and taking the correction from the error message.
 
-buildInputs = with pkgs; [
-  freetype
-];
+Now, I have to figure out how to actually build it. The xpdf [compile instructions](https://gitlab.com/mtlynch/xpdf/-/blob/4.05/INSTALL#L32-39) say the following:
+
+> Make sure you have the following installed:
+>
+> - CMake 2.8.8 or newer
+> - FreeType 2.0.5 or newer
+> - Qt 5.x or 6.x (for xpdf only)
+> - libpng (for pdftopng and pdftohtml)
+> - zlib (for pdftopng and pdftohtml)
+
+I only want to run pdftotext, so I only need CMake and FreeType. Looking at the Nix package repository, I see that packages for cmake and freetype are already available:
+
+- [cmake](https://search.nixos.org/packages?channel=24.05&show=cmake&from=0&size=50&sort=relevance&type=packages&query=cmake)
+- [freetype](https://search.nixos.org/packages?channel=24.05&show=freetype&from=0&size=50&sort=relevance&type=packages&query=freetype)
+
+I assume I only need cmake at build time, not at runtime, so I specify that in xpdf's `nativeBuildInputs`, which specifies build-time dependencies, and I specify `freetype` under `buildInputs` so that it's available both at build time and at runtime:
+
 ```
+xpdf = pkgs.stdenv.mkDerivation rec {
+  ...
+  nativeBuildInputs = with pkgs; [
+    cmake
+  ];
+
+  buildInputs = with pkgs; [
+    freetype
+  ];
+```
+
+The challenge here is telling xpdf where to find Freetype within my Nix build environment. The xpdf compile instructions say that I'm supposed to pass flags to cmake that look kind of like this:
+
+> `-DFREETYPE_DIR=/opt/freetype`
+>
+> Cmake will look for `${FREETYPE_DIR}/include`.
+>
+> You can also set the FreeType library location with:
+>
+> `-DFREETYPE_LIBRARY=/opt/freetype/lib/libfreetype.so`
 
 ```
 cmakeFlags = [
