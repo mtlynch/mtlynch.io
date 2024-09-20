@@ -175,25 +175,6 @@ xpdf = pkgs.stdenv.mkDerivation rec {
   ];
 ```
 
-The challenge here is telling xpdf where to find Freetype within my Nix build environment. The xpdf compile instructions say that I'm supposed to pass flags to cmake that look kind of like this:
-
-> `-DFREETYPE_DIR=/opt/freetype`
->
-> Cmake will look for `${FREETYPE_DIR}/include`.
->
-> You can also set the FreeType library location with:
->
-> `-DFREETYPE_LIBRARY=/opt/freetype/lib/libfreetype.so`
-
-```
-cmakeFlags = [
-  "-DCMAKE_BUILD_TYPE=Debug"
-  "-DCMAKE_INSTALL_PREFIX=${placeholder "out"}"
-  "-DFREETYPE_DIR=${pkgs.freetype.dev}"
-  "-DFREETYPE_LIBRARY=${pkgs.freetype.out}/lib/libfreetype.so"
-];
-```
-
 TODO: Explain each part.
 
 The final `flake.nix` file should look like this:
@@ -233,13 +214,6 @@ The final `flake.nix` file should look like this:
             buildInputs = with pkgs; [
               freetype
             ];
-
-            cmakeFlags = [
-              "-DCMAKE_BUILD_TYPE=Debug"
-              "-DCMAKE_INSTALL_PREFIX=${placeholder "out"}"
-              "-DFREETYPE_DIR=${pkgs.freetype.dev}"
-              "-DFREETYPE_LIBRARY=${pkgs.freetype.out}/lib/libfreetype.so"
-            ];
           };
         };
       }
@@ -260,8 +234,6 @@ fuzz-output' > .gitignore
 
 Finally, build the package from source with `nix build`:
 
-TODO: Add .gitignore
-
 ```bash
 git add -A
 nix build
@@ -274,6 +246,8 @@ $ ./result/bin/pdfinfo -v
 pdfinfo version 3.02
 Copyright 1996-2007 Glyph & Cog, LLC
 ```
+
+The full source at this stage is [available on Gitlab](https://gitlab.com/mtlynch/fuzz-xpdf/-/tree/01-compile-xpdf).
 
 ## Compile xpdf with AFL++
 
