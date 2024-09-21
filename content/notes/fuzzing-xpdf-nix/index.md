@@ -242,9 +242,12 @@ Finally, build the package from source with `nix build`:
 nix build
 ```
 
-If everything worked, there should be a set of binaries under `./result/bin` that you can try running:
+If everything worked, there should be a set of binaries under `./result/bin` that I can run:
 
 ```bash
+$ ls ./result/bin/
+pdfdetach  pdffonts  pdfimages  pdfinfo  pdftohtml  pdftopng  pdftoppm  pdftops  pdftotext
+
 $ ./result/bin/pdftotext -v
 pdftotext version 4.05 [www.xpdfreader.com]
 Copyright 1996-2024 Glyph & Cog, LLC
@@ -266,6 +269,10 @@ Cool, that looks correct.
 The full source at this stage is [available on Gitlab](https://gitlab.com/mtlynch/fuzz-xpdf/-/tree/01-compile-xpdf).
 
 ## Compile xpdf with AFL++
+
+Next, I want to fuzz test it. And to fuzz test it most effectively with AFL++, I need to compile `xpdf` using an AFL compiler. AFL++ ships with C and C++ compilers that are drop-in replacements for TODO, so compiling with AFL++ should be as simple as telling the build toolchain to use this compiler.
+
+According to AFL++'s docs, I'm likely to see the best fuzzing results with TODO, so I specify that.
 
 ```nix
 {
