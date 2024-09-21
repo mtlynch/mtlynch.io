@@ -107,13 +107,14 @@ xpdf = pkgs.stdenv.mkDerivation rec {
 First, I call []`mkDerivation`](https://nixos.org/manual/nixpkgs/stable/#sec-using-stdenv), which is how I define a build component in Nix. It requires a package name (`pname`) and version, so I specify `xpdf`, the package I want to fuzz and `4.05`, the latest published version of xpdf as of this writing.
 
 ```nix
-xpdf = pkgs.stdenv.mkDerivation rec {
-  ...
-  src = pkgs.fetchzip {
-    url = "https://dl.xpdfreader.com/${pname}-${version}.tar.gz";
-    hash = "sha256-LBxKSrXTdoulZDjPiyYMaJr63jFHHI+VCgVJx310i/w=";
-    extension = "tar.gz";
-  };
+{
+  xpdf = pkgs.stdenv.mkDerivation rec {
+    ...
+    src = pkgs.fetchzip {
+      url = "https://dl.xpdfreader.com/${pname}-${version}.tar.gz";
+      hash = "sha256-LBxKSrXTdoulZDjPiyYMaJr63jFHHI+VCgVJx310i/w=";
+      extension = "tar.gz";
+    };
 ```
 
 The other required field in `mkDerivation` is a `src` which specifies how Nix should retrieve the inputs for the build. In the case of xpdf, the source tarball is located at this URL:
@@ -163,16 +164,17 @@ I only want to run pdftotext, so I only need CMake and FreeType. Looking at the 
 
 I assume I only need cmake at build time, not at runtime, so I specify that in xpdf's `nativeBuildInputs`, which specifies build-time dependencies, and I specify `freetype` under `buildInputs` so that it's available both at build time and at runtime:
 
-```
-xpdf = pkgs.stdenv.mkDerivation rec {
-  ...
-  nativeBuildInputs = with pkgs; [
-    cmake
-  ];
+```nix
+{
+  xpdf = pkgs.stdenv.mkDerivation rec {
+    ...
+    nativeBuildInputs = with pkgs; [
+      cmake
+    ];
 
-  buildInputs = with pkgs; [
-    freetype
-  ];
+    buildInputs = with pkgs; [
+      freetype
+    ];
 ```
 
 TODO: Explain each part.
@@ -248,6 +250,19 @@ pdftotext version 4.05 [www.xpdfreader.com]
 Copyright 1996-2024 Glyph & Cog, LLC
 ```
 
+As a test I downloaded the [Form W-4 PDF](https://www.irs.gov/pub/irs-pdf/fw4.pdf) from the IRS website and fed it to `pdftotext`:
+
+```text
+$ ./result/bin/pdftotext fw4.pdf /dev/stdout | head -n 5
+Form W-4
+Department of the Treasury Internal Revenue Service
+
+Employee's Withholding Certificate
+Complete Form W-4 so that your employer can withhold the correct federal income tax from your pay. Give Form W-4 to your employer.
+```
+
+Cool, that looks correct.
+
 The full source at this stage is [available on Gitlab](https://gitlab.com/mtlynch/fuzz-xpdf/-/tree/01-compile-xpdf).
 
 ## Compile xpdf with AFL++
@@ -313,6 +328,10 @@ gdb -ex run --args ./result/bin/pdftotext "${CRASHING_PDF}"
 ```
 
 Type `bt` to see a backtrace (stacktrace).
+
+## Fixing the bug
+
+TODO: Explain how to apply patches.
 
 ---
 
