@@ -322,19 +322,9 @@ AFL++ is a XX fuzzer, which means that it traces which parts of the target binar
 
 AFL++ ships with C and C++ compilers that are drop-in replacements for TODO, so compiling with AFL++ should be as simple as telling the build toolchain to use this compiler.
 
-According to AFL++'s docs, I'm likely to see the best fuzzing results with `afl-clang-lto`, but that requires clang 11 or higher.
+According to AFL++'s docs, I'm likely to see the best fuzzing results with `afl-clang-lto`, but that requires clang 11 or higher. AFL++ docs also recommend the newest possible version of llvm. The latest version of LLVM available through Nix is 18.
 
-AFL++ docs also recommend the newest possible version of llvm. The latest version of LLVM available through Nix is 18, so I'll add that version under my list of variables following the `let`:
-
-```nix
-let
-  pkgs = nixpkgs.legacyPackages.${system};
-  llvmVersion = "18"; # Add this variable.
-in
-...
-```
-
-Next, I modify `nativeBuildInputs` to include both the [`aflplusplus`](https://search.nixos.org/packages?channel=24.05&show=aflplusplus&from=0&size=50&sort=relevance&type=packages&query=aflplusplus) package and the [`llvm_18` package](https://search.nixos.org/packages?channel=24.05&show=llvm_18&from=0&size=50&sort=relevance&type=packages&query=llvm), which I specify using the `llvmVersion` variable:
+Next, I modify `nativeBuildInputs` to include both the [`aflplusplus`](https://search.nixos.org/packages?channel=24.05&show=aflplusplus&from=0&size=50&sort=relevance&type=packages&query=aflplusplus) package and the [`llvm_18` package](https://search.nixos.org/packages?channel=24.05&show=llvm_18&from=0&size=50&sort=relevance&type=packages&query=llvm):
 
 ```nix
 {
@@ -343,7 +333,7 @@ Next, I modify `nativeBuildInputs` to include both the [`aflplusplus`](https://s
     nativeBuildInputs = with pkgs; [
       aflplusplus
       cmake
-      (pkgs."llvm_${llvmVersion}")
+      llvm_18
     ];
 }
 ```
@@ -352,18 +342,18 @@ Okay, now AFL++ will be available in my build environment, but how do I tell cma
 
 Make and CMake respect the [`CC`](https://cmake.org/cmake/help/latest/envvar/CC.html) and [`CXX`](https://cmake.org/cmake/help/latest/envvar/CXX.html) environment variables, which specify a C and C++ compiler, respectively.
 
+Interestingly, I tested setting `export CC=afl-clang-lto`, and that worked fine, but that creates ambiguity, whereas I specifically want to point to the binary from the `aflplusplus` package. But I don't know where in that package `afl-clang-lto` is located
+
 Next, I specify some environment variables to compile xpdf effectively for fuzzing:
 
 ```bash
 $ nix build nixpkgs#aflplusplus
-nix:~/fuzz-xpdf (02-compile-xpdf-with-afl++)$ ls result
-bin  lib  share
-nix:~/fuzz-xpdf (02-compile-xpdf-with-afl++)$ ls result/bin/
-afl-addseeds  afl-cgroup        afl-clang-lto++  afl-g++       afl-gotcpu  afl-network-client     afl-qemu-trace     afl-whatsup
-afl-analyze   afl-clang-fast    afl-cmin         afl-gcc       afl-ld-lto  afl-network-server     afl-showmap        get-afl-qemu-libcompcov-so
-afl-c++       afl-clang-fast++  afl-cmin.bash    afl-gcc-fast  afl-lto     afl-persistent-config  afl-system-config  get-libdislocator-so
-afl-cc        afl-clang-lto     afl-fuzz         afl-g++-fast  afl-lto++   afl-plot               afl-tmin           get-libtokencap-so
+
+$ find -L result -type f -name afl-clang-lto
+result/bin/afl-clang-lto
 ```
+
+Okay, that tells me that the compilers are under the package output for aflplusplus under the `bin/` subdirectory, so I specify them like this:
 
 ```nix
 {
@@ -372,7 +362,19 @@ afl-cc        afl-clang-lto     afl-fuzz         afl-g++-fast  afl-lto++   afl-p
       preConfigure = ''
         export CC=${pkgs.aflplusplus}/bin/afl-clang-lto
         export CXX=${pkgs.aflplusplus}/bin/afl-clang-lto++
-        export LLVM_CONFIG=llvm-config-${llvmVersion}
+      '';
+}
+```
+
+I add a sanitizer:
+
+```nix
+{
+    xpdf = pkgs.stdenv.mkDerivation rec {
+    ...
+      preConfigure = ''
+        export CC=${pkgs.aflplusplus}/bin/afl-clang-lto
+        export CXX=${pkgs.aflplusplus}/bin/afl-clang-lto++
         export AFL_USE_ASAN=1
       '';
 }
