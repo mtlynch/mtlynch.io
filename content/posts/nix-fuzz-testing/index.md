@@ -223,7 +223,7 @@ I assume I only need cmake at build time, not at runtime, which means it belongs
     ];
 ```
 
-The final `flake.nix` file should look like this:
+At this point, `flake.nix` should look like this:
 
 ```nix
 {
@@ -366,77 +366,56 @@ Okay, that tells me that the compilers are under the package output for aflplusp
 }
 ```
 
-I add a sanitizer:
+At this point, `flake.nix` should [look like this](https://gitlab.com/mtlynch/fuzz-xpdf/-/blob/02-compile-xpdf-with-afl++/flake.nix?ref_type=heads).
+
+## Doing ad-hoc fuzzing from the command line
 
 ```nix
 {
-    xpdf = pkgs.stdenv.mkDerivation rec {
+  packages = rec {
+    default = xpdf;
     ...
-      preConfigure = ''
-        export CC=${pkgs.aflplusplus}/bin/afl-clang-lto
-        export CXX=${pkgs.aflplusplus}/bin/afl-clang-lto++
-        export AFL_USE_ASAN=1
+    devShells.default = pkgs.mkShell {
+      buildInputs = self.packages.${system}.xpdf.nativeBuildInputs ++ (with pkgs; [
+        gdb
+        wget
+      ]);
+
+      shellHook = ''
+        wget --version | head -n 1
+        gdb --version | head -n 1
+        afl-fuzz --version
       '';
-}
+    };
 ```
 
-```nix
-{
-  description = "compile xpdf from source for fuzzing";
+At this point, `flake.nix` should [look like this](https://gitlab.com/mtlynch/fuzz-xpdf/-/blob/03-dev-shell/flake.nix?ref_type=heads).
 
-  inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
-    flake-utils.url = "github:numtide/flake-utils";
-  };
+The `devShells` command creates a terminal shell where I can access the components in my Nix environment. I enter the shell by typing `nix develop`:
 
-  outputs = { self, nixpkgs, flake-utils }:
-    flake-utils.lib.eachDefaultSystem (system:
-      let
-        pkgs = nixpkgs.legacyPackages.${system};
-        llvmVersion = "18";
-      in
-      {
-        packages = rec {
-          default = xpdf;
-
-          xpdf = pkgs.stdenv.mkDerivation rec {
-            pname = "xpdf";
-            version = "4.05";
-
-            src = pkgs.fetchzip {
-              url = "https://dl.xpdfreader.com/${pname}-${version}.tar.gz";
-              hash = "sha256-LBxKSrXTdoulZDjPiyYMaJr63jFHHI+VCgVJx310i/w=";
-              extension = "tar.gz";
-            };
-
-            nativeBuildInputs = with pkgs; [
-              aflplusplus
-              cmake
-              pkgs."llvm_${llvmVersion}"
-            ];
-
-            buildInputs = with pkgs; [
-              freetype
-            ];
-
-            preConfigure = ''
-              export CC=${pkgs.aflplusplus}/bin/afl-clang-lto
-              export CXX=${pkgs.aflplusplus}/bin/afl-clang-lto++
-              export LLVM_CONFIG=llvm-config-${llvmVersion}
-              export AFL_USE_ASAN=1
-            '';
-
-            # Don't strip debug information from binaries, as the debug symbols
-            # are useful during crash analysis.
-            dontStrip = true;
-          };
-        };
-      }
-    );
-}
+```bash
+$ nix develop
+GNU Wget 1.21.4 built on linux-gnu.
+GNU gdb (GDB) 14.2
+afl-fuzz++4.10c
 ```
 
-## Fuzzing
+The output is from `shellHook` which prints the version numbers of the tools available within the shell.
+
+```bash
+$ PDF_URL='https://www.irs.gov/pub/irs-pdf/fw4.pdf' && \
+  PDF_DIR="$(mktemp --directory)" && \
+  wget --directory-prefix="${PDF_DIR}" "${PDF_URL}"
+
+```
+
+```bash
+$ afl-fuzz -i $PDF_DIR -o $FUZZ_OUTPUT_DIR -- ./result/bin/pdftotext @@ /dev/null
+```
+
+## Automating the fuzzer
+
+TODO: Add ASAN and dontStrip
 
 ```bash
 CRASHING_PDF='fuzz-output/default/crashes.2024-09-14-22:05:14/id:000000,sig:11,src:000862+000165,time:102771,execs:57754,op:splice,rep:13'
