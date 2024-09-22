@@ -201,12 +201,14 @@ Now, I have to figure out how to actually build it. The xpdf [compile instructio
 > - libpng (for pdftopng and pdftohtml)
 > - zlib (for pdftopng and pdftohtml)
 
-I only want to run `pdftotext`, so I only need CMake and FreeType. Looking at the Nix package repository, I see that packages for cmake and freetype are already available:
+I only want to run `pdftotext`, so I only need CMake and FreeType.
+
+Looking at the [Nix package repository](https://search.nixos.org), I see that packages for cmake and freetype are already available:
 
 - [cmake](https://search.nixos.org/packages?channel=24.05&show=cmake&from=0&size=50&sort=relevance&type=packages&query=cmake)
 - [freetype](https://search.nixos.org/packages?channel=24.05&show=freetype&from=0&size=50&sort=relevance&type=packages&query=freetype)
 
-I assume I only need cmake at build time, not at runtime, so I specify that in xpdf's `nativeBuildInputs`, which specifies build-time dependencies, and I specify `freetype` under `buildInputs` so that it's available both at build time and at runtime:
+I assume I only need cmake at build time, not at runtime, which means it belongs under `nativeBuildInputs`. I probably need `freetype` at runtime, so I specify it under `buildInputs`:
 
 ```nix
 {
@@ -220,8 +222,6 @@ I assume I only need cmake at build time, not at runtime, so I specify that in x
       freetype
     ];
 ```
-
-TODO: Explain each part.
 
 The final `flake.nix` file should look like this:
 
@@ -280,6 +280,10 @@ And add everything to the git repository:
 git add --all
 ```
 
+{{<notice type="warning">}}
+**Note**: An annoying gotcha of Nix flakes is that Nix can't see files unless they're under source control by git. If you get error messages about "file not found," check that you've added the file to git.
+{{</notice>}}
+
 Finally, build the package from source with `nix build`:
 
 ```bash
@@ -314,16 +318,72 @@ The full source at this stage is [available on Gitlab](https://gitlab.com/mtlync
 
 ## Compile xpdf with AFL++
 
-Next, I want to fuzz test it. And to fuzz test it most effectively with AFL++, I need to compile `xpdf` using an AFL compiler. AFL++ ships with C and C++ compilers that are drop-in replacements for TODO, so compiling with AFL++ should be as simple as telling the build toolchain to use this compiler.
+AFL++ is a XX fuzzer, which means that it traces which parts of the target binary execute as different inputs run. AFL++ can do this even for closed-source binaries, but for open-source projects, AFL++ does a better job of fuzzing if I recompile the application using AFL++ as my compiler.
 
-According to AFL++'s docs, I'm likely to see the best fuzzing results with TODO, so I specify that.
+AFL++ ships with C and C++ compilers that are drop-in replacements for TODO, so compiling with AFL++ should be as simple as telling the build toolchain to use this compiler.
+
+According to AFL++'s docs, I'm likely to see the best fuzzing results with `afl-clang-lto`, but that requires clang 11 or higher.
+
+AFL++ docs also recommend the newest possible version of llvm. The latest version of LLVM available through Nix is 18, so I'll add that version under my list of variables following the `let`:
+
+```nix
+let
+  pkgs = nixpkgs.legacyPackages.${system};
+  llvmVersion = "18"; # Add this variable.
+in
+...
+```
+
+Next, I modify `nativeBuildInputs` to include both the [`aflplusplus`](https://search.nixos.org/packages?channel=24.05&show=aflplusplus&from=0&size=50&sort=relevance&type=packages&query=aflplusplus) package and the [`llvm_18` package](https://search.nixos.org/packages?channel=24.05&show=llvm_18&from=0&size=50&sort=relevance&type=packages&query=llvm), which I specify using the `llvmVersion` variable:
 
 ```nix
 {
-  description = "xpdf built from source";
+  xpdf = pkgs.stdenv.mkDerivation rec {
+    ...
+    nativeBuildInputs = with pkgs; [
+      aflplusplus
+      cmake
+      (pkgs."llvm_${llvmVersion}")
+    ];
+}
+```
+
+Okay, now AFL++ will be available in my build environment, but how do I tell cmake to use the AFL++ compiler instead of whatever it was using before?
+
+Make and CMake respect the [`CC`](https://cmake.org/cmake/help/latest/envvar/CC.html) and [`CXX`](https://cmake.org/cmake/help/latest/envvar/CXX.html) environment variables, which specify a C and C++ compiler, respectively.
+
+Next, I specify some environment variables to compile xpdf effectively for fuzzing:
+
+```bash
+$ nix build nixpkgs#aflplusplus
+nix:~/fuzz-xpdf (02-compile-xpdf-with-afl++)$ ls result
+bin  lib  share
+nix:~/fuzz-xpdf (02-compile-xpdf-with-afl++)$ ls result/bin/
+afl-addseeds  afl-cgroup        afl-clang-lto++  afl-g++       afl-gotcpu  afl-network-client     afl-qemu-trace     afl-whatsup
+afl-analyze   afl-clang-fast    afl-cmin         afl-gcc       afl-ld-lto  afl-network-server     afl-showmap        get-afl-qemu-libcompcov-so
+afl-c++       afl-clang-fast++  afl-cmin.bash    afl-gcc-fast  afl-lto     afl-persistent-config  afl-system-config  get-libdislocator-so
+afl-cc        afl-clang-lto     afl-fuzz         afl-g++-fast  afl-lto++   afl-plot               afl-tmin           get-libtokencap-so
+```
+
+```nix
+{
+    xpdf = pkgs.stdenv.mkDerivation rec {
+    ...
+      preConfigure = ''
+        export CC=${pkgs.aflplusplus}/bin/afl-clang-lto
+        export CXX=${pkgs.aflplusplus}/bin/afl-clang-lto++
+        export LLVM_CONFIG=llvm-config-${llvmVersion}
+        export AFL_USE_ASAN=1
+      '';
+}
+```
+
+```nix
+{
+  description = "compile xpdf from source for fuzzing";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -331,41 +391,44 @@ According to AFL++'s docs, I'm likely to see the best fuzzing results with TODO,
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
+        llvmVersion = "18";
       in
       {
-        packages.default = pkgs.stdenv.mkDerivation rec {
-          pname = "xpdf";
-          version = "3.02";
+        packages = rec {
+          default = xpdf;
 
-          src = pkgs.fetchzip {
-            url = "https://dl.xpdfreader.com/old/${pname}-${version}.tar.gz";
-            hash = "sha256-+CO+dS+WloYr2bDv8H4VWrtx9irszqVPk2orDVfk09s=";
-            extension = "tar.gz";
+          xpdf = pkgs.stdenv.mkDerivation rec {
+            pname = "xpdf";
+            version = "4.05";
+
+            src = pkgs.fetchzip {
+              url = "https://dl.xpdfreader.com/${pname}-${version}.tar.gz";
+              hash = "sha256-LBxKSrXTdoulZDjPiyYMaJr63jFHHI+VCgVJx310i/w=";
+              extension = "tar.gz";
+            };
+
+            nativeBuildInputs = with pkgs; [
+              aflplusplus
+              cmake
+              pkgs."llvm_${llvmVersion}"
+            ];
+
+            buildInputs = with pkgs; [
+              freetype
+            ];
+
+            preConfigure = ''
+              export CC=${pkgs.aflplusplus}/bin/afl-clang-lto
+              export CXX=${pkgs.aflplusplus}/bin/afl-clang-lto++
+              export LLVM_CONFIG=llvm-config-${llvmVersion}
+              export AFL_USE_ASAN=1
+            '';
+
+            # Don't strip debug information from binaries, as the debug symbols
+            # are useful during crash analysis.
+            dontStrip = true;
           };
-
-          nativeBuildInputs = with pkgs; [
-            aflplusplus
-          ];
-
-          buildInputs = with pkgs; [
-            freetype
-            motif
-          ];
-
-          configureFlags = [
-            "--with-freetype2-library=${pkgs.freetype.out}/lib"
-            "--with-freetype2-includes=${pkgs.freetype.dev}/include/freetype2"
-            "--prefix=${placeholder "out"}"
-          ];
-
-          configurePhase = ''
-            export CC=${pkgs.aflplusplus}/bin/afl-clang-fast
-            export CXX=${pkgs.aflplusplus}/bin/afl-clang-fast++
-            ./configure $configureFlags
-          '';
         };
-
-        defaultPackage = self.packages.${system}.default;
       }
     );
 }
