@@ -68,11 +68,17 @@ Effective caching. If you change a compilation option, you don't have to start f
 
 With a tool like `make`, if I compile an application with `gcc`, then try compiling with `clang`, then decide to go back to `gcc`, I have to do the whole compilation over from scratch. With Nix, it caches every build, so even if my program takes 20 minutes to compile, once I've compiled at least once with both `gcc` and `clang`, I can switch between them instantly. And that applies not just to the compiler but every compilation option in my build.
 
-## If you don't have Nix
+## Requirements
+
+### Nix
 
 Install Nix using the Determinate Systems installer:
 
 TODO
+
+### git
+
+You'll also need git installed.
 
 ## Building xpdf with Nix
 
@@ -80,7 +86,9 @@ The PDF reader I'm fuzz testing is called [xpdf](https://xpdfreader.com). I'd ne
 
 xpdf is a PDF viewer, but it ships with a suite of PDF utilities. One of the utilities, `pdftotext` is an attractive fuzzing target because it's so simple. It has no GUI; it just accepts a PDF as input and produces plaintext as output, but it still exercises xpdf's complex PDF parsing code. If I find a bug in `pdftotext`, it means I've probably found a bug in the whole `xpdf` suite.
 
-To start the project, I create a new folder and make it a git repository.
+### Putting the boilerplate in place
+
+To start the project, I create a new folder and create a git repository.
 
 ```bash
 mkdir fuzz-xpdf \
@@ -125,9 +133,13 @@ So far, this is just a boilerplate skeleton of a Nix flake. Most of it is not wo
 nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
 ```
 
-This tells Nix that when I want to pull in packages, I'm pulling them from the nixos-24.05 branch of the Nix package repository (TODO: link).
+This tells Nix that when I want to pull in packages, I'm pulling them from the [24.05 tag](https://github.com/NixOS/nixpkgs/tree/24.05) of the Nix package repository.
 
 But this is just a skeleton and won't successfully build yet. To compile xpdf using Nix, I need to add a few bits.
+
+### Specifying a source tarball
+
+First, I call [`mkDerivation`](https://nixos.org/manual/nixpkgs/stable/#sec-using-stdenv), which is how I define a build component in Nix. It requires a package name (`pname`) and version, so I specify `xpdf`, the package I want to fuzz and `4.05`, the latest published version of xpdf as of this writing.
 
 ```
 xpdf = pkgs.stdenv.mkDerivation rec {
@@ -136,7 +148,11 @@ xpdf = pkgs.stdenv.mkDerivation rec {
   ...
 ```
 
-First, I call []`mkDerivation`](https://nixos.org/manual/nixpkgs/stable/#sec-using-stdenv), which is how I define a build component in Nix. It requires a package name (`pname`) and version, so I specify `xpdf`, the package I want to fuzz and `4.05`, the latest published version of xpdf as of this writing.
+The other required field in `mkDerivation` is a `src` which specifies how Nix should retrieve the inputs for the build. In the case of xpdf, the source tarball is located at this URL:
+
+- https://dl.xpdfreader.com/xpdf-4.05.tar.gz
+
+I specify xpdf's tarball URL using the `pname` and `version` variables to make it easier to fuzz other versions if I want to.
 
 ```nix
 {
@@ -149,11 +165,7 @@ First, I call []`mkDerivation`](https://nixos.org/manual/nixpkgs/stable/#sec-usi
     };
 ```
 
-The other required field in `mkDerivation` is a `src` which specifies how Nix should retrieve the inputs for the build. In the case of xpdf, the source tarball is located at this URL:
-
-- https://dl.xpdfreader.com/xpdf-4.05.tar.gz
-
-I specify that URL in Nix using the `pname` and `version` variables to make it easier to fuzz other versions if I want to.
+### Specifying a source tarball hash
 
 Nix requires a hash of the tarball so that it can tell whether its cached result is valid, so I have to specify the SHA256 hash of the tarball. The easiest way to do this is to just provide a placeholder:
 
@@ -189,7 +201,7 @@ Now, I have to figure out how to actually build it. The xpdf [compile instructio
 > - libpng (for pdftopng and pdftohtml)
 > - zlib (for pdftopng and pdftohtml)
 
-I only want to run pdftotext, so I only need CMake and FreeType. Looking at the Nix package repository, I see that packages for cmake and freetype are already available:
+I only want to run `pdftotext`, so I only need CMake and FreeType. Looking at the Nix package repository, I see that packages for cmake and freetype are already available:
 
 - [cmake](https://search.nixos.org/packages?channel=24.05&show=cmake&from=0&size=50&sort=relevance&type=packages&query=cmake)
 - [freetype](https://search.nixos.org/packages?channel=24.05&show=freetype&from=0&size=50&sort=relevance&type=packages&query=freetype)
