@@ -402,31 +402,27 @@ afl-fuzz++4.10c
 
 The output is from `shellHook` which prints the version numbers of the tools available within the shell.
 
+Next, I grab a PDF to use as my sample input.
+
 ```bash
 $ PDF_URL='https://www.irs.gov/pub/irs-pdf/fw4.pdf' && \
   PDF_DIR="$(mktemp --directory)" && \
   wget --directory-prefix="${PDF_DIR}" "${PDF_URL}"
-
 ```
 
 ```bash
-$ afl-fuzz -i $PDF_DIR -o $FUZZ_OUTPUT_DIR -- ./result/bin/pdftotext @@ /dev/null
+FUZZ_OUTPUT_DIR="$(mktemp --directory)"
 ```
-
-## Automating the fuzzer
-
-TODO: Add ASAN and dontStrip
 
 ```bash
-CRASHING_PDF='fuzz-output/default/crashes.2024-09-14-22:05:14/id:000000,sig:11,src:000862+000165,time:102771,execs:57754,op:splice,rep:13'
-gdb -ex run --args ./result/bin/pdftotext "${CRASHING_PDF}"
+$ nix build && \
+  afl-fuzz \
+    -i "${PDF_DIR}" \
+    -o "${FUZZ_OUTPUT_DIR}" \
+    -- ./result/bin/pdftotext @@ /dev/null
 ```
 
-Type `bt` to see a backtrace (stacktrace).
-
-## Fixing the bug
-
-TODO: Explain how to apply patches.
+That's enough for part one. In my follow-up post, I'll show how to automate more of the fuzzing workflow and tune AFL++ to find an unpatched bug in the latest version of xpdf.
 
 ---
 
