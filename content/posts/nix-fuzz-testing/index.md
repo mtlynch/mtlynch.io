@@ -6,27 +6,48 @@ tags:
   - fuzzing
 ---
 
-Fuzz testing is a cool technique for finding bugs in software, especially security critical bugs. I recently discovered that Nix is a great way to perform fuzz testing, as it eliminates a lot of gruntwork that's normally part of the fuzz testing workflow.
+Fuzz testing is a technique for automatically uncovering bugs in software. It exposes a lot of bugs, especially security critical ones, but it's a pain to set up.
 
-I created a Nix configuration that lets you fuzz test an open-source PDF reader with a single command:
+It turns out that Nix is a great tool for eliminating the gruntwork from the fuzz testing, even for a beginner like me to both Nix and fuzz testing.
+
+## A preview of the solution
+
+I'm going to show you the process I used to create the fuzzing workflow step by step, but here's the end result: you can start fuzz testing [an open-source PDF reader](https://www.xpdfreader.com/) with a single command:
 
 ```bash
 nix run gitlab:mtlynch/fuzz-xpdf
 ```
 
-1. Compiles an open-source PDF reader from source with proper instrumentation for fuzz testing
-1. Downloads a set of edge-case PDFs to use as a basis for generating inputs
-1. Fuzz tests the PDF reader and reports PDFs that caused crashes
+The command should work on any Linux system with Nix installed, and maybe MacOS, too.
+
+Here's everything that happens when you run the command above:
+
+1. Nix downloads all tools and dependencies for the PDF reader itself and the testing toolchain.
+1. Nix compiles an open-source PDF reader from source with proper instrumentation for fuzz testing.
+1. Nix downloads a set of edge-case PDFs to use as a basis for generating inputs for testing.
+1. Nix automatically generates new PDFs, feeds them to the PDF reader, and reports which inputs caused the PDF reader to crash.
 
 So, that's neat! You don't have to hunt around for all the tools in the toolchain for compiling xpdf. You just run the command above, and it will install everything for you.
 
-What's more, if you want to change the compilation options or compile a different version of xpdf, you can make simple changes to a single file.
+What's more, if you want to change the compilation options or test a different version of the PDF reader, you can make simple changes to a single file. And hopefully, the methodology I show allows you to apply the same techniques to other projects.
 
 ## What's fuzz testing?
 
-Fuzz testing or "fuzzing" is a way of finding bugs in program by randomly changing its input and checking if the program crashes trying to read the modified input.
+Fuzz testing or "fuzzing" is a way of finding bugs in program by feeding it randomly generated input.
 
-For example, if you wanted to fuzz test a program that resized JPEG images, you could test it by starting with a valid JPEG, then randomly modifying the file and having your resizer open each version looking for crashes. If your program crashes, it reveals that your program is not robust against malformed input. These types of bugs often have security implications.
+For example, if you wanted to fuzz test a program that resized JPEG images, the workflow would look like this:
+
+1. Take a set of valid and/or malformed JPEG image files.
+1. Randomly select one of the input files and randomly mutate it (flip some bits, add some data, delete some data).
+1. Feed the mutated input file to the image resizing program.
+1. If the mutated input caused the program to crash or hang, save the input for later analysis.
+1. Go back to step (2)
+
+Fuzz testing often reveals security-critical bugs.
+
+### Code-path-aware fuzzing
+
+Modern fuzzers are even smarter than random, as they trace execution within a program. So if the fuzzing tool mutates an input file, feeds it to the target program, and then the program executes a piece of code that no other input has triggered, the fuzzer tries more mutations from there to try to execute less-traveled code paths, as that's often where bugs lie.
 
 ### Why fuzzing is hard
 
@@ -34,9 +55,18 @@ One of the biggest obstacles to fuzz testing is that it's a pain to set up. I've
 
 ## What's Nix?
 
-Nix is a complex tool that does a lot of different things, many of which I don't quite understand, as I'm still a Nix beginner.
+Nix is a complex tool that does a lot of different things, many of which I don't even understand.
 
-For this article, it's sufficient to think of Nix as a hybrid build tool and package manager. I'll show how to use Nix to pull dependencies and tools into your development environment, and I'll also use Nix to create a sequence of steps that compile the application under test and execute fuzz tests.
+For the purposes of this article, it's sufficient to think of Nix as:
+
+- A package manager, similar to `apt` or `yum`. Nix has XXk packages available to run within the Nix environment.
+- A build tool, similar to `make` or `Docker`. Nix allows you to define a set of build steps and builds
+
+### Why is Nix useful for fuzzing?
+
+Effective caching. If you change a compilation option, you don't have to start from scratch.
+
+With a tool like `make`, if I compile an application with `gcc`, then try compiling with `clang`, then decide to go back to `gcc`, I have to do the whole compilation over from scratch. With Nix, it caches every build, so even if my program takes 20 minutes to compile, once I've compiled at least once with both `gcc` and `clang`, I can switch between them instantly. And that applies not just to the compiler but every compilation option in my build.
 
 ## If you don't have Nix
 
@@ -46,7 +76,9 @@ TODO
 
 ## Building xpdf with Nix
 
-I want to compile the pdftotext utility. It exercises the PDF parsing code, but it's a simple command-line utility with no GUI component, so it should run quickly and be friendly to testing entirely from the terminal.
+The PDF reader I'm fuzz testing is called [xpdf](https://xpdfreader.com). I'd never seen it before, but it was an example in a good fuzzing tutorial I found, so I'm sticking with it.
+
+xpdf is a PDF viewer, but it ships with a suite of PDF utilities. One of the utilities, `pdftotext` is an attractive fuzzing target because it's so simple. It has no GUI; it just accepts a PDF as input and produces plaintext as output, but it still exercises xpdf's complex PDF parsing code. If I find a bug in `pdftotext`, it means I've probably found a bug in the whole `xpdf` suite.
 
 To start the project, I create a new folder and make it a git repository.
 
