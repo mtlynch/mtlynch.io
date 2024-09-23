@@ -8,11 +8,11 @@ tags:
 
 Fuzz testing is a technique for automatically uncovering bugs in software. It exposes a lot of bugs, especially security critical ones, but it's a pain to set up.
 
-It turns out that Nix is a great tool for eliminating the gruntwork from the fuzz testing, even for a beginner like me to both Nix and fuzz testing.
+I've found Nix to be an excellent tool for eliminating the gruntwork from the fuzz testing, even though I'm a beginner to both Nix and fuzz testing.
 
 ## A preview of the solution
 
-I'm going to show you the process I used to create the fuzzing workflow step by step, but here's the end result: you can start fuzz testing [an open-source PDF reader](https://www.xpdfreader.com/) with a single command:
+I'm going to show you the process I used to create a fuzzing workflow with Nix, but here's the end result: you can start fuzz testing [an open-source PDF reader](https://www.xpdfreader.com/) with a single command:
 
 ```bash
 nix run gitlab:mtlynch/fuzz-xpdf
@@ -31,9 +31,11 @@ Here's everything that happens when you run the command above:
 
 You don't have to hunt around for all the tools in the toolchain for compiling the PDF reader or the fuzzer. You just run the command above, and it will install everything for you.
 
-What's more, if you want to change the fuzzing options or test a different version of the PDF reader, you can make simple changes to a single file.
+What's more, if you want to change the fuzzing options or test a different version of the PDF reader, you can change a single file and re-run the command.
 
-If you'd like to start hacking around with it, my full configuration is [available on Gitlab](https://gitlab.com/mtlynch/fuzz-xpdf/-/blob/master/flake.nix?ref_type=heads), but in this post, I'm going to share how I created it step by step. The methodology I show allows you to apply the same techniques to other projects.
+In this post, I'm going to share how I created it step by step. The methodology I show allows you to apply the same techniques to other projects.
+
+If you're impatient, you can tinker with [my configuration](https://gitlab.com/mtlynch/fuzz-xpdf/-/blob/master/flake.nix?ref_type=heads) without sticking around for the explanation.
 
 ## What's fuzz testing?
 
@@ -74,15 +76,11 @@ With a tool like `make`, if I compile an application with `gcc`, then try compil
 
 ## Requirements
 
-### Nix
+To follow along, you'll only need two things:
 
-Install Nix using the Determinate Systems installer:
-
-TODO
-
-### git
-
-You'll also need git installed.
+- Nix (with Flakes enabled)
+  - I recommend the Determinate Systems installer, which enables Flakes by default.
+- git
 
 ## Building xpdf with Nix
 
@@ -145,11 +143,12 @@ But this is just a skeleton and won't successfully build yet. To compile xpdf us
 
 First, I call [`mkDerivation`](https://nixos.org/manual/nixpkgs/stable/#sec-using-stdenv), which is how I define a build component in Nix. It requires a package name (`pname`) and version, so I specify `xpdf`, the package I want to fuzz and `4.05`, the latest published version of xpdf as of this writing.
 
-```
-xpdf = pkgs.stdenv.mkDerivation rec {
-  pname = "xpdf";
-  version = "4.05";
-  ...
+```nix
+{
+  xpdf = pkgs.stdenv.mkDerivation rec {
+    pname = "xpdf";
+    version = "4.05";
+    ...
 ```
 
 The other required field in `mkDerivation` is a `src` which specifies how Nix should retrieve the inputs for the build. In the case of xpdf, the source tarball is located at this URL:
@@ -164,36 +163,32 @@ I specify xpdf's tarball URL using the `pname` and `version` variables to make i
     ...
     src = pkgs.fetchzip {
       url = "https://dl.xpdfreader.com/${pname}-${version}.tar.gz";
-      hash = "sha256-LBxKSrXTdoulZDjPiyYMaJr63jFHHI+VCgVJx310i/w=";
       extension = "tar.gz";
     };
 ```
 
-### Specifying a source tarball hash
-
-Nix requires a hash of the tarball so that it can tell whether its cached result is valid, so I have to specify the SHA256 hash of the tarball. The easiest way to do this is to just provide a placeholder:
-
-Nix will then dutifully complain that the hash is wrong:
+The problem is that Nix needs a hash of the tarball to determine whether the local version matches what's on the server. If I try to `nix build` at this point, Nix complains that the hash is wrong:
 
 ```text
-error: hash mismatch in fixed-output derivation '/nix/store/dckwxnxplnzzbf1c5pa4jlspss2vwck9-source.drv':
+warning: found empty hash, assuming 'sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA='
+error: hash mismatch in fixed-output derivation '/nix/store/z3ckfdjqpfd73xkkwsnpg4ijwj60vyz8-source.drv':
          specified: sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
             got:    sha256-LBxKSrXTdoulZDjPiyYMaJr63jFHHI+VCgVJx310i/w=
 ```
 
 And then I just paste the `got` value back into my `flake.nix`.
 
-The slightly more elegant way to calculate the correct hash is to run this command:
-
-```bash
-$ URL='https://dl.xpdfreader.com/xpdf-4.05.tar.gz' && \
-  nix hash to-sri --type sha256 \
-    "$(nix-prefetch-url --unpack "${URL}" | tail -n 1)"
-path is '/nix/store/n7v30hkr7s18z714jgvvg4gxy1f3i94i-xpdf-4.05.tar.gz'
-sha256-LBxKSrXTdoulZDjPiyYMaJr63jFHHI+VCgVJx310i/w=
+```nix
+{
+  xpdf = pkgs.stdenv.mkDerivation rec {
+    ...
+    src = pkgs.fetchzip {
+      url = "https://dl.xpdfreader.com/${pname}-${version}.tar.gz";
+      # Paste the hash that appeared next to "got" in the error message.
+      hash = "sha256-LBxKSrXTdoulZDjPiyYMaJr63jFHHI+VCgVJx310i/w=";
+      extension = "tar.gz";
+    };
 ```
-
-The above command is pretty difficult to remember, so I recommend just using the placeholder and taking the correction from the error message.
 
 Now, I have to figure out how to actually build it. The xpdf [compile instructions](https://gitlab.com/mtlynch/xpdf/-/blob/4.05/INSTALL#L32-39) say the following:
 
@@ -301,47 +296,15 @@ $ ls ./result/bin/
 pdfdetach  pdffonts  pdfimages  pdfinfo  pdftohtml  pdftopng  pdftoppm  pdftops  pdftotext
 ```
 
-### That was confusingly easy
-
-If you're confused at how Nix built that binary, so was I.
-
-I hadn't even told Nix what the build process was for `xpdf`, so how did Nix know?
-
-It turns out that the Nix `mkDerivation` function I called assumes a standard `cmake` build process:
-
-> for Unix packages that use the standard `./configure; make; make install` build interface, you don’t need to write a build script at all; the standard environment does everything automatically. If `stdenv` doesn’t do what you need automatically, you can easily customise or override the various build phases.
->
-> ["The Standard Environment"](https://nixos.org/manual/nixpkgs/stable/#chap-stdenv) from the Nix Manual
-
-Nix's magic here is neat, albeit confusing.
-
-Still, it seemed so magical that I worried Nix wasn't actually building `xpdf` properly. The `xpdf` instructions explain how you have to tell the compiler where to find Freetype's headers and libraries. I never did that, so how was that working? And `make install` should be writing to a system-wide directory like `/usr/bin/`, but how could that be happening if I never elevated to root with `sudo`?
-
-```nix
-{
-  xpdf = pkgs.stdenv.mkDerivation rec {
-    ...
-    installPhase = ''
-      printenv
-      make install
-    '';
-```
-
-```text
-CMAKE_INCLUDE_PATH=/nix/store/rmqyzrzpz2kzmn8329bc4fjmzvd33ylw-freetype-2.13.2-dev/include:...
-```
-
-```text
-cmakeFlags=...-DCMAKE_INSTALL_BINDIR=/nix/store/7w4ql3kdrl3c0knnvx3lxsnrqfzfcy34-xpdf-4.05/bin
-```
-
-### Experimenting with pdftotext
+I can run `pdftotext` and verify that it's working:
 
 ```bash
 $ ./result/bin/pdftotext -v
 pdftotext version 4.05 [www.xpdfreader.com]
 Copyright 1996-2024 Glyph & Cog, LLC
 ```
+
+### Experimenting with pdftotext
 
 As a test I downloaded the [Form W-4 PDF](https://www.irs.gov/pub/irs-pdf/fw4.pdf) from the IRS website and fed it to `pdftotext`:
 
@@ -358,7 +321,57 @@ Cool, that looks correct.
 
 The full source at this stage is [available on Gitlab](https://gitlab.com/mtlynch/fuzz-xpdf/-/tree/01-compile-xpdf).
 
-## Compile xpdf with AFL++
+## That was confusingly easy
+
+If you're confused at how Nix built those binary, so was I.
+
+I hadn't even told Nix what the build process was for `xpdf`, so how did it know?
+
+It turns out that the Nix `mkDerivation` function I called assumes a standard `make` build process:
+
+> for Unix packages that use the standard `./configure; make; make install` build interface, you don’t need to write a build script at all; the standard environment does everything automatically. If `stdenv` doesn’t do what you need automatically, you can easily customise or override the various build phases.
+>
+> ["The Standard Environment"](https://nixos.org/manual/nixpkgs/stable/#chap-stdenv) from the Nix Manual
+
+Still, it seemed a bit _too_ magical to me.
+
+The `xpdf` instructions explain how you have to [tell the compiler where to find Freetype's headers and libraries](https://gitlab.com/mtlynch/xpdf/-/blob/4.05/INSTALL#L61-70). I never did that, so how was that working?
+
+And `make install` normally writes to a system-wide directory like `/usr/bin/`, but that shouldn't be possible, since I never elevated to root with `sudo`.
+
+I suspected that, in addition to implicitly calling the `make` build sequence, Nix was quietly controlling the build process through environment variables.
+
+To test my theory, I replaced the default `installPhase` option with one that dumped all environment variables:
+
+```nix
+{
+  xpdf = pkgs.stdenv.mkDerivation rec {
+    ...
+    installPhase = ''
+      printenv
+      make install
+    '';
+```
+
+I then re-ran `nix build` with verbose logging:
+
+```bash
+nix build -L
+```
+
+Sure enough, I saw that it pointed to the Freetype headers via the `CMAKE_INCLUDE_PATH` variable:
+
+```text
+CMAKE_INCLUDE_PATH=/nix/store/rmqyzrzpz2kzmn8329bc4fjmzvd33ylw-freetype-2.13.2-dev/include:...
+```
+
+And the reason it hadn't scribbled over my `/usr/bin` directory was that Nix told `cmake` to install in a Nix-specific install directory:
+
+```text
+cmakeFlags=...-DCMAKE_INSTALL_BINDIR=/nix/store/7w4ql3kdrl3c0knnvx3lxsnrqfzfcy34-xpdf-4.05/bin
+```
+
+## Compiling xpdf with AFL++
 
 AFL++ is a XX fuzzer, which means that it traces which parts of the target binary execute as different inputs run. AFL++ can do this even for closed-source binaries, but for open-source projects, AFL++ does a better job of fuzzing if I recompile the application using AFL++ as my compiler.
 
