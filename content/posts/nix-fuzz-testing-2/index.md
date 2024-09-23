@@ -1,5 +1,5 @@
 ---
-title: "Nix is Surprisingly Useful for Fuzz Testin (Part Two)"
+title: "Nix is Surprisingly Useful for Fuzz Testing (Part Two)"
 date: 2024-09-14T19:16:32-04:00
 tags:
   - nix
@@ -14,7 +14,7 @@ TODO: Add ASAN and dontStrip
 
 TODO
 
-## Running the fuzzer through Nix
+## Launching tests with Nix
 
 TODO
 
@@ -30,6 +30,10 @@ Type `bt` to see a backtrace (stacktrace).
 ## Fixing the bug
 
 TODO: Explain how to apply patches.
+
+## Bonus: Minimizing the test corpus
+
+I don't know how much difference it makes, but I'll include it here in case it's useful.
 
 ---
 

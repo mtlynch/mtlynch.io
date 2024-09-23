@@ -1,5 +1,5 @@
 ---
-title: "Nix is Surprisingly Useful for Fuzz Testing"
+title: "Nix is Surprisingly Useful for Fuzz Testing (Part One)"
 date: 2024-09-14T19:16:32-04:00
 tags:
   - nix
@@ -18,7 +18,9 @@ I'm going to show you the process I used to create the fuzzing workflow step by 
 nix run gitlab:mtlynch/fuzz-xpdf
 ```
 
-The command should work on any Linux system with Nix installed, and maybe MacOS, too.
+The command should work on any Linux system with Nix installed, and maybe MacOS, too. It should cause your system to spend a few minutes building and then start a terminal UI that looks like this:
+
+TODO
 
 Here's everything that happens when you run the command above:
 
@@ -27,9 +29,11 @@ Here's everything that happens when you run the command above:
 1. Nix downloads a set of edge-case PDFs to use as a basis for generating inputs for testing.
 1. Nix automatically generates new PDFs, feeds them to the PDF reader, and reports which inputs caused the PDF reader to crash.
 
-So, that's neat! You don't have to hunt around for all the tools in the toolchain for compiling xpdf. You just run the command above, and it will install everything for you.
+You don't have to hunt around for all the tools in the toolchain for compiling the PDF reader or the fuzzer. You just run the command above, and it will install everything for you.
 
-What's more, if you want to change the compilation options or test a different version of the PDF reader, you can make simple changes to a single file. And hopefully, the methodology I show allows you to apply the same techniques to other projects.
+What's more, if you want to change the fuzzing options or test a different version of the PDF reader, you can make simple changes to a single file.
+
+If you'd like to start hacking around with it, my full configuration is [available on Gitlab](https://gitlab.com/mtlynch/fuzz-xpdf/-/blob/master/flake.nix?ref_type=heads), but in this post, I'm going to share how I created it step by step. The methodology I show allows you to apply the same techniques to other projects.
 
 ## What's fuzz testing?
 
@@ -295,7 +299,19 @@ If everything worked, there should be a set of binaries under `./result/bin` tha
 ```bash
 $ ls ./result/bin/
 pdfdetach  pdffonts  pdfimages  pdfinfo  pdftohtml  pdftopng  pdftoppm  pdftops  pdftotext
+```
 
+### That was confusingly easy
+
+If you're confused at how Nix built that binary, so was I. I hadn't even told Nix what the build process was for `xpdf`, so how did Nix know?
+
+> for Unix packages that use the standard `./configure; make; make install` build interface, you don’t need to write a build script at all; the standard environment does everything automatically. If `stdenv` doesn’t do what you need automatically, you can easily customise or override the various build phases.
+>
+> ["The Standard Environment"](https://nixos.org/manual/nixpkgs/stable/#chap-stdenv) from the Nix Manual
+
+### Experimenting with pdftotext
+
+```bash
 $ ./result/bin/pdftotext -v
 pdftotext version 4.05 [www.xpdfreader.com]
 Copyright 1996-2024 Glyph & Cog, LLC
@@ -368,7 +384,7 @@ Okay, that tells me that the compilers are under the package output for aflplusp
 
 At this point, `flake.nix` should [look like this](https://gitlab.com/mtlynch/fuzz-xpdf/-/blob/02-compile-xpdf-with-afl++/flake.nix?ref_type=heads).
 
-## Doing ad-hoc fuzzing from the command line
+## Ad-hoc fuzzing
 
 ```nix
 {
@@ -410,19 +426,44 @@ $ PDF_URL='https://www.irs.gov/pub/irs-pdf/fw4.pdf' && \
   wget --directory-prefix="${PDF_DIR}" "${PDF_URL}"
 ```
 
+Then I create a directory to store the fuzz results. Since this is just experimental, I'm using a temporary directory:
+
 ```bash
 FUZZ_OUTPUT_DIR="$(mktemp --directory)"
 ```
 
+I do one more `nix build` to ensure that `pdftotext` is ready to run under the `./result/bin` folder:
+
 ```bash
-$ nix build && \
-  afl-fuzz \
+$ nix build && ./result/bin/pdftotext -v
+pdftotext version 4.05 [www.xpdfreader.com]
+Copyright 1996-2024 Glyph & Cog, LLC
+```
+
+Finally, it's the moment of truth. I put everything together to call AFL++'s fuzz testing runner, `afl-fuzz`.
+
+```bash
+$ afl-fuzz \
     -i "${PDF_DIR}" \
     -o "${FUZZ_OUTPUT_DIR}" \
     -- ./result/bin/pdftotext @@ /dev/null
 ```
 
+There's a lot to this command, so let me break it down:
+
+- `-i "${PDF_DIR}"`: Specifies the directory of input files to mutate.
+- `-o "${FUZZ_OUTPUT_DIR}"`: Specifies the directory to write fuzzing results.
+- `-- ./result/bin/pdftotext @@ /dev/null`: Specifies the target program to fuzz. `afl-fuzz` replaces the `@@` with a newly generated file on each execution, and `/dev/null` tells `pdftotext` to throw out the results of the PDF to text conversion.
+
+I run the command and am greeted to the AFL++ fuzzing interface:
+
+TODO
+
+## Next: Finding an unpatched bug
+
 That's enough for part one. In my follow-up post, I'll show how to automate more of the fuzzing workflow and tune AFL++ to find an unpatched bug in the latest version of xpdf.
+
+- [Nix is Surprisingly Useful for Fuzz Testing (Part Two)](/nix-fuzz-testing-2/)
 
 ---
 
