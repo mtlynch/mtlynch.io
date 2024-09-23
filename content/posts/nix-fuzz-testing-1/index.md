@@ -303,11 +303,37 @@ pdfdetach  pdffonts  pdfimages  pdfinfo  pdftohtml  pdftopng  pdftoppm  pdftops 
 
 ### That was confusingly easy
 
-If you're confused at how Nix built that binary, so was I. I hadn't even told Nix what the build process was for `xpdf`, so how did Nix know?
+If you're confused at how Nix built that binary, so was I.
+
+I hadn't even told Nix what the build process was for `xpdf`, so how did Nix know?
+
+It turns out that the Nix `mkDerivation` function I called assumes a standard `cmake` build process:
 
 > for Unix packages that use the standard `./configure; make; make install` build interface, you don’t need to write a build script at all; the standard environment does everything automatically. If `stdenv` doesn’t do what you need automatically, you can easily customise or override the various build phases.
 >
 > ["The Standard Environment"](https://nixos.org/manual/nixpkgs/stable/#chap-stdenv) from the Nix Manual
+
+Nix's magic here is neat, albeit confusing.
+
+Still, it seemed so magical that I worried Nix wasn't actually building `xpdf` properly. The `xpdf` instructions explain how you have to tell the compiler where to find Freetype's headers and libraries. I never did that, so how was that working? And `make install` should be writing to a system-wide directory like `/usr/bin/`, but how could that be happening if I never elevated to root with `sudo`?
+
+```nix
+{
+  xpdf = pkgs.stdenv.mkDerivation rec {
+    ...
+    installPhase = ''
+      printenv
+      make install
+    '';
+```
+
+```text
+CMAKE_INCLUDE_PATH=/nix/store/rmqyzrzpz2kzmn8329bc4fjmzvd33ylw-freetype-2.13.2-dev/include:...
+```
+
+```text
+cmakeFlags=...-DCMAKE_INSTALL_BINDIR=/nix/store/7w4ql3kdrl3c0knnvx3lxsnrqfzfcy34-xpdf-4.05/bin
+```
 
 ### Experimenting with pdftotext
 
