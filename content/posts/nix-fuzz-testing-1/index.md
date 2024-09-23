@@ -304,8 +304,6 @@ pdftotext version 4.05 [www.xpdfreader.com]
 Copyright 1996-2024 Glyph & Cog, LLC
 ```
 
-### Experimenting with pdftotext
-
 As a test I downloaded the [Form W-4 PDF](https://www.irs.gov/pub/irs-pdf/fw4.pdf) from the IRS website and fed it to `pdftotext`:
 
 ```text
@@ -446,7 +444,7 @@ At this point, `flake.nix` should [look like this](https://gitlab.com/mtlynch/fu
 
 At this point, `flake.nix` should [look like this](https://gitlab.com/mtlynch/fuzz-xpdf/-/blob/03-dev-shell/flake.nix?ref_type=heads).
 
-The `devShells` command creates a terminal shell where I can access the components in my Nix environment. I enter the shell by typing `nix develop`:
+The `mkShell` function creates a terminal shell where I can access the components in my Nix environment. I enter the shell by typing `nix develop`:
 
 ```bash
 $ nix develop
