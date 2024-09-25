@@ -8,6 +8,8 @@ tags:
 
 ## Tuning AFL++ for better results
 
+TODO: Call `sudo "$(which afl-persistent-config)"`
+
 TODO: Add ASAN and dontStrip
 
 ## Downloading tricky PDFs
