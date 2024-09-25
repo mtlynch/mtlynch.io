@@ -10,6 +10,9 @@
     # 0.9.0
     markdown-lint-nixpkgs.url = "github:NixOS/nixpkgs/12bdeb01ff9e2d3917e6a44037ed7df6e6c3df9d";
 
+    # 5.0.8 release
+    html-proofer-nixpkgs.url = "github:NixOS/nixpkgs/5ed627539ac84809c78b2dd6d26a5cebeb5ae269";
+
     # 0.119.0 release
     hugo-nixpkgs.url = "github:NixOS/nixpkgs/75a52265bda7fd25e06e3a67dee3f0354e73243c";
   };
@@ -19,11 +22,13 @@
     flake-utils,
     nodejs-nixpkgs,
     markdown-lint-nixpkgs,
+    html-proofer-nixpkgs,
     hugo-nixpkgs,
   } @ inputs:
     flake-utils.lib.eachDefaultSystem (system: let
       hugo = hugo-nixpkgs.legacyPackages.${system}.hugo;
       nodejs = nodejs-nixpkgs.legacyPackages.${system}.nodejs-18_x;
+      html-proofer = html-proofer-nixpkgs.legacyPackages.${system}.html-proofer;
       markdownlint = markdown-lint-nixpkgs.legacyPackages.${system}.markdownlint-cli2;
     in {
       devShells.default = hugo-nixpkgs.legacyPackages.${system}.mkShell {
@@ -31,9 +36,11 @@
           hugo
           nodejs
           markdownlint
+          html-proofer
         ];
 
         shellHook = ''
+          echo "htmlproofer" "$(htmlproofer --version)"
           markdownlint-cli2 | head -n 1
           echo "node" "$(node --version)"
           hugo version
