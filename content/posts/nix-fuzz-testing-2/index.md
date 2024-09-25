@@ -8,7 +8,7 @@ tags:
 
 ## Tuning AFL++ for better results
 
-TODO: Call `sudo "$(which afl-persistent-config)"`
+TODO: Call `sudo "$(which afl-persistent-config)"` and `sudo "$(which afl-system-config)"`
 
 TODO: Add ASAN and dontStrip
 
