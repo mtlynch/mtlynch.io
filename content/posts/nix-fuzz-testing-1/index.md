@@ -1,6 +1,6 @@
 ---
 title: "Nix is Surprisingly Useful for Fuzz Testing (Part One)"
-date: 2024-09-14T19:16:32-04:00
+date: 2024-09-14T00:00:00-04:00
 tags:
   - nix
   - fuzzing
@@ -375,7 +375,7 @@ AFL++ is a XX fuzzer, which means that it traces which parts of the target binar
 
 AFL++ ships with C and C++ compilers that are drop-in replacements for TODO, so compiling with AFL++ should be as simple as telling the build toolchain to use this compiler.
 
-According to AFL++'s docs, I'm likely to see the best fuzzing results with `afl-clang-lto`, but that requires clang 11 or higher. AFL++ docs also recommend the newest possible version of llvm. The latest version of LLVM available through Nix is 18.
+According to [AFL++'s docs](https://github.com/AFLplusplus/AFLplusplus/blob/v4.21c/docs/fuzzing_in_depth.md#a-selecting-the-best-afl-compiler-for-instrumenting-the-target), I'm likely to see the best fuzzing results with `afl-clang-lto`, but that requires clang 11 or higher. AFL++ docs also recommend the newest possible version of llvm. The latest version of LLVM available through Nix is 18.
 
 Next, I modify `nativeBuildInputs` to include both the [`aflplusplus`](https://search.nixos.org/packages?channel=24.05&show=aflplusplus&from=0&size=50&sort=relevance&type=packages&query=aflplusplus) package and the [`llvm_18` package](https://search.nixos.org/packages?channel=24.05&show=llvm_18&from=0&size=50&sort=relevance&type=packages&query=llvm):
 
@@ -425,9 +425,10 @@ At this point, `flake.nix` should [look like this](https://gitlab.com/mtlynch/fu
 
 ```nix
 {
-  packages = rec {
-    default = xpdf;
-    ...
+    packages = rec {
+        ...
+    };
+
     devShells.default = pkgs.mkShell {
       buildInputs = self.packages.${system}.xpdf.nativeBuildInputs ++ (with pkgs; [
         gdb
