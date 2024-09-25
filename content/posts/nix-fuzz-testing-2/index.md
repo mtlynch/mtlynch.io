@@ -12,6 +12,8 @@ TODO: Call `sudo "$(which afl-persistent-config)"` and `sudo "$(which afl-system
 
 TODO: Add ASAN and dontStrip
 
+TODO: dictionary
+
 ## Downloading tricky PDFs
 
 TODO
