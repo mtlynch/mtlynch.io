@@ -7,11 +7,9 @@
     <h1 class="title">{{ .Title }}</h1>
 
     <ul class="blurb-list book-reports-list">
-      {{- range .Paginator.Pages -}}
+      {{- range .Pages -}}
         {{- .Render "li" -}}
       {{- end -}}
     </ul>
-
-    {{ partial "pagination.html" . }}
   </section>
 {{ end }}
