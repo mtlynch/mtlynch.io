@@ -4,11 +4,13 @@ date: 2024-09-14T00:00:00-04:00
 tags:
   - nix
   - fuzzing
+images:
+  - nix-fuzz-testing-1/afl-nix.webp
 ---
 
 Fuzz testing is a technique for automatically uncovering bugs in software. It's an effective way to find subtle data parsing bugs, including security critical issues, but it's a pain to set up.
 
-I recently used Nix to set up a fuzz testing workflow, and I was pleasantly surprised at how much gruntwork it eliminated from fuzz testing. I'm a beginner to both Nix and fuzz testing, and this experiment both made fuzz testing easier and made a lot of Nix concepts finally click for me.
+I recently used Nix to set up a fuzz testing workflow, and I was pleasantly surprised at how much gruntwork it eliminated from fuzz testing. Nix helped me find an unpatched bug in a PDF renderer, and the experience finally made key Nix concepts click for me.
 
 ## A preview of the solution
 
@@ -68,11 +70,19 @@ For the purposes of this article, it's sufficient to think of Nix as:
 - A package manager, similar to `apt` or `yum`. Nix has XXk packages available to run within the Nix environment.
 - A build tool, similar to `make` or `Docker`. Nix allows you to define a set of build steps and builds
 
-### Why is Nix useful for fuzzing?
+## Pros and cons of Nix for fuzz testing
+
+### Pro: Define the whole workflow in code
+
+### Pro: Effective caching
 
 Effective caching. If you change a compilation option, you don't have to start from scratch.
 
 With a tool like `make`, if I compile an application with `gcc`, then try compiling with `clang`, then decide to go back to `gcc`, I have to do the whole compilation over from scratch. With Nix, it caches every build, so even if my program takes 20 minutes to compile, once I've compiled at least once with both `gcc` and `clang`, I can switch between them instantly. And that applies not just to the compiler but every compilation option in my build.
+
+### Con: Adds a complex abstraction layer
+
+You have to figure out how to define flags and build comamnds in Nix.
 
 ## Requirements
 
