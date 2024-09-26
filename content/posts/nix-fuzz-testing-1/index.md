@@ -6,9 +6,9 @@ tags:
   - fuzzing
 ---
 
-Fuzz testing is a technique for automatically uncovering bugs in software. It exposes a lot of bugs, especially security critical ones, but it's a pain to set up.
+Fuzz testing is a technique for automatically uncovering bugs in software. It's an effective way to find subtle data parsing bugs, including security critical issues, but it's a pain to set up.
 
-I've found Nix to be an excellent tool for eliminating the gruntwork from the fuzz testing, even though I'm a beginner to both Nix and fuzz testing.
+I recently used Nix to set up a fuzz testing workflow, and I was pleasantly surprised at how much gruntwork it eliminated from fuzz testing. I'm a beginner to both Nix and fuzz testing, and this experiment both made fuzz testing easier and made a lot of Nix concepts finally click for me.
 
 ## A preview of the solution
 
@@ -20,7 +20,7 @@ nix run gitlab:mtlynch/fuzz-xpdf
 
 The command should work on any Linux system with Nix installed, and maybe MacOS, too. It should cause your system to spend a few minutes building and then start a terminal UI that looks like this:
 
-TODO
+{{<img src="afl-nix.webp" caption="Nix allows me to install all dependencies and begin fuzz testing in a single command." alt="Screenshot of AFL++'s terminal UI, showing progress fuzz testing pdftotext">}}
 
 Here's everything that happens when you run the command above:
 
