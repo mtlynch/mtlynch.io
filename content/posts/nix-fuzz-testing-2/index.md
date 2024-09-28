@@ -70,6 +70,8 @@ nix run
 
 The full source at this stage is [available on Gitlab](https://gitlab.com/mtlynch/fuzz-xpdf/-/tree/04-run-fuzzer).
 
+TODO: Can we fix the source paths so it doesn't show as /build?
+
 ## Tuning AFL++ for better results
 
 From reading AFL++'s documentation,
