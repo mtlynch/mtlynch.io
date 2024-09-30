@@ -1,5 +1,5 @@
 ---
-title: "Nix is Surprisingly Useful for Fuzz Testing (Part One)"
+title: "Using Nix to Fuzz Test a PDF Parser (Part One)"
 date: 2024-09-14T00:00:00-04:00
 tags:
   - nix
@@ -22,7 +22,7 @@ nix run gitlab:mtlynch/fuzz-xpdf
 
 The command should work on any Linux system with Nix installed, and maybe MacOS, too. It should cause your system to spend a few minutes building and then start a terminal UI that looks like this:
 
-{{<img src="afl-nix.webp" caption="Nix allows me to install all dependencies and begin fuzz testing in a single command." alt="Screenshot of AFL++'s terminal UI, showing progress fuzz testing pdftotext">}}
+{{<img src="afl-nix.webp" caption="Nix allows me to install all dependencies and begin fuzz testing in a single command." alt="Screenshot of honggfuzz's terminal UI, showing progress fuzz testing pdftotext">}}
 
 Here's everything that happens when you run the command above:
 
@@ -53,7 +53,7 @@ For example, if you wanted to fuzz test a program that resized JPEG images, the 
 
 Fuzz testing often reveals security-critical bugs.
 
-### Code-path-aware fuzzing
+### Coverage-aware fuzzing
 
 Modern fuzzers are even smarter than random, as they trace execution within a program. So if the fuzzing tool mutates an input file, feeds it to the target program, and then the program executes a piece of code that no other input has triggered, the fuzzer tries more mutations from there to try to execute less-traveled code paths, as that's often where bugs lie.
 
@@ -68,21 +68,7 @@ Nix is a complex tool that does a lot of different things, many of which I don't
 For the purposes of this article, it's sufficient to think of Nix as:
 
 - A package manager, similar to `apt` or `yum`. Nix has XXk packages available to run within the Nix environment.
-- A build tool, similar to `make` or `Docker`. Nix allows you to define a set of build steps and builds
-
-## Pros and cons of Nix for fuzz testing
-
-### Pro: Define the whole workflow in code
-
-### Pro: Effective caching
-
-Effective caching. If you change a compilation option, you don't have to start from scratch.
-
-With a tool like `make`, if I compile an application with `gcc`, then try compiling with `clang`, then decide to go back to `gcc`, I have to do the whole compilation over from scratch. With Nix, it caches every build, so even if my program takes 20 minutes to compile, once I've compiled at least once with both `gcc` and `clang`, I can switch between them instantly. And that applies not just to the compiler but every compilation option in my build.
-
-### Con: Adds a complex abstraction layer
-
-You have to figure out how to define flags and build comamnds in Nix.
+- A build tool, similar to `make` or `Docker`. Nix allows you to define a set of build steps and the dependencies between them, and Nix figures out which steps to perform to achieve the build you request.
 
 ## Requirements
 
@@ -92,13 +78,13 @@ To follow along, you'll only need two things:
   - I recommend the Determinate Systems installer, which enables Flakes by default.
 - git
 
-## Building xpdf with Nix
+## Selecting a fuzzing target
 
-The PDF reader I'm fuzz testing is called [xpdf](https://xpdfreader.com). I'd never seen it before, but it was an example in a good fuzzing tutorial I found, so I'm sticking with it.
+The PDF reader I'm fuzz testing is called [xpdf](https://xpdfreader.com). I'd never seen it before, but it was an example in a good fuzzing tutorial I found (TODO: link), so I'm sticking with it.
 
 xpdf is a PDF viewer, but it ships with a suite of PDF utilities. One of the utilities, `pdftotext` is an attractive fuzzing target because it's so simple. It has no GUI; it just accepts a PDF as input and produces plaintext as output, but it still exercises xpdf's complex PDF parsing code. If I find a bug in `pdftotext`, it means I've probably found a bug in the whole `xpdf` suite.
 
-### Putting the boilerplate in place
+## Putting the Nix boilerplate in place
 
 To start the project, I create a new folder and create a git repository.
 
@@ -149,7 +135,9 @@ This tells Nix that when I want to pull in packages, I'm pulling them from the [
 
 But this is just a skeleton and won't successfully build yet. To compile xpdf using Nix, I need to add a few bits.
 
-### Specifying a source tarball
+## Specifying a source tarball
+
+To compile xpdf, I need a copy of its source code.
 
 First, I call [`mkDerivation`](https://nixos.org/manual/nixpkgs/stable/#sec-using-stdenv), which is how I define a build component in Nix. It requires a package name (`pname`) and version, so I specify `xpdf`, the package I want to fuzz and `4.05`, the latest published version of xpdf as of this writing.
 
@@ -165,7 +153,7 @@ The other required field in `mkDerivation` is a `src` which specifies how Nix sh
 
 - https://dl.xpdfreader.com/xpdf-4.05.tar.gz
 
-I specify xpdf's tarball URL using the `pname` and `version` variables to make it easier to fuzz other versions if I want to.
+I specify xpdf's tarball URL using the `pname` and `version` variables so that when future versions of xpdf come out, it's obvious how to adjust the version number in my Nix flake to match:
 
 ```nix
 {
@@ -186,7 +174,7 @@ error: hash mismatch in fixed-output derivation '/nix/store/z3ckfdjqpfd73xkkwsnp
             got:    sha256-LBxKSrXTdoulZDjPiyYMaJr63jFHHI+VCgVJx310i/w=
 ```
 
-And then I just paste the `got` value back into my `flake.nix`.
+To fix the hash mismatch, I paste the value in the error message after `got` back into my `flake.nix`.
 
 ```nix
 {
@@ -200,7 +188,11 @@ And then I just paste the `got` value back into my `flake.nix`.
     };
 ```
 
-Now, I have to figure out how to actually build it. The xpdf [compile instructions](https://gitlab.com/mtlynch/xpdf/-/blob/4.05/INSTALL#L32-39) say the following:
+## Compiling xpdf from source
+
+Now that I've shown Nix how to retrieve xpdf's source code, I have to figure out how to build it.
+
+The xpdf [compile instructions](https://gitlab.com/mtlynch/xpdf/-/blob/4.05/INSTALL#L32-39) list the following dependencies:
 
 > Make sure you have the following installed:
 >
@@ -212,7 +204,14 @@ Now, I have to figure out how to actually build it. The xpdf [compile instructio
 
 I only want to run `pdftotext`, so I only need CMake and FreeType.
 
-Looking at the [Nix package repository](https://search.nixos.org), I see that packages for cmake and freetype are already available:
+This is normally the stage during building a tool from source where the pain begins. I find out that tool A depends on library X, then I have to research how to install X, and it depends on package Y, and on and on. And often, there's a package available but only for different version of my OS.
+
+With Nix, installing dependencies is easier than in other environments because:
+
+- Nix has one of the largest package repositories of any package manager, so most packages I need are already available.
+- Nix packages are not tied to any OS version, so as long as there's a Nix package for my architecture, I can use it.
+
+Looking at the [Nix package repository](https://search.nixos.org), I see that packages for cmake and freetype are indeed already available:
 
 - [cmake](https://search.nixos.org/packages?channel=24.05&show=cmake&from=0&size=50&sort=relevance&type=packages&query=cmake)
 - [freetype](https://search.nixos.org/packages?channel=24.05&show=freetype&from=0&size=50&sort=relevance&type=packages&query=freetype)
@@ -276,14 +275,13 @@ At this point, `flake.nix` should look like this:
 }
 ```
 
-For tidiness, create a `.gitignore`:
+For tidiness, I create a `.gitignore`:
 
 ```bash
-echo 'result
-fuzz-output' > .gitignore
+echo 'result' > .gitignore
 ```
 
-And add everything to the git repository:
+And I add everything to the git repository:
 
 ```
 git add --all
@@ -293,7 +291,7 @@ git add --all
 **Note**: An annoying gotcha of Nix flakes is that Nix can't see files unless they're under source control by git. If you get error messages about "file not found," check that you've added the file to git.
 {{</notice>}}
 
-Finally, build the package from source with `nix build`:
+Finally, I build the package from source with `nix build`:
 
 ```bash
 nix build
@@ -379,13 +377,13 @@ And the reason it hadn't scribbled over my `/usr/bin` directory was that Nix tol
 cmakeFlags=...-DCMAKE_INSTALL_BINDIR=/nix/store/7w4ql3kdrl3c0knnvx3lxsnrqfzfcy34-xpdf-4.05/bin
 ```
 
-## Compiling xpdf with AFL++
+## Compiling xpdf with honggfuzz
 
-AFL++ is a XX fuzzer, which means that it traces which parts of the target binary execute as different inputs run. AFL++ can do this even for closed-source binaries, but for open-source projects, AFL++ does a better job of fuzzing if I recompile the application using AFL++ as my compiler.
+honggfuzz is a coverage-guided fuzzer, which means that it traces which parts of the target binary execute as different inputs run. honggfuzz can do this even for closed-source binaries, but for open-source projects, honggfuzz does a better job of fuzzing if I recompile the application using honggfuzz as my compiler.
 
-AFL++ ships with C and C++ compilers that are drop-in replacements for TODO, so compiling with AFL++ should be as simple as telling the build toolchain to use this compiler.
+honggfuzz ships with C and C++ compilers that are drop-in replacements for TODO, so compiling with honggfuzz should be as simple as telling the build toolchain to use this compiler.
 
-According to [AFL++'s docs](https://github.com/AFLplusplus/AFLplusplus/blob/v4.21c/docs/fuzzing_in_depth.md#a-selecting-the-best-afl-compiler-for-instrumenting-the-target), I'm likely to see the best fuzzing results with `afl-clang-lto`, but that requires clang 11 or higher. AFL++ docs also recommend the newest possible version of llvm. The latest version of LLVM available through Nix is 18.
+According to [honggfuzz's docs](https://github.com/AFLplusplus/AFLplusplus/blob/v4.21c/docs/fuzzing_in_depth.md#a-selecting-the-best-afl-compiler-for-instrumenting-the-target), I'm likely to see the best fuzzing results with `afl-clang-lto`, but that requires clang 11 or higher. honggfuzz docs also recommend the newest possible version of llvm. The latest version of LLVM available through Nix is 18.
 
 Next, I modify `nativeBuildInputs` to include both the [`aflplusplus`](https://search.nixos.org/packages?channel=24.05&show=aflplusplus&from=0&size=50&sort=relevance&type=packages&query=aflplusplus) package and the [`llvm_18` package](https://search.nixos.org/packages?channel=24.05&show=llvm_18&from=0&size=50&sort=relevance&type=packages&query=llvm):
 
@@ -401,7 +399,7 @@ Next, I modify `nativeBuildInputs` to include both the [`aflplusplus`](https://s
 }
 ```
 
-Okay, now AFL++ will be available in my build environment, but how do I tell cmake to use the AFL++ compiler instead of whatever it was using before?
+Okay, now honggfuzz will be available in my build environment, but how do I tell cmake to use the honggfuzz compiler instead of whatever it was using before?
 
 Make and CMake respect the [`CC`](https://cmake.org/cmake/help/latest/envvar/CC.html) and [`CXX`](https://cmake.org/cmake/help/latest/envvar/CXX.html) environment variables, which specify a C and C++ compiler, respectively.
 
@@ -441,14 +439,11 @@ At this point, `flake.nix` should [look like this](https://gitlab.com/mtlynch/fu
 
     devShells.default = pkgs.mkShell {
       buildInputs = self.packages.${system}.xpdf.nativeBuildInputs ++ (with pkgs; [
-        gdb
         wget
       ]);
 
       shellHook = ''
         wget --version | head -n 1
-        gdb --version | head -n 1
-        afl-fuzz --version
       '';
     };
 ```
@@ -461,7 +456,7 @@ The `mkShell` function creates a terminal shell where I can access the component
 $ nix develop
 GNU Wget 1.21.4 built on linux-gnu.
 GNU gdb (GDB) 14.2
-afl-fuzz++4.10c
+honggfuzz++4.10c
 ```
 
 The output is from `shellHook` which prints the version numbers of the tools available within the shell.
@@ -488,28 +483,26 @@ pdftotext version 4.05 [www.xpdfreader.com]
 Copyright 1996-2024 Glyph & Cog, LLC
 ```
 
-Finally, it's the moment of truth. I put everything together to call AFL++'s fuzz testing runner, `afl-fuzz`.
+Finally, it's the moment of truth. I put everything together to call honggfuzz's fuzz testing runner, `honggfuzz`.
 
 ```bash
-$ afl-fuzz \
-    -i "${PDF_DIR}" \
-    -o "${FUZZ_OUTPUT_DIR}" \
-    -- ./result/bin/pdftotext @@ /dev/null
+$ honggfuzz \
+    --input "${PDF_DIR}" \
+    -- ./result/bin/pdftotext ___FILE___
 ```
 
 There's a lot to this command, so let me break it down:
 
-- `-i "${PDF_DIR}"`: Specifies the directory of input files to mutate.
-- `-o "${FUZZ_OUTPUT_DIR}"`: Specifies the directory to write fuzzing results.
-- `-- ./result/bin/pdftotext @@ /dev/null`: Specifies the target program to fuzz. `afl-fuzz` replaces the `@@` with a newly generated file on each execution, and `/dev/null` tells `pdftotext` to throw out the results of the PDF to text conversion.
+- `--input "${PDF_DIR}"`: Specifies the directory of input files to mutate.
+- `-- ./result/bin/pdftotext ___FILE___`: Specifies the target program to fuzz. `honggfuzz` replaces the `___FILE___` with a newly generated file on each execution.
 
-I run the command and am greeted to the AFL++ fuzzing interface:
+I run the command and am greeted to the honggfuzz fuzzing interface:
 
 TODO
 
 ## Next: Finding an unpatched bug
 
-That's enough for part one. In my follow-up post, I'll show how to automate more of the fuzzing workflow and tune AFL++ to find an unpatched bug in the latest version of xpdf.
+That's enough for part one. In my follow-up post, I'll show how to automate more of the fuzzing workflow and tune honggfuzz to find an unpatched bug in the latest version of xpdf.
 
 - [Nix is Surprisingly Useful for Fuzz Testing (Part Two)](/nix-fuzz-testing-2/)
 
