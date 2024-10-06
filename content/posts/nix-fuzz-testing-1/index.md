@@ -5,7 +5,7 @@ tags:
   - nix
   - fuzzing
 images:
-  - nix-fuzz-testing-1/afl-nix.webp
+  - nix-fuzz-testing-1/hfuzz-cover.webp
 ---
 
 Fuzz testing is a technique for automatically uncovering bugs in software. It's an effective way to find subtle data parsing bugs, especially security critical issues.
@@ -26,7 +26,7 @@ nix run gitlab:mtlynch/fuzz-xpdf
 
 The command should work on any Linux system with Nix installed, and maybe MacOS, too. It should cause your system to spend a few minutes building and then start a terminal UI that looks like this:
 
-{{<img src="afl-nix.webp" caption="Nix allows me to install all dependencies and begin fuzz testing in a single command." alt="Screenshot of honggfuzz's terminal UI, showing progress fuzz testing pdftotext">}}
+{{<img src="hfuzz.webp" caption="Nix allows me to install all dependencies and begin fuzz testing in a single command." alt="Screenshot of honggfuzz's terminal UI, showing progress fuzz testing pdftotext">}}
 
 Here's everything that happens when you run the command above:
 
@@ -433,7 +433,15 @@ xpdf> -- Check for working CXX compiler: /nix/store/kb9vkjv4admbdixrjyanfb1i9dd3
 
 At this point, `flake.nix` should [look like this](https://gitlab.com/mtlynch/fuzz-xpdf/-/blob/02-compile-xpdf-with-hongg/flake.nix).
 
-## Ad-hoc fuzzing
+## Ad-hoc fuzzing in a dev shell
+
+At this point, I've compiled xpdf using honggfuzz's compiler, and I want to start fuzzing something.
+
+I could set up an elegant command for kicking off fuzzing within my Nix flake, but at this point, I just want to get my hands dirty and start messing around as quickly as possible. To do that, I create a Nix dev shell with all of my tools available.
+
+A Nix dev shell is a terminal environment that I can enter that has all the tools I specify in the Nix flake.
+
+To create a Nix dev shell, I add the following to my Nix flake:
 
 ```nix
 {
@@ -452,31 +460,33 @@ At this point, `flake.nix` should [look like this](https://gitlab.com/mtlynch/fu
     };
 ```
 
-At this point, `flake.nix` should [look like this](https://gitlab.com/mtlynch/fuzz-xpdf/-/blob/03-dev-shell/flake.nix?ref_type=heads).
-
-The `mkShell` function creates a terminal shell where I can access the components in my Nix environment. I enter the shell by typing `nix develop`:
+At this point, `flake.nix` should [look like this](https://gitlab.com/mtlynch/fuzz-xpdf/-/blob/03-dev-shell/flake.nix). I enter the shell by typing `nix develop`:
 
 ```bash
 $ nix develop
 GNU Wget 1.21.4 built on linux-gnu.
-GNU gdb (GDB) 14.2
-honggfuzz++4.10c
 ```
 
-The output is from `shellHook` which prints the version numbers of the tools available within the shell.
-
-Next, I grab a PDF to use as my sample input.
+The "GNU Wget" output is from `shellHook` which prints the version numbers of the tools available within the shell. Within the shell, the `honggfuzz` binary is also available:
 
 ```bash
-$ PDF_URL='https://www.irs.gov/pub/irs-pdf/fw4.pdf' && \
-  PDF_DIR="$(mktemp --directory)" && \
-  wget --directory-prefix="${PDF_DIR}" "${PDF_URL}"
+$ honggfuzz --help 2>&1 | head -n 1
+Usage: honggfuzz [options] -- path_to_command [args]
 ```
+
+That works because within `mkShell`, I specified `buildInputs` as all the `nativeBuildInputs` from the xpdf package (`cmake` and `honggfuzz`) plus `wget`, which I want only in my dev shell for downloading PDFs.
 
 Then I create a directory to store the fuzz results. Since this is just experimental, I'm using a temporary directory:
 
 ```bash
 PDF_DIR="$(mktemp --directory)"
+```
+
+Next, I grab a PDF to use as my sample input.
+
+```bash
+$ PDF_URL='https://www.irs.gov/pub/irs-pdf/fw4.pdf' && \
+  wget --directory-prefix="${PDF_DIR}" "${PDF_URL}"
 ```
 
 I do one more `nix build` to ensure that `pdftotext` is ready to run under the `./result/bin` folder:
@@ -495,21 +505,29 @@ $ honggfuzz \
     -- ./result/bin/pdftotext ___FILE___
 ```
 
-There's a lot to this command, so let me break it down:
+Here's how it works:
 
-- `--input "${PDF_DIR}"`: Specifies the directory of input files to mutate.
+- `--input "${PDF_DIR}"` specifies the directory of input files to mutate.
 - `-- ./result/bin/pdftotext ___FILE___`: Specifies the target program to fuzz. `honggfuzz` replaces the `___FILE___` with a newly generated file on each execution.
 
 I run the command and am greeted to the honggfuzz fuzzing interface:
 
-TODO
+{{<img src="hfuzz.webp" caption="TODO">}}
 
-## Next: Finding an unpatched bug
+## Next: Using Nix to find an unpatched bug in xpdf
 
-That's enough for part one. In my follow-up post, I'll show how to automate more of the fuzzing workflow and tune honggfuzz to find an unpatched bug in the latest version of xpdf.
+At this point, I've shown how to use Nix and honggfuzz to perform basic fuzz testing of the xpdf PDF reader.
+
+In my follow-up post, I'll show how to:
+
+- Automate more of the fuzzing workflow.
+- Gather trickier PDFs more likely to cause crashes.
+- Find an unpatched bug in the latest version of xpdf.
+
+Read on below:
 
 - [Using Nix to Fuzz Test a PDF Parser (Part Two)](/nix-fuzz-testing-2/)
 
 ---
 
-_Thanks to XX for creating the tutorial series XX. This work builds on that foundation._
+_Thanks to [Antonio Morales](https://x.com/Nosoynadiemas) for creating the [Fuzzing101 tutorial series](https://github.com/antonio-morales/Fuzzing101) upon which this work is based._
