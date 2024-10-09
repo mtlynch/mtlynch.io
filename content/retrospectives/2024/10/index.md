@@ -21,6 +21,8 @@ TODO
 
 ## It's okay not to work
 
+I have what I hope is an irrational fear that I'll never be able to work again.
+
 ## Fuzz is in the air
 
 About ten yars ago, I was a security consultant and [used fuzz testing to find a serious vulnerability in VLC](https://www.nccgroup.com/us/research-blog/fuzzing-rtsp-to-discover-an-exploitable-vulnerability-in-vlc/).
