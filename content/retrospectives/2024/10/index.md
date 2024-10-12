@@ -70,4 +70,5 @@ I was able to create the entire fuzz testing workflow in a Nix flake so I just t
 
 ### Requests for help
 
-- People that are more up to date on fuzzing, what's the modern equivalent of AFL++?
+- What's the modern equivalent of AFL++?
+  - If you work in infosec, let me know what the new, cool fuzz testing tool is.
