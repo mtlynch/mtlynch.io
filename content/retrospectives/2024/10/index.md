@@ -1,7 +1,7 @@
 ---
 title: "Paternity Leave: Month 2"
 date: 2024-10-08T09:59:39-04:00
-description: Doing nothing is hard
+description: Not working is harder than I expected.
 ---
 
 ## Highlights
