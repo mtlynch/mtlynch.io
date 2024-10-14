@@ -16,14 +16,14 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Enjoy family time
 
-- **Result**: Spent lots of time with my wife and our newborn son and had lots of visits with friends and family.
+- **Result**: Spent lots of time with my wife and our newborn son and had frequent visits with friends and family.
 - **Grade**: A
 
 ## I'll be okay if I don't work for a bit
 
 I never thought of myself as someone who needs to work all the time, but I'm finding it difficult to take time off.
 
-When I look at how little I've gotten done work-wise in the last three months, I have this anxious feeling of, "What if this is my new normal? What if I have to make a living with only a few hours per month for work?"
+When I look at how little I've gotten done work-wise in the last three months, I have this anxious feeling of, "What if this is my new normal? What if I have to make a living with only a few hours for work each month?"
 
 I know these fears are mostly irrational. Tons of people have kids &mdash; they work regular hours, and it's fine. And on top of that, I have lots of family nearby who are eager to help out with childcare.
 
