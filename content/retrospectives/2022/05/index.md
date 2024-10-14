@@ -12,7 +12,7 @@ images:
 - It's more important than I thought to have low-latency insight into developers' hours.
 - I'm trying paid advertising again for the first time in almost two years.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

@@ -12,7 +12,7 @@ images:
 - One of TinyPilot's competitors raised $800k almost overnight.
 - I'm working with a design firm to improve TinyPilot's brand and website.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

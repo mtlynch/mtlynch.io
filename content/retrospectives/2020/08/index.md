@@ -12,7 +12,7 @@ images:
 - [Tiny Pilot](https://tinypilotkvm.com/) had the biggest first month of anything I've ever launched, at 52 sales and $8.7k in revenue.
 - The sudden surge in customers also made it one of my highest-stress months since [going full-time to work for myself](/why-i-quit-google/).
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

@@ -12,7 +12,7 @@ date: "2019-05-08"
 - My task journaling app is almost ready for publication.
 - I've begun setting up meetings with potential customers about my next project ideas.
 
-## Goal Grades
+## Goal grades
 
 At the start of the month, I [gave up on Is It Keto](/retrospectives/2019/04/#calling-it-quits) and set goals to help me pursue other projects. Here's how I did against those goals.
 

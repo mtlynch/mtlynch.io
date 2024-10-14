@@ -12,7 +12,7 @@ images:
 - TinyPilot's revenues continue to plummet, but I'm learning to accept it.
 - I'm inching ever closer to the freedom to take short vacations.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

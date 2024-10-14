@@ -17,7 +17,7 @@ Hi, I'm Michael. I'm a software developer and the founder of [TinyPilot](https:/
 Every month, I publish a retrospective like this one to share how things are going with my business and my professional life overall.
 {{</notice>}}
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

@@ -13,7 +13,7 @@ images:
 - One of the critical TinyPilot parts I need suddenly disappeared from vendors.
 - Delegating work to others is paradoxically leaving me with less free time.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

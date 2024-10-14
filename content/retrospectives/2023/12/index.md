@@ -21,7 +21,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - I attended the Handmade Seattle conference.
 - I experimented with Zig and an open-source AI chatbot.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

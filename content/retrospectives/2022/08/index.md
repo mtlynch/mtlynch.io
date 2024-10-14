@@ -12,7 +12,7 @@ images:
 - I'm exploring ways to preserve more knowledge on my blog
 - I've lowered TinyPilot's prices in an effort to reduce inventory
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

@@ -15,7 +15,7 @@ discuss_urls:
 - After lots of research and customer interviews, I gave up on my idea for creating sheet metal software.
 - I published my first version of an app for finding live comedy.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I [declare what I'd like to accomplish](/retrospectives/2019/12/#goals-for-next-month). Here's how I did against those goals:
 
