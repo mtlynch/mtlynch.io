@@ -12,7 +12,7 @@ date: "2019-07-03"
 - [Zestful](https://zestfuldata.com) may be rising from the dead, with four new inbound customer inquiries.
 - [Is It Keto](https://isitketo.org) earned $184, and [Zestful](https://zestfuldata.com) earned $26, making it my highest revenue month since quitting my job.
 
-## Goal Grades
+## Goal grades
 
 ### Publish a new blog post that explains why I built What Got Done
 

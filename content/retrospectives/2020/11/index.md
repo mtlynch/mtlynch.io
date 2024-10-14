@@ -12,7 +12,7 @@ images:
 - I interviewed several IT consultants and business owners about what TinyPilot features would be useful to them.
 - I tested several new marketing channels and realized I'm failing to measure results accurately.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

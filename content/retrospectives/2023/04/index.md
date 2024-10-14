@@ -21,7 +21,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - TinyPilot customers are less sensitive to price than I expected.
 - I invested a lot of resources into a trade-in for TinyPilot that I'm not sure paid off.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

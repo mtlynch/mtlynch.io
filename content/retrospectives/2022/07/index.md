@@ -12,7 +12,7 @@ images:
 - I'm trying to figure out the best approach to software licensing.
 - I'm still searching for a web framework I can love.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

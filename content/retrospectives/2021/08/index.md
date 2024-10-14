@@ -12,7 +12,7 @@ images:
 - I've freed up time by delegating responsibilities to my teammates.
 - I miraculously became unstuck on two tasks that have been blocking work for months.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

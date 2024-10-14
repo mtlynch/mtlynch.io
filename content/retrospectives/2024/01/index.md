@@ -23,7 +23,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - I think about how I can do a better job delegating product decisions and documentation.
 - I compare my experience learning Nix to learning Zig.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

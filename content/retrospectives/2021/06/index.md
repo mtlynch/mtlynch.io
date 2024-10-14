@@ -12,7 +12,7 @@ images:
 - I'm exploring options to get big companies to pay more for TinyPilot.
 - I need to come to terms with the fact that managing people is a real job.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

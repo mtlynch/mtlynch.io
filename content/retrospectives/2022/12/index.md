@@ -21,7 +21,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - I grossly overestimated how much spare capacity TinyPilot's fulfillment team had.
 - Long-term tasks can be a canary for impending resource exhaustion.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

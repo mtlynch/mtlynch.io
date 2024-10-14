@@ -12,7 +12,7 @@ images:
 - I tried a marketing experiment that flopped.
 - Designing IT infrastructure for a new office is fun.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

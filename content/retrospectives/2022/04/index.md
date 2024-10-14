@@ -12,7 +12,7 @@ images:
 - I'm now five months and $32k over budget on a website redesign.
 - I launched PicoShare, and it's the fastest-growing project I've ever published.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

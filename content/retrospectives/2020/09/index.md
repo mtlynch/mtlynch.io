@@ -12,7 +12,7 @@ images:
 - I'm manufacturing a custom USB power connector for TinyPilot.
 - Revenue across all my projects was among my strongest ever, at $3.6k total.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

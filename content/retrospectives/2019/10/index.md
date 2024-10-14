@@ -12,7 +12,7 @@ date: "2019-10-05"
 - I'm preparing to sell premium meal plans on Is It Keto.
 - I'm ready to make bigger bets on my businesses.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I [declare what I'd like to accomplish](/retrospectives/2019/09/#goals-for-next-month). Here's how I did against those goals:
 
