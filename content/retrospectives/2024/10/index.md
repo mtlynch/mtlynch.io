@@ -6,9 +6,11 @@ description: Not working is harder than I expected.
 
 ## Highlights
 
--
+- I'm finding it surprisingly difficult not to work.
+- Sleep is getting a little better.
+- I used Nix to create a slick and reusable fuzz testing workflow.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -47,7 +49,7 @@ Overall, our sleep strategies are working well, as I feel well-rested most days.
 
 ## Nix is a surprisingly good tool for fuzz testing
 
-About ten yars ago, when I was working as a security consultant, I used [fuzz testing](https://en.wikipedia.org/wiki/Fuzzing) to [find a serious vulnerability in VLC](https://www.nccgroup.com/us/research-blog/fuzzing-rtsp-to-discover-an-exploitable-vulnerability-in-vlc/).
+About ten years ago, when I was working as a security consultant, I used [fuzz testing](https://en.wikipedia.org/wiki/Fuzzing) to [find a serious vulnerability in VLC](https://www.nccgroup.com/us/research-blog/fuzzing-rtsp-to-discover-an-exploitable-vulnerability-in-vlc/).
 
 The tooling around fuzz testing has gotten significantly better in the last decade, so I've been curious to try out the latest state of the art.
 
