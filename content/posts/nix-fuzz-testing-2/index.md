@@ -22,8 +22,6 @@ Adobe [used to have a corpus of interesting-looking test PDFs](https://web.archi
 
 The best collection of difficult-to-parse PDFs I found was in Mozilla's pdf.js project [contains 700 PDFs](https://github.com/mozilla/pdf.js/tree/v4.7.76/test/pdfs) that have caused parsing bugs in their project, so it's likely that these same PDFs will trip up other PDF parsers.
 
-Sidenote: In addition to the PDFs themselves, the repo contains several `.link` files that contain URLs of external PDFs. I don't know of a way of pulling those into a clean Nix pipeline, so I'm skipping them, but they would help get more fuzzing coverage.
-
 ```nix
 {
     packages = rec {
@@ -42,6 +40,30 @@ Sidenote: In addition to the PDFs themselves, the repo contains several `.link` 
             cp $src/test/pdfs/*.pdf $out
           '';
         };
+```
+
+At this point, `flake.nix` should [look like this](https://gitlab.com/mtlynch/fuzz-xpdf/-/blob/04-download-pdfs/flake.nix).
+
+Sidenote: In addition to the PDFs themselves, the pdf.js repo contains several hundred `.link` files that contain URLs of external PDFs. I can't think of a simple way of pulling those external PDFs into a Nix pipeline, so I'm skipping them, but they would achieve higher fuzzing coverage.
+
+I can run the new `sample-pdfs` build step with the following command:
+
+```bash
+nix build .#sample-pdfs
+```
+
+From there, I verify that Nix successfully downloaded 700 PDFs:
+
+```bash
+$ ls ./result | head -n 5
+160F-2019.pdf
+alphatrans.pdf
+annotation-border-styles.pdf
+annotation-button-widget.pdf
+annotation-caret-ink.pdf
+
+$ $ ls ./result | wc --lines
+700
 ```
 
 ## Automating fuzz runs
