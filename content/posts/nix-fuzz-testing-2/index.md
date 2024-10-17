@@ -369,6 +369,8 @@ READ of size 1 at 0x60200002228f thread T0
     #4 0x55555594a065 in GfxFontDict::load(char*, GfxFontDictEntry*) /nix/store/alirmx60yanq6g8ym5v3laa7ncw2h9nm-source/xpdf/GfxFont.cc:2393:12
 ```
 
+If I plug that file path into `sed`, it prints the file's contents:
+
 ```bash
 $ sed -n '548,558p' /nix/store/alirmx60yanq6g8ym5v3laa7ncw2h9nm-source/xpdf/GfxFont.cc
       i -= 2;
@@ -384,10 +386,39 @@ $ sed -n '548,558p' /nix/store/alirmx60yanq6g8ym5v3laa7ncw2h9nm-source/xpdf/GfxF
     }
 ```
 
+At this point, `flake.nix` should [look like this](https://gitlab.com/mtlynch/fuzz-xpdf/-/blob/07-debug-symbols/flake.nix).
+
+## Understanding the crash
+
+```c
+// goo/GString.h
+
+// Get <i>th character.
+char getChar(int i) { return s[i]; }
+```
+
+```c++
+// xpdf/GfxFont.cc
+
+void GfxFont::readFontDescriptor(XRef *xref, Dict *fontDict) {
+  ...
+
+  // scan font name for bold/italic tags and update the flags
+  if (name) {
+    i = name->getLength();
+    if (i > 2 && !strncmp(name->getCString() + i - 2, "MT", 2)) {
+      i -= 2;
+    }
+
+    ...
+
+    char c = name->getChar(i-1); // <<< CRASH
+```
+
 ## Fixing the bug
 
 TODO: Explain how to apply patches.
 
 ---
 
-_Thanks to XX for creating the tutorial series XX. This work builds on that foundation._
+_Excerpts from xpdf are used under [the GPLv3 license](https://gitlab.com/mtlynch/xpdf/-/blob/4.05/COPYING3)._
