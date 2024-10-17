@@ -202,19 +202,33 @@ Adding ASAN to my fuzzing workflow allows me to find more memory bugs than I oth
         };
 ```
 
-## Finding my first crash
+At this point, `flake.nix` should [look like this](https://gitlab.com/mtlynch/fuzz-xpdf/-/blob/06-asan/flake.nix).
 
-TODO
+Now, I'm finally ready to kick off my fuzzer and let it find some bugs for me. With my Nix flake, that's as simple as running:
 
 ```bash
+nix run
+```
+
+## Finding my first crash
+
+I let honggfuzz run for two hours and checked back to find that it discovered its first crash:
+
+{{<img src="hfuzz-crash.webp">}}
+
+honggfuzz also saved a file to the local directory called `SIGABRT.PC.55555592fff5.STACK.1bb46b81df.CODE.-6.ADDR.0.INSTR.mov____%eax,%edx.fuzz`, which contained the randomly generated PDF that caused the crash.
+
+To reproduce the crash, I ran the following commands:
+
+```bash
+# Specify the path to the crashing PDF.
+CRASHING_PDF='SIGABRT.PC.55555592fff5.STACK.1bb46b81df.CODE.-6.ADDR.0.INSTR.mov____%eax,%edx.fuzz'
+
 # Rebuild pdftotext in the result folder
 nix build
 
-# Specify the path to the crashing PDF.
-CRASHING_PDF=TODO
-
 # Run pdftotext with the crashing PDF.
-./result/bin/pdftotext "${CRASHING_PDF}"
+./result/bin/pdftotext "${CRASHING_PDF}" /dev/null
 ```
 
 The program indeed crashes with ASAN reporting that it caught a buffer overflow:
@@ -248,18 +262,18 @@ So, how do I dig deeper into what's causing this crash?
 When `pdftotext` crashed, I hoped to see a stack trace that included source filenames and line numbers. Instead, the output was just memory offsets, which makes debugging harder:
 
 ```text
-    #0 0x557c3230bd57  (/nix/store/l774c0m9kh6z7iq1jn5m31kzy77kwffc-xpdf-4.05/bin/pdftotext+0x3e3d57)
-    #1 0x557c3231f6ea  (/nix/store/l774c0m9kh6z7iq1jn5m31kzy77kwffc-xpdf-4.05/bin/pdftotext+0x3f76ea)
-    #2 0x557c32327a0d  (/nix/store/l774c0m9kh6z7iq1jn5m31kzy77kwffc-xpdf-4.05/bin/pdftotext+0x3ffa0d)
+#0 0x557c3230bd57  (/nix/store/l774c0m9kh6z7iq1jn5m31kzy77kwffc-xpdf-4.05/bin/pdftotext+0x3e3d57)
+#1 0x557c3231f6ea  (/nix/store/l774c0m9kh6z7iq1jn5m31kzy77kwffc-xpdf-4.05/bin/pdftotext+0x3f76ea)
+#2 0x557c32327a0d  (/nix/store/l774c0m9kh6z7iq1jn5m31kzy77kwffc-xpdf-4.05/bin/pdftotext+0x3ffa0d)
 ```
 
 Strangely, the hardest part of this whole process was figuruing out how to get debug symbols to work properly in the binary so that I'd see accurate stack traces in my crash dumps.
 
-First, I happened to notice when I ran `nix run` that the log output said something about stripping debug output from the binary. It turns out that Nix has a `dontStrip` option that defaults to `false`, meaning that it automatically strips debug information.
+First, I happened to notice that `nix run`'s log output said something about stripping debug output from the binary. It turns out that Nix has [a `dontStrip` option](https://nixos.org/manual/nixpkgs/stable/#var-stdenv-dontStrip) that defaults to `false`, meaning that it automatically strips debug information.
 
-I also noticed that xpdf's [compile instructions](https://gitlab.com/mtlynch/xpdf/-/blob/4.05/INSTALL#54) mentioned a `CMAKE_BUILD_TYPE` option. The compile instructions didn't documented the `CMAKE_BUILD_TYPE` option, but searching the source [revealed that it accepted a value of `Debug`](https://gitlab.com/mtlynch/xpdf/-/blob/4.05/cmake-config.txt#L48).
+I also noticed that xpdf's [compile instructions](https://gitlab.com/mtlynch/xpdf/-/blob/4.05/INSTALL#54) mentioned a `CMAKE_BUILD_TYPE` option. It's not documented, but searching the source [revealed that it accepted a value of `Debug`](https://gitlab.com/mtlynch/xpdf/-/blob/4.05/cmake-config.txt#L48).
 
-To prevent Nix from stripping debug symbols, I added these options to the end of my `xpdf` package definition:
+To preserve debug symbols in my xpdf binaries, I added these options to the end of my `xpdf` package definition:
 
 ```nix
 {
@@ -285,9 +299,11 @@ To prevent Nix from stripping debug symbols, I added these options to the end of
 
 At this point, something strange happened. I got rich stack traces with filenames and line numbers, but then they'd mysteriously stop working after a few hours. I still don't know why.
 
-To get the rich stack traces to work consistently, I had to use a tool called `llvm-symbolizer`, which I'd never heard of before. Fortunately, `llvm-symbolizer` ships as part of the popular `llvm_18` Nix package, so I included that package in my Nix flake and added an environment variable called `ASAN_SYMBOLIZER_PATH` to point to that binary.
+To get the rich stack traces to work consistently, I had to use a tool called `llvm-symbolizer`, which I'd never heard of before. Fortunately, `llvm-symbolizer` ships as part of the popular [`llvm_18` Nix package](https://search.nixos.org/packages?channel=24.05&show=llvm_18&from=0&size=50&sort=relevance&type=packages&query=llvm_18), so I included that package in my Nix flake and added an environment variable called `ASAN_SYMBOLIZER_PATH` to point to that binary.
 
 The changes to my Nix flake are a bit hard to show because they touch many parts of the so it's easiest to look at [the diff](https://gitlab.com/mtlynch/fuzz-xpdf/-/compare/06-asan...07-debug-symbols).
+
+With the changes to my Nix flake, I need to enter the Nix dev shell to see rich stack traces, as that will set the proper `ASAN_SYMBOLIZER_PATH` environment value.
 
 ```bash
 # Enter the nix dev shell.
@@ -297,10 +313,10 @@ nix develop
 nix build
 
 # Specify the path to the crashing PDF.
-CRASHING_PDF=TODO
+CRASHING_PDF='SIGABRT.PC.55555592fff5.STACK.1bb46b81df.CODE.-6.ADDR.0.INSTR.mov____%eax,%edx.fuzz'
 
 # Run pdftotext with the crashing PDF.
-./result/bin/pdftotext "${CRASHING_PDF}"
+./result/bin/pdftotext "${CRASHING_PDF}" /dev/null
 ```
 
 And then, I should finally see a stack trace with filenames:
@@ -319,10 +335,14 @@ READ of size 1 at 0x60200002228f thread T0
     #24 0x555555698a04 in _start (/nix/store/x59ccyx8gz0ap74zapdi7k8ssgypmipm-xpdf-4.05/bin/pdftotext+0x144a04)
 ```
 
+It worked! Now, I get source filenames, line numbers, and function names.
+
 But there's still a problem. Look at the path to any of the files.
 
 ```text
 /build/source/xpdf/GfxFont.cc
+^^^^^^^^^^^^^
+  Where is this coming from?
 ```
 
 The xpdf sources all point to a root folder called `/build/source` that doesn't really exist:
@@ -343,12 +363,7 @@ I'm not sure if the `/build/source` path is a quirk of Nix or of xpdf's build co
           ...
 
           preConfigure = ''
-            export CC=${pkgs.honggfuzz}/bin/hfuzz-clang
-            export CXX=${pkgs.honggfuzz}/bin/hfuzz-clang++
-
-            # Use address sanitizer (ASAN).
-            export CFLAGS="$CFLAGS -fsanitize=address"
-            export CXXFLAGS="$CXXFLAGS -fsanitize=address"
+            ...
 
             # For some reason, without these flags, the debug symbols point to
             # source files at the base filesystem /build/source, so we
@@ -357,7 +372,7 @@ I'm not sure if the `/build/source` path is a quirk of Nix or of xpdf's build co
           '';
 ```
 
-If I rebuild, finally, the stack traces are correct:
+If I re-run my `nix build` sequence, finally, the stack traces are correct:
 
 ```text
 ==1498830==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60200002228f at pc 0x55555592fff5 bp 0x7fffffffac70 sp 0x7fffffffac68
@@ -390,12 +405,20 @@ At this point, `flake.nix` should [look like this](https://gitlab.com/mtlynch/fu
 
 ## Understanding the crash
 
+I now have an out of bounds memory read that crashes consistently. I've got all the debugging information I need to understand this bug, so it's time to dive into the source.
+
+The top of the stack trace points to this line:
+
 ```c
 // goo/GString.h
 
 // Get <i>th character.
 char getChar(int i) { return s[i]; }
 ```
+
+Okay, so `s` is a `char` buffer, so it probably contains a C-style string. The `getChar` function doesn't perform any bounds checking to ensure that the caller is passing a legal value for `i`, and so the function is reading memory outside of the buffer that was allocated for `s`.
+
+I'll step back one layer and check how `getChar` was called just before the crash. The next line of the stack trace points here:
 
 ```c++
 // xpdf/GfxFont.cc
@@ -415,7 +438,43 @@ void GfxFont::readFontDescriptor(XRef *xref, Dict *fontDict) {
     char c = name->getChar(i-1); // <<< CRASH
 ```
 
+Okay, this is actually a fairly simple bug. `readFontDescriptor` checks that `name` is not `NULL`, but it assumes that it has a length of at least 1. If `name` is actually an empty string, then the `getChar` call evaluates to `name->getChar(-1)`. Then, `getChar` returns `s[-1]`, which is 1 byte before the memory buffer that was allocated for `s`.
+
+If I re-read the ASAN output of the crash, that matches what ASAN was trying to tell me:
+
+```text
+==241578==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60200002360f at pc 0x55555592fff5 bp 0x7fffffffa650 sp 0x7fffffffa648
+READ of size 1 at 0x60200002360f thread T0
+    #0 0x55555592fff4 in GString::getChar(int) /nix/store/alirmx60yanq6g8ym5v3laa7ncw2h9nm-source/goo/GString.h:82:32
+    #1 0x55555592fff4 in GfxFont::readFontDescriptor(XRef*, Dict*) /nix/store/alirmx60yanq6g8ym5v3laa7ncw2h9nm-source/xpdf/GfxFont.cc:553:20
+
+...
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /nix/store/alirmx60yanq6g8ym5v3laa7ncw2h9nm-source/goo/GString.h:82:32 in GString::getChar(int)
+Shadow bytes around the buggy address:
+...
+=>0x602000023600: fa[fa]00 fa fa fa fd fd fa fa fd fa fa fa fd fa
+```
+
+ASAN said that it's an illegal read of size 1, which makes sense because `getChar` tries to read a single 1-byte character.
+
+ASAN's also shows the memory layout where it read `fa` which appears right before `00`. In the source code, `s` contains an empty string, which C++ represents in memory as `00`, so `pdftotext` was (illegally) trying to read the byte just before the empty string, which contains `fa`.
+
 ## Fixing the bug
+
+If my hypothesis is correct, this bug should be easy to fix. In `readFontDescriptor`, I can change this line:
+
+```c++
+  if (name) {
+```
+
+To this:
+
+```c++
+  if (name && (name->getLength() > 0)) {
+```
+
+That ensures that the function treats an empty string the same as a null pointer and doesn't process it further.
 
 TODO: Explain how to apply patches.
 
