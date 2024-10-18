@@ -526,17 +526,24 @@ TODO: Explain how to apply patches.
 At this point, `flake.nix` should [look like this](https://gitlab.com/mtlynch/fuzz-xpdf/-/blob/08-patch-bug/flake.nix).
 
 ```bash
-# Rebuild pdftotext in the result folder
-nix build
-
 # Specify the path to the crashing PDF.
-CRASHING_PDF='SIGABRT.PC.55555592fff5.STACK.1bb46b81df.CODE.-6.ADDR.0.INSTR.mov____%eax,%edx.fuzz'
+$ CRASHING_PDF='SIGABRT.PC.55555592fff5.STACK.1bb46b81df.CODE.-6.ADDR.0.INSTR.mov____%eax,%edx.fuzz'
+
+# Rebuild pdftotext in the result folder
+$ nix build
 
 # Run pdftotext with the crashing PDF.
-./result/bin/pdftotext "${CRASHING_PDF}" /dev/null
+$ ./result/bin/pdftotext "${CRASHING_PDF}"
+Syntax Error: Couldn't read xref table
+Syntax Warning: PDF file is damaged - attempting to reconstruct xref table...
+Syntax Error (2800): Bad dynamic code table in flate stream
+Syntax Error (2800): Bad block header in flate stream
+Syntax Error (2158): Dictionary key must be a name object
+Syntax Error: Unterminated string
+Syntax Error: Leftover args in content stream
 ```
 
-The crash is gone! The fix worked.
+And voila! `pdftotext` reports a lot of errors, but the program never crashes. The fix worked.
 
 ## Wrapping up
 
