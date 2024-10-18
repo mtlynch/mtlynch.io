@@ -476,7 +476,71 @@ To this:
 
 That ensures that the function treats an empty string the same as a null pointer and doesn't process it further.
 
+To test my hypothesis, I'll create a patch with this change, recompile xpdf, then re-run `pdftotext` against the same PDF to see if it crashes again.
+
+xpdf is a bit unusual for an open-source project in that it doesn't publish a git repository, just periodic tarballs. But that's okay
+
+```bash
+ORIGINAL_SRC="$(nix eval --raw .#xpdf.src.outPath)"
+MODIFIED_SRC="$(mktemp --directory)"
+
+pushd "${MODIFIED_SRC}" && \
+  cp --recursive --verbose $ORIGINAL_SRC/* . && \
+  chmod -R u+w . && \
+  git init && \
+  git add --all && \
+  git commit --message "Dummy base commit"
+```
+
+```bash
+vim xpdf/GfxFont.cc
+```
+
+```bash
+# Create a patch file for the fix.
+git diff > check-font-name-length.patch
+
+# Get back to fuzz-xpdf git repo.
+popd
+
+mv "${MODIFIED_SRC}/check-font-name-length.patch" .
+```
+
 TODO: Explain how to apply patches.
+
+```nix
+{
+  xpdf = pkgs.stdenv.mkDerivation rec {
+    ...
+    src = pkgs.fetchzip {
+      url = "https://dl.xpdfreader.com/${pname}-${version}.tar.gz";
+      extension = "tar.gz";
+    };
+
+    # Add a custom patch to fix the font name length bug.
+    patches = [
+      ./check-font-name-length.patch
+    ];
+```
+
+At this point, `flake.nix` should [look like this](https://gitlab.com/mtlynch/fuzz-xpdf/-/blob/08-patch-bug/flake.nix).
+
+```bash
+# Rebuild pdftotext in the result folder
+nix build
+
+# Specify the path to the crashing PDF.
+CRASHING_PDF='SIGABRT.PC.55555592fff5.STACK.1bb46b81df.CODE.-6.ADDR.0.INSTR.mov____%eax,%edx.fuzz'
+
+# Run pdftotext with the crashing PDF.
+./result/bin/pdftotext "${CRASHING_PDF}" /dev/null
+```
+
+The crash is gone! The fix worked.
+
+## Wrapping up
+
+TODO
 
 ---
 

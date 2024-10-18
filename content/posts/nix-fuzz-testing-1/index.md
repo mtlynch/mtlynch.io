@@ -8,40 +8,40 @@ images:
   - nix-fuzz-testing-1/hfuzz-cover.webp
 ---
 
-Fuzz testing is a technique for automatically uncovering bugs in software. It's an effective way to find subtle data parsing bugs, especially security critical issues.
+Fuzz testing is a technique for automatically uncovering bugs in software. It's an effective way to find parsing bugs, especially security critical ones.
 
-The problem is that fuzz testing is a pain to set up. All of the fuzz testing guides I've found start with about an hour's worth of installing tools, often building from source, and the instructions quickly go out of date.
+The problem with fuzz testing is that it's a pain to set up. All of the fuzz testing tutorials start with about an hour of toil dedicated exclusively to installing tools, often building from source, which means chasing down dependencies upon dependencies.
 
-I recently found that [Nix](https://nixos.org) eliminates a lot of the gruntwork from fuzz testing. I created a Nix configuration that allows anyone to kick off a fuzz testing workflow in a single command.
+I recently found that [Nix](https://nixos.org) eliminates a lot of the gruntwork from fuzz testing. I created a Nix configuration that kicks off a fuzz testing workflow with a single command.
 
-In this post, I'll show how I used Nix to find an unpatched bug in a PDF renderer, even though I'm a beginnner to both Nix and fuzz testing.
+I used my Nix fuzzing workflow to find an unpatched bug in a PDF renderer, even though I'm a beginnner at both Nix and fuzz testing.
 
 ## A preview of the solution
 
-I'm going to show you the process I used to create a fuzzing workflow with Nix, but here's the end result: you can start fuzz testing [an open-source PDF reader](https://www.xpdfreader.com/) with a single command:
+Here's a preview of my final product: you can start fuzz testing [an open-source PDF reader](https://www.xpdfreader.com/) with a single command:
 
 ```bash
 nix run gitlab:mtlynch/fuzz-xpdf
 ```
 
-The command should work on any Linux system with Nix installed, and maybe MacOS, too. It should cause your system to spend a few minutes building and then start a terminal UI that looks like this:
+The command should work on any Linux system with Nix installed, and maybe MacOS, too. After a few minutes of building, you should see a terminal UI that looks like this:
 
 {{<img src="hfuzz.webp" caption="Nix allows me to install all dependencies and begin fuzz testing in a single command." alt="Screenshot of honggfuzz's terminal UI, showing progress fuzz testing pdftotext">}}
 
 Here's everything that happens when you run the command above:
 
-1. Nix downloads all tools and dependencies for the PDF reader itself and the testing toolchain.
+1. Nix downloads all tools and dependencies for the PDF reader and the testing toolchain.
 1. Nix compiles an open-source PDF reader from source with proper instrumentation for fuzz testing.
 1. Nix downloads a set of edge-case PDFs to use as a basis for generating inputs for testing.
 1. Nix automatically generates new PDFs, feeds them to the PDF reader, and reports which inputs caused the PDF reader to crash.
 
-You don't have to hunt around for all the tools in the toolchain for compiling the PDF reader or the fuzzer. You just run the command above, and it will install everything for you.
+You don't have to hunt around to figure out how to install the whole toolchain. You just run the command above, and it will install everything for you.
 
-What's more, if you want to change the fuzzing options or test a different version of the PDF reader, you can change a single file and re-run the command.
+What's more, if you want to change the fuzzing options or test a different version of the PDF reader, it's as simple as editing a single file.
 
 I'm going to share how I created it step by step. I'm using a particular software target in the example, but you can use the same methodology to find bugs in other projects.
 
-If you're impatient, you can tinker with [my configuration](https://gitlab.com/mtlynch/fuzz-xpdf/-/blob/master/flake.nix?ref_type=heads) without sticking around for the explanation.
+If you're impatient, you can skip to the end to see my [final result](https://gitlab.com/mtlynch/fuzz-xpdf).
 
 ## What's fuzz testing?
 
@@ -375,7 +375,7 @@ This aspect of Nix's behavior is a double-edged sword. When it works, it feels m
 
 ## Compiling xpdf with honggfuzz
 
-honggfuzz is a Google-maintained fuzz testing tool. honggfuzz is coverage-guided, which means that it traces which parts of the target binary execute for a particular test input. When it discovers an input that causes the binary to execute a new code path, it generates more inputs similar to the one that opened a new code path, as it means a greater chance of hitting untested behavior.
+[honggfuzz](https://github.com/google/honggfuzz) is a Google-maintained fuzz testing tool. honggfuzz is coverage-guided, which means that it traces which parts of the target binary execute for a particular test input. When it discovers an input that causes the binary to execute a new code path, it generates more inputs similar to the one that opened a new code path, as it means a greater chance of hitting untested behavior.
 
 honggfuzz ships with C and C++ compilers, so compiling with honggfuzz should be as simple as telling the build toolchain to use these compilers instead of Nix's default build tools.
 
