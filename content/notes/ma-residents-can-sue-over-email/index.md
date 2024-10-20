@@ -3,9 +3,9 @@ title: "Massachusetts Residents Can Sue Online Merchants for Spam"
 date: 2024-10-20T12:13:02-04:00
 ---
 
-Last week, I saw an interesting article on the /r/legaladvice subreddit. An ecommerce business owner was complaining that a customer was suing because the merchant had been sending the customer promotional emails for years that the customer never agreed to. The author deleted the post a few days later, but I found [a copy of the text](original.txt)
+Last week, I saw an interesting article on the /r/legaladvice subreddit. An e-commerce business owner was complaining that a customer was suing because the merchant had been sending the customer promotional emails for years that the customer never agreed to. The author deleted the post a few days later, but I found [a copy of the text](original.txt).
 
-The merchant was indignant and felt like it was a shakedown, but I was 100% on the customer's side. The merchant is in the wrong for spamming their customers with promotional emails they never requested, and so the merchant should suffer financial reprocussions.
+The merchant was indignant and felt like it was a shakedown, but I was 100% on the customer's side. The merchant is in the wrong for spamming their customers with promotional emails they never requested, and so the merchant should suffer financial repercussions.
 
 ## Promotional emails privatize profits and socialize costs
 
@@ -41,7 +41,7 @@ Dan was able to sue businesses because he's a resident of California, which has 
 
 I hoped that my home state of Massachusetts might have a law like California's so I could exercise my rights with spammers like Dan does.
 
-It turns out that Massachusetts _does_ have a law protecting consumers from spam, though it actually predates ecommerce.
+It turns out that Massachusetts _does_ have a law protecting consumers from spam, though it actually predates e-commerce.
 
 The Massachusetts law is the Consumer Privacy in Commercial Transactions Act (or CPICTA). In commercial transactions, it forbids the merchant from collecting more personal information than necessary to complete a credit card transaction:
 
@@ -71,8 +71,8 @@ Based on these cases, it seems like there's precedent for Massachusetts resident
 
 Here's my plan:
 
-1. Record the checkout process when I buy something from an online merchant to capture the fact that I'm not opting in to promotional emails
+1. Record the checkout process when I buy something from an online merchant to capture the fact that I'm not opting in to promotional emails.
 1. If I receive a promotional email, solicitation of a review, or any kind of email other than what's strictly required to complete my purchase, I'll send the business a [30-day demand letter](https://www.mass.gov/info-details/30-day-demand-letter) telling them to send me a penalty of $25 and that subsequent emails after they receive my letter will be triple because at that point it will be willful violation of the law.
 1. If they don't respond or say they don't owe me money, take them to small claims court and cite [Massachusetts General Law Chapter 93 § 105(a)](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXV/Chapter93/Section105).
 
-I've never taken a business to small claims court, so part of it will just be interesting to see how the processs works. I'll post updates here as I proceed.
+I've never taken a business to small claims court, so part of it will just be interesting to see how the process works. I'll post updates here as I proceed.
