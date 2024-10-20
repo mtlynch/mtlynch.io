@@ -18,14 +18,14 @@ One example was his idea of the [circle of influence vs. the circle of concern](
 
 ---
 
-## What I Liked
+## What I liked
 
 - The author genuinely finds human behavior delightful and fascinating, and his writing shows it.
 - Lots of useful takeaways that I've been applying in my life.
 - It's genuinely funny and moving in parts.
   - He draws many stories from experiences with his family, and one of them made me tear up, while others made me laugh out loud.
 
-## What I Disliked
+## What I disliked
 
 - Certain topics could have been explained better.
   - e.g., the terms "character ethic" and "personality ethic" sound similar to me, but Covey uses them to represent opposite ideas.
@@ -33,7 +33,7 @@ One example was his idea of the [circle of influence vs. the circle of concern](
   - In particular, the chapters about ["win/win"](#habit-4-think-winwin) and ["synergy"](#habit-6-synergize) felt like obvious ideas wrapped in a lot of fluff.
 - It comes across a little tone-deaf in that the author seems to imply that unsuccessful people would be successful if they simply practiced better habits.
 
-## Key Takeaways
+## Key takeaways
 
 ### Character ethic vs. personality ethic
 

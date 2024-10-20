@@ -23,20 +23,20 @@ The first half of the book focuses on the software development parts of his life
 
 ---
 
-## What I Liked
+## What I liked
 
 - Reading journal entries provides a fascinating, unfiltered view into a person's life.
 - The Stripe version includes margin notes where the author provides context, present reflections, and trivia about people involved.
 - It's impressive how eloquent he is in what he expected to be his private journal.
   - If I kept a journal from my twenties, it would be far less succinct or profound.
 
-## What I Disliked
+## What I disliked
 
 - Certain parts are a little hard to follow.
   - Because it's just verbatim journal entries, the author often omits context about who people are or what's happening. The Stripe edition has margin notes, but I wish there were a bit more.
 - Lots of content dedicated to Mechner's unsuccessful attempts to break into the film industry that I could have done without.
 
-## Key Takeaways
+## Key takeaways
 
 ### Stripe has a publishing house?
 
