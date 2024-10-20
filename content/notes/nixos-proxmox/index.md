@@ -52,14 +52,19 @@ In the upload dialog, click "Select File..." and select the NixOS container imag
 ## Create a NixOS container
 
 ```
-pct create $(pvesh get /cluster/nextid) \
+TEMPLATE_STORAGE='local'
+TEMPLATE_FILE='just-made-today-nixos-system-x86_64-linux.tar.xz'
+CONTAINER_HOSTNAME='n9'
+CONTAINER_STORAGE='local'
+
+pct create "$(pvesh get /cluster/nextid)" \
   --arch amd64 \
-  local:vztmpl/just-made-today-nixos-system-x86_64-linux.tar.xz \
+  "${TEMPLATE_STORAGE}:vztmpl/${TEMPLATE_FILE}" \
   --ostype unmanaged \
   --description nixos \
-  --hostname n8 \
+  --hostname "${CONTAINER_HOSTNAME}" \
   --net0 name=eth0,bridge=vmbr0,firewall=1 \
-  --storage local \
+  --storage "${CONTAINER_STORAGE}" \
   --unprivileged 1 \
   --features nesting=1 \
   --cmode console \
