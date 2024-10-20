@@ -51,6 +51,22 @@ In the upload dialog, click "Select File..." and select the NixOS container imag
 
 ## Create a NixOS container
 
+```
+pct create $(pvesh get /cluster/nextid) \
+  --arch amd64 \
+  local:vztmpl/just-made-today-nixos-system-x86_64-linux.tar.xz \
+  --ostype unmanaged \
+  --description nixos \
+  --hostname n8 \
+  --net0 name=eth0,bridge=vmbr0,firewall=1 \
+  --storage local \
+  --unprivileged 1 \
+  --features nesting=1 \
+  --cmode console \
+  --onboot 1 \
+  --start 1
+```
+
 Now that your Proxmox server has the NixOS image available, you can create your first NixOS container.
 
 Scroll up to your Proxmox node, right click it, and select "Create CT":
@@ -117,19 +133,20 @@ curl \
   --show-error \
   --fail \
   {{<baseurl>}}/notes/nixos-proxmox/configuration.nix \
-  | sudo tee /etc/nixos/configuration.nix
+  | tee /etc/nixos/configuration.nix
 ```
 
 Apply the new configuration by running the following commands:
 
 ```bash
 nix-channel --update && \
-  sudo nixos-rebuild boot && \
+  nixos-rebuild switch --upgrade && \
   echo "install complete, rebooting..." && \
-  sudo poweroff --reboot
+  poweroff --reboot
 ```
 
 ## References
 
 - <https://nixos.wiki/wiki/Proxmox_Linux_Container>
 - <https://blog.xirion.net/posts/nixos-proxmox-lxc/>
+- <https://taoofmac.com/space/blog/2024/08/17/1530>

@@ -1,17 +1,22 @@
 {
+  modulesPath,
   config,
   pkgs,
   ...
 }: let
-  hostname = "nixos1";
+  hostname = "n8";
   user = "tempuser";
   password = "somepass";
 
   timeZone = "America/New_York";
   defaultLocale = "en_US.UTF-8";
 in {
-  imports = [<nixpkgs/nixos/modules/virtualisation/lxc-container.nix>];
+  imports = [
+    # Include the default lxc/lxd configuration.
+    "${modulesPath}/virtualisation/lxc-container.nix"
+  ];
 
+  boot.isContainer = true;
   networking.hostName = hostname;
 
   environment.systemPackages = with pkgs; [
@@ -70,5 +75,5 @@ in {
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  system.stateVersion = "23.11";
+  system.stateVersion = "24.11";
 }
