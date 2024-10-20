@@ -65,7 +65,7 @@ TODO: Short summary
 - Radcliffe line
   - In 1947, British lawyer Cyril Radcliffe was assigned to divide up Punjab and Bengal, as UK was abdicating rule
   - Radcliffe divided the region by religion between India and Pakistan, but it was impossible to create a simple line border, so there were enclosed parts that were exceptions
-  - Dahala Khagrabari - a pocket of Indian territory within Bangladeshi territory within Indian territory
+  - [Dahala Khagrabari](https://en.wikipedia.org/wiki/Dahala_Khagrabari) - a pocket of Indian territory within Bangladeshi territory within Indian territory
   - Partition displaced 14 million people and killed up to 2 million
   - Radcliffe line stops in Kashmir and left India & Pakistan to figure out the rest
   - That led to a war and the Line of Control, which is a de facto border but still not legally recognized
