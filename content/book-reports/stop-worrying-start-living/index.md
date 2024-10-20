@@ -15,19 +15,19 @@ I'm glad I read the book, as I feel like the useful lessons were valuable enough
 
 ---
 
-## What I Liked
+## What I liked
 
 - Several of the lessons helped me reduce stress and look at my life from different perspectives.
 - The stories are often hokey, but they make the lessons feel more relatable.
 
-## What I Disliked
+## What I disliked
 
 - The excerpts from the "third-party contributors" sound suspiciously like Dale Carnegie.
 - Lots of the stories were fluff that didn't resonate with me.
 - A lot of the advice feels easier said than done.
   - e.g., just deciding to stop worrying about a problem once you've thought about it enough
 
-## Key Takeaways
+## Key takeaways
 
 ### Live in "Day-tight compartments"
 

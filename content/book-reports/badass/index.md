@@ -19,7 +19,7 @@ The book's biggest weakness was relying too heavily on theory. Sierra has plenty
 
 ---
 
-## What I Liked
+## What I liked
 
 - It discusses meta-learning and deliberate practice in an accessible, engaging way.
 - Sierra makes complex ideas feel light and easy to read.
@@ -27,7 +27,7 @@ The book's biggest weakness was relying too heavily on theory. Sierra has plenty
 - It's laugh-out-loud funny.
   - Creative use of stock photos.
 
-## What I Disliked
+## What I disliked
 
 - The strategies seem optimized for products with extremely large teams.
   - Sierra suggests reading third-party discussion forums about your product, which suggests a high level of scale already.
@@ -40,7 +40,7 @@ The book's biggest weakness was relying too heavily on theory. Sierra has plenty
   - Almost all of the discussion is theoretical or based on lab studies.
 - It gets too into the weeds on the subject of meta-learning.
 
-## Key Takeaways
+## Key takeaways
 
 ### The brand engagement arms race
 

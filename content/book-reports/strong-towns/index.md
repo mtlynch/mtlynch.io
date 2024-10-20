@@ -13,13 +13,13 @@ This book complements [_Happy City_](/book-reports/happy-city/) in that both boo
 
 ---
 
-## What I Liked
+## What I liked
 
 - I learned a lot about how municipal policy affects everyday life in American cities.
 - It changed the way I think about what local government policies to support and what to look for in city government.
 - It made municipal government interesting and engaging, which is quite difficult.
 
-## What I Disliked
+## What I disliked
 
 - There were lots of careless grammar and spelling errors.
 - Marohn uses a non-standard format for citing sources, which made me question his research methods.
@@ -31,7 +31,7 @@ This book complements [_Happy City_](/book-reports/happy-city/) in that both boo
   - He says that according to this metric, blighted towns are often healthier than affluent towns.
   - The observation made me question the metric, as blighted towns struggle more to pay for public services, so the metric doesn't seem predictive.
 
-## Key Takeaways
+## Key takeaways
 
 ### Pompeii as a model city
 
