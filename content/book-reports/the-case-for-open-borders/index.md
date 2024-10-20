@@ -11,11 +11,11 @@ TODO: Short summary
 
 ---
 
-## What I Liked
+## What I liked
 
 -
 
-## What I Disliked
+## What I disliked
 
 - Repeatedly claims borders are not necessary but has no examples of any modern society with totally open borders.
 - Most of the people he quotes aren't policy experts but philosophers, poets, and activists.
@@ -25,7 +25,7 @@ TODO: Short summary
 - will often argue advantages of illegal immigrants by lumping them together with legal immigrants
 - Bad with causality, often points to economic increase after migration and credits migration rather than larger trends
 
-## Key Takeaways
+## Key takeaways
 
 - Poor sourcing, often refers to particular studies without citing them, making it difficult to check claims
 - Between 1800 - 1900, 3/4 of all global immigration was to the US
