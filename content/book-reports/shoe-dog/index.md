@@ -17,14 +17,14 @@ Nike's history is more interesting than I expected, and the book provides a live
 
 ---
 
-## What I Liked
+## What I liked
 
 - I laughed out loud several times while reading it, which is rare for me while reading.
 - I related strongly to Knight's experience as a founder new to manufacturing and importing.
 - As a casual runner, it was motivating to see someone describe running with such love and reverence.
 - It was interesting to see how closely Steve Prefontaine was tied to Nike.
 
-## What I Disliked
+## What I disliked
 
 - I felt sorry for his employees.
   - It seemed like they worked so much harder than Knight and sacrificed more for Nike, yet he kept most of the rewards.
@@ -34,7 +34,7 @@ Nike's history is more interesting than I expected, and the book provides a live
 - The way he meets his wife is presented as cutesy and romantic but would today be egregious sexual harassment.
 - Knight built a lot of his business by lying to partners and employees.
 
-## Key Takeaways
+## Key takeaways
 
 ### Origins
 

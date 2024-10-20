@@ -15,14 +15,14 @@ The protagonist of the story is a struggling factory manager who's mostly helple
 
 ---
 
-## What I Liked
+## What I liked
 
 - I found Goldratt's [distinction between science and truth](#science-is-not-truth) to be profound and original.
 - It's a light read, as the novel format makes it easy to stay engaged.
 - The Theory of Constraints helped me think about priorities in my business.
 - Goldratt's metrics for judging a business's effectiveness feel practical and well-reasoned.
 
-## What I Disliked
+## What I disliked
 
 - The novel format is a double-edged sword. Although it does make the book an easier read, some of the book is just for story, which dilutes the time you're actually learning.
 - The protagonist's marriage is a huge bummer.
@@ -31,7 +31,7 @@ The protagonist of the story is a struggling factory manager who's mostly helple
   - I was expecting the protagonist to realize that he and his wife should discuss how to share responsibilities rather than him constantly breaking commitments to his family for his job. Instead, after his wife leaves, his mother moves in and just takes over all the childcare and household chores.
 - The protagonist meets an overweight child who struggles on a hike. Throughout the book, the protagonist casually refers to the child as "the fat kid" and uses him as the canonical example for a part of the system that holds everyone else back.
 
-## Key Takeaways
+## Key takeaways
 
 ### Science is not truth
 
