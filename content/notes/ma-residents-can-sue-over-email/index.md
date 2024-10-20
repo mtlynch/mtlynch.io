@@ -1,6 +1,8 @@
 ---
 title: "Massachusetts Residents Can Sue Online Merchants for Spam"
-date: 2024-10-20T12:13:02-04:00
+date: 2024-10-20T00:00:00-04:00
+tags:
+  - privacy
 ---
 
 Last week, I saw an interesting article on the /r/legaladvice subreddit. An e-commerce business owner was complaining that a customer was suing because the merchant had been sending the customer promotional emails for years that the customer never agreed to. The author deleted the post a few days later, but I found [a copy of the text](original.txt).
