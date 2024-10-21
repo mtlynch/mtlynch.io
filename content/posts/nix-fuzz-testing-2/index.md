@@ -1,6 +1,6 @@
 ---
 title: "Using Nix to Fuzz Test a PDF Parser (Part Two)"
-date: 2024-09-14T01:00:00-04:00
+date: 2024-10-22T01:00:00-04:00
 tags:
   - nix
   - fuzzing
@@ -8,19 +8,19 @@ images:
   - nix-fuzz-testing-2/hfuzz-cover.webp
 ---
 
-This is the second half of a post about using Nix to automate a fuzz testing workflow.
+This is the second half of a post about [using Nix to automate a fuzz testing workflow](/nix-fuzz-testing-1/).
 
 At this point, I can run honggfuzz against `pdftotext`, but it takes a bit of manual effort to get things started. I promised in part one that I'd get all installation and fuzzing down to a single command.
 
 ## Downloading tricky PDFs
 
-In my ad-hoc fuzzing, I had to download a boring PDF from the IRS interactively through the command-line. I'll start by automating this step.
+In my ad-hoc fuzzing, I had to download a boring PDF from the IRS interactively through the command-line. I'll start by automating that step.
 
-While I'm automating, I can probably do better than a single PDF. For fuzzing, my goal is to have a wide variety of PDFs that challenge different functionalities of the PDF parser.
+While I'm automating, I can probably do better than a single PDF. For fuzzing, my goal is to have a wide variety of PDFs that exercise different parts of the PDF parser.
 
 Adobe [used to have a corpus of interesting-looking test PDFs](https://web.archive.org/web/20150228065245/http://acroeng.adobe.com/wp/?page_id=10), but they've taken it offline.
 
-The best collection of difficult-to-parse PDFs I found was in Mozilla's pdf.js project [contains 700 PDFs](https://github.com/mozilla/pdf.js/tree/v4.7.76/test/pdfs) that have caused parsing bugs in their project, so it's likely that these same PDFs will trip up other PDF parsers.
+The best collection of difficult-to-parse PDFs I found was in Mozilla's pdf.js project. It [contains 700 PDFs](https://github.com/mozilla/pdf.js/tree/v4.7.76/test/pdfs) that have caused parsing bugs in their tool, so it's likely that these same PDFs will trip up other PDF parsers.
 
 I create a new build step in my Nix flake that downloads all the PDFs from Mozilla's pdf.js project:
 
@@ -46,9 +46,9 @@ I create a new build step in my Nix flake that downloads all the PDFs from Mozil
 
 At this point, `flake.nix` should [look like this](https://gitlab.com/mtlynch/fuzz-xpdf/-/blob/04-download-pdfs/flake.nix).
 
-Sidenote: In addition to the PDFs themselves, the pdf.js repo contains several hundred `.link` files that contain URLs of external PDFs. I can't think of a simple way of pulling those external PDFs into a Nix pipeline. I welcome suggestions on integrating the `.link` files, as they would achieve higher fuzzing coverage.
+Sidenote: In addition to the PDFs themselves, the pdf.js repo contains several hundred `.link` files that contain URLs of external PDFs. I can't think of a simple way of pulling those external PDFs into a Nix pipeline. I welcome suggestions on integrating them, as they would achieve higher fuzzing coverage.
 
-I can run the new `sample-pdfs` build step with the following command:
+I run the new `sample-pdfs` build step with the following command:
 
 ```bash
 nix build .#sample-pdfs
@@ -68,15 +68,13 @@ $ $ ls ./result | wc --lines
 700
 ```
 
-At this point, I have a nice initial corpus of edge case PDFs that will hopefully exercise less frequent code paths of any PDF parsing code.
+The new build step gives me an initial corpus of edge case PDFs that will hopefully exercise less frequent code paths of any PDF parsing code.
 
 ## Automating fuzz runs
 
-In part 1 of this series, I showed how to run honggfuzz manually from a Nix dev shell. But I can make that process even easier by defining it in my Nix flake.
+In part 1 of this series, I showed how to run honggfuzz manually from a Nix dev shell. I can make that process even easier by defining a launch command for the fuzzer in my Nix flake.
 
 To start, I add a new shell script for launching honggfuzz:
-
-TODO: Increase timeout to 10s?
 
 ```nix
 {
@@ -87,19 +85,18 @@ TODO: Increase timeout to 10s?
 
       fuzz-xpdf = pkgs.writeShellScriptBin "fuzz-xpdf" ''
         readonly CORPUS_DIR='fuzz-corpus'
-        mkdir -p "''${CORPUS_DIR}"
+        mkdir -p "$CORPUS_DIR"
 
         # Copy the source corpus into a new directory for active fuzzing.
-        cp --force ${sample-pdfs}/*.pdf "''${CORPUS_DIR}"
+        cp --force ${sample-pdfs}/*.pdf "$CORPUS_DIR"
 
         ${pkgs.honggfuzz}/bin/honggfuzz \
-          --input "''${CORPUS_DIR}" \
+          --input "$CORPUS_DIR" \
           --instrument \
+          --timeout 10 \
           -- ${xpdf}/bin/pdftotext ___FILE___
       '';
 ```
-
-Writing bash scripts within a Nix flake is awkward because both bash and Nix use the `${foo}` syntax for variables. To disambiguate the two, I need to prefix bash variables with `''`. So, in the snippet above, variables like `${sample-pdfs}` and `${xpdf}` are Nix variables whereas `''${CORPUS_DIR}` is a bash variable.
 
 I build the shell script with `nix build`:
 
@@ -113,18 +110,18 @@ Nix then creates a bash script at `./result/bin/fuzz-xpdf`:
 $ cat ./result/bin/fuzz-xpdf
 #!/nix/store/1xhds5s320nfp2022yjah1h7dpv8qqns-bash-5.2p32/bin/bash
 readonly CORPUS_DIR='fuzz-corpus'
-mkdir -p "${CORPUS_DIR}"
+mkdir -p "$CORPUS_DIR"
 
 # Copy the source corpus into a new directory for active fuzzing.
 cp --force /nix/store/gncc6jy3cry5lwbkd2b54h1dg46wfkdc-sample-pdfs-4.7.76/*.pdf "${CORPUS_DIR}"
 
 /nix/store/kb9vkjv4admbdixrjyanfb1i9dd3cbmm-honggfuzz-2.6/bin/honggfuzz \
-  --input "${CORPUS_DIR}" \
+  --input "$CORPUS_DIR" \
   --instrument \
   -- /nix/store/pixq8qiqyy6iwsc4wisb1vrmgy7l1kas-xpdf-4.05/bin/pdftotext ___FILE___
 ```
 
-The generated output has replaced all the Nix variables with absolute paths but the bash variable (`CORPUS_DIR`) remains a variable so that bash can interpret it at script runtime.
+The generated output has replaced all the Nix variables with absolute paths. The bash variable (`CORPUS_DIR`) remains a symbol so that bash can interpret it at script runtime.
 
 If I run the shell script, it starts a new fuzzing session:
 
@@ -134,9 +131,11 @@ If I run the shell script, it starts a new fuzzing session:
 
 That command should produce a screen like this:
 
-{{<img src="hfuzz.webp" caption="TODO">}}
+{{<img src="hfuzz.webp" caption="I can now run honggfuzz from my launcher script">}}
 
-This works, but it requires me to run the `nix build` command before I execute the shell script. Nix offers an even simpler solution with `apps`, so I add an app definition to my Nix flake after the `packages` section:
+This works, but it requires me to run the `nix build` command before I execute the shell script. Nix offers an even simpler solution with its `apps` feature.
+
+I add an `apps` definition to my Nix flake after the `packages` section:
 
 ```nix
 {
@@ -153,13 +152,13 @@ This works, but it requires me to run the `nix build` command before I execute t
     };
 ```
 
-With my `fuzz-xpdf` app in place, I can kick off fuzzing with a single command:
+With my `fuzz-xpdf` app in place, I kick off fuzzing with a single command:
 
 ```bash
 nix run .#fuzz-xpdf
 ```
 
-I declared `fuzz-xpdf` as the default app for this flake, so I can start fuzzing without even specifying the `fuzz-xpdf` app:
+I declared `fuzz-xpdf` as the default app for this flake, so I can actually use an even simpler command:
 
 ```bash
 nix run
@@ -167,7 +166,9 @@ nix run
 
 At this point, `flake.nix` should [look like this](https://gitlab.com/mtlynch/fuzz-xpdf/-/blob/05-launch-honggfuzz/flake.nix).
 
-And the fuzzing workflow is complete. I can put this Nix flake in a brand new directory, and when I run `nix run`, it will download all the tricky PDFs, compile xpdf, and start fuzzing. I can let honggfuzz run indefinitely and see what crashes it finds.
+Now, the fuzzing workflow is complete.
+
+I can put this Nix flake in a brand new directory, and when I run `nix run`, it will download all the tricky PDFs, compile xpdf, and start fuzzing. I can let honggfuzz run indefinitely and see what crashes it finds.
 
 {{<img src="hfuzz.webp" caption="With the addition of a `fuzz-xpdf` app in my Nix flake, I have a complete fuzzing workflow and can allow my fuzzer to run indefinitely and find all the bugs that it can.">}}
 
@@ -177,9 +178,9 @@ By this point, my fuzzing workflow works, but I can run it more efficiently.
 
 When fuzz testing, you only know when you've found an interesting bug when it causes the target application to crash. The problem is that are lots of ways to make a program misbehave without actually crashing it.
 
-One of the most famous examples of a security bug that didn't cause a crash was the 2014 [Heartbleed](https://heartbleed.com/) bug in OpenSSL. It allowed attackers to extract sensitive information from web servers, but it didn't cause them to crash. In general, tricking a program into reading or writing memory outside of the intended bounaries will not necessarily result in a crash.
+One of the most famous examples of a security bug with no crashes the 2014 [Heartbleed](https://heartbleed.com/) bug in OpenSSL. It allowed attackers to extract sensitive information from web servers, but it didn't cause them to crash. Tricking a program into reading or writing memory outside of the intended bounaries will not necessarily result in a crash.
 
-The good news is that there's a tool that forces otherwise non-crashy memory errors to crash the program immediately. [Address Sanitizer (ASAN)](https://github.com/google/sanitizers/wiki/addresssanitizer) adds extra safety checks to a program's memory reads and writes that crash the program if it attempts to read or write beyond a variable's intended memory location.
+The good news is that there's a tool that forces otherwise non-crashy memory errors to crash the program immediately. [Address Sanitizer (ASAN)](https://github.com/google/sanitizers/wiki/addresssanitizer) adds extra safety checks to a program's memory reads and writes that crash with debug output if the program attempts to read or write beyond a variable's memory location.
 
 Adding ASAN to my fuzzing workflow allows me to find more memory bugs than I otherwise would. To compile xpdf with ASAN enabled, I add `-fsanitize=address` to xpdf's compilation step:
 
@@ -216,7 +217,11 @@ I let honggfuzz run for two hours and checked back to find that it discovered it
 
 {{<img src="hfuzz-crash.webp">}}
 
-honggfuzz also saved a file to the local directory called `SIGABRT.PC.55555592fff5.STACK.1bb46b81df.CODE.-6.ADDR.0.INSTR.mov____%eax,%edx.fuzz`, which contained the randomly generated PDF that caused the crash.
+honggfuzz had also generated a file:
+
+- `SIGABRT.PC.55555592fff5.STACK.1bb46b81df.CODE.-6.ADDR.0.INSTR.mov____%eax,%edx.fuzz`
+
+That file contained the randomly generated PDF that caused the crash.
 
 To reproduce the crash, I ran the following commands:
 
@@ -231,7 +236,7 @@ nix build
 ./result/bin/pdftotext "${CRASHING_PDF}" /dev/null
 ```
 
-The program indeed crashes with ASAN reporting that it caught a buffer overflow:
+The program indeed crashes, with ASAN reporting that it caught a buffer overflow:
 
 ```text
 ==1259902==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60200002228f at pc 0x557c3230bd58 bp 0x7ffd7f070cf0 sp 0x7ffd7f070ce8
@@ -259,7 +264,7 @@ So, how do I dig deeper into what's causing this crash?
 
 ## Improving debug symbols
 
-When `pdftotext` crashed, I hoped to see a stack trace that included source filenames and line numbers. Instead, the output was just memory offsets, which makes debugging harder:
+When `pdftotext` crashed, I hoped to see a stack trace that included source filenames and line numbers. Instead, the output was just binary offsets, which makes debugging harder:
 
 ```text
 #0 0x557c3230bd57  (/nix/store/l774c0m9kh6z7iq1jn5m31kzy77kwffc-xpdf-4.05/bin/pdftotext+0x3e3d57)
@@ -267,7 +272,7 @@ When `pdftotext` crashed, I hoped to see a stack trace that included source file
 #2 0x557c32327a0d  (/nix/store/l774c0m9kh6z7iq1jn5m31kzy77kwffc-xpdf-4.05/bin/pdftotext+0x3ffa0d)
 ```
 
-Strangely, the hardest part of this whole process was figuruing out how to get debug symbols to work properly in the binary so that I'd see accurate stack traces in my crash dumps.
+Strangely, the hardest part of this whole process was figuring out how to get debug symbols to work properly so I could see source information in my crash dumps.
 
 First, I happened to notice that `nix run`'s log output said something about stripping debug output from the binary. It turns out that Nix has [a `dontStrip` option](https://nixos.org/manual/nixpkgs/stable/#var-stdenv-dontStrip) that defaults to `false`, meaning that it automatically strips debug information.
 
@@ -301,7 +306,7 @@ At this point, something strange happened. I got rich stack traces with filename
 
 To get the rich stack traces to work consistently, I had to use a tool called `llvm-symbolizer`, which I'd never heard of before. Fortunately, `llvm-symbolizer` ships as part of the popular [`llvm_18` Nix package](https://search.nixos.org/packages?channel=24.05&show=llvm_18&from=0&size=50&sort=relevance&type=packages&query=llvm_18), so I included that package in my Nix flake and added an environment variable called `ASAN_SYMBOLIZER_PATH` to point to that binary.
 
-The changes to my Nix flake are a bit hard to show because they touch many parts of the so it's easiest to look at [the diff](https://gitlab.com/mtlynch/fuzz-xpdf/-/compare/06-asan...07-debug-symbols).
+The changes to my Nix flake are a bit hard to show because they touch several disparate parts of the file, so it's easiest to look at [the diff](https://gitlab.com/mtlynch/fuzz-xpdf/-/compare/06-asan...07-debug-symbols).
 
 With the changes to my Nix flake, I need to enter the Nix dev shell to see rich stack traces, as that will set the proper `ASAN_SYMBOLIZER_PATH` environment value.
 
@@ -345,14 +350,14 @@ But there's still a problem. Look at the path to any of the files.
   Where is this coming from?
 ```
 
-The xpdf sources all point to a root folder called `/build/source` that doesn't really exist:
+The xpdf sources all point to a root folder called `/build/source`, but that path doesn't exist on my system:
 
 ```bash
 $ ls /build/source
 ls: cannot access '/build/source': No such file or directory
 ```
 
-I'm not sure if the `/build/source` path is a quirk of Nix or of xpdf's build configuration. The only way I found to fix it was to do this semi-ugly hack to replace that path with the correct one at compile time using clang's `-fdebug-prefix-map` flag:
+I'm not sure if the `/build/source` path is a quirk of Nix or of xpdf's build configuration. The only way I've been able to fix this is with a semi-ugly hack that replaces the incorrect path with the correct one at compile time using clang's `-fdebug-prefix-map` flag:
 
 ```nix
 {
@@ -407,7 +412,7 @@ At this point, `flake.nix` should [look like this](https://gitlab.com/mtlynch/fu
 
 I now have an out of bounds memory read that crashes consistently. I've got all the debugging information I need to understand this bug, so it's time to dive into the source.
 
-The top of the stack trace points to this line:
+The top of the stack trace points to [this line](https://gitlab.com/mtlynch/xpdf/-/blob/4.05/goo/GString.h#L82):
 
 ```c
 // goo/GString.h
@@ -416,9 +421,9 @@ The top of the stack trace points to this line:
 char getChar(int i) { return s[i]; }
 ```
 
-Okay, so `s` is a `char` buffer, so it probably contains a C-style string. The `getChar` function doesn't perform any bounds checking to ensure that the caller is passing a legal value for `i`, and so the function is reading memory outside of the buffer that was allocated for `s`.
+Okay, so `s` is a `char` buffer, so it probably contains a C-style string. The `getChar` function doesn't perform any bounds-checking to ensure that the caller is passing a legal value for `i`, and so the function is reading memory outside of the buffer that was allocated for `s`.
 
-I'll step back one layer and check how `getChar` was called just before the crash. The next line of the stack trace points here:
+I'll step back one level and check how `getChar` was called just before the crash. The [next line](https://gitlab.com/mtlynch/xpdf/-/blob/4.05/xpdf/GfxFont.cc#L553) of the stack trace points here:
 
 ```c++
 // xpdf/GfxFont.cc
@@ -438,9 +443,11 @@ void GfxFont::readFontDescriptor(XRef *xref, Dict *fontDict) {
     char c = name->getChar(i-1); // <<< CRASH
 ```
 
-Okay, this is actually a fairly simple bug. `readFontDescriptor` checks that `name` is not `NULL`, but it assumes that it has a length of at least 1. If `name` is actually an empty string, then the `getChar` call evaluates to `name->getChar(-1)`. Then, `getChar` returns `s[-1]`, which is 1 byte before the memory buffer that was allocated for `s`.
+Okay, this is actually a fairly simple bug.
 
-If I re-read the ASAN output of the crash, that matches what ASAN was trying to tell me:
+`readFontDescriptor` checks that `name` is not `NULL`, but it assumes that it has a length of at least 1. If `name` is an empty string (length 0), then the `getChar` call evaluates to `name->getChar(-1)`. Then, `getChar` returns `s[-1]`, which is 1 byte before the memory buffer that was allocated for `s`.
+
+Re-reading the crash's debug output, my hypothesis matches what ASAN was trying to tell me:
 
 ```text
 ==241578==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60200002360f at pc 0x55555592fff5 bp 0x7fffffffa650 sp 0x7fffffffa648
@@ -458,7 +465,7 @@ Shadow bytes around the buggy address:
 
 ASAN said that it's an illegal read of size 1, which makes sense because `getChar` tries to read a single 1-byte character.
 
-ASAN's also shows the memory layout where it read `fa` which appears right before `00`. In the source code, `s` contains an empty string, which C++ represents in memory as `00`, so `pdftotext` was (illegally) trying to read the byte just before the empty string, which contains `fa`.
+ASAN also shows the memory layout where it read the memory address containing byte `fa`. That byte appears immediately before an address containing `00`. In the source code, `s` contains an empty string, which C++ represents in memory as `00`, so `pdftotext` was (illegally) trying to read the byte just before the empty string.
 
 ## Fixing the bug
 
@@ -476,9 +483,9 @@ To this:
 
 That ensures that the function treats an empty string the same as a null pointer and doesn't process it further.
 
-To test my hypothesis, I'll create a patch with this change, recompile xpdf, then re-run `pdftotext` against the same PDF to see if it crashes again.
+To test my hypothesis, I'll create a patch with this change, recompile xpdf, then re-run `pdftotext` against the same PDF to see if my fix prevents the same crash.
 
-xpdf is a bit unusual for an open-source project in that it doesn't publish a git repository, just periodic tarballs. But that's okay
+xpdf is a bit unusual for an open-source project in that it doesn't publish a git repository, just periodic tarballs. But that's okay. I'l create my own scratch git repository for making the patch.
 
 ```bash
 ORIGINAL_SRC="$(nix eval --raw .#xpdf.src.outPath)"
@@ -492,9 +499,31 @@ pushd "${MODIFIED_SRC}" && \
   git commit --message "Dummy base commit"
 ```
 
+I now have a copy of xpdf's source code in a fresh git repository. I edit `GfxFont.cc` to make my fix:
+
 ```bash
 vim xpdf/GfxFont.cc
 ```
+
+When I've finished my edits and saved the file, I create a patch file, which looks like this:
+
+```diff
+diff --git a/xpdf/GfxFont.cc b/xpdf/GfxFont.cc
+index c3db4e8..7074354 100644
+--- a/xpdf/GfxFont.cc
++++ b/xpdf/GfxFont.cc
+@@ -535,7 +535,7 @@ void GfxFont::readFontDescriptor(XRef *xref, Dict *fontDict) {
+   obj1.free();
+
+   // scan font name for bold/italic tags and update the flags
+-  if (name) {
++  if (name && (name->getLength() > 0)) {
+     i = name->getLength();
+     if (i > 2 && !strncmp(name->getCString() + i - 2, "MT", 2)) {
+       i -= 2;
+```
+
+I copy the patch back to my fuzz testing directory:
 
 ```bash
 # Create a patch file for the fix.
@@ -506,7 +535,7 @@ popd
 mv "${MODIFIED_SRC}/check-font-name-length.patch" .
 ```
 
-TODO: Explain how to apply patches.
+With my patch file in the same directory as my `flake.nix`, I update my Nix flake to tell it to apply my custom patch when compiling xpdf:
 
 ```nix
 {
@@ -524,6 +553,8 @@ TODO: Explain how to apply patches.
 ```
 
 At this point, `flake.nix` should [look like this](https://gitlab.com/mtlynch/fuzz-xpdf/-/blob/08-patch-bug/flake.nix).
+
+I'm ready to test my fix. I recompile xpdf with my patch and run it against the PDF that caused the previous crash:
 
 ```bash
 # Specify the path to the crashing PDF.
