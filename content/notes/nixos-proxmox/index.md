@@ -22,9 +22,9 @@ First, download the latest [NixOS x86_x64 lxdContainerImage image](https://hydra
 **Warning**: Hydra also features a build called [`proxmoxLXC.x86_64-linux`](https://hydra.nixos.org/job/nixos/release-24.05/nixos.proxmoxLXC.x86_64-linux). I expected it to work even better on Proxmox, but it seems to be broken. It boots NixOS, but the login does not accept any standard NixOS credential (`nixos`, `root`).
 {{</notice>}}
 
-At the time of this writing, the latest NixOS container build is [275970735](https://hydra.nixos.org/build/275970735), but you can just click whatever is the latest build as you read this.
+At the time of this writing, the latest NixOS container build is [275970650](https://hydra.nixos.org/build/275970650), but you can just click whatever is the latest build as you read this.
 
-{{<img src="download-build.webp" alt="Screenshot of latest builds page, showing a NixOS container image build each day." has-border="true" max-width="800px">}}
+{{<img src="download-build.webp" alt="Screenshot of latest builds page, showing a NixOS container image build each day." has-border="true" max-width="724px">}}
 
 From the build result page, click the link labeled `nixos-system-x86_64-linux.tar.xz` to download the image:
 
@@ -56,14 +56,30 @@ In the upload dialog, click "Select File..." and select the NixOS container imag
 
 ## Create a NixOS container
 
+For the next step, you need to SSH to your Proxmox system and switch to the `root` user context:
+
 ```bash
+ssh root@pve
+```
+
+From the Proxmox SSH session, select the settings for the new NixOS container:
+
+```bash
+# Where the template file is located
 TEMPLATE_STORAGE='local'
+# Name of the template file downloaded from Hydra.
 TEMPLATE_FILE='nixos-2024-10-21-lxdContainerImage.x86_64-linux.tar.xz'
+# Name to assign to new NixOS container.
 CONTAINER_HOSTNAME='nixos'
+# Which storage location to place the new NixOS container.
 CONTAINER_STORAGE='local'
+# How much RAM to assign the new container.
 CONTAINER_RAM_IN_MB='8192'
+# How much disk space to assign the new container.
 CONTAINER_DISK_SIZE_IN_GB='80'
 ```
+
+With those settings in place, create the new NixOS container with `pct create`:
 
 ```bash
 pct create "$(pvesh get /cluster/nextid)" \
@@ -83,9 +99,7 @@ pct create "$(pvesh get /cluster/nextid)" \
   --start 1
 ```
 
-Type `root` as username, and it will auto-log in with no password.
-
-## Start NixOS
+## Log in to NixOS
 
 Your NixOS container is now configured!
 
