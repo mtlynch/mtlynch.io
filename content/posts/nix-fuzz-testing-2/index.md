@@ -578,7 +578,9 @@ And voila! `pdftotext` reports a lot of errors, but the program never crashes. T
 
 ## Wrapping up
 
-TODO
+I've found Nix to be an excellent match for creating fuzz testing workflows. It took a bit of work to figure out all the odds and ends, but now it should be easy to drop in a different PDF parser or use a different fuzzer. The beauty of Nix is that it composes well, so it's easy to swap out different components within the workflow.
+
+This project ended up being a great way to learn more about both fuzzing and Nix. I've been dabbling in Nix for the last year, but using Nix in this way helped crystallize a lot of concepts that had been fuzzy for me.
 
 ---
 
