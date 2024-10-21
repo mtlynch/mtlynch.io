@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: let
-  hostname = "n8";
+  hostname = "nixos";
   user = "tempuser";
   password = "somepass";
 
@@ -74,5 +74,5 @@ in {
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  system.stateVersion = "24.11";
+  system.stateVersion = "24.05";
 }

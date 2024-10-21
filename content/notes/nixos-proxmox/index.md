@@ -113,7 +113,22 @@ If you hit "Enter," you should see the standard NixOS prompt. You can log in wit
 
 {{<img src="nixos-prompt.webp" alt="Screenshot of nixos default login prompt in a Proxmox container on the Console tab" has-border="true">}}
 
-## Configure NixOS system
+## Get SSH access to NixOS
+
+Strangely, the `configuration.nix` file that ships with the NixOS container image does not work. If you try to run `nixos-rebuild`, you'll see errors about a missing `lxd.nix` file. Even if you fix those, there are other systemd errors.
+
+Before you fix those, it's easier if you have SSH access. The easiest way I've found to do that is to download your SSH keys to the system. If you have a Github account with SSH keys enabled, you can do that as follows:
+
+```bash
+GITHUB_USERNAME="your-github-username" # Replace this.
+
+mkdir -p ~/.ssh && \
+  curl "https://github.com/${GITHUB_USERNAME}.keys" > ~/.ssh/authorized_keys
+```
+
+After this, you should be able to SSH in to your NixOS system with `ssh root@nixos`.
+
+## Configuring NixOS
 
 I've created a basic configuration for a NixOS server system as a Proxmox container. You can download this configuration by running the following command:
 
@@ -122,7 +137,7 @@ curl \
   --show-error \
   --fail \
   {{<baseurl>}}/notes/nixos-proxmox/configuration.nix \
-  | tee /etc/nixos/configuration.nix
+  > /etc/nixos/configuration.nix
 ```
 
 Apply the new configuration by running the following commands:
@@ -133,6 +148,8 @@ nix-channel --update && \
   echo "install complete, rebooting..." && \
   poweroff --reboot
 ```
+
+From there, you have a basic NixOS server system, which you can configure however you like.
 
 ## References
 
