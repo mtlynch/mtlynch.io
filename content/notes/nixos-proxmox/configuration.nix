@@ -20,7 +20,6 @@ in {
   networking.hostName = hostname;
 
   environment.systemPackages = with pkgs; [
-    firefox
     vim
   ];
 

@@ -56,6 +56,8 @@ TEMPLATE_STORAGE='local'
 TEMPLATE_FILE='just-made-today-nixos-system-x86_64-linux.tar.xz'
 CONTAINER_HOSTNAME='n9'
 CONTAINER_STORAGE='local'
+CONTAINER_RAM='8192'
+CONTAINER_DISK_SIZE='80'
 
 pct create "$(pvesh get /cluster/nextid)" \
   --arch amd64 \
@@ -63,14 +65,53 @@ pct create "$(pvesh get /cluster/nextid)" \
   --ostype unmanaged \
   --description nixos \
   --hostname "${CONTAINER_HOSTNAME}" \
-  --net0 name=eth0,bridge=vmbr0,firewall=1 \
+  --net0 name=eth0,bridge=vmbr0,ip=dhcp,firewall=1 \
   --storage "${CONTAINER_STORAGE}" \
+  --memory "${CONTAINER_RAM}" \
+  --rootfs ${CONTAINER_STORAGE}:${CONTAINER_DISK_SIZE} \
   --unprivileged 1 \
   --features nesting=1 \
   --cmode console \
   --onboot 1 \
   --start 1
 ```
+
+Type `root` as username, and it will auto-log in with no password.
+
+## test 1
+
+```bash
+nixos-rebuild switch
+```
+
+Fails because lxd.nix doesn't exist.
+
+Comment it out and re-run. Runs for a while and fails:
+
+```bash
+$ echo $?
+
+```
+
+## test 2 (120)
+
+```bash
+mkdir -p /root/.ssh
+
+GITHUB_USERNAME="mtlynch"
+curl "https://github.com/${GITHUB_USERNAME}.keys" >> /root/.ssh/authorized_keys
+```
+
+Run exactly the commands from: https://taoofmac.com/space/blog/2024/08/17/1530
+
+```
+# echo $?
+137
+```
+
+## test 3
+
+Tried with the proxmoxLXC template, and it prompts for a password, but `root` / `nixos` passwords don't work.
 
 Now that your Proxmox server has the NixOS image available, you can create your first NixOS container.
 
