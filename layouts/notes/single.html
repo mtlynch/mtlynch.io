@@ -15,6 +15,10 @@
               datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}"
             >
               {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
+              {{ if .Lastmod }}
+                •&nbsp;Updated
+                {{ .Lastmod.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
+              {{ end }}
             </time>
           </span>
           <span class="reading-time">
