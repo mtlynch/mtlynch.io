@@ -12,7 +12,7 @@ images:
 - I simplified the TinyPilot website to focus on a single device.
 - I tried taking my first real vacation from TinyPilot with mixed results.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

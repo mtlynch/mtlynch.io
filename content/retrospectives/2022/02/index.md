@@ -12,7 +12,7 @@ images:
 - TinyPilot sales continue running strong despite a delay in launching our next product.
 - I analyze how I'm spending my time and figure out ways to allocate my hours better.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

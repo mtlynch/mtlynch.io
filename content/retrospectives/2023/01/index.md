@@ -20,7 +20,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - TinyPilot is facing a supply shortage that will drastically limit its sales for 2023.
 - Running leaner might not be such a bad thing.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

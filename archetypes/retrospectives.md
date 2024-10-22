@@ -8,7 +8,7 @@ description: TODO - One-line summary
 
 -
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

@@ -12,7 +12,7 @@ images:
 - I realized that caring for a newborn takes more time than I expected.
 - I'm unsure what to do with my partially-finished Hacker News course.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

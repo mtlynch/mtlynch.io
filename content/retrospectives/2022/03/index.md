@@ -12,7 +12,7 @@ images:
 - I learned that hiring a support engineer is even harder than I expected.
 - I'm evaluating platforms for paying international contractors.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

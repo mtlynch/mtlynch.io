@@ -12,7 +12,7 @@ images:
 - With 100k monthly pageviews, it's time to explore new ways of working with Is It Keto's audience.
 - I created a KVM over IP device that requires <$100 in hardware.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

@@ -19,7 +19,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - Publishing a release through delegation helped identify many undocumented or poorly conceived steps in our release process.
 - I'm continuing to enjoy writing a bytecode interpreter in Zig.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

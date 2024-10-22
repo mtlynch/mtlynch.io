@@ -12,7 +12,7 @@ images:
 - Finding new ways to monetize [Is It Keto](https://isitketo.org) is proving more difficult than I expected.
 - I sold an Enterprise plan for [Zestful](https://zestfuldata.com).
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
