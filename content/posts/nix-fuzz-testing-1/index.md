@@ -8,11 +8,11 @@ images:
   - nix-fuzz-testing-1/hfuzz-cover.webp
 ---
 
-Fuzz testing is a technique for automatically uncovering bugs in software. The problem with fuzz testing is that it's a pain to set up. Read any fuzz testing tutorial, and the first task is an hour of building tools from source, chasing down dependencies upon dependencies.
+Fuzz testing is a technique for automatically uncovering bugs in software. The problem is that it's a pain to set up. Read any fuzz testing tutorial, and the first task is an hour of building tools from source and chasing down dependencies upon dependencies.
 
 I recently found that [Nix](https://nixos.org) eliminates a lot of the gruntwork from fuzz testing. I created a Nix configuration that kicks off a fuzz testing workflow with a single command. The only dependencies are Nix and git.
 
-I used my Nix fuzzing workflow to find an unpatched bug in a PDF renderer, even though I'm a beginnner to both Nix and fuzz testing.
+I used my Nix workflow to find an unpatched bug in a PDF renderer, even though I'm a beginnner to both Nix and fuzz testing.
 
 ## A preview of the solution
 
@@ -35,15 +35,15 @@ Here's everything that happens when you run the command above:
 
 If you want to change the fuzzing options or test a different version of the PDF reader, it's as simple as editing a single file.
 
-I'm going to share how I created the fuzz testing workflow step by step. I'm using a particular software target in the example, but you can use the same methodology to find bugs in other projects.
+I'm going to share how I created the fuzz testing workflow step by step. I'm using a particular PDF rader in my example, but you can use the same methodology to find bugs in other projects.
 
 If you're impatient, you can skip to the end to see my [final result](https://gitlab.com/mtlynch/fuzz-xpdf).
 
 ## What's fuzz testing?
 
-Fuzz testing or "fuzzing" is a way of finding bugs in software by feeding it randomly generated input.
+Fuzz testing or "fuzzing" is a way of finding bugs in software by randomly generating input data and checking to see if the input causes the target application to crash.
 
-For example, if you wanted to fuzz a program that resized JPEG images, the workflow would look like this:
+For example, if you wanted to test a program that resized JPEG images, the workflow would look like this:
 
 1. Take a set of valid and/or malformed JPEG image files.
 1. Randomly select one of the input files and randomly mutate it (flip some bits, add some data, delete some data).
@@ -58,25 +58,25 @@ For example, if you wanted to fuzz a program that resized JPEG images, the workf
 For the purposes of this article, it's sufficient to understand two things about Nix:
 
 - **Nix is a package manager**, similar to `apt` or `yum`. Nix has 100k+ packages available to run within the Nix environment.
-- **Nix is a build tool**, similar to `make` or `Docker`. Nix allows you to define a set of build steps and the dependencies between them, and Nix figures out which steps to perform to build the result you requested.
+- **Nix is a build tool**, similar to `make` or `Docker`. Nix allows you to define a set of build steps and the dependencies between them. When you request a build from Nix, it performs all the required steps to create the result you requested.
 
 ## Requirements
 
 To follow along, you'll only need two things:
 
-- Nix (with Flakes enabled)
-  - I recommend the [Determinate Systems installer](https://zero-to-nix.com/start/install), which enables Flakes by default.
+- Nix (with the flakes feature enabled)
+  - I recommend the [Determinate Systems installer](https://zero-to-nix.com/start/install), which enables flakes by default.
 - git
 
 ## Selecting a fuzzing target
 
 The PDF reader I'm fuzz testing is called [xpdf](https://xpdfreader.com). I'd never seen it before, but it was an example in [a good fuzzing tutorial](https://github.com/antonio-morales/Fuzzing101) I found, so I'm sticking with it.
 
-xpdf is a PDF viewer, but it ships with a suite of PDF utilities. One of the utilities, `pdftotext` is an attractive fuzzing target because it's so simple. It has no GUI; it just accepts a PDF as input and produces plaintext as output, but it still exercises xpdf's complex PDF parsing code. If I find a bug in `pdftotext`, it means I've probably found a bug in the whole xpdf suite.
+xpdf is a PDF viewer, but it ships with a suite of PDF utilities. One of the utilities, `pdftotext` is an attractive fuzzing target because it's so simple. It has no GUI; it just accepts a PDF as input and produces plaintext as output. It still exercises xpdf's complex PDF parsing code, so if I find a bug in `pdftotext`, it means I've probably found a bug in the whole xpdf suite.
 
 ## Putting the Nix boilerplate in place
 
-To start the project, I create a new folder and create a git repository.
+To start the project, I create a new folder and git repository.
 
 ```bash
 mkdir fuzz-xpdf \
@@ -84,7 +84,7 @@ mkdir fuzz-xpdf \
   && git init
 ```
 
-Next, I create this a called `flake.nix`:
+Next, I create a file called `flake.nix`:
 
 ```nix
 {
@@ -113,7 +113,7 @@ Next, I create this a called `flake.nix`:
 }
 ```
 
-This is a Nix "flake," which is a file that defines a set of Nix packages and applications.
+This is a Nix "flake," which defines a set of Nix packages and applications.
 
 So far, this is just a boilerplate skeleton of a Nix flake. Most of it is not worth discussing except this line:
 
@@ -121,15 +121,15 @@ So far, this is just a boilerplate skeleton of a Nix flake. Most of it is not wo
 nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
 ```
 
-This tells Nix that when I want to pull in packages, I'm pulling them from the [24.05 tag](https://github.com/NixOS/nixpkgs/tree/24.05), the latest stable branch of the Nix package repository at the time of this writing.
+This tells Nix that when I want to pull in packages, I'm pulling them from the [May 2024 branch](https://github.com/NixOS/nixpkgs/tree/24.05) of the package repository, the latest stable branch at the time of this writing.
 
-But this is just a skeleton and won't successfully build yet. To compile xpdf using Nix, I need to add a few bits.
+This file is just a skeleton and won't successfully build yet. To compile xpdf using Nix, I need to add a few bits.
 
 ## Specifying a source tarball
 
 To compile xpdf, I need a copy of its source code.
 
-First, I call [`mkDerivation`](https://nixos.org/manual/nixpkgs/stable/#sec-using-stdenv), which is how I define a build component in Nix. It requires a package name (`pname`) and version, so I specify `xpdf`, the package I want to fuzz and `4.05`, the latest published version of xpdf, as of this writing.
+First, I call [`mkDerivation`](https://nixos.org/manual/nixpkgs/stable/#sec-using-stdenv), which is how Nix defines build components. It requires a package name (`pname`) and version, so I specify `xpdf`, the package I want to fuzz and `4.05`, the latest published version of xpdf, as of this writing.
 
 ```nix
 {
@@ -180,7 +180,7 @@ To fix the hash mismatch, I paste the value from the error message into my `flak
 
 ## Compiling xpdf from source
 
-Now that I've shown Nix how to retrieve xpdf's source code, I have to figure out how to build it.
+Now that I've shown Nix how to retrieve xpdf's source code, I have to figure out how to build that code.
 
 The xpdf [compile instructions](https://gitlab.com/mtlynch/xpdf/-/blob/4.05/INSTALL#L32-39) list the following dependencies:
 
@@ -194,7 +194,7 @@ The xpdf [compile instructions](https://gitlab.com/mtlynch/xpdf/-/blob/4.05/INST
 
 I only want to run `pdftotext`, so I only need CMake and FreeType.
 
-Building a complex tool from source is usually a painful process. I want to build tool A, but it depends on library X, so I have to figure out how to install library X. It turns out library X depends on libraries Y and Z, so I have to figure out how to install them, and so on.
+Building a complex tool from source is usually a painful process. I want to build tool A, but it depends on library X, so I have to figure out how to install library X. It turns out library X depends on libraries Y and Z, so I have to figure out how to install those, and so on.
 
 Nix radically simplifies the process of building from source in two ways:
 
@@ -274,7 +274,7 @@ When I build with Nix, it generates output under a folder called `result`, so I 
 echo 'result' > .gitignore
 ```
 
-And I add everything to the git repository:
+Next, I add everything to my git repository:
 
 ```
 git add --all
@@ -336,7 +336,7 @@ Still, it seemed a bit _too_ magical to me.
 
 The xpdf instructions explain how you have to [tell the compiler where to find FreeType's headers and libraries](https://gitlab.com/mtlynch/xpdf/-/blob/4.05/INSTALL#L61-70). I never did that, so how was Nix compiling the project anyway?
 
-And `make install` normally writes to a system-wide directory like `/usr/bin/`, so how did that happen if I never elevated to root privileges with `sudo`?
+And `make install` normally writes to a system-wide directory like `/usr/bin`, so how did that happen if I never elevated to root privileges with `sudo`?
 
 I suspected that, in addition to implicitly calling the `make` build sequence, Nix was quietly controlling the build process through environment variables.
 
@@ -374,11 +374,11 @@ This aspect of Nix's behavior is a double-edged sword. When it works, it feels m
 
 ## Compiling xpdf with honggfuzz
 
-Now that I can compile xpdf successfully, it's time to introduce a fuzz testing tool.
+Now that I can compile xpdf successfully, it's time to introduce the fuzz testing part of the workflow.
 
 [honggfuzz](https://github.com/google/honggfuzz) is a Google-maintained fuzz testing tool. It's a coverage-guided fuzzer, which means that it traces which parts of the target binary execute for a particular test input. When it discovers an input that causes the binary to execute a new code path, it generates more inputs similar to the one that opened a new code path, as it means a greater chance of hitting untested behavior.
 
-honggfuzz ships with C and C++ compilers, so compiling xpdf with honggfuzz should be as simple as pointing Nix at honggfuzz's compilers instead of Nix's default compilers. To do this, I first modify `nativeBuildInputs` to include the [`honggfuzz`](https://search.nixos.org/packages?channel=24.05&show=honggfuzz&from=0&size=50&sort=relevance&type=packages&query=honggfuzz) package, so I can use it during compilation:
+honggfuzz ships with C and C++ compilers, so compiling xpdf with honggfuzz should be as simple as pointing Nix at honggfuzz's compilers instead of Nix's default compilers. To do this, I first modify `nativeBuildInputs` to include the [`honggfuzz`](https://search.nixos.org/packages?channel=24.05&show=honggfuzz&from=0&size=50&sort=relevance&type=packages&query=honggfuzz) package, so that it's available during compilation:
 
 ```nix
 {
@@ -393,9 +393,9 @@ honggfuzz ships with C and C++ compilers, so compiling xpdf with honggfuzz shoul
 
 Okay, now honggfuzz will be available in my build environment, but how do I tell CMake to use the honggfuzz compiler instead of whatever it was using before?
 
-Make and CMake respect the [`CC`](https://cmake.org/cmake/help/latest/envvar/CC.html) and [`CXX`](https://cmake.org/cmake/help/latest/envvar/CXX.html) environment variables, which specify the C and C++ compilers, respectively.
+Make and CMake obey the [`CC`](https://cmake.org/cmake/help/latest/envvar/CC.html) and [`CXX`](https://cmake.org/cmake/help/latest/envvar/CXX.html) environment variables, which specify the C and C++ compilers, respectively.
 
-I can see that honggfuzz ships with compilers called [hfuzz-clang and hfuzz-clang++](https://github.com/google/honggfuzz/tree/2.6/hfuzz_cc). That sounds promising, but I don't know those binaries appear in honggfuzz's Nix package. I search the package like this:
+I can see that honggfuzz ships with compilers called [hfuzz-clang and hfuzz-clang++](https://github.com/google/honggfuzz/tree/2.6/hfuzz_cc). That sounds promising, but I don't know where to find those binaries appear in honggfuzz's Nix package. I search the package like this:
 
 ```bash
 $ nix build nixpkgs#honggfuzz
@@ -484,7 +484,7 @@ Next, I create a directory to store the fuzz results. Since this is just experim
 PDF_DIR="$(mktemp --directory)"
 ```
 
-Next, I grab a PDF to use as my sample input.
+Then, I grab a PDF to use as my sample input.
 
 ```bash
 $ PDF_URL='https://www.irs.gov/pub/irs-pdf/fw4.pdf' && \
@@ -510,13 +510,13 @@ $ honggfuzz \
 Here's how it works:
 
 - `--input "${PDF_DIR}"` specifies the directory of input files to mutate.
-- `-- ./result/bin/pdftotext ___FILE___`: Specifies the target program to fuzz. `honggfuzz` replaces the `___FILE___` with a newly generated file on each execution.
+- `-- ./result/bin/pdftotext ___FILE___`: Specifies the target program to fuzz. `___FILE___` is a placeholder parameter. honggfuzz replaces it with the path to a newly generated file on each execution.
 
 I run the command and am greeted to the honggfuzz fuzzing interface:
 
 {{<img src="hfuzz.webp" caption="honggfuzz shows a terminal UI to display fuzz testing progress">}}
 
-It worked! I could let honggfuzz run for a few days to see if it catches anything, but I want to polish the workflow a bit more to make it more likely to find bugs.
+It worked! I could let honggfuzz run for a few days to see if it catches anything, but I want to polish the workflow a bit more to increase the probability of finding bugs.
 
 ## Next: Using Nix to find an unpatched bug in xpdf
 

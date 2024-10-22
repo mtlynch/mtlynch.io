@@ -16,7 +16,7 @@ At this point, I can run honggfuzz against `pdftotext`, but it takes a bit of ma
 
 In my ad-hoc fuzzing, I had to download a boring PDF from the IRS interactively through the command-line. I'll start by automating that step.
 
-While I'm automating, I can probably do better than a single PDF. For fuzzing, my goal is to have a wide variety of PDFs that exercise different parts of the PDF parser.
+While I'm automating, I can probably do better than a single PDF. For fuzzing, my goal is to have a wide variety of PDFs that exercise different parts of the PDF file format.
 
 Adobe [used to have a corpus of interesting-looking test PDFs](https://web.archive.org/web/20150228065245/http://acroeng.adobe.com/wp/?page_id=10), but they've taken it offline.
 
@@ -121,7 +121,7 @@ cp --force /nix/store/gncc6jy3cry5lwbkd2b54h1dg46wfkdc-sample-pdfs-4.7.76/*.pdf 
   -- /nix/store/pixq8qiqyy6iwsc4wisb1vrmgy7l1kas-xpdf-4.05/bin/pdftotext ___FILE___
 ```
 
-The generated output has replaced all the Nix variables with absolute paths. The bash variable (`CORPUS_DIR`) remains a symbol so that bash can interpret it at script runtime.
+In the shell script, Nix replaced all the Nix variables with absolute paths. The bash variable (`CORPUS_DIR`) remains a symbol so that bash can interpret it at script runtime.
 
 If I run the shell script, it starts a new fuzzing session:
 
@@ -133,7 +133,7 @@ That command should produce a screen like this:
 
 {{<img src="hfuzz.webp" caption="I can now run honggfuzz from my launcher script">}}
 
-This works, but it requires me to run the `nix build` command before I execute the shell script. Nix offers an even simpler solution with its `apps` feature.
+This works, but I'd have to remember to run the `nix build` command first every time I execute the shell script. Nix offers an even simpler solution with its `apps` feature.
 
 I add an `apps` definition to my Nix flake after the `packages` section:
 
@@ -174,11 +174,11 @@ I can put this Nix flake in a brand new directory, and when I run `nix run`, it 
 
 ## Turning subtle memory errors into loud crashes with ASAN
 
-By this point, my fuzzing workflow works, but I can run it more efficiently.
+By this point, my fuzzing workflow is functional, but I can run it more efficiently.
 
-When fuzz testing, you only know when you've found an interesting bug when it causes the target application to crash. The problem is that are lots of ways to make a program misbehave without actually crashing it.
+When fuzz testing, you only know when you've found an interesting bug when it causes the target application to crash. The problem is that are lots of ways to make a program misbehave without crashing it.
 
-One of the most famous examples of a security bug with no crashes the 2014 [Heartbleed](https://heartbleed.com/) bug in OpenSSL. It allowed attackers to extract sensitive information from web servers, but it didn't cause them to crash. Tricking a program into reading or writing memory outside of the intended bounaries will not necessarily result in a crash.
+One of the most famous examples of a security bug with no crashes the 2014 [Heartbleed](https://heartbleed.com/) bug in OpenSSL. It allowed attackers to extract sensitive information from web servers, but it didn't cause them to crash. Tricking a program into reading or writing memory outside of the intended bounaries doesn't always crash it.
 
 The good news is that there's a tool that forces otherwise non-crashy memory errors to crash the program immediately. [Address Sanitizer (ASAN)](https://github.com/google/sanitizers/wiki/addresssanitizer) adds extra safety checks to a program's memory reads and writes that crash with debug output if the program attempts to read or write beyond a variable's memory location.
 
@@ -217,11 +217,9 @@ I let honggfuzz run for two hours and checked back to find that it discovered it
 
 {{<img src="hfuzz-crash.webp">}}
 
-honggfuzz had also generated a file:
+honggfuzz saved the PDF that caused the crash in a file named:
 
 - `SIGABRT.PC.55555592fff5.STACK.1bb46b81df.CODE.-6.ADDR.0.INSTR.mov____%eax,%edx.fuzz`
-
-That file contained the randomly generated PDF that caused the crash.
 
 To reproduce the crash, I ran the following commands:
 
@@ -258,7 +256,7 @@ Shadow bytes around the buggy address:
   0x602000022300: fa fa fd fa fa fa fd fa fa fa 03 fa fa fa fd fa
 ```
 
-The error message is a bit arcane, but it's telling me that ASAN caught `pdftotext` trying to read 1 byte outside of the buffer it allocated.
+ASAN's error message is a bit arcane, but it's telling me that ASAN caught `pdftotext` trying to read 1 byte outside of the buffer that `pdftotext`'s code had allocated.
 
 So, how do I dig deeper into what's causing this crash?
 
@@ -465,7 +463,7 @@ Shadow bytes around the buggy address:
 
 ASAN said that it's an illegal read of size 1, which makes sense because `getChar` tries to read a single 1-byte character.
 
-ASAN also shows the memory layout where it read the memory address containing byte `fa`. That byte appears immediately before an address containing `00`. In the source code, `s` contains an empty string, which C++ represents in memory as `00`, so `pdftotext` was (illegally) trying to read the byte just before the empty string.
+ASAN also shows the memory layout where it read the memory address containing byte `fa`. That byte appears immediately before an address containing `00`. The variable `s` contains an empty string, which C++ represents in memory as `00`, so `pdftotext` was trying to read the byte just before the empty string. That read is illegal because it contains data that was not assigned to the `s` variable.
 
 ## Fixing the bug
 
@@ -485,7 +483,7 @@ That ensures that the function treats an empty string the same as a null pointer
 
 To test my hypothesis, I'll create a patch with this change, recompile xpdf, then re-run `pdftotext` against the same PDF to see if my fix prevents the same crash.
 
-xpdf is a bit unusual for an open-source project in that it doesn't publish a git repository, just periodic tarballs. But that's okay. I'l create my own scratch git repository for making the patch.
+xpdf is a bit unusual for an open-source project in that it doesn't publish a git repository, just periodic tarballs. But that's okay. I'l create my own scratch git repository so I have a workspace for editing the code:
 
 ```bash
 ORIGINAL_SRC="$(nix eval --raw .#xpdf.src.outPath)"
@@ -505,7 +503,7 @@ I now have a copy of xpdf's source code in a fresh git repository. I edit `GfxFo
 vim xpdf/GfxFont.cc
 ```
 
-When I've finished my edits and saved the file, I create a patch file, which looks like this:
+When I've finished my edits and saved the file, I call `git diff` to create a patch file, which looks like this:
 
 ```diff
 diff --git a/xpdf/GfxFont.cc b/xpdf/GfxFont.cc
@@ -574,13 +572,15 @@ Syntax Error: Unterminated string
 Syntax Error: Leftover args in content stream
 ```
 
-And voila! `pdftotext` reports a lot of errors, but the program never crashes. The fix worked.
+And voila! `pdftotext` reports a lot of errors, but the program never crashes. My fix worked.
 
 ## Wrapping up
 
-I've found Nix to be an excellent match for creating fuzz testing workflows. It took a bit of work to figure out all the odds and ends, but now it should be easy to drop in a different PDF parser or use a different fuzzer. The beauty of Nix is that it composes well, so it's easy to swap out different components within the workflow.
+I've found Nix to be an excellent tool for creating fuzz testing workflows.
 
-This project ended up being a great way to learn more about both fuzzing and Nix. I've been dabbling in Nix for the last year, but using Nix in this way helped crystallize a lot of concepts that had been fuzzy for me.
+It took a bit of work to figure out all of Nix's odds and ends for use in fuzzing, but now it should be easy to drop in a different PDF parser or use a different fuzzer. The beauty of Nix is that it composes well, so it's easy to swap out different components within the workflow.
+
+This project ended up being a great way to learn more about both fuzzing and Nix. I've been dabbling in Nix for the last year, but using Nix in this way helped crystallize a lot of concepts that had been foggy for me.
 
 ---
 
