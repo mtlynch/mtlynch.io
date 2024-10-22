@@ -14,7 +14,7 @@ At this point, I can run honggfuzz against `pdftotext`, but it takes a bit of ma
 
 ## Downloading tricky PDFs
 
-In my ad-hoc fuzzing, I had to download a boring PDF from the IRS interactively through the command-line. I'll start by automating that step.
+In my ad-hoc fuzzing, I had to download a boring PDF from the IRS interactively through the command line. I'll start by automating that step.
 
 While I'm automating, I can probably do better than a single PDF. For fuzzing, my goal is to have a wide variety of PDFs that exercise different parts of the PDF file format.
 
@@ -170,15 +170,15 @@ Now, the fuzzing workflow is complete.
 
 I can put this Nix flake in a brand new directory, and when I run `nix run`, it will download all the tricky PDFs, compile xpdf, and start fuzzing. I can let honggfuzz run indefinitely and see what crashes it finds.
 
-{{<img src="hfuzz.webp" caption="With the addition of a `fuzz-xpdf` app in my Nix flake, I have a complete fuzzing workflow and can allow my fuzzer to run indefinitely and find all the bugs that it can.">}}
+{{<img src="hfuzz.webp" caption="With the addition of a `fuzz-xpdf` app in my Nix flake, I have a complete fuzzing workflow. I could run the fuzzer indefinitely and let it find bugs.">}}
 
 ## Turning subtle memory errors into loud crashes with ASAN
 
 By this point, my fuzzing workflow is functional, but I can run it more efficiently.
 
-When fuzz testing, you only know when you've found an interesting bug when it causes the target application to crash. The problem is that are lots of ways to make a program misbehave without crashing it.
+When fuzz testing, you only know when you've found an interesting bug when it causes the target application to crash. The problem is that there are lots of ways to make a program misbehave without crashing it.
 
-One of the most famous examples of a security bug with no crashes the 2014 [Heartbleed](https://heartbleed.com/) bug in OpenSSL. It allowed attackers to extract sensitive information from web servers, but it didn't cause them to crash. Tricking a program into reading or writing memory outside of the intended bounaries doesn't always crash it.
+One of the most famous examples of a security bug with no crashes is the 2014 [Heartbleed](https://heartbleed.com/) bug in OpenSSL. It allowed attackers to extract sensitive information from web servers but didn't cause them to crash. Tricking a program into reading or writing memory outside the intended boundaries doesn't always crash it.
 
 The good news is that there's a tool that forces otherwise non-crashy memory errors to crash the program immediately. [Address Sanitizer (ASAN)](https://github.com/google/sanitizers/wiki/addresssanitizer) adds extra safety checks to a program's memory reads and writes that crash with debug output if the program attempts to read or write beyond a variable's memory location.
 
@@ -408,7 +408,7 @@ At this point, `flake.nix` should [look like this](https://gitlab.com/mtlynch/fu
 
 ## Understanding the crash
 
-I now have an out of bounds memory read that crashes consistently. I've got all the debugging information I need to understand this bug, so it's time to dive into the source.
+I now have an out-of-bounds memory read that crashes consistently. I've got all the debugging information I need to understand this bug, so it's time to dive into the source.
 
 The top of the stack trace points to [this line](https://gitlab.com/mtlynch/xpdf/-/blob/4.05/goo/GString.h#L82):
 
@@ -445,7 +445,7 @@ Okay, this is actually a fairly simple bug.
 
 `readFontDescriptor` checks that `name` is not `NULL`, but it assumes that it has a length of at least 1. If `name` is an empty string (length 0), then the `getChar` call evaluates to `name->getChar(-1)`. Then, `getChar` returns `s[-1]`, which is 1 byte before the memory buffer that was allocated for `s`.
 
-Re-reading the crash's debug output, my hypothesis matches what ASAN was trying to tell me:
+The crash's debug output supports my hypothesis:
 
 ```text
 ==241578==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60200002360f at pc 0x55555592fff5 bp 0x7fffffffa650 sp 0x7fffffffa648

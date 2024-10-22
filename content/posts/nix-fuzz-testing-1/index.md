@@ -12,7 +12,7 @@ Fuzz testing is a technique for automatically uncovering bugs in software. The p
 
 I recently found that [Nix](https://nixos.org) eliminates a lot of the gruntwork from fuzz testing. I created a Nix configuration that kicks off a fuzz testing workflow with a single command. The only dependencies are Nix and git.
 
-I used my Nix workflow to find an unpatched bug in a PDF renderer, even though I'm a beginnner to both Nix and fuzz testing.
+I used my Nix workflow to find an unpatched bug in a PDF renderer, even though I'm a beginner at both Nix and fuzz testing.
 
 ## A preview of the solution
 
@@ -35,7 +35,7 @@ Here's everything that happens when you run the command above:
 
 If you want to change the fuzzing options or test a different version of the PDF reader, it's as simple as editing a single file.
 
-I'm going to share how I created the fuzz testing workflow step by step. I'm using a particular PDF rader in my example, but you can use the same methodology to find bugs in other projects.
+I'm going to share how I created the fuzz testing workflow step by step. I'm using a particular PDF reader in my example, but you can use the same methodology to find bugs in other projects.
 
 If you're impatient, you can skip to the end to see my [final result](https://gitlab.com/mtlynch/fuzz-xpdf).
 
@@ -129,7 +129,7 @@ This file is just a skeleton and won't successfully build yet. To compile xpdf u
 
 To compile xpdf, I need a copy of its source code.
 
-First, I call [`mkDerivation`](https://nixos.org/manual/nixpkgs/stable/#sec-using-stdenv), which is how Nix defines build components. It requires a package name (`pname`) and version, so I specify `xpdf`, the package I want to fuzz and `4.05`, the latest published version of xpdf, as of this writing.
+First, I call [`mkDerivation`](https://nixos.org/manual/nixpkgs/stable/#sec-using-stdenv), which is how Nix defines build components. It requires a package name (`pname`) and version, so I specify `xpdf`, the package I want to fuzz, and `4.05`, the latest published version of xpdf, as of this writing.
 
 ```nix
 {
@@ -206,7 +206,7 @@ Looking at the [Nix package repository](https://search.nixos.org), I see that pa
 - [CMake](https://search.nixos.org/packages?channel=24.05&show=cmake&from=0&size=50&sort=relevance&type=packages&query=cmake)
 - [FreeType](https://search.nixos.org/packages?channel=24.05&show=freetype&from=0&size=50&sort=relevance&type=packages&query=freetype)
 
-I assume that I only need CMake at build time, not at runtime, which means it belongs under `nativeBuildInputs`. I probably need FreeType at runtime, so I specify it under `buildInputs`:
+I assume I only need CMake at build time, not at runtime, which means it belongs under `nativeBuildInputs`. I probably need FreeType at runtime, so I specify it under `buildInputs`:
 
 ```nix
 {
@@ -395,7 +395,7 @@ Okay, now honggfuzz will be available in my build environment, but how do I tell
 
 Make and CMake obey the [`CC`](https://cmake.org/cmake/help/latest/envvar/CC.html) and [`CXX`](https://cmake.org/cmake/help/latest/envvar/CXX.html) environment variables, which specify the C and C++ compilers, respectively.
 
-I can see that honggfuzz ships with compilers called [hfuzz-clang and hfuzz-clang++](https://github.com/google/honggfuzz/tree/2.6/hfuzz_cc). That sounds promising, but I don't know where to find those binaries appear in honggfuzz's Nix package. I search the package like this:
+I can see that honggfuzz ships with compilers called [hfuzz-clang and hfuzz-clang++](https://github.com/google/honggfuzz/tree/2.6/hfuzz_cc). That sounds promising, but I don't know where to find those binaries in honggfuzz's Nix package. I search the package like this:
 
 ```bash
 $ nix build nixpkgs#honggfuzz
@@ -469,14 +469,14 @@ $ nix develop
 GNU Wget 1.21.4 built on linux-gnu.
 ```
 
-The "GNU Wget" output is from `shellHook` which prints the version numbers of the tools available within the shell. The `honggfuzz` binary is also available:
+The "GNU Wget" output is from `shellHook`, which prints the version numbers of the tools available within the shell. The `honggfuzz` binary is also available:
 
 ```bash
 $ honggfuzz --help 2>&1 | head -n 1
 Usage: honggfuzz [options] -- path_to_command [args]
 ```
 
-That works because within `mkShell`, I specified `buildInputs` as all the `nativeBuildInputs` from the xpdf package (`cmake` and `honggfuzz`) plus `wget`, which I want only in my dev shell for downloading PDFs.
+That works because, within `mkShell`, I specified `buildInputs` as all the `nativeBuildInputs` from the xpdf package (`cmake` and `honggfuzz`) plus `wget`, which I want only in my dev shell for downloading PDFs.
 
 Next, I create a directory to store the fuzz results. Since this is just experimental, I'm using a temporary directory:
 
@@ -525,7 +525,7 @@ At this point, I've shown how to use Nix and honggfuzz to perform basic fuzz tes
 In my follow-up post, I'll show how to:
 
 - Automate the complete fuzzing workflow.
-- Gather tricky PDFs more likely to cause crashes.
+- Gather tricky PDFs that are more likely to cause crashes.
 - Find an unpatched bug in the latest version of xpdf.
 
 Read on below:
