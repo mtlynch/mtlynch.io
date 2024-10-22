@@ -324,7 +324,7 @@ CRASHING_PDF='SIGABRT.PC.55555592fff5.STACK.1bb46b81df.CODE.-6.ADDR.0.INSTR.mov_
 
 And then, I should finally see a stack trace with filenames:
 
-```
+```text
 =================================================================
 ==1461608==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60200002228f at pc 0x55555592fff5 bp 0x7fffffffac70 sp 0x7fffffffac68
 READ of size 1 at 0x60200002228f thread T0

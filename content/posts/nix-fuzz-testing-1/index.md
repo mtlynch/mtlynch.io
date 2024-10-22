@@ -117,7 +117,7 @@ This is a Nix "flake," which defines a set of Nix packages and applications.
 
 So far, this is just a boilerplate skeleton of a Nix flake. Most of it is not worth discussing except this line:
 
-```
+```nix
 nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
 ```
 
@@ -141,7 +141,7 @@ First, I call [`mkDerivation`](https://nixos.org/manual/nixpkgs/stable/#sec-usin
 
 The other required field in `mkDerivation` is a `src` property, which specifies how Nix should retrieve the inputs for the build. In the case of xpdf, the source tarball is located at this URL:
 
-- https://dl.xpdfreader.com/xpdf-4.05.tar.gz
+- <https://dl.xpdfreader.com/xpdf-4.05.tar.gz>
 
 I specify xpdf's tarball URL using the `pname` and `version` variables so that when the version number changes in the future, the URL still works:
 
@@ -276,7 +276,7 @@ echo 'result' > .gitignore
 
 Next, I add everything to my git repository:
 
-```
+```bash
 git add --all
 ```
 
@@ -422,7 +422,7 @@ To tell Nix to build xpdf using the honggfuzz compilers, I point the `CC` and `C
 
 If I build with verbose output, I see that Nix is indeed using the hongfuzz compilers:
 
-```
+```bash
 $ nix build -L
 ...
 xpdf> -- The C compiler identification is Clang 16.0.6
