@@ -574,6 +574,8 @@ Syntax Error: Leftover args in content stream
 
 And voila! `pdftotext` reports a lot of errors, but the program never crashes. My fix worked.
 
+I discovered after finding a fix that someone else had [reported the same vulnerability](https://forum.xpdfreader.com/viewtopic.php?t=44009) a few weeks before I found this crash, but it was still a useful exercise.
+
 ## Wrapping up
 
 I've found Nix to be an excellent tool for creating fuzz testing workflows.
