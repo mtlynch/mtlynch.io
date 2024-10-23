@@ -35,7 +35,7 @@ Here's everything that happens when you run the command above:
 
 If you want to change the fuzzing options or test a different version of the PDF reader, it's as simple as editing a single file.
 
-I'm going to share how I created the fuzz testing workflow step by step. I'm using a particular PDF reader in my example, but you can use the same methodology to find bugs in other projects.
+I'm going to share how I created the fuzz testing workflow step by step. You can use the same methodology to find bugs in other projects.
 
 If you're impatient, you can skip to the end to see my [final result](https://gitlab.com/mtlynch/fuzz-xpdf).
 
@@ -43,9 +43,9 @@ If you're impatient, you can skip to the end to see my [final result](https://gi
 
 Fuzz testing or "fuzzing" is a way of finding bugs in software by randomly generating input data and checking to see if the input causes the target application to crash.
 
-For example, if you wanted to test a program that resized JPEG images, the workflow would look like this:
+For example, to test a program that resized JPEG images, the workflow would look like this:
 
-1. Take a set of valid and/or malformed JPEG image files.
+1. Take a set of valid and/or malformed JPEG files.
 1. Randomly select one of the input files and randomly mutate it (flip some bits, add some data, delete some data).
 1. Feed the mutated input file to the image resizing program.
 1. If the mutated input caused the program to crash or hang, save the input for later analysis.
@@ -70,9 +70,7 @@ To follow along, you'll only need two things:
 
 ## Selecting a fuzzing target
 
-The PDF reader I'm fuzz testing is called [xpdf](https://xpdfreader.com). I'd never seen it before, but it was an example in [a good fuzzing tutorial](https://github.com/antonio-morales/Fuzzing101) I found, so I'm sticking with it.
-
-xpdf is a PDF viewer, but it ships with a suite of PDF utilities. One of the utilities, `pdftotext` is an attractive fuzzing target because it's so simple. It has no GUI; it just accepts a PDF as input and produces plaintext as output. It still exercises xpdf's complex PDF parsing code, so if I find a bug in `pdftotext`, it means I've probably found a bug in the whole xpdf suite.
+The PDF reader I'm fuzz testing is called [xpdf](https://xpdfreader.com). It's a PDF viewer, but it ships with a suite of PDF utilities. One of the utilities, `pdftotext` is an attractive fuzzing target because it's so simple. It has no GUI; it just accepts a PDF as input and produces plaintext as output. It still exercises xpdf's complex PDF parsing code, so if I find a bug in `pdftotext`, it means I've probably found a bug in the whole xpdf suite.
 
 ## Putting the Nix boilerplate in place
 
@@ -143,7 +141,7 @@ The other required field in `mkDerivation` is a `src` property, which specifies 
 
 - <https://dl.xpdfreader.com/xpdf-4.05.tar.gz>
 
-I specify xpdf's tarball URL using the `pname` and `version` variables so that when the version number changes in the future, the URL still works:
+I specify xpdf's tarball URL using the `pname` and `version` variables so that when the version number changes in the future, the URL will still work:
 
 ```nix
 {
@@ -198,7 +196,7 @@ Building a complex tool from source is usually a painful process. I want to buil
 
 Nix radically simplifies the process of building from source in two ways:
 
-- Nix has one of the largest repositories of any package manager, so most packages I need are already available.
+- Nix has one of the largest package repositories of any package manager, so most packages I need are already available.
 - Nix packages are not tied to any OS version, so as long as there's a Nix package for my architecture, I can use it.
 
 Looking at the [Nix package repository](https://search.nixos.org), I see that packages for CMake and FreeType are indeed already available:
@@ -281,7 +279,7 @@ git add --all
 ```
 
 {{<notice type="warning">}}
-**Note**: An annoying gotcha of Nix flakes is that Nix can't see files unless they're under source control by git. If you get error messages about "file not found," check that you've added the file to git.
+**Note**: An annoying gotcha of Nix flakes is that Nix can't see files unless they're under git source control. If you get error messages about "file not found," check that you've added the file to git.
 {{</notice>}}
 
 Finally, I build the package from source with `nix build`:
@@ -340,7 +338,7 @@ And `make install` normally writes to a system-wide directory like `/usr/bin`, s
 
 I suspected that, in addition to implicitly calling the `make` build sequence, Nix was quietly controlling the build process through environment variables.
 
-To test my theory, I replaced the default `installPhase` section of `mkDerivation` with one that dumped all environment variables:
+To test my theory, I replaced the default `installPhase` section of `mkDerivation` with one that dumped all of the environment variables:
 
 ```nix
 {
@@ -370,7 +368,7 @@ And the reason it hadn't scribbled over my `/usr/bin` directory was that Nix tol
 cmakeFlags=...-DCMAKE_INSTALL_BINDIR=/nix/store/7w4ql3kdrl3c0knnvx3lxsnrqfzfcy34-xpdf-4.05/bin
 ```
 
-This aspect of Nix's behavior is a double-edged sword. When it works, it feels magical that Nix figured out the build process without me having to hold its hand. But if it hadn't worked, I'd have to debug the issue through an opaque layer of Nix's abstraction of the build process.
+This aspect of Nix's behavior is a double-edged sword. When it works, it feels magical that Nix figured out the build process without me having to hold its hand. But if it hadn't worked, I'd have to debug the issue through Nix's opaque abstractions.
 
 ## Compiling xpdf with honggfuzz
 
@@ -393,7 +391,7 @@ honggfuzz ships with C and C++ compilers, so compiling xpdf with honggfuzz shoul
 
 Okay, now honggfuzz will be available in my build environment, but how do I tell CMake to use the honggfuzz compiler instead of whatever it was using before?
 
-Make and CMake obey the [`CC`](https://cmake.org/cmake/help/latest/envvar/CC.html) and [`CXX`](https://cmake.org/cmake/help/latest/envvar/CXX.html) environment variables, which specify the C and C++ compilers, respectively.
+Make and CMake obey the [`CC`](https://cmake.org/cmake/help/latest/envvar/CC.html) and [`CXX`](https://cmake.org/cmake/help/latest/envvar/CXX.html) environment variables, which specify, respectively, which C and C++ compilers to use.
 
 I can see that honggfuzz ships with compilers called [hfuzz-clang and hfuzz-clang++](https://github.com/google/honggfuzz/tree/2.6/hfuzz_cc). That sounds promising, but I don't know where to find those binaries in honggfuzz's Nix package. I search the package like this:
 
@@ -437,7 +435,7 @@ At this point, `flake.nix` should [look like this](https://gitlab.com/mtlynch/fu
 
 ## Ad-hoc fuzzing in a dev shell
 
-Okay, I've compiled xpdf using honggfuzz's compiler, but now I want to get to the fun stuff.
+I've compiled xpdf using honggfuzz's compiler, but now I want to get to the fun stuff.
 
 I could set up an elegant command for kicking off fuzzing within my Nix flake, but at this point, I just want to get my hands dirty and start messing around as quickly as possible. To do that, I create a Nix dev shell with all of my tools available.
 

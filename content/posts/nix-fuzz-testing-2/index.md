@@ -10,13 +10,13 @@ images:
 
 This is the second half of a post about [using Nix to automate a fuzz testing workflow](/nix-fuzz-testing-1/).
 
-At this point, I can run honggfuzz against `pdftotext`, but it takes a bit of manual effort to get things started. I promised in part one that I'd get all installation and fuzzing down to a single command.
+At this point, I can run honggfuzz against `pdftotext`, but it takes a bit of manual effort to get things started. I promised in part one that I'd get all of the installation and fuzzing down to a single command.
 
 ## Downloading tricky PDFs
 
-In my ad-hoc fuzzing, I had to download a boring PDF from the IRS interactively through the command line. I'll start by automating that step.
+In my ad-hoc fuzzing, I manually downloaded a PDF from the IRS website. I'll start by automating that step.
 
-While I'm automating, I can probably do better than a single PDF. For fuzzing, my goal is to have a wide variety of PDFs that exercise different parts of the PDF file format.
+While I'm automating, I can probably do better than a single PDF. For fuzzing, my goal is to have an expansive variety of PDFs that exercise different parts of the PDF file format.
 
 Adobe [used to have a corpus of interesting-looking test PDFs](https://web.archive.org/web/20150228065245/http://acroeng.adobe.com/wp/?page_id=10), but they've taken it offline.
 
@@ -304,7 +304,7 @@ At this point, something strange happened. I got rich stack traces with filename
 
 To get the rich stack traces to work consistently, I had to use a tool called `llvm-symbolizer`, which I'd never heard of before. Fortunately, `llvm-symbolizer` ships as part of the popular [`llvm_18` Nix package](https://search.nixos.org/packages?channel=24.05&show=llvm_18&from=0&size=50&sort=relevance&type=packages&query=llvm_18), so I included that package in my Nix flake and added an environment variable called `ASAN_SYMBOLIZER_PATH` to point to that binary.
 
-The changes to my Nix flake are a bit hard to show because they touch several disparate parts of the file, so it's easiest to look at [the diff](https://gitlab.com/mtlynch/fuzz-xpdf/-/compare/06-asan...07-debug-symbols).
+The changes to my Nix flake are hard to show because they touch several disparate parts of the file, so it's easiest to look at [the diff](https://gitlab.com/mtlynch/fuzz-xpdf/-/compare/06-asan...07-debug-symbols).
 
 With the changes to my Nix flake, I need to enter the Nix dev shell to see rich stack traces, as that will set the proper `ASAN_SYMBOLIZER_PATH` environment value.
 
@@ -355,7 +355,7 @@ $ ls /build/source
 ls: cannot access '/build/source': No such file or directory
 ```
 
-I'm not sure if the `/build/source` path is a quirk of Nix or of xpdf's build configuration. The only way I've been able to fix this is with a semi-ugly hack that replaces the incorrect path with the correct one at compile time using clang's `-fdebug-prefix-map` flag:
+I'm not sure if the `/build/source` path is a quirk of Nix or of xpdf's build configuration. The only way I've been able to fix that is with a semi-ugly hack that replaces the incorrect path with the correct one at compile time using clang's `-fdebug-prefix-map` flag:
 
 ```nix
 {
@@ -580,7 +580,7 @@ I've found Nix to be an excellent tool for creating fuzz testing workflows.
 
 It took a bit of work to figure out all of Nix's odds and ends for use in fuzzing, but now it should be easy to drop in a different PDF parser or use a different fuzzer. The beauty of Nix is that it composes well, so it's easy to swap out different components within the workflow.
 
-This project ended up being a great way to learn more about both fuzzing and Nix. I've been dabbling in Nix for the last year, but using Nix in this way helped crystallize a lot of concepts that had been foggy for me.
+This project ended up being a great way to learn more about both fuzzing and Nix. I've been dabbling in Nix for the last year, but using Nix in this way helped crystallize a lot of concepts that had been blurry for me.
 
 ---
 
