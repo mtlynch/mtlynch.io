@@ -584,6 +584,8 @@ It took a bit of work to figure out all of Nix's odds and ends for use in fuzzin
 
 This project ended up being a great way to learn more about both fuzzing and Nix. I've been dabbling in Nix for the last year, but using Nix in this way helped crystallize a lot of concepts that had been blurry for me.
 
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:5rmuptxnl562svleoywqf7fe/app.bsky.feed.post/3l76sq3u7zu2j" data-bluesky-cid="bafyreicigcnhq6rvwbx5rx3yonasfu457u4bnbzdzdenkbb7idmrkyzmzq"><p lang="en">Fuzz testing is a great way to uncover security bugs, but there&#x27;s a lot of friction in setting up a test environment and building a fuzz testing workflow. I found a way of using Nix that simplifies fuzz testing and makes workflows more reusable across different projects. mtlynch.io/nix-fuzz-tes...<br><br><a href="https://bsky.app/profile/did:plc:5rmuptxnl562svleoywqf7fe/post/3l76sq3u7zu2j?ref_src=embed">[image or embed]</a></p>&mdash; Michael Lynch (<a href="https://bsky.app/profile/did:plc:5rmuptxnl562svleoywqf7fe?ref_src=embed">@mtlynch.io</a>) <a href="https://bsky.app/profile/did:plc:5rmuptxnl562svleoywqf7fe/post/3l76sq3u7zu2j?ref_src=embed">October 23, 2024 at 11:02 AM</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+
 ---
 
 _Excerpts from xpdf are used under [the GPLv3 license](https://gitlab.com/mtlynch/xpdf/-/blob/4.05/COPYING3)._
