@@ -55,7 +55,7 @@ In any case, it's obvious that eugenicist physicians did **not** perform 700,000
 
 ---
 
-## What I Liked
+## What I liked
 
 - Kendi treats accessibility of terms as a first-class concern.
   - He avoids the terms "institutional racism" and "systemic racism" because he believes these terms only make sense to people who study race theory.
@@ -65,7 +65,7 @@ In any case, it's obvious that eugenicist physicians did **not** perform 700,000
   - Kendi offers a compelling comparison of [assimilationism, segregationism, and separatism](#segregationism-vs-assimilationism-vs-separatism).
 - It was enlightening to see examples of popular figures saying blatantly racist things, both in the distant and not-so-distant past.
 
-## What I Disliked
+## What I disliked
 
 - Kendi often blurs the distinction between what he believes the definition of a word should be and how Americans currently use this word.
   - e.g., he argues that "racist" is simply a descriptive term to describe behavior and not a moral judgment, though I think that contradicts most Americans' use of the word.
@@ -86,7 +86,7 @@ In any case, it's obvious that eugenicist physicians did **not** perform 700,000
 - Kendi fundamentally misunderstands the plot of the 1988 film [_Coming to America_](https://www.imdb.com/title/tt0094898/).
   - The audience is **not** supposed to empathize with Lisa's obnoxious boyfriend!
 
-## Key Takeaways
+## Key takeaways
 
 {{<notice type="info">}}
 Usually, the "Key Takeaways" section summarizes the lessons from the book that I'm applying to my life.

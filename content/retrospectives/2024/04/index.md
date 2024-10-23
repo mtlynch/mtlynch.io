@@ -21,7 +21,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - I learned from my mistakes to limit downtime when migrating services between platforms.
 - I wrote my first compiler, albeit an extremely simple one.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

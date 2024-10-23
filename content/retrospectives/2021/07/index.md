@@ -11,7 +11,7 @@ images:
 - I'm struggling to get unstuck in two areas that have stalled for months: hardware development and hiring.
 - I'm partnering with a distributor in Germany to begin selling TinyPilot within the EU.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

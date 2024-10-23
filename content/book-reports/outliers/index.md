@@ -17,13 +17,13 @@ In the past few years, I've noticed people increasingly mocking Gladwell and his
 
 ---
 
-## What I Liked
+## What I liked
 
 - Gladwell writes with an engaging, easy-to-read style.
 - Many of the case studies are compelling.
   - Fascinating exploration of the connection between plane crashes and status differential between pilots and their first officers.
 
-## What I Disliked
+## What I disliked
 
 - Gladwell's overarching theories to tie together all of the case studies felt flimsy and unconvincing.
   - _See also_: every other Malcolm Gladwell book ever.
@@ -34,7 +34,7 @@ In the past few years, I've noticed people increasingly mocking Gladwell and his
   - Gladwell often illustrates points using one or two studies on social behavior without discussing whether anyone has replicated these studies on larger or more diverse samples.
   - In general, it feels like Gladwell is cherry-picking data to support his theories.
 
-## Key Takeaways
+## Key takeaways
 
 ### Self-fulfilling prophecy and relative age
 

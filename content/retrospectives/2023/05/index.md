@@ -21,7 +21,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - The local team is escaping their months-long stint in "urgent mode."
 - Now that production speed isn't a bottleneck, I can choose a price that optimizes for profitability.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

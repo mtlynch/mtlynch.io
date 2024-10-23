@@ -19,7 +19,7 @@ _Nonviolent Communication_ is a bit mushier in that it focuses on vulnerability 
 
 ---
 
-## What I Liked
+## What I liked
 
 - Highlights the many ways that we unthinkingly use language that implies choicelessness and helplessness:
   - e.g., "I **have to** respond to this email," "You **made me** upset."
@@ -27,7 +27,7 @@ _Nonviolent Communication_ is a bit mushier in that it focuses on vulnerability 
 - I've found many of his ideas helpful in improving communication with loved ones.
 - It made me re-evaluate the ways I try to empathize with people and comfort them when they're upset.
 
-## What I Disliked
+## What I disliked
 
 - The book advocates a style of reflective listening that feels patronizing to me.
   - A: "I'm having a terrible day!"
@@ -39,7 +39,7 @@ _Nonviolent Communication_ is a bit mushier in that it focuses on vulnerability 
 - The second half was mostly stories about people putting the ideas of the first half into practice, which I found not so interesting.
 - The author likes quoting lyrics from songs that he and his fellow therapists have written, but they didn't resonate with me.
 
-## Key Takeaways
+## Key takeaways
 
 ## Nonviolent communication (NVC)
 

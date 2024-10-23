@@ -12,7 +12,7 @@ images:
 - I went from zero to a complete, custom manufactured product in 26 days.
 - I'm still struggling to manage my inventory.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

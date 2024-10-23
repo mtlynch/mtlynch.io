@@ -20,7 +20,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - TinyPilot began shipping a new product: the [Voyager 2a](https://tinypilotkvm.com/product/tinypilot-voyager2a).
 - I canceled our contract with a new 3PL vendor a few weeks into the relationship.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

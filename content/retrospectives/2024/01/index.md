@@ -23,7 +23,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - I think about how I can do a better job delegating product decisions and documentation.
 - I compare my experience learning Nix to learning Zig.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -111,7 +111,7 @@ I've considered pulling in a freelance technical writer, but that would complica
 
 One of the challenges I run into when reviewing writing is that I have a model in my head of what the typical TinyPilot customer is like, and I don't know how to articulate that model accurately to other people. And even when others understand the model, it's hard for them to write in a way that fits TinyPilot's customer model.
 
-{{<img src="write-for-the-average.png" alt="Write for the average TinyPilot customer. The average TinyPilot customer understands these terms: Ethernet, WiFi, Local network, Keyboard / mouse input, USB / USB-C / USB 3.0, AC adapter, HDMI / VGA, Router / switch, Web browser, SSH. We assume that the average TinyPilot customer **does not** understand these terms / concepts: cached , PCB / HAT , audio breakout board , VPN , EDID , virtual display , NTP server. The best way to avoid confusing customers is to speak in terms they already understand. If that’s not possible, you can still use terms that customers might not recognize, but you should first define them." has-border="true" caption="Exceprt from TinyPilot's internal style guide about level of technical jargon to use" max-width="500px">}}
+{{<img src="write-for-the-average.png" alt="Write for the average TinyPilot customer. The average TinyPilot customer understands these terms: Ethernet, WiFi, Local network, Keyboard / mouse input, USB / USB-C / USB 3.0, AC adapter, HDMI / VGA, Router / switch, Web browser, SSH. We assume that the average TinyPilot customer **does not** understand these terms / concepts: cached , PCB / HAT , audio breakout board , VPN , EDID , virtual display , NTP server. The best way to avoid confusing customers is to speak in terms they already understand. If that’s not possible, you can still use terms that customers might not recognize, but you should first define them." has-border="true" caption="Excerpt from TinyPilot's internal style guide about level of technical jargon to use" max-width="500px">}}
 
 Perhaps one way of improving this is to revisit past reviews and look for patterns. If I see patterns, I can say, "Before you send this out for review, check for whether there are sections that would benefit from a screenshot, check that you're explaining new terms before you use them, etc."
 

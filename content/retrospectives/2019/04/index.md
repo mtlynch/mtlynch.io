@@ -10,7 +10,7 @@ date: "2019-04-03"
 - Revenues reached a record high of $40.84 in affiliate income.
 - Despite this, Is It Keto didn't satisfy its critical goals, so I'm putting it on the backburner.
 
-## Goal Grades
+## Goal grades
 
 At the start of the month, I laid out some high-level goals. Because of Is It Keto's slow growth, I declared these to be goals the site **must** meet or else I'd stop working on it.
 

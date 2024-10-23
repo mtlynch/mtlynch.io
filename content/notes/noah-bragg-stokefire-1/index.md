@@ -152,7 +152,7 @@ I noticed that Noah frequently uses `uint256` in places where it seems like mass
 
 {{<img src="uint256.png" max-width="800px" caption="Don't such large integer types increase gas fees?">}}
 
-From working on [my own EVM implementation](https://github.com/mtlynch/zenith), I know the Ethereum network charges for data that has to be processed, so pushing a 256-bit value onto the stack is 8x more expensive than pushing a 32-bit word.
+From working on [my own EVM implementation](https://github.com/mtlynch/zenith), I know the Ethereum network charges for data that has to be processed, ~~so pushing a 256-bit value onto the stack is 8x more expensive than pushing a 32-bit word.~~ (Edit: Pushing a 256-bit word and a 32-bit word actually cost the same. Thanks to a14u for the correction.)
 
 I'm not sure if this is just an oversight, or if the gas fees are actually less than I imagine.
 

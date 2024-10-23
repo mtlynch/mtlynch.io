@@ -12,7 +12,7 @@ images:
 - I've decided I don't need to use a Merchant of Record service.
 - I've integrated [htmx](https://htmx.org) into my standard toolkit for making web applications.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

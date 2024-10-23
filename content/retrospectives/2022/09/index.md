@@ -21,7 +21,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - The response rate to my job posting was 8x higher than when I listed the same job six months ago.
 - I have lots of thoughts about hiring people.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

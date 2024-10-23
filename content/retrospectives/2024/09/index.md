@@ -12,7 +12,7 @@ images:
 - I realized that caring for a newborn takes more time than I expected.
 - I'm unsure what to do with my partially-finished Hacker News course.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -136,4 +136,4 @@ There are a few NixOS quests I haven't yet been able to complete. If you know ho
 
 - TPM+PIN unlock: There are a lot of tutorials for TPM-only unlock, but I'd like to protect the unlock process with a TPM PIN, which is how I run Windows laptops with BitLocker.
 - Stop Gnome from asking if I have a headset: There's a [longstanding bug](https://gitlab.gnome.org/GNOME/libgnome-volume-control/-/issues/14) in Gnome that it can't distinguish between headphones or a headset, so it asks every time. I'd like to find the right NixOS incantation to tell it to assume headphones.
-- Configure Syncthing remote folders through NixOS: The [NixOS wiki for Syncthing](https://nixos.wiki/wiki/Syncthing) is pretty good, but one thing I can't figure out is how to programmatically accept folders from peer devices. I can do it through the web GUI, but if I ever wipe the system, I'd have to re-do this step manually, which feels very un-Nix.
+- ~~Configure Syncthing remote folders through NixOS~~ (done: see comments below): The [NixOS wiki for Syncthing](https://wiki.nixos.org/wiki/Syncthing) is pretty good, but one thing I can't figure out is how to programmatically accept folders from peer devices. I can do it through the web GUI, but if I ever wipe the system, I'd have to re-do this step manually, which feels very un-Nix.
