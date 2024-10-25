@@ -14,11 +14,13 @@ In this post, I'm sharing what went well, what I want to improve in the future, 
 
 ### Invested heavily into documentation
 
-Before I even started my first business, I read the book _Built to Sell_ by John Warrilow. The book encourages founders to design their company so that it doesn't depend on their day-to-day involvement. An effective company has a set of well-defined processes and teams that execute them.
+Before I even started my first business, I read the book _Built to Sell_ by John Warrilow. The book encourages founders to organize their company so that it runs smoothly even if the founder is not actively managing day-to-day business. An effective company has a set of well-defined processes, and the team knows how to execute those processes.
 
-I've always been a fan of clear documentation, so when I started building out the team for TinyPilot, I invested a lot into documentation. Rather than train people in person or on video calls, I would always write a playbook and ask the team member to follow it. If we ran into issues or misunderstandings, we'd update the playbook. When new people would join, they'd onboard via the same playbooks, and we'd continuously improve them.
+I've always been a fan of clear documentation, so when I started building out the team for TinyPilot, I invested a lot into documentation. Rather than train people in person or on video calls, I would wrote playbooks and ask the team member to follow them. If we ran into issues or misunderstandings, we'd update the playbook. When new team members joined, they'd onboard via the same playbooks, and we'd continuously improve them.
 
-After I sold TinyPilot, the contract called for a 30-day period during which I would provide up to 80 hours of consulting time to help the buyer with the transition. Most of my time post-transition was just introducing the new owner to the team and our key vendors. There was very little I had to answer outside of that because the buyer had access to all of our documentation, and the team already knew how to run the day-to-day of TinyPilot.
+After I sold TinyPilot, the contract called for a 30-day transition period during which I would provide up to 80 hours of consulting time to help the buyer with the transition.
+
+The buyer ended up using only about 15 hours of the consulting time available. The team already knew how to run the day-to-day of TinyPilot, and the buyer had access to all of our documentation. Most of my time post-transition was just introducing the new owner to the team and our key vendors.
 
 ### Created a transition checklist
 
@@ -31,19 +33,19 @@ As we entered due diligence, I expanded this checklist to include things that wo
 - Things that should happen within the first week after closing
 - Things that should happen within the first month after closing
 
-It was helpful to start this checklist several months before the actual closing because I added to it as new things came to mind as we approached the final closing date. For example, I'd send a letter to one of TinyPilot's affiliate partners and then remember to add, "Introduce buyer to affiliates" to the post-close checklist.
+It was helpful to start this checklist several months before the actual closing because new things came to mind through negotiations. For example, I'd send a letter to one of TinyPilot's affiliate partners and then remember to add, "Introduce buyer to affiliates" to the post-close checklist.
 
-The checklist turned out to be extremely valuable after the close. The week of closing is chaotic because so many workflows are changing, so it was helpful to have a checklist I created in calmer times.
+The checklist turned out to be extremely valuable after the close. The week of closing is chaotic because so many accounts are changing hands and processes need tweaking for the new owner, so it was helpful to have a checklist I created in calmer times.
 
 ### Worked with a broker I trusted
 
-Before I started the sales process for TinyPilot, I had a negative view of M&A brokers. The picture in my head of a broker was someone who just wanted to close deals as quickly as possible for the highest possible number and didn't care about anything else. I imagined them saying things like, "Let's bottom line this," or "Time for some jager bombs!"
+Before I started the sales process for TinyPilot, I had a negative view of M&A brokers. The picture in my head of a broker was someone who just wanted to close deals as quickly as possible for the highest possible number and didn't care about anything else. I imagined them saying things like, "Let's bottom line this," or "Time for some Jäger bombs!"
 
-When I attended Microconf in 2023, I met Chris Guthrie, who's an advisor at Quiet Light Brokerage. He immediately came across as laid back, low-pressure, and founder focused. He was a former founder himself, and he talked about finding the best deal for the founder, not necessarily the quickest payout.
+When I attended Microconf in 2023, I met Chris Guthrie, an advisor at Quiet Light Brokerage. He immediately came across as laid back, low-pressure, and founder focused. He was a former founder, and he talked about finding the best deal for the founder, not necessarily the quickest payout.
 
-I appreciated about working with Quiet Light because our incentives were aligned throughout the process. Quiet Light is incentivized to find me a large payout because their commissions is percentage-based. They also need deal flow, so they have care about ensuring the seller is satisfied with the overall sales experience, not just the final price. The pool of founders looking for M&A brokers is small and fairly tight-knit, so Quiet Light natural pressure to maintain a positive reputation.
+I appreciated working with Quiet Light because our incentives felt aligned throughout the process. The pool of founders looking for M&A brokers is small and fairly tight-knit, so Quiet Light natural pressure to maintain a positive reputation.
 
-In discussions about the sale, some people balked at Quiet Light's $88.9k fee, as it represented 15% of the sale price. I still think that was a fair commission, as they found me a buyer that I couldn't have found one my own.
+In discussions about the sale, some people balked at Quiet Light's $88.9k fee, as it represented 15% of the sale price. I still think that was a fair commission, as they found me a buyer that I couldn't have found on my own.
 
 ### Avoided seller financing
 
@@ -55,13 +57,13 @@ I was puzzled. How does financing the sale mean I work for the buyer?
 
 The founder explained that you don't get paid unless the business makes money, and the new owner knows that. The new owner can dump management responsibilities onto you. If you say no, the new owner can let the business fail, and they stop making payments to you.
 
-The other major risk of seller financing is that I, as a small time lender, don't have tools or experience to collect a loan if a buyer refuses to pay. The buyer might have plenty of cash to pay and simply decide not to pay me. For a deal that's under $1M, I'd probably spend more in legal fees than I could hope to collect from an unscrupulous buyer.
+The other major risk of seller financing is that I, as a small time lender, don't have tools or experience to collect a loan if a buyer defaults. The buyer might have plenty of cash to pay and simply refuse. For a deal that's under $1M, I'd probably spend more in legal fees than I could hope to collect from an unscrupulous buyer.
 
 I would have been open to seller financing if there were no other options available, but it would be a major red flag to me that the buyer was unable to obtain a loan from a bank. Further, I'd need interest rates that are much higher than the prevailing rates banks offer because my risk would be so much higher than a bank's.
 
 ### Assumed I'd get nothing after closing
 
-From talking to other founders about acquisition stories, most people seemed disappointed with the payments they were supposed to receive after closing. In some cases, the buyer simply refused to pay and it was too small an amount to litigate. In other cases, the new owner used creative bookkeeping to avoid paying performance-based incentives to the seller.
+From talking to other founders about acquisition stories, most people seemed disappointed with the payments they were supposed to receive after closing. In some cases, the buyer failed to honor the contract, but it was too small an amount for the seller to litigate. In other cases, the new owner used creative bookkeeping to avoid paying performance-based bonuses.
 
 The advice I heard consistently was to structure the deal so that if I got nothing after closing, I'd still be happy. I should treat anything after closing as an unexpected bonus.
 
@@ -75,7 +77,7 @@ I asked other founders for advice about how to avoid a buyer who will simply gut
 
 It's true that I can't control how the new owner runs their business, but I think it's possible to screen out risky buyers. For example, if I was approached by a company like Idera, I'd notice that they have a history of buying companies and [laying off their staff](https://news.ycombinator.com/item?id=19218036), so I'd have a good guess about their plans for TinyPilot.
 
-I looked for buyers whose vision for the company aligned with mine, but I also recognized that my control or desires for the company ended when the new owner took over.
+I looked for buyers whose vision for the company aligned with mine, but I also recognized that my influence over the company ended on closing day.
 
 ### Revised the broker agreement so that the broker gets paid when I get paid
 
