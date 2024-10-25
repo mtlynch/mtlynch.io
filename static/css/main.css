@@ -34,10 +34,6 @@ blockquote {
   font-weight: 100;
 }
 
-.content {
-  margin-top: 3rem;
-}
-
 .content article header {
   margin-top: 0.25rem;
   margin-bottom: 0.5rem;
@@ -194,6 +190,17 @@ h4:hover .hanchor {
   text-decoration: none;
 }
 
+.btn-primary {
+  width: 100%;
+  float: none;
+  color: #fff;
+  background: #0d6db8;
+  border-radius: 3px;
+  cursor: pointer;
+  border: none;
+  text-shadow: none;
+}
+
 .subscribe-container {
   background: #f9f9f9;
   font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
@@ -223,7 +230,7 @@ h4:hover .hanchor {
 .subscribe-container .subscribe-container-inner {
   width: 100%;
   float: left;
-  padding: 5%;
+  padding: 3rem;
 }
 
 .subscribe-container input[type="text"],
@@ -250,18 +257,10 @@ h4:hover .hanchor {
   margin-top: 2rem;
 }
 
-.subscribe-container .subscribe-btn {
-  width: 100%;
-  float: none;
+.subscribe-container .btn-primary {
   margin-top: 5px;
-  color: #fff;
   padding: 11px 0px;
   font-size: 18px;
-  background: #0d6db8;
-  border-radius: 3px;
-  cursor: pointer;
-  border: none;
-  text-shadow: none;
   height: 42px;
 }
 
@@ -605,5 +604,88 @@ table + .img {
 
 .list li.retrospectives .title {
   font-size: 1.4em;
+  text-decoration: none;
+}
+
+header .header-meta,
+header .tags {
+  margin-left: 0;
+  margin-right: 1.5rem;
+}
+
+header .tags {
+  display: inline;
+}
+
+.refactoring-english-box {
+  background: #d3ffca;
+  font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+  color: #5c4033;
+  border: 1px solid #a6ed99;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10rem;
+  font-size: 1.05em;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .refactoring-english-box {
+    margin-top: 0;
+    padding: 3rem;
+  }
+}
+
+.refactoring-english-box h2 {
+  margin-top: 0.75rem;
+  font-size: 1.5em;
+  color: #5c4033;
+}
+
+@media screen and (min-width: 768px) {
+  .refactoring-english-box h2 {
+    font-size: 1.4em;
+  }
+}
+
+.refactoring-english-box p {
+  margin-top: 1rem;
+  font-size: 0.9em;
+}
+
+.refactoring-english-box ul {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1em;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.refactoring-english-box ul li {
+  list-style-type: none;
+  position: relative;
+  padding-left: 1.5em;
+}
+
+.refactoring-english-box ul li:before {
+  content: "✓";
+  color: green;
+  position: absolute;
+  left: 0;
+}
+
+.refactoring-english-box .btn-primary {
+  font-size: 1.2em;
+  padding: 1.5rem;
+  margin-top: 3rem;
+  display: block;
+  text-align: center;
+}
+
+.refactoring-english-box a:hover {
   text-decoration: none;
 }

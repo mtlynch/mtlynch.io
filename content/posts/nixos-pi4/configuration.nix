@@ -1,6 +1,9 @@
-{ config, pkgs, lib, ... }:
-
-let
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}: let
   hostname = "pinix";
   user = "tempuser";
   password = "somepass";
@@ -9,13 +12,13 @@ let
   timeZone = "America/New_York";
   defaultLocale = "en_US.UTF-8";
 in {
-  imports = ["${fetchTarball "https://github.com/NixOS/nixos-hardware/archive/${nixosHardwareVersion}.tar.gz" }/raspberry-pi/4"];
+  imports = ["${fetchTarball "https://github.com/NixOS/nixos-hardware/archive/${nixosHardwareVersion}.tar.gz"}/raspberry-pi/4"];
 
   fileSystems = {
     "/" = {
       device = "/dev/disk/by-label/NIXOS_SD";
       fsType = "ext4";
-      options = [ "noatime" ];
+      options = ["noatime"];
     };
   };
 
@@ -50,16 +53,18 @@ in {
     users."${user}" = {
       isNormalUser = true;
       password = password;
-      extraGroups = [ "wheel" ];
+      extraGroups = ["wheel"];
     };
   };
 
   # Enable passwordless sudo.
-  security.sudo.extraRules= [
-    {  users = [ user ];
+  security.sudo.extraRules = [
+    {
+      users = [user];
       commands = [
-         { command = "ALL" ;
-           options= [ "NOPASSWD" ];
+        {
+          command = "ALL";
+          options = ["NOPASSWD"];
         }
       ];
     }

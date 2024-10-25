@@ -21,7 +21,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - Thinking about outsourcing forces me to recognize inefficiencies in our current workflows.
 - The [Playwright](https://playwright.dev) end-to-end testing tool has won me over.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

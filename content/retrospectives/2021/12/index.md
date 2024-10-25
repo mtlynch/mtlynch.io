@@ -12,7 +12,7 @@ images:
 - I'm just about to launch TinyPilot's new product and branding.
 - I reduced Google Cloud Platform fees by 90% on my side projects.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

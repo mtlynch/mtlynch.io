@@ -178,11 +178,11 @@ I unfortunately couldn't find the source code for the original version of Copilo
 
 ## What happened to the interns?
 
-[Tyler Griffin Hicks-Wright](https://tghw.com) accepted a full-time position at Fog Creek after his internship and worked there for several years. He left in 2012 to start a photo backup startup called Snaposit. He sought funding from his _Aardvark'd_ co-star, Paul Graham, but [Y Combinator rejected Tyler's pitch](https://tghw.com/blog/well-that-sucks-what-else-you-got). Tyler shuttered the business a year later.
+[Tyler Griffin Hicks-Wright](https://tghw.com) accepted a full-time position at Fog Creek after his internship and worked there for several years. He left in 2012 to start a photo backup startup called Snaposit. He sought funding from his _Aardvark'd_ co-star, Paul Graham, but [Y Combinator rejected Tyler's pitch](https://web.archive.org/web/20240529135543/https://tghw.com/blog/well-that-sucks-what-else-you-got). Tyler shuttered the business a year later.
 
 {{<img src="tyler-2005.webp" max-width="500px" caption="Tyler Griffin Hicks-Wright, software development intern on Aardvark">}}
 
-In 2014, Fog Creek restructured to spin out [Trello](https://en.wikipedia.org/wiki/Trello), its ultra-successful project management app. As part of the restructuring, Fog Creek sold the Copilot product to Tyler [for an undisclosed sum](https://tghw.com/blog/copilot-coming-full-circle). He ran Copilot on the side for eight years before [shutting it down in April 2022](https://news.ycombinator.com/item?id=31192812).
+In 2014, Fog Creek restructured to spin out [Trello](https://en.wikipedia.org/wiki/Trello), its ultra-successful project management app. As part of the restructuring, Fog Creek sold the Copilot product to Tyler [for an undisclosed sum](https://web.archive.org/web/20240412135226/https://tghw.com/blog/copilot-coming-full-circle). He ran Copilot on the side for eight years before [shutting it down in April 2022](https://news.ycombinator.com/item?id=31192812).
 
 [Michael Lehenbauer](https://twitter.com/mikelehen) took a job at Microsoft after his _Aardvark'd_ internship. He left in 2011 to join Firebase as employee #2, which I can only assume means he's now relaxing on a superyacht somewhere.
 

@@ -12,7 +12,7 @@ date: "2019-12-05"
 - I'm going to try to make a better version of a decades' old application for managing machine shops.
 - I'm doing lots of coding to avoid talking to customers.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I [declare what I'd like to accomplish](/retrospectives/2019/11/#goals-for-next-month). Here's how I did against those goals:
 

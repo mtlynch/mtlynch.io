@@ -12,7 +12,7 @@ images:
 - Two of my blog posts reached the front page of [Hacker News](https://news.ycombinator.com/news).
 - Is It Keto earned its all-time-highest monthly revenue, doubling its previous record.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I [declare what I'd like to accomplish](/retrospectives/2020/01/#goals-for-next-month). Here's how I did against those goals:
 

@@ -256,10 +256,6 @@ My wife and I are expecting our first child in August, so that's been the main t
 
 In the short term, I'm looking for simple projects that I can step away from abruptly when the baby arrives. Beyond that, I'd like to find a way to build a virtuous cycle between my blog and my business. I'd love to write about what interests me, then attract customers to my product through my writing and fund my writing from the business.
 
-If you're a reader of my blog, let me know what you're interested in seeing me do next, and maybe I'll do it:
-
-- [What should Michael do next?](https://tally.so/r/nr6Pyv)
-
 As for TinyPilot, Scott plans to keep improving the product and bring it to a wider audience. Everyone on the team received offers to stay on, and they all accepted. The company will continue to publish updates on [TinyPilot's blog](https://tinypilotkvm.com/blog), and Scott is continuing my tradition of [blogging about TinyPilot's behind-the-scenes strategy](https://www.aftertheladder.com).
 
 {{<tweet user="deliberatecoder" id="1795832878783496702">}}

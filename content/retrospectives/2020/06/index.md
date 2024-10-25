@@ -12,7 +12,7 @@ images:
 - With 100k monthly pageviews, it's time to explore new ways of working with Is It Keto's audience.
 - I created a KVM over IP device that requires <$100 in hardware.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -59,11 +59,19 @@ A few weeks ago, [Justin Vincent](https://nugget.one/jv) reached out to me. He's
 
 The first thing that surprised me was how highly Justin viewed Is It Keto's visitor stats.
 
-> **Justin**: How many uniques do you get per week?<br> > **Me**: Around ten thousand.<br> > **Justin**: Wow. You're sitting on a goldmine.<br>
+> **Justin**: How many uniques do you get per week?
+>
+> **Me**: Around ten thousand.
+>
+> **Justin**: Wow. You're sitting on a goldmine.
 
 Top keto recipe blogs get ~3M unique visitors per month, so my 40-50k felt like nothing. Justin argued that one of the hardest parts of launching a product is finding interested customers, but if I have access to 10,000 people each week interested in keto, that's a huge leg up.
 
-> **Justin**: When you look at existing keto communities, what do you notice people struggling with? What issues come up a lot?<br> >**Me**: I don't know. I feel like most of the discussion revolves around people sharing progress and other members congratulating them.<br> >**Justin**: Congratulating each other... That's interesting. Have you seen [wip.chat](https://wip.chat/)?
+> **Justin**: When you look at existing keto communities, what do you notice people struggling with? What issues come up a lot?
+>
+> **Me**: I don't know. I feel like most of the discussion revolves around people sharing progress and other members congratulating them.
+>
+> **Justin**: Congratulating each other... That's interesting. Have you seen [wip.chat](https://wip.chat/)?
 
 {{<img src="wip.chat.png" alt="Screenshot of wip.chat" has-border="true" max-width="650px" caption="[wip.chat](https://wip.chat/), a popular social network for independent software developers">}}
 
@@ -75,7 +83,11 @@ This week, I'm going to create a landing page for this theoretical keto social n
 
 Another great insight that came out of the conversation was around partnerships:
 
-> **Justin**: Once you create your membership product, you can make direct partnerships and affiliate deals with other keto businesses.<br> > **Me**: But I already have visitors. Why wouldn't I do that now?<br> > **Justin**: Good question. Why **wouldn't** you do that now?
+> **Justin**: Once you create your membership product, you can make direct partnerships and affiliate deals with other keto businesses.
+>
+> **Me**: But I already have visitors. Why wouldn't I do that now?
+>
+> **Justin**: Good question. Why **wouldn't** you do that now?
 
 This is why it's valuable to have an outsider's perspective. I tried approaching other keto companies for affiliate deals early in Is It Keto's life, but I was too small, so most of them ignored me. With 100k monthly pageviews, Is It Keto is significant enough that partnerships are viable. I just forgot to revisit the idea because it had been infeasible for so long. But what's stopping me from contacting keto businesses advertising on my site via AdSense to ask if they want to set up a deal with me directly?
 

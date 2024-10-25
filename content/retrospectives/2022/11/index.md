@@ -21,7 +21,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - I think I've found a third-party logistics vendor that's a good match for TinyPilot.
 - I'm scrambling to produce more cases before they become a sales bottleneck.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

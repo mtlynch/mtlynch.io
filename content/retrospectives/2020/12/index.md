@@ -12,7 +12,7 @@ images:
 - I released a new high-end model of TinyPilot.
 - I launched my first ever paid course.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

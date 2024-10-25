@@ -21,7 +21,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - TinyPilot has almost finished transitioning manufacturing to a third-party vendor.
 - I may have crossed into the dark side of mechanical keyboards.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

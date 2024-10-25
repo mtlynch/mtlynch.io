@@ -15,23 +15,22 @@
           <h1 class="title">{{ .Title }}</h1>
         </div>
         <div class="post-meta">
-          <div class="date">
-            <span class="posted-on">
-              <i class="fas fa-calendar"></i>
-              <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-                {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
-              </time>
-            </span>
-            <span class="reading-time">
-              <i class="fas fa-clock"></i>
-              {{ .ReadingTime }}-minute read
-            </span>
-            {{ if .Site.IsServer }}
-              <span>&mdash; {{ .Content | countwords }} words </span>
-            {{ end }}
-          </div>
+          <span class="header-meta">
+            <i class="fas fa-calendar"></i>
+            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+              {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
+            </time>
+          </span>
+          <span class="header-meta">
+            <i class="fas fa-clock"></i
+            >&nbsp;{{ .ReadingTime }}-minute&nbsp;read
+          </span>
           {{ with .Page.Params.Tags }}
             {{ partial "taxonomy/tags.html" . }}
+          {{ end }}
+
+          {{ if .Site.IsServer }}
+            <span class="header-meta">{{ .Content | countwords }} words </span>
           {{ end }}
         </div>
       </header>
@@ -41,6 +40,8 @@
           {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor"> 🔗&#xFE0E;</a> ${3}` | safeHTML }}
         </div>
       {{- end -}}
+
+      {{ partial "refactoring-english-ad.html" }}
 
       {{ partial "mailing-list-signup.html" . }}
 

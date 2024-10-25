@@ -13,7 +13,7 @@ images:
 - After three years, I've earned back my investment in Zestful (and I might sell it).
 - I'm still ruthlessly delegating every task I can.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
