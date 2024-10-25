@@ -1,12 +1,12 @@
 ---
 title: "Lessons from my First Exit"
-date: 2024-08-18T06:53:53-04:00
+date: 2024-11-02T00:00:00-04:00
 description: My takeaways from selling TinyPilot
 ---
 
 In April this year, [I sold TinyPilot](/i-sold-tinypilot/), the bootstrapped business I founded and ran for four years.
 
-My earlier post told the story of how the sale happened, but I'd like to dig a bit deeper into the nuts and bolts of the sale itself.
+My earlier post told the story of how the sale happened, but I'd like to share more about the practical lessons I learned from the sale itself.
 
 In this post, I'm sharing what went well, what I want to improve in the future, and what surprised me about the process of selling my business.
 
