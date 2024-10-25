@@ -13,13 +13,13 @@ An engaging read, but the narrator is painfully obnoxious.
 
 ---
 
-## What I Liked
+## What I liked
 
 - Story is well-written and engaging
 - Interesting to see such a revealing view inside Facebook
 - Does an excellent job of explaining technology and finance terms that are approachable to the layperson
 
-## What I Disliked
+## What I disliked
 
 - I found the author pretentious and abrasive
   - He boasts about getting out of a ticket after being pulled over for drunk driving.
@@ -31,13 +31,13 @@ An engaging read, but the narrator is painfully obnoxious.
 - Lots of "hustle worship."
   - He sneeringly declines a job offer from Twitter because they encourage their employees to go home at dinnertime, whereas Facebook encouraged all-night hackathons and weekend work.
 
-## Key Takeaways
+## Key takeaways
 
 - You can understand credit default swaps by thinking of them in terms of car insurance
   - Credit default swaps are insurance against someone failing to pay you money they owe. If you buy a bond from someone and it defaults, the seller of a credit default swap will reimburse your losses. Similar to how if your car gets damaged, the insurer will pay for you to get it back to normal state.
   - The difference with credit default swaps is that anyone can buy the policy, so it would be like if your neighbor could buy an insurance policy and collect money if your car got damaged.
   - Further, with credit default swaps, anyone can _sell_ a policy, so it would be like if a person across town could sell an insurance policy for your car.
-- > an incumbent in a market dominated by a few, with total information asymmetry, and the ability to make prices on the market rather than just take them, has little incentive to increase transparency.
+    - > an incumbent in a market dominated by a few, with total information asymmetry, and the ability to make prices on the market rather than just take them, has little incentive to increase transparency.
   - Explains why Goldman-Sachs preferred to offer credit default swaps through its own private channels rather than bringing them to public exchanges.
   - Also explains why Facebook never set up its own ad exchange
 - Early 2000s advertising on the Internet was primitive
@@ -53,7 +53,8 @@ An engaging read, but the narrator is painfully obnoxious.
 - If you say that you're in "stealth mode," VCs will think that you're an amateur
   - Ditto if you ask them to sign an NDA
 - How many miracles have to happen for your startup to succeed?
-  - If it's zero, it's just a regular business (\*e.g., a trucking company)
+  - If it's zero, it's just a regular business
+  - (e.g., a trucking company)
   - Startups require miracles but can only depend on 1-2 to have a reasonable shot at success
     - i.e., if your startup can only succeed if several miraculous events occur, you'll probably fail
 - Return on advertising spend (ROAS)
@@ -101,7 +102,7 @@ An engaging read, but the narrator is painfully obnoxious.
   - If each founder owned 30-40% of the company from day one, any founder could instantly kill the whole company by walking away with their share of the equity.
 - Facebook didn't monetize well until ~2013 (shortly after their IPO)
   - "[Facebook's per-user revenue was] comparable to what you'd monetize your _Star Wars_ blog at if you ran AdSense."
-- > a billion times any number is still a big fucking number.
+    - > a billion times any number is still a big fucking number.
   - Despite poor monetization, Facebook had high revenue by virtue of its enormous user base
 - Pre-IPO, the Ads team didn't have much power and was forced to try to squeeze money from whatever the product teams built (without having any voice in the product direction)
 - Nobody on Facebook Ads had any real advertising experience except for some of the people poached from Google

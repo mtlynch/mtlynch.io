@@ -12,7 +12,7 @@ images:
 - I sold $1.1k in pre-orders for my first ever [video course](https://hitthefrontpage.com/).
 - My attempt to slow down sales ended up doing the opposite.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

@@ -15,7 +15,7 @@ discuss_urls:
 - After lots of research and customer interviews, I gave up on my idea for creating sheet metal software.
 - I published my first version of an app for finding live comedy.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I [declare what I'd like to accomplish](/retrospectives/2019/12/#goals-for-next-month). Here's how I did against those goals:
 
@@ -105,7 +105,13 @@ The owner seemed satisfied with his software but said that he only used 2% of it
 
 The owner had repeatedly said he didn't like dealing with software, so I thought offering a simpler solution would be a slam dunk:
 
-> **Me**: What if I made something that just focused on the 2% that you use, so that there's less complexity?<br> > **Owner**: Wouldn't be interested.<br> > **Me**: Really? Why not?<br> > **Owner**: Because ShopTech already has everything we could ever need built-in. Suppose we get ISO 9001 certified. With ShopTech, we just flip a switch, and we have all the ISO 9001 features we need. If you made something that's only what we use **now**, we'd be stuck.
+> **Me**: What if I made something that just focused on the 2% that you use, so that there's less complexity?
+>
+> **Owner**: Wouldn't be interested.
+>
+> **Me**: Really? Why not?
+>
+> **Owner**: Because ShopTech already has everything we could ever need built-in. Suppose we get ISO 9001 certified. With ShopTech, we just flip a switch, and we have all the ISO 9001 features we need. If you made something that's only what we use **now**, we'd be stuck.
 
 It made me realize that there's some nuance to the idea that people want software that perfectly matches their use case. The example in _Start Small, Stay Small_ is that if you design accounting software specifically for web designers, your target audience will choose you over general-purpose accounting software like Xero or QuickBooks, even if you're more expensive. But that works because web designers' accounting needs stay relatively static. Even if they drastically change the jobs they take on, they likely don't need to change much about their accounting software.
 

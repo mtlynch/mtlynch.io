@@ -12,7 +12,7 @@ images:
 - I may have finally discovered a way to scale my keto site profitably.
 - I'm putting Portfolio Rebalancer on the backburner due to lack of traction.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

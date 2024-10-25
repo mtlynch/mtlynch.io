@@ -10,7 +10,7 @@ date: "2019-03-05"
 - Revenues fell substantially and missed targets for the month.
 - I'm going to shelve the project unless I achieve my targets for March.
 
-## Goal Grades
+## Goal grades
 
 At the start of the month, I laid out some high-level goals. Here's how I did against those goals.
 

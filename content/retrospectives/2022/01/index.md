@@ -12,7 +12,7 @@ images:
 - TinyPilot's revenue finished the year strong at $55k for December.
 - I've learned to manage design projects more aggressively.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

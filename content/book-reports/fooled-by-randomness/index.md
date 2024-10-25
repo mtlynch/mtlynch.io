@@ -11,13 +11,13 @@ The book contains many interesting examples of common biases and logical fallaci
 
 ---
 
-## What I Liked
+## What I liked
 
 - Contains many interesting examples of ways people typically derive meaning from random noise or misapply statistics:
   - e.g., [Bayes' Theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem) as [applied to medical testing](http://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_Probability/BS704_Probability6.html)
   - "Dow is up 1.03 on lower interest rates" when the percentage change is 0.01%, it's just random noise and can't be tied to a particular cause
 
-## What I Disliked
+## What I disliked
 
 - The most smug book I've ever read.
   - Wastes so many pages mocking financial authors and TV personalities.
@@ -27,7 +27,7 @@ The book contains many interesting examples of common biases and logical fallaci
   - There are several instances where the author builds his own Monte Carlo simulation of the market, then concludes that a certain trading style is more profitable than another.
   - I am highly skeptical that anyone could get meaningful results by attempting to model the behavior of every market participant.
 
-## Key Takeaways
+## Key takeaways
 
 - [Black swan problem](https://en.wikipedia.org/wiki/Problem_of_induction)
   - No matter how many white swans you see, you can never conclude that all swans are white because seeing a single black swan would disprove this.

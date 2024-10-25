@@ -196,15 +196,11 @@ Responding, "Can we simplify this with a list comprehension?" will annoy them be
 
 They will be much happier to receive a note like the following:
 
-{{<quoted-markdown>}}
-
-Consider simplifying with a list comprehension like this:
-
-```python
-urls = ['https://' + domain + path for path in paths]
-```
-
-{{</quoted-markdown>}}
+> Consider simplifying with a list comprehension like this:
+>
+> ```python
+> urls = ['https://' + domain + path for path in paths]
+> ```
 
 This technique is not limited to one-liners. I'll often create my own branch of the code to demonstrate a large proof of concept to the author, such as breaking up a large function or adding a unit test to cover an additional edge case.
 

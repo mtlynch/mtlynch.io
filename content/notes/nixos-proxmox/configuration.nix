@@ -1,19 +1,25 @@
-{ config, pkgs, ... }:
-
-let
-  hostname = "nixos1";
+{
+  modulesPath,
+  config,
+  pkgs,
+  ...
+}: let
+  hostname = "nixos";
   user = "tempuser";
   password = "somepass";
 
   timeZone = "America/New_York";
   defaultLocale = "en_US.UTF-8";
 in {
-  imports = [ <nixpkgs/nixos/modules/virtualisation/lxc-container.nix> ];
+  imports = [
+    # Include the default lxc/lxd configuration.
+    "${modulesPath}/virtualisation/lxc-container.nix"
+  ];
 
+  boot.isContainer = true;
   networking.hostName = hostname;
 
   environment.systemPackages = with pkgs; [
-    firefox
     vim
   ];
 
@@ -41,16 +47,18 @@ in {
     users."${user}" = {
       isNormalUser = true;
       password = password;
-      extraGroups = [ "wheel" ];
+      extraGroups = ["wheel"];
     };
   };
 
   # Enable passwordless sudo.
-  security.sudo.extraRules= [
-    {  users = [ user ];
+  security.sudo.extraRules = [
+    {
+      users = [user];
       commands = [
-         { command = "ALL" ;
-           options= [ "NOPASSWD" ];
+        {
+          command = "ALL";
+          options = ["NOPASSWD"];
         }
       ];
     }
@@ -64,7 +72,7 @@ in {
     "sys-fs-fuse-connections.mount"
   ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  system.stateVersion = "23.11";
+  system.stateVersion = "24.05";
 }

@@ -12,7 +12,7 @@ images:
 - Most of TinyPilot's sales came from a single positive YouTube review.
 - TinyPilot is experiencing growing pains as I scramble to meet demand.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

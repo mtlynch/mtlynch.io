@@ -12,7 +12,7 @@ images:
 - I've learned to make Debian packages, and it's surprisingly simple.
 - I've given up on Vue and frontend frameworks in general.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

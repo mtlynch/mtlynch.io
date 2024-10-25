@@ -21,7 +21,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - I've decided to hang onto TinyPilot's office for two more months.
 - I'm planning my escape from a miserable seller experience on RapidAPI.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

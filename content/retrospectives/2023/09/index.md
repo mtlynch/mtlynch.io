@@ -21,7 +21,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - I realized I made TinyPilot way too configurable.
 - I thought I'd been investing poorly into TinyPilot's development, but writing this retrospective made me realize I'm mostly on track.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 

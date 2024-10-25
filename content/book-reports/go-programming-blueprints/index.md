@@ -11,7 +11,7 @@ I'm a fan of [Mat Ryer](https://twitter.com/matryer)'s work, and his blog posts 
 
 ---
 
-## What I Liked
+## What I liked
 
 - The variety of example apps did a good job of demonstrating features of Go in realistic scenarios.
 - Features wonderfully elegant Go code that taught me several new idiomatic language patterns.
@@ -19,7 +19,7 @@ I'm a fan of [Mat Ryer](https://twitter.com/matryer)'s work, and his blog posts 
 - Finally made HTTP contexts click for me when I'd never understood them in the past.
 - Available in DRM-free formats.
 
-## What I Disliked
+## What I disliked
 
 - Most of the examples focus on highly scalable applications rather than single-server Go applications that I typically write.
 - The book felt overly dependent on heavy Google libraries (e.g., Google Maps, OAuth, gRPC, AppEngine).
@@ -40,7 +40,7 @@ I'm a fan of [Mat Ryer](https://twitter.com/matryer)'s work, and his blog posts 
 - There are instructions for running the examples on Windows, but they feel like an untested afterthought.
 - Some of the examples no longer compile due to third-party dependencies that have disappeared.
 
-## Key Takeaways
+## Key takeaways
 
 ### Go language and standard library tips
 
