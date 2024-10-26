@@ -1,7 +1,9 @@
 ---
-title: "Llama3.1 Nemotron Ollama"
+title: "How Close is Llama3.1 Nemotron Ollama"
 date: 2024-10-26T11:37:26-04:00
 ---
+
+I saw NVIDIA claimed that it [beat Claude 3.5 Sonnet and GPT-4o on a bunch of benchmarks](https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF).
 
 ## Provisioning a cloud server with a GPU
 
