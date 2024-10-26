@@ -91,159 +91,13 @@ It's going to sit at 100% for a while, but it's not done until you see a popup a
 
 ---
 
-### Input
-
-```go
-package sqlite
-import (
-    "database/sql"
-    "log"
-    "github.com/mtlynch/picoshare/v2/picoshare"
-)
-func (d DB) InsertEntryDownload(id picoshare.EntryID, r picoshare.DownloadRecord) error {
-    log.Printf("recording download of file ID %s from client %s", id.String(), r.ClientIP)
-    if _, err := d.ctx.Exec(`
-    INSERT INTO
-        downloads
-    (
-        entry_id,
-        download_timestamp,
-        client_ip,
-        user_agent
-    )
-    VALUES(?,?,?,?)`,
-        id.String(),
-        formatTime(r.Time),
-        r.ClientIP,
-        r.UserAgent,
-    ); err != nil {
-        log.Printf("insert into downloads table failed: %v", err)
-        return err
-    }
-    return nil
-}
-
-func (d DB) GetEntryDownloads(id picoshare.EntryID) ([]picoshare.DownloadRecord, error) {
-    rows, err := d.ctx.Query(`
-    SELECT
-        download_timestamp,
-        client_ip,
-        user_agent
-    FROM
-        downloads
-    WHERE
-        entry_id=?
-    ORDER BY
-        download_timestamp DESC`, id)
-    if err == sql.ErrNoRows {
-        return []picoshare.DownloadRecord{}, nil
-    } else if err != nil {
-        return []picoshare.DownloadRecord{}, err
-    }
-    downloads := []picoshare.DownloadRecord{}
-    for rows.Next() {
-        var downloadTimeRaw string
-        var clientIP string
-        var userAgent string
-        if err := rows.Scan(&downloadTimeRaw, &clientIP, &userAgent); err != nil {
-            return []picoshare.DownloadRecord{}, err
-        }
-        dt, err := parseDatetime(downloadTimeRaw)
-        if err != nil {
-            return []picoshare.DownloadRecord{}, err
-        }
-        downloads = append(downloads, picoshare.DownloadRecord{
-            Time:      dt,
-            ClientIP:  clientIP,
-            UserAgent: userAgent,
-        })
-    }
-    return downloads, nil
-}
-```
-
-### Output
-
-```go
-package sqlite
-
-import (
-    "database/sql"
-    "log"
-    "github.com/mtlynch/picoshare/v2/picoshare"
-)
-
-func (d DB) InsertEntryDownload(id picoshare.EntryID, r picoshare.DownloadRecord) error {
-    log.Printf("recording download of file ID %s from client %s", id.String(), r.ClientIP)
-    params := []sql.NamedArg{
-        {Name: "entry_id", Value: id.String()},
-        {Name: "download_timestamp", Value: formatTime(r.Time)},
-        {Name: "client_ip", Value: r.ClientIP},
-        {Name: "user_agent", Value: r.UserAgent},
-    }
-    if _, err := d.ctx.Exec(`
-    INSERT INTO
-        downloads
-    (
-        entry_id,
-        download_timestamp,
-        client_ip,
-        user_agent
-    )
-    VALUES(:entry_id, :download_timestamp, :client_ip, :user_agent)`,
-        params...,
-    ); err != nil {
-        log.Printf("insert into downloads table failed: %v", err)
-        return err
-    }
-    return nil
-}
-
-func (d DB) GetEntryDownloads(id picoshare.EntryID) ([]picoshare.DownloadRecord, error) {
-    params := []sql.NamedArg{
-        {Name: "entry_id", Value: id},
-    }
-    rows, err := d.ctx.Query(`
-    SELECT
-        download_timestamp,
-        client_ip,
-        user_agent
-    FROM
-        downloads
-    WHERE
-        entry_id=:entry_id
-    ORDER BY
-        download_timestamp DESC`,
-        params...,
-    )
-    if err == sql.ErrNoRows {
-        return []picoshare.DownloadRecord{}, nil
-    } else if err != nil {
-        return []picoshare.DownloadRecord{}, err
-    }
-    downloads := []picoshare.DownloadRecord{}
-    for rows.Next() {
-        var downloadTimeRaw string
-        var clientIP string
-        var userAgent string
-        if err := rows.Scan(&downloadTimeRaw, &clientIP, &userAgent); err != nil {
-            return []picoshare.DownloadRecord{}, err
-        }
-        dt, err := parseDatetime(downloadTimeRaw)
-        if err != nil {
-            return []picoshare.DownloadRecord{}, err
-        }
-        downloads = append(downloads, picoshare.DownloadRecord{
-            Time:      dt,
-            ClientIP:  clientIP,
-            UserAgent: userAgent,
-        })
-    }
-    return downloads, nil
-}
-```
-
 ---
+
+## Test 1: Create unit tests for a Go function
+
+For the first test, I asked Nemotron to write unit tests for a function in PicoShare:
+
+### Prompt
 
 Create unit tests for this code:
 
@@ -413,7 +267,165 @@ func TestFilename(t *testing.T) {
 }
 ```
 
-It does okay, but it makes some mistakes:
+Nemotron did okay, but it makes some mistakes:
 
-- It gets the wrong path for the import
-- It has syntax errors where it sometimes puts in `(` instead tabs before `description`
+- It gets the wrong path for the import, which it should have learned from the example test.
+- It has syntax errors where it sometimes puts in `(` instead tabs before `description`.
+- It misunderstood the behavior of the function and created a test with the wrong expectation.
+  - `.hidden` is a legal filename on PicoShare
+
+It otherwise created valid tests that have decent coverage of the behavior. I compared it with `claude-3-5-sonnet-20241022`, and Claude created similar tests but without Nemotron's errors.
+
+## Test 2: Refactor SQL queries in Go
+
+### Input
+
+```go
+package sqlite
+import (
+    "database/sql"
+    "log"
+    "github.com/mtlynch/picoshare/v2/picoshare"
+)
+func (d DB) InsertEntryDownload(id picoshare.EntryID, r picoshare.DownloadRecord) error {
+    log.Printf("recording download of file ID %s from client %s", id.String(), r.ClientIP)
+    if _, err := d.ctx.Exec(`
+    INSERT INTO
+        downloads
+    (
+        entry_id,
+        download_timestamp,
+        client_ip,
+        user_agent
+    )
+    VALUES(?,?,?,?)`,
+        id.String(),
+        formatTime(r.Time),
+        r.ClientIP,
+        r.UserAgent,
+    ); err != nil {
+        log.Printf("insert into downloads table failed: %v", err)
+        return err
+    }
+    return nil
+}
+
+func (d DB) GetEntryDownloads(id picoshare.EntryID) ([]picoshare.DownloadRecord, error) {
+    rows, err := d.ctx.Query(`
+    SELECT
+        download_timestamp,
+        client_ip,
+        user_agent
+    FROM
+        downloads
+    WHERE
+        entry_id=?
+    ORDER BY
+        download_timestamp DESC`, id)
+    if err == sql.ErrNoRows {
+        return []picoshare.DownloadRecord{}, nil
+    } else if err != nil {
+        return []picoshare.DownloadRecord{}, err
+    }
+    downloads := []picoshare.DownloadRecord{}
+    for rows.Next() {
+        var downloadTimeRaw string
+        var clientIP string
+        var userAgent string
+        if err := rows.Scan(&downloadTimeRaw, &clientIP, &userAgent); err != nil {
+            return []picoshare.DownloadRecord{}, err
+        }
+        dt, err := parseDatetime(downloadTimeRaw)
+        if err != nil {
+            return []picoshare.DownloadRecord{}, err
+        }
+        downloads = append(downloads, picoshare.DownloadRecord{
+            Time:      dt,
+            ClientIP:  clientIP,
+            UserAgent: userAgent,
+        })
+    }
+    return downloads, nil
+}
+```
+
+### Output
+
+```go
+package sqlite
+
+import (
+    "database/sql"
+    "log"
+    "github.com/mtlynch/picoshare/v2/picoshare"
+)
+
+func (d DB) InsertEntryDownload(id picoshare.EntryID, r picoshare.DownloadRecord) error {
+    log.Printf("recording download of file ID %s from client %s", id.String(), r.ClientIP)
+    params := []sql.NamedArg{
+        {Name: "entry_id", Value: id.String()},
+        {Name: "download_timestamp", Value: formatTime(r.Time)},
+        {Name: "client_ip", Value: r.ClientIP},
+        {Name: "user_agent", Value: r.UserAgent},
+    }
+    if _, err := d.ctx.Exec(`
+    INSERT INTO
+        downloads
+    (
+        entry_id,
+        download_timestamp,
+        client_ip,
+        user_agent
+    )
+    VALUES(:entry_id, :download_timestamp, :client_ip, :user_agent)`,
+        params...,
+    ); err != nil {
+        log.Printf("insert into downloads table failed: %v", err)
+        return err
+    }
+    return nil
+}
+
+func (d DB) GetEntryDownloads(id picoshare.EntryID) ([]picoshare.DownloadRecord, error) {
+    params := []sql.NamedArg{
+        {Name: "entry_id", Value: id},
+    }
+    rows, err := d.ctx.Query(`
+    SELECT
+        download_timestamp,
+        client_ip,
+        user_agent
+    FROM
+        downloads
+    WHERE
+        entry_id=:entry_id
+    ORDER BY
+        download_timestamp DESC`,
+        params...,
+    )
+    if err == sql.ErrNoRows {
+        return []picoshare.DownloadRecord{}, nil
+    } else if err != nil {
+        return []picoshare.DownloadRecord{}, err
+    }
+    downloads := []picoshare.DownloadRecord{}
+    for rows.Next() {
+        var downloadTimeRaw string
+        var clientIP string
+        var userAgent string
+        if err := rows.Scan(&downloadTimeRaw, &clientIP, &userAgent); err != nil {
+            return []picoshare.DownloadRecord{}, err
+        }
+        dt, err := parseDatetime(downloadTimeRaw)
+        if err != nil {
+            return []picoshare.DownloadRecord{}, err
+        }
+        downloads = append(downloads, picoshare.DownloadRecord{
+            Time:      dt,
+            ClientIP:  clientIP,
+            UserAgent: userAgent,
+        })
+    }
+    return downloads, nil
+}
+```
