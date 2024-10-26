@@ -355,7 +355,9 @@ $ ls /build/source
 ls: cannot access '/build/source': No such file or directory
 ```
 
-I'm not sure if the `/build/source` path is a quirk of Nix or of xpdf's build configuration. The only way I've been able to fix that is with a semi-ugly hack that replaces the incorrect path with the correct one at compile time using clang's `-fdebug-prefix-map` flag:
+~~I'm not sure if the `/build/source` path is a quirk of Nix or of xpdf's build configuration.~~ (_Edit:_ The prefix comes from Nix's [`sandbox-build-dir` option](https://nix.dev/manual/nix/2.18/command-ref/conf-file#conf-sandbox-build-dir), which defines the root directory for building from source. Thanks to Dionysis Grigoropoulos for the clarification.)
+
+The only way I've been able to fix the `/build/source` prefix is with a semi-ugly hack that replaces the incorrect path with the correct one at compile time using clang's `-fdebug-prefix-map` flag:
 
 ```nix
 {
