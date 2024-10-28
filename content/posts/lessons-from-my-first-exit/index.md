@@ -300,24 +300,6 @@ In general, I've tried to minimize my dependencies on Google, both personally an
 
 ## What surprised me
 
-### Selling the business is all the boring parts of entrepreneurship
-
-There are so many parts of being a founder that are fun and exciting: launching a new product or feature, having full control over what tools you use, deciding exactly who you want to work with.
-
-But there are always parts of running a business that suck, like figuring out how complicated laws apply to your business or dealing with banks who you desperately need but who don't care about you at all.
-
-Most of the sales process is the unpleasant parts of running a business. You're constantly gathering contracts, invoices, statements and answering questions about decisions from years ago.
-
-### As you prepare to sell, everything costs 4x as much
-
-Every time you spend money, it costs you 4x as much. For example, suppose the multiple for your business is about 3x. If your annual profit is $100k, you can sell your business for $300k.
-
-Now imagine you decided to give one of your employees a $10k bonus. Now your profit is $90k, so your sale price is $270k. So to give the employee the $10k bonus, it costs you $40k: the initial $10k you paid plus another $30k in deflated valuation.
-
-It's not just bonuses. It's everything you spend money on. If you need to buy someone a new laptop, that $1k laptop now costs $4k.
-
-And beyond just costs, the sale process made me care a lot about numbers. Before, I obviously cared about profits, but it was just for myself. If I had a slow month, I would be disappointed but take solace in the fact that it's the long-term trends that matter, and I'd probably do better next month. But once I started thinking about a sale, a slow month could mean $30k off my valuation.
-
 ### Due diligence is unbounded, high-stress work
 
 I greatly underestimated how labor-intensive the due diligence process would be.
@@ -346,6 +328,16 @@ A pending sale also prevents me from thinking about anything but the short-term 
 
 If the buyer withdraws from the deal, I'd be in a worse position to sell than when I started because I'd spent the last several months distracted by the sale and optimizing for the short term.
 
+### As you prepare to sell, everything costs 4x as much
+
+Every time you spend money, it costs you 4x as much. For example, suppose the multiple for your business is about 3x. If your annual profit is $100k, you can sell your business for $300k.
+
+Now imagine you decided to give one of your employees a $10k bonus. Now your profit is $90k, so your sale price is $270k. So to give the employee the $10k bonus, it costs you $40k: the initial $10k you paid plus another $30k in deflated valuation.
+
+It's not just bonuses. It's everything you spend money on. If you need to buy someone a new laptop, that $1k laptop now costs $4k.
+
+And beyond just costs, the sale process made me care a lot about numbers. Before, I obviously cared about profits, but it was just for myself. If I had a slow month, I would be disappointed but take solace in the fact that it's the long-term trends that matter, and I'd probably do better next month. But once I started thinking about a sale, a slow month could mean $30k off my valuation.
+
 ### You don't strictly need a broker to sell
 
 I liked Quiet Light, and I have no regrets with using them as the broker to sell my business, but I was surprised at the end to see that I didn't strictly need a broker to sell the business.
@@ -358,21 +350,7 @@ The M&A broker should and did provide guidance to keep the deal on track. They f
 
 If I sell a business in the future, I may forego a broker if I can find a buyer independently. As a first-time seller, it was worth 15% to have an advisor on my side from start to finish. Now that I have experience selling, I might try a future deal using only an M&A lawyer, but I would still always consider working with a broker again to have that support all the way through the process.
 
-### Lawyers insist on Microsoft Word but never learned to use it
-
-I knew the lawyers were going to use Microsoft Word to send contract revisions back and forth, and I knew that was going to be frustrating, but I underestimated how bad lawyers are at Word.
-
-The lawyers would do things like number fields manually instead of using auto-numbering. Any time we added or deleted from a list, we had to re-number the list by hand.
-
-The lawyers didn't know how to cross-reference within a document, so when they said "as mentioned in section 4.3.3," that reference would point to the wrong thing when anything changed the numbering.
-
-They also don't seem to know how to use page breaks. Instead, they fill the remainder of the page with dozens of line breaks, so as soon as you change any content, the layout gets screwed up.
-
-I guess they figure that if they're making $550/hour, why bother with Word's time-saving features?
-
-### If the non-compete is too restrictive, I'm screwed
-
-One of the things my lawyer told me was that judges are less forgiving of a bad non-compete on an acquisition contract.
+### If the non-compete is too restrictive, you're screwed
 
 If I'm a big tech company hires me as a rank-and-file developer and has me sign a 500-page contract that buries a clause saying that I can never to write software for any other company, a judge would likely reject that non-compete.
 
@@ -380,17 +358,15 @@ If, however, I sell my company and the purchase agreement says that I agree to n
 
 When reviewing TinyPilot's purchase agreement, we looked carefully at the non-compete to ensure that it was limited specifically to the domain of KVM over IP devices and not software or technology in general.
 
-### If there's no cap on liability, I'm screwed
+### If there's no cap on liability, you're screwed
 
 When you run a business in the US as a corporation or an LLC, the most you can ever lose financially is the value of the business itself.
 
-If your business is worth $50k, and someone sues you for $1M, the worst that can happen is that they take your business. They can't take your house or car or first-born child because the structure of the corporation or LLC protects you. LLC stands for "limited liability company," and the "limited liability" part refers to the fact that your losses are strictly limited to the business' assets.
+If your business is worth $50k, and someone sues you for $1M, the worst that can happen is that they take your business. They can't take your house or car or first-born child because &mdash; only the assets under the business itself. That's what "limited liability" means in the company structure of limited liability company (LLC).
 
-One of the surprises in the sale process was that I lose limited liability protection in selling the business. If the asset purchase agreement didn't explicitly limit my liability to the value of the sale price, the buyer could theoretically sue me for a value that's much more than my business.
+But it turns out that when you sell the business, you lose limited liability protection unless you explicitly protect yourself in the purchase agreement.
 
-My lawyer made sure we included a
-
-They actually wanted it to be higher, but my lawyer pushed back and said that was unusual and we wouldn't sign anything above the sale price. The lawyer suggested I push for below the sale price, but that feels like a hard thing to negotiate because it seems like the kind of thing you'd only care about if you were hiding something major about the business.
+The buyer's lawyer originally wanted my liability to be higher. My lawyer pushed back and said that was unusual and we wouldn't sign anything above the sale price. My lawyer suggested I push for a cap of 50% of the sale price, as that's what he perceived as more normal for a deal of this size. I was exhausted and just wanted to get through it. I felt like the chances of the buyer suing me were pretty low, so I was satisfied making sure it wasn't infinity.
 
 ### Buyers have incentive to keep the seller happy
 
