@@ -352,7 +352,7 @@ If I sell a business in the future, I may forego a broker if I can find a buyer 
 
 ### If the non-compete is too restrictive, you're screwed
 
-If I'm a big tech company hires me as a rank-and-file developer and has me sign a 500-page contract that buries a clause saying that I can never to write software for any other company, a judge would likely reject that non-compete.
+If I'm a big tech company hires me as a rank-and-file developer and has me sign a 500-page contract that buries a clause saying that I can never to write software for any other company, a judge would likely reject that non-compete as unfair and unreasonable.
 
 If, however, I sell my company and the purchase agreement says that I agree to never work in software again, then a judge will hold me to that promise. They assume that I had reasonable bargaining power and awareness of the agreement, so if I signed a bad deal, it's on me.
 
