@@ -11,7 +11,7 @@ A few weeks ago, NVIDIA released Nemotron, a large language model that they deri
 
 NVIDIA claimed at release that Nemotron outperformed GPT-4o and Claude 3.5 Sonnet in certain benchmarks. That was exciting news, as my experience with self-hostable AI models is that they trail commercial models by about a year in terms of accuracy and quality.
 
-# I decided to test out Nemotron with a few simple coding tasks to see how it compared to commercial models like Claude 3.5 Sonnet.
+## I decided to test out Nemotron with a few simple coding tasks to see how it compared to commercial models like Claude 3.5 Sonnet.
 
 title: "How Close is Llama3.1 Nemotron Ollama"
 date: 2024-10-26T11:37:26-04:00
