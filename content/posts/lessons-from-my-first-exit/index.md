@@ -43,9 +43,9 @@ The checklist turned out to be extremely valuable after the close. The week of c
 
 Before I started the sales process for TinyPilot, I had a negative view of M&A brokers. The picture in my head of a broker was someone who just wanted to close deals as quickly as possible for the highest possible number and didn't care about anything else. I imagined them saying things like, "Let's bottom line this," or "Time for some Jäger bombs!"
 
-When I attended Microconf in 2023, I met Chris Guthrie, an advisor at Quiet Light Brokerage. He immediately came across as laid back, low-pressure, and founder focused. He was a former founder, and he talked about finding the best deal for the founder, not necessarily the quickest payout.
+When I attended Microconf in 2023, I met Chris Guthrie, an advisor at Quiet Light Brokerage. He immediately came across as laid back, low-pressure, and founder-focused. He was a former founder, and he talked about finding the best deal for the founder, not necessarily the quickest payout.
 
-I appreciated working with Quiet Light because our incentives felt aligned throughout the process. The pool of founders looking for M&A brokers is small and fairly tight-knit, so Quiet Light natural pressure to maintain a positive reputation.
+I appreciated working with Quiet Light because our incentives felt aligned throughout the process. The pool of founders looking for M&A brokers is small and fairly tight-knit, so Quiet Light has natural pressure to maintain a positive reputation.
 
 In discussions about the sale, some people balked at Quiet Light's $88.9k fee, as it represented 15% of the sale price. I still think that was a fair commission, as they found me a buyer that I couldn't have found on my own.
 
@@ -53,7 +53,9 @@ In discussions about the sale, some people balked at Quiet Light's $88.9k fee, a
 
 When I started thinking about a sale, I didn't need cash desperately, so I was open to receiving payments in installments over several years.
 
-When I spoke to other founders about seller financing, they warned me away from it. One founder had advice that stuck with me: "if you sell to a buyer and finance the purchase yourself, you now work for the buyer."
+When I spoke to other founders about seller financing, they warned me away from it. One founder had advice that stuck with me:
+
+> If you sell to a buyer and finance the purchase yourself, you now work for the buyer.
 
 I was puzzled. How does financing the sale mean I work for the buyer?
 
