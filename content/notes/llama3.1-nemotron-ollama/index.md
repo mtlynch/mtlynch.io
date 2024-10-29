@@ -1,11 +1,23 @@
 ---
-title: "Llama3.1 Nemotron Ollama"
-date: 2024-10-26T11:37:26-04:00
+title: "An Unsuccessful Experiment with Nemotron"
+date: 2024-10-29T00:00:00-04:00
+tags:
+  - llama
+  - chatbots
+  - ai
 ---
+
+A few weeks ago, NVIDIA released Nemotron, a large language model that they derived from Meta's Llama 3.1 70B.
+
+NVIDIA claimed at release that Nemotron outperformed GPT-4o and Claude 3.5 Sonnet in certain benchmarks. That was exciting news, as my experience with self-hostable AI models is that they trail commercial models by about a year in terms of accuracy and quality.
+
+I decided to test out Nemotron with a few simple coding tasks to see how it compared to commercial models like Claude 3.5 Sonnet.
 
 ## Provisioning a cloud server with a GPU
 
-To run this experiment, I provisioned the following server on [Scaleway](https://scaleway.com):
+I initially tried to run Nemotron on my local workstation, but my 9-year old GTX 970 GPU said, "Haha, funny joke!" Ollama refused to even install the Nemotron model.
+
+Instead, I provisioned the following server on [Scaleway](https://scaleway.com):
 
 - Server instance type: H100-1-80G
 - OS: Debian 12
@@ -22,9 +34,9 @@ LOCAL_PORT='8080'
 ssh "${TARGET_IP}" -L "${REMOTE_PORT}:localhost:${LOCAL_PORT}"
 ```
 
-## Install docker
+## Install Docker
 
-Next, install Docker so that you can run ollama under the Open-WebUI web interface for Ollama:
+Next, I installed Docker so that I can run Ollama under the Open-WebUI web interface:
 
 ```bash
 sudo apt-get update && \
@@ -51,7 +63,9 @@ docker run hello-world
 
 ## Start Ollama and Open-WebUI
 
-I adapted the standard [Open-WebUI](https://github.com/open-webui/open-webui) Docker Compose file to make one for Ollama, which you can download and run with the following command:
+Since my last Ollama experiment, the install process has gotten even easier.
+
+You can now install Ollama and Open-WebUI in a single Docker container, which is easier than having to deal with Docker Compose:
 
 ```bash
 docker run \
@@ -85,13 +99,63 @@ Click where it says `Pull a model from Ollama.com`:
 
 {{<img src="open-webui-select-model.webp" has-border="true">}}
 
+For the model, enter `nemotron` and hit the download button:
+
 {{<img src="open-webui-specify-nemotron.webp" has-border="true">}}
 
-It's going to sit at 100% for a while, but it's not done until you see a popup announcing the model is fully downloaded.
+It's a large file, so it's going to take a few minutes to download. The download progress sits at 100% for a while, but it's not done until you see a popup announcing the model is fully downloaded.
 
----
+## Test 1: Refactoring code to use `sql.Named`
 
-### Input
+I recently discovered the [`sql.Named` function](https://pkg.go.dev/database/sql#Named) in the Go standard library. So, instead of writing SQL queries with the `?` placeholder like this:
+
+```go
+db.Exec(`
+    INSERT INTO
+        downloads
+    (
+        entry_id,
+        download_timestamp,
+        client_ip,
+        user_agent
+    )
+    VALUES(?,?,?,?)`, // Ugly placeholders!
+        id.String(),
+        formatTime(r.Time),
+        r.ClientIP,
+        r.UserAgent,
+    )
+```
+
+That's ugly because the reader has to carry a lot of context in their head to remember what each `?` represents, and it's easy to screw things up when rewriting queries.
+
+Instead, you can write more readable queries with named parameters like this:
+
+```go
+db.Exec(`
+	INSERT INTO
+		downloads
+	(
+		entry_id,
+		download_timestamp,
+		client_ip,
+		user_agent
+	)
+	VALUES(@entry_id, @download_timestamp, @client_ip, @user_agent)`,
+		sql.Named("entry_id", id.String()),
+		sql.Named("download_timestamp", formatTime(r.Time)),
+		sql.Named("client_ip", r.ClientIP),
+		sql.Named("user_agent", r.UserAgent),
+	)
+```
+
+This is one of my favorite coding tasks for an LLM, as it's easy to describe to an LLM but tedious for a human to fix manually.
+
+To test Nemotron, I had it try to re-do a refactoring I'd already done in Picoshare [to replace `?` placeholders with `sql.Named`](https://github.com/mtlynch/picoshare/pull/560).
+
+### Prompt
+
+> Refactor this code to replace the `?` placeholders in the SQL query with `sql.Named` arguments:
 
 ```go
 package sqlite
@@ -243,7 +307,43 @@ func (d DB) GetEntryDownloads(id picoshare.EntryID) ([]picoshare.DownloadRecord,
 }
 ```
 
----
+### Commentary
+
+So, Nemotron is off to a poor start. This code does not compile, as the `sql` APIs don't accept `sql.NamedArg` as parameters:
+
+```text
+store/sqlite/downloads.go:28:3: cannot use params (variable of type []sql.NamedArg) as []any value in argument to d.ctx.Exec
+store/sqlite/downloads.go:51:3: cannot use params (variable of type []sql.NamedArg) as []any value in argument to d.ctx.Query
+```
+
+But even if they did, it's not as readable as what Claude 3.5 Sonnet produces for the same prompt. Instead of declaring an unnecessary array, it just creates the `sql.Named` arguments inline, which is much easier to understand:
+
+```go
+// Excerpt of output from claude-3-5-sonnet-20241022
+
+    if _, err := d.ctx.Exec(`
+    INSERT INTO
+        downloads
+    (
+        entry_id,
+        download_timestamp,
+        client_ip,
+        user_agent
+    )
+    VALUES(@entryID, @timestamp, @clientIP, @userAgent)`,
+        sql.Named("entryID", id.String()),
+        sql.Named("timestamp", formatTime(r.Time)),
+        sql.Named("clientIP", r.ClientIP),
+        sql.Named("userAgent", r.UserAgent),
+    ); err != nil {
+//      ...
+```
+
+Still, Nemotron understood what I wanted and sort of had the right idea about how to implement it.
+
+## Test 2: Create unit tests
+
+### Prompt
 
 Create unit tests for this code:
 
@@ -338,7 +438,7 @@ func TestGuestLinkLabel(t *testing.T) {
 }
 ```
 
-Output:
+### Output
 
 ```go
 package parse_test
@@ -413,7 +513,20 @@ func TestFilename(t *testing.T) {
 }
 ```
 
-It does okay, but it makes some mistakes:
+### Commentary
 
-- It gets the wrong path for the import
-- It has syntax errors where it sometimes puts in `(` instead tabs before `description`
+Nemotron did okay here, but it made some obvious mistakes:
+
+- Nemotron created the wrong path to import the `parse` package.
+  - It should have figured out from the example tests that the path to the `parse` package is `.../handlers/parse` rather than `.../parse`.
+- Nemotron introduced loud syntax errors by sometimes bizarrely emitting a `(` instead of a tab character before the `description` field.
+- Nemotron misunderstood the rules around filenames with a leading dot.
+  - It created a test saying that leading dots in a filename like `.hidden` should be rejected, but the implementation actually says that a single leading dot is okay.
+
+## Final thoughts
+
+I found Nemotron disappointing at the few coding tasks I offered. I view these as easy to medium difficulty challenges, so it's disappointing to see Nemotron fail.
+
+In both cases, output from Claude 3.5 Sonnet was strictly better than output from Nemotron.
+
+Still, it's always exciting to see activity in self-hostable LLMs, so I hope they continue catching up to commercial models.
