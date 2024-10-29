@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 title: "An Unsuccessful Experiment with Nemotron"
 date: 2024-10-29T00:00:00-04:00
 tags:
@@ -11,7 +12,16 @@ A few weeks ago, NVIDIA released Nemotron, a large language model that they deri
 
 NVIDIA claimed at release that Nemotron outperformed GPT-4o and Claude 3.5 Sonnet in certain benchmarks. That was exciting news, as my experience with self-hostable AI models is that they trail commercial models by about a year in terms of accuracy and quality.
 
-I decided to test out Nemotron with a few simple coding tasks to see how it compared to commercial models like Claude 3.5 Sonnet.
+# I decided to test out Nemotron with a few simple coding tasks to see how it compared to commercial models like Claude 3.5 Sonnet.
+
+title: "How Close is Llama3.1 Nemotron Ollama"
+date: 2024-10-26T11:37:26-04:00
+
+---
+
+I saw NVIDIA claimed that it [beat Claude 3.5 Sonnet and GPT-4o on a bunch of benchmarks](https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF).
+
+> > > > > > > 673978d35ce81057b0035940dd46bbde7319a1ea
 
 ## Provisioning a cloud server with a GPU
 
@@ -345,6 +355,12 @@ Still, Nemotron understood what I wanted and sort of had the right idea about ho
 
 ### Prompt
 
+## Test 1: Create unit tests for a Go function
+
+For the first test, I asked Nemotron to write unit tests for a function in PicoShare:
+
+### Prompt
+
 Create unit tests for this code:
 
 ```go
@@ -522,6 +538,8 @@ Nemotron did okay here, but it made some obvious mistakes:
 - Nemotron introduced loud syntax errors by sometimes bizarrely emitting a `(` instead of a tab character before the `description` field.
 - Nemotron misunderstood the rules around filenames with a leading dot.
   - It created a test saying that leading dots in a filename like `.hidden` should be rejected, but the implementation actually says that a single leading dot is okay.
+
+It otherwise created valid tests that have decent coverage of the behavior. I compared it with `claude-3-5-sonnet-20241022`, and Claude created similar tests but without Nemotron's errors.
 
 ## Final thoughts
 
