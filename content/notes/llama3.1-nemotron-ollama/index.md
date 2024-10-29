@@ -20,8 +20,6 @@ date: 2024-10-26T11:37:26-04:00
 
 I saw NVIDIA claimed that it [beat Claude 3.5 Sonnet and GPT-4o on a bunch of benchmarks](https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF).
 
-> > > > > > > 673978d35ce81057b0035940dd46bbde7319a1ea
-
 ## Provisioning a cloud server with a GPU
 
 I initially tried to run Nemotron on my local workstation, but my 9-year old GTX 970 GPU said, "Haha, funny joke!" Ollama refused to even install the Nemotron model.
@@ -142,20 +140,20 @@ Instead, you can write more readable queries with named parameters like this:
 
 ```go
 db.Exec(`
-	INSERT INTO
-		downloads
-	(
-		entry_id,
-		download_timestamp,
-		client_ip,
-		user_agent
-	)
-	VALUES(@entry_id, @download_timestamp, @client_ip, @user_agent)`,
-		sql.Named("entry_id", id.String()),
-		sql.Named("download_timestamp", formatTime(r.Time)),
-		sql.Named("client_ip", r.ClientIP),
-		sql.Named("user_agent", r.UserAgent),
-	)
+    INSERT INTO
+        downloads
+    (
+        entry_id,
+        download_timestamp,
+        client_ip,
+        user_agent
+    )
+    VALUES(@entry_id, @download_timestamp, @client_ip, @user_agent)`,
+        sql.Named("entry_id", id.String()),
+        sql.Named("download_timestamp", formatTime(r.Time)),
+        sql.Named("client_ip", r.ClientIP),
+        sql.Named("user_agent", r.UserAgent),
+    )
 ```
 
 This is one of my favorite coding tasks for an LLM, as it's easy to describe to an LLM but tedious for a human to fix manually.
@@ -366,10 +364,10 @@ Create unit tests for this code:
 package parse
 
 import (
-	"errors"
-	"strings"
+    "errors"
+    "strings"
 
-	"github.com/mtlynch/picoshare/v2/picoshare"
+    "github.com/mtlynch/picoshare/v2/picoshare"
 )
 
 // MaxFilenameBytes is the maximum number of bytes allowed for uploaded files
@@ -384,19 +382,19 @@ var ErrFilenameHasDotPrefix = errors.New("filename cannot begin with dots")
 var ErrFilenameIllegalCharacters = errors.New("illegal characters in filename")
 
 func Filename(s string) (picoshare.Filename, error) {
-	if s == "" {
-		return picoshare.Filename(""), ErrFilenameEmpty
-	}
-	if len(s) > MaxFilenameBytes {
-		return picoshare.Filename(""), ErrFilenameTooLong
-	}
-	if s == "." || strings.HasPrefix(s, "..") {
-		return picoshare.Filename(""), ErrFilenameHasDotPrefix
-	}
-	if strings.ContainsAny(s, "\\/\a\b\t\n\v\f\r\n") {
-		return picoshare.Filename(""), ErrFilenameIllegalCharacters
-	}
-	return picoshare.Filename(s), nil
+    if s == "" {
+        return picoshare.Filename(""), ErrFilenameEmpty
+    }
+    if len(s) > MaxFilenameBytes {
+        return picoshare.Filename(""), ErrFilenameTooLong
+    }
+    if s == "." || strings.HasPrefix(s, "..") {
+        return picoshare.Filename(""), ErrFilenameHasDotPrefix
+    }
+    if strings.ContainsAny(s, "\\/\a\b\t\n\v\f\r\n") {
+        return picoshare.Filename(""), ErrFilenameIllegalCharacters
+    }
+    return picoshare.Filename(s), nil
 }
 ```
 
@@ -406,50 +404,50 @@ Match the style conventions of this file:
 package parse_test
 
 import (
-	"fmt"
-	"strings"
-	"testing"
+    "fmt"
+    "strings"
+    "testing"
 
-	"github.com/mtlynch/picoshare/v2/handlers/parse"
-	"github.com/mtlynch/picoshare/v2/picoshare"
+    "github.com/mtlynch/picoshare/v2/handlers/parse"
+    "github.com/mtlynch/picoshare/v2/picoshare"
 )
 
 func TestGuestLinkLabel(t *testing.T) {
-	for _, tt := range []struct {
-		description string
-		input       string
-		output      picoshare.GuestLinkLabel
-		err         error
-	}{
-		{
-			description: "accept valid label",
-			input:       "For my good pals",
-			output:      picoshare.GuestLinkLabel("For my good pals"),
-			err:         nil,
-		},
-		{
-			description: "allow empty label",
-			input:       "",
-			output:      picoshare.GuestLinkLabel(""),
-			err:         nil,
-		},
-		{
-			description: "reject labels that are too long",
-			input:       strings.Repeat("A", parse.MaxGuestLinkLabelLength+1),
-			output:      picoshare.GuestLinkLabel(""),
-			err:         parse.ErrGuestLinkLabelTooLong,
-		},
-	} {
-		t.Run(fmt.Sprintf("%s [%s]", tt.description, tt.input), func(t *testing.T) {
-			label, err := parse.GuestLinkLabel(tt.input)
-			if got, want := err, tt.err; got != want {
-				t.Fatalf("err=%v, want=%v", err, want)
-			}
-			if got, want := label, tt.output; got != want {
-				t.Errorf("label=%v, want=%v", label, want)
-			}
-		})
-	}
+    for _, tt := range []struct {
+        description string
+        input       string
+        output      picoshare.GuestLinkLabel
+        err         error
+    }{
+        {
+            description: "accept valid label",
+            input:       "For my good pals",
+            output:      picoshare.GuestLinkLabel("For my good pals"),
+            err:         nil,
+        },
+        {
+            description: "allow empty label",
+            input:       "",
+            output:      picoshare.GuestLinkLabel(""),
+            err:         nil,
+        },
+        {
+            description: "reject labels that are too long",
+            input:       strings.Repeat("A", parse.MaxGuestLinkLabelLength+1),
+            output:      picoshare.GuestLinkLabel(""),
+            err:         parse.ErrGuestLinkLabelTooLong,
+        },
+    } {
+        t.Run(fmt.Sprintf("%s [%s]", tt.description, tt.input), func(t *testing.T) {
+            label, err := parse.GuestLinkLabel(tt.input)
+            if got, want := err, tt.err; got != want {
+                t.Fatalf("err=%v, want=%v", err, want)
+            }
+            if got, want := label, tt.output; got != want {
+                t.Errorf("label=%v, want=%v", label, want)
+            }
+        })
+    }
 }
 ```
 
