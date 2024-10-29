@@ -37,7 +37,7 @@ As we entered due diligence, I expanded this checklist to include things that wo
 
 It was helpful to start this checklist several months before the actual closing because new things came to mind through negotiations. For example, I'd send a letter to one of TinyPilot's affiliate partners and then remember to add, "Introduce buyer to affiliates" to the post-close checklist.
 
-The checklist turned out to be extremely valuable after the close. The week of closing is chaotic because so many accounts are changing hands and processes need tweaking for the new owner, so it was helpful to have a checklist I created in calmer times.
+The checklist turned out to be extremely valuable, especially the week of the closing. So many accounts were changing hands and processes needed tweaking for the new owner, so it was helpful to have a checklist I created in calmer times.
 
 ### Worked with a broker I trusted
 
