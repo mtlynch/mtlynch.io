@@ -204,7 +204,7 @@ I don't think this strategy is ideal or fair to everyone, but it feels like the 
 
 I found the due diligence process quite stressful and exhausting. There were so many hoops to jump through and so many approvals to win, so I was constantly worried something would blow up the deal and I'd be left wasting a painful amount of time and money for nothing.
 
-I made the closing process even more stressful on myself by catastrophizing everything. Every time I recognized the potential for something to go awry, I started imagining how bad it would be if it happened. I'd think about the bad outcome so much that my mood darkened to what it would be if the bad thing already happened.
+I made the closing process even more stressful on myself by catastrophizing everything. Every time I recognized the potential for something to go awry, I started imagining how bad it would be if it happened. I'd think about the bad outcome so much that I'd feel like the bad thing already happened.
 
 For example, TinyPilot uses the H.264 video encoding algorithm. That algorithm is patented, so before we released it, we had to get a license from the patent holder. During due diligence, we discovered that the license terms forbid me from transferring the license in an asset sale.
 
