@@ -356,9 +356,9 @@ I liked Quiet Light, and I have no regrets with using them as the broker to sell
 
 My only frame of reference for a deal of this size is buying or selling a house. In that process, the broker does a lot of things I don't understand or know how to do like list on MLS (TODO: link) or ensure we're meeting municipal requirements for the sale.
 
-Quiet Light's main contribution was finding a buyer, as that's something I could not have done on my own. But outside of that, they're outside of the critical path of the deal. Once we found a buyer, then the work shifted to the M&A lawyer to review legal documents.
+Quiet Light's main contribution was finding a buyer, as that's something I could not have done on my own. But after that, they're outside of the critical path of the deal. Once we found a buyer, then the work shifted to the M&A lawyer to review legal documents.
 
-The M&A broker should and did provide guidance to keep the deal on track. They found a new lender for the buyer when the buyer's original lender backed out. But if they disappeared, the deal could still go through, whereas if my lawyer disappeared midway through, I wouldn't have anyone to review the closing documents.
+The M&A broker should and did provide guidance to keep the deal on track. They even found a new lender for the buyer when the buyer's original lender backed out. But if the broker had disappeared after the LOI, we could have completed the sale without a broker. This is in contrast to roles like the lawyer, where the deal can't move forward without one.
 
 If I sell a business in the future, I may forego a broker if I can find a buyer independently. As a first-time seller, it was worth 15% to have an advisor on my side from start to finish. Now that I have experience selling, I might try a future deal using only an M&A lawyer, but I would still always consider working with a broker again to have that support all the way through the process.
 
