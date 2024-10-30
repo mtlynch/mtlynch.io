@@ -216,9 +216,17 @@ If I sell a company in the future, I hope to worry less about potential disaster
 
 TODO: Revise this
 
-Put stronger language in the contract that buyer can't contact suppliers if the deal doesn't close. Maybe wouldn't work if I was selling to a competitor. It was just too much of a pain to have to redact information from so many documents. And you only have to screw up once to make all the work worthless.
+Another founder advised me to withhold the names of TinyPilot's critical vendors until after the deal closed. They argued that you can force the buyer to sign something to say they can't use the information if the deal falls through, but it's hard as the seller to enforce that on small-scale deals. The only way to protect the information is to not share it at all.
 
-Forgetting to redact the vendor name in just one spot completely ruins hours of work. I spent hours manually placing black boxes on pages and pages of PDFs to hide vendor names, and then . And then the bank ended up insisting on seeing everything anyway.
+I withheld the names of vendors until a few weeks from closing, but I wouldn't do it again in most circumstances.
+
+Remember when I said that the buyer [wanted to see every single bank statement](#due-diligence-is-unbounded-high-stress-work)? My vendors names obviously appear frequently in my bank statements, so I had to manually go through a hundred PDFs checking for each vendor's name, manually redacting the information, and then rasterizing the PDF to prevent leaks in the metadata.
+
+After all that work, I was horrified weeks later when I sent a document to the buyer, and he asked, "Hey, who's FooCorp?" "FooCorp" was the very web searchable name of TinyPilot's electrical engineering design firm (I'm changing their name here).
+
+And then just a few weeks later, the buyer's bank insisted on seeing vendor names anyway, and they wouldn't budge on it.
+
+If I sell a business in the future, my strategy will be to put language in the LOI preventing the buyer from acting on insider secrets they learn in due diligence. I'd guard more carefully if I was selling to a competitor, but my default would be to trust a contract to discourage bad behavior. Hiding the names of multiple key vendors makes due diligence so much more onerous. On top of all the work, one accidentally leaked name makes all the work you did pointless.
 
 ### Eliminate inventory from the broker's commission
 
