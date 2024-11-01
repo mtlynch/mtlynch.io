@@ -176,13 +176,11 @@ If I were to do this again, I'd propose to the buyer a "small stuff agreement." 
 
 ### Announce the sale to my team later
 
-When should an owner announce an acquisition to their team? I haven't seen anyone come up with a good solution to this problem.
+When should an owner announce an acquisition to their team?
 
-If you keep the sale a secret until the deal closes, you're effectively lying to your team. An acquisition will have a major impact on their lives, and there are important decisions they might make where it would greatly benefit them to know about the sale.
+If you keep the sale a secret until the deal closes, you're effectively lying to your team. On the other hand, if you're completely transparent about the sale, you bear enormous risk. Members of the team might threaten to leave and put the sale in jeopardy unless you offer them bonuses or promotions. Or the looming sale might kill their motivation and tank their job performance.
 
-On the other hand, if you're completely transparent about the sale to your team, you bear enormous risk. Members of the team might threaten to leave and put the sale in jeopardy unless you offer them bonuses or promotions. Or the looming sale might kill their motivation and tank their job performance.
-
-In the case of TinyPilot, I had a good relationship with every member of the team, so I didn't think anyone would use the sale as negotiating leverage against me. That said, I've had plenty of experiences of people doing weird and unexpected things when they know a relationship is about to end.
+I had a good relationship with every member of TinyPilot's team, so I didn't think anyone would use my candor against me in bargaining. That said, people do unexpected things when a relationship is about to end.
 
 I chose to reveal the sale to the team at the earliest formal step of the process: when I signed the agreement to begin working with my broker. That ended up being six months before closing.
 
@@ -190,69 +188,67 @@ I regret that decision _slightly_.
 
 Nothing catastrophic happened, but announcing the sale made certain parts of managing the team more difficult. I unfortunately need to be a bit vague here to respect the team's privacy.
 
-I didn't fully understand it until we were in the middle of the sale that the team and I faced different levels of risk. To the team, an acquisition meant the potential for the new owner to fire them or change their role in a way that makes them want to leave. And job changes are stressful, but everyone worked part-time for hourly pay. Nobody was about to take out a mortgage on a new home with the expectation that they'd be working at TinyPilot for the next 20 years.
-
-But if an employee wanted to interfere with the sale, that could mean scaring away a buyer and slicing $50-100k off the valuation. Worse, they could delay the sale and leave me in a position where I'm managing the company, trying to prepare it for sale, and [caring for a newborn](/i-sold-tinypilot/#whats-next) all at the same time.
+To the team, an acquisition meant the new owner could fire them or drastically change their role. If they wanted to interfere with the sale, they could scare off a buyer and slicing $50-100k off the valuation. Worse, they could delay the sale and leave me in a position where I'm managing the company, trying to prepare it for sale, and [caring for a newborn](/i-sold-tinypilot/#whats-next) all at the same time.
 
 I didn't want a bad outcome for anyone, but the worst case for me was significantly worse than the worst case for any other member of the team.
 
-If I do this again, I'd wait to tell my team about the sale until it's a done deal, but I'd also disclose early on in working together that an acquisition is always a possibility. I'd explain before I even start looking for a buyer that an acquisition might happen, and that the team won't necessarily know it's happening. I'd communicate that if an acquisition did happen, I'd be looking for a buyer that aligns with the team's interests, as I did with TinyPilot.
+If I do this again, I'd wait to tell my team about the sale until it's a done deal, but I'd also make sure the team knows that an acquisition is always a possibility. I'd explain before I even start looking for a buyer that an acquisition might happen, and that the team won't necessarily know it's happening. If it did, I'd prioritize a buyer whose vision aligns with the team's interests, as I did with TinyPilot.
 
 I don't think this strategy is ideal or fair to everyone, but it feels like the least bad of many flawed options.
 
 ### Don't catastrophize every setback
 
-I found the due diligence process quite stressful and exhausting. There were so many hoops to jump through and so many approvals to win, so I was constantly worried something would blow up the deal and I'd be left wasting a painful amount of time and money for nothing.
+I found the due diligence process quite stressful and exhausting, but I made it even harder on myself by catastrophizing everything.
 
-I made the closing process even more stressful on myself by catastrophizing everything. Every time I recognized the potential for something to go awry, I started imagining how bad it would be if it happened. I'd think about the bad outcome so much that I'd feel like the bad thing already happened.
+Every time there was even a potential obstacle in negotiations, I began ruminating about all the terrible consequences that might occur if it happened. I'd ruminate about the bad outcome so much that I'd feel like it already happened, and the deal was dead.
 
 For example, TinyPilot uses the H.264 video encoding algorithm. That algorithm is patented, so before we released it, we had to get a license from the patent holder. During due diligence, we discovered that the license terms forbid me from transferring the license in an asset sale.
 
-I immediately started worrying that the patent owner would refuse to grant the new owner the same license or otherwise take too long and blow up the deal. But then a day after I told the buyer about the license, they had already heard back from the patent owner and the wheels were in motion for a new license. I tore my hair out for nothing.
+I immediately started imagining the worst possible outcome. What if the patent holder realizes they can block the sale, and they demand I pay them $100k? What if the patent holder just can't be bothered to deal with such a small player, and so they block the sale out of sheer indifference?
+
+I imagined all the negative scenarios all day and into the night. And then the next morning, the buyer emailed to say they'd already heard back from the patent owner and the wheels were in motion for a new license. Everything had been easy peasy, and I'd freaked out based on zero evidence there was any problem at all.
 
 If I sell a company in the future, I hope to worry less about potential disasters. I need to remember to sleep on things and see how they feel in the morning.
 
 ### Reveal vendors earlier, but put tighter restrictions in LOI
 
-Another founder advised me to withhold the names of TinyPilot's critical vendors until after the deal closed. They argued that you can force the buyer to sign something to say they can't use the information if the deal falls through, but it's hard as the seller to enforce that on small-scale deals. The only way to protect the information is to not share it at all.
+Another founder advised me to withhold the names of TinyPilot's critical vendors until after the deal closed. They explained that you can force the buyer to sign something to say they can't use the information if the deal falls through, but it's hard to enforce that on small-scale deals. The only way to protect the information is to not share it at all.
 
 I withheld the names of my vendors, but I wouldn't do it again.
 
-As part of due diligence, I had to share the last two years of TinyPilot's bank statements. TinyPilot's vendor's names appeared frequently in its bank statements, so I had to go through a hundred PDFs searching for each vendor's name, manually drawing black rectangles over each appearance, and then rasterizing the PDF to prevent leaks in the metadata.
+As part of due diligence, I had to share the last two years of TinyPilot's bank statements. Vendor names appeared frequently in our bank statements, so I had to go through a hundred PDFs searching for each vendor's name, manually drawing black rectangles over each appearance, and rasterizing the PDF to prevent leaks in the metadata.
 
 Weeks later, I sent an inventory report to the buyer and was horrified when he replied, "Who's FooCorp?"
 
-"FooCorp" (not their real name) was the very web searchable name of TinyPilot's electrical engineering vendor. I completely forgot that the report mentioned them, so I didn't redact it before sending.
+"FooCorp" (not their real name) was the very web searchable name of TinyPilot's electrical engineering vendor. I forgot that the report mentioned them, so I didn't redact it before sending.
 
 And then just a few weeks later, the buyer's bank firmly insisted on seeing vendor names, so I had to reveal everything at that point anyway.
 
-If I sell a business in the future, my strategy will be to require the buyer to sign a contract at the LOI stage preventing them from acting on insider secrets they learn in due diligence. I'd guard more carefully if I was selling to a competitor, but my default would be to trust a contract to discourage bad behavior.
+If I sell a business in the future, my strategy will be to create a contract at that forbids the buyer from acting on insider secrets they learn in due diligence. I'd guard more carefully if I was selling to a competitor, but my default would be to rely on the contract to discourage bad behavior.
 
-Hiding the names of multiple key vendors makes due diligence so much more onerous. On top of all the work, missing a single redaction can nullify hours of tedious work.
+Hiding the names of multiple key vendors makes due diligence so much more onerous. On top of all the contortions to withhold information, missing a single redaction can nullify hours of tedious work.
 
 ### Eliminate inventory from the broker's commission
 
-My only regret about my broker agreement with Quiet Light was that part of their commission was a percentage of the value of my inventory at the time of the sale.
+My only regret about my broker agreement with Quiet Light was that their commission included the value of TinyPilot's inventory at the time of the sale.
 
-I didn't realize until I started the sale process with the buyer, but giving the broker a commission on inventory makes no sense.
-
-First, the value of TinyPilot's inventory could vary by a factor of four depending on where we are in the manufacturing cycle. Why should I pay the broker $20k if my inventory happens to be high vs. $5k if my inventory is low?
+The value of TinyPilot's inventory could vary by a factor of four depending on where we are in the manufacturing cycle. Why should I pay the broker $20k if my inventory happens to be high vs. $5k if my inventory is low?
 
 Worse, I was selling my inventory to the buyer at cost. It's not like the broker can negotiate a great price on my unsold inventory and earn their commission that way. If I have $100k in inventory, I actually only receive $90k for it after paying the broker their commission, so it's a pure loss for me.
 
-That said, I got lucky, and the deal closed when TinyPilot's inventory was at the ideal level for the sale. On closing day, we were a couple of weeks from placing my next order for the subsequent eight months. That was perfect because we were low but not so low that the new buyer was coming in understocked. On top of that, there's some wiggle room in how to calculate the inventory for the broker fee, and Quiet Light calculated it in a way that was especially generous to me.
+That said, I got lucky, and the deal closed when TinyPilot's inventory was at the ideal level for the sale. On closing day, we were a couple of weeks from placing our next manufacturing order for the subsequent eight months. That was perfect because we were low but not so low that the new buyer was coming in understocked. On top of that, there's wiggle room in calculating inventory value for the broker fee, and Quiet Light calculated it in a way that was especially generous to me.
 
-Still, the broker fee on inventory was one more layer that stressed me out around closing time. If the deal had stretched out another month, it could have cost me $10k in additional broker fees on inventory.
+Still, the broker fee on inventory was one more layer that stressed me out around closing time. If the deal had stretched out another month, I'd have lost $10k on additional broker fees for the inventory.
 
 If I do this again, I'll push the broker to eliminate inventory from the fee, even if it means giving them a higher percentage of the sale price.
 
 ### Assume from the start that nothing written is private
 
-Part of TinyPilot's sale included all of TinyPilot's emails. This seemed reasonable and standard to me, as a lot of institutional knowledge is buried in old emails.
+Part of TinyPilot's sale included all of TinyPilot's emails. This seemed reasonable, as a lot of institutional knowledge is buried in old emails.
 
 As I started thinking more about the sale, I realized that some of my email would be complicated to hand over. What if my employees had said something personal and private to me an email?
 
-As a fictional example, imagine an employee said in an email, "Ever since my father died, I've been struggling with anxiety and depression, and I've been feeling unproductive." If someone shared something like that with me, it would be with me, Michael their human co-worker with whom they have a trusting relationship, not Michael, the corporate owner of TinyPilot's email assets. It felt strange and cold to sell that email to the new buyer.
+As a fictional example, imagine I had an email from an employee that said, "Ever since my father died, I've been struggling with anxiety and depression, and I've been feeling unproductive." If someone shared something like that with me, it would be with me, Michael their human co-worker with whom they have a trusting relationship, not Michael, the corporate owner of TinyPilot's email assets. It felt strange and cold to sell that email to the new buyer.
 
 Fortunately, I worked out an agreement between the buyer and the team that before closing, anyone could flag private, personal emails, and I'd purge them before closing.
 
@@ -288,7 +284,7 @@ I knew a longer transition period would be a better deal for the buyer, but I di
 
 Even though I was available for 40 hours per week, the buyer can't really use all of those hours. He's taking over a team of six employees and learning how to run everything, so it's hard for him to direct my time enough to fill 40 hours per week right out of the gate. In practice, I did everything he needed with only 8-10 hours per week.
 
-Even though I was officially only working 10 hours, there's still a high cost to me of being available every workday for 30 days. There was nothing in the contract about how quickly I had to respond to emails, but I was checking my TinyPilot inbox every hour or so. If I did two hours of transition work in a day, it was often spread into several 30-minute chunks, so I didn't get much else done.
+Even though I was officially only working 10 hours, there was still a high cost to me being available every workday for 30 days. There was nothing in the contract about how quickly I had to respond to emails, but I checked my TinyPilot inbox every hour or so. If I did two hours of transition work in a day, it was often spread into several 30-minute chunks, so I didn't get much else done.
 
 ### Disconnect non-transferable accounts from business email before closing
 
@@ -302,7 +298,7 @@ I worked with the new owner to fix up the email address on those accounts after 
 
 I had all of TinyPilot's account credentials in Bitwarden, so transferring ownership of accounts was smooth. I just added the new owner as an admin in our Bitwarden organization, and he took possession of all the accounts.
 
-The one account that couldn't transfer over was Google. I used Google Cloud Platform for some TinyPilot services, but I never created a dedicated TinyPilot GCP account. I just used a dedicated TinyPilot GCP project within my personal Google account. I figured that when the time came, I'd just transfer the project to the new owner's GCP account.
+The one account that couldn't transfer over was Google. I used Google Cloud Platform for some TinyPilot services, and I had a dedicated TinyPilot GCP project, but it was within my personal Google account. I figured that when the time came, I'd just transfer the project to the new owner's GCP account.
 
 There's a big "Migrate" button at the top of the GCP project settings page, so I naïvely thought Google would allow me to push that button and specify the new owner's GCP account as the destination.
 
@@ -312,7 +308,7 @@ When the sale closed, I finally clicked that button and immediately saw this err
 
 {{<img src="gcp-error.png" has-border="true">}}
 
-The [project migration docs](https://cloud.google.com/resource-manager/docs/project-migration) are a maze of confusing and incorrect instructions. The jist seemed to be that both the new owner and I would need to create paid Google Workspace accounts and go through some complicated process from there. We had a similar issue with some notes and old documents that I'd stored in Google Drive.
+GCP's [project migration docs](https://cloud.google.com/resource-manager/docs/project-migration) are a maze of confusing and incorrect instructions. The jist seemed to be that both the new owner and I would need to create paid Google Workspace accounts and go through some complicated process from there. We had a similar issue with some notes and old documents that I'd stored in Google Drive.
 
 The new owner decided it was too much hassle to do the official migration, so I exported what I could, and we deleted the rest.
 
@@ -324,13 +320,11 @@ In general, I've tried to minimize my dependencies on Google, both personally an
 
 I greatly underestimated how labor-intensive the due diligence process would be.
 
-At the start, I thought due diligence would be somewhat tedious but still straightforward. I'd already shared monthly profit and loss statements before the buyer even signed the LOI.
-
-I thought maybe the buyer would need to see a few of my bank statements to prove that my profit and loss was real. Perhaps I'd have an opportunity to show off my immaculate bookkeeping ledger, of which I was quite proud.
+At the start, I thought due diligence would be somewhat tedious but still straightforward. The buyer had already seen two years of profit and loss statements before they even signed the LOI. I thought maybe they'd want to see a few of my bank statements to prove that my profit and loss was real. Perhaps I'd have an opportunity to show off my immaculate bookkeeping ledger, of which I was quite proud.
 
 It turned out that the due diligence process required me to share _all_ of my bank statements from the last two years. And that was just part of the first round of requests.
 
-As we proceeded further into the due diligence process, I needed to create lots of one-off reports to demonstrate some aspect of my business, like how frequently our customers make repeat purchases or which platforms account for what percentage of our revenue.
+As we proceeded further into the due diligence process, I needed to create lots of one-off reports to demonstrate different aspect of my business, like how frequently our customers make repeat purchases or which platforms account for what percentage of our revenue.
 
 I didn't want to expose customer data, so I did custom processing on our reports to avoid leaking customer details. But the more I customized the reports, the more likely I was to make an error. And if I made an error, the buyer would have grounds to sue me later for selling the company based on fraudulent data. So, even for simple reports, I felt stressed about doing them perfectly.
 
@@ -338,7 +332,9 @@ This is also a case where a non-cash buyer makes things more challenging. The bu
 
 ### Due diligence bound me to a single seller, even beyond the due diligence period
 
-The last time I bought a house, I requested a 10-day inspection period. I wanted enough time to bring in an inspector and an electrician to identify red flags. The homeowner pushed back and asked me to limit the inspection period to seven days. They were worried about the cost of keeping the house off the market for an extra three days. And that's a house! Its price is far more stable than a small business.
+The last time I bought a house, I requested a 10-day inspection period. I wanted to do standard checks with an inspector and an electrician before completing the purchase.
+
+The homeowner pushed back and asked me to limit the inspection period to seven days. They were worried about the cost of keeping the house off the market for an extra three days. And that's a house! Its price is far more stable than a small business.
 
 I didn't realize how much it would cost me to take my business off the market for three whole months.
 
@@ -346,7 +342,7 @@ Three months of due diligence means three months where I'm distracted from the b
 
 A pending sale also prevents me from thinking about anything but the short-term future. If I could spend $20k to reduce my hardware costs by $50k over the next six months, I can't do that because it will look to the seller like my manufacturing costs are increasing with nothing to offset them.
 
-If the buyer withdraws from the deal, I'd be in a worse position to sell than because I'd spent the last several months feeling distracted by the sale and optimizing for short-term timeframes.
+If the buyer withdrew from the deal, I'd be in a worse position to sell than because I'd spent the last several months feeling distracted by the sale and optimizing for short-term timeframes.
 
 ### As you prepare to sell, everything costs 4x as much
 
@@ -362,19 +358,19 @@ It's not just bonuses &mdash; it's everything you spend money on. If you need to
 
 I liked Quiet Light, and I have no regrets about using them as the broker to sell TinyPilot, but I was surprised at the end to see that I didn't strictly need a broker.
 
-My only frame of reference for a deal of this size is buying or selling a house. In that process, the broker does a lot of things I don't understand or know how to do like list on MLS (TODO: link) or ensure we're meeting municipal requirements for the sale.
+My only frame of reference for a deal of this size is buying or selling a house. In that process, the broker does a lot of things I don't understand or know how to do like list on [MLS](https://en.wikipedia.org/wiki/Multiple_listing_service) or ensure we're meeting municipal requirements for the sale.
 
-Quiet Light's main contribution was finding a buyer, as that's something I couldn't have done on my own. But after that, they're outside of the critical path of the deal. Once we found a buyer, the work shifted to the M&A lawyer to review legal documents.
+Quiet Light's main contribution was finding a buyer, as that's something I couldn't have done on my own. After that, they're outside of the critical path of the deal. Once we found a buyer, the heavy lifting of getting the deal to close was on my M&A lawyer to prepare and negotiate all the legal documents.
 
-The M&A broker should and did provide guidance to keep the deal on track. They even found a new lender when the buyer's original lender backed out. But if the broker had disappeared after the LOI, we could have completed the sale without a broker, whereas I couldn't have closed without a lawyer.
+The M&A broker should and did provide guidance to keep the deal on track. They even found a new lender when the buyer's original lender backed out. But if my broker had disappeared after the LOI, we could have completed the sale without a broker, whereas I couldn't have closed without a lawyer.
 
-If I sell a business in the future, I may forego a broker if I can find a buyer independently. As a first-time seller, it was worth 15% to have an advisor on my side from start to finish. Now that I have experience selling, I might try a future deal using only an M&A lawyer, but I would still always consider a broker to have a knowledgeable advisor shepherding the deal through.
+If I sell a business in the future, I may forego a broker if I can find a buyer independently. As a first-time seller, it was worth 15% of the sale price to have an advisor on my side from start to finish. Now that I have more experience, I'd feel more comfortable going through the process on my own, but I value a broker enough that I'd always keep the option open.
 
 ### If the non-compete is too restrictive, you're screwed
 
 If a big tech company hires me as a developer, and the 500th page of my contract says I can never write software for any other company ever again, a judge would likely reject that non-compete as unfair and unreasonable.
 
-If, however, I sell my company, and the purchase agreement says that I agree to never work in software again, then a judge will hold me to that promise. In that case, the judge assumes that I had reasonable bargaining power and awareness of the agreement, so if I signed a bad deal, it's on me.
+If, however, I sell my company, and the purchase agreement says that I agree to never work in software again, then a judge will hold me to that promise. They'd assume that I had reasonable bargaining power and awareness of the agreement, so if I signed a bad deal, it's on me.
 
 When reviewing TinyPilot's purchase agreement, my lawyer carefully reviewed the non-compete clause with me to ensure that I was only agreeing not to work in the domain of KVM over IP devices rather than software or technology in general.
 
@@ -382,16 +378,16 @@ When reviewing TinyPilot's purchase agreement, my lawyer carefully reviewed the 
 
 When you run a business in the US as a corporation or an LLC, the most you can ever lose is the value of the business itself.
 
-If your business is worth $50k, and someone sues you for $1M, the worst that can happen is that they take your business. They can't take your house, car, or first-born child &mdash; only the assets under the business itself. That's what "limited liability" means in limited liability company (LLC).
+If your business is worth $100k, and someone sues you for $5M, the worst that can happen is that they take your business. They can't take your house, car, or first-born child &mdash; only the assets under the business itself. That's what "limited liability" means in limited liability company (LLC).
 
-It turns out that when you sell your business, you lose limited liability protection. If the purchase agreement doesn't place an upper limit on your liability to the buyer, the buyer can purchase your business and then later sue you for any amount, even if it exceeds what they paid for the acquisition.
+It turns out that when you sell your business, you lose limited liability protection. If the purchase agreement doesn't place an upper limit on your liability to the buyer, the buyer can purchase your business and then later sue you for any amount, even if it exceeds what they paid in the acquisition.
 
-The buyer's lawyer originally wanted my liability to be higher (TODO: look up initial offer). My lawyer pushed back and said that was unusual, and we wouldn't sign anything above the sale price. My lawyer suggested I push for a liability cap of 50% of the sale price, as that was more common for a deal of this size. I was exhausted and just wanted to get through it, so I was happy as long as the liability wasn't infinity.
+The buyer's lawyer originally wanted my liability to be uncapped. My lawyer pushed back and said I absolutely shouldn't sign anything that exposes me to liabilities above the sale price, and the buyer's lawyer eventually relented.
 
 ### Buyers have incentive to keep the seller happy
 
-One of my worries in the sale was that once I handed over all the accounts and domains to the seller, they'd lose incentive to cooperate with me. What if the buyer forgets to update the billing information on one of the accounts, and I get hit with a $2k credit card charge? What leverage would I have to make the buyer reimburse me?
+One of my fears was that after I handed over all of TinyPilot's accounts and domains to the seller, they'd lose incentive to cooperate with me. What if the buyer forgets to update the billing information on one of the accounts, and I get hit with a $2k credit card charge? What leverage would I have to make the buyer reimburse me?
 
 I trusted the buyer, but you also never know how people are going to behave when power shifts.
 
-It turns out that even if a buyer is devious and wants to exploit of the seller at any opportunity, the seller still holds the leverage of institutional knowledge. The buyer doesn't want to screw over the seller for $2k only to realize a month later that they need the seller's help to access some critical account. So, there's a nice balance of power that keeps both sides on their best behavior.
+It turns out that even if a buyer wants to cheat, the seller still holds the leverage of institutional knowledge. The buyer doesn't want to screw over the seller for $2k only to realize a month later that they need the seller's help to access some critical account. So, there's a nice balance of power that keeps both sides on their best behavior.
