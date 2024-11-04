@@ -12,6 +12,8 @@ My earlier post told the story of how the sale happened, but I'd like to share m
 
 In this post, I'm sharing what went well, what I want to improve in the future, and what surprised me about the process of selling my business.
 
+TODO: Table of contents
+
 ## Details of the sale
 
 - Sale price: $598,000 (2.4x annual earnings)
