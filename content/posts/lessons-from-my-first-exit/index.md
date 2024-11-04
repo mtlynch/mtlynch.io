@@ -130,11 +130,23 @@ After closing, handing over control was extremely straightforward. I just added 
 
 ### Offer incentives for a cash buyer
 
+The last time I bought a house, I requested a 10-day inspection period. I wanted to do standard checks with an inspector and an electrician before completing the purchase.
+
+The homeowner pushed back and asked me to limit the inspection period to seven days. They were worried about the cost of keeping the house off the market for an extra three days. And that's a house! Its price is far more stable than a small business.
+
+I didn't realize how much it would cost me to take my business off the market for three whole months.
+
+Three months of due diligence means three months where I'm distracted from the business and spending 50% of my time on the sale itself.
+
+A pending sale prevented me from thinking about anything but the short-term future. If there's an opportunity to spend $20k to reduce my hardware costs by $50k over the subsequent six months, I couldn't pursue it, as it would look to the seller like my manufacturing costs are increasing with nothing to offset them.
+
+If the buyer withdrew from the deal, I'd be in a worse position to sell than because I'd spent the last several months feeling distracted by the sale and optimizing for short-term timeframes.
+
 One of the biggest factors for closing time is how the buyer is financing the purchase. In TinyPilot's case, the buyer used a loan from the [US Small Business Administration (SBA)](https://www.sba.gov/), which is common for deals of TinyPilot's scale.
 
 The typical closing time for a buyer with an SBA-backed bank loan is three to five months. For TinyPilot, the time from signing the letter of intent to closing day was three months, so we were on the quicker side, but it still felt dreadfully slow.
 
-Each additional day of due diligence [makes the seller weaker](/i-sold-tinypilot/#due-diligence-makes-me-weaker-by-the-day). If the buyer had backed out the day before closing, that would have been an enormous blow, as the sale had occupied most of my focus for several months.
+Each additional day of due diligence [makes the seller weaker](/i-sold-tinypilot/#due-diligence-makes-me-weaker-by-the-day).
 
 If I sell another business, I plan to offer incentives that make it easier for the buyer to purchase in cash. I could offer a discount for a cash purchase or make other accomodations to attract buyers who can purchase in cash and make a fast close.
 
@@ -335,20 +347,6 @@ As we proceeded further into the due diligence process, I needed to create lots 
 I didn't want to expose customer data, so I did custom processing on our reports to avoid leaking customer details. But the more I customized the reports, the more likely I was to make an error. And if I made an error, the buyer would have grounds to sue me later for selling the company based on fraudulent data. So, even for simple reports, I felt stressed about doing them perfectly.
 
 This is also a case where a non-cash buyer makes things more challenging. The buyer was presenting me with requests from both himself and the bank. The bank was hard to negotiate with because they don't care if the deal falls through. I was more comfortable pushing back against the buyer because he had skin in the game to make the deal go through. But I can't say to the buyer, "Is this information that you want or that the bank wants? Because if it's you, I'm going to say no; if it's the bank, I'll say yes."
-
-### Due diligence bound me to a single seller, even beyond the due diligence period
-
-The last time I bought a house, I requested a 10-day inspection period. I wanted to do standard checks with an inspector and an electrician before completing the purchase.
-
-The homeowner pushed back and asked me to limit the inspection period to seven days. They were worried about the cost of keeping the house off the market for an extra three days. And that's a house! Its price is far more stable than a small business.
-
-I didn't realize how much it would cost me to take my business off the market for three whole months.
-
-Three months of due diligence means three months where I'm distracted from the business and spending 50% of my time on the sale itself.
-
-A pending sale also prevents me from thinking about anything but the short-term future. If I could spend $20k to reduce my hardware costs by $50k over the next six months, I can't do that because it will look to the seller like my manufacturing costs are increasing with nothing to offset them.
-
-If the buyer withdrew from the deal, I'd be in a worse position to sell than because I'd spent the last several months feeling distracted by the sale and optimizing for short-term timeframes.
 
 ### As you prepare to sell, everything costs 4x as much
 
