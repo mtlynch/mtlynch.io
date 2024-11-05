@@ -47,6 +47,7 @@ In this post, I'm sharing what went well, what I want to improve in the future, 
   - [If the non-compete is too restrictive, you're screwed](#if-the-non-compete-is-too-restrictive-youre-screwed)
   - [If there's no cap on liability, you're screwed](#if-theres-no-cap-on-liability-youre-screwed)
   - [Buyers have incentive to keep the seller happy](#buyers-have-incentive-to-keep-the-seller-happy)
+- [Resources that helped me](#resources-that-helped-me)
 
 ## Details of the sale
 
@@ -425,6 +426,27 @@ One of my fears in the process was that after I handed over all of TinyPilot's a
 I trusted the buyer, but you also never know how people are going to behave when power shifts.
 
 It turns out that even if a buyer wants to cheat, the seller still holds the leverage of institutional knowledge. The buyer doesn't want to screw over the seller for $2k only to realize a month later that they need the seller's help to access some critical account. So, there's a nice balance of power that keeps both sides on their best behavior.
+
+## Resources that helped me
+
+In preparing to sell my business, the most helpful
+
+Hard to practice because even serial entrepreneurs only have a handful of exits in their life. Helpful to read a lot and talk to other founders to hear about potential pitfalls and red flags.
+
+- John Warrilow's books and podcasts
+  - [_Built to Sell_](https://builttosell.com/) was helpful in understanding how to design my business from the start for a potential acquisition.
+  - [_The Art Of Selling Your Business_](https://builttosell.com/) covered the practical considerations of the sale itself.
+  - [_Built to Sell Radio_]() is Warrilow's podcast. His guests tend to be larger companies and less tech-focused, so I listened to episodes with founders that seemed closest to my situation. My favorites were [Natalie Nagele](https://builttosell.com/radio/episode-363/) and [Laura Roeder](https://builttosell.com/radio/episode-344/). I [got to be a guest](https://builttosell.com/radio/episode-450/) on the show after my exit.
+- Privately telling other founders I'm thinking of selling
+  - I didn't know anyone who had been through an acquisition of TinyPilot's size, but it turns out that I knew people who knew people. A few friends put me in touch with people they knew with experience going through acquisitions, and the
+- Attending the Microconf founder conference
+  - That was where I met Quiet Light, and it was helpful meeting the brokers in person so I could choose one I got along with. It was also helpful to ask attendees about their experience with acquisitions because that conference attracts a lot of founders who are similar to me who have been through a sale.
+- Blog posts
+  - I learned a lot from reading blog posts about acquisitions written by other indie founders.
+  - My favorites:
+    - ["I sold Baremetrics"](https://baremetrics.com/blog/i-sold-baremetrics) by Josh Pigford
+    - ["What it's like buying a $128k side project"](https://blog.codetree.com/articles/what-its-like-buying-a-128k-side-project.html) by Kareem Mayan
+    - ["Exactly How I Cold Emailed My Way to A Life-Changing Exit (And You Can Too)"](https://lauraroeder.com/exactly-how-i-cold-emailed-my-way-to-a-life-changing-exit-and-you-can-too-165d8eaf8306) by Laura Roeder
 
 ---
 
