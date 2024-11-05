@@ -439,8 +439,9 @@ Hard to practice because even serial entrepreneurs only have a handful of exits 
   - [_Built to Sell Radio_]() is Warrilow's podcast. His guests tend to be larger companies and less tech-focused, so I listened to episodes with founders that seemed closest to my situation. My favorites were [Natalie Nagele](https://builttosell.com/radio/episode-363/) and [Laura Roeder](https://builttosell.com/radio/episode-344/). I [got to be a guest](https://builttosell.com/radio/episode-450/) on the show after my exit.
 - Privately telling other founders I'm thinking of selling
   - I didn't know anyone who had been through an acquisition of TinyPilot's size, but it turns out that I knew people who knew people. A few friends put me in touch with people they knew with experience going through acquisitions, and the
-- Attending the Microconf founder conference
-  - That was where I met Quiet Light, and it was helpful meeting the brokers in person so I could choose one I got along with. It was also helpful to ask attendees about their experience with acquisitions because that conference attracts a lot of founders who are similar to me who have been through a sale.
+- [Microconf](https://microconf.com/), an indie-focused founder conference
+  - That was where I met Quiet Light, and it was helpful meeting the brokers in person so I could choose one I got along with.
+  - Microconf was also a good place to ask attendees about their experience with acquisitions. The conference attracts a lot of founders who are similar to me who have been through a sale.
 - Blog posts
   - I learned a lot from reading blog posts about acquisitions written by other indie founders.
   - My favorites:
