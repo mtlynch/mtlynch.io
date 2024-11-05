@@ -2,6 +2,7 @@
 title: "Lessons from My First Exit"
 date: 2024-11-05T00:00:00-04:00
 description: My takeaways from selling TinyPilot
+hero_image: cover.webp
 tags:
   - tinypilot
 ---
@@ -12,7 +13,40 @@ My earlier post told the story of how the sale happened, but I'd like to share m
 
 In this post, I'm sharing what went well, what I want to improve in the future, and what surprised me about the process of selling my business.
 
-TODO: Table of contents
+## Table of contents
+
+- [Details of the sale](#details-of-the-sale)
+- [What I'm glad I did](#what-im-glad-i-did)
+  - [Invested heavily into documentation](#invested-heavily-into-documentation)
+  - [Created a transition checklist](#created-a-transition-checklist)
+  - [Worked with a broker I trusted](#worked-with-a-broker-i-trusted)
+  - [Avoided seller financing](#avoided-seller-financing)
+  - [Assumed I'd get nothing after closing](#assumed-id-get-nothing-after-closing)
+  - [Recognized the limits of my influence on the business post-close](#recognized-the-limits-of-my-influence-on-the-business-post-close)
+  - [Revised the broker agreement so that the broker gets paid when I get paid](#revised-the-broker-agreement-so-that-the-broker-gets-paid-when-i-get-paid)
+  - [Discussed contentious issues without lawyers first](#discussed-contentious-issues-without-lawyers-first)
+  - [Used dedicated accounts for the business](#used-dedicated-accounts-for-the-business)
+- [What I'll do differently in the future](#what-ill-do-differently-in-the-future)
+  - [Offer incentives for a cash buyer](#offer-incentives-for-a-cash-buyer)
+  - [Discuss key contract terms earlier in the process](#discuss-key-contract-terms-earlier-in-the-process)
+  - [Begin working with a lawyer earlier](#begin-working-with-a-lawyer-earlier)
+  - [Create an unofficial "small stuff agreement" with the buyer](#create-an-unofficial-small-stuff-agreement-with-the-buyer)
+  - [Announce the sale to my team later](#announce-the-sale-to-my-team-later)
+  - [Don't catastrophize every setback](#dont-catastrophize-every-setback)
+  - [Reveal vendors earlier, but put tighter restrictions in the LOI](#reveal-vendors-earlier-but-put-tighter-restrictions-in-the-loi)
+  - [Eliminate inventory from the broker's commission](#eliminate-inventory-from-the-brokers-commission)
+  - [Assume from the start that nothing written is private](#assume-from-the-start-that-nothing-written-is-private)
+  - [Define what happens to money flows around the time of closing](#define-what-happens-to-money-flows-around-the-time-of-closing)
+  - [In the transition agreement, value calendar days more than work hours](#in-the-transition-agreement-value-calendar-days-more-than-work-hours)
+  - [Disconnect non-transferable accounts from business email before closing](#disconnect-non-transferable-accounts-from-business-email-before-closing)
+  - [Take even fewer dependencies on Google](#take-even-fewer-dependencies-on-google)
+- [What surprised me](#what-surprised-me)
+  - [Due diligence is unbounded, high-stress work](#due-diligence-is-unbounded-high-stress-work)
+  - [As you prepare to sell, everything costs 4x as much](#as-you-prepare-to-sell-everything-costs-4x-as-much)
+  - [You don't strictly need a broker to sell](#you-dont-strictly-need-a-broker-to-sell)
+  - [If the non-compete is too restrictive, you're screwed](#if-the-non-compete-is-too-restrictive-youre-screwed)
+  - [If there's no cap on liability, you're screwed](#if-theres-no-cap-on-liability-youre-screwed)
+  - [Buyers have incentive to keep the seller happy](#buyers-have-incentive-to-keep-the-seller-happy)
 
 ## Details of the sale
 
@@ -28,11 +62,11 @@ TODO: Table of contents
 
 ### Invested heavily into documentation
 
-Before I even my first business six years ago, I read the book [_Built to Sell_](https://builttosell.com/) by John Warrilow. The book encourages founders to build businesses that run smoothly without the founder actively managing day-to-day business. An effective company has a set of well-defined processes, and the team knows how to execute those processes.
+Before I even my first business six years ago, I read the book [_Built to Sell_](https://builttosell.com/) by John Warrilow. The book encourages founders to build businesses that run smoothly without the founder actively managing day-to-day business. An effective company should have a set of well-defined processes and a team that knows how to execute those processes.
 
-I've always been a fan of reproducible processes, so when I started building out the team for TinyPilot, I invested heavily into documentation. Rather than train people in person or on video calls, I wrote playbooks in our Notion workspace. If we ran into issues with our playbooks, we'd revise them so that there'd be lower chances of errors in the future. When new team members joined, they'd onboard via the same playbooks, and we'd continuously improve them.
+I've always loved reproducible processes, so when I started building out the team for TinyPilot, I invested heavily into documentation. Rather than train people in person or on video calls, I wrote playbooks in our Notion workspace. If we ran into issues with our playbooks, we'd revise them so that there'd be lower chances of errors in the future. When new team members joined, they'd onboard via the same playbooks, and we'd continuously improve them.
 
-After I sold TinyPilot, the contract called for a 30-day transition period during which I would provide up to 80 hours of consulting time, but the buyer only needed about 25 hours. The team already knew how to run the day-to-day of TinyPilot, and the buyer had access to all of our documentation. Most of my time post-transition was just introducing the new owner to the team and our key vendors.
+After I sold TinyPilot, the contract called for a 30-day transition period during which I would provide up to 80 hours of consulting time. but the buyer only needed about 25 hours. The team already knew how to run the day-to-day of TinyPilot, and the buyer had access to all of our documentation. Most of my time post-transition was just introducing the new owner to the team and our key vendors.
 
 ### Created a transition checklist
 
@@ -49,29 +83,27 @@ The checklist turned out to be extremely valuable, especially the week of the cl
 
 ### Worked with a broker I trusted
 
-I used to have a negative view of M&A brokers. When I thought "broker," I imagined someone who just wanted to close deals as quickly as possible for the highest possible number and didn't care about anything else. I imagined them saying things like, "Let's bottom line this," or "Time for some Jäger bombs!"
+I used to have a negative view of M&A brokers. When I thought "broker," I imagined someone who just wanted to close deals as quickly as possible and didn't care about anything else. I imagined them saying things like, "Let's bottom line this," or "Time for Jäger bombs!"
 
-When I attended Microconf in 2023, I met Chris Guthrie, an advisor at Quiet Light Brokerage. He immediately came across as laid back, low-pressure, and founder-focused. He was a former founder, and he emphasized the importance of finding the best deal for the founder, not necessarily the quickest payout.
+When I attended Microconf in 2023, I met Chris Guthrie, an advisor at [Quiet Light Brokerage](https://quietlight.com/). He immediately came across as laid back, low-pressure, and founder-focused. He was a former founder, and he emphasized the importance of finding the best deal for the founder, not necessarily the quickest payout.
 
 I appreciated working with Quiet Light because our incentives felt aligned throughout the process. The pool of founders looking for M&A brokers is small and fairly tight-knit, so Quiet Light has natural pressure to maintain a positive reputation.
 
-In discussions about the sale, some people [balked](https://news.ycombinator.com/item?id=40515107) at Quiet Light's $88.9k fee, as it represented 15% of the sale price. I still think that was a fair commission, as they found me a buyer that I couldn't have found on my own and kept the deal on track throughout.
+In discussions about the sale, some people [balked](https://news.ycombinator.com/item?id=40515107) at Quiet Light's $89k fee, as it represented 15% of the sale price. I still think that was a fair commission, as they found me a buyer that I couldn't have found on my own and kept the deal on track throughout.
 
 ### Avoided seller financing
 
-When I started thinking about a sale, I didn't need cash desperately, so I was open to receiving payments in installments over several years.
-
-When I spoke to other founders about seller financing, they warned me away from it. As one founder put it:
+I didn't need cash desperately, so I was initially open to receiving payments in installments over several years. When I spoke to other founders, they warned me away from seller financing. As one founder put it:
 
 > If you finance the purchase yourself, you now work for the buyer.
 
 I was puzzled. How does financing the sale mean I work for the buyer?
 
-The founder explained that you don't get paid unless the business makes money, and the new owner knows that. The new owner can dump management responsibilities onto you knowing that if the business fails, they'll default on their debt.
+The founder explained that you don't get paid unless the business makes money, and the new owner knows that. The new owner can push management responsibilities onto you, knowing that if the business fails, you can't collect your debt.
 
-The other major risk of seller financing is that I, as a small lender, don't have tools or experience to collect a loan if a buyer defaults. The buyer might have the means to pay and decide they simploy don't feel like paying me. For a deal that's under $1M, I'd probably spend more in legal fees than I could hope to collect from an unscrupulous buyer.
+The other major risk of seller financing is that I, as a small lender, don't have tools or experience to collect a loan if a buyer defaults. The buyer might have the means to pay and decide they simply don't feel like paying me. For a deal that's under $1M, I'd probably spend more in legal fees than I could hope to collect from an unscrupulous buyer.
 
-I would have been open to seller financing if there were no other options available, but it would be a major red flag to me that the buyer was unable to obtain a loan from a bank. Further, I'd need to charge interest well above prevailing interest rates because my risk would be higher than a bank's.
+I would have been open to seller financing had there were been no other options available, but it would be a major red flag to me that the buyer was unable to obtain a loan from a bank. Further, I'd need to charge interest well above prevailing interest rates because my risk would be higher than a bank's.
 
 ### Assumed I'd get nothing after closing
 
@@ -85,15 +117,17 @@ The buyer and I did send some money back and forth after closing to account for 
 
 One of the most important criteria for the sale was to find a new owner who wanted to continue investing in the product, the team, and our customers.
 
-I asked other founders for advice about how to avoid a buyer who will simply gut the company and squeeze everything for short-term profits. The advice I heard was that I can't control what the new owner does after closing, so I shouldn't think about it.
+I asked other founders for advice on avoiding a buyer who's out to gut the company and squeeze everything for short-term profits. Their advice was that I can't control what the new owner does after closing, so I shouldn't think about it.
 
 It's true that I can't control how the new owner runs their business, but I think it's possible to screen out risky buyers. For example, if a private equity company like Idera approached me, I'd notice that they have a history of buying companies and [laying off their staff](https://news.ycombinator.com/item?id=19218036), so I'd have a good guess about their plans for TinyPilot.
 
-I looked for buyers whose vision for the company aligned with mine, but I also recognized that my influence over the company ended on closing day. And I feel like that worked. The new owner runs the business his own way, but his approach matches what we discussed about his vision for the company. I didn't guarantee this outcome, but I think I increase my odds to some degree.
+I looked for buyers whose vision for the company aligned with mine, but I also recognized that my influence over the company ended on closing day.
+
+The new owner runs the business his own way, but his approach matches what we discussed about his vision for the company. I didn't guarantee this outcome, but I think screening buyers increased my odds to some degree.
 
 ### Revised the broker agreement so that the broker gets paid when I get paid
 
-The broker agreement that Quiet Light initially sent me said that their broker fee is a percentage of the purchase price, and it's due at closing.
+The first draft of the broker agreement that Quiet Light sent me said that their fee is a percentage of the purchase price, and it's due at closing.
 
 The problem I saw in that agreement was that I, as the seller, may not receive the full purchase price at closing. I sign with the broker well before I know the terms of any deal they might find for me.
 
@@ -105,15 +139,15 @@ I was relieved that they were willing to adjust their contract, as the new payme
 
 ### Discussed contentious issues without lawyers first
 
-For this acquisition, the buyer drafted their own asset purchase agreement. For the most part, we agreed on the initial draft, but there were a few key terms where we had different expectations.
+The buyer drafted their own asset purchase agreement for the sale rather than use a pre-made template from the broker. For the most part, we agreed on the initial draft, but there were a few key terms where we had different expectations.
 
 We could have each told our lawyers what we wanted and had them hash it out, but lawyers get expensive fast &mdash; mine was $550/hr.
 
 Lawyers also slow down the process. The buyer and I could usually arrange to meet within one business day, whereas it would have taken a week to arrange a meeting with both of our lawyers. For a process that already felt long at three months, every day mattered.
 
-When the buyer and I ran into disagreements in the contract, we'd first talk one-on-one. In these conversations, my goal was to go past the terms in the contract and find out the underlying need.
+When the buyer and I ran into disagreements in the contract, we'd first talk one-on-one. In these conversations, my goal was to go past the contract terms and find out the underlying need.
 
-For example, the first draft of the contract called for tight restrictions on discussing the sale publicly. So, the buyer and I talked about why the clause was there, and it turned out that there were only a small number of things the buyer cared about me disclosing. We adjusted the wording from "you can't discuss anything publicly" to "you can't discuss [these two specific things](/i-sold-tinypilot/#what-am-i-allowed-to-say) publicly," and we both felt good about the compromise.
+For example, the first draft of the contract called for tight restrictions on discussing the sale publicly. I spoke with the buyer about why the clause was there, and it turned out that there were only a small number of things the buyer cared keeping private. We adjusted the wording from "you can't discuss anything publicly" to "you can't discuss [these two specific things](/i-sold-tinypilot/#what-am-i-allowed-to-say) publicly," and we both felt good about the compromise.
 
 ### Used dedicated accounts for the business
 
@@ -134,37 +168,31 @@ After closing, handing over control was extremely straightforward. I just added 
 
 The last time I bought a house, I requested a 10-day inspection period. I wanted to do standard checks with an inspector and an electrician before completing the purchase.
 
-The homeowner pushed back and asked me to limit the inspection period to seven days. They were worried about the cost of keeping the house off the market for an extra three days. And that's a house! Its price is far more stable than a small business.
+The homeowner pushed back and asked me to limit the inspection period to seven days. They were worried about the cost of keeping the house off the market for an extra three days.
+
+And that's a house! Its price is far more stable than a small business.
 
 I didn't realize how much it would cost me to take my business off the market for three whole months.
 
-Three months of due diligence means three months where I'm distracted from the business and spending 50% of my time on the sale itself.
+Three months of due diligence means three months where I'm distracted from the business and spending 50% of my time on the sale itself. It also makes long-term investments harder, as they'd reduce demonstrable profits and lower the company's valuation.
 
-A pending sale prevented me from thinking about anything but the short-term future. If there's an opportunity to spend $20k to reduce my hardware costs by $50k over the subsequent six months, I couldn't pursue it, as it would look to the seller like my manufacturing costs are increasing with nothing to offset them.
-
-If the buyer withdrew from the deal, I'd be in a worse position to sell than because I'd spent the last several months feeling distracted by the sale and optimizing for short-term timeframes.
-
-One of the biggest factors for closing time is how the buyer is financing the purchase. In TinyPilot's case, the buyer used a loan from the [US Small Business Administration (SBA)](https://www.sba.gov/), which is common for deals of TinyPilot's scale.
-
-The typical closing time for a buyer with an SBA-backed bank loan is three to five months. For TinyPilot, the time from signing the letter of intent to closing day was three months, so we were on the quicker side, but it still felt dreadfully slow.
-
-Each additional day of due diligence [makes the seller weaker](/i-sold-tinypilot/#due-diligence-makes-me-weaker-by-the-day).
-
-If I sell another business, I plan to offer incentives that make it easier for the buyer to purchase in cash. I could offer a discount for a cash purchase or make other accomodations to attract buyers who can purchase in cash and make a fast close.
-
-Cash deals involve fewer decision-makers and require less paperwork and bureacracy. I've heard of cash deals closing in 30 days or less.
+One of the biggest factors for closing time is how the buyer is financing the purchase. In TinyPilot's case, the buyer used a loan from the [US Small Business Administration (SBA)](https://www.sba.gov/), which typically involve three to five months of paperwork and approvals. For TinyPilot, the time from signing the letter of intent to closing day was three months, so we were on the quicker side, but it still felt dreadfully slow.
 
 The other subtlety of a buyer purchasing with a bank loan is that it makes the closing contract more complicated, which means you spend more on lawyers. Working through the requirements from the bank and the SBA probably consumed $10k in lawyer time on each side, so even if I accepted a lower price from a cash buyer, I'd make some of it back by reducing closing costs.
 
+Cash deals involve fewer decision-makers and require less paperwork and bureacracy. I've heard of cash deals closing in 30 days or less.
+
+If I sell another business, I plan to offer incentives that make it easier for the buyer to purchase in cash. I could offer a discount for a cash purchase or make other accomodations to attract buyers who can purchase in cash and make a fast close.
+
 ### Discuss key contract terms earlier in the process
 
-The most stressful part of the sale for me was the contract negotiations, and I'm still not sure how to do it better.
+The most stressful part of the sale was the contract negotiations, and I'm still not sure how to do it better.
 
 I didn't see the first draft of the contract until five weeks into due dilligence. By that point, I felt like I was already in terrible negotiating position. I'd invested so much time and revealed so much during due diligence that I felt exhaused and afraid of starting the whole process over with a new buyer.
 
-It would be wonderful for me if the buyer had to present the full purchase agreement along with the letter of intent. That way, if I saw terms I didn't like, I could request adjustments before ever taking TinyPilot off the market or participating in due diligence.
+It would be wonderful for me if the buyer had to present the full purchase agreement at the letter of intent stage. That way, if I saw terms I didn't like, I could request adjustments before ever taking TinyPilot off the market or participating in due diligence.
 
-The problem is that virtually no buyer would agree to a purchase agreement before starting due diligence. They don't want to spend thousands of dollars of lawyer time before they've gotten some commitment from the seller.
+The problem is that buyers don't want to spend thousands of dollars of lawyer time drafting a purchase agreement before they've gotten some commitment from the seller.
 
 What I'll try next time is to negotiate a few terms I care about at the letter of intent stage. I'd want to include things like:
 
@@ -174,15 +202,15 @@ What I'll try next time is to negotiate a few terms I care about at the letter o
 
 ### Begin working with a lawyer earlier
 
-I found an M&A law firm to represent me in the sale when I started talking with a broker. The lawyer reviewed the broker agreement, but I didn't reach out to them again until I had the purchase agreement from the buyer.
+When I started talking with a broker, I also found an M&A law firm to represent me in the sale. The lawyer reviewed the broker agreement, but I didn't reach out to them again until I had the purchase agreement from the buyer.
 
-I never asked my lawyer to review the LOI, as I figured there wasn't much value in paying a lawyer to review something that wasn't legally binding in the first place.
+I never asked my lawyer to review the letter of intent, as I figured there wasn't much value in paying a lawyer to review something that wasn't legally binding in the first place.
 
-In retrospect, I think it would have been helpful to involve my lawyer at that stage, as the LOI sets a baseline for the APA.
+In retrospect, it would have been helpful to involve my lawyer at that stage, as the letter of intent sets a baseline for the purchase agreement.
 
 Had I met with my lawyer earlier, they also would have helped me with other due diligence tasks like reviewing my existing contracts and gathering other documents the buyer or lender would request later.
 
-Working with a lawyer at the letter of intent stage also would have been a good opportunity to find out if I liked working with my lawyer. I ended up feeling dissatisfied with my lawyer, but by the time I saw the issues, it would have been too large a disruption to replace him in the middle of negotiations with the buyer.
+Working with a lawyer at the letter of intent stage also would have been a good opportunity to find out if I liked working with my lawyer. I ended up feeling dissatisfied with mine, but by the time I saw the issues, it was too late in negotations with the buyer to replace him.
 
 ### Create an unofficial "small stuff agreement" with the buyer
 
@@ -196,9 +224,9 @@ If I were to do this again, I'd propose to the buyer a "small stuff agreement." 
 
 ### Announce the sale to my team later
 
-When should an owner announce an acquisition to their team?
+When should an owner announce a potential acquisition to their team?
 
-If you keep the sale a secret until the deal closes, you're effectively lying to your team. On the other hand, if you're completely transparent about the sale, you bear enormous risk. Members of the team might threaten to leave and put the sale in jeopardy unless you offer them bonuses or promotions. Or the looming sale might kill their motivation and tank their job performance.
+If you keep the sale a secret until the deal closes, you're effectively lying to your team. On the other hand, if you're completely transparent about the sale, you bear enormous risk. Members of the team might threaten to leave unless you offer them bonuses or promotions. Or the looming sale might kill their motivation and tank their job performance.
 
 I had a good relationship with every member of TinyPilot's team, so I didn't think anyone would use my candor against me in bargaining. That said, people do unexpected things when a relationship is about to end.
 
@@ -206,9 +234,9 @@ I chose to reveal the sale to the team at the earliest formal step of the proces
 
 I regret that decision _slightly_.
 
-Nothing catastrophic happened, but announcing the sale made certain parts of managing the team more difficult. I unfortunately need to be a bit vague here to respect the team's privacy.
+Nothing catastrophic happened, but announcing the sale affected management dynamics and made employee performance issues harder in certain cases. I unfortunately need to be a bit vague here to respect the team's privacy.
 
-To the team, an acquisition meant the new owner could fire them or drastically change their role. If they wanted to interfere with the sale, they could scare off a buyer and slicing $50-100k off the valuation. Worse, they could delay the sale and leave me in a position where I'm managing the company, trying to prepare it for sale, and [caring for a newborn](/i-sold-tinypilot/#whats-next) all at the same time.
+To the team, an acquisition meant the new owner could fire them or drastically change their role. If they wanted to interfere with the sale, they could scare off a buyer and slice $50-100k off the valuation. Worse, they could delay the sale and leave me in a position where I'm managing the company, trying to prepare it for sale, and [caring for a newborn](/i-sold-tinypilot/#whats-next) all at the same time.
 
 I didn't want a bad outcome for anyone, but the worst case for me was significantly worse than the worst case for any other member of the team.
 
@@ -230,7 +258,7 @@ I imagined all the negative scenarios all day and into the night. And then the n
 
 If I sell a company in the future, I hope to worry less about potential disasters. I need to remember to sleep on things and see how they feel in the morning.
 
-### Reveal vendors earlier, but put tighter restrictions in LOI
+### Reveal vendors earlier, but put tighter restrictions in the LOI
 
 Another founder advised me to withhold the names of TinyPilot's critical vendors until after the deal closed. They explained that you can force the buyer to sign something to say they can't use the information if the deal falls through, but it's hard to enforce that on small-scale deals. The only way to protect the information is to not share it at all.
 
