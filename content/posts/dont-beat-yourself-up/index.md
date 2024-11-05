@@ -108,6 +108,10 @@ That's not even the worst of it. That founder promotes the course and nobody bat
 
 https://x.com/neilpatel/status/1749570322800759133
 
+## Skimp on security
+
+https://x.com/aarondfrancis/status/1848357083613168003
+
 ## Find the founders that resonate with you
 
 Oh no, they have to be great at YouTube and Twitter and Pinterest and TikTok. There are lots of different paths to success, and the vast majority of successful founders aren't publishing all their results (it's fine if you do or don't).
