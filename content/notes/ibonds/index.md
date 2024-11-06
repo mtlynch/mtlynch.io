@@ -46,7 +46,7 @@ The current rate of return on iBonds is 9.62%, which is looking stronger than al
 
 CDs from major banks and brokerages are only paying around 4%, and AAA-rated corporate bonds are in the 2-5% range.
 
-Vanguard's total bond market index is [down 16%](https://finance.yahoo.com/quote/VBTLX/performance?p=VBTLX) in the last year. The S&P 500 is [down 18%](https://finance.yahoo.com/quote/VFIAX/performance?p=VFIAX).
+Vanguard's total bond market index is [down 16%](https://investor.vanguard.com/investment-products/mutual-funds/profile/vbtlx) in the last year. The S&P 500 is [down 18%](https://investor.vanguard.com/investment-products/mutual-funds/profile/vfiax).
 
 ### iBonds are backed by the federal government
 

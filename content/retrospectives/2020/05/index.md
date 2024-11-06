@@ -136,7 +136,7 @@ One of the reasons I keep abandoning Is It Keto is that it's never played to my 
 
 Pivoting to auto-generated pages gives me an advantage over other keto sites because none of them seem to have developers on staff. They probably have developers that help them maintain their WordPress setups or to create one-off tools like a keto calculator. Those things are in a different category of software engineering than what I'd be doing, which is creating and maintaining a data pipeline that runs smoothly for years. And that's great because that's the type of development I do best.
 
-Another advantage is that I already have a database of nutritional information. The USDA offers [a free, open database of food data](https://fdc.nal.usda.gov/), but their search is terrible. A query like "apples" [yields 17,000 results](https://fdc.nal.usda.gov/fdc-app.html#/?query=apples), so you have to pick through to find the most appropriate match. I went through this process for [Zestful](https://zestfuldata.com), so I already have coverage for most foods.
+Another advantage is that I already have a database of nutritional information. The USDA offers [a free, open database of food data](https://fdc.nal.usda.gov/), but their search is terrible. A query like "apples" [yields 17,000 results](https://fdc.nal.usda.gov/food-search?query=apples&type=Branded), so you have to pick through to find the most appropriate match. I went through this process for [Zestful](https://zestfuldata.com), so I already have coverage for most foods.
 
 ## What it will look like
 
