@@ -1,6 +1,6 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+title: "{{ .Site.Params.currentproject }}: Month XX"
+date: "{{ .Date }}"
 description: TODO - One-line summary
 ---
 
