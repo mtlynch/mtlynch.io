@@ -63,7 +63,7 @@ docker run hello-world
 
 ## Start Ollama and Open-WebUI
 
-Since my last Ollama experiment, the install process has gotten even easier.
+Since [my last Ollama experiment](/notes/ollama-llama3/), the install process has gotten even easier.
 
 You can now install Ollama and Open-WebUI in a single Docker container, which is easier than having to deal with Docker Compose:
 
@@ -341,17 +341,13 @@ But even if they did, it's not as readable as what Claude 3.5 Sonnet produces fo
 
 Still, Nemotron understood what I wanted and sort of had the right idea about how to implement it.
 
-## Test 2: Create unit tests
+## Test 2: Create unit tests for a Go function
+
+For the second test, I asked Nemotron to write unit tests for a function in PicoShare:
 
 ### Prompt
 
-## Test 1: Create unit tests for a Go function
-
-For the first test, I asked Nemotron to write unit tests for a function in PicoShare:
-
-### Prompt
-
-Create unit tests for this code:
+> Create unit tests for this code:
 
 ```go
 package parse
