@@ -12,14 +12,14 @@ description: TODO - One-line summary
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
-### Goal 1
+### Enjoy family time
 
 - **Result**: XX
 - **Grade**: XX
 
 TODO
 
-### Goal 2
+### Publish my tutorial on fuzz testing with Nix
 
 - **Result**: XX
 - **Grade**: XX
@@ -33,13 +33,11 @@ TODO
 
 TODO
 
-## Topic 1
+## Easing back into work
 
-## Topic 2
+## Implementing major features through stacked diffs
 
-## Topic 3
-
-## Side projects
+## Did I overinvest in that Nix fuzzing post?
 
 ## Wrap up
 
