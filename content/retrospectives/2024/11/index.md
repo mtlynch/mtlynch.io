@@ -44,7 +44,15 @@ For the past few weeks, I've spent most of my hobby programming time on ScreenJo
 
 I always wanted it to support reviewing both movies and TV shows, but I implemented movies first because they were simpler. I intentionally avoided design choices that would make it easier to add TV shows in the future, as I didn't know if it would ever happen, so I wanted to optimize for the functionality that was there.
 
-Now, I want to support TV show reviews, so I have to make a lot of changes to the codebase where I assumed the user would always be reviewing a movie. The full changes will probably be about 2,000 lines of code, which is significantly larger than I'd like for a single changelist. I'm using the term "changelist," but I'm talking about something like a pull request in Github terms or a merge request in Gitlab terms.
+Now, I want to support TV show reviews, so I have to make a lot of changes to the codebase where I assumed the user would always be reviewing a movie.
+
+The full changes will probably be about 2,000 lines of code, which is significantly larger than I'd like for a single changelist. I'm using the term "changelist," but I'm talking about something like a pull request in Github terms or a merge request in Gitlab terms.
+
+In the past, the way I've tackled large changes like this is that I have a feature branch that's in a broken or incomplete state until I finish the feature. I either make changes directly into the feature branch or I branch off that feature branch again for a subtask and then merge in the subtask when I'm done.
+
+The problem with this approach is that the feature branch becomes a giant blob of changes that are too large to understand. You can see an example of this [when I migrated What Got Done from Firestore to SQLite](https://github.com/mtlynch/whatgotdone/pull/639). There were lots of substeps within that change, but they're not inspectable because everything is mixed together.
+
+So, for this ScreenJournal change, I tried something different. Instead of keeping a big, messy feature branch, I did stacked diffs. I started by looking for a small complete subtask that . I decided to start with the search screen. The original ScreenJournal review flow starts with the user searching for the movie they want to review. I had to edit this page to let the user pick a movie or TV show.
 
 Not aware of any command that says to push the whole stack back up. And then you have to force push, which makes the Github PR ugly.
 
