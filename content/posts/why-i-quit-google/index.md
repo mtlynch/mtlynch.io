@@ -137,7 +137,7 @@ Even if I got the promotion, what then? Popular wisdom said that each promotion 
 
 Around this time, I discovered Indie Hackers.
 
-{{<img src="indie-hackers.png" alt="Screenshot of Indie Hackers website" max-width="750px">}}
+{{<img src="indie-hackers.png" alt="Screenshot of Indie Hackers website" max-width="550px">}}
 
 It's an online community for founders of small software businesses. Emphasis on small. These weren't Zuckerberg hopefuls, but rather people who wanted to build modest, profitable businesses that pay their bills.
 
