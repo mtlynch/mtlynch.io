@@ -41,6 +41,10 @@ The talk is based on ideas from Marohn's new book, [_Escaping the Housing Trap_]
 - After every bubble burst, one of the primary tools the federal government uses to spur recovery is to make it easier for Americans to obtain mortgages.
   - e.g., Government guarantees loans, government agrees to buy bad loans, government pushes banks to offer longer terms
 
+### Case-Shiller home price index
+
+- https://www.investopedia.com/terms/s/sp_case_shiller_us_nhpi.asp
+
 ### The problem with accessible mortgages
 
 - The more the government intervenes to make loans accessible, the more mortgages become an instrument for banks and investors to profit off of homeowners.
