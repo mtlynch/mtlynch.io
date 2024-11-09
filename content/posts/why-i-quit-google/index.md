@@ -6,7 +6,6 @@ description:
 discuss_urls:
   reddit: https://redd.it/80whkc
   hacker_news: https://news.ycombinator.com/item?id=16483241
-  indie_hackers: https://www.indiehackers.com/forum/why-i-quit-google-to-work-for-myself-284c36ec48
 tags:
   - entrepreneurship
   - google
@@ -136,7 +135,7 @@ Even if I got the promotion, what then? Popular wisdom said that each promotion 
 
 ## What's the alternative?
 
-Around this time, I discovered [Indie Hackers](https://www.indiehackers.com/).
+Around this time, I discovered Indie Hackers.
 
 {{<img src="indie-hackers.png" alt="Screenshot of Indie Hackers website" max-width="750px">}}
 
