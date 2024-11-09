@@ -5,6 +5,8 @@ date: "2024-11-09"
 
 [_Strong Towns_](/book-reports/strong-towns/) was one of my favorite books of the last few years. I stumbled upon a reddit post announcing that the author, Charles Marohn, was giving a free talk near my town the next morning, so my wife and I attended.
 
+The talk is based on ideas from Marohn's new book, [_Escaping the Housing Trap_](https://www.housingtrap.org/), which I haven't read yet, so these notes are from memory.
+
 ## Takeaways
 
 ### Everyone agrees on the problem, diverg
