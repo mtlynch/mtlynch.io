@@ -1,6 +1,6 @@
 ---
 title: "Lessons from My First Exit"
-date: 2024-11-05T00:00:00-04:00
+date: 2024-11-13
 description: My takeaways from selling TinyPilot
 hero_image: cover.webp
 tags:
@@ -415,7 +415,7 @@ When you run a business in the US as a corporation or an LLC, the most you can e
 
 If your business is worth $100k, and someone sues you for $5M, the worst that can happen is that they take your business. They can't take your house, car, or first-born child &mdash; only the assets under the business itself. That's what "limited liability" means in limited liability company (LLC).
 
-It turns out that when you sell your business, you lose limited liability protection. If the purchase agreement doesn't place an upper limit on your liability to the buyer, the buyer can purchase your business and then later sue you for any amount, even if it exceeds what they paid in the acquisition.
+My lawyer warned me that when I sell my business, I lose limited liability protection. If the purchase agreement doesn't place an upper limit on your liability to the buyer, the buyer can purchase your business and then later sue you for any amount, even if it exceeds what they paid in the acquisition.
 
 The buyer's lawyer originally wanted my liability to be uncapped. My lawyer pushed back and said I absolutely shouldn't sign anything that exposes me to liabilities above the sale price, and the buyer's lawyer eventually relented.
 
@@ -427,21 +427,22 @@ I trusted the buyer, but you also never know how people are going to behave when
 
 It turns out that even if a buyer wants to cheat, the seller still holds the leverage of institutional knowledge. The buyer doesn't want to screw over the seller for $2k only to realize a month later that they need the seller's help to access some critical account. So, there's a nice balance of power that keeps both sides on their best behavior.
 
-## Resources that helped me
+## Resources that helped me prepare
 
-In preparing to sell my business, the most helpful
+One of the hardest things about the acquisition was how much of it was completely new to me. It's hard to practice for an acquisition, and even experienced founders only go through a few acquisitions per lifetime.
 
-Hard to practice because even serial entrepreneurs only have a handful of exits in their life. Helpful to read a lot and talk to other founders to hear about potential pitfalls and red flags.
+The most valuable things I did were to read about small business acquisitions and to ask other founders about their experiences selling their businesses.
 
 - John Warrilow's books and podcasts
   - [_Built to Sell_](https://builttosell.com/) was helpful in understanding how to design my business from the start for a potential acquisition.
   - [_The Art Of Selling Your Business_](https://builttosell.com/) covered the practical considerations of the sale itself.
-  - [_Built to Sell Radio_]() is Warrilow's podcast. His guests tend to be larger companies and less tech-focused, so I listened to episodes with founders that seemed closest to my situation. My favorites were [Natalie Nagele](https://builttosell.com/radio/episode-363/) and [Laura Roeder](https://builttosell.com/radio/episode-344/). I [got to be a guest](https://builttosell.com/radio/episode-450/) on the show after my exit.
+  - [_Built to Sell Radio_](https://builttosell.com/podcast/), Warrilow's podcast, tends to feature larger, less tech-focused companies. I listened to episodes with founders that seemed closest to my situation. My favorites were [Natalie Nagele](https://builttosell.com/radio/episode-363/) and [Laura Roeder](https://builttosell.com/radio/episode-344/).
+    - I [appeared on the show](https://builttosell.com/radio/episode-450/) after my exit.
 - Privately telling other founders I'm thinking of selling
-  - I didn't know anyone who had been through an acquisition of TinyPilot's size, but it turns out that I knew people who knew people. A few friends put me in touch with people they knew with experience going through acquisitions, and the
+  - I didn't know many people who had been through acquisitions, but I discovered that I knew people who knew people. A few friends put me in touch with people they knew with experience going through acquisitions, and those were some of the most informative conversations I had.
 - [Microconf](https://microconf.com/), an indie-focused founder conference
-  - That was where I met Quiet Light, and it was helpful meeting the brokers in person so I could choose one I got along with.
-  - Microconf was also a good place to ask attendees about their experience with acquisitions. The conference attracts a lot of founders who are similar to me who have been through a sale.
+  - I met Quiet Light at Microconf. It was helpful to meet several brokers in person and choose who felt like the best match.
+  - The conference attracts a lot of founders who have been through acquisitions, so it was helpful asking attendees about their experience selling companies.
 - Blog posts
   - I learned a lot from reading blog posts about acquisitions written by other indie founders.
   - My favorites:
