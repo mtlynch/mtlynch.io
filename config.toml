@@ -35,6 +35,7 @@ twitter = "deliberatecoder"
     author = "Michael Lynch"
     info = "By day, a simple software engineer. By night, also a software engineer."
     description = "Updates about my life and what I learn about creating software"
+    currentproject = "Paternity Leave"
     keywords = "blog,developer,personal"
     avatarurl = "images/avatar.jpg"
 

@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# Exit build script on first failure.
+set -e
+
+# Echo commands to stdout.
+set -x
+
+# Exit on unset variable.
+set -u
+
+YEAR=$(date +%Y)
+readonly YEAR
+MONTH=$(date +%m)
+readonly MONTH
+
+EST_PUBLISH_DATE=$(date -d "+1 week" +%Y-%m-%dT00:00:00%:z)
+readonly EST_PUBLISH_DATE
+
+readonly RETRO_PATH="content/retrospectives/${YEAR}/${MONTH}/index.md"
+hugo new "${RETRO_PATH}" \
+  --clock "${EST_PUBLISH_DATE}"
+
+code "${RETRO_PATH}"
