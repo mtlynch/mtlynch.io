@@ -361,11 +361,11 @@ When the sale closed, I finally clicked that button and immediately saw this err
 
 {{<img src="gcp-error.png" has-border="true">}}
 
-GCP's [project migration docs](https://cloud.google.com/resource-manager/docs/project-migration) are a maze of confusing and incorrect instructions. The jist seemed to be that both the new owner and I would need to create paid Google Workspace accounts and go through some complicated process from there. We had a similar issue with some notes and old documents that I'd stored in Google Drive.
+GCP's [project migration docs](https://cloud.google.com/resource-manager/docs/project-migration) are a maze of confusing and incorrect instructions. The gist seemed to be that the new owner and I would each need to create paid Google Workspace accounts and go through some complicated process from there. We had a similar issue with some notes and old documents that I'd stored in Google Drive.
 
 The new owner decided it was too much hassle to do the official migration, so I exported what I could, and we deleted the rest.
 
-In general, I've tried to minimize my dependencies on Google, both personally and professionally. Google frequently burns me on corner cases like these, so this is just a further reminder to depend on them even less.
+In general, I've tried to minimize my dependencies on Google, both personally and professionally. Google frequently burns me on corner cases like these, so this is a further reminder to depend on them even less.
 
 ## What surprised me
 
@@ -373,15 +373,15 @@ In general, I've tried to minimize my dependencies on Google, both personally an
 
 I greatly underestimated how labor-intensive the due diligence process would be.
 
-At the start, I thought due diligence would be somewhat tedious but still straightforward. The buyer had already seen two years of profit and loss statements before they even signed the LOI. I thought maybe they'd spot check a few bank statements to prove that my numbers were real. Perhaps I'd have an opportunity to show off my immaculate bookkeeping ledger, of which I was quite proud.
+At the start, I thought due diligence would be somewhat tedious but still straightforward. The buyer had already seen two years of profit and loss statements before they even signed the LOI. Maybe they'd spot-check a few bank statements to verify that my numbers were real. Perhaps I'd have an opportunity to show off my immaculate bookkeeping ledger, of which I was quite proud.
 
 It turned out that the due diligence process required me to share _all_ of my bank statements from the last two years. And that was just part of the first round of requests.
 
-As we proceeded further into the due diligence process, I needed to create lots of one-off reports to demonstrate different aspect of my business, like how frequently our customers make repeat purchases or which platforms account for what percentage of our revenue.
+As we proceeded further into the due diligence process, I needed to create lots of one-off reports to demonstrate different aspects of my business, like how frequently our customers make repeat purchases or which platforms account for what percentage of our revenue.
 
 I didn't want to expose customer data, so I did custom processing on our reports to avoid leaking customer details. But the more I customized the reports, the more I risked introducing errors into my records. And if I made an error, the buyer would have grounds to sue me later for selling the company based on fraudulent data. So, even for simple reports, I felt stressed about doing them perfectly.
 
-This is also a case where a non-cash buyer makes things more challenging. The buyer was presenting me with requests from both himself and the bank. The bank was hard to negotiate with because they didn't care if the deal fell through. I was more comfortable pushing back against the buyer because he had skin in the game and was motivated to make a deal. But I can't say to the buyer, "Is this request coming from you or from the bank? Because if it's you, I'm going to say no; if it's the bank, I'll say yes."
+A non-cash buyer makes it harder to push back on due diligence requests. The buyer was presenting me with requests from both himself and the bank. The bank was hard to negotiate with because they didn't care if the deal fell through. I was more comfortable pushing back against the buyer because he had skin in the game and was motivated to make a deal. But I can't ask the buyer, "Is this request coming from you or from the bank? Because if it's you, I'm going to say no; if it's the bank, I'll say yes."
 
 ### As you prepare to sell, everything costs 4x as much
 
@@ -389,15 +389,15 @@ When you sell a small business, the sale price is usually some multiple of your 
 
 If your annual profit was $100k and businesses like yours sell at 3x annual profit, then you could sell your business for roughly $300k.
 
-Now, imagine you decided to give one of your employees a $10k bonus. Your profit drops to $90k, so your business is only worth $270k. To give your employee their $10k bonus, it costs you $40k: the initial $10k you paid plus another $30k in deflated valuation.
+Now, imagine you decided to give one of your employees a $10k bonus. Your profit drops to $90k, so your business is only worth $270k. Giving your employee their $10k bonus costs you $40k: the initial $10k you paid plus another $30k in deflated valuation.
 
 It's not just bonuses &mdash; everything you spend money on is 4x as expensive as you're preparing to sell. If you need to buy someone a new laptop, that $1k laptop now costs $4k.
 
 ### You don't strictly need a broker to sell
 
-I liked Quiet Light, and I have no regrets about using them as the broker to sell TinyPilot, but I was surprised to see that I didn't strictly need a broker.
+I liked Quiet Light and have no regrets about using them as the broker to sell TinyPilot, but I was surprised to see that I didn't strictly need a broker.
 
-My only frame of reference for a deal of this size is buying or selling a house. In that process, the broker does a lot of things I don't understand or know how to do like list on [MLS](https://en.wikipedia.org/wiki/Multiple_listing_service) or ensure we're following municipal regulations for the sale.
+My only frame of reference for a deal of this size is buying or selling a house. In that process, the broker does a lot of things I don't understand or know how to do like listing on [MLS](https://en.wikipedia.org/wiki/Multiple_listing_service) or ensuring we're following municipal regulations for the sale.
 
 Quiet Light's main contribution was finding a buyer, as that's something I couldn't have done on my own. After that, they're outside of the critical path of the deal. Once we found a buyer, the heavy lifting of getting the deal to close was on my M&A lawyer to prepare and negotiate all the legal documents.
 
@@ -419,7 +419,7 @@ When you run a business in the US as a corporation or an LLC, the most you can e
 
 If your business is worth $100k, and someone sues you for $5M, the worst that can happen is that they take your business. They can't take your house, car, or first-born child &mdash; only the assets under the business itself. That's what "limited liability" means in limited liability company (LLC).
 
-My lawyer warned me that when I sell my business, I lose limited liability protection. If the purchase agreement didn't place an upper limit on my liability to the buyer, the buyer could later sue me for any amount, even if it exceeds what they paid in the acquisition.
+My lawyer warned me that when I sell my business, I lose limited liability protection. If the purchase agreement didn't limit my liability to the buyer, the buyer could later sue me for any amount, even if it exceeds what they paid in the acquisition.
 
 The buyer's lawyer originally wanted my liability to be uncapped. My lawyer pushed back and said I absolutely shouldn't sign anything that exposes me to liabilities above the sale price, and the buyer's lawyer eventually relented.
 
@@ -427,9 +427,9 @@ The buyer's lawyer originally wanted my liability to be uncapped. My lawyer push
 
 One of my fears in the process was that after I handed over all of TinyPilot's accounts and domains to the seller, they'd lose incentive to cooperate with me. What if the buyer forgets to update the billing information on one of the accounts, and I get hit with a $2k credit card charge? What leverage would I have to make the buyer reimburse me?
 
-I trusted the buyer, but you also never know how people are going to behave when power shifts.
+I trusted the buyer, but you also never know how people will behave when power shifts.
 
-It turns out that even if a buyer wants to cheat, the seller still holds the leverage of institutional knowledge. The buyer doesn't want to screw over the seller for $2k only to realize a month later that they need the seller's help to access some critical account. So, there's a nice balance of power that keeps both sides on their best behavior.
+It turns out that even if a buyer wants to cheat, the seller still holds the leverage of institutional knowledge. The buyer doesn't want to screw over the seller for $2k only to realize a month later that they need the seller's help to access some critical account. So, a nice balance of power keeps both sides on their best behavior.
 
 ## Resources that helped me prepare
 
@@ -445,10 +445,10 @@ The following were the resources I found most helpful in approaching my exit:
   - [_Built to Sell Radio_](https://builttosell.com/podcast/), Warrilow's podcast, tends to feature larger, less tech-focused companies. I listened to episodes with founders that seemed closest to my situation. My favorites were [Natalie Nagele](https://builttosell.com/radio/episode-363/) and [Laura Roeder](https://builttosell.com/radio/episode-344/).
     - I [appeared on the show](https://builttosell.com/radio/episode-450/) after my exit.
 - Privately telling other founders I'm thinking of selling
-  - I didn't know many people who had been through acquisitions, but I discovered that I knew people who knew people. A few friends put me in touch with people they knew with experience going through acquisitions, and those were some of the most informative conversations I had.
+  - I didn't know many people who had been through acquisitions, but I discovered that I knew people who knew people. A few friends put me in touch with people they knew who had experience going through acquisitions, and those were some of the most informative conversations I had.
 - [Microconf](https://microconf.com/), an indie-focused founder conference
   - I met Quiet Light at Microconf. It was helpful to meet several brokers in person and choose who felt like the best match.
-  - The conference attracts a lot of founders who have been through acquisitions, so it was helpful asking attendees about their experience selling companies.
+  - The conference attracts a lot of founders who have been through acquisitions, so it was helpful to ask attendees about their experience selling companies.
 - Blog posts
   - I learned a lot from reading blog posts about acquisitions written by other indie founders.
   - My favorites were:
