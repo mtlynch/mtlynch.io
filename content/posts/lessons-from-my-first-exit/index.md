@@ -47,7 +47,7 @@ In this post, I'm sharing what went well, what I want to improve in the future, 
   - [If the non-compete is too restrictive, you're screwed](#if-the-non-compete-is-too-restrictive-youre-screwed)
   - [If there's no cap on liability, you're screwed](#if-theres-no-cap-on-liability-youre-screwed)
   - [Buyers have incentive to keep the seller happy](#buyers-have-incentive-to-keep-the-seller-happy)
-- [Resources that helped me](#resources-that-helped-me)
+- [Resources that helped me prepare](#resources-that-helped-me-prepare)
 
 ## Details of the sale
 
