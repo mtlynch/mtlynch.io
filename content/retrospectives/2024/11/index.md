@@ -61,13 +61,18 @@ https://steveklabnik.github.io/jujutsu-tutorial/advanced/simultaneous-edits.html
 ## Recommendations
 
 - ["Why I still blog after 15 years"](https://www.jonashietala.se/blog/2024/09/25/why_i_still_blog_after_15_years) by Jonas Hietala
-  - When I found it, I was like, "Oh, this guy is like the Swedish version of me."
+  - I related a lot to his post about blogging, and as I explored his site more, I was like, "Oh, this guy is like the Swedish version of me." So if you enjoy my writing, you'd probably enjoy his as well.
 - ["Notes on Ukraine"](https://mattlakeman.org/2022/05/15/notes-on-ukraine/) by Matt Lakeman
   - I discovered Lakeman's blog last week, and every day since then, I just keep thinking, "Who is this guy?" He travels to not-so-popular destinations, usually for ten days or so and then publishes a blog post about the country. But it's not like postcard to your mom blog posts; these are novella-length blog posts based on hours of study of the history of the country and conversations with locals.
   - I also discovered that he has a long posting history elsewhere on the Internet under the username `dormin111`.
   - The craziest thing about all his work is that there's seemingly no angle. Usually, when you see someone invest so much into their writing, it's usually obvious how it benefits them: they have a Substack or YouTube channel that earns them money, and their free articles are loss leaders for the thing that supports them financially. But I can't find any angle or profit motive in any of Lakeman's stuff. He just seems like a guy who loves thinking deeploy about things and sharing his thoughts.
+  - Anyway, this Ukraine post, I naturally assumed he visited before the war, but it turned out that he visited two months into the war and interviewed people within miles of the front lines.
 - Cyberpunk 2077 (video game)
+  - I don't play video games much, but I buy one new game per year and play until I get bored, which usually takes 5-25 hours over a few days. I'm at about 25 hours of play with this game, and I'm still enjoying it, and I find its depth amazing. I think I've only explored like 3% of the game so far, so it amazes me that modern games have such expansive worlds.
+  - I usually don't care about stories in video games and find it irritating when games make me sit through boring exposition, but Cyberpunk is one of the few games where I find the story compelling enough to pay attention. And it's cool to see them invest so much into voice acting to the point that Keanu Reeves plays a major role in the game.
 - Detroiters (TV show)
+  - I'd heard of this show, but I think the name always dissuaded me from watching. A show where the defining feature is that they live in Detroit? No thanks.
+  - And then somehow I saw [this clip](https://www.youtube.com/watch?v=yWBqnpCCasg) from the show and realized that great people are in it, and the tone is like a slightly more grounded sitcom version of _I Think You Should Leave_. And I'm eight episodes in, and it's great.
 
 ## Wrap up
 
