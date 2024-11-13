@@ -5,8 +5,6 @@ description: My takeaways from selling TinyPilot
 hero_image: cover.webp
 tags:
   - tinypilot
-discuss_urls:
-  hacker_news: https://news.ycombinator.com/item?id=42126156
 ---
 
 In April of this year, I sold [TinyPilot](https://tinypilotkvm.com), the bootstrapped hardware company I founded and ran for four years.
