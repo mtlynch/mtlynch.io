@@ -409,7 +409,7 @@ If I sell a business in the future, I may forego a broker if I can find a buyer 
 
 If a big tech company hires me as a developer, and the 500th page of my contract says I can never write software for any other company, a judge would likely reject that non-compete as unfair and unenforceable.
 
-If, however, I sell my company, and the purchase agreement says that I agree to never work in software again, then a judge will hold me to that promise. They'd assume that I had reasonable bargaining power and awareness of the agreement, so if I signed a bad deal, it's on me.
+If, however, I sell my company, and the purchase agreement says that I agree to never work in software again, a judge might hold me to that promise. My lawyer warned me that judges are stricter in acquisition agreements, as they assume I had reasonable bargaining power and awareness of the agreement. If I signed a bad deal, it's on me.
 
 When reviewing TinyPilot's purchase agreement, my lawyer carefully reviewed the non-compete clause with me to ensure that I was only agreeing not to work in the domain of KVM over IP devices rather than software or technology in general.
 
