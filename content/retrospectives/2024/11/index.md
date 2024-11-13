@@ -58,6 +58,17 @@ Not aware of any command that says to push the whole stack back up. And then you
 
 https://steveklabnik.github.io/jujutsu-tutorial/advanced/simultaneous-edits.html
 
+## Recommendations
+
+- ["Why I still blog after 15 years"](https://www.jonashietala.se/blog/2024/09/25/why_i_still_blog_after_15_years) by Jonas Hietala
+  - When I found it, I was like, "Oh, this guy is like the Swedish version of me."
+- ["Notes on Ukraine"](https://mattlakeman.org/2022/05/15/notes-on-ukraine/) by Matt Lakeman
+  - I discovered Lakeman's blog last week, and every day since then, I just keep thinking, "Who is this guy?" He travels to not-so-popular destinations, usually for ten days or so and then publishes a blog post about the country. But it's not like postcard to your mom blog posts; these are novella-length blog posts based on hours of study of the history of the country and conversations with locals.
+  - I also discovered that he has a long posting history elsewhere on the Internet under the username `dormin111`.
+  - The craziest thing about all his work is that there's seemingly no angle. Usually, when you see someone invest so much into their writing, it's usually obvious how it benefits them: they have a Substack or YouTube channel that earns them money, and their free articles are loss leaders for the thing that supports them financially. But I can't find any angle or profit motive in any of Lakeman's stuff. He just seems like a guy who loves thinking deeploy about things and sharing his thoughts.
+- Cyberpunk 2077 (video game)
+- Detroiters (TV show)
+
 ## Wrap up
 
 ### What got done?
