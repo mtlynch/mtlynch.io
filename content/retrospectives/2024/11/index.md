@@ -26,6 +26,12 @@ I'm still finding the right balance between work and family time, and things con
 - **Result**: I finally [finished the post](/nix-fuzz-testing-1/), but it didn't get much traction.
 - **Grade**: A
 
+## Easing back into work
+
+One new change is that my wife offered to
+
+## Am I over-investing in blog posts?
+
 I feel a bit conflicted about this post. Writing the post taught me a lot about Nix and fuzz testing, but I spent longer than I expected writing it. At first, I thought, "Oh, I can do a quick writeup in a few hours about what I did here," but I ended up spending 20+ hours on it.
 
 I used to have a bad habit of feeling like once I learned something difficult, I absolutely had to write a blog post explaining it even if the audience for article was tiny or if I had no way of reaching readers. Previous examples include ["Hiring Content Writers: A Guide for Small Businesses"](/hiring-content-writers/) (there's an audience, but I don't have a good way of reaching them) and ["Retrofitting Apps for Cloud Storage with Zero Code Changes"](/retrofit-docker-gcs/) (too niche to be worth it).
@@ -34,27 +40,69 @@ I've spoken to readers who are glad that I've written those articles, but I also
 
 It's also discouraging to write software tutorials in an age of LLMs. Five years ago, there was a long-term return on tutorials, as people would discover them through web searches later. These days, if I write a niche tutorial, I think LLMs will just steal whatever I write, and the reader will have no idea it came from me.
 
-## Easing back into work
-
-One new change is that my wife offered to
-
 ## Implementing major features through stacked diffs
 
-For the past few weeks, I've spent most of my hobby programming time on ScreenJournal, my movie review app. The idea of it is like letterboxd or Goodreads, but the reviews are private and the code is open-source.
+For the past few weeks, I've spent most of my hobby programming time on [ScreenJournal](https://github.com/mtlynch/screenjournal), my TV and movie review app. The idea of it is like letterboxd or Goodreads, but the reviews are private and the code is open-source.
 
-I always wanted it to support reviewing both movies and TV shows, but I implemented movies first because they were simpler. I intentionally avoided design choices that would make it easier to add TV shows in the future, as I didn't know if it would ever happen, so I wanted to optimize for the functionality that was there.
+<figure class="img">
+<img class="img-border" src="https://raw.githubusercontent.com/mtlynch/screenjournal/refs/heads/master/docs/assets/screenjournal-demo.webp" >
+<figcaption><p><a href="https://github.com/mtlynch/screenjournal">ScreenJournal</a>, my open-source TV and movie review app</p></figcaption>
+</figure>
 
-Now, I want to support TV show reviews, so I have to make a lot of changes to the codebase where I assumed the user would always be reviewing a movie.
+I always wanted ScreenJournal to support both movies and TV shows, but I implemented movies first because they were simpler. I intentionally avoided generalizing the code to support TV shows in the future. I didn't know if it would ever happen, so I wanted to optimize for the functionality that was there.
 
-The full changes will probably be about 2,000 lines of code, which is significantly larger than I'd like for a single changelist. I'm using the term "changelist," but I'm talking about something like a pull request in Github terms or a merge request in Gitlab terms.
+In October, I added support TV show reviews, so I had to make a lot of changes to the codebase where I assumed the user would always be reviewing a movie.
+
+The [full change](https://github.com/mtlynch/screenjournal/pull/359) ended up weighing in at over 2k lines of code, which is significantly larger than I'd like for a single changelist. I'm using the term "changelist," but I'm talking about something like a pull request in Github terms or a merge request in Gitlab terms.
 
 In the past, the way I've tackled large changes like this is that I have a feature branch that's in a broken or incomplete state until I finish the feature. I either make changes directly into the feature branch or I branch off that feature branch again for a subtask and then merge in the subtask when I'm done.
 
 The problem with this approach is that the feature branch becomes a giant blob of changes that are too large to understand. You can see an example of this [when I migrated What Got Done from Firestore to SQLite](https://github.com/mtlynch/whatgotdone/pull/639). There were lots of substeps within that change, but they're not inspectable because everything is mixed together.
 
-So, for this ScreenJournal change, I tried something different. Instead of keeping a big, messy feature branch, I did stacked diffs. I started by looking for a small complete subtask that . I decided to start with the search screen. The original ScreenJournal review flow starts with the user searching for the movie they want to review. I had to edit this page to let the user pick a movie or TV show.
+So, for this ScreenJournal change, I tried something different. Instead of keeping a big, messy feature branch, I did stacked diffs.
+
+{{<notice type="info">}}
+
+##### What's a stacked diff?
+
+Stacked diffs are where you have a `main` branch, and you want to merge in a large feature, so you break the feature into change `A`, `B`, and `C`. You create `A` by branching off of `main`, create `B` by branching off of `A`, etc.
+
+Github has okay support for stacked diffs in that if your stack is `A`, `B`, `C`, you'd make a PR from `A` into `main`, then a PR from `B` into `A`. When you merge in the `A` into `main` PR, the `B` into `A` PR automatically updates to a `B` into `main` PR.
+{{</notice>}}
+
+I broke up the work by making a PR for each page in the TV show review flow. The first step of leaving a review is to search for the thing you want to review. It used to only be movies, so I started by adding a radio button that let the user choose between a movie or TV show:
+
+TODO: image
+
+That was the [first change](https://github.com/mtlynch/screenjournal/pull/329/files). The next thing I needed was a way for the user to pick a TV show season, as that's something that I didn't have when it was movies only. So, [that was its own chage](https://github.com/mtlynch/screenjournal/pull/342).
 
 Not aware of any command that says to push the whole stack back up. And then you have to force push, which makes the Github PR ugly.
+
+### Issue 1: Deleting source history
+
+The thing I dislike most about the stacked diff workflow is that I end up deleting source history, which defeats the purpose of using source control. Because `git rebase` rewrites history, I have to force push to Github, and my PR becomes littered with this:
+
+TODO
+
+And it's not that I'm particularly precious about having a courtroom-level archive of events exactly as they happened, but I like having a change history in case I screwed something up. With rebase,
+
+### Issue 2: Rebasing is easy, pushing is hard
+
+If I have branches `A`, `B`, and `C`, and I rebase all of them at once, the git output looks like this:
+
+```bash
+$ git rebase master --update-refs
+Successfully rebased and updated refs/heads/C.
+Updated the following refs with --update-refs:
+        refs/heads/A
+        refs/heads/B
+```
+
+Okay, that was easy, but now I want to push all those changes to Github. There's no "okay, now push the branches I just rebased" command, so I instead have to copy the output from git into a text editor, edit to pull out the branch names, then put it back into a command like `git push origin A B C -f`.
+
+### Maybe I should give jujutsu a try
+
+I'm seeing more and more chatter about jujutsu, a new source control system that's on track to become standard within Google.
 
 https://steveklabnik.github.io/jujutsu-tutorial/advanced/simultaneous-edits.html
 
