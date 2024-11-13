@@ -33,7 +33,8 @@ I don't have feelings of anxiety about never being able to get work done again.
 - He's sleeping better at night. For the first two months, he could only sleep for two to three hour stretches, now he can do four to six. And instead of needing up to 90 minutes to get him back to sleep, he usually finishes eating and gets back to bed in about 30 minutes.
 - More help from family
 - Guaranteed work time
-  I generally work for a couple of hours each day with my son sleeping on my chest, and then I can work another hour or two when my
+
+I generally work for a couple of hours each day with my son sleeping on my chest, and then I can work another hour or two when my
 
 One new change is that my wife offered to
 
@@ -41,13 +42,13 @@ One new change is that my wife offered to
 
 I used to have a bad habit of feeling like once I learned something difficult, I absolutely had to write a blog post explaining it. I tried to polish every post to the best they could be, even if the audience for the article was tiny or if I had no way of reaching readers. Previous examples include ["Hiring Content Writers: A Guide for Small Businesses"](/hiring-content-writers/) (there's an audience, but I don't have a good way of reaching them) and ["Retrofitting Apps for Cloud Storage with Zero Code Changes"](/retrofit-docker-gcs/) (very niche and not interesting outside of my strange use-case).
 
-I've since changed become a bit more strategic in my posts. If I don't think an article can reach a critical mass of readers, I either don't write it or I write a quick 'n dirty version in my ["Notes" section](/notes/).
+I've spoken to readers who are glad that I've written those articles, but I also have to consider the opportunity cost. In the time I spent writing them, was there another article that would have reached more readers or provided more value in aggregate?
+
+I've since become more strategic in my posts. If I don't think an article can reach a critical mass of readers, I either don't write it or I write a quick 'n dirty version in my ["Notes" section](/notes/).
 
 ### "Using Nix to Fuzz Test a PDF Parser"
 
-I feel a bit conflicted about this post. Writing the post taught me a lot about Nix and fuzz testing, but I spent longer than I expected writing it. At first, I thought, "Oh, I can do a quick writeup in a few hours about what I did here," but I ended up spending 20+ hours on it.
-
-I've spoken to readers who are glad that I've written those articles, but I also have to consider the opportunity cost. In the time I spent writing my Nix fuzzing article, was there another article that would benefit me more or reach more readers?
+I feel a bit conflicted about this post. Writing the post taught me a lot about Nix and fuzz testing, but I spent longer than I expected writing it. At first, I thought, "Oh, I can do a quick writeup in a few hours," but I ended up spending 20+ hours on it.
 
 It's also discouraging to write software tutorials in an age of LLMs. Five years ago, there was a long-term return on tutorials, as people would discover them through web searches later. These days, if I write a niche tutorial, I think LLMs will just steal whatever I write, and the reader will have no idea it came from me.
 
@@ -93,13 +94,19 @@ Stacked diffs are where you have a `main` branch, and you want to merge in a lar
 Github has okay support for stacked diffs in that if your stack is `A`, `B`, `C`, you'd make a PR from `A` into `main`, then a PR from `B` into `A`. When you merge in the `A` into `main` PR, the `B` into `A` PR automatically updates to a `B` into `main` PR.
 {{</notice>}}
 
-I broke up the work by making a PR for each page in the TV show review flow. The first step of leaving a review is to search for the thing you want to review. It used to only be movies, so I started by adding a radio button that let the user choose between a movie or TV show:
+I broke up the work by making a PR for each page in the TV show review flow.
 
-TODO: image
+The first step of leaving a review is to search for the thing you want to review. It used to only be movies, so my first step in supporting TV shows was to [add a radio button](https://github.com/mtlynch/screenjournal/pull/329/files) that let the user choose between a movie or TV show:
 
-That was the [first change](https://github.com/mtlynch/screenjournal/pull/329/files). The next thing I needed was a way for the user to pick a TV show season, as that's something that I didn't have when it was movies only. So, [that was its own chage](https://github.com/mtlynch/screenjournal/pull/342).
+{{<img src="movie-or-tv.webp" max-width="550px" has-border="true">}}
 
-Not aware of any command that says to push the whole stack back up. And then you have to force push, which makes the Github PR ugly.
+The next thing I needed was a way for the user to pick a TV show season, as that's something that I didn't have when it was movies only. So, [that was its own change](https://github.com/mtlynch/screenjournal/pull/342).
+
+I kept going like that, where each stage of the flow was a new branch and separate pull request.
+
+### Stacked diff workflows are nice
+
+I liked it. It felt more motivating to be able to mark a change as "done" and move on to the next rather than have one giant change that's some unknown percentage complete.
 
 ### Issue 1: Deleting source history
 
