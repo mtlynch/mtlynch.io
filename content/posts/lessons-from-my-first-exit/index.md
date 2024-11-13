@@ -1,5 +1,5 @@
 ---
-title: "Lessons from My First Exit"
+title: "Lessons from my First Exit"
 date: 2024-11-13
 description: My takeaways from selling TinyPilot
 hero_image: cover.webp
