@@ -28,6 +28,13 @@ I'm still finding the right balance between work and family time, and things con
 
 ## Easing back into work
 
+I don't have feelings of anxiety about never being able to get work done again.
+
+- He's sleeping better at night. For the first two months, he could only sleep for two to three hour stretches, now he can do four to six. And instead of needing up to 90 minutes to get him back to sleep, he usually finishes eating and gets back to bed in about 30 minutes.
+- More help from family
+- Guaranteed work time
+  I generally work for a couple of hours each day with my son sleeping on my chest, and then I can work another hour or two when my
+
 One new change is that my wife offered to
 
 ## Am I over-investing in blog posts?
