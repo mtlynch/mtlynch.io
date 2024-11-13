@@ -32,13 +32,29 @@ One new change is that my wife offered to
 
 ## Am I over-investing in blog posts?
 
-I feel a bit conflicted about this post. Writing the post taught me a lot about Nix and fuzz testing, but I spent longer than I expected writing it. At first, I thought, "Oh, I can do a quick writeup in a few hours about what I did here," but I ended up spending 20+ hours on it.
+I used to have a bad habit of feeling like once I learned something difficult, I absolutely had to write a blog post explaining it. I tried to polish every post to the best they could be, even if the audience for the article was tiny or if I had no way of reaching readers. Previous examples include ["Hiring Content Writers: A Guide for Small Businesses"](/hiring-content-writers/) (there's an audience, but I don't have a good way of reaching them) and ["Retrofitting Apps for Cloud Storage with Zero Code Changes"](/retrofit-docker-gcs/) (very niche and not interesting outside of my strange use-case).
 
-I used to have a bad habit of feeling like once I learned something difficult, I absolutely had to write a blog post explaining it even if the audience for article was tiny or if I had no way of reaching readers. Previous examples include ["Hiring Content Writers: A Guide for Small Businesses"](/hiring-content-writers/) (there's an audience, but I don't have a good way of reaching them) and ["Retrofitting Apps for Cloud Storage with Zero Code Changes"](/retrofit-docker-gcs/) (too niche to be worth it).
+I've since changed become a bit more strategic in my posts. If I don't think an article can reach a critical mass of readers, I either don't write it or I write a quick 'n dirty version in my ["Notes" section](/notes/).
+
+### "Using Nix to Fuzz Test a PDF Parser"
+
+I feel a bit conflicted about this post. Writing the post taught me a lot about Nix and fuzz testing, but I spent longer than I expected writing it. At first, I thought, "Oh, I can do a quick writeup in a few hours about what I did here," but I ended up spending 20+ hours on it.
 
 I've spoken to readers who are glad that I've written those articles, but I also have to consider the opportunity cost. In the time I spent writing my Nix fuzzing article, was there another article that would benefit me more or reach more readers?
 
 It's also discouraging to write software tutorials in an age of LLMs. Five years ago, there was a long-term return on tutorials, as people would discover them through web searches later. These days, if I write a niche tutorial, I think LLMs will just steal whatever I write, and the reader will have no idea it came from me.
+
+### "Lessons from my First Exit"
+
+I knew from the start that this was a risky post because it has a few things working against it:
+
+- It's about nitty-gritty details of selling a business, which 99% of my readers have no plans to do.
+  - My previous post about the sale got traction, but that was a story, so readers could enjoy the story of it even if they weren't interested in doing it themselves.
+- The only channel social media channel where it has a decent shot is Hacker News
+
+I think that post still has a decent shot of getting traction on Hacker News.
+
+But even if that post flops entirely, I'm still happy about writing it. It helped me think through the acquisition for myself, and it will be a useful reference if I ever sell another business in the future. I have gotten positive feedback about it from founders who have been through an acquisition or are thinking about it.
 
 ## Implementing major features through stacked diffs
 
@@ -102,7 +118,7 @@ Okay, that was easy, but now I want to push all those changes to Github. There's
 
 ### Maybe I should give jujutsu a try
 
-I'm seeing more and more chatter about jujutsu, a new source control system that's on track to become standard within Google.
+I'm seeing more and more chatter about [jujutsu](https://github.com/martinvonz/jj), a new source control system that's on track to become standard within Google. I thought about trying it and thought, "Eh, git does what I need. Why chase after the next shiny thing?" But then I had this experience with git rebase and remembered there are a lot of times I have to fight with git, and I've just accepted that as normal.
 
 https://steveklabnik.github.io/jujutsu-tutorial/advanced/simultaneous-edits.html
 
@@ -138,6 +154,8 @@ And then somehow I saw [this clip](https://www.youtube.com/watch?v=yWBqnpCCasg) 
 
 ### What got done?
 
+- Published "Lessons from my First Exit"
+- Published "Fuzzing a XX"
 -
 
 ### Lessons learned
