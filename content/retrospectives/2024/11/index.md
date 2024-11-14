@@ -157,7 +157,9 @@ Anyway, this Ukraine post, I naturally assumed he visited before the war, but it
 
 ### Cyberpunk 2077 (video game)
 
-I don't play video games much, but I buy one new game per year and play until I get bored, which usually takes 5-25 hours over a few days. I'm at about 25 hours of play with this game, and I'm still enjoying it, and I find its depth amazing. I think I've only explored like 3% of the game so far, so it amazes me that modern games have such expansive worlds.
+I don't play video games much. I buy one new game per year and it play until I get bored, which usually takes 5-25 hours over a few days. I'm at about 25 hours of play with this game, and I'm still enjoying it.
+
+I find the depth astounding. I think I've only explored like 3% of the game despite 25 hours of playing, so it amazes me that modern games have such expansive worlds.
 
 I usually don't care about stories in video games and find it irritating when games make me sit through boring exposition, but Cyberpunk is one of the few games where I find the story compelling enough to pay attention. And it's cool to see them invest so much into voice acting to the point that Keanu Reeves plays a major role in the game.
 
