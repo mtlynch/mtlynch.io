@@ -167,7 +167,7 @@ I usually don't care about stories in video games and find it irritating when ga
 
 I'd heard of this show, but I think the name always dissuaded me from watching. A show where the defining feature is that they live in Detroit? No thanks.
 
-And then somehow I saw [this clip](https://www.youtube.com/watch?v=yWBqnpCCasg) from the show and realized that great people are in it, and the tone is like a slightly more grounded sitcom version of _I Think You Should Leave_. And I'm eight episodes in, and it's great.
+And then somehow I saw [this clip](https://www.youtube.com/watch?v=yWBqnpCCasg) from the show and realized that great people are in it, and the tone is like a slightly more grounded version of _I Think You Should Leave_ in sitcom format. I just finished season 1, and I thought it was great.
 
 ## Wrap up
 
