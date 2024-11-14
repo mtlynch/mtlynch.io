@@ -54,11 +54,14 @@ It's also discouraging to write software tutorials in an age of LLMs. Five years
 
 ### "Lessons from my First Exit"
 
+Note: after I wrote this section, another user re-submitted the article, and it reached #2 on Hacker News.
+
 I knew from the start that this was a risky post because it has a few things working against it:
 
 - It's about nitty-gritty details of selling a business, which 99% of my readers have no plans to do.
   - My previous post about the sale got traction, but that was a story, so readers could enjoy the story of it even if they weren't interested in doing it themselves.
-- The only channel social media channel where it has a decent shot is Hacker News
+- It's super long. I aim for each blog posts to be about a 10-minute read, and that one is an estimated 33-minute read.
+- The only channel social media channel where it had a decent shot is Hacker News.
 
 I think that post still has a decent shot of getting traction on Hacker News.
 
