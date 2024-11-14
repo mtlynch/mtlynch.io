@@ -151,9 +151,9 @@ I discovered Lakeman's blog last week, and every day since then, I just keep thi
 
 I also discovered that he has a long posting history elsewhere on the Internet under the username `dormin111`.
 
-The craziest thing about all his work is that there's seemingly no angle. Usually, when you see someone invest so much into their writing, it's usually obvious how it benefits them: they have a Substack or YouTube channel that earns them money, and their free articles are [loss leaders](https://en.wikipedia.org/wiki/Loss_leader). But I can't find any angle or profit motive in any of Lakeman's stuff. He just seems like a guy who loves thinking deeploy about things and sharing his thoughts.
+The craziest thing about all his work is that there's seemingly no angle. Usually, when you see someone invest so much into their writing, it's usually obvious how it benefits them: they have a Substack or YouTube channel that earns them money, and their free articles are [loss leaders](https://en.wikipedia.org/wiki/Loss_leader). But I can't find any angle or profit motive in any of Lakeman's stuff. He seems to just love thinking deeply about things and sharing his thoughts.
 
-Anyway, this Ukraine post, I naturally assumed he visited before the war, but it turned out that he visited two months into the war and interviewed people within miles of the front lines.
+Anyway, this Ukraine post, I naturally assumed he visited before the war, but it turned out that he visited two months into the war and interviewed people within miles of the front lines. I found it interesting to see coverage of the war from someone who's not career journalist but still interviewed a variety of real people in Ukraine.
 
 ### Cyberpunk 2077 (video game)
 
