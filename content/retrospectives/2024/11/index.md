@@ -52,6 +52,8 @@ I feel a bit conflicted about this post. Writing the post taught me a lot about 
 
 It's also discouraging to write software tutorials in an age of LLMs. Five years ago, there was a long-term return on tutorials, as people would discover them through web searches later. These days, if I write a niche tutorial, I think LLMs will just steal whatever I write, and the reader will have no idea it came from me.
 
+After I wrote the above, I realized that [Hackaday](https://hackaday.com/2024/11/09/nix-automated-fuzz-testing-finds-bug-in-pdf-parser/) did a writeup about my tutorial, which is validating.
+
 ### "Lessons from my First Exit"
 
 Note: after I wrote this section, another user re-submitted the article, and it reached #2 on Hacker News.
