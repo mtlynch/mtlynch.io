@@ -12,7 +12,7 @@ Earlier this week, I thought back to Fady Othman's post ["Meta Bug Bounty &mdash
 
 Like most fuzzing blog posts, I found the work a bit difficult to reproduce because it requires the reader to figure out how to replicate the author's environment and toolchain.
 
-I thought I'd try making an easily reproducible version of Othman's fuzzer using Nix, as I did [with xpdf](nix-fuzz-testing-1). My post about xpdf is much more thorough and polished. These are just some quick notes for anyone who's curious.
+I thought I'd try making an easily reproducible version of Othman's fuzzer using Nix, as I did [with xpdf](/nix-fuzz-testing-1). My post about xpdf is much more thorough and polished. These are just some quick notes for anyone who's curious.
 
 ## fuzz-netconsd
 
