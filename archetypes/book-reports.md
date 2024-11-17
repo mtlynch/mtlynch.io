@@ -1,6 +1,6 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+date: "{{ now.Format "2006-01-02" }}"
 rating: TODO
 purchase_url: TODO
 ---
