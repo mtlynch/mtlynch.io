@@ -117,7 +117,7 @@ I did learn some interesting details that improved my understanding of immigrati
   - Singapore: 20,000
 - US population could triple and be less crowded than France
 - Thomas Sowell observed that the entire world population could fit in Texas with single-family homes and yards.
-  - This was in the early 80s when the world population was about half what it is now, so I think you could currently fit everyone in tiny houses.
+  - This was in the early 80s when the world population was about half what it is now, so I think you could [currently fit everyone in tiny houses](https://www.pop.org/episode-1-overpopulation-the-making-of-a-myth/).
 
 ### Americans overestimate immigrants
 
