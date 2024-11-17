@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 44"
-date: 2024-03-19T00:00:00-04:00
+date: 2024-03-19
 description: Eliminating myself from the critical path on releases
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Shoe Dog by Phil Knight"
-date: 2021-04-03T00:00:00-04:00
+date: 2021-04-03
 rating: 6
 purchase_url: https://www.indiebound.org/book/9781501135927
 ---

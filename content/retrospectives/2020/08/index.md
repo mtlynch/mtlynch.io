@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 1"
-date: 2020-08-05T09:47:05-04:00
+date: 2020-08-05
 description: "I finally created a business that gained traction immediately."
 images:
   - /retrospectives/2020/08/hn-no-1.png

@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 3"
-date: 2020-10-06T07:54:00-04:00
+date: 2020-10-06
 description: Racing to manufacture a physical product from scratch.
 images:
   - /retrospectives/2020/10/backlogged-inventory.png

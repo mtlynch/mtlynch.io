@@ -1,6 +1,6 @@
 ---
 title: "Paternity Leave: Month 2"
-date: 2024-10-15T00:00:00-04:00
+date: 2024-10-15
 description: Not working is harder than I expected.
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 33"
-date: 2023-04-06T00:00:00-04:00
+date: 2023-04-06
 description: The slow transition to third-party fulfillment
 images:
   - /retrospectives/2023/04/og-cover.png

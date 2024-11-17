@@ -1,6 +1,6 @@
 ---
 title: "Deploying Syncthing on a Fly.io Cloud Server"
-date: 2023-05-29T00:00:00-04:00
+date: 2023-05-29
 tags:
   - syncthing
   - fly.io

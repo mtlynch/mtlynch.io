@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 19"
-date: 2022-02-09T00:05:00-05:00
+date: 2022-02-09
 description: How can I manage TinyPilot on 20 hours per week?
 images:
   - /retrospectives/2022/02/tinypilot-rev.png

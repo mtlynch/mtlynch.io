@@ -1,6 +1,6 @@
 ---
 title: "Using Nix to Fuzz Test a PDF Parser (Part Two)"
-date: 2024-10-23T01:00:00-04:00
+date: 2024-10-23
 tags:
   - nix
   - fuzzing

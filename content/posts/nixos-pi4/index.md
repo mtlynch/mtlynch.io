@@ -1,6 +1,6 @@
 ---
 title: "Installing NixOS on Raspberry Pi 4"
-date: 2023-07-18T00:00:00-04:00
+date: 2023-07-18
 lastmod: "2023-08-18T00:00:00-04:00"
 tags:
   - nix
