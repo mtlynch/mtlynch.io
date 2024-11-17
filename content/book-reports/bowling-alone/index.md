@@ -1,6 +1,6 @@
 ---
 title: "Bowling Alone by Robert D. Putnam"
-date: 2020-11-14T17:55:30-05:00
+date: 2020-11-14
 rating: 3
 purchase_url: https://www.indiebound.org/book/9780743203043
 ---

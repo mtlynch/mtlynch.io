@@ -1,6 +1,6 @@
 ---
 title: "Using Zig to Call C Code: Strings"
-date: 2023-12-15T00:00:00-05:00
+date: 2023-12-15
 tags:
   - zig
 ---

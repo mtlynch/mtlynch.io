@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 5"
-date: 2020-12-02T00:00:00-05:00
+date: 2020-12-02
 description: Launching a new product and my very first course.
 images:
   - /retrospectives/2020/12/voyager-angled.jpg

@@ -1,7 +1,7 @@
 ---
 title: "Running NixOS on Proxmox"
-date: 2023-09-24T00:00:00-04:00
-lastmod: 2024-10-21T00:00:00-04:00
+date: 2023-09-24
+lastmod: 2024-10-21
 tags:
   - nix
 ---

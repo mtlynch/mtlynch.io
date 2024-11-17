@@ -1,7 +1,7 @@
 ---
 title: "Fixing Memory Exhaustion Bugs in My Golang Web App"
 description: Using profiling tools and debugging techniques to improve performance of PicoShare.
-date: 2022-08-09T00:00:00-04:00
+date: 2022-08-09
 images:
   - /notes/picoshare-perf/oom-crash.png
 tags:

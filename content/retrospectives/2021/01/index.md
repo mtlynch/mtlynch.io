@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 6"
-date: 2021-01-05T11:25:03-05:00
+date: 2021-01-05
 description: I generated record sales by accident.
 images:
   - /retrospectives/2021/01/og-image.png

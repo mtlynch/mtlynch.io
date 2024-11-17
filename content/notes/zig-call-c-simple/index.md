@@ -1,6 +1,6 @@
 ---
 title: "A Simple Example of Calling a C Library from Zig"
-date: 2023-11-19T00:00:00-05:00
+date: 2023-11-19
 tags:
   - nix
   - zig

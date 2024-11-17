@@ -1,6 +1,6 @@
 ---
 title: "My First Impressions of Nix"
-date: 2023-06-17T00:00:00-04:00
+date: 2023-06-17
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=36387874
 tags:
