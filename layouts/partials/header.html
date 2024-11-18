@@ -12,10 +12,10 @@
       <i class="fas fa-calendar"></i>&nbsp;<time
         datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}"
       >
-        {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
+        {{ .Date.Format .Site.Params.dateFormat }}
         {{ if ne .Date .Lastmod }}
           •&nbsp;Updated
-          {{ .Lastmod.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
+          {{ .Lastmod.Format .Site.Params.dateFormat }}
         {{ end }}
       </time>
     </span>
