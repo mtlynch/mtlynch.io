@@ -42,6 +42,10 @@ He was initially waking up three or four times per night and eating for 60-90 mi
 
 As my son has gotten older, we're more comfortable having family come over and care for him without us. We now have about five hours of help per week, and that will probably keep increasing, as our families are willing to help even more than they currently are.
 
+### My son can nap while I work
+
+My son sleeps for longer stretches when someone is holding him or he's in a chest carrier, so I typically work for an hour or two per day with him on my chest, and it gives my wife a break because she knows he'll be asleep for two to three hours.
+
 ### My wife gave me guaranteed work time
 
 One of the challenges of finding time to work was that I find it difficult to work on an inconsistent schedule. I was getting time to work, when my wife had our son or when he was napping on my chest, but it's time that I know can be interrupted suddenly, which makes it harder to focus.
@@ -82,7 +86,7 @@ I think it still has a decent shot of getting traction on Hacker News, but even 
 
 After I wrote the above, I realized that [Hackaday](https://hackaday.com/2024/11/09/nix-automated-fuzz-testing-finds-bug-in-pdf-parser/) did a writeup about my Nix fuzzing tutorial, which is validating.
 
-And then the day after I wrote the section about "Lessons from my First Exit" flopping, it was submitted again by a reader and it [reached #2](https://hnrankings.info/42133864/) and [generated a good discussion](https://news.ycombinator.com/item?id=42133864).
+And then the day after I wrote the section about "Lessons from my First Exit" flopping, it was submitted again by a reader and [reached #2](https://hnrankings.info/42133864/) and [generated a good discussion](https://news.ycombinator.com/item?id=42133864).
 
 Still, I think my initial analysis was correct. I overinvested in the fuzzing post and invested the right amount into the one about selling TinyPilot.
 
@@ -120,11 +124,11 @@ I broke up the work by making a changelist for each page in the TV show review f
 
 The first step of leaving a review is to search for the thing you want to review. It used to only be movies, so my first step in supporting TV shows was to [add a radio button](https://github.com/mtlynch/screenjournal/pull/329/files) that let the user choose between a movie or TV show:
 
-{{<img src="movie-or-tv.webp" max-width="550px" has-border="true">}}
+{{<img src="movie-or-tv.webp" max-width="550px" has-border="true" caption="My first task was to modify the title search UI to support TV shows.">}}
 
 The next thing I needed was a way for the user to pick a TV show season, as that's something that I didn't have when it was movies only. So, [that was its own change](https://github.com/mtlynch/screenjournal/pull/342).
 
-{{<img src="pick-season.webp" max-width="550px" has-border="true">}}
+{{<img src="pick-season.webp" max-width="550px" has-border="true" caption="My second task was to implement a web UI for picking the season of the TV show to review.">}}
 
 I kept going like that, where each stage of the flow was a new branch and separate pull request.
 
@@ -142,7 +146,7 @@ The thing I dislike most about the stacked diff workflow is that I end up deleti
 
 Whenever I realize I should have made a change earlier in the stack, I have to do `git rebase`, which rewrites history. That means I have to force push to Github, which litters my changelist with all these ugly `force-pushed` entries:
 
-{{<img src="force-pushes.webp" max-width="650px" has-border="true">}}
+{{<img src="force-pushes.webp" max-width="650px" has-border="true" caption="Rebasing frequently in git causes ugly `force-pushed` entries to litter my changelist on Github">}}
 
 I know some people want all of their changes preserved exactly as they occurred, as if each commit was evidence in a murder trial. I don't care about that, but I do want a sensible undo history in case I make a mistake. I don't like that force pushes overwrite the undo history on the remote end and require complicated surgery to recover from the local end.
 
@@ -212,7 +216,7 @@ I'd heard of this show, but I think the name always dissuaded me from watching. 
 
 And then I saw [this clip](https://www.youtube.com/watch?v=yWBqnpCCasg) from the show and realized that great people are in it, and the tone is like a slightly more grounded version of _I Think You Should Leave_ in sitcom format. I just finished season 1, and I thought it was great.
 
-{{<img src="detroiters.webp" max-width="800px">}}
+{{<img src="detroiters.webp" max-width="800px" caption="_Detroiters_ is a slightly more grounded version of _I Think You Should Leave_ in sitcom format.">}}
 
 ## Wrap up
 
@@ -227,15 +231,13 @@ And then I saw [this clip](https://www.youtube.com/watch?v=yWBqnpCCasg) from the
   - ["An Unsuccessful Experiment with Nemotron"](/notes/llama3.1-nemotron-ollama/)
   - ["Creating a Nix Workflow to Fuzz netconsd"](/notes/fuzz-netconsd/)
   - ["Takeaways from Charles Marohn's 'Escaping the Housing Trap'"](/notes/marohn-housing-trap/)
+- Added support in ScreenJournal for [reviewing TV shows](https://github.com/mtlynch/screenjournal/pull/359)
 
 ### Lessons learned
 
--
+- Stacked diffs provide a nice workflow for large changes, but git doesn't have great support for them.
 
 ### Goals for next month
 
--
-
-### Requests for help
-
-TODO
+- Enjoy family time.
+- Complete and publish a chapter of [_Refactoring English_](https://refactoringenglish.com).
