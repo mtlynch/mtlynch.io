@@ -106,7 +106,7 @@
       {{ partial "navbar.html" . }}
 
 
-      <div class="content">
+      <div class="content {{ .Type }}">
         {{ block "content" . }}{{ end }}
       </div>
 
