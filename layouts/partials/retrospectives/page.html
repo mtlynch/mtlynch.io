@@ -17,8 +17,9 @@
           <span>&mdash; {{ .Content | countwords }} words </span>
         {{ end }}
       </div>
-      {{ partial "prev-next.html" . }}
     </header>
+
+    {{ partial "prev-next.html" . }}
 
     {{ if not (hasPrefix .Title "Notes from") }}
       <h2>One-Line Summary</h2>
