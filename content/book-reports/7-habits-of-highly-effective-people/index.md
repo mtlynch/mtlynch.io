@@ -1,6 +1,6 @@
 ---
 title: "The Seven Habits of Highly Effective People by Stephen R. Covey"
-date: 2020-08-03T20:33:09-04:00
+date: 2020-08-03
 rating: 8
 purchase_url: https://www.indiebound.org/book/9781982137274
 custom_css: true

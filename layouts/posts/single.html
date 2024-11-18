@@ -5,35 +5,7 @@
 {{ define "content" }}
   <section class="container post">
     <article>
-      <header>
-        {{ if .Page.Params.hero_image }}
-          <a href="{{ .Page.Params.hero_image }}">
-            <img src="{{ .Page.Params.hero_image }}" />
-          </a>
-        {{ end }}
-        <div class="post-title">
-          <h1 class="title">{{ .Title }}</h1>
-        </div>
-        <div class="post-meta">
-          <span class="header-meta">
-            <i class="fas fa-calendar"></i>
-            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-              {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
-            </time>
-          </span>
-          <span class="header-meta">
-            <i class="fas fa-clock"></i
-            >&nbsp;{{ .ReadingTime }}-minute&nbsp;read
-          </span>
-          {{ with .Page.Params.Tags }}
-            {{ partial "taxonomy/tags.html" . }}
-          {{ end }}
-
-          {{ if .Site.IsServer }}
-            <span class="header-meta">{{ .Content | countwords }} words </span>
-          {{ end }}
-        </div>
-      </header>
+      {{ partial "header.html" . }}
 
       {{- with .Content -}}
         <div>

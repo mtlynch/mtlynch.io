@@ -1,6 +1,6 @@
 ---
 title: "I Regret My $46k Website Redesign"
-date: 2022-07-21T00:00:00-04:00
+date: 2022-07-21
 description: Mistakes I made working with my first design agency.
 images:
   - tinypilot-redesign/og-cover.png

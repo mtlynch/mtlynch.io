@@ -1,24 +1,8 @@
 <section class="container page retrospective">
   <article>
-    <header>
-      <h1>{{ .Title }}</h1>
-      <div class="post-meta">
-        <span class="posted-on">
-          <i class="fas fa-calendar"></i>
-          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-            {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
-          </time>
-        </span>
-        <span class="reading-time">
-          <i class="fas fa-clock"></i>
-          {{ .ReadingTime }}-minute read
-        </span>
-        {{ if .Site.IsServer }}
-          <span>&mdash; {{ .Content | countwords }} words </span>
-        {{ end }}
-      </div>
-      {{ partial "prev-next.html" . }}
-    </header>
+    {{ partial "header.html" . }}
+
+    {{ partial "prev-next.html" . }}
 
     {{ if not (hasPrefix .Title "Notes from") }}
       <h2>One-Line Summary</h2>

@@ -32,6 +32,7 @@ buildFuture = true
 twitter = "deliberatecoder"
 
 [params]
+    dateFormat = "January 2, 2006"
     author = "Michael Lynch"
     info = "By day, a simple software engineer. By night, also a software engineer."
     description = "Updates about my life and what I learn about creating software"

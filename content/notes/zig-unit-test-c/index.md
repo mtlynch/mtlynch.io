@@ -1,6 +1,6 @@
 ---
 title: "Using Zig to Unit Test a C Application"
-date: 2023-12-18T00:00:00-05:00
+date: 2023-12-18
 tags:
   - zig
 discuss_urls:

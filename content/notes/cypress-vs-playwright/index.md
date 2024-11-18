@@ -1,6 +1,6 @@
 ---
 title: "On Migrating from Cypress to Playwright"
-date: 2022-10-25T00:00:00-04:00
+date: 2022-10-25
 discuss_urls:
   reddit: https://www.reddit.com/r/javascript/comments/yd3dr8/on_migrating_from_cypress_to_playwright/
 ---

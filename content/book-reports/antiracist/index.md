@@ -1,6 +1,6 @@
 ---
 title: "How to Be an Antiracist by Ibram X. Kendi"
-date: 2020-12-30T09:02:20-05:00
+date: 2020-12-30
 rating: 5
 purchase_url: https://www.ibramxkendi.com/how-to-be-an-antiracist
 ---

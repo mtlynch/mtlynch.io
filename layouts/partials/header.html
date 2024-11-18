@@ -1,28 +1,34 @@
-<nav class="navigation">
-  <section class="container">
-    <div class="navigation-author">
-      <a class="navigation-avatar" href="{{ .Site.BaseURL | relLangURL }}">
-        {{ with .Site.Params.avatarurl }}
-          <img src="{{ . | relURL }}" alt="Author photo" />
+<header>
+  {{ if .Page.Params.hero_image }}
+    <a href="{{ .Page.Params.hero_image }}">
+      <img src="{{ .Page.Params.hero_image }}" />
+    </a>
+  {{ end }}
+  <div class="post-title">
+    <h1 class="title">{{ .Title }}</h1>
+  </div>
+  <div class="post-meta">
+    <span class="header-meta">
+      <i class="fas fa-calendar"></i>&nbsp;<time
+        datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}"
+      >
+        {{ .Date.Format .Site.Params.dateFormat }}
+        {{ if ne .Date .Lastmod }}
+          •&nbsp;Updated
+          {{ .Lastmod.Format .Site.Params.dateFormat }}
         {{ end }}
-      </a>
-      <a class="name" href="{{ .Site.BaseURL | relLangURL }}">Michael Lynch</a>
-    </div>
-
-    <input type="checkbox" id="menu-toggle" />
-    <label class="menu-button float-right" for="menu-toggle"
-      ><i class="fas fa-bars"></i
-    ></label>
-    <ul class="navigation-list">
-      {{ with .Site.Menus.main }}
-        {{ range sort . }}
-          <li class="navigation-item">
-            <a class="navigation-link" href="{{ .URL | relLangURL }}"
-              >{{ .Name }}</a
-            >
-          </li>
-        {{ end }}
-      {{ end }}
-    </ul>
-  </section>
-</nav>
+      </time>
+    </span>
+    <span class="header-meta">
+      <i class="fas fa-clock"></i>&nbsp;{{ .ReadingTime }}-minute&nbsp;read
+    </span>
+    {{ if .Site.IsServer }}
+      <span class="header-meta"
+        >&mdash; {{ .Content | countwords }} words
+      </span>
+    {{ end }}
+    {{ with .Page.Params.Tags }}
+      {{ partial "taxonomy/tags.html" . }}
+    {{ end }}
+  </div>
+</header>

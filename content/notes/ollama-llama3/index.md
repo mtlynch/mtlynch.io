@@ -1,6 +1,6 @@
 ---
 title: "Experimenting with Lllama 3 via Ollama"
-date: 2024-04-25T00:00:00-04:00
+date: 2024-04-25
 tags:
   - llama
   - chatbots

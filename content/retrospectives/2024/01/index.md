@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 42"
-date: 2024-01-09T00:00:00-05:00
+date: 2024-01-09
 description: How can I delegate more?
 images:
   - /retrospectives/2024/01/csat-v-dev-cost.webp

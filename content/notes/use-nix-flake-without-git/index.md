@@ -1,6 +1,6 @@
 ---
 title: "Use a Nix Flake without Adding it to Git"
-date: 2023-12-29T00:00:00-05:00
+date: 2023-12-29
 tags:
   - nix
 ---

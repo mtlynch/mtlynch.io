@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 40"
-date: 2023-11-07T00:00:00-04:00
+date: 2023-11-07
 description: The surprising difficulty of flashing microSDs
 images:
   - /retrospectives/2023/11/kinesis-keyboard.jpg

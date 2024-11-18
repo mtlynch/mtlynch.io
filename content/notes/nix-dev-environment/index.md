@@ -1,6 +1,6 @@
 ---
 title: "Per-Project Development Environments with Nix"
-date: 2023-10-17T00:00:00-04:00
+date: 2023-10-17
 tags:
   - nix
 ---

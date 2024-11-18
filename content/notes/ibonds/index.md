@@ -1,6 +1,6 @@
 ---
 title: "Should I Invest in iBonds?"
-date: 2022-10-16T00:00:00-04:00
+date: 2022-10-16
 images:
   - /notes/ibonds/pays-his-debts.jpg
 ---

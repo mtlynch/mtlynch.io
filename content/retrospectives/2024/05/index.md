@@ -1,6 +1,6 @@
 ---
 title: "Reset Month"
-date: 2024-05-31T00:00:00-04:00
+date: 2024-05-31
 description: I'm skipping the retrospective this month.
 ---
 
