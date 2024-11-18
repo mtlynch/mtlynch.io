@@ -88,14 +88,14 @@ Still, I think my initial analysis was correct. I overinvested in the fuzzing po
 
 ## Implementing major features through stacked diffs
 
-For the past few weeks, I've spent most of my hobby programming time on [ScreenJournal](https://github.com/mtlynch/screenjournal), my TV and movie review app. The idea of it is like letterboxd or Goodreads, but the reviews are private and the code is open-source.
+For the past few weeks, I've spent most of my hobby programming time on [ScreenJournal](https://github.com/mtlynch/screenjournal), my TV and movie review app. The idea of it is like letterboxd or Goodreads, but the reviews are only visible to your friends, and the code is open-source.
 
 <figure class="img">
 <img class="img-border" src="https://raw.githubusercontent.com/mtlynch/screenjournal/refs/heads/master/docs/assets/screenjournal-demo.webp" >
 <figcaption><p><a href="https://github.com/mtlynch/screenjournal">ScreenJournal</a>, my open-source TV and movie review app</p></figcaption>
 </figure>
 
-I always wanted ScreenJournal to support both movies and TV shows, but I implemented movies first because they were simpler. I intentionally avoided generalizing the code to support TV shows in the future. I didn't know if it would ever happen, so I wanted to optimize for the functionality that was there.
+I always wanted ScreenJournal to support both movies and TV shows, but I implemented movies first because they were simpler. I intentionally didn't generalize the code to support TV shows. I didn't know if it would ever happen, so I wanted to optimize for the functionality that was there.
 
 In October, I added support TV show reviews, so I had to make a lot of changes to the codebase where I assumed the user would always be reviewing a movie.
 
@@ -116,7 +116,7 @@ Stacked diffs are where you have a `main` branch, and you want to merge in a lar
 Github has okay support for stacked diffs in that if your stack is `A`, `B`, `C`, you'd make a PR from `A` into `main`, then a PR from `B` into `A`. When you merge in the `A` into `main` PR, the `B` into `A` PR automatically updates to a `B` into `main` PR.
 {{</notice>}}
 
-I broke up the work by making a PR for each page in the TV show review flow.
+I broke up the work by making a changelist for each page in the TV show review flow.
 
 The first step of leaving a review is to search for the thing you want to review. It used to only be movies, so my first step in supporting TV shows was to [add a radio button](https://github.com/mtlynch/screenjournal/pull/329/files) that let the user choose between a movie or TV show:
 
@@ -138,7 +138,7 @@ Breaking the change into smaller pieces gave me a better sense of accomplishment
 
 ### Bad: I constantly have to delete change history
 
-The thing I dislike most about the stacked diff workflow is that I end up deleting source history, which defeats the purpose of using source control.
+The thing I dislike most about the stacked diff workflow is that I end up deleting source history, which negates a big benefit of source control.
 
 Whenever I realize I should have made a change earlier in the stack, I have to do `git rebase`, which rewrites history. That means I have to force push to Github, which litters my changelist with all these ugly `force-pushed` entries:
 
@@ -170,7 +170,7 @@ While `--update-refs` simplifies the rebase action, there's no "okay, now push t
 
 Even though I thought I was rebasing in the correct way, I frequently found myself in a confusing state. Like I'd rebase, and then it would want me to reconcile conflicts that I'd already reconciled.
 
-I worked around this by squashing commits and rebasing again, but this again rewrites history and makes it harder to undo mistakes. It's also just an annoying amount of mental overhead where I have to think about how to apologize properly to git rather than there being a clear way to tell git the routine thing I'm doing.
+I worked around this by squashing commits and rebasing again, but this again rewrites history and makes it harder to undo mistakes. It's also just an annoying amount of mental overhead where I have to think about how to apologize properly to git when I'd much rather than focus on my code.
 
 ### Maybe I should give jujutsu a try
 
@@ -196,7 +196,7 @@ I also discovered that he has a long posting history elsewhere on the Internet u
 
 The craziest thing about all his work is that there's seemingly no angle. Usually, when you see someone invest so much into their writing, it's usually obvious how it benefits them: they have a Substack or [some paid course](/retrospectives/2024/09/#what-should-i-do-with-my-hacker-news-course) that earns them money, and their free articles are [loss leaders](https://en.wikipedia.org/wiki/Loss_leader). But I can't find any angle or profit motive in any of Lakeman's stuff. He seems to just love [thinking deeply about things and sharing his thoughts](https://mattlakeman.org/2020/10/06/thoughts-on-meaning-and-writing/).
 
-Anyway, this Ukraine post, I naturally assumed he visited before the war, but it turned out that he visited two months into the war and interviewed people within miles of the front lines. I found it interesting to see coverage of the war from someone who's not career journalist but still interviewed a variety of real people in Ukraine.
+Anyway, back to this Ukraine post. I assumed that he visited before the war, but it turned out that he visited two months into the war and interviewed people within miles of the front lines. I found it interesting to see coverage of the war from someone who's not career journalist but still interviewed a variety of real people in Ukraine. It feels like a more authentic and personal view into the situation than anything I've seen from traditional media channels.
 
 ### _Cyberpunk 2077_ (video game)
 
@@ -212,13 +212,21 @@ I'd heard of this show, but I think the name always dissuaded me from watching. 
 
 And then I saw [this clip](https://www.youtube.com/watch?v=yWBqnpCCasg) from the show and realized that great people are in it, and the tone is like a slightly more grounded version of _I Think You Should Leave_ in sitcom format. I just finished season 1, and I thought it was great.
 
+{{<img src="detroiters.webp" max-width="800px">}}
+
 ## Wrap up
 
 ### What got done?
 
-- Published "Lessons from my First Exit"
-- Published "Fuzzing a XX"
--
+- Published two full-length articles:
+  - ["Lessons from my First Exit"](/lessons-from-my-first-exit/)
+  - ["Using Nix to Fuzz Test a PDF Parser"](/nix-fuzz-testing-2/)
+- Published five short-form notes:
+  - ["Delete the Timestamps from your Static Blog"](/notes/delete-your-timestamps/)
+  - ["Massachusetts Residents Can Sue Online Merchants for Spam"](/notes/ma-residents-can-sue-over-email/)
+  - ["An Unsuccessful Experiment with Nemotron"](/notes/llama3.1-nemotron-ollama/)
+  - ["Creating a Nix Workflow to Fuzz netconsd"](/notes/fuzz-netconsd/)
+  - ["Takeaways from Charles Marohn's 'Escaping the Housing Trap'"](/notes/marohn-housing-trap/)
 
 ### Lessons learned
 
