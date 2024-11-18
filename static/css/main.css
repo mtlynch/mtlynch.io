@@ -592,17 +592,17 @@ table + .img {
   margin-top: 3rem;
 }
 
-.list li.retrospectives {
+.retrospectives .list li {
   margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 768px) {
-  .list li.retrospectives {
+  .retrospectives .list li {
     display: flex;
   }
 }
 
-.list li.retrospectives .title {
+.retrospectives .list li .title {
   font-size: 1.4em;
   text-decoration: none;
 }
