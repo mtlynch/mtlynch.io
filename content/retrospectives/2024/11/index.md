@@ -84,6 +84,8 @@ After I wrote the above, I realized that [Hackaday](https://hackaday.com/2024/11
 
 And then the day after I wrote the section about "Lessons from my First Exit" flopping, it was submitted again by a reader and it [reached #2](https://hnrankings.info/42133864/) and [generated a good discussion](https://news.ycombinator.com/item?id=42133864).
 
+Still, I think my initial analysis was correct. I overinvested in the fuzzing post and invested the right amount into the one about selling TinyPilot.
+
 ## Implementing major features through stacked diffs
 
 For the past few weeks, I've spent most of my hobby programming time on [ScreenJournal](https://github.com/mtlynch/screenjournal), my TV and movie review app. The idea of it is like letterboxd or Goodreads, but the reviews are private and the code is open-source.
@@ -182,31 +184,33 @@ From skimming Steve Kalabnik's tutorial, it sounds like jujutsu [supports stacke
 
 ### ["Why I still blog after 15 years"](https://www.jonashietala.se/blog/2024/09/25/why_i_still_blog_after_15_years) by Jonas Hietala
 
-I related a lot to his post about blogging, and as I explored his site more, I was like, "Oh, this guy is like the Swedish version of me." So if you enjoy my writing, you'd probably enjoy his as well.
+I related a lot to this post about blogging. As I explored Jonas' site more, I was like, "Oh, this guy is like the Swedish version of me." So if you enjoy my writing, you'd probably enjoy his as well.
 
 ### ["Notes on Ukraine"](https://mattlakeman.org/2022/05/15/notes-on-ukraine/) by Matt Lakeman
 
-I discovered Lakeman's blog last week, and every day since then, I just keep thinking, "Who is this guy?" He travels to not-so-popular destinations, usually for ten days or so and then publishes a blog post about the country. But it's not like postcard to your mom blog posts; these are novella-length blog posts based on hours of study of the history of the country and conversations with locals.
+I discovered Matt's blog last week, and every day since then, I just keep thinking, "Who is this guy?"
 
-I also discovered that he has a long posting history elsewhere on the Internet under the username `dormin111`.
+Matt travels to not-so-popular destinations, usually for ten days or so and then publishes a blog post about the country. But it's not like postcard to your mom blog posts; these are novella-length blog posts based on hours of study of the history of the country and conversations with locals.
 
-The craziest thing about all his work is that there's seemingly no angle. Usually, when you see someone invest so much into their writing, it's usually obvious how it benefits them: they have a Substack or YouTube channel that earns them money, and their free articles are [loss leaders](https://en.wikipedia.org/wiki/Loss_leader). But I can't find any angle or profit motive in any of Lakeman's stuff. He seems to just love [thinking deeply about things and sharing his thoughts](https://mattlakeman.org/2020/10/06/thoughts-on-meaning-and-writing/).
+I also discovered that he has a long posting history elsewhere on the Internet under the username `dormin111`, such as this [detailed analysis of the movie _The Disaster Artist_](https://old.reddit.com/r/slatestarcodex/comments/binx8k/disaster_artist_insanity_is_no_shortcut_to/).
+
+The craziest thing about all his work is that there's seemingly no angle. Usually, when you see someone invest so much into their writing, it's usually obvious how it benefits them: they have a Substack or [some paid course](/retrospectives/2024/09/#what-should-i-do-with-my-hacker-news-course) that earns them money, and their free articles are [loss leaders](https://en.wikipedia.org/wiki/Loss_leader). But I can't find any angle or profit motive in any of Lakeman's stuff. He seems to just love [thinking deeply about things and sharing his thoughts](https://mattlakeman.org/2020/10/06/thoughts-on-meaning-and-writing/).
 
 Anyway, this Ukraine post, I naturally assumed he visited before the war, but it turned out that he visited two months into the war and interviewed people within miles of the front lines. I found it interesting to see coverage of the war from someone who's not career journalist but still interviewed a variety of real people in Ukraine.
 
-### Cyberpunk 2077 (video game)
+### _Cyberpunk 2077_ (video game)
 
 I don't play video games much. I buy one new game per year and it play until I get bored, which usually takes 5-25 hours over a few days. I'm at about 25 hours of play with this game, and I'm still enjoying it.
 
-I find the depth astounding. I think I've only explored like 3% of the game despite 25 hours of playing, so it amazes me that modern games have such expansive worlds.
+I find the depth astounding. I think I've only explored like 10% of the game despite 25 hours of playing, so it amazes me that modern games have such expansive worlds.
 
-I usually don't care about stories in video games and find it irritating when games make me sit through boring exposition, but Cyberpunk is one of the few games where I find the story compelling enough to pay attention. And it's cool to see them invest so much into voice acting to the point that Keanu Reeves plays a major role in the game.
+I usually don't care about stories in video games and find it irritating when games make me sit through boring exposition, but _Cyberpunk_ is one of the few games where I find the story compelling enough to pay attention. And it's cool to see them invest so much into voice acting to the point that Keanu Reeves plays a major role in the game.
 
-### Detroiters (TV show)
+### _Detroiters_ (TV show)
 
-I'd heard of this show, but I think the name always dissuaded me from watching. A show where the defining feature is that they live in Detroit? No thanks.
+I'd heard of this show, but I think the name always dissuaded me from watching. A show where the defining feature is that the characters live in Detroit? Sounds boring.
 
-And then somehow I saw [this clip](https://www.youtube.com/watch?v=yWBqnpCCasg) from the show and realized that great people are in it, and the tone is like a slightly more grounded version of _I Think You Should Leave_ in sitcom format. I just finished season 1, and I thought it was great.
+And then I saw [this clip](https://www.youtube.com/watch?v=yWBqnpCCasg) from the show and realized that great people are in it, and the tone is like a slightly more grounded version of _I Think You Should Leave_ in sitcom format. I just finished season 1, and I thought it was great.
 
 ## Wrap up
 
