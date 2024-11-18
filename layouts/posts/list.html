@@ -3,7 +3,7 @@
   {{ .Site.Title }}
 {{ end }}
 {{ define "content" }}
-  <section class="container list">
+  <section class="container {{ .Type }} list">
     <h1 class="title">{{ .Title }}</h1>
 
     <ul class="blurb-list posts-list">
