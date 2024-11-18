@@ -10,7 +10,7 @@
           <h1 class="title">{{ .Title }}</h1>
         </div>
         <div class="post-meta">
-          <span class="posted-on">
+          <span class="header-meta">
             <i class="fas fa-calendar"></i>&nbsp;<time
               datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}"
             >
@@ -21,7 +21,7 @@
               {{ end }}
             </time>
           </span>
-          <span class="reading-time">
+          <span class="header-meta">
             <i class="fas fa-clock"></i
             >&nbsp;{{ .ReadingTime }}-minute&nbsp;read
           </span>
