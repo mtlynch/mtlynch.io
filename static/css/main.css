@@ -39,7 +39,7 @@ blockquote {
   margin-bottom: 0.5rem;
 }
 
-.content article header + h2 {
+.content article > h2:first-of-type {
   margin-top: 1rem;
 }
 
