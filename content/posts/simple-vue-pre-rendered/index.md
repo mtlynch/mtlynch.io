@@ -99,7 +99,7 @@ Pre-rendering is not right for every situation. You'll need to decide what your 
 
 To demonstrate pre-rendering, I'll show you a basic, pre-rendered "Hello, world!" app in just three files.
 
-The only pre-requisite is [Node.js](https://nodejs.org/en/download/). I used [Node v12.13.1](https://nodejs.org/dist/v12.13.1/), which is the latest stable release at the time of this writing.
+The only pre-requisite is [Node.js](https://nodejs.org). I used [Node v12.13.1](https://nodejs.org/dist/v12.13.1/), which is the latest stable release at the time of this writing.
 
 ### `pages/index.vue`
 
