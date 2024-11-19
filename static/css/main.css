@@ -19,17 +19,6 @@ blockquote {
   --link-color: #1565c0;
 }
 
-:root {
-  --text-font: Merriweather, Georgia, serif;
-  --heading-font: Lato, Helvetica, sans-serif;
-  --code-font: "Source Code Pro", "Lucida Console", monospace;
-  --bg-color: #fafafa;
-  --fg-color: #212121;
-  --alt-bg-color: #e0e0e0;
-  --alt-fg-color: #000;
-  --link-color: #1565c0;
-}
-
 *,
 *:after,
 *:before {
