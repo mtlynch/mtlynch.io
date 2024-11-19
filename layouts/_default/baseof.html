@@ -54,20 +54,6 @@
       <script src="/js/retrospectives.js"></script>
     {{ end }}
 
-    {{ if .Site.IsServer }}
-      {{ $cssOpts := (dict "targetPath" "css/style.css" "enableSourceMap" true ) }}
-      <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen" />
-    {{ else }}
-      {{ $cssOpts := (dict "targetPath" "css/style.css" ) }}
-      <link
-        rel="stylesheet"
-        href="{{ $styles.RelPermalink }}"
-        integrity="{{ $styles.Data.Integrity }}"
-        crossorigin="anonymous"
-        media="screen"
-      />
-    {{ end }}
-
     {{ if not .Site.IsServer }}
       <script
         defer
