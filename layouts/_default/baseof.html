@@ -25,6 +25,20 @@
       <link rel="canonical" href="{{ .Permalink }}" />
     {{ end }}
 
+    {{ $styles := resources.Get "css/main.css" }}
+    {{ if .Site.IsServer }}
+      <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen" />
+    {{ else }}
+      {{ $styles := $styles | minify | fingerprint }}
+      <link
+        rel="stylesheet"
+        href="{{ $styles.RelPermalink }}"
+        integrity="{{ $styles.Data.Integrity }}"
+        crossorigin="anonymous"
+        media="screen"
+      />
+    {{ end }}
+
 
     <link href="/third-party/google-fonts/css/style.css" rel="stylesheet" />
     <link
@@ -62,10 +76,6 @@
         data-domain="mtlynch.io"
         src="https://plausible.io/js/plausible.js"
       ></script>
-    {{ end }}
-
-    {{ range .Site.Params.custom_css }}
-      <link rel="stylesheet" href="{{ . | relURL }}" />
     {{ end }}
 
     {{ if and .Params.custom_css }}
