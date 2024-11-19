@@ -21,7 +21,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 I found it helpful to remind myself that even when it seems like I'm going long stretches without working, I'm making that choice, and I'm still mostly in control of my time.
 
-I'm still finding the right balance between work and family time, and things continue feeling better.
+I'm still finding the right balance between work and family time, and things continue to feel better.
 
 ### Publish my tutorial on fuzz testing with Nix
 
@@ -30,7 +30,7 @@ I'm still finding the right balance between work and family time, and things con
 
 ## Easing back into work
 
-When I sat down to write this retrospective, it seemed like my anxiety around not having time to workk was such a distant memory. I thought it must have been two months ago, so I was surprised to see that was actually my most recent retrospective.
+When I sat down to write this retrospective, it seemed like my anxiety around not having time to work was such a distant memory. I thought it must have been two months ago, so I was surprised to see that was actually my most recent retrospective.
 
 Fortunately, I'm feeling much more relaxed about the balance of time with my family. I've enjoyed a lot of family time while also [publishing more writing](#what-got-done) than ever before.
 
@@ -52,7 +52,7 @@ My son sleeps for longer stretches when someone is holding him or he's in a ches
 
 ### I have guaranteed work time
 
-I find it difficult to work on an inconsistent schedule. Even though there's lots of time when my wife is caring for our son or he's asleep on my chest, knowing that my wife or son might suddenly need me makes it harder for me to focus.
+I find it difficult to work on an inconsistent schedule. Even though there are lots of time when my wife is caring for our son or he's asleep on my chest, knowing they might suddenly need me makes it harder to focus.
 
 My wife offered to give me a guaranteed 90-minute block of focus time each day, which has helped with focus. It's also good to know that I have it each day, so I can reserve certain high-focus tasks for that time block.
 
@@ -79,9 +79,9 @@ It's also discouraging to write software tutorials in the age of LLMs. Up until 
 I knew from the start that this was a risky post because it has a few things working against it:
 
 - It's about nitty-gritty details of selling a business, which 99% of my readers have no plans to do.
-  - My previous post about the sale got traction, but that was a story, so readers could enjoy the ride even if they weren't interested in doing it themselves.
+  - My previous post about the sale got traction, but that was a story so readers could enjoy the ride even if they weren't interested in doing it themselves.
 - It's super long.
-  - I aim for each blog posts to be about 10 minutes of reading time, and that one is an estimated 33-minute read.
+  - I aim for each blog post to be about 10 minutes of reading time, and that one is an estimated 33-minute read.
 - The only channel social media channel where it had a decent shot was Hacker News.
 
 I submitted it to Hacker News, but it didn't make the front page at all.
@@ -109,9 +109,9 @@ I always wanted ScreenJournal to support both movies and TV shows, but I impleme
 
 In October, I added support for reviewing TV show, so I had to correct a lot of assumptions in the codebase about the reviews always being of movies.
 
-The [full change](https://github.com/mtlynch/screenjournal/pull/359) ended up hitting 2k lines of code, which is a bit unwieldy to understand in a single changelist. I'm using the term "changelist," but I'm talking about something like a pull request in Github terms or a merge request in Gitlab terms.
+The [full change](https://github.com/mtlynch/screenjournal/pull/359) ended up hitting 2k lines of code, which is a bit unwieldy to understand in a single changelist. I'm using the term "changelist," but I'm talking about something like a pull request in GitHub terms or a merge request in GitLab terms.
 
-In the past, the way I've tackled large changes like this is that I have a feature branch that's in a broken or incomplete state until I finish the feature. I either make changes directly into the feature branch or I branch off that feature branch again for a subtask and then merge in the subtask when I'm done.
+In the past, the way I've tackled large changes like this is that I have a feature branch that's in a broken or incomplete state until I finish the feature. I either make changes directly into the feature branch, or I branch off that feature branch again for a subtask and then merge in the subtask when I'm done.
 
 The problem with this approach is that the feature branch becomes a giant blob of changes that are too large to understand. You can see an example of this [when I migrated What Got Done from Firestore to SQLite](https://github.com/mtlynch/whatgotdone/pull/639). There were lots of substeps within that change, but they're not inspectable because everything is mixed together.
 
@@ -123,7 +123,7 @@ So, for this ScreenJournal change, I tried something different. Instead of keepi
 
 Stacked diffs are where you have a `main` branch, and you want to merge in a large feature, so you break the feature into change `A`, `B`, and `C`. You create `A` by branching off of `main`, create `B` by branching off of `A`, etc.
 
-Github has okay support for stacked diffs in that if your stack is `A`, `B`, `C`, you'd make a PR from `A` into `main`, then a PR from `B` into `A`. When you merge in the `A` into `main` PR, the `B` into `A` PR automatically updates to a `B` into `main` PR.
+GitHub has okay support for stacked diffs in that if your stack is `A`, `B`, `C`, you'd make a PR from `A` into `main`, then a PR from `B` into `A`. When you merge in the `A` into `main` PR, the `B` into `A` PR automatically updates to a `B` into `main` PR.
 {{</notice>}}
 
 I broke up the work by making a changelist for each page in the TV show review flow.
@@ -150,11 +150,11 @@ Breaking the change into smaller pieces gave me a better sense of accomplishment
 
 The thing I dislike most about the stacked diff workflow is that I end up deleting source history, which negates a big benefit of source control.
 
-Whenever I realize I should have made a change earlier in the stack, I have to do `git rebase`, which rewrites history. That means I have to force push to Github, which litters my changelist with all these ugly `force-pushed` entries:
+Whenever I realize I should have made a change earlier in the stack, I have to do `git rebase`, which rewrites history. That means I have to force push to GitHub, which litters my changelist with all these ugly `force-pushed` entries:
 
-{{<img src="force-pushes.webp" alt="Screenshot of a Github PR showing lots of force-pushed entries" max-width="650px" has-border="true" caption="Rebasing frequently in git causes ugly `force-pushed` entries to litter my changelist on Github">}}
+{{<img src="force-pushes.webp" alt="Screenshot of a GitHub PR showing lots of force-pushed entries" max-width="650px" has-border="true" caption="Rebasing frequently in git causes ugly `force-pushed` entries to litter my changelist on GitHub">}}
 
-I know some people want all of their changes preserved exactly as they occurred, as if each commit was evidence in a murder trial. I don't care about that, but I do want a sensible undo history in case I make a mistake. I don't like that force pushes overwrite the undo history on the remote end and require complicated surgery to recover from the local end.
+I know some people want all of their changes preserved exactly as they occurred as if each commit was evidence in a murder trial. I don't care about that, but I do want a sensible undo history in case I make a mistake. I don't like that force pushes overwrite the undo history on the remote end and require complicated surgery to recover from the local end.
 
 ### Good: `--update-refs` simplifies rebasing stacked diffs
 
@@ -198,15 +198,15 @@ I related a lot to this post about blogging. As I explored Jonas' site more, I w
 
 ### ["Notes on Ukraine"](https://mattlakeman.org/2022/05/15/notes-on-ukraine/) by Matt Lakeman
 
-I discovered Matt's blog last week, and every day since then, I just keep thinking, "Who is this guy?"
+I discovered Matt's blog last week, and every day since then, I keep thinking, "Who is this guy?"
 
-Matt travels to not-so-popular destinations, usually for ten days or so and then publishes a blog post about the country. But it's not like postcard to your mom blog posts; these are novella-length articles based on hours of study of the history of the country and conversations with locals.
+Matt travels to not-so-popular destinations, usually for ten days or so and then publishes a blog post about the country. But it's not like postcard-to-your-mom blog posts; these are novella-length articles based on hours of study of the history of the country and conversations with locals.
 
 I also discovered that Matt has a long posting history elsewhere on the Internet under the username `dormin111`, such as this [detailed analysis of the movie _The Disaster Artist_](https://old.reddit.com/r/slatestarcodex/comments/binx8k/disaster_artist_insanity_is_no_shortcut_to/).
 
 The craziest thing about all his work is that there's seemingly no angle. Usually, when you see someone invest so much into their writing, it's usually obvious how it benefits them: they have a Substack or [some paid course](/retrospectives/2024/09/#what-should-i-do-with-my-hacker-news-course) that earns them money, and their free articles are [loss leaders](https://en.wikipedia.org/wiki/Loss_leader). But I can't find any angle or profit motive in any of Lakeman's stuff. He seems to just love [thinking deeply about things and sharing his thoughts](https://mattlakeman.org/2020/10/06/thoughts-on-meaning-and-writing/).
 
-Anyway, back to this Ukraine post. I assumed that he visited before the war, but it turned out that he visited two months after the war began and interviewed soldiers and civilians within miles of the front lines. I found it interesting to see coverage of the war from someone who's not career journalist but still interviewed a variety of real people in Ukraine. It feels like a more authentic and personal view into the situation than anything I've seen from traditional media channels.
+Anyway, back to this Ukraine post. I assumed that he visited before the war, but it turned out that he visited two months after the war began and interviewed soldiers and civilians within miles of the front lines. I found it interesting to see coverage of the war from someone who's not a career journalist but still interviewed a variety of real people in Ukraine. It feels like a more authentic and personal view into the situation than anything I've seen from traditional media channels.
 
 ### _Cyberpunk 2077_ (video game)
 
@@ -243,7 +243,7 @@ And then I saw [this clip](https://www.youtube.com/watch?v=yWBqnpCCasg) from the
 
 - Stacked diffs provide a nice workflow for large changes, but git doesn't have great support for them.
 - Match investment in blog posts to their expected return.
-  - While I love documenting everything I learn, I need for my blog to be financially sustainable, and that can only happen if a large percentage of my full-length articles draw readers who might be interested in my for-profit projects.
+  - While I love documenting everything I learn, I need my blog to be financially sustainable, and that can only happen if a large percentage of my full-length articles draw readers who might be interested in my for-profit projects.
 
 ### Goals for next month
 
