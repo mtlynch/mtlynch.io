@@ -25,7 +25,12 @@
       <link rel="canonical" href="{{ .Permalink }}" />
     {{ end }}
 
-    {{ $styles := slice (resources.Get "css/main.css") (resources.Get "css/footer.css") | resources.Concat "assets/css/bundle.css" }}
+    {{ $styles := slice
+      (resources.Get "css/main.css")
+      (resources.Get "css/subscribe.css")
+      (resources.Get "css/footer.css")
+      | resources.Concat "assets/css/bundle.css"
+    }}
     {{ if .Site.IsServer }}
       <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen" />
     {{ else }}
