@@ -1,7 +1,3 @@
-.footer .creative-commons-license {
-  margin-top: 1rem;
-}
-
 .footer {
   width: 100%;
   text-align: center;
@@ -11,23 +7,27 @@
   & a {
     color: var(--link-color);
   }
-}
 
-.footer ul {
-  list-style: none;
-  margin: 3rem 0 1rem;
-  padding: 0;
-}
+  & .creative-commons-license {
+    margin-top: 1rem;
+  }
 
-.footer ul li {
-  display: inline-block;
-  position: relative;
-}
+  & ul {
+    list-style: none;
+    margin: 3rem 0 1rem;
+    padding: 0;
 
-.footer ul li a {
-  color: #212121;
-  text-transform: uppercase;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  font-size: 1.6rem;
+    & li {
+      display: inline-block;
+      position: relative;
+
+      & a {
+        color: #212121;
+        text-transform: uppercase;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 1.6rem;
+      }
+    }
+  }
 }
