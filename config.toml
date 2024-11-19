@@ -48,8 +48,6 @@ twitter = "deliberatecoder"
 
     rtl = false
 
-    custom_css = ["css/main.css"]
-
     photoWidths = [300, 600, 800, 1200]
 
     talkyardServerUrl = "https://comments.mtlynch.io"
