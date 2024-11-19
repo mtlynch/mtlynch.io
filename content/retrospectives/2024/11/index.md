@@ -6,9 +6,9 @@ description: Easing back into work.
 
 ## Highlights
 
-- I'm finding an easier balance of family time as a new father.
+- I'm finding it easier to balance my time as a new father.
 - I moped about two of my blog posts doing poorly, and then they did well.
-- I experimented with a stacked diff workflow for software development and liked it except the git parts.
+- I experimented with a stacked diff workflow for software development and liked it except for git's weaknesses.
 
 ## Goal grades
 
@@ -19,7 +19,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: Enjoyed time with my wife and son.
 - **Grade**: A
 
-I found it helpful since the last retrospective to remind myself that even when it seems like I'm going long stretches without working, I'm making that choice, and I'm still mostly in control of my time.
+I found it helpful to remind myself that even when it seems like I'm going long stretches without working, I'm making that choice, and I'm still mostly in control of my time.
 
 I'm still finding the right balance between work and family time, and things continue feeling better.
 
@@ -30,9 +30,9 @@ I'm still finding the right balance between work and family time, and things con
 
 ## Easing back into work
 
-When I sat down to write this retrospective, I remembered writing about feeling anxious about not having any time to work. It seemed like such a distant memory that I thought it was two months ago. I was surprised to see that was actually my most recent retrospective.
+When I sat down to write this retrospective, it seemed like my anxiety around not having time to workk was such a distant memory. I thought it must have been two months ago, so I was surprised to see that was actually my most recent retrospective.
 
-Fortunately, I'm feeling much more relaxed about balancing time with family with time to myself.
+Fortunately, I'm feeling much more relaxed about the balance of time with my family. I've enjoyed a lot of family time while also [publishing more writing](#what-got-done) than ever before.
 
 A few factors that influenced this:
 
@@ -40,7 +40,7 @@ A few factors that influenced this:
 
 He was initially waking up three or four times per night and eating for 60-90 minutes per wakeup, but now he only wakes up two or three times per night and goes back to sleep within 15 to 60 minutes.
 
-Last night, he slept the full night (7 hours 45 minutes), which was very exciting.
+Last night, he slept the full night (7 hours 45 minutes), which was exciting.
 
 ### We're getting more help from family
 
@@ -48,64 +48,66 @@ As my son has gotten older, we're more comfortable having family come over and c
 
 ### My son can nap while I work
 
-My son sleeps for longer stretches when someone is holding him or he's in a chest carrier, so I typically work for an hour or two per day with him on my chest, and it gives my wife a break because she knows he'll be asleep for two to three hours.
+My son sleeps for longer stretches when someone is holding him or he's in a chest carrier, so I typically work for one to three hours per day with him on my chest. It gives my wife a break because it's a multi-hour stretch where she has time to herself.
 
 ### I have guaranteed work time
 
-One of the challenges of finding time to work was that I find it difficult to work on an inconsistent schedule. I was getting time to work, when my wife had our son or when he was napping on my chest, but it's time that I know can be interrupted suddenly, which makes it harder to focus.
+I find it difficult to work on an inconsistent schedule. Even though there's lots of time when my wife is caring for our son or he's asleep on my chest, knowing that my wife or son might suddenly need me makes it harder for me to focus.
 
-My wife offered to give me a guaranteed 90-minute block of focus time each day, so I know that I'll have a solid block of time to work.
+My wife offered to give me a guaranteed 90-minute block of focus time each day, which has helped with focus. It's also good to know that I have it each day, so I can reserve certain high-focus tasks for that time block.
 
 ## Am I over-investing in blog posts?
 
-I used to have a bad habit of feeling like once I learned something difficult, I absolutely had to write a blog post explaining it. I tried to polish every post to the best they could be, even if the audience for the article was tiny or if I had no way of reaching readers. Previous examples include ["Hiring Content Writers: A Guide for Small Businesses"](/hiring-content-writers/) (there's an audience, but I don't have a good way of reaching them) and ["Retrofitting Apps for Cloud Storage with Zero Code Changes"](/retrofit-docker-gcs/) (very niche and not interesting outside of my strange use-case).
+I used to have a bad habit where every time I learned something difficult, I felt like I absolutely had to write a blog post explaining it.
 
-I've spoken to readers who are glad that I've written those articles, but I also have to consider the opportunity cost. In the time I spent writing them, was there another article that would have reached more readers or provided more value in aggregate?
+I tried to polish every post to the best it could be, even if the audience for the article was tiny or if I had no way of reaching readers. Previous examples include ["Hiring Content Writers: A Guide for Small Businesses"](/hiring-content-writers/) (there's an audience, but I don't have a good way of reaching them) and ["Retrofitting Apps for Cloud Storage with Zero Code Changes"](/retrofit-docker-gcs/) (very niche and not interesting outside of my strange use-case).
+
+I've spoken to readers who appreciated those articles, but I also have to consider the opportunity cost. In the time I spent writing them, was there another article that would have reached more readers or provided more value in aggregate?
 
 I've since become more strategic in my posts. If I don't think an article can reach a critical mass of readers, I either don't write it or I write a quick 'n dirty version in my ["Notes" section](/notes/).
 
 ### ["Using Nix to Fuzz Test a PDF Parser"](/nix-fuzz-testing-1/)
 
-I feel a bit conflicted about how much time I invested into this post.
+I feel conflicted about how much time I invested into this post.
 
 Writing the article taught me a lot about Nix and fuzz testing, but it took me longer than I expected. At first, I thought, "Oh, I can do a quick writeup in a few hours," but I ended up spending 20+ hours on it.
 
-It's also discouraging to write software tutorials in an age of LLMs. Up until a few years ago, there was a long-term return on tutorials, as people would discover them through web searches later. These days, if I write a niche tutorial, I think LLMs will just steal whatever I write, and the reader will have no idea it came from me.
+It's also discouraging to write software tutorials in the age of LLMs. Up until a few years ago, there was a long-term return on tutorials, as people would discover them through web searches later. These days, if I write a niche tutorial, LLMs will just steal whatever I write, and the reader will have no idea it came from me.
 
 ### ["Lessons from my First Exit"](/lessons-from-my-first-exit/)
 
 I knew from the start that this was a risky post because it has a few things working against it:
 
 - It's about nitty-gritty details of selling a business, which 99% of my readers have no plans to do.
-  - My previous post about the sale got traction, but that was a story, so readers could enjoy the story of it even if they weren't interested in doing it themselves.
+  - My previous post about the sale got traction, but that was a story, so readers could enjoy the ride even if they weren't interested in doing it themselves.
 - It's super long.
-  - I aim for each blog posts to be about a 10-minute read, and that one is an estimated 33-minute read.
-- The only channel social media channel where it had a decent shot is Hacker News.
+  - I aim for each blog posts to be about 10 minutes of reading time, and that one is an estimated 33-minute read.
+- The only channel social media channel where it had a decent shot was Hacker News.
 
 I submitted it to Hacker News, but it didn't make the front page at all.
 
-I think it still has a decent shot of getting traction on Hacker News, but even it flops entirely, I'm still happy about writing it. It helped me think through the acquisition for myself, and it will be a useful reference if I ever sell another business in the future. I have gotten positive feedback about it from founders who have been through an acquisition or are thinking about it.
+I think it still has a decent shot of getting traction on Hacker News, but even it flops entirely, I'm still happy about writing it. It helped me think through the acquisition for myself, and it will be a useful reference if I ever sell another business. I've gotten positive feedback about it from founders who have been through an acquisition or are thinking about it.
 
 ## And suddenly, those posts got traction
 
 After I wrote the above, I realized that [Hackaday wrote about my Nix fuzzing tutorial](https://hackaday.com/2024/11/09/nix-automated-fuzz-testing-finds-bug-in-pdf-parser/), which is validating.
 
-And then the day after I wrote the section about "Lessons from my First Exit" flopping, it was submitted again by a reader and [reached #2](https://hnrankings.info/42133864/) and [generated a good discussion](https://news.ycombinator.com/item?id=42133864).
+And then the day after I wrote the section about "Lessons from my First Exit" flopping, a reader submitted it to Hacker News again, and [it reached #2](https://news.ycombinator.com/item?id=42133864).
 
 Still, I think my initial analysis was correct. I overinvested in the fuzzing post and invested the right amount into the one about selling TinyPilot.
 
 ## Implementing major features through stacked diffs
 
-For the past few weeks, I've spent most of my hobby programming time on [ScreenJournal](https://github.com/mtlynch/screenjournal), my TV and movie review app. The idea of it is like letterboxd or Goodreads, but the reviews are only visible to your friends, and the code is open-source.
+For the past few weeks, I've spent most of my hobby programming time on [ScreenJournal](https://github.com/mtlynch/screenjournal), my TV and movie review web app. The idea of it is like letterboxd or Goodreads, but the reviews are only visible to your friends, and the code is open-source.
 
 <figure class="img">
 <img class="img-border" src="https://raw.githubusercontent.com/mtlynch/screenjournal/refs/heads/master/docs/assets/screenjournal-demo.webp" alt="Animated demo of a user reviewing Weird: The Al Yankovic Story on ScreenJournal>
-<figcaption><p><a href="https://github.com/mtlynch/screenjournal">ScreenJournal</a>, my open-source TV and movie review app</p></figcaption>
+<figcaption><p><a href="https://github.com/mtlynch/screenjournal">ScreenJournal</a>, my open-source TV and movie review web app</p></figcaption>
 </figure>
 
 I always wanted ScreenJournal to support both movies and TV shows, but I implemented movies first because they were simpler. I intentionally didn't generalize the code to support TV shows. I didn't know if it would ever happen, so I wanted to optimize for the functionality that was there.
 
-In October, I added support TV show reviews, so I had to make a lot of changes to the codebase where I assumed the user would always be reviewing a movie.
+In October, I added support for reviewing TV show, so I had to correct a lot of assumptions in the codebase about the reviews always being of movies.
 
 The [full change](https://github.com/mtlynch/screenjournal/pull/359) ended up hitting 2k lines of code, which is a bit unwieldy to understand in a single changelist. I'm using the term "changelist," but I'm talking about something like a pull request in Github terms or a merge request in Gitlab terms.
 
@@ -178,13 +180,13 @@ While `--update-refs` simplifies the rebase action, there's no "okay, now push t
 
 Even though I thought I was rebasing in the correct way, I frequently found myself in a confusing state. Like I'd rebase, and then it would want me to reconcile conflicts that I'd already reconciled.
 
-I worked around this by squashing commits and rebasing again, but this again rewrites history and makes it harder to undo mistakes. It's also just an annoying amount of mental overhead where I have to think about how to apologize properly to git when I'd much rather than focus on my code.
+I worked around this by squashing commits and rebasing again, but this again rewrites history and makes it harder to undo mistakes. I was also annoyed at the mental bandwidth I wasted thinking about how to apologize properly to git rather than writing my code.
 
 ### Maybe I should give jujutsu a try
 
 I'm seeing more and more chatter about [jujutsu](https://github.com/martinvonz/jj), a new source control system that's on track to become standard within Google.
 
-A few months ago, I thought about trying it and thought, "Eh, git does what I need. Why chase after the next shiny thing?" But then I had this experience with git rebase and remembered there are a lot of times I have to fight with git, and I've just accepted that as normal.
+A few months ago, I thought about trying it and thought, "Eh, git does what I need. Why chase after the next shiny thing?" But then I had this experience with git rebase and remembered that I've accepted so many frustrating git experiences as normal.
 
 From skimming Steve Kalabnik's tutorial, it sounds like jujutsu [supports stacked diffs and multi-rebase better than git does](https://steveklabnik.github.io/jujutsu-tutorial/advanced/simultaneous-edits.html).
 
@@ -198,21 +200,21 @@ I related a lot to this post about blogging. As I explored Jonas' site more, I w
 
 I discovered Matt's blog last week, and every day since then, I just keep thinking, "Who is this guy?"
 
-Matt travels to not-so-popular destinations, usually for ten days or so and then publishes a blog post about the country. But it's not like postcard to your mom blog posts; these are novella-length blog posts based on hours of study of the history of the country and conversations with locals.
+Matt travels to not-so-popular destinations, usually for ten days or so and then publishes a blog post about the country. But it's not like postcard to your mom blog posts; these are novella-length articles based on hours of study of the history of the country and conversations with locals.
 
-I also discovered that he has a long posting history elsewhere on the Internet under the username `dormin111`, such as this [detailed analysis of the movie _The Disaster Artist_](https://old.reddit.com/r/slatestarcodex/comments/binx8k/disaster_artist_insanity_is_no_shortcut_to/).
+I also discovered that Matt has a long posting history elsewhere on the Internet under the username `dormin111`, such as this [detailed analysis of the movie _The Disaster Artist_](https://old.reddit.com/r/slatestarcodex/comments/binx8k/disaster_artist_insanity_is_no_shortcut_to/).
 
 The craziest thing about all his work is that there's seemingly no angle. Usually, when you see someone invest so much into their writing, it's usually obvious how it benefits them: they have a Substack or [some paid course](/retrospectives/2024/09/#what-should-i-do-with-my-hacker-news-course) that earns them money, and their free articles are [loss leaders](https://en.wikipedia.org/wiki/Loss_leader). But I can't find any angle or profit motive in any of Lakeman's stuff. He seems to just love [thinking deeply about things and sharing his thoughts](https://mattlakeman.org/2020/10/06/thoughts-on-meaning-and-writing/).
 
-Anyway, back to this Ukraine post. I assumed that he visited before the war, but it turned out that he visited two months into the war and interviewed people within miles of the front lines. I found it interesting to see coverage of the war from someone who's not career journalist but still interviewed a variety of real people in Ukraine. It feels like a more authentic and personal view into the situation than anything I've seen from traditional media channels.
+Anyway, back to this Ukraine post. I assumed that he visited before the war, but it turned out that he visited two months after the war began and interviewed soldiers and civilians within miles of the front lines. I found it interesting to see coverage of the war from someone who's not career journalist but still interviewed a variety of real people in Ukraine. It feels like a more authentic and personal view into the situation than anything I've seen from traditional media channels.
 
 ### _Cyberpunk 2077_ (video game)
 
 I don't play video games much. I buy one new game per year and it play until I get bored, which usually takes 5-25 hours over a few days. I'm at about 25 hours of play with this game, and I'm still enjoying it.
 
-I find the depth astounding. I think I've only explored like 10% of the game despite 25 hours of playing, so it amazes me that modern games have such expansive worlds.
+I find the depth astounding. I think I've only explored like 5% of the game despite 25 hours of playing, so it amazes me that modern games have such expansive worlds.
 
-I usually don't care about stories in video games and find it irritating when games make me sit through boring exposition, but _Cyberpunk_ is one of the few games where I find the story compelling enough to pay attention. And it's cool to see them invest so much into voice acting to the point that Keanu Reeves plays a major role in the game.
+I usually don't care about stories in video games and find it irritating when the game makes me sit through boring exposition, but _Cyberpunk_ is one of the few games where I find the story compelling enough to pay attention. And it's cool to see them invest so much into voice acting that Keanu Reeves plays a major role in the game.
 
 ### _Detroiters_ (TV show)
 
@@ -241,7 +243,7 @@ And then I saw [this clip](https://www.youtube.com/watch?v=yWBqnpCCasg) from the
 
 - Stacked diffs provide a nice workflow for large changes, but git doesn't have great support for them.
 - Match investment in blog posts to their expected return.
-  - While I love documenting everything I learn, I need for my blog to be financially sustainable, and that can only happen if a large percentage of my full-length articles draw a critical mass of readers who might be interested in my for-profit projects.
+  - While I love documenting everything I learn, I need for my blog to be financially sustainable, and that can only happen if a large percentage of my full-length articles draw readers who might be interested in my for-profit projects.
 
 ### Goals for next month
 
