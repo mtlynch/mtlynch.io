@@ -1,12 +1,14 @@
 ---
 title: "Paternity Leave: Month 3"
-date: 2024-11-18
-description: TODO - One-line summary
+date: 2024-11-19
+description: Easing back into work.
 ---
 
 ## Highlights
 
--
+- I'm finding an easier balance of family time as a new father.
+- I moped about two of my blog posts doing poorly, and then they did well.
+- I experimented with a stacked diff workflow for software development and liked it except the git parts.
 
 ## Goal grades
 
@@ -28,15 +30,17 @@ I'm still finding the right balance between work and family time, and things con
 
 ## Easing back into work
 
-When I sat down to write this retrospective, I remembered writing about feeling anxious about not having any time to work. It seemed like such a distant memory that I remembered it being two months ago, but it was actually just last month.
+When I sat down to write this retrospective, I remembered writing about feeling anxious about not having any time to work. It seemed like such a distant memory that I thought it was two months ago. I was surprised to see that was actually my most recent retrospective.
 
 Fortunately, I'm feeling much more relaxed about balancing time with family with time to myself.
 
-There are a few factors that influenced this:
+A few factors that influenced this:
 
 ### My son sleeps better at night
 
 He was initially waking up three or four times per night and eating for 60-90 minutes per wakeup, but now he only wakes up two or three times per night and goes back to sleep within 15 to 60 minutes.
+
+Last night, he slept the full night (7 hours 45 minutes), which was very exciting.
 
 ### We're getting more help from family
 
@@ -46,7 +50,7 @@ As my son has gotten older, we're more comfortable having family come over and c
 
 My son sleeps for longer stretches when someone is holding him or he's in a chest carrier, so I typically work for an hour or two per day with him on my chest, and it gives my wife a break because she knows he'll be asleep for two to three hours.
 
-### My wife gave me guaranteed work time
+### I have guaranteed work time
 
 One of the challenges of finding time to work was that I find it difficult to work on an inconsistent schedule. I was getting time to work, when my wife had our son or when he was napping on my chest, but it's time that I know can be interrupted suddenly, which makes it harder to focus.
 
@@ -84,7 +88,7 @@ I think it still has a decent shot of getting traction on Hacker News, but even 
 
 ## And suddenly, those posts got traction
 
-After I wrote the above, I realized that [Hackaday](https://hackaday.com/2024/11/09/nix-automated-fuzz-testing-finds-bug-in-pdf-parser/) did a writeup about my Nix fuzzing tutorial, which is validating.
+After I wrote the above, I realized that [Hackaday wrote about my Nix fuzzing tutorial](https://hackaday.com/2024/11/09/nix-automated-fuzz-testing-finds-bug-in-pdf-parser/), which is validating.
 
 And then the day after I wrote the section about "Lessons from my First Exit" flopping, it was submitted again by a reader and [reached #2](https://hnrankings.info/42133864/) and [generated a good discussion](https://news.ycombinator.com/item?id=42133864).
 
@@ -95,7 +99,7 @@ Still, I think my initial analysis was correct. I overinvested in the fuzzing po
 For the past few weeks, I've spent most of my hobby programming time on [ScreenJournal](https://github.com/mtlynch/screenjournal), my TV and movie review app. The idea of it is like letterboxd or Goodreads, but the reviews are only visible to your friends, and the code is open-source.
 
 <figure class="img">
-<img class="img-border" src="https://raw.githubusercontent.com/mtlynch/screenjournal/refs/heads/master/docs/assets/screenjournal-demo.webp" >
+<img class="img-border" src="https://raw.githubusercontent.com/mtlynch/screenjournal/refs/heads/master/docs/assets/screenjournal-demo.webp" alt="Animated demo of a user reviewing Weird: The Al Yankovic Story on ScreenJournal>
 <figcaption><p><a href="https://github.com/mtlynch/screenjournal">ScreenJournal</a>, my open-source TV and movie review app</p></figcaption>
 </figure>
 
@@ -103,7 +107,7 @@ I always wanted ScreenJournal to support both movies and TV shows, but I impleme
 
 In October, I added support TV show reviews, so I had to make a lot of changes to the codebase where I assumed the user would always be reviewing a movie.
 
-The [full change](https://github.com/mtlynch/screenjournal/pull/359) ended up weighing in at over 2k lines of code, which is a bit unwieldy to understand in a single changelist. I'm using the term "changelist," but I'm talking about something like a pull request in Github terms or a merge request in Gitlab terms.
+The [full change](https://github.com/mtlynch/screenjournal/pull/359) ended up hitting 2k lines of code, which is a bit unwieldy to understand in a single changelist. I'm using the term "changelist," but I'm talking about something like a pull request in Github terms or a merge request in Gitlab terms.
 
 In the past, the way I've tackled large changes like this is that I have a feature branch that's in a broken or incomplete state until I finish the feature. I either make changes directly into the feature branch or I branch off that feature branch again for a subtask and then merge in the subtask when I'm done.
 
@@ -124,11 +128,11 @@ I broke up the work by making a changelist for each page in the TV show review f
 
 The first step of leaving a review is to search for the thing you want to review. It used to only be movies, so my first step in supporting TV shows was to [add a radio button](https://github.com/mtlynch/screenjournal/pull/329/files) that let the user choose between a movie or TV show:
 
-{{<img src="movie-or-tv.webp" max-width="550px" has-border="true" caption="My first task was to modify the title search UI to support TV shows.">}}
+{{<img src="movie-or-tv.webp" alt="Screenshot of radio button for TV vs Movies added to the title search screen of ScreenJournal" max-width="550px" has-border="true" caption="My first task was to modify the title search UI to support TV shows.">}}
 
 The next thing I needed was a way for the user to pick a TV show season, as that's something that I didn't have when it was movies only. So, [that was its own change](https://github.com/mtlynch/screenjournal/pull/342).
 
-{{<img src="pick-season.webp" max-width="550px" has-border="true" caption="My second task was to implement a web UI for picking the season of the TV show to review.">}}
+{{<img src="pick-season.webp" alt="Screenshot of TV season picker screen from ScreenJournal" max-width="550px" has-border="true" caption="My second task was to implement a web UI for picking the season of the TV show to review.">}}
 
 I kept going like that, where each stage of the flow was a new branch and separate pull request.
 
@@ -146,7 +150,7 @@ The thing I dislike most about the stacked diff workflow is that I end up deleti
 
 Whenever I realize I should have made a change earlier in the stack, I have to do `git rebase`, which rewrites history. That means I have to force push to Github, which litters my changelist with all these ugly `force-pushed` entries:
 
-{{<img src="force-pushes.webp" max-width="650px" has-border="true" caption="Rebasing frequently in git causes ugly `force-pushed` entries to litter my changelist on Github">}}
+{{<img src="force-pushes.webp" alt="Screenshot of a Github PR showing lots of force-pushed entries" max-width="650px" has-border="true" caption="Rebasing frequently in git causes ugly `force-pushed` entries to litter my changelist on Github">}}
 
 I know some people want all of their changes preserved exactly as they occurred, as if each commit was evidence in a murder trial. I don't care about that, but I do want a sensible undo history in case I make a mistake. I don't like that force pushes overwrite the undo history on the remote end and require complicated surgery to recover from the local end.
 
@@ -216,7 +220,7 @@ I'd heard of this show, but I think the name always dissuaded me from watching. 
 
 And then I saw [this clip](https://www.youtube.com/watch?v=yWBqnpCCasg) from the show and realized that great people are in it, and the tone is like a slightly more grounded version of _I Think You Should Leave_ in sitcom format. I just finished season 1, and I thought it was great.
 
-{{<img src="detroiters.webp" max-width="800px" caption="_Detroiters_ is a slightly more grounded version of _I Think You Should Leave_ in sitcom format.">}}
+{{<img src="detroiters.webp" alt="Still from Detroiters showing Tim Robinson and Sam Richardson eating chips in front of an unconscious Jason Sudeikis" max-width="800px" caption="_Detroiters_ is a slightly more grounded version of _I Think You Should Leave_ in sitcom format.">}}
 
 ## Wrap up
 
@@ -236,6 +240,8 @@ And then I saw [this clip](https://www.youtube.com/watch?v=yWBqnpCCasg) from the
 ### Lessons learned
 
 - Stacked diffs provide a nice workflow for large changes, but git doesn't have great support for them.
+- Match investment in blog posts to their expected return.
+  - While I love documenting everything I learn, I need for my blog to be financially sustainable, and that can only happen if a large percentage of my full-length articles draw a critical mass of readers who might be interested in my for-profit projects.
 
 ### Goals for next month
 
