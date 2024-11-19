@@ -419,7 +419,7 @@ For example, if I use Nix to create a Python 3 project with a list of pip depend
 
 I've seen [poetry2nix](https://github.com/nix-community/poetry2nix), but I haven't tried it, as I don't use Poetry in my Python projects. But if any readers have suggestions of how to achieve the functionality I'm imagining, let me know in the comments.
 
-**Update (2023-10-28)**: I discovered that [pyproject.nix supports plain `requirements.txt` files](https://nix-community.github.io/pyproject.nix/use-cases/requirements.html), so I'm now [using that](https://github.com/mtlynch/python3_seed/blob/81998e07eaafa8e64f39e771402d2d11c2eeb4e4/flake.nix).
+**Update (2023-10-28)**: I discovered that [pyproject.nix supports plain `requirements.txt` files](https://pyproject-nix.github.io/pyproject.nix/use-cases/requirements.html), so I'm now [using that](https://github.com/mtlynch/python3_seed/blob/81998e07eaafa8e64f39e771402d2d11c2eeb4e4/flake.nix).
 
 ## Gotchas
 
