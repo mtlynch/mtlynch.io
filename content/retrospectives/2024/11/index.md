@@ -119,7 +119,11 @@ So, for this ScreenJournal change, I tried something different. Instead of keepi
 
 {{<notice type="info">}}
 
+<!-- markdownlint-disable header-increment -->
+
 ##### What's a stacked diff?
+
+<!-- markdownlint-enable header-increment -->
 
 Stacked diffs are where you have a `main` branch, and you want to merge in a large feature, so you break the feature into change `A`, `B`, and `C`. You create `A` by branching off of `main`, create `B` by branching off of `A`, etc.
 
