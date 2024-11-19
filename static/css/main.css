@@ -8,6 +8,130 @@ blockquote {
   line-height: 2.8rem;
 }
 
+:root {
+  --text-font: Merriweather, Georgia, serif;
+  --heading-font: Lato, Helvetica, sans-serif;
+  --code-font: "Source Code Pro", "Lucida Console", monospace;
+  --bg-color: #fafafa;
+  --fg-color: #212121;
+  --alt-bg-color: #e0e0e0;
+  --alt-fg-color: #000;
+  --link-color: #1565c0;
+}
+
+.navigation {
+  height: 6rem;
+  width: 100%;
+
+  & a,
+  & span {
+    display: inline;
+    font-size: 1.6rem;
+    font-family: var(--heading-font);
+    font-weight: 700;
+    line-height: 6rem;
+    color: var(--fg-color);
+  }
+
+  & a:hover,
+  & a:focus {
+    color: var(--link-color);
+  }
+
+  & .navigation-title {
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+  }
+
+  & .navigation-list {
+    float: right;
+    list-style: none;
+    margin-bottom: 0;
+    margin-top: 0;
+
+    & .navigation-item {
+      float: left;
+      margin: 0;
+      position: relative;
+
+      & a,
+      & span {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  & #menu-toggle {
+    display: none;
+  }
+
+  & .menu-button {
+    display: none;
+  }
+
+  @media only screen and (max-width: 768px) {
+    & .navigation-list {
+      position: absolute;
+      top: 6rem;
+      right: 0;
+      z-index: 5;
+      visibility: hidden;
+      opacity: 0;
+      padding: 0;
+      max-height: 0;
+      width: 100%;
+      background-color: var(--bg-color);
+      border-top: solid 2px var(--alt-bg-color);
+      border-bottom: solid 2px var(--alt-bg-color);
+      transition: opacity 0.25s, max-height 0.15s linear;
+
+      & .navigation-item {
+        float: none !important;
+        text-align: center;
+
+        & a,
+        & span {
+          line-height: 5rem;
+        }
+      }
+
+      & .menu-separator {
+        border-top: 2px solid var(--fg-color);
+        margin: 0 8rem;
+
+        & span {
+          display: none;
+        }
+      }
+    }
+
+    & #menu-toggle:checked + label {
+      color: var(--alt-bg-color);
+    }
+
+    & #menu-toggle:checked + label + ul {
+      visibility: visible;
+      opacity: 1;
+      max-height: 100rem;
+    }
+
+    & .menu-button {
+      display: block;
+      font-size: 2.4rem;
+      font-weight: 400;
+      line-height: 6rem;
+      color: var(--fg-color);
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        color: var(--link-color);
+      }
+    }
+  }
+}
+
 .navigation-author {
   display: inline-flex;
   flex-direction: row;
