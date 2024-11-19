@@ -1236,6 +1236,17 @@ h4:hover .hanchor {
   margin-top: 1rem;
 }
 
+.footer {
+  width: 100%;
+  text-align: center;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+
+  & a {
+    color: var(--link-color);
+  }
+}
+
 .footer ul {
   list-style: none;
   margin: 3rem 0 1rem;
