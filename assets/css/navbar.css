@@ -109,6 +109,10 @@
       }
     }
   }
+
+  .float-right {
+    float: right;
+  }
 }
 
 .navigation {
