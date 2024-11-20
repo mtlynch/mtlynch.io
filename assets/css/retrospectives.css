@@ -1,0 +1,35 @@
+.retrospectives .prev-next-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.retrospectives .prev-next-links a {
+  background-color: #d6d6d6;
+  color: black;
+  padding: 0.5rem 2rem;
+  border: 1px solid #666;
+  border-radius: 4px;
+}
+
+.retrospectives .prev-next-links a:hover {
+  background-color: #ccc;
+  color: black;
+  text-decoration: none;
+}
+
+.retrospectives .list li {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .retrospectives .list li {
+    display: flex;
+  }
+}
+
+.retrospectives .list li .title {
+  font-size: 1.4em;
+  text-decoration: none;
+}

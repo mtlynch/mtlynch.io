@@ -27,12 +27,14 @@
 
     {{ $styles := slice
       (resources.Get "css/main.css")
-      (resources.Get "css/navbar.css")
       (resources.Get "css/content.css")
+      (resources.Get "css/footer.css")
+      (resources.Get "css/navbar.css")
+      (resources.Get "css/refactoring-english.css")
+      (resources.Get "css/retrospectives.css")
       (resources.Get "css/subscribe.css")
       (resources.Get "css/social-buttons.css")
-      (resources.Get "css/refactoring-english.css")
-      (resources.Get "css/footer.css")
+      (resources.Get "css/tags.css")
       | resources.Concat "assets/css/bundle.css"
     }}
     {{ if .Site.IsServer }}
