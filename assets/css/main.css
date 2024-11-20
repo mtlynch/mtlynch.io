@@ -1,15 +1,5 @@
-body {
-  font-family: Rubik;
-  font-size: 1.9em;
-  line-height: 1.65em;
-}
-
-blockquote {
-  line-height: 2.8rem;
-}
-
 :root {
-  --text-font: Merriweather, Georgia, serif;
+  --text-font: Rubik;
   --heading-font: Lato, Helvetica, sans-serif;
   --code-font: "Source Code Pro", "Lucida Console", monospace;
   --bg-color: #fafafa;
@@ -34,9 +24,9 @@ body {
   color: var(--fg-color);
   background-color: var(--bg-color);
   font-family: var(--text-font);
-  font-size: 1.6em;
+  font-size: 1.9em;
   font-weight: 300;
-  line-height: 1.8em;
+  line-height: 1.65em;
 
   @media only screen and (max-width: 768px) {
     font-size: 1.6em;
@@ -71,7 +61,16 @@ h6 {
   margin: 6.4rem 0 3.2rem 0;
 }
 
+h2,
+h3,
+h4,
+h5,
+hr {
+  clear: both;
+}
+
 h1 {
+  margin-top: 0.5rem;
   font-size: 3.2rem;
   line-height: 3.6rem;
 
@@ -92,6 +91,9 @@ h2 {
 }
 
 h3 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  color: #707070;
   font-size: 2.4rem;
   line-height: 2.8rem;
 
@@ -102,6 +104,9 @@ h3 {
 }
 
 h4 {
+  font-size: 1.1em;
+  margin-top: 2rem;
+  margin-bottom: 1.4rem;
   font-size: 2.2rem;
   line-height: 2.6rem;
 
@@ -165,7 +170,7 @@ code {
 blockquote {
   border-left: 2px solid var(--alt-bg-color);
   padding-left: 2rem;
-  line-height: 2.2rem;
+  line-height: 2.8rem;
   font-weight: 400;
   font-style: italic;
 }
@@ -226,7 +231,7 @@ img {
 }
 
 .fas {
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .float-right {
@@ -235,34 +240,6 @@ img {
 
 .float-left {
   float: left;
-}
-
-.fas {
-  font-weight: 900;
-}
-
-h1 {
-  margin-top: 0.5rem;
-}
-
-h2,
-h3,
-h4,
-h5,
-hr {
-  clear: both;
-}
-
-h3 {
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
-  color: #707070;
-}
-
-h4 {
-  font-size: 1.1em;
-  margin-top: 2rem;
-  margin-bottom: 1.4rem;
 }
 
 hr {
@@ -382,16 +359,6 @@ h4:hover .hanchor {
 .btn-indie-hackers i {
   background-image: url("/images/social/indie-hackers.svg");
   background-position: center;
-}
-
-.btn-social span {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  .btn-social span {
-    display: inline-block;
-  }
 }
 
 .inline-file {
