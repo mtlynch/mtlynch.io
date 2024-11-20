@@ -63,6 +63,7 @@
     height: 42px;
   }
 
+  /* Honeypot to prevent bot signups */
   .ninja {
     position: absolute;
     top: -5000px;
