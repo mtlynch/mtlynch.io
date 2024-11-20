@@ -33,3 +33,7 @@
   font-size: 1.4em;
   text-decoration: none;
 }
+
+.retrospectives .finances-chart {
+  margin-bottom: 5rem;
+}
