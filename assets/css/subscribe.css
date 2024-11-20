@@ -29,7 +29,6 @@
     padding: 3rem;
   }
 
-  input[type="text"],
   input[type="email"] {
     width: 100%;
     float: none;
@@ -61,29 +60,5 @@
     padding: 11px 0px;
     font-size: 18px;
     height: 42px;
-  }
-
-  /* Honeypot to prevent bot signups */
-  .ninja {
-    position: absolute;
-    top: -5000px;
-    right: 0px;
-  }
-
-  .success {
-    display: none;
-    background: #d3ffd6;
-    border: 1px solid #2f5a32;
-    color: black;
-    padding: 1rem 5rem;
-  }
-
-  .error {
-    display: none;
-    color: #963328;
-    background: #fdd1bf;
-    margin-top: 2rem;
-    padding: 1rem 5rem;
-    border: 1px solid #770000;
   }
 }
