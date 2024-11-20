@@ -155,6 +155,28 @@
     box-shadow: 0 1px 1px rgba(238, 95, 91, 0.25);
   }
 
+  .inline-file {
+    clear: both;
+    margin-bottom: 65px;
+
+    .download-raw-button {
+      border-width: 1px;
+      border-style: solid;
+      border-color: #f2f3f3;
+      border-top: 0;
+      border-radius: 0 0 4px 4px;
+      background-color: #fafafa;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
+      margin-top: -20px;
+      z-index: 10;
+      position: relative;
+      padding: 0.5em 1em;
+      float: right;
+      margin-left: 1em;
+      font-size: 0.6875em;
+    }
+  }
+
   .twitter-tweet {
     margin: 0 auto;
   }
