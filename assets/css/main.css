@@ -241,55 +241,6 @@ img {
   font-weight: 900;
 }
 
-.content article header {
-  margin-top: 0.25rem;
-  margin-bottom: 0.5rem;
-}
-
-.content article > h2:first-of-type {
-  margin-top: 1rem;
-}
-
-.content .img {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.content .video {
-  display: flex;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-}
-
-.content video {
-  max-width: 100%;
-}
-
-.content figcaption p {
-  font-style: normal;
-  font-size: 0.8em;
-}
-
-.content figure.gallery .img-container {
-  display: flex;
-  flex-direction: column;
-}
-
-@media screen and (min-width: 768px) {
-  .content figure.gallery .img-container {
-    flex-direction: row;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .content figure.gallery .img-container img {
-    max-width: 99%;
-  }
-}
-
 .img-border {
   border: 1px solid rgba(177, 177, 177, 0.76);
 }
@@ -655,81 +606,6 @@ h4:hover .hanchor {
 
 .twitter-tweet {
   margin: 0 auto;
-}
-
-.content {
-  flex: 1;
-  display: flex;
-  margin-top: 0.5rem;
-  margin-bottom: 3.2rem;
-
-  & article {
-    & header {
-      margin-top: 6.4rem;
-      margin-bottom: 3.2rem;
-
-      & h1 {
-        font-size: 4.2rem;
-        line-height: 4.6rem;
-        margin: 0;
-
-        @media only screen and (max-width: 768px) {
-          font-size: 2.8rem;
-          line-height: 3rem;
-        }
-      }
-    }
-
-    & footer {
-      margin-top: 4rem;
-
-      & .see-also {
-        margin: 3.2rem 0;
-
-        & h3 {
-          margin: 3.2rem 0;
-        }
-      }
-    }
-  }
-
-  & .post {
-    & .post-title {
-      margin-bottom: 0.75em;
-    }
-
-    & .post-meta {
-      & i {
-        text-align: center;
-        width: 1.6rem;
-        margin-left: 0;
-        margin-right: 0.5rem;
-      }
-    }
-  }
-
-  & figure {
-    margin: 0;
-    padding: 0;
-  }
-
-  & figure + figure {
-    margin-top: 3rem;
-    padding: 0;
-  }
-
-  & figcaption p {
-    text-align: center;
-    font-style: italic;
-    font-size: 1.6rem;
-    margin: 0;
-  }
-
-  & figcaption code {
-    font-size: 1.5rem;
-    background-color: unset;
-    padding: 0;
-  }
 }
 
 .avatar img {
