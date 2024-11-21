@@ -22,13 +22,15 @@
     <span class="header-meta">
       <i class="fas fa-clock"></i>&nbsp;{{ .ReadingTime }}-minute&nbsp;read
     </span>
-    {{ if .Site.IsServer }}
-      <span class="header-meta"
-        >&mdash; {{ .Content | countwords }} words
-      </span>
-    {{ end }}
     {{ with .Page.Params.Tags }}
       {{ partial "taxonomy/tags.html" . }}
+    {{ end }}
+
+    {{ if .Site.IsServer }}
+      <br />
+      <span style="color: green"
+        >PREVIEW DRAFT: {{ .Content | countwords }} words
+      </span>
     {{ end }}
   </div>
 </header>
