@@ -151,13 +151,13 @@ One of the most surprising gaps in Nix is that [there's no official way to speci
 
 ### Nix leadership is decentralized, Zig has a BDFL
 
-Andrew Kelly is the original creator of Zig. Several others have joined the project, but [Andrew is effectively still the benevolent dictator for life (BDFL)](https://kristoff.it/blog/interfacing-with-zig/). When I'd search for Zig documentation or help, I'd frequently encounter Andrew or someone official from the project answering in a Github issue or forum discussion.
+Andrew Kelly is the original creator of Zig. Several others have joined the project, but [Andrew is effectively still the benevolent dictator for life (BDFL)](https://kristoff.it/blog/interfacing-with-zig/). When I'd search for Zig documentation or help, I'd frequently encounter Andrew or someone official from the project answering in a GitHub issue or forum discussion.
 
 When I first heard about Nix, I assumed [Eelco Dolstra](https://edolstra.github.io/) would be Nix's BDFL. He doesn't seem to be, at least not publicly.
 
 Nix is Eelco's brainchild, as it came out of his [2006 PhD thesis](https://edolstra.github.io/pubs/phd-thesis.pdf). Eelco is [president of the Nix Foundation](https://discourse.nixos.org/t/expanding-the-nixos-foundation/19929), but he also works for [Determinate Systems](https://determinate.systems/), a third-party consulting firm that promotes Nix. But Determinate Systems is decidedly third-party and not core to Nix. They release things that sometimes [clash](https://discourse.nixos.org/t/introducing-flakehub/32044/3?u=mtlynch) [controversially](https://discourse.nixos.org/t/parting-from-the-documentation-team/24900?u=mtlynch) with work from internal Nix teams.
 
-While Zig feels centrally-planned, Nix feels rudderless. When I can't figure something out, my searches often bring me to meandering discussions on Github or the Nix Discourse forum. The conversations always sound like people discussing an alien technology that we've discovered by mistake. I never see someone from the Nix core team weigh in, and I don't even know if there is a core team.
+While Zig feels centrally-planned, Nix feels rudderless. When I can't figure something out, my searches often bring me to meandering discussions on GitHub or the Nix Discourse forum. The conversations always sound like people discussing an alien technology that we've discovered by mistake. I never see someone from the Nix core team weigh in, and I don't even know if there is a core team.
 
 ### Older solutions usually don't work in Nix or Zig
 

@@ -118,7 +118,7 @@ ssh nixos@nixos.local
 
 You can also add your SSH public key as an authorized key on the system.
 
-If you authenticate to Github with SSH keys, Github offers a convenient way to download your public SSH key to any device:
+If you authenticate to GitHub with SSH keys, GitHub offers a convenient way to download your public SSH key to any device:
 
 ```bash
 GITHUB_USERNAME="your-github-username" # Replace this.

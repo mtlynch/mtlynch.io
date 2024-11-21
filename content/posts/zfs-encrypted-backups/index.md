@@ -374,7 +374,7 @@ if [[ -n "${INCREMENTAL_SNAPSHOT_PATH}" ]]; then
 fi
 ```
 
-These scripts are available on Github:
+These scripts are available on GitHub:
 
 - [mtlynch/zfs-encrypted-backup](https://github.com/mtlynch/zfs-encrypted-backup)
 
@@ -532,7 +532,7 @@ I recommend testing your backups on a separate ZFS system, even a TrueNAS VM, to
 
 ## Source code
 
-I've published my convenience scripts on Github:
+I've published my convenience scripts on GitHub:
 
 - [mtlynch/zfs-encrypted-backup](https://github.com/mtlynch/zfs-encrypted-backup)
 - [mtlynch/mtlynch-backup](https://github.com/mtlynch/mtlynch-backup)

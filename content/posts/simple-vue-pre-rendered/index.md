@@ -352,7 +352,7 @@ Below are instructions for publishing static files with a few popular providers:
 
 ## Source code
 
-All code for this example is available on Github under the [MIT license](https://choosealicense.com/licenses/mit/):
+All code for this example is available on GitHub under the [MIT license](https://choosealicense.com/licenses/mit/):
 
 - [hello-world-vue-pre-rendered](https://github.com/mtlynch/hello-world-vue-pre-rendered)
 

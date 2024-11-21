@@ -171,7 +171,7 @@ I officially released [PicoShare v1.0.0](https://github.com/mtlynch/picoshare/re
 
 YouTube creator David Burgess made [a video about PicoShare](https://www.youtube.com/watch?v=9eJeA8If0dY), and then Hal Gus [made another](https://www.youtube.com/watch?v=E0G5mSe04NE). A self-hosting blogger [wrote a tutorial](https://mariushosting.com/how-to-install-picoshare-on-your-synology-nas/) for installing PicoShare on a Synology NAS (fun for me because my first-ever blog post was about [setting up a Docker image on my Synology NAS](/sia-via-docker/)).
 
-PicoShare is now the fastest-growing project I've ever created. The [first commit](https://github.com/mtlynch/picoshare/commit/bd4b3c38a680ffc06f95174d0e062cb429e2e4d1) was February 13th, and the project currently has 664 stars on Github. For comparison, [TinyPilot](https://github.com/tiny-pilot/tinypilot) has 1.8k stars after almost two years, and [LogPaste](https://github.com/mtlynch/logpaste) has 201 stars after one year.
+PicoShare is now the fastest-growing project I've ever created. The [first commit](https://github.com/mtlynch/picoshare/commit/bd4b3c38a680ffc06f95174d0e062cb429e2e4d1) was February 13th, and the project currently has 664 stars on GitHub. For comparison, [TinyPilot](https://github.com/tiny-pilot/tinypilot) has 1.8k stars after almost two years, and [LogPaste](https://github.com/mtlynch/logpaste) has 201 stars after one year.
 
 Open-source developers made cool code contributions as well:
 

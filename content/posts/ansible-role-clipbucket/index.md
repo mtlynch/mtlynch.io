@@ -129,7 +129,7 @@ I'm considering expanding the testing by writing more sophisticated web flows, s
 
 My ClipBucket Ansible Role is available:
 
-- [On Github](https://github.com/mtlynch/ansible-role-clipbucket)
+- [On GitHub](https://github.com/mtlynch/ansible-role-clipbucket)
 - [On Ansible Galaxy](https://galaxy.ansible.com/mtlynch/clipbucket)
 
 ## Using the ClipBucket Ansible Role

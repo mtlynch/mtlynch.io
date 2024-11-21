@@ -81,7 +81,7 @@ ProsperBot includes several different pieces and imposes some dependencies on th
 - **[mtlynch.prosperbot](https://galaxy.ansible.com/mtlynch/prosperbot/)** is the role that installs the core (headless) ProsperBot application.
 - **[mtlynch.prosperbot-frontend](https://galaxy.ansible.com/mtlynch/prosperbot-frontend/)** deploys the frontend.
 
-Splitting it this way makes it possible for someone to deploy ProsperBot, ProsperBot Frontend, and Redis each on a separate machine. I personally install all the components on a single server (example Ansible playbook for this is shown in the Github [README example](https://github.com/mtlynch/ansible-role-prosperbot-frontend#example-playbook)).
+Splitting it this way makes it possible for someone to deploy ProsperBot, ProsperBot Frontend, and Redis each on a separate machine. I personally install all the components on a single server (example Ansible playbook for this is shown in the GitHub [README example](https://github.com/mtlynch/ansible-role-prosperbot-frontend#example-playbook)).
 
 ## Thoughts on Prosper
 

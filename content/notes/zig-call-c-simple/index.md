@@ -85,7 +85,7 @@ $ ./bin/example
 
 Great, everything works!
 
-The complete example at this stage [is on Github](https://github.com/mtlynch/zig-c-simple/tree/10-pure-c).
+The complete example at this stage [is on GitHub](https://github.com/mtlynch/zig-c-simple/tree/10-pure-c).
 
 ## Switching the compiler to Zig
 
@@ -142,7 +142,7 @@ $ ./bin/example
 
 Cool, everything is still working, and now I'm using Zig for compilation. I'm not using any Zig code yet, so that's next.
 
-The complete example at this stage [is on Github](https://github.com/mtlynch/zig-c-simple/tree/20-zig-compile).
+The complete example at this stage [is on GitHub](https://github.com/mtlynch/zig-c-simple/tree/20-zig-compile).
 
 ## Creating an equivalent Zig app
 
@@ -193,7 +193,7 @@ $ zig build run
 
 Cool, but my goal is to call into C code from Zig, not just rewrite everything in Zig. Next, I'll figure out how to replace my Zig implementation of `add` with the native C implementation.
 
-The complete example at this stage [is on Github](https://github.com/mtlynch/zig-c-simple/tree/30-zig-main).
+The complete example at this stage [is on GitHub](https://github.com/mtlynch/zig-c-simple/tree/30-zig-main).
 
 ## Linking a Zig application against a native C library
 
@@ -353,7 +353,7 @@ Using this technique, it's possible to port a piece of a C library to the Zig bu
 
 ## Source code
 
-The full source code is available on Github. I split it up into the different stages of the project:
+The full source code is available on GitHub. I split it up into the different stages of the project:
 
 - [Stage 1: The Pure C Implementation](https://github.com/mtlynch/zig-c-simple/tree/10-pure-c)
 - [Stage 2: Compiling C with Zig](https://github.com/mtlynch/zig-c-simple/tree/20-zig-compile)
