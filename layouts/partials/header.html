@@ -25,7 +25,6 @@
     {{ with .Page.Params.Tags }}
       {{ partial "taxonomy/tags.html" . }}
     {{ end }}
-
     {{ if .Site.IsServer }}
       <br />
       <span style="color: green"
