@@ -10,7 +10,6 @@ discuss_urls:
 tags:
   - tinypilot
   - outsourcing
-  - conflict resolution
 ---
 
 Two years ago, I created a website for my business. By combining my terrible design skills with a decent-looking template, I created a site that looked okay. I told myself that if the business took off, I'd hire a real designer to make it look professional.
@@ -19,7 +18,7 @@ Two years ago, I created a website for my business. By combining my terrible des
 
 A year later, the business was generating $45k/month in revenue, but my website still looked like a college student's hobby project. It was time for that professional redesign I'd promised myself.
 
-There were only three pages I cared about, so I expected the redesign would be straightforward. Maybe a few months and $15k.
+There were only three pages I cared about, so I expected the redesign to be straightforward. Maybe a few months and $15k.
 
 Here's how the site looked after the redesign:
 
@@ -92,7 +91,7 @@ A few weeks later, DesignAgency called a meeting to share updates, but they hadn
 
 By December, we were three months into the project. DesignAgency was 95% done with TinyPilot's new logo. All I wanted was to change some rounding on the corners and eliminate the border. I expected it to be a couple of hours of work.
 
-I was eager to finalize the logo because it would be the first completed asset DesignAgency was giving me. Once it was ready, I could publish it on the website, integrate it into the product's web interface, and print it on the device's physical case.
+I was eager to finalize the logo because it would be the project's first complete asset. Once it was ready, I could publish it on the website, integrate it into the product's web interface, and print it on the device's physical case.
 
 All I needed was a couple more hours of work. But I didn't get them.
 
@@ -130,7 +129,7 @@ Isaac did, however, have an idea for expediting the project.
 
 ## The solution is to pay more
 
-The real issue, Isaac said, was that I was their only hourly client. I would always be at the mercy of long-term retainer clients pre-empting my project. So what if I signed a retainer agreement to guarantee DesignAgency's time? Their retainers started at 40 hours per month for $160/hr.
+The real issue, Isaac said, was that I was their only hourly client. I would always be at the mercy of long-term retainer clients pre-empting me. So what if I signed a retainer agreement to guarantee DesignAgency's time? Their retainers started at 40 hours per month for $160/hr.
 
 I felt duped and manipulated. DesignAgency structured the work so that everything was 80% done, but nothing was usable. If I took the work to a new vendor, there'd be a massive amount of rework. And now they were holding the last 20% hostage until I signed an expensive retainer agreement?
 
