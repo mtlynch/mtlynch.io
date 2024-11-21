@@ -157,7 +157,7 @@ To realize the changes, I ran:
 sudo nixos-rebuild switch
 ```
 
-Now, I had `vim` and `curl`, available, so I could pull down my SSH public key from Github:
+Now, I had `vim` and `curl`, available, so I could pull down my SSH public key from GitHub:
 
 ```bash
 sudo mkdir -p /etc/nixos/ssh

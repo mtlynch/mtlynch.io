@@ -69,7 +69,7 @@ resampleFilter = "Lanczos"
 
 # Social links
 [[params.social]]
-    name = "Github"
+    name = "GitHub"
     icon = "fab fa-github fa-2x"
     weight = 1
     url = "https://github.com/mtlynch/"

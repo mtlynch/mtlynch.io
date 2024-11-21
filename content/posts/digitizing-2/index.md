@@ -25,7 +25,7 @@ In [part one](/digitizing-1), I described my arduous journey to capture my old h
 
 The first solution I tried was [ClipBucket](https://github.com/arslancb/clipbucket), which advertises itself as an open-source YouTube clone that you can self-host.
 
-{{<img src="clipbucket-github.png" alt="ClipBucket's repository on Github" max-width="500px" has-border="true" caption="[ClipBucket](https://github.com/arslancb/clipbucket) is an open-source clone of YouTube that users can self-host (theoretically).">}}
+{{<img src="clipbucket-github.png" alt="ClipBucket's repository on GitHub" max-width="500px" has-border="true" caption="[ClipBucket](https://github.com/arslancb/clipbucket) is an open-source clone of YouTube that users can self-host (theoretically).">}}
 
 Puzzlingly, ClipBucket offered no installation instructions. Using a [third-party guide](https://linoxide.com/linux-how-to/setup-clipbucket-video-sharing-website-linux/), I [automated the installation process](/ansible-role-clipbucket/) using [Ansible](https://docs.ansible.com/ansible/latest/index.html), a configuration management tool for servers.
 
@@ -85,7 +85,7 @@ The only problem was that it made MediaGoblin unusably slow. Loading the video t
 
 The underlying issue was that video and image files followed a long, circuitous route to the user. They had to go from Google Cloud Storage through gcsfuse to MediaGoblin to Nginx and then finally to the user's browser. gcsfuse was a major bottleneck, as it's not optimized for speed. It warns about its poor latency right [on the project homepage](https://github.com/GoogleCloudPlatform/gcsfuse#latency-and-rsync):
 
-{{<img src="gcsfuse-latency.png" alt="Latency warning from gcsfuse Github repository" caption="Warnings in gcsfuse documentation [about slow performance](https://github.com/GoogleCloudPlatform/gcsfuse#latency-and-rsync)" max-width="700px" has-border="true">}}
+{{<img src="gcsfuse-latency.png" alt="Latency warning from gcsfuse GitHub repository" caption="Warnings in gcsfuse documentation [about slow performance](https://github.com/GoogleCloudPlatform/gcsfuse#latency-and-rsync)" max-width="700px" has-border="true">}}
 
 Ideally, the browser would fetch files directly from Google Cloud Storage, bypassing all the intermediate layers. How could I do that without delving into MediaGoblin's codebase and adding complicated integration logic for Google Cloud Storage?
 

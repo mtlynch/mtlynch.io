@@ -79,7 +79,7 @@ Once again, if I save these changes to `configuration.nix`, run `sudo nixos-rebu
 
 Another option for fetching remote Nix files is to store them in a public Git repository and then use `fetchGit` to retrieve the files.
 
-Here's an example of a `configuration.nix` file that fetches my `shell.nix` from a public Github repo:
+Here's an example of a `configuration.nix` file that fetches my `shell.nix` from a public GitHub repo:
 
 ```nix
 let
@@ -94,9 +94,9 @@ in {
 }
 ```
 
-The `url` is the public URL of my Github repo, and `rev` is the Git commit hash of the version of the file I want to import.
+The `url` is the public URL of my GitHub repo, and `rev` is the Git commit hash of the version of the file I want to import.
 
-After I make those changes to `configuration.nix`, I can re-run `sudo nixos-rebuild switch`, and Nix imports my `shell.nix` file from my Github repo.
+After I make those changes to `configuration.nix`, I can re-run `sudo nixos-rebuild switch`, and Nix imports my `shell.nix` file from my GitHub repo.
 
 ## More advanced shell configuration
 

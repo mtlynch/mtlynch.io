@@ -177,7 +177,7 @@ for module_element in self._driver.find_elements_by_class_name('well'):
 
 Putting it all together, we can add the Selenium installation playbook and our Selenium script to our [build file](https://github.com/mtlynch/ansible-role-clipbucket/blob/88a397b790e6d135719339964bcddd7f5acf0359/build#L69...L78).
 
-Now, we create [a Github pull request](https://github.com/mtlynch/ansible-role-clipbucket/pull/34) with the broken commit we made earlier. When the Travis build runs, we can see that it fails:
+Now, we create [a GitHub pull request](https://github.com/mtlynch/ansible-role-clipbucket/pull/34) with the broken commit we made earlier. When the Travis build runs, we can see that it fails:
 
 ```text
 2016-09-21 00:17:06,229 clipbucket_driver INFO     Logging in with username=testadmin

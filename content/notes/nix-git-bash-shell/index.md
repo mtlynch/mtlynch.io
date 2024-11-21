@@ -45,7 +45,7 @@ $ find / -name 'git-prompt.sh' -type f -print
 # No results
 ```
 
-The other option was to download an official copy of `git-prompt.sh` from Github:
+The other option was to download an official copy of `git-prompt.sh` from GitHub:
 
 ```bash
 # Download git-prompt.sh

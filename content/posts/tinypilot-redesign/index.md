@@ -158,7 +158,7 @@ When the month ended, DesignAgency hadn't moved the website any closer to the ne
 
 {{<img src="console-log.png" alt="Screenshot of new landing page" has-border="true" caption="One of the DesignAgency developers used 15 of the month's 60 hours to fix the minor bugs from the end of the task queue.">}}
 
-What inspired DesignAgency to take on these insignificant bugs, you ask? Well, DesignAgency had asked me to create Github tickets for each redesign task. DesignAgency warned that they don't refund or roll over unused hours, so they encouraged me to overbook the schedule with tasks beyond the redesign work.
+What inspired DesignAgency to take on these insignificant bugs, you ask? Well, DesignAgency had asked me to create GitHub tickets for each redesign task. DesignAgency warned that they don't refund or roll over unused hours, so they encouraged me to overbook the schedule with tasks beyond the redesign work.
 
 What I didn't expect was how DesignAgency would split the tickets among their developers. I thought developer A would work on page X, and developer B would work on page Y. Instead, DesignAgency assigned all the design-related tickets to developer A and left the rest to developer B. And that's how a quarter of the March dev budget went to minor bugfixes.
 

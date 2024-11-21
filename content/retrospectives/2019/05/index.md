@@ -67,7 +67,7 @@ It would be great if this growth keeps up. If revenue reaches $500/mo, I can hir
 
 I worked with freelance writers to create several articles for Is It Keto, but we always had a clunky process for drafts -> feedback -> revisions. We used Google Docs and margin comments, but Docs doesn't do a great job of highlighting what changed between drafts or keeping context of what comment led to which edit.
 
-If you're a professional developer, you're probably familiar with code review tools like [Github reviews](https://github.com/features/code-review/), [Reviewable](https://reviewable.io/), or [Phabricator](https://www.phacility.com/). I suspect that content writers could benefit from similar tools, so I've been reaching out to writers and editors to ask them what kind of tool I could create for them to solve this problem.
+If you're a professional developer, you're probably familiar with code review tools like [GitHub reviews](https://github.com/features/code-review/), [Reviewable](https://reviewable.io/), or [Phabricator](https://www.phacility.com/). I suspect that content writers could benefit from similar tools, so I've been reaching out to writers and editors to ask them what kind of tool I could create for them to solve this problem.
 
 {{<img src="reviewable.jpg" alt="Screenshot of a code review on Reviewable.io" caption="I want to make this but for content instead of code" max-width="950px" has-border="true">}}
 

@@ -45,7 +45,7 @@ I began by examining the words in the incorrect seed:
 
 I wasn't familiar with how Sia generates its seeds, but Sia is completely open-source, so I figured it couldn't be too hard to figure it out.
 
-Indeed it was not. Browsing to Sia's [`wallet.go` file](https://github.com/NebulousLabs/Sia/blob/master/modules/wallet.go) I found a [`SeedToString` function](https://github.com/NebulousLabs/Sia/blob/a61170dd20118f68b1fdb7e06c2c483c91aa649e/modules/wallet.go#L404...L412). That led me to the [entropy-mnemonics](https://github.com/NebulousLabs/entropy-mnemonics) Github project, which contained [this dictionary](https://github.com/NebulousLabs/entropy-mnemonics/blob/master/english.go) of possible seed words:
+Indeed it was not. Browsing to Sia's [`wallet.go` file](https://github.com/NebulousLabs/Sia/blob/master/modules/wallet.go) I found a [`SeedToString` function](https://github.com/NebulousLabs/Sia/blob/a61170dd20118f68b1fdb7e06c2c483c91aa649e/modules/wallet.go#L404...L412). That led me to the [entropy-mnemonics](https://github.com/NebulousLabs/entropy-mnemonics) GitHub project, which contained [this dictionary](https://github.com/NebulousLabs/entropy-mnemonics/blob/master/english.go) of possible seed words:
 
 ```golang
   englishDictionary = Dictionary{
