@@ -192,7 +192,7 @@ Surprisingly, the dev work was never smoother than after I terminated the contra
 
 There were still issues, but I was prepared this time. DesignAgency kept suggesting new flourishes to the design. I declined them all and told them to focus on the design I'd approved. I'm glad I did because they'd probably still be working on the website today.
 
-On the last day of the month, the final page still wasn't done. DesignAgency hadn't communicated with me about disengaging from the project.
+On the last day of the month, the final page still wasn't done, and DesignAgency hadn't communicated with me about disengaging from the project.
 
 On June 1st, the day after our contract officially ended, their dev told me that Isaac had authorized him to finish the outstanding work at no charge. He wrapped up the final page within two days.
 
@@ -227,7 +227,7 @@ I told Isaac that I wished we'd structured the work to give me usable assets soo
 
 I shared my surprise at how little DesignAgency managed the project. I expected DesignAgency's project managers to provide regular status updates and maintain project timelines, but nobody was doing that. Isaac said this was a misstep on his part. DesignAgency tries to keep project management to less than 5% of billable hours. At my scale, 5% would be too limited to provide any tangible benefit, so he eliminated project management entirely. He admitted that, in retrospect, he should have included me in that conversation to make sure it was what I wanted.
 
-We talked about the opaqueness of DesignAgency's hours. Because they shared their hours so infrequently and worked an irregular schedule, I could never tell when a task was bloating beyond my expectations. I wished I'd raised this issue earlier because it turned out all I had to do was ask. DesignAgency tracks billable time with [toggl](https://toggl.com), and Isaac would have been happy to give me access to their dashboard.
+Because DesignAgency shared their hours so infrequently and worked an irregular schedule, I could never tell when a task was bloating beyond my expectations. I wished I'd raised this issue earlier because it turned out all I had to do was ask. DesignAgency tracks billable time with [toggl](https://toggl.com), and Isaac would have been happy to give me access to their dashboard.
 
 ## What I'd do differently
 
@@ -252,7 +252,7 @@ But think about it this way: if a project involves eight tasks that will take ro
 
 The one-at-a-time is better value for your money. At the end of month one, you have one asset that provides value to your business for the next seven months. In month two, you have more, and so on.
 
-Parallelizing everything also puts you in a weak negotiating position. If the agency has eight tasks that are all 80% complete, it's expensive for you to scope down the project or switch vendors. If you limit the agency to only two or three tasks at once, those are the only tasks at risk if the project goes south.
+Parallelizing everything also puts you in a weak negotiating position. If the agency has eight tasks that are all 80% complete, it's expensive for you to scope down the project or switch vendors. If you limit the agency to only two or three tasks at a time, those are the only tasks at risk if the project goes south.
 
 Lastly, it's more mentally taxing to oversee eight subprojects at once. Every unfinished task occupies real estate in your mind. It's better to knock them out in small batches than to drag everything out for the entire project.
 
