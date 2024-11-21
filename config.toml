@@ -46,6 +46,16 @@ twitter = "deliberatecoder"
     hidecredits = false
     hidecopyright = false
 
+     popularPosts = [
+      "i-sold-tinypilot",
+      "why-i-quit-google",
+      "tinypilot-redesign",
+      "code-review-love",
+      "human-code-reviews-1",
+      "tinypilot",
+      "stole-siacoins"
+    ]
+
     rtl = false
 
     photoWidths = [300, 600, 800, 1200]
