@@ -74,6 +74,11 @@ resampleFilter = "Lanczos"
     weight = 1
     url = "https://github.com/mtlynch/"
 [[params.social]]
+    name = "Bluesky"
+    icon = "fa-brands fa-bluesky fa-2x"
+    weight = 2
+    url = "https://bsky.app/profile/mtlynch.io"
+[[params.social]]
     name = "Twitter"
     icon = "fa-brands fa-twitter fa-2x"
     weight = 3
