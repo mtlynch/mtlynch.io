@@ -9,7 +9,7 @@
   </div>
   <div class="post-meta">
     <span class="header-meta">
-      <i class="fas fa-calendar"></i>&nbsp;<time
+      <i class="fa-solid fa-calendar"></i>&nbsp;<time
         datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}"
       >
         {{ .Date.Format .Site.Params.dateFormat }}
@@ -20,7 +20,7 @@
       </time>
     </span>
     <span class="header-meta">
-      <i class="fas fa-clock"></i>&nbsp;{{ .ReadingTime }}-minute&nbsp;read
+      <i class="fa-solid fa-clock"></i>&nbsp;{{ .ReadingTime }}-minute&nbsp;read
     </span>
     {{ with .Page.Params.Tags }}
       {{ partial "taxonomy/tags.html" . }}
