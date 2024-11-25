@@ -2,7 +2,7 @@
 title: Start Small, Stay Small by Rob Walling
 date: "2018-11-15"
 rating: 6
-purchase_url: https://startupbook.net/
+purchase_url: https://startsmall.com/
 ---
 
 I wish that I had found this book nine years ago. It taught me a great deal about choosing the right product to build and the advantages of targeting small niches. The author makes compelling points about the importance of marketing and small founders' common pitfall of treating it as an afterthought.
