@@ -246,7 +246,7 @@ In particular, Fly's metrics would frequently show RAM maxed out when Go and `ht
 
 The game-changing insight came from Andrew Ayer, who pointed out that RAM bloat was likely a red herring:
 
-{{<tweet user="__agwa" id="1553767839156379649">}}
+{{<img src="agwa-tweet.png" alt="Also, I think you're looking at the wrong metric here. It's not a bad thing for the VM to use a lot of RAM, if that RAM is being used for the page cache. It's only an issue if the Go process gets OOM killed." has-border="true" >}}
 
 Kurt Mackey, Fly's CEO, popped into the thread to confirm Andrew's hypothesis:
 
