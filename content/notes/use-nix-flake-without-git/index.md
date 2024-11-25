@@ -19,7 +19,7 @@ Commenter `@kesor` offered the simplest solution I've seen so far: create a pare
 
 If you were working on a repo called `examplerepo`, you'd structure your directory tree like this:
 
-```
+```text
 ./examplerepo/ << The actual git repo
 ./flake.nix
 ./flake.lock
