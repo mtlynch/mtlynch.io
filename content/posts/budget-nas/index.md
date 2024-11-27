@@ -562,7 +562,7 @@ The motherboard is fine. I like it a little better than my ASUS Prime A320I-K:
 
 My biggest regret is choosing a mini-ITX form factor for the case and motherboard.
 
-All of the mini-ITX motherboards I've seen have only four SATA ports and one PCI slot. That means that if you want an HBA to add more than four disks, you have no PCI slots left.
+Mini-ITX motherboards have only a single PCI slot. Most only have four SATA ports, and I haven't seen any that have more while also supporting onboard graphics. That means that if you want an HBA to add more than four disks, you have no PCI slots left.
 
 In my case, I wanted to install a 10 Gbps network card, but that means I'm now stuck with just four disks unless I buy a whole new chassis and motherboard.
 
