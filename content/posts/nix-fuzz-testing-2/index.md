@@ -46,8 +46,6 @@ I create a new build step in my Nix flake that downloads all the PDFs from Mozil
 
 At this point, `flake.nix` should [look like this](https://gitlab.com/mtlynch/fuzz-xpdf/-/blob/04-download-pdfs/flake.nix).
 
-Sidenote: In addition to the PDFs themselves, the pdf.js repo contains several hundred `.link` files that contain URLs of external PDFs. I can't think of a simple way of pulling those external PDFs into a Nix pipeline. I welcome suggestions on integrating them, as they would achieve higher fuzzing coverage.
-
 I run the new `sample-pdfs` build step with the following command:
 
 ```bash
@@ -69,6 +67,16 @@ $ $ ls ./result | wc --lines
 ```
 
 The new build step gives me an initial corpus of edge case PDFs that will hopefully exercise less frequent code paths of any PDF parsing code.
+
+## Downloading even more tricky PDFs
+
+In addition to the PDFs themselves, the pdf.js repo contains several hundred `.link` files that contain URLs of external PDFs.
+
+I couldn't figure out how to download them, as the `mkDerivation` step blocks Internet access, and I didn't want to have hundreds of `fetchUrl` commands for each PDF in the repository.
+
+[Anton Mosich](https://github.com/antonmosich) helped
+
+I can't think of a simple way of pulling those external PDFs into a Nix pipeline. I welcome suggestions on integrating them, as they would achieve higher fuzzing coverage.
 
 ## Automating fuzz runs
 
