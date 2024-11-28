@@ -62,7 +62,7 @@ annotation-border-styles.pdf
 annotation-button-widget.pdf
 annotation-caret-ink.pdf
 
-$ $ ls ./result | wc --lines
+$ ls ./result | wc --lines
 700
 ```
 
@@ -76,7 +76,63 @@ I couldn't figure out how to download them, as the `mkDerivation` step blocks In
 
 [Anton Mosich](https://github.com/antonmosich) helped
 
-I can't think of a simple way of pulling those external PDFs into a Nix pipeline. I welcome suggestions on integrating them, as they would achieve higher fuzzing coverage.
+```nix
+{
+    packages = rec {
+        ...
+        sample-pdfs = pkgs.stdenv.mkDerivation rec {
+          pname = "sample-pdfs";
+          version = "4.7.76";
+
+          src = pkgs.fetchzip {
+            url = "https://github.com/mozilla/pdf.js/archive/refs/tags/v${version}.zip";
+            hash = "sha256-2xt8j2xJ3Teg/uiwjbWnpR6zckdxsp3LVbfsbBc3Dco=";
+          };
+
+          nativeBuildInputs = [
+            pkgs.aria2
+          ];
+
+          SSL_CERT_FILE = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt";
+
+          buildPhase = ''
+            url_file=$(mktemp)
+            for pdf in $src/test/pdfs/*.pdf.link; do
+              url=$(sed 's/\r$//' "$pdf")
+              filename=$(basename "$pdf" .link)
+              echo "$url" >> "$url_file"
+              echo "  out=$filename" >> "$url_file"
+            done
+
+            aria2c \
+                --input-file="$url_file" \
+                --max-tries=5 \
+                --retry-wait=20 \
+                --auto-file-renaming=false \
+                --max-concurrent-downloads=5 \
+                --max-connection-per-server=1 \
+                --dir=.
+
+            cp $src/test/pdfs/*.pdf .
+          '';
+          installPhase = ''
+            mkdir -p $out
+            cp -r . $out
+          '';
+
+          # We need to specify the output hash so that Nix allows Internet
+          # access during the build.
+          outputHash = "sha256-lcPF6AQNVsXH2RIiyGZQpp5VjcaBhtolQxmbqSduCNs=";
+          outputHashMode = "recursive";
+          outputHashAlgo = "sha256";
+        };
+
+```
+
+```bash
+$ ls ./result | wc --lines
+1137
+```
 
 ## Automating fuzz runs
 
