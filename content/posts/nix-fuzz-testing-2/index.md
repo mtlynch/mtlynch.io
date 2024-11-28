@@ -126,8 +126,9 @@ I couldn't figure out how to download them, as the `mkDerivation` step blocks In
           outputHashMode = "recursive";
           outputHashAlgo = "sha256";
         };
-
 ```
+
+I can see that the total lines are:
 
 ```bash
 $ ls ./result | wc --lines
