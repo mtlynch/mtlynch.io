@@ -72,9 +72,11 @@ The new build step gives me an initial corpus of edge case PDFs that will hopefu
 
 In addition to the PDFs themselves, the pdf.js repo contains several hundred `.link` files that contain URLs of external PDFs.
 
-I couldn't figure out how to download them, as the `mkDerivation` step blocks Internet access, and I didn't want to have hundreds of `fetchUrl` commands for each PDF in the repository.
+I couldn't figure out how to download the PDFs from the `.link` file URLs, as the `mkDerivation` step blocks Internet access. I could use the `fetchUrl` command, but I'd have to write hundreds of them.
 
-[Anton Mosich](https://github.com/antonmosich) helped
+[Anton Mosich](https://github.com/antonmosich) showed me an elegant way to download the PDFs from all the `.link` files. He told me that if you specify `outputHash`, `outputHashMode`, `outputHashAlgo`, then Nix relaxes rules and allows Internet access during the build.
+
+I initially tried downloading each file with `curl`, but that was prohibitively slow, because it was downloading each file sequentially. I found a utility called aria2c that downloads URLs in parallel, which made the process significantly quicker:
 
 ```nix
 {
@@ -96,6 +98,8 @@ I couldn't figure out how to download them, as the `mkDerivation` step blocks In
           SSL_CERT_FILE = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt";
 
           buildPhase = ''
+            # Extract the URLs and filenames from .link files into an input
+            # file of URLs for aria2c.
             url_file=$(mktemp)
             for pdf in $src/test/pdfs/*.pdf.link; do
               url=$(sed 's/\r$//' "$pdf")
@@ -115,6 +119,7 @@ I couldn't figure out how to download them, as the `mkDerivation` step blocks In
 
             cp $src/test/pdfs/*.pdf .
           '';
+
           installPhase = ''
             mkdir -p $out
             cp -r . $out
@@ -128,7 +133,13 @@ I couldn't figure out how to download them, as the `mkDerivation` step blocks In
         };
 ```
 
-I can see that the total lines are:
+I run the updated `sample-pdfs` step with `nix build`:
+
+```bash
+nix build .#sample-pdfs
+```
+
+And if I check the `./result` directory, I see that it now has 437 more files than it did when I was copying only the PDF files in the repo:
 
 ```bash
 $ ls ./result | wc --lines
@@ -137,7 +148,7 @@ $ ls ./result | wc --lines
 
 ## Automating fuzz runs
 
-In part 1 of this series, I showed how to run honggfuzz manually from a Nix dev shell. I can make that process even easier by defining a launch command for the fuzzer in my Nix flake.
+In part 1 of this series, I showed how to [run honggfuzz manually from a Nix dev shell](/nix-fuzz-testing-1/#ad-hoc-fuzzing-in-a-dev-shell). I can make that process even easier by defining a launch command for the fuzzer in my Nix flake.
 
 To start, I add a new shell script for launching honggfuzz:
 
@@ -655,4 +666,4 @@ This project ended up being a great way to learn more about both fuzzing and Nix
 
 ---
 
-_Excerpts from xpdf are used under [the GPLv3 license](https://gitlab.com/mtlynch/xpdf/-/blob/4.05/COPYING3)._
+_Excerpts from xpdf are used under [the GPLv3 license](https://gitlab.com/mtlynch/xpdf/-/blob/4.05/COPYING3). Thanks to [Anton Mosich](https://github.com/antonmosich) for assistance with this post._
