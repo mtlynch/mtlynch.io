@@ -70,69 +70,69 @@ Create a file called `main.go` that defines a simple Go web service:
 package main
 
 import (
-	"errors"
-	"fmt"
-	"log"
-	"net"
-	"net/http"
-	"os"
-	"os/user"
-	"runtime"
-	"time"
+  "errors"
+  "fmt"
+  "log"
+  "net"
+  "net/http"
+  "os"
+  "os/user"
+  "runtime"
+  "time"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	hostname, err := os.Hostname()
-	if err != nil {
-		log.Fatalf("failed to get hostname: %v", err)
-	}
-	currentUser, err := user.Current()
-	if err != nil {
-		log.Fatalf("failed to get username: %v", err)
-	}
-	localIP, err := getLocalIP()
-	if err != nil {
-		log.Fatalf("failed to get local IP: %v", err)
-	}
+  hostname, err := os.Hostname()
+  if err != nil {
+    log.Fatalf("failed to get hostname: %v", err)
+  }
+  currentUser, err := user.Current()
+  if err != nil {
+    log.Fatalf("failed to get username: %v", err)
+  }
+  localIP, err := getLocalIP()
+  if err != nil {
+    log.Fatalf("failed to get local IP: %v", err)
+  }
 
-	fmt.Fprintf(w, "Time:          %s\n", getFormattedTime())
-	fmt.Fprintf(w, "Hostname:      %s\n", hostname)
-	fmt.Fprintf(w, "Username:      %s\n", currentUser.Username)
-	fmt.Fprintf(w, "Local IP:      %s\n", localIP.String())
-	fmt.Fprintf(w, "Compiled with: %s\n", runtime.Version())
+  fmt.Fprintf(w, "Time:          %s\n", getFormattedTime())
+  fmt.Fprintf(w, "Hostname:      %s\n", hostname)
+  fmt.Fprintf(w, "Username:      %s\n", currentUser.Username)
+  fmt.Fprintf(w, "Local IP:      %s\n", localIP.String())
+  fmt.Fprintf(w, "Compiled with: %s\n", runtime.Version())
 }
 
 func getLocalIP() (net.IP, error) {
-	addrs, err := net.InterfaceAddrs()
-	if err != nil {
-		return net.IP{}, err
-	}
-	for _, addr := range addrs {
-		if ipnet, ok := addr.(*net.IPNet); ok && !ipnet.IP.IsLoopback() {
-			if ipnet.IP.To4() != nil {
-				return ipnet.IP, nil
-			}
-		}
-	}
+  addrs, err := net.InterfaceAddrs()
+  if err != nil {
+    return net.IP{}, err
+  }
+  for _, addr := range addrs {
+    if ipnet, ok := addr.(*net.IPNet); ok && !ipnet.IP.IsLoopback() {
+      if ipnet.IP.To4() != nil {
+        return ipnet.IP, nil
+      }
+    }
+  }
 
-	return net.IP{}, errors.New("no local IP address found")
+  return net.IP{}, errors.New("no local IP address found")
 }
 
 func getFormattedTime() string {
-	now := time.Now()
-	zone, _ := now.Zone()
-	return now.Format("2006-01-02 03:04:05 PM") + fmt.Sprintf(" (%s)", zone)
+  now := time.Now()
+  zone, _ := now.Zone()
+  return now.Format("2006-01-02 03:04:05 PM") + fmt.Sprintf(" (%s)", zone)
 }
 
 func main() {
-	port := os.Getenv("PORT")
-	if port == "" {
-		port = "8080"
-	}
+  port := os.Getenv("PORT")
+  if port == "" {
+    port = "8080"
+  }
 
-	http.HandleFunc("/", handler)
-	fmt.Printf("listening on :%s\n", port)
-	log.Fatal(http.ListenAndServe(":"+port, nil))
+  http.HandleFunc("/", handler)
+  fmt.Printf("listening on :%s\n", port)
+  log.Fatal(http.ListenAndServe(":"+port, nil))
 }
 ```
 
