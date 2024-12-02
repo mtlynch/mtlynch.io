@@ -6,25 +6,29 @@ tags:
   - go
 ---
 
-I have a few toy utility apps that I run 24/7 on cloud infrastructure. One example is [PicoShare](https://github.com/mtlynch/picoshare), a simple utility that makes it easy for me to share files with friends and teammates.
+I have a few toy utility apps that I run 24/7 on cloud infrastructure. One example is [PicoShare](https://github.com/mtlynch/picoshare), a simple web app that makes it easy for me to share files with friends and teammates.
 
 There are several convenience apps I _would_ run if it were easy to run them constantly. But there's enough friction to running even a simple app 24/7 that I don't do it.
 
-I've tried running toy apps in the past. I've set up cron jobs and systemd services to run the services all the time, but inevitably something breaks, and I get tired of fixing it and just let the service die.
+In the past, I've tried running toy apps on my home server. I've set up cron jobs and systemd services, but inevitably something breaks, and I get tired of fixing it and just let the service die.
 
 I think I've finally found a low-friction way of hosting personal apps that keeps them constantly available while minimizing my overhead in maintaining them: NixOS modules.
 
 ## What my solution lets me do
 
-- I can create a new web service, and it's less than 15 minutes of work to run it 24/7 on my NixOS server.
+- Given an arbitrary web service, it takes me less than 15 minutes of work to run it 24/7 on my NixOS server.
 - I can upgrade/downgrade or change configuration options by changing a line of code and running a rebuild command.
-- I can run apps with conflicting dependencies (e.g., Python 2 and Python 3) on the same server and do zero work to avoid conflicts.
+- I can run apps with conflicting dependencies (e.g., Python 2 and Python 3) on the same server and never worry about version conflicts.
+- Keep my entire server's configuration under source control, so I can roll back to any state at any time.
 
 ## Why NixOS?
 
-NixOS let me define my entire system configuration in code, and it keeps the system in that state.
+There are a few reasons I find NixOS useful for the task of running a set of services 24/7:
 
-I can add a new service to any of my NixOS servers with just a few lines of code.
+- The full system configuration is in text files.
+- Rebuilding the system is relatively fast (usually seconds or minutes).
+- Services on NixOS are friendly to composition (I can combine services)
+- Services on NixOS are friendly to extensibility (I can adjust options or patch behavior easily).
 
 ### But isn't Nix complicated?
 
@@ -42,13 +46,13 @@ For years, I maintained a set of VMs for various projects, and I used Ansible to
 
 The first problem is that Ansible is slow. Every time you add a new service to a server, it takes longer to run Ansible against it. I had not-so-complicated servers where applying configuration took 10+ minutes every time. On Nix, minor configuration changes happen in seconds, and longer ones take about 30 seconds.
 
-I also ran into version conflicts under Ansible. If one service depends on Python 2 and another depends on Python 3.7 and another depends on Python 3.10, you're going to have a hard time making sure each app uses the correct version of Python on the system, and the different versions will try to overwrite the same files (like `/usr/bin/python3`).
+I also ran into version conflicts under Ansible. If one service depended on Python 2 and another depended on Python 3.7 and another depended on Python 3.10, they'd all break each other and try to overwrite the same files.
 
 ### Why not Docker?
 
 I've tried running services under Docker, and it works okay.
 
-One big disadvantage to Docker is that it's unfriendly to development. With NixOS and Ansible, you can mostly reuse the packaging code for your development work. There are ways that you can do development within a Docker container, but that's not what Docker is designed for, so you'd be fighting the tool a bit. Instead, I always end up defining my Docker image redundantly to how I set up my development environment.
+Docker is unfriendly to development. With NixOS and Ansible, you can mostly reuse the packaging code for your development work. There are ways that you can do development within a Docker container, but that's not what Docker is designed for, so you'd be fighting the tool a bit. Instead, I always end up defining my Docker image redundantly to how I set up my development environment.
 
 I also find that Docker gets harder to use when you have more than one running process. For example, if you have a web app that depends on Postgres, now you have two Docker containers, and it gets a bit harder to manage.
 
@@ -162,7 +166,7 @@ The service is deliberately simple and kind of boring because I want to focus on
 
 ## Create a simple Go module
 
-Next, create a Go module for this app, as Nix will need it to build:
+Next, create a Go module for this app, as Nix will need it to build the NixOS module:
 
 ```bash
 $ nix-shell -p go --command 'go mod init gitlab.com/mtlynch/basic-go-web-app'
@@ -214,7 +218,7 @@ Now, I'm going to create a Nix flake that builds and runs this app under Nix. Ad
 }
 ```
 
-With the flake, I can how run my app under Nix:
+With the flake, I can run my app under Nix:
 
 ```bash
 $ PORT=5000 nix run
@@ -367,7 +371,9 @@ I use systemd to run my web app continuously in the background. When a NixOS sys
   };
 ```
 
-The `ExecStart` line specifies the location of the `basic-go-web-app`
+The `ExecStart` line specifies the location of the `basic-go-web-app`, which it gets from the output of my `buildGoModule` step.
+
+The service also converts the NixOS module's `port` option into the `PORT` environment variable, as that's what `main.go` [reads](#a-basic-demo-microservice) (with `os.Getenv("PORT")`).
 
 ### Exporting the NixOS module
 
@@ -381,7 +387,17 @@ Finally, at the end, I export the NixOS module so that NixOS systems can import 
 
 ## Install the NixOS module
 
-Now, in my server's root `flake.nix`, I import the `basic-go-web-app` NixOS module and pass it to my host (`nixon`) like this:
+Now, it's time to import the `basic-go-web-app` NixOS module into my NixOS system's root `flake.nix` file.
+
+{{<notice type="warning">}}
+**Note**: I'm talking about two distinct `flake.nix` files.
+
+The first `flake.nix` is the Nix flake for `basic-go-web-app`, and it should be in the same folder as `main.go`.
+
+The second `flake.nix` is the NixOS system's root Nix flake. On my NixOS system, my layout is like [the Misterio77 example](https://github.com/Misterio77/nix-starter-configs/tree/cd2634edb7742a5b4bbf6520a2403c22be7013c6/minimal).
+{{</notice>}}
+
+Now, in my server's root `flake.nix`, I import and pass it to my host (`nixon`) like this:
 
 ```nix
 {
