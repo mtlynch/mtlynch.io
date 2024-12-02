@@ -375,6 +375,8 @@ The `ExecStart` line specifies the location of the `basic-go-web-app`, which it 
 
 The service also converts the NixOS module's `port` option into the `PORT` environment variable, as that's what `main.go` [reads](#a-basic-demo-microservice) (with `os.Getenv("PORT")`).
 
+`DynamicUser = "yes"` tells systemd to create a limited-privilege user and run the service under that user's context. That prevents the service from accidentally clashing with other services on my system, and it improves security. There are many other hardening options within systemd, but I'm skipping them since there is essentially no attack surface to this toy example.
+
 ### Exporting the NixOS module
 
 Finally, at the end, I export the NixOS module so that NixOS systems can import it:
@@ -390,14 +392,14 @@ Finally, at the end, I export the NixOS module so that NixOS systems can import 
 Now, it's time to import the `basic-go-web-app` NixOS module into my NixOS system's root `flake.nix` file.
 
 {{<notice type="warning">}}
-**Note**: I'm talking about two distinct `flake.nix` files.
+**Note**: I'm talking about two distinct `flake.nix` files, which is a bit confusing.
 
 The first `flake.nix` is the Nix flake for `basic-go-web-app`, and it should be in the same folder as `main.go`.
 
 The second `flake.nix` is the NixOS system's root Nix flake. On my NixOS system, my layout is like [the Misterio77 example](https://github.com/Misterio77/nix-starter-configs/tree/cd2634edb7742a5b4bbf6520a2403c22be7013c6/minimal).
 {{</notice>}}
 
-Now, in my server's root `flake.nix`, I import and pass it to my host (`nixon`) like this:
+In my server's root `flake.nix`, I import and pass it to my host (`nixon`) like this:
 
 ```nix
 {
@@ -421,7 +423,7 @@ Now, in my server's root `flake.nix`, I import and pass it to my host (`nixon`) 
 }
 ```
 
-Then, in the Nix file for my host (located at `hosts/nixon/default.nix` in the same directory as my root flake), I have this:
+Then, in the Nix file for my host (located at `./hosts/nixon/default.nix` relative to my NixOS system root flake), I have this:
 
 ```nix
 {
@@ -446,7 +448,15 @@ Now, it's the moment of truth. It's time to rebuild my host with my `basic-go-we
 sudo nixos-rebuild switch --flake ".#${HOSTNAME}"
 ```
 
-That succeeded, so I'll check if my app is running:
+That succeeded, so I'll check the systemd logs for the new service:
+
+```bash
+$ journalctl -u basic-go-web-app
+Dec 01 10:20:53 nixon systemd[1]: Started Basic Go Web App Service.
+Dec 01 10:20:53 nixon basic-go-web-app[186195]: listening on :3000
+```
+
+The logs say the service is running, so I try calling it:
 
 ```bash
 $ curl localhost:3000
@@ -457,10 +467,8 @@ Local IP:      10.0.0.31
 Compiled with: go1.23.2
 ```
 
-It's running! Note that now, it runs under the username `basic-go-web-app` instead of my dev username of `mike`.
+It's running!
 
-```bash
-$ journalctl -u basic-go-web-app
-Dec 01 10:20:53 nixon systemd[1]: Started Basic Go Web App Service.
-Dec 01 10:20:53 nixon basic-go-web-app[186195]: listening on :3000
-```
+Note that now, it runs under the username `basic-go-web-app` instead of my dev username of `mike`.
+
+## Conclusion
