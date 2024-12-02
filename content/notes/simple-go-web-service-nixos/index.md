@@ -472,3 +472,7 @@ It's running!
 Note that now, it runs under the username `basic-go-web-app` instead of my dev username of `mike`.
 
 ## Conclusion
+
+The web app I showed is simple and small, but I have real utilities that are about similar in complexity. The difficult part has been finding a way to run the services all the time without adding extra work for packaging or maintenance.
+
+I only just started using NixOS modules to manage my personal services, but I'm excited at how well they work for so little investment.
