@@ -1,6 +1,6 @@
 ---
 title: "Run a Simple Go Web Service on NixOS"
-date: 2024-12-01
+date: 2024-12-02
 tags:
   - nix
   - go
