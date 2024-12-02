@@ -30,7 +30,16 @@ TODO
 
 I found a font for the book.
 
+{{<gallery caption="I switched the *Refactoring English* website's font to [Concourse](https://mbtype.com/fonts/concourse/) and [Heliotrope](https://mbtype.com/fonts/heliotrope/)">}}
+{{<img src="before-font.jpg" has-border="true">}}
+{{<img src="after-font.jpg" has-border="true">}}
+{{</gallery>}}
+
 I wrote [a spec for the cover design](https://docs.google.com/document/d/1SUQ6GTeyL-XWmZYlJdQgyvQHZdHiUvCy0G-dh5nnrQM/edit?usp=sharing) and hired a designer to create it.
+
+I also got an email from a reader asking if they could buy access to the unfinished lessons in _Hit the Front Page of Hacker News_, and they seemed happy with it, so I got to thinking I should just finish the videos.
+
+At this point, I started to notice that I was finding ideas for lots of activities that weren't writing my book.
 
 Because it's a book about writing, my writing has to be perfect.
 
