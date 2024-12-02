@@ -152,6 +152,10 @@
     h5 {
       margin-top: 1rem;
     }
+
+    code {
+      font-size: 1em;
+    }
   }
 
   .notice.notice-info {
