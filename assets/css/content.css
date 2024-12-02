@@ -141,8 +141,8 @@
   }
 
   .notice {
-    margin: 2em 0 !important;
-    padding: 1em;
+    margin: 2rem 0;
+    padding: 0.5rem 1.5rem;
     color: #494e52;
     font-size: 0.8em !important;
     border-radius: 4px;
@@ -151,6 +151,10 @@
 
     h5 {
       margin-top: 1rem;
+    }
+
+    p {
+      margin: 1.5rem 0;
     }
 
     code {
