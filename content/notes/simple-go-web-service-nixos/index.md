@@ -4,6 +4,8 @@ date: 2024-12-02
 tags:
   - nix
   - go
+images:
+  - /notes/simple-go-web-service-nixos/firefox-service.webp
 ---
 
 I have a few toy utility apps that I run 24/7 on cloud infrastructure. One example is [PicoShare](https://github.com/mtlynch/picoshare), a simple web app that makes it easy for me to share files with friends and teammates.
