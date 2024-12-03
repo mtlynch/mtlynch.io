@@ -14,8 +14,8 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Enjoy family time
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: Continued to enjoy family time.
+- **Grade**: A
 
 TODO
 
@@ -51,15 +51,15 @@ My wife and I have since changed sleeping strategies, but for most of November, 
 
 Nix [makes it easy](/nix-fuzz-testing-1/) to set up fuzz testing workflows, and I feel like the world hasn't caught on yet.
 
-So, one night, I read this blog post about [fuzzing a random open-source utility that Facebook published](https://blog.fadyothman.com/meta-bug-bounty-fuzzing-netconsd-for-fun-and-profit-part-1-6ffe96eb1419), so I [spent an hour reproducing it with Nix](/notes/fuzz-netconsd/).
-
 ### Fuzzing openc2e
 
-A few nights later, I realized that [the open-source reimplementation of the _Creatures_ game series](https://openc2e.github.io/) has probably never been fuzzed, so I spent a couple of hours [writing a fuzzer for that](https://gitlab.com/mtlynch/fuzz-openc2e).
+So, one night, I read this blog post about [fuzzing a random open-source utility that Facebook published](https://blog.fadyothman.com/meta-bug-bounty-fuzzing-netconsd-for-fun-and-profit-part-1-6ffe96eb1419), so I [spent an hour reproducing it with Nix](/notes/fuzz-netconsd/).
 
-The part of openc2e I fuzzed was CAOS, a part of the project that fascinates me. The original _Creatures_ game from 1996 included a custom scripting language and corresponding virtual machine. The language is called [Creatures Agent Object Script (CAOS)](https://creatures.fandom.com/wiki/CAOS), and it let players create custom add-ons for the game.
+A few nights later, I spent a couple of hours [writing a fuzzer](https://gitlab.com/mtlynch/fuzz-openc2e) for the [the open-source reimplementation of the _Creatures_ game series](https://openc2e.github.io/).
 
-CAOS is a low-level language that looks a bit like assembly. Here's an example:
+The original _Creatures_ game from 1996 included a custom scripting language and corresponding virtual machine. The language is called [Creatures Agent Object Script (CAOS)](https://creatures.fandom.com/wiki/CAOS), and it let players create custom add-ons for the game.
+
+CAOS is a low-level language that looks a bit like assembly:
 
 ```
 SETS VA00 "he"
@@ -67,9 +67,16 @@ ADDS VA00 "llo"
 DBG: ASRT VA00 eq "hello"
 ```
 
-Enthusiasts have reimplemented a CAOS interpreter within openc2e, and I doubted that anyone had ever fuzzed it. But it's a good thing to fuzz because it parses untrusted third-party code.
+Enthusiasts have reimplemented a CAOS interpreter within openc2e, and I doubted that anyone had ever fuzzed it. But it's a good thing to fuzz because it parses untrusted third-party code if you install add-ons.
 
-I started by fuzzing just the lexer for the CAOS language, and I immediately found a bunch of crashes. One of them is just an unterminated double quote. I started by making a [pull request to fix the simplest crash with a unit test to demonstrate the fix](https://github.com/openc2e/openc2e/pull/215), but the project is semi-abandoned, so it might be awhile before I can get all of my fixes in.
+I started by fuzzing just the lexer for the CAOS language, and I immediately found a bunch of crashes. One of them is just an unterminated double quote, which confirmed my suspicion that nobody had ever fuzzed the code.
+
+```
+* The following line crashes openc2e's CAOS lexer.
+"
+```
+
+I made a [pull request to fix the simplest crash with a unit test to demonstrate the fix](https://github.com/openc2e/openc2e/pull/215), but the project is semi-abandoned, so it might be awhile before I can get all of my fixes in. I hope they eventually get time to review it because I think my PR is neat.
 
 ### Fuzzing means you can do whatever you want
 
@@ -83,13 +90,17 @@ Usually, when I'm contributing to an open-source project, if I want to make a si
 
 ## Building my new development desktop
 
-I do most of my software development on my homelab VM server using VS Code with Remote SSH.
+I'm planning a dramatic transition to resume doing development like a normal person again.
 
-My main desktop is Windows 10. I've been a Windows user since I was seven years old using my parents' Windows 3.1 systems.
+Starting around 10 years ago, I found it easier to develop software on Linux, but I still preferred Windows as my main OS. I solved this by running Linux VMs in VirtualBox on my Windows desktop. I used per-project VMs to avoid dependency conflicts (e.g., my Python 2 project messing up my Python 3 project).
 
-I've always preferred the Windows' balance of usability and power
+In 2017, I got tired of having to reboot all of my VMs every time I rebooted my Windows system, so I [built my first homelab server](/building-a-vm-homelab-2017/). And by around 2019, I started doing all development with VS Code and Remote SSH, which mostly works fine but is unusual enough to cause issues occasionally.
 
-My dad said, "Given the amount of time you'll spend looking at your monitor, you might as well invest a lot in a good one." At the time, "a good one" was a 17" CRT.
+At this point, most of what I want is available on Linux. And I'm growing frustrated with Microsoft's increasingly invasive telemetry and ads in Windows, so I'm ready to switch to Linux.
+
+I've also stopped using per-project VMs ever since I discovered [per-project environments in Nix](/notes/nix-dev-environment/).
+
+I realized that now's my chance to ditch Windows, go all in on NixOS, and consolidate my separate VM and desktop machines into one. And because I hadn't upgraded my desktop in nine years, and I somehow convinced myself that I'm making an economically responsible choice by reducing two machines to one, I went overboard on the components:
 
 - CPU: Ryzen 9 7950X
 - Motherboard: Gigabyte X870 Aorus Elite
@@ -101,9 +112,13 @@ My dad said, "Given the amount of time you'll spend looking at your monitor, you
 - Monitor arm: Ergotron HX HD
 - PSU: SilverStone Platinum PS-ST55F-PT 550W
 
-The OS disk is most often the bottleneck in my workflows, so I got the best of the best there. The CPU is pretty fast but not top of the line. When I'm buying CPUs, I look at benchmarks and try to pick something that's 80-90% as good as the best possible option but at 50% or less of top-end prices.
+The OS disk is most often the bottleneck in my workflows, so I got the best of the best there.
 
-### Learning to use an ultrawide monitor
+The CPU is pretty fast but not top of the line. When I'm buying CPUs, I look at benchmarks and try to pick something that's 80-90% as good as the best possible option but at 50% or less of top-end prices.
+
+## Learning to use an ultrawide monitor
+
+My dad said, "Given the amount of time you'll spend looking at your monitor, you might as well invest a lot in a good one." At the time, a "good" monitor was a 17" CRT.
 
 I haven't received most of the components yet, but I already set up the monitor, and it's really nice.
 
@@ -111,7 +126,7 @@ But I quickly realized I needed a new strategy for managing windows. My old moni
 
 I originally tried [Komorebi](https://github.com/LGUG2Z/komorebi), but I found it too complicated to understand.
 
-I found Fancy Zones, and it does exactly what I want. It lets me define zones, and then I can dock windows to those zones by hotkey or with the mouse.
+I found [Fancy Zones](https://learn.microsoft.com/en-us/windows/powertoys/fancyzones), and it does exactly what I want. It lets me define zones, and then I can dock windows to those zones by hotkey or with the mouse.
 
 Here are my four zones:
 
@@ -122,7 +137,7 @@ Here are my four zones:
 
 I generally only dock web browsers and VS code windows. Everything else is just a floating window that I only use briefly.
 
-It felt like a dumb indulgence when I bought it, but I do find it legitimately useful. I've run into several situations where it's good to have at least three panes. Like one window for my IDE, one window for the browser to load the web app I'm working on, and one window to look up information about what I want to do next.
+It felt like a needless extravagance when I bought it, but I do find it legitimately useful. I've run into several situations where it's been helpful to have three windows side by side all dedicated to the same task.
 
 ## Wrap up
 
@@ -137,7 +152,3 @@ It felt like a dumb indulgence when I bought it, but I do find it legitimately u
 ### Goals for next month
 
 -
-
-### Requests for help
-
-TODO
