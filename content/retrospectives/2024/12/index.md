@@ -6,7 +6,9 @@ description: TODO - One-line summary
 
 ## Highlights
 
--
+- I found ways to procrastinate writing my book.
+- I had fun fuzz testing open-source projects.
+- I picked out components for a new high-end development desktop.
 
 ## Goal grades
 
@@ -37,13 +39,13 @@ So, I experimented with different fonts and found that I enjoyed working on the 
 {{<img src="after-font.jpg" has-border="true">}}
 {{</gallery>}}
 
-After I had my spiffy fonts, I got to thinking about the cover for my book. I plan to have one before I publish, so I might as well get it now. More people will probably be interested if I can show a nice cover. So, I wrote [a spec for the cover design](https://docs.google.com/document/d/1SUQ6GTeyL-XWmZYlJdQgyvQHZdHiUvCy0G-dh5nnrQM/edit?usp=sharing) and hired a designer to create it.
+After installing my spiffy new fonts, I got to thinking about the cover for my book. I plan to commission a cover before I publish the book, so I might as well get it now. More people will probably be interested if I can show a nice cover. So, I wrote [a spec for the cover design](https://docs.google.com/document/d/1SUQ6GTeyL-XWmZYlJdQgyvQHZdHiUvCy0G-dh5nnrQM/edit?usp=sharing) and hired a designer to work on it.
 
-A few days later, I got an email from a reader asking if they could buy access to the unfinished lessons in _Hit the Front Page of Hacker News_. I sent the two new unreleased sections and a link to the old course, and the reader seemed happy with the material. I got to thinking I should pause _Refactoring English_ and finish _Hit the Front Page of Hacker News_.
+A few days later, I got an email from a reader asking if they could buy access to the unfinished lessons in _Hit the Front Page of Hacker News_. I sent them my two new unreleased lessons and a link to the old course, and the reader seemed happy with the material. I got to thinking I should pause _Refactoring English_ and finish _Hit the Front Page of Hacker News_.
 
 At this point, I noticed that I was finding an awful lot of activities that weren't writing my book.
 
-It's easy to get distracted because finishing the book feels so far away. And because it's a book about writing, I feel like my writing has to be perfect, so I get hung up on whether every sentence is phrased as well as it could be.
+It's easy to get distracted because finishing the book is so far into the future. And because it's a book about writing, I feel like my writing has to be perfect, so I get hung up on wordsmithing everything.
 
 I think I'll have a better sense of what the work is like once I publish my first sample chapter and see reader feedback, so I'm going to just push on until that's done.
 
@@ -57,9 +59,11 @@ Nix [makes it easy](/nix-fuzz-testing-1/) to set up fuzz testing workflows, and 
 
 ### Fuzzing openc2e
 
-One night, I read a blog post about [fuzzing a random open-source utility that Facebook published](https://blog.fadyothman.com/meta-bug-bounty-fuzzing-netconsd-for-fun-and-profit-part-1-6ffe96eb1419), so I [spent an hour reproducing it with Nix](/notes/fuzz-netconsd/).
+One night, I read a blog post about [fuzzing a random open-source utility that Facebook published](https://blog.fadyothman.com/meta-bug-bounty-fuzzing-netconsd-for-fun-and-profit-part-1-6ffe96eb1419), so I [spent an hour reproducing that fuzzing workflow with Nix](/notes/fuzz-netconsd/).
 
-A few nights later, I spent a couple of hours [writing a fuzzer](https://gitlab.com/mtlynch/fuzz-openc2e) for [openc2e](https://openc2e.github.io/), the the open-source reimplementation of the _Creatures_ game series.
+A few nights later, I spent a couple of hours [writing a fuzzer](https://gitlab.com/mtlynch/fuzz-openc2e) for [openc2e](https://openc2e.github.io/), the open-source reimplementation of the [_Creatures_ game series](<https://en.wikipedia.org/wiki/Creatures_(video_game_series)>).
+
+{{<img src="Openc2e-c1-april2008.jpg" max-width="600px" caption="[openc2e](https://openc2e.github.io/) is the the open-source reimplementation of the [_Creatures_ game series](https://en.wikipedia.org/wiki/Creatures_(video_game_series)).">}}
 
 The original _Creatures_ game from 1996 included a custom scripting language and corresponding virtual machine. The language is called [Creatures Agent Object Script (CAOS)](https://creatures.fandom.com/wiki/CAOS), and it let players create custom add-ons for the game.
 
@@ -108,9 +112,9 @@ By 2019, I started doing all development with VS Code and Remote SSH, which most
 
 At this point, most of the software I want is available on Linux, and I'm growing frustrated with Microsoft's increasingly invasive telemetry and ads in Windows, so I'm ready to switch to Linux.
 
-Ever since I discovered [per-project environments in Nix](/notes/nix-dev-environment/), I've stopped using per-project VMs, and I just do all of my development in a single Debian VM with Nix installed.
+Ever since I discovered [per-project environments in Nix](/notes/nix-dev-environment/), I've stopped using per-project VMs, and I do all of my development in a single Debian VM with Nix installed.
 
-I realized that these two changes mean I no longer need a VM server or a Windows desktop. I'm going to try to go all-in on NixOS with a single desktop, as I've been enjoying NixOS on my Framework 13 laptop for the past few months.
+I realized that these two changes mean I no longer need a VM server or a Windows desktop. I'm going to try to go all-in on NixOS with a single desktop, as I've been enjoying NixOS on [my Framework 13 laptop](/retrospectives/2024/09/#making-nixos--framework-13-amd-7040-my-daily-driver) for the past few months.
 
 Because I hadn't upgraded my desktop in nine years, I convinced myself that I'm making an economically responsible choice by reducing two machines to one. That was helpful justification for somewhat overspending on my new system:
 
@@ -133,34 +137,54 @@ The CPU is pretty fast but not top of the line. When I'm buying CPUs, I look at 
 
 The biggest indulgence is the monitor. It's a ridiculous 49" ultrawide OLED:
 
-When I was 11 and the way I got new computers was by begging my parents for one, my dad surprised me with the biggest monitor I wanted. My dad said, "Given the amount of time you'll spend looking at your monitor, you might as well invest a lot in a good one." At the time, a "good" monitor was a 17" CRT.
+{{<img src="new-monitor.webp" max-width="700px" caption="The 49&quot; Samsung Odyssey G9 is the biggest indulgence of my new desktop.">}}
+
+I distinctly recall being overjoyed when I was 11 years old and my dad came back from CompUSA with a box for me containing one of the largest monitors available. At the time, it was probably a 17" CRT. "Given the amount of time you'll spend looking at your monitor," he explained, "we might as well invest in a good one." For context, both of my parents are programmers, and from a young age, I spent most of my free time at a computer.
+
+Ever since then, I've my dad's logic to justify buying extravagant monitors, and I feel like it's served me well. I'm at my computer for 2500 hours per year, so on a per-hour basis, the additional cost of a high-end monitor is basically free.
+
+Plus, now that I've experienced [Hacker News](https://news.ycombinator.com/) at 5120x1440px resolution, I can't imagine ever going back.
+
+{{<img src="hn-ultrawide.webp" max-width="700px" has-border="true" caption="You haven't truly browsed [Hacker News](https://news.ycombinator.com/) until you've done it at 5120x1400px resolution.">}}
 
 ## Learning to use an ultrawide monitor
 
-I haven't received most of the components yet, but I already set up the monitor, and it's really nice.
+I haven't received most of the components for my new computer yet, but I did set up the monitor, and it's really nice.
 
 But I quickly realized I needed a new strategy for managing windows. My old monitor was 34", and I mostly just used Win+Left / Win+Right to dock windows to half-width.
 
-I originally tried [Komorebi](https://github.com/LGUG2Z/komorebi), but I found it too complicated to understand.
+I originally tried [Komorebi](https://github.com/LGUG2Z/komorebi), but I found it too complicated.
 
 I found [Fancy Zones](https://learn.microsoft.com/en-us/windows/powertoys/fancyzones), and it does exactly what I want. It lets me define zones, and then I can dock windows to those zones by hotkey or with the mouse.
 
 Here are my four zones:
 
-1. 1000x1440 - Primary VS Code window
-1. 1000x1440 - Secondary VS Code window
-1. 1560x1440 - Primary web browser window
-1. 1560x1440 - Secondary web browser window
+1. 1000x1440px - Primary VS Code window
+1. 1000x1440px - Secondary VS Code window
+1. 1560x1440px - Primary web browser window
+1. 1560x1440px - Secondary web browser window
 
 I generally only dock web browsers and VS code windows. Everything else is just a floating window that I only use briefly.
 
-It felt like a needless extravagance when I bought it, but I do find it legitimately useful. I've run into several situations where it's been helpful to have three windows side by side all dedicated to the same task.
+Limiting VS Code to 1000px in width is helpful because I prefer to keep only the editing pane open. If there's more screen real estate, I forget and leave other panels open like the file explorer. But at 1000px, I can open side-panels occasionally, but it's noticeable enough that I close them afterward and get back to focusing on the main editing panel.
+
+{{<gallery caption="VS Code with side panels open (left) vs. only the editor open (right)">}}
+{{<img src="distracting-panels.webp" max-width="400px">}}
+{{<img src="just-editor.webp" max-width="400px">}}
+{{</gallery>}}
+
+I also didn't think I'd care about the sharpness of OLED vs. LED, but I do appreciate the difference. The blacks are blacker, which makes the image feel more crisp.
+
+Similarly, I didn't think I'd care about refresh rate, but I do notice a difference in 60 Hz vs. 120 Hz. The monitor supports 240 Hz, but Windows doesn't show me that option for some reason, so I'll try tinkering when I switch to NixOS.
 
 ## Wrap up
 
 ### What got done?
 
--
+- Cleaned up a lot of my blog's templating and CSS code and reorganized [the homepage](/).
+- Selected and ordered components for a new main desktop workstation.
+- Worked on design elements for _Refactoring English_.
+- Published a quick tutorial on [how to run simple services on NixOS](/notes/simple-go-web-service-nixos/)
 
 ### Lessons learned
 
