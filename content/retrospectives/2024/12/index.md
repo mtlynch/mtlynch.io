@@ -32,22 +32,38 @@ I got the chapter to about 60%, but I didn't focus as much as I could have.
 
 ## I need to stop procrastinating on the book
 
-I started working on the first chapter of my book, but I kept feeling distracted by my site's design.
+### Maybe I need new fonts
+
+I started working on the first chapter of my book, but I kept feeling distracted by my site's mediocre design.
 
 {{<img src="before-font.jpg" has-border="true" max-width="700px">}}
 
-My book's website is my first time ever creating a theme from scratch. It's just Bootstrap's default CSS with some custom styling that I've added.
+My book's website is my first time creating a theme from scratch. It's just Bootstrap's default CSS with some custom styling that I've added. I couldn't point to any specific problem, but it just felt off.
 
-So, I experimented with different fonts and found that I enjoyed working on the chapter more when I had nice-looking fonts. So, for the first time ever, I purchased fonts instead of using a free font from Google Fonts. I used [Concourse](https://mbtype.com/fonts/concourse/) and [Heliotrope](https://mbtype.com/fonts/heliotrope/), both designed by Matthew Butterick.
+I began looking at blogs and websites that I liked and tried out their fonts on my site:
+
+- [Jonas Hietala](https://www.jonashietala.se) uses [Concourse](https://practicaltypography.com/century-supra.html) and [Century Supra](https://practicaltypography.com/century-supra.html), which are paid fonts designed by [Matthew Butterick](https://matthewbutterick.com/).
+- [Xe Iaso](https://xeiaso.net/) uses Iosevka Aile Iaso, which turns out to be a font that [she designed herself](https://xeiaso.net/blog/iaso-fonts/).
+- [fasterthanlime](https://fasterthanli.me/) uses [Atkinson Hyperlegible](https://www.brailleinstitute.org/freefont/), a font that the Braille Institute distributes for free because it's good for people with vision impairment.
+
+So, for the first time ever, I purchased fonts instead of using a free font from Google Fonts. I used [Concourse](https://mbtype.com/fonts/concourse/) and [Heliotrope](https://mbtype.com/fonts/heliotrope/), both designed by Matthew Butterick.
 
 {{<gallery caption="I switched the *Refactoring English* website's font to [Concourse](https://mbtype.com/fonts/concourse/) and [Heliotrope](https://mbtype.com/fonts/heliotrope/)">}}
 {{<img src="before-font.jpg" has-border="true">}}
 {{<img src="after-font.jpg" has-border="true">}}
 {{</gallery>}}
 
-After installing my spiffy new fonts, I got to thinking about the cover for my book. I plan to commission a cover before I publish the book, so I might as well get it now. More people will probably be interested if I can show a nice cover. So, I wrote [a spec for the cover design](https://docs.google.com/document/d/1SUQ6GTeyL-XWmZYlJdQgyvQHZdHiUvCy0G-dh5nnrQM/edit?usp=sharing) and hired a designer to work on it.
+I was surprised at how much of a difference nice fonts made. It felt like cheating that I didn't have to make any other design changes, and my site looked 3x better with a nice font.
+
+### Maybe I need a book cover
+
+After installing my spiffy new fonts, I got to thinking about the cover for my book. I plan to commission a cover before I publish the book, so I might as well get it now. More people will be interested if they see a nice cover. So, I wrote [a spec for the cover design](https://docs.google.com/document/d/1SUQ6GTeyL-XWmZYlJdQgyvQHZdHiUvCy0G-dh5nnrQM/edit?usp=sharing) and hired a designer to work on it.
+
+### Maybe I should go back to my previous idea
 
 A few days later, I got an email from a reader asking if they could buy access to the unfinished lessons in _Hit the Front Page of Hacker News_. I sent them my two new unreleased lessons and a link to the old course, and the reader seemed happy with the material. I got to thinking I should pause _Refactoring English_ and finish _Hit the Front Page of Hacker News_.
+
+### Maybe I should focus
 
 At this point, I noticed that I was finding an awful lot of activities that weren't writing my book.
 
@@ -59,7 +75,7 @@ I think I'll have a better sense of what the work is like once I publish my firs
 
 Notwithstanding the previous section, I had a lot of fun last month with fuzz testing.
 
-For most of November, I had a few hours to myself when I was waiting for my three-month old's first wakeup of the night, which could happen anywhere from 1-4 hours after we put him to bed. In those hours, it's hard to focus on programming because I'm tired from the day and could be interrupted at any moment, but it's the perfect time to fuzz test stuff. Fuzz requires a relatively low level of focus, as it's a lot of trial and error just getting things set up.
+For most of November, I had a few hours to myself when I was waiting for my three-month-old's first wakeup of the night, which could happen anywhere from 1-4 hours after we put him to bed. In those hours, it's hard to focus on programming because I'm tired from the day and could be interrupted at any moment, but it's the perfect time to fuzz test stuff. Fuzzing requires a relatively low level of focus, as it's a lot of trial and error just getting things set up.
 
 ### Fuzzing openc2e
 
@@ -69,9 +85,9 @@ One night, I read a blog post about [fuzzing a random open-source utility that F
 
 A few nights later, I spent a couple of hours [writing a fuzzer](https://gitlab.com/mtlynch/fuzz-openc2e) for [openc2e](https://openc2e.github.io/), the open-source reimplementation of the [_Creatures_ game series](<https://en.wikipedia.org/wiki/Creatures_(video_game_series)>).
 
-{{<img src="Openc2e-c1-april2008.jpg" max-width="600px" caption="[openc2e](https://openc2e.github.io/) is the the open-source reimplementation of the [_Creatures_ game series](https://en.wikipedia.org/wiki/Creatures_(video_game_series)).">}}
+{{<img src="Openc2e-c1-april2008.jpg" max-width="600px" caption="[openc2e](https://openc2e.github.io/) is the open-source reimplementation of the [_Creatures_ game series](https://en.wikipedia.org/wiki/Creatures_(video_game_series)).">}}
 
-The original _Creatures_ game from 1996 included a custom scripting language and corresponding virtual machine. The language is called [Creatures Agent Object Script (CAOS)](https://creatures.fandom.com/wiki/CAOS), and it let players create custom add-ons for the game.
+The original _Creatures_ game from 1996 included a custom scripting language and corresponding virtual machine. The language is called [Creatures Agent Object Script (CAOS)](https://creatures.fandom.com/wiki/CAOS), and it lets players create custom add-ons for the game.
 
 CAOS is a low-level language that looks a bit like assembly:
 
@@ -94,15 +110,15 @@ One of the crashes is just an unterminated double quote, which confirmed my susp
 "
 ```
 
-I made a [pull request to fix the simplest crash with a unit test to demonstrate the fix](https://github.com/openc2e/openc2e/pull/215), but the project is semi-abandoned, so it might be awhile before I can get all of my fixes in. I hope they eventually get time to review it because I think my PR is neat.
+I made a [pull request to fix the simplest crash with a unit test to demonstrate the fix](https://github.com/openc2e/openc2e/pull/215), but the project is semi-abandoned, so it might be a while before I can get all of my fixes in. I hope they eventually get time to review it because I think my PR is neat.
 
 ### Fuzzing means you can do whatever you want
 
 One of the most fun things about fuzzing with Nix is that you can mess around with the underlying project without bothering anyone.
 
-When I was trying to fuzz openc2e, I realized that the code I want to link against is compiled into an object that's not friendly to linking. I was trying to figure out how to link against the code when I realized I can just [patch their Makefile](https://gitlab.com/mtlynch/fuzz-openc2e/-/blob/dc48bfbe62bdc4a99eab2e9662a780c253654558/share-openc2e-lib.patch) in my repo and make whatever changes I want.
+When I was trying to fuzz openc2e, I realized that the code I wanted to link against was compiled into an object that's not friendly to linking. I was trying to figure out how to link against the code when I realized I could just [patch their Makefile](https://gitlab.com/mtlynch/fuzz-openc2e/-/blob/dc48bfbe62bdc4a99eab2e9662a780c253654558/share-openc2e-lib.patch) in my repo and make whatever changes I want.
 
-Usually, when I'm contributing to an open-source project, if I want to make a significant change like changing a library from private to public, I'd have to spend a lot of time understanding why it's private to begin with and then make the case to maintainers for why it makes sense to export the library. But for fuzzing, I'm just playing in my own separate area, and I can futz around with whatever I want.
+Usually, when I'm contributing to an open-source project, if I want to make a significant change like changing a library from private to public, I'd have to spend a lot of time understanding why it's private to begin with and then make the case to maintainers for why it makes sense to export the library. But for fuzzing, I'm just off in my own personal sandbox, and I can futz around with whatever I want.
 
 ## Building my new development desktop
 
@@ -114,13 +130,14 @@ In 2017, I got tired of having to reboot all of my VMs every time I rebooted my 
 
 By 2019, I started doing all development with VS Code and Remote SSH, which mostly works but is unusual enough to cause issues occasionally.
 
-At this point, most of the software I want is available on Linux, and I'm growing frustrated with Microsoft's increasingly invasive telemetry and ads in Windows, so I'm ready to switch to Linux.
+Then, two changes happened in the last year:
 
-Ever since I discovered [per-project environments in Nix](/notes/nix-dev-environment/), I've stopped using per-project VMs, and I do all of my development in a single Debian VM with Nix installed.
+1. I realized that virtually all of the software I want is available on Linux. I'm growing frustrated with Microsoft's increasingly invasive telemetry and ads in Windows, so I'm ready to switch to Linux.
+1. Ever since I discovered [per-project environments in Nix](/notes/nix-dev-environment/), I've stopped using per-project VMs, and I do all of my development in a single Debian VM with Nix installed.
 
-I realized that these two changes mean I no longer need a VM server or a Windows desktop. I'm going to try to go all-in on NixOS with a single desktop, as I've been enjoying NixOS on [my Framework 13 laptop](/retrospectives/2024/09/#making-nixos--framework-13-amd-7040-my-daily-driver) for the past few months.
+These two changes mean I no longer need a VM server or a Windows desktop. I'm going to consolidate down to a single desktop running Linux with NixOS, as I've been enjoying NixOS on [my Framework 13 laptop](/retrospectives/2024/09/#making-nixos--framework-13-amd-7040-my-daily-driver) for the past few months.
 
-I convinced myself that I'm making an economically responsible choice by reducing two machines to one, which was also how I justified somewhat overspending on my new system:
+I'm making an economically responsible choice by reducing two machines to one, which was how I rationalized overspending on my new system:
 
 | Component   | Old Desktop                    | New Desktop                           |
 | ----------- | ------------------------------ | ------------------------------------- |
@@ -135,25 +152,25 @@ I convinced myself that I'm making an economically responsible choice by reducin
 | Monitor     | LG 34UMP95 34"                 | Samsung Odyssey OLED G9 49" Ultrawide |
 | Monitor Arm | AmazonBasics Monitor Arm       | Ergotron HX HD                        |
 
-The disk is most often the bottleneck in my workflows, so I got the best of the best there, even though it feels inudulgent. I only need a single OS disk, as most of my data is on my [storage server](/budget-nas/).
+The disk is most often the bottleneck in my workflows, so I got the best of the best there, even though it feels indulgent. I only need a single OS disk, as most of my data is on my [storage server](/budget-nas/).
 
-The CPU is pretty fast but not top of the line. When I'm buying CPUs, I look at benchmarks and try to pick something that's 80-90% as good as the best possible option but at 50% or less of top-end prices.
+The CPU is fast but not top-of-the-line. When I'm buying CPUs, I look at benchmarks and try to pick something that's 80-90% as good as the best possible option but at 50% or less of top-end prices.
 
-The biggest indulgence is the monitor. It's a ridiculous 49" ultrawide OLED:
+The biggest extravagance is the monitor. It's a ridiculous 49" ultrawide OLED:
 
 {{<img src="new-monitor.webp" max-width="700px" caption="The 49&quot; Samsung Odyssey G9 is the biggest indulgence of my new desktop.">}}
 
-I distinctly recall the joy I felt when I was 11 years old and my dad came back from CompUSA and presented me with a box containing one of the largest monitors available, which was probably a 17" CRT. "Given the amount of time you'll spend looking at your monitor," he explained, "we might as well invest in a good one." For context, both of my parents are programmers, and from a young age, I spent most of my free time at a computer.
+I distinctly recall the joy I felt when I was 11 years old, and my dad came back from CompUSA and presented me with a box containing one of the largest monitors available, which was probably a 17" CRT. "Given the amount of time you'll spend looking at your monitor," he explained, "we might as well invest in a good one." For context, both of my parents are programmers, and from a young age, I spent most of my free time at a computer.
 
-Ever since then, I've my dad's logic to justify buying extravagant monitors, and I feel like it's served me well. I'm at my computer for 2500 hours per year. On a per-hour basis, the cost of a high-end monitor is basically nil.
+Ever since then, I've used my dad's logic to justify buying premium monitors, and it's served me well. I'm at my computer for 2500 hours per year. On a per-hour basis, the cost of a high-end monitor is basically nil.
 
-Plus, now that I've experienced [Hacker News](https://news.ycombinator.com/) at 5120x1440px resolution, I can't imagine ever going back.
+Plus, now that I've experienced [Hacker News](https://news.ycombinator.com/) at 5120x1440px resolution, I can't ever go back.
 
 {{<img src="hn-ultrawide.webp" max-width="700px" has-border="true" caption="You haven't truly browsed [Hacker News](https://news.ycombinator.com/) until you've done it at 5120x1400px resolution.">}}
 
 ## Learning to use an ultrawide monitor
 
-I haven't received all of the components for my new computer yet, but I did already set up my new monitor. I quickly realized I needed a new strategy for managing windows on my desktop.
+I haven't received all of the components for my new computer yet, but I already set up my new monitor. I quickly realized I needed a new strategy for managing windows on my desktop.
 
 My old monitor was 34", and I mostly used Win+Left / Win+Right to dock windows to half-width on my desktop.
 
@@ -196,4 +213,4 @@ Similarly, I didn't think I'd care about refresh rate, but I do notice a differe
 ### Goals for next month
 
 - Finish two chapters of _Refactoring English_.
-- Work with designer to complete cover design for _Refactoring English_.
+- Work with a designer to complete the cover design for _Refactoring English_.
