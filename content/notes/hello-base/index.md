@@ -99,7 +99,7 @@ Maybe for the first example, that's the way it has to be, but is there something
 
 If the reader isn't excited about the idea of storing data on a blockchain for its own sake, what's something exciting you can do easily with Base that's either hard or impossible with web2 technologies?
 
-Can I put content behind a paywall without giving Gumroad a 10% cut? Can I create a simple way for fans to give me monthly donations without getting approval from Patreon?
+Can I put content behind a paywall without giving Gumroad a 13% cut? Can I create a simple way for fans to give me monthly donations without getting approval from Patreon?
 
 ### Minimize jargon
 
