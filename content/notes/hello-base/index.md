@@ -140,6 +140,8 @@ I was relieved to find it let me create the wallet with only a passkey, but mayb
 
 But I'd love to see this friction gone entirely. I'd prefer a tutorial that's frictionless and fake (i.e. doesn't really publish to the blockchain) than one that makes me jump through hoops just to publish a "hello world" smart contract to the Base testnet.
 
+[mess with dns](https://messwithdns.net/) by [Julia Evans](https://jvns.ca/) is a great example of a tutorial that requires complicated infrastructure (a DNS server), but the author abstracted away the complicated bits so that the reader can do everything from within a single web app.
+
 ### Test on Firefox
 
 I was able to get through the tutorial up to "Read Contract" and then it just stopped working at "Read Contract." I'm using Firefox on Win10:
