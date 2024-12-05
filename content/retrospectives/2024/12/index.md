@@ -1,14 +1,14 @@
 ---
 title: "Paternity Leave: Month 4"
-date: "2024-12-09"
-description: TODO - One-line summary
+date: "2024-12-06"
+description: I need to stop procrastinating.
 ---
 
 ## Highlights
 
 - I found ways to procrastinate writing my book.
 - I had fun fuzz testing open-source projects.
-- I picked out components for a new high-end development desktop.
+- I picked out components for a new high-end desktop computer for software development.
 
 ## Goal grades
 
@@ -19,18 +19,24 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: Continued to enjoy family time.
 - **Grade**: A
 
-TODO
+I'm continuing to enjoy the balance between enjoying family time during parental leave while also finding time to work on personal and professional projects.
 
 ### Complete and publish a chapter of [_Refactoring English_](https://refactoringenglish.com)
 
 - **Result**: Worked on the chapter but didn't publish anything.
 - **Grade**: D
 
-I underestimated this goal when I wrote it. I had started one chapter years ago and kept returning to it, so in my mind, it was like 80% complete, but when I returned to it this time, it felt more like 20% complete.
+I underestimated this goal when I wrote it. I had started one chapter years ago and kept returning to sporadically. In my memory, the chapter was 80% complete already, but when I returned to it this time, it felt more like 20% complete.
+
+I got the chapter to about 60%, but I didn't focus as much as I could have.
 
 ## I need to stop procrastinating on the book
 
-I started working on the first chapter of my book, and I felt increasingly distracted by my site's style. It's the first time I've published a website without using a third-party theme. It's just Bootstrap's default CSS with some custom styling that I've added.
+I started working on the first chapter of my book, but I kept feeling distracted by my site's design.
+
+{{<img src="before-font.jpg" has-border="true" max-width="700px">}}
+
+My book's website is my first time ever creating a theme from scratch. It's just Bootstrap's default CSS with some custom styling that I've added.
 
 So, I experimented with different fonts and found that I enjoyed working on the chapter more when I had nice-looking fonts. So, for the first time ever, I purchased fonts instead of using a free font from Google Fonts. I used [Concourse](https://mbtype.com/fonts/concourse/) and [Heliotrope](https://mbtype.com/fonts/heliotrope/), both designed by Matthew Butterick.
 
@@ -45,7 +51,7 @@ A few days later, I got an email from a reader asking if they could buy access t
 
 At this point, I noticed that I was finding an awful lot of activities that weren't writing my book.
 
-It's easy to get distracted because finishing the book is so far into the future. And because it's a book about writing, I feel like my writing has to be perfect, so I get hung up on wordsmithing everything.
+It's easy to get distracted because finishing the book feels like such a distant goal. And because it's a book about writing, I feel like my writing has to be perfect, so I get hung up on wordsmithing everything.
 
 I think I'll have a better sense of what the work is like once I publish my first sample chapter and see reader feedback, so I'm going to just push on until that's done.
 
@@ -53,11 +59,11 @@ I think I'll have a better sense of what the work is like once I publish my firs
 
 Notwithstanding the previous section, I had a lot of fun last month with fuzz testing.
 
-For most of November, I had a few hours to myself when I was waiting for my three-month old's first wakeup of the night, which could happen anywhere from 1-4 hours after we put him to bed. In those hours, it's hard to focus on programming because I'm tired from the day and could be interrupted at any moment, but it's the perfect time to fuzz test stuff. Fuzz testing requires some focus, but it's a lot of trial and error just getting things set up.
-
-Nix [makes it easy](/nix-fuzz-testing-1/) to set up fuzz testing workflows, and I feel like the world hasn't caught on yet.
+For most of November, I had a few hours to myself when I was waiting for my three-month old's first wakeup of the night, which could happen anywhere from 1-4 hours after we put him to bed. In those hours, it's hard to focus on programming because I'm tired from the day and could be interrupted at any moment, but it's the perfect time to fuzz test stuff. Fuzz requires a relatively low level of focus, as it's a lot of trial and error just getting things set up.
 
 ### Fuzzing openc2e
+
+Nix [makes it easy](/nix-fuzz-testing-1/) to set up fuzz testing workflows, and I feel like the world hasn't caught on yet.
 
 One night, I read a blog post about [fuzzing a random open-source utility that Facebook published](https://blog.fadyothman.com/meta-bug-bounty-fuzzing-netconsd-for-fun-and-profit-part-1-6ffe96eb1419), so I [spent an hour reproducing that fuzzing workflow with Nix](/notes/fuzz-netconsd/).
 
@@ -94,9 +100,7 @@ I made a [pull request to fix the simplest crash with a unit test to demonstrate
 
 One of the most fun things about fuzzing with Nix is that you can mess around with the underlying project without bothering anyone.
 
-When I was trying to fuzz openc2e, I realized that the code I want to link against is compiled into an object that's not friendly to linking. I was trying to figure out how to link against the code when I realized I can just [patch their Makefile](https://gitlab.com/mtlynch/fuzz-openc2e/-/blob/dc48bfbe62bdc4a99eab2e9662a780c253654558/share-openc2e-lib.patch) in my repo, and nobody can stop me!
-
-Adding in my custom patch meant that when I compile that repo, I get a shared library to link against, so I can write a test harness that throws a bunch of crazy data at their code, and I can see what causes crashes.
+When I was trying to fuzz openc2e, I realized that the code I want to link against is compiled into an object that's not friendly to linking. I was trying to figure out how to link against the code when I realized I can just [patch their Makefile](https://gitlab.com/mtlynch/fuzz-openc2e/-/blob/dc48bfbe62bdc4a99eab2e9662a780c253654558/share-openc2e-lib.patch) in my repo and make whatever changes I want.
 
 Usually, when I'm contributing to an open-source project, if I want to make a significant change like changing a library from private to public, I'd have to spend a lot of time understanding why it's private to begin with and then make the case to maintainers for why it makes sense to export the library. But for fuzzing, I'm just playing in my own separate area, and I can futz around with whatever I want.
 
@@ -106,9 +110,9 @@ I'm planning a dramatic transition in my software development habits: I'm going 
 
 Starting around 10 years ago, I found it easier to develop software on Linux, but I still preferred Windows as my main OS. I solved this by running Linux VMs in VirtualBox on my Windows desktop. I used per-project VMs to avoid dependency conflicts (e.g., my Python 2 project messing up my Python 3 project).
 
-In 2017, I got tired of having to reboot all of my VMs every time I rebooted my Windows system, so I [built my first homelab server](/building-a-vm-homelab-2017/).
+In 2017, I got tired of having to reboot all of my VMs every time I rebooted my Windows system, so I [built my first homelab VM server](/building-a-vm-homelab-2017/).
 
-By 2019, I started doing all development with VS Code and Remote SSH, which mostly works fine but is unusual enough to cause issues occasionally.
+By 2019, I started doing all development with VS Code and Remote SSH, which mostly works but is unusual enough to cause issues occasionally.
 
 At this point, most of the software I want is available on Linux, and I'm growing frustrated with Microsoft's increasingly invasive telemetry and ads in Windows, so I'm ready to switch to Linux.
 
@@ -116,7 +120,7 @@ Ever since I discovered [per-project environments in Nix](/notes/nix-dev-environ
 
 I realized that these two changes mean I no longer need a VM server or a Windows desktop. I'm going to try to go all-in on NixOS with a single desktop, as I've been enjoying NixOS on [my Framework 13 laptop](/retrospectives/2024/09/#making-nixos--framework-13-amd-7040-my-daily-driver) for the past few months.
 
-Because I hadn't upgraded my desktop in nine years, I convinced myself that I'm making an economically responsible choice by reducing two machines to one. That was helpful justification for somewhat overspending on my new system:
+I convinced myself that I'm making an economically responsible choice by reducing two machines to one, which was also how I justified somewhat overspending on my new system:
 
 | Component   | Old Desktop                    | New Desktop                           |
 | ----------- | ------------------------------ | ------------------------------------- |
@@ -139,9 +143,9 @@ The biggest indulgence is the monitor. It's a ridiculous 49" ultrawide OLED:
 
 {{<img src="new-monitor.webp" max-width="700px" caption="The 49&quot; Samsung Odyssey G9 is the biggest indulgence of my new desktop.">}}
 
-I distinctly recall being overjoyed when I was 11 years old and my dad came back from CompUSA with a box for me containing one of the largest monitors available. At the time, it was probably a 17" CRT. "Given the amount of time you'll spend looking at your monitor," he explained, "we might as well invest in a good one." For context, both of my parents are programmers, and from a young age, I spent most of my free time at a computer.
+I distinctly recall the joy I felt when I was 11 years old and my dad came back from CompUSA and presented me with a box containing one of the largest monitors available, which was probably a 17" CRT. "Given the amount of time you'll spend looking at your monitor," he explained, "we might as well invest in a good one." For context, both of my parents are programmers, and from a young age, I spent most of my free time at a computer.
 
-Ever since then, I've my dad's logic to justify buying extravagant monitors, and I feel like it's served me well. I'm at my computer for 2500 hours per year, so on a per-hour basis, the additional cost of a high-end monitor is basically free.
+Ever since then, I've my dad's logic to justify buying extravagant monitors, and I feel like it's served me well. I'm at my computer for 2500 hours per year. On a per-hour basis, the cost of a high-end monitor is basically nil.
 
 Plus, now that I've experienced [Hacker News](https://news.ycombinator.com/) at 5120x1440px resolution, I can't imagine ever going back.
 
@@ -149,13 +153,11 @@ Plus, now that I've experienced [Hacker News](https://news.ycombinator.com/) at 
 
 ## Learning to use an ultrawide monitor
 
-I haven't received most of the components for my new computer yet, but I did set up the monitor, and it's really nice.
+I haven't received all of the components for my new computer yet, but I did already set up my new monitor. I quickly realized I needed a new strategy for managing windows on my desktop.
 
-But I quickly realized I needed a new strategy for managing windows. My old monitor was 34", and I mostly just used Win+Left / Win+Right to dock windows to half-width.
+My old monitor was 34", and I mostly used Win+Left / Win+Right to dock windows to half-width on my desktop.
 
-I originally tried [Komorebi](https://github.com/LGUG2Z/komorebi), but I found it too complicated.
-
-I found [Fancy Zones](https://learn.microsoft.com/en-us/windows/powertoys/fancyzones), and it does exactly what I want. It lets me define zones, and then I can dock windows to those zones by hotkey or with the mouse.
+I tried [Komorebi](https://github.com/LGUG2Z/komorebi), but I found it too complicated. Then, I found [Fancy Zones](https://learn.microsoft.com/en-us/windows/powertoys/fancyzones), and it does exactly what I want. It lets me define zones through a GUI, and then I can dock windows to those zones by hotkey or with the mouse.
 
 Here are my four zones:
 
@@ -184,12 +186,14 @@ Similarly, I didn't think I'd care about refresh rate, but I do notice a differe
 - Cleaned up a lot of my blog's templating and CSS code and reorganized [the homepage](/).
 - Selected and ordered components for a new main desktop workstation.
 - Worked on design elements for _Refactoring English_.
-- Published a quick tutorial on [how to run simple services on NixOS](/notes/simple-go-web-service-nixos/)
+- Published a quick tutorial on [how to run simple services on NixOS](/notes/simple-go-web-service-nixos/).
 
 ### Lessons learned
 
--
+- Workflows that let you apply custom patches to other projects provide a pleasant sense of freedom.
+  - You get to do whatever you want because the changes only affect you. And if you have a workflow that makes patching easy, you don't feel the burden of taking on tasks associated with building the code.
 
 ### Goals for next month
 
-- Finish two chapters of _Refactoring English_
+- Finish two chapters of _Refactoring English_.
+- Work with designer to complete cover design for _Refactoring English_.
