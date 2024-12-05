@@ -117,7 +117,7 @@ Do we need these explanations at all? If I'm following a tutorial, I just want t
 
 One of my biggest gripes with the messaging about Base is that they keep repeating this chant of, "It's the easiest way for developers to build new web apps! It's permissionless, so anyone can do it anywhere!"
 
-And then you try to start building and they're like, "Oh, by the way, you need a Coinbase account\*, and Coinbase is going to need to do a full body scan to verify your identity. And also, your app can't store persistent data that's more than a few kilobytes unless you do these awkward workarounds. And also, you can't ever change your app after you deploy it unless you do these awkward workarounds."
+And then you try to start building and they're like, "Oh, by the way, you need a Coinbase account\*, and Coinbase is going to need to do a full body scan to verify your identity. And also, your app [can't store persistent data that's more than a few kilobytes](/notes/noah-bragg-stokefire-1/#why-blockchain) unless you do these awkward workarounds. And also, you can't ever change your app after you deploy it unless you do [these awkward workarounds](/notes/noah-bragg-stokefire-1/#diamond)."
 
 \* I know you don't really need a Coinbase account to use Base, but the tutorials all take that path without presenting alternatives.
 
