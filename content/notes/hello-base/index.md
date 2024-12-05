@@ -7,13 +7,13 @@ tags:
 
 ## The cryptocurrency language barrier
 
-There's an unforunate language barrier among technologists right now. Cryptocurrency enthusiasts are excited about the ecosystem and what's going on in crypto-world right now. They're trying to bring new people in, but they're often so entrenched in their crypto bubble that they struggle to explain any crypto stuff to non-crypto people.
+There's an unforunate language barrier among technologists right now.
+
+Cryptocurrency enthusiasts are excited about the ecosystem and what's going on in crypto-world right now. They're trying to bring new people in, but they're often so entrenched in their crypto bubble that they struggle to explain any crypto stuff to non-crypto people.
 
 I feel like I'm a good candidate to bridge the language gap, as I understand the fundamentals of cryptocurrency but I haven't been following any crypto stuff closely for about seven years.
 
-I also _want_ to like cryptocurrency. I see a lot of potential, but I haven't found a way to get excited about it in a long time.
-
-## My previous writing about Base
+## Base is supposed to be the bridge
 
 A year ago, I listented to [an interview with Jesse Pollak on an episode of _Into the Bytecode_](https://www.intothebytecode.com/jesse-pollak/). He was excited about this new technology Coinbase was working on called [Base](https://base.org).
 
@@ -29,7 +29,7 @@ This week, [Steve Simkins](https://x.com/stevedylandev) [tagged me on Twitter](h
 
 - [Hello Base](https://www.hellobase.dev/)
 
-So, I'm going to take another crack at Base and share my thoughts as a non-crypto insider about how the messaging looks.
+I'm going to take another crack at Base and share my thoughts as a non-crypto insider about how the messaging looks.
 
 ## What I like about Hello Base
 
