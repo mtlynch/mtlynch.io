@@ -91,7 +91,7 @@ The original _Creatures_ game from 1996 included a custom scripting language and
 
 CAOS is a low-level language that looks a bit like assembly:
 
-```
+```text
 SETS VA00 "he"
 ADDS VA00 "llo"
 DBG: ASRT VA00 eq "hello"
@@ -105,7 +105,7 @@ I started by fuzzing the lexer for the CAOS language, and I immediately found a 
 
 One of the crashes was just an unterminated double quote, which confirmed my suspicion that nobody had ever fuzzed the code.
 
-```
+```text
 * The following line crashes openc2e's CAOS lexer.
 "
 ```
