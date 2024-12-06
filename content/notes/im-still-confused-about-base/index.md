@@ -5,7 +5,7 @@ tags:
   - ethereum
 ---
 
-A year ago, I listented to [an interview with Jesse Pollak on an episode of _Into the Bytecode_](https://www.intothebytecode.com/jesse-pollak/).
+A year ago, I listened to [an interview with Jesse Pollak on an episode of _Into the Bytecode_](https://www.intothebytecode.com/jesse-pollak/).
 
 Jesse works for Coinbase, and he noticed that lots of developers building apps on top of Ethereum were solving the same problems over and over again. He started a project at Coinbase to create a layer on top of Etherum called Base. Base would get Ethereum developers up and running faster because they could use shared solutions to these common problems.
 
