@@ -41,7 +41,7 @@ This integration is a Big Deal, and I'm planning to write a lot more about once 
 
 A postmortem is an exercise to learn from a recent experience that did not go according to plan.
 
-Postmortems are blame-free: we are identifying problems in our *processes *that led to bad outcomes. We are not attempting to identify or shame _people_. It is assumed that all people who participated in the event under discussion are competent and well-intentioned.
+Postmortems are blame-free: we are identifying problems in our _processes_ that led to bad outcomes. We are not attempting to identify or shame _people_. It is assumed that all people who participated in the event under discussion are competent and well-intentioned.
 
 See [“Postmortem Culture: Learning from Failure”](https://landing.google.com/sre/book/chapters/postmortem-culture.html) from the SRE book for more details.
 
