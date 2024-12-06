@@ -2,6 +2,8 @@
 title: "Paternity Leave: Month 4"
 date: "2024-12-06"
 description: I need to stop procrastinating.
+images:
+  - /retrospectives/2024/12/og-image.webp
 ---
 
 ## Highlights
