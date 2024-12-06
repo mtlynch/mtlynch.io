@@ -19,16 +19,16 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: Continued to enjoy family time.
 - **Grade**: A
 
-I'm continuing to enjoy the balance between enjoying family time during parental leave while also finding time to work on personal and professional projects.
+During my self-managed paternity leave, I'm continuing to enjoy the balance between my family time and my time working on personal and professional projects.
 
 ### Complete and publish a chapter of [_Refactoring English_](https://refactoringenglish.com)
 
 - **Result**: Worked on the chapter but didn't publish anything.
 - **Grade**: D
 
-I underestimated this goal when I wrote it. I had started one chapter years ago and kept returning to sporadically. In my memory, the chapter was 80% complete already, but when I returned to it this time, it felt more like 20% complete.
+I underestimated this goal when I wrote it. I had started one chapter years ago and kept returning to it sporadically. In my memory, the chapter was 80% complete already, but when I returned to it this time, it felt more like 20% complete.
 
-I got the chapter to about 60%, but I didn't focus as much as I could have.
+I got the chapter to about 60% done, but I didn't focus as much as I could have.
 
 ## I need to stop procrastinating on the book
 
@@ -38,7 +38,7 @@ I started working on the first chapter of my book, but I kept feeling distracted
 
 {{<img src="before-font.jpg" has-border="true" max-width="700px">}}
 
-My book's website is my first time creating a theme from scratch. It's just Bootstrap's default CSS with some custom styling that I've added. I couldn't point to any specific problem, but it just felt off.
+My book's website uses I simple design theme that I created. It's just Bootstrap's default CSS with some custom styling that I've added. I couldn't point to any specific problem, but the look just felt off.
 
 I began looking at blogs and websites that I liked and tried out their fonts on my site:
 
@@ -46,14 +46,14 @@ I began looking at blogs and websites that I liked and tried out their fonts on 
 - [Xe Iaso](https://xeiaso.net/) uses Iosevka Aile Iaso, which turns out to be a font that [she designed herself](https://xeiaso.net/blog/iaso-fonts/).
 - [fasterthanlime](https://fasterthanli.me/) uses [Atkinson Hyperlegible](https://www.brailleinstitute.org/freefont/), a font that the Braille Institute distributes for free because it's good for people with vision impairment.
 
-So, for the first time ever, I purchased fonts instead of using a free font from Google Fonts. I used [Concourse](https://mbtype.com/fonts/concourse/) and [Heliotrope](https://mbtype.com/fonts/heliotrope/), both designed by Matthew Butterick.
+The font that looked best for the book's website was [Concourse](https://mbtype.com/fonts/concourse/), which led me to explore all of [Matthew Butterick's fonts](https://mbtype.com). For the first time ever, I purchased fonts instead of using a free font from Google Fonts. I used [Concourse](https://mbtype.com/fonts/concourse/) for the headings and [Heliotrope](https://mbtype.com/fonts/heliotrope/) for the text.
 
 {{<gallery caption="I switched the *Refactoring English* website's font to [Concourse](https://mbtype.com/fonts/concourse/) and [Heliotrope](https://mbtype.com/fonts/heliotrope/)">}}
 {{<img src="before-font.jpg" has-border="true">}}
 {{<img src="after-font.jpg" has-border="true">}}
 {{</gallery>}}
 
-I was surprised at how much of a difference nice fonts made. It felt like cheating that I didn't have to make any other design changes, and my site looked 3x better with a nice font.
+I was surprised at how much of a difference nice fonts made. It felt like cheating that I didn't have to make any other design changes, and my site looked 3x better.
 
 ### Maybe I need a book cover
 
@@ -61,7 +61,7 @@ After installing my spiffy new fonts, I got to thinking about the cover for my b
 
 ### Maybe I should go back to my previous idea
 
-A few days later, I got an email from a reader asking if they could buy access to the unfinished lessons in _Hit the Front Page of Hacker News_. I sent them my two new unreleased lessons and a link to the old course, and the reader seemed happy with the material. I got to thinking I should pause _Refactoring English_ and finish _Hit the Front Page of Hacker News_.
+A few days later, I got an email from a reader asking if they could buy access to the unfinished lessons in _Hit the Front Page of Hacker News_. I sent them my two new unreleased lessons and a link to the old course. They seemed happy with the material. I got to thinking I should pause _Refactoring English_ and finish my reboot of _Hit the Front Page of Hacker News_.
 
 ### Maybe I should focus
 
@@ -69,13 +69,13 @@ At this point, I noticed that I was finding an awful lot of activities that were
 
 It's easy to get distracted because finishing the book feels like such a distant goal. And because it's a book about writing, I feel like my writing has to be perfect, so I get hung up on wordsmithing everything.
 
-I think I'll have a better sense of what the work is like once I publish my first sample chapter and see reader feedback, so I'm going to just push on until that's done.
+I think I'll have a better feel for the book once I publish my first sample chapter and see reader feedback. I'm just going to push on until that's done.
 
 ## Fuzzing is super fun
 
 Notwithstanding the previous section, I had a lot of fun last month with fuzz testing.
 
-For most of November, I had a few hours to myself when I was waiting for my three-month-old's first wakeup of the night, which could happen anywhere from 1-4 hours after we put him to bed. In those hours, it's hard to focus on programming because I'm tired from the day and could be interrupted at any moment, but it's the perfect time to fuzz test stuff. Fuzzing requires a relatively low level of focus, as it's a lot of trial and error just getting things set up.
+For most of November, I had a few hours to myself when I was waiting for my three-month-old's first wakeup of the night, which could happen anywhere from 1-4 hours after we put him to bed. In those hours, it's hard to focus on programming because I'm tired from the day and could be interrupted at any moment, but it's the perfect time to fuzz test. Fuzzing requires a relatively low level of focus, as it's mostly trial and error just getting things set up.
 
 ### Fuzzing openc2e
 
@@ -103,7 +103,7 @@ I started by fuzzing the lexer for the CAOS language, and I immediately found a 
 
 {{<img src="fuzz-openc2e.webp" caption="Within a minute of fuzzing, I found 20 unique crashes in openc2e." max-width="800px">}}
 
-One of the crashes is just an unterminated double quote, which confirmed my suspicion that nobody had ever fuzzed the code.
+One of the crashes was just an unterminated double quote, which confirmed my suspicion that nobody had ever fuzzed the code.
 
 ```
 * The following line crashes openc2e's CAOS lexer.
@@ -118,7 +118,7 @@ One of the most fun things about fuzzing with Nix is that you can mess around wi
 
 When I was trying to fuzz openc2e, I realized that the code I wanted to link against was compiled into an object that's not friendly to linking. I was trying to figure out how to link against the code when I realized I could just [patch their Makefile](https://gitlab.com/mtlynch/fuzz-openc2e/-/blob/dc48bfbe62bdc4a99eab2e9662a780c253654558/share-openc2e-lib.patch) in my repo and make whatever changes I want.
 
-Usually, when I'm contributing to an open-source project, if I want to make a significant change like changing a library from private to public, I'd have to spend a lot of time understanding why it's private to begin with and then make the case to maintainers for why it makes sense to export the library. But for fuzzing, I'm just off in my own personal sandbox, and I can futz around with whatever I want.
+Usually, when I'm contributing to an open-source project, if I want to make a significant change like converting a library from private to public, I'd have to spend a lot of time understanding why it's private to begin with and then make the case to maintainers for why it makes sense to export the library. But for fuzzing, I'm just off in my own personal sandbox, and I can futz around with whatever I want.
 
 ## Building my new development desktop
 
@@ -128,7 +128,7 @@ Starting around 10 years ago, I found it easier to develop software on Linux, bu
 
 In 2017, I got tired of having to reboot all of my VMs every time I rebooted my Windows system, so I [built my first homelab VM server](/building-a-vm-homelab-2017/).
 
-By 2019, I started doing all development with VS Code and Remote SSH, which mostly works but is unusual enough to cause issues occasionally.
+By 2019, I was doing all of my development with VS Code and Remote SSH, which mostly works but is unusual enough to cause issues occasionally.
 
 Then, two changes happened in the last year:
 
@@ -164,7 +164,7 @@ I distinctly recall the joy I felt when I was 11 years old, and my dad came back
 
 Ever since then, I've used my dad's logic to justify buying premium monitors, and it's served me well. I'm at my computer for 2500 hours per year. On a per-hour basis, the cost of a high-end monitor is basically nil.
 
-Plus, now that I've experienced [Hacker News](https://news.ycombinator.com/) at 5120x1440px resolution, I can't ever go back.
+Plus, now that I've experienced [Hacker News](https://news.ycombinator.com/) at 5120x1440px resolution, I can never go back.
 
 {{<img src="hn-ultrawide.webp" max-width="700px" has-border="true" caption="You haven't truly browsed [Hacker News](https://news.ycombinator.com/) until you've done it at 5120x1400px resolution.">}}
 
@@ -172,7 +172,7 @@ Plus, now that I've experienced [Hacker News](https://news.ycombinator.com/) at 
 
 I haven't received all of the components for my new computer yet, but I already set up my new monitor. I quickly realized I needed a new strategy for managing windows on my desktop.
 
-My old monitor was 34", and I mostly used Win+Left / Win+Right to dock windows to half-width on my desktop.
+My old monitor was 34", and I mostly used Win+Left / Win+Right to dock windows to half-width on my desktop. With 5120px of width on my new monitor, I wanted to dock more than two windows at a time.
 
 I tried [Komorebi](https://github.com/LGUG2Z/komorebi), but I found it too complicated. Then, I found [Fancy Zones](https://learn.microsoft.com/en-us/windows/powertoys/fancyzones), and it does exactly what I want. It lets me define zones through a GUI, and then I can dock windows to those zones by hotkey or with the mouse.
 
@@ -208,7 +208,7 @@ Similarly, I didn't think I'd care about refresh rate, but I do notice a differe
 ### Lessons learned
 
 - Workflows that let you apply custom patches to other projects provide a pleasant sense of freedom.
-  - You get to do whatever you want because the changes only affect you. And if you have a workflow that makes patching easy, you don't feel the burden of taking on tasks associated with building the code.
+  - You get to do whatever you want because the changes only affect you. And if you have a workflow that makes patching easy, you don't feel the burden of building a special version of the code.
 
 ### Goals for next month
 
