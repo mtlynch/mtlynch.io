@@ -15,7 +15,7 @@ I feel like I'm a good candidate to bridge the language gap, as I understand the
 
 ## Base is supposed to be the bridge
 
-A year ago, I listented to [an interview with Jesse Pollak on an episode of _Into the Bytecode_](https://www.intothebytecode.com/jesse-pollak/). He was excited about this new technology Coinbase was working on called [Base](https://base.org).
+A year ago, I listened to [an interview with Jesse Pollak on an episode of _Into the Bytecode_](https://www.intothebytecode.com/jesse-pollak/). He was excited about this new technology Coinbase was working on called [Base](https://base.org).
 
 Base is supposed to appeal to developers who are new to the cryptocurrency world and make it easy for them to start building within that ecosystem.
 
