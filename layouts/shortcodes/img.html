@@ -22,16 +22,15 @@
 
 {{ $maxWidth = printf "%dpx" $maxWidthPixels }}
 
+{{ $containerAttrs := printf `class="img%s"%s`
+  (cond (ne $align "") (printf " align-%s" $align) "")
+  (cond (ne $maxWidth "") (printf ` style="max-width: %s"` $maxWidth) "") | safeHTMLAttr }}
+
+
 {{ if $caption }}
-<figure
-  class="img{{ if $align }} align-{{ $align }}{{ end }}"
-  {{- if $maxWidth }} style="max-width: {{ $maxWidth }}"{{ end -}}
-  >
+<figure {{ $containerAttrs }}>
 {{ else }}
-<div
-  class="img{{ if $align }} align-{{ $align }}{{ end }}"
-  {{- if $maxWidth }} style="max-width: {{ $maxWidth }}"{{ end -}}
-  >
+<div {{ $containerAttrs }}>
 {{ end }}
 
 {{ if $src }}
