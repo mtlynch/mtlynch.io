@@ -148,7 +148,7 @@ I'm making an economically responsible choice by reducing two machines to one, w
 | GPU         | ASUS GeForce GTX 970 STRIX 4GB | MSI RTX 4060 Ventus 2X 8GB            |
 | RAM         | G.SKILL Ripjaws 4 32GB DDR4    | G.Skill Trident Z5 RGB 64GB DDR5      |
 | Storage     | Samsung 980 PRO 2 TB           | Crucial T705 2TB                      |
-| Case        | Cooler Master HAF 912          | Fractal Design Define 7               |
+| Case        | Cooler Master HAF 912          | Fractal Design Define 7 Compact       |
 | PSU         | Corsair HX750i 750W            | SilverStone Platinum PS-ST55F-PT 550W |
 | CPU Cooler  | Noctua NH-U9DXi4               | Noctua NH-U12S redux                  |
 | Monitor     | LG 34UMP95 34"                 | Samsung Odyssey OLED G9 49" Ultrawide |
