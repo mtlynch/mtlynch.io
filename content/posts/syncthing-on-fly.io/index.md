@@ -549,15 +549,15 @@ Finally, share one of your folders with your new Syncthing server. Go to Edit Fo
 
 ### Access web UI
 
-To access your Fly.io server's Syncthing admin dashboard, open a proxy to connect your local port 8384 to your Fly.io server's port 8384:
+To access your Fly.io server's Syncthing admin dashboard, open a proxy to connect your local port 8388 to your Fly.io server's port 8384:
 
 ```bash
-fly proxy 8384:8384
+fly proxy 8388:8384
 ```
 
 With the proxy in place, you should be able to access your cloud server's Syncthing dashboard from your local device via a `localhost` URL:
 
-- <http://localhost:8384>
+- <http://localhost:8388>
 
 You should see an admin dashboard like the following:
 
