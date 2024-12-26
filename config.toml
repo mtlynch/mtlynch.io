@@ -28,14 +28,12 @@ buildFuture = true
 [permalinks]
     posts = "/:filename/"
 
-[social]
-twitter = "deliberatecoder"
-
 [params]
     dateFormat = "January 2, 2006"
     author = "Michael Lynch"
     info = "By day, a simple software engineer. By night, also a software engineer."
     description = "Updates about my life and what I learn about creating software"
+    twitter = "deliberatecoder"
     currentproject = "Paternity Leave"
     keywords = "blog,developer,personal"
     avatarurl = "images/avatar.jpg"
