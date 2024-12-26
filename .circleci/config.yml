@@ -54,6 +54,7 @@ jobs:
           key: resources-gen-v{{ .Environment.RESOURCES_CACHE_VERSION }}
           paths:
             - resources
+            - public
   lint-html:
     docker:
       - image: mtlynch/htmlproofer:5.0.6
