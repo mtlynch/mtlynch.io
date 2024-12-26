@@ -37,7 +37,7 @@
       (resources.Get "css/tags.css")
       | resources.Concat "assets/css/bundle.css"
     }}
-    {{ if .Site.IsServer }}
+    {{ if hugo.IsServer }}
       <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen" />
     {{ else }}
       {{ $styles := $styles | minify | fingerprint }}
@@ -73,7 +73,7 @@
       <script src="/js/retrospectives.js"></script>
     {{ end }}
 
-    {{ if not .Site.IsServer }}
+    {{ if not hugo.IsServer }}
       <script
         defer
         data-domain="mtlynch.io"
