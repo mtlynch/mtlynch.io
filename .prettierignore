@@ -4,7 +4,7 @@ node_modules/
 public/
 resources/
 **/third-party/
-content/notes/archivebox/reddit-singlefile.html
+static/**/*.html
 
 # TODO: Make these play nicely with prettier
 layouts/shortcodes/
