@@ -22,8 +22,6 @@
 
     {{ partial "mailing-list-signup.html" . }}
 
-    {{ if not hugo.IsServer }}
-      {{ partial "talkyard.html" . }}
-    {{ end }}
+    {{ partial "talkyard.html" . }}
   </article>
 </section>
