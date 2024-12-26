@@ -59,12 +59,12 @@ The solution above works, but it requires me to copy the same file on each of my
 
 I'd rather host the file at a publicly accessible URL, and then I can have a standard `configuration.nix` file that references the URL.
 
-Here's how I adjust my `configuration.nix` to pull in [my `shell.nix` file]({{<baseurl>}}/notes/nix-import-from-url/shell.nix) from a remote URL:
+Here's how I adjust my `configuration.nix` to pull in [my `shell.nix` file]({{<baseurl>}}notes/nix-import-from-url/shell.nix) from a remote URL:
 
 ```nix
 let
   shellAliases = builtins.fetchurl {
-    url = "{{<baseurl>}}/notes/nix-import-from-url/shell.nix";
+    url = "{{<baseurl>}}notes/nix-import-from-url/shell.nix";
   };
 in {
   imports = [
