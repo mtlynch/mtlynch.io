@@ -1,16 +1,11 @@
 {{ if not hugo.IsServer }}
-  <script>
-    talkyardServerUrl='{{ .Site.Params.talkyardServerUrl }}';
-    talkyardLogLevel = 'warn';
-  </script>
+  <script>talkyardServerUrl='{{ .Site.Params.talkyardServerUrl }}';</script>
   <script async defer src="{{ .Site.Params.talkyardScriptUrl }}"></script>
-  <section>
-    <div
-      class="talkyard-comments"
-      data-discussion-id="{{ .Params.discussionId }}"
-      style="margin-top: 45px;"
-    >
-      <noscript>Please enable JavaScript to view comments.</noscript>
-    </div>
-  </section>
+  <div
+    class="talkyard-comments"
+    data-discussion-id="{{ .Params.discussionId }}"
+    style="margin-top: 45px;"
+  >
+    <noscript>Please enable Javascript to view comments.</noscript>
+  </div>
 {{ end }}
