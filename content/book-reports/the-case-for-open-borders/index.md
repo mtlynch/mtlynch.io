@@ -62,7 +62,7 @@ I did learn some interesting details that improved my understanding of immigrati
 
 ### Arguments for relaxing restrictions on US immigration
 
-_[**Ed**: The author provides many more arguments than this, but these were the ones that resonated with me.\]_
+_**Ed**: The author provides many more arguments than this, but these were the ones that I found compelling._
 
 - The US has destabilized many other countries through diplomatic policies and active intervention.
   - We therefore have an obligation to residents in those countries to offer a safe place to live.
@@ -83,12 +83,11 @@ _[**Ed**: The author provides many more arguments than this, but these were the 
 ### Impact on wages and unemployment
 
 - [2007 study by Giovanni Peri](https://wol.iza.org/uploads/articles/42/pdfs/do-immigrant-workers-depress-the-wages-of-native-workers.pdf) found that immigration does not increase unemployment or reduce wages.
-- Undocumented immigrants pay more in taxes than they receive in measurable government benefits p. 79
-  - Q: In the US, do these studies exclude value of public school?
-
-\*\[**Ed**: From reading some of these studies, I'm skeptical. They often consider time windows when immigrants are working age but people tend to use most public resources in childhood and old age.\]
-
-TODO: Look this up on p.79
+- Undocumented immigrants pay more in taxes than they receive in government benefits.
+  - The author cites as evidence the [leaked HHS report](https://www.nytimes.com/interactive/2017/09/19/us/politics/document-Refugee-Report.html) on immigrants' impact on tax revenue.
+  - _**Ed**: From reading some of these studies about tax revenue vs. consumption of public resources, I'm skeptical._
+    - _The studies often consider time windows when immigrants are working age, which is when they contribute most in taxes and consume least in public support. They don't capture the costs of sustaining their health in old age or of additional load on the school system when their kids enter school._
+    - _It also seems impossible to get an accurate accounting of how much a particular person paid in sales tax, especially when so much of their finances are under the table. And it's similarly hard to decide what portion of public resources a particular person is consuming, especially for things like school where they need additional support from not speaking the language._
 
 ### [1929 Mexican Repatriation Act](https://en.wikipedia.org/wiki/Mexican_Repatriation)
 
@@ -96,22 +95,24 @@ TODO: Look this up on p.79
   - Many of those displaced were legal US citizens.
   - A [2017 analysis by the National Bureau of Economic Research](https://www.nber.org/system/files/working_papers/w23885/w23885.pdf) found that cities that enforced repatriation more intensely suffered more economically.
 
-### 1980 Mariel Boatlift
+### [1980 Mariel Boatlift](https://en.wikipedia.org/wiki/Mariel_boatlift)
 
 - In 1979, a series of agricultural crises hit Cuba along with fishing limitations due to diplomatic failures.
-- As a result, Cuban economy was struggling, and thousands of Cubans were trying to escape the country.
+  - As a result, the Cuban economy was struggling, and thousands of Cubans were trying to escape the country.
 - Jimmy Carter tried to undermine the Cuban government by highlighting how many Cubans were trying to leave.
-- Fidel Castro publicly announced that Cuban Americans could pick up their relatives from Mariel.
+- In response to Carter, Fidel Castro publicly announced that any Cubans could leave the country if their relatives in the US picked them up from the Mariel port in Cuba.
 - Due to the US Cuban Adjustment Act of 1966, Cubans get a green card after only a year of residency and could get work authorization immediately regardless of how they arrived.
-- 125k Cubans migrated from Cuba to Florida.
+- 125k Cubans migrated from Cuba to Florida in 1980.
   - 100k of that migration happened in just 6 weeks.
-- Increased labor force by 7% in Miami, was 20% increase in Cuban.
-- Before boatlift, Miami had highest proportion of foreign workers at 35.5%, significantly higher than LA's #2 at 22%
-- Over the next five years:
-  - Wages for Black workers increased.
+- The migration increased Miami's labor force by 7%.
+  - It was a 20% increase in Miami's Cuban labor force.
+- Before the boatlift, Miami was the US city with the highest proportion of foreign workers at 35.5%.
+  - #2 was LA at 22%.
+- Over the next five years in Miami:
+  - Wages for black workers increased.
   - Wages for non-Cuban Latinos stayed steady.
   - Wages for pre-existing Cubans fell.
-  - Wages for Whites not mentioned.
+  - Author doesn't mention the impact on wages for white workers, but [a 1996 study by a Cuban-American economist](https://web.archive.org/web/20160821045111/https://www.hks.harvard.edu/fs/gborjas/publications/journal/ILRR2017.pdf) suggests that it negatively impacted wages for the native population.
 
 ### Mass migration to Israel
 
@@ -166,5 +167,5 @@ TODO: Look this up on p.79
 ### Americans overestimate immigrants
 
 - [2021 Cato study](https://www.cato.org/survey-reports/e-pluribus-unum-findings-cato-institute-2021-immigration-identity-national-survey) found Americans think 40% of US population is first-generation immigrants, but the actual number is 14%.
-  - _\[**Ed**: This is such a bizarre finding that I looked up the actual study to see if the question was worded confusingly. It seems unambiguous.\]_
+  - _**Ed**: This is such a bizarre finding that I looked up the actual study to see if the question was worded confusingly. It seems unambiguous._
     > If you were to estimate, about what percentage of the US population are immigrants (were born in another country)?
