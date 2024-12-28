@@ -98,16 +98,20 @@ TODO: Look this up on p.79
 
 ### 1980 Mariel Boatlift
 
-- In 1979, a series of agricultural crises hit Cuba along with fishing limitations due to diplomatic failures
-- As a result, Cuban economy was struggling, and thousands of Cubans were trying to escape the country
-- Jimmy Carter tried to undermine the Cuban government by highlighting how many Cubans were trying to leave
-- Fidel Castro publicly announced that Cuban Americans could pick up their relatives from Mariel
+- In 1979, a series of agricultural crises hit Cuba along with fishing limitations due to diplomatic failures.
+- As a result, Cuban economy was struggling, and thousands of Cubans were trying to escape the country.
+- Jimmy Carter tried to undermine the Cuban government by highlighting how many Cubans were trying to leave.
+- Fidel Castro publicly announced that Cuban Americans could pick up their relatives from Mariel.
 - Due to the US Cuban Adjustment Act of 1966, Cubans get a green card after only a year of residency and could get work authorization immediately regardless of how they arrived.
 - 125k Cubans migrated from Cuba to Florida.
   - 100k of that migration happened in just 6 weeks.
-- Increased labor force by 7% in Miami, was 20% increase in Cuban
+- Increased labor force by 7% in Miami, was 20% increase in Cuban.
 - Before boatlift, Miami had highest proportion of foreign workers at 35.5%, significantly higher than LA's #2 at 22%
-- Wages for Black workers increased over next 5 years, wages for non-Cuban Latinos stayed steady, wages for pre-existing Cubans fell, wages for Whites not mentioned
+- Over the next five years:
+  - Wages for Black workers increased.
+  - Wages for non-Cuban Latinos stayed steady.
+  - Wages for pre-existing Cubans fell.
+  - Wages for Whites not mentioned.
 
 ### Mass migration to Israel
 
