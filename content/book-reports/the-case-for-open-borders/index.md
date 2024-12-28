@@ -1,6 +1,6 @@
 ---
 title: "The Case for Open Borders by John Washington"
-date: 2024-12-18
+date: 2024-12-28
 rating: 3
 purchase_url: https://www.haymarketbooks.org/books/2199-the-case-for-open-borders
 ---
