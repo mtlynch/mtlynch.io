@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 16"
-date: 2021-11-11T00:00:00-05:00
+date: 2021-11-11
 description: The TinyPilot Cloud flop
 images:
   - /retrospectives/2021/11/sales-trends.png

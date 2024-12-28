@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 7"
-date: 2021-02-04T00:00:00-05:00
+date: 2021-02-04
 description: TinyPilot is facing good problems to have.
 images:
   - /retrospectives/2021/02/og-cover.png

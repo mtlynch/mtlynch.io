@@ -1,6 +1,6 @@
 ---
 title: "Massachusetts Residents Can Sue Online Merchants for Spam"
-date: 2024-10-20T00:00:00-04:00
+date: 2024-10-20
 tags:
   - privacy
 ---

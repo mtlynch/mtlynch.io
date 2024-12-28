@@ -1,6 +1,6 @@
 ---
 title: "Deploying Syncthing on a Fly.io Cloud Server"
-date: 2023-05-29T00:00:00-04:00
+date: 2023-05-29
 tags:
   - syncthing
   - fly.io
@@ -27,7 +27,7 @@ I'm going to share some approaches to deploying Syncthing that failed. If you wa
 
 ## Prior work: Syncthing + Tailscale on Fly.io
 
-For the past two years, [Fly.io](https://fly.io) has been my preferred cloud hosting provider, so I checked if anyone had written about Syncthing on Fly.io. It turned out that [Andrew Katz had written a nice tutorial](https://akatz.org/running-syncthing-on-fly-io-with-tailscale/) less than a year ago.
+For the past two years, [Fly.io](https://fly.io) has been my preferred cloud hosting provider, so I checked if anyone had written about Syncthing on Fly.io. It turned out that [Andrew Katz had written a nice tutorial](https://web.archive.org/web/20240523091036/https://akatz.org/running-syncthing-on-fly-io-with-tailscale/) less than a year ago.
 
 {{<img src="akatz-tutorial.png" has-border="true" max-width="600px" alt="Screenshot of post 'Running Syncthing on Fly.io with Tailscale'">}}
 
@@ -549,15 +549,15 @@ Finally, share one of your folders with your new Syncthing server. Go to Edit Fo
 
 ### Access web UI
 
-To access your Fly.io server's Syncthing admin dashboard, open a proxy to connect your local port 8384 to your Fly.io server's port 8384:
+To access your Fly.io server's Syncthing admin dashboard, open a proxy to connect your local port 8388 to your Fly.io server's port 8384:
 
 ```bash
-fly proxy 8384:8384
+fly proxy 8388:8384
 ```
 
 With the proxy in place, you should be able to access your cloud server's Syncthing dashboard from your local device via a `localhost` URL:
 
-- <http://localhost:8384>
+- <http://localhost:8388>
 
 You should see an admin dashboard like the following:
 

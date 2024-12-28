@@ -1,6 +1,6 @@
 ---
 title: "Noah Bragg's First Stoke Fire Livestream"
-date: 2024-09-04T00:00:00-04:00
+date: 2024-09-04
 tags:
   - ethereum
   - livestream notes

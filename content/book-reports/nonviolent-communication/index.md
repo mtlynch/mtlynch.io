@@ -1,6 +1,6 @@
 ---
 title: "Nonviolent Communication by Marshall B. Rosenberg, Ph.D."
-date: 2020-05-05T00:00:00-04:00
+date: 2020-05-05
 rating: 7
 purchase_url: https://www.indiebound.org/book/9781892005281
 ---

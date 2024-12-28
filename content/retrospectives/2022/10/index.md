@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 27"
-date: 2022-10-17T00:00:00-04:00
+date: 2022-10-17
 description: What would a fully remote TinyPilot look like?
 images:
   - /retrospectives/2022/10/outsourced-complexity.png

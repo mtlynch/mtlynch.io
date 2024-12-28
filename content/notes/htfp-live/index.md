@@ -1,6 +1,6 @@
 ---
 title: "Join My Six-Week Blogging Course"
-date: 2024-06-20T00:00:00-04:00
+date: 2024-06-20
 images:
   - /notes/htfp-live/cover.webp
 ---

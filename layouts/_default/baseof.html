@@ -25,11 +25,44 @@
       <link rel="canonical" href="{{ .Permalink }}" />
     {{ end }}
 
+    {{ $styles := slice
+      (resources.Get "css/main.css")
+      (resources.Get "css/content.css")
+      (resources.Get "css/footer.css")
+      (resources.Get "css/navbar.css")
+      (resources.Get "css/refactoring-english.css")
+      (resources.Get "css/retrospectives.css")
+      (resources.Get "css/subscribe.css")
+      (resources.Get "css/social-buttons.css")
+      (resources.Get "css/tags.css")
+      | resources.Concat "assets/css/bundle.css"
+    }}
+    {{ if hugo.IsServer }}
+      <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen" />
+    {{ else }}
+      {{ $styles := $styles | minify | fingerprint }}
+      <link
+        rel="stylesheet"
+        href="{{ $styles.RelPermalink }}"
+        integrity="{{ $styles.Data.Integrity }}"
+        crossorigin="anonymous"
+        media="screen"
+      />
+    {{ end }}
+
 
     <link href="/third-party/google-fonts/css/style.css" rel="stylesheet" />
     <link
       rel="stylesheet"
-      href="/third-party/font-awesome/v5.11.2/css/all.css"
+      href="/third-party/font-awesome/v6.7.1/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/third-party/font-awesome/v6.7.1/css/brands.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/third-party/font-awesome/v6.7.1/css/solid.min.css"
     />
     {{ if .HasShortcode "zestful-ad" }}
       <link rel="stylesheet" href="/css/zestful.css" media="screen" />
@@ -40,32 +73,12 @@
       <script src="/js/retrospectives.js"></script>
     {{ end }}
 
-    {{ if .Site.IsServer }}
-      {{ $cssOpts := (dict "targetPath" "css/style.css" "enableSourceMap" true ) }}
-      {{ $styles := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.style.css" . | toCSS $cssOpts }}
-      <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen" />
-    {{ else }}
-      {{ $cssOpts := (dict "targetPath" "css/style.css" ) }}
-      {{ $styles := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.style.css" . | toCSS $cssOpts | minify | fingerprint }}
-      <link
-        rel="stylesheet"
-        href="{{ $styles.RelPermalink }}"
-        integrity="{{ $styles.Data.Integrity }}"
-        crossorigin="anonymous"
-        media="screen"
-      />
-    {{ end }}
-
-    {{ if not .Site.IsServer }}
+    {{ if not hugo.IsServer }}
       <script
         defer
         data-domain="mtlynch.io"
         src="https://plausible.io/js/plausible.js"
       ></script>
-    {{ end }}
-
-    {{ range .Site.Params.custom_css }}
-      <link rel="stylesheet" href="{{ . | relURL }}" />
     {{ end }}
 
     {{ if and .Params.custom_css }}
@@ -95,7 +108,7 @@
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
       {{ end -}}
     {{ else }}
-      {{ printf `<link rel="alternate" type="application/rss+xml" href="%s/%s" title="%s" />` .Site.BaseURL "index.xml" $.Site.Title | safeHTML }}
+      {{ printf `<link rel="alternate" type="application/rss+xml" href="%s%s" title="%s" />` .Site.BaseURL "index.xml" $.Site.Title | safeHTML }}
     {{ end -}}
 
     {{ hugo.Generator }}
@@ -103,10 +116,10 @@
 
   <body class="colorscheme-light">
     <main class="wrapper">
-      {{ partial "header.html" . }}
+      {{ partial "navbar.html" . }}
 
 
-      <div class="content">
+      <div class="content {{ .Type }}">
         {{ block "content" . }}{{ end }}
       </div>
 

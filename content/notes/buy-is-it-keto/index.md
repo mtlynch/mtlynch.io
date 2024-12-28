@@ -1,6 +1,6 @@
 ---
 title: "Want to Buy Is It Keto?"
-date: 2024-07-11T00:00:00-04:00
+date: 2024-07-11
 ---
 
 {{<notice type="warning">}}

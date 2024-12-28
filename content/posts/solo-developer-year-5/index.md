@@ -3,7 +3,7 @@ title: "My Fifth Year as a Bootstrapped Founder"
 tags:
   - annual review
   - tinypilot
-date: 2023-02-10T00:00:00-05:00
+date: 2023-02-10
 custom_css: true
 hero_image: cover.webp
 images:
@@ -115,7 +115,7 @@ As an alternative to the existing cloud storage options, I made a minimalist fil
 
 There are a few open-source tools that offer [similar functionality](https://github.com/awesome-selfhosted/awesome-selfhosted#file-transfer---single-click--drag-n-drop-upload), but PicoShare is unique in not requiring a database server. That means you can run it in a single Docker container, whereas other solutions require more complicated orchestration.
 
-PicoShare became the fastest-growing open-source project I ever published. It received 600 Github stars within two weeks of its release. As of this writing, PicoShare has [over 100k installs](https://hub.docker.com/r/mtlynch/picoshare/).
+PicoShare became the fastest-growing open-source project I ever published. It received 600 GitHub stars within two weeks of its release. As of this writing, PicoShare has [over 100k installs](https://hub.docker.com/r/mtlynch/picoshare/).
 
 {{<img src="picoshare-growth.png" max-width="600px" has-border="true">}}
 

@@ -1,6 +1,6 @@
 ---
 title: "GUIs are Antisocial"
-date: 2024-07-12T00:00:00-04:00
+date: 2024-07-12
 images:
   - /notes/guis-are-antisocial/excerpt.webp
 ---

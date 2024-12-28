@@ -1,6 +1,6 @@
 ---
 title: "The Making of Prince of Persia by Jordan Mechner"
-date: 2020-06-10T10:18:48-04:00
+date: 2020-06-10
 rating: 7
 purchase_url: https://jordanmechner.com/books/journals/
 ---

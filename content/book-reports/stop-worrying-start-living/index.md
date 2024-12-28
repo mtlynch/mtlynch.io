@@ -1,6 +1,6 @@
 ---
 title: "How to Stop Worrying and Start Living by Dale Carnegie"
-date: 2021-08-24T00:00:00-04:00
+date: 2021-08-24
 rating: 5
 purchase_url: https://www.indiebound.org/book/9780671035976
 ---

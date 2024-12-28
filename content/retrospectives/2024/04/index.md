@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 45"
-date: 2024-04-11T00:00:00-04:00
+date: 2024-04-11
 description: Thinking critically about deployments.
 images:
   - /retrospectives/2024/04/og-cover.webp

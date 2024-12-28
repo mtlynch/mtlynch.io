@@ -1,0 +1,255 @@
+.navigation {
+  height: 6rem;
+  width: 100%;
+
+  & a,
+  & span {
+    display: inline;
+    font-size: 1.6rem;
+    font-family: var(--heading-font);
+    font-weight: 700;
+    line-height: 6rem;
+    color: var(--fg-color);
+  }
+
+  & a:hover,
+  & a:focus {
+    color: var(--link-color);
+  }
+
+  & .navigation-title {
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+  }
+
+  & .navigation-list {
+    float: right;
+    list-style: none;
+    margin-bottom: 0;
+    margin-top: 0;
+
+    & .navigation-item {
+      float: left;
+      margin: 0;
+      position: relative;
+
+      & a,
+      & span {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      position: absolute;
+      top: 6rem;
+      right: 0;
+      z-index: 5;
+      visibility: hidden;
+      opacity: 0;
+      padding: 0;
+      max-height: 0;
+      width: 100%;
+      background-color: var(--bg-color);
+      border-top: solid 2px var(--alt-bg-color);
+      border-bottom: solid 2px var(--alt-bg-color);
+      transition: opacity 0.25s, max-height 0.15s linear;
+
+      & .navigation-item {
+        float: none !important;
+        text-align: center;
+
+        & a,
+        & span {
+          line-height: 5rem;
+        }
+      }
+
+      & .menu-separator {
+        border-top: 2px solid var(--fg-color);
+        margin: 0 8rem;
+
+        & span {
+          display: none;
+        }
+      }
+    }
+  }
+
+  & #menu-toggle {
+    display: none;
+
+    @media only screen and (max-width: 768px) {
+      &:checked + label {
+        color: var(--alt-bg-color);
+      }
+
+      &:checked + label + ul {
+        visibility: visible;
+        opacity: 1;
+        max-height: 100rem;
+      }
+    }
+  }
+
+  & .menu-button {
+    display: none;
+
+    @media only screen and (max-width: 768px) {
+      display: block;
+      font-size: 2.4rem;
+      font-weight: 400;
+      line-height: 6rem;
+      color: var(--fg-color);
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        color: var(--link-color);
+      }
+    }
+  }
+
+  .float-right {
+    float: right;
+  }
+}
+
+.navigation {
+  height: 6rem;
+  width: 100%;
+
+  & a,
+  & span {
+    display: inline;
+    font-size: 1.6rem;
+    font-family: var(--heading-font);
+    font-weight: 700;
+    line-height: 6rem;
+    color: var(--fg-color);
+  }
+
+  & a:hover,
+  & a:focus {
+    color: var(--link-color);
+  }
+
+  & .navigation-title {
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+  }
+
+  & .navigation-list {
+    float: right;
+    list-style: none;
+    margin-bottom: 0;
+    margin-top: 0;
+
+    & .navigation-item {
+      float: left;
+      margin: 0;
+      position: relative;
+
+      & a,
+      & span {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  & #menu-toggle {
+    display: none;
+  }
+
+  & .menu-button {
+    display: none;
+  }
+
+  @media only screen and (max-width: 768px) {
+    & .navigation-list {
+      position: absolute;
+      top: 6rem;
+      right: 0;
+      z-index: 5;
+      visibility: hidden;
+      opacity: 0;
+      padding: 0;
+      max-height: 0;
+      width: 100%;
+      background-color: var(--bg-color);
+      border-top: solid 2px var(--alt-bg-color);
+      border-bottom: solid 2px var(--alt-bg-color);
+      transition: opacity 0.25s, max-height 0.15s linear;
+
+      & .navigation-item {
+        float: none !important;
+        text-align: center;
+
+        & a,
+        & span {
+          line-height: 5rem;
+        }
+      }
+
+      & .menu-separator {
+        border-top: 2px solid var(--fg-color);
+        margin: 0 8rem;
+
+        & span {
+          display: none;
+        }
+      }
+    }
+
+    & #menu-toggle:checked + label {
+      color: var(--alt-bg-color);
+    }
+
+    & #menu-toggle:checked + label + ul {
+      visibility: visible;
+      opacity: 1;
+      max-height: 100rem;
+    }
+
+    & .menu-button {
+      display: block;
+      font-size: 2.4rem;
+      font-weight: 400;
+      line-height: 6rem;
+      color: var(--fg-color);
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        color: var(--link-color);
+      }
+    }
+  }
+}
+
+.navigation-author {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation-avatar {
+  display: inline-block !important;
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.navigation-avatar img {
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 30%;
+}
+
+.navigation-author .name {
+  margin-left: 1rem;
+  font-size: 1.5em;
+  text-decoration: none;
+  font-weight: 100;
+}

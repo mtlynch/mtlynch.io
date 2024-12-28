@@ -1,6 +1,6 @@
 ---
 title: "Using Nix to Fuzz Test a PDF Parser (Part Two)"
-date: 2024-10-23T01:00:00-04:00
+date: 2024-10-23
 tags:
   - nix
   - fuzzing
@@ -46,8 +46,6 @@ I create a new build step in my Nix flake that downloads all the PDFs from Mozil
 
 At this point, `flake.nix` should [look like this](https://gitlab.com/mtlynch/fuzz-xpdf/-/blob/04-download-pdfs/flake.nix).
 
-Sidenote: In addition to the PDFs themselves, the pdf.js repo contains several hundred `.link` files that contain URLs of external PDFs. I can't think of a simple way of pulling those external PDFs into a Nix pipeline. I welcome suggestions on integrating them, as they would achieve higher fuzzing coverage.
-
 I run the new `sample-pdfs` build step with the following command:
 
 ```bash
@@ -64,15 +62,93 @@ annotation-border-styles.pdf
 annotation-button-widget.pdf
 annotation-caret-ink.pdf
 
-$ $ ls ./result | wc --lines
+$ ls ./result | wc --lines
 700
 ```
 
 The new build step gives me an initial corpus of edge case PDFs that will hopefully exercise less frequent code paths of any PDF parsing code.
 
+## Downloading even more tricky PDFs
+
+In addition to the PDFs themselves, the pdf.js repo contains several hundred `.link` files that contain URLs of external PDFs.
+
+I couldn't figure out how to download the PDFs from the `.link` file URLs, as the `mkDerivation` step blocks Internet access. I could use the `fetchUrl` command, but I'd have to write hundreds of them.
+
+[Anton Mosich](https://github.com/antonmosich) showed me an elegant way to download the PDFs from all the `.link` files. He told me that if you specify `outputHash`, `outputHashMode`, `outputHashAlgo`, then Nix relaxes rules and allows Internet access during the build.
+
+I initially tried downloading each file with `curl`, but that was prohibitively slow, because it was downloading each file sequentially. I found a utility called aria2c that downloads URLs in parallel, which made the process significantly quicker:
+
+```nix
+{
+    packages = rec {
+        ...
+        sample-pdfs = pkgs.stdenv.mkDerivation rec {
+          pname = "sample-pdfs";
+          version = "4.7.76";
+
+          src = pkgs.fetchzip {
+            url = "https://github.com/mozilla/pdf.js/archive/refs/tags/v${version}.zip";
+            hash = "sha256-2xt8j2xJ3Teg/uiwjbWnpR6zckdxsp3LVbfsbBc3Dco=";
+          };
+
+          nativeBuildInputs = [
+            pkgs.aria2
+          ];
+
+          SSL_CERT_FILE = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt";
+
+          buildPhase = ''
+            # Extract the URLs and filenames from .link files into an input
+            # file of URLs for aria2c.
+            url_file=$(mktemp)
+            for pdf in $src/test/pdfs/*.pdf.link; do
+              url=$(sed 's/\r$//' "$pdf")
+              filename=$(basename "$pdf" .link)
+              echo "$url" >> "$url_file"
+              echo "  out=$filename" >> "$url_file"
+            done
+
+            aria2c \
+                --input-file="$url_file" \
+                --max-tries=5 \
+                --retry-wait=20 \
+                --auto-file-renaming=false \
+                --max-concurrent-downloads=5 \
+                --max-connection-per-server=1 \
+                --dir=.
+
+            cp $src/test/pdfs/*.pdf .
+          '';
+
+          installPhase = ''
+            mkdir -p $out
+            cp -r . $out
+          '';
+
+          # We need to specify the output hash so that Nix allows Internet
+          # access during the build.
+          outputHash = "sha256-lcPF6AQNVsXH2RIiyGZQpp5VjcaBhtolQxmbqSduCNs=";
+          outputHashMode = "recursive";
+          outputHashAlgo = "sha256";
+        };
+```
+
+I run the updated `sample-pdfs` step with `nix build`:
+
+```bash
+nix build .#sample-pdfs
+```
+
+And if I check the `./result` directory, I see that it now has 437 more files than it did when I was copying only the PDF files in the repo:
+
+```bash
+$ ls ./result | wc --lines
+1137
+```
+
 ## Automating fuzz runs
 
-In part 1 of this series, I showed how to run honggfuzz manually from a Nix dev shell. I can make that process even easier by defining a launch command for the fuzzer in my Nix flake.
+In part 1 of this series, I showed how to [run honggfuzz manually from a Nix dev shell](/nix-fuzz-testing-1/#ad-hoc-fuzzing-in-a-dev-shell). I can make that process even easier by defining a launch command for the fuzzer in my Nix flake.
 
 To start, I add a new shell script for launching honggfuzz:
 
@@ -590,4 +666,4 @@ This project ended up being a great way to learn more about both fuzzing and Nix
 
 ---
 
-_Excerpts from xpdf are used under [the GPLv3 license](https://gitlab.com/mtlynch/xpdf/-/blob/4.05/COPYING3)._
+_Excerpts from xpdf are used under [the GPLv3 license](https://gitlab.com/mtlynch/xpdf/-/blob/4.05/COPYING3). Thanks to [Anton Mosich](https://github.com/antonmosich) for assistance with this post._

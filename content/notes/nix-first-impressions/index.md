@@ -1,6 +1,6 @@
 ---
 title: "My First Impressions of Nix"
-date: 2023-06-17T00:00:00-04:00
+date: 2023-06-17
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=36387874
 tags:
@@ -157,7 +157,7 @@ To realize the changes, I ran:
 sudo nixos-rebuild switch
 ```
 
-Now, I had `vim` and `curl`, available, so I could pull down my SSH public key from Github:
+Now, I had `vim` and `curl`, available, so I could pull down my SSH public key from GitHub:
 
 ```bash
 sudo mkdir -p /etc/nixos/ssh

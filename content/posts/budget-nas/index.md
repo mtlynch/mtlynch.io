@@ -8,7 +8,8 @@ tags:
 description: How I chose parts, built, and configured my first custom home storage server.
 images:
   - budget-nas/og-cover.jpg
-date: "2022-05-23"
+date: 2022-05-23
+lastmod: 2024-11-27
 discuss_urls:
   reddit: https://www.reddit.com/r/truenas/comments/uw5hly/how_i_built_my_first_home_truenas_server_22_tb/
   hacker_news: https://news.ycombinator.com/item?id=31548829
@@ -29,6 +30,7 @@ In this post, I'll walk through how I chose the parts, what mistakes I made, and
 - [Build photos](#build-photos)
 - [Benchmarking performance](#performance-benchmarks)
 - [Final thoughts](#final-thoughts)
+- [2.5-year update](#25-year-update) - Added November 2024
 
 {{<gallery caption="Before and after of my 2022 homelab TrueNAS server build">}}
 {{<img src="all-parts.jpg" alt="Photo of NAS server parts in retail packaging" max-width="450px">}}
@@ -79,7 +81,11 @@ Fortunately, my old Synology recovered after I cleaned it out and reseated the d
 
 [TrueNAS](https://truenas.com/) (formerly known as FreeNAS) is one of the most popular operating systems for storage servers. It's open-source, and it's been around for almost 20 years, so it seemed like a reliable choice.
 
+<div style="max-width: 50%; margin: 1rem auto">
+
 ![TrueNAS logo](truenas-logo.svg)
+
+</div>
 
 TrueNAS uses [ZFS](https://docs.freebsd.org/en/books/handbook/zfs/), a filesystem designed specifically for storage servers. Traditional filesystems like NTFS or ext4 run on top of a data volume that manages low-level disk I/O. ZFS manages everything in the stack from the file-level logic down to disk I/O. ZFS' comprehensive control gives it more power and performance than other filesystems.
 
@@ -499,6 +505,68 @@ Overall, I'm enjoying my new NAS, and I learned a lot from this build. If this h
 ## Video
 
 {{<youtube q_Mi5LrnIiU>}}
+
+## 2.5-year update
+
+As of November 2024, I've been using my storage server for about 2.5 years. Here are my thoughts on using it in that time.
+
+### Still happy with the NAS
+
+I still enjoy the NAS. I miss the Synology user experience, but I somehow feel more in control on TrueNAS.
+
+### One of my Toshiba N300 disks started clicking
+
+About 18 months after I built my NAS, one of my Toshiba N300 disks began to click. SMART tests didn't show any issues, but I didn't want to risk continuing with a clicking disk.
+
+I replaced it with another 8 TB Seagate IronWolf and haven't had any issues since.
+
+### Switched to a rack-mounted chassis
+
+A year after building my NAS, I [purchased a server rack](/building-first-homelab-rack/) and began migrating all of my infrastructure to the rack.
+
+For my NAS, I purchased a [Sliger CX3701 10-bay server chassis](https://www.sliger.com/products/rackmount/3u/cx3701/). I like the chassis and would recommend it as long as you're certain you'll use your motherboard's only PCI slot to gain more SATA ports. If you need the PCI slot for graphics or 10 G networking, you can only use four of the 10 drive bays, as a mini-ITX motherboard typically only has four SATA ports.
+
+### Switched to TrueNAS Scale
+
+It looked like TrueNAS Scale was getting more investment than TrueNAS Core, so I switched to TrueNAS Scale. The main difference is that Core is based on FreeBSD, whereas Scale is based on Linux Debian.
+
+Since switching, I haven't noticed much difference except that the Web UI for Scale is slightly better. And I'm more comfortable using the terminal, as I typically work in Linux rather than FreeBSD.
+
+### Added a 10 Gbps fiber NIC
+
+When I built my server rack, I chose a switch with 10 Gbps ports, so I bought a 10 Gbps NIC for my NAS.
+
+Unfortunately, that NIC didn't work, and I tried two others, and [none of them worked](https://www.truenas.com/community/threads/no-success-with-three-different-10-gb-nics.111026/).
+
+Eventually, I decided the only explanation was a motherboard incompatibility, so I upgraded to the Gigabyte B550I Aorus Pro (see [below](#switched-to-gigabyte-b550i-aorus-pro-motherboard)), which finally worked with my Mellanox ConnectX-3 EN CX311A NIC.
+
+I still had a hard time configuring TrueNAS with my 10 Gbps NIC because it kept defaulting to the motherboard's onboard LAN. When I tried to move my NAS's static IP to the 10 Gbps NIC, it kept complaining that Kubernetes was already using that IP address. I couldn't find a way to atomically move the static IP assignment, so I had to disable the motherboard's LAN from BIOS. Even then, it wouldn't let me move the IP, so I just had to choose a new static IP for my NAS.
+
+### Switched to Gigabyte B550I Aorus Pro motherboard
+
+As mentioned above, I upgraded to the [Gigabyte B550I Aorus Pro AX motherboard](https://www.newegg.com/gigabyte-b550i-aorus-pro-ax-mini-itx-amd-b550-am4/p/N82E16813145222) to overcome compatibility issues with my 10 Gbps NIC.
+
+The motherboard is fine. I like it a little better than my ASUS Prime A320I-K:
+
+- Pros
+  - I like that it has its own I/O shield.
+  - The SATA ports point directly up, so I don't need special right-angle SATA connectors.
+  - The RAM slots are easier to use.
+  - The CPU mount is easier to work with.
+  - The fan pins are in more convenient places.
+- Cons
+  - It has the most confusing M.2 slot I've ever seen, and the instructions don't explain it at all. I had to look up videos on YouTube.
+  - Booting into the BIOS seems substantially slower than the ASUS Prime A320I-K.
+
+### Regret: mini-ITX limits expansion
+
+My biggest regret is choosing a mini-ITX form factor for the case and motherboard.
+
+Mini-ITX motherboards have only a single PCI slot. Most only have four SATA ports, and I haven't seen any that have more while also supporting onboard graphics. That means that if you want an HBA to add more than four disks, you have no PCI slots left.
+
+In my case, I wanted to install a 10 Gbps network card, but that means I'm now stuck with just four disks unless I buy a whole new chassis and motherboard.
+
+If I were to do this over again, I would have bought a rack-mounted chassis that has slots for six to eight 3.5" hard drives and a motherboard with either multiple PCI slots or at least eight SATA ports.
 
 ---
 

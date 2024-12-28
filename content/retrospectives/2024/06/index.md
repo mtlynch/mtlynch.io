@@ -1,6 +1,6 @@
 ---
 title: "Reset Month"
-date: 2024-06-30T00:00:00-04:00
+date: 2024-06-30
 description: No retrospective this month.
 ---
 

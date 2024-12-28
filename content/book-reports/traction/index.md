@@ -1,6 +1,6 @@
 ---
 title: "Traction by Gabriel Weinberg and Justin Mares"
-date: 2020-08-23T09:45:33-04:00
+date: 2020-08-23
 rating: 5
 purchase_url: https://www.indiebound.org/book/9781591848363
 ---

@@ -1,6 +1,6 @@
 ---
 title: "The Goal by Eliyahu M. Goldratt"
-date: 2021-06-22T00:00:00-04:00
+date: 2021-06-22
 rating: 7
 purchase_url: https://www.indiebound.org/book/9780884271956
 ---

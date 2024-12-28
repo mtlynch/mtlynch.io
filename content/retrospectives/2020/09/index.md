@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 2"
-date: 2020-09-02T14:00:00-04:00
+date: 2020-09-02
 description: TinyPilot threw me a huge curveball, but things continue moving forward.
 images:
   - /retrospectives/2020/09/tinypilot-mouse-support.png

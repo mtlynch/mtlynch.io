@@ -1,6 +1,6 @@
 ---
 title: "Using Zig to Unit Test a C Application"
-date: 2023-12-18T00:00:00-05:00
+date: 2023-12-18
 tags:
   - zig
 discuss_urls:
@@ -146,7 +146,7 @@ $ printf 'hello, world!' | base64
 aGVsbG8sIHdvcmxkIQ==
 ```
 
-The complete example at this stage [is on Github](https://github.com/tiny-pilot/ustreamer/tree/zig-00-c-test).
+The complete example at this stage [is on GitHub](https://github.com/tiny-pilot/ustreamer/tree/zig-00-c-test).
 
 ## Adding Zig to my uStreamer project environment
 
@@ -514,7 +514,7 @@ output size: 21
 
 Great! That worked. And the results are identical to [my C implementation above](#whats-the-simplest-c-function-in-ustreamer).
 
-The complete example at this stage [is on Github](https://github.com/tiny-pilot/ustreamer/tree/zig-10-simple-exe).
+The complete example at this stage [is on GitHub](https://github.com/tiny-pilot/ustreamer/tree/zig-10-simple-exe).
 
 ## Creating a Zig wrapper for the native C implementation
 
@@ -685,7 +685,7 @@ output size: 20
 
 The output size is now `20` instead of `21` because the underlying data type changed. Previously, I was printing the output size parameter that `us_base64_encode` populated, which included the null terminator. Now, I'm using the `.len` property of the output string, which does not include the null terminator.
 
-The complete example at this stage [is on Github](https://github.com/tiny-pilot/ustreamer/tree/zig-20-wrapper-fn).
+The complete example at this stage [is on GitHub](https://github.com/tiny-pilot/ustreamer/tree/zig-20-wrapper-fn).
 
 ## Creating the first unit test
 
@@ -730,7 +730,7 @@ test success
 
 Success! My first unit test is working and exercising the C code.
 
-The complete example at this stage [is on Github](https://github.com/tiny-pilot/ustreamer/tree/zig-30-unit-test).
+The complete example at this stage [is on GitHub](https://github.com/tiny-pilot/ustreamer/tree/zig-30-unit-test).
 
 ## Checking for false positive test results
 
@@ -817,7 +817,7 @@ test success
    └─ zig test Debug native success 2s MaxRSS:195M
 ```
 
-The complete example at this stage [is on Github](https://github.com/tiny-pilot/ustreamer/tree/zig-40-multi-test).
+The complete example at this stage [is on GitHub](https://github.com/tiny-pilot/ustreamer/tree/zig-40-multi-test).
 
 ## Wrap up
 

@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 29"
-date: 2022-12-14T00:00:00-05:00
+date: 2022-12-14
 description: Worry when long-term tasks stop.
 images:
   - /retrospectives/2022/12/outsourcing-2.png

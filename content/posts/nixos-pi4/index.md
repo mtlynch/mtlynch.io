@@ -1,6 +1,6 @@
 ---
 title: "Installing NixOS on Raspberry Pi 4"
-date: 2023-07-18T00:00:00-04:00
+date: 2023-07-18
 lastmod: "2023-08-18T00:00:00-04:00"
 tags:
   - nix
@@ -118,7 +118,7 @@ ssh nixos@nixos.local
 
 You can also add your SSH public key as an authorized key on the system.
 
-If you authenticate to Github with SSH keys, Github offers a convenient way to download your public SSH key to any device:
+If you authenticate to GitHub with SSH keys, GitHub offers a convenient way to download your public SSH key to any device:
 
 ```bash
 GITHUB_USERNAME="your-github-username" # Replace this.
@@ -141,13 +141,13 @@ You're now in NixOS!
 
 There's not much you can do yet because it's a minimal NixOS environment with nothing installed.
 
-To make your NixOS experience more interesting, install a desktop GUI and a few applications. To begin, download [my example NixOS configuration file]({{<baseurl>}}/nixos-pi4/configuration.nix):
+To make your NixOS experience more interesting, install a desktop GUI and a few applications. To begin, download [my example NixOS configuration file]({{<baseurl>}}nixos-pi4/configuration.nix):
 
 ```bash
 curl \
   --show-error \
   --fail \
-  {{<baseurl>}}/nixos-pi4/configuration.nix \
+  {{<baseurl>}}nixos-pi4/configuration.nix \
   | sudo tee /etc/nixos/configuration.nix
 ```
 

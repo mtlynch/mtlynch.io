@@ -1,6 +1,6 @@
 ---
 title: "Paternity Leave: Month 1"
-date: 2024-09-11T00:00:00-04:00
+date: 2024-09-11
 description: I have a son!
 images:
   - /retrospectives/2024/09/baby-photo.webp

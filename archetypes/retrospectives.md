@@ -1,6 +1,6 @@
 ---
 title: "{{ .Site.Params.currentproject }}: Month XX"
-date: "{{ .Date }}"
+date: "{{ now.Format "2006-01-02" }}"
 description: TODO - One-line summary
 ---
 

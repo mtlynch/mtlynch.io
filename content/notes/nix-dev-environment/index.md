@@ -1,6 +1,6 @@
 ---
 title: "Per-Project Development Environments with Nix"
-date: 2023-10-17T00:00:00-04:00
+date: 2023-10-17
 tags:
   - nix
 ---
@@ -67,7 +67,7 @@ Next, download or copy this Nix flake, the file that defines the Nix development
 curl \
   --show-error \
   --fail \
-  {{<baseurl>}}/notes/nixos-dev-environment/flake.nix \
+  {{<baseurl>}}notes/nixos-dev-environment/flake.nix \
   > flake.nix
 ```
 
@@ -114,7 +114,7 @@ python_dep.url = "github:NixOS/nixpkgs/517501bcf14ae6ec47efd6a17dda0ca8e6d866f9"
 
 The line `# 2.7.18.7 release` is just a comment for my own reference. Nix ignores it. The part that's doing the heavy lifting is the `python_dep` line.
 
-`NixOS/nixpkgs` is a [Github repo](https://github.com/NixOS/nixpkgs), and [`517501bcf14ae6ec47efd6a17dda0ca8e6d866f9`](https://github.com/NixOS/nixpkgs/tree/517501bcf14ae6ec47efd6a17dda0ca8e6d866f9) is the version of the repo where the `python2` package corresponded with Python 2.7.18.7.
+`NixOS/nixpkgs` is a [GitHub repo](https://github.com/NixOS/nixpkgs), and [`517501bcf14ae6ec47efd6a17dda0ca8e6d866f9`](https://github.com/NixOS/nixpkgs/tree/517501bcf14ae6ec47efd6a17dda0ca8e6d866f9) is the version of the repo where the `python2` package corresponded with Python 2.7.18.7.
 
 How did I know that long version string? I used [Nixhub](https://www.nixhub.io/).
 
@@ -419,7 +419,7 @@ For example, if I use Nix to create a Python 3 project with a list of pip depend
 
 I've seen [poetry2nix](https://github.com/nix-community/poetry2nix), but I haven't tried it, as I don't use Poetry in my Python projects. But if any readers have suggestions of how to achieve the functionality I'm imagining, let me know in the comments.
 
-**Update (2023-10-28)**: I discovered that [pyproject.nix supports plain `requirements.txt` files](https://nix-community.github.io/pyproject.nix/use-cases/requirements.html), so I'm now [using that](https://github.com/mtlynch/python3_seed/blob/81998e07eaafa8e64f39e771402d2d11c2eeb4e4/flake.nix).
+**Update (2023-10-28)**: I discovered that [pyproject.nix supports plain `requirements.txt` files](https://pyproject-nix.github.io/pyproject.nix/use-cases/requirements.html), so I'm now [using that](https://github.com/mtlynch/python3_seed/blob/81998e07eaafa8e64f39e771402d2d11c2eeb4e4/flake.nix).
 
 ## Gotchas
 

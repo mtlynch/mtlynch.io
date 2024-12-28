@@ -1,6 +1,6 @@
 ---
 title: "Educational Products: Month 1"
-date: 2024-07-11T00:00:00-04:00
+date: 2024-07-11
 description: I'm coming back to my blogging course.
 ---
 

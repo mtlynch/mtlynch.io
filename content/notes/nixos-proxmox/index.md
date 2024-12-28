@@ -1,7 +1,7 @@
 ---
 title: "Running NixOS on Proxmox"
-date: 2023-09-24T00:00:00-04:00
-lastmod: 2024-10-21T00:00:00-04:00
+date: 2023-09-24
+lastmod: 2024-10-21
 tags:
   - nix
 ---
@@ -16,7 +16,7 @@ Through some trial and error, I figured out how to install NixOS as a Proxmox co
 
 ## Download the NixOS container image
 
-First, download the latest [NixOS x86_x64 lxdContainerImage image](https://hydra.nixos.org/job/nixos/release-24.05/nixos.lxdContainerImage.x86_64-linux). For other hardware architectures, see [this Github comment](https://github.com/NixOS/nixpkgs/issues/43781#issuecomment-1707132209).
+First, download the latest [NixOS x86_x64 lxdContainerImage image](https://hydra.nixos.org/job/nixos/release-24.05/nixos.lxdContainerImage.x86_64-linux). For other hardware architectures, see [this GitHub comment](https://github.com/NixOS/nixpkgs/issues/43781#issuecomment-1707132209).
 
 {{<notice type="warning">}}
 **Warning**: Hydra also features a build called [`proxmoxLXC.x86_64-linux`](https://hydra.nixos.org/job/nixos/release-24.05/nixos.proxmoxLXC.x86_64-linux). I expected it to work even better on Proxmox, but it seems to be broken. It boots NixOS, but the login does not accept any standard NixOS credential (`nixos`, `root`).
@@ -117,7 +117,7 @@ If you hit "Enter," you should see the standard NixOS prompt. You can log in wit
 
 Strangely, the `configuration.nix` file that ships with the NixOS container image does not work. If you try to run `nixos-rebuild`, you'll see errors about a missing `lxd.nix` file. Even if you fix those, there are other systemd errors.
 
-Before you fix those, it's easier if you have SSH access. The easiest way I've found to do that is to download your SSH keys to the system. If you have a Github account with SSH keys enabled, you can do that as follows:
+Before you fix those, it's easier if you have SSH access. The easiest way I've found to do that is to download your SSH keys to the system. If you have a GitHub account with SSH keys enabled, you can do that as follows:
 
 ```bash
 GITHUB_USERNAME="your-github-username" # Replace this.
@@ -136,7 +136,7 @@ I've created a basic configuration for a NixOS server system as a Proxmox contai
 curl \
   --show-error \
   --fail \
-  {{<baseurl>}}/notes/nixos-proxmox/configuration.nix \
+  {{<baseurl>}}notes/nixos-proxmox/configuration.nix \
   > /etc/nixos/configuration.nix
 ```
 

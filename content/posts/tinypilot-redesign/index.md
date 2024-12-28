@@ -1,6 +1,6 @@
 ---
 title: "I Regret My $46k Website Redesign"
-date: 2022-07-21T00:00:00-04:00
+date: 2022-07-21
 description: Mistakes I made working with my first design agency.
 images:
   - tinypilot-redesign/og-cover.png
@@ -10,7 +10,6 @@ discuss_urls:
 tags:
   - tinypilot
   - outsourcing
-  - conflict resolution
 ---
 
 Two years ago, I created a website for my business. By combining my terrible design skills with a decent-looking template, I created a site that looked okay. I told myself that if the business took off, I'd hire a real designer to make it look professional.
@@ -19,7 +18,7 @@ Two years ago, I created a website for my business. By combining my terrible des
 
 A year later, the business was generating $45k/month in revenue, but my website still looked like a college student's hobby project. It was time for that professional redesign I'd promised myself.
 
-There were only three pages I cared about, so I expected the redesign would be straightforward. Maybe a few months and $15k.
+There were only three pages I cared about, so I expected the redesign to be straightforward. Maybe a few months and $15k.
 
 Here's how the site looked after the redesign:
 
@@ -92,7 +91,7 @@ A few weeks later, DesignAgency called a meeting to share updates, but they hadn
 
 By December, we were three months into the project. DesignAgency was 95% done with TinyPilot's new logo. All I wanted was to change some rounding on the corners and eliminate the border. I expected it to be a couple of hours of work.
 
-I was eager to finalize the logo because it would be the first completed asset DesignAgency was giving me. Once it was ready, I could publish it on the website, integrate it into the product's web interface, and print it on the device's physical case.
+I was eager to finalize the logo because it would be the project's first complete asset. Once it was ready, I could publish it on the website, integrate it into the product's web interface, and print it on the device's physical case.
 
 All I needed was a couple more hours of work. But I didn't get them.
 
@@ -130,7 +129,7 @@ Isaac did, however, have an idea for expediting the project.
 
 ## The solution is to pay more
 
-The real issue, Isaac said, was that I was their only hourly client. I would always be at the mercy of long-term retainer clients pre-empting my project. So what if I signed a retainer agreement to guarantee DesignAgency's time? Their retainers started at 40 hours per month for $160/hr.
+The real issue, Isaac said, was that I was their only hourly client. I would always be at the mercy of long-term retainer clients pre-empting me. So what if I signed a retainer agreement to guarantee DesignAgency's time? Their retainers started at 40 hours per month for $160/hr.
 
 I felt duped and manipulated. DesignAgency structured the work so that everything was 80% done, but nothing was usable. If I took the work to a new vendor, there'd be a massive amount of rework. And now they were holding the last 20% hostage until I signed an expensive retainer agreement?
 
@@ -158,7 +157,7 @@ When the month ended, DesignAgency hadn't moved the website any closer to the ne
 
 {{<img src="console-log.png" alt="Screenshot of new landing page" has-border="true" caption="One of the DesignAgency developers used 15 of the month's 60 hours to fix the minor bugs from the end of the task queue.">}}
 
-What inspired DesignAgency to take on these insignificant bugs, you ask? Well, DesignAgency had asked me to create Github tickets for each redesign task. DesignAgency warned that they don't refund or roll over unused hours, so they encouraged me to overbook the schedule with tasks beyond the redesign work.
+What inspired DesignAgency to take on these insignificant bugs, you ask? Well, DesignAgency had asked me to create GitHub tickets for each redesign task. DesignAgency warned that they don't refund or roll over unused hours, so they encouraged me to overbook the schedule with tasks beyond the redesign work.
 
 What I didn't expect was how DesignAgency would split the tickets among their developers. I thought developer A would work on page X, and developer B would work on page Y. Instead, DesignAgency assigned all the design-related tickets to developer A and left the rest to developer B. And that's how a quarter of the March dev budget went to minor bugfixes.
 
@@ -193,7 +192,7 @@ Surprisingly, the dev work was never smoother than after I terminated the contra
 
 There were still issues, but I was prepared this time. DesignAgency kept suggesting new flourishes to the design. I declined them all and told them to focus on the design I'd approved. I'm glad I did because they'd probably still be working on the website today.
 
-On the last day of the month, the final page still wasn't done. DesignAgency hadn't communicated with me about disengaging from the project.
+On the last day of the month, the final page still wasn't done, and DesignAgency hadn't communicated with me about disengaging from the project.
 
 On June 1st, the day after our contract officially ended, their dev told me that Isaac had authorized him to finish the outstanding work at no charge. He wrapped up the final page within two days.
 
@@ -228,7 +227,7 @@ I told Isaac that I wished we'd structured the work to give me usable assets soo
 
 I shared my surprise at how little DesignAgency managed the project. I expected DesignAgency's project managers to provide regular status updates and maintain project timelines, but nobody was doing that. Isaac said this was a misstep on his part. DesignAgency tries to keep project management to less than 5% of billable hours. At my scale, 5% would be too limited to provide any tangible benefit, so he eliminated project management entirely. He admitted that, in retrospect, he should have included me in that conversation to make sure it was what I wanted.
 
-We talked about the opaqueness of DesignAgency's hours. Because they shared their hours so infrequently and worked an irregular schedule, I could never tell when a task was bloating beyond my expectations. I wished I'd raised this issue earlier because it turned out all I had to do was ask. DesignAgency tracks billable time with [toggl](https://toggl.com), and Isaac would have been happy to give me access to their dashboard.
+Because DesignAgency shared their hours so infrequently and worked an irregular schedule, I could never tell when a task was bloating beyond my expectations. I wished I'd raised this issue earlier because it turned out all I had to do was ask. DesignAgency tracks billable time with [toggl](https://toggl.com), and Isaac would have been happy to give me access to their dashboard.
 
 ## What I'd do differently
 
@@ -253,7 +252,7 @@ But think about it this way: if a project involves eight tasks that will take ro
 
 The one-at-a-time is better value for your money. At the end of month one, you have one asset that provides value to your business for the next seven months. In month two, you have more, and so on.
 
-Parallelizing everything also puts you in a weak negotiating position. If the agency has eight tasks that are all 80% complete, it's expensive for you to scope down the project or switch vendors. If you limit the agency to only two or three tasks at once, those are the only tasks at risk if the project goes south.
+Parallelizing everything also puts you in a weak negotiating position. If the agency has eight tasks that are all 80% complete, it's expensive for you to scope down the project or switch vendors. If you limit the agency to only two or three tasks at a time, those are the only tasks at risk if the project goes south.
 
 Lastly, it's more mentally taxing to oversee eight subprojects at once. Every unfinished task occupies real estate in your mind. It's better to knock them out in small batches than to drag everything out for the entire project.
 

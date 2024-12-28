@@ -1,6 +1,6 @@
 ---
 title: "Is It Keto: Month 12"
-date: 2020-06-01T00:00:00-04:00
+date: 2020-06-01
 description: 50k monthly visitors is more valuable than I'm giving it credit for.
 images:
   - /retrospectives/2020/06/cover.png

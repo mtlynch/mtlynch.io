@@ -1,7 +1,7 @@
 ---
 title: "Back Up Encrypted ZFS Data without Unlocking It"
 description: How to create backup files of encrypted ZFS datasets that you can securely replicate anywhere.
-date: 2022-07-29T00:00:00-04:00
+date: 2022-07-29
 images:
   - zfs-encrypted-backups/og-cover.png
 tags:
@@ -374,7 +374,7 @@ if [[ -n "${INCREMENTAL_SNAPSHOT_PATH}" ]]; then
 fi
 ```
 
-These scripts are available on Github:
+These scripts are available on GitHub:
 
 - [mtlynch/zfs-encrypted-backup](https://github.com/mtlynch/zfs-encrypted-backup)
 
@@ -532,7 +532,7 @@ I recommend testing your backups on a separate ZFS system, even a TrueNAS VM, to
 
 ## Source code
 
-I've published my convenience scripts on Github:
+I've published my convenience scripts on GitHub:
 
 - [mtlynch/zfs-encrypted-backup](https://github.com/mtlynch/zfs-encrypted-backup)
 - [mtlynch/mtlynch-backup](https://github.com/mtlynch/mtlynch-backup)

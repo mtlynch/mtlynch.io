@@ -1,6 +1,6 @@
 ---
 title: "Experimenting with Lllama 3 via Ollama"
-date: 2024-04-25T00:00:00-04:00
+date: 2024-04-25
 tags:
   - llama
   - chatbots
@@ -73,7 +73,7 @@ docker run hello-world
 I adapted the standard [Open-WebUI](https://github.com/open-webui/open-webui) Docker Compose file to make one for Ollama, which you can download and run with the following command:
 
 ```bash
-wget {{<baseurl>}}/notes/ollama-llama3/docker-compose.yml && \
+wget {{<baseurl>}}notes/ollama-llama3/docker-compose.yml && \
   docker-compose up
 ```
 

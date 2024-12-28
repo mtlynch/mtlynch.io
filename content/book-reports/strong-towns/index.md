@@ -1,6 +1,6 @@
 ---
 title: "Strong Towns"
-date: 2024-02-11T00:00:00-04:00
+date: 2024-02-11
 rating: 8
 purchase_url: https://bookshop.org/p/books/strong-towns-a-bottom-up-revolution-to-rebuild-american-prosperity-charles-l-marohn/7390111
 ---

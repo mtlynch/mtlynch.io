@@ -1,6 +1,6 @@
 ---
 title: "Building My First Homelab Server Rack"
-date: 2024-04-05T00:00:00-05:00
+date: 2024-04-05
 description: What I learned building a rack for my home server infrastructure.
 tags:
   - homelab

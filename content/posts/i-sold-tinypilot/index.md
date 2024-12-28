@@ -1,6 +1,6 @@
 ---
 title: "I Sold TinyPilot, My First Successful Business"
-date: 2024-05-29T00:00:00-04:00
+date: 2024-05-29
 hero_image: cover.webp
 tags:
   - tinypilot

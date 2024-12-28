@@ -1,6 +1,6 @@
 ---
 title: "Go Programming Blueprints by Mat Ryer"
-date: 2023-01-02T00:00:00-04:00
+date: 2023-01-02
 rating: 8
 purchase_url: https://www.packtpub.com/product/go-programming-blueprints-second-edition/9781786468949
 ---
@@ -35,7 +35,7 @@ I'm a fan of [Mat Ryer](https://twitter.com/matryer)'s work, and his blog posts 
 - The bash script examples felt sloppy.
 - Code quality was inconsistent throughout the book.
   - Some examples are elegant and intuitive, while others feel like a first draft.
-- There are two independent Github repos: one [from the author](https://github.com/matryer/goblueprints) and one [from the publisher](https://github.com/PacktPublishing/Go-Programming-Blueprints).
+- There are two independent GitHub repos: one [from the author](https://github.com/matryer/goblueprints) and one [from the publisher](https://github.com/PacktPublishing/Go-Programming-Blueprints).
   - [The author's repo](https://github.com/matryer/goblueprints) seems to be the correct one.
 - There are instructions for running the examples on Windows, but they feel like an untested afterthought.
 - Some of the examples no longer compile due to third-party dependencies that have disappeared.

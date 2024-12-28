@@ -99,7 +99,7 @@ Pre-rendering is not right for every situation. You'll need to decide what your 
 
 To demonstrate pre-rendering, I'll show you a basic, pre-rendered "Hello, world!" app in just three files.
 
-The only pre-requisite is [Node.js](https://nodejs.org/en/download/). I used [Node v12.13.1](https://nodejs.org/dist/v12.13.1/), which is the latest stable release at the time of this writing.
+The only pre-requisite is [Node.js](https://nodejs.org). I used [Node v12.13.1](https://nodejs.org/dist/v12.13.1/), which is the latest stable release at the time of this writing.
 
 ### `pages/index.vue`
 
@@ -352,7 +352,7 @@ Below are instructions for publishing static files with a few popular providers:
 
 ## Source code
 
-All code for this example is available on Github under the [MIT license](https://choosealicense.com/licenses/mit/):
+All code for this example is available on GitHub under the [MIT license](https://choosealicense.com/licenses/mit/):
 
 - [hello-world-vue-pre-rendered](https://github.com/mtlynch/hello-world-vue-pre-rendered)
 
