@@ -11,6 +11,24 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  .img-text {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+    }
+
+    img {
+      border: 1px solid gray;
+
+      @media screen and (min-width: 768px) {
+        max-width: 350px;
+        margin-right: 2rem;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
