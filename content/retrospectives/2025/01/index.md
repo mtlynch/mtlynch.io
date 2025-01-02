@@ -36,14 +36,14 @@ I wrote [a design brief](https://docs.google.com/document/d/1SUQ6GTeyL-XWmZYlJdQ
 
 Gary had a portfolio with dozens of book covers and a perfect 5.0-star rating. He proposed a one-month timeline, with the fee split into three payments, which seemed fine to me.
 
-But then things went south. Gary wasn't awful, but he was just kind of mediocre and slow. A week went by, and I hadn't heard anything. After my first payment was auto-billed, I asked for an ETA on when I could see some drafts, and he said he'd send them the next day, which he did.
+Gary wasn't awful, but he was just kind of mediocre and slow. A week went by, and I hadn't heard anything. After my first payment was auto-billed, I asked for an ETA on when I could see some drafts, and he said he'd send concepts the next day, which he did.
 
 {{<img src="cover-ideas.webp" max-width="800px" caption="Initial book cover ideas from the designer I hired through Reedsy">}}
 
 Sample 01 looked good, but it was a direct ripoff of [_Beautiful Code_](https://www.oreilly.com/library/view/beautiful-code/9780596510046/), which I had cited in my brief.
 I found the rest underwhelming, but I felt like it was my fault for not spending more time on my brief.
 
-I thought that the tone should be simplicity, but I realzied that what I cared more about was the idea of careful, deliberate work. I felt like sample 06 of the zen garden and sample 05 of the clay mold were on the right track, so I asked to explore those more.
+As I reviewed the concepts, I realized what I cared about conveying was the idea of careful, deliberate work. I felt like Sample 06 of the zen garden and Sample 05 of the clay mold were on the right track, so I asked to explore those.
 
 Another week went by, and Gary sent a minor variation on the zen garden idea, and a cover where someone was starting to
 
@@ -53,7 +53,7 @@ I found [a royalty-free image on Unsplash](https://unsplash.com/photos/shallow-f
 
 {{<img src="refactoring-english-cover-800px.webp" max-width="350px" has-border="true">}}
 
-I know it looks very amateurish, but it's about 80% as good as Gary's work, except that it was free and took me an hour. I'm treating it as a placeholder, and I can always hire someone or invest more time later.
+I know it looks amateurish, but I'm about 80% as satisfied as I expected to be with Gary's work. But this was free and took me an hour. I'm treating it as a placeholder, and I can always hire someone or invest more time later.
 
 The experience also put me off Reedsy. Reedsy wouldn't allow me to cancel my final payment. I tried to delete my credit card, but they prevent you from removing your card without replacing it with another one.
 
@@ -75,13 +75,30 @@ I hope to write a longer article in a few months, but I just want to capture som
 
 If I spend time configuring something hard, I keep that work. It's not like Windows where I'm so exhausted from doing whatever I did, and then a few months later when something breaks or I reinstall the OS, I have to figure everything out again.
 
-### Good: I can launch applications with my keyboard
+### Good: I can navigate more with my keyboard
+
+For the past few years, I've had a goal of maintaining better keyboard discipline (i.e., preferring the keyboard to the mouse), but I've been bad at practicing.
+
+When I started using NixOS, I realized how much Windows pulls me back to the mouse. One of the biggest things I noticed in NixOS was that I can launch applications quickly using the keyboard. I just hit Super+A and then start typing the name of the application I want to launch. On NixOS it works.
+
+It felt magical even though you can launch applications with the keyboard on Windows, too. But Windows had trained me out of it because:
+
+1. Windows somehow managed to make the Start menu slow, so when I hit the Windows key, there was a delay of sometimes seconds before the Start menu rendered.
+1. When I search, the Start menu doesn't just search applications. It also searches file contents and remote content on the Internet, which is thousands of times slower than searching a few dozen local applications.
 
 ### Good: My OS is no longer actively working against me
+
+One of the main reasons I left Windows was that the OS feels increasingly user-hostile. It keeps adding in telemetry and user tracking, then when I disable it, a new version will come out and introduce even more tracking that's on by default.
+
+As I was migrating my data from Windows to NixOS, I got a full-screen modal pop up on my Windows system telling me that Windows 10 was deprecated so I absolutely had to upgrade to Windows 11. I had to look closely to find the subtle button at the bottom of the modal that let me decline and continue using my own computer.
+
+With NixOS, there's none of that. Nothing's bothering me about forced upgrades or opt-out telemetry.
 
 ### Good: Rebuilding my system is easy, mostly
 
 I originally installed NixOS on a blazing-fast Crucial T705. But then after a few weeks, I realized the disk was defective, so I had to send it back.
+
+If this had been a Windows or Ubuntu system, it would have been a huge drag to
 
 ### Good: SSH just works
 
