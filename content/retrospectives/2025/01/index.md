@@ -32,6 +32,12 @@ TODO
 
 ## From Windows to NixOS
 
+### Good: I can launch applications with my keyboard
+
+### Good: My system configuration is in source control
+
+### Good: My OS is no longer actively working against me
+
 ### Good: Rebuilding my system is (mostly) easy
 
 ### Good: Trying new applications is low-friction
@@ -39,6 +45,28 @@ TODO
 ### Good: SSH just works
 
 ### Bad: Linux file explorers all suck
+
+### Bad: It's harder to configure most applications through Nix
+
+### Bad: I can't figure out how to customize my mouse buttons
+
+### The rest in brief
+
+- Good
+  - It's easy to create new keyboard shortcuts.
+  - I can install most apps by just guessing the package name (e.g., `nix-shell -p bitwarden`).
+  - Logging is more accessible and standardized.
+  - There's no Windows Registry, so data is more accessible through normal filesystem tools.
+  - It's easier to manage always-on services.
+  - It's easier to manage scheduled tasks.
+- Bad
+  - It's a pain to install apps that haven't been packaged for Nix.
+  - To install with disk encryption enabled using the GUI installer, there's a lot of stuff you have to "just know" about partitioning the disk manually in the right way.
+  - The separation between binaries and user data on the filesystem is less clear to me.
+    - Like on Windows, it's obvious that everything in `C:\Program Files` is not supposed to be user data, and mostly everything under `C:\Users` is user data.
+  - I couldn't figure out how to get my motherboard's onboard network card to work.
+    - Fortunately, my PCI-based 10G NIC worked out of the box.
+  - I find the NFS experience terrible, so I just keep using CIFS despite no longer having Windows systems on my network.
 
 ## NixOS encourages me to make mini-utilities
 
@@ -55,6 +83,10 @@ Sometimes, I'll want to throw a video onto PicoShare to send someone, but the vi
 I always knew I should automate more of that. The easiest would be to create my own wrapper script so that I didn't have to look up ffmpeg's semantics. But then it would break if I installed a new version of ffmpeg. And then I'd have to remember where on my filesystem that wrapper script was. And then do I have to replicate the script between my laptop and desktop?
 
 I could make a web interface, but Windows isn't so friendly to hosting web services in the background. And if I host it in the cloud, it's expensive because I need to run ffmpeg on the backend, so I need a whole server. And I'd have to put in abuse protection.
+
+But if I'm already running NixOS, creating a utility to make web-streamable videos is so much less friction.
+
+### Basic Go Web App: A basic Go web app
 
 ### Pointer Brother: Point to things in screenshots
 
