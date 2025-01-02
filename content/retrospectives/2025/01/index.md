@@ -32,6 +32,8 @@ TODO
 
 ## From Windows to NixOS
 
+I hope to write a longer article in a few months, but I just want to capture some thoughts while they're still fresh.
+
 ### Good: I can launch applications with my keyboard
 
 ### Good: My system configuration is in source control
