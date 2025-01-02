@@ -38,7 +38,7 @@ I did learn some interesting details that improved my understanding of immigrati
 - The arguments are lacking in nuance. The author only considers the harms of immigration policies and uses that to justify abolishing them without considering any benefits.
 - The athor repeatedly claims that borders are unnecessary but has no examples of any modern society with open borders or any explanation for why no country adopts such a policy.
 - The author is uncharitable in painting proponents of immigration controls. They're presented as seething xenophobes or greedy elites.
-- The author largely ignores any studies or criticism of open borders.
+- The author largely ignores any criticism of open borders or studies contradicting his beliefs.
   - Almost all studies he discusses are from pro-immigration organizations or libertarian think tanks.
 - Most of the people he quotes aren't policy experts but philosophers, poets, and activists.
 - He takes bizarre extreme positions, such as arguing that even illegal immigrants who commit violent crime don't deserve arrest.
