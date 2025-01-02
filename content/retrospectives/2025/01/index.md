@@ -38,7 +38,7 @@ Gary had a portfolio with dozens of book covers and a perfect 5.0-star rating. H
 
 But then things went south. Gary wasn't awful, but he was just kind of mediocre and slow. A week went by, and I hadn't heard anything. After my first payment was auto-billed, I asked for an ETA on when I could see some drafts, and he said he'd send them the next day, which he did.
 
-{{<img src="cover-ideas.webp" max-width="800px">}}
+{{<img src="cover-ideas.webp" max-width="800px" caption="Initial book cover ideas from the designer I hired through Reedsy">}}
 
 Sample 01 looked good, but it was a direct ripoff of [_Beautiful Code_](https://www.oreilly.com/library/view/beautiful-code/9780596510046/), which I had cited in my brief.
 I found the rest underwhelming, but I felt like it was my fault for not spending more time on my brief.
@@ -120,6 +120,10 @@ I probably could if I tried hard enough with Wine to run Photoshop under NixOS, 
   - I find the NFS experience terrible, so I just keep using CIFS despite no longer having Windows systems on my network.
   - Nix is still an order of magnitude faster than anything else but it still feels like it's an order of magnitude slower than it needs to be.
   - Documentation is so-so.
+  - I can't figure out how to change my desktop background.
+  - I can't figure out how to switch to i3 or anything except Gnome.
+  - I can't type emojis
+  - Some NixOS settings take effect immediately, while others require a new login, and others require a reboot, and it's hard to tell which is which.
 - The so-so
   - The error messages are fine. A common complaint I hear about Nix is that the error messages are opaque and point to the wrong thing, but I've found the error messages to be fine. Not amazing, but on par with other programming languages.
 
