@@ -54,7 +54,7 @@ After years of flops, I was finally earning a consistent profit, selling a produ
 
 I missed writing code. TinyPilot is a hardware business, so there were tons of moving parts beyond the software. I was the sole manager of six people on three distinct teams and managed relationships with our key vendors. I rarely had uninterrupted time for deep focus, and when I did, I felt too exhausted from juggling everything else.
 
-My wife and I also wanted to start a family. TinyPilot only occupied about 20% of my time, but it occupied 90% of my stress. I would have done a terrible job juggling founder stress with new parent stress.
+My wife and I also wanted to start a family. TinyPilot only occupied about 40% of my waking hours, but it occupied 90% of my stress. I would have done a terrible job juggling founder stress with new parent stress.
 
 ### Who would want to buy such a strange business?
 
