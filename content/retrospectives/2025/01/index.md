@@ -39,15 +39,39 @@ TODO
   - I think they're right, and that was my weakest rule.
   - That was in my head because it was a rule I championed within TinyPilot, but it makes more sense in a troubleshooting context than in tutorials. For example, I would encourage support engineers to avoid things like, "If you're running version 1.9.2, run command `X`. If you're running version 1.9.3, run command `Y`." Instead, I tried as much as possible to give commands snippets that would just figure out the state of the system and do the right thing.
 
-It's interesting getting responses from people who are like, "I think you're wrong about some of your advice. As evidence, look at this spectacular tutorial that I wrote." And then I read their example, and it's offensively bad.
+It's interesting getting responses from people who are like, "I think you're wrong about some of your advice. As evidence, look at this spectacular tutorial that I wrote." And then I read their tutorial, and it's offensively bad.
 
-In truth, I'm happy to get that reaction because I feel immensely confident that those authors are wrong, and I'm right. Or not so much that they're "wrong" exactly, but I feel confident that the overwhelming majority of developers prefers a tutorial that allows them to copy paste rather than one where the author has gone out of their way to force the reader to re-type entire files by hand.
+In truth, I'm happy to get that reaction because I feel immensely confident that those authors are wrong, and I'm right. Or not so much that they're "wrong" exactly, but I feel confident that I have a better read on what the majority of developers want than the people do that are giving me these critiques.
+
+### What's the right way to iterate on an article after I publish it?
+
+When [Salvatore Sanfilippo](http://antirez.com), creator of Redis, paused his programming work to write a sci-fi novel, he [observed](https://antirez.com/news/135):
+
+> I believe the most sharp difference between writing and programming is that, once written, edited and finalized, a novel remains immutable, mostly.
+
+He went on to say that programmers should learn from novelists and resist the urge to rewrite the core logic of their app after it's done, but it made me realize that the format of ebooks makes it easy to treat books more like software and keep iterating on it based on reader feedback.
+
+I'm obviously not the first person to think of this, and the whole LeanPub platform is based on the idea of selling books as the author is in the process of writing and editing it.
+
+My plan for
+
+My blog posts are usually pretty static. Once I publish them, I don't rewrite them unless someone points out a mistake.
+
+For the book, I'm trying to publish chapters in near-finished state, but I'm also treating them as non-final.
+
+But it does create a problem I've never dealt with before in that I'm messing up past discussion. Like on Hacker News, Lobsters, and reddit, commenters disagreed with my point about "Let computers evaluate conditional logic." And I think they're right. That was my weakest point, and I'm probably going to cut it. But if I cut it, it's confusing for anyone reading these discussions wondering why people are disagreeing with a point that never appears in the post.
+
+The best solution I can think of is to include a note at the bottom saying that I'm still revising it and link to the version of the chapter as it was originally published.
 
 ### What's my marketing strategy now?
 
-The reception was pretty good, and I thought, "Okay, I need to just keep sharing preview chapters like this to those same channels."
+It wasn't a sensational reception, but it got a decent response on Lobsters, Hacker News, and the /r/programming subreddit.
 
-Then, I reviewed my table of contents and realized that this is basically my only chapter that works on Hacker News, Lobsters, and reddit. Like Hacker News is probably not going to be excited to read about why I hate the passive voice.
+I thought, "Okay, I need to just keep sharing preview chapters like this to those same channels."
+
+Then, I reviewed my table of contents and realized that this is basically my only chapter that works on any of the channels where I shared it. Most of those channels have a rule that's basically, "If there's no code in the post, it doesn't belong here." So, /r/programming is probably not going to be excited to read my ranty chapter about why I hate the passive voice.
+
+One idea I've had is to do freelance editing for other writers and use that to inform the _Refactoring English_. Except I don't think "editing" is exactly what I'd be good at. Like I think people hear editor and think I'm going to polish their writing for them, but what I actually want to do is identify problems in their writing and explain principles and techniques to help them improve it themselves.
 
 ## My poor experience hiring a book cover designer through Reedsy
 
