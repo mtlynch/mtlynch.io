@@ -1,6 +1,6 @@
 ---
 title: "Increasing Your Reply Rate on Cold Emails to Me"
-date: 2024-12-13
+date: 2025-01-13
 ---
 
 There are lots of guides on writing cold emails. This one is hyperspecific, and I'm more qualified than anyone to write it because it's for people who cold email me, Michael Lynch.
@@ -87,6 +87,20 @@ I'm happy working for myself.
 ## Examples
 
 ### Good:
+
+> From: Paul Graham<br>
+> To: Michael Lynch<br>
+> Subject: Great work
+>
+> Hey Michael,
+>
+> Love your blog. Great stuff! It's taught me a lot about writing and entrepreneurship!
+>
+> I'd like to send you $5 million as a thank you.
+>
+> -pg
+
+I like this email because it's very to the point. It doesn't ask a lot of me.
 
 ### Bad: Technical support
 
