@@ -235,4 +235,4 @@ Speaking of goals, here's what I hope to accomplish in my second year as a solo 
 
 ---
 
-_Cover art by [Loraine Yow](https://www.loraineyow.com/)_
+_Cover art by Loraine Yow_
