@@ -136,7 +136,7 @@ I've created a basic configuration for a NixOS server system as a Proxmox contai
 curl \
   --show-error \
   --fail \
-  {{<baseurl>}}/notes/nixos-proxmox/configuration.nix \
+  {{<baseurl>}}notes/nixos-proxmox/configuration.nix \
   > /etc/nixos/configuration.nix
 ```
 

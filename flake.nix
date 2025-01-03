@@ -13,8 +13,8 @@
     # 5.0.8 release
     html-proofer-nixpkgs.url = "github:NixOS/nixpkgs/5ed627539ac84809c78b2dd6d26a5cebeb5ae269";
 
-    # 0.119.0 release
-    hugo-nixpkgs.url = "github:NixOS/nixpkgs/75a52265bda7fd25e06e3a67dee3f0354e73243c";
+    # 0.139.3 release
+    hugo-nixpkgs.url = "github:NixOS/nixpkgs/dd51f52372a20a93c219e8216fe528a648ffcbf4";
   };
 
   outputs = {

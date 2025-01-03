@@ -21,10 +21,7 @@
 
       {{ partial "social-discuss.html" . }}
 
-      {{ if not .Site.IsServer }}
-        {{ partial "talkyard.html" . }}
-      {{ end }}
-
+      {{ partial "talkyard.html" . }}
     </article>
   </section>
 {{ end }}
