@@ -26,7 +26,28 @@ TODO
 
 TODO
 
-## Topic 1
+## Thoughts on finishing my first chapter
+
+- Changing an article after it's published
+- Too much bash
+- Make examples copy/pasteable
+  - Readers won't learn if they copy/paste.
+- Revisions
+- Feels unwieldy. There are still parts where that I felt flow poorly, but I was tired of editing it. I think 2,000 word chunks are my ideal. This was 5,400 words.
+- The rule "Teach one thing" at publication time was called, "Boil it down to the essentials." I realized in participating in discussion that the original heading didn't really fit, and "Teach one thing" more crisply captured what I thihk.
+- I got a lot of pushback on "Use computers to evaluate conditional logic"
+  - I think they're right, and that was my weakest rule.
+  - That was in my head because it was a rule I championed within TinyPilot, but it makes more sense in a troubleshooting context than in tutorials. For example, I would encourage support engineers to avoid things like, "If you're running version 1.9.2, run command `X`. If you're running version 1.9.3, run command `Y`." Instead, I tried as much as possible to give commands snippets that would just figure out the state of the system and do the right thing.
+
+It's interesting getting responses from people who are like, "I think you're wrong about some of your advice. As evidence, look at this spectacular tutorial that I wrote." And then I read their example, and it's offensively bad.
+
+In truth, I'm happy to get that reaction because I feel immensely confident that those authors are wrong, and I'm right. Or not so much that they're "wrong" exactly, but I feel confident that the overwhelming majority of developers prefers a tutorial that allows them to copy paste rather than one where the author has gone out of their way to force the reader to re-type entire files by hand.
+
+### What's my marketing strategy now?
+
+The reception was pretty good, and I thought, "Okay, I need to just keep sharing preview chapters like this to those same channels."
+
+Then, I reviewed my table of contents and realized that this is basically my only chapter that works on Hacker News, Lobsters, and reddit. Like Hacker News is probably not going to be excited to read about why I hate the passive voice.
 
 ## My poor experience hiring a book cover designer through Reedsy
 
@@ -110,38 +131,52 @@ On NixOS, SSH just works. It never breaks unexpectedly. I manage my SSH configur
 
 I never thought of Windows Explorer as having an especially brilliant or innovative UX, but for whatever reason, every other option feels terrible by comparison.
 
+Nautilus is the best I've found, but it's still missing a lot of basic features:
+
+- There's no tree view of folders.
+- I can't drag a file from one Nautilus window to another.
+- There's no "Copy file path" option.
+
 ### Bad: It's harder to configure most applications through Nix
+
+For example, I use Firefox heavily. There might be some way to configure it through Nix, but
 
 ### Bad: I can't run Photoshop
 
+I [dislike Adobe as a company](https://www.ftc.gov/news-events/news/press-releases/2024/06/ftc-takes-action-against-adobe-executives-hiding-fees-preventing-consumers-easily-cancelling), but Photoshop is good software. I'm not even that good at it, but I've been using it on a daily basis for 14 years for quick screenshotting and editing.
+
 I probably could if I tried hard enough with Wine to run Photoshop under NixOS, but I'd rather figure something out in the Linux world, especially something that's open-source.
+
+I've been trying to learn GIMP, but it's a major step down in UX and it's going to take me a while to learn to do what I used to do in Photoshop.
 
 ### The rest in brief
 
 - The good
   - It's easy to create new keyboard shortcuts.
-  - Trying new applications is low-friction
-  - I can install most apps by just guessing the package name (e.g., `nix-shell -p bitwarden`).
-  - Logging is more accessible and standardized.
+  - Trying new applications is super low-friction.
+    - I can install most apps by just guessing the package name (e.g., `nix-shell -p bitwarden`).
+    - Installing one app never breaks another.
+    - It's trivial to uninstall apps.
+  - Logging is more accessible and standardized than on Windows.
   - There's no Windows Registry, so data is more accessible through normal filesystem tools.
   - It's easier to manage always-on services.
   - It's easier to manage scheduled tasks.
 - The bad
   - It's a pain to install apps that haven't been packaged for Nix.
-  - To install with disk encryption enabled using the GUI installer, there's a lot of stuff you have to "just know" about partitioning the disk manually in the right way.
+  - To install NixOS with disk encryption enabled using the GUI installer, there's a lot of stuff you have to "just know" about partitioning the disk manually in the right way.
+  - Some NixOS settings take effect immediately, while others require a new login, and others require a reboot, and it's hard to tell which is which.
   - The separation between binaries and user data on the filesystem is less clear to me.
-    - Like on Windows, it's obvious that everything in `C:\Program Files` is not supposed to be user data, and mostly everything under `C:\Users` is user data.
+    - Windows doesn't do this perfectly, but it's obvious that everything in `C:\Program Files` is not supposed to be user data, and mostly everything under `C:\Users` is user data.
   - I can't figure out how to customize my mouse buttons
   - I couldn't figure out how to get my motherboard's onboard network card to work.
-    - Fortunately, my PCI-based 10G NIC worked out of the box.
+    - Fortunately, my PCI-based 10G NIC worked out of the box, so I didn't have to bother.
   - I find the NFS experience terrible, so I just keep using CIFS despite no longer having Windows systems on my network.
   - Nix is still an order of magnitude faster than anything else but it still feels like it's an order of magnitude slower than it needs to be.
-  - Documentation is so-so.
   - I can't figure out how to change my desktop background.
   - I can't figure out how to switch to i3 or anything except Gnome.
-  - I can't type emojis
-  - Some NixOS settings take effect immediately, while others require a new login, and others require a reboot, and it's hard to tell which is which.
+  - I can't figure out a way to type emojis.
 - The so-so
+  - Documentation is okay. I know it's one of the biggest complaints, but I can usually get by between the [NixOS wiki](https://wiki.nixos.org/wiki/NixOS_Wiki) and searching for package options.
   - The error messages are fine. A common complaint I hear about Nix is that the error messages are opaque and point to the wrong thing, but I've found the error messages to be fine. Not amazing, but on par with other programming languages.
 
 ## NixOS encourages me to make mini-utilities
@@ -166,6 +201,8 @@ But if I'm already running NixOS, creating a utility to make web-streamable vide
 
 ### Pointer Brother: Point to things in screenshots
 
+Named in honor of [The Pointer Brothers](https://www.youtube.com/watch?v=0OwgTEB51Os)
+
 ## Side projects
 
 ### Making PicoShare work with large files
@@ -187,4 +224,4 @@ But if I'm already running NixOS, creating a utility to make web-streamable vide
 
 ### Requests for help
 
-TODO
+- TODO
