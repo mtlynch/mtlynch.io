@@ -19,7 +19,7 @@ I'm a blogger, and I often commission custom cartoons for my blog posts like thi
 
 {{<img src="year-6-cover.webp" max-width="700px" caption="An example of a cartoon I commissioned for the blog, part of my [year-in-review series](/tags/annual-review/)">}}
 
-The blog's previous cartoonist was the awesome [Loraine Yow](https://www.loraineyow.com/), who worked with me for six years. She recently changed careers, so I'm looking for someone who can take over as the blog's official cartoonist.
+The blog's previous cartoonist was the awesome Loraine Yow, who worked with me for six years. She recently changed careers, so I'm looking for someone who can take over as the blog's official cartoonist.
 
 ## Benefits
 
