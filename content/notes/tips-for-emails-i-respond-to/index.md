@@ -96,11 +96,15 @@ I'm happy working for myself.
 >
 > Love your blog. Great stuff! It's taught me a lot about writing and entrepreneurship!
 >
+> I notice that you post a lot on Hacker News. Did you know I actually founded the company that runs that site? Small world, LOL!
+>
 > I'd like to send you $5 million as a thank you.
 >
 > -pg
 
 I like this email because it's very to the point. It doesn't ask a lot of me.
+
+It establishes common interests.
 
 ### Bad: Technical support
 
