@@ -13,7 +13,7 @@ I found the book frustrating in a lot of ways.
 
 I hoped the author would consider the benefits of borders and weight them against the harms and make the case that the harms outweigh the benefits. Instead, the author was unable or unwilling to see any legitimate reason for a nation to enforce limits or criteria on who may enter.
 
-Instead of evaluating pros and cons, the author enumerates all the harms of border control and concludes that we should abolish borders because they have negative efects. This is basically like arguing that because you sometimes forget your keys and can't use your car, we should just get rid of car keys and make cars accessible to any person who wants to use one.
+Instead of evaluating pros and cons, the author enumerates all the harms of border control and concludes that we should abolish borders because they have negative effects. This is basically like arguing that because you sometimes forget your keys and can't use your car, we should just get rid of car keys and make cars accessible to any person who wants to use one.
 
 When people talk about ["Chesterton's Fence,"](https://fs.blog/chestertons-fence/) it's about this exact situation. Every country has borders, and there are reasons why those borders exist. It's silly to talk about eliminating borders without acknowledging why virtually every civilization created them in the first place:
 
