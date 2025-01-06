@@ -1,5 +1,5 @@
 ---
-title: "Educational Products: Month 1"
+title: "Educational Products: Month 3"
 date: "2025-01-09"
 description: TODO - One-line summary
 ---
@@ -22,7 +22,7 @@ TODO
 ### Work with a designer to complete the cover design for _Refactoring English_
 
 - **Result**: Decided to do the cover design on my own.
-- **Grade**: XX
+- **Grade**: C
 
 TODO
 
@@ -75,24 +75,48 @@ One idea I've had is to do freelance editing for other writers and use that to i
 
 ## My poor experience hiring a book cover designer through Reedsy
 
-I checked for recommendations in the Write Useful Books community, and several people described mentioned Reedsy, a service I'd never heard of before. They common review was that it was pricey but worth it.
+One of my distractions in November from working on my book was to convince myself I needed [a professionally-designed cover](/retrospectives/2024/12/#maybe-i-need-a-book-cover). I started the process in November, but work was scheduled to happen in December.
 
-I wrote [a design brief](https://docs.google.com/document/d/1SUQ6GTeyL-XWmZYlJdQgyvQHZdHiUvCy0G-dh5nnrQM/edit?usp=sharing) explaining what I wanted and sent it to three designers. One of them bid
+I found the designer through Reedsy, a platform that several people recommended in the Write Useful Books community. The common review was that it was pricey but worth it.
 
-Gary had a portfolio with dozens of book covers and a perfect 5.0-star rating. He proposed a one-month timeline, with the fee split into three payments, which seemed fine to me.
+I wrote [a design brief](https://docs.google.com/document/d/1SUQ6GTeyL-XWmZYlJdQgyvQHZdHiUvCy0G-dh5nnrQM/edit?usp=sharing) explaining what I wanted and sent it to four designers. My budget was $350-650. One bid 20% over my max budget, another declined saying that my budget was too low, and one never responded.
 
-Gary wasn't awful, but he was just kind of mediocre and slow. A week went by, and I hadn't heard anything. After my first payment was auto-billed, I asked for an ETA on when I could see some drafts, and he said he'd send concepts the next day, which he did.
+The only valid bid came from Gary, who offered to do the cover for £350 (US$434). He had a portfolio with dozens of book covers and a perfect 5.0-star rating on Reedsy. He proposed a one-month timeline, with the fee split into three payments, which seemed fine to me, so I hired him.
+
+### Working with Gary
+
+A week went by, and I hadn't heard anything. After my first payment was auto-billed, I asked for an ETA on when I could see some drafts, and he said he'd send concepts the next day, which he did.
 
 {{<img src="cover-ideas.webp" max-width="800px" caption="Initial book cover ideas from the designer I hired through Reedsy">}}
 
 Sample 01 looked good, but it was a direct ripoff of [_Beautiful Code_](https://www.oreilly.com/library/view/beautiful-code/9780596510046/), which I had cited in my brief.
-I found the rest underwhelming, but I felt like it was my fault for not spending more time on my brief.
+I found the rest underwhelming, but I blamed myself for not spending more time on my brief.
 
-As I reviewed the concepts, I realized what I cared about conveying was the idea of careful, deliberate work. I felt like Sample 06 of the zen garden and Sample 05 of the clay mold were on the right track, so I asked to explore those.
+As I reviewed the concepts, I realized what I cared about conveying was the idea of careful, deliberate work. I felt like Sample 06 of the zen garden and Sample 05 of the clay mold were on the right track, so I asked to explore those. I suggested an image of a sculptor carving stone.
 
-Another week went by, and Gary sent a minor variation on the zen garden idea, and a cover where someone was starting to
+Another week went by, and Gary sent a minor variation on the zen garden idea, and a cover where someone was holding a chisel to a raw stone.
 
 The next week was the holidays, and I started to worry that the project wouldn't complete by the December 30th finish date. Gary emailed me the Monday before Christmas to say he was returning to work on December 27th.
+
+By the end of the day on December 27th, I realized I was in a bit of a pickle. Gary was in the UK, so his business day was long over. Reedsy was going to auto-bill me at noon ET on December 30th, but that was a Monday. And Reedsy prohibits me from disputing a bill in the last 24 hours, so I had zero business days left to get completed work.
+
+I asked Reedsy support to push back my final payment a week, as Gary hadn't delivered his work. Reedsy told me that I had to take it up with Gary. I explained that if I waited until the next business day to get a response from Gary, Reedsy would auto-bill me. Reedsy support insisted I try to resolve it with Gary anyway.
+
+I tried to remove my credit card from Reedsy, but they prevent you from removing your card without replacing it with another.
+
+I emailed Gary at 5 PM ET on Friday, and he responded that he didn't work "corporate hours," so he was still on track to finish the project by working the weekend, but he pushed back my payment as a courtesy. He seemed miffed that I'd complained to Reedsy and said no client had behaved that way.
+
+I, on the other hand, do try to stick to regular working hours, so I didn't want to spend my weekend rushing to finish this project with Gary. I snoozed the emails until Monday, but Reedsy sent me another email Saturday warning me that if I didn't log in and accept the new payment schedule within 24 hours, it would revert back to the original. So, I logged in and did that and put off the rest of the discussion until Monday.
+
+When I checked on Monday, Gary had sent updates on the two concepts, but they were both pretty mediocre. One looked clearly AI-generated and unrealistic. The other was just not capturing the tone I asked for.
+
+I pressed Gary for details about whether the images were AI-generated and if they met the license requirements I'd specified in my brief. He got cagey at that point, so I asked to cancel the project. I offered that he could keep the £231 (US$287) I already paid, but I'd cancel the final payment. He agreed, so that was that.
+
+I gave Gary a 3-star review across the board. I didn't think he was awful, but just kinda meh and bad at communicating timelines. My review is public, but Reedsy still claims that Gary has a perfect 5.0-star rating even though he only has five reviews.
+
+{{<img src="gary-reedsy-reviews.webp" max-width="800px" caption="Despite me giving Gary a 3-star review, he still has a perfect 5.0 rating with five reviews." has-border="true">}}
+
+### My DIY book cover
 
 I found [a royalty-free image on Unsplash](https://unsplash.com/photos/shallow-focus-photo-gray-balance-stone-HWRAHxoBlpU) that I felt captured the spirit of quiet, careful work, and added I some text.
 
@@ -100,41 +124,21 @@ I found [a royalty-free image on Unsplash](https://unsplash.com/photos/shallow-f
 
 I know it looks amateurish, but I'm about 80% as satisfied as I expected to be with Gary's work. But this was free and took me an hour. I'm treating it as a placeholder, and I can always hire someone or invest more time later.
 
-The experience also put me off Reedsy. Reedsy wouldn't allow me to cancel my final payment. I tried to delete my credit card, but they prevent you from removing your card without replacing it with another one.
+### Takeaways for hiring a graphic designer
 
-I gave Gary a 3-star review across the board, and my review is public, but Reedsy still claims that Gary has a perfect 5.0-star rating even though he only has five reviews.
-
-Takeaways:
-
-- Tie payments to project milestones.
+- Tie payments to project milestones, not dates.
 - Be explicit about whether you're okay with the designer using AI-generated images or AI-assisted image compositing.
 - Be explicit that you want to see license information for third-party assets like photos or fonts.
-  - I had said in the brief that all the assets needed to have compatible licenses, but it would have been better to say they had to deliver the license information and not just pinky promise that it's okay.
-- Reedsy sides heavily with its platform vendors rather than its clients.
+  - I had said in the brief that all the assets needed to have compatible licenses.
+  - It would have been better to say the contractor had to deliver the license information and not just pinky promise that they're providing an asset in compliance with its license.
+- Don't plan a project that's supposed to end right after Christmas.
+- Reedsy biases the experience heavily to favor contractors rather than its clients.
 
 ## NixOS encourages me to make mini-utilities
 
-One of my favorite things about using NixOS is that it rewards me for creating personal utilities.
+I started writing this as part of the retrospective, but I thought it would work as its own standalone post:
 
-I create a lot of personal utilities anyway, but
-
-### Streamabilizer: Make videos web-streamable
-
-A utility I've wanted for years but never bothered to make is a tool for making videos web-streamable. Modern browsers can play MP4 videos natively, but the video has to be encoded specifically to support web streaming.
-
-Sometimes, I'll want to throw a video onto PicoShare to send someone, but the video isn't web-streamable. So, I find the [SuperUser answer](https://superuser.com/a/438471) I've found 100x times before, copy the ffmpeg incantation, modify it for my filename and the path to ffmpeg on my system, then run the command.
-
-I always knew I should automate more of that. The easiest would be to create my own wrapper script so that I didn't have to look up ffmpeg's semantics. But then it would break if I installed a new version of ffmpeg. And then I'd have to remember where on my filesystem that wrapper script was. And then do I have to replicate the script between my laptop and desktop?
-
-I could make a web interface, but Windows isn't so friendly to hosting web services in the background. And if I host it in the cloud, it's expensive because I need to run ffmpeg on the backend, so I need a whole server. And I'd have to put in abuse protection.
-
-But if I'm already running NixOS, creating a utility to make web-streamable videos is so much less friction.
-
-### Basic Go Web App: A basic Go web app
-
-### Pointer Brother: Point to things in screenshots
-
-Named in honor of [The Pointer Brothers](https://www.youtube.com/watch?v=0OwgTEB51Os)
+- ["NixOS encourages me to make mini-utilities"](/notes/nixos-encourages-mini-utilities/)
 
 ## Side projects
 
