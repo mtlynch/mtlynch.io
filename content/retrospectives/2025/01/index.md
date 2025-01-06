@@ -146,7 +146,9 @@ My minor shame of PicoShare is that it doesn't scale well for large files. On a 
 
 I've dug into the issue a few times, and my strong hunch is that this performance issue is because PicoShare uses SQLite in a peculiar way. It stores all file data in SQLite, which is an unusual choice, but it means that the SQLite data captures the app's full state, including file data.
 
-SQLite has APIs for writing data to the
+So, PicoShare tries to write a ton of data to SQLite and bloats RAM in the process.
+
+I'd been curious about using SQLite's streaming I/O APIs, as they seemed like they'd be more efficient than just stuffing data in through regular SQL queries. But I wrote PicoShare in Go, and the Go sqlite driver I was using didn't support the streaming I/O APIs.
 
 ## Wrap up
 
