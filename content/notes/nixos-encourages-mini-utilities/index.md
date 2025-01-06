@@ -18,7 +18,7 @@ A utility I've wanted for years but never bothered to make is a tool for making 
 Sometimes, I'll want to throw a short video onto [my file sharing server](https://github.com/mtlynch/picoshare), but the video isn't web-streamable. So, I find the [SuperUser answer](https://superuser.com/a/438471) I've found 100x times before, copy the ffmpeg incantation, modify it for my filename and the path to ffmpeg on my system, then run the command.
 
 I always wanted to automate my process for converting videos for web streaming, but I immediately ran into obstacles.
-
+s
 I could create a convenience script so that I didn't have to look up ffmpeg's semantics. But I never write scripts for Windows, so I'd have to look up how to do it in PowerShell, a language I dislike. And then my script would break if I installed a new version of ffmpeg. And then I'd have to remember where on my filesystem that wrapper script was. And then how do I maintain the same copy between my laptop and desktop?
 
 I could create a simple web app to convert my videos, but Windows isn't so friendly to hosting web services in the background. And if I host it in the cloud, it's expensive because I need to run ffmpeg on the backend, so I need a whole server. And I'd have to put in abuse protection.
