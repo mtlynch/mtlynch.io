@@ -63,54 +63,56 @@ But it does create a problem I've never dealt with before in that I'm messing up
 
 The best solution I can think of is to include a note at the bottom saying that I'm still revising it and link to the version of the chapter as it was originally published.
 
-### What's my marketing strategy now?
+### What's my marketing strategy?
 
 It wasn't a sensational reception, but it got a decent response on Lobsters, Hacker News, and the /r/programming subreddit.
 
 I thought, "Okay, I need to just keep sharing preview chapters like this to those same channels."
 
-Then, I reviewed my table of contents and realized that this is basically my only chapter that works on any of the channels where I shared it. Most of those channels have a rule that's basically, "If there's no code in the post, it doesn't belong here." So, /r/programming is probably not going to be excited to read my ranty chapter about why I hate the passive voice.
+Then, I reviewed my table of contents and realized that this is basically my only chapter that works on any those channels. Most of them have a written or unwritten rule that says, "If there's no code in the post, it doesn't belong here." /r/programming is probably not going to be excited to read my ranty chapter about why I hate the passive voice.
 
 One idea I've had is to do freelance editing for other writers and use that to inform the _Refactoring English_. Except I don't think "editing" is exactly what I'd be good at. Like I think people hear editor and think I'm going to polish their writing for them, but what I actually want to do is identify problems in their writing and explain principles and techniques to help them improve it themselves.
 
 ## My poor experience hiring a book cover designer through Reedsy
 
-One of my distractions in November from working on my book was to convince myself I needed [a professionally-designed cover](/retrospectives/2024/12/#maybe-i-need-a-book-cover). I started the process in November, but work was scheduled to happen in December.
+One of my distractions from working on my book in November was to convince myself I needed [a professionally-designed cover](/retrospectives/2024/12/#maybe-i-need-a-book-cover). I started the process in November, but the actual work with the designer happened in December.
 
 I found the designer through Reedsy, a platform that several people recommended in the Write Useful Books community. The common review was that it was pricey but worth it.
 
-I wrote [a design brief](https://docs.google.com/document/d/1SUQ6GTeyL-XWmZYlJdQgyvQHZdHiUvCy0G-dh5nnrQM/edit?usp=sharing) explaining what I wanted and sent it to four designers. My budget was $350-650. One bid 20% over my max budget, another declined saying that my budget was too low, and one never responded.
+I wrote [a design brief](https://docs.google.com/document/d/1SUQ6GTeyL-XWmZYlJdQgyvQHZdHiUvCy0G-dh5nnrQM/edit?usp=sharing) explaining what I wanted and sent it to four designers on Reedsy. My budget was $350-650. One designer bid 20% over my max budget, and his reply was a generic, "Sure, I can do this for you," with nothing that suggested he read my brief. Another designer declined saying that my budget was too low, and one never responded.
 
-The only valid bid came from Gary, who offered to do the cover for £350 (US$434). He had a portfolio with dozens of book covers and a perfect 5.0-star rating on Reedsy. He proposed a one-month timeline, with the fee split into three payments, which seemed fine to me, so I hired him.
+The only valid bid came from Gary, who offered to do the cover for £350 (US$434). He sent a nice note indicating he'd read my brief, and he had a portfolio with dozens of book covers and a perfect 5.0-star rating on Reedsy. He proposed a one-month timeline, with the fee split into three payments. That sounded fine to me, so I hired him.
 
 ### Working with Gary
 
-A week went by, and I hadn't heard anything. After my first payment was auto-billed, I asked for an ETA on when I could see some drafts, and he said he'd send concepts the next day, which he did.
+A week went by, and I hadn't heard anything from Gary. After my first payment was auto-billed, I asked for an ETA on when I could see some drafts. Gary said he'd send concepts the next day, which he did.
 
 {{<img src="cover-ideas.webp" max-width="800px" caption="Initial book cover ideas from the designer I hired through Reedsy">}}
 
-Sample 01 looked good, but it was a direct ripoff of [_Beautiful Code_](https://www.oreilly.com/library/view/beautiful-code/9780596510046/), which I had cited in my brief.
+Sample 01 looked good, but it was a pretty on-the-nose ripoff of [_Beautiful Code_](https://www.oreilly.com/library/view/beautiful-code/9780596510046/), which I had cited in my brief.
 I found the rest underwhelming, but I blamed myself for not spending more time on my brief.
 
 As I reviewed the concepts, I realized what I cared about conveying was the idea of careful, deliberate work. I felt like Sample 06 of the zen garden and Sample 05 of the clay mold were on the right track, so I asked to explore those. I suggested an image of a sculptor carving stone.
 
-Another week went by, and Gary sent a minor variation on the zen garden idea, and a cover where someone was holding a chisel to a raw stone.
+Another week went by, and Gary sent a minor variation on the zen garden idea, and a sculpting concept. Except Gary's cover showed a sculptor holding a chisel up to a raw stone. In the photo, the sculptor hadn't even started working, so I felt like it wasn't the right match.
 
-The next week was the holidays, and I started to worry that the project wouldn't complete by the December 30th finish date. Gary emailed me the Monday before Christmas to say he was returning to work on December 27th.
+The next week was the holidays, and I started to worry that the project wouldn't complete by the December 30th finish date. Gary emailed me the Monday before Christmas to say he was returning to work on December 27th, so he was still on track.
 
-By the end of the day on December 27th, I realized I was in a bit of a pickle. Gary was in the UK, so his business day was long over. Reedsy was going to auto-bill me at noon ET on December 30th, but that was a Monday. And Reedsy prohibits me from disputing a bill in the last 24 hours, so I had zero business days left to get completed work.
+By the end of the day on December 27th, I hadn't heard from Gary.
 
-I asked Reedsy support to push back my final payment a week, as Gary hadn't delivered his work. Reedsy told me that I had to take it up with Gary. I explained that if I waited until the next business day to get a response from Gary, Reedsy would auto-bill me. Reedsy support insisted I try to resolve it with Gary anyway.
+I realized I was in a bit of a pickle. Gary was in the UK, so, by 4 PM ET, his business day was long over. Reedsy was going to auto-bill me at noon ET on December 30th, but that was a Monday. And Reedsy prohibits me from disputing a bill in the last 24 hours, so I had zero business days left to get completed work.
 
-I tried to remove my credit card from Reedsy, but they prevent you from removing your card without replacing it with another.
+I asked Reedsy's customer support to push back my final payment a week, as Gary hadn't delivered his work. Reedsy told me that I had to take it up with Gary. I explained that if I waited until the next business day to get a response from Gary, it would be too late to move the payment. Reedsy support insisted I try to resolve it with Gary anyway.
 
-I emailed Gary at 5 PM ET on Friday, and he responded that he didn't work "corporate hours," so he was still on track to finish the project by working the weekend, but he pushed back my payment as a courtesy. He seemed miffed that I'd complained to Reedsy and said no client had behaved that way.
+I tried to remove my credit card from my account to prevent Reedsy from making further charges, but Reedsy's UI prevented me from removing my card without replacing it with another.
 
-I, on the other hand, do try to stick to regular working hours, so I didn't want to spend my weekend rushing to finish this project with Gary. I snoozed the emails until Monday, but Reedsy sent me another email Saturday warning me that if I didn't log in and accept the new payment schedule within 24 hours, it would revert back to the original. So, I logged in and did that and put off the rest of the discussion until Monday.
+I emailed Gary at 5 PM ET on Friday, and he responded that he didn't work "corporate hours," so he was still on track to finish the project by working the weekend. He pushed back my payment as a courtesy. He seemed miffed that I'd complained to Reedsy and said no client had behaved that way.
 
-When I checked on Monday, Gary had sent updates on the two concepts, but they were both pretty mediocre. One looked clearly AI-generated and unrealistic. The other was just not capturing the tone I asked for.
+I, on the other hand, do try to stick to regular working hours, so I didn't want to spend my weekend rushing to finish this project with Gary. I snoozed the emails until Monday, but Reedsy sent me another email Saturday warning me that if I didn't log in and accept the new payment schedule within 24 hours, it would revert back to the original. I logged in to accept the new payment schedule and put off the rest of the discussion until Monday.
 
-I pressed Gary for details about whether the images were AI-generated and if they met the license requirements I'd specified in my brief. He got cagey at that point, so I asked to cancel the project. I offered that he could keep the £231 (US$287) I already paid, but I'd cancel the final payment. He agreed, so that was that.
+When I checked back on Monday, Gary had sent updates on the two concepts, but they were both pretty mediocre. One looked clearly AI-generated and unrealistic. The other was just not capturing the tone I asked for.
+
+I pressed Gary for details about whether the images were AI-generated and if they met the license requirements I'd specified in my brief. He got cagey at that point, so I asked to cancel the project. I offered him the £231 (US$287) I already paid if he'd allow me to cancel the final payment. He agreed, so that was that.
 
 I gave Gary a 3-star review across the board. I didn't think he was awful, but just kinda meh and bad at communicating timelines. My review is public, but Reedsy still claims that Gary has a perfect 5.0-star rating even though he only has five reviews.
 
@@ -134,15 +136,17 @@ I know it looks amateurish, but I'm about 80% as satisfied as I expected to be w
 - Don't plan a project that's supposed to end right after Christmas.
 - Reedsy biases the experience heavily to favor contractors rather than its clients.
 
-## NixOS encourages me to make mini-utilities
-
-I started writing this as part of the retrospective, but I thought it would work as its own standalone post:
-
-- ["NixOS encourages me to make mini-utilities"](/notes/nixos-encourages-mini-utilities/)
-
 ## Side projects
 
 ### Making PicoShare work with large files
+
+PicoShare is my minimalist, easy-to-host web app for sharing files over the Internet. I created it a few years ago, and I use it on a weekly basis.
+
+My minor shame of PicoShare is that it doesn't scale well for large files. On a VM with a shared CPU and 256 MB of RAM, PicoShare works great for files up to about 1 GB in size. If you try uploading files larger than 1 GB, PicoShare typically exhausts RAM and crashes.
+
+I've dug into the issue a few times, and my strong hunch is that this performance issue is because PicoShare uses SQLite in a peculiar way. It stores all file data in SQLite, which is an unusual choice, but it means that the SQLite data captures the app's full state, including file data.
+
+SQLite has APIs for writing data to the
 
 ## Wrap up
 
