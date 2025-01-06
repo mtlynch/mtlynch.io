@@ -1,5 +1,5 @@
 ---
-title: "NixOS encourages me to make mini-utilities"
+title: "NixOS Encourages Me to Make Mini-Utilities"
 date: 2025-01-06
 ---
 
@@ -7,23 +7,27 @@ I've been using Windows as my main desktop since I was seven years old, so it's 
 
 After increasing frustrations with Microsoft and Windows in particular for the last decade, I finally made the switch last week to NixOS, a Linux distribution that's distinctive in that you largely configure it through a central folder of config files.
 
-I have mixed feelings about switching from Windows to NixOS, but one excellent benefit I didn't anticipate was how much NixOS rewards me for creating personal mini-utilities.
+There are certainly things from Windows that I miss, but one unexpected benefit of NixOS is how much it rewards me for creating personal mini-utilities.
 
 I create a lot of personal utilities anyway, but
 
-## Streamabilizer: Make videos web-streamable
+## Streamabilize: Make videos web-streamable
 
-A utility I've wanted for years but never bothered to make is a tool for making videos web-streamable. Modern browsers can play MP4 videos natively, but the video has to be encoded specifically to support web streaming.
+A utility I've wanted for years but never bothered to make is a tool for making videos web-streamable.
 
-Sometimes, I'll want to throw a short video onto [my file sharing server](https://github.com/mtlynch/picoshare), but the video isn't web-streamable. So, I find the [SuperUser answer](https://superuser.com/a/438471) I've found 100x times before, copy the ffmpeg incantation, modify it for my filename and the path to ffmpeg on my system, then run the command.
+Modern web browsers can play videos natively, but the video has to be encoded to support web streaming.
+
+Sometimes, I'll want to throw a short video onto [my file sharing server](https://github.com/mtlynch/picoshare), but the video isn't web-streamable. So, I search for the [SuperUser answer](https://superuser.com/a/438471) I've found a hundred times before, copy the command, modify it to match the paths on my system, then run the command.
 
 I always wanted to automate my process for converting videos for web streaming, but I immediately ran into obstacles.
-s
-I could create a convenience script so that I didn't have to look up ffmpeg's semantics. But I never write scripts for Windows, so I'd have to look up how to do it in PowerShell, a language I dislike. And then my script would break if I installed a new version of ffmpeg. And then I'd have to remember where on my filesystem that wrapper script was. And then how do I maintain the same copy between my laptop and desktop?
 
-I could create a simple web app to convert my videos, but Windows isn't so friendly to hosting web services in the background. And if I host it in the cloud, it's expensive because I need to run ffmpeg on the backend, so I need a whole server. And I'd have to put in abuse protection.
+I could create a convenience script so that I didn't have to look up ffmpeg's semantics. But I dislike writing Powershell, and I'd have to look up how to do everything. And then anytime I downloaded a new version of ffmpeg, I'd have to remember to update my script with the new path. And then I'd have to remember where on my filesystem that wrapper script was. And then how do I maintain the same copy between my laptop and desktop?
 
-But if I'm already running NixOS, creating a utility to make web-streamable videos is so much less friction.
+These problems were all solvable, but they created enough friction that I just kept converting videos the manual way.
+
+NixOS drastically reduces the friction in creating a utility like a video converter. I told an AI chatbot what I wanted, and it spit out
+
+https://gitlab.com/mtlynch/streamablize
 
 ## Basic Go Web App: A basic Go web app
 
@@ -31,4 +35,34 @@ This was my first NixOS mini-utility. It doesn't do anything useful, but it help
 
 ## Pointer Brother: Point to things in screenshots
 
-Named in honor of [The Pointer Brothers](https://www.youtube.com/watch?v=0OwgTEB51Os)
+Named in honor of famed corporate entertainment act, [The Pointer Brothers](https://www.youtube.com/watch?v=0OwgTEB51Os)
+
+## Couldn't you do this in Docker?
+
+I've been using Docker for years. I know Docker solves a lot of the same problems, so I was trying to figure out why NixOS makes these appealing, but Docker doesn't.
+
+### Nix has more official packages
+
+They're not official as in from the developers, but they're not just random packages published to Docker Hub, either. They're at least vetted by the nixpkgs maintainers.
+
+There's an official NixOS package for ffmpeg, and I can drop it into my app's dependencies, and now ffmpeg is available to my app.
+
+On Docker, there's no official ffmpeg Docker image, so I first have to search for which third-party packaged one looks most trustworthy and up to date.
+
+### Docker images compose poorly
+
+Once I solve the problem of finding a Docker image for ffmpeg, it actually doesn't help me much.
+
+I find it, how do I call ffmpeg from my app? I can't just. I could write my own Docker image that inherits from an ffmpeg image, but then I'm inheriting all their OS and package choices. I could copy the ffmpeg binary out of a Docker image and into my app's Docker image, but there's no guarantee that my app's environment will offer ffmpeg the right libraries it needs.
+
+With Nix packages, I can drop the ffmpeg Nix package into my app's dependencies, and now ffmpeg is available to my app. And I don't need to worry that one of ffmpeg's dependencies will be missing or will conflict with my app's other dependencies. Nix takes care of all of that for me. ffmpeg is just there, ready for my app to call it.
+
+### I can't manage Docker services via source code
+
+With NixOS, if I want to add a new service, I just add it to my configuration and run `nixos-rebuild switch`. Nix then rebuilds my system with the new configuration. If it fails, Nix atomically rolls back to my previous working configuration.
+
+Docker doesn't have an equivalent workflow. There's Docker Compose, but that's for creating a single application with multiple containers. There's no layer on top of Compose to let you manage multiple distinct services. To achieve that, I'd need Kubernetes, but that's a big jump in complexity.
+
+## Conclusion
+
+NixOS is nice.
