@@ -33,51 +33,51 @@ The `if got, want :=`: pattern works even better in [table-driven tests](https:/
 
 ```go
 func TestParseTwitterHandle(t *testing.T) {
-	for _, tt := range []struct {
-		explanation    string
-		input          string
-		handleExpected social.TwitterHandle
-		errExpected    error
-	}{
-		{
-			"regular handle on its own is valid",
-			"jerry",
-			social.TwitterHandle("jerry"),
-			nil,
-		},
-		{
-			"regular handle in URL is valid",
-			"https://twitter.com/jerry",
-			social.TwitterHandle("jerry"),
-			nil,
-		},
-		{
-			"handle with exactly 15 characters is valid",
-			"https://twitter.com/" + strings.Repeat("A", 15),
-			social.TwitterHandle(strings.Repeat("A", 15)),
-			nil,
-		},
-		{
-			"handle with more than 15 characters is invalid",
-			"https://twitter.com/" + strings.Repeat("A", 16),
-			social.TwitterHandle(""),
-			social.ErrInvalidTwitterHandle,
-		},
-	} {
-		t.Run(fmt.Sprintf("%s [%s]", tt.explanation, tt.input), func(t *testing.T) {
-			handle, err := social.ParseTwitterHandle(tt.input)
-			if got, want := err, tt.errExpected; got != want {
-				t.Fatalf("err=%v, want=%v", got, want)
-			}
-			if got, want := handle, tt.handleExpected; got != want {
-				t.Errorf("handle=%v, want=%v", got, want)
-			}
-		})
-	}
+  for _, tt := range []struct {
+    explanation    string
+    input          string
+    handleExpected social.TwitterHandle
+    errExpected    error
+  }{
+    {
+      "regular handle on its own is valid",
+      "jerry",
+      social.TwitterHandle("jerry"),
+      nil,
+    },
+    {
+      "regular handle in URL is valid",
+      "https://twitter.com/jerry",
+      social.TwitterHandle("jerry"),
+      nil,
+    },
+    {
+      "handle with exactly 15 characters is valid",
+      "https://twitter.com/" + strings.Repeat("A", 15),
+      social.TwitterHandle(strings.Repeat("A", 15)),
+      nil,
+    },
+    {
+      "handle with more than 15 characters is invalid",
+      "https://twitter.com/" + strings.Repeat("A", 16),
+      social.TwitterHandle(""),
+      social.ErrInvalidTwitterHandle,
+    },
+  } {
+    t.Run(fmt.Sprintf("%s [%s]", tt.explanation, tt.input), func(t *testing.T) {
+      handle, err := social.ParseTwitterHandle(tt.input)
+      if got, want := err, tt.errExpected; got != want {
+        t.Fatalf("err=%v, want=%v", got, want)
+      }
+      if got, want := handle, tt.handleExpected; got != want {
+        t.Errorf("handle=%v, want=%v", got, want)
+      }
+    })
+  }
 }
 ```
 
-## How does it work?
+## How does this pattern work?
 
 Simple `if` statements in Go evaluate a boolean expression:
 
@@ -156,7 +156,7 @@ Once you know the pattern, your eye can quickly find the important information i
 
 ### It's easy to copy/paste
 
-When the variables are always named `got` and `want`, you can copy paste assertions without having to change much. You usually just have to change the assignments, the name in the `t.Errorf`, and maybe the format specifiers (e.g., `%s` vs `%v`).
+When the variables are always named `got` and `want`, you can copy/paste assertions without having to change much. You usually just have to change the assignments, the name in the `t.Errorf`, and maybe the format specifiers (e.g., `%s` vs `%v`).
 
 It also prevents a mistake I frequently made in the past, where I'd copy/paste a test assertion but forget to update some part of the error message, like this:
 
