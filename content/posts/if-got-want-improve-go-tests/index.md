@@ -158,11 +158,29 @@ Once you know the pattern, your eye can quickly find the important information i
 
 When the variables are always named `got` and `want`, you can copy paste assertions without having to change much. You usually just have to change the assignments, the name in the `t.Errorf`, and maybe the format specifiers (e.g., `%s` vs `%v`).
 
-It also protects you from a mistake I made frequently before this technique where I'd copy/paste a structure but forget to update the error message, so it referred to the wrong thing, like this:
+It also prevents a mistake I frequently made in the past, where I'd copy/paste a test assertion but forget to update some part of the error message, like this:
 
 ```go
+username := GetUser()
+if username != "admin" {
+  t.Errorf("wrong username: got %s, want %s", username, "admin")
+}
 
+email := GetEmail()
+if email != "root@example.com" {
+  // Whoops, copy/pasted from above but forgot to update the error message.
+  t.Errorf("wrong username: got %s, want %s", username, "admin")
+}
 ```
+
+I don't notice the mistake until my test fails, yielding this confusing error message:
+
+```text
+--- FAIL: TestUserProperties (0.00s)
+    users_test.go:24: wrong username: got admin, want admin
+```
+
+The `if got, want :=` pattern protects me from this class of error because if I copy/paste a test assertion, I only have to update values in one place.
 
 ### It distinguishes test assertions from test logic
 
@@ -232,9 +250,9 @@ func TestUserHandler(t *testing.T) {
 
 In that test body, there are two different types of `if` statements: test assertions and test logic branches.
 
-Every `if` statement with the `if got, want :=` pattern is an assertion about the code that I'm testing.
+Every `if` statement with the `if got, want :=` pattern is an assertion about the code that I'm testing. All the other `if` statements are just controlling code flow and are not assertions about my code.
 
-Every other `if` statement is just controlling code flow of my test and is not an assertion about my code. For example, the first `if` statement in the test is to check that I was able to construct an HTTP request object:
+For example, the first `if` statement in the test is to check that I was able to construct an HTTP request object:
 
 ```go
 req, err := http.NewRequest("POST", "/user", strings.NewReader(tt.payload))
@@ -255,12 +273,12 @@ if got, want := res.StatusCode, tt.statusExpected; got != want {
 
 ## Why not use a third-party test assertion library?
 
-If you're a devout user of a third-party testing library like `stretchr/testify` or `is`, then this post probably sounds ridiculous to you. With those libraries, you get both expressive test output and clear assertions, so why don't I just use one of those libraries?
+If you're a devout user of a third-party testing library like [testify](https://github.com/stretchr/testify) or [is](https://github.com/matryer/is), this post probably sounds ridiculous to you. Those libraries offer both expressive test output and clear assertions, so why don't I just use them?
 
-When I started writing Go, I was mainly writing Python, so I thought it was absurd that Go didn't come with an API like [Python's `unittest.assertEqual`](https://docs.python.org/3/library/unittest.html#basic-example). I immediately reached for third-party libraries for mocks and assertions, but my more experienced teammates asked me to try foregoing them in favor of the Go standard library.
+I came to Go from Python, so I thought it was absurd that Go didn't offer an API like [Python's `unittest.assertEqual`](https://docs.python.org/3/library/unittest.html#basic-example). I immediately reached for third-party libraries to create mocks and make assertions, but my more experienced teammates asked me to try the Go standard library's testing APIs instead.
 
-I came to prefer the minimalism and explicitness of Go's standard testing library over third-party libraries. Eschewing third-party testing libraries means one less dependency and one less layer of technology for newcomers to learn when they work on my codebase.
+I came to prefer the minimalism and explicitness of Go's standard testing library over third-party libraries. The libraries are one more dependency to maintain and one more layer of abstraction that could introduce bugs.
 
 ## Credit
 
-I learned this technique from [Litestream](https://litestream.io/) author, [Ben Johnson](https://github.com/benbjohnson), who, in turn, learned it [from its occasional use in the Go standard library](https://github.com/search?q=repo%3Agolang%2Fgo+%22if+got%2C+want%22+&type=code).
+I learned this technique from [Litestream](https://litestream.io/) author [Ben Johnson](https://github.com/benbjohnson), who, in turn, learned it [from its occasional use in the Go standard library](https://github.com/search?q=repo%3Agolang%2Fgo+%22if+got%2C+want%22+&type=code).
