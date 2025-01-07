@@ -1,6 +1,8 @@
 ---
 title: "if got, want: A Simple Way to Improve Go Tests"
 date: 2025-01-07
+images:
+  - if-got-want-improve-go-tests/og-cover.webp
 tags:
   - golang
   - testing
@@ -27,7 +29,7 @@ if got, want := GetUser(), "dummyUser"; got != want {
 }
 ```
 
-The `if got, want :=`: pattern works even better in table-driven tests. Here's an example from [my library for parsing social media handles](https://github.com/mtlynch/social-go/blob/5348ed8e66e318651c646aea4d72ef62481c30fa/twitter_test.go):
+The `if got, want :=`: pattern works even better in [table-driven tests](https://go.dev/wiki/TableDrivenTests). Here's an example from [my library for parsing social media handles](https://github.com/mtlynch/social-go/blob/5348ed8e66e318651c646aea4d72ef62481c30fa/twitter_test.go):
 
 ```go
 func TestParseTwitterHandle(t *testing.T) {
@@ -75,14 +77,6 @@ func TestParseTwitterHandle(t *testing.T) {
 }
 ```
 
-When you're comparing types that don't work with simple `!=`, switch the end of the `if` to use the right comparison:
-
-```go
-if got, want := fullLocationInfo, tt.expected; !reflect.DeepEqual(got, want) {
-  t.Errorf("fullLocationInfo=%+v, want=%+v", got, want)
-}
-```
-
 ## How does it work?
 
 Simple `if` statements in Go evaluate a boolean expression:
@@ -112,7 +106,7 @@ if a, b, c := nextScore(), nextScore(), nextScore(); a + b + c == 300 {
 }
 ```
 
-New variables that you declare within the scope of the `if` statement only exist within the if statement. That's why you can reuse the variable names `got` and `want` in all of your assertions without causing naming conflicts.
+Variables that you declare within the scope of the `if` statement only exist within the `if` statement. That's why you can reuse the variable names `got` and `want` in all of your assertions without causing naming conflicts.
 
 In fact, if you try to access `got` or `want` outside of an `if` statement, the Go compiler will tell you that the variable doesn't exist:
 
@@ -126,37 +120,49 @@ log.Printf("username was %s", got) // This won't compile
 
 ## What's so great about this technique?
 
-### It communicates the test structure clearly
+### It trains your eye to find important information
 
-Go code tends to be verbose, especially its test logic. If you have
+Go code tends to be verbose, especially its test logic.
+
+Consider the following test snippet:
 
 ```go
-username, err := GetUser()
-if err != nil {
-  errors.N
+users := GetAllUsers()
+if len(users) != 1 {
+  t.Fatalf("expected only a single user, got %d", len(users))
 }
-if username != "dummyUser" {
-  t.Errorf("unexpected username: got %s, want: %s", username, "dummyUser")
+if users[0].username != adminUsername {
+  t.Errorf("unexpected username: got %s, want: %s", users[0].username, adminUsername)
 }
 ```
 
-My favorite feature of the `if got, want :=` pattern is that it trains the reader's eye to look for important information.
+At a glance, is it obvious which values I expect and which are the values that `GetAllUsers` returned? Not to me.
+
+If I rewrite the above snippet using the `if got, want :=` pattern, the ambiguity goes away:
 
 ```go
-handle, err := social.ParseTwitterHandle(tt.input)
-if err != tt.errExepected {
-  t.Fatalf("err=%v, want=%v", err, tt.errExpected)
+users := GetAllUsers()
+if got, want := len(users), 1; got != want {
+  t.Fatalf("userCount=%d, want=%d", got, want)
 }
-if handle != tt.handleExpected {
-  t.Errorf("handle=%v, want=%v", handle, tt.handleExpected)
+if got, want := users[0].username, adminUsername; got != want {
+  t.Errorf("username=%s, want: %s", got, want)
 }
 ```
 
-A unit test has three distinct called arrange, act, assert.
+Once you know the pattern, your eye can quickly find the important information in a test assertion:
+
+{{<img src="eye-locations.webp" max-width="750px" caption="When you recognize this pattern, your eye can quickly find the actual and expected values of the assertion.">}}
 
 ### It's easy to copy/paste
 
 When the variables are always named `got` and `want`, you can copy paste assertions without having to change much. You usually just have to change the assignments, the name in the `t.Errorf`, and maybe the format specifiers (e.g., `%s` vs `%v`).
+
+It also protects you from a mistake I made frequently before this technique where I'd copy/paste a structure but forget to update the error message, so it referred to the wrong thing, like this:
+
+```go
+
+```
 
 ### It distinguishes test assertions from test logic
 
@@ -224,7 +230,7 @@ func TestUserHandler(t *testing.T) {
 }
 ```
 
-In that test body, there are two different types of `if` statements: test assertions and test execution logic.
+In that test body, there are two different types of `if` statements: test assertions and test logic branches.
 
 Every `if` statement with the `if got, want :=` pattern is an assertion about the code that I'm testing.
 
