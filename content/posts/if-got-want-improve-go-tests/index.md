@@ -1,6 +1,6 @@
 ---
 title: "if got, want: A Simple Way to Improve Go Tests"
-date: 2025-01-07
+date: 2025-01-08
 images:
   - if-got-want-improve-go-tests/og-cover.webp
 tags:
