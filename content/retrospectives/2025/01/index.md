@@ -26,16 +26,21 @@ TODO
 
 TODO
 
-## Thoughts on finishing my first chapter
+## Thoughts on finishing the first chapter of _Refactoring English_
 
-- Too much bash
-- Make examples copy/pasteable
-  - Readers won't learn if they copy/paste.
-- Feels unwieldy. There are still parts where that I felt flow poorly, but I was tired of editing it. I think 2,000 word chunks are my ideal. This was 5,400 words.
+I'm happy about publishing the first chapter of my book, _Refactoring English_.
 
-It's interesting getting responses from people who are like, "I think you're wrong about some of your advice. As evidence, look at this spectacular tutorial that I wrote." And then I read their tutorial, and it's offensively bad.
+### A succesful reception for the first chapter
 
-In truth, I'm happy to get that reaction because I feel immensely confident that those authors are wrong, and I'm right. Or not so much that they're "wrong" exactly, but I feel confident that I have a better read on what the majority of developers want than the people do that are giving me these critiques.
+The reception was on the high end of my expectations. It's a list of rules about tutorials, so I didn't think it would set the Internet on fire, but it got a respectable response on a few sites I thought would be a good match:
+
+- [Hacker News](https://news.ycombinator.com/item?id=42574641): 375 points and [reached the #10 position](https://hnrankings.info/42574641/)
+- [/r/programming](https://www.reddit.com/r/programming/comments/1hrux0b/rules_for_writing_software_tutorials/): 159 points and was #1 for the day (I think?)
+- [Lobste.rs](https://lobste.rs/s/7t86dw/rules_for_writing_software_tutorials) 27 points and reached the #2 position
+
+The main metric I'm tracking is mailing list subscribers, and. 245 new subscribers signed up the week after the post, which is a 31% increase in total subscribers for updates about the book.
+
+{{<img src="confirmed-subscribers.webp" has-border="true" caption="The first chapter caused a major jump in subscribers to the book's mailing list.">}}
 
 ### What's the right way to iterate on an article after I publish it?
 
@@ -53,25 +58,25 @@ The problem is that anyone reading those discussions now will wonder why people 
 
 The best solution I can think of is to include [a note at the bottom](https://refactoringenglish.com/chapters/rules-for-software-tutorials/#revisions) saying that I'm still revising it with a link to the original and a list of notable edits.
 
-### What's my marketing strategy?
+### How do I keep finding readers to give feedback?
 
-It wasn't a sensational reception, but it got a decent response on Lobsters, Hacker News, and the /r/programming subreddit.
+So far, I feel like my plan to iterate based on reader feedback is working.
 
-The main metric I'm tracking is mailing list subscribers, and. 245 new subscribers signed up the week after the post, which is a 31% increase in total subscribers for updates about the book.
-
-{{<img src="confirmed-subscribers.webp" has-border="true" caption="The first chapter caused a major jump in subscribers to the book's mailing list.">}}
+I'm happy with what I published in the first chapter, but I also received a lot of thoughtful critiques from readers that will help me revise it.
 
 I thought, "Okay, I need to just keep sharing preview chapters like this to those same channels."
 
-Then, I reviewed my table of contents and realized that this is basically my only chapter that works on any those channels. Most of them have a written or unwritten rule that says, "If there's no code in the post, it doesn't belong here." /r/programming is probably not going to be excited to read my ranty chapter about why I hate the passive voice.
+Then, I reviewed my table of contents and realized that no other chapters would be a match for the channels where I shared the first chapter. Most of those sites have a written or unwritten rule that says, "If there's no code in the post, it doesn't belong here." For example, /r/programming is probably not going to be excited to read my impassioned chapter about why I hate the passive voice.
 
-One idea I've had is to do freelance editing for other writers and use that to inform the _Refactoring English_. Except I don't think "editing" is exactly what I'd be good at. Like I think people hear editor and think I'm going to polish their writing for them, but what I actually want to do is identify problems in their writing and explain principles and techniques to help them improve it themselves. If that sounds interesting to you, [reach out](#requests-for-help).
+One idea I've had is to do freelance editing for other writers and use that to inform the _Refactoring English_.
+
+Except I don't think "editing" is exactly what I'd be good at. I think people hear "editor" and think I'm going to polish their writing for them. What I actually want to do is identify problems in their writing and explain principles and techniques to help them improve it themselves. I don't know what to call that. Writing mentorship? Coaching? Either way, if that sounds interesting to you, [reach out](#requests-for-help).
 
 ## My poor experience hiring a book cover designer through Reedsy
 
-One of my distractions from working on my book in November was to convince myself I needed [a professionally-designed cover](/retrospectives/2024/12/#maybe-i-need-a-book-cover). I started the process in November, but the actual work with the designer happened in December.
+One of my distractions from working on my book in November was to convince myself I needed [a professionally-designed cover](/retrospectives/2024/12/#maybe-i-need-a-book-cover). I started the process in November, but the work happened in December.
 
-I found the designer through Reedsy, a platform that several people recommended in the Write Useful Books community. The common review was that it was pricey but worth it.
+I found the designer through Reedsy, a platform that several people recommended in the [Write Useful Books community](https://www.usefulbooks.com/community). The common review was that it was pricey but worth it.
 
 I wrote [a design brief](https://docs.google.com/document/d/1SUQ6GTeyL-XWmZYlJdQgyvQHZdHiUvCy0G-dh5nnrQM/edit?usp=sharing) explaining what I wanted and sent it to four designers on Reedsy. I listed my budget as US$350-650. One designer bid 20% over my max budget, and his reply was a generic, "Sure, I can do this for you," with nothing that suggested he read my brief. Another designer declined saying that my budget was too low, and one never responded.
 
@@ -83,18 +88,18 @@ A week went by, and I hadn't heard anything from Gary. After my first payment wa
 
 {{<img src="cover-ideas.webp" max-width="800px" caption="Initial book cover ideas from the designer I hired through Reedsy">}}
 
-Sample 01 looked good, but it was a pretty on-the-nose ripoff of [_Beautiful Code_](https://www.oreilly.com/library/view/beautiful-code/9780596510046/), which I had cited in my brief.
+Sample 1 looked good, but it was a pretty on-the-nose ripoff of [_Beautiful Code_](https://www.oreilly.com/library/view/beautiful-code/9780596510046/), which I had cited in my brief.
 I found the rest underwhelming, but I blamed myself for not spending more time on my brief.
 
-As I reviewed the concepts, I realized what I cared about conveying was the idea of careful, deliberate work. I felt like Sample 06 of the zen garden and Sample 05 of the clay mold were on the right track, so I asked to explore those. I suggested an image of a sculptor carving stone.
+As I reviewed the concepts, I realized what I cared about conveying was the idea of careful, deliberate work. I felt like Sample 6 of the zen garden and Sample 5 of the clay mold were on the right track, so I asked to explore those. I suggested an image of a sculptor carving stone.
 
-Another week went by, and Gary sent a minor variation on the zen garden idea, and a sculpting concept. Except Gary's cover showed a sculptor holding a chisel up to a raw stone. In the photo, the sculptor hadn't even started working, so I felt like it wasn't the right match.
+Another week went by, and Gary sent a minor variation on the zen garden idea. He also attempted the sculptor concept with an image showing a chisel with raw stone. But the sculptor photo was of stone that hadn't been carved at all, so I felt like it wasn't really capturing the idea of careful work.
 
 The following week was Christmas, and I started to worry that the project wouldn't complete by the December 30th finish date. Gary emailed me the Monday before Christmas to say he was returning to work on December 27th, so he was still on track.
 
-By the end of the day on the 27th, I hadn't heard from Gary.
+By the end of the day on the 27th, I hadn't heard from Gary, and I realized I was in a bit of a pickle.
 
-I realized I was in a bit of a pickle. It was 4 PM for me in Eastern US Time, but Gary was in the UK, so his business day was long over. Reedsy was going to auto-bill me at noon Eastern Time on December 30th, but that was a Monday. And Reedsy prohibits me from disputing a bill in the last 24 hours, so I had zero business days left to get completed work.
+It was 4 PM on a Friday for me in US Eastern Time, but Gary was in the UK, so his business day was long over. Reedsy was going to auto-bill me at noon Eastern Time on Monday. The last day Reedsy allows me to dispute a bill is 24 hours before it's charged, so I had zero business days left to get completed work.
 
 I asked Reedsy's customer support to push back my final payment a week, as Gary hadn't delivered his work. Reedsy told me that I had to take it up with Gary. I explained that if I waited until the next business day to get a response from Gary, it would be too late to move the payment. Reedsy support insisted I try to resolve it with Gary anyway.
 
@@ -102,7 +107,7 @@ I tried to remove my credit card from my account to prevent Reedsy from making f
 
 I emailed Gary at 5 PM ET on Friday, and he responded that he didn't work "corporate hours," so he was still on track to finish the project by working the weekend. He pushed back my payment as a courtesy. He seemed miffed that I'd complained to Reedsy and said no client had behaved that way.
 
-I, on the other hand, do try to stick to regular working hours, so I didn't want to spend my weekend rushing to finish this project with Gary. When I checked back on Monday, Gary had sent updates on the two concepts, but they were both pretty mediocre. One looked clearly AI-generated and unrealistic. The other was just not capturing the tone I asked for.
+I, on the other hand, do try to stick to regular working hours and didn't feel like spending my weekend with Gary rushing to finish this project. When I checked back on Monday, Gary had sent updates on the two concepts, but they were both pretty mediocre. One looked clearly AI-generated and unrealistic. The other was just not capturing the tone I asked for.
 
 I pressed Gary for details about whether the images were AI-generated and if they met the license requirements I'd specified in my brief. He got cagey at that point, so I asked to cancel the project. I offered him the £231 (US$287) I already paid if he'd allow me to cancel the final payment and terminate the project. He agreed, so that was that.
 
@@ -132,17 +137,17 @@ I know it looks amateurish, but I'm about 80% as satisfied as I expected to be w
 
 ### Making PicoShare work with large files
 
-PicoShare is my minimalist, easy-to-host web app for sharing files over the Internet. I created it a few years ago, and I use it on a weekly basis.
+[PicoShare](https://github.com/mtlynch/picoshare) is my minimalist, easy-to-host web app for sharing files over the Internet. I created it a few years ago, and I use it on a weekly basis.
 
 My minor shame of PicoShare is that it doesn't scale well for large files. On a VM with a shared CPU and 256 MB of RAM, PicoShare works great for files up to about 1 GB in size. If you try uploading files larger than 1 GB, PicoShare typically exhausts RAM and crashes.
 
 I've dug into the issue a few times, and my strong hunch is that this performance issue is because PicoShare stores all file data in SQLite. It's an unusual choice, but it means that the SQLite data captures the app's full state, including file data. So, I think what's happening is that PicoShare tries to write a ton of data to SQLite, exhausts RAM, and dies.
 
-I'd been curious about using SQLite's streaming I/O APIs, as they seem like they should let me write to the database more efficiently. But I wrote PicoShare in Go, and the Go sqlite driver I was using didn't support the streaming I/O APIs.
+I'd been curious about using [SQLite's streaming I/O APIs](https://www.sqlite.org/c3ref/blob_open.html), as they seem like they should let me write to the database more efficiently. But I wrote PicoShare in Go, and the Go sqlite driver I was using didn't support the streaming I/O APIs.
 
-Luckily, Nuno Cruces published a new Go SQLite driver that supports streaming I/O, and he offered to help me port PicoShare to his library. I worked with him a little bit in September, and we made some progress, but we realized that even with streaming I/O, PicoShare still exhausts memory on large files.
+Luckily, Nuno Cruces published [a new SQLite driver for Go](https://github.com/ncruces/go-sqlite3) that supports streaming I/O, and he [offered to help me](https://github.com/mtlynch/picoshare/pull/567#issuecomment-2330295660) port PicoShare to his library. I [worked with him](https://github.com/ncruces/go-sqlite3/issues/148) a little bit in September, and we made some progress, but we realized that even with streaming I/O, PicoShare still exhausts memory on large files.
 
-Nuno suggested that I could break the file up and store it in chunks, which I actually already do in my current implementation, but it would require a major rewrite to fit the streaming I/O API semantics. So, I kind of ran out of steam at that point and shelved the work.
+Nuno suggested that I might lower RAM consumption if I broke the files up and wrote them to SQLite in chunks. I actually [already do that](https://github.com/mtlynch/picoshare/blob/1.4.5/store/sqlite/file/writer.go) in my current implementation, but the the different streaming I/O semantics meant I'd have to rewrite a lot of delicate code. So, I ran out of steam at that point and shelved the work.
 
 But I came back to the project with fresh eyes, and I realized the chunking problem is easier than I thought. PicoShare exhausted RAM when I wrote large files, but not when I read them. So, I only had to rewrite the writing side of things to use streaming I/O. And writing turned out to be easier than what I had initially implemented.
 
