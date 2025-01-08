@@ -8,7 +8,7 @@ tags:
   - testing
 ---
 
-There's an excellent Go pattern for creating clearer tests, and too few people are aware of it. I can teach it to you in 30 seconds.
+There's an excellent Go testing pattern that too few people know. I can teach it to you in 30 seconds.
 
 Instead of writing Go tests like this:
 
@@ -88,7 +88,7 @@ if volume > maxVolume {
 }
 ```
 
-Go offers [a second type of `if` statement](https://go.dev/ref/spec#If_statements) where you can execute a statement before evaluating the boolean expression:
+Go offers [a second type of `if`](https://go.dev/ref/spec#If_statements) where you can execute a statement before evaluating the boolean expression:
 
 ```go
 // Execute a statement before evaluating the boolean expression.
@@ -102,7 +102,7 @@ The neat trick is that you can declare and assign multiple variables within an `
 ```go
 // Declare and assign multiple variables within if statement.
 if a, b, c := nextScore(), nextScore(), nextScore(); a + b + c == 300 {
-  fmt.Print("Congratulations! You got a perfect score!")
+  fmt.Println("Congratulations! You got a perfect score!")
 }
 ```
 
@@ -122,7 +122,7 @@ log.Printf("username was %s", got) // This won't compile
 
 ### It trains your eye to find important information
 
-Go code tends to be verbose, especially its test logic.
+Go code tends to be verbose, especially in tests.
 
 Consider the following test snippet:
 
@@ -158,7 +158,7 @@ Once you know the pattern, your eye can quickly find the important information i
 
 When the variables are always named `got` and `want`, you can copy/paste assertions without having to change much. You usually just have to change the assignments, the name in the `t.Errorf`, and maybe the format specifiers (e.g., `%s` vs `%v`).
 
-It also prevents a mistake I frequently made in the past, where I'd copy/paste a test assertion but forget to update some part of the error message, like this:
+This pattern also prevents a mistake I frequently made in the past, where I'd copy/paste a test assertion but forget to update some part of the error message, like this:
 
 ```go
 username := GetUser()
@@ -250,7 +250,7 @@ func TestUserHandler(t *testing.T) {
 
 In that test body, there are two different types of `if` statements: test assertions and test logic branches.
 
-Every `if` statement with the `if got, want :=` pattern is an assertion about the code that I'm testing. All the other `if` statements are just controlling code flow and are not assertions about my code.
+Every `if` statement with the `if got, want :=` pattern is an assertion about the code I'm testing. All the other `if` statements are just controlling code flow and are not assertions about my code.
 
 For example, the first `if` statement in the test is to check that I was able to construct an HTTP request object:
 
@@ -273,7 +273,7 @@ if got, want := res.StatusCode, tt.statusExpected; got != want {
 
 ## Why not use a third-party test assertion library?
 
-If you're a devout user of a third-party testing library like [testify](https://github.com/stretchr/testify) or [is](https://github.com/matryer/is), this post probably sounds ridiculous to you. Those libraries offer both expressive test output and clear assertions, so why don't I just use them?
+If you're a devout user of a third-party testing library like [testify](https://github.com/stretchr/testify) or [is](https://github.com/matryer/is), this post probably sounds ridiculous. Those libraries offer both expressive test output and clear assertions, so why don't I use them?
 
 I came to Go from Python, so I thought it was absurd that Go didn't offer an API like [Python's `unittest.assertEqual`](https://docs.python.org/3/library/unittest.html#basic-example). I immediately reached for third-party libraries to create mocks and make assertions, but my more experienced teammates asked me to try the Go standard library's testing APIs instead.
 
