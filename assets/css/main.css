@@ -150,6 +150,13 @@ pre {
   padding: 2rem;
   overflow-x: auto;
 
+  /* Prevent Safari on iPhone from messing with text sizes. Michael has not
+     tested this on an actual iPhone, so this is based on user suggestions.
+     https://cue.gerrithub.io/c/cue-lang/cuelang.org/+/1206289
+     https://fosstodon.org/@jonathanmatthews/113793278512401976
+     */
+  -webkit-text-size-adjust: 100%;
+
   code {
     display: inline-block;
     background-color: inherit;
