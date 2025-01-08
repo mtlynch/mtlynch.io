@@ -28,16 +28,10 @@ TODO
 
 ## Thoughts on finishing my first chapter
 
-- Changing an article after it's published
 - Too much bash
 - Make examples copy/pasteable
   - Readers won't learn if they copy/paste.
-- Revisions
 - Feels unwieldy. There are still parts where that I felt flow poorly, but I was tired of editing it. I think 2,000 word chunks are my ideal. This was 5,400 words.
-- The rule "Teach one thing" at publication time was called, "Boil it down to the essentials." I realized in participating in discussion that the original heading didn't really fit, and "Teach one thing" more crisply captured what I thihk.
-- I got a lot of pushback on "Use computers to evaluate conditional logic"
-  - I think they're right, and that was my weakest rule.
-  - That was in my head because it was a rule I championed within TinyPilot, but it makes more sense in a troubleshooting context than in tutorials. For example, I would encourage support engineers to avoid things like, "If you're running version 1.9.2, run command `X`. If you're running version 1.9.3, run command `Y`." Instead, I tried as much as possible to give commands snippets that would just figure out the state of the system and do the right thing.
 
 It's interesting getting responses from people who are like, "I think you're wrong about some of your advice. As evidence, look at this spectacular tutorial that I wrote." And then I read their tutorial, and it's offensively bad.
 
@@ -45,23 +39,19 @@ In truth, I'm happy to get that reaction because I feel immensely confident that
 
 ### What's the right way to iterate on an article after I publish it?
 
-When [Salvatore Sanfilippo](http://antirez.com), creator of Redis, paused his programming work to write a sci-fi novel, he [observed](https://antirez.com/news/135):
+A few years ago, [Salvatore Sanfilippo](http://antirez.com), creator of Redis, paused his programming work to write a sci-fi novel. While working on the novel, he [observed](https://antirez.com/news/135):
 
 > I believe the most sharp difference between writing and programming is that, once written, edited and finalized, a novel remains immutable, mostly.
 
-He went on to say that programmers should learn from novelists and resist the urge to rewrite the core logic of their app after it's done, but it made me realize that the format of ebooks makes it easy to treat books more like software and keep iterating on it based on reader feedback.
+He went on to say that programmers should learn from novelists and resist the urge to rewrite the core logic of their app after it's done. I actually took the opposite lesson: authors should write books more iteratively.
 
-I'm obviously not the first person to think of this, and the whole LeanPub platform is based on the idea of selling books as the author is in the process of writing and editing it.
+For _Refactoring English_, I'm trying to publish chapters in near-finished state, but I'm also treating them as non-final.
 
-My plan for
+Having chapters live in flux creates a problem I've never dealt with before in that I'm messing up past discussions. Like on Hacker News, Lobsters, and reddit, commenters disagreed with my point about ["Let computers evaluate conditional logic."](https://6776b3d35623f593a0e9dc40--refactoring-english.netlify.app/chapters/rules-for-software-tutorials/#let-computers-evaluate-conditional-logic) And I think they're right. That was my weakest point, so I've cut it.
 
-My blog posts are usually pretty static. Once I publish them, I don't rewrite them unless someone points out a mistake.
+The problem is that anyone reading those discussions now will wonder why people are disagreeing with a point that never appears in the post.
 
-For the book, I'm trying to publish chapters in near-finished state, but I'm also treating them as non-final.
-
-But it does create a problem I've never dealt with before in that I'm messing up past discussion. Like on Hacker News, Lobsters, and reddit, commenters disagreed with my point about "Let computers evaluate conditional logic." And I think they're right. That was my weakest point, and I'm probably going to cut it. But if I cut it, it's confusing for anyone reading these discussions wondering why people are disagreeing with a point that never appears in the post.
-
-The best solution I can think of is to include a note at the bottom saying that I'm still revising it and link to the version of the chapter as it was originally published.
+The best solution I can think of is to include [a note at the bottom](https://refactoringenglish.com/chapters/rules-for-software-tutorials/#revisions) saying that I'm still revising it with a link to the original and a list of notable edits.
 
 ### What's my marketing strategy?
 
@@ -167,4 +157,7 @@ I'd been curious about using SQLite's streaming I/O APIs, as they seemed like th
 
 ### Requests for help
 
-- TODO
+- If you're interested in hiring me to help you write a blog post, documentation page, or something software-related, please [reach out](/about/).
+  - The cost is $100 for two rounds of review. I'll review your initial draft, and I'll review the changes you make based on my feedback.
+  - The piece can be up to 2,500 words.
+  - The money is mainly so you have skin in the game, so if that's beyond your budget, maybe we can still work something out.
