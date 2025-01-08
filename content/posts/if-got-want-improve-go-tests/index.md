@@ -1,5 +1,5 @@
 ---
-title: "if got, want: A Simple Way to Improve Go Tests"
+title: "if got, want: A Simple Way to Write Better Go Tests"
 date: 2025-01-08
 images:
   - if-got-want-improve-go-tests/og-cover.webp
@@ -88,7 +88,7 @@ if volume > maxVolume {
 }
 ```
 
-Go allows [a second type of `if` statement](https://go.dev/ref/spec#If_statements) where you can execute a statement before evaluating the boolean expression:
+Go offers [a second type of `if` statement](https://go.dev/ref/spec#If_statements) where you can execute a statement before evaluating the boolean expression:
 
 ```go
 // Execute a statement before evaluating the boolean expression.
@@ -173,7 +173,7 @@ if email != "root@example.com" {
 }
 ```
 
-I don't notice the mistake until my test fails, yielding this confusing error message:
+I wouldn't notice the mistake until my test failed, yielding this confusing error message:
 
 ```text
 --- FAIL: TestUserProperties (0.00s)
