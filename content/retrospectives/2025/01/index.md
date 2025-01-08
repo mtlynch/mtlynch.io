@@ -39,13 +39,13 @@ In truth, I'm happy to get that reaction because I feel immensely confident that
 
 ### What's the right way to iterate on an article after I publish it?
 
-A few years ago, [Salvatore Sanfilippo](http://antirez.com), creator of Redis, paused his programming work to write a sci-fi novel. While working on the novel, he [observed](https://antirez.com/news/135):
+A few years ago, [Salvatore Sanfilippo](http://antirez.com), creator of Redis, paused his programming work to [write a sci-fi novel](http://invece.org/). While working on the novel, he [observed](https://antirez.com/news/135):
 
 > I believe the most sharp difference between writing and programming is that, once written, edited and finalized, a novel remains immutable, mostly.
 
-He went on to say that programmers should learn from novelists and resist the urge to rewrite the core logic of their app after it's done. I actually took the opposite lesson: authors should write books more iteratively.
+He went on to say that programmers should learn from novelists and resist the urge to rewrite the core logic of their app after it's done. I actually took the opposite lesson: authors should write books more iteratively, like programmers.
 
-For _Refactoring English_, I'm trying to publish chapters in near-finished state, but I'm also treating them as non-final.
+For _Refactoring English_, I'm trying to publish chapters in near-finished state, but I also want to let readers help shape the content based on their feedback.
 
 Having chapters live in flux creates a problem I've never dealt with before in that I'm messing up past discussions. Like on Hacker News, Lobsters, and reddit, commenters disagreed with my point about ["Let computers evaluate conditional logic."](https://6776b3d35623f593a0e9dc40--refactoring-english.netlify.app/chapters/rules-for-software-tutorials/#let-computers-evaluate-conditional-logic) And I think they're right. That was my weakest point, so I've cut it.
 
@@ -57,11 +57,15 @@ The best solution I can think of is to include [a note at the bottom](https://re
 
 It wasn't a sensational reception, but it got a decent response on Lobsters, Hacker News, and the /r/programming subreddit.
 
+The main metric I'm tracking is mailing list subscribers, and. 245 new subscribers signed up the week after the post, which is a 31% increase in total subscribers for updates about the book.
+
+{{<img src="confirmed-subscribers.webp" has-border="true" caption="The first chapter caused a major jump in subscribers to the book's mailing list.">}}
+
 I thought, "Okay, I need to just keep sharing preview chapters like this to those same channels."
 
 Then, I reviewed my table of contents and realized that this is basically my only chapter that works on any those channels. Most of them have a written or unwritten rule that says, "If there's no code in the post, it doesn't belong here." /r/programming is probably not going to be excited to read my ranty chapter about why I hate the passive voice.
 
-One idea I've had is to do freelance editing for other writers and use that to inform the _Refactoring English_. Except I don't think "editing" is exactly what I'd be good at. Like I think people hear editor and think I'm going to polish their writing for them, but what I actually want to do is identify problems in their writing and explain principles and techniques to help them improve it themselves.
+One idea I've had is to do freelance editing for other writers and use that to inform the _Refactoring English_. Except I don't think "editing" is exactly what I'd be good at. Like I think people hear editor and think I'm going to polish their writing for them, but what I actually want to do is identify problems in their writing and explain principles and techniques to help them improve it themselves. If that sounds interesting to you, [reach out](#requests-for-help).
 
 ## My poor experience hiring a book cover designer through Reedsy
 
@@ -98,9 +102,7 @@ I tried to remove my credit card from my account to prevent Reedsy from making f
 
 I emailed Gary at 5 PM ET on Friday, and he responded that he didn't work "corporate hours," so he was still on track to finish the project by working the weekend. He pushed back my payment as a courtesy. He seemed miffed that I'd complained to Reedsy and said no client had behaved that way.
 
-I, on the other hand, do try to stick to regular working hours, so I didn't want to spend my weekend rushing to finish this project with Gary. I snoozed the emails until Monday, but Reedsy sent me another email Saturday warning that if I didn't log in and accept the new payment schedule within 24 hours, it would revert back to the original. I logged in to accept the new payment schedule and put off the rest of the discussion until Monday.
-
-When I checked back on Monday, Gary had sent updates on the two concepts, but they were both pretty mediocre. One looked clearly AI-generated and unrealistic. The other was just not capturing the tone I asked for.
+I, on the other hand, do try to stick to regular working hours, so I didn't want to spend my weekend rushing to finish this project with Gary. When I checked back on Monday, Gary had sent updates on the two concepts, but they were both pretty mediocre. One looked clearly AI-generated and unrealistic. The other was just not capturing the tone I asked for.
 
 I pressed Gary for details about whether the images were AI-generated and if they met the license requirements I'd specified in my brief. He got cagey at that point, so I asked to cancel the project. I offered him the £231 (US$287) I already paid if he'd allow me to cancel the final payment and terminate the project. He agreed, so that was that.
 
@@ -134,16 +136,23 @@ PicoShare is my minimalist, easy-to-host web app for sharing files over the Inte
 
 My minor shame of PicoShare is that it doesn't scale well for large files. On a VM with a shared CPU and 256 MB of RAM, PicoShare works great for files up to about 1 GB in size. If you try uploading files larger than 1 GB, PicoShare typically exhausts RAM and crashes.
 
-I've dug into the issue a few times, and my strong hunch is that this performance issue is because PicoShare uses SQLite in a peculiar way. It stores all file data in SQLite, which is an unusual choice, but it means that the SQLite data captures the app's full state, including file data.
+I've dug into the issue a few times, and my strong hunch is that this performance issue is because PicoShare stores all file data in SQLite. It's an unusual choice, but it means that the SQLite data captures the app's full state, including file data. So, I think what's happening is that PicoShare tries to write a ton of data to SQLite, exhausts RAM, and dies.
 
-So, PicoShare tries to write a ton of data to SQLite and bloats RAM in the process.
+I'd been curious about using SQLite's streaming I/O APIs, as they seem like they should let me write to the database more efficiently. But I wrote PicoShare in Go, and the Go sqlite driver I was using didn't support the streaming I/O APIs.
 
-I'd been curious about using SQLite's streaming I/O APIs, as they seemed like they'd be more efficient than just stuffing data in through regular SQL queries. But I wrote PicoShare in Go, and the Go sqlite driver I was using didn't support the streaming I/O APIs.
+Luckily, Nuno Cruces published a new Go SQLite driver that supports streaming I/O, and he offered to help me port PicoShare to his library. I worked with him a little bit in September, and we made some progress, but we realized that even with streaming I/O, PicoShare still exhausts memory on large files.
+
+Nuno suggested that I could break the file up and store it in chunks, which I actually already do in my current implementation, but it would require a major rewrite to fit the streaming I/O API semantics. So, I kind of ran out of steam at that point and shelved the work.
+
+But I came back to the project with fresh eyes, and I realized the chunking problem is easier than I thought. PicoShare exhausted RAM when I wrote large files, but not when I read them. So, I only had to rewrite the writing side of things to use streaming I/O. And writing turned out to be easier than what I had initially implemented.
+
+### Spoiler alerts in ScreenJournal
 
 ## Wrap up
 
 ### What got done?
 
+- Published ["if got, want: A Simple Way to Write Better Go Tests"](/if-got-want-improve-go-tests/)
 - Set up my new NixOS system.
 - Set up offlineimap to keep a local copy of my email, and I back it up with daily snapshots.
 
@@ -154,10 +163,11 @@ I'd been curious about using SQLite's streaming I/O APIs, as they seemed like th
 ### Goals for next month
 
 - Publish my 2024 [annual review](/tags/annual-review/) blog post.
+- Finish another chapter of my book.
 
 ### Requests for help
 
-- If you're interested in hiring me to help you write a blog post, documentation page, or something software-related, please [reach out](/about/).
+- If you're interested in hiring me to help you write a blog post, documentation, or something software-related, please [reach out](/about/).
   - The cost is $100 for two rounds of review. I'll review your initial draft, and I'll review the changes you make based on my feedback.
   - The piece can be up to 2,500 words.
-  - The money is mainly so you have skin in the game, so if that's beyond your budget, maybe we can still work something out.
+  - The money is mainly so you have skin in the game, so if $100 is beyond your budget, maybe we can still work something out.
