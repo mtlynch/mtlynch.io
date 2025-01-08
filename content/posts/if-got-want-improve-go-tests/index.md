@@ -6,6 +6,8 @@ images:
 tags:
   - golang
   - testing
+discuss_urls:
+  reddit: https://www.reddit.com/r/golang/comments/1hwl735/if_got_want_a_simple_way_to_write_better_go_tests/
 ---
 
 There's an excellent Go testing pattern that too few people know. I can teach it to you in 30 seconds.
