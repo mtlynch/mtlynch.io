@@ -13,9 +13,9 @@ I found the book frustrating in a lot of ways.
 
 I hoped the author would consider the benefits of borders and weight them against the harms and make the case that the harms outweigh the benefits. Instead, the author was unable or unwilling to see any legitimate reason for a nation to enforce limits or criteria on who may enter.
 
-Instead of evaluating pros and cons, the author enumerates all the harms of border control and concludes that we should abolish borders because they have negative efects. This is basically like arguing that because you sometimes forget your keys and can't use your car, we should just get rid of car keys and make cars accessible to any person who wants to use one.
+Instead of evaluating pros and cons, the author enumerates all the harms of border control and concludes that we should abolish borders because they have negative effects. This is basically like arguing that because you sometimes forget your keys and can't use your car, we should just get rid of car keys and make cars accessible to any person who wants to use one.
 
-When people talk about ["Chesterton's Fence,"](https://fs.blog/chestertons-fence/) it's about this exact situation. Every country has borders, and there are reasons why those borders exist. It's foolish to talk about eliminating borders without acknowledging why they're there in the first place:
+When people talk about ["Chesterton's Fence,"](https://fs.blog/chestertons-fence/) it's about this exact situation. Every country has borders, and there are reasons why those borders exist. It's silly to talk about eliminating borders without acknowledging why virtually every civilization created them in the first place:
 
 > There exists in such a case a certain institution or law; let us say, for the sake of simplicity, a fence or gate erected across a road. The more modern type of reformer goes gaily up to it and says, “I don’t see the use of this; let us clear it away.” To which the more intelligent type of reformer will do well to answer: "If you don’t see the use of it, I certainly won’t let you clear it away. Go away and think. Then, when you can come back and tell me that you do see the use of it, I may allow you to destroy it."
 >
@@ -36,7 +36,7 @@ I did learn some interesting details that improved my understanding of immigrati
 ## What I Disliked
 
 - The arguments are lacking in nuance. The author only considers the harms of immigration policies and uses that to justify abolishing them without considering any benefits.
-- The athor repeatedly claims that borders are unnecessary but has no examples of any modern society with open borders or any explanation for why no country adopts such a policy.
+- The author repeatedly claims that borders are unnecessary but has no examples of any modern society with open borders or any explanation for why no country adopts such a policy.
 - The author is uncharitable in painting proponents of immigration controls. They're presented as seething xenophobes or greedy elites.
 - The author largely ignores any criticism of open borders or studies contradicting his beliefs.
   - Almost all studies he discusses are from pro-immigration organizations or libertarian think tanks.
