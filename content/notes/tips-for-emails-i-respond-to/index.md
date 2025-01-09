@@ -30,7 +30,7 @@ I'm 100x more likely to respond if you've tried
 
 ### You write publicly
 
-You have a blog or you've published books.
+You have a blog or you've published books. It doesn't have to be a popular blog or a beautiful blog or even a good blog. As long as you're writing with your human mind and human hands, I'm interested.
 
 YouTube counts, Twitter doesn't.
 
