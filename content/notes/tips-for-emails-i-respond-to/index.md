@@ -68,7 +68,7 @@ If you're reaching out because something I wrote resonated with you, tell me wha
 
 ### You insert trackers into your email
 
-If you use an email service that injects hidden pixels or you use special links that track when I've clicked, I'm a lot less likely to respond. I understand that it's interesting to know who read and clicked your email, but I find it disrespectful to try to track me that way, especially in ways that are not obvious.
+If you use an email service that injects hidden pixels or you use special links that track when I've clicked, I'm a lot less likely to respond. I understand that it's interesting to know who read and clicked your email, but it's also invasive and sneaky to track people like that.
 
 ## Things that I definitely won't respond to
 
@@ -84,30 +84,6 @@ If it's a question about a blog post that doesn't have a repo, I'm more likely t
 
 I'm happy working for myself.
 
-## Examples
+If you're really intent on reaching out about a job, this is basically the only intro that would get a positive response:
 
-### Good:
-
-> From: Paul Graham<br>
-> To: Michael Lynch<br>
-> Subject: Great work
->
-> Hey Michael,
->
-> Love your blog. Great stuff! It's taught me a lot about writing and entrepreneurship!
->
-> I notice that you post a lot on Hacker News. Did you know I actually founded the company that runs that site? Small world, LOL!
->
-> I'd like to send you $5 million as a thank you.
->
-> -pg
-
-I like this email because it's very to the point. It doesn't ask a lot of me.
-
-It establishes common interests.
-
-### Bad: Technical support
-
-These are made up
-
-> Windows won't boot. Can you help me figure out what's wrong?
+> I'm going to pay you $1,000 in advance just to get on a call with me, and I'm offering you a job that's going to pay $1M/year in salary, excluding equity or options.
