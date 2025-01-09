@@ -1,12 +1,14 @@
 ---
 title: "Educational Products: Month 3"
 date: "2025-01-09"
-description: TODO - One-line summary
+description: I've published my first book chapter.
 ---
 
 ## Highlights
 
--
+- I published the first chapter of my book and was happy with the reception.
+- My attempt to hire a book cover designer flopped.
+- I may have figured out how to support large files on PicoShare.
 
 ## Goal grades
 
@@ -15,20 +17,20 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 ### Finish two chapters of _Refactoring English_
 
 - **Result**: Finished one chapter and got 75% through the next.
-- **Grade**: XX
+- **Grade**: B
 
-TODO
+The first chapter took longer than I expected, as I kept finding parts that I wanted to rewrite. I did find it helpful to take a break for a week to write a different chapter and come back to the tutorials chapter fresh.
 
 ### Work with a designer to complete the cover design for _Refactoring English_
 
 - **Result**: Decided to do the cover design on my own.
 - **Grade**: C
 
-TODO
+I got partway through working with the designer but I pulled the plug because I didn't like the direction it was going. I decided to do my own cover for now.
 
 ## Thoughts on finishing the first chapter of _Refactoring English_
 
-I'm happy about publishing the first chapter of my book, _Refactoring English_.
+I successfully published the first chapter of my book, _Refactoring English_. The chapter was called ["Rules for Writing Software Tutorials,"](https://refactoringenglish.com/chapters/rules-for-software-tutorials/) and it's based on years of following software tutorials and noticing when they do things well or poorly.
 
 ### A succesful reception for the first chapter
 
@@ -38,7 +40,7 @@ The reception was on the high end of my expectations. It's a list of rules about
 - [/r/programming](https://www.reddit.com/r/programming/comments/1hrux0b/rules_for_writing_software_tutorials/): 159 points and was #1 for the day (I think?)
 - [Lobste.rs](https://lobste.rs/s/7t86dw/rules_for_writing_software_tutorials) 27 points and reached the #2 position
 
-The main metric I'm tracking is mailing list subscribers, and. 245 new subscribers signed up the week after the post, which is a 31% increase in total subscribers for updates about the book.
+The main metric I'm tracking is mailing list subscribers. 245 new subscribers signed up the week after the post, which is a 31% increase in total subscribers for updates about the book.
 
 {{<img src="confirmed-subscribers.webp" has-border="true" caption="The first chapter caused a major jump in subscribers to the book's mailing list.">}}
 
@@ -50,9 +52,9 @@ A few years ago, [Salvatore Sanfilippo](http://antirez.com), creator of Redis, p
 
 He went on to say that programmers should learn from novelists and resist the urge to rewrite the core logic of their app after it's done. I actually took the opposite lesson: authors should write books more iteratively, like programmers.
 
-For _Refactoring English_, I'm trying to publish chapters in near-finished state, but I also want to let readers help shape the content based on their feedback.
+For _Refactoring English_, I'm trying to publish chapters in near-finished state, but I also want to let reader feedback shape my writing.
 
-Having chapters live in flux creates a problem I've never dealt with before in that I'm messing up past discussions. Like on Hacker News, Lobsters, and reddit, commenters disagreed with my point about ["Let computers evaluate conditional logic."](https://6776b3d35623f593a0e9dc40--refactoring-english.netlify.app/chapters/rules-for-software-tutorials/#let-computers-evaluate-conditional-logic) And I think they're right. That was my weakest point, so I've cut it.
+Having chapters live in flux creates a problem I've never dealt with before: I'm messing up comment threads. Like on Hacker News, Lobsters, and reddit, commenters disagreed with my point about ["Let computers evaluate conditional logic."](https://6776b3d35623f593a0e9dc40--refactoring-english.netlify.app/chapters/rules-for-software-tutorials/#let-computers-evaluate-conditional-logic) And I think they're right. That was my weakest point, so I've cut it.
 
 The problem is that anyone reading those discussions now will wonder why people are disagreeing with a point that never appears in the post.
 
@@ -66,11 +68,18 @@ I'm happy with what I published in the first chapter, but I also received a lot 
 
 I thought, "Okay, I need to just keep sharing preview chapters like this to those same channels."
 
-Then, I reviewed my table of contents and realized that no other chapters would be a match for the channels where I shared the first chapter. Most of those sites have a written or unwritten rule that says, "If there's no code in the post, it doesn't belong here." For example, /r/programming is probably not going to be excited to read my impassioned chapter about why I hate the passive voice.
+Then, I reviewed my table of contents and realized that no other chapters would be a match for the channels where I shared the first one. Most of those sites have a written or unwritten rule that says, "If there's no code in the post, it doesn't belong here." For example, /r/programming is probably not going to be excited to read my impassioned chapter about why I hate the passive voice.
 
 One idea I've had is to do freelance editing for other writers and use that to inform the _Refactoring English_.
 
-Except I don't think "editing" is exactly what I'd be good at. I think people hear "editor" and think I'm going to polish their writing for them. What I actually want to do is identify problems in their writing and explain principles and techniques to help them improve it themselves. I don't know what to call that. Writing mentorship? Coaching? Either way, if that sounds interesting to you, [reach out](#requests-for-help).
+Except I don't think "editing" is exactly what I'd be good at. I think people hear "editor" and think I'm going to polish their writing for them. What I actually want to do is identify problems in their writing and explain principles and techniques to help them improve it themselves. I don't know what to call that. Writing mentorship? Coaching?
+
+Either way, if that sounds interesting to you, [reach out](/about). I can help with blog posts, documentation, or any software-related writing. I can show you how to attract more readers and make your writing more engaging. Basically, if you like the way I write on this blog, I can show you the techniques I'm using here.
+
+- I'll charge $100 for two rounds of review.
+  - The cost covers me reviewing your initial draft, then reviewing changes you make based on my feedback.
+- The piece can be up to 2,500 words.
+- The money is mainly so you have skin in the game, so if $100 is beyond your budget, maybe we can still work something out.
 
 ## My poor experience hiring a book cover designer through Reedsy
 
@@ -103,13 +112,11 @@ It was 4 PM on a Friday for me in US Eastern Time, but Gary was in the UK, so hi
 
 I asked Reedsy's customer support to push back my final payment a week, as Gary hadn't delivered his work. Reedsy told me that I had to take it up with Gary. I explained that if I waited until the next business day to get a response from Gary, it would be too late to move the payment. Reedsy support insisted I try to resolve it with Gary anyway.
 
-I tried to remove my credit card from my account to prevent Reedsy from making further charges, but Reedsy's UI prevented me from removing my card without replacing it with another.
-
-I emailed Gary at 5 PM ET on Friday, and he responded that he didn't work "corporate hours," so he was still on track to finish the project by working the weekend. He pushed back my payment as a courtesy. He seemed miffed that I'd complained to Reedsy and said no client had behaved that way.
+I emailed Gary at 5 PM ET on Friday, and he responded that he didn't work "corporate hours," so he was still on track to finish the project by working the weekend. He pushed back my payment as a courtesy but seemed miffed that I'd complained to Reedsy.
 
 I, on the other hand, do try to stick to regular working hours and didn't feel like spending my weekend with Gary rushing to finish this project. When I checked back on Monday, Gary had sent updates on the two concepts, but they were both pretty mediocre. One looked clearly AI-generated and unrealistic. The other was just not capturing the tone I asked for.
 
-I pressed Gary for details about whether the images were AI-generated and if they met the license requirements I'd specified in my brief. He got cagey at that point, so I asked to cancel the project. I offered him the £231 (US$287) I already paid if he'd allow me to cancel the final payment and terminate the project. He agreed, so that was that.
+I asked Gary whether the images were AI-generated and if they met the license requirements I'd specified in my brief. He got cagey at that point, so I asked to cancel the project. I offered him the £231 (US$287) I already paid if he'd allow me to cancel the final payment and terminate the project. He agreed, so that was that.
 
 I gave Gary a 3-star review across the board. I didn't think he was awful, but just kinda meh and bad at communicating timelines. My review is public, but Reedsy still claims that Gary has a perfect 5.0-star rating even though he only has five reviews.
 
@@ -123,23 +130,13 @@ With Gary out of the picture, I decided to try making my own cover. I found [a r
 
 I know it looks amateurish, but I'm about 80% as satisfied as I expected to be with Gary's work. But this was free and took me an hour. I'm treating it as a placeholder, and I can always hire someone or invest more time later.
 
-### Takeaways for hiring a graphic designer
-
-- Tie payments to project milestones, not dates.
-- Be explicit about whether you're okay with the designer using AI-generated images or AI-assisted image compositing.
-- Be explicit that you want to see license information for third-party assets like photos or fonts.
-  - I had said in the brief that all the assets needed to have compatible licenses.
-  - It would have been better to say the contractor had to deliver the license information and not just pinky promise that they're providing an asset in compliance with its license.
-- Don't plan a project that's supposed to end right after Christmas.
-- Reedsy biases the experience heavily to favor contractors rather than its clients.
-
 ## Side projects
 
 ### Making PicoShare work with large files
 
 [PicoShare](https://github.com/mtlynch/picoshare) is my minimalist, easy-to-host web app for sharing files over the Internet. I created it a few years ago, and I use it on a weekly basis.
 
-My minor shame of PicoShare is that it doesn't scale well for large files. On a VM with a shared CPU and 256 MB of RAM, PicoShare works great for files up to about 1 GB in size. If you try uploading files larger than 1 GB, PicoShare typically exhausts RAM and crashes.
+My minor shame of PicoShare is that it scales poorly for large files. On a VM with a shared CPU and 256 MB of RAM, PicoShare works great for files up to about 1 GB in size. If you try uploading files larger than 1 GB, PicoShare typically exhausts RAM and crashes. You can solve it by [throwing more hardware](https://github.com/mtlynch/picoshare/issues/355#issue-1488397399) at the problem, but it would be nice if PicoShare supported uploading arbitrarily large files.
 
 I've dug into the issue a few times, and my strong hunch is that this performance issue is because PicoShare stores all file data in SQLite. It's an unusual choice, but it means that the SQLite data captures the app's full state, including file data. So, I think what's happening is that PicoShare tries to write a ton of data to SQLite, exhausts RAM, and dies.
 
@@ -149,30 +146,40 @@ Luckily, Nuno Cruces published [a new SQLite driver for Go](https://github.com/n
 
 Nuno suggested that I might lower RAM consumption if I broke the files up and wrote them to SQLite in chunks. I actually [already do that](https://github.com/mtlynch/picoshare/blob/1.4.5/store/sqlite/file/writer.go) in my current implementation, but the the different streaming I/O semantics meant I'd have to rewrite a lot of delicate code. So, I ran out of steam at that point and shelved the work.
 
-But I came back to the project with fresh eyes, and I realized the chunking problem is easier than I thought. PicoShare exhausted RAM when I wrote large files, but not when I read them. So, I only had to rewrite the writing side of things to use streaming I/O. And writing turned out to be easier than what I had initially implemented.
+In December, I came back to the streaming I/O problem with fresh eyes. I realized the chunking problem was easier than I thought. PicoShare exhausted RAM when I wrote large files, but not when I read them. So, I only had to reimplement the writing side of things.
 
-### Spoiler alerts in ScreenJournal
+Writing files in chunks with streaming I/O turned out to be simpler than what I implemented with the regular APIs. I had initially thought the easiest thing to do would be to abstract the SQLite database with [an `io.Writer` object](https://github.com/mtlynch/picoshare/blob/1.4.5/store/sqlite/file/writer.go) and let `io.Copy` dump the data in. But on this go-around, I realized it's easier if I [do all the writes directly](https://github.com/mtlynch/picoshare/blob/af05ce01eee7d26acb1247fd6878f97c426893ba/store/sqlite/entries.go#L221-L257) without bothering with `io.Copy`.
+
+The streaming I/O version has been stable in my limited testing, but I still need to test more extensively. The obstacle there is that my home upload speeds are pitiful, so I've been working on a way to get a desktop OS running on fly.io that I can access remotely via VNC.
 
 ## Wrap up
 
 ### What got done?
 
+- Published ["Rules for Writing Software Tutorials"](https://refactoringenglish.com/chapters/rules-for-software-tutorials/)
 - Published ["if got, want: A Simple Way to Write Better Go Tests"](/if-got-want-improve-go-tests/)
-- Set up my new NixOS system.
-- Set up offlineimap to keep a local copy of my email, and I back it up with daily snapshots.
+- Set up my new NixOS system and have not used Windows at all except to migrate data.
+- Set up [offlineimap](https://www.offlineimap.org/) to keep a local copy of my email, and I back it up with daily snapshots.
+- Made [a few contributions](https://github.com/0x2E/fusion/pulls?q=is%3Apr+is%3Aclosed+author%3Amtlynch) to [fusion](https://github.com/0x2E/fusion), an open-source RSS reader I like (built with Go and SQLite).
 
 ### Lessons learned
 
--
+- Takeaways for hiring a graphic designer
+  - Consider doing a DIY placeholder version before hiring a professional.
+  - Tie payments to project milestones, not dates.
+  - Be explicit about whether you're okay with the designer using AI-generated images or AI-assisted image compositing.
+  - Be explicit that you want to see license information for third-party assets like photos or fonts.
+    - I had said in the brief that all the assets needed to have compatible licenses.
+    - It would have been better to say the contractor had to deliver the license information and not just pinky promise that they're providing an asset in compliance with its license.
+  - Don't plan a project that's supposed to end right after Christmas.
+  - Reedsy biases the experience heavily to favor contractors rather than its clients.
 
 ### Goals for next month
 
 - Publish my 2024 [annual review](/tags/annual-review/) blog post.
 - Finish another chapter of my book.
+- Revise my tutorials chapter based on reader feedback.
 
 ### Requests for help
 
-- If you're interested in hiring me to help you write a blog post, documentation, or something software-related, please [reach out](/about/).
-  - The cost is $100 for two rounds of review. I'll review your initial draft, and I'll review the changes you make based on my feedback.
-  - The piece can be up to 2,500 words.
-  - The money is mainly so you have skin in the game, so if $100 is beyond your budget, maybe we can still work something out.
+- [Reach out](#how-do-i-keep-finding-readers-to-give-feedback) if you're interested in hiring me to help you with your writing.
