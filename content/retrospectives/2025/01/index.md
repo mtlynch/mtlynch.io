@@ -28,13 +28,13 @@ The first chapter took longer than I expected, as I kept finding parts that I wa
 - **Result**: Decided to do the cover design on my own.
 - **Grade**: C
 
-I got partway through working with the designer but I pulled the plug because I didn't like the direction it was going. I decided to do my own cover for now.
+I got partway through working with the designer, but I pulled the plug because I didn't like the direction it was going. I decided to do my own cover for now.
 
 ## Thoughts on finishing the first chapter of _Refactoring English_
 
-I published the first chapter of my book, _Refactoring English_. The chapter is called, ["Rules for Writing Software Tutorials,"](https://refactoringenglish.com/chapters/rules-for-software-tutorials/) and it's based on years of following tutorials and noticing when they do things well or poorly.
+I published the first chapter of my book, _Refactoring English_. The chapter is called ["Rules for Writing Software Tutorials,"](https://refactoringenglish.com/chapters/rules-for-software-tutorials/) and it's based on years of following tutorials and noticing when they do things well or poorly.
 
-### A succesful reception for the first chapter
+### A successful reception for the first chapter
 
 The chapter's reception was on the high end of my expectations. It's a list of rules about tutorials, so I didn't think it would set the Internet on fire, but it got a respectable response on a few sites I thought would be a good match:
 
@@ -79,17 +79,17 @@ Except I don't think "editing" is exactly what I'd be good at. People hear "edit
 Either way, if that sounds interesting to you, [reach out](/about). I can help with blog posts, documentation, or any software-related writing. I can show you how to attract more readers and make your writing more engaging. Basically, if you like the way I write on this blog, I can show you the techniques I'm using here.
 
 - I'll charge $100 for two rounds of review.
-  - The cost covers me reviewing your initial draft, then reviewing changes you make based on my feedback.
+  - The cost covers me reviewing your initial draft and then reviewing changes you make based on my feedback.
 - The piece can be up to 2,500 words.
 - The money is mainly so you have skin in the game, so if $100 is beyond your budget, maybe we can still work something out.
 
 ## My poor experience hiring a book cover designer through Reedsy
 
-One of my distractions from working on my book in November was to convince myself I needed [a professionally-designed cover](/retrospectives/2024/12/#maybe-i-need-a-book-cover). I started the process in November, but the work happened in December.
+One of my distractions from working on my book in November was to convince myself I needed [a professionally designed cover](/retrospectives/2024/12/#maybe-i-need-a-book-cover). I started the process in November, but the work happened in December.
 
 I found the designer through Reedsy, a platform that several people recommended in the [Write Useful Books community](https://www.usefulbooks.com/community). The common review was that it was pricey but worth it.
 
-I wrote [a design brief](https://docs.google.com/document/d/1SUQ6GTeyL-XWmZYlJdQgyvQHZdHiUvCy0G-dh5nnrQM/edit?usp=sharing) explaining what I wanted and sent it to four designers on Reedsy. I listed my budget as US$350-650. One designer bid 20% over my max budget, and his reply was a generic, "Sure, I can do this for you," with nothing that suggested he read my brief. Another designer declined saying that my budget was too low, and one never responded.
+I wrote [a design brief](https://docs.google.com/document/d/1SUQ6GTeyL-XWmZYlJdQgyvQHZdHiUvCy0G-dh5nnrQM/edit?usp=sharing) explaining what I wanted and sent it to four designers on Reedsy. I listed my budget as US$350-650. One designer bid 20% over my max budget, and his reply was a generic, "Sure, I can do this for you," with nothing that suggested he read my brief. Another designer declined, saying that my budget was too low, and one never responded.
 
 The only valid bid came from Gary, who offered to do the cover for £350 (US$434). He sent a thoughtful note that referenced specifics from my brief, his portfolio had dozens of book covers, and he had a perfect 5.0 rating on Reedsy. He proposed a one-month timeline, with the fee split into three payments. That sounded fine to me, so I hired him.
 
@@ -126,7 +126,7 @@ I gave Gary a 3-star review across the board. I didn't think he was awful, but j
 
 ### My DIY book cover
 
-With Gary out of the picture, I decided to try making my own cover. I found [a royalty-free image on Unsplash](https://unsplash.com/photos/shallow-focus-photo-gray-balance-stone-HWRAHxoBlpU) that captured the spirit of quiet, careful work, and added I some text.
+With Gary out of the picture, I decided to try making my own cover. I found [a royalty-free image on Unsplash](https://unsplash.com/photos/shallow-focus-photo-gray-balance-stone-HWRAHxoBlpU) that captured the spirit of quiet, careful work, and I added some text.
 
 {{<img src="refactoring-english-cover-800px.webp" max-width="350px" has-border="true">}}
 
@@ -138,17 +138,17 @@ I know it looks amateurish, but I'm about 80% as satisfied as I expected to be w
 
 [PicoShare](https://github.com/mtlynch/picoshare) is my minimalist, easy-to-host web app for sharing files over the Internet. I created it a few years ago, and I use it on a weekly basis.
 
-My minor shame of PicoShare is that it scales poorly for large files. On a VM with a shared CPU and 256 MB of RAM, PicoShare works great for files up to about 1 GB in size. If you try uploading files larger than 1 GB, PicoShare typically exhausts RAM and crashes. You can solve it by [throwing more hardware](https://github.com/mtlynch/picoshare/issues/355#issue-1488397399) at the problem, but it would be nice if PicoShare supported uploading arbitrarily large files.
+My minor shame about PicoShare is that it scales poorly for large files. On a VM with a shared CPU and 256 MB of RAM, PicoShare works great for files up to about 1 GB in size. If you try uploading files larger than 1 GB, PicoShare typically exhausts RAM and crashes. You can solve it by [throwing more hardware](https://github.com/mtlynch/picoshare/issues/355#issue-1488397399) at the problem, but it would be nice if PicoShare supported uploading arbitrarily large files.
 
 I've dug into the issue a few times, and my strong hunch is that this performance issue is because PicoShare stores all file data in SQLite. It's an unusual choice, but it means that the SQLite data captures the app's full state, including file data. So, I think what's happening is that PicoShare tries to write a ton of data to SQLite, exhausts RAM, and dies.
 
-I'd been curious about using [SQLite's streaming I/O APIs](https://www.sqlite.org/c3ref/blob_open.html), as they seem like they should let me write to the database more efficiently. But I wrote PicoShare in Go, and the Go sqlite driver I was using didn't support the streaming I/O APIs.
+I'd been curious about using [SQLite's streaming I/O APIs](https://www.sqlite.org/c3ref/blob_open.html), as they seem like they should let me write to the database more efficiently. But I wrote PicoShare in Go, and the Go SQLite driver I was using didn't support the streaming I/O APIs.
 
 Luckily, Nuno Cruces published [a new SQLite driver for Go](https://github.com/ncruces/go-sqlite3) that supports streaming I/O, and he [offered to help me](https://github.com/mtlynch/picoshare/pull/567#issuecomment-2330295660) port PicoShare to his library. I [worked with him](https://github.com/ncruces/go-sqlite3/issues/148) a little bit in September, and we made some progress, but we realized that even with streaming I/O, PicoShare still exhausts memory on large files.
 
-Nuno suggested that I might lower RAM consumption if I broke the files up and wrote them to SQLite in chunks. I actually [already do that](https://github.com/mtlynch/picoshare/blob/1.4.5/store/sqlite/file/writer.go) in my current implementation, but the the different streaming I/O semantics meant I'd have to rewrite a lot of delicate code. So, I ran out of steam at that point and shelved the work.
+Nuno suggested that I might lower RAM consumption if I broke the files up and wrote them to SQLite in chunks. I actually [already do that](https://github.com/mtlynch/picoshare/blob/1.4.5/store/sqlite/file/writer.go) in my current implementation, but the different streaming I/O semantics meant I'd have to rewrite a lot of delicate code. So, I ran out of steam at that point and shelved the work.
 
-In December, I came back to the streaming I/O problem with fresh eyes. I realized the chunking problem was easier than I thought. PicoShare exhausted RAM when I wrote large files, but not when I read them. So, I only had to reimplement the writing side of things with the more efficient streaming APIs.
+In December, I came back to the streaming I/O problem with fresh eyes. I realized the chunking problem was easier than I thought. PicoShare exhausted RAM when I wrote large files but not when I read them. So, I only had to reimplement the writing side of things with the more efficient streaming APIs.
 
 Writing files in chunks with streaming I/O turned out to be simpler than what I implemented with SQLite's default APIs. I had initially thought the easiest thing to do would be to abstract the SQLite database with [an `io.Writer` object](https://github.com/mtlynch/picoshare/blob/1.4.5/store/sqlite/file/writer.go) and let `io.Copy` dump the data in. But on this go-around, I realized it's easier if I [do all the writes directly](https://github.com/mtlynch/picoshare/blob/af05ce01eee7d26acb1247fd6878f97c426893ba/store/sqlite/entries.go#L221-L257) without bothering with `io.Copy`.
 
@@ -170,7 +170,7 @@ The streaming I/O version has been stable in my limited testing, but I still nee
   - Consider doing a DIY placeholder version before hiring a professional.
   - Tie payments to project milestones, not dates.
   - Be explicit about whether you're okay with the designer using AI-generated images or AI-assisted image compositing.
-  - Be explicit that you want to see license information for third-party assets like photos or fonts.
+  - Be explicit about needing to see license information for third-party assets like photos or fonts.
     - I had said in the brief that all the assets needed to have compatible licenses.
     - It would have been better to say the contractor had to deliver the license information and not just pinky promise that they're providing an asset in compliance with its license.
   - Don't plan a project that's supposed to end right after Christmas.
