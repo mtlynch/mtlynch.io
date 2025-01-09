@@ -2,6 +2,8 @@
 title: "Educational Products: Month 3"
 date: "2025-01-09"
 description: I've published my first book chapter.
+images:
+  - /retrospectives/2025/01/cover-ideas.webp
 ---
 
 ## Highlights
