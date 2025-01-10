@@ -5,13 +5,15 @@ date: 2025-01-13
 
 Emailing someone who you've never spoken to before is called a "cold email."
 
-There are lots of guides on writing cold emails. This one is a bit niche, as it's about cold emailing a single person: me. But I guarantee you that it's the best guide you can find on this topic.
+There are lots of guides on writing cold emails. This one is a bit niche, as it's about cold emailing a single person: me. But I guarantee you that it's the best guide you can find on this specific topic.
 
 I'm publishing my guidelines under the [Creative Commons BY-4.0 license](https://creativecommons.org/licenses/by/4.0/), so you're welcome to reuse or adapt them to guide people in emailing you.
 
 ## I know this sounds obnoxious
 
-When I see other people post these guides to emailing them, I roll my eyes and privately judge them for being self-important. But I also get a lot of emails from people who invest time into writing emails not realizing that they're making some mistake that will cause me to never respond.
+Every time I see someone post a guide about how other people should interact with them, I roll my eyes and privately judge that person for being self-important.
+
+But I also get a lot of emails from people who invest time into writing emails not realizing that they're making some mistake that will cause me to never respond.
 
 ## Things that increase my chances of responding
 
@@ -38,10 +40,6 @@ You have a blog or you've published books. It doesn't have to be a popular blog 
 
 YouTube counts, Twitter doesn't.
 
-### We have similar interests
-
-### We have a common friend or acquaintance
-
 ### We've done something similar
 
 - e.g., worked at the same place, lived in the same city, attended the same school, drank from the same water bottle.
@@ -62,7 +60,7 @@ I don't expect you to read every last word of my blog to study everything I've s
 
 You're not going to have perfect awareness of my blog, but try searching my site to see if I've written about the topic before you email.
 
-### Your email is templated
+### Your email looks templated
 
 If you're reaching out because something I wrote resonated with you, tell me what it was. If you just say, "I read your blog, and I really enjoy your writing," it might be a sincere sentiment, but it's also what 99% of spam I receive looks like, so I might mistake you for a bot.
 
