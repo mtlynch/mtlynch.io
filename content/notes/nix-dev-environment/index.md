@@ -109,10 +109,10 @@ One of the first lines in the `flake.nix` file declares the exact version of the
 
 ```nix
 # 2.7.18.7 release
-python_dep.url = "github:NixOS/nixpkgs/517501bcf14ae6ec47efd6a17dda0ca8e6d866f9";
+python-nixpkgs.url = "github:NixOS/nixpkgs/517501bcf14ae6ec47efd6a17dda0ca8e6d866f9";
 ```
 
-The line `# 2.7.18.7 release` is just a comment for my own reference. Nix ignores it. The part that's doing the heavy lifting is the `python_dep` line.
+The line `# 2.7.18.7 release` is just a comment for my own reference. Nix ignores it. The part that's doing the heavy lifting is the `python-nixpkgs` line.
 
 `NixOS/nixpkgs` is a [GitHub repo](https://github.com/NixOS/nixpkgs), and [`517501bcf14ae6ec47efd6a17dda0ca8e6d866f9`](https://github.com/NixOS/nixpkgs/tree/517501bcf14ae6ec47efd6a17dda0ca8e6d866f9) is the version of the repo where the `python2` package corresponded with Python 2.7.18.7.
 
@@ -144,16 +144,16 @@ The `inputs` section is where you put the versions of different Nix sources you 
     flake-utils.url = "github:numtide/flake-utils";
 
     # 2.7.18.7 release
-    python_dep.url = "github:NixOS/nixpkgs/517501bcf14ae6ec47efd6a17dda0ca8e6d866f9";
+    python-nixpkgs.url = "github:NixOS/nixpkgs/517501bcf14ae6ec47efd6a17dda0ca8e6d866f9";
   };
 ```
 
 `devshells.default` defines the development environment for the Nix shell. `packages` includes a list of all the packages I want available in my environment.
 
 ```nix
-devShells.default = python_dep.mkShell {
+devShells.default = python-nixpkgs.mkShell {
         packages = [
-          python_dep.python2
+          python-nixpkgs.python2
         ];
 ```
 
@@ -177,12 +177,12 @@ Okay, let's say that I'm ready to do the hard work of porting my one-line Python
 
 ```nix
     # 3.12.0 release
-    python_dep.url = "github:NixOS/nixpkgs/e2b8feae8470705c3f331901ae057da3095cea10";
+    python-nixpkgs.url = "github:NixOS/nixpkgs/e2b8feae8470705c3f331901ae057da3095cea10";
 ```
 
 ```nix
         packages = [
-          python_dep.python312
+          python-nixpkgs.python312
         ];
 ```
 
@@ -196,18 +196,18 @@ My new Python 3 flake looks like this:
     flake-utils.url = "github:numtide/flake-utils";
 
     # 3.12.0 release
-    python_dep.url = "github:NixOS/nixpkgs/e2b8feae8470705c3f331901ae057da3095cea10";
+    python-nixpkgs.url = "github:NixOS/nixpkgs/e2b8feae8470705c3f331901ae057da3095cea10";
   };
 
-  outputs = { self, flake-utils, python_dep }@inputs :
+  outputs = { self, flake-utils, python-nixpkgs }@inputs :
     flake-utils.lib.eachDefaultSystem (system:
     let
-      python_dep = inputs.python_dep.legacyPackages.${system};
+      python-nixpkgs = inputs.python-nixpkgs.legacyPackages.${system};
     in
     {
-      devShells.default = python_dep.mkShell {
+      devShells.default = python-nixpkgs.mkShell {
         packages = [
-          python_dep.python312
+          python-nixpkgs.python312
         ];
 
         shellHook = ''
@@ -223,7 +223,7 @@ I exit my original Nix shell by hitting Ctrl+D or typing `exit`, and I initializ
 ```bash
 $ nix develop
 warning: updating lock file '/home/mike/example/flake.lock':
-• Updated input 'python_dep':
+• Updated input 'python-nixpkgs':
     'github:NixOS/nixpkgs/517501bcf14ae6ec47efd6a17dda0ca8e6d866f9' (2023-09-27)
   → 'github:NixOS/nixpkgs/e2b8feae8470705c3f331901ae057da3095cea10' (2023-10-03)
 Python 3.12.0
@@ -292,23 +292,23 @@ I'm a weak bash developer, so static analysis tools could probably improve my `r
     flake-utils.url = "github:numtide/flake-utils";
 
     # 3.12.0 release
-    python_dep.url = "github:NixOS/nixpkgs/e2b8feae8470705c3f331901ae057da3095cea10";
+    python-nixpkgs.url = "github:NixOS/nixpkgs/e2b8feae8470705c3f331901ae057da3095cea10";
 
     # 0.9.0 release
-    shellcheck_dep.url = "github:NixOS/nixpkgs/8b5ab8341e33322e5b66fb46ce23d724050f6606";
+    shellcheck-nixpkgs.url = "github:NixOS/nixpkgs/8b5ab8341e33322e5b66fb46ce23d724050f6606";
   };
 
-  outputs = { self, flake-utils, python_dep, shellcheck_dep }@inputs :
+  outputs = { self, flake-utils, python-nixpkgs, shellcheck-nixpkgs }@inputs :
     flake-utils.lib.eachDefaultSystem (system:
     let
-      python_dep = inputs.python_dep.legacyPackages.${system};
-      shellcheck_dep = inputs.shellcheck_dep.legacyPackages.${system};
+      python-nixpkgs = inputs.python-nixpkgs.legacyPackages.${system};
+      shellcheck-nixpkgs = inputs.shellcheck-nixpkgs.legacyPackages.${system};
     in
     {
-      devShells.default = python_dep.mkShell {
+      devShells.default = python-nixpkgs.mkShell {
         packages = [
-          python_dep.python312
-          shellcheck_dep.shellcheck
+          python-nixpkgs.python312
+          shellcheck-nixpkgs.shellcheck
         ];
 
         shellHook = ''
@@ -325,7 +325,7 @@ Again, I exit my original Nix shell by hitting Ctrl+D or typing `exit` and insta
 ```bash
 $ nix develop
 warning: updating lock file '/home/mike/example/flake.lock':
-• Added input 'shellcheck_dep':
+• Added input 'shellcheck-nixpkgs':
     'github:NixOS/nixpkgs/8b5ab8341e33322e5b66fb46ce23d724050f6606' (2023-09-19)
 Python 3.12.0
 shellcheck version: 0.9.0
@@ -479,7 +479,7 @@ I've tried certain older versions of packages, and they flat-out don't work.
 For example, if I choose nixpkgs version `b4e193a23a1c5d8794794e65cabf1f1135d07fd9` for `python39`, it not only breaks Python, but it breaks `shellcheck` as well:
 
 ```text
-• Updated input 'python_dep':
+• Updated input 'python-nixpkgs':
     'github:NixOS/nixpkgs/e2b8feae8470705c3f331901ae057da3095cea10' (2023-10-03)
   → 'github:NixOS/nixpkgs/b4e193a23a1c5d8794794e65cabf1f1135d07fd9' (2021-02-19)
 environment:2863: python: command not found
