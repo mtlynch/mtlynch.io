@@ -63,9 +63,7 @@ If you're curious about Nix, a low-risk, high-reward way to use it is to manage 
 
 You probably switch between multiple projects that have different dependencies. Maybe you have a project A that depends on Node.js XX and Python 2.7. And you have another project B that depends on Node.js XX and Python 3.XX. You don't want to do anything to the Node and Python installations in Project A that will mess up Project B, and vice-versa. There are version managers and virtual environments, but they're tech specific. Nix dev shells let you manage all the dependencies for a project so that when you're working in project A, the environment only sees Python 2.7 and Node.js XX no matter what happens in project B.
 
-Read that post. Hopefully, you see that you don't have to understand much about Nix to
-
-started using NixOS as my only OS for both personal and work computing. This is after 30 years of mainly working from a Windows desktop. It has completely replaced Ansible, which I used heavily for six years.
+Read that post. Hopefully, you see that you don't have to understand much about Nix to get a working setup. And even if you're working in a repository you share with other people, you can still privately use Nix dev shells without commiting anything Nix-related to the project's source repo.
 
 The main feature of Nix I love is [dev shells](/notes/nix-dev-environment/). They allow you to create a custom environment for each of your projects.
 
@@ -79,7 +77,7 @@ The community is a mess. I wish there was a more centralized leadership board th
 
 ### htmx
 
-I'd seen people talking about htmx for the past several years, and I never got it.
+I'd seen people talking about htmx for the past several years, and I never got it. I finally had a long plane ride, so I started reading the free ebook _Hypermedia Systems_, written by the authors of htmx.
 
 ### Zig
 
