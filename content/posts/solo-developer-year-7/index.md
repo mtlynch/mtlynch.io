@@ -7,21 +7,35 @@ tags:
 
 Six years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own bootstrapped software company.
 
-For the first few years, all of my businesses flopped. The best of them earned a few hundred dollars per month in revenue, but none were profitable.
-
-Halfway through my third year, I created a device called [TinyPilot](https://tinypilotkvm.com). It allowed users to control their computers remotely. The product quickly caught on, and it's been my main focus ever since.
-
-I sold the company this past year for $598k.
-
-In this post, I'll share what I've learned about being a bootstrapped founder from my seventh year doing it.
+Every year, I post an update about how life is going as a bootstrapped software founder and what went well and poorly in the past year.
 
 ## I sold my company
+
+The defining feature of my professional life last year was that I sold TinyPilot, the company I founded in 2020.
+
+TinyPilot was the first profitable business I started after quitting my job in 2018. It followed a lot of flops.
+
+The product was a device that let users control their computers remotely. I built the prototype with a $35 Raspberry Pi mini computer and blogged about it, then suddenly dozens of people were willing to pay $100-200 on kits to build their own.
+
+For the next four years, I continued improving the product. I moved from kits to pre-made devices. I hired a team to help me with development, support
+
+For the first few years, all of my products flopped. I couldn't figure out how to build something customers wanted to pay for.
+
+Halfway through my third year, I created a device called [TinyPilot](https://tinypilotkvm.com) that let users to control their computers remotely. Suddenly, customers were excited to buy what I had built, so I focused on that for the next four years. I built a company around it that I grew to seven people and $1M in annual revenue.
+
+Last year, I sold the company this past year for $598k.
+
+Selling my company was the defining feature of my professional life for the last year, but it was only two months in.
+
+In this post, I'll share what I've learned about being a bootstrapped founder from my seventh year doing it.
 
 I kind of milked the story for all it's worth. I wrote about everything leading up to it as well as all the lessons I learned. And I went on some podcasts to talk about it more.
 
 I'm still incredibly grateful for how it worked out. Five of the six employees are still there. I've been happy with the direction of the company.
 
 ## I became a new parent
+
+In August, my wife and I welcomed our first child. It's been the happiest time of my life.
 
 ## I worked on educational products
 
