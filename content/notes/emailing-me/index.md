@@ -13,7 +13,9 @@ I'm publishing my guidelines under the [Creative Commons BY-4.0 license](https:/
 
 Every time I see someone post a guide about how other people should interact with them, I roll my eyes and privately judge that person for being self-important.
 
-But I also get a lot of emails from people who invest time into writing emails not realizing that they're making some mistake that will cause me to never respond.
+But I also get a lot of emails from people who spent 20+ minutes writing something that would never get a response from me.
+
+I do enjoy getting emails from readers. I'm not famous enough that I'm inundated with emails. I receive maybe 10 per month, and I respond to a handful depending on how busy I am.
 
 ## Things that increase my chances of responding
 
@@ -24,7 +26,7 @@ I know this sounds selfish, but this is true.
 Note that helping people is something I enjoy, so
 
 - Offers an improvement on something I've written about.
-- Offers a solution to a problem I've written about but can't figure out.
+- Offers a solution to a problem I've written about.
 
 ### You're also a bootstrapped founder
 
@@ -42,7 +44,7 @@ YouTube counts, Twitter doesn't.
 
 ### We've done something similar
 
-- e.g., worked at the same place, lived in the same city, attended the same school, drank from the same water bottle.
+- e.g., worked at the same place, lived in the same city, drank from the same water bottle.
 
 ## Things that decrease my chances of responding
 
@@ -54,19 +56,23 @@ I do sometimes meet with people who cold email me, but it's usually when there's
 
 ### You're asking something I've already answered in my blog
 
-If you're asking a question, first try searching the topic on a search engine with `site:mtlynch.io` at the end. You'll get your answer immediately, and we both save time.
+If you're asking a question, first try searching the topic on a search engine and append `site:mtlynch.io`. You might get your answer instantly, and we'd both save time.
 
-I don't expect you to read every last word of my blog to study everything I've said about a to less likely to respond to someone who wants an individualized
+I don't expect you to read every last word of my blog to know everything I've ever said. But just try to read the big stuff.
 
-You're not going to have perfect awareness of my blog, but try searching my site to see if I've written about the topic before you email.
+So if you ask me if I have any thoughts about code reviews and it seems like you haven't read anything I've written, I'll quickly archive that email.
+
+But if you ask me something about how I use Docker, I don't expect you to read every post where I mention Docker to see if I've answered your question.
 
 ### Your email looks templated
 
-If you're reaching out because something I wrote resonated with you, tell me what it was. If you just say, "I read your blog, and I really enjoy your writing," it might be a sincere sentiment, but it's also what 99% of spam I receive looks like, so I might mistake you for a bot.
+If you just say, "I read your blog, and I really enjoy your writing," it might be a sincere sentiment, but it's also what 99% of spam I receive looks like, so I might mistake you for a bot.
+
+If you're reaching out because something I wrote resonated with you, that's great! But just be a bit more specific about what you liked and why.
 
 ### Your email looks AI-generated
 
-If you're reaching out because something I wrote resonated with you, tell me what it was. If you just say, "I read your blog, and I really enjoy your writing," it might be a sincere sentiment, but it's also what 99% of spam I receive looks like, so I might mistake you for a bot.
+We're probably in the last few years where I can meaningfully distinguish a human-written email from an AI-generated email, but while we're still here, try to make your email as human-sounding as possible. If it sounds like something an AI chatbot would generate, try revising it to sound more like you.
 
 ### You include a lot of details that need addressing
 
@@ -74,7 +80,7 @@ The easiest emails for me to respond to are when someone says they liked one of 
 
 When people include a lot of extra details, it makes it hard to give a quick thanks. Here's a made up example:
 
-> Thanks for your post about code reviews! It taught me a lot.
+> Thanks for your post about unit testing! It taught me a lot.
 >
 > That post really brightened my day because things are a bit gloomy on the farm where I live. Grandma Pauline has come down with smallpox again, and we've had to say goodbye to our beloved hamster, Emilio, due to the global pellet supply crisis.
 
@@ -98,8 +104,8 @@ If you have a question about a blog post that doesn't have an accompanying sourc
 
 ### A job offer
 
-I'm happy working for myself.
+I love working for myself, so it's nearly impossible that I'm interested in having an employer again.
 
-If you're really intent on reaching out about a job, this is basically the only intro that would get a positive response:
+If you're really intent on offering me a job, this is basically the only intro that might get a positive response:
 
 > I'm going to pay you $1,000 in advance just to get on a call with me, and the salary is $1M/year in salary, excluding equity or options.
