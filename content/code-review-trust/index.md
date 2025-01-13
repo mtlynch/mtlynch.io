@@ -175,3 +175,11 @@ No, that's not an indictment of code reviews. That's a problem with your team's 
 > They take so long. I have to wait a week just to check in a simple feature?
 
 I agree that they add time and friction. There's certainly a cost.
+
+### It's not enough for code to be correct
+
+It has to also be intelligible. If you have correct code that only one person understands, the code will quickly become incorrect when that person forgets or if someone else has to modify the code.
+
+### Code is communication
+
+You're taking an idea in your head and communicating this idea to someone else. Like in writing, like Stephen King and his editor. You can mostly verify that your code is correct by testing it, but you can't verify that it's intelligle to other humans until another developer tells you they understand it.
