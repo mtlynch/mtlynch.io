@@ -15,21 +15,11 @@ The defining feature of my professional life last year was that I sold TinyPilot
 
 TinyPilot was the first profitable business I started after quitting my job in 2018. It followed a lot of flops.
 
-The product was a device that let users control their computers remotely. I built the prototype with a $35 Raspberry Pi mini computer and blogged about it, then suddenly dozens of people were willing to pay $100-200 on kits to build their own.
+The TinyPilot product was a device that let users control their computers remotely. I built the prototype with a $35 Raspberry Pi mini computer and blogged about it, then suddenly dozens of people were willing to pay me $100-200 for kits to build their own.
 
-For the next four years, I continued improving the product. I moved from kits to pre-made devices. I hired a team to help me with development, support
+For the next four years, I continued improving the product. I moved from kits to pre-made devices. I hired a team to help me with hardware, software, support, and logistics, eventually growing to $1M/year in revenue.
 
-For the first few years, all of my products flopped. I couldn't figure out how to build something customers wanted to pay for.
-
-Halfway through my third year, I created a device called [TinyPilot](https://tinypilotkvm.com) that let users to control their computers remotely. Suddenly, customers were excited to buy what I had built, so I focused on that for the next four years. I built a company around it that I grew to seven people and $1M in annual revenue.
-
-Last year, I sold the company this past year for $598k.
-
-Selling my company was the defining feature of my professional life for the last year, but it was only two months in.
-
-In this post, I'll share what I've learned about being a bootstrapped founder from my seventh year doing it.
-
-I kind of milked the story for all it's worth. I wrote about everything leading up to it as well as all the lessons I learned. And I went on some podcasts to talk about it more.
+In 2024, I sold the company for $598k. My wife and I wanted to start a family, and I knew that being the sole manager at a seven-person company wasn't how I wanted my work to be when we had a baby. I found a buyer whose vision for the company aligned with what I wanted it to be, and we completed the sale in April 2024.
 
 I'm still incredibly grateful for how it worked out. Five of the six employees are still there. I've been happy with the direction of the company.
 
