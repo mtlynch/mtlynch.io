@@ -1,6 +1,6 @@
 ---
 title: "You Still Need Code Reviews, Even When You Trust Your Developers"
-date: 2024-02-10T22:24:23-05:00
+date: "2026-02-10"
 ---
 
 I'm always surprised and a little baffled when I hear people tell me that they've figured out a cool software development efficiency hack: just skip code reviews.
