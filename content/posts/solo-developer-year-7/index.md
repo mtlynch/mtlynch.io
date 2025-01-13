@@ -108,10 +108,22 @@ The other unexpected consequence of selling was that the new CEO didn't have a p
 
 ### Publish a course or book
 
+- **Result**: Taught a live course, but didn't publish a course or book.
+- **Grade**: C
+
 ### Write software for ten working hours per week
 
+- **Result**: I write software for 10-20 hours per week.
+- **Grade**: A
+
+This goal was more about freeing up time as a manager at TinyPilot, but this has worked out. I'm writing code a lot and enjoying it.
+
 ## Goals for next year
+
+### Earn $50k in profit
 
 ### Learn a new programming language
 
 A lot of the people who I like are excited about Elixir and Phoenix, so I'm curious to try those.
+
+### Goal 3
