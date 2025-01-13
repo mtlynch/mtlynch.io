@@ -21,21 +21,51 @@ For the next four years, I continued improving the product. I moved from kits to
 
 In 2024, I sold the company for $598k. My wife and I wanted to start a family, and I knew that being the sole manager at a seven-person company wasn't how I wanted my work to be when we had a baby. I found a buyer whose vision for the company aligned with what I wanted it to be, and we completed the sale in April 2024.
 
-I'm still incredibly grateful for how it worked out. Five of the six employees are still there. I've been happy with the direction of the company.
+I already wrote and podcasted a lot about the sale and the lessons I learned, so I won't rehash it, but in short, I'm still very grateful for how everything worked out.
 
 ## I became a new parent
 
 In August, my wife and I welcomed our first child. It's been the happiest time of my life.
 
+It confirmed my belief that I wanted to move on from TinyPilot before the baby arrived.
+
+As an indie founder, my schedule is incredibly flexible. Especially now that I work by myself. So having a baby is one of those things where I think, "How do people with regular jobs manage this?"
+
+I had no professional responsibilities, tons of friends and family support nearby, and
+
+It's also one of those things
+
 ## I worked on educational products
 
-Hour for hour, it's the highest return on investment thing I've done since leaving Google
+After TinyPilot, I had to decide what to do next.
+
+In 2021, I released a short video course about blogging for technial audiences. It only made $XXk that year, but it's made $XXk total, making it the highest return on investment project I've ever done.
+
+Educational products also work well with a young baby because I can work on it at my own pace. There are no servers to keep online or users waiting on me for support issues.
+
+So, over the summer, I taught a live version of my blogging course. The course went okay, but the dominant feedback from students was that they wanted to learn more about writing technique and less about platforms to share your writing.
+
+After my son was born, it became harder to record videos in my office, so I switched to writing a book. My plan is to publish it chapter by chapter and iterate on the material based on reader feedback.
 
 ## I learned cool technologies
 
+When I was running TinyPilot, I didn't have a lot of time for technical work, which was a bummer because I still love writing software.
+
+I've always loved programming, but I've never found it as exciting as I have in the last year. I'm awed by the amazing software that's available now for free, and I'm only able to experiment with a tiny fraction of it.
+
 ### Nix
 
-The technology that's had the biggest impact on my work the last year is Nix. I like it so much that I started using NixOS as my only OS for both personal and work computing. This is after 30 years of mainly working from a Windows desktop. It has completely replaced Ansible, which I used heavily for six years.
+The technology that's had the biggest impact on my work the last year is Nix and NixOS.
+
+I like Nix so much that I use it in every programming project, and now all of my personal and work computers run NixOS after
+
+If you're curious about Nix, a low-risk, high-reward way to use it is to manage dev shells.
+
+You probably switch between multiple projects that have different dependencies. Maybe you have a project A that depends on Node.js XX and Python 2.7. And you have another project B that depends on Node.js XX and Python 3.XX. You don't want to do anything to the Node and Python installations in Project A that will mess up Project B, and vice-versa. There are version managers and virtual environments, but they're tech specific. Nix dev shells let you manage all the dependencies for a project so that when you're working in project A, the environment only sees Python 2.7 and Node.js XX no matter what happens in project B.
+
+Read that post. Hopefully, you see that you don't have to understand much about Nix to
+
+started using NixOS as my only OS for both personal and work computing. This is after 30 years of mainly working from a Windows desktop. It has completely replaced Ansible, which I used heavily for six years.
 
 The main feature of Nix I love is [dev shells](/notes/nix-dev-environment/). They allow you to create a custom environment for each of your projects.
 
