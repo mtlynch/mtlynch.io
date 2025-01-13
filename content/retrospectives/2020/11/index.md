@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 4"
-date: 2020-11-03T08:18:10-05:00
+date: 2020-11-03
 description: My first $10k month.
 images:
   - /retrospectives/2020/11/shopify-dashboard.png
@@ -12,7 +12,7 @@ images:
 - I interviewed several IT consultants and business owners about what TinyPilot features would be useful to them.
 - I tested several new marketing channels and realized I'm failing to measure results accurately.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -39,7 +39,7 @@ I didn't arrange as many interviews as I had hoped, but I think I got enough inf
 
 ## Stats
 
-### [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io)
+### [TinyPilot](https://tinypilotkvm.com/)
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -123,7 +123,7 @@ Next was **power management**. People wanted a way to power a machine on and off
 
 The last feature that people asked for was **drive mounting**. Some KVMs allow you to upload a disk image, and then the KVM makes that disk appear as a removable drive on the target computer. Only a couple of interviewees mentioned this, but it's also a common request among my existing users.
 
-The good news is that my intuitions were correct. These were all features I teased a few months ago when advertising a possible paid version of TinyPilot's software called [TinyPilot Pro](https://tinypilotkvm.com/pro?ref=mtlynch.io). Without my prompting, these interviewees often brought up these same features independently.
+The good news is that my intuitions were correct. These were all features I teased a few months ago when advertising a possible paid version of TinyPilot's software called [TinyPilot Pro](https://tinypilotkvm.com/product/tinypilot-pro). Without my prompting, these interviewees often brought up these same features independently.
 
 ## Experimenting with paid reddit ads
 
@@ -294,5 +294,5 @@ I received an inquiry from a large customer about an enterprise package for Zest
 ### Goals for next month
 
 - Release a high-end version of TinyPilot that arrives pre-assembled in a custom case.
-- Release the first version of [TinyPilot Pro](https://tinypilotkvm.com/pro?ref=mtlynch.io).
+- Release the first version of [TinyPilot Pro](https://tinypilotkvm.com/product/tinypilot-pro).
 - Figure out how to properly track the source of customers who end up completing purchases.

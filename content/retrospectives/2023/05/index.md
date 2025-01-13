@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 34"
-date: 2023-05-11T00:00:00-04:00
+date: 2023-05-11
 description: 'Getting out of "urgent mode"'
 images:
   - /retrospectives/2023/05/price-profit-usb-c.webp
@@ -21,7 +21,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - The local team is escaping their months-long stint in "urgent mode."
 - Now that production speed isn't a bottleneck, I can choose a price that optimizes for profitability.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -46,7 +46,7 @@ I found a contract manufacturer I like but still haven't signed with them offici
 
 This was not an exciting release feature-wise, but it created a path for users to migrate off of Debian Buster, which is now a legacy OS. Dropping support for Buster means eliminating a lot of complexity in our codebase, where we had conditional logic for that OS version.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

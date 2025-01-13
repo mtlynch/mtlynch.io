@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 22"
-date: 2022-05-12T12:09:29-04:00
+date: 2022-05-12
 description: Where is all of my money going?
 images:
   - /retrospectives/2022/05/expenses-pie.png
@@ -12,7 +12,7 @@ images:
 - It's more important than I thought to have low-latency insight into developers' hours.
 - I'm trying paid advertising again for the first time in almost two years.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -39,7 +39,7 @@ I've canceled the contract with the design agency, so they're wrapping up their 
 
 The month's theme is, "this took a little longer than I expected." The release is code complete, but I still have to wrap up some last manual tests before publishing the build to customers.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

@@ -3,7 +3,7 @@ title: "My Fifth Year as a Bootstrapped Founder"
 tags:
   - annual review
   - tinypilot
-date: 2023-02-10T00:00:00-05:00
+date: 2023-02-10
 custom_css: true
 hero_image: cover.webp
 images:
@@ -115,7 +115,7 @@ As an alternative to the existing cloud storage options, I made a minimalist fil
 
 There are a few open-source tools that offer [similar functionality](https://github.com/awesome-selfhosted/awesome-selfhosted#file-transfer---single-click--drag-n-drop-upload), but PicoShare is unique in not requiring a database server. That means you can run it in a single Docker container, whereas other solutions require more complicated orchestration.
 
-PicoShare became the fastest-growing open-source project I ever published. It received 600 Github stars within two weeks of its release. As of this writing, PicoShare has [over 100k installs](https://hub.docker.com/r/mtlynch/picoshare/).
+PicoShare became the fastest-growing open-source project I ever published. It received 600 GitHub stars within two weeks of its release. As of this writing, PicoShare has [over 100k installs](https://hub.docker.com/r/mtlynch/picoshare/).
 
 {{<img src="picoshare-growth.png" max-width="600px" has-border="true">}}
 
@@ -141,7 +141,7 @@ I aim for everyone at TinyPilot to run at around 50% capacity. That is, a balanc
 
 The technical support team is the clearest example of a 50/50 split: they spend half of their time responding to support requests and the other half finding ways to save users from needing support. The proactive tasks include fixing bugs in the product, writing documentation, and improving our diagnostic tools.
 
-Every TinyPilot team comprises two people. When one person is unavailable, the other can suspend their proactive work and handle time-sensitive tasks without feeling overwhelmed. If we get a rush of orders because a popular YouTube channel [mentions us](/retrospectives/2022/12/#tinypilothttpstinypilotkvmcomrefmtlynchio-stats), we have spare capacity to absorb it.
+Every TinyPilot team comprises two people. When one person is unavailable, the other can suspend their proactive work and handle time-sensitive tasks without feeling overwhelmed. If we get a rush of orders because a popular YouTube channel [mentions us](/retrospectives/2022/12/#tinypilothttpstinypilotkvmcom-stats), we have spare capacity to absorb it.
 
 | Team                | Reactive tasks                                                                             | Proactive tasks                                                                |
 | ------------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
@@ -233,7 +233,7 @@ I still prefer working for myself to having an employer. I still feel grateful f
 
 ---
 
-_Cover image by [Loraine Yow](https://www.loraineyow.com/). Thanks to my lovely fiancé and the [Blogging for Devs community](https://bloggingfordevs.com/) for providing early feedback on this post._
+_Cover image by Loraine Yow. Thanks to my lovely fiancé and the [Blogging for Devs community](https://bloggingfordevs.com/) for providing early feedback on this post._
 
 <script src="/third-party/chart.js/2.9.4/Chart.min.js"></script>
 <script src="script.js"></script>

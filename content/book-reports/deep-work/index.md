@@ -11,19 +11,19 @@ This was my favorite book of 2018. It profoundly impacted the way I approach my 
 
 ---
 
-## What I Liked
+## What I liked
 
 - The author's arguments in favor of deep work are logical and compelling
 - Made me recognize how much time I was spending on low-effort, low-value work
 - Opened my eyes to the concept of ["attention residue"](https://calnewport.com/blog/2016/09/06/a-productivity-lesson-from-a-classic-arcade-game/)
 - Offers many simple, pragmatic techniques for achieving deep work
 
-## What I Disliked
+## What I disliked
 
 - A bit too heavy on fluff stories about highly accomplished people who achieved greatness due to their commitment to deep work techniques
 - Some of the focus techniques felt extreme past the point of being practical or helpful
 
-## Key Takeaways
+## Key takeaways
 
 > Deep Work: Professional activities performed in a state of distraction-free concentration that push your cognitive capabilities to their limit. These efforts create new value, improve your skill, and are hard to replicate.
 >

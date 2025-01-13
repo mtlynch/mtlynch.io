@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 20"
-date: 2022-03-08T00:00:00-05:00
+date: 2022-03-08
 description: Hiring TinyPilot's first support engineer
 images:
   - /retrospectives/2022/03/og-image.png
@@ -12,7 +12,7 @@ images:
 - I learned that hiring a support engineer is even harder than I expected.
 - I'm evaluating platforms for paying international contractors.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -37,7 +37,7 @@ It was a lot of work to hire for this role, but I'm excited to have this new mem
 
 The design firm I'm working with had too few hours to complete the design in February. I've negotiated guaranteed hours with them in March and April, so I expect to complete this by the end of the month.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

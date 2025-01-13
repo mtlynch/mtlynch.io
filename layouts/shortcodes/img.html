@@ -22,16 +22,23 @@
 
 {{ $maxWidth = printf "%dpx" $maxWidthPixels }}
 
+{{ $containerAttrs := printf `class="img%s"%s`
+  (cond (ne $align "") (printf " align-%s" $align) "")
+  (cond (ne $maxWidth "") (printf ` style="max-width: %s"` $maxWidth) "") | safeHTMLAttr }}
+
+{{ $srcset := "" }}
+{{ range $.Site.Params.photoWidths }}
+  {{- if ge $image.Width . }}
+    {{ $resized := $image.Resize (printf "%dx" .) }}
+    {{ $srcset = printf "%s%s %dw, " $srcset $resized.RelPermalink . }}
+  {{ end }}
+{{ end }}
+{{ $srcset = printf "%s%s %dw" $srcset $image.RelPermalink $image.Width }}
+
 {{ if $caption }}
-<figure
-  class="img{{ if $align }} align-{{ $align }}{{ end }}"
-  {{- if $maxWidth }} style="max-width: {{ $maxWidth }}"{{ end -}}
-  >
+<figure {{ $containerAttrs }}>
 {{ else }}
-<div
-  class="img{{ if $align }} align-{{ $align }}{{ end }}"
-  {{- if $maxWidth }} style="max-width: {{ $maxWidth }}"{{ end -}}
-  >
+<div {{ $containerAttrs }}>
 {{ end }}
 
 {{ if $src }}
@@ -39,13 +46,7 @@
     <img
       {{ if $hasBorder }}class="img-border"{{ end }}
       sizes="(min-width: 768px) {{ if $maxWidth }}{{ $maxWidth }}{{ else }}{{ index (last 1 $.Site.Params.photoWidths) 0 }}px{{ end }}, 98vw"
-      srcset='{{ range $.Site.Params.photoWidths }}
-                {{- if ge $image.Width . }}
-                  {{ $resized := $image.Resize (printf "%dx" .) }}
-                  {{ $resized.RelPermalink }} {{ . }}w,
-                {{ end }}
-              {{ end }}
-              {{ $image.RelPermalink }} {{ $image.Width }}w'
+      srcset='{{ $srcset }}'
       src="{{ $src }}" alt="{{$altText}}" loading="lazy"/>
   </a>
 {{ else }}

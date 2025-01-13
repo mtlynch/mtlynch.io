@@ -6,7 +6,6 @@ description:
 discuss_urls:
   reddit: https://redd.it/80whkc
   hacker_news: https://news.ycombinator.com/item?id=16483241
-  indie_hackers: https://www.indiehackers.com/forum/why-i-quit-google-to-work-for-myself-284c36ec48
 tags:
   - entrepreneurship
   - google
@@ -136,9 +135,9 @@ Even if I got the promotion, what then? Popular wisdom said that each promotion 
 
 ## What's the alternative?
 
-Around this time, I discovered [Indie Hackers](https://www.indiehackers.com/).
+Around this time, I discovered Indie Hackers.
 
-{{<img src="indie-hackers.png" alt="Screenshot of Indie Hackers website" max-width="750px">}}
+{{<img src="indie-hackers.png" alt="Screenshot of Indie Hackers website" max-width="550px">}}
 
 It's an online community for founders of small software businesses. Emphasis on small. These weren't Zuckerberg hopefuls, but rather people who wanted to build modest, profitable businesses that pay their bills.
 
@@ -188,7 +187,9 @@ Google was a great place to work, and I learned valuable skills during my time t
 - **Update (Jan. 31, 2020)**: [My Second Year as a Solo Developer](/solo-developer-year-2/)
 - **Update (Feb. 1, 2021)**: [My Third Year as a Solo Developer](/solo-developer-year-3/)
 - **Update (Feb. 1, 2022)**: [My Fourth Year as a Bootstrapped Founder](/solo-developer-year-4/)
+- **Update (Feb. 10, 2023)**: [My Fifth Year as a Bootstrapped Founder](/solo-developer-year-5/)
+- **Update (Feb. 10, 2024)**: [My Sixth Year as a Bootstrapped Founder](/solo-developer-year-6/)
 
 ---
 
-_Illustrations by [Loraine Yow](https://www.loraineyow.com/)._
+_Illustrations by Loraine Yow._

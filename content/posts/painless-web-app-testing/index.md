@@ -94,7 +94,7 @@ All of the production logic is in the root folder, while all the end-to-end test
 
 ## Run Sentimentalyzer locally
 
-I'm deliberately not showing the app's source code here to emphasize the fact that you can write Cypress tests without ever seeing the implementation of the app itself. Sentimentalyzer happens to be a Go app, but the tests would be the same had I implemented it in Python or Angular. If you're curious, the source code is [on Github](https://github.com/mtlynch/hello-world-cypress).
+I'm deliberately not showing the app's source code here to emphasize the fact that you can write Cypress tests without ever seeing the implementation of the app itself. Sentimentalyzer happens to be a Go app, but the tests would be the same had I implemented it in Python or Angular. If you're curious, the source code is [on GitHub](https://github.com/mtlynch/hello-world-cypress).
 
 To play with Sentimentalyzer on your machine, run the following commands:
 
@@ -261,7 +261,7 @@ Those three files are all you need to start end-to-end testing your web app. Her
 
 ## Source code and additional examples
 
-The full source for this demo is available on Github:
+The full source for this demo is available on GitHub:
 
 - [mtlynch/hello-world-cypress](https://github.com/mtlynch/hello-world-cypress)
 
@@ -283,4 +283,4 @@ This guide provided a basic introduction to Cypress. For more advanced functiona
 
 ---
 
-_Illustrations by [Loraine Yow](https://www.loraineyow.com/). Thanks to [Gleb Bahmutov](https://glebbahmutov.com/) from the Cypress team for providing early feedback on this article._
+_Illustrations by Loraine Yow. Thanks to [Gleb Bahmutov](https://glebbahmutov.com/) from the Cypress team for providing early feedback on this article._

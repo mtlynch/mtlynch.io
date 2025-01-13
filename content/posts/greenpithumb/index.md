@@ -274,7 +274,7 @@ The items below are generic electronics tools and components that you can use fo
 
 - [10" planter pot](https://smile.amazon.com/gp/product/B006GK60PC/)
 - [Potting mix](https://smile.amazon.com/gp/product/B01JIRJK8S/) (soil)
-- [Kentucky Wonder bush bean seeds](https://smile.amazon.com/gp/product/B009YZBG7S/)
+- Kentucky Wonder bush bean seeds
 
 ### Optional components
 

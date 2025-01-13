@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 41"
-date: 2023-12-13T00:00:00-05:00
+date: 2023-12-13
 description: "One-day shipping: how hard could it be?"
 images:
   - /retrospectives/2023/12/ship1.webp
@@ -21,7 +21,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - I attended the Handmade Seattle conference.
 - I experimented with Zig and an open-source AI chatbot.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -50,7 +50,7 @@ As an example, we have three used Arduino Uno boards. Each one retails for $28. 
 
 My new plan is to wait until we're close to moving out and advertise a time when people can come by and take what they want for free.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

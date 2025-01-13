@@ -10,7 +10,7 @@ date: "2019-02-06"
 - Revenues increased substantially from the previous month but missed targets for January.
 - I figured out an easy and inexpensive way to attract users via Twitter.
 
-## Goal Grades
+## Goal grades
 
 At the start of the month, I laid out some high-level goals. Here's how I did against those goals.
 

@@ -1,6 +1,6 @@
 ---
 title: "Failed Attempts to Install NixOS on the Raspberry Pi 4"
-date: 2023-07-18T00:00:00-04:00
+date: 2023-07-18
 tags:
   - nix
 ---

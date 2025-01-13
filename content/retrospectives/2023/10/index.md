@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 39"
-date: 2023-10-17T00:00:00-04:00
+date: 2023-10-17
 description: Working around manufacturing delays
 images:
   - /retrospectives/2023/10/chipping-paint.webp
@@ -21,7 +21,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - I've decided to hang onto TinyPilot's office for two more months.
 - I'm planning my escape from a miserable seller experience on RapidAPI.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -46,7 +46,7 @@ I ended up deciding to [stay in the office](#slowing-down-the-transition-to-full
 
 Our assembly went according to plan, and now all of our new devices are at the warehouse. We're on track to sell off our refurbished devices in the next few weeks.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

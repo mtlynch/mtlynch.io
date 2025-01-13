@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 8"
-date: 2021-03-03T00:00:00-05:00
+date: 2021-03-03
 description: My growth streak had to end somewhere.
 images:
   - /retrospectives/2021/03/og-cover.png
@@ -13,7 +13,7 @@ images:
 - One of the critical TinyPilot parts I need suddenly disappeared from vendors.
 - Delegating work to others is paradoxically leaving me with less free time.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -37,7 +37,7 @@ I added three new convenience features to TinyPilot, but I haven't yet cut an of
 - Change hostname through the web UI
 - View debug logs from the web UI
 
-I also added a [support forum](https://forum.tinypilotkvm.com) and [frequently asked questions pages](https://tinypilotkvm.com/faq?ref=mtlynch.io), both of which I should have added a long time ago. They both help users answer their own questions instead of relying on me for private email support.
+I also added a [support forum](https://forum.tinypilotkvm.com) and [frequently asked questions pages](https://tinypilotkvm.com/faq), both of which I should have added a long time ago. They both help users answer their own questions instead of relying on me for private email support.
 
 ### Collect feedback from 10 customers about a potential rack-mounted version of TinyPilot
 
@@ -46,7 +46,7 @@ I also added a [support forum](https://forum.tinypilotkvm.com) and [frequently a
 
 Sketching out a rack-mounted TinyPilot took longer than I expected. I'm days away from a preview document I can show customers to solicit feedback.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

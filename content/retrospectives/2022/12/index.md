@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 29"
-date: 2022-12-14T00:00:00-05:00
+date: 2022-12-14
 description: Worry when long-term tasks stop.
 images:
   - /retrospectives/2022/12/outsourcing-2.png
@@ -21,7 +21,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - I grossly overestimated how much spare capacity TinyPilot's fulfillment team had.
 - Long-term tasks can be a canary for impending resource exhaustion.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -46,7 +46,7 @@ The support engineering team is becoming more effective than I expected. In addi
 
 Launching a new TinyPilot model always requires a lot of my time. I've been through this process enough to anticipate a lot of the work, but I also know that no matter how much planning I do, there will always be work I fail to anticipate. Even though there are days I feel like I have some spare bandwidth, I'm trying to keep as much of my time free as possible.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

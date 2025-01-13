@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 14"
-date: 2021-09-08T00:00:00-04:00
+date: 2021-09-08
 description: Returning focus to the bottom line.
 images:
   - /retrospectives/2021/09/cover.png
@@ -13,7 +13,7 @@ images:
 - After three years, I've earned back my investment in Zestful (and I might sell it).
 - I'm still ruthlessly delegating every task I can.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -38,7 +38,7 @@ I thought the chip shortage was the last big hurdle to overcome, but the electri
 
 The thing about publishing a book about effective writing is that people expect you to be a good writer. That puts some pressure on me. I'm about 70% ready to publish a sample chapter to publish, but I still need to edit it more.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

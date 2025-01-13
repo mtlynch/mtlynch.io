@@ -41,7 +41,7 @@ Then, I created a file called `.travis.yml`, which told Travis how to build the 
 
 {{<inline-file filename="travis.yml" language="yml">}}
 
-I pushed my commit to Github, created a [pull request](https://github.com/mtlynch/ingredient-phrase-tagger/pull/4), and Travis [built it](https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/362818282) successfully:
+I pushed my commit to GitHub, created a [pull request](https://github.com/mtlynch/ingredient-phrase-tagger/pull/4), and Travis [built it](https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/362818282) successfully:
 
 {{<img src="first-travis-build.png" alt="Screenshot of first successful build on Travis CI" caption="First successful build on Travis" max-width="792px" has-border="true">}}
 
@@ -272,7 +272,7 @@ I tweaked my `build.sh` script to set the thread count explicitly:
 +  template_file "$ACTUAL_CRF_TRAINING_FILE" "$ACTUAL_CRF_MODEL_FILE"
 ```
 
-Then, I saved the newly generated output files as my golden copies. I pushed [the changes](https://github.com/mtlynch/ingredient-phrase-tagger/commit/c1cad53a4d661d86dc4842aff6e5bac36723d4e7) to Github and was greeted with a pleasant sight: [my end-to-end tests passed](https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/408786692):
+Then, I saved the newly generated output files as my golden copies. I pushed [the changes](https://github.com/mtlynch/ingredient-phrase-tagger/commit/c1cad53a4d661d86dc4842aff6e5bac36723d4e7) to GitHub and was greeted with a pleasant sight: [my end-to-end tests passed](https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/408786692):
 
 {{<img src="e2e-fix.png" alt="Success after fixing end-to-end test" caption="End-to-end test passing on Travis" max-width="800px" has-border="true">}}
 
@@ -296,4 +296,4 @@ Read on for [part three](/resurrecting-3/) of this series, where I describe how 
 
 ---
 
-_Cover illustration by [Loraine Yow](https://www.loraineyow.com/). My fork of the ingredient-phrase-tagger library is available on [Github](https://github.com/mtlynch/ingredient-phrase-tagger). I offer a managed service based on this library called [Zestful](https://zestfuldata.com)._
+_Cover illustration by Loraine Yow. My fork of the ingredient-phrase-tagger library is available on [GitHub](https://github.com/mtlynch/ingredient-phrase-tagger). I offer a managed service based on this library called [Zestful](https://zestfuldata.com)._

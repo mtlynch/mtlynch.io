@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 2"
-date: 2020-09-02T14:00:00-04:00
+date: 2020-09-02
 description: TinyPilot threw me a huge curveball, but things continue moving forward.
 images:
   - /retrospectives/2020/09/tinypilot-mouse-support.png
@@ -12,7 +12,7 @@ images:
 - I'm manufacturing a custom USB power connector for TinyPilot.
 - Revenue across all my projects was among my strongest ever, at $3.6k total.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -37,7 +37,7 @@ For the same reasons as above, I postponed marketing efforts until I had a produ
 
 This ended up being more difficult than I expected, but I completed the feature right at the end of the month. Integrating the mouse improved the user experience more than I anticipated.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io)
+## [TinyPilot](https://tinypilotkvm.com/)
 
 {{<revenue-graph project="tinypilot">}}
 

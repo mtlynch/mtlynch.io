@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 17"
-date: 2021-12-06T00:00:00-05:00
+date: 2021-12-06
 description: How removing a single link generated a 62% sales increase
 images:
   - /retrospectives/2021/12/tp-sales-consolidated.png
@@ -12,7 +12,7 @@ images:
 - I'm just about to launch TinyPilot's new product and branding.
 - I reduced Google Cloud Platform fees by 90% on my side projects.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -37,7 +37,7 @@ It's been a long slog to get the custom hardware we need for the Voyager 2, but 
 
 I spoke to a few marketing firms, but I wasn't ready to hire anyone yet. We're struggling to keep up with TinyPilot's growing sales as it is, so I'm pausing on marketing and focusing on scaling production to meet our current demand.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

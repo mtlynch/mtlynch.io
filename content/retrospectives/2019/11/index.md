@@ -12,7 +12,7 @@ date: "2019-11-08"
 - I then tried five different experiments for increasing sales.
 - Is It Keto's revenue dropped for the month as I redirected resources toward its failing meal plans.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I [declare what I'd like to accomplish](/retrospectives/2019/10/#goals-for-next-month). Here's how I did against those goals:
 

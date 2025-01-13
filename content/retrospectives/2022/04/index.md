@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 21"
-date: 2022-04-06T00:00:00-04:00
+date: 2022-04-06
 description: Should I build more or optimize what I have?
 images:
   - /retrospectives/2022/04/og-image.png
@@ -12,7 +12,7 @@ images:
 - I'm now five months and $32k over budget on a website redesign.
 - I launched PicoShare, and it's the fastest-growing project I've ever published.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -37,7 +37,7 @@ This project is continuing to take longer than I expected. We're done with the d
 
 It took a long time to find the right engineer, but I'm happy this is working out. It's freeing up a significant amount of time for me already.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -171,7 +171,7 @@ I officially released [PicoShare v1.0.0](https://github.com/mtlynch/picoshare/re
 
 YouTube creator David Burgess made [a video about PicoShare](https://www.youtube.com/watch?v=9eJeA8If0dY), and then Hal Gus [made another](https://www.youtube.com/watch?v=E0G5mSe04NE). A self-hosting blogger [wrote a tutorial](https://mariushosting.com/how-to-install-picoshare-on-your-synology-nas/) for installing PicoShare on a Synology NAS (fun for me because my first-ever blog post was about [setting up a Docker image on my Synology NAS](/sia-via-docker/)).
 
-PicoShare is now the fastest-growing project I've ever created. The [first commit](https://github.com/mtlynch/picoshare/commit/bd4b3c38a680ffc06f95174d0e062cb429e2e4d1) was February 13th, and the project currently has 664 stars on Github. For comparison, [TinyPilot](https://github.com/tiny-pilot/tinypilot) has 1.8k stars after almost two years, and [LogPaste](https://github.com/mtlynch/logpaste) has 201 stars after one year.
+PicoShare is now the fastest-growing project I've ever created. The [first commit](https://github.com/mtlynch/picoshare/commit/bd4b3c38a680ffc06f95174d0e062cb429e2e4d1) was February 13th, and the project currently has 664 stars on GitHub. For comparison, [TinyPilot](https://github.com/tiny-pilot/tinypilot) has 1.8k stars after almost two years, and [LogPaste](https://github.com/mtlynch/logpaste) has 201 stars after one year.
 
 Open-source developers made cool code contributions as well:
 

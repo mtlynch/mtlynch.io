@@ -15,7 +15,7 @@
   <div>
     <h2><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     <p class="date">
-      {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
+      {{ .Date.Format .Site.Params.dateFormat }}
     </p>
     <p>{{ .Page.Params.description }}</p>
   </div>

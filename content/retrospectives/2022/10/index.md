@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 27"
-date: 2022-10-17T00:00:00-04:00
+date: 2022-10-17
 description: What would a fully remote TinyPilot look like?
 images:
   - /retrospectives/2022/10/outsourced-complexity.png
@@ -21,7 +21,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - Thinking about outsourcing forces me to recognize inefficiencies in our current workflows.
 - The [Playwright](https://playwright.dev) end-to-end testing tool has won me over.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -48,7 +48,7 @@ I ended up letting a support engineer go, so I instead focused on hiring his rep
 
 This is a vague goal, as I'm still exploring options at this point. In the past, I'd [explored injection-molded cases](/retrospectives/2021/02/#scaling-manufacturing), which have a low per-unit cost but require an expensive upfront price. I'm now exploring metal cases, which don't require as much upfront cost and scale up efficiently.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

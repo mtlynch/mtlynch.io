@@ -62,7 +62,7 @@ Admin credentials of:
 
 ClipBucket doesn't provide much documentation about deployment. All I could find as far as official documentation was this [guide](https://clipbucket.com/docs/clipbucket-installation/), but it assumes that the user has already installed many of ClipBucket's dependencies.
 
-I found [this excellent and very thorough guide](http://linoxide.com/linux-how-to/setup-clipbucket-video-sharing-website-linux/), but it's still a very manual process. The user is forced to copy/paste many different commands and it's difficult for the user to customize for their particular system.
+I found [this excellent and very thorough guide](https://web.archive.org/web/20160202164342/http://linoxide.com/linux-how-to/setup-clipbucket-video-sharing-website-linux/), but it's still a very manual process. The user is forced to copy/paste many different commands and it's difficult for the user to customize for their particular system.
 
 Even after installing ClipBucket and all of its dependencies, a new deployment of ClipBucket requires the user to manually click through a web UI and enter information about their installation.
 
@@ -129,7 +129,7 @@ I'm considering expanding the testing by writing more sophisticated web flows, s
 
 My ClipBucket Ansible Role is available:
 
-- [On Github](https://github.com/mtlynch/ansible-role-clipbucket)
+- [On GitHub](https://github.com/mtlynch/ansible-role-clipbucket)
 - [On Ansible Galaxy](https://galaxy.ansible.com/mtlynch/clipbucket)
 
 ## Using the ClipBucket Ansible Role

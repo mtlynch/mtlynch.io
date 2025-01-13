@@ -1,6 +1,6 @@
 ---
 title: "On Migrating from Cypress to Playwright"
-date: 2022-10-25T00:00:00-04:00
+date: 2022-10-25
 discuss_urls:
   reddit: https://www.reddit.com/r/javascript/comments/yd3dr8/on_migrating_from_cypress_to_playwright/
 ---
@@ -182,7 +182,7 @@ Here's an example `<p>` element from PicoShare:
 ```html
 <p data-test-id="github-instructions">
   Visit our
-  <a href="https://github.com/mtlynch/picoshare">Github repo</a> to create your
+  <a href="https://github.com/mtlynch/picoshare">GitHub repo</a> to create your
   own PicoShare server.
 </p>
 ```
@@ -194,7 +194,7 @@ Here's the naïve approach to asserting the text value in Cypress:
 ```javascript
 cy.get("[data-test-id='github-instructions']").should(
   "have.text",
-  "Visit our Github repo to create your own PicoShare server."
+  "Visit our GitHub repo to create your own PicoShare server."
 );
 ```
 
@@ -204,8 +204,8 @@ Unfortunately, this test will fail:
 Timed out retrying after 10000ms
 + expected - actual
 
--'\n      Visit our\n      Github repo to create\n      your own PicoShare server.\n    '
-+'Visit our Github repo to create your own PicoShare server.'
+-'\n      Visit our\n      GitHub repo to create\n      your own PicoShare server.\n    '
++'Visit our GitHub repo to create your own PicoShare server.'
 ```
 
 Cypress is grabbing the [textContent](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent) property, which includes all the whitespace around the text as it appears in the raw HTML instead of how the text appears in the browser.
@@ -215,7 +215,7 @@ You can work around this by grabbing the element's `innerText`, but the syntax i
 ```javascript
 cy.get("[data-test-id='github-instructions']").should(($el) => {
   expect($el.get(0).innerText).to.eq(
-    "Visit our Github repo to create your own PicoShare server."
+    "Visit our GitHub repo to create your own PicoShare server."
   );
 });
 ```
@@ -226,7 +226,7 @@ In Playwright, the naïve assertion yields the correct behavior:
 
 ```javascript
 await expect(page.locator("data-test-id=github-instructions")).toHaveText(
-  "Visit our Github repo to create your own PicoShare server."
+  "Visit our GitHub repo to create your own PicoShare server."
 );
 ```
 
@@ -236,7 +236,7 @@ You can force Playwright to look at `innerText` instead with a much simpler synt
 
 ```javascript
 await expect(page.locator("data-test-id=github-instructions")).toHaveText(
-  "Visit our Github repo to create your own PicoShare server.",
+  "Visit our GitHub repo to create your own PicoShare server.",
   { useInnerText: true }
 );
 ```

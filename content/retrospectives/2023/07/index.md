@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 36"
-date: 2023-07-13T00:00:00-04:00
+date: 2023-07-13
 description: Where is my time going? (2023 edition)
 images:
   - /retrospectives/2023/07/server-rack.webp
@@ -21,7 +21,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - I realized I've once again become addicted to email.
 - I built my first server rack.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -46,7 +46,7 @@ Our June release went smoothly but felt underwhelming. A lot of our dev effort i
 
 TinyPilot's earnings were fairly flat. A new review [came out](https://www.youtube.com/watch?v=tx724dhxGxc) but got a tepid response, so we saw fewer sales than I hoped.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

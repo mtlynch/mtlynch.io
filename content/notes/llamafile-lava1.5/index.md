@@ -1,6 +1,6 @@
 ---
 title: "Rough Experiments with Llamafile and LLaVA 1.5"
-date: 2023-12-02T00:00:00-05:00
+date: 2023-12-02
 tags:
   - llava
   - chatbots
@@ -135,7 +135,7 @@ CUDA error 2 at /home/mike/.llamafile/ggml-cuda.cu:6006: out of memory
 
 I tried again using Scaleway's beefier RENDER-S instance, which has double the GPU VRAM, but I got the same crash.
 
-One [llama.cpp Github issue](https://github.com/ggerganov/llama.cpp/issues/1230#issuecomment-1575097730) seemed similar and said the workaround was to disable "pinning" so I tried that:
+One [llama.cpp GitHub issue](https://github.com/ggerganov/llama.cpp/issues/1230#issuecomment-1575097730) seemed similar and said the workaround was to disable "pinning" so I tried that:
 
 ```bash
 export GGML_CUDA_NO_PINNED=1

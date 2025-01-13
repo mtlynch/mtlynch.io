@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 37"
-date: 2023-08-15T00:00:00-04:00
+date: 2023-08-15
 description: How can TinyPilot increase recurring revenue?
 images:
   - /retrospectives/2023/08/og-cover.png
@@ -20,7 +20,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - I think through what it would take to add recurring subscriptions for TinyPilot Pro.
 - I've done some more exploration into [Nix](https://nixos.org/) for managing development environments.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -58,7 +58,7 @@ I ended up spending way more of my time on email than I expected. I had some vac
 
 Ultimately, I spent most of my time this month responding to emails and reviewing my teammates' work.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

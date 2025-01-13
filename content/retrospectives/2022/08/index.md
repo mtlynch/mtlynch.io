@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 25"
-date: 2022-08-05T00:00:00-04:00
+date: 2022-08-05
 description: Are blog posts worthwhile, even when they succeed?
 images:
   - /retrospectives/2022/08/2022-analytics.png
@@ -12,7 +12,7 @@ images:
 - I'm exploring ways to preserve more knowledge on my blog
 - I've lowered TinyPilot's prices in an effort to reduce inventory
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -37,7 +37,7 @@ Overhauling our update system is one of those things that keeps seeming like we'
 
 I thought it would be easy to write this since I'd written so much in my retros, but it took me about two months to complete. It got an unexpectedly strong response with 157k unique readers in its first week. It continues to ripple out and attract new visitors as people see it in other channels and then add it to things like design newsletters.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

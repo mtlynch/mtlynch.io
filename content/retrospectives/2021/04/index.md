@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 9"
-date: 2021-04-05T00:00:00-04:00
+date: 2021-04-05
 description: Using the sales lull to optimize processes.
 images:
   - /retrospectives/2021/04/og-cover.png
@@ -12,7 +12,7 @@ images:
 - TinyPilot's revenues continue to plummet, but I'm learning to accept it.
 - I'm inching ever closer to the freedom to take short vacations.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -39,7 +39,7 @@ Two YouTubers signed on as affiliates, and one more is interested but hasn't yet
 
 I published a [preview](https://tinypilotkvm.com/blog/rackmount) of the rack mount and solicited feedback from readers and customers. The feedback was positive in that people seem excited about it. It was also valuable in identifying some incorrect assumptions.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

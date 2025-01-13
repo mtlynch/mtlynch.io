@@ -420,7 +420,7 @@ Otherwise, set the `GCS_BUCKET` environment variable to the name of GCS bucket.
 
 ## Giving the Docker container access to GCS
 
-You need to modify your Docker image to integrate the gcsfuse utility. Fortunately, I've done it for you. The complete `Dockerfile` is available on the [`gcsfuse` branch of my Github repo](https://github.com/mtlynch/docker-flask-upload-demo/blob/gcsfuse/Dockerfile), but here are the main changes:
+You need to modify your Docker image to integrate the gcsfuse utility. Fortunately, I've done it for you. The complete `Dockerfile` is available on the [`gcsfuse` branch of my GitHub repo](https://github.com/mtlynch/docker-flask-upload-demo/blob/gcsfuse/Dockerfile), but here are the main changes:
 
 ```bash
 # Install gcsfuse.
@@ -702,4 +702,4 @@ In this tutorial, you learned to redirect an app's data to cloud storage without
 
 ---
 
-_Software architecture diagrams by [Loraine Yow](https://www.loraineyow.com/)_
+_Software architecture diagrams by Loraine Yow_

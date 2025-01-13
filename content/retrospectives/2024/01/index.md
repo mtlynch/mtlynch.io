@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 42"
-date: 2024-01-09T00:00:00-05:00
+date: 2024-01-09
 description: How can I delegate more?
 images:
   - /retrospectives/2024/01/csat-v-dev-cost.webp
@@ -23,7 +23,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - I think about how I can do a better job delegating product decisions and documentation.
 - I compare my experience learning Nix to learning Zig.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -50,7 +50,7 @@ The other issue is that this is an unpleasant task, so I procrastinated. It's an
 
 This is now complete, and I have a better understanding of who needs to give us W-9 forms. I can avoid making it a last-minute task in the future.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -111,7 +111,7 @@ I've considered pulling in a freelance technical writer, but that would complica
 
 One of the challenges I run into when reviewing writing is that I have a model in my head of what the typical TinyPilot customer is like, and I don't know how to articulate that model accurately to other people. And even when others understand the model, it's hard for them to write in a way that fits TinyPilot's customer model.
 
-{{<img src="write-for-the-average.png" alt="Write for the average TinyPilot customer. The average TinyPilot customer understands these terms: Ethernet, WiFi, Local network, Keyboard / mouse input, USB / USB-C / USB 3.0, AC adapter, HDMI / VGA, Router / switch, Web browser, SSH. We assume that the average TinyPilot customer **does not** understand these terms / concepts: cached , PCB / HAT , audio breakout board , VPN , EDID , virtual display , NTP server. The best way to avoid confusing customers is to speak in terms they already understand. If that’s not possible, you can still use terms that customers might not recognize, but you should first define them." has-border="true" caption="Exceprt from TinyPilot's internal style guide about level of technical jargon to use" max-width="500px">}}
+{{<img src="write-for-the-average.png" alt="Write for the average TinyPilot customer. The average TinyPilot customer understands these terms: Ethernet, WiFi, Local network, Keyboard / mouse input, USB / USB-C / USB 3.0, AC adapter, HDMI / VGA, Router / switch, Web browser, SSH. We assume that the average TinyPilot customer **does not** understand these terms / concepts: cached , PCB / HAT , audio breakout board , VPN , EDID , virtual display , NTP server. The best way to avoid confusing customers is to speak in terms they already understand. If that’s not possible, you can still use terms that customers might not recognize, but you should first define them." has-border="true" caption="Excerpt from TinyPilot's internal style guide about level of technical jargon to use" max-width="500px">}}
 
 Perhaps one way of improving this is to revisit past reviews and look for patterns. If I see patterns, I can say, "Before you send this out for review, check for whether there are sections that would benefit from a screenshot, check that you're explaining new terms before you use them, etc."
 
@@ -151,13 +151,13 @@ One of the most surprising gaps in Nix is that [there's no official way to speci
 
 ### Nix leadership is decentralized, Zig has a BDFL
 
-Andrew Kelly is the original creator of Zig. Several others have joined the project, but [Andrew is effectively still the benevolent dictator for life (BDFL)](https://kristoff.it/blog/interfacing-with-zig/). When I'd search for Zig documentation or help, I'd frequently encounter Andrew or someone official from the project answering in a Github issue or forum discussion.
+Andrew Kelly is the original creator of Zig. Several others have joined the project, but [Andrew is effectively still the benevolent dictator for life (BDFL)](https://kristoff.it/blog/interfacing-with-zig/). When I'd search for Zig documentation or help, I'd frequently encounter Andrew or someone official from the project answering in a GitHub issue or forum discussion.
 
 When I first heard about Nix, I assumed [Eelco Dolstra](https://edolstra.github.io/) would be Nix's BDFL. He doesn't seem to be, at least not publicly.
 
 Nix is Eelco's brainchild, as it came out of his [2006 PhD thesis](https://edolstra.github.io/pubs/phd-thesis.pdf). Eelco is [president of the Nix Foundation](https://discourse.nixos.org/t/expanding-the-nixos-foundation/19929), but he also works for [Determinate Systems](https://determinate.systems/), a third-party consulting firm that promotes Nix. But Determinate Systems is decidedly third-party and not core to Nix. They release things that sometimes [clash](https://discourse.nixos.org/t/introducing-flakehub/32044/3?u=mtlynch) [controversially](https://discourse.nixos.org/t/parting-from-the-documentation-team/24900?u=mtlynch) with work from internal Nix teams.
 
-While Zig feels centrally-planned, Nix feels rudderless. When I can't figure something out, my searches often bring me to meandering discussions on Github or the Nix Discourse forum. The conversations always sound like people discussing an alien technology that we've discovered by mistake. I never see someone from the Nix core team weigh in, and I don't even know if there is a core team.
+While Zig feels centrally-planned, Nix feels rudderless. When I can't figure something out, my searches often bring me to meandering discussions on GitHub or the Nix Discourse forum. The conversations always sound like people discussing an alien technology that we've discovered by mistake. I never see someone from the Nix core team weigh in, and I don't even know if there is a core team.
 
 ### Older solutions usually don't work in Nix or Zig
 

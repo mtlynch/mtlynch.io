@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 23"
-date: 2022-06-08T00:00:00-04:00
+date: 2022-06-08
 description: The eight-month redesign is finally complete!
 images:
   - /retrospectives/2022/06/og-cover.png
@@ -12,7 +12,7 @@ images:
 - I've learned to make Debian packages, and it's surprisingly simple.
 - I've given up on Vue and frontend frameworks in general.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -41,7 +41,7 @@ I found an agency that seemed like a potential match, but I felt a little iffy a
 
 Fortunately, my electrical engineering partner firm recommended a digital marketing freelancer. From the first call, he was a much better match than anyone else I'd spoken to, so I hired him on the spot.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

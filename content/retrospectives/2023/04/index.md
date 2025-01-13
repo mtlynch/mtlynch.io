@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 33"
-date: 2023-04-06T00:00:00-04:00
+date: 2023-04-06
 description: The slow transition to third-party fulfillment
 images:
   - /retrospectives/2023/04/og-cover.png
@@ -21,7 +21,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - TinyPilot customers are less sensitive to price than I expected.
 - I invested a lot of resources into a trade-in for TinyPilot that I'm not sure paid off.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -46,7 +46,7 @@ It was fun to be back at NERD Summit in person for the first time since 2019. Th
 
 In order to transition to the 3PL, we needed to free up the local team's workload enough that they could build an extra week's worth of devices. We took several measures to reduce their load, though they also worked more hours than usual.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

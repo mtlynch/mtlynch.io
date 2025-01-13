@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 32"
-date: 2023-03-09T00:00:00-05:00
+date: 2023-03-09
 description: My longest vacation from TinyPilot
 images:
   - /retrospectives/2023/03/og-cover.jpg
@@ -21,7 +21,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - A pipe burst in the TinyPilot office, leading to a near-disaster.
 - I'm searching for the right balance between reactive and proactive work.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -46,7 +46,7 @@ I'm hopeful about this new 3PL. Once we hand over fulfillment to an external ven
 
 There's work that the developers and support engineers can collaborate on, but I was deferring it until the two teams could meet face-to-face. We had our first dev and support engineering crossover meeting, and now we're ready for the two teams to begin working together directly.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

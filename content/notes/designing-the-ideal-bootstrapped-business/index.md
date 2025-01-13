@@ -1,6 +1,6 @@
 ---
 title: "Designing the Ideal Bootstrapped Business"
-date: 2023-03-26T00:00:00-05:00
+date: 2023-03-26
 images:
   - /notes/designing-the-ideal-bootstrapped-business/og-cover.jpg
 ---

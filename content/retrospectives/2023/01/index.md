@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 30"
-date: 2023-01-10T00:00:00-05:00
+date: 2023-01-10
 description: Handling an eight-month supply shortage
 images:
   - /retrospectives/2023/01/og-cover.png
@@ -20,7 +20,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - TinyPilot is facing a supply shortage that will drastically limit its sales for 2023.
 - Running leaner might not be such a bad thing.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -45,7 +45,7 @@ We were close to hitting this deadline, but there was one final bug that took lo
 
 We're on track for this so far. It's always hard with a new release to anticipate all the changes that will be necessary, but we've completed almost all of the predictable tasks, so we have spare capacity to fix unexpected issues.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

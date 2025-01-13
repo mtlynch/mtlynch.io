@@ -1,6 +1,6 @@
 ---
 title: "Is It Keto: Month 11"
-date: 2020-05-03T22:01:20-04:00
+date: 2020-05-03
 description: Can I remix my original content to create 1000x as many pages?
 images:
   - /retrospectives/2020/05/isitketo-ga.png
@@ -12,7 +12,7 @@ images:
 - I may have finally discovered a way to scale my keto site profitably.
 - I'm putting Portfolio Rebalancer on the backburner due to lack of traction.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -136,7 +136,7 @@ One of the reasons I keep abandoning Is It Keto is that it's never played to my 
 
 Pivoting to auto-generated pages gives me an advantage over other keto sites because none of them seem to have developers on staff. They probably have developers that help them maintain their WordPress setups or to create one-off tools like a keto calculator. Those things are in a different category of software engineering than what I'd be doing, which is creating and maintaining a data pipeline that runs smoothly for years. And that's great because that's the type of development I do best.
 
-Another advantage is that I already have a database of nutritional information. The USDA offers [a free, open database of food data](https://fdc.nal.usda.gov/), but their search is terrible. A query like "apples" [yields 17,000 results](https://fdc.nal.usda.gov/fdc-app.html#/?query=apples), so you have to pick through to find the most appropriate match. I went through this process for [Zestful](https://zestfuldata.com), so I already have coverage for most foods.
+Another advantage is that I already have a database of nutritional information. The USDA offers [a free, open database of food data](https://fdc.nal.usda.gov/), but their search is terrible. A query like "apples" [yields 17,000 results](https://fdc.nal.usda.gov/food-search?query=apples&type=Branded), so you have to pick through to find the most appropriate match. I went through this process for [Zestful](https://zestfuldata.com), so I already have coverage for most foods.
 
 ## What it will look like
 

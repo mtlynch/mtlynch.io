@@ -12,7 +12,7 @@ date: "2019-06-07"
 - Interviewing potential customers gave me a good idea for my next project.
 - I earned $107 from [Is It Keto](https://isitketo.org) and $123 from [Zestful](https://zestfuldata.com) without working on either.
 
-## Goal Grades
+## Goal grades
 
 ### Publish a minimum viable product version of What Got Done
 

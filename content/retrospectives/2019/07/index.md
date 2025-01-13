@@ -12,7 +12,7 @@ date: "2019-07-03"
 - [Zestful](https://zestfuldata.com) may be rising from the dead, with four new inbound customer inquiries.
 - [Is It Keto](https://isitketo.org) earned $184, and [Zestful](https://zestfuldata.com) earned $26, making it my highest revenue month since quitting my job.
 
-## Goal Grades
+## Goal grades
 
 ### Publish a new blog post that explains why I built What Got Done
 
@@ -51,7 +51,7 @@ Now that Is It Keto is on the back burner, I'm not going to dive as deeply into 
 | Ranking Keywords (Moz) | 949         | 862         | <font color="red">-87 (-9%)</font>            |
 | **Total Revenue**      | **$107.25** | **$138.76** | **<font color="green">+$31.51 (+29%)</font>** |
 
-After my [blog post about Is It Keto](/keep-growing-never-profit/) last month, I received some good suggestions for small tweaks to the site and spent a few days implementing those. Notably, I added a [browse by category](https://isitketo.org/category/) feature and made my food cards [a little prettier](https://imgur.com/w11ZWEK).
+After my [blog post about Is It Keto](/keep-growing-never-profit/) last month, I received some good suggestions for small tweaks to the site and spent a few days implementing those. Notably, I added a [browse by category](https://isitketo.org/categories/) feature and made my food cards [a little prettier](https://imgur.com/w11ZWEK).
 
 ## Bouncing around too much
 

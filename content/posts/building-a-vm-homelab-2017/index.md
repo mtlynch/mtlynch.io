@@ -31,7 +31,7 @@ All the software I write depends on a particular software environment. For examp
 
 ### Security: VM isolation
 
-VMs also provide security by keeping software isolated from my main system. I like to experiment with new tools and apps, but it's always possible that an app could be malicious (maybe the developer made a malicious app, maybe it's a legitimate app but an attacker compromised it to spread malware). If I install an app directly to my Windows machine and it infects it with malware, it's game over. Very basic malware running on my machine could record everything on my screen, control my Gmail, Facebook, Github, or hold all my files [for ransom](https://en.wikipedia.org/wiki/Ransomware).
+VMs also provide security by keeping software isolated from my main system. I like to experiment with new tools and apps, but it's always possible that an app could be malicious (maybe the developer made a malicious app, maybe it's a legitimate app but an attacker compromised it to spread malware). If I install an app directly to my Windows machine and it infects it with malware, it's game over. Very basic malware running on my machine could record everything on my screen, control my Gmail, Facebook, GitHub, or hold all my files [for ransom](https://en.wikipedia.org/wiki/Ransomware).
 
 Malware running in a VM is much more limited in the damage it can cause. If I install software in a VM and it covertly installs a keylogger, it can only record my keystrokes in that VM, not my main desktop machine. VMs are not a complete defense, as advanced malware could [escape the VM](https://arstechnica.com/security/2017/03/hack-that-escapes-vm-by-exploiting-edge-browser-fetches-105000-at-pwn2own/), but they still provide a large degree of protection.
 
@@ -141,8 +141,6 @@ The VM server's host OS should be as lightweight as possible. It needs to host a
 
 I tried a few different Linux distros, but Ubuntu server was the only one that worked out of the box on my hardware (successfully tested both 16.04 and 17.04) . I think [Ryzen's SMT functionality](https://www.phoronix.com/scan.php?page=news_item&px=AMD-Ryzen-Newer-Kernel) is what causes the installations to fail on other distros. I suspect I could work around this by disabling SMT in the BIOS, installing another distro, then upgrading the kernel to >= 4.10, then re-enabling SMT, but I decided to just stick with **Ubuntu 16.04 server** since it's the distro I'm most familiar with anyway.
 
-{{<tinypilot-ad headline="Install a new server OS right from your browser" copy="TinyPilot is an affordable, open-source solution that provides a remote console for your headless server.">}}
-
 ## Running virtual machines
 
 ### KVM
@@ -228,8 +226,6 @@ The power supply has sufficient wattage for the system, and it's pretty quiet. I
 The one downside is that it uses non-modular cabling. My system is so bare bones that I only need the 24-pin motherboard cable and 8-pin CPU cable. All the rest are clutter, but they hide away pretty cleanly in my case's 5.25" bay for an optical disc reader (obviously empty in my case).
 
 If I were to do it over, I'd consider a semi-modular or full-modular PSU so I could get rid of the extraneous PSU cables.
-
-{{<tinypilot-ad headline="BIOS-level access right in your browser" copy="TinyPilot is an easy-to-use, open source KVM over IP solution for homelab enthusiasts. Starting at $169.99.">}}
 
 ## Conclusion
 

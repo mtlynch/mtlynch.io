@@ -13,7 +13,7 @@ date: "2019-09-06"
 - I finally got a high-ranking domain to link to Is It Keto, but the experience soured me on guest posts.
 - [Zestful](https://zestfuldata.com/) had its best month ever, earning $728 in revenue.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I [declare what I'd like to accomplish](/retrospectives/2019/08/#goals-for-next-month). Here's how I did against those goals:
 

@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 15"
-date: 2021-10-07T11:58:24-04:00
+date: 2021-10-07
 description: What to do when a competitor raises $800k overnight?
 images:
   - /retrospectives/2021/10/cover.png
@@ -12,7 +12,7 @@ images:
 - One of TinyPilot's competitors raised $800k almost overnight.
 - I'm working with a design firm to improve TinyPilot's brand and website.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -37,7 +37,7 @@ I was hoping to start development by the end of the month, but there are more de
 
 We're running a little late on this, but we're still on track to ship the first Voyager 2 by the end of November. The electrical engineers have built several prototypes, and they've passed all tests. We're now in the process of ordering the first production batch from a PCB manufacturer.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

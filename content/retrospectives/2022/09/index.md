@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 26"
-date: 2022-09-14T00:00:00-04:00
+date: 2022-09-14
 description: The surprising difficulty of hiring.
 images:
   - /retrospectives/2022/09/support-engineer-applicants.png
@@ -21,7 +21,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - The response rate to my job posting was 8x higher than when I listed the same job six months ago.
 - I have lots of thoughts about hiring people.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -48,7 +48,7 @@ We've finalized a plan for managing TinyPilot licenses, and I think everyone inv
 
 I didn't make any progress here. I really should have made hiring one of my goals instead because that's what I spent most of the month doing.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

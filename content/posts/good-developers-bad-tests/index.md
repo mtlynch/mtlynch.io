@@ -358,4 +358,4 @@ To write excellent tests, a developer must align their engineering decisions wit
 
 ---
 
-_Cover art by [Loraine Yow](https://www.loraineyow.com/)_
+_Cover art by Loraine Yow_

@@ -12,7 +12,7 @@ date: "2019-10-05"
 - I'm preparing to sell premium meal plans on Is It Keto.
 - I'm ready to make bigger bets on my businesses.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I [declare what I'd like to accomplish](/retrospectives/2019/09/#goals-for-next-month). Here's how I did against those goals:
 
@@ -44,7 +44,7 @@ One thing I'm struggling with is finding an audience for my less technical posts
 - **Result**: What Got Done is now [open-source](https://github.com/mtlynch/whatgotdone).
 - **Grade**: A
 
-I published What Got Done's source on Github and released it under the [Apache 2 license](https://choosealicense.com/licenses/apache-2.0/). The project has already received contributions from [three external developers](https://github.com/mtlynch/whatgotdone/graphs/contributors), and it's entirely because I added the label `hacktoberfest` [to a few bugs](https://github.com/mtlynch/whatgotdone/issues?q=is%3Aissue+label%3AHacktoberfest). It's a program that Digital Ocean is [running in October](https://hacktoberfest.digitalocean.com) to encourage contributions to open source projects.
+I published What Got Done's source on GitHub and released it under the [Apache 2 license](https://choosealicense.com/licenses/apache-2.0/). The project has already received contributions from [three external developers](https://github.com/mtlynch/whatgotdone/graphs/contributors), and it's entirely because I added the label `hacktoberfest` [to a few bugs](https://github.com/mtlynch/whatgotdone/issues?q=is%3Aissue+label%3AHacktoberfest). It's a program that Digital Ocean is [running in October](https://hacktoberfest.digitalocean.com) to encourage contributions to open source projects.
 
 ## Stats
 

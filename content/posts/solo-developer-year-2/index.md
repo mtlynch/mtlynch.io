@@ -270,7 +270,7 @@ My first year as a founder, I was a puppy chasing any ball that happened to roll
 
 My friend [David Toth](https://twitter.com/jupiterunknown) taught me the value of idea screening. He pointed out that whatever idea I pursue determines large parts of my life for several months at the minimum, so it's worth choosing carefully. Instead of bounding off after the first good idea he has, David generates ideas until he has a list of at least 10. He then evaluates that list carefully to choose which has the highest chance of success.
 
-Reading [_Start Small, Stay Small_](https://smile.amazon.com/Start-Small-Stay-Developers-Launching/dp/0615373968/) ([notes](/book-reports/start-small-stay-small/)) and [_The Mom Test_](https://smile.amazon.com/Mom-Test-customers-business-everyone/dp/1492180742/) ([notes](/book-reports/the-mom-test/)) also influenced how I approach new businesses. Both books encourage founders to start with market research and build the product later. As a result, I was conservative about building anything and gave myself permission to bail if my investigation indicated an idea was no longer my best chance of success.
+Reading [_Start Small, Stay Small_](https://startsmall.com/) ([notes](/book-reports/start-small-stay-small/)) and [_The Mom Test_](https://www.momtestbook.com/) ([notes](/book-reports/the-mom-test/)) also influenced how I approach new businesses. Both books encourage founders to start with market research and build the product later. As a result, I was conservative about building anything and gave myself permission to bail if my investigation indicated an idea was no longer my best chance of success.
 
 ### Take bigger swings
 
@@ -360,4 +360,4 @@ Here's what I hope to accomplish in my third year as a solo developer:
 
 ---
 
-_Cover art by [Loraine Yow](https://www.loraineyow.com/). Go gopher adapted from a design by [Renee French](http://reneefrench.blogspot.com/)._
+_Cover art by Loraine Yow. Go gopher adapted from a design by [Renee French](http://reneefrench.blogspot.com/)._

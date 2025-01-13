@@ -1,6 +1,6 @@
 ---
 title: "A Survey of Applicant Tracking Systems for Bootstrapped Businesses"
-date: 2022-08-12T00:00:00-04:00
+date: 2022-08-12
 images:
   - /notes/bootstrapper-ats/ats-cover.png
 ---

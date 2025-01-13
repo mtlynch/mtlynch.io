@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 31"
-date: 2023-02-17T00:00:00-05:00
+date: 2023-02-17
 description: Some transitions are smoother than others.
 images:
   - /retrospectives/2023/02/og-cover.png
@@ -20,7 +20,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - TinyPilot began shipping a new product: the [Voyager 2a](https://tinypilotkvm.com/product/tinypilot-voyager2a).
 - I canceled our contract with a new 3PL vendor a few weeks into the relationship.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -47,7 +47,7 @@ I had a tough time writing my annual review this year. The final post was 2.5k w
 
 I felt like the version I published did a good job of covering the major topics of the year without going too far down the rabbit hole on complicated stories.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

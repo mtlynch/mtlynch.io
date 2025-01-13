@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 28"
-date: 2022-11-15T00:00:00-04:00
+date: 2022-11-15
 description: Scrambling to meet demand
 images:
   - /retrospectives/2022/11/cn-prototype-1.jpg
@@ -21,7 +21,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - I think I've found a third-party logistics vendor that's a good match for TinyPilot.
 - I'm scrambling to produce more cases before they become a sales bottleneck.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -50,7 +50,7 @@ I'm not sure if it's just greater difficulties of designing with metal or if the
 
 Of the six vendors I approached, two ended up being a good match for what I want. I'm hoping to transition fulfillment to one of these 3PL vendors in December.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

@@ -1,6 +1,6 @@
 ---
 title: "ArchiveBox is Super Cool"
-date: 2024-01-13T00:00:00-05:00
+date: 2024-01-13
 images:
   - /notes/archivebox/archivebox-overview.png
 ---

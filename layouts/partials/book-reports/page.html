@@ -1,4 +1,4 @@
-<section class="container page book-report">
+<section class="container page">
   <article>
     <header>
       <h1>{{ .Title }}</h1>
@@ -21,10 +21,10 @@
       </div>
     {{- end -}}
 
+    {{ partial "refactoring-english-ad.html" }}
+
     {{ partial "mailing-list-signup.html" . }}
 
-    {{ if not .Site.IsServer }}
-      {{ partial "talkyard.html" . }}
-    {{ end }}
+    {{ partial "talkyard.html" . }}
   </article>
 </section>

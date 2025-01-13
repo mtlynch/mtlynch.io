@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 38"
-date: 2023-09-21T00:00:00-04:00
+date: 2023-09-21
 description: Am I making the right investments in software?
 images:
   - /retrospectives/2023/09/og-cover.webp
@@ -21,7 +21,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - I realized I made TinyPilot way too configurable.
 - I thought I'd been investing poorly into TinyPilot's development, but writing this retrospective made me realize I'm mostly on track.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -52,7 +52,7 @@ There's still a chicken-and-egg problem with some of the equipment I want to sel
 
 I hoped to find a Shopify app that allowed me to sell [recurring subscriptions for TinyPilot Pro](/retrospectives/2023/08/#add-an-auto-renew-option), but I couldn't find any. More on this [below](#my-failed-attempts-at-recurring-subscriptions).
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -142,7 +142,7 @@ Revisiting the last release through that lens, we had:
 | Automation and reducing complexity | 26         | 70%        |
 | Regular maintenance                | 3          | 8%         |
 
-{{<img src="three-category-2.6.1.webp" max-width="350px" has-border="true" caption="The tasks in TinyPilot's 2.6.1, colored according to improving the product (green), automation and reducing complexity (blue), and regular maintenance (red)">}}
+{{<img src="three-category-2.6.1.webp" max-width="350px" has-border="true" caption="The tasks in TinyPilot's [2.6.1 release](https://tinypilotkvm.com/pro/changes#261), colored according to improving the product (green), automation and reducing complexity (blue), and regular maintenance (red)">}}
 
 We were skewed toward automation because we made a big push to eliminate Ansible, but we were closer to my ideal split than I realized.
 

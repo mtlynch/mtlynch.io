@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 10"
-date: 2021-05-11T00:00:00-04:00
+date: 2021-05-11
 description: TinyPilot gets its first real office.
 images:
   - /retrospectives/2021/05/move-in-day.jpg
@@ -12,7 +12,7 @@ images:
 - I tried a marketing experiment that flopped.
 - Designing IT infrastructure for a new office is fun.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -39,7 +39,7 @@ Normally, you'd buy components in bulk after designing and printing a successful
 
 I wrote an outline that feels right to me, but I haven't yet collected feedback from readers. My next step is to survey the book's mailing list about whether the outline matches what they're hoping to learn.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

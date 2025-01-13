@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 35"
-date: 2023-06-13T00:00:00-04:00
+date: 2023-06-13
 description: How do I come up with $250k in cash?
 images:
   - /retrospectives/2023/06/og-cover.webp
@@ -21,7 +21,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - I evaluate how a contract manufacturer will change my finances.
 - Outsourcing to a 3PL vendor is less expensive than I expected.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -50,7 +50,7 @@ The problem with Amazon is that the only way to get them to show a "Buy" button 
 
 I reached out to three YouTubers. Two of them are interested and plan to feature TinyPilot in a video. The third doesn't do reviews but is open to giving TinyPilot a cameo if they can find a use for it.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

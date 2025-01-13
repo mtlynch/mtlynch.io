@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 40"
-date: 2023-11-07T00:00:00-04:00
+date: 2023-11-07
 description: The surprising difficulty of flashing microSDs
 images:
   - /retrospectives/2023/11/kinesis-keyboard.jpg
@@ -21,7 +21,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - TinyPilot has almost finished transitioning manufacturing to a third-party vendor.
 - I may have crossed into the dark side of mechanical keyboards.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -50,7 +50,7 @@ It used to be that I'd cut the release and then manually update the website to p
 
 The dev team has had less availability than I was expecting for October, so we ended up not making progress on a plan for license enforcement.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 

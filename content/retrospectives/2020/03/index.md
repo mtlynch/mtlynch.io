@@ -12,7 +12,7 @@ images:
 - WanderJest finally earned its first dollar of revenue, but in a way that is definitely unsustainable.
 - Poor work habits have left me with the most stress I've felt in a year.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I [declare what I'd like to accomplish](/retrospectives/2020/02/#goals-for-next-month). Here's how I did against those goals:
 

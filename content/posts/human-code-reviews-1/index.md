@@ -121,7 +121,7 @@ Automation helps you make more meaningful contributions as a reviewer. When you 
 
 Automation benefits the author as well. It allows them to discover careless mistakes in seconds instead of hours. The instant feedback makes it easier to learn from and cheaper to fix because the author still has the relevant context in their head. Plus, if they have to hear about a dumb mistake they made, it's much easier on their ego if they hear it from a computer instead of from you.
 
-Work with your team to build these automated checks directly into the code review workflow (e.g., [pre-commit hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) in Git or [webhooks](https://developer.github.com/webhooks/) in Github). If the review process requires the author to run these checks manually, you forfeit most of the benefit. The author will invariably forget on occasion which forces you to continue reviewing for the simple issues that automation is meant to handle instead.
+Work with your team to build these automated checks directly into the code review workflow (e.g., [pre-commit hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) in Git or [webhooks](https://developer.github.com/webhooks/) in GitHub). If the review process requires the author to run these checks manually, you forfeit most of the benefit. The author will invariably forget on occasion which forces you to continue reviewing for the simple issues that automation is meant to handle instead.
 
 ### Settle style arguments with a style guide
 
@@ -196,15 +196,11 @@ Responding, "Can we simplify this with a list comprehension?" will annoy them be
 
 They will be much happier to receive a note like the following:
 
-{{<quoted-markdown>}}
-
-Consider simplifying with a list comprehension like this:
-
-```python
-urls = ['https://' + domain + path for path in paths]
-```
-
-{{</quoted-markdown>}}
+> Consider simplifying with a list comprehension like this:
+>
+> ```python
+> urls = ['https://' + domain + path for path in paths]
+> ```
 
 This technique is not limited to one-liners. I'll often create my own branch of the code to demonstrate a large proof of concept to the author, such as breaking up a large function or adding a unit test to cover an additional edge case.
 
@@ -310,4 +306,4 @@ If you enjoyed this post, check out [the second half of this article](/human-cod
 
 ---
 
-_Edited by [Samantha Mason](https://www.samanthamasonfreelancer.com). Illustrations by [Loraine Yow](https://www.loraineyow.com/). Thanks to [@global4g](https://twitter.com/global4g) for providing valuable feedback on an early draft of this post._
+_Edited by [Samantha Mason](https://www.samanthamasonfreelancer.com). Illustrations by Loraine Yow. Thanks to [@global4g](https://twitter.com/global4g) for providing valuable feedback on an early draft of this post._
