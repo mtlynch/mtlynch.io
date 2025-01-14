@@ -5,19 +5,17 @@ tags:
   - annual review
 ---
 
-Six years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own bootstrapped software company.
+Seven years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own bootstrapped software company.
 
 Every year, I post an update about how life is going as a bootstrapped software founder and what went well and poorly in the past year.
 
 ## I sold my company
 
-The defining feature of my professional life last year was that I sold TinyPilot, the company I founded in 2020.
+The defining feature of my professional year was that I sold TinyPilot, the company I founded in 2020.
 
-TinyPilot was the first profitable business I started after quitting my job in 2018. It followed a lot of flops.
+The TinyPilot product is a device that lets users control their computers remotely. I built the prototype with a $35 Raspberry Pi mini computer and blogged about it. Suddenly, dozens of people were willing to pay me $100-200 for kits to build their own.
 
-The TinyPilot product was a device that let users control their computers remotely. I built the prototype with a $35 Raspberry Pi mini computer and blogged about it, then suddenly dozens of people were willing to pay me $100-200 for kits to build their own.
-
-For the next four years, I continued improving the product. I moved from kits to pre-made devices. I hired a team to help me with hardware, software, support, and logistics, eventually growing to $1M/year in revenue.
+For the next four years, I continued improving the product. I moved from unassembled kits to pre-made devices. I hired a team to help me with hardware, software, support, and logistics, eventually growing the company to $1M/year in revenue.
 
 In 2024, I sold the company for $598k. My wife and I wanted to start a family, and I knew that being the sole manager at a seven-person company wasn't how I wanted my work to be when we had a baby. I found a buyer whose vision for the company aligned with what I wanted it to be, and we completed the sale in April 2024.
 
@@ -57,7 +55,7 @@ I've always loved programming, but I've never found it as exciting as I have in 
 
 The technology that's had the biggest impact on my work the last year is Nix and NixOS.
 
-I like Nix so much that I use it in every programming project, and now all of my personal and work computers run NixOS after
+I've been adopting Nix little by little, but I like it so much that I use it in every programming project, and now all of my personal and work computers run NixOS.
 
 If you're curious about Nix, a low-risk, high-reward way to use it is to manage dev shells.
 
@@ -77,15 +75,25 @@ The community is a mess. I wish there was a more centralized leadership board th
 
 ### htmx
 
-I'd seen people talking about htmx for the past several years, and I never got it. I finally had a long plane ride, so I started reading the free ebook _Hypermedia Systems_, written by the authors of htmx.
+I'd seen people talking about htmx for the past several years, but the concept never clicked for me. "The flagship feature is that you can make the HTML `<button>` element send a POST request?" I thought. "Who cares?"
+
+I finally had a long plane ride, so I started reading the free ebook _Hypermedia Systems_, written by the authors of htmx. And I finally got that it's not about letting a `<button>` send a POST request but rather about bringing simple interactivity back to regular HTML markup without pulling in JavaScript.
+
+I was so used to writing custom JavaScript to make my web apps work. I knew it was repetitive and tedious, but I figured that that's just how it has to be if I'm going to add logic to the presentation-focused HTML.
+
+htmx's insight is that there are so many common behaviors of a web app that shouldn't require custom JavaScript. Like writing a comment and submitting it in a comment thread. Why should that require custom JavaScript? Why can't you declare in HTML that you want to send the form to the server and add the server's response to the end of the thread?
 
 ### Zig
 
-I'd been interested in Zig ever since I listened to Andrew Kelly on the XX podcast XX years ago.
+I'd been interested in Zig ever since I listened to Andrew Kelly on the XX podcast XX years ago. He argued that we suffer so much from designing low-level software in C and C++, languages that were designed XX years ago under constraints that no longer apply. He developed Zig to achieve the same results as C and C++ but using the technological advantages that are available today.
+
+I found Andrew's argument compelling and his enthusiasm contagious. I immediatly began experimenting with Zig
 
 The thing that kept me from learning Zig was that my fun coding is mainly around projects I want to use, and most of the project ideas I have are web apps.
 
-I still have fun coding in Zig. If I was sent to live on a desert island for a year with a laptop but no Internet, the project I'd want to work on is taking an open-source rebuild of some computer game I played in the 90s (e.g. open AoE, open command and conquer) and porting all the disgusting C++ code to elegant Zig.
+Zig is the most fun programming I've done in a long time. There's something about coding with extremely low abstraction that feels exciting.
+
+I still have fun coding in Zig. If I was sent to live on a desert island for a year with a laptop but no Internet, the project I'd want to work on is taking an open-source rebuild of some computer game I played in the 90s (e.g. [Age of Empires II](http://openage.dev/), open [Command and Conquer](https://www.openra.net/)) and porting all the disgusting C++ code to elegant Zig.
 
 ### hongfuzz
 
