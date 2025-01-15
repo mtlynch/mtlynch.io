@@ -13,11 +13,15 @@ Every year, I post an update about how life is going as a bootstrapped software 
 
 The defining feature of my professional year was that I sold TinyPilot, the company I founded in 2020.
 
-The TinyPilot product is a device that lets users control their computers remotely. I built the prototype with a $35 Raspberry Pi mini computer and blogged about it. Suddenly, dozens of people were willing to pay me $100-200 for kits to build their own.
+The TinyPilot product is a device that lets users control their computers remotely. I built a rudimentary prototype with a $35 Raspberry Pi mini computer and a $15 HDMI capture dongle.
 
-For the next four years, I continued improving the product. I moved from unassembled kits to pre-made devices. I hired a team to help me with hardware, software, support, and logistics, eventually growing the company to $1M/year in revenue.
+TODO: Photo of prototype
 
-In 2024, I sold the company for $598k. My wife and I wanted to start a family, and I knew that being the sole manager at a seven-person company wasn't how I wanted my work to be when we had a baby. I found a buyer whose vision for the company aligned with what I wanted it to be, and we completed the sale in April 2024.
+I wrote [a blog post](/tinypilot/) about how I got the initial version of TinyPilot to work, and dozens of readers materialized who were willing to pay me $100-200 for kits to build their own. After two years of desperately searching for any paying customers for my previous ventures, I suddenly had so many customers that I could barely keep up with inventory.
+
+For the next four years, I improved on the TinyPilot product and built it into a real company. I graduated from unassembled kits to pre-made devices. I hired a team to help me with hardware, software, support, and logistics, eventually growing the company to $1M/year in revenue.
+
+In 2024, I sold the company for $598k. My wife and I wanted to start a family, and I knew that my life as sole manager of a seven-person company wasn't what I wanted for a new family. I found a buyer whose vision for the company aligned with what I wanted it to be, and we completed the sale in April 2024.
 
 I already wrote and podcasted a lot about the sale and the lessons I learned, so I won't rehash it, but in short, I'm still very grateful for how everything worked out.
 
@@ -93,11 +97,28 @@ The thing that kept me from learning Zig was that my fun coding is mainly around
 
 Zig is the most fun programming I've done in a long time. There's something about coding with extremely low abstraction that feels exciting.
 
-I still have fun coding in Zig. If I was sent to live on a desert island for a year with a laptop but no Internet, the project I'd want to work on is taking an open-source rebuild of some computer game I played in the 90s (e.g. [Age of Empires II](http://openage.dev/), open [Command and Conquer](https://www.openra.net/)) and porting all the disgusting C++ code to elegant Zig.
+I still have fun coding in Zig. If I was sent to live on a desert island for a year with a laptop but no Internet, the project I'd want to work on is taking an open-source rebuild of some computer game I played in the 90s (e.g. [Age of Empires II](http://openage.dev/), [Command and Conquer](https://www.openra.net/)) and porting all the disgusting C++ code to elegant Zig.
 
 ### hongfuzz
 
+The most powerful fuzzer is still be AFL++, but hongfuzz is about 80% of the power with 20% of the complexity.
+
+My real discovery was combining honggfuzz with Nix, which too few people are doing.
+
 I wish I had time to do more fuzzing tutorials with Nix because I feel like the world is sleeping on Nix as a fuzzing tool.
+
+Here's my pitch for using Nix in your fuzzing workflow:
+
+- Nix makes fuzzing workflows reproducible.
+  - Once you get your fuzzer running under Nix, anyone run your fuzzing configuration by just [typing `nix run`](/nix-fuzz-testing-1/#a-preview-of-the-solution). They don't have to figure out dependencies because Nix automatically reproduces the exact environment you used.
+- Nix simplifies installing dependencies.
+  - Nix has one of the largest package repositories of any package manager. If your fuzzing target has dependencies, they're probably already available in the Nix package repository, so you don't have to figure out a special process for building each dependency.
+- Nix simplifies custom patches.
+  - If you need to [apply custom patches](/nix-fuzz-testing-2/#fixing-the-bug) to fuzz your target, Nix makes it easy to apply those and keep the patch files in the same source tree as the rest of your fuzzing workflow.
+- Nix caches builds.
+  - If you experiment with different compilation options, you don't have to compile from scratch each time. Nix will remember if you've compiled with the same options before and re-use that build. You never have to `make clean` or delete binaries manually.
+
+If that sounds interesting, I wrote [a detailed, beginner-friendly tutorial](/nix-fuzz-testing-1/) about how I used Nix and honggfuzz to create a fuzzing workflow for an open-source PDF reader.
 
 ## Grading last year's goals
 
