@@ -27,15 +27,19 @@ I already wrote and podcasted a lot about the sale and the lessons I learned, so
 
 ## I became a new parent
 
-In August, my wife and I welcomed our first child. It's been the happiest time of my life.
+In August, my wife and I welcomed our first child, a son. It's been the happiest time of my life.
 
-It confirmed my belief that I wanted to move on from TinyPilot before the baby arrived.
+We're trying to be protective of our son's privacy, so I took a photo of the three of us shortly after the birth and ran it through a hand-tuned Fast Fourier transform to remove identifying biometric details:
 
-As an indie founder, my schedule is incredibly flexible. Especially now that I work by myself. So having a baby is one of those things where I think, "How do people with regular jobs manage this?"
+{{<img src="baby-photo.webp" has-border="true" max-width="450px" alt="Stick figure drawing of my family" caption="Photo of me, my wife, and our child soon after birth, post-processed with a privacy-preserving photo filter">}}
 
-I had no professional responsibilities, tons of friends and family support nearby, and
+There are some major life tasks like buying a house or dealing with a health issue that completely upend your life and take over your schedule. Whenever I encounter these as an indie founder, I'm always baffled that these tasks are even possible for people with regular jobs. Like, I find them incredibly hard and I have an empty schedule, so how do people do it with regular 9-5 in-person jobs?
 
-It's also one of those things
+I have tons of family and friend support nearby, and I have a totally blank work schedule, and I still found it hard to care for a newborn. How do people do it when they have to return to full-time work weeks or even days after their baby arrives?
+
+Having a baby made me incredibly thankful that being an indie founder gives me the freedom to have this much flexibility for my son's first few months. Some of my favorite experiences in the first few months were being able to spend the morning just walking downtown and eating brunch outside with our baby.
+
+I definitely had the thought multiple times in the first few days after my son arrived when, "I'm so glad I'm not running a company anymore." When I was still running TinyPilot, I was constantly worried about what could go wrong with our vendors, an employee, the supply chain, and a dozen other things. I was so glad to know when the baby arrived that I could focus on my family.
 
 ## I worked on educational products
 
@@ -106,6 +110,16 @@ The thing that kept me from learning Zig was that my fun coding is mainly around
 Zig is the most fun programming I've done in a long time. There's something about coding with extremely low abstraction that feels exciting.
 
 I still have fun coding in Zig. If I was sent to live on a desert island for a year with a laptop but no Internet, the project I'd want to work on is taking an open-source rebuild of some computer game I played in the 90s (e.g. [Age of Empires II](http://openage.dev/), [Command and Conquer](https://www.openra.net/)) and porting all the disgusting C++ code to elegant Zig.
+
+Here's my pitch for Zig:
+
+- Easy to reason about.
+
+And here are my caveats for Zig:
+
+- There's no stable release yet.
+  - You'll likely have to rewrite some of your code every time you update to the latest Zig compiler.
+- Documentation is limited.
 
 ### Fuzz testing with Nix
 
