@@ -660,9 +660,13 @@ I've found Nix to be an excellent tool for creating fuzz testing workflows.
 
 It took a bit of work to figure out all of Nix's odds and ends for use in fuzzing, but now it should be easy to drop in a different PDF parser or use a different fuzzer. The beauty of Nix is that it composes well, so it's easy to swap out different components within the workflow.
 
-This project ended up being a great way to learn more about both fuzzing and Nix. I've been dabbling in Nix for the last year, but using Nix in this way helped crystallize a lot of concepts that had been blurry for me.
+This project ended up being a great way to learn more about both fuzzing and Nix. I've been dabbling in Nix for the last year, but using Nix in this way helped crystallize a lot of concepts that had been hazy for me.
 
-<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:5rmuptxnl562svleoywqf7fe/app.bsky.feed.post/3l76sq3u7zu2j" data-bluesky-cid="bafyreicigcnhq6rvwbx5rx3yonasfu457u4bnbzdzdenkbb7idmrkyzmzq"><p lang="en">Fuzz testing is a great way to uncover security bugs, but there&#x27;s a lot of friction in setting up a test environment and building a fuzz testing workflow. I found a way of using Nix that simplifies fuzz testing and makes workflows more reusable across different projects. mtlynch.io/nix-fuzz-tes...<br><br><a href="https://bsky.app/profile/did:plc:5rmuptxnl562svleoywqf7fe/post/3l76sq3u7zu2j?ref_src=embed">[image or embed]</a></p>&mdash; Michael Lynch (<a href="https://bsky.app/profile/did:plc:5rmuptxnl562svleoywqf7fe?ref_src=embed">@mtlynch.io</a>) <a href="https://bsky.app/profile/did:plc:5rmuptxnl562svleoywqf7fe/post/3l76sq3u7zu2j?ref_src=embed">October 23, 2024 at 11:02 AM</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+## Source code
+
+The full source for my fuzzing workflow is available on Gitlab:
+
+- <https://gitlab.com/mtlynch/fuzz-xpdf>
 
 ---
 
