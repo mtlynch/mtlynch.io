@@ -53,6 +53,8 @@ After my son was born, it became harder to record videos in my office, so I swit
 
 When I was running TinyPilot, I didn't have a lot of time for technical work, which was a bummer because I still love writing software.
 
+After TinyPilot, I basically only had time for learning cool technologies.
+
 I've always loved programming, but I've never found it as exciting as I have in the last year. I'm awed by the amazing software that's available now for free, and I'm only able to experiment with a tiny fraction of it.
 
 ### Nix
@@ -105,7 +107,9 @@ Zig is the most fun programming I've done in a long time. There's something abou
 
 I still have fun coding in Zig. If I was sent to live on a desert island for a year with a laptop but no Internet, the project I'd want to work on is taking an open-source rebuild of some computer game I played in the 90s (e.g. [Age of Empires II](http://openage.dev/), [Command and Conquer](https://www.openra.net/)) and porting all the disgusting C++ code to elegant Zig.
 
-### hongfuzz
+### Fuzz testing with Nix
+
+You probably thought I was done talking about Nix. I'm not!
 
 The most powerful fuzzer is still be AFL++, but hongfuzz is about 80% of the power with 20% of the complexity.
 
@@ -156,6 +160,8 @@ This goal was more about freeing up time as a manager at TinyPilot, but this has
 ## Goals for next year
 
 ### Earn $50k in profit
+
+Across all of my products, I want to earn $50k in profit. It doesn't have to be recurring revenue. One-time sales count, but I want to find a way to earn about $50k.
 
 ### Learn a new programming language
 
