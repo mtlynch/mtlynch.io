@@ -5,7 +5,7 @@ tags:
   - annual review
 ---
 
-Seven years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own bootstrapped software company.
+On this date seven years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own bootstrapped software company.
 
 Every year, I post an update about how life is going as a bootstrapped software founder and what went well and poorly in the past year.
 
