@@ -93,6 +93,34 @@ I was so used to writing custom JavaScript to make my web apps work. I knew it w
 
 htmx's insight is that there are so many common behaviors of a web app that shouldn't require custom JavaScript. Like writing a comment and submitting it in a comment thread. Why should that require custom JavaScript? Why can't you declare in HTML that you want to send the form to the server and add the server's response to the end of the thread?
 
+### Zig
+
+I'd been interested in Zig ever since I listened to Andrew Kelly on the XX podcast XX years ago. He argued that we suffer so much from designing low-level software in C and C++, languages that were designed XX years ago under constraints that no longer apply. He developed Zig to achieve the same results as C and C++ but using the technological advantages that are available today.
+
+I found Andrew's argument compelling and his enthusiasm contagious. I loved the idea of Zig as a replacement for C++, but I hadn't written any C++ for personal projects in a decade. All the projects I create are just things I want to use and share with friends, so they're typically web apps, which I don't want to write in a low-level systems language like C++ or Zig.
+
+After I attended Handmade Seattle in 2023, I met Andrew Kelly, and it inspired me to finally write some Zig. And I enjoyed Zig. It's the most fun I've had learning a new language in a long time. It reminds me of when I first learned to program and there's a sense of mastery because there's so little abstraction that you feel in control.
+
+I started working on a pure Zig implementatio of the Ethereum virtual machine, but I ran out of steam. It's not particularly useful until I have a complete implementation, and that's a huge amount of work.
+
+I'm always on the lookout for some excuse to use Zig for a practical purpose, but I just don't have any good project ideas for it at the moment.
+
+The thing that kept me from learning Zig was that my fun coding is mainly around projects I want to use, and most of the project ideas I have are web apps.
+
+Zig is the most fun programming I've done in a long time. There's something about coding with extremely low abstraction that feels exciting.
+
+I still have fun coding in Zig. If I was sent to live on a desert island for a year with a laptop but no Internet, the project I'd want to work on is taking an open-source rebuild of some computer game I played in the 90s (e.g. [Age of Empires II](http://openage.dev/), [Command and Conquer](https://www.openra.net/)) and porting all the disgusting C++ code to elegant Zig.
+
+Here's my pitch for Zig:
+
+- Easy to reason about.
+
+And here are my caveats for Zig:
+
+- There's no stable release yet.
+  - You'll likely have to rewrite some of your code every time you update to the latest Zig compiler.
+- Documentation is limited.
+
 ### Fuzz testing with Nix
 
 You probably thought I was done talking about Nix. I'm not!
