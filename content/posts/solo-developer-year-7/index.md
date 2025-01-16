@@ -25,7 +25,7 @@ In 2024, I sold the company for $598k. My wife and I wanted to start a family, a
 
 I already [wrote](/i-sold-tinypilot/) and [podcasted](https://softwaremisadventures.com/p/michael-lynch-indie-hacking) a lot about the sale and [the lessons I learned](/lessons-from-my-first-exit/), so I won't rehash it, but in short, I'm still very grateful for how everything worked out.
 
-I still feel the same way I did at the time. I'm proud of the work I did for four years running the company.
+I still feel the same way I did at the time. I'm proud of the work I did for four years running the company, I'm glad that I moved on when I did, and I'm happy with what the new owner is doing.
 
 ## I became a new parent
 
