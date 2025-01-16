@@ -23,7 +23,7 @@ For the next four years, I improved on the TinyPilot product and built it into a
 
 In 2024, I sold the company for $598k. My wife and I wanted to start a family, and I didn't think I could be both the sole manager of a seven-person company and a good father to a newborn. I found a buyer whose vision for the company aligned with what I wanted it to be, and we completed the sale in April 2024.
 
-I already wrote and podcasted a lot about the sale and the lessons I learned, so I won't rehash it, but in short, I'm still very grateful for how everything worked out.
+I already [wrote](/i-sold-tinypilot/) and [podcasted](https://softwaremisadventures.com/p/michael-lynch-indie-hacking) a lot about the sale and [the lessons I learned](/lessons-from-my-first-exit/), so I won't rehash it, but in short, I'm still very grateful for how everything worked out.
 
 I still feel the same way I did at the time. I'm proud of the work I did for four years running the company.
 
@@ -45,15 +45,21 @@ I definitely had the thought multiple times in the first few days after my son a
 
 ## I worked on educational products
 
-After TinyPilot, I had to decide what to do next.
+I sold TinyPilot in April, and I stayed with the company for another month to help with the transition.
 
-In 2021, I released a short video course about blogging for technial audiences. It only made $XXk that year, but it's made $XXk total, making it the highest return on investment project I've ever done.
+My son was due in August. I knew that once he arrived, I'd want to stop thinking about work for a few months. That left an awkard amount of time because I didn't want to start a new business and then disappear from my customers for several months.
 
-Educational products also work well with a young baby because I can work on it at my own pace. There are no servers to keep online or users waiting on me for support issues.
+The best project for that time felt like a educational product like a course or book. That way, no matter where I was in the process when my son arrived, I could pick back up when I was ready to go back to work. There would be no servers to keep online or support emails to answer.
 
-So, over the summer, I taught a live version of my blogging course. The course went okay, but the dominant feedback from students was that they wanted to learn more about writing technique and less about platforms to share your writing.
+My only experience with educational products was in 2021. I released a short video course about blogging for technial audiences. It only made $XXk that year, but it's made $XXk total, making it the highest return on investment project I've ever done.
 
-After my son was born, it became harder to record videos in my office, so I switched to writing a book. My plan is to publish it chapter by chapter and iterate on the material based on reader feedback.
+So, over the summer, I revised the material from my 2021 blogging course. I decided to teach it live to a small pilot group of students over video calls and then record the downloadable course based on their feedback. The course went okay, but the feedback from students was that they wanted to learn more about writing technique and less about platforms to share their writing.
+
+After my son was born, it became harder to record videos in my office, so I switched to [writing a book](https://refactoringenglish.com). I'm publishing it chapter by chapter and iterating on the material based on reader feedback.
+
+I still have a bunch of videos from the blogging course I didn't release, so here's one about why you should say yes if popular bootstrapping author [Patrick McKenzie](https://kalzumeus.com) challenges you to a blogging duel:
+
+<div style="position:relative;padding-top:56.25%;"><iframe src="https://iframe.mediadelivery.net/embed/273218/f04d4f68-e5da-4886-a0f6-a3bedc62c399?autoplay=true&loop=false&muted=false&preload=true&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe></div>
 
 ## I learned cool technologies
 
@@ -70,12 +76,13 @@ The technology that's had the biggest impact on my work the last year is Nix and
 I've been adopting Nix little by little, but I like it so much that I use it in every programming project, and now all of my personal and work computers run NixOS.
 
 - Who should use it?
-  - Developers who see value in tools like Docker, Ansible, and other infrastructure as code tools.
+  - Developers who like infrastructure as code tools like Docker or Ansible.
 - What's my pitch?
 - What are the drawbacks?
   - The community is in an unhealthy state due to poor leadership.
   -
 - What's a good way to explore it?
+  - Try it in small increments. You can get a lot of value from Nix by using small parts of its functionality.
   - Try Determinate Systems Nix installer and try running a program with `nix shell`
   - If you liked that, create a [dev shell](/notes/nix-dev-environment/) for one of your projects so that you can manage the versions of all your dependencies and dev tools from a single file.
 
@@ -105,8 +112,16 @@ I was so used to writing custom JavaScript to make my web apps work. I knew it w
 
 htmx's insight is that there are so many common behaviors of a web app that shouldn't require custom JavaScript. Like writing a comment and submitting it in a comment thread. Why should that require custom JavaScript? Why can't you declare in HTML that you want to send the form to the server and add the server's response to the end of the thread?
 
-- [this](/retrospectives/2024/07/#learning-htmx)
-- [that](/retrospectives/2024/08/#finding-my-preferred-pattern-for-htmx-forms)
+- Who should use it?
+  - Developers who prefer minimal frontend libraries over heavy frameworks like React and Vue.
+- What's my pitch?
+  - [this](/retrospectives/2024/07/#learning-htmx)
+- What are the drawbacks?
+  - TODO
+- What's a good way to explore it?
+  - Read my experience [porting ScreenJournal to htmx](/retrospectives/2024/08/#finding-my-preferred-pattern-for-htmx-forms)
+  - Read the first few chapters of _Hypermedia Systems_
+  - Try
 
 ### Zig
 
@@ -126,15 +141,15 @@ Zig is the most fun programming I've done in a long time. There's something abou
 
 I still have fun coding in Zig. If I was sent to live on a desert island for a year with a laptop but no Internet, the project I'd want to work on is taking an open-source rebuild of some computer game I played in the 90s (e.g. [Age of Empires II](http://openage.dev/), [Command and Conquer](https://www.openra.net/)) and porting all the disgusting C++ code to elegant Zig.
 
-Here's my pitch for Zig:
-
-- Easy to reason about.
-
-And here are my caveats for Zig:
-
-- There's no stable release yet.
-  - You'll likely have to rewrite some of your code every time you update to the latest Zig compiler.
-- Documentation is limited.
+- Who should use it?
+  - TODO
+- What's my pitch?
+  - Easy to reason about.
+- What are the drawbacks?
+  - There's no stable release yet. You'll likely have to rewrite some of your code every time you update to the latest Zig compiler.
+  - Documentation is limited.
+- What's a good way to explore it?
+  - TODO
 
 ### Fuzz testing with Nix
 
@@ -146,18 +161,22 @@ My real discovery was combining honggfuzz with Nix, which too few people are doi
 
 I wish I had time to do more fuzzing tutorials with Nix because I feel like the world is sleeping on Nix as a fuzzing tool.
 
-Here's my pitch for using Nix in your fuzzing workflow:
-
-- Nix makes fuzzing workflows reproducible.
-  - Once you get your fuzzer running under Nix, anyone run your fuzzing configuration by just [typing `nix run`](/nix-fuzz-testing-1/#a-preview-of-the-solution). They don't have to figure out dependencies because Nix automatically reproduces the exact environment you used.
-- Nix simplifies installing dependencies.
-  - Nix has one of the largest package repositories of any package manager. If your fuzzing target has dependencies, they're probably already available in the Nix package repository, so you don't have to figure out a special process for building each dependency.
-- Nix simplifies custom patches.
-  - If you need to [apply custom patches](/nix-fuzz-testing-2/#fixing-the-bug) to fuzz your target, Nix makes it easy to apply those and keep the patch files in the same source tree as the rest of your fuzzing workflow.
-- Nix caches builds.
-  - If you experiment with different compilation options, you don't have to compile from scratch each time. Nix will remember if you've compiled with the same options before and re-use that build. You never have to `make clean` or delete binaries manually.
-
-If that sounds interesting, I wrote [a detailed, beginner-friendly tutorial](/nix-fuzz-testing-1/) about how I used Nix and honggfuzz to create a fuzzing workflow for an open-source PDF reader.
+- Who should use it?
+  - Anyone who performs fuzz testing, especially on C/C++ code.
+- What's my pitch?
+  - Nix makes fuzzing workflows reproducible.
+    - Once you get your fuzzer running under Nix, anyone run your fuzzing configuration by just [typing `nix run`](/nix-fuzz-testing-1/#a-preview-of-the-solution). They don't have to figure out dependencies because Nix automatically reproduces the exact environment you used.
+  - Nix simplifies installing dependencies.
+    - Nix has one of the largest package repositories of any package manager. If your fuzzing target has dependencies, they're probably already available in the Nix package repository, so you don't have to figure out a special process for building each dependency.
+  - Nix simplifies custom patches.
+    - If you need to [apply custom patches](/nix-fuzz-testing-2/#fixing-the-bug) to fuzz your target, Nix makes it easy to apply those and keep the patch files in the same source tree as the rest of your fuzzing workflow.
+  - Nix caches builds.
+    - If you experiment with different compilation options, you don't have to compile from scratch each time. Nix will remember if you've compiled with the same options before and re-use that build. You never have to `make clean` or delete binaries manually.
+  - If that sounds interesting, I wrote [a detailed, beginner-friendly tutorial](/nix-fuzz-testing-1/) about how I used Nix and honggfuzz to create a fuzzing workflow for an open-source PDF reader.
+- What are the drawbacks?
+  - TODO
+- What's a good way to explore it?
+  - TODO
 
 ## Grading last year's goals
 
@@ -179,18 +198,20 @@ The other unexpected consequence of selling was that the new CEO didn't have a p
 - **Result**: Taught a live course, but didn't publish a course or book.
 - **Grade**: C
 
+I decided to teach the course live before recording the downloadable version, but I underestimated how long it would take to run the class and work with students. I only got about 20% through recording the course videos and may not ever publish them.
+
 ### Write software for ten working hours per week
 
 - **Result**: I write software for 10-20 hours per week.
 - **Grade**: A
 
-This goal was more about freeing up time as a manager at TinyPilot, but this has worked out. I'm writing code a lot and enjoying it.
+This goal was more about freeing up time as a manager for TinyPilot, but selling the company gave me lots more time to write code. I'm writing code more frequently and am enjoying it immensely.
 
 ## Goals for next year
 
 ### Earn $50k in profit
 
-Across all of my products, I want to earn $50k in profit. It doesn't have to be recurring revenue. One-time sales count, but I want to find a way to earn about $50k.
+Across all of my products, I want to earn $50k in profit. It doesn't have to be recurring revenue. One-time sales count, but I want to find a way to earn about $50k from selling my own products.
 
 ### Publish a course or book
 
@@ -198,4 +219,6 @@ TODO
 
 ### Learn a new programming language
 
-A lot of the people who I like are excited about Elixir and Phoenix, so I'm curious to try those.
+Every time I learn a new programming language, it gives me insights I can apply to any programming language.
+
+A lot of my favorite bloggers are excited about [Elixir](https://elixir-lang.org/) and [Phoenix](https://hexdocs.pm/phoenix/), so I'm curious to try those.
