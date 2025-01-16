@@ -7,29 +7,31 @@ tags:
 
 On this date seven years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own bootstrapped software company.
 
-Every year, I post an update about how life is going as a bootstrapped software founder and what went well and poorly in the past year.
+Every year, I post an update about how life is going as a founder, what's gone well, and what I'd like to improve.
 
 ## I sold my company
 
 The defining feature of my professional year was that I sold TinyPilot, the company I founded in 2020.
 
-The TinyPilot product is a device that lets users control their computers remotely. I built a rudimentary prototype with a $35 Raspberry Pi mini computer and a $15 HDMI capture dongle.
+TinyPilot is a device that lets users control their computers remotely. I built a rudimentary prototype in 2020 with a $35 Raspberry Pi mini computer and a $15 HDMI capture dongle.
 
 TODO: Photo of prototype
 
-I wrote [a blog post](/tinypilot/) about how I got the initial version of TinyPilot to work, and dozens of readers materialized who were willing to pay me $100-200 for kits to build their own. After two years of desperately searching for any paying customers for my previous ventures, I suddenly had so many customers that I could barely keep up with inventory.
+I wrote [a blog post](/tinypilot/) about how I got the initial version of TinyPilot to work, and dozens of readers told me they were willing to pay me $100-200 for TinyPilot build-it-it-yourself kits.
 
-For the next four years, I improved on the TinyPilot product and built it into a real company. I graduated from unassembled kits to pre-made devices. I hired a team to help me with hardware, software, support, and logistics, eventually growing the company to $1M/year in revenue.
+For the next four years, I improved on the TinyPilot product and built it into a real company. I graduated from kits to pre-made devices. I hired a team to help me with hardware, software, support, and logistics, eventually growing the company to $1M/year in revenue.
 
-In 2024, I sold the company for $598k. My wife and I wanted to start a family, and I knew that my life as sole manager of a seven-person company wasn't what I wanted for a new family. I found a buyer whose vision for the company aligned with what I wanted it to be, and we completed the sale in April 2024.
+In 2024, I sold the company for $598k. My wife and I wanted to start a family, and I didn't think I could be both the sole manager of a seven-person company and a good father to a newborn. I found a buyer whose vision for the company aligned with what I wanted it to be, and we completed the sale in April 2024.
 
 I already wrote and podcasted a lot about the sale and the lessons I learned, so I won't rehash it, but in short, I'm still very grateful for how everything worked out.
+
+I still feel the same way I did at the time. I'm proud of the work I did for four years running the company.
 
 ## I became a new parent
 
 In August, my wife and I welcomed our first child, a son. It's been the happiest time of my life.
 
-We're trying to be protective of our son's privacy, so I took a photo of the three of us shortly after the birth and ran it through a hand-tuned Fast Fourier transform to remove identifying biometric details:
+I'm protective of my son's privacy, so I'm sharing a photo of the three of us shortly after the birth that I ran through a hand-tuned Fast Fourier transform to remove identifying biometric details:
 
 {{<img src="baby-photo.webp" has-border="true" max-width="450px" alt="Stick figure drawing of my family" caption="Photo of me, my wife, and our child soon after birth, post-processed with a privacy-preserving photo filter">}}
 
@@ -67,13 +69,23 @@ The technology that's had the biggest impact on my work the last year is Nix and
 
 I've been adopting Nix little by little, but I like it so much that I use it in every programming project, and now all of my personal and work computers run NixOS.
 
+- Who should use it?
+  - Developers who see value in tools like Docker, Ansible, and other infrastructure as code tools.
+- What's my pitch?
+- What are the drawbacks?
+  - The community is in an unhealthy state due to poor leadership.
+  -
+- What's a good way to explore it?
+  - Try Determinate Systems Nix installer and try running a program with `nix shell`
+  - If you liked that, create a [dev shell](/notes/nix-dev-environment/) for one of your projects so that you can manage the versions of all your dependencies and dev tools from a single file.
+
 If you're curious about Nix, a low-risk, high-reward way to use it is to manage dev shells.
 
 You probably switch between multiple projects that have different dependencies. Maybe you have a project A that depends on Node.js XX and Python 2.7. And you have another project B that depends on Node.js XX and Python 3.XX. You don't want to do anything to the Node and Python installations in Project A that will mess up Project B, and vice-versa. There are version managers and virtual environments, but they're tech specific. Nix dev shells let you manage all the dependencies for a project so that when you're working in project A, the environment only sees Python 2.7 and Node.js XX no matter what happens in project B.
 
 Read that post. Hopefully, you see that you don't have to understand much about Nix to get a working setup. And even if you're working in a repository you share with other people, you can still privately use Nix dev shells without commiting anything Nix-related to the project's source repo.
 
-The main feature of Nix I love is [dev shells](/notes/nix-dev-environment/). They allow you to create a custom environment for each of your projects.
+The main feature of Nix I love is . They allow you to create a custom environment for each of your projects.
 
 I create dev shells for all of my projects now. Whenever I'm contributing to an open-source project I don't maintain, I create [my own private dev shell](/notes/use-nix-flake-without-git/) with all the project's dependencies.
 
@@ -92,6 +104,9 @@ During a long plane ride, I read the free ebook _Hypermedia Systems_. It's writt
 I was so used to writing custom JavaScript to make my web apps work. I knew it was repetitive and tedious, but I figured that that's just how it has to be if I'm going to add logic to the presentation-focused HTML.
 
 htmx's insight is that there are so many common behaviors of a web app that shouldn't require custom JavaScript. Like writing a comment and submitting it in a comment thread. Why should that require custom JavaScript? Why can't you declare in HTML that you want to send the form to the server and add the server's response to the end of the thread?
+
+- [this](/retrospectives/2024/07/#learning-htmx)
+- [that](/retrospectives/2024/08/#finding-my-preferred-pattern-for-htmx-forms)
 
 ### Zig
 
@@ -177,8 +192,10 @@ This goal was more about freeing up time as a manager at TinyPilot, but this has
 
 Across all of my products, I want to earn $50k in profit. It doesn't have to be recurring revenue. One-time sales count, but I want to find a way to earn about $50k.
 
+### Publish a course or book
+
+TODO
+
 ### Learn a new programming language
 
 A lot of the people who I like are excited about Elixir and Phoenix, so I'm curious to try those.
-
-### Goal 3
