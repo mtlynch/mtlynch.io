@@ -244,7 +244,7 @@ hx-disabled-elt="input, .btn"
 
 During the HTTP request, disable all `<input>` tags and elements with the `.btn` CSS class so that the user can't double-submit the same request.
 
-Sidenote: The htmx [documentation](https://htmx.org/attributes/hx-disable/) implies that `hx-disabled-elt="this"` should disable the whole form, but it doesn't seem to work. As a workaround, I have to use selectors that match all inputs in the form.
+Sidenote: The htmx [documentation](https://htmx.org/attributes/hx-disabled-elt/) implies that `hx-disabled-elt="this"` should disable the whole form, but it doesn't seem to work. As a workaround, I have to use selectors that match all inputs in the form.
 
 ```html
 hx-target="#result-success"
