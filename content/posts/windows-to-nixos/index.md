@@ -1,6 +1,6 @@
 ---
-title: "Windows to Nixos"
-date: 2025-01-03
+title: "Migrating to NixOS after 30 Years on Windows"
+date: 2025-03-03
 ---
 
 ## From Windows to NixOS
@@ -99,3 +99,5 @@ I've been trying to learn GIMP, but it's a major step down in UX and it's going 
 - VLC doesn't render videos well. Weird artifacts or everything comes out green.
 - Hard to manage dependencies a la carte.
   - If there's a bad version of, VLC, it's hard to plumb everything together to pull in a different version than the standard nixpkgs.
+
+{{<img src="captain-ron.webp">}}
