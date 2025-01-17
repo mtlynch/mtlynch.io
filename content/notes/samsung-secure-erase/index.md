@@ -19,7 +19,7 @@ So, if you want to securely erase the data on computer A, which contains a Samsu
 
 When you finally get a compatible system to run Samsung Magician, when you click "Secure Erase," you'll probably find that when you try to create a bootable USB, it won't show you any options, even if you insert a working USB drive.
 
-You might get a bit further. Maybe Samsung Magician recognizes the USB the error message>
+You might get a bit further. Maybe Samsung Magician recognizes the USB drive but shows this error message:
 
 ```text
 Failed to create bootable USB device
@@ -31,12 +31,12 @@ The issue is that Samsung Magician expects the drive to be partitioned in a part
 
 The solution is to erase all partitions on the USB disk and create a single FAT32 partition that's 500 MB in size.
 
-I don't know why Samsung Magician insists on this, as it completely blows away the partitions anyway, but once it sees a disk with a 500 MB partition, it successfully creates the bootable disk for secure erasing the SSD.
+I don't know why Samsung Magician insists on this, as it completely blows away the partitions anyway. But once it sees a disk with a 500 MB partition, it successfully creates the bootable disk for secure erasing the SSD.
 
 ## SSD is locked
 
 When I thought I was home free, the Samsung bootable disk told me that my SSD was "locked."
 
-It's suggestion was to remove the SSD's power cable while the computer is still on, then plug in the power again. I'm leery of removing cables while a desktop is running, but I tried it, and sure enough, that allowed the secure erase to work.
+Its suggestion was to remove the SSD's power cable while the computer is still on, then plug in the power again. I'm leery of removing internal cables while a desktop is running, but I tried it, and sure enough, that allowed the secure erase to work.
 
 I tried other options like shutting off my computer, and completely cutting off power. But it seemed that for whatever reason, I had to remove the SSD power cable while keeping the SATA cable attached.
