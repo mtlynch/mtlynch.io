@@ -5,7 +5,7 @@ tags:
   - annual review
 ---
 
-On this date seven years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own bootstrapped software company.
+Exactly seven years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own bootstrapped software company.
 
 Every year, I post an update about how life is going as a founder, what's gone well, and what I'd like to improve.
 
@@ -23,7 +23,9 @@ For the next four years, I improved on the TinyPilot product and built it into a
 
 In 2024, I sold the company for $598k. My wife and I wanted to start a family, and I didn't think I could be both the sole manager of a seven-person company and a good father to a newborn. I found a buyer whose vision for the company aligned with what I wanted it to be, and we completed the sale in April 2024.
 
-I already [wrote](/i-sold-tinypilot/) and [podcasted](https://softwaremisadventures.com/p/michael-lynch-indie-hacking) a lot about the sale and [the lessons I learned](/lessons-from-my-first-exit/), so I won't rehash it, but in short, I'm still very grateful for how everything worked out.
+{{<img src="sold-tinypilot.webp"  max-width="550px" alt="Illustration of me waving goodbye to TinyPilot mascot flying away in tiny prop plane">}}
+
+I already [wrote](/i-sold-tinypilot/) and [podcasted](https://softwaremisadventures.com/p/michael-lynch-indie-hacking) a lot about selling my company and [the lessons I learned](/lessons-from-my-first-exit/), so I won't rehash it, but in short, I'm still very grateful for how everything worked out.
 
 I still feel the same way I did at the time. I'm proud of the work I did for four years running the company, I'm glad that I moved on when I did, and I'm happy with what the new owner is doing.
 
@@ -75,10 +77,11 @@ The technology that's had the biggest impact on my work the last year is Nix and
 
 I've been adopting Nix little by little, but I like it so much that I use it in every programming project, and now all of my personal and work computers run NixOS.
 
-- Who should use it?
+- Who should try it?
   - Developers who like infrastructure as code tools like Docker or Ansible.
 - What's my pitch?
 - What are the drawbacks?
+  - There's a schism around a feature called "flakes," so if you use that feature, it's harder to understand examples that don't, and vice-versa.
   - The community is in an unhealthy state due to poor leadership.
   -
 - What's a good way to explore it?
@@ -112,7 +115,7 @@ I was so used to writing custom JavaScript to make my web apps work. I knew it w
 
 htmx's insight is that there are so many common behaviors of a web app that shouldn't require custom JavaScript. Like writing a comment and submitting it in a comment thread. Why should that require custom JavaScript? Why can't you declare in HTML that you want to send the form to the server and add the server's response to the end of the thread?
 
-- Who should use it?
+- Who should try it?
   - Developers who prefer minimal frontend libraries over heavy frameworks like React and Vue.
 - What's my pitch?
   - [this](/retrospectives/2024/07/#learning-htmx)
@@ -141,7 +144,7 @@ Zig is the most fun programming I've done in a long time. There's something abou
 
 I still have fun coding in Zig. If I was sent to live on a desert island for a year with a laptop but no Internet, the project I'd want to work on is taking an open-source rebuild of some computer game I played in the 90s (e.g. [Age of Empires II](http://openage.dev/), [Command and Conquer](https://www.openra.net/)) and porting all the disgusting C++ code to elegant Zig.
 
-- Who should use it?
+- Who should try it?
   - TODO
 - What's my pitch?
   - Easy to reason about.
@@ -161,7 +164,7 @@ My real discovery was combining honggfuzz with Nix, which too few people are doi
 
 I wish I had time to do more fuzzing tutorials with Nix because I feel like the world is sleeping on Nix as a fuzzing tool.
 
-- Who should use it?
+- Who should try it?
   - Anyone who performs fuzz testing, especially on C/C++ code.
 - What's my pitch?
   - Nix makes fuzzing workflows reproducible.
@@ -222,3 +225,7 @@ TODO
 Every time I learn a new programming language, it gives me insights I can apply to any programming language.
 
 A lot of my favorite bloggers are excited about [Elixir](https://elixir-lang.org/) and [Phoenix](https://hexdocs.pm/phoenix/), so I'm curious to try those.
+
+---
+
+_Illustrations by [Piotr Letachowicz](https://cartoony.eu)._
