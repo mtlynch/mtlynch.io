@@ -11,19 +11,19 @@ Every year, I post an update about how life is going as a founder, what's gone w
 
 ## I sold my company
 
-The defining feature of my professional year was that I sold TinyPilot, the company I founded in 2020.
+The defining event of my professional year was that I sold [TinyPilot](https://tinypilotkvm.com), the company I founded in 2020.
 
 TinyPilot is a device that lets users control their computers remotely. I built a rudimentary prototype in 2020 with a $35 Raspberry Pi mini computer and a $15 HDMI capture dongle.
 
-TODO: Photo of prototype
+{{<img src="tinypilot-prototype.webp" alt="Photo of a laptop open with 'Hello, World' printed on the screen. On another laptop, the same desktop is displayed within a TinyPilot web interface." max-width="450px" caption="The prototype of TinyPilot, which allowed me to control computers in my home remotely without installing any software">}}
 
-I wrote [a blog post](/tinypilot/) about how I got the initial version of TinyPilot to work, and dozens of readers told me they were willing to pay me $100-200 for TinyPilot build-it-it-yourself kits.
+I wrote [a blog post](/tinypilot/) about how I got the initial version of TinyPilot to work, and dozens of customers materialized who were willing to pay $100-200 for TinyPilot build-it-it-yourself kits.
 
 For the next four years, I improved on the TinyPilot product and built it into a real company. I graduated from kits to pre-made devices. I hired a team to help me with hardware, software, support, and logistics, eventually growing the company to $1M/year in revenue.
 
-In 2024, I sold the company for $598k. My wife and I wanted to start a family, and I didn't think I could be both the sole manager of a seven-person company and a good father to a newborn. I found a buyer whose vision for the company aligned with what I wanted it to be, and we completed the sale in April 2024.
+In 2024, I sold the company for $600k. My wife and I wanted to start a family, and I didn't think I could be both the sole manager of a seven-person company and a good father to a newborn. I found a buyer whose vision for the company aligned with what I wanted it to be, and we completed the sale in April 2024.
 
-{{<img src="sold-tinypilot.webp"  max-width="550px" alt="Illustration of me waving goodbye to TinyPilot mascot flying away in tiny prop plane">}}
+{{<img src="sold-tinypilot.webp"  max-width="600px" alt="Illustration of me waving goodbye to TinyPilot mascot flying away in tiny prop plane">}}
 
 I already [wrote](/i-sold-tinypilot/) and [podcasted](https://softwaremisadventures.com/p/michael-lynch-indie-hacking) a lot about selling my company and [the lessons I learned](/lessons-from-my-first-exit/), so I won't rehash it, but in short, I'm still very grateful for how everything worked out.
 
