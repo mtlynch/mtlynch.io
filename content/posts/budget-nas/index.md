@@ -9,7 +9,7 @@ description: How I chose parts, built, and configured my first custom home stora
 images:
   - budget-nas/og-cover.jpg
 date: 2022-05-23
-lastmod: 2024-11-27
+lastmod: 2025-01-17
 discuss_urls:
   reddit: https://www.reddit.com/r/truenas/comments/uw5hly/how_i_built_my_first_home_truenas_server_22_tb/
   hacker_news: https://news.ycombinator.com/item?id=31548829
@@ -106,7 +106,9 @@ When I bought my Synology NAS, I initially installed three 4 TB drives and left 
 
 I decided to apply the same strategy for my new build. I wanted a system that met my current needs with room to grow. My rough target was to start with 20 TB of usable storage and extra headroom for up to 30 TB if I add disks later.
 
-ZFS doesn't let you add a new drive to an existing pool, but that feature is [under active development](https://github.com/openzfs/zfs/pull/12225). Hopefully, by the time I need to expand storage, the feature will be available in TrueNAS.
+ZFS ~~doesn't let you add a new drive to an existing pool~~, but that feature is [under active development](https://github.com/openzfs/zfs/pull/12225). Hopefully, by the time I need to expand storage, the feature will be available in TrueNAS.
+
+**Update (2025-01-25)**: This feature [is now available](https://github.com/openzfs/zfs/pull/15022) in [the latest version of ZFS](https://github.com/openzfs/zfs/releases/tag/zfs-2.3.0), though I haven't yet had the opportunity to test it in TrueNAS.
 
 ### Many small disks or fewer large disks?
 
