@@ -1,6 +1,7 @@
 ---
 title: "Use a Nix Flake without Adding it to Git"
 date: 2023-12-29
+lastmod: 2025-01-17
 tags:
   - nix
 ---
@@ -20,9 +21,10 @@ Commenter `@kesor` offered the simplest solution I've seen so far: create a pare
 If you were working on a repo called `examplerepo`, you'd structure your directory tree like this:
 
 ```text
-./examplerepo/ << The actual git repo
-./flake.nix
-./flake.lock
+.
+├── examplerepo/ << The actual git repo
+├── flake.lock
+└── flake.nix
 ```
 
 That way, `flake.nix` and `flake.lock` sit outside of a git repo.
