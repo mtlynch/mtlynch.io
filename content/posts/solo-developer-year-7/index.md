@@ -21,45 +21,45 @@ I wrote [a blog post](/tinypilot/) about how I got the initial version of TinyPi
 
 For the next four years, I improved on the TinyPilot product and built it into a real company. I graduated from kits to pre-made devices. I hired a team to help me with hardware, software, support, and logistics, eventually growing the company to $1M/year in revenue.
 
-In 2024, I sold the company for $600k. My wife and I wanted to start a family, and I didn't think I could be both the sole manager of a seven-person company and a good father to a newborn. I found a buyer whose vision for the company aligned with what I wanted it to be, and we completed the sale in April 2024.
+TODO: Photo of later version
+
+Last year, I sold the company for $600k.
+
+My wife and I wanted to start a family, and I didn't think I could be both the sole manager of a seven-person company and a good father to a newborn. I found a buyer whose vision for the company aligned with mine, and we completed the sale in April 2024.
 
 {{<img src="sold-tinypilot.webp"  max-width="600px" alt="Illustration of me waving goodbye to TinyPilot mascot flying away in tiny prop plane">}}
 
-I already [wrote](/i-sold-tinypilot/) and [podcasted](https://softwaremisadventures.com/p/michael-lynch-indie-hacking) a lot about selling my company and [the lessons I learned](/lessons-from-my-first-exit/), so I won't rehash it, but in short, I'm still very grateful for how everything worked out.
-
-I still feel the same way I did at the time. I'm proud of the work I did for four years running the company, I'm glad that I moved on when I did, and I'm happy with what the new owner is doing.
+I already [wrote](/i-sold-tinypilot/) and [podcasted](https://softwaremisadventures.com/p/michael-lynch-indie-hacking) a lot about selling my company and [the lessons I learned](/lessons-from-my-first-exit/), but the short version is that I'm grateful for how everything worked out.
 
 ## I became a new parent
 
-In August, my wife and I welcomed our first child, a son. It's been the happiest time of my life.
+In August, my wife and I welcomed our first child, a son.
 
-I'm protective of my son's privacy, so I'm sharing a photo of the three of us shortly after the birth that I ran through a hand-tuned Fast Fourier transform to remove identifying biometric details:
+Shortly after the birth, one of the nurses took a nice photo of the three of us. I'm protective of my son's privacy, so I ran the picture through a hand-tuned Fast Fourier transform to remove identifying biometric details:
 
 {{<img src="baby-photo.webp" has-border="true" max-width="450px" alt="Stick figure drawing of my family" caption="Photo of me, my wife, and our child soon after birth, post-processed with a privacy-preserving photo filter">}}
 
-There are some major life tasks like buying a house or dealing with a health issue that completely upend your life and take over your schedule. Whenever I encounter these as an indie founder, I'm always baffled that these tasks are even possible for people with regular jobs. Like, I find them incredibly hard and I have an empty schedule, so how do people do it with regular 9-5 in-person jobs?
+I took two months off to not think about making money at all, and I've slowly been phasing work back in.
 
-I have tons of family and friend support nearby, and I have a totally blank work schedule, and I still found it hard to care for a newborn. How do people do it when they have to return to full-time work weeks or even days after their baby arrives?
-
-Having a baby made me incredibly thankful that being an indie founder gives me the freedom to have this much flexibility for my son's first few months. Some of my favorite experiences in the first few months were being able to spend the morning just walking downtown and eating brunch outside with our baby.
-
-I definitely had the thought multiple times in the first few days after my son arrived when, "I'm so glad I'm not running a company anymore." When I was still running TinyPilot, I was constantly worried about what could go wrong with our vendors, an employee, the supply chain, and a dozen other things. I was so glad to know when the baby arrived that I could focus on my family.
+I'm thankful for the flexibility I get from being an indie founder and for the timing of the TinyPilot sale, as the past five months have been the happiest time of my life.
 
 ## I worked on educational products
 
-I sold TinyPilot in April, and I stayed with the company for another month to help with the transition.
+I sold TinyPilot in April, but I stayed with the company through mid-May to help with the transition.
 
-My son was due in August. I knew that once he arrived, I'd want to stop thinking about work for a few months. That left an awkard amount of time because I didn't want to start a new business and then disappear from my customers for several months.
+My son was due in August, and I knew I'd take time off when he arrived. That left me three months to start something new, but it would have to be something I could shelve for two to six months depending on what my life looked like post-baby.
 
-The best project for that time felt like a educational product like a course or book. That way, no matter where I was in the process when my son arrived, I could pick back up when I was ready to go back to work. There would be no servers to keep online or support emails to answer.
+The best project for that time felt like a educational product like a course or book. It's easy to pause the work, and even if I have paying customers, there are no servers to keep online or support questions to answer.
 
-My only experience with educational products was in 2021. I released a short video course about blogging for technial audiences. It only made $XXk that year, but it's made $XXk total, making it the highest return on investment project I've ever done.
+My only experience with educational products was in 2021. I released a short video course about [blogging for technial audiences](https://hitthefrontpage.com). It only made $XXk that year, but it's made $XXk total, making it the highest return on investment project I've ever done.
 
-So, over the summer, I revised the material from my 2021 blogging course. I decided to teach it live to a small pilot group of students over video calls and then record the downloadable course based on their feedback. The course went okay, but the feedback from students was that they wanted to learn more about writing technique and less about platforms to share their writing.
+Over the summer, I revised the material from my 2021 blogging course. I started by teaching it to a small group of students over video calls. My plan was to adjust the material based on their feedback, and then record the final, downloadable course.
 
-After my son was born, it became harder to record videos in my office, so I switched to [writing a book](https://refactoringenglish.com). I'm publishing it chapter by chapter and iterating on the material based on reader feedback.
+The live course went okay, but the feedback from students was that they wanted to learn more about writing technique and less about platforms to share their writing. I still wanted to finish the course, but my son arrived a few weeks early, so I never finished the recordings.
 
-I still have a bunch of videos from the blogging course I didn't release, so here's one about why you should say yes if popular bootstrapping author [Patrick McKenzie](https://kalzumeus.com) challenges you to a blogging duel:
+After my son was born, it became harder to record videos in my office, so I switched to [writing a book](https://refactoringenglish.com) about effective writing techniques for developers. I'm publishing it chapter by chapter and iterating on the material based on reader feedback.
+
+I still have a bunch of videos from the partially-recorded blogging course that I don't know what to do with, so here's one about why you should say yes if popular bootstrapping author [Patrick McKenzie](https://kalzumeus.com) challenges you to a blogging duel:
 
 <div style="position:relative;padding-top:56.25%;"><iframe src="https://iframe.mediadelivery.net/embed/273218/f04d4f68-e5da-4886-a0f6-a3bedc62c399?autoplay=true&loop=false&muted=false&preload=true&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe></div>
 
@@ -75,35 +75,23 @@ I've always loved programming, but I've never found it as exciting as I have in 
 
 The technology that's had the biggest impact on my work the last year is Nix and NixOS.
 
-I've been adopting Nix little by little, but I like it so much that I use it in every programming project, and now all of my personal and work computers run NixOS.
+I've been adopting Nix little by little, but I like it so much that I use Nix in every programming project, and now all of my personal and work computers run NixOS.
 
 - Who should try it?
   - Developers who like infrastructure as code tools like Docker or Ansible.
 - What's my pitch?
+  - On software projects, Nix allows you to define all of your dependencies in source code. Anyone with Nix can replicate your environment without figuring out how to install your dependencies.
+  - NixOS allows you to define your computer's entire configuration in source code. You can easily rebuild your computer from scratch or roll back to previous configurations.
+  - Nix has many of the advantages of Docker, except that Nix packages compose better than Docker images.
 - What are the drawbacks?
-  - There's a schism around a feature called "flakes," so if you use that feature, it's harder to understand examples that don't, and vice-versa.
-  - The community is in an unhealthy state due to poor leadership.
-  -
+  - It has a steep learning curve.
+  - There's a schism around a feature called "flakes." If you flakes, it's harder to understand documentation and examples that don't use flakes, and vice-versa.
+  - The Nix community is in an unhealthy state due to poor leadership.
+  - In continuous integration (CI), Nix scales down poorly. I haven't been able to find a way to run any Nix-dependent job in less than one minute unless I switch to a Nix-specific CI vendor.
 - What's a good way to explore it?
   - Try it in small increments. You can get a lot of value from Nix by using small parts of its functionality.
   - Try Determinate Systems Nix installer and try running a program with `nix shell`
-  - If you liked that, create a [dev shell](/notes/nix-dev-environment/) for one of your projects so that you can manage the versions of all your dependencies and dev tools from a single file.
-
-If you're curious about Nix, a low-risk, high-reward way to use it is to manage dev shells.
-
-You probably switch between multiple projects that have different dependencies. Maybe you have a project A that depends on Node.js XX and Python 2.7. And you have another project B that depends on Node.js XX and Python 3.XX. You don't want to do anything to the Node and Python installations in Project A that will mess up Project B, and vice-versa. There are version managers and virtual environments, but they're tech specific. Nix dev shells let you manage all the dependencies for a project so that when you're working in project A, the environment only sees Python 2.7 and Node.js XX no matter what happens in project B.
-
-Read that post. Hopefully, you see that you don't have to understand much about Nix to get a working setup. And even if you're working in a repository you share with other people, you can still privately use Nix dev shells without commiting anything Nix-related to the project's source repo.
-
-The main feature of Nix I love is . They allow you to create a custom environment for each of your projects.
-
-I create dev shells for all of my projects now. Whenever I'm contributing to an open-source project I don't maintain, I create [my own private dev shell](/notes/use-nix-flake-without-git/) with all the project's dependencies.
-
-A lot of people shy away from Nix because it's so complicated and difficult to learn, but what too few people realize is that you can use a lot of powerful features even if you're a dummy like me and understand about 2% of Nix. Once you see how to create a dev shell, you can mainly just tweak it without understanding much.
-
-But also, this year, I finally abandoned my Windows desktop after 30 years of Windows being my primary desktop OS, and I'm now running NixOS. I love it, and I only miss a few things about Windows.
-
-The community is a mess. I wish there was a more centralized leadership board that could unite the community, but there isn't.
+  - If you liked ephemeral shells, create a [dev shell](/notes/nix-dev-environment/) for one of your projects so that you can manage the versions of all your dependencies and dev tools from a single file.
 
 ### htmx
 
@@ -228,4 +216,4 @@ A lot of my favorite bloggers are excited about [Elixir](https://elixir-lang.org
 
 ---
 
-_Illustrations by [Piotr Letachowicz](https://cartoony.eu)._
+_Illustrations by [Piotr Letachowicz](https://cartoony.eu) (except for the terrible stick figure one)._
