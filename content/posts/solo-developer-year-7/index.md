@@ -101,17 +101,20 @@ During a long plane ride, I read the free ebook _Hypermedia Systems_. It's writt
 
 I was so used to writing custom JavaScript to make my web apps work. I knew it was repetitive and tedious, but I figured that that's just how it has to be if I'm going to add logic to the presentation-focused HTML.
 
-htmx's insight is that there are so many common behaviors of a web app that shouldn't require custom JavaScript. Like writing a comment and submitting it in a comment thread. Why should that require custom JavaScript? Why can't you declare in HTML that you want to send the form to the server and add the server's response to the end of the thread?
-
 - Who should try it?
   - Developers who prefer minimal frontend libraries over heavy frameworks like React and Vue.
 - What's my pitch?
-  - [this](/retrospectives/2024/07/#learning-htmx)
+  - htmx makes you realize how much unnecessary JavaScript you've been writing all the time.
+  - htmx strikes a balance that's difficult in web programming in that it saves you from duplicating boilerplate code. Heavier JS frameworks perform inscrutable magic on your code to turn it into a web app whose HTML looks nothing like the source code you wrote, but htmx is low-abstraction, so the code that's running in your browser is the code that you wrote.
+  - It's a library rather than a framework, so adopting htmx isn't all-or-nothing. You can try it on a page or two to see if you like it.
+  - There's no build step, so you don't have to run your code through any sort of Webpack / Node.js component just to render a page.
+  - I wrote a longer pitch [last year](/retrospectives/2024/07/#learning-htmx).
 - What are the drawbacks?
-  - TODO
+  - I find htmx's [error handling awkward](/retrospectives/2024/07/#htmxs-error-handling-is-underwhelming), but I have a [decent workaround](/retrospectives/2024/08/#finding-my-preferred-pattern-for-htmx-forms)
+  - htmx [weakens Content Security Policy (CSP)](/retrospectives/2024/07/#htmx-weakens-content-security-policy-csp)
 - What's a good way to explore it?
-  - Read my experience [porting ScreenJournal to htmx](/retrospectives/2024/08/#finding-my-preferred-pattern-for-htmx-forms)
-  - Read the first few chapters of _Hypermedia Systems_
+  - Read about my experience [porting ScreenJournal to htmx](/retrospectives/2024/08/#finding-my-preferred-pattern-for-htmx-forms).
+  - Read the first few chapters of [_Hypermedia Systems_](https://hypermedia.systems/) (free, available online) to see if it resonates with you.
   - Try
 
 ### Zig
@@ -146,9 +149,11 @@ I still have fun coding in Zig. If I was sent to live on a desert island for a y
 
 You probably thought I was done talking about Nix. I'm not!
 
-The most powerful fuzzer is still be AFL++, but hongfuzz is about 80% of the power with 20% of the complexity.
+I'd been curious to try fuzz testing to find security vulnerabilities, as I hadn't used fuzzing tools since I [found a serious vulnerability in VLC](https://www.nccgroup.com/us/research-blog/fuzzing-rtsp-to-discover-an-exploitable-vulnerability-in-vlc/), ten years ago.
 
-My real discovery was combining honggfuzz with Nix, which too few people are doing.
+I found Antonio Morales' 2021 [fuzz testing tutorial series](https://github.com/antonio-morales/Fuzzing101), which I liked, but it involves a lot of boring gruntwork to set up a working fuzzing environment.
+
+I tried implementing a fuzzing workflow in Nix, and I found that Nix made the experience so much better.
 
 I wish I had time to do more fuzzing tutorials with Nix because I feel like the world is sleeping on Nix as a fuzzing tool.
 
@@ -163,11 +168,10 @@ I wish I had time to do more fuzzing tutorials with Nix because I feel like the 
     - If you need to [apply custom patches](/nix-fuzz-testing-2/#fixing-the-bug) to fuzz your target, Nix makes it easy to apply those and keep the patch files in the same source tree as the rest of your fuzzing workflow.
   - Nix caches builds.
     - If you experiment with different compilation options, you don't have to compile from scratch each time. Nix will remember if you've compiled with the same options before and re-use that build. You never have to `make clean` or delete binaries manually.
-  - If that sounds interesting, I wrote [a detailed, beginner-friendly tutorial](/nix-fuzz-testing-1/) about how I used Nix and honggfuzz to create a fuzzing workflow for an open-source PDF reader.
 - What are the drawbacks?
-  - TODO
+  - You have to figure out how to build the code you're testing through Nix as an extra layer of abstraction.
 - What's a good way to explore it?
-  - TODO
+  - Try [my beginner-friendly tutorial](/nix-fuzz-testing-1/) about how I used Nix and honggfuzz to create a fuzzing workflow for an open-source PDF reader.
 
 ## Grading last year's goals
 
