@@ -68,7 +68,7 @@ I use `time.Ticker` in [PicoShare](https://github.com/mtlynch/picoshare) to sche
 #### [`flags.Duration`](https://pkg.go.dev/flag#Duration) is impressively flexible
 
 - `flags.Duration` natively supports different time units like `55s` or `10m`.
-  - i.e., when you use `flags.Duration` as a command-line flag, your comman-line interface can take a flag like `--interval 10m`, and the flags package will natively parse it into a `time.Duration` for you.
+  - i.e., when you use `flags.Duration` as a command-line flag, your command-line interface can take a flag like `--interval 10m`, and the `flags` package will natively parse it into a `time.Duration` for you.
 
 ### Separating test packages from production
 

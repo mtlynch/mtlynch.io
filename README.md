@@ -92,6 +92,8 @@ Developers need not verify every change on every possible OS/browser combination
 ### Names
 
 - reddit is written all lowercase.
+- GitHub capitalizes the 'H'.
+- GitLab capitalizes the 'L'.
 
 ### e.g. / i.e.
 
@@ -104,17 +106,3 @@ Developers need not verify every change on every possible OS/browser combination
 ### Spelling conventions
 
 - ebook (not e-book)
-
-## Encoding video for posts
-
-Use ffmpeg with these settings:
-
-```bash
-ffmpeg \
-  -i input.avi \
-  -shortest \
-  -vcodec libx264 \
-  -movflags +faststart \
-  -vf "format=yuv420p" \
-  output.mp4
-```

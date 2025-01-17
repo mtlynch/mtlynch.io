@@ -306,4 +306,4 @@ If you enjoyed this post, check out [the second half of this article](/human-cod
 
 ---
 
-_Edited by [Samantha Mason](https://www.samanthamasonfreelancer.com). Illustrations by [Loraine Yow](https://www.loraineyow.com/). Thanks to [@global4g](https://twitter.com/global4g) for providing valuable feedback on an early draft of this post._
+_Edited by [Samantha Mason](https://www.samanthamasonfreelancer.com). Illustrations by Loraine Yow. Thanks to [@global4g](https://twitter.com/global4g) for providing valuable feedback on an early draft of this post._
