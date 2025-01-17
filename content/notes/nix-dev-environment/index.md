@@ -1,6 +1,7 @@
 ---
 title: "Per-Project Development Environments with Nix"
 date: 2023-10-17
+lastmod: 2025-01-17
 tags:
   - nix
 ---
@@ -108,8 +109,9 @@ So, how does my `flake.nix` file work?
 One of the first lines in the `flake.nix` file declares the exact version of the Python package I want:
 
 ```nix
-# 2.7.18.7 release
-python-nixpkgs.url = "github:NixOS/nixpkgs/517501bcf14ae6ec47efd6a17dda0ca8e6d866f9";
+{
+  # 2.7.18.7 release
+  python-nixpkgs.url = "github:NixOS/nixpkgs/517501bcf14ae6ec47efd6a17dda0ca8e6d866f9";
 ```
 
 The line `# 2.7.18.7 release` is just a comment for my own reference. Nix ignores it. The part that's doing the heavy lifting is the `python-nixpkgs` line.
@@ -140,6 +142,7 @@ I'm not going to explain everything about Nix flakes because I don't have a deep
 The `inputs` section is where you put the versions of different Nix sources you want in your environment. I'm using a special syntax for github repos, but you can import from other source repositories or URLs.
 
 ```nix
+{
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
 
@@ -151,7 +154,8 @@ The `inputs` section is where you put the versions of different Nix sources you 
 `devshells.default` defines the development environment for the Nix shell. `packages` includes a list of all the packages I want available in my environment.
 
 ```nix
-devShells.default = python-nixpkgs.mkShell {
+{
+    devShells.default = python-nixpkgs.mkShell {
         packages = [
           python-nixpkgs.python2
         ];
@@ -162,9 +166,10 @@ For most packages, the package name doesn't have a version. For packages like `h
 The last relevant bit is the `shellHook` section.
 
 ```nix
-shellHook = ''
-  python --version
-'';
+{
+  shellHook = ''
+    python --version
+  '';
 ```
 
 Nix runs the commands in `shellHook` just before dumping you into your shell. You can put any shell commands there.
@@ -176,14 +181,16 @@ I like to put commands that print the versions of my dependencies so that I can 
 Okay, let's say that I'm ready to do the hard work of porting my one-line Python app from Python 2.7 to modern Python 3. I just need to update these two snippets:
 
 ```nix
+{
     # 3.12.0 release
     python-nixpkgs.url = "github:NixOS/nixpkgs/e2b8feae8470705c3f331901ae057da3095cea10";
 ```
 
 ```nix
-        packages = [
-          python-nixpkgs.python312
-        ];
+{
+    packages = [
+      python-nixpkgs.python312
+    ];
 ```
 
 My new Python 3 flake looks like this:
@@ -391,6 +398,23 @@ echo 'use flake .' > .envrc && \
 
 Now, `direnv` will automatically load my Nix environment anytime I `cd` into my project directory and unload it when I exit the directory.
 
+## Creating dev shells for projects you don't own
+
+If you love dev shells like I do, you'll want to use them in every project you work on.
+
+What do you do when you're working in someone else's repository, and htey don't want to adopt Nix at all?
+
+The easiest way to handle this situation is to create a dedicated directory for your Nix flake, and put the third-party repo in a folder within that directory, like this:
+
+```text
+.
+├── examplerepo/ << The actual git repo
+├── flake.lock
+└── flake.nix
+```
+
+I explain this in more detail in ["Use a Nix Flake without Adding it to Git"](/notes/use-nix-flake-without-git/).
+
 ## Every new dependency makes initialization slower
 
 The biggest downside I've found with Nix dev environments is that the environment load times are slow. `cd`ing into a directory is normally something that happens in milliseconds, but if I need to load my Nix environment, it can take 5-10 seconds.
@@ -419,7 +443,9 @@ For example, if I use Nix to create a Python 3 project with a list of pip depend
 
 I've seen [poetry2nix](https://github.com/nix-community/poetry2nix), but I haven't tried it, as I don't use Poetry in my Python projects. But if any readers have suggestions of how to achieve the functionality I'm imagining, let me know in the comments.
 
-**Update (2023-10-28)**: I discovered that [pyproject.nix supports plain `requirements.txt` files](https://pyproject-nix.github.io/pyproject.nix/use-cases/requirements.html), so I'm now [using that](https://github.com/mtlynch/python3_seed/blob/81998e07eaafa8e64f39e771402d2d11c2eeb4e4/flake.nix).
+**Update (2023-10-28)**: I discovered that [pyproject.nix supports plain `requirements.txt` files](https://pyproject-nix.github.io/pyproject.nix/use-cases/requirements.html), so I'm now ~~[using that](https://github.com/mtlynch/python3_seed/blob/81998e07eaafa8e64f39e771402d2d11c2eeb4e4/flake.nix)~~.
+
+**Update (2025-01-17)**: I've stopped using pyproject.nix, as I find it too confusing. It seems to only work with PyPI packages that Nix maintainers have specifically ported to Nix, and it fails confusingly on everything else.
 
 ## Gotchas
 
