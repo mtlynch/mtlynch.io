@@ -103,18 +103,18 @@ I added the following `flake.nix` file to my project, which pulls Zig 0.11.0 int
     flake-utils.url = "github:numtide/flake-utils";
 
     # 0.11.0
-    zig_dep.url = "github:NixOS/nixpkgs/46688f8eb5cd6f1298d873d4d2b9cf245e09e88e";
+    zig-nixpkgs.url = "github:NixOS/nixpkgs/46688f8eb5cd6f1298d873d4d2b9cf245e09e88e";
   };
 
-  outputs = { self, flake-utils, zig_dep }@inputs :
+  outputs = { self, flake-utils, zig-nixpkgs }@inputs :
     flake-utils.lib.eachDefaultSystem (system:
     let
-      zig_dep = inputs.zig_dep.legacyPackages.${system};
+      zig-nixpkgs = inputs.zig-nixpkgs.legacyPackages.${system};
     in
     {
-      devShells.default = zig_dep.mkShell {
+      devShells.default = zig-nixpkgs.mkShell {
         packages = [
-          zig_dep.zig
+          zig-nixpkgs.zig
         ];
 
         shellHook = ''
