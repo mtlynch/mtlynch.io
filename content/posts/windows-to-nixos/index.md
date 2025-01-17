@@ -66,30 +66,36 @@ I've been trying to learn GIMP, but it's a major step down in UX and it's going 
 
 ### The rest in brief
 
-- The good
-  - It's easy to create new keyboard shortcuts.
-  - Trying new applications is super low-friction.
-    - I can install most apps by just guessing the package name (e.g., `nix-shell -p bitwarden`).
-    - Installing one app never breaks another.
-    - It's trivial to uninstall apps.
-  - Logging is more accessible and standardized than on Windows.
-  - There's no Windows Registry, so data is more accessible through normal filesystem tools.
-  - It's easier to manage always-on services.
-  - It's easier to manage scheduled tasks.
-- The bad
-  - It's a pain to install apps that haven't been packaged for Nix.
-  - To install NixOS with disk encryption enabled using the GUI installer, there's a lot of stuff you have to "just know" about partitioning the disk manually in the right way.
-  - Some NixOS settings take effect immediately, while others require a new login, and others require a reboot, and it's hard to tell which is which.
-  - The separation between binaries and user data on the filesystem is less clear to me.
-    - Windows doesn't do this perfectly, but it's obvious that everything in `C:\Program Files` is not supposed to be user data, and mostly everything under `C:\Users` is user data.
-  - I can't figure out how to customize my mouse buttons
-  - I couldn't figure out how to get my motherboard's onboard network card to work.
-    - Fortunately, my PCI-based 10G NIC worked out of the box, so I didn't have to bother.
-  - I find the NFS experience terrible, so I just keep using CIFS despite no longer having Windows systems on my network.
-  - Nix is still an order of magnitude faster than anything else but it still feels like it's an order of magnitude slower than it needs to be.
-  - I can't figure out how to change my desktop background.
-  - I can't figure out how to switch to i3 or anything except Gnome.
-  - I can't figure out a way to type emojis.
+#### The good
+
+- It's easy to create new keyboard shortcuts.
+- Trying new applications is super low-friction.
+  - I can install most apps by just guessing the package name (e.g., `nix-shell -p bitwarden`).
+  - Installing one app never breaks another.
+  - It's trivial to uninstall apps.
+- Logging is more accessible and standardized than on Windows.
+- There's no Windows Registry, so data is more accessible through normal filesystem tools.
+- It's easier to manage always-on services.
+- It's easier to manage scheduled tasks.
+
+#### The bad
+
+- It's a pain to install apps that haven't been packaged for Nix.
+- To install NixOS with disk encryption enabled using the GUI installer, there's a lot of stuff you have to "just know" about partitioning the disk manually in the right way.
+- Some NixOS settings take effect immediately, while others require a new login, and others require a reboot, and it's hard to tell which is which.
+- The separation between binaries and user data on the filesystem is less clear to me.
+  - Windows doesn't do this perfectly, but it's obvious that everything in `C:\Program Files` is not supposed to be user data, and mostly everything under `C:\Users` is user data.
+- I can't figure out how to customize my mouse buttons
+- I couldn't figure out how to get my motherboard's onboard network card to work.
+  - Fortunately, my PCI-based 10G NIC worked out of the box, so I didn't have to bother.
+- I find the NFS experience terrible, so I just keep using CIFS despite no longer having Windows systems on my network.
+- Nix is still an order of magnitude faster than anything else but it still feels like it's an order of magnitude slower than it needs to be.
+- I can't figure out how to change my desktop background.
+- I can't figure out how to switch to i3 or anything except Gnome.
+- I can't figure out a way to type emojis.
 - The so-so
   - Documentation is okay. I know it's one of the biggest complaints, but I can usually get by between the [NixOS wiki](https://wiki.nixos.org/wiki/NixOS_Wiki) and searching for package options.
   - The error messages are fine. A common complaint I hear about Nix is that the error messages are opaque and point to the wrong thing, but I've found the error messages to be fine. Not amazing, but on par with other programming languages.
+- VLC doesn't render videos well. Weird artifacts or everything comes out green.
+- Hard to manage dependencies a la carte.
+  - If there's a bad version of, VLC, it's hard to plumb everything together to pull in a different version than the standard nixpkgs.
