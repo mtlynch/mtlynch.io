@@ -9,4 +9,6 @@ set -x
 # Exit on unset variable.
 set -u
 
-find public -type f -name "*.xml" -exec xmllint --noout {} \;
+find public -type f -name "*.xml" -print0 | while IFS= read -r -d '' file; do
+  xmllint --noout --valid "$file"
+done
