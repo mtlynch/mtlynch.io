@@ -70,7 +70,7 @@ jobs:
       - checkout
       - run:
           name: Install bash and xmllint
-          command: apk add bash xmllint
+          command: apk add bash libxml2
       - run:
           name: Lint XML
           command: ./dev-scripts/lint-xml
