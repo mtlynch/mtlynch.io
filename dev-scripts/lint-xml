@@ -10,5 +10,9 @@ set -x
 set -u
 
 find public -type f -name "*.xml" -print0 | while IFS= read -r -d '' file; do
-  xmllint --noout --valid "$file"
+  output=$(xmllint --noout "$file" 2>&1)
+  if [[ -n "$output" ]]; then
+    echo "$output"
+    exit 1
+  fi
 done
