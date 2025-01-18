@@ -63,6 +63,18 @@ jobs:
       - run:
           name: Check HTML and external links
           command: ./dev-scripts/lint-html
+  lint-xml:
+    docker:
+      - image: alpine:3.21.2
+    steps:
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Install bash and xmllint
+          command: apk add bash libxml2-utils
+      - run:
+          name: Lint XML
+          command: ./dev-scripts/lint-xml
   check-seo-metadata:
     docker:
       - image: cimg/base:2020.01
@@ -113,6 +125,9 @@ workflows:
       - lint-markdown
       - build
       - lint-html:
+          requires:
+            - build
+      - lint-xml:
           requires:
             - build
       - check-seo-metadata:
