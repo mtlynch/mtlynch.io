@@ -71,7 +71,7 @@ jobs:
           at: ./
       - run:
           name: Install bash and xmllint
-          command: apk add bash libxml2
+          command: apk add bash libxml2-utils
       - run:
           name: Lint XML
           command: ./dev-scripts/lint-xml
