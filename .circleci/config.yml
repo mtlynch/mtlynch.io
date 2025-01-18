@@ -67,7 +67,8 @@ jobs:
     docker:
       - image: alpine:3.21.2
     steps:
-      - checkout
+      - attach_workspace:
+          at: ./
       - run:
           name: Install bash and xmllint
           command: apk add bash libxml2
