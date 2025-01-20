@@ -105,17 +105,17 @@ I was so used to writing custom JavaScript to make my web apps work. I knew it w
   - Developers who prefer minimal frontend libraries over heavy frameworks like React and Vue.
 - What's my pitch?
   - htmx makes you realize how much unnecessary JavaScript you've been writing all the time.
-  - htmx strikes a balance that's difficult in web programming in that it saves you from duplicating boilerplate code. Heavier JS frameworks perform inscrutable magic on your code to turn it into a web app whose HTML looks nothing like the source code you wrote, but htmx is low-abstraction, so the code that's running in your browser is the code that you wrote.
+  - htmx strikes a difficult balance in web programming in that it saves you from duplicating boilerplate code. Heavier JS frameworks perform inscrutable magic on your code to turn it into a web app whose HTML looks nothing like the source code you wrote, but htmx is low-abstraction, so the code that's running in your browser is the code that you wrote.
   - It's a library rather than a framework, so adopting htmx isn't all-or-nothing. You can try it on a page or two to see if you like it.
-  - There's no build step, so you don't have to run your code through any sort of Webpack / Node.js component just to render a page.
-  - I wrote a longer pitch [last year](/retrospectives/2024/07/#learning-htmx).
+  - There's no build step, so you don't have to run your code through any sort of Webpack / Node.js tool just to generate plaintext HTML, CSS, and JavaScript.
 - What are the drawbacks?
   - I find htmx's [error handling awkward](/retrospectives/2024/07/#htmxs-error-handling-is-underwhelming), but I have a [decent workaround](/retrospectives/2024/08/#finding-my-preferred-pattern-for-htmx-forms)
   - htmx [weakens Content Security Policy (CSP)](/retrospectives/2024/07/#htmx-weakens-content-security-policy-csp)
 - What's a good way to explore it?
+  - Read my [more detailed pitch for htmx](/retrospectives/2024/07/#learning-htmx).
   - Read about my experience [porting ScreenJournal to htmx](/retrospectives/2024/08/#finding-my-preferred-pattern-for-htmx-forms).
   - Read the first few chapters of [_Hypermedia Systems_](https://hypermedia.systems/) (free, available online) to see if it resonates with you.
-  - Try
+  - Try htmx on a single form in your web application.
 
 ### Zig
 
@@ -131,19 +131,20 @@ I'm always on the lookout for some excuse to use Zig for a practical purpose, bu
 
 The thing that kept me from learning Zig was that my fun coding is mainly around projects I want to use, and most of the project ideas I have are web apps.
 
-Zig is the most fun programming I've done in a long time. There's something about coding with extremely low abstraction that feels exciting.
-
 I still have fun coding in Zig. If I was sent to live on a desert island for a year with a laptop but no Internet, the project I'd want to work on is taking an open-source rebuild of some computer game I played in the 90s (e.g. [Age of Empires II](http://openage.dev/), [Command and Conquer](https://www.openra.net/)) and porting all the disgusting C++ code to elegant Zig.
 
 - Who should try it?
-  - TODO
+  - Programmers who have used C and C++.
 - What's my pitch?
   - Easy to reason about.
+  - Zig is the most fun programming I've done in a long time. There's something about coding with extremely low abstraction that feels exciting.
 - What are the drawbacks?
-  - There's no stable release yet. You'll likely have to rewrite some of your code every time you update to the latest Zig compiler.
-  - Documentation is limited.
+  - There's no stable 1.0 release yet. You'll likely have to rewrite some of your code every time you update to the latest Zig compiler. If you read Zig examples in blog posts, you usually need to tweak them to run on the latest compiler.
+  - I haven't found good resources for learning the language. There are no Zig books or courses yet. I mainly learn by cobbling together information from disparate blog posts, forum discussions, and the [Zig language spec](https://ziglang.org/documentation/master/).
 - What's a good way to explore it?
-  - TODO
+  - Try taking a simple program you know how to write in C or C++, and try building it in Zig.
+  - Try [Ziglings](https://ziglings.org), beginnner exercises for learning Zig.
+    - If you have Nix, an easy way to get the latest pre-release Zig compiler is by running: `nix shell 'github:mitchellh/zig-overlay#master'`
 
 ### Fuzz testing with Nix
 
@@ -172,6 +173,20 @@ I wish I had time to do more fuzzing tutorials with Nix because I feel like the 
   - You have to figure out how to build the code you're testing through Nix as an extra layer of abstraction.
 - What's a good way to explore it?
   - Try [my beginner-friendly tutorial](/nix-fuzz-testing-1/) about how I used Nix and honggfuzz to create a fuzzing workflow for an open-source PDF reader.
+
+## Lessons learned
+
+### It's okay not to work
+
+I'm still trying to convince myself
+
+### Selling to a cash buyer drastically reduces risk and paperwork
+
+TODO
+
+### A process isn't really documented until someone else uses the documentation
+
+In the months leading up to the TinyPilot sale, I focused on
 
 ## Grading last year's goals
 
@@ -217,6 +232,14 @@ TODO
 Every time I learn a new programming language, it gives me insights I can apply to any programming language.
 
 A lot of my favorite bloggers are excited about [Elixir](https://elixir-lang.org/) and [Phoenix](https://hexdocs.pm/phoenix/), so I'm curious to try those.
+
+## How was my year overall?
+
+I enjoyed time off to be with family.
+
+Selling was stressful and unpleasant, and it was a relief to be done.
+
+Had more fun programming than I have in a long time.
 
 ---
 
