@@ -241,6 +241,8 @@ Selling was stressful and unpleasant, and it was a relief to be done.
 
 Had more fun programming than I have in a long time.
 
+I'm still happy. I got an email from a Google recruiter in XX offering me my old job back with no interview, and I was not tempted.
+
 ---
 
 _Illustrations by [Piotr Letachowicz](https://cartoony.eu) (except for the terrible stick figure one)._
