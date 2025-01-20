@@ -402,7 +402,7 @@ Now, `direnv` will automatically load my Nix environment anytime I `cd` into my 
 
 If you love dev shells like I do, you'll want to use them in every project you work on.
 
-What do you do when you're working in someone else's repository, and htey don't want to adopt Nix at all?
+What do you do when you're working in someone else's repository, and they don't want to adopt Nix at all?
 
 The easiest way to handle this situation is to create a dedicated directory for your Nix flake, and put the third-party repo in a folder within that directory, like this:
 
