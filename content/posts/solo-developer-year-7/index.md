@@ -7,7 +7,7 @@ tags:
 
 Exactly seven years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own bootstrapped software company.
 
-Every year, I post an update about how life is going as a founder, what's gone well, and what I'd like to improve.
+Every year, I post an update about how things have gone in the last year and what my life is like as an an indie founder.
 
 ## I sold my company
 
@@ -27,7 +27,7 @@ Last year, I sold the company for $600k.
 
 My wife and I wanted to start a family, and I didn't think I could be both the sole manager of a seven-person company and a good father to a newborn. I found a buyer whose vision for the company aligned with mine, and we completed the sale in April 2024.
 
-{{<img src="sold-tinypilot.webp"  max-width="600px" alt="Illustration of me waving goodbye to TinyPilot mascot flying away in tiny prop plane">}}
+{{<img src="sold-tinypilot.webp"  max-width="600px" alt="Illustration of me waving goodbye to TinyPilot mascot flying away in tiny prop plane" caption="Me selling TinyPilot to start a family">}}
 
 I already [wrote](/i-sold-tinypilot/) and [podcasted](https://softwaremisadventures.com/p/michael-lynch-indie-hacking) a lot about selling my company and [the lessons I learned](/lessons-from-my-first-exit/), but the short version is that I'm grateful for how everything worked out.
 
@@ -37,7 +37,7 @@ In August, my wife and I welcomed our first child, a son.
 
 Shortly after the birth, one of the nurses took a nice photo of the three of us. I'm protective of my son's privacy, so I ran the picture through a hand-tuned Fast Fourier transform to remove identifying biometric details:
 
-{{<img src="baby-photo.webp" has-border="true" max-width="450px" alt="Stick figure drawing of my family" caption="Photo of me, my wife, and our child soon after birth, post-processed with a privacy-preserving photo filter">}}
+{{<img src="baby-photo.webp" has-border="true" max-width="450px" alt="Stick figure drawing of my family" caption="Photo of me, my wife, and our newborn son, post-processed with a privacy-preserving photo filter">}}
 
 I took two months off to not think about making money at all, and I've slowly been phasing work back in.
 
@@ -47,17 +47,17 @@ I'm thankful for the flexibility I get from being an indie founder and for the t
 
 I sold TinyPilot in April, but I stayed with the company through mid-May to help with the transition.
 
-My son was due in August, and I knew I'd take time off when he arrived. That left me three months to start something new, but it would have to be something I could shelve for two to six months depending on what my life looked like post-baby.
+My son was due in August, and I knew I'd take time off when he arrived. That left me three months to start something new, but it needed to be something I could shelve for a few months while I figured out life post-baby.
 
-The best project for that time felt like a educational product like a course or book. It's easy to pause the work, and even if I have paying customers, there are no servers to keep online or support questions to answer.
+I decided to work on an educational product like a course or book. It's easy to pause the work, and even if I have paying customers, there are no servers to keep online or support questions to answer.
 
 My only experience with educational products was in 2021. I released a short video course about [blogging for technial audiences](https://hitthefrontpage.com). It only made $XXk that year, but it's made $XXk total, making it the highest return on investment project I've ever done.
 
-Over the summer, I revised the material from my 2021 blogging course. I started by teaching it to a small group of students over video calls. My plan was to adjust the material based on their feedback, and then record the final, downloadable course.
+Over the summer, I revised the material from my 2021 blogging course. I started by teaching it to a small group of students on weekly video sessions. My plan was to continue refining the course based on the students' feedback, and then record a final, downloadable version of the course to sell.
 
 The live course went okay, but the feedback from students was that they wanted to learn more about writing technique and less about platforms to share their writing. I still wanted to finish the course, but my son arrived a few weeks early, so I never finished the recordings.
 
-After my son was born, it became harder to record videos in my office, so I switched to [writing a book](https://refactoringenglish.com) about effective writing techniques for developers. I'm publishing it chapter by chapter and iterating on the material based on reader feedback.
+After my son was born, it became harder to record videos at home, so I switched to [writing a book](https://refactoringenglish.com) about effective writing techniques for developers. I'm publishing it chapter by chapter and iterating on the material based on reader feedback.
 
 I still have a bunch of videos from the partially-recorded blogging course that I don't know what to do with, so here's one about why you should say yes if popular bootstrapping author [Patrick McKenzie](https://kalzumeus.com) challenges you to a blogging duel:
 
@@ -75,22 +75,22 @@ I've always loved programming, but I've never found it as exciting as I have in 
 
 The technology that's had the biggest impact on my work the last year is Nix and NixOS.
 
-I've been adopting Nix little by little, but I like it so much that I use Nix in every programming project, and now all of my personal and work computers run NixOS.
+I've been adopting Nix little by little, but I like it so much that I now use Nix in every programming project and run NixOS on all of my computers.
 
 - Who should try it?
-  - Developers who like infrastructure as code tools like Docker or Ansible.
+  - Developers who appreciate infrastructure as code tools like Docker or Ansible.
 - What's my pitch?
-  - On software projects, Nix allows you to define all of your dependencies in source code. Anyone with Nix can replicate your environment without figuring out how to install your dependencies.
+  - On software projects, Nix allows you to define all of your dependencies in source code. Anyone can replicate your environment in one command.
   - NixOS allows you to define your computer's entire configuration in source code. You can easily rebuild your computer from scratch or roll back to previous configurations.
   - Nix has many of the advantages of Docker, except that Nix packages compose better than Docker images.
 - What are the drawbacks?
-  - It has a steep learning curve.
-  - There's a schism around a feature called "flakes." If you flakes, it's harder to understand documentation and examples that don't use flakes, and vice-versa.
+  - Nix has a steep learning curve, and I haven't found a good developer-oriented beginner guide. The closest is [_NixOS in Production_](https://leanpub.com/nixos-in-production), which is aimed at DevOps engineers.
+  - There's a schism around a feature called "flakes." If you use flakes, it's hard to understand tutorials and documentation that don't, and vice-versa.
   - The Nix community is in an unhealthy state due to poor leadership.
-  - In continuous integration (CI), Nix scales down poorly. I haven't been able to find a way to run any Nix-dependent job in less than one minute unless I switch to a Nix-specific CI vendor.
+  - In continuous integration (CI), Nix scales down poorly. I [haven't been able to find a way to run any Nix-dependent job](https://github.com/Gabriella439/nixos-in-production/issues/24) in less than one minute unless I switch to a Nix-specific CI vendor.
 - What's a good way to explore it?
   - Try it in small increments. You can get a lot of value from Nix by using small parts of its functionality.
-  - Try Determinate Systems Nix installer and try running a program with `nix shell`
+  - Install Nix through the Determinate Systems installer, and try running a program with `nix shell` (e.g., `nix shell -p cowsay` then `cowsay howdy, human`)
   - If you liked ephemeral shells, create a [dev shell](/notes/nix-dev-environment/) for one of your projects so that you can manage the versions of all your dependencies and dev tools from a single file.
 
 ### htmx
