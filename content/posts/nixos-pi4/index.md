@@ -1,7 +1,7 @@
 ---
 title: "Installing NixOS on Raspberry Pi 4"
 date: 2023-07-18
-lastmod: "2023-08-18T00:00:00-04:00"
+lastmod: 2025-01-21
 tags:
   - nix
   - raspberry pi
@@ -29,7 +29,9 @@ To follow this tutorial, you'll need:
 
 To begin, download the NixOS microSD image from the link below:
 
-- [nixos-sd-image-23.11pre515819.8ecc900b2f69-aarch64-linux](https://hydra.nixos.org/build/231913696/download/1/nixos-sd-image-23.11pre515819.8ecc900b2f69-aarch64-linux.img.zst)
+- [nixos-image-sd-card-25.05beta741800.78886a72ed11-aarch64-linux](https://hydra.nixos.org/build/286072374/download/1/nixos-image-sd-card-25.05beta741800.78886a72ed11-aarch64-linux.img.zst)
+
+You can find later images on Nix's build server by checking the [most recent build](https://hydra.nixos.org/job/nixos/trunk-combined/nixos.sd_image.aarch64-linux) with a green check mark.
 
 ## Decompress the NixOS microSD image
 
@@ -42,20 +44,32 @@ To decompress the NixOS image, download the latest Zstandard release for your pl
 Once you have both the Zstandard tool and the NixOS microSD image, decompress the `.img.zst` file with the following command:
 
 ```bash
-zstd --decompress "nixos-sd-image-23.11pre515819.8ecc900b2f69-aarch64-linux.img.zst"
+zstd --decompress "nixos-image-sd-card-25.05beta741800.78886a72ed11-aarch64-linux.img.zst"
 ```
 
-Decompressing the Zstandard file should produce a file called `nixos-sd-image-23.11pre515819.8ecc900b2f69-aarch64-linux.img`.
+Decompressing the Zstandard file should produce a file called `nixos-image-sd-card-25.05beta741800.78886a72ed11-aarch64-linux.img`.
 
 ## Flash the NixOS microSD image
 
 After you've decompressed the image, flash it to a microSD using your favorite microSD flashing utility.
 
+When you flash the microSD, choose the `.img` file rather than the `.img.zst` file, as most flashing tools won't understand the Zstandard format.
+
+### Option 1: balenaEtcher
+
 If you don't know which microSD flashing tool to use, I recommend [balenaEtcher](https://etcher.balena.io/). It's user-friendly and works on every major OS.
 
 {{<img src="balena-etcher-nixos.webp" alt="Screenshot of balenaEtcher">}}
 
-When you flash the microSD, choose the `.img` file rather than the `.img.zst` file, as most flashing tools won't understand the Zstandard format.
+### Option 2: caligula
+
+balenaEtcher is not available on NixOS, so if you're on NixOS, a good alternative is [caligula](https://github.com/ifd3f/caligula):
+
+```bash
+caligula burn nixos-image-sd-card-25.05beta741800.78886a72ed11-aarch64-linux.img.zst
+```
+
+caligula natively supports Zstandard file compression, so you don't need to decompress the image first.
 
 ## Insert the microSD card into your Pi
 
@@ -121,7 +135,7 @@ You can also add your SSH public key as an authorized key on the system.
 If you authenticate to GitHub with SSH keys, GitHub offers a convenient way to download your public SSH key to any device:
 
 ```bash
-GITHUB_USERNAME="your-github-username" # Replace this.
+GITHUB_USERNAME='your-github-username' # Replace this.
 
 mkdir -p ~/.ssh && \
   curl "https://github.com/${GITHUB_USERNAME}.keys" > ~/.ssh/authorized_keys
