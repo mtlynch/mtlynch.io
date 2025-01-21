@@ -1,7 +1,7 @@
 ---
 title: "Installing NixOS on Raspberry Pi 4"
 date: 2023-07-18
-lastmod: "2023-08-18T00:00:00-04:00"
+lastmod: 2025-01-21
 tags:
   - nix
   - raspberry pi
@@ -63,7 +63,7 @@ If you don't know which microSD flashing tool to use, I recommend [balenaEtcher]
 
 ### Option 2: caligula
 
-balenaEtcher is ironically not available on NixOS, so if you're on NixOS, a good alternative is caligula:
+balenaEtcher is ironically not available on NixOS, so if you're on NixOS, a good alternative is [caligula](https://github.com/ifd3f/caligula):
 
 ```bash
 caligula burn nixos-image-sd-card-25.05beta741800.78886a72ed11-aarch64-linux.img.zst
@@ -135,7 +135,7 @@ You can also add your SSH public key as an authorized key on the system.
 If you authenticate to GitHub with SSH keys, GitHub offers a convenient way to download your public SSH key to any device:
 
 ```bash
-GITHUB_USERNAME="your-github-username" # Replace this.
+GITHUB_USERNAME='your-github-username' # Replace this.
 
 mkdir -p ~/.ssh && \
   curl "https://github.com/${GITHUB_USERNAME}.keys" > ~/.ssh/authorized_keys
@@ -174,6 +174,14 @@ sudo nano /etc/nixos/configuration.nix
 Don't worry too much about perfecting the configuration file just yet. With NixOS, you can change your mind about any option at any time, and applying the change is as easy as editing the configuration file again.
 
 When you're happy with your `configuration.nix` file, run these commands to apply the configuration to your system and reboot:
+
+## Enabling swap
+
+TODO
+
+## Applying changes
+
+TODO
 
 ```bash
 sudo nixos-rebuild boot && \

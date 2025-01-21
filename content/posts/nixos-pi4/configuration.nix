@@ -7,7 +7,7 @@
   hostname = "pinix";
   user = "tempuser";
   password = "somepass";
-  nixosHardwareVersion = "7f1836531b126cfcf584e7d7d71bf8758bb58969";
+  nixosHardwareVersion = "61c79181e77ef774ab0468b28a24bc2647d498d6";
 
   timeZone = "America/New_York";
   defaultLocale = "en_US.UTF-8";
@@ -79,7 +79,15 @@ in {
     desktopManager.gnome.enable = true;
   };
 
-  hardware.pulseaudio.enable = true;
+  services.pulseaudio.enable = false;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+  };
 
-  system.stateVersion = "23.11";
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  system.stateVersion = "25.05";
 }
