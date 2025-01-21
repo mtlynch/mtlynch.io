@@ -46,7 +46,7 @@ To decompress the NixOS image, download the latest Zstandard release for your pl
 Once you have both the Zstandard tool and the NixOS microSD image, decompress the `.img.zst` file with the following command:
 
 ```bash
-zstd --decompress 'nixos-sd-image-23.11pre515819.8ecc900b2f69-aarch64-linux-aarch64-linux.img.zst'
+zstd --decompress 'nixos-sd-image-23.11pre515819.8ecc900b2f69-aarch64-linux.img.zst'
 ```
 
 Decompressing the Zstandard file should produce a file called `nixos-sd-image-23.11pre515819.8ecc900b2f69-aarch64-linux-aarch64-linux.img`.
@@ -69,7 +69,7 @@ balenaEtcher is not available on NixOS, so if you're on NixOS, a good alternativ
 
 ```bash
 caligula burn \
-  nixos-sd-image-23.11pre515819.8ecc900b2f69-aarch64-linux-aarch64-linux.img.zst
+  nixos-sd-image-23.11pre515819.8ecc900b2f69-aarch64-linux.img.zst
 ```
 
 caligula natively supports Zstandard file compression, so you don't need to decompress the image first.
