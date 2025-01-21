@@ -13,6 +13,8 @@ For every other router I've owned in my life, if there's a computer on my networ
 
 On OPNsense, I can't ping `foo123`. OPNsense seems to not resolve local hostnames by default, and I don't understand why.
 
+I've found workarounds that improve the situation somewhat, but it's still not perfect.
+
 ## Tell Unbound to resolve local hostnames
 
 Go to Services > Unbound DNS > General.
@@ -48,3 +50,13 @@ In situations where I just need OPNsense to resolve, I force the mappings manual
 1. Under "Domain" enter `local`.
 1. Under "IP address" enter the IP address you chose in the static mapping.
 1. Click "Save".
+
+## Specifying hosts with the `.local` domain suffix
+
+Sometimes, when OPNsense fails to resolve host `foo123`, it successfully resolves `foo123.local`, so I always try adding the domain suffix if the bare hostname doesn't work.
+
+I'm not sure why OPNsense needs the suffix, as the lack of domain name should make it obvious that I'm talking about a host on the local network, but the `.local` domain sometimes makes a difference.
+
+## Other improvements?
+
+If you have suggestions for making OPNsense's hostname resolution less brittle and more reliable, let me know in the comments.
