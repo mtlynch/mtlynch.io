@@ -20,7 +20,7 @@ I present to you my complete and working guide to installing NixOS on a Raspberr
 
 To follow this tutorial, you'll need:
 
-- A Raspberry Pi 4
+- A Raspberry Pi 4 with at least 2 GB of RAM
 - A microSD card with at least 8 GB of storage
 - A microSD writer
 - A separate computer to flash the microSD card
@@ -29,13 +29,15 @@ To follow this tutorial, you'll need:
 
 To begin, download the NixOS microSD image from the link below:
 
-- [nixos-image-sd-card-25.05beta741800.78886a72ed11-aarch64-linux](https://hydra.nixos.org/build/286072374/download/1/nixos-image-sd-card-25.05beta741800.78886a72ed11-aarch64-linux.img.zst)
+- [nixos-sd-image-23.11pre515819.8ecc900b2f69-aarch64-linux-aarch64-linux](https://hydra.nixos.org/build/286072374/download/1/nixos-sd-image-23.11pre515819.8ecc900b2f69-aarch64-linux-aarch64-linux.img.zst)
 
 You can find later images on Nix's build server by checking the [most recent build](https://hydra.nixos.org/job/nixos/trunk-combined/nixos.sd_image.aarch64-linux) with a green check mark.
 
+I tested [`nixos-image-sd-card-25.05beta741800.78886a72ed11`](https://hydra.nixos.org/build/286072374) (built on 2025-01-19), but I wasn't able to install on a Pi 4, as the later `nixos-build` step exhausted my Pi's 2 GB of RAM.
+
 ## Decompress the NixOS microSD image
 
-The NixOS team compresses their microSD images with an uncommon compression format called [Zstandard](https://facebook.github.io/zstd/), an open-source format from Facebook.
+The NixOS team compresses their microSD images with a compression format called [Zstandard](https://facebook.github.io/zstd/), an open-source format from Facebook.
 
 To decompress the NixOS image, download the latest Zstandard release for your platform:
 
@@ -44,10 +46,10 @@ To decompress the NixOS image, download the latest Zstandard release for your pl
 Once you have both the Zstandard tool and the NixOS microSD image, decompress the `.img.zst` file with the following command:
 
 ```bash
-zstd --decompress "nixos-image-sd-card-25.05beta741800.78886a72ed11-aarch64-linux.img.zst"
+zstd --decompress 'nixos-sd-image-23.11pre515819.8ecc900b2f69-aarch64-linux-aarch64-linux.img.zst'
 ```
 
-Decompressing the Zstandard file should produce a file called `nixos-image-sd-card-25.05beta741800.78886a72ed11-aarch64-linux.img`.
+Decompressing the Zstandard file should produce a file called `nixos-sd-image-23.11pre515819.8ecc900b2f69-aarch64-linux-aarch64-linux.img`.
 
 ## Flash the NixOS microSD image
 
@@ -66,10 +68,13 @@ If you don't know which microSD flashing tool to use, I recommend [balenaEtcher]
 balenaEtcher is not available on NixOS, so if you're on NixOS, a good alternative is [caligula](https://github.com/ifd3f/caligula):
 
 ```bash
-caligula burn nixos-image-sd-card-25.05beta741800.78886a72ed11-aarch64-linux.img.zst
+caligula burn \
+  nixos-sd-image-23.11pre515819.8ecc900b2f69-aarch64-linux-aarch64-linux.img.zst
 ```
 
 caligula natively supports Zstandard file compression, so you don't need to decompress the image first.
+
+{{<img src="caligula.webp">}}
 
 ## Insert the microSD card into your Pi
 
