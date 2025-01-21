@@ -49,7 +49,7 @@ Once you have both the Zstandard tool and the NixOS microSD image, decompress th
 zstd --decompress 'nixos-sd-image-23.11pre515819.8ecc900b2f69-aarch64-linux.img.zst'
 ```
 
-Decompressing the Zstandard file should produce a file called `nixos-sd-image-23.11pre515819.8ecc900b2f69-aarch64-linux-aarch64-linux.img`.
+Decompressing the Zstandard file should produce a file called `nixos-sd-image-23.11pre515819.8ecc900b2f69-aarch64-linux.img`.
 
 ## Flash the NixOS microSD image
 
