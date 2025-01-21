@@ -29,11 +29,11 @@ To follow this tutorial, you'll need:
 
 To begin, download the NixOS microSD image from the link below:
 
-- [nixos-sd-image-23.11pre515819.8ecc900b2f69-aarch64-linux-aarch64-linux](https://hydra.nixos.org/build/286072374/download/1/nixos-sd-image-23.11pre515819.8ecc900b2f69-aarch64-linux-aarch64-linux.img.zst)
+- [nixos-sd-image-23.11pre515819.8ecc900b2f69-aarch64-linux](https://hydra.nixos.org/build/231913696/download/1/nixos-sd-image-23.11pre515819.8ecc900b2f69-aarch64-linux.img.zst)
 
 You can find later images on Nix's build server by checking the [most recent build](https://hydra.nixos.org/job/nixos/trunk-combined/nixos.sd_image.aarch64-linux) with a green check mark.
 
-I tested [`nixos-image-sd-card-25.05beta741800.78886a72ed11`](https://hydra.nixos.org/build/286072374) (built on 2025-01-19), but I wasn't able to install on a Pi 4, as the later `nixos-build` step exhausted my Pi's 2 GB of RAM.
+I recently attempted this process with a later build ([`nixos-image-sd-card-25.05beta741800.78886a72ed11`](https://hydra.nixos.org/build/286072374), built on 2025-01-19), but the install failed. The later `nixos-build` step exhausted my Pi 4's 2 GB of RAM.
 
 ## Decompress the NixOS microSD image
 
