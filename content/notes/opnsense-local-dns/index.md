@@ -3,11 +3,11 @@ title: "Fixing Local DNS Resolution in OPNSense"
 date: 2025-01-21
 ---
 
-I run a router that runs OPNSense Business, as I like running open-source routing software and having a vendor that's financially responsible for maintaining it.
+My router runs OPNSense Business. I like having an open-source router, but I have a few gripes with it.
+
+My biggest issue is that, by default, OPNsense can't resolve hostnames on my local network.
 
 ## Why can't OPNsense resolve local hostnames?
-
-My biggest gripe with OPNSense is that it's bad at resolving hostnames locally.
 
 For every other router I've owned in my life, if there's a computer on my network named `foo123` and I run `ping foo123`, then everything just works, and my computer successfully pings `foo123`.
 
