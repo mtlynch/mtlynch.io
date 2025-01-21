@@ -1,5 +1,5 @@
 ---
-title: "Fixing Local DNS Resolution in OPNSense"
+title: "How to Resolve Local Hostnames in OPNSense"
 date: 2025-01-21
 ---
 
