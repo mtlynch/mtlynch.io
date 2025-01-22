@@ -131,13 +131,13 @@ I'm always on the lookout for some excuse to use Zig for a practical purpose, bu
 
 The thing that kept me from learning Zig was that my fun coding is mainly around projects I want to use, and most of the project ideas I have are web apps.
 
-I still have fun coding in Zig. If I was sent to live on a desert island for a year with a laptop but no Internet, the project I'd want to work on is taking an open-source rebuild of some computer game I played in the 90s (e.g. [Age of Empires II](http://openage.dev/), [Command and Conquer](https://www.openra.net/)) and porting all the disgusting C++ code to elegant Zig.
+I still have fun coding in Zig. If I was sent to live on a desert island for a year with a laptop but no Internet, the project I'd want to work on is taking an open-source rebuild of some computer game I played as a kid (e.g. [Age of Empires II](http://openage.dev/), [Command and Conquer](https://www.openra.net/)) and porting all the disgusting C++ code to elegant Zig.
 
 - Who should try it?
   - Programmers who have used C and C++.
 - What's my pitch?
   - Easy to reason about.
-  - Zig is the most fun programming I've done in a long time. There's something about coding with extremely low abstraction that feels exciting.
+  - Zig is the most fun programming I've done in a long time. There's something about coding with extremely low abstraction that feels exciting. I enjoy thinking about exactly how many times to read a piece of memory and controlling exactly when to make a copy of an object.
 - What are the drawbacks?
   - There's no stable 1.0 release yet. You'll likely have to rewrite some of your code every time you update to the latest Zig compiler. If you read Zig examples in blog posts, you usually need to tweak them to run on the latest compiler.
   - I haven't found good resources for learning the language. There are no Zig books or courses yet. I mainly learn by cobbling together information from disparate blog posts, forum discussions, and the [Zig language spec](https://ziglang.org/documentation/master/).
