@@ -34,6 +34,13 @@ Despite configuring Unbound, I find that OPNsense still doesn't always resolve l
 
 In situations where I just need OPNsense to resolve, I force the mappings manually.
 
+### Choose a local domain name
+
+1. Go to System > Settings > General.
+1. Under "Domain" specify a domain name for your local network.
+   - I always thought you were supposed to choose `local`, but the help text warns that you're not supposed to do that.
+   - I chose [`home.arpa`](https://datatracker.ietf.org/doc/html/rfc8375), as that's the technically correct domain for a home network, but wow is it ugly.
+
 ### Create a static mapping for the host
 
 1. Go to Services > ISC DHCPv4 > Leases
@@ -47,15 +54,15 @@ In situations where I just need OPNsense to resolve, I force the mappings manual
 1. Go to Services > Unbound DNS > Overrides.
 1. Under "Host Overrides", click the orange "+" button to add a new override.
 1. Under "Host" enter the hostname you specified in the static mapping.
-1. Under "Domain" enter `local`.
+1. Under "Domain" enter `home.arpa`.
 1. Under "IP address" enter the IP address you chose in the static mapping.
 1. Click "Save".
 
-## Specifying hosts with the `.local` domain suffix
+## Specifying hosts with the `.home.arpa` domain suffix
 
-Sometimes, when OPNsense fails to resolve host `foo123`, it successfully resolves `foo123.local`, so I always try adding the domain suffix if the bare hostname doesn't work.
+Sometimes, when OPNsense fails to resolve host `foo123`, it successfully resolves `foo123.home.arpa`, so I always try adding the domain suffix if the bare hostname doesn't work.
 
-I'm not sure why OPNsense needs the suffix, as the lack of domain name should make it obvious that I'm talking about a host on the local network, but the `.local` domain sometimes makes a difference.
+I'm not sure why OPNsense needs the suffix, as the lack of domain name should make it obvious that I'm talking about a host on the local network, but the `.home.arpa` domain sometimes makes a difference.
 
 ## Other improvements?
 
