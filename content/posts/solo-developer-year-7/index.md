@@ -17,17 +17,20 @@ TinyPilot is a device that lets users control their computers remotely. I built 
 
 {{<img src="tinypilot-prototype.webp" alt="Photo of a laptop open with 'Hello, World' printed on the screen. On another laptop, the same desktop is displayed within a TinyPilot web interface." max-width="450px" caption="The prototype of TinyPilot, which allowed me to control computers in my home remotely without installing any software">}}
 
-I wrote [a blog post](/tinypilot/) about how I got the initial version of TinyPilot to work, and dozens of customers materialized who were willing to pay $100-200 for TinyPilot build-it-it-yourself kits.
+I wrote [a blog post](/tinypilot/) about how I got the initial version of TinyPilot to work, and I offered build-it-it-yourself kits for $XX. The kits sold out within XX hours.
 
-For the next four years, I improved on the TinyPilot product and built it into a real company. I graduated from kits to pre-made devices. I hired a team to help me with hardware, software, support, and logistics, eventually growing the company to $1M/year in revenue.
+For the next four years, I improved on the TinyPilot product and built it into a real company. I evolved the product from DIY kits to pre-made devices. I hired a team to help me with hardware, software, support, and logistics, eventually growing the company to $1M/year in revenue.
 
-TODO: Photo of later version
+{{<gallery caption="Over the next four years, TinyPilot evolved into a more refined product.">}}
+{{<img src="2a-front.webp" alt="Front view of TinyPilot Voyager 2a device" max-width="350px">}}
+{{<img src="tinypilot-bios-menu-2.webp" alt="Screenshot of TinyPilot web interface" max-width="350px">}}
+{{</gallery>}}
 
 Last year, I sold the company for $600k.
 
 My wife and I wanted to start a family, and I didn't think I could be both the sole manager of a seven-person company and a good father to a newborn. I found a buyer whose vision for the company aligned with mine, and we completed the sale in April 2024.
 
-{{<img src="sold-tinypilot.webp"  max-width="600px" alt="Illustration of me waving goodbye to TinyPilot mascot flying away in tiny prop plane" caption="Me selling TinyPilot to start a family">}}
+{{<img src="sold-tinypilot.webp"  max-width="600px" alt="Illustration of me waving goodbye to TinyPilot mascot flying away in tiny prop plane" caption="Me selling TinyPilot so I could start a family">}}
 
 I already [wrote](/i-sold-tinypilot/) and [podcasted](https://softwaremisadventures.com/p/michael-lynch-indie-hacking) a lot about selling my company and [the lessons I learned](/lessons-from-my-first-exit/), but the short version is that I'm grateful for how everything worked out.
 
@@ -35,7 +38,7 @@ I already [wrote](/i-sold-tinypilot/) and [podcasted](https://softwaremisadventu
 
 In August, my wife and I welcomed our first child, a son.
 
-Shortly after the birth, one of the nurses took a nice photo of the three of us. I'm protective of my son's privacy, so I ran the picture through a hand-tuned Fast Fourier transform to remove identifying biometric details:
+Shortly after the birth, one of the nurses took a nice photo of my wife and I with our new baby. I'm protective of my son's privacy, so I ran the picture through a hand-tuned fast Fourier transform to remove identifying biometric details:
 
 {{<img src="baby-photo.webp" has-border="true" max-width="450px" alt="Stick figure drawing of my family" caption="Photo of me, my wife, and our newborn son, post-processed with a privacy-preserving photo filter">}}
 
@@ -45,7 +48,7 @@ I'm thankful for the flexibility I get from being an indie founder and for the t
 
 ## I worked on educational products
 
-I sold TinyPilot in April, but I stayed with the company through mid-May to help with the transition.
+I sold TinyPilot in April, but I stayed with the company through mid-May to help with the transition to the new owner.
 
 My son was due in August, and I knew I'd take time off when he arrived. That left me three months to start something new, but it needed to be something I could shelve for a few months while I figured out life post-baby.
 
@@ -95,22 +98,27 @@ I've been adopting Nix little by little, but I like it so much that I now use Ni
 
 ### htmx
 
-I'd seen people talking about htmx for the past several years, but the concept never clicked for me. "The flagship feature is that you can make the HTML `<button>` element send a POST request?" I thought. "Who cares?"
+I'd seen people talking about [htmx](https://htmx.org) for the past several years, but the concept never clicked for me.
 
-During a long plane ride, I read the free ebook _Hypermedia Systems_. It's written by the authors of htmx. And I finally got that it's not about letting a `<button>` send a POST request but rather about bringing simple interactivity to HTML without having to write custom JavaScript.
+The flagship feature is that you can make the HTML `<button>` element send a POST request? Who cares?
 
-I was so used to writing custom JavaScript to make my web apps work. I knew it was repetitive and tedious, but I figured that that's just how it has to be if I'm going to add logic to the presentation-focused HTML.
+Then, during a long plane ride, I read the free ebook [_Hypermedia Systems_](https://hypermedia.systems/) about the philosophy of htmx. The book made me realize that htmx's value isn't about letting a `<button>` send a POST request but rather about bringing simple interactivity to HTML without having to write custom JavaScript.
+
+I always knew that the JavaScript part of web apps was tedious and repetitive, but I'd long ago accepted that as normal. HTML/CSS should focus on presentation, and JavaScript should focus on interactivity, so there has to be glue code to connect the two, and glue code is inherently boring.
+
+htmx's thesis is that you can bring more interactivity to the HTML/CSS part of a web app to eliminate glue code and boilerplate JavaScript. And you can do it without introducing a lot of complexity and dependencies like npm, Webpack, and gigantic frontend frameworks.
 
 - Who should try it?
-  - Developers who prefer minimal frontend libraries over heavy frameworks like React and Vue.
+  - Developers who prefer vanilla JavaScript or jQuery over heavy frameworks like React and Vue.
 - What's my pitch?
   - htmx makes you realize how much unnecessary JavaScript you've been writing all the time.
-  - htmx strikes a difficult balance in web programming in that it saves you from duplicating boilerplate code. Heavier JS frameworks perform inscrutable magic on your code to turn it into a web app whose HTML looks nothing like the source code you wrote, but htmx is low-abstraction, so the code that's running in your browser is the code that you wrote.
-  - It's a library rather than a framework, so adopting htmx isn't all-or-nothing. You can try it on a page or two to see if you like it.
-  - There's no build step, so you don't have to run your code through any sort of Webpack / Node.js tool just to generate plaintext HTML, CSS, and JavaScript.
+  - htmx strikes a difficult balance in web programming: it saves you from duplicating boilerplate code. Heavier JS frameworks perform inscrutable magic on your code to turn it into a web app whose HTML looks nothing like the source code you wrote, but htmx is low-abstraction, so the code that's running in your browser is the code that you wrote.
+  - It's a library rather than a framework, so adopting htmx isn't all-or-nothing like React or Vue. You can try htmx on a single form in your web app to see if you like it.
+  - There's no build step, so you don't have to run your code through Webpack / Node.js just to generate plaintext HTML, CSS, and JavaScript.
 - What are the drawbacks?
+  - It's an adjustment to recognize the htmx way of writing web apps, but it often results in simpler code.
   - I find htmx's [error handling awkward](/retrospectives/2024/07/#htmxs-error-handling-is-underwhelming), but I have a [decent workaround](/retrospectives/2024/08/#finding-my-preferred-pattern-for-htmx-forms)
-  - htmx [weakens Content Security Policy (CSP)](/retrospectives/2024/07/#htmx-weakens-content-security-policy-csp)
+  - htmx [weakens Content Security Policy (CSP)](/retrospectives/2024/07/#htmx-weakens-content-security-policy-csp).
 - What's a good way to explore it?
   - Read my [more detailed pitch for htmx](/retrospectives/2024/07/#learning-htmx).
   - Read about my experience [porting ScreenJournal to htmx](/retrospectives/2024/08/#finding-my-preferred-pattern-for-htmx-forms).
@@ -139,12 +147,14 @@ I still have fun coding in Zig. If I was sent to live on a desert island for a y
   - Easy to reason about.
   - Zig is the most fun programming I've done in a long time. There's something about coding with extremely low abstraction that feels exciting. I enjoy thinking about exactly how many times to read a piece of memory and controlling exactly when to make a copy of an object.
 - What are the drawbacks?
-  - There's no stable 1.0 release yet. You'll likely have to rewrite some of your code every time you update to the latest Zig compiler. If you read Zig examples in blog posts, you usually need to tweak them to run on the latest compiler.
-  - I haven't found good resources for learning the language. There are no Zig books or courses yet. I mainly learn by cobbling together information from disparate blog posts, forum discussions, and the [Zig language spec](https://ziglang.org/documentation/master/).
+  - There's no stable 1.0 release yet. You'll likely have to rewrite some of your code every time you update to the latest Zig compiler.
+  - If you read Zig examples in blog posts, you usually need to tweak them to run on the latest compiler.
+  - I haven't found good resources for learning the language. There are no Zig books yet.
+    - I mainly learn by cobbling together information from disparate blog posts, forum discussions, and the [Zig language spec](https://ziglang.org/documentation/master/).
 - What's a good way to explore it?
-  - Try taking a simple program you know how to write in C or C++, and try building it in Zig.
+  - Try taking a simple program you'd normally write in C or C++, and try writing it in Zig instead.
   - Try [Ziglings](https://ziglings.org), beginnner exercises for learning Zig.
-    - If you have Nix, an easy way to get the latest pre-release Zig compiler is by running: `nix shell 'github:mitchellh/zig-overlay#master'`
+    - Ziglings exercises depend on pre-release versions of the Zig compiler. If you have Nix, an easy way to get the latest pre-release Zig compiler is by running: `nix shell 'github:mitchellh/zig-overlay#master'`
 
 ### Fuzz testing with Nix
 
@@ -152,11 +162,9 @@ You probably thought I was done talking about Nix. I'm not!
 
 I'd been curious to try fuzz testing to find security vulnerabilities, as I hadn't used fuzzing tools since I [found a serious vulnerability in VLC](https://www.nccgroup.com/us/research-blog/fuzzing-rtsp-to-discover-an-exploitable-vulnerability-in-vlc/), ten years ago.
 
-I found Antonio Morales' 2021 [fuzz testing tutorial series](https://github.com/antonio-morales/Fuzzing101), which I liked, but it involves a lot of boring gruntwork to set up a working fuzzing environment.
+I enjoyed [Antonio Morales' 2021 fuzz testing tutorial](https://github.com/antonio-morales/Fuzzing101), but all the exercises involved a lot of boring gruntwork just to set up a working fuzzing environment.
 
-I tried implementing a fuzzing workflow in Nix, and I found that Nix made the experience so much better.
-
-I wish I had time to do more fuzzing tutorials with Nix because I feel like the world is sleeping on Nix as a fuzzing tool.
+I tried implementing a fuzzing workflow in Nix, and I found that Nix made the experience so much better. I wish I had time to do more fuzzing tutorials with Nix because I feel like the world is sleeping on Nix as a fuzzing tool.
 
 - Who should try it?
   - Anyone who performs fuzz testing, especially on C/C++ code.
@@ -174,19 +182,47 @@ I wish I had time to do more fuzzing tutorials with Nix because I feel like the 
 - What's a good way to explore it?
   - Try [my beginner-friendly tutorial](/nix-fuzz-testing-1/) about how I used Nix and honggfuzz to create a fuzzing workflow for an open-source PDF reader.
 
+## How was my year overall?
+
+Every year, I ask myself whether I still enjoy being an indie founder.
+
+For the past two years, my answer has been complicated. When I was running TinyPilot, I was proud of the work and enjoyed the team, but the pace and complexity of the work stressed me out.
+
+The past year, I can give a much less qualified answer that I enjoyed being an indie founder. I loved having the freedom to spend a lot of time with my family, and I was grateful that returning to work was entirely up to me, and I had complete control over when I started working again and how many hours per week I did it.
+
+I also had fun exploring technology in a way that I haven't been able to in as long as I remember.
+
+Selling TinyPilot was stressful and unpleasant, but when I look back, the parts I remember were celebrating with my wife and friends on [an impromptu dessert tour of Western Massachusetts](/i-sold-tinypilot/#part-4-after-the-sale).
+
+In May, a Google recruiter emailed me offering me my old job back with no interview, and I was not at all tempted.
+
 ## Lessons learned
 
 ### It's okay not to work
+
+When I took a break from working after my son was born, I had this fear. If one month is okay, why not two? Why not four? Why not a year?
 
 I'm still trying to convince myself
 
 ### Selling to a cash buyer drastically reduces risk and paperwork
 
-TODO
+One of the biggest lessons from selling TinyPilot was how big a difference closing time makes. A 30-day close is different from a close that takes three to six months to close.
+
+One factor that hugely impacts closing time is where the buyer is getting the money. If the buyer is borrowing the money from a bank, now the bank is involved in this deal, and they'll move slowly, demand a lot of paperwork, and they're harder to negotiate with because they don't care if the deal falls through.
+
+At first, I thought faster close would be better, but I'm a patient person. What's another two months? But it's not just another two months of waiting. It's another two months where you're bearing the risk should the deal fall through. It's another two months where 25-75% of your working hours are dedicated to paperwork and discussions related to the acquisition.
+
+If I sell another company, I'd still consider a buyer who's financing the deal with a loan, but I'd offer more incentives for a cash buyer.
 
 ### A process isn't really documented until someone else uses the documentation
 
-In the months leading up to the TinyPilot sale, I focused on
+In the months leading up to the TinyPilot sale, I focused on shifting my responsibilities to the team. I didn't want a new owner to take over and feel like I left them in the dark about things like our release process or publishing to the company blog.
+
+I initially felt like those things would be easy because I had documented them for myself. Every time we went through those workflows, I'd keep myself honest by using my own documentation to guide the process.
+
+But as we approached the sale, I began having my teammates take over those workflows, and I realized how much of the "documented" process actually just lived in my head. I realized that a step like, "Review video of end-to-end testing" only works if the person watching the video knows what correct behavior looks like.
+
+So, a process is only documented when someone can follow it who isn't the person who wrote the documentation.
 
 ## Grading last year's goals
 
@@ -232,16 +268,6 @@ TODO
 Every time I learn a new programming language, it gives me insights I can apply to any programming language.
 
 A lot of my favorite bloggers are excited about [Elixir](https://elixir-lang.org/) and [Phoenix](https://hexdocs.pm/phoenix/), so I'm curious to try those.
-
-## How was my year overall?
-
-I enjoyed time off to be with family.
-
-Selling was stressful and unpleasant, and it was a relief to be done.
-
-Had more fun programming than I have in a long time.
-
-I'm still happy. I got an email from a Google recruiter in XX offering me my old job back with no interview, and I was not tempted.
 
 ---
 
