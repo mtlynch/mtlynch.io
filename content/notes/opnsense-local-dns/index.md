@@ -9,9 +9,9 @@ My biggest issue is that, by default, OPNsense can't resolve hostnames on my loc
 
 ## Why can't OPNsense resolve local hostnames?
 
-For every other router I've owned in my life, if there's a computer on my network named `foo123` and I run `ping foo123`, then everything just works, and my computer successfully pings `foo123`.
+For every other router I've owned in my life, if there's a computer on my network named `foo123` and I run `ping foo123` from my main desktop, then everything just works. My desktop successfully pings `foo123`.
 
-On OPNsense, I can't ping `foo123`. OPNsense seems to not resolve local hostnames by default, and I don't understand why.
+With OPNsense, I can't ping `foo123` from my desktop. OPNsense seems to not resolve local hostnames by default, and I don't understand why.
 
 I've found workarounds that improve the situation somewhat, but it's still not perfect.
 
