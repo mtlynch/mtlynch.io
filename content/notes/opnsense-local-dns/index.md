@@ -40,6 +40,9 @@ In situations where I just need OPNsense to resolve, I force the mappings manual
 1. Under "Domain" specify a domain name for your local network.
    - I always thought you were supposed to choose `local`, but the help text warns that you're not supposed to do that.
    - I chose [`home.arpa`](https://datatracker.ietf.org/doc/html/rfc8375), as that's the technically correct domain for a home network, but wow is it ugly.
+1. Click "Save" to apply the change.
+
+{{<img src="home.arpa-setting.webp" has-border="true" max-width="800px">}}
 
 ### Create a static mapping for the host
 
