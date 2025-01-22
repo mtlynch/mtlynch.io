@@ -39,7 +39,8 @@ In situations where I just need OPNsense to resolve, I force the mappings manual
 1. Go to System > Settings > General.
 1. Under "Domain" specify a domain name for your local network.
    - I always thought you were supposed to choose `local`, but the help text warns that you're not supposed to do that.
-   - I chose [`home.arpa`](https://datatracker.ietf.org/doc/html/rfc8375), as that's the technically correct domain for a home network, but wow is it ugly.
+   - I chose `home.arpa`, as that's [the technically correct domain](https://datatracker.ietf.org/doc/html/rfc8375) for a home network, but wow is it ugly.
+   - According to the IETF's definition, the domain should actually be `home.arpa.` (with a trailing dot), but OPNsense rejects that as a domain and recommends `home.arpa`, so I'm sticking with that.
 1. Click "Save" to apply the change.
 
 {{<img src="home.arpa-setting.webp" has-border="true" max-width="800px">}}
