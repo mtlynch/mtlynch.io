@@ -1,11 +1,11 @@
 ---
 title: "My Seventh Year as a Bootstrapped Founder"
-date: 2025-02-01
+date: 2025-02-03
 tags:
   - annual review
 ---
 
-Exactly seven years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own bootstrapped software company.
+Seven years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own bootstrapped software company.
 
 Every year, I post an update about how things have gone in the last year and what my life is like as an an indie founder.
 
@@ -32,13 +32,13 @@ My wife and I wanted to start a family, and I didn't think I could be both the s
 
 {{<img src="sold-tinypilot.webp"  max-width="600px" alt="Illustration of me waving goodbye to TinyPilot mascot flying away in tiny prop plane" caption="Me selling TinyPilot so I could start a family">}}
 
-I already [wrote](/i-sold-tinypilot/) and [podcasted](https://softwaremisadventures.com/p/michael-lynch-indie-hacking) a lot about selling my company and [the lessons I learned](/lessons-from-my-first-exit/), but the short version is that I'm grateful for how everything worked out.
+I already wrote and [podcasted](https://softwaremisadventures.com/p/michael-lynch-indie-hacking) about [the process of selling my company](/i-sold-tinypilot/) and [the lessons I learned](/lessons-from-my-first-exit/), but the short version is that I'm grateful for how everything worked out.
 
 ## I became a new parent
 
 In August, my wife and I welcomed our first child, a son.
 
-Shortly after the birth, one of the nurses took a nice photo of my wife and I with our new baby. I'm protective of my son's privacy, so I ran the picture through a hand-tuned fast Fourier transform to remove identifying biometric details:
+Shortly after the birth, one of the nurses took a beautiful photo of my wife and I with our new baby. I've included it below, but I'm protective of my son's privacy, so I ran the picture through a hand-tuned fast Fourier transform to remove biometric details:
 
 {{<img src="baby-photo.webp" has-border="true" max-width="450px" alt="Stick figure drawing of my family" caption="Photo of me, my wife, and our newborn son, post-processed with a privacy-preserving photo filter">}}
 
@@ -84,7 +84,7 @@ I've been adopting Nix little by little, but I like it so much that I now use Ni
   - Developers who appreciate infrastructure as code tools like Docker or Ansible.
 - What's my pitch?
   - On software projects, Nix allows you to define all of your dependencies in source code. Anyone can replicate your environment in one command.
-  - NixOS allows you to define your computer's entire configuration in source code. You can easily rebuild your computer from scratch or roll back to previous configurations.
+  - NixOS is a Linux distro designed around the Nix concept. NixOS allows you to define your computer's entire configuration in source code with version control. NixOS allows you to easily rebuild your computer from scratch or roll back to previous configurations.
   - Nix has many of the advantages of Docker, except that Nix packages compose better than Docker images.
 - What are the drawbacks?
   - Nix has a steep learning curve, and I haven't found a good developer-oriented beginner guide. The closest is [_NixOS in Production_](https://leanpub.com/nixos-in-production), which is aimed at DevOps engineers.
@@ -93,28 +93,27 @@ I've been adopting Nix little by little, but I like it so much that I now use Ni
   - In continuous integration (CI), Nix scales down poorly. I [haven't been able to find a way to run any Nix-dependent job](https://github.com/Gabriella439/nixos-in-production/issues/24) in less than one minute unless I switch to a Nix-specific CI vendor.
 - What's a good way to explore it?
   - Try it in small increments. You can get a lot of value from Nix by using small parts of its functionality.
-  - Install Nix through the Determinate Systems installer, and try running a program with `nix shell` (e.g., `nix shell -p cowsay` then `cowsay howdy, human`)
+  - Install Nix through [the Determinate Systems installer](https://zero-to-nix.com/start/install/), and try running a program with `nix shell` (e.g., `nix shell -p cowsay` then `cowsay howdy, human`)
   - If you liked ephemeral shells, create a [dev shell](/notes/nix-dev-environment/) for one of your projects so that you can manage the versions of all your dependencies and dev tools from a single file.
 
 ### htmx
 
-I'd seen people talking about [htmx](https://htmx.org) for the past several years, but the concept never clicked for me.
+My friends have been praising [htmx](https://htmx.org) for the past several years, but the concept never clicked for me.
 
-The flagship feature is that you can make the HTML `<button>` element send a POST request? Who cares?
+You can make the HTML `<button>` element send a POST request? Who cares?
 
-Then, during a long plane ride, I read the free ebook [_Hypermedia Systems_](https://hypermedia.systems/) about the philosophy of htmx. The book made me realize that htmx's value isn't about letting a `<button>` send a POST request but rather about bringing simple interactivity to HTML without having to write custom JavaScript.
+Then, during a long plane ride, I read the free ebook [_Hypermedia Systems_](https://hypermedia.systems/) about the philosophy of htmx. The book made me realize that htmx's value isn't about letting a `<button>` send a POST request. It's about bringing simple interactivity to HTML without burdening the developer with custom JavaScript or deep layers of abstraction.
 
-I always knew that the JavaScript part of web apps was tedious and repetitive, but I'd long ago accepted that as normal. HTML/CSS should focus on presentation, and JavaScript should focus on interactivity, so there has to be glue code to connect the two, and glue code is inherently boring.
+I always knew that the JavaScript part of web apps was tedious and repetitive, but I'd long ago accepted that as normal. HTML/CSS handles presentation, and JavaScript handles interactivity. There has to be glue code to connect the two, and glue code is inherently boring.
 
 htmx's thesis is that you can bring more interactivity to the HTML/CSS part of a web app to eliminate glue code and boilerplate JavaScript. And you can do it without introducing a lot of complexity and dependencies like npm, Webpack, and gigantic frontend frameworks.
 
 - Who should try it?
   - Developers who prefer vanilla JavaScript or jQuery over heavy frameworks like React and Vue.
 - What's my pitch?
-  - htmx makes you realize how much unnecessary JavaScript you've been writing all the time.
-  - htmx strikes a difficult balance in web programming: it saves you from duplicating boilerplate code. Heavier JS frameworks perform inscrutable magic on your code to turn it into a web app whose HTML looks nothing like the source code you wrote, but htmx is low-abstraction, so the code that's running in your browser is the code that you wrote.
-  - It's a library rather than a framework, so adopting htmx isn't all-or-nothing like React or Vue. You can try htmx on a single form in your web app to see if you like it.
-  - There's no build step, so you don't have to run your code through Webpack / Node.js just to generate plaintext HTML, CSS, and JavaScript.
+  - htmx makes you realize how much unnecessary JavaScript you've been writing all your life.
+  - htmx is a library rather than a framework, so adopting htmx isn't all-or-nothing like React or Vue. You can try htmx on a single form in your web app to see if you like it.
+  - There's no build step, so you don't have to run your code through Webpack / Node.js just to generate plaintext HTML, CSS, and JavaScript. The code you write is the same code you see running in the browser.
 - What are the drawbacks?
   - It's an adjustment to recognize the htmx way of writing web apps, but it often results in simpler code.
   - I find htmx's [error handling awkward](/retrospectives/2024/07/#htmxs-error-handling-is-underwhelming), but I have a [decent workaround](/retrospectives/2024/08/#finding-my-preferred-pattern-for-htmx-forms)
@@ -127,32 +126,26 @@ htmx's thesis is that you can bring more interactivity to the HTML/CSS part of a
 
 ### Zig
 
-I'd been interested in Zig ever since I listened to Andrew Kelly on the XX podcast XX years ago. He argued that we suffer so much from designing low-level software in C and C++, languages that were designed XX years ago under constraints that no longer apply. He developed Zig to achieve the same results as C and C++ but using the technological advantages that are available today.
+The idea of Zig is that there are still programs we need to write in low-level languages like C, but why are we using languages that were designed 50 years ago before many huge advancements in hardware and compiler design? Zig gives you the same power and performance you can achieve with C, but with language conveniences that C can't provide.
 
-I found Andrew's argument compelling and his enthusiasm contagious. I loved the idea of Zig as a replacement for C++, but I hadn't written any C++ for personal projects in a decade. All the projects I create are just things I want to use and share with friends, so they're typically web apps, which I don't want to write in a low-level systems language like C++ or Zig.
+I immediately loved the idea of Zig, but I struggled to find a project for it. I haven't used C or C++ for a personal project in 15 years. I typically find it more fun to build small-scale web apps, and Zig isn't the best tool for those.
 
-After I attended Handmade Seattle in 2023, I met Andrew Kelly, and it inspired me to finally write some Zig. And I enjoyed Zig. It's the most fun I've had learning a new language in a long time. It reminds me of when I first learned to program and there's a sense of mastery because there's so little abstraction that you feel in control.
+I started working on a [pure Zig implementatio of the Ethereum virtual machine](https://github.com/mtlynch/zenith), but I ran out of steam. I realized the project wouldn't be serve any practical purpose until I have a complete implementation of Ethereum, and that would be months of full-time work.
 
-I started working on a pure Zig implementatio of the Ethereum virtual machine, but I ran out of steam. It's not particularly useful until I have a complete implementation, and that's a huge amount of work.
-
-I'm always on the lookout for some excuse to use Zig for a practical purpose, but I just don't have any good project ideas for it at the moment.
-
-The thing that kept me from learning Zig was that my fun coding is mainly around projects I want to use, and most of the project ideas I have are web apps.
-
-I still have fun coding in Zig. If I was sent to live on a desert island for a year with a laptop but no Internet, the project I'd want to work on is taking an open-source rebuild of some computer game I played as a kid (e.g. [Age of Empires II](http://openage.dev/), [Command and Conquer](https://www.openra.net/)) and porting all the disgusting C++ code to elegant Zig.
+I still find Zig extremely fun. If I was sent to live on a desert island for a year with a laptop but no Internet, my fantasy quest would be to take an open-source rebuild of a computer game I played as a kid (e.g. [Age of Empires II](http://openage.dev/), [Command and Conquer](https://www.openra.net/)) and port all the unrefined C++ code to elegant Zig.
 
 - Who should try it?
   - Programmers who have used C and C++.
 - What's my pitch?
-  - Easy to reason about.
-  - Zig is the most fun programming I've done in a long time. There's something about coding with extremely low abstraction that feels exciting. I enjoy thinking about exactly how many times to read a piece of memory and controlling exactly when to make a copy of an object.
+  - Zig is the most fun I've had programming in a long time, and I generally find programming pretty fun. There's something extra fun about coding with extremely low abstraction. There's special delight in exercising full control over how many times my application touches a piece of memory.
+  - Zig optimizes for explicit control flow and memory allocation, so I find Zig code easy to reason about.
+  - The Zig community is welcoming and positive. Whenever I ask questions, I get patient, helpful answers. When I share my [Zig tutorials](/tags/zig/), the community welcomes them enthusiastically.
 - What are the drawbacks?
   - There's no stable 1.0 release yet. You'll likely have to rewrite some of your code every time you update to the latest Zig compiler.
   - If you read Zig examples in blog posts, you usually need to tweak them to run on the latest compiler.
-  - I haven't found good resources for learning the language. There are no Zig books yet.
-    - I mainly learn by cobbling together information from disparate blog posts, forum discussions, and the [Zig language spec](https://ziglang.org/documentation/master/).
+  - I haven't found good resources for learning the language. There are no Zig books yet. I mainly learn by cobbling together information from disparate blog posts, forum discussions, and the [Zig language spec](https://ziglang.org/documentation/master/).
 - What's a good way to explore it?
-  - Try taking a simple program you'd normally write in C or C++, and try writing it in Zig instead.
+  - Take a simple program you'd normally write in C or C++, and write it in Zig instead.
   - Try [Ziglings](https://ziglings.org), beginnner exercises for learning Zig.
     - Ziglings exercises depend on pre-release versions of the Zig compiler. If you have Nix, an easy way to get the latest pre-release Zig compiler is by running: `nix shell 'github:mitchellh/zig-overlay#master'`
 
@@ -164,7 +157,7 @@ I'd been curious to try fuzz testing to find security vulnerabilities, as I hadn
 
 I enjoyed [Antonio Morales' 2021 fuzz testing tutorial](https://github.com/antonio-morales/Fuzzing101), but all the exercises involved a lot of boring gruntwork just to set up a working fuzzing environment.
 
-I tried implementing a fuzzing workflow in Nix, and I found that Nix made the experience so much better. I wish I had time to do more fuzzing tutorials with Nix because I feel like the world is sleeping on Nix as a fuzzing tool.
+I tried implementing a fuzzing workflow in Nix, and I found that Nix made the experience so much better. I wish I had time to create more [fuzzing tutorials with Nix](/nix-fuzz-testing-1/) because I feel like the world is sleeping on Nix as a fuzzing tool.
 
 - Who should try it?
   - Anyone who performs fuzz testing, especially on C/C++ code.
@@ -186,19 +179,23 @@ I tried implementing a fuzzing workflow in Nix, and I found that Nix made the ex
 
 Every year, I ask myself whether I still enjoy being an indie founder.
 
-For the past two years, my answer has been complicated. When I was running TinyPilot, I was proud of the work and enjoyed the team, but the pace and complexity of the work stressed me out.
+For the past few years, I had a hard time answering this question. When I was running TinyPilot, I was proud of my work and enjoyed working with the team, but I felt like the pace and complexity of a hardware company was too much for me.
 
-The past year, I can give a much less qualified answer that I enjoyed being an indie founder. I loved having the freedom to spend a lot of time with my family, and I was grateful that returning to work was entirely up to me, and I had complete control over when I started working again and how many hours per week I did it.
-
-I also had fun exploring technology in a way that I haven't been able to in as long as I remember.
+This year, I had fun being an indie founder again. I loved having the freedom to spend so much time with my wife and our son. I was grateful that my return to work was entirely up to me, and I had complete control over how and when to phase work into my post-baby life.
 
 Selling TinyPilot was stressful and unpleasant, but when I look back, the parts I remember were celebrating with my wife and friends on [an impromptu dessert tour of Western Massachusetts](/i-sold-tinypilot/#part-4-after-the-sale).
 
 In May, a Google recruiter emailed me offering me my old job back with no interview, and I was not at all tempted.
 
+I continue enjoying life as an indie founder, and I still want to keep doing it for as long as possible.
+
 ## Lessons learned
 
 ### It's okay not to work
+
+In the months leading up to my son's birth, I struggled with the question of how much time to take off.
+
+We have enough in savings that I could take time off comfortably, but I also didn't have any source of income anymore.
 
 When I took a break from working after my son was born, I had this fear. If one month is okay, why not two? Why not four? Why not a year?
 
