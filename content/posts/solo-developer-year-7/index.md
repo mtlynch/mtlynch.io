@@ -205,16 +205,6 @@ I took a breath and realized the reason I had "no free time" was that I was spen
 
 In the end, I found that there was just a time where it felt right to start working again, and my wife and I figured out a good balance.
 
-### Selling to a cash buyer drastically reduces risk and paperwork
-
-One of the biggest lessons from selling TinyPilot was how big a difference closing time makes. A 30-day close is different from a close that takes three to six months to close.
-
-One factor that hugely impacts closing time is where the buyer is getting the money. If the buyer is borrowing the money from a bank, now the bank is involved in this deal, and they'll move slowly, demand a lot of paperwork, and they're harder to negotiate with because they don't care if the deal falls through.
-
-At first, I thought faster close would be better, but I'm a patient person. What's another two months? But it's not just another two months of waiting. It's another two months where you're bearing the risk should the deal fall through. It's another two months where 25-75% of your working hours are dedicated to paperwork and discussions related to the acquisition.
-
-If I sell another company, I'd still consider a buyer who's financing the deal with a loan, but I'd offer more incentives for a cash buyer.
-
 ### A process isn't really documented until someone else uses the documentation
 
 In the months leading up to the TinyPilot sale, I focused on shifting my responsibilities to the team. I didn't want a new owner to take over and feel like I left them in the dark about things like our release process or publishing to the company blog.
@@ -224,6 +214,16 @@ I initially felt like those things would be easy because I had documented them f
 But as we approached the sale, I began having my teammates take over those workflows, and I realized how much of the "documented" process actually just lived in my head. I realized that a step like, "Review video of end-to-end testing" only works if the person watching the video knows what correct behavior looks like.
 
 So, a process is only documented when someone can follow it who isn't the person who wrote the documentation.
+
+### Selling to a cash buyer drastically reduces risk and paperwork
+
+One of the biggest lessons from selling TinyPilot was how big a difference closing time makes. A 30-day close is different from a close that takes three to six months to close.
+
+One factor that hugely impacts closing time is where the buyer is getting the money. If the buyer is borrowing the money from a bank, now the bank is involved in this deal, and they'll move slowly, demand a lot of paperwork, and they're harder to negotiate with because they don't care if the deal falls through.
+
+At first, I thought faster close would be better, but I'm a patient person. What's another two months? But it's not just another two months of waiting. It's another two months where you're bearing the risk should the deal fall through. It's another two months where 25-75% of your working hours are dedicated to paperwork and discussions related to the acquisition.
+
+If I sell another company, I'd still consider a buyer who's financing the deal with a loan, but I'd offer more incentives for a cash buyer.
 
 ## Grading last year's goals
 
