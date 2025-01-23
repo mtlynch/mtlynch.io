@@ -195,11 +195,15 @@ I continue enjoying life as an indie founder, and I still want to keep doing it 
 
 In the months leading up to my son's birth, I struggled with the question of how much time to take off.
 
-We have enough in savings that I could take time off comfortably, but I also didn't have any source of income anymore.
+We have enough in savings that I could take time off, but I also didn't know how long it would take me to build another successful business. Obviously, taking one month off would be fine. But if one month is okay, why not two? Why not four? Why not a year?
 
-When I took a break from working after my son was born, I had this fear. If one month is okay, why not two? Why not four? Why not a year?
+After my son was born, I had an even scarier thought: what if, now that I have a baby, I'm not even able to work?
 
-I'm still trying to convince myself
+In the months after my son's birth, I found myself with almost no free time. I worried that it would become my new normal, and I'd just never regain enough time to work, or at least to have uninterrupted time blocks to write and program.
+
+I took a breath and realized the reason I had "no free time" was that I was spending a lot of time visiting family and friends or taking long walks downtown to enjoy an outdoor brunch with my wife and son.
+
+In the end, I found that there was just a time where it felt right to start working again, and my wife and I figured out a good balance.
 
 ### Selling to a cash buyer drastically reduces risk and paperwork
 
