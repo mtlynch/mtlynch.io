@@ -14,3 +14,4 @@ You can also find him through these channels:
 - Mastodon: [@michael@m.mtlynch.io](https://m.mtlynch.io/@michael)
 - Twitter: [@deliberatecoder](https://twitter.com/deliberatecoder)
 - Email: [hello@mtlynch.io](mailto:hello@mtlynch.io)
+  - See [tips for writing emails I'll respond to](/notes/emailing-me/).

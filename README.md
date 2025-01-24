@@ -92,6 +92,8 @@ Developers need not verify every change on every possible OS/browser combination
 ### Names
 
 - reddit is written all lowercase.
+- GitHub capitalizes the 'H'.
+- GitLab capitalizes the 'L'.
 
 ### e.g. / i.e.
 

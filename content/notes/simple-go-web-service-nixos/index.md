@@ -171,8 +171,8 @@ The service is deliberately simple and kind of boring because I want to focus on
 Next, create a Go module for this app, as Nix will need it to build the NixOS module:
 
 ```bash
-$ nix-shell -p go --command 'go mod init gitlab.com/mtlynch/basic-go-web-app'
-go: creating new go.mod: module gitlab.com/mtlynch/basic-go-web-app
+$ nix-shell -p go --command 'go mod init codeberg.org/mtlynch/basic-go-web-app'
+go: creating new go.mod: module codeberg.org/mtlynch/basic-go-web-app
 go: to add module requirements and sums:
         go mod tidy
 ```
@@ -181,7 +181,7 @@ That creates a file called `go.mod` with the following contents:
 
 ```bash
 $ cat go.mod
-module gitlab.com/mtlynch/basic-go-web-app
+module codeberg.org/mtlynch/basic-go-web-app
 
 go 1.22.8
 ```
@@ -472,6 +472,12 @@ Compiled with: go1.23.2
 It's running!
 
 Note that now, it runs under the username `basic-go-web-app` instead of my dev username of `mike`.
+
+## Source code
+
+The full source for this example is available on Codeberg:
+
+- <https://codeberg.org/mtlynch/basic-go-web-app>
 
 ## Conclusion
 

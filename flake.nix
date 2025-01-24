@@ -30,10 +30,12 @@
       nodejs = nodejs-nixpkgs.legacyPackages.${system}.nodejs-18_x;
       html-proofer = html-proofer-nixpkgs.legacyPackages.${system}.html-proofer;
       markdownlint = markdown-lint-nixpkgs.legacyPackages.${system}.markdownlint-cli2;
+      libxml2 = hugo-nixpkgs.legacyPackages.${system}.libxml2;
     in {
       devShells.default = hugo-nixpkgs.legacyPackages.${system}.mkShell {
         packages = [
           hugo
+          libxml2
           nodejs
           markdownlint
           html-proofer
