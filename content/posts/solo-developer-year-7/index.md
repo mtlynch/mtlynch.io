@@ -213,7 +213,7 @@ In the end, returning to work felt organic. My wife and I figured out the balanc
 
 In the months leading up to TinyPilot's sale, I focused on delegating as much as possible to the rest of the team. I didn't want the new owner to take over and feel like they couldn't complete some critical task because I was the only one who knew how to do it.
 
-I expected delegation to be easy because I had already documented all of the TinyPilot workflows I performed. As we approached the sale, I began having my teammates take over those workflows, and I realized how much of the "documented" process actually just [lived in my head](retrospectives/2024/02/#i-accidentally-hoarded-tinypilots-release-process). I realized that steps like, "Update the public changelog" or "Write the release announcement," were much more complicated than the short phrase implied.
+I expected delegation to be easy because I had already documented all of the TinyPilot workflows I performed. As we approached the sale, I began having my teammates take over those workflows, and I realized how much of the "documented" process actually just [lived in my head](/retrospectives/2024/02/#i-accidentally-hoarded-tinypilots-release-process). I realized that steps like, "Update the public changelog" or "Write the release announcement," were much more complicated than the short phrase implied.
 
 I was able to document all of TinyPilot's workflows for the new owner before the sale closed, but it made me realize I should update my definition of when a process is "documented."
 
