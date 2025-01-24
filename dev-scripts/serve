@@ -14,4 +14,4 @@ PORT="${PORT:-1313}"
 hugo server \
   --bind "0.0.0.0" \
   --port "${PORT}" \
-  --baseURL "http://${HOSTNAME}.local:${PORT}"
+  --baseURL "http://${HOSTNAME}:${PORT}"
