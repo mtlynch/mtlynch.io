@@ -17,7 +17,7 @@ TinyPilot is a device that lets users control their computers remotely. I built 
 
 {{<img src="tinypilot-prototype.webp" alt="Photo of a laptop open with 'Hello, World' printed on the screen. On another laptop, the same desktop is displayed within a TinyPilot web interface." max-width="450px" caption="The prototype of TinyPilot, which allowed me to control computers in my home remotely without installing any software">}}
 
-I wrote [a blog post](/tinypilot/) about how I got the initial version of TinyPilot to work, and I offered build-it-it-yourself kits for $XX. The kits sold out within XX hours.
+I wrote [a blog post](/tinypilot/) about how I got the initial version of TinyPilot to work, and I offered build-it-it-yourself kits for $170. The kits sold out within four hours.
 
 For the next four years, I improved on the TinyPilot product and built it into a real company. I evolved the product from DIY kits to pre-made devices. I hired a team to help me with hardware, software, support, and logistics, eventually growing the company to $1M/year in revenue.
 
@@ -52,9 +52,9 @@ I sold TinyPilot in April, but I stayed with the company through mid-May to help
 
 My son was due in August, and I knew I'd take time off when he arrived. That left me three months to start something new, but it needed to be something I could shelve for a few months while I figured out life post-baby.
 
-I decided to work on an educational product like a course or book. It's easy to pause the work, and even if I have paying customers, there are no servers to keep online or support questions to answer.
+I decided the best product for those three months would be a downloadable course or book. It's easy to pause work on an educational product, and even if I have paying customers, there are no servers to keep online or support questions to answer.
 
-My only experience with educational products was in 2021. I released a short video course about [blogging for technial audiences](https://hitthefrontpage.com). It only made $XXk that year, but it's made $XXk total, making it the highest return on investment project I've ever done.
+My only experience with educational products was in 2021. I created a video course about [blogging for technial audiences](https://hitthefrontpage.com). It made $7.6k in its first year and another $2.2k since then. It's not a smash success by course creator standards, but it took me about 100 hours to produce, and I'm proud of the material, so the course is the highest return on investment thing I've done since becoming an indie founder.
 
 Over the summer, I revised the material from my 2021 blogging course. I started by teaching it to a small group of students on weekly video sessions. My plan was to continue refining the course based on the students' feedback, and then record a final, downloadable version of the course to sell.
 
@@ -76,7 +76,7 @@ I've always loved programming, but I've never found it as exciting as I have in 
 
 ### Nix
 
-The technology that's had the biggest impact on my work the last year is Nix and NixOS.
+The technology that's had the biggest impact on my work the last year is [Nix and NixOS](https://nixos.org/).
 
 I've been adopting Nix little by little, but I like it so much that I now use Nix in every programming project and run NixOS on all of my computers.
 
@@ -84,16 +84,16 @@ I've been adopting Nix little by little, but I like it so much that I now use Ni
   - Developers who appreciate infrastructure as code tools like Docker or Ansible.
 - What's my pitch?
   - On software projects, Nix allows you to define all of your dependencies in source code. Anyone can replicate your environment in one command.
-  - NixOS is a Linux distro designed around the Nix concept. NixOS allows you to define your computer's entire configuration in source code with version control. NixOS allows you to easily rebuild your computer from scratch or roll back to previous configurations.
+  - NixOS is a Linux distro designed around the Nix concept. NixOS allows you to define your computer's entire configuration in plaintext files. NixOS allows you to easily rebuild your computer from scratch or roll back to previous configurations.
   - Nix has many of the advantages of Docker, except that Nix packages compose better than Docker images.
 - What are the drawbacks?
   - Nix has a steep learning curve, and I haven't found a good developer-oriented beginner guide. The closest is [_NixOS in Production_](https://leanpub.com/nixos-in-production), which is aimed at DevOps engineers.
   - There's a schism around a feature called "flakes." If you use flakes, it's hard to understand tutorials and documentation that don't, and vice-versa.
   - The Nix community is in an unhealthy state due to poor leadership.
-  - In continuous integration (CI), Nix scales down poorly. I [haven't been able to find a way to run any Nix-dependent job](https://github.com/Gabriella439/nixos-in-production/issues/24) in less than one minute unless I switch to a Nix-specific CI vendor.
+  - In continuous integration (CI), Nix scales down poorly. I haven't been able to find a way to run any Nix-dependent CI job [faster than 55 seconds](https://github.com/Gabriella439/nixos-in-production/issues/24) unless I switch to a Nix-specific CI vendor.
 - What's a good way to explore it?
-  - Try it in small increments. You can get a lot of value from Nix by using small parts of its functionality.
-  - Install Nix through [the Determinate Systems installer](https://zero-to-nix.com/start/install/), and try running a program with `nix shell` (e.g., `nix shell -p cowsay` then `cowsay howdy, human`)
+  - Try Nix in small increments. You can get a lot of value from Nix by using small parts of its functionality.
+  - Install Nix through [the Determinate Systems installer](https://zero-to-nix.com/start/install/), and try running a program with `nix shell` (e.g., `nix shell -p cowsay` then `cowsay howdy, human`). Search [the package repo](https://search.nixos.org/packages) to see all the packages you can install in one line.
   - If you liked ephemeral shells, create a [dev shell](/notes/nix-dev-environment/) for one of your projects so that you can manage the versions of all your dependencies and dev tools from a single file.
 
 ### htmx
@@ -115,7 +115,7 @@ htmx's thesis is that you can bring more interactivity to the HTML/CSS part of a
   - htmx is a library rather than a framework, so adopting htmx isn't all-or-nothing like React or Vue. You can try htmx on a single form in your web app to see if you like it.
   - There's no build step, so you don't have to run your code through Webpack / Node.js just to generate plaintext HTML, CSS, and JavaScript. The code you write is the same code you see running in the browser.
 - What are the drawbacks?
-  - It's an adjustment to recognize the htmx way of writing web apps, but it often results in simpler code.
+  - I found it challenging to shift my thinking to recognize the htmx way of writing web apps, but it often results in simpler code.
   - I find htmx's [error handling awkward](/retrospectives/2024/07/#htmxs-error-handling-is-underwhelming), but I have a [decent workaround](/retrospectives/2024/08/#finding-my-preferred-pattern-for-htmx-forms)
   - htmx [weakens Content Security Policy (CSP)](/retrospectives/2024/07/#htmx-weakens-content-security-policy-csp).
 - What's a good way to explore it?
@@ -126,7 +126,9 @@ htmx's thesis is that you can bring more interactivity to the HTML/CSS part of a
 
 ### Zig
 
-The idea of Zig is that there are still programs we need to write in low-level languages like C, but why are we using languages that were designed 50 years ago before many huge advancements in hardware and compiler design? Zig gives you the same power and performance you can achieve with C, but with language conveniences that C can't provide.
+The idea of Zig is that there are still programs we need to write in low-level languages like C, but we're making it harder on ourselves by continuing to write them in languages that were designed 50 years ago.
+
+Zig gives you the same power and performance you can achieve with C, but it takes advantage of advancements in hardware and compiler design that weren't available when the C language was created.
 
 I immediately loved the idea of Zig, but I struggled to find a project for it. I haven't used C or C++ for a personal project in 15 years. I typically find it more fun to build small-scale web apps, and Zig isn't the best tool for those.
 
@@ -142,7 +144,7 @@ I still find Zig extremely fun. If I was sent to live on a desert island for a y
   - The Zig community is welcoming and positive. Whenever I ask questions, I get patient, helpful answers. When I share my [Zig tutorials](/tags/zig/), the community welcomes them enthusiastically.
 - What are the drawbacks?
   - There's no stable 1.0 release yet. You'll likely have to rewrite some of your code every time you update to the latest Zig compiler.
-  - If you read Zig examples in blog posts, you usually need to tweak them to run on the latest compiler.
+  - Becuase of compiler churn, you usually have to tweak examples you read in blog posts or sometimes [official language docs](https://github.com/ziglang/zig/issues/18497#issuecomment-2252162626).
   - I haven't found good resources for learning the language. There are no Zig books yet. I mainly learn by cobbling together information from disparate blog posts, forum discussions, and the [Zig language spec](https://ziglang.org/documentation/master/).
 - What's a good way to explore it?
   - Take a simple program you'd normally write in C or C++, and write it in Zig instead.
@@ -157,7 +159,7 @@ I'd been curious to try fuzz testing to find security vulnerabilities, as I hadn
 
 I enjoyed [Antonio Morales' 2021 fuzz testing tutorial](https://github.com/antonio-morales/Fuzzing101), but all the exercises involved a lot of boring gruntwork just to set up a working fuzzing environment.
 
-I tried implementing a fuzzing workflow in Nix, and I found that Nix made the experience so much better. I wish I had time to create more [fuzzing tutorials with Nix](/nix-fuzz-testing-1/) because I feel like the world is sleeping on Nix as a fuzzing tool.
+I tried [implementing a fuzzing workflow in Nix](/nix-fuzz-testing-1/), and I found that Nix made the experience so much better. I wish I had time to create more fuzzing tutorials with Nix because I feel like the world is sleeping on Nix as a fuzzing tool.
 
 - Who should try it?
   - Anyone who performs fuzz testing, especially on C/C++ code.
@@ -172,6 +174,8 @@ I tried implementing a fuzzing workflow in Nix, and I found that Nix made the ex
     - If you experiment with different compilation options, you don't have to compile from scratch each time. Nix will remember if you've compiled with the same options before and re-use that build. You never have to `make clean` or delete binaries manually.
 - What are the drawbacks?
   - You have to figure out how to build the code you're testing through Nix as an extra layer of abstraction.
+  - Nix [does magic](/nix-fuzz-testing-1/#that-was-confusingly-easy) to help you build CMake-based projects, but it can be hard to understand what Nix is doing implicitly for you.
+  - I had a difficult time [getting Nix to produce debug symbols](/nix-fuzz-testing-2/#improving-debug-symbols), and I'm still not sure what I was doing wrong.
 - What's a good way to explore it?
   - Try [my beginner-friendly tutorial](/nix-fuzz-testing-1/) about how I used Nix and honggfuzz to create a fuzzing workflow for an open-source PDF reader.
 
@@ -179,7 +183,7 @@ I tried implementing a fuzzing workflow in Nix, and I found that Nix made the ex
 
 Every year, I ask myself whether I still enjoy being an indie founder.
 
-For the past few years, I had a hard time answering this question. When I was running TinyPilot, I was proud of my work and enjoyed working with the team, but I felt like the pace and complexity of a hardware company was too much for me.
+For the past few years, I had a hard time answering this question. When I was running TinyPilot, I was proud of my work and enjoyed working with the TinyPilot team, but I felt like the pace and complexity of a hardware company was too much for me.
 
 This year, I had fun being an indie founder again. I loved having the freedom to spend so much time with my wife and our son. I was grateful that my return to work was entirely up to me, and I had complete control over how and when to phase work into my post-baby life.
 
@@ -197,33 +201,33 @@ In the months leading up to my son's birth, I struggled with the question of how
 
 We have enough in savings that I could take time off, but I also didn't know how long it would take me to build another successful business. Obviously, taking one month off would be fine. But if one month is okay, why not two? Why not four? Why not a year?
 
-After my son was born, I had an even scarier thought: what if, now that I have a baby, I'm not even able to work?
+After my son was born, I had an even scarier thought: what if, now that I have a baby, I can't even return to work if I want to?
 
 In the months after my son's birth, I found myself with almost no free time. I worried that it would become my new normal, and I'd just never regain enough time to work, or at least to have uninterrupted time blocks to write and program.
 
-I took a breath and realized the reason I had "no free time" was that I was spending a lot of time visiting family and friends or taking long walks downtown to enjoy an outdoor brunch with my wife and son.
+I took a breath and realized the reason I had no "free time" was that several days each week, I'd take long walks downtown to enjoy an outdoor brunch with my wife and son. Or we'd have visitors from out of town who wanted to meet the baby. And I had to remind myself that these were all _good things_ that I _liked doing_, and I was still in control of my time should I decide to resume working.
 
-In the end, I found that there was just a time where it felt right to start working again, and my wife and I figured out a good balance.
+In the end, returning to work felt organic. My wife and I figured out the balance that felt right to us. I started working for 90 minutes per weekday, and adjusting as my son's needs changed.
 
 ### A process isn't really documented until someone else uses the documentation
 
-In the months leading up to the TinyPilot sale, I focused on shifting my responsibilities to the team. I didn't want a new owner to take over and feel like I left them in the dark about things like our release process or publishing to the company blog.
+In the months leading up to TinyPilot's sale, I focused on delegating as much as possible to the rest of the team. I didn't want the new owner to take over and feel like they couldn't complete some critical task because I was the only one who knew how to do it.
 
-I initially felt like those things would be easy because I had documented them for myself. Every time we went through those workflows, I'd keep myself honest by using my own documentation to guide the process.
+I expected delegation to be easy because I had already documented all of the TinyPilot workflows I performed. As we approached the sale, I began having my teammates take over those workflows, and I realized how much of the "documented" process actually just [lived in my head](retrospectives/2024/02/#i-accidentally-hoarded-tinypilots-release-process). I realized that steps like, "Update the public changelog" or "Write the release announcement," were much more complicated than the short phrase implied.
 
-But as we approached the sale, I began having my teammates take over those workflows, and I realized how much of the "documented" process actually just lived in my head. I realized that a step like, "Review video of end-to-end testing" only works if the person watching the video knows what correct behavior looks like.
+I was able to document all of TinyPilot's workflows for the new owner before the sale closed, but it made me realize I should update my definition of when a process is "documented."
 
-So, a process is only documented when someone can follow it who isn't the person who wrote the documentation.
+I now consider a process to be documented when a teammate can follow the process for the first time using only the documentation.
 
 ### Selling to a cash buyer drastically reduces risk and paperwork
 
-One of the biggest lessons from selling TinyPilot was how big a difference closing time makes. A 30-day close is different from a close that takes three to six months to close.
+One of the biggest lessons from selling TinyPilot was how big a difference closing time makes. I didn't realize how much [additional risk and paperwork the seller bears](/i-sold-tinypilot/#due-diligence-makes-me-weaker-by-the-day) for every month that the acquisition process lasts.
 
-One factor that hugely impacts closing time is where the buyer is getting the money. If the buyer is borrowing the money from a bank, now the bank is involved in this deal, and they'll move slowly, demand a lot of paperwork, and they're harder to negotiate with because they don't care if the deal falls through.
+{{<img src="due-diligence.webp" alt="Cartoon of a man growing increasingly weak as he receives due diligence requests over several weeks">}}
 
-At first, I thought faster close would be better, but I'm a patient person. What's another two months? But it's not just another two months of waiting. It's another two months where you're bearing the risk should the deal fall through. It's another two months where 25-75% of your working hours are dedicated to paperwork and discussions related to the acquisition.
+One of the biggest factors in closing time is how the buyer finances the acquisition. If they're borrowing the money from a bank, now the bank is a key decision maker in the deal. Banks move slowly, demand a lot of paperwork, and they're harder to negotiate with because they don't care if the deal falls through.
 
-If I sell another company, I'd still consider a buyer who's financing the deal with a loan, but I'd offer more incentives for a cash buyer.
+If I sell another company, I'd still consider a buyer who's financing the deal with a loan, but I'd [offer incentives for a buyer with cash on hand](/lessons-from-my-first-exit/#offer-incentives-for-a-cash-buyer).
 
 ## Grading last year's goals
 
