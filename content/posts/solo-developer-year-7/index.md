@@ -1,6 +1,9 @@
 ---
 title: "My Seventh Year as a Bootstrapped Founder"
 date: 2025-02-03
+hero_image: cover.webp
+images:
+  - solo-developer-year-7/cover.webp
 tags:
   - annual review
 ---
