@@ -11,13 +11,13 @@ description: It's now been seven years since I quit my job at Google to become a
 
 Seven years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own bootstrapped software company.
 
-Every year, I [post an update](/tags/annual-review/) about how things have gone in the last year and what my life is like as an an indie founder.
+Every year, I [post an update](/tags/annual-review/) about how things have gone in the last year and what my life is like as an indie founder.
 
 ## I sold my company
 
 The defining event of my professional year was that I sold [TinyPilot](https://tinypilotkvm.com), the company I founded in 2020.
 
-TinyPilot is a device that lets users control their computers remotely. I built a rudimentary prototype in 2020 with a $35 Raspberry Pi mini computer and a $15 HDMI capture dongle.
+TinyPilot is a device that lets users control their computers remotely. I built a rudimentary prototype in 2020 with a $35 Raspberry Pi mini-computer and a $15 HDMI capture dongle.
 
 {{<img src="tinypilot-prototype.webp" alt="Photo of a laptop open with 'Hello, World' printed on the screen. On another laptop, the same desktop is displayed within a TinyPilot web interface." max-width="450px" caption="The prototype of TinyPilot, which allowed me to control computers in my home remotely without installing any software">}}
 
@@ -36,7 +36,7 @@ My wife and I wanted to start a family, and I didn't think I could be both the s
 
 {{<img src="sold-tinypilot.webp"  max-width="600px" alt="Illustration of me waving goodbye to TinyPilot mascot flying away in tiny prop plane" caption="Me selling TinyPilot so I could start a family">}}
 
-I already wrote and [podcasted](https://softwaremisadventures.com/p/michael-lynch-indie-hacking) about [the process of selling my company](/i-sold-tinypilot/) and [the lessons I learned](/lessons-from-my-first-exit/), but the short version is that I'm grateful for how everything worked out.
+I already wrote and [podcasted](https://softwaremisadventures.com/p/michael-lynch-indie-hacking) about [selling my company](/i-sold-tinypilot/) and [the lessons I learned](/lessons-from-my-first-exit/), but the short version is that I'm grateful for how everything worked out.
 
 ## I became a new parent
 
@@ -58,13 +58,13 @@ My son was due in August, and I knew I'd take time off when he arrived. That lef
 
 I decided the best product for those three months would be a downloadable course or book. It's easy to pause work on an educational product, and even if I have paying customers, there are no servers to keep online or support questions to answer.
 
-My only experience with educational products was in 2021. I created a video course about [blogging for technical audiences](https://hitthefrontpage.com). It made $7.6k in its first year and another $2.2k since then. It's not a smash success by course creator standards, but it took me about 100 hours to produce, and I'm proud of the material, so the course is the highest return on investment thing I've done since becoming an indie founder.
+My only experience with educational products was in 2021. I created a video course about [blogging for technical audiences](https://hitthefrontpage.com). It made $7.6k in its first year and another $2.2k since then. It's not a smash hit by course creator standards, but it took me about 100 hours to produce, and I'm proud of the material, so the course is the highest return on investment thing I've done since becoming an indie founder.
 
 {{<img src="htfp.webp" max-width="700px" has-border="true" caption="My 2021 course about [blogging for technical audiences](https://hitthefrontpage.com) has made a total of $10k in four years.">}}
 
-Over the summer, I revised the material from my 2021 blogging course. I started by teaching it to a small group of students on weekly video sessions. My plan was to continue refining the course based on the students' feedback, and then record a final, downloadable version of the course to sell.
+Over the summer, I revised the material from my 2021 blogging course. I started by teaching it to a small group of students on weekly video sessions. My plan was to continue refining the course based on the students' feedback and then record a final, downloadable version of the course to sell.
 
-The live course went okay, but the feedback from students was that they wanted to learn more about writing technique and less about how to find readers. I still wanted to finish the course, but my son arrived a few weeks early, so I never finished the recordings.
+The live course went okay, but the feedback from students was that they wanted to learn more about the craft of writing and less about attracting readers. I still wanted to finish the course, but my son arrived a few weeks early, so I never finished the recordings.
 
 After my son was born, it became harder to record videos at home, so I switched to [writing a book](https://refactoringenglish.com) about effective writing techniques for developers. I'm publishing it chapter by chapter and iterating on the material based on reader feedback.
 
@@ -74,15 +74,13 @@ I still have a bunch of videos from the partially-recorded blogging course that 
 
 ## I learned cool technologies
 
-When I was running TinyPilot, I didn't have a lot of time for technical work, which was a bummer because I still love writing software.
+When I was running TinyPilot, I didn't have time for technical work, which was a bummer because I still love writing software.
 
-After TinyPilot, I basically only had time for learning cool technologies.
-
-I've always loved programming, but I've never found it as exciting as I have in the last year. I'm awed by the amazing software that's available now for free, and I'm only able to experiment with a tiny fraction of it.
+I've always loved programming, but I've never found it as exciting as I have in the last year. I'm awed by all the amazing open-source software that's freely available.
 
 ### Nix
 
-The technology that's had the biggest impact on my work the last year is [Nix and NixOS](https://nixos.org/).
+The technology that had the biggest impact on my work the last year was [Nix and NixOS](https://nixos.org/).
 
 I've been adopting Nix little by little, but I like it so much that I now use Nix in every programming project and run NixOS on all of my computers.
 
@@ -96,15 +94,15 @@ I've been adopting Nix little by little, but I like it so much that I now use Ni
   - Nix has a steep learning curve, and I haven't found a good developer-oriented beginner guide. The closest is [_NixOS in Production_](https://leanpub.com/nixos-in-production), which is aimed at DevOps engineers.
   - There's a schism around a feature called "flakes." If you use flakes, it's hard to understand tutorials and documentation that don't, and vice-versa.
   - The Nix community is in an unhealthy state due to poor leadership.
-  - In continuous integration (CI), Nix scales down poorly. I haven't been able to find a way to run any Nix-dependent CI job [faster than 55 seconds](https://github.com/Gabriella439/nixos-in-production/issues/24) unless I switch to a Nix-specific CI vendor.
+  - In continuous integration (CI), Nix scales down poorly. I haven't found a way to run any Nix-dependent CI job [faster than 55 seconds](https://github.com/Gabriella439/nixos-in-production/issues/24) unless I switch to a Nix-specific CI vendor.
 - What's a good way to explore it?
-  - Try Nix in small increments. You can get a lot of value from Nix by using small parts of its functionality.
+  - Try Nix in small increments. You can get value from Nix by using small parts of its functionality.
   - Install Nix through [the Determinate Systems installer](https://zero-to-nix.com/start/install/), and try running a program with `nix shell` (e.g., `nix shell -p cowsay` then `cowsay howdy, human`). Search [the package repo](https://search.nixos.org/packages) to see all the packages you can install in one line.
   - If you liked ephemeral shells, create a [dev shell](/notes/nix-dev-environment/) for one of your projects so that you can manage the versions of all your dependencies and dev tools from a single file.
 
 ### htmx
 
-My friends have been praising [htmx](https://htmx.org) for the past several years, but the concept never clicked for me.
+My friends have been praising [htmx](https://htmx.org) for several years, but the concept never clicked for me.
 
 "You can make the HTML `<button>` element send a POST request? Who cares?"
 
@@ -112,7 +110,7 @@ Then, during a long plane ride, I read the free ebook [_Hypermedia Systems_](htt
 
 I always knew that the JavaScript part of web apps was tedious and repetitive, but I'd long ago accepted that as normal. HTML/CSS handles presentation, and JavaScript handles interactivity. There has to be glue code to connect the two, and glue code is inherently boring.
 
-htmx's thesis is that you can eliminate glue code and boilerplate JavaScript by bringing more interactivity to the HTML/CSS part of a web app . And you can do it without introducing a lot of complexity and dependencies like npm, Webpack, and gigantic frontend frameworks.
+htmx's thesis is that you can eliminate glue code and boilerplate JavaScript by bringing more interactivity to the HTML/CSS part of a web app. And you can do it without introducing complexity and dependencies like npm, Webpack, and gigantic frontend frameworks.
 
 - Who should try it?
   - Developers who prefer vanilla JavaScript or jQuery over heavy frameworks like React and Vue.
@@ -122,7 +120,7 @@ htmx's thesis is that you can eliminate glue code and boilerplate JavaScript by 
   - There's no build step, so you don't have to run your code through Webpack / Node.js just to generate plaintext HTML, CSS, and JavaScript. The code you write is the same code you see running in the browser.
 - What are the drawbacks?
   - I found it challenging to shift my thinking to recognize the htmx way of writing web apps, but it often results in simpler code.
-  - I find htmx's [error handling awkward](/retrospectives/2024/07/#htmxs-error-handling-is-underwhelming), but I have a [decent workaround](/retrospectives/2024/08/#finding-my-preferred-pattern-for-htmx-forms)
+  - I find htmx's [error handling awkward](/retrospectives/2024/07/#htmxs-error-handling-is-underwhelming), but I have a [decent workaround](/retrospectives/2024/08/#finding-my-preferred-pattern-for-htmx-forms).
   - htmx [weakens Content Security Policy (CSP)](/retrospectives/2024/07/#htmx-weakens-content-security-policy-csp).
 - What's a good way to explore it?
   - Read my [more detailed pitch for htmx](/retrospectives/2024/07/#learning-htmx).
@@ -134,11 +132,11 @@ htmx's thesis is that you can eliminate glue code and boilerplate JavaScript by 
 
 The idea of Zig is that there are still programs we need to write in low-level languages like C, but we're making it harder on ourselves by continuing to write them in languages that were designed 50 years ago.
 
-Zig gives you the same power and performance you can achieve with C, but it takes advantage of advancements in hardware and compiler design that weren't available when the C language was created.
+Zig gives you the same power and performance you can achieve with C, but it takes advantage hardware and compiler design advancements that weren't available when the C language was created.
 
 I immediately loved the idea of Zig, but I struggled to find a project for it. I haven't used C or C++ for a personal project in 15 years. I typically find it more fun to build small-scale web apps, and Zig isn't the best tool for those.
 
-I still find Zig extremely fun. If I was sent to live on a desert island for a year with a laptop but no Internet, my fantasy acitivity would porting an open-source rebuild of a computer game I played as a kid (e.g. [Age of Empires II](http://openage.dev/), [Command and Conquer](https://www.openra.net/)) from unrefined C++ code to elegant Zig.
+I still find Zig extremely fun. If I were stranded on a desert island for a year with a laptop but no Internet, my fantasy activity would be porting an open-source rebuild of a computer game I played as a kid (e.g., [Age of Empires II](http://openage.dev/), [Command and Conquer](https://www.openra.net/)) from unrefined C++ code to elegant Zig.
 
 - Who should try it?
   - Programmers who have used C and C++.
@@ -148,7 +146,7 @@ I still find Zig extremely fun. If I was sent to live on a desert island for a y
   - The Zig community is welcoming and positive. Whenever I ask questions, I get patient, helpful answers. When I share my [Zig tutorials](/tags/zig/), the community welcomes them enthusiastically.
 - What are the drawbacks?
   - There's no stable 1.0 release yet. You'll likely have to rewrite some of your code every time you update to the latest Zig compiler.
-  - Becuase of compiler churn, you usually have to tweak examples you read in blog posts or sometimes [official language docs](https://github.com/ziglang/zig/issues/18497#issuecomment-2252162626).
+  - Because of compiler churn, you usually have to tweak examples you read in blog posts or sometimes [official language docs](https://github.com/ziglang/zig/issues/18497#issuecomment-2252162626).
   - I haven't found good resources for learning the language. There are no Zig books yet. I mainly learn by cobbling together information from disparate blog posts, forum discussions, and the [Zig language spec](https://ziglang.org/documentation/master/).
 - What's a good way to explore it?
   - Take a simple program you'd normally write in C or C++, and write it in Zig instead.
@@ -159,7 +157,7 @@ I still find Zig extremely fun. If I was sent to live on a desert island for a y
 
 You probably thought I was done talking about Nix. I'm not!
 
-I'd been curious to try fuzz testing to find security vulnerabilities, as I hadn't used fuzzing tools since I [found a serious vulnerability in VLC](https://www.nccgroup.com/us/research-blog/fuzzing-rtsp-to-discover-an-exploitable-vulnerability-in-vlc/), ten years ago.
+I'd been curious to try fuzz testing to find security vulnerabilities, as I hadn't used fuzzing tools since I [found a serious vulnerability in VLC](https://www.nccgroup.com/us/research-blog/fuzzing-rtsp-to-discover-an-exploitable-vulnerability-in-vlc/) ten years ago.
 
 I enjoyed [Antonio Morales' 2021 fuzz testing tutorial](https://github.com/antonio-morales/Fuzzing101), but all the exercises involved boring gruntwork just to set up a working fuzzing environment.
 
@@ -169,7 +167,7 @@ I tried [implementing a fuzzing workflow in Nix](/nix-fuzz-testing-1/), and it w
   - Anyone who performs fuzz testing, especially on C/C++ code.
 - What's my pitch?
   - Nix makes fuzzing workflows reproducible.
-    - Once you get your fuzzer running under Nix, anyone run your fuzzing configuration by just [typing `nix run`](/nix-fuzz-testing-1/#a-preview-of-the-solution). They don't have to figure out dependencies because Nix automatically reproduces the exact environment you used.
+    - Once you get your fuzzer running under Nix, anyone can run your fuzzing configuration by just [typing `nix run`](/nix-fuzz-testing-1/#a-preview-of-the-solution). They don't have to figure out dependencies because Nix automatically reproduces the exact environment you used.
   - Nix simplifies installing dependencies.
     - Nix has one of the largest package repositories of any package manager. If your fuzzing target has dependencies, they're probably already available in the Nix package repository, so you don't have to figure out a special process for building each dependency.
   - Nix simplifies custom patches.
@@ -205,15 +203,15 @@ In the months leading up to my son's birth, I struggled with the question of how
 
 In the months after my son's birth, I found myself with almost no free time. I had an even scarier thought: what if, now that I have a baby, I can't even return to work if I want to? What if I never reclaim enough uninterrupted time for writing and programming?
 
-I took a breath and realized the reason I had no "free time" was that several days each week, I'd take long walks downtown to enjoy an outdoor brunch with my wife and son. Or we'd visitors were coming from out of town to meet the baby. And I had to remind myself that these were all _good things_ that I _liked doing_, and I was still in control of my time should I decide to resume working.
+I took a breath and realized the reason I had no "free time" was that several days each week, I'd take long walks downtown to enjoy an outdoor brunch with my wife and son. Or we'd host visitors from out of town to meet the baby. I had to remind myself that these were all _good things_ that I _liked doing_, and I was still in control of my time should I decide to resume working.
 
-Ultimately, my return to work felt like it happened organically and not because I pressured myself. My wife and I figured out a childcare balance that felt right to us, and we continue to adjust as my son gets older and as family members have joined in to help with childcare.
+Ultimately, my return to work happened organically and not because I pressured myself. My wife and I figured out a childcare balance that felt right to us, and we continue to adjust as my son gets older and family members have joined in to help with childcare.
 
-### A process isn't really documented until someone else uses the documentation
+### A process isn't documented until someone else uses the documentation
 
 In the months leading up to TinyPilot's sale, I focused on delegating as much as possible to the rest of the team. I didn't want the new owner to take over and feel like they couldn't complete some critical task because I was the only one who knew how to do it.
 
-I expected delegation to be easy because I'd always written playbooks for my recurring tasks. As I began handing these playbooks over to my teammates, I realized how much of the "documented" process actually just [lived in my head](/retrospectives/2024/02/#i-accidentally-hoarded-tinypilots-release-process). Steps like, "Update the public changelog" or "Write the release announcement," were more complicated than the short phrases implied.
+I expected delegation to be easy because I'd always written playbooks for my recurring tasks. As I began handing these playbooks over to my teammates, I realized how much of the "documented" process actually just [lived in my head](/retrospectives/2024/02/#i-accidentally-hoarded-tinypilots-release-process). Steps like "Update the public changelog" or "Write the release announcement" were more complicated than the short phrases implied.
 
 I now consider a process to be documented only when a teammate can follow the process using only the documentation.
 
@@ -223,7 +221,7 @@ One of the biggest lessons from selling TinyPilot was how big a difference closi
 
 {{<img src="due-diligence.webp" alt="Cartoon of a man growing increasingly weak as he receives due diligence requests over several weeks">}}
 
-The buyer's financing has a major impact on closing time. If the buyer borrows money from a bank, the bank becomes a key decision maker in the deal. Banks move slowly, demand a lot of paperwork, and they're harder to negotiate with because they don't care if the deal falls through.
+The buyer's financing has a major impact on closing time. If the buyer borrows money from a bank, the bank becomes a key decision-maker in the deal. Banks move slowly, demand a lot of paperwork, and are harder to negotiate with because they don't care if the deal falls through.
 
 If I sell another company, I'll [offer incentives to attract a buyer with cash on hand](/lessons-from-my-first-exit/#offer-incentives-for-a-cash-buyer).
 
@@ -242,7 +240,7 @@ The thing that finally made it work was that I had no choice. Due dilligence and
 
 ### Publish a course or book
 
-- **Result**: Taught a live course, but didn't publish a course or book.
+- **Result**: Taught a live course but didn't publish a course or book.
 - **Grade**: C
 
 I likely could have released a course had I skipped the live version, but I'm still glad I did the test run, as it gave me useful feedback about the focus of the course.
