@@ -61,7 +61,7 @@ My only experience with educational products was in 2021. I created a video cour
 
 Over the summer, I revised the material from my 2021 blogging course. I started by teaching it to a small group of students on weekly video sessions. My plan was to continue refining the course based on the students' feedback, and then record a final, downloadable version of the course to sell.
 
-The live course went okay, but the feedback from students was that they wanted to learn more about writing technique and less about platforms to share their writing. I still wanted to finish the course, but my son arrived a few weeks early, so I never finished the recordings.
+The live course went okay, but the feedback from students was that they wanted to learn more about writing technique and less about how to find readers. I still wanted to finish the course, but my son arrived a few weeks early, so I never finished the recordings.
 
 After my son was born, it became harder to record videos at home, so I switched to [writing a book](https://refactoringenglish.com) about effective writing techniques for developers. I'm publishing it chapter by chapter and iterating on the material based on reader feedback.
 
@@ -252,14 +252,12 @@ The other unexpected consequence of selling was that the new CEO didn't have a p
 - **Result**: Taught a live course, but didn't publish a course or book.
 - **Grade**: C
 
-I decided to teach the course live before recording the downloadable version, but I underestimated how long it would take to run the class and work with students. I only got about 20% through recording the course videos and may not ever publish them.
-
 ### Write software for ten working hours per week
 
 - **Result**: I write software for 10-20 hours per week.
 - **Grade**: A
 
-This goal was more about freeing up time as a manager for TinyPilot, but selling the company gave me lots more time to write code. I'm writing code more frequently and am enjoying it immensely.
+I'm writing code more frequently and am enjoying it immensely.
 
 ## Goals for next year
 
@@ -269,13 +267,13 @@ Across all of my products, I want to earn $50k in profit. It doesn't have to be 
 
 ### Publish a course or book
 
-TODO
+I've had this as an annual goal [since 2021](/solo-developer-year-3/#publish-six-blog-posts-and-one-book), and I've never done it, but this feels like my year.
 
 ### Learn a new programming language
 
-Every time I learn a new programming language, it gives me insights I can apply to any programming language.
+Every time I learn a new programming language, it gives me insights I can apply to any programming in general.
 
-A lot of my favorite bloggers are excited about [Elixir](https://elixir-lang.org/) and [Phoenix](https://hexdocs.pm/phoenix/), so I'm curious to try those.
+A lot of my favorite bloggers are excited about [Elixir](https://elixir-lang.org/) and [Phoenix](https://hexdocs.pm/phoenix/), so I'm curious to try that tech stack.
 
 ---
 
