@@ -6,11 +6,12 @@ images:
   - solo-developer-year-7/cover.webp
 tags:
   - annual review
+description: It's now been seven years since I quit my job at Google to become an indie founder. In the past year, I sold my company, started a family, and learned several new technologies.
 ---
 
 Seven years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own bootstrapped software company.
 
-Every year, I post an update about how things have gone in the last year and what my life is like as an an indie founder.
+Every year, I [post an update](/tags/annual-review/) about how things have gone in the last year and what my life is like as an an indie founder.
 
 ## I sold my company
 
@@ -57,7 +58,9 @@ My son was due in August, and I knew I'd take time off when he arrived. That lef
 
 I decided the best product for those three months would be a downloadable course or book. It's easy to pause work on an educational product, and even if I have paying customers, there are no servers to keep online or support questions to answer.
 
-My only experience with educational products was in 2021. I created a video course about [blogging for technial audiences](https://hitthefrontpage.com). It made $7.6k in its first year and another $2.2k since then. It's not a smash success by course creator standards, but it took me about 100 hours to produce, and I'm proud of the material, so the course is the highest return on investment thing I've done since becoming an indie founder.
+My only experience with educational products was in 2021. I created a video course about [blogging for technical audiences](https://hitthefrontpage.com). It made $7.6k in its first year and another $2.2k since then. It's not a smash success by course creator standards, but it took me about 100 hours to produce, and I'm proud of the material, so the course is the highest return on investment thing I've done since becoming an indie founder.
+
+{{<img src="htfp.webp" max-width="700px" has-border="true" caption="My 2021 course about [blogging for technical audiences](https://hitthefrontpage.com) has made a total of $10k in four years.">}}
 
 Over the summer, I revised the material from my 2021 blogging course. I started by teaching it to a small group of students on weekly video sessions. My plan was to continue refining the course based on the students' feedback, and then record a final, downloadable version of the course to sell.
 
@@ -84,7 +87,7 @@ The technology that's had the biggest impact on my work the last year is [Nix an
 I've been adopting Nix little by little, but I like it so much that I now use Nix in every programming project and run NixOS on all of my computers.
 
 - Who should try it?
-  - Developers who appreciate infrastructure as code tools like Docker or Ansible.
+  - Developers who appreciate infrastructure as code tools like Docker, Ansible, and Terraform.
 - What's my pitch?
   - On software projects, Nix allows you to define all of your dependencies in source code. Anyone can replicate your environment in one command.
   - NixOS is a Linux distro designed around the Nix concept. NixOS allows you to define your computer's entire configuration in plaintext files. NixOS allows you to easily rebuild your computer from scratch or roll back to previous configurations.
@@ -103,19 +106,19 @@ I've been adopting Nix little by little, but I like it so much that I now use Ni
 
 My friends have been praising [htmx](https://htmx.org) for the past several years, but the concept never clicked for me.
 
-You can make the HTML `<button>` element send a POST request? Who cares?
+"You can make the HTML `<button>` element send a POST request? Who cares?"
 
 Then, during a long plane ride, I read the free ebook [_Hypermedia Systems_](https://hypermedia.systems/) about the philosophy of htmx. The book made me realize that htmx's value isn't about letting a `<button>` send a POST request. It's about bringing simple interactivity to HTML without burdening the developer with custom JavaScript or deep layers of abstraction.
 
 I always knew that the JavaScript part of web apps was tedious and repetitive, but I'd long ago accepted that as normal. HTML/CSS handles presentation, and JavaScript handles interactivity. There has to be glue code to connect the two, and glue code is inherently boring.
 
-htmx's thesis is that you can bring more interactivity to the HTML/CSS part of a web app to eliminate glue code and boilerplate JavaScript. And you can do it without introducing a lot of complexity and dependencies like npm, Webpack, and gigantic frontend frameworks.
+htmx's thesis is that you can eliminate glue code and boilerplate JavaScript by bringing more interactivity to the HTML/CSS part of a web app . And you can do it without introducing a lot of complexity and dependencies like npm, Webpack, and gigantic frontend frameworks.
 
 - Who should try it?
   - Developers who prefer vanilla JavaScript or jQuery over heavy frameworks like React and Vue.
 - What's my pitch?
   - htmx makes you realize how much unnecessary JavaScript you've been writing all your life.
-  - htmx is a library rather than a framework, so adopting htmx isn't all-or-nothing like React or Vue. You can try htmx on a single form in your web app to see if you like it.
+  - htmx is a library rather than a framework, so adopting htmx isn't an all-or-nothing commitment like React or Vue. You can try htmx on a single form in your web app to see if you like it.
   - There's no build step, so you don't have to run your code through Webpack / Node.js just to generate plaintext HTML, CSS, and JavaScript. The code you write is the same code you see running in the browser.
 - What are the drawbacks?
   - I found it challenging to shift my thinking to recognize the htmx way of writing web apps, but it often results in simpler code.
@@ -135,14 +138,12 @@ Zig gives you the same power and performance you can achieve with C, but it take
 
 I immediately loved the idea of Zig, but I struggled to find a project for it. I haven't used C or C++ for a personal project in 15 years. I typically find it more fun to build small-scale web apps, and Zig isn't the best tool for those.
 
-I started working on a [pure Zig implementatio of the Ethereum virtual machine](https://github.com/mtlynch/zenith), but I ran out of steam. I realized the project wouldn't be serve any practical purpose until I have a complete implementation of Ethereum, and that would be months of full-time work.
-
-I still find Zig extremely fun. If I was sent to live on a desert island for a year with a laptop but no Internet, my fantasy quest would be to take an open-source rebuild of a computer game I played as a kid (e.g. [Age of Empires II](http://openage.dev/), [Command and Conquer](https://www.openra.net/)) and port all the unrefined C++ code to elegant Zig.
+I still find Zig extremely fun. If I was sent to live on a desert island for a year with a laptop but no Internet, my fantasy acitivity would porting an open-source rebuild of a computer game I played as a kid (e.g. [Age of Empires II](http://openage.dev/), [Command and Conquer](https://www.openra.net/)) from unrefined C++ code to elegant Zig.
 
 - Who should try it?
   - Programmers who have used C and C++.
 - What's my pitch?
-  - Zig is the most fun I've had programming in a long time, and I generally find programming pretty fun. There's something extra fun about coding with extremely low abstraction. There's special delight in exercising full control over how many times my application touches a piece of memory.
+  - Zig is the most fun I've had programming in a long time, and I generally find programming pretty fun. There's something extra fun about coding with extremely low abstraction and a rush I get from exercising full control over how many times my application touches a piece of memory.
   - Zig optimizes for explicit control flow and memory allocation, so I find Zig code easy to reason about.
   - The Zig community is welcoming and positive. Whenever I ask questions, I get patient, helpful answers. When I share my [Zig tutorials](/tags/zig/), the community welcomes them enthusiastically.
 - What are the drawbacks?
@@ -160,9 +161,9 @@ You probably thought I was done talking about Nix. I'm not!
 
 I'd been curious to try fuzz testing to find security vulnerabilities, as I hadn't used fuzzing tools since I [found a serious vulnerability in VLC](https://www.nccgroup.com/us/research-blog/fuzzing-rtsp-to-discover-an-exploitable-vulnerability-in-vlc/), ten years ago.
 
-I enjoyed [Antonio Morales' 2021 fuzz testing tutorial](https://github.com/antonio-morales/Fuzzing101), but all the exercises involved a lot of boring gruntwork just to set up a working fuzzing environment.
+I enjoyed [Antonio Morales' 2021 fuzz testing tutorial](https://github.com/antonio-morales/Fuzzing101), but all the exercises involved boring gruntwork just to set up a working fuzzing environment.
 
-I tried [implementing a fuzzing workflow in Nix](/nix-fuzz-testing-1/), and I found that Nix made the experience so much better. I wish I had time to create more fuzzing tutorials with Nix because I feel like the world is sleeping on Nix as a fuzzing tool.
+I tried [implementing a fuzzing workflow in Nix](/nix-fuzz-testing-1/), and it was so much better. I wish I had time to create more fuzzing tutorials with Nix because I feel like the world is sleeping on Nix as a fuzzing tool.
 
 - Who should try it?
   - Anyone who performs fuzz testing, especially on C/C++ code.
@@ -177,7 +178,7 @@ I tried [implementing a fuzzing workflow in Nix](/nix-fuzz-testing-1/), and I fo
     - If you experiment with different compilation options, you don't have to compile from scratch each time. Nix will remember if you've compiled with the same options before and re-use that build. You never have to `make clean` or delete binaries manually.
 - What are the drawbacks?
   - You have to figure out how to build the code you're testing through Nix as an extra layer of abstraction.
-  - Nix [does magic](/nix-fuzz-testing-1/#that-was-confusingly-easy) to help you build CMake-based projects, but it can be hard to understand what Nix is doing implicitly for you.
+  - Nix [does magic](/nix-fuzz-testing-1/#that-was-confusingly-easy) to help you build CMake-based projects, but it can be hard to understand what Nix does implicitly.
   - I had a difficult time [getting Nix to produce debug symbols](/nix-fuzz-testing-2/#improving-debug-symbols), and I'm still not sure what I was doing wrong.
 - What's a good way to explore it?
   - Try [my beginner-friendly tutorial](/nix-fuzz-testing-1/) about how I used Nix and honggfuzz to create a fuzzing workflow for an open-source PDF reader.
@@ -186,13 +187,13 @@ I tried [implementing a fuzzing workflow in Nix](/nix-fuzz-testing-1/), and I fo
 
 Every year, I ask myself whether I still enjoy being an indie founder.
 
-For the past few years, I had a hard time answering this question. When I was running TinyPilot, I was proud of my work and enjoyed working with the TinyPilot team, but I felt like the pace and complexity of a hardware company was too much for me.
+For the past few years, I had a hard time answering this question. When I was running TinyPilot, I was proud of the company and enjoyed working with the TinyPilot team, but I felt like the pace and complexity of a hardware company was too much for me.
 
-This year, I had fun being an indie founder again. I loved having the freedom to spend so much time with my wife and our son. I was grateful that my return to work was entirely up to me, and I had complete control over how and when to phase work into my post-baby life.
+This year, I had fun being an indie founder again. I loved the freedom to spend so much time with my wife and our son. I was grateful that my return to work was entirely up to me, and I had complete control over how and when to integrate work into my post-baby life.
 
 Selling TinyPilot was stressful and unpleasant, but when I look back, the parts I remember were celebrating with my wife and friends on [an impromptu dessert tour of Western Massachusetts](/i-sold-tinypilot/#part-4-after-the-sale).
 
-In May, a Google recruiter emailed me offering me my old job back with no interview, and I was not at all tempted.
+In May, a Google recruiter offered me my old job back with no interview, and I was not at all tempted.
 
 I continue enjoying life as an indie founder, and I still want to keep doing it for as long as possible.
 
@@ -200,27 +201,21 @@ I continue enjoying life as an indie founder, and I still want to keep doing it 
 
 ### It's okay not to work
 
-In the months leading up to my son's birth, I struggled with the question of how much time to take off.
+In the months leading up to my son's birth, I struggled with the question of how much time to take off. Obviously, taking one month off would be fine. But if one month is okay, why not two? Why not four? Why not a year?
 
-We have enough in savings that I could take time off, but I also didn't know how long it would take me to build another successful business. Obviously, taking one month off would be fine. But if one month is okay, why not two? Why not four? Why not a year?
+In the months after my son's birth, I found myself with almost no free time. I had an even scarier thought: what if, now that I have a baby, I can't even return to work if I want to? What if I never reclaim enough uninterrupted time for writing and programming?
 
-After my son was born, I had an even scarier thought: what if, now that I have a baby, I can't even return to work if I want to?
+I took a breath and realized the reason I had no "free time" was that several days each week, I'd take long walks downtown to enjoy an outdoor brunch with my wife and son. Or we'd visitors were coming from out of town to meet the baby. And I had to remind myself that these were all _good things_ that I _liked doing_, and I was still in control of my time should I decide to resume working.
 
-In the months after my son's birth, I found myself with almost no free time. I worried that it would become my new normal, and I'd just never regain enough time to work, or at least to have uninterrupted time blocks to write and program.
-
-I took a breath and realized the reason I had no "free time" was that several days each week, I'd take long walks downtown to enjoy an outdoor brunch with my wife and son. Or we'd have visitors from out of town who wanted to meet the baby. And I had to remind myself that these were all _good things_ that I _liked doing_, and I was still in control of my time should I decide to resume working.
-
-In the end, returning to work felt organic. My wife and I figured out the balance that felt right to us. I started working for 90 minutes per weekday, and adjusting as my son's needs changed.
+Ultimately, my return to work felt like it happened organically and not because I pressured myself. My wife and I figured out a childcare balance that felt right to us, and we continue to adjust as my son gets older and as family members have joined in to help with childcare.
 
 ### A process isn't really documented until someone else uses the documentation
 
 In the months leading up to TinyPilot's sale, I focused on delegating as much as possible to the rest of the team. I didn't want the new owner to take over and feel like they couldn't complete some critical task because I was the only one who knew how to do it.
 
-I expected delegation to be easy because I had already documented all of the TinyPilot workflows I performed. As we approached the sale, I began having my teammates take over those workflows, and I realized how much of the "documented" process actually just [lived in my head](/retrospectives/2024/02/#i-accidentally-hoarded-tinypilots-release-process). I realized that steps like, "Update the public changelog" or "Write the release announcement," were much more complicated than the short phrase implied.
+I expected delegation to be easy because I'd always written playbooks for my recurring tasks. As I began handing these playbooks over to my teammates, I realized how much of the "documented" process actually just [lived in my head](/retrospectives/2024/02/#i-accidentally-hoarded-tinypilots-release-process). Steps like, "Update the public changelog" or "Write the release announcement," were more complicated than the short phrases implied.
 
-I was able to document all of TinyPilot's workflows for the new owner before the sale closed, but it made me realize I should update my definition of when a process is "documented."
-
-I now consider a process to be documented when a teammate can follow the process for the first time using only the documentation.
+I now consider a process to be documented only when a teammate can follow the process using only the documentation.
 
 ### Selling to a cash buyer drastically reduces risk and paperwork
 
@@ -228,9 +223,9 @@ One of the biggest lessons from selling TinyPilot was how big a difference closi
 
 {{<img src="due-diligence.webp" alt="Cartoon of a man growing increasingly weak as he receives due diligence requests over several weeks">}}
 
-One of the biggest factors in closing time is how the buyer finances the acquisition. If they're borrowing the money from a bank, now the bank is a key decision maker in the deal. Banks move slowly, demand a lot of paperwork, and they're harder to negotiate with because they don't care if the deal falls through.
+The buyer's financing has a major impact on closing time. If the buyer borrows money from a bank, the bank becomes a key decision maker in the deal. Banks move slowly, demand a lot of paperwork, and they're harder to negotiate with because they don't care if the deal falls through.
 
-If I sell another company, I'd still consider a buyer who's financing the deal with a loan, but I'd [offer incentives for a buyer with cash on hand](/lessons-from-my-first-exit/#offer-incentives-for-a-cash-buyer).
+If I sell another company, I'll [offer incentives to attract a buyer with cash on hand](/lessons-from-my-first-exit/#offer-incentives-for-a-cash-buyer).
 
 ## Grading last year's goals
 
@@ -241,16 +236,16 @@ Last year, I set [three high-level goals](/solo-developer-year-6/#goals-for-year
 - **Result**: Reduced management to 20 hours per week
 - **Grade**: A
 
-I sold the company in April, so I only managed TinyPilot for a small amount of the year, but I finally did achieve my goal of managing on just 20 hours per week. That had been a repeated goal for the previous XX years.
+I sold the company in April, so I only managed TinyPilot for a small amount of the year, but I finally did achieve my goal of managing on just 20 hours per week. That had been a repeated goal for the previous three years.
 
-The thing that finally made it work was that I had no choice. Due dilligence and managing the sale of the company took up 15-20 hours per week by itself, so I just didn't have the spare hours to do what I had been doing before.
-
-The other unexpected consequence of selling was that the new CEO didn't have a programming background, so a lot of my focus in my last few months as CEO was identifying workflows that depended on the CEO making technical decisions and finding ways to empower the employees to do the heavy technical lifting. For example, I felt like I was just doing a few bits of our release process, but when I finally wrote it all out for the new CEO, I realized most of the steps were still on me.
+The thing that finally made it work was that I had no choice. Due dilligence and managing the sale of the company took up 15-20 hours per week by itself, so I just didn't have the spare hours to do what I had been doing before. Fortunately, the team stepped up to take over tasks that I hadn't previously thought to delegate.
 
 ### Publish a course or book
 
 - **Result**: Taught a live course, but didn't publish a course or book.
 - **Grade**: C
+
+I likely could have released a course had I skipped the live version, but I'm still glad I did the test run, as it gave me useful feedback about the focus of the course.
 
 ### Write software for ten working hours per week
 
@@ -263,11 +258,11 @@ I'm writing code more frequently and am enjoying it immensely.
 
 ### Earn $50k in profit
 
-Across all of my products, I want to earn $50k in profit. It doesn't have to be recurring revenue. One-time sales count, but I want to find a way to earn about $50k from selling my own products.
+Across all of my products, I want to earn $50k in profit. It doesn't have to be recurring revenue. One-time sales count, but I want to find a way to earn at least $50k from selling my own products.
 
 ### Publish a course or book
 
-I've had this as an annual goal [since 2021](/solo-developer-year-3/#publish-six-blog-posts-and-one-book), and I've never done it, but this feels like my year.
+I've had an annual goal of publishing a book [since 2021](/solo-developer-year-3/#publish-six-blog-posts-and-one-book). I've never done it, but this feels like my year.
 
 ### Learn a new programming language
 
