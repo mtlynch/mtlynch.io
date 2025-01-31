@@ -93,7 +93,10 @@ jobs:
           at: ./
       - run:
           name: Check for duplicate words
-          command: nix run git+https://codeberg.org/mtlynch/wordword /home/mike/code/mtlynch.io/ ./public/
+          command: |
+            nix --extra-experimental-features 'nix-command flakes' \
+              run git+https://codeberg.org/mtlynch/wordword \
+              ./public/
   publish_draft:
     docker:
       - image: cimg/node:18.14.1
