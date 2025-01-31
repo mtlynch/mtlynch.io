@@ -85,6 +85,15 @@ jobs:
       - run:
           name: Check that SEO meta tags rendered properly
           command: ./dev-scripts/check-seo-metadata
+  check_duplicate_words:
+    docker:
+      - image: nixos/nix:2.26.1
+    steps:
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Check for duplicate words
+          command: nix run git+https://codeberg.org/mtlynch/wordword /home/mike/code/mtlynch.io/ ./public/
   publish_draft:
     docker:
       - image: cimg/node:18.14.1
@@ -133,6 +142,9 @@ workflows:
       - check-seo-metadata:
           requires:
             - build
+      - check_duplicate_words:
+          requires:
+            - build
       - publish_draft:
           requires:
             - build
@@ -146,6 +158,7 @@ workflows:
             - lint-markdown
             - build
             - check-seo-metadata
+            - check_duplicate_words
           filters:
             branches:
               only: master
