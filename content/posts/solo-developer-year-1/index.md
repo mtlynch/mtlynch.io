@@ -174,6 +174,8 @@ The more I thought about it, the more sense it made. It was close to my family, 
 
 In August, I bought a modest two-bedroom home in Western Massachusetts. My living expenses here are ~$2k per month, which is close enough to the rate of return on my personal investments that I'm kind of at equilibrium.
 
+<!-- wordword-next-line-ignore-word: now -->
+
 I no longer feel a sense of panic that my money is burning up and everything has to happen NOW NOW NOW. The low costs give me the freedom to experiment with projects like Is It Keto, where even a $50 growth in profits is a meaningful victory.
 
 ## I want to do this forever

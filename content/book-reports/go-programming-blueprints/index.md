@@ -47,7 +47,7 @@ I'm a fan of [Mat Ryer](https://twitter.com/matryer)'s work, and his blog posts 
 #### [Signal channels](https://medium.com/@matryer/golang-advent-calendar-day-two-starting-and-stopping-things-with-a-signal-channel-f5048161018)
 
 - Signal channels are an idiomatic way of implementing thread-safe events in Go.
-- Signal channels are just a `chan` of of type `struct{}`
+- Signal channels are just a `chan` of type `struct{}`
   - Signal channels don't pass any data &mdash; they just signal that an event has occurred.
   - The [Twitter votes app](https://github.com/matryer/goblueprints/blob/aae50b4b30fa6dfd73e3c411b3bfe1972294be61/chapter6/twittervotes/main.go) is a good example of using signal channels to:
     1. Allow clients to interrupt the server.

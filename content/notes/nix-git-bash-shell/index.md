@@ -75,7 +75,7 @@ $ __git_ps1
 
 Great! It works.
 
-But I don't want to call `__git_ps1` manually all the time time &mdash; I want the branch to appear in my terminal prompt _automatically_ like Julia Evans showed.
+But I don't want to call `__git_ps1` manually all the time &mdash; I want the branch to appear in my terminal prompt _automatically_ like Julia Evans showed.
 
 The simplest way to show my git status in my terminal shell is to overwrite the `PS1` variable in my bash session:
 
