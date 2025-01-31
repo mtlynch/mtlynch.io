@@ -31,6 +31,17 @@ jobs:
       - run:
           name: Lint Markdown
           command: ./dev-scripts/lint-markdown
+  check_duplicate_words:
+    docker:
+      - image: nixos/nix:2.26.1
+    steps:
+      - checkout
+      - run:
+          name: Check for duplicate words
+          command: |
+            nix --extra-experimental-features 'nix-command flakes' \
+              run git+https://codeberg.org/mtlynch/wordword \
+              ./
   build:
     docker:
       - image: peaceiris/hugo:v0.139.3
@@ -85,18 +96,6 @@ jobs:
       - run:
           name: Check that SEO meta tags rendered properly
           command: ./dev-scripts/check-seo-metadata
-  check_duplicate_words:
-    docker:
-      - image: nixos/nix:2.26.1
-    steps:
-      - attach_workspace:
-          at: ./
-      - run:
-          name: Check for duplicate words
-          command: |
-            nix --extra-experimental-features 'nix-command flakes' \
-              run git+https://codeberg.org/mtlynch/wordword \
-              ./public/
   publish_draft:
     docker:
       - image: cimg/node:18.14.1
@@ -135,6 +134,7 @@ workflows:
       - check-whitespace
       - check_html_format
       - lint-markdown
+      - check_duplicate_words
       - build
       - lint-html:
           requires:
@@ -143,9 +143,6 @@ workflows:
           requires:
             - build
       - check-seo-metadata:
-          requires:
-            - build
-      - check_duplicate_words:
           requires:
             - build
       - publish_draft:
