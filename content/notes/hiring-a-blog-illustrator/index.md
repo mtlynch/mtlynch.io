@@ -75,8 +75,6 @@ I'll pay you your hourly rate. I'm aiming to pay roughly $75 per cartoon.
 
 If you charge $80/hr and each cartoon takes you three hours, it's probably not going to work.
 
-This is a test test of dupes.
-
 If you charge $50/hr and each cartoon takes you about 90 minutes, that would work great. It also works fine if you charge $25/hr and each cartoon takes three hours. You get how math works.
 
 Keep in mind that your cartoons don't have to be as detailed as what's currently on the blog. I'd be fine with a simpler style that allows us to hit a $75/cartoon target.
