@@ -12,7 +12,7 @@ I tried out the [Cline AI assistant](https://cline.bot/) yesterday, and then I w
 
 As a professional developer, it was both enchanting and terrifying. It's enchanting that AI has reached this level of proficiency. It's terrifying for the same reason, as I'm not sure what role I'll serve in a world where AI can write code better and faster than I can.
 
-I'm late to the game on this, as I realize most other developers have integrated AI tools more deeply into their workflows, but I wanted to share what I saw for others that haven't experienced it yet.
+I'm late to the game on this, as I realize most other developers have integrated AI tools more deeply into their workflows, but I wanted to share what I saw for others who haven't experienced it yet.
 
 ## I've used AI tools before
 
@@ -53,9 +53,9 @@ I saw a few blog posts recently about [Cline](https://cline.bot), and it sounded
 
 The downside is that Cline doesn't seem to have a revenue source except for burning investor dollars. So, it may not be sustainable, but it's fine for right now.
 
-## Lexical illustions: the perfect test program for an AI assistant
+## Lexical illusions: the perfect test program for an AI assistant
 
-I've recently wished for a tool that scans my blog for "lexical illustions." That's [what Matt Might calls it](https://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/) when you fail to recognize a duplicate word in text, for example:
+I've recently wished for a tool that scans my blog for "lexical illusions." That's [what Matt Might calls it](https://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/) when you fail to recognize a duplicate word in text, for example:
 
 > Many readers are not aware that the<br>
 > the brain will automatically ignore<br>
@@ -64,7 +64,7 @@ I've recently wished for a tool that scans my blog for "lexical illustions." Tha
 
 I make this mistake frequently on my blog, and I often miss it until late in proofreading or after publication.
 
-Matt Might shared a Perl script for finding these instances, but it was rudimentary and produced a lot of false positives on my blog due to Markdown formatting characters.
+Matt Might shared a Perl script that finds lexical illustions, but it was rudimentary and produced a lot of false positives on my blog due to Markdown formatting characters.
 
 I asked Kagi Assistant to write a Markdown-aware version in Python, but it kept producing buggy code.
 
@@ -160,9 +160,9 @@ The implementation was obviously incomplete, as it didn't handle things like Mar
 
 ## That's when I was hooked
 
-After Cline got an initial implementation working, I kept writing new testcases and then watching Cline update the code to satisfy my tests.
+After Cline completed its initial implementation, I kept writing new testcases and then watching Cline update its code to satisfy my tests.
 
-And that's when I was hooked. I was so amazed that I could develop software this way. I just told the tool what I wanted and it kept doing exactly what I asked.
+And that's when I was hooked. I was so amazed that I could develop software this way. I just told the tool what I wanted, and it kept doing exactly what I asked.
 
 Here's a video I showed at the top of this post of what this looks like in practice:
 
@@ -184,7 +184,7 @@ In total, it only cost me $6 in credits on [OpenRouter](https://openrouter.ai/),
 
 Cline has an option where it will prompt you before each step to approve of the plan. I quickly got bored of hitting "Approve" every five seconds and just set it up to auto-approve file reads, file writes, and command execution.
 
-I found that if I stopped paying attention, Cline occasionally got stuck in dead ends, repeatedly attemping strategies that were doomed to fail.
+I found that if I stopped paying attention, Cline occasionally got stuck in dead ends, repeatedly attempting strategies that were doomed to fail.
 
 Despite this, I continued mostly letting Cline run unsupervised until it reached a solution or hit its 20-attempt limit. These dead ends ate up API credits, but on the scale of pennies, so I'd rather risk wasting a few cents than micromanaging the assistant.
 
@@ -216,13 +216,13 @@ When I found Cline getting in a loop of blind attempts to fix a bug, I found it 
 
 ### Kagi must be losing money on me
 
-This is my first time ever using a metered LLM API. I've seen people talk about token costs, but I never had an intuitive sense for it because Kagi basically just says, "Don't worry about what it costs."
+This is my first time ever using a metered LLM API. I've seen people talk about token costs, but I never had an intuitive sense of it because Kagi basically just says, "Don't worry about what it costs."
 
 Cline helpfully shows you how much each coding task has run up in credits as you go.
 
 {{<img src="cline-cost.webp">}}
 
-So, I definitely am getting the better end of Kagi's $25/month unlimited plan. I spent $6 in five hours with Cline, and Cline does a lot of things to minimize token consumption. I use Kagi Assistant everyday and frequently paste giant files into a chat 10+ times during a conversation. Now that I see the costs, I'm probably spending costing Kagi $5-10 in API credits per day.
+So, I definitely am getting the better end of Kagi's $25/month unlimited plan. I spent $6 in five hours with Cline, and Cline does a lot of things to minimize token consumption. I use Kagi Assistant every day and frequently paste giant files into a chat 10+ times during a conversation. Now that I see the costs, I'm probably spending costing Kagi $5-10 in API credits per day.
 
 ## Other resources
 
