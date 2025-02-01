@@ -10,7 +10,7 @@ I tried out the [Cline AI assistant](https://cline.bot/) yesterday, and then I w
 
 <div style="position:relative;padding-top:56.25%;"><iframe src="https://iframe.mediadelivery.net/embed/304035/04e4d47f-ead7-49d5-9ad1-899a5b92caaa?autoplay=false&loop=false&muted=false&preload=true&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe></div>
 
-As a professional developer, it was both enchanting and terrifying. It's enchanting that AI has gotten this good and is rapidly improving. It's terrifying for the same reason, as I'm not sure what role I'll serve in a world where AI can write code better and faster than I can.
+As a professional developer, it was both enchanting and terrifying. It's enchanting that AI has reached this level of proficiency. It's terrifying for the same reason, as I'm not sure what role I'll serve in a world where AI can write code better and faster than I can.
 
 I'm late to the game on this, as I realize most other developers have integrated AI tools more deeply into their workflows, but I wanted to share what I saw for others that haven't experienced it yet.
 
@@ -18,9 +18,9 @@ I'm late to the game on this, as I realize most other developers have integrated
 
 Cline isn't the first time I've used AI.
 
-I've been experimenting with LLM assistants for the past two years. I started using them much more heavily in the last six months, as I've found.
+I've been experimenting with LLM assistants for the past two years. I started using them much more heavily in the last six months, as models have reached the level where they reliably produce correct code.
 
-I use [Kagi](https://kagi.com/) as my search engine, and their Ultimate package includes unlimited access to all the major LLMs.
+I use [Kagi](https://kagi.com/) as my search engine, and their Ultimate package includes unlimited access to all the major LLMs. I mainly interact with LLMs through the Kagi Assistant feature, which is just a web UI for chatting with LLMs.
 
 {{<img src="kagi-assistant.webp" max-width="600px" caption="My search engine, [Kagi](https://kagi.com/), comes with a nice web chat interface for all the major LLMs.">}}
 
@@ -43,7 +43,7 @@ I needed a tool to take over my role as "copy code and error messages back and f
 
 I tried [Sourcegraph Cody](https://sourcegraph.com/cody) twice about a year apart, and I found it disappointing both times. Having it edit my code in place was better than pasting back and forth between the browser and my editor, but Cody was slow and buggy enough that I eventually just went back to pasting code back and forth to my web browser.
 
-I saw a few blog posts recently about Cline, and it sounded appealing for a few reasons:
+I saw a few blog posts recently about [Cline](https://cline.bot), and it sounded appealing for a few reasons:
 
 - The code is [open-source](https://github.com/cline/cline).
 - It integrates with VS Code, my main editor.
@@ -51,7 +51,7 @@ I saw a few blog posts recently about Cline, and it sounded appealing for a few 
 - It allows me to use locally-hosted LLMs if I choose.
 - It doesn't insist on being the middleman for purchasing access to AI APIs, as many other AI assistants do.
 
-The downside is that I don't see any way that Cline makes money except for burning investor dollars, so it may not be sustainable, but it's fine for right now.
+The downside is that Cline doesn't seem to have a revenue source except for burning investor dollars. So, it may not be sustainable, but it's fine for right now.
 
 ## Lexical illustions: the perfect test program for an AI assistant
 
@@ -76,7 +76,7 @@ It was also an excuse to write in [Zig](https://ziglang.org), as I want this too
 
 The main interface of my tool was simple: it needed to accept file contents as a string (a `[] const u8` in Zig) and then produce a list of duplicate words with their corresponding line numbers.
 
-The basic code looked like this:
+The basic main interface looked like this:
 
 ```zig
 pub const DupeWord = struct {
@@ -160,35 +160,39 @@ The implementation was obviously incomplete, as it didn't handle things like Mar
 
 ## That's when I was hooked
 
-And that's when I was hooked. I just kept producing new testcases and then watching Cline solve them.
+After Cline got an initial implementation working, I kept writing new testcases and then watching Cline update the code to satisfy my tests.
 
-Here's a video I showed at the top of this post:
+And that's when I was hooked. I was so amazed that I could develop software this way. I just told the tool what I wanted and it kept doing exactly what I asked.
+
+Here's a video I showed at the top of this post of what this looks like in practice:
 
 <div style="position:relative;padding-top:56.25%;"><iframe src="https://iframe.mediadelivery.net/embed/304035/04e4d47f-ead7-49d5-9ad1-899a5b92caaa?autoplay=false&loop=false&muted=false&preload=true&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe></div>
 
-I just spent the rest of the day playing with Cline on implementing the tool I wanted.
-
 ## Results
 
-The tool works. I call it `wordword`:
+I spent the rest of the day playing with Cline on implementing the tool. And I now have a functional version of the duplicate word finder. I call it `wordword`:
 
 - [mtlynch/wordword on Codeberg](https://codeberg.org/mtlynch/wordword)
 
-I used `wordword` to find [seven instances of lexical illusion errors](https://github.com/mtlynch/mtlynch.io/pull/1414) in my published articles.
+I used `wordword` to find [seven instances of lexical illusion errors](https://github.com/mtlynch/mtlynch.io/pull/1414) on my blog.
 
-I spent about $6 in credits on [OpenRouter](https://openrouter.ai/) from about five hours working with Cline.
+In total, it only cost me $6 in credits on [OpenRouter](https://openrouter.ai/), which represented five hours of working continuously with Cline.
 
 ## What I've learned so far
 
 ### Unsupervised work is suboptimal but too cheap to matter
 
-I find it more satisfying to give Cline a task and then come back in a few minutes to find it complete, but it does sometimes get stuck in a dead end and . In my case, it's wasting a few pennies of API credits, so I don't mind the waste, but I expect that I could achieve better results by more actively managing Cline.
+Cline has an option where it will prompt you before each step to approve of the plan. I quickly got bored of hitting "Approve" every five seconds and just set it up to auto-approve file reads, file writes, and command execution.
+
+I found that if I stopped paying attention, Cline occasionally got stuck in dead ends, repeatedly attemping strategies that were doomed to fail.
+
+Despite this, I continued mostly letting Cline run unsupervised until it reached a solution or hit its 20-attempt limit. These dead ends ate up API credits, but on the scale of pennies, so I'd rather risk wasting a few cents than micromanaging the assistant.
 
 ### Cline trusts you unconditionally, so choose your words carefully
 
 The times that Cline went most loopy was when I accidentally wrote test cases with incorrect behavior.
 
-Like this test case, I accidentally wrote
+This is a test case I wrote too hastily:
 
 ```zig
 // Detect duplicates after a heading
@@ -200,11 +204,25 @@ try testFindDupes(
     .{ .line_number = 1, .word = "potatoes" },
 ```
 
-I accidentally wrote the line number as `1` when it should have been `3`. So when I asked Cline to make the test pass, it freaked out trying to figure out some consistent rule that would cause newlines to increment the line count in every situation except for this one.
+I accidentally wrote the line number as `1` when it should have been `3`.
+
+When I asked Cline to make the test pass, it had a bit of a breakdown trying to figure out how to justify assigning a line number of `1` when it should obviously be `3`.
 
 ### Encourage Cline to add debug print statements
 
-Like a real junior engineer, when Cline would get stuck.
+I notice that LLMs tend to guess at solutions rather than stop to gather more information about why a piece of code is behaving as it does.
+
+When I found Cline getting in a loop of blind attempts to fix a bug, I found it helpful to pause its work and instruct it to insert debug print statements to verify its assumptions about the code. Cline added useful debugging output, and it remembered to remove them all before declaring their solution complete.
+
+### Kagi must be losing money on me
+
+This is my first time ever using a metered LLM API. I've seen people talk about token costs, but I never had an intuitive sense for it because Kagi basically just says, "Don't worry about what it costs."
+
+Cline helpfully shows you how much each coding task has run up in credits as you go.
+
+{{<img src="cline-cost.webp">}}
+
+So, I definitely am getting the better end of Kagi's $25/month unlimited plan. I spent $6 in five hours with Cline, and Cline does a lot of things to minimize token consumption. I use Kagi Assistant everyday and frequently paste giant files into a chat 10+ times during a conversation. Now that I see the costs, I'm probably spending costing Kagi $5-10 in API credits per day.
 
 ## Other resources
 
