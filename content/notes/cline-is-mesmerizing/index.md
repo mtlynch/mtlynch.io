@@ -1,9 +1,14 @@
 ---
 title: "The Cline AI Assistant is Mesmerizing"
 date: 2025-02-01
+tags:
+  - llms
+  - zig
 ---
 
 I tried out the [Cline AI assistant](https://cline.bot/) yesterday, and then I went into a trance for five hours where I couldn't do anything but stare transfixed at Cline fixing bugs for me.
+
+<div style="position:relative;padding-top:56.25%;"><iframe src="https://iframe.mediadelivery.net/embed/304035/04e4d47f-ead7-49d5-9ad1-899a5b92caaa?autoplay=false&loop=false&muted=false&preload=true&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe></div>
 
 As a professional developer, it was both enchanting and terrifying. It's enchanting that AI has gotten this good and is rapidly improving. It's terrifying for the same reason, as I'm not sure what role I'll serve in a world where AI can write code better and faster than I can.
 
@@ -157,11 +162,21 @@ The implementation was obviously incomplete, as it didn't handle things like Mar
 
 And that's when I was hooked. I just kept producing new testcases and then watching Cline solve them.
 
-Here's a video so you can see what it looks like:
+Here's a video I showed at the top of this post:
+
+<div style="position:relative;padding-top:56.25%;"><iframe src="https://iframe.mediadelivery.net/embed/304035/04e4d47f-ead7-49d5-9ad1-899a5b92caaa?autoplay=false&loop=false&muted=false&preload=true&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe></div>
 
 I just spent the rest of the day playing with Cline on implementing the tool I wanted.
 
-And the tool works. I found [seven instances of lexical illusion errors](https://github.com/mtlynch/mtlynch.io/pull/1414) in my published articles.
+## Results
+
+The tool works. I call it `wordword`:
+
+- [mtlynch/wordword on Codeberg](https://codeberg.org/mtlynch/wordword)
+
+I used `wordword` to find [seven instances of lexical illusion errors](https://github.com/mtlynch/mtlynch.io/pull/1414) in my published articles.
+
+I spent about $6 in credits on [OpenRouter](https://openrouter.ai/) from about five hours working with Cline.
 
 ## What I've learned so far
 
