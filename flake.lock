@@ -315,11 +315,11 @@
         "zls": "zls"
       },
       "locked": {
-        "lastModified": 1738358512,
-        "narHash": "sha256-cA665OPZgUQn+/4IFARcw7TN0rVwO6tp4p1VHWRVp0g=",
+        "lastModified": 1738533967,
+        "narHash": "sha256-JOP1NqpYMtMCTJzNNcdZ6Zv+YJAhtPZJawumKNia94E=",
         "ref": "refs/heads/master",
-        "rev": "93af27090c1f039329c77e4700effb39cfd39c1d",
-        "revCount": 34,
+        "rev": "565f662fa102d68f2148f91ee10e475a992bc1a0",
+        "revCount": 42,
         "type": "git",
         "url": "https://codeberg.org/mtlynch/wordword.git"
       },
