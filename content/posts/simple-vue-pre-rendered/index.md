@@ -33,7 +33,7 @@ The tradeoff for Vue's responsiveness is that you have less control over your pa
 </html>
 ```
 
-Because it's a _single page_ app, that HTML stub is the same for every page on your site. In other words, if the user visits `yoursite.com/about` or `yoursite.com/contact`, the server sends them the same HTML stub for both pages. JavaScript is responsible for for figuring out the path and drawing the appropriate page after it executes in the user's browser.
+Because it's a _single page_ app, that HTML stub is the same for every page on your site. In other words, if the user visits `yoursite.com/about` or `yoursite.com/contact`, the server sends them the same HTML stub for both pages. JavaScript is responsible for figuring out the path and drawing the appropriate page after it executes in the user's browser.
 
 Dynamic page rendering is a neat innovation that makes site navigation faster, but it creates problems when you connect your site to social networks or search engines.
 

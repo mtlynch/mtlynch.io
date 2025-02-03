@@ -275,7 +275,7 @@ await expect(
 
 {{<notice type="info">}}
 
-**Update (2022-10-26)**: reddit user /u/Daffodils2 [points out](https://www.reddit.com/r/javascript/comments/yd3dr8/on_migrating_from_cypress_to_playwright/ittrxnx/) that Cypress offers [an `includeShadowDom` option](https://docs.cypress.io/api/commands/shadow#See-also) that makes makes it behave like Playwright in selecting elements through the shadow DOM.
+**Update (2022-10-26)**: reddit user /u/Daffodils2 [points out](https://www.reddit.com/r/javascript/comments/yd3dr8/on_migrating_from_cypress_to_playwright/ittrxnx/) that Cypress offers [an `includeShadowDom` option](https://docs.cypress.io/api/commands/shadow#See-also) that makes it behave like Playwright in selecting elements through the shadow DOM.
 
 {{</notice>}}
 

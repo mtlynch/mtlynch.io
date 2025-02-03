@@ -15,6 +15,8 @@
 
     # 0.139.3 release
     hugo-nixpkgs.url = "github:NixOS/nixpkgs/dd51f52372a20a93c219e8216fe528a648ffcbf4";
+
+    wordword-pkg.url = "git+https://codeberg.org/mtlynch/wordword.git";
   };
 
   outputs = {
@@ -24,12 +26,14 @@
     markdown-lint-nixpkgs,
     html-proofer-nixpkgs,
     hugo-nixpkgs,
+    wordword-pkg,
   } @ inputs:
     flake-utils.lib.eachDefaultSystem (system: let
       hugo = hugo-nixpkgs.legacyPackages.${system}.hugo;
       nodejs = nodejs-nixpkgs.legacyPackages.${system}.nodejs-18_x;
       html-proofer = html-proofer-nixpkgs.legacyPackages.${system}.html-proofer;
       markdownlint = markdown-lint-nixpkgs.legacyPackages.${system}.markdownlint-cli2;
+      wordword = wordword-pkg.packages.${system}.default;
       libxml2 = hugo-nixpkgs.legacyPackages.${system}.libxml2;
     in {
       devShells.default = hugo-nixpkgs.legacyPackages.${system}.mkShell {
@@ -38,10 +42,12 @@
           libxml2
           nodejs
           markdownlint
+          wordword
           html-proofer
         ];
 
         shellHook = ''
+          wordword --version
           echo "htmlproofer" "$(htmlproofer --version)"
           markdownlint-cli2 | head -n 1
           echo "node" "$(node --version)"

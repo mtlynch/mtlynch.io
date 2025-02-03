@@ -380,5 +380,3 @@ The contract relates specifically to work I pay you to produce, not anything you
 _Cover art by Loraine Yow._
 
 Are you a client or freelancer? I'd love to see similar documents or hear how others approach this problem, so feel free to share in the comments.
-
-{{<tweet user="deliberatecoder" id="1370392431049474048">}}

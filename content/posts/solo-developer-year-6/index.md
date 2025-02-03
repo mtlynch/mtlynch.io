@@ -129,7 +129,7 @@ At the end of 2022, we were still making TinyPilot's cases with a fleet of seven
 
 In February 2023, we [switched to a metal case](https://tinypilotkvm.com/blog/introducing-voyager-2a).
 
-{{<img src="metal-case.webp" max-width="500px" caption="After: TinyPilot's metal case case" alt="TinyPilot in a new metal case">}}
+{{<img src="metal-case.webp" max-width="500px" caption="After: TinyPilot's metal case" alt="TinyPilot in a new metal case">}}
 
 I was surprised at how much the metal case impacted sales. Not only did it increase the absolute number of sales, it increased the price customers were willing to pay. After [experimenting with pricing](/retrospectives/2023/05/#what-price-maximizes-profits), I ended up increasing our price by 10%, and our monthly sales were still higher than when we had a 3D-printed case.
 
@@ -269,8 +269,6 @@ Every year, when I write these blog posts, I ask myself whether I still love wha
 The downside to 2023 is that I have a hard time getting excited about it. It was a restructuring year, so I spent a lot of time redefining TinyPilot's processes and shifting around team responsibilities. TinyPilot has shown me that I'm better than the average developer at designing organizational processes, but I still find it painfully boring.
 
 While I can't say that I loved the year, I still enjoyed most of it and preferred it to working for an employer. I'm grateful to be in a position where I can earn a living working for myself and creating a product I'm proud of.
-
-{{<tweet user="deliberatecoder" id="1758511480238985701">}}
 
 ---
 
