@@ -11,19 +11,19 @@ description: It's now been seven years since I quit my job at Google to become a
 
 Seven years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own bootstrapped software company.
 
-Every year, I [post an update](/tags/annual-review/) about how things have gone in the last year and what my life is like as an indie founder.
+Every year, I [post an update](/tags/annual-review/) about my life as an indie founder.
 
 ## I sold my company
 
 The defining event of my professional year was that I sold [TinyPilot](https://tinypilotkvm.com), the company I founded in 2020.
 
-TinyPilot is a device that lets users control their computers remotely. I built a rudimentary prototype in 2020 with a $35 Raspberry Pi mini-computer and a $15 HDMI capture dongle.
+TinyPilot is a device that lets users control their computers remotely. It started as a rudimentary prototype that I built with a $35 Raspberry Pi mini-computer and a $15 HDMI capture dongle.
 
 {{<img src="tinypilot-prototype.webp" alt="Photo of a laptop open with 'Hello, World' printed on the screen. On another laptop, the same desktop is displayed within a TinyPilot web interface." max-width="450px" caption="The prototype of TinyPilot, which allowed me to control computers in my home remotely without installing any software">}}
 
-I wrote [a blog post](/tinypilot/) about how I got the initial version of TinyPilot to work, and I offered build-it-it-yourself kits for $170. The kits sold out within four hours.
+I wrote [a blog post](/tinypilot/) about the initial version of TinyPilot, and I offered do-it-yourself kits for $170. Four hours after I published the blog post, the kits sold out.
 
-For the next four years, I improved on the TinyPilot product and built it into a real company. I evolved the product from DIY kits to pre-made devices. I hired a team to help me with hardware, software, support, and logistics, eventually growing the company to $1M/year in revenue.
+For the next four years, I improved on the TinyPilot product and built it into a real company. I evolved from DIY kits to pre-made devices. I hired a team to help me with hardware, software, support, and logistics, eventually growing the company to $1M/year in revenue.
 
 {{<gallery caption="Over the next four years, TinyPilot evolved into a more refined product.">}}
 {{<img src="2a-front.webp" alt="Front view of TinyPilot Voyager 2a device" max-width="350px">}}
@@ -32,11 +32,11 @@ For the next four years, I improved on the TinyPilot product and built it into a
 
 Last year, I sold the company for $600k.
 
-My wife and I wanted to start a family, and I didn't think I could be both the sole manager of a seven-person company and a good father to a newborn. I found a buyer whose vision for the company aligned with mine, and we completed the sale in April 2024.
+My wife and I wanted to start a family, and I didn't think I could be the sole manager of a seven-person company and a good father to a newborn. I found a buyer whose vision for the company aligned with mine, and we completed the sale in April 2024.
 
 {{<img src="sold-tinypilot.webp"  max-width="600px" alt="Illustration of me waving goodbye to TinyPilot mascot flying away in tiny prop plane" caption="Me selling TinyPilot so I could start a family">}}
 
-I already wrote and [podcasted](https://softwaremisadventures.com/p/michael-lynch-indie-hacking) about [selling my company](/i-sold-tinypilot/) and [the lessons I learned](/lessons-from-my-first-exit/), but the short version is that I'm grateful for how everything worked out.
+I already wrote and [podcasted](https://softwaremisadventures.com/p/michael-lynch-indie-hacking) about [the sale](/i-sold-tinypilot/) and [the lessons I learned](/lessons-from-my-first-exit/), but the short version is that I'm grateful for how everything worked out.
 
 ## I became a new parent
 
