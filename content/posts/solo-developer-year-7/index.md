@@ -7,6 +7,8 @@ images:
 tags:
   - annual review
 description: It's now been seven years since I quit my job at Google to become an indie founder. In the past year, I sold my company, started a family, and learned several new technologies.
+discuss_urls:
+  hacker_news: https://news.ycombinator.com/item?id=42918812
 ---
 
 Seven years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own bootstrapped software company. Every year, I [post an update](/tags/annual-review/) about how that's going and what my life is like as an indie founder.
