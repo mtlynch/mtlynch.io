@@ -47,6 +47,7 @@
         ];
 
         shellHook = ''
+          wordword --version
           echo "htmlproofer" "$(htmlproofer --version)"
           markdownlint-cli2 | head -n 1
           echo "node" "$(node --version)"
