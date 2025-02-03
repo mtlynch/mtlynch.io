@@ -186,6 +186,8 @@ Even if you have crystal clear principles, the concert example is still a diffic
 
 #### Time management matrix
 
+<!-- wordword-ignore-start -->
+
 <div id="quadrant-table">
   <div class="row">
     <div class="col">&nbsp;</div>
@@ -238,6 +240,8 @@ Even if you have crystal clear principles, the concert example is still a diffic
     </div>
   </div>
 </div>
+
+<!-- wordword-ignore-end -->
 
 - If we don't take the time to figure out what's important, we default to doing what's urgent.
 - People who focus their time on Quadrant I just learn to manage crisis after crisis.

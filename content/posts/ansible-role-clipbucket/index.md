@@ -80,7 +80,7 @@ We can avoid duplicating effort with [Ansible Galaxy](https://galaxy.ansible.com
 - MySQL - [pcextreme.mariadb](https://galaxy.ansible.com/detail#/role/2462) (actually installs MariaDB, a community-maintained drop-in replacement for MySQL)
 - PHP - [geerlingguy.php](https://galaxy.ansible.com/geerlingguy/php/)
 
-ClipBucket has some smaller dependencies, such as ImageMagick and FFMpeg, which are straightforward to install with a a command or two within our Ansible playbook (see all installation steps [here](https://github.com/mtlynch/ansible-role-clipbucket/blob/master/tasks/main.yml)).
+ClipBucket has some smaller dependencies, such as ImageMagick and FFMpeg, which are straightforward to install with a command or two within our Ansible playbook (see all installation steps [here](https://github.com/mtlynch/ansible-role-clipbucket/blob/master/tasks/main.yml)).
 
 ## Automating Post-Install Steps
 

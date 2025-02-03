@@ -31,6 +31,24 @@ jobs:
       - run:
           name: Lint Markdown
           command: ./dev-scripts/lint-markdown
+  check_duplicate_words:
+    docker:
+      - image: nixos/nix:2.26.1
+    steps:
+      - checkout
+      - run:
+          name: Install wordword
+          command: |
+            nix \
+              --extra-experimental-features 'nix-command flakes' \
+              profile \
+              install git+https://codeberg.org/mtlynch/wordword
+      - run:
+          name: Verify wordword installation
+          command: wordword --version
+      - run:
+          name: Check for duplicate words
+          command: wordword ./
   build:
     docker:
       - image: peaceiris/hugo:v0.139.3
@@ -123,6 +141,7 @@ workflows:
       - check-whitespace
       - check_html_format
       - lint-markdown
+      - check_duplicate_words
       - build
       - lint-html:
           requires:
@@ -146,6 +165,7 @@ workflows:
             - lint-markdown
             - build
             - check-seo-metadata
+            - check_duplicate_words
           filters:
             branches:
               only: master

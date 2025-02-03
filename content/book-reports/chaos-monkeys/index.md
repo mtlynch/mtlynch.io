@@ -5,6 +5,8 @@ rating: 6
 purchase_url: https://www.indiebound.org/book/9780062458209
 ---
 
+<!-- wordword-next-line-ignore-word: names -->
+
 An insider's story about Facebook in the years leading up to its IPO. It's surprisingly candid &mdash; it names names and exposes internal Facebook discussions that were never meant to be public.
 
 An engaging read, but the narrator is painfully obnoxious.

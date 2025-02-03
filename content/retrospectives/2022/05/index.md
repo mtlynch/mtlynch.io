@@ -172,6 +172,8 @@ I've increased my Google budget to $150/day, and I'll keep cranking it up as lon
 
 I'm keeping my Bing budget to $50/day and tuning the ads a bit. Bing was showing my ads for irrelevant queries like "unifi 24 port switch" (a product that serves a completely different function) and "kvms pro" (some kind of CCTV management software).
 
+<!-- wordword-ignore-word: duck -->
+
 I originally intended to advertise on [Duck Duck Go](https://duckduckgo.com) because I suspect their users to be a good match for my product. Bizarrely, Duck Duck Go only sells ads indirectly through Bing, its direct competitor. To buy Ads on Duck Duck Go, you have to advertise on Bing and then enable advertising through Bing's syndicated partners, which include AOL, Yahoo, and Duck Duck Go.
 
 {{<img src="dg-policy.png" has-border="true" max-width="600px" caption="The only way to [advertise on Duck Duck Go](https://help.duckduckgo.com/duckduckgo-help-pages/company/advertising-and-affiliates/) is to advertise on Bing, Yahoo, and AOL.">}}

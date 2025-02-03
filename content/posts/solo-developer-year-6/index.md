@@ -129,7 +129,7 @@ At the end of 2022, we were still making TinyPilot's cases with a fleet of seven
 
 In February 2023, we [switched to a metal case](https://tinypilotkvm.com/blog/introducing-voyager-2a).
 
-{{<img src="metal-case.webp" max-width="500px" caption="After: TinyPilot's metal case case" alt="TinyPilot in a new metal case">}}
+{{<img src="metal-case.webp" max-width="500px" caption="After: TinyPilot's metal case" alt="TinyPilot in a new metal case">}}
 
 I was surprised at how much the metal case impacted sales. Not only did it increase the absolute number of sales, it increased the price customers were willing to pay. After [experimenting with pricing](/retrospectives/2023/05/#what-price-maximizes-profits), I ended up increasing our price by 10%, and our monthly sales were still higher than when we had a 3D-printed case.
 
