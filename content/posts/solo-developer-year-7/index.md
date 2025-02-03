@@ -9,13 +9,11 @@ tags:
 description: It's now been seven years since I quit my job at Google to become an indie founder. In the past year, I sold my company, started a family, and learned several new technologies.
 ---
 
-Seven years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own bootstrapped software company.
-
-Every year, I [post an update](/tags/annual-review/) about my life as an indie founder.
+Seven years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own bootstrapped software company. Every year, I [post an update](/tags/annual-review/) about how that's going and what my life is like as an indie founder.
 
 ## I sold my company
 
-The defining event of my professional year was that I sold [TinyPilot](https://tinypilotkvm.com), the company I founded in 2020.
+My most significant professional development of the last year is that I sold [TinyPilot](https://tinypilotkvm.com), the company I founded in 2020.
 
 TinyPilot is a device that lets users control their computers remotely. It started as a rudimentary prototype that I built with a $35 Raspberry Pi mini-computer and a $15 HDMI capture dongle.
 
@@ -23,7 +21,7 @@ TinyPilot is a device that lets users control their computers remotely. It start
 
 I wrote [a blog post](/tinypilot/) about the initial version of TinyPilot, and I offered do-it-yourself kits for $170. Four hours after I published the blog post, the kits sold out.
 
-For the next four years, I improved on the TinyPilot product and built it into a real company. I evolved from DIY kits to pre-made devices. I hired a team to help me with hardware, software, support, and logistics, eventually growing the company to $1M/year in revenue.
+For the next four years, I improved on the TinyPilot product and built it into a real company. I evolved from DIY kits to pre-made devices with custom metal cases and circuit boards. I hired a team to help me with hardware, software, support, and logistics, eventually growing the company to $1M/year in revenue.
 
 {{<gallery caption="Over the next four years, TinyPilot evolved into a more refined product.">}}
 {{<img src="2a-front.webp" alt="Front view of TinyPilot Voyager 2a device" max-width="350px">}}
@@ -52,7 +50,7 @@ I'm thankful for the flexibility I get from being an indie founder and for the t
 
 I sold TinyPilot in April, but I stayed with the company through mid-May to help the new owner with the transition.
 
-My son was due in August, and I knew I'd take time off when he arrived. That left me three months to start something new, but it needed to be something I could shelve for a few months while I figured out life post-baby.
+My son was due in August, and I knew I'd take time off when he arrived. That left me with three months to start something new, but it needed to be something I could shelve for a few months while I figured out my post-baby life.
 
 I decided the best product for those three months would be a downloadable course or book. It's easy to pause work on an educational product, and even if I have paying customers, there are no servers to keep online or support questions to answer.
 
@@ -72,7 +70,7 @@ I still have a bunch of videos from the partially-recorded blogging course that 
 
 ## I learned cool technologies
 
-When I was running TinyPilot, I didn't have time for technical work, which was a bummer because I still love writing software.
+When I was running TinyPilot, I didn't have time for technical work, which was a bummer because I love writing software.
 
 I've always loved programming, but I've never found it as exciting as I have in the last year. I'm awed by all the amazing open-source software that's freely available.
 
@@ -92,11 +90,11 @@ I've been adopting Nix little by little, but I like it so much that I now use Ni
   - Nix has many of the advantages of Docker, except that Nix packages compose better than Docker images.
 - What are the drawbacks?
   - Nix has a steep learning curve, and I haven't found a good developer-oriented beginner guide. The closest is [_NixOS in Production_](https://leanpub.com/nixos-in-production), which is aimed at DevOps engineers.
-  - There's a schism around a feature called "flakes." If you use flakes, it's hard to understand tutorials and documentation that don't, and vice-versa.
+  - There's a schism around a feature called ["flakes."](https://serokell.io/blog/practical-nix-flakes) If you use flakes, it's hard to understand tutorials and documentation that don't, and vice-versa.
   - The Nix community is in an unhealthy state due to poor leadership.
-  - In continuous integration (CI), Nix scales down poorly. I haven't found a way to run any Nix-dependent CI job [faster than 55 seconds](https://github.com/Gabriella439/nixos-in-production/issues/24) unless I switch to a Nix-specific CI vendor.
+  - In continuous integration (CI), Nix scales down poorly. I haven't found a way to run any Nix-dependent CI job [in under 55 seconds](https://github.com/Gabriella439/nixos-in-production/issues/24) unless I switch to a Nix-specific CI vendor.
 - What's a good way to explore it?
-  - Try Nix in small increments. You can get tremendous value from Nix by using small parts of its functionality.
+  - Try Nix in small increments. You can get tremendous value from learning narrow slices of Nix's functionality.
   - Install Nix using [the Determinate Systems installer](https://zero-to-nix.com/start/install/), and try running a program with `nix shell` (e.g., `nix shell -p cowsay` then `cowsay howdy, human`). Search [the package repo](https://search.nixos.org/packages) to see all the packages you can install in one line.
   - If you liked ephemeral shells, create a [dev shell](/notes/nix-dev-environment/) for one of your projects so that you can manage all of your dependencies and dev tools from a single file.
 
@@ -106,7 +104,7 @@ My friends have been praising [htmx](https://htmx.org) for several years, but th
 
 "You can make the HTML `<button>` element send a POST request? Who cares?"
 
-Then, during a long plane ride, I read the free ebook [_Hypermedia Systems_](https://hypermedia.systems/) about the philosophy of htmx. The book made me realize that htmx's value isn't about letting a `<button>` send a POST request. It's about bringing simple interactivity to HTML without burdening the developer with custom JavaScript or deep layers of abstraction.
+Then, during a long plane ride, I read the free ebook [_Hypermedia Systems_](https://hypermedia.systems/) about the philosophy of htmx. The book made me realize that htmx's value isn't about letting a `<button>` send a POST request &mdash; it's about bringing simple interactivity to HTML without burdening the developer with custom JavaScript or deep layers of abstraction.
 
 I always knew that web development involved a lot of tedious JavaScript, but I'd long ago accepted that as normal. HTML and CSS handle presentation, and JavaScript handles interactivity. There has to be glue code to connect the two, and glue code is inherently boring.
 
@@ -130,13 +128,13 @@ htmx's thesis is that you can eliminate glue code and boilerplate JavaScript by 
 
 ### Zig
 
-The idea of Zig is that there are still programs we need to write in low-level languages like C, but we're making it harder on ourselves by continuing to write them in 50-year-old languages.
+The idea of Zig is that there are still programs we need to write in low-level languages like C, but we're making it harder on ourselves by continuing to write them in 50-year-old programming languages.
 
 Zig gives you the same power and performance of C, but it takes advantage of hardware and compiler advancements that weren't available when C was created.
 
 I immediately loved the idea of Zig, but I struggled to find a project for it. I haven't used C or C++ for a personal project in 15 years. I typically build small-scale web apps, and Zig isn't the best tool for those.
 
-I still find Zig extremely fun. If I were stranded on a desert island for a year with a laptop but no Internet, my fantasy activity would be porting an open-source rebuild of a computer game I played as a kid (e.g., [Age of Empires II](http://openage.dev/), [Command and Conquer](https://www.openra.net/)) from unrefined C++ code to elegant Zig.
+I still find Zig extremely fun. If I were stranded on a desert island for a year with a laptop but no Internet, my fantasy activity would be porting an open-source rebuild of one of my childhood computer games (e.g., [Age of Empires II](http://openage.dev/), [Command and Conquer](https://www.openra.net/)) from unrefined C++ code to elegant Zig.
 
 - Who should try it?
   - C/C++ programmers who are curious about a modern reimagining of those languages.
@@ -199,21 +197,21 @@ I continue enjoying life as an indie founder, and I still want to keep doing it 
 
 ### It's okay not to work
 
-Before my son was born, I struggled with the question of how much time to take off. Obviously, taking one month off would be fine. But if one month is okay, why not two? Why not four? Why not a year?
+Before my son was born, I struggled with the question of how much time to take off. Obviously, taking a month off would be fine. But if one month is okay, why not two? Why not four? Why not a year?
 
-In the months after my son's birth, I wrestled with an even scarier question: what if, now that I have a baby, I can't return to work even if I want to? I suddenly had no free time. What if I could never reclaim enough uninterrupted time for writing and programming?
+In the months after my son's birth, I suddenly had no free time. I wrestled with an even scarier question: what if, now that I have a baby, I can't return to work even if I want to? What if I could never reclaim enough uninterrupted time for writing and programming?
 
 I took a breath and realized the reason I had "no free time" was that several days each week, I'd take long walks downtown to enjoy an outdoor brunch with my wife and son. Or we'd host visitors from out of town to meet the baby. I had to remind myself that these were all _good things_ that I _liked doing_, and I was still in control of my time should I decide to resume working.
 
-Ultimately, my return to work happened organically and didn't feel at odds with family time. My wife and I found out a childcare balance that felt right to us, and we continue to adjust as my son gets older and our other family members have joined in to help with childcare.
+Ultimately, my return to work happened organically and didn't feel at odds with family time. My wife and I found a childcare balance that felt right to us, and we continue to adjust as my son gets older and our other family members have joined in to help with childcare.
 
 ### A process isn't documented until someone else uses the documentation
 
 In the months leading up to TinyPilot's sale, I focused on delegating as much as possible to the rest of the team. I didn't want the new owner to take over and feel like they couldn't complete some critical task because I was the only one who knew how to do it.
 
-I expected delegation to be easy because we had playbooks for everything, even tasks I did myself. As I began handing off my tasks to teammates, I realized how much of the "documented" processes actually just [lived in my head](/retrospectives/2024/02/#i-accidentally-hoarded-tinypilots-release-process). Steps like "Write the release announcement" or "Update the public changelog" were more complicated than the short phrases implied.
+I expected delegation to be easy because we had playbooks for everything, even tasks I did myself. As I began handing off my tasks to teammates, I realized how much of the "documented" processes I owned actually just [lived in my head](/retrospectives/2024/02/#i-accidentally-hoarded-tinypilots-release-process). Steps like "Write the release announcement" or "Update the public changelog" were more complicated than the short phrases implied.
 
-I now consider a process to be documented only when a teammate can follow the process using the documentation exclusively.
+I now consider a process to be documented only when a teammate can follow the process exclusively using the documentation.
 
 ### Selling to a cash buyer drastically reduces risk and paperwork
 
