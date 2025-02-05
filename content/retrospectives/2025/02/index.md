@@ -41,9 +41,11 @@ AI models now [operate at the skill level of a competent junior engineer](/notes
 
 I expect a lot of the software industry and the world at large to restructure around AI. The closest parallel in my lifetime is the shift from desktop software to the Internet and the web.
 
-And I'm writing a book that has nothing to do with AI.
+And I'm writing a book that has nothing to do with AI... Even though I have no job and no company to run, so I can do whatever I want.
 
-In fact, AI might decrease demand for my book because developers might prefer asking an LLM for editing suggestions rather than reading a book about clear writing.
+I don't want to just chase the newest, shiny thing, but I also feel sitting out AI is like seeing the Internet happen in the late 90s and saying, "I think I want to publish software on a CD that customers order by mail."
+
+AI might even decrease demand for my book because developers might prefer asking an LLM for editing suggestions rather than reading a book about clear writing.
 
 On the other hand, maybe AI increases the demand for effective, personal writing. If everything anyone reads is AI-generated, maybe they'll seek out some artisenal, hand-crafted words.
 
@@ -51,7 +53,7 @@ On the other hand, maybe AI increases the demand for effective, personal writing
 
 The other issue is that writing my book is a long commitment, and I don't yet have confidence that people want to read it.
 
-The [first chapter I released](https://refactoringenglish.com/chapters/rules-for-software-tutorials/) got a positive reception, but that's one of the fun, broad-appeal chapters. I fear that chapters like "Passive voice considered harmful," is more of an "eat your vegetables" lesson. People might recognize it as beneficial, but it's not fun to read. And my usual haunts like Hacker News or reddit wouldn't like a post about the passive voice.
+The [first chapter I released](https://refactoringenglish.com/chapters/rules-for-software-tutorials/) got a positive reception, but that's one of the fun, broad-appeal chapters. I fear that chapters like "Passive voice considered harmful," is more of an "eat your vegetables" lesson. People might recognize it as beneficial, but it's not fun to read. And my usual haunts like Hacker News or reddit wouldn't showcase a post about the passive voice.
 
 The problem is that most of the chapters in my book are "eat your vegetables" chapters.
 
@@ -117,9 +119,11 @@ I bought my old router before I had a server rack, so it wasn't rack-mountable. 
 
 Fiber Internet recently became available in my area, and the fastest plan is 2 Gbps. This is the first time an ISP has ever offered me &gt; 1 Gbps speeds, so I wanted to do it.
 
-I bought the XX router and installed OPNsense business on it. It's doing great. I checked system load while running a speed test, and RAM never went above 13% and CPU stayed at about 30%, so the hardware is more than sufficient for my needs. Note that I don't have a ton of firewall rules, and I don't use OPNsense's IDS/IPS features.
+I bought the [Qotom C3758R 1U 10 Gbps router](https://www.servethehome.com/everything-homelab-node-goes-1u-rackmount-qotom-intel-review/) and installed OPNsense business on it. It's doing great. I always worry that I'm not getting enough RAM or disk space on my router, but OPNsense barely needs anything. I went with 8 GB of RAM and 128 GB of disk. I just checked system load while running a speed test, and RAM never went above 13% and CPU stayed at about 30%, so the hardware is more than sufficient for my needs. Note that I don't have a ton of firewall rules, and I don't use OPNsense's IDS/IPS features.
 
 {{<img src="opnsense-load.webp" has-border="true">}}
+
+I paid $417 including shipping and taxes. I would have preferred to buy from a trusted hardware vendor like OPNsense or Protectli, but OPNsense's cheapest 10 Gbps rack-mounted router is [three times the price](https://shop.opnsense.com/product/dec2752-opnsense-rack-security-appliance/), and Protectli doesn't have any rack mountable options.
 
 ### Officially converted to rack studs
 
