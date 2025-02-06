@@ -139,10 +139,6 @@ Codeberg officially recommends self-hosting Woodpecker CI, which sounds kind of 
 - Drone: Seems like they only offer managed hosting for Enterprise.
 - Harness: This is a new Drone thing, it seems, but I can't figure out if they support Forgejo/Gitea.
 
-### Switched to the ncruces SQLite Go library
-
-- Switched to ncruces implementation of sqlite
-
 ### Got a 10 Gbps router
 
 For the first time ever, my ISP is offering 2 Gbps symmetrical speeds, so I wanted to take advantage of the full capacity.
