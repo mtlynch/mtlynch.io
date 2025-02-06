@@ -59,7 +59,7 @@ The [first chapter I released](https://refactoringenglish.com/chapters/rules-for
 
 The problem is that most of the chapters in my book are "eat your vegetables" chapters.
 
-TODO: Screenshot
+{{<img src="fun-chapters.webp" max-width="650px" has-border="true">}}
 
 I could restructure it so that I talk about a tip like "read your post aloud" as part of the blogging chapter, but it wouldn't quite make sense because that applies to all kinds of writing, not just blog posts.
 
@@ -100,7 +100,7 @@ I recently read a blog post by Matt Might where he explains [the idea of "lexica
 
 I make this mistake on my blog, so I wanted a tool that could catch this mistake for me automatically.
 
-I wrote the tool leaning heavily on Cline, an AI assistant. I [found it impressive and scary](/notes/cline-is-mesmerizing/) how good Cline was at implementing the tool based on my prompts and test cases.
+I wrote the tool leaning heavily on [Cline](https://cline.bot/), an AI assistant. I [found it impressive and scary](/notes/cline-is-mesmerizing/) how good Cline was at implementing the tool based on my prompts and test cases.
 
 And the tool works well. I used it to find [seven lexical illusions](https://github.com/mtlynch/mtlynch.io/pull/1414) in already-published articles. I've added `wordword` to my blog's [CI build](https://github.com/mtlynch/mtlynch.io/pull/1414/files#diff-78a8a19706dbd2a4425dd72bdab0502ed7a2cef16365ab7030a5a0588927bf47) and to my [git pre-commit hook](https://github.com/mtlynch/mtlynch.io/pull/1414/files#diff-c901cafe102063c4ca0cb0d0c42723a4fbe06baefab7c7c4feb8484f54b3ccc5).
 
@@ -129,7 +129,7 @@ I saw that one of the ways you can pay for Codeberg is by joining as a voting me
 
 The biggest downside of Codeberg is that there don't seem to be any managed continuous integration vendors that support it.
 
-Codeberg officially recommends self-hosting Woodpecker CI, which sounds kind of fun, but is not really where I want to spend my time. And I store a bunch of critical production secrets in CI, so I'd much rather pay someone with dedicated staff to think about security.
+Codeberg officially recommends self-hosting Woodpecker CI, which sounds kind of fun, but is not really where I want to spend my time. And I store a bunch of critical production secrets in CI, so I'd rather pay someone with dedicated staff to think about security.
 
 - WoodpeckerCI: No vendor offers paid managed hosting.
 - Codeberg Actions: Experimental project with no paid support.
