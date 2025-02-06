@@ -153,7 +153,13 @@ I always worry that I'm not getting enough RAM or disk space on my router, but O
 
 {{<img src="opnsense-load.webp" has-border="true">}}
 
+<!-- workaround for https://github.com/DavidAnson/markdownlint/issues/1482 -->
+
+<!-- markdownlint-disable MD034 -->
+
 I paid $417 including shipping and taxes. I would have preferred to buy from a trusted hardware vendor like OPNsense or Protectli, but OPNsense's cheapest 10 Gbps rack-mounted router is [$1,200](https://shop.opnsense.com/product/dec2752-opnsense-rack-security-appliance/), and Protectli doesn't have any rack mountable options.
+
+<!-- markdownlint-enable MD034 -->
 
 ### Officially converted to rack studs
 
