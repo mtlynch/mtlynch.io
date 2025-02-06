@@ -7,8 +7,8 @@
     # 18.14.1 release
     nodejs-nixpkgs.url = "github:NixOS/nixpkgs/6adf48f53d819a7b6e15672817fa1e78e5f4e84f";
 
-    # 0.9.0
-    markdown-lint-nixpkgs.url = "github:NixOS/nixpkgs/12bdeb01ff9e2d3917e6a44037ed7df6e6c3df9d";
+    # 0.17.2
+    markdown-lint-nixpkgs.url = "github:NixOS/nixpkgs/102a39bfee444533e6b4e8611d7e92aa39b7bec1";
 
     # 5.0.8 release
     html-proofer-nixpkgs.url = "github:NixOS/nixpkgs/5ed627539ac84809c78b2dd6d26a5cebeb5ae269";

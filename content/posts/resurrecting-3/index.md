@@ -182,7 +182,7 @@ I still didn't fully understand what this function did, but the unit test brough
 
 | index | input        | name  | qty | range_end | unit | comment |
 | ----- | ------------ | ----- | --- | --------- | ---- | ------- |
-| 162   | 2 cups flour | flour | 2.0 | 0.0       | cup  |
+| 162   | 2 cups flour | flour | 2.0 | 0.0       | cup  |         |
 
 It returned a set of tab-separated values that the library's machine learning engine understood.
 
