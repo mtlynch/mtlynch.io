@@ -102,7 +102,7 @@ I make this mistake on my blog, so I wanted a tool that could catch this mistake
 
 I wrote the tool leaning heavily on Cline, an AI assistant. I [found it impressive and scary](/notes/cline-is-mesmerizing/) how good Cline was at implementing the tool based on my prompts and test cases.
 
-And the tool works well. I used it to find [seven lexical illusions](https://github.com/mtlynch/mtlynch.io/pull/1414) in already-published articles.
+And the tool works well. I used it to find [seven lexical illusions](https://github.com/mtlynch/mtlynch.io/pull/1414) in already-published articles. I've added `wordword` to my blog's [CI build](https://github.com/mtlynch/mtlynch.io/pull/1414/files#diff-78a8a19706dbd2a4425dd72bdab0502ed7a2cef16365ab7030a5a0588927bf47) and to my [git pre-commit hook](https://github.com/mtlynch/mtlynch.io/pull/1414/files#diff-c901cafe102063c4ca0cb0d0c42723a4fbe06baefab7c7c4feb8484f54b3ccc5).
 
 And because I wrote it in Zig, it's super fast. It checks 221 Markdown files in my blog in just 28.7 milliseconds:
 
@@ -113,21 +113,23 @@ Benchmark 1: wordword ./
   Range (min … max):    26.8 ms …  31.7 ms    90 runs
 ```
 
-I've added `wordword` to my blog's [CI build](https://github.com/mtlynch/mtlynch.io/pull/1414/files#diff-78a8a19706dbd2a4425dd72bdab0502ed7a2cef16365ab7030a5a0588927bf47) and to my [git pre-commit hook](https://github.com/mtlynch/mtlynch.io/pull/1414/files#diff-c901cafe102063c4ca0cb0d0c42723a4fbe06baefab7c7c4feb8484f54b3ccc5).
-
 ## Other small things
 
 ### I joined Codeberg as a member
 
-I've been looking for a more open-source git hosting service.
+I've been looking for a less corporate, more open-source git hosting service.
 
-I'd been using Gitlab. But they made [a bizarre decision](https://gitlab.com/gitlab-org/gitlab/-/issues/419602#note_2030565051) to forcefully log out every user every two weeks. It felt like every time I tried to use Gitlab, I was signed out. And then to sign in, I can't even just let my password manager fill out my credentials, as Gitlab forces me to go open my email for a one-time code.
+I'd been using Gitlab. But they made [the bizarre decision](https://gitlab.com/gitlab-org/gitlab/-/issues/419602#note_2030565051) to forcefully log out every user every two weeks.
 
-I looked at Codeberg, and I liked it. It's simpler than Gitlab, which is great for me because Gitlab always felt like overkill. And it's fully open-source and implemented in Go and HTML templates, which is my favorite web stack.
+Every time I tried to use Gitlab, I'm signed out. And then to sign in, I can't even just let my password manager fill out my credentials, as Gitlab forces me to go open my email for a one-time code.
 
-And I saw that one of the ways you can pay is by joining as a voting member of the company, so I did that. I haven't used my membership to do anything yet, but it's fun to feel like I'm part of a co-operative rather than just a user.
+I looked at [Codeberg](https://codeberg.org/), and I liked it. It's simpler than Gitlab, which works for me because Gitlab always felt overly complex for my needs. And it's [fully open-source](https://codeberg.org/forgejo/forgejo) and implemented in Go and HTML templates, which is my favorite web stack.
 
-The biggest downside of Codeberg is that I can't figure out a good continuous integration option to use with it. Codeberg officially recommends self-hosting Woodpecker CI, but CI is deceptively difficult to self-host. CI has access to production secrets, so I'd much rather pay a company to manage CI infrastructure for me and
+I saw that one of the ways you can pay for Codeberg is by joining as a voting member of the company, so I did that. I haven't used my membership to do anything yet, but it's fun to feel like I'm part of a co-operative rather than just a user.
+
+The biggest downside of Codeberg is that there don't seem to be any managed continuous integration vendors that support it.
+
+Codeberg officially recommends self-hosting Woodpecker CI, which sounds kind of fun, but is not really where I want to spend my time. And I store a bunch of critical production secrets in CI, so I'd much rather pay someone with dedicated staff to think about security.
 
 - WoodpeckerCI: No vendor offers paid managed hosting.
 - Codeberg Actions: Experimental project with no paid support.
@@ -143,43 +145,47 @@ The biggest downside of Codeberg is that I can't figure out a good continuous in
 
 ### Got a 10 Gbps router
 
-I bought my old router before I had a server rack, so it wasn't rack-mountable. It was a Qotom Q355G4 that sat on a rack shelf.
+For the first time ever, my ISP is offering 2 Gbps symmetrical speeds, so I wanted to take advantage of the full capacity.
 
-Fiber Internet recently became available in my area, and the fastest plan is 2 Gbps. This is the first time an ISP has ever offered me &gt; 1 Gbps speeds, so I wanted to do it.
+My router was a Qotom Q355G4, which has served me well, except it's not rack-mountable, and it only has 1 Gbps ports.
 
-I bought the [Qotom C3758R 1U 10 Gbps router](https://www.servethehome.com/everything-homelab-node-goes-1u-rackmount-qotom-intel-review/) and installed OPNsense business on it. It's doing great.
+I wanted to buy a router from a trusted hardware vendor like OPNsense or Protectli, but OPNsense's cheapest 10 Gbps rack-mounted router is [$1,200](https://shop.opnsense.com/product/dec2752-opnsense-rack-security-appliance/), and Protectli doesn't have any rack mountable options.
+
+I ended up buying the [Qotom C3758R 1U 10 Gbps router](https://www.servethehome.com/everything-homelab-node-goes-1u-rackmount-qotom-intel-review/) ($417 after shipping and taxes) and installed OPNsense business on it.
+
+{{<img src="10g-router.webp" max-width="600px" caption="I bought a Qotom C3758R 10 Gbps router (third from the top) to take advantage of a newly available 2 Gbps option from my ISP.">}}
 
 I always worry that I'm not getting enough RAM or disk space on my router, but OPNsense barely needs anything. I went with 8 GB of RAM and 128 GB of disk. I just checked system load while running a speed test, and RAM never went above 13% and CPU peaked at about 30%, so the hardware is more than sufficient for my needs. Note that I don't have a ton of firewall rules, and I don't use OPNsense's IDS/IPS features.
 
 {{<img src="opnsense-load.webp" has-border="true">}}
 
-<!-- workaround for https://github.com/DavidAnson/markdownlint/issues/1482 -->
-
-<!-- markdownlint-disable MD034 -->
-
-I paid $417 including shipping and taxes. I would have preferred to buy from a trusted hardware vendor like OPNsense or Protectli, but OPNsense's cheapest 10 Gbps rack-mounted router is [$1,200](https://shop.opnsense.com/product/dec2752-opnsense-rack-security-appliance/), and Protectli doesn't have any rack mountable options.
-
-<!-- markdownlint-enable MD034 -->
-
 ### Officially converted to rack studs
 
-After I published my article about building my first home server rack, several readers recommended I use Rackstuds instead of cage nuts. I was skeptical
+After I published my article about building my first home server rack, several readers recommended I try [Rackstuds](https://www.rackstuds.com/) instead of cage nuts.
 
-I couldn't understand the difference between the red studs and the purple studs. The product page says:
+I was skeptical because Rackstuds are plastic, so they seem more liable to break than metal cage nuts. But Rackstuds has lab tests showing they can [support equipment of up to 40 lbs](https://www.rackstuds.com/certification).
+
+Rackstuds are definitely easier to work with than cage nuts. Cage nuts made it [difficult to mount equipment](/building-first-homelab-rack/#test-the-ups-before-mounting-it), especially heavy stuff, because you need to hold the component level and also screw in nuts to secure it in place.
+
+Rackstuds solve this problem because you install those into your rack first, and then just hang the component onto the studs.
+
+One thing that confused me was that Rackstuds come in two variants: red and purple, and they're different in a confusing way. The product page for the purple studs says:
 
 > Suitable for rails between 2.7mm/0.106 and 3.2mm/0.125". If ≤ 2.2mm/0.086", use the new red version instead
 
 Huh?
 
-"Rails" in a server rack means to me the things attach to the server to slide it in.
+I think of "rails" in a server rack as the things attach to the server to slide it in, and they're way bigger than 3mm in every dimension.
+
+{{<img src="server-rails.webp" max-width="300px" has-border="true" caption="What I thought &ldquo;rails&rdquo; are in a server rack.">}}
 
 I finally figured out that when Rackstuds talks about rail thickness, they mean the piece of metal on the front of the rack:
 
 {{<img src="rail-thickness.webp" max-width="700px">}}
 
-On my StarTech rack, red Rackstuds fit with effort, but purple studs fit comfortably.
+On my StarTech rack, purple Rackstuds seemed to fit more comfortably.
 
-If you buy the Rackstuds Duo, they only work on components that are exactly 1U, whereas the loose Rackstuds work for rack mounting anything.
+Another gotcha: if you buy the Rackstuds Duo, they only work on components that are exactly 1U, whereas the loose Rackstuds work for rack mounting anything. I bought the sample pack of eight first, and then I bought myself a bag of 20 for future rack components.
 
 ## Wrap up
 
@@ -198,9 +204,10 @@ If you buy the Rackstuds Duo, they only work on components that are exactly 1U, 
 
 ### Requests for help
 
+- If you have suggestions for a Kickstarter alternative that's more focused on publishing ebooks, [let me know](/about).
+  - I know about [LeanPub](https://leanpub.com/), but I'm looking for similar mechanics to Kickstarter's "reach this minimum, or it doesn't happen."
 - Please [reach out](/about) or leave a comment below if you have opinions on tools for writing a book in a markup language that supports rendering to both PDF and HTML.
   - The options I'm considering are:
     - [AsciiDoc](https://asciidoc.org/)
     - [mdBook](https://rust-lang.github.io/mdBook/)
     - [Pollen](https://docs.racket-lang.org/pollen/index.html) - I like the idea, but I'd have to learn Pollen, which means learning Racket, which means learning Lisp, so it's a lot.
-- If you have suggestions for a Kickstarter alternative that's more focused on publishing ebooks, [let me know](/about).
