@@ -48,7 +48,7 @@ jobs:
           command: wordword --version
       - run:
           name: Check for duplicate words
-          command: wordword ./content
+          command: wordword --verbose ./content
   build:
     docker:
       - image: peaceiris/hugo:v0.139.3
