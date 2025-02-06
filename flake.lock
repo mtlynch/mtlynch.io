@@ -160,17 +160,17 @@
     },
     "markdown-lint-nixpkgs": {
       "locked": {
-        "lastModified": 1697379843,
-        "narHash": "sha256-RcnGuJgC2K/UpTy+d32piEoBXq2M+nVFzM3ah/ZdJzg=",
+        "lastModified": 1738422722,
+        "narHash": "sha256-Q4vhtbLYWBUnjWD4iQb003Lt+N5PuURDad1BngGKdUs=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "12bdeb01ff9e2d3917e6a44037ed7df6e6c3df9d",
+        "rev": "102a39bfee444533e6b4e8611d7e92aa39b7bec1",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "12bdeb01ff9e2d3917e6a44037ed7df6e6c3df9d",
+        "rev": "102a39bfee444533e6b4e8611d7e92aa39b7bec1",
         "type": "github"
       }
     },
@@ -315,11 +315,11 @@
         "zls": "zls"
       },
       "locked": {
-        "lastModified": 1738672278,
-        "narHash": "sha256-46eOOogSVRQjNIKfOTx5RBKtsUbkjE0+J2jaE3TspFY=",
+        "lastModified": 1738864095,
+        "narHash": "sha256-/Z7ULzmTja9KC8/ta7w7ekt6MvelAR2BhfxUi/qPmSw=",
         "ref": "refs/heads/master",
-        "rev": "9924c22b4bb2588cc54e7c59a6247fb830934170",
-        "revCount": 48,
+        "rev": "4e70033e7fd1d966dd573b13f1689ec1757f3d6b",
+        "revCount": 55,
         "type": "git",
         "url": "https://codeberg.org/mtlynch/wordword.git"
       },
