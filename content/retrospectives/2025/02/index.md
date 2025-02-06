@@ -102,6 +102,19 @@ I make this mistake on my blog, so I wanted a tool that could catch this mistake
 
 I wrote the tool leaning heavily on Cline, an AI assistant. I [found it impressive and scary](/notes/cline-is-mesmerizing/) how good Cline was at implementing the tool based on my prompts and test cases.
 
+And the tool works well. I used it to find [seven lexical illusions](https://github.com/mtlynch/mtlynch.io/pull/1414) in already-published articles.
+
+And because I wrote it in Zig, it's super fast. It checks 221 Markdown files in my blog in just 28.7 milliseconds:
+
+```bash
+$ hyperfine 'wordword ./'
+Benchmark 1: wordword ./
+  Time (mean ± σ):      28.7 ms ±   1.3 ms    [User: 11.7 ms, System: 16.5 ms]
+  Range (min … max):    26.8 ms …  31.7 ms    90 runs
+```
+
+I've added `wordword` to my blog's [CI build](https://github.com/mtlynch/mtlynch.io/pull/1414/files#diff-78a8a19706dbd2a4425dd72bdab0502ed7a2cef16365ab7030a5a0588927bf47) and to my [git pre-commit hook](https://github.com/mtlynch/mtlynch.io/pull/1414/files#diff-c901cafe102063c4ca0cb0d0c42723a4fbe06baefab7c7c4feb8484f54b3ccc5).
+
 ## Other small things
 
 ### I joined Codeberg as a member
