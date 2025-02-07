@@ -16,7 +16,7 @@ GCP's price for an equivalent 4-CPU ARM VM is $132/month and it has 30% less RAM
 
 {{<img src="gcp-price.webp" max-width="600px" has-border="true" caption="Google charges $132/month for a slightly worse VM than Oracle's free-tier ARM option.">}}
 
-## The challenge: Install NixOS
+## The challenge: Install NixOS on an Oracle Cloud VM
 
 Oracle doesn't offer NixOS as one of the OS options for its VMs, and I've read reports that uploading a NixOS image doesn't work either.
 
