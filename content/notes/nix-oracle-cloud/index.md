@@ -1,19 +1,69 @@
 ---
 title: "Install NixOS on a Free Oracle Cloud VM"
-date: 2025-02-06
+date: 2025-02-07
+tags:
+  - nix
 ---
 
-https://prithu.dev/notes/installing-nixos-on-oracle-cloud-arm-instance/
+Oracle is not a very popular cloud hosting service, but they have an unusually attractive [free tier offering](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm). You can run the following two VMs for free 24/7:
 
-{{<img src="vm-settings.webp" has-border="true">}}
+- 4 CPU / 24 GB RAM Ampere A1 ARM VM
+- 1 CPU / 1 GB RAM AMD CPU
 
-Upload your SSH public key.
+The AMD one is not that exciting, but a 4-CPU / 24 GB system is more powerful than you'll find in the free tier of any other cloud vendor.
 
-Wait until the VM instance shows as "Running"
+GCP's price for an equivalent 4-CPU ARM VM is $132/month and it has 30% less RAM than Oracle's.
+
+{{<img src="gcp-price.webp" max-width="600px" has-border="true" caption="Google charges $132/month for a slightly worse VM than Oracle's free-tier ARM option.">}}
+
+## The challenge: Install NixOS
+
+Oracle doesn't offer NixOS as one of the OS options for its VMs, and I've read reports that uploading a NixOS image doesn't work either.
+
+I've found [several](https://mdleom.com/blog/2021/03/09/nixos-oracle/) [tutorials](https://mdleom.com/blog/2021/03/09/nixos-oracle/) about installing NixOS on Oracle's ARM VM, but they all seemed complicated and involved a lot of manual steps.
+
+Prithu Goswami figured out [a clever shortcut](https://prithu.dev/notes/installing-nixos-on-oracle-cloud-arm-instance/) by using the NixOS installer through netboot, which simplifies things. Prithu's explanation was pretty terse, so I thought I'd share my complete walkthrough of his method.
+
+## Requirements
+
+There are no pre-requisites except that you'll need an SSH client on your local system.
+
+- `ssh`
+
+## Step 1: Get an Oracle Cloud account
+
+I unfortunately can't help much with this step, as I did it several months ago and don't remember the process.
+
+I do know that Oracle kept closing my account for opaque reasons before I even tried any of the cloud services, and I had to email support to get my account restored.
+
+Note that you can only create free-tier VMs in your home region, and I'm not sure which regions have the most capacity.
+
+I chose a home region of US-ASHBURN, which has free-tier VMs.
+
+## Step 2: Create a free-tier VM
+
+Once you're logged in to your Oracle Cloud account, create your free VM:
+
+1. Go to [Create compute instance](https://cloud.oracle.com/compute/instances/create).
+1. Change the name to whatever you want.
+1. Under "Image and shape," choose the image Ubuntu > `Canonical Ubuntu 24.04 Minimal aarch64`.
+1. Under "Image and shape," choose the shape `VM.Standard.A1.Flex` and increase the number of OCPUs to `4`. RAM should auto-update to `24` GB.
+
+The image and shape screen should look like this:
+
+{{<img src="vm-settings.webp" has-border="true" max-width="700px">}}
+
+Under "Add SSH keys," upload your SSH public key.
+
+Finally, hit "Create" to create the VM.
+
+## Step 3: Log in over SSH
+
+Wait until your VM shows as running:
 
 {{<img src="vm-running.webp" has-border="true">}}
 
-## Log in over SSH
+Once your VM is running, open a terminal on your local system.
 
 Copy your VM's public IP address:
 
@@ -21,8 +71,16 @@ Copy your VM's public IP address:
 VM_IP='1.2.3.4' # Replace with your VM's IP.
 ```
 
+SSH into your newly-created VM with your SSH keys:
+
 ```bash
 ssh "ubuntu@${VM_IP}"
+```
+
+## Step 4: Download netboot
+
+```bash
+sudo su
 ```
 
 ```bash
@@ -35,21 +93,35 @@ wget https://boot.netboot.xyz/ipxe/netboot.xyz-arm64.efi && \
     /boot/efi/netboot.efi
 ```
 
-## Boot into EFI boot manager
+## Step 5: Boot into EFI boot manager using Cloud Shell
 
-Scroll down to the "Resources" section at the bottom of the VM page and click "Console connection"
+Go back to the VM page for your instance on Oracle Cloud. Scroll down to the "Resources" section at the bottom of the VM page and click "Console connection"
 
 {{<img src="console-connection.webp" has-border="true">}}
 
-Click "Launch Cloud Shell connection."
+From there, click "Launch Cloud Shell connection."
+
+When the Cloud Shell is initialized, you should see this line:
+
+```text
+Instance Console Connection reached state: ACTIVE
+```
+
+{{<notice type="info">}}
+
+**Note**: The next two steps have to happen quickly in succession. If you miss it, you can just SSH in and try again, though.
+
+{{</notice>}}
 
 From your SSH session:
 
 ```bash
-sudo reboot
+reboot
 ```
 
-In the Cloud Shell keep hitting the Escape key as the system reboots. You should eventually see the EFI boot manager:
+Quickly, switch over to Cloud Shell in your browser. Click on the remote screen and then keep hitting the Escape key on your keyboard as the system reboots.
+
+If you do it correctly, you should see the EFI boot manager:
 
 {{<img src="boot-manager.webp" has-border="true">}}
 
@@ -65,11 +137,15 @@ From the EFI Shell prompt, type:
 fs0:netboot.efi
 ```
 
-1. Choose Distributions > Linux Network Installs (arm64)
-1. Choose `NixOS`
-1. Choose `NixOS nixos-24.11`
+When netboot launches, choose the following options:
 
-## Configure SSH access
+1. Distributions > Linux Network Installs (arm64)
+1. `NixOS`
+1. `NixOS nixos-24.11`
+
+netboot should launch the NixOS live installer.
+
+## Step 7: Configure SSH access for the NixOS installer
 
 You should automatically log in as user `nixos` with no password prompt.
 
@@ -88,24 +164,63 @@ Go back to your standard terminal, and SSH in again, this time to the NixOS inst
 ssh "nixos@${VM_IP}"
 ```
 
-## Configure the NixOS install
+## Step 8: Repartition the cloud VM's disk
 
-Elevate to root
+At this point, you're in the NixOS installer, but the disk still has Ubuntu installed on it. You need to wipe and repartition the disk to install NixOS.
+
+From your SSH session to the VM, elevate to root.
 
 ```bash
 sudo su
 ```
 
+Next, change to a temporary directory:
+
 ```bash
-mount /dev/disk/by-label/cloudimg-rootfs /mnt && \
-  mkdir -p /mnt/boot && \
-  mount /dev/disk/by-label/UEFI /mnt/boot && \
-  nixos-generate-config --root /mnt
+cd "$(mktemp --directory)"
 ```
 
-{{<inline-file filename="vars.nix" language="javascript">}}
+From here, download the [disk configuration file](disk-config.nix) I've created. It reserves 500 MB for a boot partition and uses the rest of the disk for NixOS.
 
-{{<inline-file filename="configuration.nix" language="javascript">}}
+```bash
+curl \
+  --show-error \
+  --fail \
+  {{<baseurl>}}notes/nixos-oracle-cloud/disk-config.nix \
+  > disk-config.nix
+```
+
+Use [disko](https://github.com/nix-community/disko) to apply the disk partitioning configuration to the VM's disk:
+
+```bash
+nix \
+  --experimental-features 'nix-command flakes' \
+  run \
+  github:nix-community/disko/v1.11.0 \
+  -- \
+  --mode destroy,format,mount \
+  disk-config.nix
+```
+
+When prompted, say "yes" to deleting all data.
+
+## Step 9: Install NixOS
+
+At this point, you have a freshly-partitioned disk. It's time to install NixOS.
+
+To begin, generate a placeholder configuration:
+
+```bash
+nixos-generate-config --no-filesystems --root /mnt
+```
+
+Move the disk configuration you created above to `/mnt/etc/nixos/` with the rest of your NixOS configuration files:
+
+```bash
+mv disk-config.nix /mnt/etc/nixos/
+```
+
+Next, download the Nix configuration files I prepared for this Oracle Cloud VM:
 
 ```bash
 curl \
@@ -120,16 +235,50 @@ curl \
     > /mnt/etc/nixos/vars.nix
 ```
 
+I split out all the values you're likely to change into a file called `vars.nix`:
+
+{{<inline-file filename="vars.nix" language="nix">}}
+
+Open `vars.nix` and change the settings to match your desired values.
+
 ```bash
 nano /mnt/etc/nixos/vars.nix
 ```
 
-TODO: Copy configuration.nix
+Feel free to tinker with `configuration.nix` as well, but you can also change the files after you complete the initial install.
+
+Once you've customized your `configuration.nix` and `vars.nix`, start the NixOS install:
 
 ```bash
 nixos-install --no-root-password
 ```
 
+When the install completes, reboot the VM:
+
 ```bash
 shutdown --reboot now
+```
+
+## Step 10: Log in to your new NixOS system
+
+The first boot will take about a minute. When it's ready, go to your terminal, and SSH in using the same IP address you used earlier:
+
+```bash
+ssh "${VM_IP}"
+```
+
+```bash
+sudo nano /etc/nixos/configuration.nix
+```
+
+Add `ffmpeg` to the list of packages.
+
+```bash
+sudo nixos-rebuild switch
+```
+
+```bash
+$ ffmpeg -version | head -n 2
+ffmpeg version 7.1 Copyright (c) 2000-2024 the FFmpeg developers
+built with gcc 14.2.1 (GCC) 20241116
 ```
