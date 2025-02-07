@@ -95,3 +95,28 @@ htmlproofer \
   --no-enforce-https \
   "$htmlproofer_args_extra" \
   "${BUILD_DIR}"
+
+# Scrape for internal URLs that we use in code examples. They may not be in link
+# tags, but they still need to work.
+readonly TEMP_DIR=$(mktemp -d)
+# Find all mtlynch.io URLs
+grep -roh 'https://mtlynch\.io/[^[:space:]<>"'"'"']*' "${BUILD_DIR}" | \
+  grep -v '^https://mtlynch\.io/[^/]*$' | \
+  grep -v '_hu[0-9a-f]*\.' | \
+  grep -v '#' | \
+  sort -u > "${TEMP_DIR}/internal-urls.txt"
+# Create internal-urls.html with links.
+{
+  echo "<!DOCTYPE html><html><body>"
+  while read -r link; do
+    echo "<a href=\"$link\">$link</a>"
+  done < "${TEMP_DIR}/internal-urls.txt"
+  echo "</body></html>"
+} > "${BUILD_DIR}/internal-urls.html"
+# Run HTMLProofer on the generated file - internal links only.
+htmlproofer \
+  --only-4xx \
+  --checks 'Links' \
+  --disable-external \
+  --swap-urls "https\://mtlynch.io/:/" \
+  "${BUILD_DIR}/internal-urls.html"
