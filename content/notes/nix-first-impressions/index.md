@@ -162,7 +162,7 @@ Now, I had `vim` and `curl`, available, so I could pull down my SSH public key f
 ```bash
 sudo mkdir -p /etc/nixos/ssh
 
-GITHUB_USERNAME="mtlynch"
+GITHUB_USERNAME='mtlynch'
 curl "https://github.com/${GITHUB_USERNAME}.keys" | \
   sudo tee --append /etc/nixos/ssh/authorized_keys
 ```
