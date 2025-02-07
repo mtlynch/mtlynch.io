@@ -212,7 +212,7 @@ From here, download the [disk configuration file](disk-config.nix) I've created.
 curl \
   --show-error \
   --fail \
-  {{<baseurl>}}notes/nixos-oracle-cloud/disk-config.nix \
+  {{<baseurl>}}notes/nix-oracle-cloud/disk-config.nix \
   > disk-config.nix
 ```
 
@@ -252,12 +252,12 @@ Next, download the Nix configuration files I prepared for this Oracle Cloud VM:
 curl \
   --show-error \
   --fail \
-  {{<baseurl>}}notes/nixos-oracle-cloud/configuration.nix \
+  {{<baseurl>}}notes/nix-oracle-cloud/configuration.nix \
   > /mnt/etc/nixos/configuration.nix && \
   curl \
     --show-error \
     --fail \
-    {{<baseurl>}}notes/nixos-oracle-cloud/vars.nix \
+    {{<baseurl>}}notes/nix-oracle-cloud/vars.nix \
     > /mnt/etc/nixos/vars.nix
 ```
 
