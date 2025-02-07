@@ -1,56 +1,46 @@
-# Edit this configuration file to define what should be installed on
-# your system. Help is available in the configuration.nix(5) man page, on
-# https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
 { config, lib, pkgs, ... }:
 
+let
+  vars = import ./vars.nix;
+in
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./hardware-configuration.nix
     ];
 
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot = {
+    loader = {
+      systemd-boot.enable = true;
+      efi = {
+        canTouchEfiVariables = true;
+        efiSysMountPoint = "/boot";
+      };
+    };
+    initrd.systemd.enable = true;
+  };
 
-  # networking.hostName = "woodpecker"; # Define your hostname.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  systemd.targets.multi-user.enable = true;
 
-  # Set your time zone.
-  time.timeZone = "America/New_York";
+  networking.hostName = vars.hostname;
+  networking.networkmanager.enable = true;
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.alice = {
-  #   isNormalUser = true;
-  #   extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-  #   packages = with pkgs; [
-  #     tree
-  #   ];
-  # };
+  time.timeZone = vars.timezone;
+  i18n.defaultLocale = vars.locale;
 
   users = {
     mutableUsers = false;
-    users.mike = {
+    users.${vars.username} = {
       isNormalUser = true;
       extraGroups = ["networkmanager" "wheel"];
-      openssh.authorizedKeys.keys = [
-        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC4JsvmCGXcz4W+84YJeoIE3ydeAF/lIGPuBrDTmF1a+HYdxbdjyp4hjg9f0vOJfnYMgexwggdD9imIPYMK26qdaOx68E/ehUltqZeD+ktIcKpNe0YbjEe4GxDedHZ5MqmUaE6PBfAODiPMcNcqRIPr+u2ct/wNC3c1D8tNCb92YC0MEtFceqPukFBXt2dMfDSSMGAT8zLJ8r5GM2C8kWJf2sSB2P9ApwwKqJatqLh+6wL5cHSgAj4ZIIro0apc1Bx2+Mu0vmoWudLDhDaqZCu+Z7jR9gtw+ZdKlJt5lXeG+9rZOYj6PYOxjoKBaCzww92JrZNRHa62QxTMrTL0EXxj mike"
-    ];
+      openssh.authorizedKeys.keys = [ vars.sshKey ];
     };
   };
 
   # Enable passwordless sudo.
   security.sudo.extraRules = [
     {
-      users = ["mike"];
+      users = [vars.username];
       commands = [
         {
           command = "ALL";
@@ -60,8 +50,6 @@
     }
   ];
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
      curl
      git
@@ -69,27 +57,24 @@
      wget
   ];
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-
   # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
+  services.openssh = {
+    enable = true;
+    settings = {
+      PermitRootLogin = "no";
+      PasswordAuthentication = false;
+    };
+  };
+
+  # Disable autologin.
+  services.getty.autologinUser = null;
 
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [ 22 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
 
-  # Copy the NixOS configuration file and link it from the resulting system
-  # (/run/current-system/configuration.nix). This is useful in case you
-  # accidentally delete configuration.nix.
-  # system.copySystemConfiguration = true;
+  # Disable documentation for minimal install.
+  documentation.enable = false;
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
@@ -109,6 +94,4 @@
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "24.11"; # Did you read the comment?
-
 }
-

@@ -120,7 +120,7 @@ Strangely, the `configuration.nix` file that ships with the NixOS container imag
 Before you fix those, it's easier if you have SSH access. The easiest way I've found to do that is to download your SSH keys to the system. If you have a GitHub account with SSH keys enabled, you can do that as follows:
 
 ```bash
-GITHUB_USERNAME="your-github-username" # Replace this.
+GITHUB_USERNAME='your-github-username' # Replace this.
 
 mkdir -p ~/.ssh && \
   curl "https://github.com/${GITHUB_USERNAME}.keys" > ~/.ssh/authorized_keys
