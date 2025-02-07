@@ -5,6 +5,10 @@ date: 2025-02-06
 
 https://prithu.dev/notes/installing-nixos-on-oracle-cloud-arm-instance/
 
+Choose "Canonical Ubuntu 24.04 Minimal aarch64"
+
+Choose "VM.Standard.A1.Flex" and increase OCPUs to 4. Memory should automatically increase to 24 GB.
+
 {{<img src="vm-settings.webp" has-border="true">}}
 
 Upload your SSH public key.
@@ -12,6 +16,37 @@ Upload your SSH public key.
 Wait until the VM instance shows as "Running"
 
 {{<img src="vm-running.webp" has-border="true">}}
+
+```bash
+VM_IP='1.2.3.4'                         # Replace with VM's IP.
+export VM_DESIRED_HOSTNAME='myhostname' # Replace with desired hostname.
+```
+
+Configure key-based SSH access for user `root`:
+
+```bash
+ssh ubuntu@$VM_IP \
+  'sudo mkdir -p /root/.ssh && \
+   sudo cp ~/.ssh/authorized_keys /root/.ssh/ && \
+   sudo chown -R root:root /root/.ssh && \
+   sudo chmod 700 /root/.ssh && \
+   sudo chmod 600 /root/.ssh/authorized_keys'
+```
+
+```bash
+git add *.nix
+```
+
+```bash
+nix run github:nix-community/nixos-anywhere -- \
+  --flake ".#${VM_DESIRED_HOSTNAME}" \
+  --target-host "root@${VM_IP}" \
+  --disk-encryption-keys /dev/null /dev/null
+```
+
+---
+
+# OLD
 
 ## Log in over SSH
 
@@ -127,8 +162,22 @@ nano /mnt/etc/nixos/vars.nix
 TODO: Copy configuration.nix
 
 ```bash
+rm -rf /mnt/etc/terminfo && \
+  rm -rf /mnt/etc/udev/rules.d && \
+  rm -rf /mnt/etc/systemd/system-generators && \
+  rm -rf /mnt/etc/systemd/user && \
+  rm -rf /mnt/etc/systemd/system
+```
+
+```bash
 nixos-install --no-root-password
 ```
+
+```bash
+nixos-enter --root "/mnt"
+```
+
+Go back to Oracle Cloud Shell to watch the reboot.
 
 ```bash
 shutdown --reboot now
