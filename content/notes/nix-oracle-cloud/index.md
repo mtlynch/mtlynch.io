@@ -53,6 +53,14 @@ The image and shape screen should look like this:
 
 {{<img src="vm-settings.webp" has-border="true" max-width="700px">}}
 
+Verify that the reported cost for "Shape" is $0.
+
+{{<notice type="info">}}
+
+**Note**: Oracle shows a $2/month charge for the boot volume, but according to what I've read, this estimate is a bug, as the free tier includes 200 GB of boot volume storage. I don't really care, as I'd still pay $2/month for a VM this powerful.
+
+{{</notice>}}
+
 Under "Add SSH keys," upload your SSH public key.
 
 Finally, hit "Create" to create the VM.
