@@ -13,13 +13,13 @@ When I open the project, VS Code helpfully prompts me to enable the Zig Language
 
 The issue is that I start VS Code before I launch my Nix dev environment, so the Zig VS Code plugin doesn't know where to find my local Zig compiler or the Zig Language Server binary, `zls`.
 
-I found a solution to this so that I can switch Zig versions easily with Nix, and VS Code follows along and offers auto-complete and cross-referencing specific to the project's target Zig language.
+I found a solution to this so that I can switch Zig versions easily with Nix, and VS Code follows along and offers auto-complete and cross-referencing specific to the project's target Zig language. It's a bit hacky, but it works.
+
+{{<img src="vscode-zig-working.webp" has-border="true" max-width="700px" caption="Zig extension for VS Code working correctly">}}
 
 ## Just show me the solution
 
 If you want to skip the process of how I got my solution working, you can [skip to the solution below](#working-solution).
-
-I installed the [Zig VS Code extension](https://marketplace.visualstudio.com/items?itemName=ziglang.vscode-zig)
 
 ## Requirements
 
