@@ -89,13 +89,23 @@ ssh "ubuntu@${VM_IP}"
 
 ## Step 4: Download netboot
 
-From your SSH session to your VM, download [netboot](https://netboot.xyz/), a minimal meta-OS for installing other OSes.
-
 To begin, elevate to the `root` user:
 
 ```bash
 sudo su
 ```
+
+```bash
+curl \
+  --location \
+  --show-error \
+  --fail \
+  https://github.com/nix-community/nixos-images/releases/download/nixos-24.11/nixos-kexec-installer-noninteractive-aarch64-linux.tar.gz \
+  | tar -xzf- -C /root && \
+  /root/kexec/run
+```
+
+From your SSH session to your VM, download [netboot](https://netboot.xyz/), a minimal meta-OS for installing other OSes.
 
 Download the netboot ARM64 image to `/boot/efi/netboot.efi`:
 
