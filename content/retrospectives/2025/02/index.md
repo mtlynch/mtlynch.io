@@ -71,9 +71,11 @@ Still, I need to validate that there are customers for this book before I spend 
 
 ## Late to the game: RSS is great
 
-RSS has been around for 25 years, but I never got into RSS readers. I tried Google Reader back in 2011, but I didn't have enough of a critical mass of interesting or new articles in my feed, so I just stopped checking and forgot about it.
+RSS has been around for 25 years, but I never got into reading via RSS.
 
-In the past few years, a few things have happened to make RSS feeds more appealing:
+I tried Google Reader back in 2011, but I didn't have enough of a critical mass of interesting or new articles in my feed, so I just stopped checking and forgot about it.
+
+In the past few years, a few things have happened to make me more interested in using RSS to find new articles to read:
 
 - The tech people I used to follow on Twitter have all fragmented to different spaces.
 - I've become more aware of social media amplifying attention-grabbing posts over technically interesting posts.
@@ -127,17 +129,17 @@ I looked at [Codeberg](https://codeberg.org/), and I liked it. It's simpler than
 
 I saw that one of the ways you can pay for Codeberg is by joining as a voting member of the company, so I did that. I haven't used my membership to do anything yet, but it's fun to feel like I'm part of a co-operative rather than just a user.
 
-The biggest downside of Codeberg is that there don't seem to be any managed continuous integration vendors that support it.
-
-Codeberg officially recommends self-hosting Woodpecker CI, which sounds kind of fun, but is not really where I want to spend my time. And I store a bunch of critical production secrets in CI, so I'd rather pay someone with dedicated staff to think about security.
+The biggest downside of Codeberg is that there don't seem to be any managed continuous integration vendors that support it:
 
 - WoodpeckerCI: No vendor offers paid managed hosting.
 - Codeberg Actions: Experimental project with no paid support.
 - CircleCI: No support for Forgejo/Gitea.
 - Garnix: No support for Forgejo/Gitea.
-- Buildkite:
+- Buildkite: No support for Forgejo/Gitea.
 - Drone: Seems like they only offer managed hosting for Enterprise.
 - Harness: This is a new Drone thing, it seems, but I can't figure out if they support Forgejo/Gitea.
+
+Codeberg officially recommends self-hosting Woodpecker CI, which sounds kind of fun, but is not really where I want to spend my time. And I store a bunch of critical production secrets in CI, so I'd rather pay someone with dedicated staff to think about security.
 
 ### Got a 10 Gbps router
 
