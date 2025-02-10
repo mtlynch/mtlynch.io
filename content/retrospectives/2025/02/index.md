@@ -6,7 +6,9 @@ description: TODO - One-line summary
 
 ## Highlights
 
--
+- I'm having doubts about sitting out the AI revolution.
+- I should prove to myself that customers are willing to buy my book before investing more time into it.
+- I'm probably the last person on the planet to discover that RSS is a great way to read blogs.
 
 ## Goal grades
 
@@ -43,11 +45,11 @@ AI models now [operate at the skill level of a competent junior engineer](/notes
 
 I expect a lot of the software industry to restructure around AI. The closest parallel in my lifetime is the shift from desktop software to the Internet.
 
-And I'm writing a book that has nothing to do with AI... Even though I have no job and no company to run, so I can do whatever I want.
+I have no job and no company to run, so I have complete freedom to work on anything I want to take advantage of recent AI developments.
 
-I don't want to just chase the newest, shiny thing, but I also feel sitting out AI is like seeing the Internet happen in the late 90s and saying, "I think I want to publish software on a CD that customers order by mail."
+And I'm writing a book that has nothing to do with AI...
 
-AI might even decrease demand for my book because developers might prefer asking an LLM for editing suggestions rather than reading a book about clear writing. On the other hand, maybe AI increases the demand for effective, personal writing. If everything anyone reads is AI-generated, maybe they'll seek out some artisenal, hand-crafted words.
+I don't want to just chase the newest, shiny thing, but I also feel like sitting out AI is like seeing the Internet happen in the late 90s and saying, "I think I want to publish software on a CD that customers order by mail."
 
 I still think the reasons I chose to focus on the book are still true, but there's a bigger opportunity cost than I expected when I was planning this last year.
 
@@ -139,7 +141,7 @@ The biggest downside of Codeberg is that there don't seem to be any managed cont
 - Drone: Seems like they only offer managed hosting for Enterprise.
 - Harness: This is a new Drone thing, it seems, but I can't figure out if they support Forgejo/Gitea.
 
-Codeberg officially recommends self-hosting Woodpecker CI, which sounds kind of fun, but is not really where I want to spend my time. And I store a bunch of critical production secrets in CI, so I'd rather pay someone with dedicated staff to think about security.
+Codeberg officially recommends self-hosting Woodpecker CI, which sounded fun, so I spent a day setting that up on [my free Oracle cloud VM](/notes/nix-oracle-cloud/), and now [it runs CI for my wordword](https://ci.mtlynch.io/repos/1). But I don't trust myself to secure it as well as paid vendors, so Im not willing to store secrets there, which limits how much I can use it.
 
 ### Got a 10 Gbps router
 
@@ -189,11 +191,20 @@ Another gotcha: if you buy the Rackstuds Duo, they only work on components that 
 
 ### What got done?
 
--
+- I published the ["Passive Voice Considered Harmful"](https://refactoringenglish.com/chapters/passive-voice-considered-harmful/) chapter of _Refactoring English_ and an accompanying [interactive exercise](https://refactoringenglish.com/exercises/recognize-passive-voice/).
+- I published [My Seventh Year as a Bootstrapped Founder](/solo-developer-year-7/).
+- I published a lot of quick note posts:
+  - [The Cline AI Assistant is Mesmerizing](/notes/cline-is-mesmerizing/)
+  - [Increase Your Reply Rate on Cold Emails to Me](/notes/emailing-me/)
+  - [Install NixOS on a Free Oracle Cloud VM](/notes/nix-oracle-cloud/)
+  - [How to Resolve Local Hostnames in OPNSense](/notes/opnsense-local-dns/)
+  - [Overcoming Gotchas in Samsung Secure Erase](/notes/samsung-secure-erase/)
+- I created [a new blog error checking tool in Zig](https://codeberg.org/mtlynch/wordword).
 
 ### Lessons learned
 
--
+- I need to reassess whether my book idea is the right strategy given the time it will take and alternative projects that make better use of changes in AI.
+- I can adapt content from my book to fit the web better and attract readers. I don't need my excerpts to 100% match what appears in the full book.
 
 ### Goals for next month
 
@@ -203,7 +214,7 @@ Another gotcha: if you buy the Rackstuds Duo, they only work on components that 
 ### Requests for help
 
 - If you have suggestions for a Kickstarter alternative that's more focused on publishing ebooks, [let me know](/about).
-  - I know about [LeanPub](https://leanpub.com/), but I'm looking for similar mechanics to Kickstarter's "reach this minimum, or it doesn't happen."
+  - I know about [LeanPub](https://leanpub.com/), but I'm looking for Kickstarter's "reach this minimum, or it doesn't happen" mechanics.
 - Please [reach out](/about) or leave a comment below if you have opinions on tools for writing a book in a markup language that supports rendering to both PDF and HTML.
   - The options I'm considering are:
     - [AsciiDoc](https://asciidoc.org/)
