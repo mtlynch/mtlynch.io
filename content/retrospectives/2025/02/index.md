@@ -19,7 +19,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: I published [My Seventh Year as a Bootstrapped Founder](/solo-developer-year-7/)
 - **Grade**: A
 
-I was happy with how this came out. I had a hard time figuring out what to include because the year felt fragmented from different major events that I've already written about, but it was a good summary of the year.
+I was happy with how this came out. I had a hard time figuring out what to include because the year felt fragmented from different major events that I'd already written about, but it was a good summary of the year.
 
 It [briefly reached the #1 spot](https://hnrankings.info/42932492/) on Hacker News, but they suddenly kicked it down to #63, and I'm not sure why.
 
@@ -57,7 +57,7 @@ I still think the reasons I chose to focus on the book are still true, but there
 
 The other issue is that writing my book is a long commitment, and I don't yet have confidence that people want to read it.
 
-The [first chapter I released](https://refactoringenglish.com/chapters/rules-for-software-tutorials/) got a positive reception, but that's one of the fun, broad-appeal chapters. I fear that chapters like "Passive voice considered harmful," is more of an "eat your vegetables" lesson. People might recognize it as beneficial, but it's not fun to read. And my usual haunts like Hacker News or reddit wouldn't showcase a post about the passive voice.
+The [first chapter I released](https://refactoringenglish.com/chapters/rules-for-software-tutorials/) got a positive reception, but that's one of the fun, broad-appeal chapters. I fear that chapters like "Passive voice considered harmful," are more of an "eat your vegetables" lesson. People might recognize it as beneficial, but it's not fun to read. And my usual haunts like Hacker News or reddit wouldn't showcase a post about the passive voice.
 
 The problem is that most of the chapters in my book are "eat your vegetables" chapters.
 
@@ -67,7 +67,7 @@ I could restructure it so that I talk about a tip like "read your post aloud" as
 
 But maybe I'm approaching it wrong. I don't think most people are interested in an article about the passive voice as they're browsing the web, but they'd probably read a chapter about it if they were reading a book about effective writing.
 
-I'd assumed that the samples I publish for free online would be word-for-word chapters from the book, but I don't need to do that. I can adapt the content for the web however I want, so if I talk about reading your writing aloud as part of a sample chapter on blogging, that's okay. In the actual book, I can restructure it so that tip isn't part of the blogging chapter.
+I'd assumed that the samples I publish for free online would be word-for-word chapters from the book, but I don't need to do that. I can adapt the content for the web however I want, so if I talk about reading your writing aloud as part of a sample chapter on blogging, that's okay. In the actual book, I can structure it so that the reading alout tip isn't part of the blogging chapter.
 
 Still, I need to validate that there are customers for this book before I spend another few months on it. So, my plan is to focus on another fun, accessible chapter like, "Write blog posts that developers read," and then start a Kickstarter for people to pre-order based on the initial three chapters. I'll need to set some goal for what I think is a reasonable minimum of pre-orders to justify continuing the work.
 
@@ -85,7 +85,7 @@ In the past few years, a few things have happened to make me more interested in 
 - I realized I don't like subscribing to blogs via email, as it clutters my inbox and makes me feel like I have to read when I'm not in a good reading mode.
 - As AI slop is taking over the web, I want to follow particular people that I like.
 
-So, I installed [the fusion RSS aggregator](https://github.com/0x2E/fusion), and I've found it to be one of my favorite ways to read new blog posts. Whenever I find a blog post I like, I skim their other posts, and if they write about things I find interesting, I just add them into my feeds.
+So, I installed [the fusion RSS aggregator](https://github.com/0x2E/fusion), and I've found it to be one of my favorite ways to read new blog posts. Whenever I find a blog post I like, I skim their other posts, and if they write about things I find interesting, I just add them to my feeds.
 
 {{<img src="fusion.webp" max-width="650px" has-border="true" caption="I recently started using fusion, an RSS reader, so that I can follow interesting blogs">}}
 
@@ -148,11 +148,11 @@ I've been looking for a less corporate, more open-source git hosting service.
 
 I'd been using Gitlab. But they made [the bizarre decision](https://gitlab.com/gitlab-org/gitlab/-/issues/419602#note_2030565051) to forcefully log out every user every two weeks.
 
-Every time I tried to use Gitlab, I'm signed out. And then to sign in, I can't even just let my password manager fill out my credentials, as Gitlab forces me to go open my email for a one-time code.
+Every time I use Gitlab, I'm signed out. And then to sign in, Gitlab forces me out of flow to check my email for a one-time code rather than allow my password manager to auto-fill my credentials.
 
 I looked at [Codeberg](https://codeberg.org/), and I liked it. It's simpler than Gitlab, which works for me because Gitlab always felt overly complex for my needs. And it's [fully open-source](https://codeberg.org/forgejo/forgejo) and implemented in Go and HTML templates, which is my favorite web stack.
 
-I saw that one of the ways you can pay for Codeberg is by joining as a voting member of the company, so I did that. I haven't used my membership to do anything yet, but it's fun to feel like I'm part of a co-operative rather than just a user.
+I saw that one of the ways you can pay for Codeberg is by joining as a voting member of the company, so I did that. I haven't used my membership to do anything yet, but it's fun to feel like I'm part of a cooperative rather than just a user.
 
 The biggest downside of Codeberg is that there don't seem to be any managed continuous integration vendors that support it:
 
@@ -164,7 +164,7 @@ The biggest downside of Codeberg is that there don't seem to be any managed cont
 - Drone: They support Forgejo/Gitea, but it seems like they only offer managed hosting for Enterprise.
 - Harness: This is a new Drone thing, it seems, but I can't figure out if they support Forgejo/Gitea.
 
-Codeberg officially recommends self-hosting Woodpecker CI, which sounded fun, so I spent a day setting that up on [my free Oracle cloud VM](/notes/nix-oracle-cloud/), and now [it runs CI for wordword](https://ci.mtlynch.io/repos/1). But I don't trust myself to secure it as well as paid vendors, so I'm not willing to store secrets there. That severly limits how much I can use it as a real CI/CD solution.
+Codeberg officially recommends self-hosting Woodpecker CI, which sounded fun, so I spent a day setting that up on [my free Oracle cloud VM](/notes/nix-oracle-cloud/), and now [it runs CI for wordword](https://ci.mtlynch.io/repos/1). But I don't trust myself to secure it as well as paid vendors, so I'm not willing to store secrets there. That severely limits how much I can use it as a real CI/CD solution.
 
 ### Got a 10 Gbps router
 
@@ -224,7 +224,7 @@ Another gotcha: if you buy the Rackstuds Duo, they only work on components that 
   - [Install NixOS on a Free Oracle Cloud VM](/notes/nix-oracle-cloud/)
   - [How to Resolve Local Hostnames in OPNSense](/notes/opnsense-local-dns/)
   - [Overcoming Gotchas in Samsung Secure Erase](/notes/samsung-secure-erase/)
-- I created [a new blog error checking tool in Zig](https://codeberg.org/mtlynch/wordword).
+- I created [a new blog error-checking tool in Zig](https://codeberg.org/mtlynch/wordword).
 
 ### Lessons learned
 
