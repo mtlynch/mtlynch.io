@@ -19,7 +19,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: I published [My Seventh Year as a Bootstrapped Founder](/solo-developer-year-7/)
 - **Grade**: A
 
-I was happy with how this came out. I had a hard time figuring out what to include because the year felt fragmented from different major events that I'd already written about, but it was a good summary of the year.
+I was happy with how this came out. I had a hard time figuring out what to include because the year felt fragmented from different major events that I'd already written about. I felt like the result was a good summary of the year.
 
 It [briefly reached the #1 spot](https://hnrankings.info/42932492/) on Hacker News, but they suddenly kicked it down to #63, and I'm not sure why.
 
@@ -41,7 +41,7 @@ I made some line-level fixes based on reader suggestions, but the biggest revisi
 
 It's clear to me that AI is causing a revolution in software development.
 
-AI models now [operate at the skill level of a competent junior engineer](/notes/cline-is-mesmerizing/). At the pace they're improving, AI will outperform even the best humans at programming within two years.
+AI models now [operate at the level of a competent junior engineer](/notes/cline-is-mesmerizing/). At the pace they're improving, AI will outperform even the best humans at most programming tasks within two years.
 
 I expect a lot of the software industry to restructure around AI. The closest parallel in my lifetime is the shift from desktop software to the Internet.
 
@@ -49,9 +49,9 @@ I have no job and no company to run, so I have complete freedom to work on anyth
 
 And I'm writing a book that has nothing to do with AI...
 
-I don't want to just chase the newest, shiny thing, but I also feel like sitting out AI is like seeing the Internet happen in the late 90s and saying, "I think I want to publish software on a CD that customers order by mail."
+I don't want to just chase the newest, shiny thing, but I also feel like sitting out the AI revolution is like seeing the Internet happen in the late 90s and saying, "I think I want to publish software on a CD that customers order by mail."
 
-I still think the reasons I chose to focus on the book are still true, but there's a bigger opportunity cost than I expected when I was planning this last year.
+The reasons I chose to focus on the book are still valid, but there's a bigger opportunity cost than I expected when I was planning this six months ago.
 
 ## Is there even a market for this book?
 
@@ -65,31 +65,29 @@ The problem is that most of the chapters in my book are "eat your vegetables" ch
 
 I could restructure it so that I talk about a tip like "read your post aloud" as part of the blogging chapter, but it wouldn't quite make sense because that applies to all kinds of writing, not just blog posts.
 
-But maybe I'm approaching it wrong. I don't think most people are interested in an article about the passive voice as they're browsing the web, but they'd probably read a chapter about it if they were reading a book about effective writing.
+But maybe I'm approaching it wrong. I don't think people browsing the web want to read an article about the passive voice, but if they decided to read a book about effective writing, they'd probably read the passive voice chapter.
 
-I'd assumed that the samples I publish for free online would be word-for-word chapters from the book, but I don't need to do that. I can adapt the content for the web however I want, so if I talk about reading your writing aloud as part of a sample chapter on blogging, that's okay. In the actual book, I can structure it so that the reading alout tip isn't part of the blogging chapter.
+I'd assumed that the samples I publish for free online would be word-for-word chapters from the book, but I don't need to do that. I can adapt the content for the web however I want, so if I talk about reading your writing aloud as part of a sample chapter on blogging, that's okay. In the actual book, I can structure it so that the reading aloud tip isn't part of the blogging chapter.
 
-Still, I need to validate that there are customers for this book before I spend another few months on it. So, my plan is to focus on another fun, accessible chapter like, "Write blog posts that developers read," and then start a Kickstarter for people to pre-order based on the initial three chapters. I'll need to set some goal for what I think is a reasonable minimum of pre-orders to justify continuing the work.
+Still, I need to validate that there are customers for this book before I spend another few months on it. So, my plan is to focus on another fun, accessible chapter like, "Write blog posts that developers read," and then start a Kickstarter for people to pre-order based on the initial three chapters. I'll need to set some goal for what I think is a reasonable minimum of pre-orders to justify continuing to write.
 
 ## Late to the game: RSS is great
 
-RSS has been around for 25 years, but I never got into reading via RSS.
+RSS has been around for 25 years, but I never got into reading articles via RSS.
 
-I tried Google Reader back in 2011, but I didn't have enough of a critical mass of interesting or new articles in my feed, so I just stopped checking and forgot about it.
+I tried Google Reader back in 2011, but I didn't have a critical mass of interesting articles in my feed, so I just stopped checking and forgot about it.
 
-In the past few years, a few things have happened to make me more interested in using RSS to find new articles to read:
+In the past few years, several things have increased my interest in RSS:
 
 - The tech people I used to follow on Twitter have all fragmented to different spaces.
-- I've become more aware of social media amplifying attention-grabbing posts over technically interesting posts.
+- I've become more aware of social media amplifying attention-grabbing posts over interesting technical posts.
 - I switched to NixOS as my OS, which makes it easy to self-host [a free, open-source RSS reader](https://github.com/0x2E/fusion).
 - I realized I don't like subscribing to blogs via email, as it clutters my inbox and makes me feel like I have to read when I'm not in a good reading mode.
-- As AI slop is taking over the web, I want to follow particular people that I like.
+- As AI slop takes over the web, I want to follow particular people that I like.
 
-So, I installed [the fusion RSS aggregator](https://github.com/0x2E/fusion), and I've found it to be one of my favorite ways to read new blog posts. Whenever I find a blog post I like, I skim their other posts, and if they write about things I find interesting, I just add them to my feeds.
+So, I installed [the fusion RSS reader](https://github.com/0x2E/fusion), and I've found it to be one of my favorite ways to read new blog posts. Whenever I find a blog post on social media that I like, I skim their other posts. If they write about things I find interesting, I just add them to my feeds.
 
 {{<img src="fusion.webp" max-width="650px" has-border="true" caption="I recently started using fusion, an RSS reader, so that I can follow interesting blogs">}}
-
-I go to social media looking for something interesting to read about technology, but every social network surfaces content that's engaging but not necessarily useful to consume. With RSS, I don't have that problem.
 
 ## Side projects
 
@@ -102,13 +100,14 @@ I recently read a blog post by Matt Might where he explains [the idea of "lexica
 > a second instance of the word "the"<br>
 > when it starts a new line.
 
-I make this mistake on my blog, so I wanted a tool that could catch this mistake for me automatically.
+I make this mistake when writing my blog, so I wanted a tool that could catch this mistake for me automatically.
 
 I wrote the tool leaning heavily on [Cline](https://cline.bot/), an AI assistant. I [found it impressive and scary](/notes/cline-is-mesmerizing/) how good Cline was at implementing the tool based on my prompts and test cases.
 
 And the tool works well. I used it to find [seven lexical illusions](https://github.com/mtlynch/mtlynch.io/pull/1414) in already-published articles.
 
 ```text
+# Find lexical illusions (and also some false positives like "Duck Duck Go").
 $ wordword ./content/
 ./content/retrospectives/2019/11/index.md:114: the
 ./content/retrospectives/2022/05/index.md:175: Duck
@@ -148,9 +147,9 @@ I've been looking for a less corporate, more open-source git hosting service.
 
 I'd been using Gitlab. But they made [the bizarre decision](https://gitlab.com/gitlab-org/gitlab/-/issues/419602#note_2030565051) to forcefully log out every user every two weeks.
 
-Every time I use Gitlab, I'm signed out. And then to sign in, Gitlab forces me out of flow to check my email for a one-time code rather than allow my password manager to auto-fill my credentials.
+Every time I use Gitlab, I'm signed out. And then to sign in, Gitlab forces me out of flow to check my email for a one-time code rather than allowing my password manager to auto-fill my credentials.
 
-I looked at [Codeberg](https://codeberg.org/), and I liked it. It's simpler than Gitlab, which works for me because Gitlab always felt overly complex for my needs. And it's [fully open-source](https://codeberg.org/forgejo/forgejo) and implemented in Go and HTML templates, which is my favorite web stack.
+I tried [Codeberg](https://codeberg.org/), and I liked it. It's simpler than Gitlab, which works for me because Gitlab always felt overly complex for my needs. And it's [fully open-source](https://codeberg.org/forgejo/forgejo) and implemented in Go and HTML templates, which is my favorite web stack.
 
 I saw that one of the ways you can pay for Codeberg is by joining as a voting member of the company, so I did that. I haven't used my membership to do anything yet, but it's fun to feel like I'm part of a cooperative rather than just a user.
 
@@ -164,7 +163,7 @@ The biggest downside of Codeberg is that there don't seem to be any managed cont
 - Drone: They support Forgejo/Gitea, but it seems like they only offer managed hosting for Enterprise.
 - Harness: This is a new Drone thing, it seems, but I can't figure out if they support Forgejo/Gitea.
 
-Codeberg officially recommends self-hosting Woodpecker CI, which sounded fun, so I spent a day setting that up on [my free Oracle cloud VM](/notes/nix-oracle-cloud/), and now [it runs CI for wordword](https://ci.mtlynch.io/repos/1). But I don't trust myself to secure it as well as paid vendors, so I'm not willing to store secrets there. That severely limits how much I can use it as a real CI/CD solution.
+Codeberg officially recommends self-hosting Woodpecker CI, which sounded fun and impractical, so I spent a day setting that up on [my free Oracle cloud VM](/notes/nix-oracle-cloud/). Now, [I self-host CI for wordword](https://ci.mtlynch.io/repos/1) and a few of my other projects. But I don't trust myself to secure it as well as paid vendors, so I'm not willing to store secrets there. That severely limits how much I can use it as a real CI/CD solution.
 
 ### Got a 10 Gbps router
 
