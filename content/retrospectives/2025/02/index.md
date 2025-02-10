@@ -1,7 +1,7 @@
 ---
 title: "Educational Products: Month 4"
-date: "2025-02-11"
-description: TODO - One-line summary
+date: "2025-02-10"
+description: Should I be writing a book during an AI revolution?
 ---
 
 ## Highlights
@@ -106,9 +106,32 @@ I make this mistake on my blog, so I wanted a tool that could catch this mistake
 
 I wrote the tool leaning heavily on [Cline](https://cline.bot/), an AI assistant. I [found it impressive and scary](/notes/cline-is-mesmerizing/) how good Cline was at implementing the tool based on my prompts and test cases.
 
-And the tool works well. I used it to find [seven lexical illusions](https://github.com/mtlynch/mtlynch.io/pull/1414) in already-published articles. I've added `wordword` to my blog's [CI build](https://github.com/mtlynch/mtlynch.io/pull/1414/files#diff-78a8a19706dbd2a4425dd72bdab0502ed7a2cef16365ab7030a5a0588927bf47) and to my [git pre-commit hook](https://github.com/mtlynch/mtlynch.io/pull/1414/files#diff-c901cafe102063c4ca0cb0d0c42723a4fbe06baefab7c7c4feb8484f54b3ccc5).
+And the tool works well. I used it to find [seven lexical illusions](https://github.com/mtlynch/mtlynch.io/pull/1414) in already-published articles.
 
-And because I wrote it in Zig, it's super fast. It checks 221 Markdown files in my blog in just 28.7 milliseconds:
+```text
+$ wordword ./content/
+./content/retrospectives/2019/11/index.md:114: the
+./content/retrospectives/2022/05/index.md:175: Duck
+./content/retrospectives/2022/05/index.md:175: Duck
+./content/retrospectives/2022/05/index.md:175: Duck
+./content/retrospectives/2022/05/index.md:175: Duck
+./content/retrospectives/2022/05/index.md:177: Duck
+./content/notes/nix-git-bash-shell/index.md:78: time
+./content/notes/cypress-vs-playwright/index.md:278: makes
+./content/posts/simple-vue-pre-rendered/index.md:36: for
+./content/posts/solo-developer-year-6/index.md:132: case
+./content/posts/ansible-role-clipbucket/index.md:83: a
+./content/posts/solo-developer-year-1/index.md:177: NOW
+./content/posts/solo-developer-year-1/index.md:177: NOW
+./content/book-reports/chaos-monkeys/index.md:8: names
+./content/book-reports/go-programming-blueprints/index.md:50: of
+212 total files checked
+15 total errors found
+```
+
+I've added `wordword` to my blog's [CI build](https://github.com/mtlynch/mtlynch.io/pull/1414/files#diff-78a8a19706dbd2a4425dd72bdab0502ed7a2cef16365ab7030a5a0588927bf47) and to my [git pre-commit hook](https://github.com/mtlynch/mtlynch.io/pull/1414/files#diff-c901cafe102063c4ca0cb0d0c42723a4fbe06baefab7c7c4feb8484f54b3ccc5).
+
+And because I wrote it in Zig, it's super fast. It checks 212 Markdown files in my blog in just 28.7 milliseconds:
 
 ```bash
 $ hyperfine 'wordword ./'
@@ -133,15 +156,15 @@ I saw that one of the ways you can pay for Codeberg is by joining as a voting me
 
 The biggest downside of Codeberg is that there don't seem to be any managed continuous integration vendors that support it:
 
-- WoodpeckerCI: No vendor offers paid managed hosting.
-- Codeberg Actions: Experimental project with no paid support.
+- [WoodpeckerCI](https://woodpecker-ci.org/): No vendor offers paid managed hosting.
+- [Forgejo Actions](https://docs.codeberg.org/ci/actions/): Experimental project with no paid support.
 - CircleCI: No support for Forgejo/Gitea.
 - Garnix: No support for Forgejo/Gitea.
 - Buildkite: No support for Forgejo/Gitea.
-- Drone: Seems like they only offer managed hosting for Enterprise.
+- Drone: They support Forgejo/Gitea, but it seems like they only offer managed hosting for Enterprise.
 - Harness: This is a new Drone thing, it seems, but I can't figure out if they support Forgejo/Gitea.
 
-Codeberg officially recommends self-hosting Woodpecker CI, which sounded fun, so I spent a day setting that up on [my free Oracle cloud VM](/notes/nix-oracle-cloud/), and now [it runs CI for my wordword](https://ci.mtlynch.io/repos/1). But I don't trust myself to secure it as well as paid vendors, so Im not willing to store secrets there, which limits how much I can use it.
+Codeberg officially recommends self-hosting Woodpecker CI, which sounded fun, so I spent a day setting that up on [my free Oracle cloud VM](/notes/nix-oracle-cloud/), and now [it runs CI for wordword](https://ci.mtlynch.io/repos/1). But I don't trust myself to secure it as well as paid vendors, so I'm not willing to store secrets there. That severly limits how much I can use it as a real CI/CD solution.
 
 ### Got a 10 Gbps router
 
@@ -163,13 +186,15 @@ I always worry that I'm not getting enough RAM or disk space on my router, but O
 
 After I published my article about building my first home server rack, several readers recommended I try [Rackstuds](https://www.rackstuds.com/) instead of cage nuts.
 
+{{<img src="rack-studs.webp" caption="I like Rackstuds way more than standard cage nuts." max-width="600px">}}
+
 I was skeptical because Rackstuds are plastic, so they seem more liable to break than metal cage nuts. But Rackstuds has lab tests showing they can [support equipment of up to 40 lbs](https://www.rackstuds.com/certification).
 
 Rackstuds are definitely easier to work with than cage nuts. Cage nuts made it [difficult to mount equipment](/building-first-homelab-rack/#test-the-ups-before-mounting-it), especially heavy stuff, because you need to hold the component level and also screw in nuts to secure it in place.
 
-Rackstuds solve this problem because you install those into your rack first, and then just hang the component onto the studs.
+Rackstuds solve this problem because you install the studs first, and then just hang the component onto the studs.
 
-One thing that confused me was that Rackstuds come in two variants: red and purple, and they're different in a confusing way. The product page for the purple studs says:
+One thing that confused me was that Rackstuds come in two variants: red and purple. They're different in a confusing way. The product page for the purple studs says:
 
 > Suitable for rails between 2.7mm/0.106 and 3.2mm/0.125". If ≤ 2.2mm/0.086", use the new red version instead
 
