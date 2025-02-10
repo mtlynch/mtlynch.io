@@ -40,7 +40,7 @@ curl \
   | sh -s -- install
 ```
 
-## Attempt #1: Just make ZLS available
+## Attempt #1: Just make Zig available
 
 I started by doing the obvious: creating a Nix flake to install Zig 0.13.0 with the matching version of ZLS, the Zig Language Server. Here was my `flake.nix`:
 
@@ -106,11 +106,18 @@ The problem is that VS Code doesn't pick up ZLS. When I view the sample `main.zi
 
 {{<img src="bad-autocomplete.webp" has-border="true">}}
 
-## Attempt #2: Use the direnv VS Code extension
+If I go to the command menu and choose "Developer: Open Extension Logs Folder" and open `exthost.log`, I see the following in my logs:
 
-I read a fasterthanlime post that said
+```text
+2025-02-08 16:01:55.504 [error] Activating extension ziglang.vscode-zig failed due to an error:
+2025-02-08 16:01:55.504 [error] TypeError: Cannot read properties of undefined (reading 'getZigPath')
+```
 
-## Attempt #3: Give VS Code a hardcoded path
+Okay, that makes sense. The Zig VS Code extension can't find the path to Zig in my weirdo Nix development environment.
+
+How do I help the Zig extension find my Zig binary?
+
+## Attempt #2: Give VS Code a hardcoded path
 
 From reading documentation, I figured out that the VS Code Zig extension allows me to override the default paths to Zig and ZLS with these VS Code settings:
 
@@ -130,6 +137,28 @@ Have to completely close the window. Reloading doesn't work.
 ```bash
 nix flake update zls-overlay
 ```
+
+## Attempt #3: Make Nix generate the settings path dynamically
+
+TODO
+
+## Attempt #4: Oh, wait there's an extension for this
+
+I found a [fasterthanlime post](https://fasterthanli.me/series/building-a-rust-service-with-nix/part-10#setting-up-direnv-in-vscode) that talked about this same problem. He solved it by using the .
+
+I actually thought this didn't work because I installed direnv, and nothing happened.
+
+Then I noticed that direnv had attempted to update my system-wide VS Code user settings to add this line:
+
+```json
+{
+  "zig.zls.enabled": "off"
+}
+```
+
+It wasn't able to save the changes because I manage VS Code settings with Home Manager, so the file was read-only.
+
+So, I tried adding that setting to my project-local `.vscode/settings.json` folder, and again: nothing happened. But then I tried flipping `"off"` to `"on"`, and suddenly: it worked!
 
 ## Working solution
 
