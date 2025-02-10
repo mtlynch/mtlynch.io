@@ -2,6 +2,8 @@
 title: "Educational Products: Month 4"
 date: "2025-02-10"
 description: Should I be writing a book during an AI revolution?
+images:
+  - /retrospectives/2025/02/fun-chapters.webp
 ---
 
 ## Highlights
@@ -189,7 +191,7 @@ After I published my article about building my first home server rack, several r
 
 I was skeptical because Rackstuds are plastic, so they seem more liable to break than metal cage nuts. But Rackstuds has lab tests showing they can [support equipment of up to 40 lbs](https://www.rackstuds.com/certification).
 
-Rackstuds are definitely easier to work with than cage nuts. Cage nuts made it [difficult to mount equipment](/building-first-homelab-rack/#test-the-ups-before-mounting-it), especially heavy stuff, because you need to hold the component level and also screw in nuts to secure it in place.
+Rackstuds are definitely easier to work with than cage nuts. Cage nuts made it [difficult to mount equipment](/building-first-homelab-rack/#test-the-ups-before-mounting-it), especially heavy stuff. You need one hand to hold up the component and keep it level, and you need to use your other hand to screw nuts in to secure the equipment in place.
 
 Rackstuds solve this problem because you install the studs first, and then just hang the component onto the studs.
 
@@ -217,7 +219,7 @@ Another gotcha: if you buy the Rackstuds Duo, they only work on components that 
 
 - I published the ["Passive Voice Considered Harmful"](https://refactoringenglish.com/chapters/passive-voice-considered-harmful/) chapter of _Refactoring English_ and an accompanying [interactive exercise](https://refactoringenglish.com/exercises/recognize-passive-voice/).
 - I published [My Seventh Year as a Bootstrapped Founder](/solo-developer-year-7/).
-- I published a lot of quick note posts:
+- I published five short note posts:
   - [The Cline AI Assistant is Mesmerizing](/notes/cline-is-mesmerizing/)
   - [Increase Your Reply Rate on Cold Emails to Me](/notes/emailing-me/)
   - [Install NixOS on a Free Oracle Cloud VM](/notes/nix-oracle-cloud/)
