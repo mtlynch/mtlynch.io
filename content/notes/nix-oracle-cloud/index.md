@@ -295,6 +295,14 @@ ssh "${VM_IP}"
 
 You're done! You now have a free 4-CPU VM running on Oracle's cloud with NixOS installed.
 
+If you run [neofetch](https://github.com/dylanaraps/neofetch), you should see output like the screenshot below:
+
+```bash
+nix-shell -p neofetch --command neofetch
+```
+
+{{<img src="neofetch.webp">}}
+
 ## Step 11: (optional) Install a package
 
 At this point, everything's done, but you may want to test something to make sure your NixOS configuration is in a healthy state.
