@@ -162,4 +162,14 @@ So, I tried adding that setting to my project-local `.vscode/settings.json` fold
 
 ## Working solution
 
-Note that you have to completely close the VS Code window and reopen it for the solution to work. Simply reloading the window is not sufficient.
+```bash
+nix flake init \
+  --template git+https://codeberg.org/mtlynch/zig-vscode-flake.git
+```
+
+After calling `nix flake init`:
+
+1. Run `direnv allow`
+1. In VS Code, go to "Extensions: Show Recommended Extensions" and install the recommended extensions.
+
+At that point, you can run `zig init` to create a new project, and you should find that the Zig VS Code extension works properly with Zig.
