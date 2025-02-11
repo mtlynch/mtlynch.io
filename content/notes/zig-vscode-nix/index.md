@@ -1,6 +1,6 @@
 ---
 title: "My Zig Configuration for VS Code"
-date: 2025-02-11
+date: 2025-02-14
 ---
 
 I switch between a few Zig projects that each depend on a different version of the Zig compiler. I manage Zig versions per-project using [Nix development shells](notes/nix-dev-environment/).
@@ -20,25 +20,6 @@ I found a solution to this so that I can switch Zig versions easily with Nix, an
 ## Just show me the solution
 
 If you want to skip the process of how I got my solution working, you can [skip to the solution below](#working-solution).
-
-## Requirements
-
-- Nix (I'm using 2.24.12)
-  - with flakes enabled
-- VS Code (I'm using 1.96.4)
-- [Zig VS Code extension](https://marketplace.visualstudio.com/items?itemName=ziglang.vscode-zig) (I'm using 0.6.4)
-- (optional) direnv
-  - You don't strictly need it, but it auto-loads your environment when you enter your project directory, which is handy.
-
-If you don't have Nix, I recommend the [Determinate Systems installer](https://zero-to-nix.com/start/install/), which automatically enables flakes:
-
-```bash
-curl \
-  --proto '=https' \
-  --tlsv1.2 -sSf -L \
-  https://install.determinate.systems/nix \
-  | sh -s -- install
-```
 
 ## Attempt #1: Just make Zig available
 
@@ -161,6 +142,24 @@ It wasn't able to save the changes because I manage VS Code settings with Home M
 So, I tried adding that setting to my project-local `.vscode/settings.json` folder, and again: nothing happened. But then I tried flipping `"off"` to `"on"`, and suddenly: it worked!
 
 ## Working solution
+
+### Requirements
+
+- Nix (I'm using 2.24.12)
+  - with flakes enabled
+- [direnv](https://direnv.net/)
+- VS Code (I'm using 1.96.4)
+- [Zig VS Code extension](https://marketplace.visualstudio.com/items?itemName=ziglang.vscode-zig) (I'm using 0.6.4)
+
+If you don't have Nix, I recommend the [Determinate Systems installer](https://zero-to-nix.com/start/install/), which automatically enables flakes:
+
+```bash
+curl \
+  --proto '=https' \
+  --tlsv1.2 -sSf -L \
+  https://install.determinate.systems/nix \
+  | sh -s -- install
+```
 
 ```bash
 nix flake init \
