@@ -31,7 +31,15 @@ If you want to skip the process of how I got my solution working, you can [skip 
 
 ## Failed attempt: Hardcode the path to Zig
 
-I started by doing the obvious: creating a Nix flake to install Zig 0.13.0 with the matching version of ZLS, the Zig Language Server. Here was my `flake.nix`:
+{{<notice type="warning">}}
+
+**Warning**: This is a **bad** solution. If you want to skip to the working solution, it's [below](#working-solution).
+
+{{</notice>}}
+
+I started by doing the obvious: creating a Nix flake to install Zig 0.13.0 with the matching version of ZLS, the Zig Language Server.
+
+Here was my `flake.nix`:
 
 ```nix
 {
@@ -123,7 +131,11 @@ $ which zig && which zls
 /nix/store/rfy6amzrkimywfmlgr5mvka99b6yp3jk-zls/bin/zls
 ```
 
-Have to completely close the window. Reloading doesn't work.
+So I put those paths in my `.vscode/settings.json` file:
+
+```json
+
+```
 
 ### What about when I switch Zig versions?
 
@@ -172,18 +184,20 @@ nix flake init \
   --template git+https://codeberg.org/mtlynch/zig-vscode-flake.git
 ```
 
-After calling `nix flake init`:
-
-1. Run `direnv allow`
-1. In VS Code, go to "Extensions: Show Recommended Extensions" and install the recommended extensions.
-
-At that point, you should see this output:
+After calling `nix flake init`, run `direnv allow`, which should show zig and zls available:
 
 ```bash
-
+$ direnv allow
+...
+direnv: nix-direnv: Renewed cache
+Alejandra 3.0.0
+zls 0.13.0
+zig 0.13.0
 ```
 
-You can run `zig init` to create a new project, and you should find that the Zig VS Code extension works properly with Zig.
+Finally, in VS Code, go to "Extensions: Show Recommended Extensions" and install the recommended extensions.
+
+At this point, you can run `zig init` to create a new project, and you should find that the Zig VS Code extension works properly with Zig.
 
 ### Changing Zig versions
 
@@ -194,7 +208,7 @@ EXISTING_ZIG_VERSION='0.13.0' # Set to whatever the version in the flake.nix is.
 NEW_ZIG_VERSION='0.12.0'      # Set to your desired Zig version.
 ```
 
-To use the bleeding edge development version of Zig, set the version to `master`:
+To use the bleeding edge, pre-release version of Zig, set the version to `master`:
 
 ```bash
 NEW_ZIG_VERSION='master'      # Set if you want bleeding edge Zig.
