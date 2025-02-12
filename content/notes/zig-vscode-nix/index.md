@@ -15,7 +15,7 @@ Zig has not yet reached a stable 1.0 release. If you're working on software writ
 
 The most popular method for managing Zig versions seems to be the [Zig Version Manager](https://www.zvm.app/), which I haven't tried.
 
-I personally manage Zig versions per-project using [Nix development shells](notes/nix-dev-environment/), so that's what I'm sharing below.
+I personally manage Zig versions per-project using [Nix development shells](/notes/nix-dev-environment/), so that's what I'm sharing below.
 
 ## The problem: VS Code can't find ZLS
 
