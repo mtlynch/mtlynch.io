@@ -66,7 +66,7 @@ At this point, you can run `zig init` to create a new project, and you should fi
 
 My flake is set to Zig 0.13.0, the latest release as of this writing.
 
-If you want to a different tagged release, replace `0.13.0` with a different version:
+If you want to use a different tagged release, replace `0.13.0` with a different version:
 
 ```bash
 EXISTING_ZIG_VERSION='0.13.0' # Set to whatever the version in the flake.nix is.
