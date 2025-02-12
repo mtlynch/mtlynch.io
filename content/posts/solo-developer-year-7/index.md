@@ -17,21 +17,6 @@ Seven years ago, I [quit my job as a developer at Google](/why-i-quit-google/) t
 
 My most significant professional development of the last year is that I sold [TinyPilot](https://tinypilotkvm.com), the company I founded in 2020.
 
-TinyPilot is a device that lets users control their computers remotely. It started as a rudimentary prototype that I built with a $35 Raspberry Pi mini-computer and a $15 HDMI capture dongle.
-
-{{<img src="tinypilot-prototype.webp" alt="Photo of a laptop open with 'Hello, World' printed on the screen. On another laptop, the same desktop is displayed within a TinyPilot web interface." max-width="450px" caption="The prototype of TinyPilot, which allowed me to control computers in my home remotely without installing any software">}}
-
-I wrote [a blog post](/tinypilot/) about the initial version of TinyPilot, and I offered do-it-yourself kits for $170. Four hours after I published the blog post, the kits sold out.
-
-For the next four years, I improved on the TinyPilot product and built it into a real company. I evolved from DIY kits to pre-made devices with custom metal cases and circuit boards. I hired a team to help me with hardware, software, support, and logistics, eventually growing the company to $1M/year in revenue.
-
-{{<gallery caption="Over the next four years, TinyPilot evolved into a more refined product.">}}
-{{<img src="2a-front.webp" alt="Front view of TinyPilot Voyager 2a device" max-width="350px">}}
-{{<img src="tinypilot-bios-menu-2.webp" alt="Screenshot of TinyPilot web interface" max-width="350px">}}
-{{</gallery>}}
-
-Last year, I sold the company for $600k.
-
 My wife and I wanted to start a family, and I didn't think I could be the sole manager of a seven-person company and a good father to a newborn. I found a buyer whose vision for the company aligned with mine, and we completed the sale in April 2024.
 
 {{<img src="sold-tinypilot.webp"  max-width="600px" alt="Illustration of me waving goodbye to TinyPilot mascot flying away in tiny prop plane" caption="Me selling TinyPilot so I could start a family">}}
