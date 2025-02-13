@@ -39,7 +39,7 @@ I initially came up with a wacky solution where my Nix flake [automatically rewr
 
 Then, I read [a fasterthanlime post](https://fasterthanli.me/series/building-a-rust-service-with-nix/part-10#setting-up-direnv-in-vscode) and found out there's a simple solution.
 
-There's a [direnv VS Code extension](https://marketplace.visualstudio.com/items?itemName=mkhl.direnv) that effortlessly syncs Zig paths with VS code.
+There's a [direnv VS Code extension](https://marketplace.visualstudio.com/items?itemName=mkhl.direnv) that effortlessly syncs Zig paths with VS code. It also means that this solution works with VS Code using Remote SSH development.
 
 ## My complete working solution
 
