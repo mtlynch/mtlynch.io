@@ -1,17 +1,25 @@
 ---
 title: "My Zig Configuration for VS Code"
-date: 2025-02-14
+date: 2025-02-13
+tags:
+  - zig
+  - vscode
+  - nix
+images:
+  - /notes/zig-vscode-nix/vscode-zig-working.webp
 ---
 
-I found it surprisingly difficult to configure VS Code properly for development with Zig. I kept running into issues with Zig version mismatches or VS Code completely failing to recognize Zig semantics and failing over to naive autocomplete.
-
 I finally found a solution that makes VS Code work consistently with Zig, so I hope this saves someone else a headache.
+
+I found it surprisingly difficult to configure VS Code properly for development with Zig. I kept running into issues with Zig version mismatches or VS Code completely failing to recognize Zig semantics and failing over to naive autocomplete.
 
 {{<img src="vscode-zig-working.webp" has-border="true" max-width="700px" caption="Zig extension for VS Code working correctly">}}
 
 ## Managing multiple Zig versions across projects
 
 Zig has not yet reached a stable 1.0 release. If you're working on software written in Zig, you have to use the version of the Zig compiler that matches that project.
+
+If you work on multiple projects, you need a way to juggle different versions of Zig on the same system.
 
 The most popular method for managing Zig versions seems to be the [Zig Version Manager](https://www.zvm.app/), which I haven't tried.
 
@@ -23,11 +31,53 @@ When I open the project, VS Code helpfully prompts me to enable the Zig Language
 
 {{<img src="zls-fail.webp" has-border="true" caption="ZLS install fails">}}
 
-The issue is that I start VS Code before I launch my Nix dev environment, so the Zig VS Code plugin doesn't know where to find my local Zig compiler or the Zig Language Server binary, `zls`.
+The problem VS Code has is that I start VS Code before I launch my Nix dev environment, so the Zig VS Code plugin doesn't know where to find my local Zig compiler or the Zig Language Server binary, `zls`.
 
-The solution was to use the [direnv VS Code extension](https://marketplace.visualstudio.com/items?itemName=mkhl.direnv) to sync Zig paths with VS code.
+The solution was finding out from [a fasterthanlime post](https://fasterthanli.me/series/building-a-rust-service-with-nix/part-10#setting-up-direnv-in-vscode) that there's a [direnv VS Code extension](https://marketplace.visualstudio.com/items?itemName=mkhl.direnv) to sync Zig paths with VS code.
 
-## Working solution
+## My working solution
+
+I'm including an explanation of my solution, but if you want to just use it without the tour, I created a template that's easy to copy [below](#copying-my-template).
+
+### flake.nix
+
+My Nix flake is doing the heavy lifting here:
+
+{{<inline-file filename="flake.nix" language="nix">}}
+
+The Nix flake creates a dev shell that includes the Zig compiler and the Zig Language Server (ZLS).
+
+I set it to Zig `0.13.0`, but you can change it to any tagged relase. To use the pre-release development version of zig, change both instances of `0.13.0` to `master`.
+
+I tried several ways to eliminate the repetition of `0.13.0` so that there could be a single definition, but my Nix language skills were too weak to figure out a way to do it. If anyone has a solution, please let me know.
+
+### .envrc
+
+My solution relies on [direnv](https://direnv.net/) to start the Nix dev shell whenever I'm in the project directory. The definition is simple:
+
+```bash
+use_flake
+```
+
+### .vscode/extensions.json
+
+To integrate VS Code with Zig, I need two VS Code extensions:
+
+{{<inline-file filename="extensions.json" language="json">}}
+
+The first is the official [Zig VS Code extension](https://marketplace.visualstudio.com/items?itemName=ziglang.vscode-zig).
+
+The second, less-obvious one is the [direnv VS Code extension](https://marketplace.visualstudio.com/items?itemName=mkhl.direnv), which lets VS Code see paths within my Nix dev shell.
+
+### .vscode/settings.json
+
+Finally, I need just one setting to tell VS Code to use the Zig Language Server:
+
+{{<inline-file filename="settings.json" language="json">}}
+
+## Copying my template
+
+I created a Nix flake template to make it easy to replicate my setup.
 
 ### Requirements
 
