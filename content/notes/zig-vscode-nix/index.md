@@ -9,11 +9,11 @@ images:
   - /notes/zig-vscode-nix/vscode-zig-working.webp
 ---
 
-I finally found a solution that makes VS Code work consistently with Zig, so I hope this saves someone else a headache.
-
-I found it surprisingly difficult to configure VS Code properly for development with Zig. I kept running into issues with Zig version mismatches or VS Code completely failing to recognize Zig semantics and failing over to naive autocomplete.
+I finally found a solution that makes VS Code work consistently with Zig, so I'm sharing my setup in the hope that it saves someone else a headache.
 
 {{<img src="vscode-zig-working.webp" has-border="true" max-width="700px" caption="Zig extension for VS Code working correctly">}}
+
+Before I landed on a working solution, I kept running into issues with Zig version mismatches or VS Code completely failing to recognize Zig semantics and failing over to naive autocomplete.
 
 ## Managing multiple Zig versions across projects
 
@@ -21,21 +21,27 @@ Zig has not yet reached a stable 1.0 release. If you're working on software writ
 
 If you work on multiple projects, you need a way to juggle different versions of Zig on the same system.
 
-The most popular method for managing Zig versions seems to be the [Zig Version Manager](https://www.zvm.app/), which I haven't tried.
+The most popular method for managing Zig versions seems to be the [Zig Version Manager](https://www.zvm.app/), which I haven't tried, so I'm not sure how it plays with VS Code.
 
 I personally manage Zig versions per-project using [Nix development shells](/notes/nix-dev-environment/), so that's what I'm sharing below.
 
 ## The problem: VS Code can't find ZLS
 
-When I open the project, VS Code helpfully prompts me to enable the Zig Language Server, but when I say yes, I get this error message:
+When I open a Zig project, VS Code helpfully prompts me to enable the Zig Language Server, but when I say yes, I get this error message:
 
 {{<img src="zls-fail.webp" has-border="true" caption="ZLS install fails">}}
 
-The problem VS Code has is that I start VS Code before I launch my Nix dev environment, so the Zig VS Code plugin doesn't know where to find my local Zig compiler or the Zig Language Server binary, `zls`.
+The problem is that I start VS Code before I launch my Nix dev environment, so the Zig VS Code plugin doesn't know where to find my local Zig compiler or the Zig Language Server binary, `zls`.
 
-The solution was finding out from [a fasterthanlime post](https://fasterthanli.me/series/building-a-rust-service-with-nix/part-10#setting-up-direnv-in-vscode) that there's a [direnv VS Code extension](https://marketplace.visualstudio.com/items?itemName=mkhl.direnv) to sync Zig paths with VS code.
+## The solution: Use the direnv VS Code extension
 
-## My working solution
+I initially came up with a wacky solution where my Nix flake [automatically rewrote my VS Code settings](https://codeberg.org/mtlynch/zig-vscode-nix-example/src/branch/03-dynamic-paths/flake.nix#L49-L69) every time I entered the dev shell. That way, VS Code would always have the latest path to the Zig and ZLS binaries.
+
+Then, I read [a fasterthanlime post](https://fasterthanli.me/series/building-a-rust-service-with-nix/part-10#setting-up-direnv-in-vscode) and found out there's a simple solution.
+
+There's a [direnv VS Code extension](https://marketplace.visualstudio.com/items?itemName=mkhl.direnv) that effortlessly syncs Zig paths with VS code.
+
+## My complete working solution
 
 I'm including an explanation of my solution, but if you want to just use it without the tour, I created a template that's easy to copy [below](#copying-my-template).
 
