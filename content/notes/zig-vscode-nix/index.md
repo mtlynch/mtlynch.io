@@ -1,6 +1,7 @@
 ---
 title: "My Zig Configuration for VS Code"
 date: 2025-02-13
+lastmod: 2025-02-14
 tags:
   - zig
   - vscode
@@ -34,6 +35,10 @@ When I open a Zig project, VS Code helpfully prompts me to enable the Zig Langua
 The problem is that I start VS Code before I launch my Nix dev environment, so the Zig VS Code plugin doesn't know where to find my local Zig compiler or the Zig Language Server binary, `zls`.
 
 ## The solution: Use the direnv VS Code extension
+
+{{<notice type="info">}}
+**Update** (2025-02-14): There's [a simpler solution](#update-the-simpler-non-nix-solution) that doesn't rely on Nix.
+{{</notice>}}
 
 I initially came up with a wacky solution where my Nix flake [automatically rewrote my VS Code settings](https://codeberg.org/mtlynch/zig-vscode-nix-example/src/branch/03-dynamic-paths/flake.nix#L49-L69) every time I entered the dev shell. That way, VS Code would always have the latest path to the Zig and ZLS binaries.
 
@@ -147,3 +152,17 @@ sed \
 ```
 
 You may have to restart (not just reload) VS Code for the changes to take effect.
+
+## Update: The simpler, non-Nix solution
+
+One of the Zig VS Code extension developers [replied to this post](https://ziggit.dev/t/my-zig-vs-code-setup-for-multiple-zig-versions/8548/4?u=mtlynch) and said that I should be able to manage Zig versions with just the extension itself.
+
+I didn't realize that the Zig VS Code extension could manage Zig installs, so I tried that. To install Zig through the VS Code extension, go to the VS Code command pallette and select:
+
+- Zig Setup: Install Zig
+
+{{<img src="zig-setup.webp" max-width="700px" has-border="true">}}
+
+Then, choose the Zig version you want, and it should work. I had to [set my `settings.json` manually](https://github.com/ziglang/vscode-zig/issues/398) and reload VS Code for it to take effect.
+
+I like Nix dev shells, so I'm going to keep using mine, but if you just want a simple setup, you're probably better off letting the Zig VS Code extension manage your Zig install.
