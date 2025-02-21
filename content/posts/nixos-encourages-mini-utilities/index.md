@@ -7,7 +7,9 @@ I recently switched from Windows to NixOS as my primary operating system, and it
 
 One of my favorite things about NixOS is how friendly it is to creating tiny software utilities. If I write a simple web app, NixOS makes it easy to run that web app forever. If I make a command-line utility, it's easy to add it to my shell. If my computer's disk dies or I get a new computer, it's trivial to take all those utilities with me to my next computer.
 
-On Windows, creating my own apps was possible, but it was frictiony. The only way I knew how to make an app that always ran in the background was to add it to Task Scheduler
+On Windows, creating my own apps was possible, but it was frictiony. The only way I knew how to make an app that always ran in the background was to add it to Task Scheduler. And then it popped a big ugly window on my screen.
+
+NixOS, there's systemd, there's journald. It's easy to manage all my startup tasks and view their logs.
 
 My primary desktop has been Windows since I was seven years old, so it's been my main OS for over 30 years.
 
