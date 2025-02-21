@@ -9,6 +9,8 @@ After increasing frustrations with Microsoft and Windows in particular for the l
 
 There are certainly things from Windows that I miss, but one unexpected benefit of NixOS is how friendly it is to mini-utilities.
 
+https://simonwillison.net/2024/Oct/21/claude-artifacts/
+
 ## Why
 
 - I don't have to deal with creating domain names
