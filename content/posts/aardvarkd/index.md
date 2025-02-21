@@ -242,5 +242,3 @@ Both movies are available for free on YouTube. If you're a fan of Joel Spolsky, 
 And if you're a superfan of Joel Spolsky's blog, [Joel on Software](https://www.joelonsoftware.com/), you'll enjoy _Make Better Software_.
 
 - [_Make Better Software: The Training Series_](https://www.youtube.com/playlist?list=PLcIkt5s7w8D0ywp0CBmNFWRTFZic3pWNn)
-
-{{<tweet user="deliberatecoder" id="1700140534126244021">}}

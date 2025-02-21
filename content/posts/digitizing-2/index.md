@@ -27,7 +27,7 @@ The first solution I tried was [ClipBucket](https://github.com/arslancb/clipbuck
 
 {{<img src="clipbucket-github.png" alt="ClipBucket's repository on GitHub" max-width="500px" has-border="true" caption="[ClipBucket](https://github.com/arslancb/clipbucket) is an open-source clone of YouTube that users can self-host (theoretically).">}}
 
-Puzzlingly, ClipBucket offered no installation instructions. Using a [third-party guide](https://linoxide.com/linux-how-to/setup-clipbucket-video-sharing-website-linux/), I [automated the installation process](/ansible-role-clipbucket/) using [Ansible](https://docs.ansible.com/ansible/latest/index.html), a configuration management tool for servers.
+Puzzlingly, ClipBucket offered no installation instructions. Using a [third-party guide](https://web.archive.org/web/20160202164342/http://linoxide.com/linux-how-to/setup-clipbucket-video-sharing-website-linux/), I [automated the installation process](/ansible-role-clipbucket/) using [Ansible](https://docs.ansible.com/ansible/latest/index.html), a configuration management tool for servers.
 
 Part of the difficulty was that ClipBucket's installation scripts were flat-out broken. As a [Google employee](/why-i-quit-google/) at the time, I couldn't contribute patches to a YouTube clone, but [I submitted a bug report](https://github.com/arslancb/clipbucket/issues/223) that should have made the fixes obvious. Months went by, and they never acknowledged the problem. Instead, they introduced even _more_ breaking errors on every release.
 

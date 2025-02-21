@@ -5,20 +5,20 @@
     flake-utils.url = "github:numtide/flake-utils";
 
     # 2.7.18.7 release
-    python_dep.url = "github:NixOS/nixpkgs/517501bcf14ae6ec47efd6a17dda0ca8e6d866f9";
+    python-nixpkgs.url = "github:NixOS/nixpkgs/517501bcf14ae6ec47efd6a17dda0ca8e6d866f9";
   };
 
   outputs = {
     self,
     flake-utils,
-    python_dep,
+    python-nixpkgs,
   } @ inputs:
     flake-utils.lib.eachDefaultSystem (system: let
-      python_dep = inputs.python_dep.legacyPackages.${system};
+      python-nixpkgs = inputs.python-nixpkgs.legacyPackages.${system};
     in {
-      devShells.default = python_dep.mkShell {
+      devShells.default = python-nixpkgs.mkShell {
         packages = [
-          python_dep.python2
+          python-nixpkgs.python2
         ];
 
         shellHook = ''

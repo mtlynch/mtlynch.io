@@ -458,8 +458,6 @@ The following were the resources I found most helpful in approaching my exit:
     - ["What it's like buying a $128k side project"](https://blog.codetree.com/articles/what-its-like-buying-a-128k-side-project.html) by Kareem Mayan
     - ["Exactly How I Cold Emailed My Way to A Life-Changing Exit (And You Can Too)"](https://lauraroeder.com/exactly-how-i-cold-emailed-my-way-to-a-life-changing-exit-and-you-can-too-165d8eaf8306) by Laura Roeder
 
-<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:5rmuptxnl562svleoywqf7fe/app.bsky.feed.post/3latjdmtvwk24" data-bluesky-cid="bafyreib63ocew5c5mgnrwmly3iyke533p5rgivexkupcbtqun4blqoi2pa"><p lang="en">In April, I sold my first business. Even though I&#x27;d done a lot of research about small business acquisitions, so much of the process felt like uncharted territory that nobody discusses publicly. I wrote about everything I wish I&#x27;d known before selling my business.<br><br><a href="https://bsky.app/profile/did:plc:5rmuptxnl562svleoywqf7fe/post/3latjdmtvwk24?ref_src=embed">[image or embed]</a></p>&mdash; Michael Lynch (<a href="https://bsky.app/profile/did:plc:5rmuptxnl562svleoywqf7fe?ref_src=embed">@mtlynch.io</a>) <a href="https://bsky.app/profile/did:plc:5rmuptxnl562svleoywqf7fe/post/3latjdmtvwk24?ref_src=embed">November 13, 2024 at 9:05 AM</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
-
 ---
 
 _Cover image by [Piotr Letachowicz](https://cartoony.eu)._

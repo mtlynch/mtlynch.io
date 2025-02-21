@@ -104,17 +104,17 @@ Also of note: the onboard NIC was _not_ compatible with ESXi 6.5, but the Broadc
 
 ### Final parts list
 
-| Category       | Component                                                                                                                                           |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CPU            | [AMD Ryzen 7 1700](https://smile.amazon.com/dp/B06WP5YCX6/)                                                                                         |
-| Motherboard    | [ASRock AB350M-HDV](https://smile.amazon.com/ASRock-AB350M-HDV-Socket-MicroATX-Motherboard/dp/B06WWC7BTJ/)                                          |
-| Disk           | [Samsung 850 EVO - 250GB](https://smile.amazon.com/gp/product/B00TGIVZTW/)                                                                          |
-| Memory         | [G.SKILL Flare X Series 32GB (2 x 16GB) F4-2400C15D-32GFXR](https://smile.amazon.com/G-SKILL-Flare-288-Pin-Memory-F4-3200C14D-16GFX/dp/B06XFT7DF9/) |
-| Power          | [EVGA 430 W1, 80+ WHITE 430W 100-W1-0430-KR](https://smile.amazon.com/gp/product/B00H33SDR4/)                                                       |
-| Graphics       | [EVGA 512-P3-1300-LR GeForce 8400 GS](https://smile.amazon.com/gp/product/B004BQKQ8A/)                                                              |
-| Network        | [Broadcom BCM5751 Netxtreme](https://smile.amazon.com/gp/product/B005NX1DAK/)                                                                       |
-| Case           | [Rosewill Micro ATX SRM-01](https://smile.amazon.com/ROSEWILL-Micro-Computer-plastic-computer/dp/B00ZPWOA6I/)                                       |
-| **Total Cost** | **$823.55**                                                                                                                                         |
+| Category       | Component                                                                                                                                           | I paid      |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| CPU            | [AMD Ryzen 7 1700](https://smile.amazon.com/dp/B06WP5YCX6/)                                                                                         | $323.66     |
+| Motherboard    | [ASRock AB350M-HDV](https://smile.amazon.com/ASRock-AB350M-HDV-Socket-MicroATX-Motherboard/dp/B06WWC7BTJ/)                                          | $69.99      |
+| Disk           | [Samsung 850 EVO - 250GB](https://smile.amazon.com/gp/product/B00TGIVZTW/)                                                                          | $99.99      |
+| Memory         | [G.SKILL Flare X Series 32GB (2 x 16GB) F4-2400C15D-32GFXR](https://smile.amazon.com/G-SKILL-Flare-288-Pin-Memory-F4-3200C14D-16GFX/dp/B06XFT7DF9/) | $224.99     |
+| Power          | [EVGA 430 W1, 80+ WHITE 430W 100-W1-0430-KR](https://smile.amazon.com/gp/product/B00H33SDR4/)                                                       | $29.99      |
+| Graphics       | [EVGA 512-P3-1300-LR GeForce 8400 GS](https://smile.amazon.com/gp/product/B004BQKQ8A/)                                                              | $29.99      |
+| Network        | [Broadcom BCM5751 Netxtreme](https://smile.amazon.com/gp/product/B005NX1DAK/)                                                                       | $22.95      |
+| Case           | [Rosewill Micro ATX SRM-01](https://smile.amazon.com/ROSEWILL-Micro-Computer-plastic-computer/dp/B00ZPWOA6I/)                                       | $21.99      |
+| **Total Cost** |                                                                                                                                                     | **$823.55** |
 
 ## Build
 

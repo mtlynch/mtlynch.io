@@ -176,7 +176,7 @@ Establish conventions on your team that make it clear who's "holding the baton" 
 
 For every note that requires action, respond explicitly to confirm that you've addressed it. Some code review tools allow you to mark comments as resolved. Otherwise, follow a simple convention, like, "Done," for each note. If you disagree with the note, politely explain why you declined to take action.
 
-{{<img src="reviewable-satisfied.png" has-border="true" alt="Reviewable interface shows options: discussing, satisfied, blocking, and working. Satisfied means you think you've addressed the reviewer's note." caption="Code review tools like [Reviewable](https://reviewable.io) and [Gerritt](https://www.gerritcodereview.com/) offer mechanisms for the author to mark specific notes as resolved.">}}
+{{<img src="reviewable-satisfied.png" has-border="true" alt="Reviewable interface shows options: discussing, satisfied, blocking, and working. Satisfied means you think you've addressed the reviewer's note." caption="Code review tools like [Reviewable](https://reviewable.io) and [Gerrit](https://www.gerritcodereview.com/) offer mechanisms for the author to mark specific notes as resolved.">}}
 
 Adjust your response based on your reviewer's effort. If they write a detailed note to help you learn something new, don't just mark it done. Respond thoughtfully to show gratitude for their effort.
 

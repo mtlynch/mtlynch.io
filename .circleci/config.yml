@@ -25,12 +25,30 @@ jobs:
           command: ./dev-scripts/check-formatting
   lint-markdown:
     docker:
-      - image: davidanson/markdownlint-cli2:v0.9.0
+      - image: davidanson/markdownlint-cli2:v0.17.2
     steps:
       - checkout
       - run:
           name: Lint Markdown
           command: ./dev-scripts/lint-markdown
+  check_duplicate_words:
+    docker:
+      - image: nixos/nix:2.26.1
+    steps:
+      - checkout
+      - run:
+          name: Install wordword
+          command: |
+            nix \
+              --extra-experimental-features 'nix-command flakes' \
+              profile \
+              install git+https://codeberg.org/mtlynch/wordword
+      - run:
+          name: Verify wordword installation
+          command: wordword --version
+      - run:
+          name: Check for duplicate words
+          command: wordword --verbose ./content
   build:
     docker:
       - image: peaceiris/hugo:v0.139.3
@@ -63,6 +81,18 @@ jobs:
       - run:
           name: Check HTML and external links
           command: ./dev-scripts/lint-html
+  lint-xml:
+    docker:
+      - image: alpine:3.21.2
+    steps:
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Install bash and xmllint
+          command: apk add bash libxml2-utils
+      - run:
+          name: Lint XML
+          command: ./dev-scripts/lint-xml
   check-seo-metadata:
     docker:
       - image: cimg/base:2020.01
@@ -111,8 +141,12 @@ workflows:
       - check-whitespace
       - check_html_format
       - lint-markdown
+      - check_duplicate_words
       - build
       - lint-html:
+          requires:
+            - build
+      - lint-xml:
           requires:
             - build
       - check-seo-metadata:
@@ -131,6 +165,7 @@ workflows:
             - lint-markdown
             - build
             - check-seo-metadata
+            - check_duplicate_words
           filters:
             branches:
               only: master

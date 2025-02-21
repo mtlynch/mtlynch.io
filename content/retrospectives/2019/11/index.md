@@ -111,7 +111,7 @@ And then... silence. After that first sale, nothing else came in for weeks.
 
 ### I added self-ads
 
-Maybe the problem was that too few users realized I was selling meal plans. There was an entry for "Meal Plans" in the the site's navigation bar, but I wanted to maximize the visitors to my meal plan sales page.
+Maybe the problem was that too few users realized I was selling meal plans. There was an entry for "Meal Plans" in the site's navigation bar, but I wanted to maximize the visitors to my meal plan sales page.
 
 To drive more users to the sales page, I created self-ads to replace the ads I'd been running for Google AdSense:
 
