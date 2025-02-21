@@ -3,6 +3,12 @@ title: "Mini-Utilities I Created Because of NixOS"
 date: 2025-03-06
 ---
 
+I recently switched from Windows to NixOS as my primary operating system, and it's been a major adjustment. There are some things I miss about Windows, but overall
+
+One of my favorite things about NixOS is how friendly it is to creating tiny software utilities. If I write a simple web app, NixOS makes it easy to run that web app forever. If I make a command-line utility, it's easy to add it to my shell. If my computer's disk dies or I get a new computer, it's trivial to take all those utilities with me to my next computer.
+
+On Windows, creating my own apps was possible, but it was frictiony. The only way I knew how to make an app that always ran in the background was to add it to Task Scheduler
+
 My primary desktop has been Windows since I was seven years old, so it's been my main OS for over 30 years.
 
 After increasing frustrations with Microsoft and Windows in particular for the last decade, I finally made the switch to NixOS, a Linux distribution that's distinctive in that you largely configure it through a central folder of config files.
