@@ -1,15 +1,19 @@
 ---
-title: "NixOS Encourages Me to Make Mini-Utilities"
-date: 2025-01-06
+title: "Mini-Utilities I Created Because of NixOS"
+date: 2025-03-06
 ---
 
-I've been using Windows as my main desktop since I was seven years old, so it's been my main OS for over 30 years.
+My primary desktop has been Windows since I was seven years old, so it's been my main OS for over 30 years.
 
-After increasing frustrations with Microsoft and Windows in particular for the last decade, I finally made the switch last week to NixOS, a Linux distribution that's distinctive in that you largely configure it through a central folder of config files.
+After increasing frustrations with Microsoft and Windows in particular for the last decade, I finally made the switch to NixOS, a Linux distribution that's distinctive in that you largely configure it through a central folder of config files.
 
-There are certainly things from Windows that I miss, but one unexpected benefit of NixOS is how much it rewards me for creating personal mini-utilities.
+There are certainly things from Windows that I miss, but one unexpected benefit of NixOS is how friendly it is to mini-utilities.
 
-I create a lot of personal utilities anyway, but
+## Why
+
+- I don't have to deal with creating domain names
+- I don't have to do anything to prevent abuse if there's a server-side component
+- I don't have to create an app anywhere
 
 ## Streamabilize: Make videos web-streamable
 
@@ -27,7 +31,7 @@ These problems were all solvable, but they created enough friction that I just k
 
 NixOS drastically reduces the friction in creating a utility like a video converter. I told an AI chatbot what I wanted, and it spit out
 
-https://gitlab.com/mtlynch/streamablize
+https://codeberg.org/mtlynch/streamablize
 
 ## Basic Go Web App: A basic Go web app
 
@@ -36,6 +40,22 @@ This was my first NixOS mini-utility. It doesn't do anything useful, but it help
 ## Pointer Brother: Point to things in screenshots
 
 Named in honor of famed corporate entertainment act, [The Pointer Brothers](https://www.youtube.com/watch?v=0OwgTEB51Os)
+
+- <https://codeberg.org/mtlynch/pointer-brother>
+
+## Exploding Servers: Auto-deleting cloud VMs
+
+This one I might turn into a real product. [Reach out](/about/) if it sounds like something you'd pay for.
+
+## Babycam: A simple babycam viewer
+
+I recently bought a babycam to check on how my son is doing when he naps. It's a handy way of checking on if he's awake without disturbing his sleep by checking.
+
+It's a Reolink E1 Zoom Pro, and overall, I'm happy with it. I run it on a dedicated VLAN with firewall rules to prevent it from connecting to the Internet.
+
+Reolink has a built-in web app, but it kind of sucks. It prompts you to log in every time you visit, and it doesn't render well on mobile, which is primarily how my wife and his other caretakers want to check.
+
+So I just made my own simple web app. The camera exposes an RTSP stream, so I spent two hours iterating with Claude 3.5 Sonnet to make a Go app that wraps
 
 ## Couldn't you do this in Docker?
 
