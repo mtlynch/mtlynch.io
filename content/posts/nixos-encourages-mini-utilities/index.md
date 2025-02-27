@@ -51,6 +51,8 @@ This was my first NixOS mini-utility. It doesn't do anything useful, but it help
 
 Named in honor of famed corporate entertainment act, [The Pointer Brothers](https://www.youtube.com/watch?v=0OwgTEB51Os)
 
+{{<video src="pointer-brother.mp4" caption="TODO" max-width="800px">}}
+
 - <https://codeberg.org/mtlynch/pointer-brother>
 
 ## Exploding Servers: Auto-deleting cloud VMs
