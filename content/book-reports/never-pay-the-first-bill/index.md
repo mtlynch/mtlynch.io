@@ -5,18 +5,19 @@ rating: 7
 purchase_url: https://www.marshallallen.com/
 ---
 
-TODO: Short summary
+I enjoy finding ways to exercise my rights as a consumer and push back against corporate abuse, so this was right up my alley.
 
-My wife and I recently had a child, so my family's medical bills are atypically high. But I've saved thousands of dollars by checking
+The book was eye-opening and made me infuriated with how corrupt the medical system is in the US and how much it extracts wealth by fleecing the middle class.
 
 <!--more-->
+
+My wife and I recently had a child, so my family's medical bills are atypically high. Reading the book saved me thousands of dollars by alerting me of how common incorrect medical bills are and what to look for to avoid providers from overcharging you.
 
 ---
 
 ## What I liked
 
 - It got me fired up about exercising my rights as a patient.
-- It's eye-opening and infuriating how corrupt the medical system is in the US and how much burden falls on the middle class.
 - It included several practical techniques for challenging unfair medical bills.
 - The biggest bang-for-buck technique I've learned is simply comparing my medical bill to the explanation of benefits from my insurer.
   - It saved me [over $3k on four separate incorrect bills](#compare-your-medical-bill-with-your-insurers-eob).
@@ -24,8 +25,9 @@ My wife and I recently had a child, so my family's medical bills are atypically 
 ## What I disliked
 
 - The author doesn't have a good sense of which techniques are effective.
-  - He sometimes says, "I've heard this works,"
+  - He sometimes says, "I've heard this works," but I'd like to see a bit more information about what's worth trying vs. what's unlikely to get results.
 - In a lot of the stories the author shares about his personal experience, he reveals to the provider that he's an investigative reporter for ProPublica, so that gets him better outcomes with these techniques than the average person could achieve.
+- It's fairly "fluffy." There's about 40 pages of practical advice stretched out into a 300-page book.
 
 ## Key takeaways
 
