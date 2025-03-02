@@ -177,7 +177,7 @@ My current solution is to assign a cookie to each client and associate that cook
 - Published TinyPilot Pro 2.5.4.
 - Attended Microconf US 2023.
 - Hired a new employee for the TinyPilot office.
-- Dealt with [Section 174 headaches](https://ssballiance.org/contactcongress.html) for my 2022 taxes.
+- Dealt with [Section 174 headaches](https://ssballiance.org/2023/04/18/letter-to-congress/) for my 2022 taxes.
 
 ### Lessons learned
 
