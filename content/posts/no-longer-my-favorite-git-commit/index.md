@@ -112,7 +112,16 @@ I read it at the time, and
 
 I recently wrote out my own take about what makes a good commit message. I looked back to Thompson's blog post for inpsiration so I could write about the reasons I liked the commit message he showcased. And I realized I didn't like it so much.
 
-It's not a bad commit message. It's certainly better than average. I appreciate the effort that the author put into it, but I no longer think it's an example commit that we should emulate. I'm not trying to dump on this one commit that was never meant to be held up to so much scrutiny.
+It's not a bad commit message. I'd rate it as "pretty good," and I agree with Thompson for all the reasons he praises it:
+
+- It explains the motivation.
+- It includes searchable artifacts.
+- It teaches the author's investigation and debugging process to teammates and readers.
+- It has a human touch.
+
+I appreciate the effort that the author put into it, but I no longer think it's an example commit that we should emulate. I'm not trying to dump on this one commit that was never meant to be held up to so much scrutiny.
+
+A lot of commits that people hold up as fun are more optimized for entertainment than they are for software development. They're all very ranty, hostile, snarky, cathartic, but generally not the type of commit message I'd like to find if I were trying to understand the code or investigate an outage at 2 AM.
 
 I used to think that was an example of a useful commit message, and I still think it's better than average, but reading it today, I think that it forces the reader to read a long story and never quite spells out the actual issue, which is that
 
