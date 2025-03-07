@@ -5,6 +5,8 @@ date: 2025-03-07
 
 In 2019, David Thompson wrote a popular blog post called, ["My favourite Git commit"](https://dhwthompson.com/2019/my-favourite-git-commit) where he shows a co-worker's six-paragraph commit message that tells the story of how he made a change that's just a single-character whitespace change.
 
+I revisited the commit message recently, and I realized we all had it wrong. It's not such a good commit message after all.
+
 ## The commit in question
 
 Here's the [commit message](https://github.com/alphagov/govuk-puppet/commit/63b36f93bf75a848e2125008aa1e880c5861cf46) that so enamored Thompson, and many others at the time, including me.
@@ -70,6 +72,36 @@ It feels whimsical and delightful that someone went to such lengths to explain t
 
 ## My issues with the commit message
 
+### It never explains the problem clearly
+
+The issue is on [line 463](https://github.com/alphagov/govuk-puppet/blob/bfe3f647cc158e04ab6c80bee035d2e832582786/modules/router/templates/routes.conf.erb#L463) of `routes.conf.erb`:
+
+```bash
+$ cat modules/router/templates/routes.conf.erb | head -n 463 | tail -n 1
+  # where civica QueryPayments calls are taking too long.
+```
+
+It's not obvious in the console or the web view what's wrong, but if you use `xxd` to view the raw bytes of the line, you see the issue:
+
+```bash
+$ cat modules/router/templates/routes.conf.erb \
+  | head -n 463 | tail -n 1 \
+  | xxd | head -n 1
+00000000: 2020 23c2 a077 6865 7265 2063 6976 6963    #..where civic
+                 ^^ ^^
+```
+
+A bit more clearly, here are the first few characters:
+
+| Byte representation | Text representation                |
+| ------------------- | ---------------------------------- |
+| `0x20`              | `' '` (space)                      |
+| `0x20`              | `' '` (space)                      |
+| `0x23`              | `'#'`                              |
+| `0xc2` `0xa0`       | `' '` (Unicode non-breaking space) |
+
+The file had the byte sequence `0xC2 0xA0`, which is the [UTF-8 representation of a non-breaking space character](https://www.compart.com/en/unicode/U+00A0). But that character was breaking tools that expected the file to have US-ASCII encoding, so the change replaced the UTF-8 space with a standard ASCII space: `0x20`.
+
 ### It buries the most important information at the end
 
 ### It doesn't address the root cause
@@ -80,9 +112,9 @@ I read it at the time, and
 
 I recently wrote out my own take about what makes a good commit message. I looked back to Thompson's blog post for inpsiration so I could write about the reasons I liked the commit message he showcased. And I realized I didn't like it so much.
 
-It's not a bad commit. It's certainly better than average. I appreciate the effort that the author put into it, but I no longer think it's an example commit that we should emulate.
+It's not a bad commit message. It's certainly better than average. I appreciate the effort that the author put into it, but I no longer think it's an example commit that we should emulate. I'm not trying to dump on this one commit that was never meant to be held up to so much scrutiny.
 
-I used to think that was an example of a useful commit message, and I still think it's better than average, but reading it today, I think that it forces the reader to read a long story and never quite spells out the actual issue, which is that the file had the byte sequence `0xC2 0xA0`, which is the [UTF-8 representation of a non-breaking space character](https://www.compart.com/en/unicode/U+00A0). But that character was breaking tools that expected the file to have US-ASCII encoding, so the change replaced the UTF-8 space with a standard ASCII space: `0x20`.
+I used to think that was an example of a useful commit message, and I still think it's better than average, but reading it today, I think that it forces the reader to read a long story and never quite spells out the actual issue, which is that
 
 ## My rewrite
 
@@ -139,6 +171,8 @@ rake spec` or `bundle exec rspec modules/router/spec`. But when run as
 > ```
 >
 > Now the tests work! One hour of my life I won't get back..
+
+I left the "How I found this" mostly the same except that I simplified the terminal prompt from `dcarley-MBA:puppet dcarley $` to just `$`, as the former had useless noise.
 
 ---
 
