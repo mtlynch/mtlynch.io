@@ -5,7 +5,7 @@ date: 2025-03-07
 
 In 2019, David Thompson wrote a popular blog post called, ["My favourite Git commit"](https://dhwthompson.com/2019/my-favourite-git-commit) where he shows a co-worker's six-paragraph commit message that tells the story of how he made a change that's just a single-character whitespace change.
 
-I revisited the commit message recently, and I realized we all had it wrong. It's not such a good commit message after all.
+I sat down recently to describe what makes a good commit message, and I looked at it for inspiration. And I realized it's not such a great commit message after all.
 
 ## The commit in question
 
@@ -71,7 +71,16 @@ TODO: Show image
 
 Yes, five paragraphs and five code snippets, all to describe a one-character whitespace change.
 
-It's easy to see what's appealing about this commit.
+It's easy to see what's appealing about this commit. I think it's a good commit message, and I agree with all the reasons Thompson praises it. I just don't think it's the best or that we should hold it up as an example.
+
+In discussions about it, people held up other commit messages:
+
+- They're snarky.
+- They often are very long and detailed relative to the size of the commit.
+- They're funny.
+- They're cathartic in mocking something a lot of people feel frustration with.
+
+So, they're all entertaining commits, but they're not good examples of good software engineering. They're enjoyable commit messages to read when you're screwing around on reddit or Hacker News, but they probably wouldn't be so great if you were tracking down a bug at 2 AM, and instead of finding a nice succinct explanation, you had to read through a 20-paragraph rant about some third-party dependency.
 
 It feels whimsical and delightful that someone went to such lengths to explain their process when 99% of developers would describe the result as "fix whitespace character."
 
