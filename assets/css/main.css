@@ -174,11 +174,17 @@ code {
 }
 
 blockquote {
-  border-left: 2px solid var(--alt-bg-color);
-  padding-left: 2rem;
-  line-height: 2.8rem;
-  font-weight: 400;
-  font-style: italic;
+  margin: 1rem 0em;
+  padding: 0.5em 0 0.5em 1.5em;
+  border-left: 4px solid #797979;
+  background-color: #eaeaea;
+  font-style: normal;
+  position: relative;
+
+  p {
+    margin: 0.5em 0;
+    line-height: 1.6;
+  }
 }
 
 table {
