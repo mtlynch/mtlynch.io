@@ -62,11 +62,6 @@ rake spec` or `bundle exec rspec modules/router/spec`. But when run as
 
 The "punchline" to this commit message is that this is the diff that it described:
 
-```diff
--  # where civica QueryPayments calls are taking too long.
-+  # where civica QueryPayments calls are taking too long.
-```
-
 TODO: Show image
 
 Yes, five paragraphs and five code snippets, all to describe a one-character whitespace change.
