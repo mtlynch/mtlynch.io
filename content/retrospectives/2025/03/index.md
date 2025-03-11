@@ -30,15 +30,19 @@ TODO
 
 ## Kickstarter: I'm pleasantly surprised
 
-I decided to do the pre-order for _Refactoring English_ on Kickstarter. I'd never used Kickstarter before, and I was bracing myself for it to be a miserable experience where I feel like they're trying to squeeze money out of me and don't care if my campaign succeds, but I found it surprisingly pleasant.
+I decided to do the pre-order for _Refactoring English_ on Kickstarter. I'd never used Kickstarter before, and I was bracing myself for it to be a miserable experience.
 
-I've tried platforms that are ostensibly "creator-oriented," but then it quickly feels like the platform is working against me. Like the only way to use it is to pay for all these upgrades that have no guarantee of returning the investment.
+My typical experience with "creator platforms" is that they try to make their money squeezing me for upsells rather than helping my project.
+
+I'm pleased to report that launching my first project on Kickstarter was surprisingly painless. They never presented me with any upsells or asked me to pay for anything at all. They do seem to really make their money helping projects raise money.
 
 All in all, it took me six to eight hours of work to fill out all the paperwork, verify my banking information, and create the public-facing text, video, and images.
 
-With Kickstarter, I kept waiting for the upsells or the red tape, but it never came. I launched the project smoothly. The whole time, Kickstarter felt like they were on my side rather than trying to squeeze money out of me.
+I really like the Kickstarter model for this project. If I were to just do regular pre-orders, I'd be in an awkward position if I found myself three months in with not enough customers. I'd have to refund everyone even though I did three months of work. I appreciate that Kickstarter explicitly tells backers that they're paying for the ride, and the creator is making their best effort, but the backers accept the possibility that things might not work out.
 
-I like the Kickstarter model for fundraising. I'd like to. If I raise $5k, I'll be happy that there's a critical mass of interested readers to justify me spending a few more months on the book. If I fall short, I'll be disappointed but take solace in the fact that I'm getting a concrete answer.
+I also like that I can set a goal and make the project all-or-nothing. I set the goal to $5k because I felt like it's ambitious but doable, and it's just high enough to give me hope that I could still make $10-20k more after I publish the book. If I fall short of the goal and get nothing, I'll be disappointed but take solace in the fact that I'm getting a concrete answer.
+
+### Except for Kickstarter spammers...
 
 The one downside of Kickstarter is spam. A ton of spammers must watch Kickstarter because I get about three new emails per day offering some scammy way to help my campaign succeed. They start the conversation by posing (poorly) as an interested customer, and then they steer the conversation towards their friend I should pay to help with my campaign.
 
@@ -47,50 +51,61 @@ The one downside of Kickstarter is spam. A ton of spammers must watch Kickstarte
 
 ## Fundraising: How it's going so far
 
-Right now, there have been $XX in pledges. At XX% of the project's window, I'm at XX% of my goal, which sounds good but I worry that I've already played most of my cards. I announced the Kickstarter to the book's mailing list, on social media, and on the little self-ads on the bottom of this blog, so I've already offered the Kickstarter to everyone who follows my writing.
+As of today, I'm on day 6 of 25 on my Kickstarter fundraising period.
 
-So, now what?
+There have been $XX in pledges, so I'm at XX% of my goal.
 
-I have two remaining cards to play.
+It sounds good to be at XX% when only 24% of fundraising days have elapsed, but I've played my best cards already. I announced the Kickstarter to the book's mailing list, on social media, and on the little self-ads on the bottom of this blog.
+
+So, what else can I do?
+
+I can think of two remaining cards to play.
 
 The first is to get on the front page of Hacker News. That's usually difficult to do, but I'm [supposed to be the expert](https://hitthefrontpage.com), so I feel fairly confident that I can do it at least once, hopefully two or three times. I have
 
 My second idea is to reach out to companies who invest heavily in public writing to see if they'd be interested in sponsoring the project. I've never seen a book with corporate sponsors, so maybe this is a bad idea, but it seems like it could work.
 
-## Side project: Hobby cloud server
+## Side project: What should I run on my hobby cloud server?
 
-I recently got a free [4x ARM CPU / 24 GB RAM Oracle Cloud server](/notes/nix-oracle-cloud/). I installed [Woodpecker CI](https://woodpecker-ci.org/) on it, which is helpful for projects I host on [Codeberg](/retrospectives/2025/02/#i-joined-codeberg-as-a-member), as no commercial CIs support Codeberg yet.
+I recently got a free [4x ARM CPU / 24 GB RAM Oracle Cloud server](/notes/nix-oracle-cloud/). I installed [Woodpecker CI](https://woodpecker-ci.org/) on it, which is helpful for projects I host on Codeberg, as [no commercial CIs support Codeberg yet](/retrospectives/2025/02/#i-joined-codeberg-as-a-member).
 
-The problem is that this fairly powerful server is about 99% idle:
+The problem is that this rather competent server is about 99% idle:
 
-TODO: Screenshot
+{{<img src="server-grafana.webp" max-width="700px" caption="My poor server is so bored.">}}
+
+So, I'm looking for suggestions about what fun things I could run on the server.
 
 My criteria are:
 
-- I'd like it to be something that's kind of fun like SETI@home was, where there's neat visual feedback about what you're doing.
-- The service is open-source.
-- It's useful for a cause I think is neat.
+- I'd like it to be a sevice that's fun to operate when I feel like it but not an obligation to manage when I'm not interested.
+  - I don't want to spend time moderating something like a forum or chat room.
+- It could be a volunteer computing thing that supports a cause I like.
+  - I wanted to run [ArchiveTeam Warrior](http://warrior.archiveteam.org/) to archive websites to the Internet Archive, but they [don't support ARM](https://wiki.archiveteam.org/index.php/ArchiveTeam_Warrior#Can_I_run_the_Warrior_on_ARM_or_some_other_unusual_architecture?).
+  - For a volunteer computing opportunity, I'd like it to be fun for the operator, the way it was fun to just watch SETI@home run if you donated compute time to the project.
+- I'd like it to be open-source.
 - Oracle can blow away my server, and it shouldn't impact anyone.
   - i.e., I don't want anyone to lose data that they're storing on my server.
-- I don't want to spend time moderating something.
 - I don't want to mine cryptocurrency.
 
-I wanted to run [ArchiveTeam Warrior](http://warrior.archiveteam.org/) to archive websites to the Internet Archive, but they [don't support ARM](https://wiki.archiveteam.org/index.php/ArchiveTeam_Warrior#Can_I_run_the_Warrior_on_ARM_or_some_other_unusual_architecture?).
-
 I added a [Snowflake proxy](https://snowflake.torproject.org/) to help people defeat censorship, but that still doesn't consume much in terms of resources, and it's a little dull in terms of operator feedback.
+
+[endlessh-go](https://github.com/shizunge/endlessh-go) is a good example of what I'm looking for, and I'm planning to add that.
 
 If you have suggestions for fun projects that my server should run, let me know in the comments or shoot me an email.
 
 ## Interesting links
 
 - ["Writing commit messages"](https://www.chiark.greenend.org.uk/~sgtatham/quasiblog/commit-messages/) by Simon Tatham
-  - While writing my take, I read a lot of blog posts about commit message practices, and I thought this was the only good one. Every other article focuses on style considerations that don't matter (e.g., "the title _must_ be imperative voice") or just issue edicts without explaining their value.
-  - Based on the URL and site style, I thought the author was a university student and was surprised he had so much wisdom about commit messages, but then I dug deeper and realized [the author](https://www.chiark.greenend.org.uk/~sgtatham/) is the creator of the PuTTY SSH client and [just likes hosting everything on his friend's server](https://www.chiark.greenend.org.uk/~sgtatham/putty/faq.html#faq-domain).
+  - Before writing [my article](https://refactoringenglish.com/chapters/commit-messages/), I read a lot of blog posts about commit message practices, and I thought this was the only good one.
+  - To progrEvery other article focuses on style considerations that don't matter (e.g., "the title _must_ be imperative voice") or just issue edicts without explaining their value.
+  - Based on the URL and site's design, I thought the author was a university student and was surprised he had so much wisdom about commit messages, but then I dug deeper and realized [the author](https://www.chiark.greenend.org.uk/~sgtatham/) is the creator of the PuTTY SSH client and [just likes hosting everything on his friend's server](https://www.chiark.greenend.org.uk/~sgtatham/putty/faq.html#faq-domain).
 - ["Programming without Pointers"](https://www.hytradboi.com/2025/05c72e39-c07e-41bc-ac40-85e8308f2917-programming-without-pointers) by Andrew Kelley
   - Andrew Kelley, founder of Zig, says he escaped his programming skill plateau by creating a style he calls "programming without pointers."
-  - When you design the representation of your app's state, you can't use any data structure that has child pointers. So you can use an array or hashmap at the top level, but they can't contain anything that has pointers.
-  - He gives the example of storing strings. You can't store a list of `[:0]u8` objects because that would be a pointer to a pointer. Instead, he creates a custom structure that aggregates all strings into a single array, and then he maintains a list of indexes into.
-  - The advantage of this technique is that it's trivial to serialize and deserialize state and share it across environments (e.g., a Zig backend and a WASM frontend) because
+  - Kelley's style is to represent his app's state using a single struct that contains various data types the app needs, but none of the types can contain pointers. The top-level struct can contain arrays or hashmaps, but those arrays and hashmaps can't objects that have pointers.
+    - His groovebasin project [is an example of this](https://codeberg.org/andrewrk/groovebasin/src/commit/9022521c445c2ba398f2f646aa24241ecd1a715a/shared/Db.zig#L8-L49).
+  - He gives the example of storing strings. You can't store a list of `[:0]u8` objects because that would be a pointer to a pointer. Instead, he creates a custom structure that aggregates all strings into a single array, and then he maintains a list of indexes into that array.
+  - The advantage of this technique is that it's trivial to serialize and deserialize state. Serializing is just dumping the struct's bytes into a file or network socket. Deserializing is just reading an entire file and mapping it back into the original struct. and share it across environments (e.g., a Zig backend and a WASM frontend) because
+  - Memory management also becomes simpler because you can free memory for each field of the top-level struct. You never have to iterate through lists or walk a tree structure to free memory for child objects.
 - ["Reviving an Old Kindle Paperwhite 7th Gen"](https://terminalbytes.com/reviving-kindle-paperwhite-7th-gen/) by Hemant Kumar
   - I desperately want to buy an old e-reader on eBay for $30 and make my own dashboard, but I don't have any ideas for what to display on it.
 - ["If You Ever Stacked Cups In Gym Class, Blame My Dad"](https://defector.com/if-you-ever-stacked-cups-in-gym-class-blame-my-dad) by Kit Fox
