@@ -1,7 +1,7 @@
 ---
 title: "Educational Products: Month 5"
-date: "2025-03-17"
-description: TODO - One-line summary
+date: "2025-03-12"
+description: My first time raising money on Kickstarter
 ---
 
 ## Highlights
@@ -14,7 +14,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Complete the blogging chapter of _Refactoring English_
 
-- **Result**: I decided to focus on the [commit message chapter](https://refactoringenglish.com/chapters/commit-messages/) instead, but I published that.
+- **Result**: I decided to focus on the [commit message chapter](https://refactoringenglish.com/chapters/commit-messages/) instead and finished it on time.
 - **Grade**: A
 
 Midway through writing the blogging chapter, I realized I could write about commit messages, and that would be a good chapter to share on dev-oriented social networks like Hacker News, /r/programming, and Lobsters.
@@ -23,7 +23,7 @@ Unfortunately, the article was a huge miss on Hacker News and didn't get much tr
 
 ### - Begin selling pre-orders for _Refactoring English_
 
-- **Result**: Started selling
+- **Result**: Started selling pre-orders on Kickstarter
 - **Grade**: A
 
 TODO
@@ -38,13 +38,14 @@ All in all, it took me six to eight hours of work to fill out all the paperwork,
 
 With Kickstarter, I kept waiting for the upsells or the red tape, but it never came. I launched the project smoothly. The whole time, Kickstarter felt like they were on my side rather than trying to squeeze money out of me.
 
-The one downside is spam. A ton of spammers must watch Kickstarter because as soon as my project launched, I started getting ten new emails per week from people offering some scammy way to help my campaign succeed. Irritatingly, they start the conversation with a seemingly innocuous question about the book, then transition into telling me that they also raise money on Kickstarter, and they're so glad they used company X, which they're eager to put me in touch with.
+I like the Kickstarter model for fundraising. I'd like to. If I raise $5k, I'll be happy that there's a critical mass of interested readers to justify me spending a few more months on the book. If I fall short, I'll be disappointed but take solace in the fact that I'm getting a concrete answer.
 
-{{<img src="ks-spam.webp" has-border="true" max-width="700px" caption="The spammers start with an innocuous message that feigns interest in your product, and then they shift the conversation to their &ldquo;friend&rdquo; who offers paid Kickstarter publicity services." alt="Hello, An investor promoted your campaign to me, and I was immediately intrigued by your approach to improving writing for software developers. Your experience and success in blogging are impressive! I’d love to support the project. How do you plan to tailor the writing techniques for developers with varying levels of experience and expertise? Best regards, David">}}
+The one downside of Kickstarter is spam. A ton of spammers must watch Kickstarter because I get about three new emails per day offering some scammy way to help my campaign succeed. They start the conversation by posing (poorly) as an interested customer, and then they steer the conversation towards their friend I should pay to help with my campaign.
+
+{{<img src="ks-spam.webp" has-border="true" max-width="700px" caption="The spammers start with an innocuous message that feigns interest in your product." alt="Hello, An investor promoted your campaign to me, and I was immediately intrigued by your approach to improving writing for software developers. Your experience and success in blogging are impressive! I’d love to support the project. How do you plan to tailor the writing techniques for developers with varying levels of experience and expertise? Best regards, David">}}
+{{<img src="ks-spam2.webp" has-border="true" max-width="700px" caption="...and then they shift the conversation to their &ldquo;friend&rdquo; who offers paid Kickstarter publicity services." alt="Hi Michael, Great ! Have you considered reaching out to a creator like yourself on Kickstarter for advice on how they reached their potential goal? I have a friend who's a successful creator on there, and I'm not sure if you're interested, but it might be worth connecting with him for some insights. It could be really helpful for your campaign! Wishing you success with your campaign! Best wishes, David">}}
 
 ## Fundraising: How it's going so far
-
-I like this model. I'd like to. If I raise $5k, I'll be happy that there's a critical mass of interested readers to justify me spending a few more months on the book. If I fall short, I'll be disappointed but take solace in the fact that I'm getting a concrete answer.
 
 Right now, there have been $XX in pledges. At XX% of the project's window, I'm at XX% of my goal, which sounds good but I worry that I've already played most of my cards. I announced the Kickstarter to the book's mailing list, on social media, and on the little self-ads on the bottom of this blog, so I've already offered the Kickstarter to everyone who follows my writing.
 
@@ -82,7 +83,18 @@ If you have suggestions for fun projects that my server should run, let me know 
 
 ## Interesting links
 
-- ["Writing commit messages"](https://www.chiark.greenend.org.uk/~sgtatham/quasiblog/commit-messages/). Based on the URL and site style, I thought the author was a university student and was surprised he had so much wisdom about commit messages, but then I dug deeper and realized [the author](https://www.chiark.greenend.org.uk/~sgtatham/) is the creator of the PuTTY SSH client and [just likes hosting everything on his friend's server](https://www.chiark.greenend.org.uk/~sgtatham/putty/faq.html#faq-domain).
+- ["Writing commit messages"](https://www.chiark.greenend.org.uk/~sgtatham/quasiblog/commit-messages/) by Simon Tatham
+  - While writing my take, I read a lot of blog posts about commit message practices, and I thought this was the only good one. Every other article focuses on style considerations that don't matter (e.g., "the title _must_ be imperative voice") or just issue edicts without explaining their value.
+  - Based on the URL and site style, I thought the author was a university student and was surprised he had so much wisdom about commit messages, but then I dug deeper and realized [the author](https://www.chiark.greenend.org.uk/~sgtatham/) is the creator of the PuTTY SSH client and [just likes hosting everything on his friend's server](https://www.chiark.greenend.org.uk/~sgtatham/putty/faq.html#faq-domain).
+- ["Programming without Pointers"](https://www.hytradboi.com/2025/05c72e39-c07e-41bc-ac40-85e8308f2917-programming-without-pointers) by Andrew Kelley
+  - Andrew Kelley, founder of Zig, says he escaped his programming skill plateau by creating a style he calls "programming without pointers."
+  - When you design the representation of your app's state, you can't use any data structure that has child pointers. So you can use an array or hashmap at the top level, but they can't contain anything that has pointers.
+  - He gives the example of storing strings. You can't store a list of `[:0]u8` objects because that would be a pointer to a pointer. Instead, he creates a custom structure that aggregates all strings into a single array, and then he maintains a list of indexes into.
+  - The advantage of this technique is that it's trivial to serialize and deserialize state and share it across environments (e.g., a Zig backend and a WASM frontend) because
+- ["Reviving an Old Kindle Paperwhite 7th Gen"](https://terminalbytes.com/reviving-kindle-paperwhite-7th-gen/) by Hemant Kumar
+  - I desperately want to buy an old e-reader on eBay for $30 and make my own dashboard, but I don't have any ideas for what to display on it.
+- ["If You Ever Stacked Cups In Gym Class, Blame My Dad"](https://defector.com/if-you-ever-stacked-cups-in-gym-class-blame-my-dad) by Kit Fox
+  - I woke up at 2 AM one night and couldn't fall back to sleep, and I spent about an hour reading this blog post and cup stacking videos.
 
 ## Wrap up
 
@@ -90,8 +102,8 @@ If you have suggestions for fun projects that my server should run, let me know 
 
 - Launched pre-orders for _Refactoring English_ [on Kickstarter](https://www.kickstarter.com/projects/mtlynch/refactoring-english)
 - Published ["How to Write Useful Commit Messages"](https://refactoringenglish.com/chapters/commit-messages/)
-- Published [My Zig Configuration for VS Code](https://mtlynch.io/notes/zig-vscode-nix/) and created a [Zig dev flake](https://codeberg.org/mtlynch/zig-vscode-flake)
-- Published [my notes for _Never Pay The First Bill_](https://mtlynch.io/book-reports/never-pay-the-first-bill/)
+- Published [My Zig Configuration for VS Code](/notes/zig-vscode-nix/) and created a [Zig dev flake](https://codeberg.org/mtlynch/zig-vscode-flake)
+- Published [my notes for _Never Pay The First Bill_](/book-reports/never-pay-the-first-bill/)
 
 ### Lessons learned
 
@@ -104,3 +116,5 @@ If you have suggestions for fun projects that my server should run, let me know 
 - Reach out to at least five companies asking them to sponsor _Refactoring English_.
 
 ### Requests for help
+
+- If you have suggestions for my Kickstarter project, and you're not a spambot, shoot me an email.
