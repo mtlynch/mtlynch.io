@@ -79,6 +79,8 @@ So, they're all entertaining commits, but they're not good examples of good soft
 
 It feels whimsical and delightful that someone went to such lengths to explain their process when 99% of developers would describe the result as "fix whitespace character."
 
+Introduced in [5a86076bd73f0e92558d49a15f4e828860886eca](https://github.com/alphagov/govuk-puppet/commit/5a86076bd73f0e92558d49a15f4e828860886eca).
+
 ## My issues with the commit message
 
 ### It never explains the problem clearly
