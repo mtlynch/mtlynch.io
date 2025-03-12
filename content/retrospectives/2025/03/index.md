@@ -2,11 +2,15 @@
 title: "Educational Products: Month 5"
 date: "2025-03-12"
 description: My first time raising money on Kickstarter
+images:
+  - /retrospectives/2025/03/ks-dashboard.webp
 ---
 
 ## Highlights
 
--
+- I launched my first Kickstarter project and found Kickstarter surprisingly painless.
+- I'm kind of on track to reach my Kickstarter goal, but I'll need to get creative in raising the remaining 69% of my goal.
+- I'm soliciting suggestions for fun services to run on my 4x ARM CPU / 24 GB cloud server.
 
 ## Goal grades
 
@@ -53,31 +57,34 @@ The one downside of Kickstarter is spam. A ton of spammers must watch Kickstarte
 
 As of today, I'm on day 6 of 25 on my Kickstarter fundraising period.
 
-There have been $XX in pledges, so I'm at XX% of my goal.
+There have been $1,585 in pledges, so I'm at 31% of my goal.
 
-It sounds good to be at XX% when only 24% of fundraising days have elapsed, but I've played my best cards already. I announced the Kickstarter to the book's mailing list, on social media, and on the little self-ads on the bottom of this blog.
+{{<img src="ks-dashboard.webp" max-width="700px" has-border="true">}}
+
+It sounds good to be at 31% of my goal when the project has only been up for 24% of its total days, but I've played my best cards already. I announced the Kickstarter to the book's mailing list, on social media, and on the little self-ads on the bottom of this blog.
 
 So, what else can I do?
 
 I can think of two remaining cards to play.
 
-The first is to get on the front page of Hacker News. That's usually difficult to do, but I'm [supposed to be the expert](https://hitthefrontpage.com), so I feel fairly confident that I can do it at least once, hopefully two or three times. I have
+The first is to get on the front page of Hacker News. That's usually difficult to do, but I'm [supposed to be the expert](https://hitthefrontpage.com), so I feel fairly confident that I can do it at least once, hopefully two or three times. I have a few post ideas that are basically like bunts. They probably won't be homerun posts that reach the #1 spot, but I can probably write them in 5ish hours and land somewhere in the #10-20 range.
 
 My second idea is to reach out to companies who invest heavily in public writing to see if they'd be interested in sponsoring the project. I've never seen a book with corporate sponsors, so maybe this is a bad idea, but it seems like it could work.
 
 ## Side project: What should I run on my hobby cloud server?
 
-I recently got a free [4x ARM CPU / 24 GB RAM Oracle Cloud server](/notes/nix-oracle-cloud/). I installed [Woodpecker CI](https://woodpecker-ci.org/) on it, which is helpful for projects I host on Codeberg, as [no commercial CIs support Codeberg yet](/retrospectives/2025/02/#i-joined-codeberg-as-a-member).
-
-The problem is that this rather competent server is about 99% idle:
+I recently got a free [4x ARM CPU / 24 GB RAM Oracle Cloud server](/notes/nix-oracle-cloud/). The problem is that this rather competent server is about 99% idle:
 
 {{<img src="server-grafana.webp" max-width="700px" caption="My poor server is so bored.">}}
 
-So, I'm looking for suggestions about what fun things I could run on the server.
+So far, I've installed:
 
-My criteria are:
+- [Woodpecker CI](https://woodpecker-ci.org/), which is helpful for projects I host on Codeberg, as [no commercial CIs support Codeberg yet](/retrospectives/2025/02/#i-joined-codeberg-as-a-member)
+- [Snowflake proxy](https://snowflake.torproject.org/) to help people defeat censorship
 
-- I'd like it to be a sevice that's fun to operate when I feel like it but not an obligation to manage when I'm not interested.
+I'm looking for suggestions about what fun things I could run on the server. My criteria are:
+
+- I'd like it to be a sevice that's fun to operate when I have time but not an obligation that demands my time.
   - I don't want to spend time moderating something like a forum or chat room.
 - It could be a volunteer computing thing that supports a cause I like.
   - I wanted to run [ArchiveTeam Warrior](http://warrior.archiveteam.org/) to archive websites to the Internet Archive, but they [don't support ARM](https://wiki.archiveteam.org/index.php/ArchiveTeam_Warrior#Can_I_run_the_Warrior_on_ARM_or_some_other_unusual_architecture?).
@@ -87,8 +94,6 @@ My criteria are:
   - i.e., I don't want anyone to lose data that they're storing on my server.
 - I don't want to mine cryptocurrency.
 
-I added a [Snowflake proxy](https://snowflake.torproject.org/) to help people defeat censorship, but that still doesn't consume much in terms of resources, and it's a little dull in terms of operator feedback.
-
 [endlessh-go](https://github.com/shizunge/endlessh-go) is a good example of what I'm looking for, and I'm planning to add that.
 
 If you have suggestions for fun projects that my server should run, let me know in the comments or shoot me an email.
@@ -97,19 +102,20 @@ If you have suggestions for fun projects that my server should run, let me know 
 
 - ["Writing commit messages"](https://www.chiark.greenend.org.uk/~sgtatham/quasiblog/commit-messages/) by Simon Tatham
   - Before writing [my article](https://refactoringenglish.com/chapters/commit-messages/), I read a lot of blog posts about commit message practices, and I thought this was the only good one.
-  - To progrEvery other article focuses on style considerations that don't matter (e.g., "the title _must_ be imperative voice") or just issue edicts without explaining their value.
+  - Every other article focuses on style considerations that don't matter (e.g., "the title _must_ be imperative voice") or issues edicts without explaining the reasoning.
   - Based on the URL and site's design, I thought the author was a university student and was surprised he had so much wisdom about commit messages, but then I dug deeper and realized [the author](https://www.chiark.greenend.org.uk/~sgtatham/) is the creator of the PuTTY SSH client and [just likes hosting everything on his friend's server](https://www.chiark.greenend.org.uk/~sgtatham/putty/faq.html#faq-domain).
 - ["Programming without Pointers"](https://www.hytradboi.com/2025/05c72e39-c07e-41bc-ac40-85e8308f2917-programming-without-pointers) by Andrew Kelley
   - Andrew Kelley, founder of Zig, says he escaped his programming skill plateau by creating a style he calls "programming without pointers."
-  - Kelley's style is to represent his app's state using a single struct that contains various data types the app needs, but none of the types can contain pointers. The top-level struct can contain arrays or hashmaps, but those arrays and hashmaps can't objects that have pointers.
+  - Kelley's style is to represent his app's state using a single struct that contains various data types the app needs, but none of the types can contain pointers. The top-level struct can contain arrays or hashmaps, but the objects they store can't have pointers.
     - His groovebasin project [is an example of this](https://codeberg.org/andrewrk/groovebasin/src/commit/9022521c445c2ba398f2f646aa24241ecd1a715a/shared/Db.zig#L8-L49).
-  - He gives the example of storing strings. You can't store a list of `[:0]u8` objects because that would be a pointer to a pointer. Instead, he creates a custom structure that aggregates all strings into a single array, and then he maintains a list of indexes into that array.
+  - He gives the example of storing strings. You can't store an array strings because that would be a pointer to a pointer. Instead, he creates a custom structure that aggregates all strings into a single array, and then he maintains a list of indexes into that array.
   - The advantage of this technique is that it's trivial to serialize and deserialize state. Serializing is just dumping the struct's bytes into a file or network socket. Deserializing is just reading an entire file and mapping it back into the original struct. and share it across environments (e.g., a Zig backend and a WASM frontend) because
   - Memory management also becomes simpler because you can free memory for each field of the top-level struct. You never have to iterate through lists or walk a tree structure to free memory for child objects.
+  - I find the technique surprising because it feels like the indexes are essentially pointers without compiler support. If I heard this proposal from a random person, I'd dismiss it, but because I think Andrew Kelley is smart, I want to try this out.
 - ["Reviving an Old Kindle Paperwhite 7th Gen"](https://terminalbytes.com/reviving-kindle-paperwhite-7th-gen/) by Hemant Kumar
   - I desperately want to buy an old e-reader on eBay for $30 and make my own dashboard, but I don't have any ideas for what to display on it.
 - ["If You Ever Stacked Cups In Gym Class, Blame My Dad"](https://defector.com/if-you-ever-stacked-cups-in-gym-class-blame-my-dad) by Kit Fox
-  - I woke up at 2 AM one night and couldn't fall back to sleep, and I spent about an hour reading this blog post and cup stacking videos.
+  - I woke up at 2 AM one night and couldn't fall back to sleep, and I spent about an hour reading this blog post and watching cup stacking videos.
 
 ## Wrap up
 
@@ -128,7 +134,7 @@ If you have suggestions for fun projects that my server should run, let me know 
 
 - Reach my $5k Kickstarter goal for _Refactoring English_.
 - Publish the blogging chapter of _Refactoring English_.
-- Reach out to at least five companies asking them to sponsor _Refactoring English_.
+- Reach the front page of Hacker News twice by the end of March.
 
 ### Requests for help
 
