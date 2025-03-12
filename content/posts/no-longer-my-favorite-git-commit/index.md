@@ -3,9 +3,9 @@ title: "No Longer My Favorite Git Commit"
 date: 2025-03-07
 ---
 
-In 2019, David Thompson wrote a popular blog post called, ["My favourite Git commit"](https://dhwthompson.com/2019/my-favourite-git-commit) where he shows a co-worker's six-paragraph commit message that tells the story of how he made a change that's just a single-character whitespace change.
+In 2019, David Thompson wrote a popular blog post called, ["My favourite Git commit."](https://dhwthompson.com/2019/my-favourite-git-commit) It shows a whimsically detailed commit message Thompson's co-worker wrote and why Thompson found it so special.
 
-I sat down recently to describe what makes a good commit message, and I looked at it for inspiration. And I realized it's not such a great commit message after all.
+I recently decided to write a guide to writing good commit messages, and I revisted Thompson's blog post for inspiration. I wanted to explain what made it so good, but I was surprised to find that on revisiting it, it's not that good of a commit message.
 
 ## The commit in question
 
@@ -115,6 +115,10 @@ The file had the byte sequence `0xC2 0xA0`, which is the [UTF-8 representation o
 
 ### It buries the most important information at the end
 
+### It mentions related code without linking to it
+
+No branch name or commit ID. I can't find it.
+
 ### It doesn't address the root cause
 
 The change works around an issue, but why, in 2013 couldn't Ruby handle a UTF-8 encoded file? What was going on there?
@@ -138,7 +142,7 @@ I used to think that was an example of a useful commit message, and I still thin
 
 ## My rewrite
 
-> ### Convert template to US-ASCII to fix error
+> ### Convert template to US-ASCII for rake compatibility
 >
 > #### How I discovered this
 >
