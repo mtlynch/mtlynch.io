@@ -30,21 +30,19 @@ Unfortunately, the article was a huge miss on Hacker News and didn't get much tr
 - **Result**: Started selling pre-orders on Kickstarter
 - **Grade**: A
 
-TODO
-
 ## Kickstarter: I'm pleasantly surprised
 
 I decided to do the pre-order for _Refactoring English_ on Kickstarter. I'd never used Kickstarter before, and I was bracing myself for it to be a miserable experience.
 
-My typical experience with "creator platforms" is that they try to make their money squeezing me for upsells rather than helping my project.
+My typical experience with "creator platforms" is that they try to make their money by squeezing me for upsells rather than helping my project.
 
 I'm pleased to report that launching my first project on Kickstarter was surprisingly painless. They never presented me with any upsells or asked me to pay for anything at all. They do seem to really make their money helping projects raise money.
 
 All in all, it took me six to eight hours of work to fill out all the paperwork, verify my banking information, and create the public-facing text, video, and images.
 
-I really like the Kickstarter model for this project. If I were to just do regular pre-orders, I'd be in an awkward position if I found myself three months in with not enough customers. I'd have to refund everyone even though I did three months of work. I appreciate that Kickstarter explicitly tells backers that they're paying for the ride, and the creator is making their best effort, but the backers accept the possibility that things might not work out.
+I really like the Kickstarter model for this project. If I were to just do regular pre-orders, I'd be in an awkward position if I found myself three months in with not enough customers. I'd have to refund everyone even though I did three months of work. I appreciate that Kickstarter explicitly tells backers that they're paying for the ride. The creator should make their best effort to deliver, but the backers accept the possibility that things might not work out.
 
-I also like that I can set a goal and make the project all-or-nothing. I set the goal to $5k because I felt like it's ambitious but doable, and it's just high enough to give me hope that I could still make $10-20k more after I publish the book. If I fall short of the goal and get nothing, I'll be disappointed but take solace in the fact that I'm getting a concrete answer.
+I also like that I can set a goal and make the project all or nothing. I set the goal to $5k because I felt like it's ambitious but doable, and it's just high enough to give me hope that I could still make $10-20k more after I publish the book. If I fall short of the goal and get nothing, I'll be disappointed but take solace in the fact that I'm getting a concrete answer.
 
 ### Except for Kickstarter spammers...
 
@@ -69,7 +67,7 @@ I can think of two remaining cards to play.
 
 The first is to get on the front page of Hacker News. That's usually difficult to do, but I'm [supposed to be the expert](https://hitthefrontpage.com), so I feel fairly confident that I can do it at least once, hopefully two or three times. I have a few post ideas that are basically like bunts. They probably won't be homerun posts that reach the #1 spot, but I can probably write them in 5ish hours and land somewhere in the #10-20 range.
 
-My second idea is to reach out to companies who invest heavily in public writing to see if they'd be interested in sponsoring the project. I've never seen a book with corporate sponsors, so maybe this is a bad idea, but it seems like it could work.
+My second idea is to reach out to companies that invest heavily in public writing to see if they'd be interested in sponsoring the project. I've never seen a book with corporate sponsors, so maybe this is a bad idea, but it seems like it could work.
 
 ## Side project: What should I run on my hobby cloud server?
 
@@ -84,7 +82,7 @@ So far, I've installed:
 
 I'm looking for suggestions about what fun things I could run on the server. My criteria are:
 
-- I'd like it to be a sevice that's fun to operate when I have time but not an obligation that demands my time.
+- I'd like it to be a service that's fun to operate when I have time but not an obligation that demands my time.
   - I don't want to spend time moderating something like a forum or chat room.
 - It could be a volunteer computing thing that supports a cause I like.
   - I wanted to run [ArchiveTeam Warrior](http://warrior.archiveteam.org/) to archive websites to the Internet Archive, but they [don't support ARM](https://wiki.archiveteam.org/index.php/ArchiveTeam_Warrior#Can_I_run_the_Warrior_on_ARM_or_some_other_unusual_architecture?).
@@ -108,9 +106,11 @@ If you have suggestions for fun projects that my server should run, let me know 
   - Andrew Kelley, founder of Zig, says he escaped his programming skill plateau by creating a style he calls "programming without pointers."
   - Kelley's style is to represent his app's state using a single struct that contains various data types the app needs, but none of the types can contain pointers. The top-level struct can contain arrays or hashmaps, but the objects they store can't have pointers.
     - His groovebasin project [is an example of this](https://codeberg.org/andrewrk/groovebasin/src/commit/9022521c445c2ba398f2f646aa24241ecd1a715a/shared/Db.zig#L8-L49).
-  - He gives the example of storing strings. You can't store an array strings because that would be a pointer to a pointer. Instead, he creates a custom structure that aggregates all strings into a single array, and then he maintains a list of indexes into that array.
-  - The advantage of this technique is that it's trivial to serialize and deserialize state. Serializing is just dumping the struct's bytes into a file or network socket. Deserializing is just reading an entire file and mapping it back into the original struct. and share it across environments (e.g., a Zig backend and a WASM frontend) because
-  - Memory management also becomes simpler because you can free memory for each field of the top-level struct. You never have to iterate through lists or walk a tree structure to free memory for child objects.
+  - He gives the example of storing strings. You can't store an array of strings because that would be a pointer to a pointer. Instead, he creates a custom structure that aggregates all strings into a single array, and then he maintains a list of indexes into that array.
+  - Advantage of this technique:
+    - It's trivial to serialize and deserialize state. Serializing is just dumping the struct's bytes into a file or network socket. Deserializing is just reading an entire file and mapping it back into the original struct.
+    - It's easy to share state across environments (e.g., a Zig backend and a WASM frontend).
+    - Memory management also becomes simpler because you can free memory for each field of the top-level struct. You never have to iterate through lists or walk a tree structure to free memory for child objects.
   - I find the technique surprising because it feels like the indexes are essentially pointers without compiler support. If I heard this proposal from a random person, I'd dismiss it, but because I think Andrew Kelley is smart, I want to try this out.
 - ["Reviving an Old Kindle Paperwhite 7th Gen"](https://terminalbytes.com/reviving-kindle-paperwhite-7th-gen/) by Hemant Kumar
   - I desperately want to buy an old e-reader on eBay for $30 and make my own dashboard, but I don't have any ideas for what to display on it.
