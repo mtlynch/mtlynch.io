@@ -64,7 +64,7 @@ The "punchline" to this commit message is that this is the diff that it describe
 
 TODO: Show image
 
-Yes, five paragraphs and five code snippets, all to describe a one-character whitespace change.
+Yes, six paragraphs and five code snippets, all to describe a one-character whitespace change.
 
 It's easy to see what's appealing about this commit. I think it's a good commit message, and I agree with all the reasons Thompson praises it. I just don't think it's the best or that we should hold it up as an example.
 
