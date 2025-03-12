@@ -8,7 +8,7 @@ images:
 
 ## Highlights
 
-- I launched my first Kickstarter project and found Kickstarter surprisingly painless.
+- I launched [my first Kickstarter project](https://www.kickstarter.com/projects/mtlynch/refactoring-english/) and found Kickstarter surprisingly painless.
 - I'm kind of on track to reach my Kickstarter goal, but I'll need to get creative in raising the last 2/3rds.
 - I'm soliciting suggestions for fun services to run on my 4x ARM CPU / 24 GB cloud server.
 
@@ -32,7 +32,7 @@ Unfortunately, the article was a huge miss on Hacker News and didn't get much tr
 
 ## Kickstarter: I'm pleasantly surprised
 
-I decided to do the pre-order for _Refactoring English_ on Kickstarter. I'd never used Kickstarter before, and I was bracing myself for it to be a miserable experience.
+I decided to do [the pre-order for _Refactoring English_ on Kickstarter](https://www.kickstarter.com/projects/mtlynch/refactoring-english/). I'd never used Kickstarter before, and I was bracing myself for it to be a miserable experience.
 
 My typical experience with "creator platforms" is that they try to make their money by squeezing me for upsells rather than helping my project.
 
@@ -55,7 +55,7 @@ The one downside of Kickstarter is spam. A ton of spammers must watch Kickstarte
 
 As of today, there have been $1,585 in pledges to my Kickstarter project, so I'm at 31% of my goal.
 
-{{<img src="ks-dashboard.webp" max-width="700px" has-border="true">}}
+{{<img src="ks-dashboard.webp" max-width="700px" has-border="true" caption="At 24% through the fundraising window for [my Kickstarter project](https://www.kickstarter.com/projects/mtlynch/refactoring-english/), I've reached 31% of my revenue goal.">}}
 
 I launched the project on Friday, and it ends at the end of the month, so I'm on day 6 of 25 of the fundraising period (24% complete).
 
