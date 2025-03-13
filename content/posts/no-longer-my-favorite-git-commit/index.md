@@ -1,15 +1,17 @@
 ---
 title: "No Longer My Favorite Git Commit"
-date: 2025-03-07
+date: 2025-03-14
 ---
 
-In 2019, David Thompson wrote a popular blog post called, ["My favourite Git commit."](https://dhwthompson.com/2019/my-favourite-git-commit) It shows a whimsically detailed commit message Thompson's co-worker wrote and why Thompson found it so special.
+In 2019, David Thompson wrote a popular blog post called, ["My favourite Git commit."](https://dhwthompson.com/2019/my-favourite-git-commit) It showcases a whimsically detailed commit message that his co-worker wrote, and Thompson explains why he found it so special.
 
-I recently decided to write a guide to writing good commit messages, and I revisted Thompson's blog post for inspiration. I wanted to explain what made it so good, but I was surprised to find that on revisiting it, it's not that good of a commit message.
+I remember enjoying Thompson's blog post and have since shared it a few times with teammates as an example of how to write commit messages. I recently sat down to write out a guide to what makes a good commit message, so I revisited Thompson's post for inspiration.
+
+When I tried to explain what made Thompson's favorite commit a good model commit message, I realized it wasn't one. the commit that Thompson shares became popular not because it was useful but because it was entertaining.
 
 ## The commit in question
 
-Here's the [commit message](https://github.com/alphagov/govuk-puppet/commit/63b36f93bf75a848e2125008aa1e880c5861cf46) that so enamored Thompson, and many others at the time, including me.
+Here's the [commit message](https://github.com/alphagov/govuk-puppet/commit/63b36f93bf75a848e2125008aa1e880c5861cf46) that so enamored Thompson, and many others at the time, including me:
 
 > ### Convert template to US-ASCII to fix error
 >
@@ -60,28 +62,23 @@ rake spec` or `bundle exec rspec modules/router/spec`. But when run as
 >
 > Now the tests work! One hour of my life I won't get back..
 
-The "punchline" to this commit message is that this is the diff that it described:
+The "punchline" to this commit is that, after sharing this lengthy preamble, Thompson shows the actual diff:
 
-TODO: Show image
+{{<img src="one-char-diff.webp" has-border="true">}}
 
-Yes, six paragraphs and five code snippets, all to describe a one-character whitespace change.
+Yes, the commit message contains six paragraphs and five code snippets, all to describe a one-character whitespace change.
 
-It's easy to see what's appealing about this commit. I think it's a good commit message, and I agree with all the reasons Thompson praises it. I just don't think it's the best or that we should hold it up as an example.
+## The commit is good
 
-In discussions about it, people held up other commit messages:
+It's easy to see what's appealing about this commit.
 
-- They're snarky.
-- They often are very long and detailed relative to the size of the commit.
-- They're funny.
-- They're cathartic in mocking something a lot of people feel frustration with.
+I think it's a good commit message, and I agree with all the reasons Thompson praises it. This is not an attack on Thompson or even the original author. Thompson never claimed it was the "best" commit message, just his favorite, and I support celebrating code that delights you.
 
-So, they're all entertaining commits, but they're not good examples of good software engineering. They're enjoyable commit messages to read when you're screwing around on reddit or Hacker News, but they probably wouldn't be so great if you were tracking down a bug at 2 AM, and instead of finding a nice succinct explanation, you had to read through a 20-paragraph rant about some third-party dependency.
+I just don't think it's the best or that we should hold it up as an example.
 
 It feels whimsical and delightful that someone went to such lengths to explain their process when 99% of developers would describe the result as "fix whitespace character."
 
-Introduced in [5a86076bd73f0e92558d49a15f4e828860886eca](https://github.com/alphagov/govuk-puppet/commit/5a86076bd73f0e92558d49a15f4e828860886eca).
-
-## My issues with the commit message
+## But it's also bad
 
 ### It never explains the problem clearly
 
@@ -102,24 +99,32 @@ $ cat modules/router/templates/routes.conf.erb \
                  ^^ ^^
 ```
 
-A bit more clearly, here are the first few characters:
+A bit more clearly, here are the first few characters of that line:
 
-| Byte representation | Text representation                |
-| ------------------- | ---------------------------------- |
-| `0x20`              | `' '` (space)                      |
-| `0x20`              | `' '` (space)                      |
-| `0x23`              | `'#'`                              |
-| `0xc2` `0xa0`       | `' '` (Unicode non-breaking space) |
+| Byte representation | Text representation                                                           |
+| ------------------- | ----------------------------------------------------------------------------- |
+| `0x20`              | `' '` (space)                                                                 |
+| `0x20`              | `' '` (space)                                                                 |
+| `0x23`              | `'#'`                                                                         |
+| `0xc2` `0xa0`       | `' '` ([UTF-8 non-breaking space](https://www.compart.com/en/unicode/U+00A0)) |
 
-The file had the byte sequence `0xC2 0xA0`, which is the [UTF-8 representation of a non-breaking space character](https://www.compart.com/en/unicode/U+00A0). But that character was breaking tools that expected the file to have US-ASCII encoding, so the change replaced the UTF-8 space with a standard ASCII space: `0x20`.
+So, the file had the byte sequence `0xC2 0xA0`, which means it can't be a US-ASCII file, as that byte sequence is not valid US-ASCII. That sequence means that anything consuming the file must treat it as UTF-8, a newer and more internationally-friendly scheme for encoding text.
 
-### It buries the most important information at the end
+Digging through the soure history, I find that the UTF-8 character was introduced in [commit 5a8607](https://github.com/alphagov/govuk-puppet/commit/5a86076bd73f0e92558d49a15f4e828860886eca). That commit message doesn't have any clues as to why that one particular space is a UTF-8 character rather than a regular `0x20` space, but
 
-### It mentions related code without linking to it
-
-No branch name or commit ID. I can't find it.
+> _the likely origin of the invalid character is somebody using an Apple Ireland/UK keyboard layout where # is Option-3 (AltGr-3), and non-breaking space is Option-Space (AltGr-Space)._
+>
+> -[messe](https://news.ycombinator.com/item?id=21290159) on Hacker News
 
 ### It doesn't address the root cause
+
+Now that I understand the problem clearly, does the fix match the problem?
+
+The commit fixes the issue by replacing the UTF-8 space character with a regular US-ASCII space character, but is that the best fix? That's a band-aid over a deeper problem.
+
+Why are tools in the toolchain barfing when they encounter UTF-8? The codebase was using [Ruby 1.9.3](https://github.com/alphagov/govuk-puppet/blob/63b36f93bf75a848e2125008aa1e880c5861cf46/.ruby-version), which [supported UTF-8 encoding](http://graysoftinc.com/character-encodings/ruby-19s-three-default-encodings).
+
+The commit's fix that character was breaking tools that expected the file to have US-ASCII encoding, so the change replaced the UTF-8 space with a standard ASCII space: `0x20`.
 
 The change works around an issue, but why, in 2013 couldn't Ruby handle a UTF-8 encoded file? What was going on there?
 
@@ -139,6 +144,29 @@ I appreciate the effort that the author put into it, but I no longer think it's 
 A lot of commits that people hold up as fun are more optimized for entertainment than they are for software development. They're all very ranty, hostile, snarky, cathartic, but generally not the type of commit message I'd like to find if I were trying to understand the code or investigate an outage at 2 AM.
 
 I used to think that was an example of a useful commit message, and I still think it's better than average, but reading it today, I think that it forces the reader to read a long story and never quite spells out the actual issue, which is that
+
+### It buries the most important information at the end
+
+### It mentions related code without linking to it
+
+No branch name or commit ID. I can't find it.
+
+## The difference between a fun commit and a good commit
+
+On reddit and Hacker News, commenters shared other favorite commits:
+
+-
+
+What these commit messages all have in common:
+
+- They're long and detailed relative to the size of the commit.
+- They prioritize humor and storytelling over communicating technical details clearly.
+- They devolve into rants and tangents.
+- They mock libraries or protocols that frustrate many other developers, often with colorful language.
+
+So, they're all entertaining commits, but they're not good examples of good software engineering.
+
+They're enjoyable commit messages to read when you're screwing around on reddit or Hacker News, but they probably wouldn't be so great if you were tracking down a bug at 2 AM, and instead of finding a nice succinct explanation, you had to read through a 20-paragraph rant about some third-party dependency.
 
 ## My rewrite
 
