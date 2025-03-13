@@ -116,15 +116,7 @@ Digging through the soure history, I find that the UTF-8 character was introduce
 >
 > -[messe](https://news.ycombinator.com/item?id=21290159) on Hacker News
 
-### It doesn't address the root cause
-
-Now that I understand the problem clearly, does the fix match the problem?
-
-The commit fixes the issue by replacing the UTF-8 space character with a regular US-ASCII space character, but is that the best fix? That's a band-aid over a deeper problem.
-
-Why are tools in the toolchain barfing when they encounter UTF-8? The codebase was using [Ruby 1.9.3](https://github.com/alphagov/govuk-puppet/blob/63b36f93bf75a848e2125008aa1e880c5861cf46/.ruby-version), which [supported UTF-8 encoding](http://graysoftinc.com/character-encodings/ruby-19s-three-default-encodings).
-
-The commit's fix that character was breaking tools that expected the file to have US-ASCII encoding, so the change replaced the UTF-8 space with a standard ASCII space: `0x20`.
+## TODO
 
 The change works around an issue, but why, in 2013 couldn't Ruby handle a UTF-8 encoded file? What was going on there?
 
