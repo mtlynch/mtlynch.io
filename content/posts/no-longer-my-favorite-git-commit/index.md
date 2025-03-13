@@ -116,27 +116,6 @@ Digging through the soure history, I find that the UTF-8 character was introduce
 >
 > -[messe](https://news.ycombinator.com/item?id=21290159) on Hacker News
 
-## TODO
-
-The change works around an issue, but why, in 2013 couldn't Ruby handle a UTF-8 encoded file? What was going on there?
-
-I read it at the time, and
-
-I recently wrote out my own take about what makes a good commit message. I looked back to Thompson's blog post for inpsiration so I could write about the reasons I liked the commit message he showcased. And I realized I didn't like it so much.
-
-It's not a bad commit message. I'd rate it as "pretty good," and I agree with Thompson for all the reasons he praises it:
-
-- It explains the motivation.
-- It includes searchable artifacts.
-- It teaches the author's investigation and debugging process to teammates and readers.
-- It has a human touch.
-
-I appreciate the effort that the author put into it, but I no longer think it's an example commit that we should emulate. I'm not trying to dump on this one commit that was never meant to be held up to so much scrutiny.
-
-A lot of commits that people hold up as fun are more optimized for entertainment than they are for software development. They're all very ranty, hostile, snarky, cathartic, but generally not the type of commit message I'd like to find if I were trying to understand the code or investigate an outage at 2 AM.
-
-I used to think that was an example of a useful commit message, and I still think it's better than average, but reading it today, I think that it forces the reader to read a long story and never quite spells out the actual issue, which is that
-
 ### It buries the most important information at the end
 
 ### It mentions related code without linking to it
@@ -145,9 +124,9 @@ No branch name or commit ID. I can't find it.
 
 ## The difference between a fun commit and a good commit
 
-On reddit and Hacker News, commenters shared other favorite commits:
+On [reddit](https://www.reddit.com/r/programming/comments/djnp8k/my_favourite_git_commit/) and [Hacker News](https://news.ycombinator.com/item?id=21289827), commenters shared other favorite commits:
 
--
+- [mpv: stream_libarchive: workaround various types of locale braindeath](https://github.com/mpv-player/mpv/commit/1e70e82baa9193f6f027338b0fab0f5078971fbe)
 
 What these commit messages all have in common:
 
@@ -159,6 +138,12 @@ What these commit messages all have in common:
 So, they're all entertaining commits, but they're not good examples of good software engineering.
 
 They're enjoyable commit messages to read when you're screwing around on reddit or Hacker News, but they probably wouldn't be so great if you were tracking down a bug at 2 AM, and instead of finding a nice succinct explanation, you had to read through a 20-paragraph rant about some third-party dependency.
+
+### Notes
+
+A lot of commits that people hold up as fun are more optimized for entertainment than they are for software development. They're all very ranty, hostile, snarky, cathartic, but generally not the type of commit message I'd like to find if I were trying to understand the code or investigate an outage at 2 AM.
+
+I used to think that was an example of a useful commit message, and I still think it's better than average, but reading it today, I think that it forces the reader to read a long story and never quite spells out the actual issue, which is that
 
 ## My rewrite
 
