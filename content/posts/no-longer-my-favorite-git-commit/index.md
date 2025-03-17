@@ -1,13 +1,11 @@
 ---
 title: "No Longer My Favorite Git Commit"
-date: 2025-03-14
+date: 2025-03-19
 ---
 
-In 2019, David Thompson wrote a popular blog post called, ["My favourite Git commit."](https://dhwthompson.com/2019/my-favourite-git-commit) It showcases a whimsically detailed commit message that his co-worker wrote, and Thompson explains why he found it so special.
+In 2019, David Thompson wrote a popular blog post called, ["My favourite Git commit"](https://dhwthompson.com/2019/my-favourite-git-commit) that celebrates a whimsically detailed commit message his co-worker wrote. I enjoyed that post at the time, and I've sent it to teammates as an example of how to write commit messages well.
 
-I remember enjoying Thompson's blog post and have since shared it a few times with teammates as an example of how to write commit messages. I recently sat down to write out a guide to what makes a good commit message, so I revisited Thompson's post for inspiration.
-
-When I tried to explain what made Thompson's favorite commit a good model commit message, I realized it wasn't one. the commit that Thompson shares became popular not because it was useful but because it was entertaining.
+I recently decided to write my own explanation of what makes a good commit message, and I went back to Thompson's blog post for inspiration. I was surprised to find that when pressed to explain what was good about Thompson's example, I didn't find it to be a good example of a commit message. The experience reminded me how valuable it is to define my own principles for software development rather than adopting what other people call good.
 
 ## The commit in question
 
@@ -145,7 +143,20 @@ A lot of commits that people hold up as fun are more optimized for entertainment
 
 I used to think that was an example of a useful commit message, and I still think it's better than average, but reading it today, I think that it forces the reader to read a long story and never quite spells out the actual issue, which is that
 
+## The value of defining your own principles
+
+I've done this before
+
+- Reviewing code for teammates
+- Sending out my code for review
+- Hiring and working with freelance software developers
+- Writing software tutorials
+
+Whenever I do this, it makes me better at the thing I'm writing about. Being forced to think through and defend my principles makes them clearer and more useful.
+
 ## My rewrite
+
+I critiqued Thompson's example, so here's what I think a good rewrite looks like.
 
 > ### Convert template to US-ASCII for rake compatibility
 >
@@ -201,7 +212,9 @@ rake spec` or `bundle exec rspec modules/router/spec`. But when run as
 >
 > Now the tests work! One hour of my life I won't get back..
 
-I left the "How I found this" mostly the same except that I simplified the terminal prompt from `dcarley-MBA:puppet dcarley $` to just `$`, as the former had useless noise.
+I kept a lot of the original author's content, but I moved it to a "How I found this" section to make it clear to the reader that it's extra-credit reading.
+
+The only significant edit I made was simplifying the terminal prompt from `dcarley-MBA:puppet dcarley $` to just `$`, as the former is mostly noise.
 
 ---
 
