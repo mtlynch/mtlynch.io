@@ -193,7 +193,9 @@ I griped enough about Thompson's example and kept saying how I think I have a be
 >
 > `routes.conf.erb` has a stray UTF-8 character that seems to have been introduced by accident in [5a8607](https://github.com/alphagov/govuk-puppet/commit/5a86076bd73f0e92558d49a15f4e828860886eca).
 >
-> The one UTF-8 character causes test failures in `rake`, so this change replaces the UTF-8 character with an equivalent US-ASCII character.
+> `rake` expect US-ASCII format, so the single UTF-8 character in `routes.conf.erb` causes test failures in `rake`.
+>
+> This change replaces the UTF-8 character with an equivalent US-ASCII character to prevent test failures in `rake`.
 >
 > #### The stray UTF-8 character
 >
@@ -207,14 +209,16 @@ I griped enough about Thompson's example and kept saying how I think I have a be
 >                  ^^ ^^
 > ```
 >
-> `0xC2 0xA0` is not a valid US-ASCII byte sequence, but it's the [UTF-8 non-breaking space character](https://www.compart.com/en/unicode/U+00A0). If you view the file in a web browser or a code editor, it will likely look like a normal space character, but it causes the file to be invalid for tools that expect US-ASCII format.
+> `0xC2 0xA0` is not a valid US-ASCII byte sequence, but it's the [UTF-8 non-breaking space character](https://www.compart.com/en/unicode/U+00A0).
+>
+> If you view the file in a web browser or a code editor, it will likely look like a normal space character, but it's actually UTF-8, so any tool reading the file expecting US-ASCII encoding will fail.
 >
 > #### How I discovered this
 >
 > I introduced some tests in a feature branch to match the contents of
-> `/etc/nginx/router_routes.conf`. They worked fine when run with `bundle exec
-rake spec` or `bundle exec rspec modules/router/spec`. But when run as
-> `bundle exec rake` each `should` block failed with:
+> `/etc/nginx/router_routes.conf` (see [abcd123](#)). They worked fine when I ran them with `bundle exec
+rake spec` or `bundle exec rspec modules/router/spec`, but when I ran the tests as
+> `bundle exec rake`, each `should` block failed with:
 >
 > ```text
 > ArgumentError:
@@ -222,15 +226,14 @@ rake spec` or `bundle exec rspec modules/router/spec`. But when run as
 > ```
 >
 > I eventually found that removing the `.with_content(//)` matchers made the
-> errors go away. That there weren't any weird characters in the spec file. And
-> that it could be reproduced by requiring Puppet in the same interpreter with:
+> errors go away. I didn't see any weird characters in the spec file. I could be reproduce the error by requiring Puppet in the same interpreter with:
 >
 > ```bash
 > rake -E 'require "puppet"' spec
 > ```
 >
-> That particular template appears to be the only file in our codebase with an
-> identified encoding of `utf-8`. All others are `us-ascii`:
+> That particular template appears to be the only file in our codebase that `file`
+> identifies as `utf-8`. All others are `us-ascii`:
 >
 > ```bash
 > $ find modules -type f -exec file --mime {} \+ | grep utf
@@ -261,9 +264,9 @@ rake spec` or `bundle exec rspec modules/router/spec`. But when run as
 >
 > Now the tests work! One hour of my life I won't get back..
 
-I kept a lot of the original author's content, but I moved it to a "How I found this" section to make it clear to the reader that it's extra-credit reading.
+I kept a lot of the original author's content, but I moved it to a "How I found this" section to make it clear to the reader that it's extra-credit reading. I cleaned up the grammar a bit and [removed passive voice](https://refactoringenglish.com/chapters/passive-voice-considered-harmful/) to reduce ambiguity.
 
-The only significant edit I made was simplifying the terminal prompt from `dcarley-MBA:puppet dcarley $` to just `$`, as the former is mostly noise.
+I also simplified the terminal prompt from `dcarley-MBA:puppet dcarley $` to just `$`, as the former is mostly noise.
 
 ## Further reading
 
