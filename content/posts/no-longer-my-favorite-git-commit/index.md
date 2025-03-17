@@ -84,11 +84,11 @@ It feels whimsical and delightful that someone went to such lengths to explain t
 
 The biggest shortcoming of the commit is that it buries the most important information.
 
-Imagine that you're working in Thompson's codebase, and you find a bug related to the `routes.conf.erb` file. Digging through the source history, you want to understand whether Thompson's favorite commit is related to the bug. Will you be happy or sad to read its six paragraphs and five code snippets?
+Imagine that you're working in Thompson's codebase, and you find a bug related to the `routes.conf.erb` file. Digging through the source history, you encounter Thompson's favorite commit. Will you be happy or sad to read its six paragraphs and five code snippets of its commit message?
 
 My answer is: sad.
 
-Commit messages should present the most important information first and transition to less important information. Journalists call this the inverted pyramid style of writing.
+Commit messages should [present the most important information first](https://refactoringenglish.com/chapters/commit-messages/#put-the-most-important-information-first) and transition to less important information. Journalists call this the inverted pyramid style of writing.
 
 <div style="max-width: 550px; margin-left: auto; margin-right: auto">
 
@@ -166,6 +166,8 @@ rake spec` or `bundle exec rspec modules/router/spec`.
 But the commit message never names the branch or specifies a commit hash, so the reader has no way to reproduce the author's findings.
 
 No branch name or commit ID. I can't find it.
+
+https://refactoringenglish.com/chapters/commit-messages/#cross-references-to-issues-or-other-changes
 
 ## The value of defining your own principles
 
@@ -262,6 +264,10 @@ rake spec` or `bundle exec rspec modules/router/spec`. But when run as
 I kept a lot of the original author's content, but I moved it to a "How I found this" section to make it clear to the reader that it's extra-credit reading.
 
 The only significant edit I made was simplifying the terminal prompt from `dcarley-MBA:puppet dcarley $` to just `$`, as the former is mostly noise.
+
+## Further reading
+
+- ["How to Write Useful Commit Messages"](https://refactoringenglish.com/chapters/commit-messages/) - My more detailed explanation of what I think makes a good commit message.
 
 ---
 
