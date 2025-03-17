@@ -120,29 +120,6 @@ Digging through the soure history, I find that the UTF-8 character was introduce
 
 No branch name or commit ID. I can't find it.
 
-## The difference between a fun commit and a good commit
-
-On [reddit](https://www.reddit.com/r/programming/comments/djnp8k/my_favourite_git_commit/) and [Hacker News](https://news.ycombinator.com/item?id=21289827), commenters linked to this commit as a particular favorite:
-
-- [mpv: stream_libarchive: workaround various types of locale braindeath](https://github.com/mpv-player/mpv/commit/1e70e82baa9193f6f027338b0fab0f5078971fbe)
-
-What these commit messages all have in common:
-
-- They're long and detailed relative to the size of the commit.
-- They prioritize humor and storytelling over communicating technical details clearly.
-- They devolve into rants and tangents.
-- They mock libraries or protocols that frustrate many other developers, often with colorful language.
-
-So, they're all entertaining commits, but they're not good examples of good software engineering.
-
-They're enjoyable commit messages to read when you're screwing around on reddit or Hacker News, but they probably wouldn't be so great if you were tracking down a bug at 2 AM, and instead of finding a nice succinct explanation, you had to read through a 20-paragraph rant about some third-party dependency.
-
-### Notes
-
-A lot of commits that people hold up as fun are more optimized for entertainment than they are for software development. They're all very ranty, hostile, snarky, cathartic, but generally not the type of commit message I'd like to find if I were trying to understand the code or investigate an outage at 2 AM.
-
-I used to think that was an example of a useful commit message, and I still think it's better than average, but reading it today, I think that it forces the reader to read a long story and never quite spells out the actual issue, which is that
-
 ## The value of defining your own principles
 
 I've done this before
