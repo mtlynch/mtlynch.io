@@ -2,7 +2,7 @@
 title: "No Longer My Favorite Git Commit"
 date: 2025-03-19
 images:
-  - /no-longer-my-favorite-git-commit/one-char-diff.webp
+  - no-longer-my-favorite-git-commit/one-char-diff.webp
 ---
 
 In 2019, David Thompson wrote a popular blog post called, ["My favourite Git commit"](https://dhwthompson.com/2019/my-favourite-git-commit) that celebrates a whimsically detailed commit message his co-worker wrote. I enjoyed that post at the time, and I've sent it to teammates as an example of how to write commit messages well.
@@ -13,7 +13,7 @@ The experience reminded me how valuable it is to define my own principles for so
 
 ## The commit in question
 
-Here's the [commit message](https://github.com/alphagov/govuk-puppet/commit/63b36f93bf75a848e2125008aa1e880c5861cf46) that so enamored Thompson and many others at the time, including me:
+Here's the [commit message](https://github.com/alphagov/govuk-puppet/commit/63b36f93bf75a848e2125008aa1e880c5861cf46) that so enamored Thompson and others at the time, including me:
 
 > ### Convert template to US-ASCII to fix error
 >
@@ -84,11 +84,23 @@ It feels whimsical and delightful that someone went to such lengths to explain t
 
 The biggest shortcoming of the commit is that it buries the most important information.
 
-Imaging that you're working with that codebase, and you find a bug related to the `routes.conf.erb` file. You look through the source history and want to understand whether this commit is related to the bug. Will you be happy or sad to read its six paragraphs and five code snippets?
+Imagine that you're working in Thompson's codebase, and you find a bug related to the `routes.conf.erb` file. Digging through the source history, you want to understand whether Thompson's favorite commit is related to the bug. Will you be happy or sad to read its six paragraphs and five code snippets?
 
 My answer is: sad.
 
 Commit messages should present the most important information first and transition to less important information. Journalists call this the inverted pyramid style of writing.
+
+<div style="max-width: 550px; margin-left: auto; margin-right: auto">
+
+<figure>
+
+![An inverted pyramid](inverted-pyramid.svg)
+
+<figcaption><p>Journalists structure news reports in an inverted pyramid, where the information relevant to the most people is at the top.</p></figcaption>
+
+</figure>
+
+</div>
 
 If I'm scrolling through commit messages, I want to find out as early as possible if the commit is relevant to me. I want the commit message to explain a high-level summary of the change as quickly as possible.
 
@@ -135,7 +147,9 @@ If you haven't memorized the US-ASCII and UTF-8 tables, here are the first few c
 
 So, the file had the byte sequence `0xC2 0xA0`, which means it can't be a US-ASCII file, as that byte sequence is not valid US-ASCII. That sequence means that anything consuming the file must treat it as UTF-8, a newer and more internationally-friendly scheme for encoding text.
 
-Digging through the soure history, I find that the UTF-8 character was introduced in [commit 5a8607](https://github.com/alphagov/govuk-puppet/commit/5a86076bd73f0e92558d49a15f4e828860886eca). That commit message doesn't have any clues as to why that one particular space is a UTF-8 character rather than a regular `0x20` space, but
+The codebase was using [Ruby 1.9.3](https://github.com/alphagov/govuk-puppet/blob/63b36f93bf75a848e2125008aa1e880c5861cf46/.ruby-version), which [supported UTF-8 encoding](http://graysoftinc.com/character-encodings/ruby-19s-three-default-encodings), but it defaulted to US-ASCII if the file didn't explicitly declare an encoding.
+
+Digging through the soure history, I find that the UTF-8 character was introduced in [commit 5a8607](https://github.com/alphagov/govuk-puppet/commit/5a86076bd73f0e92558d49a15f4e828860886eca). That commit message doesn't have any clues as to why that particular space is a UTF-8 character rather than a regular `0x20` space, but a Hacker News commenter floated a plausible theory:
 
 > _the likely origin of the invalid character is somebody using an Apple Ireland/UK keyboard layout where # is Option-3 (AltGr-3), and non-breaking space is Option-Space (AltGr-Space)._
 >
@@ -143,25 +157,55 @@ Digging through the soure history, I find that the UTF-8 character was introduce
 
 ### It mentions related code without linking to it
 
+The commit message opens with a referene to some external code:
+
+> I introduced some tests in a feature branch to match the contents of
+> `/etc/nginx/router_routes.conf`. They worked fine when run with `bundle exec
+rake spec` or `bundle exec rspec modules/router/spec`.
+
+But the commit message never names the branch or specifies a commit hash, so the reader has no way to reproduce the author's findings.
+
 No branch name or commit ID. I can't find it.
 
 ## The value of defining your own principles
 
-I've done this before
+Again, I write this not to attack Thompson's post or the author's commit but to emphasize the importance of defining your own principles.
 
-- Reviewing code for teammates
-- Sending out my code for review
-- Writing unit tests
-- Hiring and working with freelance software developers
-- Writing software tutorials
+I've wrote out my views on several different software engineering practices over the years, and every time I do it, it makes me a better developer:
+
+- [Reviewing code for teammates](/human-code-reviews-1/)
+- [Sending out my code for review](/code-review-love/)
+- [Writing unit tests](/good-developers-bad-tests/)
+- [Hiring and working with freelance software developers](/freelancer-guidelines/)
+- [Writing software tutorials](https://refactoringenglish.com/chapters/rules-for-software-tutorials/)
+
+If I have to think through my explanations, it prevents me from relying on things that everyone thinks are true and define for myself what good looks like.
 
 Whenever I do this, it makes me better at the thing I'm writing about. Being forced to think through and defend my principles makes them clearer and more useful.
 
 ## My rewrite
 
-I critiqued Thompson's example, so here's what I think a good rewrite looks like.
+I griped enough about Thompson's example and kept saying how I think I have a better way to write it, so I suppose I should walk the walk. Here's my rewrite of Thompson's favorite git commit:
 
-> ### Convert template to US-ASCII for rake compatibility
+> ### Convert routes.conf.erb template to US-ASCII
+>
+> `routes.conf.erb` has a stray UTF-8 character that seems to have been introduced by accident in [5a8607](https://github.com/alphagov/govuk-puppet/commit/5a86076bd73f0e92558d49a15f4e828860886eca).
+>
+> The one UTF-8 character causes test failures in `rake`, so this change replaces the UTF-8 character with an equivalent US-ASCII character.
+>
+> #### The stray UTF-8 character
+>
+> The issue is on line 463 of `modules/router/templates/routes.conf.erb`:
+>
+> ```bash
+> $ cat modules/router/templates/routes.conf.erb \
+>   | head -n 463 | tail -n 1 \
+>   | xxd | head -n 1
+> 00000000: 2020 23c2 a077 6865 7265 2063 6976 6963    #..where civic
+>                  ^^ ^^
+> ```
+>
+> `0xC2 0xA0` is not a valid US-ASCII byte sequence, but it's the [UTF-8 non-breaking space character](https://www.compart.com/en/unicode/U+00A0). If you view the file in a web browser or a code editor, it will likely look like a normal space character, but it causes the file to be invalid for tools that expect US-ASCII format.
 >
 > #### How I discovered this
 >
