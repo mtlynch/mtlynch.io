@@ -1,15 +1,19 @@
 ---
 title: "No Longer My Favorite Git Commit"
 date: 2025-03-19
+images:
+  - /no-longer-my-favorite-git-commit/one-char-diff.webp
 ---
 
 In 2019, David Thompson wrote a popular blog post called, ["My favourite Git commit"](https://dhwthompson.com/2019/my-favourite-git-commit) that celebrates a whimsically detailed commit message his co-worker wrote. I enjoyed that post at the time, and I've sent it to teammates as an example of how to write commit messages well.
 
-I recently decided to write my own explanation of what makes a good commit message, and I went back to Thompson's blog post for inspiration. I was surprised to find that when pressed to explain what was good about Thompson's example, I didn't find it to be a good example of a commit message. The experience reminded me how valuable it is to define my own principles for software development rather than adopting what other people call good.
+I recently decided to write my own explanation of what makes a good commit message, and I went back to Thompson's blog post for inspiration. I was surprised to find that when pressed to explain what was good about Thompson's example, I couldn't do it. I realized the commit message was fun to read as an outside observer but isn't one I think is a good example of software engineering.
+
+The experience reminded me how valuable it is to define my own principles for software development rather than adopting what other people call good.
 
 ## The commit in question
 
-Here's the [commit message](https://github.com/alphagov/govuk-puppet/commit/63b36f93bf75a848e2125008aa1e880c5861cf46) that so enamored Thompson, and many others at the time, including me:
+Here's the [commit message](https://github.com/alphagov/govuk-puppet/commit/63b36f93bf75a848e2125008aa1e880c5861cf46) that so enamored Thompson and many others at the time, including me:
 
 > ### Convert template to US-ASCII to fix error
 >
@@ -66,19 +70,42 @@ The "punchline" to this commit is that, after sharing this lengthy preamble, Tho
 
 Yes, the commit message contains six paragraphs and five code snippets, all to describe a one-character whitespace change.
 
-## The commit is good
-
-It's easy to see what's appealing about this commit.
+## "Favorite" != "best"
 
 I think it's a good commit message, and I agree with all the reasons Thompson praises it. This is not an attack on Thompson or even the original author. Thompson never claimed it was the "best" commit message, just his favorite, and I support celebrating code that delights you.
+
+It's easy to see what's appealing about this commit.
 
 I just don't think it's the best or that we should hold it up as an example.
 
 It feels whimsical and delightful that someone went to such lengths to explain their process when 99% of developers would describe the result as "fix whitespace character."
 
-## But it's also bad
+### It buries the most important information at the end
 
-### It never explains the problem clearly
+The biggest shortcoming of the commit is that it buries the most important information.
+
+Imaging that you're working with that codebase, and you find a bug related to the `routes.conf.erb` file. You look through the source history and want to understand whether this commit is related to the bug. Will you be happy or sad to read its six paragraphs and five code snippets?
+
+My answer is: sad.
+
+Commit messages should present the most important information first and transition to less important information. Journalists call this the inverted pyramid style of writing.
+
+If I'm scrolling through commit messages, I want to find out as early as possible if the commit is relevant to me. I want the commit message to explain a high-level summary of the change as quickly as possible.
+
+### It never quite explains the problem
+
+The commit message is a fun read, but by the end, do you even understand what it does?
+
+Here's the closest it comes to explaining the problem:
+
+> That particular template appears to be the only file in our codebase with an identified encoding of utf-8. All others are us-ascii:
+>
+> ```bash
+> dcarley-MBA:puppet dcarley$ find modules -type f -exec file --mime {} \+ | grep utf
+> modules/router/templates/routes.conf.erb:  text/plain; charset=utf-8
+> ```
+
+The message says that `routes.conf.erb` seems to have UTF-8 encoding, but why is that? The nice thing about open-source is that I can investigate myself.
 
 The issue is on [line 463](https://github.com/alphagov/govuk-puppet/blob/bfe3f647cc158e04ab6c80bee035d2e832582786/modules/router/templates/routes.conf.erb#L463) of `routes.conf.erb`:
 
@@ -87,7 +114,7 @@ $ cat modules/router/templates/routes.conf.erb | head -n 463 | tail -n 1
   # where civica QueryPayments calls are taking too long.
 ```
 
-It's not obvious in the console or the web view what's wrong, but if you use `xxd` to view the raw bytes of the line, you see the issue:
+You can't see the issue with a regular text editor or web browser, but if you dump the raw file bytes with a tool like `xxd`, you see the issue:
 
 ```bash
 $ cat modules/router/templates/routes.conf.erb \
@@ -114,8 +141,6 @@ Digging through the soure history, I find that the UTF-8 character was introduce
 >
 > -[messe](https://news.ycombinator.com/item?id=21290159) on Hacker News
 
-### It buries the most important information at the end
-
 ### It mentions related code without linking to it
 
 No branch name or commit ID. I can't find it.
@@ -126,6 +151,7 @@ I've done this before
 
 - Reviewing code for teammates
 - Sending out my code for review
+- Writing unit tests
 - Hiring and working with freelance software developers
 - Writing software tutorials
 
