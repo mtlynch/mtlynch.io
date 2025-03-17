@@ -99,7 +99,7 @@ $ cat modules/router/templates/routes.conf.erb \
                  ^^ ^^
 ```
 
-A bit more clearly, here are the first few characters of that line:
+If you haven't memorized the US-ASCII and UTF-8 tables, here are the first few characters of that line:
 
 | Byte representation | Text representation                                                           |
 | ------------------- | ----------------------------------------------------------------------------- |
@@ -124,7 +124,7 @@ No branch name or commit ID. I can't find it.
 
 ## The difference between a fun commit and a good commit
 
-On [reddit](https://www.reddit.com/r/programming/comments/djnp8k/my_favourite_git_commit/) and [Hacker News](https://news.ycombinator.com/item?id=21289827), commenters shared other favorite commits:
+On [reddit](https://www.reddit.com/r/programming/comments/djnp8k/my_favourite_git_commit/) and [Hacker News](https://news.ycombinator.com/item?id=21289827), commenters linked to this commit as a particular favorite:
 
 - [mpv: stream_libarchive: workaround various types of locale braindeath](https://github.com/mpv-player/mpv/commit/1e70e82baa9193f6f027338b0fab0f5078971fbe)
 
