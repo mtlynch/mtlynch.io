@@ -5,13 +5,11 @@ images:
   - no-longer-my-favorite-git-commit/one-char-diff.webp
 ---
 
-In 2019, David Thompson wrote a popular blog post called, ["My favourite Git commit"](https://dhwthompson.com/2019/my-favourite-git-commit) that celebrates a whimsically detailed commit message his co-worker wrote. I enjoyed that post at the time, and I've sent it to teammates as an example of how to write commit messages well.
+Six years ago, David Thompson wrote a popular blog post called, ["My favourite Git commit"](https://dhwthompson.com/2019/my-favourite-git-commit) that celebrates a whimsically detailed commit message his co-worker wrote. I enjoyed the post at the time, and have sent it to teammates since then as a model for good commit messages.
 
-I recently decided to write my own explanation of what makes a good commit message, and I went back to Thompson's blog post for inspiration. I was surprised to find that when pressed to explain what was good about Thompson's example, I couldn't do it. I realized the commit message was fun to read as an outside observer but isn't one I think is a good example of software engineering.
+I recently revisited Thompson's blog post, as I was writing a guide on how to [write useful commit messages](https://refactoringenglish.com/chapters/commit-messages/). When pressed to explain what made Thompson's post a good example of a commit message, I was surprised to find that I couldn't. I realiezd that the thing that resonated with me about Thompson's example was the fun of reading it as an outside observer, but I couldn't defend it as a good example of software engineering.
 
-The experience reminded me how valuable it is to define my own principles for software development rather than adopting what other people call good.
-
-## The commit in question
+## Thompson's favorite commit
 
 Here's the [commit message](https://github.com/alphagov/govuk-puppet/commit/63b36f93bf75a848e2125008aa1e880c5861cf46) that so enamored Thompson and others at the time, including me:
 
@@ -64,31 +62,49 @@ rake spec` or `bundle exec rspec modules/router/spec`. But when run as
 >
 > Now the tests work! One hour of my life I won't get back..
 
-The "punchline" to this commit is that, after sharing this lengthy preamble, Thompson shows the actual diff:
+The "punchline" is that, after sharing this lengthy preamble, Thompson shows the actual diff:
 
 {{<img src="one-char-diff.webp" has-border="true">}}
 
 Yes, the commit message contains six paragraphs and five code snippets, all to describe a one-character whitespace change.
 
-## "Favorite" != "best"
-
-I think it's a good commit message, and I agree with all the reasons Thompson praises it. This is not an attack on Thompson or even the original author. Thompson never claimed it was the "best" commit message, just his favorite, and I support celebrating code that delights you.
+## Favorite != best
 
 It's easy to see what's appealing about this commit.
 
-I just don't think it's the best or that we should hold it up as an example.
+99% of developers would describe the change as "fix whitespace character," so it's a pleasant surprise that someone went to such lengths to explain their process for investigating and fixing the bug.
 
-It feels whimsical and delightful that someone went to such lengths to explain their process when 99% of developers would describe the result as "fix whitespace character."
+And it is a good commit message for all the reasons Thompson offers: it creates a searchable artifact and shares helpful insights about the developer's tools and process.
+
+This is not an attack on Thompson or even the original author of the commit. Thompson never claimed it was the "best" commit message, just his favorite.
+
+That said, I now see flaws in the commit message that prevent me from using as a model for good commit messages.
 
 ### It buries the most important information at the end
 
-The biggest shortcoming of the commit is that it buries the most important information.
+When Thompson originally published his blog post, one of the most common critiques of the commit message was that it was too verbose. I found that criticism misguided. Verbosity in a commit messsage is not a problem unless it presents the information poorly.
+
+The biggest shortcoming of Thompson's example is that it buries the most important information deep into the commit message.
+
+Re-read the first paragraph of the commit message:
+
+> I introduced some tests in a feature branch to match the contents of
+> `/etc/nginx/router_routes.conf`. They worked fine when run with `bundle exec
+rake spec` or `bundle exec rspec modules/router/spec`. But when run as
+> `bundle exec rake` each should block failed with:
+>
+> ```text
+> ArgumentError:
+>  invalid byte sequence in US-ASCII
+> ```
+
+By three sentences and a code snippet into this commit message, the reader still doesn't have any information about what the change actually does.
 
 Imagine that you're working in Thompson's codebase, and you find a bug related to the `routes.conf.erb` file. Digging through the source history, you encounter Thompson's favorite commit. Will you be happy or sad to read its six paragraphs and five code snippets of its commit message?
 
 My answer is: sad.
 
-Commit messages should [present the most important information first](https://refactoringenglish.com/chapters/commit-messages/#put-the-most-important-information-first) and transition to less important information. Journalists call this the inverted pyramid style of writing.
+Commit messages should [present the most important information first](https://refactoringenglish.com/chapters/commit-messages/#put-the-most-important-information-first) and gradually transition to finer details. Journalists call this the inverted pyramid style of writing.
 
 <div style="max-width: 550px; margin-left: auto; margin-right: auto">
 
@@ -102,11 +118,11 @@ Commit messages should [present the most important information first](https://re
 
 </div>
 
-If I'm scrolling through commit messages, I want to find out as early as possible if the commit is relevant to me. I want the commit message to explain a high-level summary of the change as quickly as possible.
+If I'm scrolling through a commit history, I want to find out as early as possible if each commit is relevant to me. The commit message should provide a high-level summary of the change as quickly as possible.
 
 ### It never quite explains the problem
 
-The commit message is a fun read, but by the end, do you even understand what it does?
+Thompson's example is a fun read, but by the end, do you even understand what was in the change?
 
 Here's the closest it comes to explaining the problem:
 
@@ -117,7 +133,7 @@ Here's the closest it comes to explaining the problem:
 > modules/router/templates/routes.conf.erb:  text/plain; charset=utf-8
 > ```
 
-The message says that `routes.conf.erb` seems to have UTF-8 encoding, but why is that? The nice thing about open-source is that I can investigate myself.
+The message says that `routes.conf.erb` has UTF-8 encoding, but it never explains why. Fortunately, the project is open-source, so I can investigate myself.
 
 The issue is on [line 463](https://github.com/alphagov/govuk-puppet/blob/bfe3f647cc158e04ab6c80bee035d2e832582786/modules/router/templates/routes.conf.erb#L463) of `routes.conf.erb`:
 
@@ -145,11 +161,15 @@ If you haven't memorized the US-ASCII and UTF-8 tables, here are the first few c
 | `0x23`              | `'#'`                                                                         |
 | `0xc2` `0xa0`       | `' '` ([UTF-8 non-breaking space](https://www.compart.com/en/unicode/U+00A0)) |
 
-So, the file had the byte sequence `0xC2 0xA0`, which means it can't be a US-ASCII file, as that byte sequence is not valid US-ASCII. That sequence means that anything consuming the file must treat it as UTF-8, a newer and more internationally-friendly scheme for encoding text.
+So, the file had the byte sequence `0xC2 0xA0`, which means it can't be a US-ASCII file, as `0xC2` and `0xA0` both fall outside the range of [the US-ASCII table](https://www.columbia.edu/kermit/ascii.html).
+
+The `0xC2 0xA0` sequence means any application that consumes `routes.conf.erb` must interpret it with UTF-8 encoding, a newer and more internationally-friendly scheme for encoding text.
 
 The codebase was using [Ruby 1.9.3](https://github.com/alphagov/govuk-puppet/blob/63b36f93bf75a848e2125008aa1e880c5861cf46/.ruby-version), which [supported UTF-8 encoding](http://graysoftinc.com/character-encodings/ruby-19s-three-default-encodings), but it defaulted to US-ASCII if the file didn't explicitly declare an encoding.
 
-Digging through the soure history, I find that the UTF-8 character was introduced in [commit 5a8607](https://github.com/alphagov/govuk-puppet/commit/5a86076bd73f0e92558d49a15f4e828860886eca). That commit message doesn't have any clues as to why that particular space is a UTF-8 character rather than a regular `0x20` space, but a Hacker News commenter floated a plausible theory:
+Digging through the soure history, I found that [commit 5a8607](https://github.com/alphagov/govuk-puppet/commit/5a86076bd73f0e92558d49a15f4e828860886eca) originally introduced the UTF-8 character. That commit message doesn't declare any reason for introducing the UTF-8 character, so it was likely an accident.
+
+A Hacker News commenter [floated a plausible theory](https://news.ycombinator.com/item?id=21290159) about why that stray UTF-8 character appeared in `routes.conf.erb`:
 
 > _the likely origin of the invalid character is somebody using an Apple Ireland/UK keyboard layout where # is Option-3 (AltGr-3), and non-breaking space is Option-Space (AltGr-Space)._
 >
@@ -157,37 +177,27 @@ Digging through the soure history, I find that the UTF-8 character was introduce
 
 ### It mentions related code without linking to it
 
-The commit message opens with a referene to some external code:
+Thompson's example commit opens with a reference to some external code:
 
 > I introduced some tests in a feature branch to match the contents of
 > `/etc/nginx/router_routes.conf`. They worked fine when run with `bundle exec
 rake spec` or `bundle exec rspec modules/router/spec`.
 
-But the commit message never names the branch or specifies a commit hash, so the reader has no way to reproduce the author's findings.
+But the commit message never names the branch or specifies a commit hash, so the reader has no way to reproduce the developer's findings.
 
-No branch name or commit ID. I can't find it.
+Later, when the commit message says:
 
-https://refactoringenglish.com/chapters/commit-messages/#cross-references-to-issues-or-other-changes
+> I eventually found that removing the `.with_content(//)` matchers made the errors go away. I didn't see any weird characters in the spec file.
 
-## The value of defining your own principles
+But I don't know what matchers or which spec file they mean because they haven't linked to it.
 
-Again, I write this not to attack Thompson's post or the author's commit but to emphasize the importance of defining your own principles.
-
-I've wrote out my views on several different software engineering practices over the years, and every time I do it, it makes me a better developer:
-
-- [Reviewing code for teammates](/human-code-reviews-1/)
-- [Sending out my code for review](/code-review-love/)
-- [Writing unit tests](/good-developers-bad-tests/)
-- [Hiring and working with freelance software developers](/freelancer-guidelines/)
-- [Writing software tutorials](https://refactoringenglish.com/chapters/rules-for-software-tutorials/)
-
-If I have to think through my explanations, it prevents me from relying on things that everyone thinks are true and define for myself what good looks like.
-
-Whenever I do this, it makes me better at the thing I'm writing about. Being forced to think through and defend my principles makes them clearer and more useful.
+If a commit message references external code, it should [link to it explicitly](https://refactoringenglish.com/chapters/commit-messages/#cross-references-to-issues-or-other-changes) so that code reviewers and future maintainers can see the exact context for the change.
 
 ## My rewrite
 
-I griped enough about Thompson's example and kept saying how I think I have a better way to write it, so I suppose I should walk the walk. Here's my rewrite of Thompson's favorite git commit:
+I griped enough about Thompson's example and kept saying how I think I have a better way to write it, so I suppose I should walk the walk.
+
+Here's my revision of Thompson's favorite git commit:
 
 > ### Convert routes.conf.erb template to US-ASCII
 >
@@ -264,9 +274,32 @@ rake spec` or `bundle exec rspec modules/router/spec`, but when I ran the tests 
 >
 > Now the tests work! One hour of my life I won't get back..
 
-I kept a lot of the original author's content, but I moved it to a "How I found this" section to make it clear to the reader that it's extra-credit reading. I cleaned up the grammar a bit and [removed passive voice](https://refactoringenglish.com/chapters/passive-voice-considered-harmful/) to reduce ambiguity.
+Here were my changes:
 
-I also simplified the terminal prompt from `dcarley-MBA:puppet dcarley $` to just `$`, as the former is mostly noise.
+- I added a high-level summary early in the message.
+- I added a more explicit explanation of the UTF-8 character and where it came from.
+- I moved most of the original author's content to a "How I found this" section to make it clear to the reader that it's [extra-credit reading](https://refactoringenglish.com/chapters/commit-messages/#rants-and-stories).
+- I made light grammatical fixes.
+- I [removed passive voice](https://refactoringenglish.com/chapters/passive-voice-considered-harmful/) to reduce ambiguity.
+- I simplified the terminal prompt from `dcarley-MBA:puppet dcarley $` to just `$`, as the former is mostly noise.
+
+Notably, I didn't cut anything, as I don't think verbosity was the problem.
+
+## The value of defining your own principles
+
+I write this not to attack Thompson's post but to emphasize the importance of defining your own principles.
+
+I accepted the commit as a good example because I agreed with Thompson about its strengths. It wasn't until I sat down to write what I think are the most important qualities in a commit message that I saw the shortcomings of Thompson's example.
+
+I've wrote out my views on several different software engineering practices over the years, and every time I do it, it makes me a better developer:
+
+- [Reviewing code for teammates](/human-code-reviews-1/)
+- [Sending out my code for review](/code-review-love/)
+- [Writing unit tests](/good-developers-bad-tests/)
+- [Hiring and working with freelance software developers](/freelancer-guidelines/)
+- [Writing software tutorials](https://refactoringenglish.com/chapters/rules-for-software-tutorials/)
+
+Whenever I do this, it makes me better at the thing I'm writing about. Being forced to think through and defend my principles makes them clearer and more useful.
 
 ## Further reading
 
