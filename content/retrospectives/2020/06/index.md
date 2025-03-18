@@ -99,15 +99,15 @@ Through most of Is It Keto's life, performance has been an afterthought. Occasio
 
 Given that Google drives 90% of the site's visitors, and [Google uses performance as a metric in ranking search results](https://developers.google.com/web/updates/2018/07/search-ads-speed), I spent a few days identifying bottlenecks on Is It Keto. I use the [Gridsome](https://gridsome.org) framework for generating Is It Keto's contents, so [this article](https://www.codegram.com/blog/improving-a-gridsome-website-performance/) helped me achieve a few performance gains.
 
-| Change                                                                                                                                                                            | Performance impact |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| Load Bootstrap-Vue components [a la carte](https://bootstrap-vue.org/docs#individual-components-and-directives) instead of importing all of Bootstrap-Vue and Bootstrap-Vue-Icons | High               |
-| Filter my Gridsome data [at the graphql layer](https://gridsome.org/docs/filtering-data/) rather than at the Vue layer to reduce the size of static JSON files                    | High               |
-| Undid [this hack](https://dev.to/jeremyjackson89/gridsome-g-images-with-dynamic-paths-1mgn) for loading images in Gridsome with dynamic paths                                     | Medium             |
-| Import Google Fonts using a `<link rel>` tag instead of a CSS `@import`                                                                                                           | Low                |
-| Tune the Google Fonts URL to download only the fonts I need                                                                                                                       | Low                |
-| Add [`preconnect` and `dns-prefetch` for Google Fonts](https://www.smashingmagazine.com/2019/06/optimizing-google-fonts-performance/) in the HTML `<head>`                        | Low                |
-| [Add `?display=swap`](https://fontsplugin.com/google-fonts-font-display-swap/) to my Google Fonts import URL to prevent "Flash of Invisible Text"                                 | Low                |
+| Change                                                                                                                                                                                                                       | Performance impact |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| Load Bootstrap-Vue components [a la carte](https://web.archive.org/web/20250309063833/https://bootstrap-vue.org/docs#individual-components-and-directives) instead of importing all of Bootstrap-Vue and Bootstrap-Vue-Icons | High               |
+| Filter my Gridsome data [at the graphql layer](https://gridsome.org/docs/filtering-data/) rather than at the Vue layer to reduce the size of static JSON files                                                               | High               |
+| Undid [this hack](https://dev.to/jeremyjackson89/gridsome-g-images-with-dynamic-paths-1mgn) for loading images in Gridsome with dynamic paths                                                                                | Medium             |
+| Import Google Fonts using a `<link rel>` tag instead of a CSS `@import`                                                                                                                                                      | Low                |
+| Tune the Google Fonts URL to download only the fonts I need                                                                                                                                                                  | Low                |
+| Add [`preconnect` and `dns-prefetch` for Google Fonts](https://www.smashingmagazine.com/2019/06/optimizing-google-fonts-performance/) in the HTML `<head>`                                                                   | Low                |
+| [Add `?display=swap`](https://fontsplugin.com/google-fonts-font-display-swap/) to my Google Fonts import URL to prevent "Flash of Invisible Text"                                                                            | Low                |
 
 Everyone talks about using [webpack-bundle-analyzer](https://www.npmjs.com/package/webpack-bundle-analyzer) to look for large components in your JS bundle. I felt crazy because I couldn't find any instructions on how to actually use it. All the instructions basically say:
 
