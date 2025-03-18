@@ -72,9 +72,9 @@ Yes, the commit message contains six paragraphs and five code snippets, all to d
 
 It's easy to see what's appealing about this commit.
 
-99% of developers would describe the change as "fix whitespace character," so it's a pleasant surprise that someone went to such lengths to explain their process for investigating and fixing the bug.
+Most developers would document this change as simply, "Fix whitespace character," so it's a pleasant surprise that someone went to such lengths to explain their process for investigating and fixing the bug.
 
-And it is a good commit message for all the reasons Thompson offers: it creates a searchable artifact and shares helpful insights about the developer's tools and process.
+It is a good commit message for all the reasons Thompson offers: it creates a searchable artifact and shares helpful insights about the developer's tools and process.
 
 This is not an attack on Thompson or even the original author of the commit. Thompson never claimed it was the "best" commit message, just his favorite.
 
@@ -82,11 +82,11 @@ That said, I now see flaws in the commit message that prevent me from using as a
 
 ### It buries the most important information at the end
 
-When Thompson originally published his blog post, one of the most common critiques of the commit message was that it was too verbose. I found that criticism misguided.
+When Thompson originally published his blog post, one of the most common critiques was that the commit message was too verbose. I found that criticism misguided.
 
-It wasn't too verbose, as the details were all valuable. The details help less experienced teammates learn the author's debugging process and toolset. It also makes it possible for teammates to give the author feedback in case he's overlooking something or is unaware of a tool that would have been helpful.
+It wasn't too verbose, as the details were all valuable. The details help less experienced teammates learn the author's debugging process and toolset. Revealing the thought process also makes it possible for teammates to give the author feedback in case he's overlooking something or is unaware of a tool that would have been helpful.
 
-The actual shortcoming of Thompson's example is that it buries the most important information deep into the commit message.
+The actual shortcoming and the reason people perceived Thompson's example as overly verbose is that it buries the most important information deep into the commit message.
 
 Re-read the first paragraph of the commit message:
 
@@ -100,11 +100,7 @@ rake spec` or `bundle exec rspec modules/router/spec`. But when run as
 >  invalid byte sequence in US-ASCII
 > ```
 
-Three sentences and a code snippet into this commit message, the reader still doesn't have any information about what the change actually does.
-
-Imagine that you're working in Thompson's codebase, and you find a bug related to the `routes.conf.erb` file. Digging through the source history, you encounter Thompson's favorite commit. Will you be happy or sad to read its six paragraphs and five code snippets of its commit message?
-
-My answer is: sad.
+Three sentences and a code snippet into this commit message, and the reader still doesn't have any information about what the change actually does.
 
 Commit messages should [present the most important information first](https://refactoringenglish.com/chapters/commit-messages/#put-the-most-important-information-first) and gradually transition to finer details. Journalists call this the inverted pyramid style of writing.
 
@@ -120,7 +116,7 @@ Commit messages should [present the most important information first](https://re
 
 </div>
 
-If I'm scrolling through a commit history, I want to find out as early as possible if each commit is relevant to me. The commit message should provide a high-level summary of the change as quickly as possible.
+If I'm scrolling through a commit history, I want to find out quickly if each commit is relevant to me. The commit message should provide a high-level summary of the change right from the start.
 
 ### It never quite explains the problem
 
