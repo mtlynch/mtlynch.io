@@ -5,9 +5,9 @@ images:
   - no-longer-my-favorite-git-commit/one-char-diff.webp
 ---
 
-Six years ago, David Thompson wrote a popular blog post called, ["My favourite Git commit"](https://dhwthompson.com/2019/my-favourite-git-commit) that celebrates a whimsically detailed commit message his co-worker wrote. I enjoyed the post at the time, and have sent it to teammates since then as a model for good commit messages.
+Six years ago, David Thompson wrote a popular blog post called ["My favourite Git commit"](https://dhwthompson.com/2019/my-favourite-git-commit) that celebrated a whimsically detailed commit message his co-worker wrote. I enjoyed the post at the time and have sent it to several teammates since then as a model for good commit messages.
 
-I recently revisited Thompson's blog post, as I was writing a guide on how to [write useful commit messages](https://refactoringenglish.com/chapters/commit-messages/). When pressed to explain what made Thompson's post a good example of a commit message, I was surprised to find that I couldn't. I realiezd that the thing that resonated with me about Thompson's example was the fun of reading it as an outside observer, but I couldn't defend it as a good example of software engineering.
+I recently revisited Thompson's article, as I was creating a guide to [writing useful commit messages](https://refactoringenglish.com/chapters/commit-messages/). When pressed to explain what made Thompson's post a good example of a commit message, I was surprised to find that I couldn't. It was fun to read as an outside observer, but it wasn't a good example of software engineering.
 
 ## Thompson's favorite commit
 
@@ -62,7 +62,7 @@ rake spec` or `bundle exec rspec modules/router/spec`. But when run as
 >
 > Now the tests work! One hour of my life I won't get back..
 
-The "punchline" is that, after sharing this lengthy preamble, Thompson shows the actual diff:
+The "punchline" is that, after this lengthy preamble, Thompson shows the actual diff:
 
 {{<img src="one-char-diff.webp" has-border="true">}}
 
@@ -78,15 +78,15 @@ It is a good commit message for all the reasons Thompson offers: it creates a se
 
 This is not an attack on Thompson or even the original author of the commit. Thompson never claimed it was the "best" commit message, just his favorite.
 
-That said, I now see flaws in the commit message that prevent me from using as a model for good commit messages.
+That said, I now see flaws that prevent me from using it as a model commit message.
 
 ### It buries the most important information at the end
 
 When Thompson originally published his blog post, one of the most common critiques was that the commit message was too verbose. I found that criticism misguided.
 
-It wasn't too verbose, as the details were all valuable. The details help less experienced teammates learn the author's debugging process and toolset. Revealing the thought process also makes it possible for teammates to give the author feedback in case he's overlooking something or is unaware of a tool that would have been helpful.
+It wasn't too verbose, as the details were all valuable. The details help less experienced teammates learn the author's debugging process and toolset. They also give more experienced teammates an opportunity to see if the developer overlooked something or is unaware of a relevant tool.
 
-The actual shortcoming and the reason people perceived Thompson's example as overly verbose is that it buries the most important information deep into the commit message.
+The reason people perceived Thompson's example as overly verbose is that it buries the most important information deep into the commit message.
 
 Re-read the first paragraph of the commit message:
 
@@ -120,7 +120,7 @@ If I'm scrolling through a commit history, I want to find out quickly if each co
 
 ### It never quite explains the problem
 
-Thompson's example is a fun read, but by the end, do you even understand what was in the change?
+By the end of Thompson's example commit message, do you even understand what was in the change?
 
 Here's the closest it comes to explaining the problem:
 
@@ -159,7 +159,7 @@ If you haven't memorized the US-ASCII and UTF-8 tables, here are the first few c
 | `0x23`              | `'#'`                                                                         |
 | `0xc2` `0xa0`       | `' '` ([UTF-8 non-breaking space](https://www.compart.com/en/unicode/U+00A0)) |
 
-So, the file had the byte sequence `0xC2 0xA0`, which means it can't be a US-ASCII file, as `0xC2` and `0xA0` both fall outside the range of [the US-ASCII table](https://www.columbia.edu/kermit/ascii.html).
+So, the file had the byte sequence `0xC2 0xA0`, which means it can't be a US-ASCII file, as `0xC2` and `0xA0` both fall outside the range of [the US-ASCII byte range](https://www.columbia.edu/kermit/ascii.html).
 
 The `0xC2 0xA0` sequence means any application that consumes `routes.conf.erb` must interpret it with UTF-8 encoding, a newer and more internationally-friendly scheme for encoding text.
 
@@ -173,7 +173,7 @@ A Hacker News commenter [floated a plausible theory](https://news.ycombinator.co
 >
 > -[messe](https://news.ycombinator.com/item?id=21290159) on Hacker News
 
-### It mentions related code without linking to it
+### It references code without linking to it
 
 Thompson's example commit opens with a reference to some external code:
 
@@ -183,19 +183,17 @@ rake spec` or `bundle exec rspec modules/router/spec`.
 
 But the commit message never names the branch or specifies a commit hash, so the reader has no way to reproduce the developer's findings.
 
-Later, when the commit message says:
+Later, the commit message says:
 
 > I eventually found that removing the `.with_content(//)` matchers made the errors go away. I didn't see any weird characters in the spec file.
 
-But I don't know what matchers or which spec file they mean because they haven't linked to it.
+Without a commit hash or link, I don't know what matchers or which spec file the developer means because they haven't linked to it.
 
 If a commit message references external code, it should [link to it explicitly](https://refactoringenglish.com/chapters/commit-messages/#cross-references-to-issues-or-other-changes) so that code reviewers and future maintainers can see the exact context for the change.
 
 ## My rewrite
 
-I griped enough about Thompson's example and kept saying how I think I have a better way to write it, so I suppose I should walk the walk.
-
-Here's my revision of Thompson's favorite git commit:
+Here's my proposed revision of Thompson's favorite git commit:
 
 > ### Convert routes.conf.erb template to US-ASCII
 >
@@ -281,23 +279,21 @@ Here were my changes:
 - I [removed passive voice](https://refactoringenglish.com/chapters/passive-voice-considered-harmful/) to reduce ambiguity.
 - I simplified the terminal prompt from `dcarley-MBA:puppet dcarley $` to just `$`, as the former is mostly noise.
 
-Notably, I didn't cut anything, as I don't think verbosity was the problem.
+Notably, I didn't cut anything, as I don't think verbosity was less of a problem than how the developer organized and presented all the extra details.
 
 ## The value of defining your own principles
 
-I write this not to attack Thompson's post but to emphasize the importance of defining your own principles.
+Revisiting Thompson's post reminded me how much value there is in defining software engineering principles for yourself.
 
 I accepted the commit as a good example because I agreed with Thompson about its strengths. It wasn't until I sat down to write what I think are the most important qualities in a commit message that I saw the shortcomings of Thompson's example.
 
-I've wrote out my views on several different software engineering practices over the years, and every time I do it, it makes me a better developer:
+I've explained my perspective about several different software engineering practices over the years, and every time I do it, it makes me a better developer. It forces me to think critically about ideas I take for granted and helps me remember what my ideal looks like even if I'm not always able to achieve it.
 
 - [Reviewing code for teammates](/human-code-reviews-1/)
 - [Sending out my code for review](/code-review-love/)
 - [Writing unit tests](/good-developers-bad-tests/)
-- [Hiring and working with freelance software developers](/freelancer-guidelines/)
+- [Communicating with freelance software developers](/freelancer-guidelines/)
 - [Writing software tutorials](https://refactoringenglish.com/chapters/rules-for-software-tutorials/)
-
-Whenever I do this, it makes me better at the thing I'm writing about. Being forced to think through and defend my principles makes them clearer and more useful.
 
 ## Further reading
 
