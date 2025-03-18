@@ -7,7 +7,7 @@ images:
 
 Six years ago, David Thompson wrote a popular blog post called ["My favourite Git commit"](https://dhwthompson.com/2019/my-favourite-git-commit) that celebrated a whimsically detailed commit message his co-worker wrote. I enjoyed the post at the time and have sent it to several teammates since then as a model for good commit messages.
 
-I recently revisited Thompson's article, as I was creating a guide to [writing useful commit messages](https://refactoringenglish.com/chapters/commit-messages/). When pressed to explain what made Thompson's post a good example of a commit message, I was surprised to find that I couldn't. It was fun to read as an outside observer, but it wasn't a good example of software engineering.
+I recently revisited Thompson's article as I was creating a guide to [writing useful commit messages](https://refactoringenglish.com/chapters/commit-messages/). When pressed to explain what made Thompson's post a good example of a commit message, I was surprised to find that I couldn't. It was fun to read as an outside observer, but it wasn't a good example of software engineering.
 
 ## Thompson's favorite commit
 
@@ -194,6 +194,8 @@ If a commit message references external code, it should [link to it explicitly](
 ## My rewrite
 
 Here's my proposed revision of Thompson's favorite git commit:
+
+<!-- markdownlint-disable no-empty-links -->
 
 > ### Convert routes.conf.erb template to US-ASCII
 >
