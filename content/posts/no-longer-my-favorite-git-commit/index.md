@@ -72,7 +72,7 @@ Yes, the commit message contains six paragraphs and five code snippets, all to d
 
 It's easy to see what's appealing about this commit.
 
-Most developers would document this change as simply, "Fix whitespace character," so it's a pleasant surprise that someone went to such lengths to explain their process for investigating and fixing the bug.
+Most developers would document this change as simply "Fix whitespace character," so it's a pleasant surprise that someone went to such lengths to explain their process for investigating and fixing the bug.
 
 It is a good commit message for all the reasons Thompson offers: it creates a searchable artifact and shares helpful insights about the developer's tools and process.
 
@@ -116,7 +116,7 @@ Commit messages should [present the most important information first](https://re
 
 </div>
 
-If I'm scrolling through a commit history, I want to find out quickly if each commit is relevant to me. The commit message should provide a high-level summary of the change right from the start.
+If I'm scrolling through a commit history, I want to find out quickly if each commit is relevant. The commit message should provide a high-level summary of the change right from the start.
 
 ### It never quite explains the problem
 
@@ -163,9 +163,9 @@ So, the file had the byte sequence `0xC2 0xA0`, which means it can't be a US-ASC
 
 The `0xC2 0xA0` sequence means any application that consumes `routes.conf.erb` must interpret it with UTF-8 encoding, a newer and more internationally-friendly scheme for encoding text.
 
-The codebase was using [Ruby 1.9.3](https://github.com/alphagov/govuk-puppet/blob/63b36f93bf75a848e2125008aa1e880c5861cf46/.ruby-version), which [supported UTF-8 encoding](http://graysoftinc.com/character-encodings/ruby-19s-three-default-encodings), but it defaulted to US-ASCII if the file didn't explicitly declare an encoding.
+The codebase used [Ruby 1.9.3](https://github.com/alphagov/govuk-puppet/blob/63b36f93bf75a848e2125008aa1e880c5861cf46/.ruby-version), which [supported UTF-8 encoding](http://graysoftinc.com/character-encodings/ruby-19s-three-default-encodings), but it defaulted to US-ASCII if the file didn't explicitly declare an encoding.
 
-Digging through the soure history, I found that [commit 5a8607](https://github.com/alphagov/govuk-puppet/commit/5a86076bd73f0e92558d49a15f4e828860886eca) originally introduced the UTF-8 character. That commit message doesn't declare any reason for introducing the UTF-8 character, so it was likely an accident.
+Digging through the source history, I found that [commit 5a8607](https://github.com/alphagov/govuk-puppet/commit/5a86076bd73f0e92558d49a15f4e828860886eca) originally introduced the UTF-8 character. That commit message doesn't declare any reason for introducing the UTF-8 character, so it was likely an accident.
 
 A Hacker News commenter [floated a plausible theory](https://news.ycombinator.com/item?id=21290159) about why that stray UTF-8 character appeared in `routes.conf.erb`:
 
@@ -223,33 +223,27 @@ Here's my proposed revision of Thompson's favorite git commit:
 >
 > #### How I discovered this
 >
-> I introduced some tests in a feature branch to match the contents of
-> `/etc/nginx/router_routes.conf` (see [abcd123](#)). They worked fine when I ran them with `bundle exec
-rake spec` or `bundle exec rspec modules/router/spec`, but when I ran the tests as
-> `bundle exec rake`, each `should` block failed with:
+> I introduced some tests in a feature branch to match the contents of `/etc/nginx/router_routes.conf` (see [abcd123](#)). They worked fine when I ran them with `bundle exec rake spec` or `bundle exec rspec modules/router/spec`, but when I ran the tests as `bundle exec rake`, each `should` block failed with:
 >
 > ```text
 > ArgumentError:
 >  invalid byte sequence in US-ASCII
 > ```
 >
-> I eventually found that removing the `.with_content(//)` matchers made the
-> errors go away. I didn't see any weird characters in the spec file. I could be reproduce the error by requiring Puppet in the same interpreter with:
+> I eventually found that removing the `.with_content(//)` matchers made the errors go away. I didn't see any weird characters in the spec file. I could reproduce the error by requiring Puppet in the same interpreter with:
 >
 > ```bash
 > rake -E 'require "puppet"' spec
 > ```
 >
-> That particular template appears to be the only file in our codebase that `file`
-> identifies as `utf-8`. All others are `us-ascii`:
+> That particular template appears to be the only file in our codebase that `file` identifies as `utf-8`. All others are `us-ascii`:
 >
 > ```bash
 > $ find modules -type f -exec file --mime {} \+ | grep utf
 > modules/router/templates/routes.conf.erb:  text/plain; charset=utf-8
 > ```
 >
-> Attempting to convert that file back to US-ASCII identified the offending
-> character as something that looked like a whitespace:
+> Attempting to convert that file back to US-ASCII identified the offending character as something that looked like a whitespace:
 >
 > ```bash
 > $ iconv -f UTF8 -t US-ASCII modules/router/templates/routes.conf.erb 2>&1 \
@@ -263,7 +257,7 @@ rake spec` or `bundle exec rspec modules/router/spec`, but when I ran the tests 
 >
 > ```
 >
-> After replacing it (by hand) the file identifies as `us-ascii` again:
+> After replacing it (by hand), the file identifies as `us-ascii` again:
 >
 > ```bash
 > $ file --mime modules/router/templates/routes.conf.erb
