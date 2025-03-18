@@ -82,9 +82,11 @@ That said, I now see flaws in the commit message that prevent me from using as a
 
 ### It buries the most important information at the end
 
-When Thompson originally published his blog post, one of the most common critiques of the commit message was that it was too verbose. I found that criticism misguided. Verbosity in a commit messsage is not a problem unless it presents the information poorly.
+When Thompson originally published his blog post, one of the most common critiques of the commit message was that it was too verbose. I found that criticism misguided.
 
-The biggest shortcoming of Thompson's example is that it buries the most important information deep into the commit message.
+It wasn't too verbose, as the details were all valuable. The details help less experienced teammates learn the author's debugging process and toolset. It also makes it possible for teammates to give the author feedback in case he's overlooking something or is unaware of a tool that would have been helpful.
+
+The actual shortcoming of Thompson's example is that it buries the most important information deep into the commit message.
 
 Re-read the first paragraph of the commit message:
 
@@ -98,7 +100,7 @@ rake spec` or `bundle exec rspec modules/router/spec`. But when run as
 >  invalid byte sequence in US-ASCII
 > ```
 
-By three sentences and a code snippet into this commit message, the reader still doesn't have any information about what the change actually does.
+Three sentences and a code snippet into this commit message, the reader still doesn't have any information about what the change actually does.
 
 Imagine that you're working in Thompson's codebase, and you find a bug related to the `routes.conf.erb` file. Digging through the source history, you encounter Thompson's favorite commit. Will you be happy or sad to read its six paragraphs and five code snippets of its commit message?
 
