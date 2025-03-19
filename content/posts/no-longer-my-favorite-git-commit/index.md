@@ -3,6 +3,10 @@ title: "No Longer My Favorite Git Commit"
 date: 2025-03-19
 images:
   - no-longer-my-favorite-git-commit/one-char-diff.webp
+tags:
+  - software engineering
+  - commit messages
+description: Revisiting David Thompson's "My favourite Git commit"
 ---
 
 Six years ago, David Thompson wrote a popular blog post called ["My favourite Git commit"](https://dhwthompson.com/2019/my-favourite-git-commit) celebrating a whimsically detailed commit message his co-worker wrote. I enjoyed the post at the time and have sent it to several teammates as a model for good commit messages.
