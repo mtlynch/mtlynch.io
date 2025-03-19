@@ -166,7 +166,7 @@ If you haven't memorized the US-ASCII and UTF-8 tables, here are the first few c
 | `0x23`              | `'#'`                                                                         |
 | `0xc2` `0xa0`       | `' '` ([UTF-8 non-breaking space](https://www.compart.com/en/unicode/U+00A0)) |
 
-So, the file had the byte sequence `0xC2 0xA0`, which means it can't be a US-ASCII file, as `0xC2` and `0xA0` both fall outside the range of [the US-ASCII byte range](https://www.columbia.edu/kermit/ascii.html).
+So, the file had the byte sequence `0xC2 0xA0`, which means it can't be a US-ASCII file, as `0xC2` and `0xA0` both fall outside of [the US-ASCII byte range](https://www.columbia.edu/kermit/ascii.html).
 
 The `0xC2 0xA0` sequence means any application that consumes `routes.conf.erb` must interpret it with UTF-8 encoding, a newer and more internationally-friendly scheme for encoding text.
 
