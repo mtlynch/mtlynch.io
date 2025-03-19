@@ -5,9 +5,9 @@ images:
   - no-longer-my-favorite-git-commit/one-char-diff.webp
 ---
 
-Six years ago, David Thompson wrote a popular blog post called ["My favourite Git commit"](https://dhwthompson.com/2019/my-favourite-git-commit) that celebrated a whimsically detailed commit message his co-worker wrote. I enjoyed the post at the time and have sent it to several teammates since then as a model for good commit messages.
+Six years ago, David Thompson wrote a popular blog post called ["My favourite Git commit"](https://dhwthompson.com/2019/my-favourite-git-commit) celebrating a whimsically detailed commit message his co-worker wrote. I enjoyed the post at the time and have sent it to several teammates as a model for good commit messages.
 
-I recently revisited Thompson's article as I was creating a guide to [writing useful commit messages](https://refactoringenglish.com/chapters/commit-messages/). When pressed to explain what made Thompson's post a good example of a commit message, I was surprised to find that I couldn't. It was fun to read as an outside observer, but it wasn't a good example of software engineering.
+I recently revisited Thompson's article as I was creating my own guide to [writing useful commit messages](https://refactoringenglish.com/chapters/commit-messages/). When pressed to explain what made Thompson's post such an effective example, I was surprised to find that I couldn't. It was fun to read as an outside observer, but I couldn't justify it as a model of good software engineering.
 
 ## Thompson's favorite commit
 
@@ -84,11 +84,11 @@ That said, I now see flaws that prevent me from using it as a model commit messa
 
 When Thompson originally published his blog post, one of the most common critiques was that the commit message was too verbose. I found that criticism misguided.
 
-It wasn't too verbose, as the details were all valuable. The details help less experienced teammates learn the author's debugging process and toolset. They also give more experienced teammates an opportunity to see if the developer overlooked something or is unaware of a relevant tool.
+Thorough details in a commit message are useful as long as they're relevant, and Thompson's were. They'd help less experienced teammates learn the author's debugging process and toolset. They'd also give more experienced teammates an opportunity to see if the developer overlooked something or is unaware of a relevant tool.
 
 The reason people perceived Thompson's example as overly verbose is that it buries the most important information deep into the commit message.
 
-Re-read the first paragraph of the commit message:
+Re-read the first paragraph:
 
 > I introduced some tests in a feature branch to match the contents of
 > `/etc/nginx/router_routes.conf`. They worked fine when run with `bundle exec
@@ -120,7 +120,7 @@ If I'm scrolling through a commit history, I want to find out quickly if each co
 
 ### It never quite explains the problem
 
-By the end of Thompson's example commit message, do you even understand what was in the change?
+By the end of Thompson's example commit message, do you even understand the change?
 
 Here's the closest it comes to explaining the problem:
 
@@ -163,9 +163,9 @@ So, the file had the byte sequence `0xC2 0xA0`, which means it can't be a US-ASC
 
 The `0xC2 0xA0` sequence means any application that consumes `routes.conf.erb` must interpret it with UTF-8 encoding, a newer and more internationally-friendly scheme for encoding text.
 
-The codebase used [Ruby 1.9.3](https://github.com/alphagov/govuk-puppet/blob/63b36f93bf75a848e2125008aa1e880c5861cf46/.ruby-version), which [supported UTF-8 encoding](http://graysoftinc.com/character-encodings/ruby-19s-three-default-encodings), but it defaulted to US-ASCII if the file didn't explicitly declare an encoding.
+Thompson's codebase used [Ruby 1.9.3](https://github.com/alphagov/govuk-puppet/blob/63b36f93bf75a848e2125008aa1e880c5861cf46/.ruby-version), which [supported UTF-8 encoding](http://graysoftinc.com/character-encodings/ruby-19s-three-default-encodings), but it defaulted to US-ASCII if the file didn't explicitly declare otherwise.
 
-Digging through the source history, I found that [commit 5a8607](https://github.com/alphagov/govuk-puppet/commit/5a86076bd73f0e92558d49a15f4e828860886eca) originally introduced the UTF-8 character. That commit message doesn't declare any reason for introducing the UTF-8 character, so it was likely an accident.
+Digging through the source history, I found that [commit 5a8607](https://github.com/alphagov/govuk-puppet/commit/5a86076bd73f0e92558d49a15f4e828860886eca) originally introduced the UTF-8 character. That commit message doesn't mention any reason for introducing the UTF-8 character, so it was likely an accident.
 
 A Hacker News commenter [floated a plausible theory](https://news.ycombinator.com/item?id=21290159) about why that stray UTF-8 character appeared in `routes.conf.erb`:
 
@@ -187,7 +187,7 @@ Later, the commit message says:
 
 > I eventually found that removing the `.with_content(//)` matchers made the errors go away. I didn't see any weird characters in the spec file.
 
-Without a commit hash or link, I don't know what matchers or which spec file the developer means because they haven't linked to it.
+Without a commit hash or link, the reader doesn't know what matchers or which spec file the developer means.
 
 If a commit message references external code, it should [link to it explicitly](https://refactoringenglish.com/chapters/commit-messages/#cross-references-to-issues-or-other-changes) so that code reviewers and future maintainers can see the exact context for the change.
 
@@ -217,9 +217,7 @@ Here's my proposed revision of Thompson's favorite git commit:
 >                  ^^ ^^
 > ```
 >
-> `0xC2 0xA0` is not a valid US-ASCII byte sequence, but it's the [UTF-8 non-breaking space character](https://www.compart.com/en/unicode/U+00A0).
->
-> If you view the file in a web browser or a code editor, it will likely look like a normal space character, but it's actually UTF-8, so any tool reading the file expecting US-ASCII encoding will fail.
+> `0xC2 0xA0` is not a valid US-ASCII byte sequence, but it's the [UTF-8 non-breaking space character](https://www.compart.com/en/unicode/U+00A0). Any tool that reads the file expecting US-ASCII encoding will fail.
 >
 > #### How I discovered this
 >
@@ -270,18 +268,18 @@ Here were my changes:
 
 - I added a high-level summary early in the message.
 - I added a more explicit explanation of the UTF-8 character and where it came from.
-- I moved most of the original author's content to a "How I found this" section to make it clear to the reader that it's [extra-credit reading](https://refactoringenglish.com/chapters/commit-messages/#rants-and-stories).
+- I moved most of the author's original content to a "How I found this" section to make it clear that it's [extra-credit reading](https://refactoringenglish.com/chapters/commit-messages/#rants-and-stories).
 - I made light grammatical fixes.
 - I [removed passive voice](https://refactoringenglish.com/chapters/passive-voice-considered-harmful/) to reduce ambiguity.
 - I simplified the terminal prompt from `dcarley-MBA:puppet dcarley $` to just `$`, as the former is mostly noise.
 
-Notably, I didn't cut anything, as I don't think verbosity was less of a problem than how the developer organized and presented all the extra details.
+Notably, I didn't remove details, as the problem wasn't verbosity but how the developer organized and presented information.
 
 ## The value of defining your own principles
 
 Revisiting Thompson's post reminded me how much value there is in defining software engineering principles for yourself.
 
-I accepted the commit as a good example because I agreed with Thompson about its strengths. It wasn't until I sat down to write what I think are the most important qualities in a commit message that I saw the shortcomings of Thompson's example.
+I accepted the commit as a good example because I agreed with Thompson about its strengths. It wasn't until I sat down and defined what I think are the most important qualities in a commit message that I saw the shortcomings of Thompson's example.
 
 I've explained my perspective about several different software engineering practices over the years, and every time I do it, it makes me a better developer. It forces me to think critically about ideas I take for granted and helps me remember what my ideal looks like even if I'm not always able to achieve it.
 
