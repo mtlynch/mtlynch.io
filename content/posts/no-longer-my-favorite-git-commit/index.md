@@ -262,7 +262,7 @@ Here's my proposed revision of Thompson's favorite git commit:
 >
 > ```
 >
-> After replacing the UTF-8 character (by hand), `file` identifies `routes.conf.erb` as `us-ascii` again:
+> After I replaced the UTF-8 character (by hand), `file` identifies `routes.conf.erb` as `us-ascii` again:
 >
 > ```bash
 > $ file --mime modules/router/templates/routes.conf.erb
