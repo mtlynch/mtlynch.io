@@ -9,7 +9,6 @@ tags:
 description: Revisiting David Thompson's "My favourite Git commit"
 discuss_urls:
   reddit: https://www.reddit.com/r/programming/comments/1jexuzb/no_longer_my_favorite_git_commit/?
-  hacker_news: https://news.ycombinator.com/item?id=43412220
 ---
 
 Six years ago, David Thompson wrote a popular blog post called ["My favourite Git commit"](https://dhwthompson.com/2019/my-favourite-git-commit) celebrating a whimsically detailed commit message his co-worker wrote. I enjoyed the post at the time and have sent it to several teammates as a model for good commit messages.
