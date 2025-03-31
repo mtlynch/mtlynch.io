@@ -7,7 +7,7 @@ images:
 
 For the past few months, I've been working on a book called [_Refactoring English: Effective Writing for Software Developers_](https://refactoringenglish.com).
 
-I didn't want to spend a year writing the book only to find out that nobody wants to buy it, so I ran a one-month pre-order sale on Kickstarter. I structured the project so that if I didn't hit $5k in pre-orders, the project would be canceled, and I'd walk away with nothing.
+I didn't want to spend a year writing the book only to find out that nobody wants to buy it, so I ran a one-month pre-sale on Kickstarter. I structured the project so that if I didn't hit $5k in pre-orders, the project would be canceled, and I'd walk away with nothing.
 
 Over the weekend, I hit my goal. As of this writing, I've reached $6,000 in pre-orders from 174 customers with eight hours remaining in the sale. It looks like I hit my goal comfortably.
 
