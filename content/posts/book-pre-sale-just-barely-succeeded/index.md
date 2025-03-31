@@ -5,7 +5,7 @@ images:
   - book-pre-sale-just-barely-succeeded/hn-recovery.webp
 ---
 
-For the past few months, I've been working on a book called _Refactoring English: Effective Writing for Software Developers_.
+For the past few months, I've been working on a book called [_Refactoring English: Effective Writing for Software Developers_](https://refactoringenglish.com).
 
 I didn't want to spend a year writing the book only to find out that nobody wants to buy it, so I ran a one-month pre-order sale on Kickstarter. I structured the project so that if I didn't hit $5k in pre-orders, the project would be canceled, and I'd walk away with nothing.
 
