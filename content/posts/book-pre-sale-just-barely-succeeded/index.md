@@ -2,7 +2,7 @@
 title: "My Book's Pre-Sale Just Barely Succeeded"
 date: 2025-03-31
 images:
-  - book-pre-sale-just-barely-succeeded/hn-recovery.webp
+  - book-pre-sale-just-barely-succeeded/og-cover.webp
 ---
 
 For the past few months, I've been working on a book called [_Refactoring English: Effective Writing for Software Developers_](https://refactoringenglish.com).
