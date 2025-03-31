@@ -5,13 +5,15 @@ date: 2025-03-31
 
 For the past few months, I've been working on a book called _Refactoring English: Effective Writing for Software Developers_.
 
-I didn't want to spend a year writing it only to find out that nobody actually wants to buy this book, so I ran a one-month pre-order sale on Kickstarter. I structured the project so that if I didn't hit $5k in pre-orders, the project would be canceled, and I'd walk away with nothing.
+I didn't want to spend a year writing the book only to find out that nobody wants to buy it, so I ran a one-month pre-order sale on Kickstarter. I structured the project so that if I didn't hit $5k in pre-orders, the project would be canceled, and I'd walk away with nothing.
 
-Over the weekend, I hit my goal. As of this writing, I've reached $6,000 in pre-orders from 174 customers with 12 hours remaining in the sale.
+Over the weekend, I hit my goal. As of this writing, I've reached $6,000 in pre-orders from 174 customers with 12 hours remaining in the sale. It looks like I hit my goal comfortably.
 
 {{<img src="kickstarter-prog.webp" has-border="true">}}
 
-It looks like I hit my goal comfortably. In reality, for most of the month, it looked like this project was a bust, and I felt embarrassed about how badly I'd failed. Here's what progress looked like just four days ago:
+In reality, for most of the month, I thought the book had failed, and I felt embarrassed about how poorly the pre-sale had gone.
+
+Here's what pre-orders looked like just four days ago:
 
 {{<img src="progress-26th.webp" has-border="true">}}
 
@@ -19,62 +21,87 @@ Sales had long since plateaued. I'd already exhaused every idea I had for findin
 
 The thing that saved me was a lucky post on Hacker News.
 
-## My work on the book so far
+{{<img src="hn-recovery.webp" has-border="true">}}
 
-I started this book in 2021, but then one of my businesses took off, and I never had time to write it.
+## Before the pre-sale
 
-People were still slowly signing up for updates about the book through the mailing list, so when I started writing it again, I emailed people chapters.
+I started working on _Refactoring English_ back in 2021. But then my business grew unexpectedly, and I spent so much time managing that company that I never had time to work on the book.
 
-My plan was to keep writing blog posts about things I find interesting in software and bootstrapped businesses, and then share updates on my book. I hoped that people who enjoyed my writing might think, "Oh, maybe I'll check out this guy's book." And it would be a good way for me to make blogging financially viable.
+Until 2025, all I had of the book was a rough table of contents and a signup form for people to get updates about my progress.
 
-But I had no idea if there were enough customers to justify the business. I want to write the book, but if I spent a year writing it and finally published to find that only about ten people were willing to purchase this book, I'd be quite disappointed.
+This year, I started working on the book again, and I published a couple of sample chapters. I heard positive feedback from readers, but I still wasn't sure if any developers would pay to read a book about improving their writing skills.
 
-I didn't know what to expect from this book.
-
-- I released a course in 2021 called _Hit the Front Page of Hacker News_ that earned $XXk in sales over the last four years.
-- Josh Comeau released a course that same year called _CSS for JavaScript Developers_ that made $500k in its first week of pre-orders.
-
-I've been publishing excerpts as I write the book, and I've gotten positive feedback from readers, but I was beginning to worry whether anyone would actually pay to read a book like this.
-
-At the beginning of the month, I decided to offer pre-orders for the book at $25. I offered the pre-orders on Kickstarter and set a goal of $5k.
+At the beginning of March, I decided the best way to see if this book was worth writing would be to offer pre-orders for the book. I created a Kickstarter project for the book and let people pre-order the book for $25. I set the goal of $5k. I figured that would mean about 150 pre-orders, plus some generous readers signing up for premium tiers to support the project.
 
 ## My underwhelming first blog post
 
-I wanted to launch the pre-orders on Kickstarter at the same time as I published a new chapter. My hope was that the blog post would be popular, and then readers would get to the end of the post and see that I'm working on a book and think to themselves, "This guy has good ideas. In fact, I like these ideas so much that I'd pay $25 for more of them."
+I wanted to launch the pre-orders on Kickstarter at the same time as I published a new chapter. I hoped the blog post would be popular, and then readers would get to the end of the post and see that I'm working on a book and think, "I like this guy's ideas so much that I'd pay $25 for more of them."
 
 So I published ["How to Write Useful Commit Messages"](https://refactoringenglish.com/chapters/commit-messages/) and put a little self-ad at the bottom for the pre-sale on Kickstarter:
 
+TODO: Show self-ads
+
 I announced the new chapter and pre-orders to my mailing list.
 
-I submitted it to Hacker News, and crickets.
+1,100 people had signed up for updates about the book, but when I offered pre-orders, only 49 people ordered. That didn't bode well. Maybe they weren't that interested after all? Or maybe they didn't like what I was writing?
+
+{{<img src="ks-dashboard.webp" max-width="700px" has-border="true" caption="After a week, 49 customers had pre-ordered *Refactoring English*, though this was lower than I expected given 1,100 mailing list subscribers.">}}
+
+I tried submitting the sample chapter to Hacker News, and crickets.
+
+TODO: Screenshot
 
 Okay, no problem. I still had a few other blog post ideas.
 
 ## Two more misses in a row
 
-I actually had an ace up my sleeve. A month earlier, I'd written a blog post called ["My Seventh Year as a Bootstrapped Founder"](/solo-developer-year-7/). It shot to the front page of Hacker News [submitted it to Hacker News](https://news.ycombinator.com/item?id=42932492) and was climbing fast, but the moderators removed it.
+I didn't mind that first chapter flopping on Hacker News because I secretly had an ace up my sleeve.
 
-I reached out to the Hacker News moderators, and they explained that I had submitted my annual retrospective too soon after my related post, ["Lessons from my First Exit."](/lessons-from-my-first-exit/) They felt like the content was too similar, but I was welcome to try again in a few months.
+A month earlier, I'd written a blog post called ["My Seventh Year as a Bootstrapped Founder"](/solo-developer-year-7/). I [submitted it to Hacker News](https://news.ycombinator.com/item?id=42932492), and it immediately shot to the #1 position of the front page. It had 45 upvotes and was growing quickly.
 
-The moderator decision was a bit weird because the two posts don't overlap much, and it had _already_ been two months since that post. But I find Hacker News moderation extremely fair overall, so I figured I'd just wait a month.
+Sadly, within minutes, the Hacker News moderators removed my post.
 
-By March, it seemed like the moderators removing my post actually worked to my advantage. My post now had a strong chance of reaching the front page, but it would be during the pre-sale of my book.
+I reached out to the Hacker News moderators, and they explained that I had submitted my annual retrospective too soon after my related post, ["Lessons from my First Exit."](/lessons-from-my-first-exit/) They felt like the content was too similar, but I was welcome to try again after there had been two or three months of distance from the previous post.
 
-But then I submitted it again, and there was no response at all. I tried a few more times, and it still failed. I don't know why Hacker News was so excited about it in February, but they didn't care at all in March.
+The moderator decision was a bit odd because the two posts don't overlap much, and it had _already_ been two months between posts. But I find Hacker News moderation extremely fair overall, so I figured I'd just wait a month.
 
-But I had another idea. There was a blog post called "My Favourite Git Commit." It was popular on Hacker News and the /r/programming subreddit. While I was writing, "How to Write Useful Commit Messages," I had an insight about that post that hadn't been part of the conversation before, so I thought that would be a good blog post.
+Now, the moderators removing my post actually worked in my favor. I knew I had a post with a strong chance of reaching the front so I could do it during the pre-sale of my book.
 
-I wrote that, and I submitted it to Hacker News, and it flopped too.
+But then I submitted it again, and it barely made a blip. It got one upvote and no comments. I tried again on a weekend, as there's less competition then, and it didn't even get a single upvote.
 
-I was growing concerned, as I'm usually more successful on Hacker News, but I was still hopeful that I could get something to land by the end of the month.
+How could Hacker News love this post so much in February and then completely ignore it a few weeks later?
+
+But I had another idea. There was a blog post called ["My Favourite Git Commit"](https://dhwthompson.com/2019/my-favourite-git-commit) that was popular on [Hacker News](https://news.ycombinator.com/item?id=21289827) and [the /r/programming subreddit](https://www.reddit.com/r/programming/comments/djnp8k/my_favourite_git_commit/). While I was writing, "How to Write Useful Commit Messages," I had an insight about that post that hadn't been part of the conversation before, so I thought that make a good blog post.
+
+I wrote that and submitted it to Hacker News, but it flopped too.
+
+I was growing concerned, as I'm usually more successful on Hacker News. Still, I was hopeful that I could get something to land by the end of the month.
+
+## Unsuccessfully begging for sponsorships from companies
+
+There are companies like [Digital Ocean](https://www.digitalocean.com/) and [LogRocket](https://logrocket.com/) that invest a lot into writing high-quality blog posts for developers, so I was curious to see if they'd sponsor my book, as it's about high-quality writing for developers.
+
+I had the sponsorhip idea from the start of the presale, but I wanted to approach potential sponsors with some momentum behind me. I thought I'd approach companies right after a super popular blog post and show them how many readers would see their logo.
+
+With only 10 days left in the sale, I hadn't had any hit posts that month, and my pre-sale had clearly stalled. I felt like my pitch came across like I'm begging them to take pity on me and bail me out.
+
+I reached out to ten companies, and here were the results:
+
+- One offered $1k to buy a page in the book's acknowledgments section and a banner ad on the website.
+  - I asked whether they'd be open to something time-limited, as I didn't want a "forever" obligation, and they stopped responding.
+- One was interested but then stopped responding when they realized I wanted them to purchase the sponsorship through Kickstarter.
+- One gave a quick, polite "no."
+- Seven (the rest) never responded.
 
 ## What if I outright pander to Hacker News?
 
-Last summer, I was curious who the most popular personal bloggers were on Hacker News, so I wrote a little tool to create a ranking. It was ugly and hard to use, but another 5-10 hours of work could polish it up and use it to promote my book.
+Last summer, I was curious who the most popular personal bloggers were on Hacker News, so I wrote some ugly Python scripts to crunch the data and show me rankings. With 5-10 hours of work, I knew I could polish it into a usable web app and use it to promote my book.
 
-I know this sounds arrogant, but I was extremely confident this tool would be a hit on Hacker News.
+{{<img src="popularity-contest.webp" has-border="true" max-width="800px" caption="A tool I created to promote the book">}}
 
-Hacker News loves analyses of Hacker News itself, and they have generally have a fondness for personal bloggers and indie stuff. It also qualified for [Show HN](https://news.ycombinator.com/show), the special category for showing off things you built yourself, which gets a special advantage in reaching the front page.
+I was extremely confident this tool would be a hit on Hacker News.
+
+Hacker News loves analyses of Hacker News itself, and they generally have a fondness for personal bloggers and indie stuff. The tool also qualified for [Show HN](https://news.ycombinator.com/show), the special category for showing off things you built yourself, which gets a special advantage in reaching the front page.
 
 As always, there are never guarantees on Hacker News, but I've never been more confident in a post reaching the top 10.
 
@@ -82,37 +109,39 @@ It didn't reach the top 10.
 
 It barely even appeared on the front page at all.
 
-I submitted Popularity Contest to Hacker News, but it barely made a ripple. It slowly accured 18 upvotes throughout the day, but no comments, and it spent only a few minutes on the front page.
+{{<img src="pop-cont.webp" has-border="true">}}
 
 ## Finally, a bit of Hacker News success
 
-Then a few days later, I was browsing Hacker News and saw a post called "The most popular personal blogs of Hacker News."
+A few days later, I was browsing Hacker News and saw a post called "The highest-ranking personal blogs of Hacker News."
+
+{{<img src="other-submit.webp" has-border="true">}}
+
+What?!?
 
 Someone had stolen my idea!
 
-Oh, wait. That's a link to my site. Another Hacker News user had just submitted my tool (nothing wrong with that). For whatever reason, their submission worked. Maybe because they omitted the "Popularity Contest" title.
+Oh, wait. It was a link to my site.
 
-I checked out how Kickstarter was doing: no change. XX visitors had checked out the tool, but in that time, there were only XX new sales.
+{{<img src="my-site.webp" has-border="true">}}
 
-So, that was a bad sign, too. I got my book in front of a lot of people who I thought would be interested, and none of them were.
+Another Hacker News user had just submitted my tool (nothing wrong with that). For whatever reason, their submission caught on even though my previous attempt failed. My guess is that it was better without the "Popularity Contest" title.
 
-## Unsuccessfully begging for sponsorships from companies
+But, finally I was on the front page! From there, it got the attention of [John Gruber](https://en.wikipedia.org/wiki/John_Gruber) (co-inventor of Markdown), who wrote a [blog post about my tool](https://daringfireball.net/2025/03/the_website_hacker_news_is_afraid_to_discuss).
 
-Increasingly, I'm seeing open-source projects list company sponsors on their website. That seemed nice to me, so why not do that for my book's website?
+In two days, 20k people had visited the _Refactoring English_ website to try out my tool.
 
-There are companies like Digital Ocean and LogRocket that invest a lot into writing high-quality blog posts for developers, so maybe they'd pay to be associated with a book about high-quality writing.
+{{<img src="first-frontpage-plausible.webp" has-border="true">}}
 
-I had this idea at the start of the presale, but wanted to approach potential sponsors with some momentum behind me. I'd much rather approach companies a few days after a super popular blog post, so I could show them how many readers would see their logo.
+I checked out how Kickstarter was doing: virtually no change.
 
-With only 10 days left in the sale, I hadn't had any hit posts that month, and my pre-sale had clearly stalled. I felt like my pitch came across like I'm begging them to take pity on me and bail me out.
+There were only four sales for a total of $100 on the front page day and the day after. The graph was indistiguishable from days I wasn't on the front page at all.
 
-I reached out to ten companies, and here were the results:
+{{<img src="first-frontpage-kickstarter.webp" has-border="true">}}
 
-- 1 offered $1k to buy a page in the book's acknowledgments section and a banner ad on the website.
-  - I asked whether they'd be open to something time-limited, as I didn't want a "forever" obligation, and they stopped responding.
-- 1 was interested but then stopped responding when they realized I wanted them to purchase the sponsorship through Kickstarter.
-- 1 gave a quick, polite "no."
-- 7 never responded.
+So, that was yet another bad sign.
+
+I got my book in front of my target audience, and none of them were interested in buying the book.
 
 ## The miraculous comeback
 
@@ -120,77 +149,24 @@ By this point, there were only five days left in the pre-sale, and I had only ra
 
 I thought my book was surely a failure. I was already debating between scrapping the project entirely or pivoting to a less ambitious book that I could finish in just a few more weeks of work.
 
-I had one last hope: a sample chapter about blogging. I had been working on it for the past few weeks, and it was the last chapter I could finish by the end of the month.
+I had one last hope: [a sample chapter about blogging](https://refactoringenglish.com/chapters/write-blog-posts-developers-read/). I had been working on it for the past few weeks, and it was the last chapter I had time to finish by the end of the month.
 
-Blogging about blogging is a gamble because there aren't many viable ways to share it with a large audience. I'm never going to be anywhere near the top result for any meaningful blog-related searches on Google. And there's so much spammy advice that a lot of communities where I'd want to share the post outright ban the topic, or their users aggressively attack posts about blogging.
+The problem with giving advice about blogging is that there's so much low-quality, spammy advice that if you write about blogging at all, people think you're either , or their users aggressively attack posts about blogging.
 
-That's why I wasn't surprised when I posted the article to reddit, and it was downvoted to zero, and the top comment was someone complaining about the topic:
+That's why I wasn't surprised when I [posted the chapter to reddit](https://www.reddit.com/r/programming/comments/1jl3wgw/how_to_write_blog_posts_that_developers_read/), and it was downvoted to zero, and the [top comment](https://www.reddit.com/r/programming/comments/1jl3wgw/how_to_write_blog_posts_that_developers_read/mk0elxt/) was someone complaining about the topic itself:
 
-TODO
+{{<img src="top-reddit-comment.webp" has-border="true">}}
 
 I submitted the post to Hacker News, and it flopped. XX upvotes.
 
 Because "Popularity Contest" performed so much better with a different title, I tried submitting it the next day with the title, "What I Learned from Nine Years of Blogging." Hacker News immediately marked it as a duplicate. Huh? Usually, you can resubmit a failed post a day later, and it doesn't count as a duplicate.
 
-And then I looked on the front page, and my post was there! It was at #8.
+And then I looked on the front page, and my post was there! Once again, a reader posted it on my behalf, and it had reached the #8 spot.
 
 And this time, readers were interested in the book. There were $1,000 new pre-orders on Kickstarter within just a few hours.
 
-## Step 1: Get on the front page of Hacker News
+When I went to bed that night, the Kickstarter was less than $300 from its $5k goal with three days left.
 
-I felt like I could likely hit $3k, and $5k would be a bigger stretch. But I wanted it to be a stretch. I didn't want to talk myself into writing this book and then a year later find that I can't find anyone who cares about reading it.
+Overnight, I reached my goal, and people continued pre-ordering:
 
-- Publish excerpts from the blog and share them on Hacker News, reddit, and Lobsters.
-- Write blog posts on my personal blog and share them in those same places, and put a link at the end to my book.
-- Publish a tool
-
-My last company, TinyPilot, got its start because of a blog post I received that became popular on Hacker News, so my plan was to write blog posts that would be a good match for Hacker News. And my hope was that readers would think, "I like this guy's ideas so much that I'd pay money to hear more of them."
-
-I had four posts in mind that I thought had a decent chance at Hacker News:
-
-- [My Seventh Year as a Bootstrapped Founder](/solo-developer-year-7/) - I had published this in February and [submitted it to Hacker News](https://news.ycombinator.com/item?id=42932492). It quickly reached the front page and was climbing fast, but the moderators removed it. I reached out to them, and they explained that I had submitted it too soon after [Lessons from my First Exit](/lessons-from-my-first-exit/), and they felt like it was redundant. I thought they'd let me try again a month later, and if it did so well on its first try, it would probably do well again.
-- [How to Write Useful Commit Messages](https://refactoringenglish.com/chapters/commit-messages/)
-- [No Longer My Favorite Git Commit](/no-longer-my-favorite-git-commit/) - This was an idea I had as I was writing my chapter on commit messages. The original post was successful, so I thought a well-argued response to it might also be popular, even if I'm responding XX years after the fact.
-- [How to Write Blog Posts that Developers Read](https://refactoringenglish.com/chapters/write-blog-posts-developers-read/) - I was about 60% of the way through this chapter, and I thought it would be a potential match for Hacker News. I also thought it was the least likely to succeed, as the whole category of "how to make your blog more popular" is filled with bad advice, so people mentally perceive it in the same category as get rich quick schemes.
-
-I had four things I thought had a good chance of reaching the front page of Hacker News
-
-## The Hacker News Popularity Contest
-
-I started working on this over the summer
-
-I thought maybe "Popularity Contest" sounded too condescending, so I renamed it "Personal Best" and resubmitted it. Still, no dice.
-
-## What I'm glad I did
-
-### Using a pre-sale to see if there are readers
-
-I'm glad I chose this
-
-### Publishing samples during the pre-sale
-
-### Offering premium rewards
-
-### Self-ads
-
-## What I wish I'd done differently
-
-### Collected better data about where customers came from
-
-Kickstarter can analyze UTM parameters, but I never added them to any of my links. It probably would have been helpful to know which readers came from my personal blog vs. the book's website vs. the mailing list. They collect data based on the HTTP referer header, but that's not as reliable as UTM parameters.
-
-### Focused on individuals rather than sponsors
-
-It's easy to say this now that I know it didn't work out, but I wish I'd skipped out on soliciting sponsorships from companies and instead just focused on regular readers. I think the decision made sense at the time, but it feels like a waste of time given that it failed.
-
-Even when the one company offered to sponsor for $1k, I didn't feel great about that because it felt like a single company carrying too much of the pre-sale. I expect that the number of pre-orders from regular readers to be predictive of how many customers purchase the finished book, so if I can only sell $3k to regular people, that would have been a bad sign for long-term sales.
-
-## Other notes
-
-### Kickstarter projects attract spam
-
-I got [a ton of spam](/retrospectives/2025/03/#except-for-kickstarter-spammers) from companies trying to "help out" with my presale.
-
-Just be aware of this when you start a Kickstarter. Even though my email isn't in the Kickstarter itself, they found my email address by digging through the book website and then my personal blog.
-
-Fortunately, there's a big surge in spam for the first week of the campaign, and then nothing more after that.
+TODO
