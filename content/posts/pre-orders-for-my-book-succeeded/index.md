@@ -9,17 +9,17 @@ I didn't want to spend a year writing it only to find out that nobody actually w
 
 Over the weekend, I hit my goal. As of this writing, I've reached $6,000 in pre-orders from 174 customers with 12 hours remaining in the sale.
 
-TODO: Image
+{{<img src="kickstarter-prog.webp" has-border="true">}}
 
 It looks like I hit my goal comfortably. In reality, for most of the month, it looked like this project was a bust, and I felt embarrassed about how badly I'd failed. Here's what progress looked like just four days ago:
 
-TODO: Image
+{{<img src="progress-26th.webp" has-border="true">}}
 
-Sales had long since plateaued. I'd already exhaused every idea I had for finding customers, and I was still $1,800 from my goal.
+Sales had long since plateaued. I'd already exhaused every idea I had for finding customers, and I was still $2,000 from my goal.
 
 The thing that saved me was a lucky post on Hacker News.
 
-## How much should I expect from this book?
+## My work on the book so far
 
 I started this book in 2021, but then one of my businesses took off, and I never had time to write it.
 
@@ -54,27 +54,27 @@ Okay, no problem. I still had a few other blog post ideas.
 
 I actually had an ace up my sleeve. A month earlier, I'd written a blog post called ["My Seventh Year as a Bootstrapped Founder"](/solo-developer-year-7/). It shot to the front page of Hacker News [submitted it to Hacker News](https://news.ycombinator.com/item?id=42932492) and was climbing fast, but the moderators removed it.
 
-I reached out to the Hacker News moderators, and they explained that I had submitted my annual retrospective too soon after ["Lessons from my First Exit"](/lessons-from-my-first-exit/), and they felt like the content was too similar, but I was welcome to try again in a few months.
+I reached out to the Hacker News moderators, and they explained that I had submitted my annual retrospective too soon after my related post, ["Lessons from my First Exit."](/lessons-from-my-first-exit/) They felt like the content was too similar, but I was welcome to try again in a few months.
 
-This was a bit weird because the content wasn't very similar, and it had already been two months since that post, but I find Hacker News moderation extremely fair overall, so I figured I'd just wait a month.
+The moderator decision was a bit weird because the two posts don't overlap much, and it had _already_ been two months since that post. But I find Hacker News moderation extremely fair overall, so I figured I'd just wait a month.
 
-Now, the moderation action would work to my favor because my post now had a strong chance of reaching the front page, but now it was during the pre-sale of my book.
+By March, it seemed like the moderators removing my post actually worked to my advantage. My post now had a strong chance of reaching the front page, but it would be during the pre-sale of my book.
 
 But then I submitted it again, and there was no response at all. I tried a few more times, and it still failed. I don't know why Hacker News was so excited about it in February, but they didn't care at all in March.
 
-But I had another idea. There was a blog post called "My Favourite Git Commit." It was popular on Hacker News and the /r/programming subreddit. While I was writing, "How to Write Useful Commit Messages," I had an insight about it that hadn't been part of the conversation before, so I thought that would be a good blog post.
+But I had another idea. There was a blog post called "My Favourite Git Commit." It was popular on Hacker News and the /r/programming subreddit. While I was writing, "How to Write Useful Commit Messages," I had an insight about that post that hadn't been part of the conversation before, so I thought that would be a good blog post.
 
 I wrote that, and I submitted it to Hacker News, and it flopped too.
 
+I was growing concerned, as I'm usually more successful on Hacker News, but I was still hopeful that I could get something to land by the end of the month.
+
 ## What if I outright pander to Hacker News?
 
-Last summer, I was curious who the most popular personal bloggers were on Hacker News, so I wrote a little tool to create a ranking. It was ugly and hard to use, but another 5-10 hours of work could polish it up. And it's related to writing, so it could be part of the book's website.
-
-I appeared on the list at 48th all-time and even higher if you look at the data by year for recent years. So I added a little flair next to my name encouraging people to buy my book.
+Last summer, I was curious who the most popular personal bloggers were on Hacker News, so I wrote a little tool to create a ranking. It was ugly and hard to use, but another 5-10 hours of work could polish it up and use it to promote my book.
 
 I know this sounds arrogant, but I was extremely confident this tool would be a hit on Hacker News.
 
-Hacker News loves analysis of Hacker News itself, and they have generally have a fondness for personal bloggers and indie stuff. It also qualified for "Show HN," the special category for showing off things you built yourself, which gets a special advantage in reaching the front page.
+Hacker News loves analyses of Hacker News itself, and they have generally have a fondness for personal bloggers and indie stuff. It also qualified for [Show HN](https://news.ycombinator.com/show), the special category for showing off things you built yourself, which gets a special advantage in reaching the front page.
 
 As always, there are never guarantees on Hacker News, but I've never been more confident in a post reaching the top 10.
 
@@ -177,13 +177,17 @@ I'm glad I chose this
 
 ### Collected better data about where customers came from
 
-Kickstarter allows you to set
+Kickstarter can analyze UTM parameters, but I never added them to any of my links. It probably would have been helpful to know which readers came from my personal blog vs. the book's website vs. the mailing list. They collect data based on the HTTP referer header, but that's not as reliable as UTM parameters.
 
 ### Focused on individuals rather than sponsors
 
+It's easy to say this now that I know it didn't work out, but I wish I'd skipped out on soliciting sponsorships from companies and instead just focused on regular readers. I think the decision made sense at the time, but it feels like a waste of time given that it failed.
+
+Even when the one company offered to sponsor for $1k, I didn't feel great about that because it felt like a single company carrying too much of the pre-sale. I expect that the number of pre-orders from regular readers to be predictive of how many customers purchase the finished book, so if I can only sell $3k to regular people, that would have been a bad sign for long-term sales.
+
 ## Other notes
 
-### Kickstarter spam
+### Kickstarter projects attract spam
 
 I got [a ton of spam](/retrospectives/2025/03/#except-for-kickstarter-spammers) from companies trying to "help out" with my presale.
 
