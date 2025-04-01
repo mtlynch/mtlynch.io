@@ -7,11 +7,13 @@ images:
 
 For the past few months, I've been working on a book called [_Refactoring English: Effective Writing for Software Developers_](https://refactoringenglish.com).
 
-I didn't want to spend a year writing the book only to find out that nobody wants to buy it, so I ran a one-month pre-sale on Kickstarter. I structured the project so that if I didn't hit $5k in pre-orders, the project would be canceled, and I'd walk away with nothing.
+I didn't want to spend a year writing the book only to find out that nobody wanted to buy it, so at the beginning of March, I ran a one-month pre-sale on Kickstarter. I structured the project so that if I didn't hit $5k in pre-orders, the project would be canceled, and I'd walk away with nothing.
 
-Over the weekend, I hit my goal. As of this writing, I've reached $6,000 in pre-orders from 174 customers with eight hours remaining in the sale. It looks like I hit my goal comfortably.
+Over the weekend, I hit my goal. As of this writing, I've reached $6,000 in pre-orders from 174 customers with eight hours remaining in the sale.
 
 {{<img src="kickstarter-prog.webp" has-border="true">}}
+
+To the casual observer, it looks like I hit my goal comfortably.
 
 In reality, for most of the month, I thought the book had failed, and I felt embarrassed about how poorly the pre-sale had gone.
 
@@ -27,13 +29,15 @@ The thing that saved me was a lucky post on Hacker News.
 
 ## Before the pre-sale
 
-I started working on _Refactoring English_ back in 2021. But then my business grew unexpectedly, and I spent so much time managing that company that I [never had time to work on the book](/solo-developer-year-4/#_refactoring-english_).
+I started working on _Refactoring English_ back in 2021. As soon as I started, my main business grew unexpectedly, and I spent so much time managing my company that I [never had time to work on the book](/solo-developer-year-4/#_refactoring-english_).
 
 Until 2025, all I had of the book was a rough table of contents and a signup form for email updates about the book.
 
+{{<img src="book-website-original.webp" max-width="500px" has-border="true" caption="Between 2021 and 2024, my book was [just a website](https://web.archive.org/web/20211125050655/https://refactoringenglish.com/) with a rough table of contents and a signup form.">}}
+
 This year, I started working on the book again, and I published a couple of [sample chapters](https://refactoringenglish.com/chapters). I heard positive feedback from readers, but I wasn't sure if any developers would pay to read a book about improving their writing skills.
 
-At the beginning of March, I decided the best way to see if this book was worth writing would be to do a one-month pre-sale of the book. I created a Kickstarter project for the book and let people pre-order the book for $25.
+At the beginning of March, I decided the best way to see if this book was worth writing would be to do a one-month pre-sale of the book. I created [a Kickstarter project](https://www.kickstarter.com/projects/mtlynch/refactoring-english) for the book and let people pre-order the book for $25.
 
 I set the project goal at $5k. I figured that would mean about 150 pre-orders plus some generous readers signing up for premium tiers to support the project.
 
