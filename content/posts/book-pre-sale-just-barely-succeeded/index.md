@@ -210,4 +210,4 @@ I've wanted to write this book for the past four years, and I'm excited that peo
 ## Links
 
 - [_Refactoring English_](https://refactoringenglish.com) - Sample chapters and additional information about the book.
-- [Pre-order for the book](https://www.kickstarter.com/projects/mtlynch/refactoring-english) - Pre-orders are open for a few more hours.
+- [Sign up for email updates about the book](https://buttondown.com/refactoring-english)
