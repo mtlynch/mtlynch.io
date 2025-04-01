@@ -43,7 +43,7 @@ I set the project goal at $5k. I figured that would mean about 150 pre-orders pl
 
 ## My underwhelming first blog post
 
-I wanted to launch the pre-orders on Kickstarter right after I published a new sample chapter. I hoped the blog post would be popular, and then readers would get to the end of the post and see that I'm working on a book and think, "I like this guy's ideas so much that I'd pay $25 for more of them."
+I wanted to launch the pre-orders on Kickstarter right after I published a new sample chapter as a blog post. I hoped the blog post would be popular, and then readers would get to the end of the post and see that I'm working on a book and think, "I like this guy's ideas so much that I'd pay $25 for more of them."
 
 So I published ["How to Write Useful Commit Messages"](https://refactoringenglish.com/chapters/commit-messages/) and put a little self-ad at the bottom for the pre-sale on Kickstarter:
 
@@ -69,23 +69,27 @@ I reached out to the Hacker News moderators, and they explained that I had submi
 
 The moderator's decision was a bit odd because the two posts don't overlap much, and it had _already_ been two months between posts. But I find Hacker News moderation extremely fair overall, so I figured I'd just wait a month.
 
-So, now, the moderators removing my post actually worked in my favor because it effectively meant I had a post that I knew would succeed on Hacker News, and I could submit it whenever I wanted. I could submit it during the pre-sale for my book and attract readers interested in pre-ordering.
+So, now, the moderators removing my post actually worked in my favor. I had a post that I knew would succeed on Hacker News, and I could submit it during the pre-sale for my book to attract readers interested in pre-ordering.
 
-I was excited to use this blog post to attract a new surge of attention to my book. But then I submitted it again, and it barely made a blip. It got one upvote and no comments.
+I submitted my annual retrospective to Hacker News again, but, this time, it barely made a blip. It got a paltry two upvotes:
 
-I tried again on a weekend, as there's less competition then, and it didn't even get a single upvote.
+{{<img src="annual-retro-hn.webp" has-border="true">}}
+
+I tried again on a weekend, as there's less competition outside of the work week, and it did even worse:
+
+{{<img src="annual-retro-hn2.webp" has-border="true">}}
 
 How could Hacker News love this post so much in February and then completely ignore it a few weeks later?
 
 ## No longer my favorite git commit
 
-But I had another idea. There was a blog post called ["My Favourite Git Commit"](https://dhwthompson.com/2019/my-favourite-git-commit) that was popular on [Hacker News](https://news.ycombinator.com/item?id=21289827) and [the /r/programming subreddit](https://www.reddit.com/r/programming/comments/djnp8k/my_favourite_git_commit/). While I was writing "How to Write Useful Commit Messages," I had an insight about that post that hadn't been part of the conversation before, so I thought that would [make a good blog post](/no-longer-my-favorite-git-commit/).
+But I had another idea. There was a 2019 blog post called ["My Favourite Git Commit"](https://dhwthompson.com/2019/my-favourite-git-commit) that was popular on [Hacker News](https://news.ycombinator.com/item?id=21289827) and [the /r/programming subreddit](https://www.reddit.com/r/programming/comments/djnp8k/my_favourite_git_commit/). While I was writing "How to Write Useful Commit Messages," I had an insight about that post that hadn't been part of the conversation before, so I thought that would make a good blog post.
 
-I wrote that and submitted it to Hacker News, but it flopped too.
+I wrote a new blog post called ["No Longer My Favorite Git Commit"](/no-longer-my-favorite-git-commit/) and submitted it to Hacker News, but it flopped too.
 
 {{<img src="no-longer-my-favorite-hn.webp" has-border="true">}}
 
-I was growing concerned, as I'm usually more successful on Hacker News. Still, I was hopeful that I could get something to land by the end of the month.
+I was growing concerned, as Hacker News usually has a better response to my writing, and I now had two consecutive flops. Still, I was hopeful that I could get something to land by the end of the month.
 
 ## Unsuccessfully begging for sponsorships from companies
 
@@ -93,7 +97,7 @@ There are companies like [Digital Ocean](https://www.digitalocean.com/) and [Log
 
 I [had the sponsorship idea](/retrospectives/2025/03/#fundraising-how-its-going-so-far) from the start of the pre-sale, but I wanted to approach potential sponsors with some momentum behind me. I thought I'd approach companies right after a super popular blog post and show them how many readers would see their logo.
 
-With only 10 days left in the sale, I hadn't had any hit posts that month, and my pre-sale had clearly stalled. I felt like my pitch came across like begging for pity and a bailout.
+With only 10 days left in the sale, I hadn't had any hit posts, and my pre-sale had clearly stalled. I felt like my pitch came across like begging for pity or a bailout.
 
 I reached out to ten companies, and here were the results:
 
@@ -105,7 +109,7 @@ I reached out to ten companies, and here were the results:
 
 ## What if I outright pander to Hacker News?
 
-Last summer, I was curious who the most popular personal bloggers were on Hacker News, so I wrote some ugly Python scripts to crunch the data and show me rankings. I knew that I could put in another 5-10 hours of work and polish my tool into a usable web app to promote my book.
+Last summer, I was curious who the most popular personal bloggers were on Hacker News, so I wrote some ugly Python scripts to crunch the data and show me the rankings. After another 5-10 hours of work, I polished my tool into a usable web app to promote my book.
 
 {{<img src="popularity-contest.webp" has-border="true" max-width="800px" caption="A tool I created to promote the book">}}
 
@@ -147,7 +151,7 @@ I checked out how Kickstarter was doing: virtually no change.
 
 {{<img src="first-frontpage-kickstarter.webp" has-border="true">}}
 
-There were only four sales for a total of $100 on the front page day and the day after. The graph was indistinguishable from days I wasn't on the front page at all.
+Between the day the tool was on Hacker News and the next day when John Gruber blogged about my tool, there were only four sales for a total of $100. The pre-orders were indistinguishable from days I wasn't on the front page at all.
 
 So, that was yet another bad sign.
 
@@ -163,7 +167,7 @@ I had one last hope: [a sample chapter about blogging](https://refactoringenglis
 
 The problem with writing about blogging is that there's so much low-quality, spammy advice that readers are skeptical, and a lot of the communities where you'd want to share your article have strict rules against self-promotion.
 
-That's why I wasn't surprised when I [posted the chapter to reddit](https://www.reddit.com/r/programming/comments/1jl3wgw/how_to_write_blog_posts_that_developers_read/), and it was downvoted to zero, and the [top comment](https://www.reddit.com/r/programming/comments/1jl3wgw/how_to_write_blog_posts_that_developers_read/mk0elxt/) was someone complaining about the topic itself:
+That's why I was unsurprised when I [posted the chapter to reddit](https://www.reddit.com/r/programming/comments/1jl3wgw/how_to_write_blog_posts_that_developers_read/), and users downvoted it to zero. The [top comment](https://www.reddit.com/r/programming/comments/1jl3wgw/how_to_write_blog_posts_that_developers_read/mk0elxt/) was someone complaining about the topic itself:
 
 {{<img src="top-reddit-comment.webp" has-border="true">}}
 
@@ -179,15 +183,21 @@ And then I looked on the front page, and my post was there! Another user had pos
 
 {{<img src="hn-11th-slot.webp" has-border="true" max-width="700px">}}
 
-And this time, readers were interested in the book. There were $1,000 new pre-orders on Kickstarter within just a few hours. The chapter continued getting positive reactions on Hacker News, eventually reaching 581 upvotes and 154 comments:
+And this time, readers were interested in the book. Within a few hours, there were $1,000 in new pre-orders. The chapter continued getting positive reactions on Hacker News, eventually reaching 581 upvotes and 154 comments:
 
 {{<img src="final-hn-score.webp" has-border="true">}}
 
 When I went to bed that night, the Kickstarter was less than $300 from its $5k goal with three days left.
 
-That night, I reached my goal, and people continued pre-ordering:
+When I woke up Saturday morning, I had reached my goal, and people continued pre-ordering.
 
-{{<img src="hn-recovery.webp" has-border="true">}}
+{{<img src="hn-recovery.webp" has-border="true" max-width="650px">}}
+
+The pre-sale ended with $6,551 in sales from 191 customers.
+
+{{<img src="final-total.webp" has-border="true" max-width="550px">}}
+
+{{<img src="final-graph.webp" has-border="true">}}
 
 ## I get to write my book!
 
