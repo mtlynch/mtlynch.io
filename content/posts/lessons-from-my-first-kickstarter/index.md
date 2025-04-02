@@ -30,6 +30,8 @@ So, given that I might do a second edition with a publisher, I didn't want to co
 
 ### Self-ads
 
+The pledge meter was maybe helpful. I was just manually updating it.
+
 ## What I wish I'd done differently
 
 ### Collected better data about what led customers to order
@@ -57,3 +59,5 @@ Just be aware of this when you start a Kickstarter. Even though my email isn't i
 Fortunately, there's a big surge in spam for the first week of the campaign, and then nothing more after that.
 
 ### Kickstarter reward tiers are confusing
+
+Description and delivery date are properties of the tier, which doesn't make sense
