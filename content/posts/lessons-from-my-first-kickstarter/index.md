@@ -32,6 +32,16 @@ So, given that I might do a second edition with a publisher, I didn't want to co
 
 The pledge meter was maybe helpful. I was just manually updating it.
 
+### Start early
+
+### Look at other non-fiction book projects
+
+https://www.kickstarter.com/projects/robwalling/the-saas-playbook-by-rob-walling
+
+### Don't overinvest in a slick presentation
+
+You can spend infinite time polishing a presentation and making an amazing video. If you're good at that, that's a good edge, but I just wanted to see if anyone was interested in my book, so I didn't want to spend weeks and weeks making a jaw-dropping Kickstarter page only to find out that nobody was interested in the book to begin with.
+
 ## What I wish I'd done differently
 
 ### Collected better data about what led customers to order
