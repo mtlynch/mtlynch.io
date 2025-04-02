@@ -82,8 +82,7 @@ I worked at a security
 
 ### Getting more of the fusion RSS reader under test
 
-- Before: [v.0.8.9](https://github.com/0x2E/fusion/tree/v0.8.9/service/pull)
-- After: [v0.9.3](https://github.com/0x2E/fusion/tree/v0.9.3/service/pull)
+- The `pull` package [before (v.0.8.9)](https://github.com/0x2E/fusion/tree/v0.8.9/service/pull) vs. [after (v0.9.3)](https://github.com/0x2E/fusion/tree/v0.9.3/service/pull)
 
 Translate it into your own struct as quickly as possible. You didn't define
 
