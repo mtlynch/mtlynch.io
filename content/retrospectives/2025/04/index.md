@@ -61,24 +61,38 @@ Julia doesn't disclose her revenue publicly anymore, but she was making [about $
 
 March was an interesting blogging challenge because the primary way I was trying to find customers for my book was by writing successful blog posts. That's unusual for me, as I'm usually not writing to a deadline or choosing topics for maximum readers.
 
+I have a long list of topic ideas and half-written posts, so I evaluated them on these dimensions:
+
 - Ease: How easy would it take me to write a post that feels complete?
 - Potential audience: If this post succeeds, how large is the potential audience that would enjoy it?
 - Probability of success: How likely is this post to reach its intended audience?
 - Overlap with book: If a reader discovers this post, how likely are they to be interested in my book?
 
-I had a few posts in mind:
+I didn't sit down and formally score my ideas, but the rough mental calculation looked kind of like this:
 
 | Title                                                                                                                     | Ease | Potential audience | Probability of Success | Overlap with book |
 | ------------------------------------------------------------------------------------------------------------------------- | ---- | ------------------ | ---------------------- | ----------------- |
 | [No Longer My Favorite Git Commit](https://mtlynch.io/no-longer-my-favorite-git-commit/)                                  | 4    | 5                  | 4                      | 4                 |
 | [How to Write Useful Commit Messages](https://refactoringenglish.com/chapters/commit-messages/)                           | 2    | 5                  | 3                      | 4                 |
-| [How to Write Blog Posts that Developers Read](https://refactoringenglish.com/chapters/write-blog-posts-developers-read/) | 1    | 5                  | 2                      | 5                 |
+| [How to Write Blog Posts that Developers Read](https://refactoringenglish.com/chapters/write-blog-posts-developers-read/) | 2    | 4                  | 2                      | 5                 |
 | How to Maintain an Open-Source Project and Remain Happy                                                                   | 3    | 3                  | 4                      | 2                 |
 | Fine Tuning Your Writing: Using Strong Verbs                                                                              | 5    | 1                  | 1                      | 5                 |
 | Three Months Using NixOS after 35 Years on Windows                                                                        | 3    | 2                  | 5                      | 1                 |
 | Use Zig to Build C Applications                                                                                           | 3    | 3                  | 4                      | 1                 |
 
-One of the unusual posts I did this month was, "No Longer My Favorite Git Commit." I've never written a rebuttal to a blog post before,
+I ended up picking those top three, but they didn't perform as expected:
+
+| Title                                                                                                                     | Impact on Sales | Total Readers | Hacker News | reddit |
+| ------------------------------------------------------------------------------------------------------------------------- | --------------- | ------------- | ----------- | ------ |
+| [How to Write Blog Posts that Developers Read](https://refactoringenglish.com/chapters/write-blog-posts-developers-read/) | High            | 22.3k         | 9.7k        | 325    |
+| [How to Write Useful Commit Messages](https://refactoringenglish.com/chapters/commit-messages/)                           | Medium          | 2.6k          | 126         | 1.2k   |
+| [No Longer My Favorite Git Commit](https://mtlynch.io/no-longer-my-favorite-git-commit/)                                  | Low             | 31.6k\*       | 87          | 6.4k   |
+
+\* I don't quite trust this number. Plausible reports 15k visitors from Google search, but Google Search Console says only 759 clicks.
+
+"No Longer My Favorite Git Commit" was my best post idea because I knew I could write it quickly, and I thought there was a large potential audience since the original was so popular.
+
+I've never written a rebuttal to a blog post before,
 
 I felt like I was attacking David Thompson for writing this benign blog post. Or worse, attacking this random developer who wrote the code over a decade ago.
 
@@ -145,7 +159,8 @@ The site does still have some occasional posters, so I don't want to take it awa
 
 ### Goals for next month
 
--
+- Write a blog post about lessons from Kickstarter
+- Complete a book chapter on choosing blog post topics
 
 ### Requests for help
 
