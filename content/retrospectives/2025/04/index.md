@@ -53,9 +53,30 @@ With the complexity of a hardware business, I was almost always limited in hours
 
 My hypothesis is that I can make blogging sustainable by creating educational products. If I write about something I'm doing, and I have a book that goes into more depth, there's a way for readers to get more information while also funding time I spend writing.
 
-The best example of a blogger who earns money with related content is [Julia Evans](https://jvns.ca), who maintains a public blog but also sells digital zines. She doesn't disclose her revenue publicly anymore, but she was making [about $100k/yr from zines as of 2019](https://jvns.ca/blog/2019/10/01/zine-revenue-2019/). That's revenue, not profit, but I'd expect the margins were around 90-95% since the zines were digital, so she just had to pay fees to payment processors and content platforms like Gumroad. And that was before [she started working on her blog full-time](https://jvns.ca/blog/2019/09/13/a-year-explaining-computer-things/).
+The best example of a blogger who earns money with related content is [Julia Evans](https://jvns.ca), who maintains a software blog and monetizes her work by selling illustrated zines.
+
+Julia doesn't disclose her revenue publicly anymore, but she was making [about $100k/yr from zines as of 2019](https://jvns.ca/blog/2019/10/01/zine-revenue-2019/), which strongly suggests this is viable. That $100k/yr was before [she started working on her blog full-time](https://jvns.ca/blog/2019/09/13/a-year-explaining-computer-things/). Granted, it was revenue, not profit, but I'd expect the margins were around 90-95% since the zines were digital, so she just had to pay fees to payment processors and content platforms like Gumroad.
 
 ## Blogging like my livelihood depends on it
+
+March was an interesting blogging challenge because the primary way I was trying to find customers for my book was by writing successful blog posts. That's unusual for me, as I'm usually not writing to a deadline or choosing topics for maximum readers.
+
+- Ease: How easy would it take me to write a post that feels complete?
+- Potential audience: If this post succeeds, how large is the potential audience that would enjoy it?
+- Probability of success: How likely is this post to reach its intended audience?
+- Overlap with book: If a reader discovers this post, how likely are they to be interested in my book?
+
+I had a few posts in mind:
+
+| Title                                                                                                                     | Ease | Potential audience | Probability of Success | Overlap with book |
+| ------------------------------------------------------------------------------------------------------------------------- | ---- | ------------------ | ---------------------- | ----------------- |
+| [No Longer My Favorite Git Commit](https://mtlynch.io/no-longer-my-favorite-git-commit/)                                  | 4    | 5                  | 4                      | 4                 |
+| [How to Write Useful Commit Messages](https://refactoringenglish.com/chapters/commit-messages/)                           | 2    | 5                  | 3                      | 4                 |
+| [How to Write Blog Posts that Developers Read](https://refactoringenglish.com/chapters/write-blog-posts-developers-read/) | 1    | 5                  | 2                      | 5                 |
+| How to Maintain an Open-Source Project and Remain Happy                                                                   | 3    | 3                  | 4                      | 2                 |
+| Fine Tuning Your Writing: Using Strong Verbs                                                                              | 5    | 1                  | 1                      | 5                 |
+| Three Months Using NixOS after 35 Years on Windows                                                                        | 3    | 2                  | 5                      | 1                 |
+| Use Zig to Build C Applications                                                                                           | 3    | 3                  | 4                      | 1                 |
 
 One of the unusual posts I did this month was, "No Longer My Favorite Git Commit." I've never written a rebuttal to a blog post before,
 
@@ -129,3 +150,5 @@ The site does still have some occasional posters, so I don't want to take it awa
 ### Requests for help
 
 TODO
+
+<script src="script.js"></script>
