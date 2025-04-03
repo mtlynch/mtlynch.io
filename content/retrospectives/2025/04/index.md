@@ -1,12 +1,12 @@
 ---
 title: "Educational Products: Month 6"
 date: "2025-04-09"
-description: TODO - One-line summary
+description: I'm officially writing a book!
 ---
 
 ## Highlights
 
--
+- My book's pre-sale succeeded.
 
 ## Goal grades
 
@@ -43,40 +43,50 @@ For most of the month, it seemed doomed. It was on track to fall short of my $5k
 
 I didn't go into it in the story, but my posts consistently received good feedback on lobsters.
 
-## Blogging like my livelihood depended on it
+## Testing the Julia Evans business model
 
 The thing that's exciting about _Refactoring English_'s presale is that it's a glimmer of hope that I could earn a living by blogging.
 
-When I was running TinyPilot, blogging was definitely helpful at first for finding my first 100 or so customers, but it eventually felt like my personal blog wasn't impacting sales for TinyPilot. And that makes sense because just because you enjoy reading about behind the scenes of my company or my software experiments, it doesn't necessarily mean you want to buy a $400 KVM over IP device.
+When I was running TinyPilot, blogging helped me find my first 100 customers, but it eventually felt like my personal blog wasn't helping sales at all. And that makes sense because people who are interested in behind the scenes details of an indie company are not necessarily interested in buying a $400 KVM over IP device.
 
-With the complexity of a hardware business, I was almost always limited in hours, so it was hard to dedicate most of my day's "deep thinking" hours to my personal blog when I could have been doing other things to help the business directly.
+With the complexity of a hardware business, I was almost always limited in hours, so it was hard to dedicate most of my day's "deep thinking" hours to my personal blog when I could have been doing other things to help the business directly. Ever since, I've been looking for a busines that aligns with blogging so that I feel like my writing isn't competing with time I could be spending on the business.
 
-My hypothesis now is that if I create educational products, I can make blogging sustainable. If I write about something I'm doing, and I have a book that goes into more depth, there's a way for readers to get more information while also funding time I spend writing.
+My hypothesis is that I can make blogging sustainable by creating educational products. If I write about something I'm doing, and I have a book that goes into more depth, there's a way for readers to get more information while also funding time I spend writing.
 
-The best example of a blogger who earns money with related content is Julia Evans, who maintains a public blog but also sells digital zines. She doesn't disclose her revenue publicly anymore, but she was making [about $100k/yr from zines as of 2019](https://jvns.ca/blog/2019/10/01/zine-revenue-2019/). That's revenue, not profit, but I'd expect the margins were around 90-95% since the zines were digital, so she just had to pay fees to payment processors and content platforms like Gumroad. And that was before [she started working on her blog full-time](https://jvns.ca/blog/2019/09/13/a-year-explaining-computer-things/).
+The best example of a blogger who earns money with related content is [Julia Evans](https://jvns.ca), who maintains a public blog but also sells digital zines. She doesn't disclose her revenue publicly anymore, but she was making [about $100k/yr from zines as of 2019](https://jvns.ca/blog/2019/10/01/zine-revenue-2019/). That's revenue, not profit, but I'd expect the margins were around 90-95% since the zines were digital, so she just had to pay fees to payment processors and content platforms like Gumroad. And that was before [she started working on her blog full-time](https://jvns.ca/blog/2019/09/13/a-year-explaining-computer-things/).
 
 One of the unusual posts I did this month was, "No Longer My Favorite Git Commit." I've never written a rebuttal to a blog post before,
 
 I felt like I was attacking David Thompson for writing this benign blog post. Or worse, attacking this random developer who wrote the code over a decade ago.
 
-## Fine, I guess I'll just re-learn LaTeX
+## Picking a markup language for the book
 
-So far, I've been writing my book using Markdown with Hugo. I haven't started on the official PDF version yet, so I've just been writing I've been punting on the decision to pick a book publishing technology
+So far, I've been writing my book using Markdown with Hugo. I haven't started on the official PDF version yet, so I've just been writing I've been punting on the decision to pick a book publishing technology.
 
-- [AsciiDoc](https://asciidoc.org/)
-- [mdBook](https://rust-lang.github.io/mdBook/)
-- [Pollen](https://docs.racket-lang.org/pollen/index.html) - I like the idea, but I'd have to learn Pollen, which means learning Racket, which means learning Lisp, so it's a lot.
-- Typst
+Now that the book is officially happening, I need to pick a method for writing it. The features I'm interested in are:
 
-Surprisingly, there's no book authoring option that can output a PDF, an ePub, and a website from the same source markup. Most of the options can't even do two out of the three without something super hacky like outputting in one format and then using third-party tools to convert from one to the other (e.g., create HTML, then use a headless browser to convert HTML to PDF).
+- Can the tool natively output PDF?
+- Can the tool natively output epub?
+- Can the tool natively output HTML?
+- How mature is the tool? How likely am I to hit new bugs or dead ends trying to achieve simple things?
+- Which DRM-free technical traditional publishers support this format?
+  - I'm going to self-publish the first edition, but it would be nice to have the option to work with a traditional publisher on a print version for a second edition.
+
+| Tool                                                     | PDF | epub | HTML | Maturity  | Publisher Support |
+| -------------------------------------------------------- | --- | ---- | ---- | --------- | ----------------- |
+| [AsciiDoc](https://asciidoc.org/)                        | ✅  | ✅   | ✅   | High      | Manning           |
+| [LaTeX](https://www.latex-project.org/)                  | ✅  | ❌   | ❌   | Very high | No Starch         |
+| [Pollen](https://docs.racket-lang.org/pollen/index.html) | ❌  | ❌   | ✅   | Medium    | None              |
+| [Typst](https://typst.app/)                              | ✅  | ❌   | ❌   | Low       | None              |
+| [mdBook](https://rust-lang.github.io/mdBook/)            | ❌  | ❌   | ✅   | Low       | None              |
+
+It looks like the winner is either AsciiDoc or LaTeX.
+
+AsciiDoc has the downside of being a Ruby tool, and I find the Ruby ecosystem hard to work with. The tool's been around for so long and I don't need anything especially complicated in my book, so I hope it will be fine.
+
+There are third-party tools to convert from AsciiDoc to LaTeX. It's probably not fun, but if I do a one-time conversion because No Starch says they want to publish my book, that probably won't be too bad.
 
 I spent a few hours with Typst. I like that it's open-source, and it's simpler than LaTeX, but it's not enough of an improvement to justify using a newer, less-mature tool. Also, it seems optimized for writing research papers and not as much for writing books.
-
-The other consideration is that publishers can work with LaTeX. My blue-sky path for this book is to self-publish a first edition and then work with a traditional tech publisher like No Starch to do a printed version. I know No Starch can accept books in LaTeX.
-
-One thing I'll also try is to see if I can use something like [lunamark](https://github.com/jgm/lunamark) to convert from Markdown to LaTeX, and then maybe I can just keep using Hugo for the web / ePub version and LaTeX for the PDF.
-
-I worked at a security
 
 ## Side projects
 
