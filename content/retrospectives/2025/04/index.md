@@ -55,6 +55,8 @@ My hypothesis is that I can make blogging sustainable by creating educational pr
 
 The best example of a blogger who earns money with related content is [Julia Evans](https://jvns.ca), who maintains a public blog but also sells digital zines. She doesn't disclose her revenue publicly anymore, but she was making [about $100k/yr from zines as of 2019](https://jvns.ca/blog/2019/10/01/zine-revenue-2019/). That's revenue, not profit, but I'd expect the margins were around 90-95% since the zines were digital, so she just had to pay fees to payment processors and content platforms like Gumroad. And that was before [she started working on her blog full-time](https://jvns.ca/blog/2019/09/13/a-year-explaining-computer-things/).
 
+## Blogging like my livelihood depends on it
+
 One of the unusual posts I did this month was, "No Longer My Favorite Git Commit." I've never written a rebuttal to a blog post before,
 
 I felt like I was attacking David Thompson for writing this benign blog post. Or worse, attacking this random developer who wrote the code over a decade ago.
