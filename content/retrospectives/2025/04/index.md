@@ -43,7 +43,7 @@ For most of the month, it seemed doomed. It was on track to fall short of my $5k
 
 I didn't go into it in the story, but my posts consistently received good feedback on lobsters.
 
-## Testing the Julia Evans business model
+## Can I make the Julia Evans business model work for me?
 
 The thing that's exciting about _Refactoring English_'s presale is that it's a glimmer of hope that I could earn a living by blogging.
 
@@ -86,9 +86,11 @@ I ended up picking those top three, but they didn't perform as expected:
 | ------------------------------------------------------------------------------------------------------------------------- | --------------- | ------------- | ----------- | ------ |
 | [How to Write Blog Posts that Developers Read](https://refactoringenglish.com/chapters/write-blog-posts-developers-read/) | High            | 22.3k         | 9.7k        | 325    |
 | [How to Write Useful Commit Messages](https://refactoringenglish.com/chapters/commit-messages/)                           | Medium          | 2.6k          | 126         | 1.2k   |
-| [No Longer My Favorite Git Commit](https://mtlynch.io/no-longer-my-favorite-git-commit/)                                  | Low             | 31.6k\*       | 87          | 6.4k   |
+| [No Longer My Favorite Git Commit](https://mtlynch.io/no-longer-my-favorite-git-commit/)                                  | Low             | 16.5k         | 87          | 6.4k   |
 
-\* I don't quite trust this number. Plausible reports 15k visitors from Google search, but Google Search Console says only 759 clicks.
+"How to Write Blog Posts that Developers Read" was a surprise win.
+
+"How to Write Useful Commit Messages" was okay.
 
 "No Longer My Favorite Git Commit" was my best post idea because I knew I could write it quickly, and I thought there was a large potential audience since the original was so popular.
 
@@ -130,6 +132,9 @@ I spent a few hours with Typst. I like that it's open-source, and it's simpler t
 ### Getting more of the fusion RSS reader under test
 
 - The `pull` package [before (v.0.8.9)](https://github.com/0x2E/fusion/tree/v0.8.9/service/pull) vs. [after (v0.9.3)](https://github.com/0x2E/fusion/tree/v0.9.3/service/pull)
+
+- I moved [HTTP logic to its own file](https://github.com/0x2E/fusion/blob/v0.9.3/service/pull/client/client.go)
+- I moved [RSS parsing to its own file](https://github.com/0x2E/fusion/blob/v0.9.3/service/pull/client/parse.go)
 
 Translate it into your own struct as quickly as possible. You didn't define
 
