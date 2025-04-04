@@ -58,6 +58,10 @@ But even when the one company offered to sponsor for $1k, I didn't feel great ab
 
 One thing I screwed up in creating the rewards was that I didn't include the book itself in the $75 personal sponsor. So a few people purchased the $75 tier and then were surprised to realize it technically doesn't include the book itself. And once someone has purchased a reward, I can't edit it, even to add items. So, my workaround was just to tell people
 
+### Enabled late pledges
+
+Apparently they were enabled for my project but not per-item. And then you can't flip them on after without talking to support, but it meant losing momentum.
+
 ## Other notes
 
 ### Kickstarter projects attract spam
