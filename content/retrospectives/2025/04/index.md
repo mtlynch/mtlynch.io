@@ -108,7 +108,13 @@ There's a technique called "engineering as marketing" that's popular with engine
 
 I've had an idea to build a Hacker News blog ranking for a long time because I always wondered how my blog did relative to other bloggers that were popular on Hacker News. I created a basic prototype last summer because I was planning to use it as marketing for the reboot of my [_Hit the Front Page of Hacker News_ course](https://hitthefrontpage.com).
 
-When March rolled around and I was trying to think of ways to get people to notice _Refactoring English_, I realized I still had this blog ranking tool almost ready to go.
+I decided to shelve the course and focus on _Refactoring English_ instead, so I didn't know what to do with the blog ranking tool I created. When March rolled around and I was desperate to make the pre-sale succeed, I realized I could invest a day or two of work into getting the tool ready to publish.
+
+One of the unexpected reactions of the tool was how many people in the top 100 cared about their rank. I'd assumed that if you were one of most popular personal bloggers on Hacker News, you're famous enough that Hacker News isn't that big a deal to you, but a lot of people in the top 100 commented on it either publicly or privately to me in DMs/emails.
+
+A lot of the top bloggers seemed especially interested in how their rank changed over time, most notably John Gruber, who felt my tool supported his theory that Hacker News [had applied manual penalties to his site](https://daringfireball.net/2025/03/the_website_hacker_news_is_afraid_to_discuss) in recent years.
+
+Based on that reaction, I added functionality to view more detailed stats for individual blogs.
 
 ## Picking a markup language for the book
 
