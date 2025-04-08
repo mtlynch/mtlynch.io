@@ -133,7 +133,7 @@ The options seem to be:
 
 | Tool                                                     | PDF | epub | HTML | Maturity  | Publisher Support                        |
 | -------------------------------------------------------- | --- | ---- | ---- | --------- | ---------------------------------------- |
-| [AsciiDoc](https://asciidoc.org/)                        | ✅  | ✅   | ✅   | High      | [Manning](https://www.manning.com/)      |
+| [AsciiDoc](https://asciidoc.org/)                        | ✅  | ✅   | ✅   | High      | None                                     |
 | [LaTeX](https://www.latex-project.org/)                  | ✅  | ❌   | ❌   | Very high | [No Starch Press](https://nostarch.com/) |
 | [Pollen](https://docs.racket-lang.org/pollen/index.html) | ❌  | ❌   | ✅   | Low       | None                                     |
 | [Typst](https://typst.app/)                              | ✅  | ❌   | ❌   | Low       | None                                     |
