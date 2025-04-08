@@ -104,7 +104,11 @@ I felt like I was attacking David Thompson for writing this benign blog post. Or
 
 ## Hacker News Popularity Contest
 
-There's a technique called "engineering as marketing" that's popular with engineers who are bad at marketing. The idea is that if you want people to check out your paid product, you you create free tools that lead them to your actual product.
+There's a technique called "engineering as marketing" that's popular with engineers who are bad at marketing. The idea is that if you want people to check out your paid product, you create a free tool that leads potential customers to your actual product.
+
+I've had an idea to build a Hacker News blog ranking for a long time because I always wondered how my blog did relative to other bloggers that were popular on Hacker News. I created a basic prototype last summer because I was planning to use it as marketing for the reboot of my [_Hit the Front Page of Hacker News_ course](https://hitthefrontpage.com).
+
+When March rolled around and I was trying to think of ways to get people to notice _Refactoring English_, I realized I still had this blog ranking tool almost ready to go.
 
 ## Picking a markup language for the book
 
