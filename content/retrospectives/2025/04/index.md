@@ -35,13 +35,15 @@ TODO
 
 ## My book's pre-sale succeeded
 
-I wrote a longer account of it earlier this week, but my book's pre-sale succeeded.
+For most of the month, it seemed doomed. It was on track to fall short of my $5k goal by about $1.5k, but then one of my blog posts got attention on Hacker News just before the pre-sale ended.
+
+In the end, the Kickstarter raised $6,551, exceeding its $5k goal.
+
+I wrote a longer account of it last week:
 
 - [My Book's Pre-Sale Just Barely Succeeded](/book-pre-sale-just-barely-succeeded/)
 
-For most of the month, it seemed doomed. It was on track to fall short of my $5k goal by about $1.5k, but then I
-
-I didn't go into it in the story, but my posts consistently received good feedback on lobsters.
+I plan to write a dedicated post about Kickstarter, but I had a great experience with it. It turned out to be a good way to measure interest in this book. And the $6.5k in pre-orders is higher than I'd expect to get as an advance if I published the book with a traditional publisher.
 
 ## Can I make the Julia Evans business model work for me?
 
@@ -57,7 +59,7 @@ The best example of a blogger who earns money with related content is [Julia Eva
 
 Julia doesn't disclose her revenue publicly anymore, but she was making [about $100k/yr from zines as of 2019](https://jvns.ca/blog/2019/10/01/zine-revenue-2019/). That $100k/yr was before [she started working on her blog full-time](https://jvns.ca/blog/2019/09/13/a-year-explaining-computer-things/). Granted, it was revenue, not profit, but I'd expect the margins were around 90-95% since the zines were digital, so she just had to pay fees to payment processors and content platforms like Gumroad.
 
-So, $100k in revenue when it was still a side project is quite good. If I imagine that focusing on it full-time tripled Julia's sales, and I can be half as successful as she was, then that's $150k/yr from blogging and selling related products. It sounds challenging but achievable.
+So, $100k in revenue when it was still a side project is quite good. Let's imagine that Julia tripled her sales by working on her business full-time instead of after hours. If I can be half as successful as she was, then that's $150k/yr from blogging and selling related products. It sounds challenging but achievable.
 
 ## Blogging like my livelihood depends on it
 
@@ -65,10 +67,10 @@ March was an interesting blogging challenge because the primary way I was trying
 
 I have a long list of topic ideas and half-written posts, so I evaluated them on these dimensions:
 
-- Ease: How easy would it take me to write a post that feels complete?
-- Potential audience: If this post succeeds, how large is the potential audience that would enjoy it?
-- Probability of success: How likely is this post to reach its intended audience?
-- Overlap with book: If a reader discovers this post, how likely are they to be interested in my book?
+- **Ease**: How easy would it take me to write a post that feels complete?
+- **Potential audience**: If this post succeeds, how large is the potential audience that would enjoy it?
+- **Probability of success**: How likely is this post to reach its intended audience?
+- **Overlap with book**: If a reader discovers this post, how likely are they to be interested in my book?
 
 I didn't sit down and formally score my ideas, but the rough mental calculation looked kind of like this:
 
@@ -82,7 +84,7 @@ I didn't sit down and formally score my ideas, but the rough mental calculation 
 | Three Months Using NixOS after 35 Years on Windows                                                                        | 3    | 2                  | 5                      | 1                 |
 | Use Zig to Build C Applications                                                                                           | 3    | 3                  | 4                      | 1                 |
 
-I ended up picking those top three, but they didn't perform as expected:
+I ended up picking the top three from that list, but they didn't perform as expected:
 
 | Title                                                                                                                     | Impact on Sales | Total Readers | Hacker News | reddit |
 | ------------------------------------------------------------------------------------------------------------------------- | --------------- | ------------- | ----------- | ------ |
@@ -94,11 +96,15 @@ I ended up picking those top three, but they didn't perform as expected:
 
 "How to Write Useful Commit Messages" was okay.
 
-"No Longer My Favorite Git Commit" was my best post idea because I knew I could write it quickly, and I thought there was a large potential audience since the original was so popular.
+"No Longer My Favorite Git Commit" was my best post idea because I knew I could write it quickly, and I thought there was a large potential audience since the original was so popular. It did okay on reddit but flopped on Hacker News. I didn't realize until I sat down to write this post that [Google Discover](https://blog.google/products/search/introducing-google-discover/) (a thing I didn't even realize existed) featured my post, which brought in 15k readers.
 
 I've never written a rebuttal to a blog post before,
 
 I felt like I was attacking David Thompson for writing this benign blog post. Or worse, attacking this random developer who wrote the code over a decade ago.
+
+## Hacker News Popularity Contest
+
+There's a technique called "engineering as marketing" that's popular with engineers who are bad at marketing. The idea is that if you want people to check out your paid product, you you create free tools that lead them to your actual product.
 
 ## Picking a markup language for the book
 
@@ -145,9 +151,9 @@ The contribution I'm most proud of is refactoring the `pull` package and getting
 
 It started because I wanted to [add support for the `If-Modified-Since` HTTP header](https://github.com/0x2E/fusion/pull/113), but when I looked at [the code responsible for initiating HTTP requests](https://github.com/0x2E/fusion/blob/v0.8.9/service/pull/handle.go#L16-L78), it was difficult to modify. There were a few issues:
 
-- The code was mixing together lots of different responsibilities: reading the database, business logic decisions about when to query a feed, parsing external data, and writing results back to the database.
+- The code was mixing together lots of different responsibilities: reading the database, logic about when to query a feed, parsing external data, and writing results back to the database.
 - The code had no automated tests to exercise it.
-- The only way to exercise the code through tests would be to call `Puller.PullAll`, which is even more complicated because that function is both reading the database and managing a pool of workers.
+- If I wanted to write tests, the only exported function that exercised this code was [`Puller.PullAll`](https://github.com/0x2E/fusion/blob/v0.8.9/service/pull/pull.go#L55-L99), which adds even more complexity because that function also manages a pool of worker processes.
 
 The main changes I made were:
 
@@ -155,7 +161,7 @@ The main changes I made were:
 - I moved [RSS parsing to its own file](https://github.com/0x2E/fusion/blob/v0.9.3/service/pull/client/parse.go).
 - I split out the logic for [querying a single feed](https://github.com/0x2E/fusion/blob/v0.9.3/service/pull/singlefeed.go#L78-L90) out from the component that manages multiple workers, which simplifies testing the logic for a single feed.
 - I created [a simpler, clearer interface](https://github.com/0x2E/fusion/blob/v0.9.3/service/pull/singlefeed.go#L24-L28) for how this piece of code interacts with the database, which made it easier to mock out the database in tests.
-- I created [a dedicated function for deciding whether to update a feed](https://github.com/0x2E/fusion/blob/v0.9.3/service/pull/handle.go#L65-L80) rather than intermingle the with other parts of the update workflow.
+- I created [a dedicated function for deciding whether to update a feed](https://github.com/0x2E/fusion/blob/v0.9.3/service/pull/handle.go#L65-L80) rather than intermingle the decision with other parts of the update workflow.
 
 I'd like to tidy it up a bit further, but I'm pleased with the progress so far, and it's helped me fix several bugs and improve fusion's functionality.
 
@@ -173,15 +179,17 @@ It costs me nothing to keep the site running, and I've only had to spend about f
 
 At some point, I'll probably email recent users to announce sunsetting the project and let them export their data.
 
+## Interesting links
+
+- [Four years of running a SaaS in a competitive market](https://maxrozen.com/on-four-years-running-saas-competitive-market) - This is one of the best blog posts I've ever read about building a bootstrapped company. I [agree with](https://news.ycombinator.com/item?id=43581755) almost all the lessons Max shares. Everything rings true for me based on my experience as a bootstrapped founder.
+
 ## Wrap up
 
 ### What got done?
 
--
-
-### Lessons learned
-
--
+- Published ["No Longer My Favorite Git Commit"](https://mtlynch.io/no-longer-my-favorite-git-commit/)
+- Published ["How to Write Blog Posts that Developers Read"](https://refactoringenglish.com/chapters/write-blog-posts-developers-read/)
+- Released [Hacker News Popularity Contest](https://refactoringenglish.com/tools/hn-popularity/)
 
 ### Goals for next month
 
