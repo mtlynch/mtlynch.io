@@ -41,7 +41,7 @@ For most of the month, my book seemed doomed. The pre-sale was on track to fall 
 
 Four days before the pre-sale closed, one of my blog posts got attention on Hacker News and completely turned sales around.
 
-In the end, the Kickstarter raised $6,551, exceeding its $5k goal. It's now at $6,701 including late pre-orders.
+In the end, the Kickstarter raised $6,551, exceeding its $5k goal. It's now at $6,701, including late pre-orders.
 
 {{<img src="ks-total.webp" max-width="500px" has-border="true">}}
 
@@ -53,7 +53,7 @@ I plan to write a dedicated post about Kickstarter, but I had a great experience
 
 ## Can I make the Julia Evans business model work for me?
 
-The thing that's exciting about _Refactoring English_'s presale is that it's a glimmer of hope that I could earn a living by blogging.
+The thing that's exciting about _Refactoring English_'s pre-sale is that it's a glimmer of hope that I could earn a living by blogging.
 
 When I was running TinyPilot, blogging definitely helped me find my first few dozen customers. Eventually, it felt like my personal blog wasn't helping sales at all. And that makes sense because people who are interested in an indie founder's diaries are not necessarily interested in buying a $400 KVM over IP device.
 
@@ -120,7 +120,7 @@ When I shelved my course and focused on _Refactoring English_, I didn't know wha
 
 The tool successfully [reached the front page of Hacker News](https://news.ycombinator.com/item?id=43503872), but it didn't have any impact on book sales.
 
-One of the unexpected reactions was how many people in the top 100 cared about their rank. I assumed that if you were one of most popular personal bloggers on Hacker News, you're famous enough that Hacker News isn't a big deal to you, but a lot of people in the top 100 commented on it either publicly or privately to me in DMs/emails.
+One of the unexpected reactions was how many people in the top 100 cared about their rank. I assumed that if you were one of the most popular personal bloggers on Hacker News, you're famous enough that Hacker News isn't a big deal to you, but a lot of people in the top 100 commented on it either publicly or privately to me in DMs/emails.
 
 A lot of the top bloggers seemed especially interested in how their rank changed over time, most notably John Gruber, who felt my tool supported his theory that Hacker News [had applied manual penalties to his site](https://daringfireball.net/2025/03/the_website_hacker_news_is_afraid_to_discuss) in recent years.
 
@@ -155,7 +155,7 @@ It looks like the winner is either Asciidoctor or LaTeX.
 
 There are third-party tools to convert from AsciiDoc to LaTeX. It's probably not fun, but if _No Starch_ tells me they want to publish a second edition of my book, I can probably suck it up and do a one-time conversion.
 
-I spent a few hours with Typst. I like that it's open-source, and it's simpler than LaTeX, but it's not enough of an improvement to justify using a newer, less-mature tool. Also, it seems optimized for writing research papers and not as much for writing books.
+I spent a few hours with Typst. I like that it's open-source, and it's simpler than LaTeX, but it's not enough of an improvement to justify using a newer, less mature tool. Also, it seems optimized for writing research papers and not as much for writing books.
 
 ## Side projects
 
@@ -181,7 +181,7 @@ The main changes I made were:
 
 - I moved [HTTP logic to its own file](https://github.com/0x2E/fusion/blob/v0.9.3/service/pull/client/client.go).
 - I moved [RSS parsing to its own file](https://github.com/0x2E/fusion/blob/v0.9.3/service/pull/client/parse.go).
-- I split out the logic for [querying a single feed](https://github.com/0x2E/fusion/blob/v0.9.3/service/pull/singlefeed.go#L78-L90) out from the component that manages multiple workers, which simplifies testing the logic for a single feed.
+- I untangled the logic for [querying a single feed](https://github.com/0x2E/fusion/blob/v0.9.3/service/pull/singlefeed.go#L78-L90) from the component that manages multiple workers, which simplifies testing the logic for a single feed.
 - I created [a simpler, clearer interface](https://github.com/0x2E/fusion/blob/v0.9.3/service/pull/singlefeed.go#L24-L28) for how this piece of code interacts with the database, which made it easier to mock out the database in tests.
 - I created [a dedicated function for deciding whether to update a feed](https://github.com/0x2E/fusion/blob/v0.9.3/service/pull/handle.go#L65-L80) rather than intermingle the decision with other parts of the update workflow.
 
