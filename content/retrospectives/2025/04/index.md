@@ -6,7 +6,7 @@ description: I'm officially writing a book!
 
 ## Highlights
 
-- My book's pre-sale succeeded.
+- My book's pre-sale succeeded (just barely).
 
 ## Goal grades
 
@@ -110,11 +110,15 @@ I've had an idea to build a Hacker News blog ranking for a long time because I a
 
 I decided to shelve the course and focus on _Refactoring English_ instead, so I didn't know what to do with the blog ranking tool I created. When March rolled around and I was desperate to make the pre-sale succeed, I realized I could invest a day or two of work into getting the tool ready to publish.
 
+{{<img src="popularity-contest.webp" has-border="true" max-width="800px" caption="Popularity Contest is a tool I created to promote *Refactoring English*">}}
+
 One of the unexpected reactions of the tool was how many people in the top 100 cared about their rank. I'd assumed that if you were one of most popular personal bloggers on Hacker News, you're famous enough that Hacker News isn't that big a deal to you, but a lot of people in the top 100 commented on it either publicly or privately to me in DMs/emails.
 
 A lot of the top bloggers seemed especially interested in how their rank changed over time, most notably John Gruber, who felt my tool supported his theory that Hacker News [had applied manual penalties to his site](https://daringfireball.net/2025/03/the_website_hacker_news_is_afraid_to_discuss) in recent years.
 
-Based on that reaction, I added functionality to view more detailed stats for individual blogs.
+Based on that reaction, I added functionality to view more detailed stats for individual blogs, but I haven't seen much reaction to that feature yet.
+
+{{<img src="domain-view.webp" max-width="600px" has-border="true" caption="Top bloggers seemed interested in sharing their domain's stats, so I created per-blog views.">}}
 
 ## Picking a markup language for the book
 
@@ -197,18 +201,15 @@ At some point, I'll probably email recent users to announce sunsetting the proje
 
 ### What got done?
 
-- Published ["No Longer My Favorite Git Commit"](https://mtlynch.io/no-longer-my-favorite-git-commit/)
+- Published ["No Longer My Favorite Git Commit"](/no-longer-my-favorite-git-commit/)
 - Published ["How to Write Blog Posts that Developers Read"](https://refactoringenglish.com/chapters/write-blog-posts-developers-read/)
 - Released [Hacker News Popularity Contest](https://refactoringenglish.com/tools/hn-popularity/)
+- Published ["My Book's Pre-Sale Just Barely Succeeded"](/book-pre-sale-just-barely-succeeded/)
 
 ### Goals for next month
 
 - Write a blog post about lessons from Kickstarter.
 - Complete a new book chapter or teach a live session about a topic from the book.
 - Coordinate rewards with all the Kickstarter backers who opted for a public thanks or editorial help with a blog post.
-
-### Requests for help
-
-TODO
 
 <script src="script.js"></script>
