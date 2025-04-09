@@ -7,6 +7,8 @@ description: I'm officially writing a book!
 ## Highlights
 
 - My book's pre-sale succeeded (just barely).
+- Now, I need to pick a markup language for writing my book.
+- I wrote a bunch of blog posts, and I was bad at predicting their performance.
 
 ## Goal grades
 
@@ -92,33 +94,33 @@ I ended up picking the top three from that list, but they didn't perform as expe
 | [How to Write Useful Commit Messages](https://refactoringenglish.com/chapters/commit-messages/)                           | Medium          | 2.6k          | 126         | 1.2k   |
 | [No Longer My Favorite Git Commit](https://mtlynch.io/no-longer-my-favorite-git-commit/)                                  | Low             | 31.6k         | 87          | 6.4k   |
 
-"How to Write Blog Posts that Developers Read" was a surprise win.
+"No Longer My Favorite Git Commit" was my best post idea because I knew I could write it quickly, and I thought there was a large potential audience since the original was so popular. It did well [on Lobsters](https://lobste.rs/s/1hexlm/no_longer_my_favorite_git_commit), [okay on reddit](https://www.reddit.com/r/programming/comments/1jexuzb/no_longer_my_favorite_git_commit/), and flopped on Hacker News. I didn't realize until I sat down to write this post that [Google Discover](https://blog.google/products/search/introducing-google-discover/) (a thing I didn't even realize existed) featured my post, which brought in 15k readers.
 
-"How to Write Useful Commit Messages" was okay.
+That post was a bit unusual for me because I've never written a rebuttal to a blog post before. When I started the post, I was excited because I had strong opinions about [the original](https://dhwthompson.com/2019/my-favourite-git-commit). When I finished the first draft, I started having second thoughts. It felt like I was needlessly attacking another blogger for something they wrote six years ago. I adjusted the language to make it not come across like an attack, but it made me less likely to write rebuttals in the future.
 
-"No Longer My Favorite Git Commit" was my best post idea because I knew I could write it quickly, and I thought there was a large potential audience since the original was so popular. It did okay on reddit but flopped on Hacker News. I didn't realize until I sat down to write this post that [Google Discover](https://blog.google/products/search/introducing-google-discover/) (a thing I didn't even realize existed) featured my post, which brought in 15k readers.
+"How to Write Useful Commit Messages" was the post that was supposed to kick off the pre-sale. It did well [on Lobsters](https://lobste.rs/s/1hexlm/no_longer_my_favorite_git_commit) and [okay on reddit](https://www.reddit.com/r/programming/comments/1j5nvm5/how_to_write_useful_commit_messages/) but flopped on Hacker News. It's hard to tell how much of an impact it had on sales because I can't distinguish between who pre-ordered because of the post and who pre-ordered because I announced the pre-sale to the book's mailing list.
 
-I've never written a rebuttal to a blog post before,
-
-I felt like I was attacking David Thompson for writing this benign blog post. Or worse, attacking this random developer who wrote the code over a decade ago.
+"How to Write Blog Posts that Developers Read" was the surprise hit and what saved the pre-sale. It did [okay on Lobsters](https://lobste.rs/s/youq7y/how_write_blog_posts_developers_read) and [bombed on reddit](https://www.reddit.com/r/programming/comments/1jl3wgw/how_to_write_blog_posts_that_developers_read/). My first submission to Hacker News flopped, but then someone else resubmitted it the next morning, and it got [an amazing reception](https://news.ycombinator.com/item?id=43503872), ending at [#4 for the day](https://news.ycombinator.com/front?day=2025-03-28). Best of all, many of the people who found the post through Hacker News became customers through the pre-sale.
 
 ## Hacker News Popularity Contest
 
-There's a technique called "engineering as marketing" that's popular with engineers who are bad at marketing. The idea is that if you want people to check out your paid product, you create a free tool that leads potential customers to your actual product.
+"Engineering as marketing" is a marketing technique that's popular with engineers who are bad at marketing (e.g., me).
 
-I've had an idea to build a Hacker News blog ranking for a long time because I always wondered how my blog did relative to other bloggers that were popular on Hacker News. I created a basic prototype last summer because I was planning to use it as marketing for the reboot of my [_Hit the Front Page of Hacker News_ course](https://hitthefrontpage.com).
+The idea is that you create a free tool that's related to your paid product, and then hope that people are impressed enough with your free thing that they try out your paid thing.
 
-I decided to shelve the course and focus on _Refactoring English_ instead, so I didn't know what to do with the blog ranking tool I created. When March rolled around and I was desperate to make the pre-sale succeed, I realized I could invest a day or two of work into getting the tool ready to publish.
+I've had an idea to build a Hacker News blog ranking for a long time because I always wondered how my blog compared to other popular Hacker News bloggers. I created a basic prototype last summer because I was planning to use it as marketing for the reboot of my [_Hit the Front Page of Hacker News_ course](https://hitthefrontpage.com).
+
+When shelved my course and focused on _Refactoring English_ , I didn't know what to do with the blog ranking tool I created. When March rolled around, and I was desperate to make the pre-sale succeed, I realized I could invest a day or two of work into getting my prototype blog ranking tool ready to publish.
 
 {{<img src="popularity-contest.webp" has-border="true" max-width="800px" caption="Popularity Contest is a tool I created to promote *Refactoring English*">}}
 
-One of the unexpected reactions of the tool was how many people in the top 100 cared about their rank. I'd assumed that if you were one of most popular personal bloggers on Hacker News, you're famous enough that Hacker News isn't that big a deal to you, but a lot of people in the top 100 commented on it either publicly or privately to me in DMs/emails.
+One of the unexpected reactions was how many people in the top 100 cared about their rank. I assumed that if you were one of most popular personal bloggers on Hacker News, you're famous enough that Hacker News isn't that big a deal to you, but a lot of people in the top 100 commented on it either publicly or privately to me in DMs/emails.
 
 A lot of the top bloggers seemed especially interested in how their rank changed over time, most notably John Gruber, who felt my tool supported his theory that Hacker News [had applied manual penalties to his site](https://daringfireball.net/2025/03/the_website_hacker_news_is_afraid_to_discuss) in recent years.
 
-Based on that reaction, I added functionality to view more detailed stats for individual blogs, but I haven't seen much reaction to that feature yet.
+Based on that reaction, I added functionality to view more detailed stats for [individual blogs](https://refactoringenglish.com/tools/hn-popularity/domain/?d=mtlynch.io), but I haven't seen much reaction to that feature yet.
 
-{{<img src="domain-view.webp" max-width="600px" has-border="true" caption="Top bloggers seemed interested in sharing their domain's stats, so I created per-blog views.">}}
+{{<img src="domain-view.webp" max-width="600px" has-border="true" caption="Top bloggers seemed interested in sharing their domain's stats, so I created [per-blog views](https://refactoringenglish.com/tools/hn-popularity/domain/?d=mtlynch.io).">}}
 
 ## Picking a markup language for the book
 
@@ -135,7 +137,7 @@ Now that the book is officially happening, I need to pick a method for writing i
 
 The options seem to be:
 
-| Tool                                                     | PDF | epub | HTML | Maturity  | Publisher Support                        |
+| Language                                                 | PDF | epub | HTML | Maturity  | Publisher Support                        |
 | -------------------------------------------------------- | --- | ---- | ---- | --------- | ---------------------------------------- |
 | [AsciiDoc](https://asciidoc.org/)                        | ✅  | ✅   | ✅   | High      | None                                     |
 | [LaTeX](https://www.latex-project.org/)                  | ✅  | ❌   | ❌   | Very high | [No Starch Press](https://nostarch.com/) |
@@ -203,8 +205,8 @@ At some point, I'll probably email recent users to announce sunsetting the proje
 
 - Published ["No Longer My Favorite Git Commit"](/no-longer-my-favorite-git-commit/)
 - Published ["How to Write Blog Posts that Developers Read"](https://refactoringenglish.com/chapters/write-blog-posts-developers-read/)
-- Released [Hacker News Popularity Contest](https://refactoringenglish.com/tools/hn-popularity/)
 - Published ["My Book's Pre-Sale Just Barely Succeeded"](/book-pre-sale-just-barely-succeeded/)
+- Released [Hacker News Popularity Contest](https://refactoringenglish.com/tools/hn-popularity/) as a marketing tool for the book
 
 ### Goals for next month
 
