@@ -37,11 +37,15 @@ I feel good about this goal now that I managed to pull it off, but I was worried
 
 ## My book's pre-sale succeeded
 
-For most of the month, it seemed doomed. It was on track to fall short of my $5k goal by about $1.5k, but then one of my blog posts got attention on Hacker News just before the pre-sale ended.
+For most of the month, my book seemed doomed. The pre-sale was on track to fall short of the $5k goal by $1.5k.
 
-In the end, the Kickstarter raised $6,551, exceeding its $5k goal.
+Four days before the pre-sale closed, one of my blog posts got attention on Hacker News and completely turned sales around.
 
-I wrote a longer account of it last week:
+In the end, the Kickstarter raised $6,551, exceeding its $5k goal. It's now at $6,701 including late pre-orders.
+
+{{<img src="ks-total.webp" max-width="500px" has-border="true">}}
+
+I wrote a longer account of the pre-sale last week:
 
 - [My Book's Pre-Sale Just Barely Succeeded](/book-pre-sale-just-barely-succeeded/)
 
