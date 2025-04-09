@@ -7,8 +7,8 @@ description: I'm officially writing a book!
 ## Highlights
 
 - My book's pre-sale succeeded (just barely).
-- Now, I need to pick a markup language for writing my book.
 - I wrote a bunch of blog posts, and I was bad at predicting their performance.
+- Now, I need to pick a markup language for writing my book.
 
 ## Goal grades
 
@@ -19,7 +19,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: The Kickstarter reached $6,701 from 196 backers.
 - **Grade**: A+
 
-TODO
+The Kickstarter did better than I expected, making a last-minute comeback.
 
 ### Publish the blogging chapter of _Refactoring English_.
 
@@ -33,7 +33,7 @@ This did well [on Hacker News](https://news.ycombinator.com/item?id=43503872) an
 - **Result**: ["How to Write Blog Posts that Developers Read"](https://news.ycombinator.com/item?id=43503872) and [HN Popularity Contest](https://refactoringenglish.com/tools/hn-popularity/) both reached the front page.
 - **Grade**: A
 
-TODO
+I feel good about this goal now that I managed to pull it off, but I was worried for most of the month about how dumb I'd look if all five of my post ideas failed. Thankfully, two out of the five made it.
 
 ## My book's pre-sale succeeded
 
@@ -53,19 +53,19 @@ The thing that's exciting about _Refactoring English_'s presale is that it's a g
 
 When I was running TinyPilot, blogging definitely helped me find my first few dozen customers. Eventually, it felt like my personal blog wasn't helping sales at all. And that makes sense because people who are interested in behind the scenes diaries at an indie company are not necessarily interested in buying a $400 KVM over IP device.
 
-With the complexity of a hardware business, I was almost always limited in hours, so it was hard to dedicate most of my day's "deep thinking" hours to my personal blog when I could have been doing other things to help the business directly. Ever since, I've been trying to figure out what business I could run where blogging aligns well with the business' profitability.
+With the complexity of a hardware business, I was almost always limited in hours, so it was hard to dedicate most of my day's "deep thinking" hours to my personal blog. Ever since, I've been trying to figure out what business I could run where blogging aligns well with profitability for my business.
 
-My hypothesis is that I can make blogging sustainable by creating educational products. If I write about something I'm doing, and I have a book that goes into more depth, there's a way for readers to get more information while also funding time I spend writing.
+My hypothesis is that I can make blogging sustainable by creating educational products. If I write about something I'm doing, and I have a book or course that goes into more depth, readers can learn more and fund my work.
 
 The best example of a blogger who earns money with related content is [Julia Evans](https://jvns.ca). She maintains a software blog and monetizes her work by selling [illustrated zines](https://wizardzines.com/).
 
-Julia doesn't disclose her revenue publicly anymore, but she was making [about $100k/yr from zines as of 2019](https://jvns.ca/blog/2019/10/01/zine-revenue-2019/). That $100k/yr was before [she started working on her blog full-time](https://jvns.ca/blog/2019/09/13/a-year-explaining-computer-things/). Granted, it was revenue, not profit, but I'd expect the margins were around 90-95% since the zines were digital, so she just had to pay fees to payment processors and content platforms like Gumroad.
+Julia doesn't disclose her revenue publicly anymore, but she was making [~$100k/yr from zines as of 2019](https://jvns.ca/blog/2019/10/01/zine-revenue-2019/). That $100k/yr was before [she started working on her blog full-time](https://jvns.ca/blog/2019/09/13/a-year-explaining-computer-things/). Granted, it was revenue, not profit, but I'd expect the margins were around 90-95% since the zines were digital, so she just had to pay fees to payment processors and content platforms like Gumroad.
 
 So, $100k in revenue when it was still a side project is quite good. Let's imagine that Julia tripled her sales by working on her business full-time instead of after hours. If I can be half as successful as she was, then that's $150k/yr from blogging and selling related products. It sounds challenging but achievable.
 
 ## Blogging like my livelihood depends on it
 
-March was an interesting blogging challenge because the primary way I was trying to find customers for my book was by writing successful blog posts. That's unusual for me, as I'm usually not writing to a deadline or choosing topics for maximum readers.
+March was an interesting blogging challenge because I was trying to find customers for my book by writing successful blog posts. That's unusual for me, as I'm usually not writing to a deadline or choosing topics for maximum readers.
 
 I have a long list of topic ideas and half-written posts, so I evaluated them on these dimensions:
 
@@ -86,7 +86,7 @@ I didn't sit down and formally score my ideas, but the rough mental calculation 
 | Three Months Using NixOS after 35 Years on Windows                                                                        | 3    | 2                  | 5                      | 1                 |
 | Use Zig to Build C Applications                                                                                           | 3    | 3                  | 4                      | 1                 |
 
-I ended up picking the top three from that list, but they didn't perform as expected:
+I ended up picking the top three from that list, but they didn't perform as expected. Here were the results:
 
 | Title                                                                                                                     | Impact on Sales | Total Readers | Hacker News | reddit |
 | ------------------------------------------------------------------------------------------------------------------------- | --------------- | ------------- | ----------- | ------ |
@@ -94,13 +94,13 @@ I ended up picking the top three from that list, but they didn't perform as expe
 | [How to Write Useful Commit Messages](https://refactoringenglish.com/chapters/commit-messages/)                           | Medium          | 2.6k          | 126         | 1.2k   |
 | [No Longer My Favorite Git Commit](https://mtlynch.io/no-longer-my-favorite-git-commit/)                                  | Low             | 31.6k         | 87          | 6.4k   |
 
-"No Longer My Favorite Git Commit" was my best post idea because I knew I could write it quickly, and I thought there was a large potential audience since the original was so popular. It did well [on Lobsters](https://lobste.rs/s/1hexlm/no_longer_my_favorite_git_commit), [okay on reddit](https://www.reddit.com/r/programming/comments/1jexuzb/no_longer_my_favorite_git_commit/), and flopped on Hacker News. I didn't realize until I sat down to write this post that [Google Discover](https://blog.google/products/search/introducing-google-discover/) (a thing I didn't even realize existed) featured my post, which brought in 15k readers.
+"No Longer My Favorite Git Commit" felt like my strongest idea because I knew I could write it quickly, and I thought there was a large potential audience since the original was so popular. It did well [on Lobsters](https://lobste.rs/s/1hexlm/no_longer_my_favorite_git_commit), [okay on reddit](https://www.reddit.com/r/programming/comments/1jexuzb/no_longer_my_favorite_git_commit/), and flopped on Hacker News. I didn't realize until I sat down to write this post that [Google Discover](https://blog.google/products/search/introducing-google-discover/) (a thing I didn't even realize existed) featured my post, which brought in 15k readers.
 
 That post was a bit unusual for me because I've never written a rebuttal to a blog post before. When I started the post, I was excited because I had strong opinions about [the original](https://dhwthompson.com/2019/my-favourite-git-commit). When I finished the first draft, I started having second thoughts. It felt like I was needlessly attacking another blogger for something they wrote six years ago. I adjusted the language to make it not come across like an attack, but it made me less likely to write rebuttals in the future.
 
-"How to Write Useful Commit Messages" was the post that was supposed to kick off the pre-sale. It did well [on Lobsters](https://lobste.rs/s/1hexlm/no_longer_my_favorite_git_commit) and [okay on reddit](https://www.reddit.com/r/programming/comments/1j5nvm5/how_to_write_useful_commit_messages/) but flopped on Hacker News. It's hard to tell how much of an impact it had on sales because I can't distinguish between who pre-ordered because of the post and who pre-ordered because I announced the pre-sale to the book's mailing list.
+"How to Write Useful Commit Messages" was the post that was supposed to kick off the pre-sale. It did well [on Lobsters](https://lobste.rs/s/1hexlm/no_longer_my_favorite_git_commit) and [okay on reddit](https://www.reddit.com/r/programming/comments/1j5nvm5/how_to_write_useful_commit_messages/) but flopped on Hacker News. It's hard to tell how much of an impact it had on sales because I can't distinguish between readers who pre-ordered because of the post and those who pre-ordered because I announced the pre-sale to the book's mailing list.
 
-"How to Write Blog Posts that Developers Read" was the surprise hit and what saved the pre-sale. It did [okay on Lobsters](https://lobste.rs/s/youq7y/how_write_blog_posts_developers_read) and [bombed on reddit](https://www.reddit.com/r/programming/comments/1jl3wgw/how_to_write_blog_posts_that_developers_read/). My first submission to Hacker News flopped, but then someone else resubmitted it the next morning, and it got [an amazing reception](https://news.ycombinator.com/item?id=43503872), ending at [#4 for the day](https://news.ycombinator.com/front?day=2025-03-28). Best of all, many of the people who found the post through Hacker News became customers through the pre-sale.
+"How to Write Blog Posts that Developers Read" was the surprise hit that saved the pre-sale. It did [okay on Lobsters](https://lobste.rs/s/youq7y/how_write_blog_posts_developers_read) and [bombed on reddit](https://www.reddit.com/r/programming/comments/1jl3wgw/how_to_write_blog_posts_that_developers_read/). My first submission to Hacker News flopped, but then someone else resubmitted it the next morning, and it got [an amazing reception](https://news.ycombinator.com/item?id=43503872), ending at [#4 for the day](https://news.ycombinator.com/front?day=2025-03-28). Best of all, many of the people who found the post through Hacker News became customers through the pre-sale.
 
 ## Hacker News Popularity Contest
 
@@ -113,6 +113,8 @@ I've had an idea to build a Hacker News blog ranking for a long time because I a
 When shelved my course and focused on _Refactoring English_ , I didn't know what to do with the blog ranking tool I created. When March rolled around, and I was desperate to make the pre-sale succeed, I realized I could invest a day or two of work into getting my prototype blog ranking tool ready to publish.
 
 {{<img src="popularity-contest.webp" has-border="true" max-width="800px" caption="Popularity Contest is a tool I created to promote *Refactoring English*">}}
+
+The tool successfully [reached the front page of Hacker News](https://news.ycombinator.com/item?id=43503872), but it didn't have any impact on book sales.
 
 One of the unexpected reactions was how many people in the top 100 cared about their rank. I assumed that if you were one of most popular personal bloggers on Hacker News, you're famous enough that Hacker News isn't that big a deal to you, but a lot of people in the top 100 commented on it either publicly or privately to me in DMs/emails.
 
@@ -213,5 +215,9 @@ At some point, I'll probably email recent users to announce sunsetting the proje
 - Write a blog post about lessons from Kickstarter.
 - Complete a new book chapter or teach a live session about a topic from the book.
 - Coordinate rewards with all the Kickstarter backers who opted for a public thanks or editorial help with a blog post.
+
+### Requests for help
+
+If you have experience self-publishing a book in a markup language (i.e., not Word or Google Docs), tell me about your experience.
 
 <script src="script.js"></script>
