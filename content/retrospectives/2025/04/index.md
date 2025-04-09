@@ -49,13 +49,13 @@ I wrote a longer account of the pre-sale last week:
 
 - [My Book's Pre-Sale Just Barely Succeeded](/book-pre-sale-just-barely-succeeded/)
 
-I plan to write a dedicated post about Kickstarter, but I had a great experience with it. It turned out to be a good way to measure interest in this book. And the $6.5k in pre-orders is higher than I'd expect to get as an advance if I published the book with a traditional publisher.
+I plan to write a dedicated post about Kickstarter, but I had a great experience with it. It turned out to be a good way to measure interest in my book. And the $6.5k in pre-orders is higher than a traditional publisher would pay me as an advance.
 
 ## Can I make the Julia Evans business model work for me?
 
 The thing that's exciting about _Refactoring English_'s presale is that it's a glimmer of hope that I could earn a living by blogging.
 
-When I was running TinyPilot, blogging definitely helped me find my first few dozen customers. Eventually, it felt like my personal blog wasn't helping sales at all. And that makes sense because people who are interested in behind the scenes diaries at an indie company are not necessarily interested in buying a $400 KVM over IP device.
+When I was running TinyPilot, blogging definitely helped me find my first few dozen customers. Eventually, it felt like my personal blog wasn't helping sales at all. And that makes sense because people who are interested in an indie founder's diaries are not necessarily interested in buying a $400 KVM over IP device.
 
 With the complexity of a hardware business, I was almost always limited in hours, so it was hard to dedicate most of my day's "deep thinking" hours to my personal blog. Ever since, I've been trying to figure out what business I could run where blogging aligns well with profitability for my business.
 
@@ -73,12 +73,12 @@ March was an interesting blogging challenge because I was trying to find custome
 
 I have a long list of topic ideas and half-written posts, so I evaluated them on these dimensions:
 
-- **Ease**: How easy would it take me to write a post that feels complete?
+- **Ease**: How easy would it be to write a post that feels complete?
 - **Potential audience**: If this post succeeds, how large is the potential audience that would enjoy it?
 - **Probability of success**: How likely is this post to reach its intended audience?
 - **Overlap with book**: If a reader discovers this post, how likely are they to be interested in my book?
 
-I didn't sit down and formally score my ideas, but the rough mental calculation looked kind of like this:
+I didn't sit down and formally score my ideas, but the rough mental calculation looked like this:
 
 | Title                                                                                                                     | Ease | Potential audience | Probability of Success | Overlap with book |
 | ------------------------------------------------------------------------------------------------------------------------- | ---- | ------------------ | ---------------------- | ----------------- |
@@ -100,27 +100,27 @@ I ended up picking the top three from that list, but they didn't perform as expe
 
 "No Longer My Favorite Git Commit" felt like my strongest idea because I knew I could write it quickly, and I thought there was a large potential audience since the original was so popular. It did well [on Lobsters](https://lobste.rs/s/1hexlm/no_longer_my_favorite_git_commit), [okay on reddit](https://www.reddit.com/r/programming/comments/1jexuzb/no_longer_my_favorite_git_commit/), and flopped on Hacker News. I didn't realize until I sat down to write this post that [Google Discover](https://blog.google/products/search/introducing-google-discover/) (a thing I didn't even realize existed) featured my post, which brought in 15k readers.
 
-That post was a bit unusual for me because I've never written a rebuttal to a blog post before. When I started the post, I was excited because I had strong opinions about [the original](https://dhwthompson.com/2019/my-favourite-git-commit). When I finished the first draft, I started having second thoughts. It felt like I was needlessly attacking another blogger for something they wrote six years ago. I adjusted the language to make it not come across like an attack, but it made me less likely to write rebuttals in the future.
+That post was a bit unusual for me because I've never written a rebuttal to a blog post before. When I started the post, I was excited because I had strong opinions about [the original](https://dhwthompson.com/2019/my-favourite-git-commit). When I finished the first draft, I started having second thoughts. It felt like I was needlessly attacking another blogger for something they wrote six years ago. I adjusted the language to make it feel less like an attack, but it still felt antagonistic.
 
-"How to Write Useful Commit Messages" was the post that was supposed to kick off the pre-sale. It did well [on Lobsters](https://lobste.rs/s/1hexlm/no_longer_my_favorite_git_commit) and [okay on reddit](https://www.reddit.com/r/programming/comments/1j5nvm5/how_to_write_useful_commit_messages/) but flopped on Hacker News. It's hard to tell how much of an impact it had on sales because I can't distinguish between readers who pre-ordered because of the post and those who pre-ordered because I announced the pre-sale to the book's mailing list.
+"How to Write Useful Commit Messages" was the post that was supposed to kick off the pre-sale. It did well [on Lobsters](https://lobste.rs/s/1hexlm/no_longer_my_favorite_git_commit) and [okay on reddit](https://www.reddit.com/r/programming/comments/1j5nvm5/how_to_write_useful_commit_messages/) but flopped on Hacker News. It's hard to tell how much of an impact it had on sales because I can't distinguish between readers who pre-ordered because of the post and those who pre-ordered because I announced the pre-sale to the book's mailing list on the same day.
 
-"How to Write Blog Posts that Developers Read" was the surprise hit that saved the pre-sale. It did [okay on Lobsters](https://lobste.rs/s/youq7y/how_write_blog_posts_developers_read) and [bombed on reddit](https://www.reddit.com/r/programming/comments/1jl3wgw/how_to_write_blog_posts_that_developers_read/). My first submission to Hacker News flopped, but then someone else resubmitted it the next morning, and it got [an amazing reception](https://news.ycombinator.com/item?id=43503872), ending at [#4 for the day](https://news.ycombinator.com/front?day=2025-03-28). Best of all, many of the people who found the post through Hacker News became customers through the pre-sale.
+"How to Write Blog Posts that Developers Read" was the surprise hit that saved the book. It did [okay on Lobsters](https://lobste.rs/s/youq7y/how_write_blog_posts_developers_read) and [bombed on reddit](https://www.reddit.com/r/programming/comments/1jl3wgw/how_to_write_blog_posts_that_developers_read/). My first submission to Hacker News flopped, but then someone else resubmitted it the next morning, and it got [an amazing reception](https://news.ycombinator.com/item?id=43503872), ending at [#4 for the day](https://news.ycombinator.com/front?day=2025-03-28). Best of all, many of the people who found the post through Hacker News became customers through the pre-sale.
 
 ## Hacker News Popularity Contest
 
 "Engineering as marketing" is a marketing technique that's popular with engineers who are bad at marketing (e.g., me).
 
-The idea is that you create a free tool that's related to your paid product, and then hope that people are impressed enough with your free thing that they try out your paid thing.
+The idea is that you create a free tool that's related to your paid product, and then hope that people are impressed enough with your free thing that they check out your paid thing.
 
-I've had an idea to build a Hacker News blog ranking for a long time because I always wondered how my blog compared to other popular Hacker News bloggers. I created a basic prototype last summer because I was planning to use it as marketing for the reboot of my [_Hit the Front Page of Hacker News_ course](https://hitthefrontpage.com).
+I've had an idea to build a Hacker News blog ranking system for a long time because I always wondered how I compared to other popular Hacker News authors. I created a basic prototype last summer because I was planning to use it for the reboot of my [_Hit the Front Page of Hacker News_ course](https://hitthefrontpage.com).
 
-When shelved my course and focused on _Refactoring English_ , I didn't know what to do with the blog ranking tool I created. When March rolled around, and I was desperate to make the pre-sale succeed, I realized I could invest a day or two of work into getting my prototype blog ranking tool ready to publish.
+When I shelved my course and focused on _Refactoring English_, I didn't know what to do with the blog ranking tool. When March rolled around, and I was desperate to make the pre-sale succeed, I realized I could invest a day or two of work into getting my prototype ready to publish.
 
 {{<img src="popularity-contest.webp" has-border="true" max-width="800px" caption="Popularity Contest is a tool I created to promote *Refactoring English*">}}
 
 The tool successfully [reached the front page of Hacker News](https://news.ycombinator.com/item?id=43503872), but it didn't have any impact on book sales.
 
-One of the unexpected reactions was how many people in the top 100 cared about their rank. I assumed that if you were one of most popular personal bloggers on Hacker News, you're famous enough that Hacker News isn't that big a deal to you, but a lot of people in the top 100 commented on it either publicly or privately to me in DMs/emails.
+One of the unexpected reactions was how many people in the top 100 cared about their rank. I assumed that if you were one of most popular personal bloggers on Hacker News, you're famous enough that Hacker News isn't a big deal to you, but a lot of people in the top 100 commented on it either publicly or privately to me in DMs/emails.
 
 A lot of the top bloggers seemed especially interested in how their rank changed over time, most notably John Gruber, who felt my tool supported his theory that Hacker News [had applied manual penalties to his site](https://daringfireball.net/2025/03/the_website_hacker_news_is_afraid_to_discuss) in recent years.
 
@@ -130,7 +130,7 @@ Based on that reaction, I added functionality to view more detailed stats for [i
 
 ## Picking a markup language for the book
 
-So far, I've been writing my book using Markdown with Hugo. I haven't started on the official PDF version yet, so I've just been writing I've been punting on the decision to pick a book publishing technology.
+So far, I've been writing my book using Markdown with Hugo. I haven't started on the official PDF version yet, so I've been punting on the decision to pick a book publishing technology.
 
 Now that the book is officially happening, I need to pick a method for writing it. The features I'm interested in are:
 
@@ -143,15 +143,15 @@ Now that the book is officially happening, I need to pick a method for writing i
 
 The options seem to be:
 
-| Language                                                 | PDF | epub | HTML | Maturity  | Publisher Support                        |
+| Tool                                                     | PDF | epub | HTML | Maturity  | Publisher Support                        |
 | -------------------------------------------------------- | --- | ---- | ---- | --------- | ---------------------------------------- |
-| [AsciiDoc](https://asciidoc.org/)                        | ✅  | ✅   | ✅   | High      | None                                     |
+| [Asciidoctor](https://asciidoctor.org/)                  | ✅  | ✅   | ✅   | High      | None                                     |
 | [LaTeX](https://www.latex-project.org/)                  | ✅  | ❌   | ❌   | Very high | [No Starch Press](https://nostarch.com/) |
 | [Pollen](https://docs.racket-lang.org/pollen/index.html) | ❌  | ❌   | ✅   | Low       | None                                     |
 | [Typst](https://typst.app/)                              | ✅  | ❌   | ❌   | Low       | None                                     |
 | [mdBook](https://rust-lang.github.io/mdBook/)            | ❌  | ❌   | ✅   | Low       | None                                     |
 
-It looks like the winner is either AsciiDoc or LaTeX.
+It looks like the winner is either Asciidoctor or LaTeX.
 
 There are third-party tools to convert from AsciiDoc to LaTeX. It's probably not fun, but if _No Starch_ tells me they want to publish a second edition of my book, I can probably suck it up and do a one-time conversion.
 
@@ -191,11 +191,11 @@ I'd like to tidy it up a bit further, but I'm pleased with the progress so far, 
 
 In 2019, I [created a web app called What Got Done](/status-updates-to-nobody/). It was my first attempt at a real SaaS business, but I couldn't find any customers.
 
-I still use it every week. I'm now on a five-year streak of posting weekly updates, but I'm the only consistent user. Occasionally, other people pick it up, but they typically get bored of it after a few weeks and stop posting updates.
+I still use it every week. I'm now on a five-year streak of posting weekly updates, but I'm the only consistent user. Occasionally, other people pick it up, but they typically get bored of it after a few weeks and stop posting.
 
 I wrote it when I knew much less about web development. The site originally used Go, Vue 2, AppEngine, and Google Cloud Firestore. I've since [replaced AppEngine with fly.io and Firestore with SQLite](https://github.com/mtlynch/whatgotdone/pull/639), which made development a bit more pleasant, but I still find it miserable to work in Vue. I don't know of a good way to incrementally move from Vue to vanilla JavaScript, and I don't want to invest 30+ hours in a giant rewrite.
 
-I realized recently that the site would make more sense as a static site that I generate with Hugo: I'd write my weekly updates in whatever editor I want, and then when I push them to my main branch, and continuous integration would build the site and publish it. That's how this blog works. And for What Got Done, that would eliminate a lot of complexity around user accounts, authentication, and database management. Plus, it means that all of my updates are just on my filesystem as searchable plaintext rather than trapped in a SQL database.
+I realized recently that the site would make more sense as a static site that I generate with Hugo: I'd write my weekly updates in whatever editor I want, and then when I push them to my main branch, continuous integration would build the site and publish it. That's how this blog works. And for What Got Done, that would eliminate a lot of complexity around user accounts, authentication, and database management. Plus, it means that all of my updates are searchable plaintext files rather than records trapped in a SQL database.
 
 It costs me nothing to keep the site running, and I've only had to spend about five hours per year on maintenance. So, I'm not in a rush to sunset it, but I did take the first step of closing signups.
 
@@ -222,6 +222,6 @@ At some point, I'll probably email recent users to announce sunsetting the proje
 
 ### Requests for help
 
-If you have experience self-publishing a book in a markup language (i.e., not Word or Google Docs), tell me about your experience.
+If you have experience publishing a book in a markup language (i.e., not Word or Google Docs), tell me about your experience.
 
 <script src="script.js"></script>
