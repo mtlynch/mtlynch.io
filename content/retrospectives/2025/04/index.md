@@ -2,6 +2,8 @@
 title: "Educational Products: Month 6"
 date: "2025-04-09"
 description: I'm officially writing a book!
+images:
+  - /retrospectives/2025/04/og-cover.webp
 ---
 
 ## Highlights
