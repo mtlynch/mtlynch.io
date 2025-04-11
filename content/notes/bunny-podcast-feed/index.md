@@ -46,11 +46,35 @@ For this example, I'm going to use these example values:
 - `https://feeds.libsyn.com/12345/rss`: The RSS feed your podcast host told you to use.
 - `https://feeds.myawesomedinosaurpodcast.com/rss`: The actual URL you'll use instead.
 
-You'll need to create an account with BunnyCDN.
+### Create a BunnyCDN account
 
-From there, go to Pull Zones > Add Pull Zone.
+First, create an account with [BunnyCDN](https://bunny.net).
 
-Put in any name for
+### Add a Pull Zone
+
+From there, go to CDN > Add Pull Zone.
+
+Give your Pull Zone a name. It doesn't matter what name. For this example, I'm using the name `example12345`.
+
+Under Origin Type, select "Origin URL" and enter your vendor's podcast's RSS URL:
+
+{{<img src="origin.webp" has-border="true">}}
+
+Choose "Standard Tier."
+
+Under "Pricing Zones," just choose the cheapest option and unselect the rest. It doesn't matter if your RSS feed is super fast in every region, as it has no effect on listener experience.
+
+Finally, click "Add Pull Zone."
+
+### Testing your URL
+
+When Bunny creates your Pull Zone, try visiting the URL `b-cdn.net` URL it created at the top:
+
+{{<img src="url.webp" has-border="true">}}
+
+If this worked, you should see your podcast's RSS feed when you visit that link.
+
+### Linking your custom domain
 
 ## Cost
 
