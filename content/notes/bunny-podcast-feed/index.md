@@ -148,6 +148,8 @@ I recommend against "Do not cache." If you have a popular podcast where hundreds
 
 If you set things up correctly, you should now have a custom URL that serves your podcast feed.
 
+You now have a URL that you control.
+
 Your podcast hosting platform is still hosting all your large audio and video files. They're still hosting your podcast feed, too, in fact.
 
 By setting up the CDN, you created a server in front of your podcast provider that serves your podcast feed, so your listeners will see your copy of the RSS feed rather than talk to your podcast provider directly for the feed.
