@@ -43,39 +43,33 @@ Neither services is technically very difficult, but service (2) is extremely ine
 
 Podcast recordings are generally large files of anywhere from 50 MB to 5 GB, depending on length, quality, and whether there's video. But podcast RSS feeds are tiny, generally less than 1 MB. In hosting costs, you'd pay about a penny for every 10,000 times your listeners check your podcast feed.
 
+You can host your RSS feed simply and inexpensively by setting up a CDN in front of your podcast provider. The CDN will only be responsible for serving your RSS feed. Podcast players will still retrieve the large audio/video files directly from your podcast provider.
+
+![feed](rss-diagram.svg)
+
 ## Only distribute your own custom domain name
 
-The thing that marries you to a particular podcasting platform is distributing their RSS URL to your listeners and podcast directories.
+When you distribute a URL like `https://feeds.libsyn.com/12345/rss` to your listeners and podcast directories, you're married to Libsyn (or whoever your hosting provider is).
 
-Instead, you should distribute a URL that you own.
-
-You'll need a custom domain name.
+Instead, you should only distribute an RSS URL for a domain name that you own.
 
 For example, if your podcast is called "My Awesome Dinosaur Podcast," then you can register this domain name for your show:
 
 - myawesomedinosaurpodcast.com
 
-Note: I'm not going to explain how to purchase a domain name, as that's out of scope, but any domain name provider will be fine. I personally like DNSimple.
+{{<notice type="info">}}
 
-Once you own the domain name myawesomedinosaurpodcast.com, you can create a subdomain like this:
+**Note**: I'm not going to explain how to purchase a domain name, as that's out of scope, but any domain name provider will be fine. I personally like DNSimple.
 
-- feeds.myawesomedinosaurpodcast.com
+{{</notice>}}
 
 When you give out your podcast feed to listeners and podcast directories, it will be:
 
 - https://feeds.myawesomedinosaurpodcast.com
 
-If you switch podcast hosts, your listeners will never have to do anything as they'll still listen from your same feeds.myawesomedinosaurpodcast.com. They've never seen any Libsyn or Podbean URL at all.
+If you switch podcast hosts, your listeners will never have to do anything as they'll still listen from your same `feeds.myawesomedinosaurpodcast.com` URL. They've never seen any Libsyn or Podbean URL at all.
 
 ## Hosting your own RSS feed
-
-Once you purchase the domain and set up the `feeds` subdomain, you have to actually point it at your real podcast.
-
-{{<notice type="info">}}
-
-**Note**: The subdomain doesn't strictly have to be `feeds`. It can be anything you want, but I find that `feeds` is a useful convention.
-
-{{</notice>}}
 
 For this example, I'm going to use these example values:
 
@@ -122,6 +116,12 @@ Enter your podcast's domain like:
 
 - `feeds.myawesomedinosaurpodcast.com`
 
+{{<notice type="info">}}
+
+**Note**: The subdomain doesn't strictly have to be `feeds`. It can be anything you want, but I find that `feeds` is a useful convention.
+
+{{</notice>}}
+
 Bunny will give you a DNS record that you need to activate on your domain registrar's side.
 
 {{<img src="cname.png" has-border="true">}}
@@ -148,4 +148,6 @@ I recommend against "Do not cache." If you have a popular podcast where hundreds
 
 If you set things up correctly, you should now have a custom URL that serves your podcast feed.
 
-Your podcast hosting platform is still hosting all your large audio and video files. They're still hosting your podcast feed, too, in fact. By setting up the CDN, you created a server in front of your podcast provider that serves your podcast feed, so your listeners will see your copy of the RSS feed rather than talk to your podcast provider directly for the feed.
+Your podcast hosting platform is still hosting all your large audio and video files. They're still hosting your podcast feed, too, in fact.
+
+By setting up the CDN, you created a server in front of your podcast provider that serves your podcast feed, so your listeners will see your copy of the RSS feed rather than talk to your podcast provider directly for the feed.
