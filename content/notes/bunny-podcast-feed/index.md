@@ -65,7 +65,7 @@ For example, if your podcast is called "My Awesome Dinosaur Podcast," then you c
 
 When you give out your podcast feed to listeners and podcast directories, it will be:
 
-- https://feeds.myawesomedinosaurpodcast.com
+- <https://feeds.myawesomedinosaurpodcast.com>
 
 If you switch podcast hosts, your listeners will never have to do anything as they'll still listen from your same `feeds.myawesomedinosaurpodcast.com` URL. They've never seen any Libsyn or Podbean URL at all.
 
