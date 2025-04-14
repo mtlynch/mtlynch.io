@@ -110,7 +110,7 @@ function drawCharts(limitDate) {
           dates.push(
             date.toLocaleString("default", { month: "long" }) +
               " " +
-              date.getFullYear()
+              date.getFullYear(),
           );
         }
         drawChart(project, dates, Object.values(data));

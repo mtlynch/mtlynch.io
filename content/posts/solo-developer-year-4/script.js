@@ -57,7 +57,7 @@ function drawTotalFinancesChart() {
         {
           label: "Net Profit",
           data: Array.from(revenues.keys()).map(
-            (y) => revenues.get(y) - expenses.get(y)
+            (y) => revenues.get(y) - expenses.get(y),
           ),
           backgroundColor: "rgb(0, 255, 0)",
           borderColor: "rgb(172, 255, 172)",
@@ -158,7 +158,7 @@ function drawCharts(limit) {
           dates.push(
             date.toLocaleString("default", { month: "long" }) +
               " " +
-              date.getFullYear()
+              date.getFullYear(),
           );
           values.push(data[d].totalRevenue);
         }
@@ -207,7 +207,7 @@ function populateDeltaCell(deltaSpan) {
     }
   }
   deltaSpan.innerText = `${absoluteFormatter.format(
-    absoluteDelta
+    absoluteDelta,
   )} (${percentageFormatter.format(percentageDelta)})`;
 }
 document.querySelectorAll('[blog-purpose="delta"]').forEach(populateDeltaCell);
