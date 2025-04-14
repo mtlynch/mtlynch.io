@@ -109,7 +109,8 @@ The book includes a few pages of strategies for each of these channels, but I di
 - Blogs
   - Reach out to niche blogs that match your audience and offer them a direct affiliate deal or paid display ad.
 - Publicity
-  - Use [HARO](https://www.helpareporter.com/) to connect with reporters interested in your market.
+  - ~~Use Help a Reporter Out (HARO) to connect with reporters interested in your market.~~
+    - **Update (2025-04-08)**: This service no longer seems to exist.
   - Pitch your product to small bloggers, as larger blogs often source from smaller niche blogs.
 - Unconventional PR (PR stunts)
 - Search engine marketing
