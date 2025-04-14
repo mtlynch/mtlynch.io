@@ -45,13 +45,13 @@ function populateGraph(graphId, values, labels) {
 populateGraph(
   "demo-command",
   [24.217, 40.338],
-  ["evm (Official Go implementation)", "eth-zvm (My Zig implementation)"]
+  ["evm (Official Go implementation)", "eth-zvm (My Zig implementation)"],
 );
 
 populateGraph(
   "benchmark-fix",
   [438.059, 67.378],
-  ["eth-zvm (Before benchmark fix)", "eth-zvm (After benchmark fix)"]
+  ["eth-zvm (Before benchmark fix)", "eth-zvm (After benchmark fix)"],
 );
 
 populateGraph(
@@ -61,7 +61,7 @@ populateGraph(
     "eth-zvm (Before benchmark fix)",
     "eth-zvm (After benchmark fix)",
     "eth-zvm (After benchmark fix + buffering)",
-  ]
+  ],
 );
 
 populateGraph(
@@ -70,7 +70,7 @@ populateGraph(
   [
     "evm (Official Go implementation)",
     "eth-zvm (My Zig implementation, after fixes)",
-  ]
+  ],
 );
 
 populateGraph(
@@ -80,5 +80,5 @@ populateGraph(
     "evm (Official Go implementation)",
     "eth-zvm (My Zig implementation, after fixes)",
     "eth-zvm (My Zig implementation, no memory allocation)",
-  ]
+  ],
 );

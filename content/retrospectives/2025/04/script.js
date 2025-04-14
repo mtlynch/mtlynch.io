@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Find the reference h2 element
   const headingElement = document.getElementById(
-    "blogging-like-my-livelihood-depends-on-it"
+    "blogging-like-my-livelihood-depends-on-it",
   );
   if (!headingElement) return;
 
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
     totalCell.style.backgroundColor = calculateColor(
       totals[i],
       minTotal,
-      maxTotal
+      maxTotal,
     );
   }
 });

@@ -53,7 +53,9 @@
       background-color: var(--bg-color);
       border-top: solid 2px var(--alt-bg-color);
       border-bottom: solid 2px var(--alt-bg-color);
-      transition: opacity 0.25s, max-height 0.15s linear;
+      transition:
+        opacity 0.25s,
+        max-height 0.15s linear;
 
       & .navigation-item {
         float: none !important;
@@ -180,7 +182,9 @@
       background-color: var(--bg-color);
       border-top: solid 2px var(--alt-bg-color);
       border-bottom: solid 2px var(--alt-bg-color);
-      transition: opacity 0.25s, max-height 0.15s linear;
+      transition:
+        opacity 0.25s,
+        max-height 0.15s linear;
 
       & .navigation-item {
         float: none !important;

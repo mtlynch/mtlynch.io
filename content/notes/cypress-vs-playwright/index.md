@@ -194,7 +194,7 @@ Here's the naïve approach to asserting the text value in Cypress:
 ```javascript
 cy.get("[data-test-id='github-instructions']").should(
   "have.text",
-  "Visit our GitHub repo to create your own PicoShare server."
+  "Visit our GitHub repo to create your own PicoShare server.",
 );
 ```
 
@@ -215,7 +215,7 @@ You can work around this by grabbing the element's `innerText`, but the syntax i
 ```javascript
 cy.get("[data-test-id='github-instructions']").should(($el) => {
   expect($el.get(0).innerText).to.eq(
-    "Visit our GitHub repo to create your own PicoShare server."
+    "Visit our GitHub repo to create your own PicoShare server.",
   );
 });
 ```
@@ -226,7 +226,7 @@ In Playwright, the naïve assertion yields the correct behavior:
 
 ```javascript
 await expect(page.locator("data-test-id=github-instructions")).toHaveText(
-  "Visit our GitHub repo to create your own PicoShare server."
+  "Visit our GitHub repo to create your own PicoShare server.",
 );
 ```
 
@@ -237,7 +237,7 @@ You can force Playwright to look at `innerText` instead with a much simpler synt
 ```javascript
 await expect(page.locator("data-test-id=github-instructions")).toHaveText(
   "Visit our GitHub repo to create your own PicoShare server.",
-  { useInnerText: true }
+  { useInnerText: true },
 );
 ```
 
@@ -269,7 +269,7 @@ Playwright pierces the shadow DOM by default, resulting in concise CSS selectors
 
 ```javascript
 await expect(
-  page.locator("#upload-result upload-links #verbose-link-box #link")
+  page.locator("#upload-result upload-links #verbose-link-box #link"),
 ).toBeVisible();
 ```
 
@@ -365,7 +365,7 @@ In Playwright, the ordering is a little muddled. Before I start locating the ele
 
 ```javascript
 await expect(
-  page.locator(".navbar-item [data-test-id='log-in']")
+  page.locator(".navbar-item [data-test-id='log-in']"),
 ).toBeVisible();
 ```
 
