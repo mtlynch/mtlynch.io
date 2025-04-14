@@ -30,15 +30,29 @@ Manning doesn't publish current rates for first-time authors, but Teiva Harsanyi
 
 The cool thing about self-publishing is that you still have the option to publish a future edition with a traditional publisher. The only person who I've seen talk about this is _Tracy Osborn_, who originally self-published _Hello Web Design_ (great book), and then published [a second edition with No Starch Press](https://nostarch.com/hello-web-design).
 
-## Where I found customers
+## Where did my customers come from?
+
+TODO
 
 ## What I'm glad I did
 
-### Used Kickstarter to see if there are readers
+### Used Kickstarter for the pre-sale
 
-I'm glad I chose this. Sets good expectations.
+I considered selling the pre-orders myself. The
 
-### Picked a target that would make me excited to write the book
+What happens if something happens, and I can't finish the book?
+
+- Do I walk away with zero?
+- Do I have to negotiate with everyone about how much they think is fair for me to keep?
+- Do I have to deal with a whole mess of headaches trying to give people refunds six months after the fact?
+
+The thing that Kickstarter does well is set expectations around uncertainty.
+
+TODO: You're along for the ride.
+
+Granted, it's heavily biased in favor of the author. But if you have reasonable confidence that the author isn't intentionally burning all of their credibility to steal $6k, it's a decent tradeoff.
+
+### Picked a funding target that would make me excited to write the book
 
 I set a crowdfunding goal of $5k. I thought it would be difficult to reach that goal, but I picked a number where, even if I make no further sales, I'd still feel satisfied to earn that money.
 
