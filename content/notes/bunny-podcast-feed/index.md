@@ -17,7 +17,7 @@ If you move, all of your listeners' podcast apps will still be looking for your 
 
 When most podcasts switch platforms, they ask their old platform to set up a redirect. For example, if you're moving from Libsyn to Podbean, you'd go to your Libsyn settings and point it to your new podcast URL.
 
-That way, anytime a listener tries to access your old Libsyn RSS URL, Libsyn tells them that you've moved.
+That way, any time a listener tries to access your old Libsyn RSS URL, Libsyn tells them that you've moved.
 
 There are two problems with this strategy:
 
@@ -39,7 +39,7 @@ When you host a podcast with Libsyn or Podbean, they're actually hosting two dif
 
 But the two services are actually completely independent. If you want to, you can host them from two separate vendors, and everything works fine. And this is actually what I do and what I recommend other podcast owners do.
 
-Neither services is technically very difficult, but service (2) is extremely inexpensive to do.
+Neither service is technically very difficult, but service (2) is extremely inexpensive to do.
 
 Podcast recordings are generally large files of anywhere from 50 MB to 5 GB, depending on length, quality, and whether there's video. But podcast RSS feeds are tiny, generally less than 1 MB. In hosting costs, you'd pay about a penny for every 10,000 times your listeners check your podcast feed.
 
@@ -130,7 +130,7 @@ Go back to where you registered your domain, and add the DNS entry that Bunny sh
 
 When you've finished adding the CNAME record to your domain registrar, come back to the Bunny screen, and click "Verify & Activate SSL."
 
-### Disable caching
+### Override caching
 
 Bunny (and all CDNs) aggressively cache data. They're designed to lighten the load on other servers, so Bunny, by default, only checks the "Origin URL" (your podcast provider) occasionally for updates.
 
