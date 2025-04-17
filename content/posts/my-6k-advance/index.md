@@ -5,37 +5,88 @@ date: 2025-04-18
 
 I'm working on [my first technical book](https://refactoringenglish.com), and I just received $5,946.92 in advance sales, even though the book is only 25% complete, and I'm self-publishing it.
 
-In March, I ran a three-week pre-sale for the book on Kickstarter. The pre-sale raised $6,551 from 191 customers. After Kickstarter's fees, I get $5,946.92, or 91% of the total.
+TODO: Show screenshot
 
-There are a lot of advantages to pre-selling the book this way:
+In March, I ran a three-week pre-sale for the book [on Kickstarter](https://www.kickstarter.com/projects/mtlynch/refactoring-english). The pre-sale raised $6,551 from 191 customers. After Kickstarter's fees, I get $5,946.92, or 91% of the total.
 
-- $6k is higher than most traditional publishers offer to first-time authors.
-- The pre-sale gives me confidence early in the process that readers are willing to pay for this book.
-- I now have a group of early readers who are enthusiastic to provide early feedback about the book, as they already have skin in the game.
-- I didn't have to jump through hoops with a publisher.
+There are many advantages to pre-selling the book this way:
+
+- $6k is a higher advance than most traditional publishers offer to first-time authors.
 - The money has no strings attached.
-  - Even if I deliver late or entirely fail to deliver, the money is still mine.
+  - Even if I deliver late or fail to deliver entirely, the money is still mine.
+- The pre-sale gives me confidence that when I complete the book, I can find readers willing to purchase it.
+- I didn't have to jump through hoops with a publisher.
 - When I publish the book, I don't have to split sales with a publisher.
-  - My only cost will be commissions on whatever payment platform I choose, so I'll receive 85-95% of what customers pay.
+  - My only cost will be commissions on whatever payment platform I choose, so I'll only lose 3-13% in fees, depending on the platform.
 - I still have the option to publish the same book with a traditional publisher in the future.
 
 I haven't seen many authors write books this way, so I thought I'd share more about how and why I did this.
 
 ## My unfair advantages
 
-One of my pet peeves is seeing people on social media post things like, "Wow, I just launched this silly idea, and I've already made $100k in pre-orders. Business is so easy!" And then I check their profile, and they have 10M followers and a long track record of successful products.
+One of my pet peeves is seeing people on social media post things like, "Wow, I put up a landing page to pre-order my USB-powered flashlight, and I got $100k in pre-orders in just two hours. Business is so easy!" And then I check their profile, and they have 40M followers and a long track record of successful products.
 
-So, I want to be upfront that I had some advantages that made my pre-sale succeed, but I still think that most of what I did is repeatable.
+So, I want to be upfront that I had some advantages that made my pre-sale succeed:
 
 - I've been blogging for nine years.
-- I have a mailing list of XX subscribers on my personal blog.
-- The book has its own mailing list that had XX subscribers when I started the pre-sale.
-  - There's overlap between the two. There are at most XX unique subscribers between the two.
-- I have XX followers on Twitter
+- I have 2k subscribers on my blog's mailing list and XX subscribers for the book's mailing list.
+  - There's heavy overlap between the two lists.
+  - There are at most XX unique subscribers between the two mailing lists.
+- I have 9.2k followers on Twitter and 600 followers on Bluesky.
+
+That said, I'm not especially online famous, so I think that most of what I did is repeatable.
 
 ## Why a pre-sale?
 
-My biggest fear was spending a year writing a book only to find out afterwards that nobody wants to read it. The pre-sale was a way to confirm that there truly were readers out there interested enough in the topic to pay money.
+Writing a book is a long commitment. I don't want to spend a year writing a book only to find out afterwards that that nobody wants to read it.
+
+My book is called _Refactoring English_. It's a book that aims to teach writing specifically to software developers. A lot of people say they want to improve their writing, but that's different from being willing to invest actual money into a book about it.
+
+The pre-sale was a way to confirm that there were readers out there interested enough in my book to purchase it.
+
+I set a crowdfunding goal of $5k. I thought it would be difficult to reach that goal, but I picked a number where, even if I make no further sales, I'd still feel satisfied writing a book for that amount of money.
+
+## How did I find customers?
+
+The most effective way I found customers was by writing excerpts from the book and sharing them with my mailing lists and on social media. At the end of each post, I included a self-ad for the pre-sale that invited readers to help me expand the article they just read into a full-length ebook:
+
+TODO: Screenshot
+
+During the pre-sale, I published two new excerpts from the book. I published one right at the start of the pre-sale. I didn't finish the second excerpt until five days before the pre-sale ended. Luckily, the second excerpt got traction on Hacker News and Lobsters, and readers from those sites doubled pre-orders for my book in a few days.
+
+TODO: Graph showing when things happened
+
+## Which attempts for finding customers failed?
+
+### Soliciting sponsorships from companies
+
+A lot of open-source projects have found a way of funding where they display a company's logo on their website in exchange for some monthly donation.
+
+I thought, "Why not do the same thing with an ebook?" I didn't mind showing some companies' logos on my book's website if it will help me reach my $5k goal.
+
+But company sponsors didn't work. I reached out to ten companies, and none of the discussions went anywhere:
+
+- One offered $1k to buy a page in the book's acknowledgments section and a banner ad on the website.
+  - I asked whether they'd be open to something time-limited, as I didn't want a "forever" obligation, and they stopped responding.
+- One was interested but then stopped responding when they realized I wanted them to purchase the sponsorship through Kickstarter.
+- One gave a quick, polite "no."
+- Seven (the rest) never responded.
+
+Part of the problem was that I waited until the last ten days of the pre-sale to reach out, and at that point, it looked like my project was a flop. I kept thinking I'd have a hit post during the pre-sale so that I could show potential sponsors that 50k readers can see their logo, but I didn't have that until the end.
+
+{{<img src="sponsor-email.webp" has-border="true" max-width="550px">}}
+
+Again, with the benefit of hindsight, it's easy to say I should have skipped soliciting sponsors, but I think the decision made sense at the time.
+
+But even when the one company offered to sponsor for $1k, I didn't feel great about that because it felt like a single company carrying too much of the pre-sale. I expect that the number of pre-orders from regular readers to be predictive of how many customers purchase the finished book, so if I can only sell $3k to regular people, that would have been a bad sign for long-term sales.
+
+### Creating a web app to pander to Hacker News
+
+I'm the only author on the list with special flair:
+
+I rank in the top 50 of all time in the list, and I gave myself unique flair to lead readers to my book.
+
+The post successfully reached the front page of Hacker News, but it had no effect on sales.
 
 ## How does this compare to what traditional publishers pay?
 
@@ -47,11 +98,7 @@ Manning doesn't publish current rates for first-time authors, but Teiva Harsanyi
 
 The cool thing about self-publishing is that you still have the option to publish a future edition with a traditional publisher. The only person who I've seen talk about this is _Tracy Osborn_, who originally self-published _Hello Web Design_ (great book), and then published [a second edition with No Starch Press](https://nostarch.com/hello-web-design).
 
-## Where did my customers come from?
-
-TODO
-
-## What I'm glad I did
+## Other things that worked well for me
 
 ### Used Kickstarter for the pre-sale
 
@@ -80,16 +127,6 @@ TODO: You're along for the ride.
 Beyond that, Kickstarter found some customers for me.
 
 Finally, I appreciated that Kickstarter
-
-### Picked a funding target that would make me excited to write the book
-
-I set a crowdfunding goal of $5k. I thought it would be difficult to reach that goal, but I picked a number where, even if I make no further sales, I'd still feel satisfied writing a book for that amount of money.
-
-I'm still in the honeymoon phase, so hopefully I still feel that way when the book is done.
-
-### Published excerpts during the pre-sale
-
-I published two sample chapters before the pre-sale, and two more during the pre-sale. Looking back, I wish I'd published them all during the pre-sale, but that's only with the benefit of hindsight. It made sense to start publishing book excerpts in a low-pressure way just to see if there was any interest.
 
 ### Offering premium rewards
 
@@ -152,22 +189,32 @@ Apparently they were enabled for my project but not per-item. And then you can't
 
 Kickstarter can analyze UTM parameters, but I never added them to any of my links. It probably would have been helpful to know which readers came from my personal blog vs. the book's website vs. the mailing list. They collect data based on the HTTP referer header, but that's not as reliable as UTM parameters.
 
-### Focused on people rather than companies
+### Offered a "I just want to give you extra money" option
 
-Again, with the benefit of hindsight, it's easy to say I should have skipped soliciting sponsors, but I think the decision made sense at the time.
+I recently spoke to someone who had self-published a successful video course. The course was $300, but he offered a premium $1k option that included a 40-minute 1:1 video call with him.
 
-But even when the one company offered to sponsor for $1k, I didn't feel great about that because it felt like a single company carrying too much of the pre-sale. I expect that the number of pre-orders from regular readers to be predictive of how many customers purchase the finished book, so if I can only sell $3k to regular people, that would have been a bad sign for long-term sales.
+I asked, "Are those customers entitled or demanding? I'd worry that if someone paid me $1k for a 40-minute video call, they'd expect the moon."
 
-### Created more sensible reward tiers
+He said, "Honestly, only a couple of people have purchased that package, and they basically didn't want anything except to hang out. They treated it as a generous way to tip me."
+
+Kickstarter has an option to pay above the asking price for any package, and
+
+I also have a friend who has managed a popular mobile app for the past decade, and his observation is that part of pricing is how the customer views themselves. There's a large segment of customers who choose the top-tier plan but never use any of the premium features. When he speaks with them, it's clear that they'd just choose the top-tier plan for anything regardless of what it is.
+
+### Included the book in every reward tier
+
+I find Kickstarter's tier system pretty confusing. There are two components to it: there are reward items and reward tiers. An item is a thing like an ebook or a shoutout on the website. An item can appear in one or more reward tiers.
+
+That makes sense, right?
+
+Here's where it gets confusing: the rewards also have descriptions and delivery dates, but they're on the _tiers_ not the items. So if I have a tier that
 
 One thing I screwed up in creating the rewards was that I didn't include the book itself in the $75 personal sponsor. So a few people purchased the $75 tier and then were surprised to realize it technically doesn't include the book itself. And once someone has purchased a reward, I can't edit it, even to add items. So, my workaround was just to tell people
 
-## Other notes
-
-### Kickstarter projects attract spam
+## Kickstarter projects attract spam
 
 I got [a ton of spam](/retrospectives/2025/03/#except-for-kickstarter-spammers) from companies trying to "help out" with my presale.
 
-Just be aware of this when you start a Kickstarter. Even though my email isn't in the Kickstarter itself, they found my email address by digging through the book website and then my personal blog.
+Just be aware of this when you start a Kickstarter. Even though my email isn't in the Kickstarter itself, they found my email address by digging through the book website and then finding my contact information on my personal blog.
 
-Fortunately, there's a big surge in spam for the first week of the campaign, and then nothing more after that.
+I had a big surge in spam for the first week of the campaign, but then no new outreach after that, though the original spammers kept pestering me to respond.
