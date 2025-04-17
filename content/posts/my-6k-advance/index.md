@@ -88,7 +88,7 @@ I rank in the top 50 of all time in the list, and I gave myself unique flair to 
 
 The post successfully reached the front page of Hacker News, but it had no effect on sales.
 
-## How does this compare to what traditional publishers pay?
+## How would this look with a traditional publisher?
 
 Most publishers don't disclose the deals they make with first-time authors, so it's difficult to say how my results compare.
 
@@ -142,12 +142,6 @@ I offered pre-orders of the book for $25 as the standard item in the Kickstarter
 One path I want to keep open is potentially republishing this book later with a tech publisher like No Starch Press. There are a lot of authors who self-published a book and then did a second edition with a publisher, and that seems like the best of both worlds.
 
 So, given that I might do a second edition with a publisher, I didn't want to commit to something like, "Backers will always be mentioned by name in the book," because I don't know if that will complicate things if I eventually go to a publisher and bring them these requirements. I made sure to say that I'd thank backers specifically in the first edition, though I'll try to keep them in forever.
-
-### Self-ads
-
-The pledge meter was maybe helpful. I was just manually updating it.
-
-Although some people gave me feedback that they read the article and didn't realize they could pre-order the book.
 
 ### Start early
 
