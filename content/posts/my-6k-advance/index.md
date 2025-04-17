@@ -9,26 +9,25 @@ TODO: Show screenshot
 
 In March, I ran a three-week pre-sale for the book [on Kickstarter](https://www.kickstarter.com/projects/mtlynch/refactoring-english). The pre-sale raised $6,551 from 191 customers. After Kickstarter's fees, I get $5,946.92, or 91% of the total.
 
-There are many advantages to pre-selling the book this way:
+I haven't seen many authors write books this way, so I thought I'd share more about how and why I crowdfunded my book:
 
 - $6k is a higher advance than most traditional publishers offer to first-time authors.
 - The money has no strings attached.
   - Even if I deliver late or fail to deliver entirely, the money is still mine.
 - The pre-sale gives me confidence that when I complete the book, I can find readers willing to purchase it.
-- I didn't have to jump through hoops with a publisher.
+- I didn't have to beg a publisher for permission to write my book.
 - When I publish the book, I don't have to split sales with a publisher.
   - My only cost will be commissions on whatever payment platform I choose, so I'll only lose 3-13% in fees, depending on the platform.
 - I still have the option to publish the same book with a traditional publisher in the future.
 
-I haven't seen many authors write books this way, so I thought I'd share more about how and why I did this.
-
 ## My unfair advantages
 
-One of my pet peeves is seeing people on social media post things like, "Wow, I put up a landing page to pre-order my USB-powered flashlight, and I got $100k in pre-orders in just two hours. Business is so easy!" And then I check their profile, and they have 40M followers and a long track record of successful products.
+One of my pet peeves is posts on social media like, "Wow, I put up a basic checkout form to pre-order my USB-powered flashlight, and I got $100k in pre-orders in just two hours. Business is so easy!" And then I check their profile, and they have 40M followers and a long track record of successful products.
 
 So, I want to be upfront that I had some advantages that made my pre-sale succeed:
 
 - I've been blogging for nine years.
+- I'm atypically successful at writing articles that succeed [on Hacker News](https://refactoringenglish.com/tools/hn-popularity/domain/?d=mtlynch.io) and [reddit](https://www.reddit.com/search?q=url%3Amtlynch.io&sort=relevance&t=all).
 - I have 2k subscribers on my blog's mailing list and XX subscribers for the book's mailing list.
   - There's heavy overlap between the two lists.
   - There are at most XX unique subscribers between the two mailing lists.
@@ -50,7 +49,7 @@ I set a crowdfunding goal of $5k. I thought it would be difficult to reach that 
 
 The most effective way I found customers was by writing excerpts from the book and sharing them with my mailing lists and on social media. At the end of each post, I included a self-ad for the pre-sale that invited readers to help me expand the article they just read into a full-length ebook:
 
-TODO: Screenshot
+{{<img src="self-ad.webp" max-width="400px" has-border="true" caption="Self-ads for the book that appeared at the bottom of my sample chapters online">}}
 
 During the pre-sale, I published two new excerpts from the book. I published one right at the start of the pre-sale. I didn't finish the second excerpt until five days before the pre-sale ended. Luckily, the second excerpt got traction on Hacker News and Lobsters, and readers from those sites doubled pre-orders for my book in a few days.
 
