@@ -212,11 +212,7 @@ Kickstarter has a surprising behavior where you stop being able to edit certain 
 
 Apparently they were enabled for my project but not per-item. And then you can't flip them on after without talking to support, but it meant losing momentum.
 
-### Collected better data about what led customers to order
-
-Kickstarter can analyze UTM parameters, but I never added them to any of my links. It probably would have been helpful to know which readers came from my personal blog vs. the book's website vs. the mailing list. They collect data based on the HTTP referer header, but that's not as reliable as UTM parameters.
-
-### Offered a "I just want to give you extra money" option
+### Offered an "I just want to give you extra money" option
 
 I recently spoke to someone who had self-published a successful video course. The course was $300, but he offered a premium $1k option that included a 40-minute 1:1 video call with him.
 
@@ -224,11 +220,13 @@ I asked, "Are those customers entitled or demanding? I'd worry that if someone p
 
 He said, "Honestly, only a couple of people have purchased that package, and they basically didn't want anything except to hang out. They treated it as a generous way to tip me."
 
-Kickstarter has an option to pay above the asking price for any package, and
+I thought about offering something like a 1:1 call, but I figured that if someone wanted to pay me above the asking price, Kickstarter lets them do that. And they could always buy something like a personalized writing review.
 
-I also have a friend who has managed a popular mobile app for the past decade, and his observation is that part of pricing is how the customer views themselves. There's a large segment of customers who choose the top-tier plan but never use any of the premium features. When he speaks with them, it's clear that they'd just choose the top-tier plan for anything regardless of what it is.
+In retrospect, I think I should have offered a 1:1 call for something like $400-500. I think there might have been people interested in that option who weren't interested in having me review their writing or just overpaying for the book.
 
-I thought I was offering that with the "I review your blog post" option, but in retrospect, there were probably people who would have been interested in a premium option but didn't have a blog post for me to review. If I did this again, I'd have offered 1:1 private consultations for $300.
+### Collected better data about what led customers to order
+
+Kickstarter can analyze UTM parameters, but I never added them to any of my links. It probably would have been helpful to know which readers came from my personal blog vs. the book's website vs. the mailing list. They collect data based on the HTTP referer header, but that's not as reliable as UTM parameters.
 
 ### Included the book in every reward tier
 
