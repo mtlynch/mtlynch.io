@@ -41,7 +41,7 @@ That said, I'm not especially online famous, so I think that most of what I did 
 
 ## Why a pre-sale?
 
-Writing a book is a long commitment. I don't want to spend a year writing a book only to find out afterwards that that nobody wants to read it.
+Writing a book is a long commitment. I don't want to spend a year writing a book only to find out afterwards that nobody wants to read it.
 
 My book is called _Refactoring English_. It's a book that aims to teach writing specifically to software developers. A lot of people say they want to improve their writing, but that's different from being willing to invest actual money into a book about it.
 
@@ -198,7 +198,7 @@ I know I can produce an ebook as a PDF.
 
 I _think_ I can also produce an epub version.
 
-And I could figure out printing a physical version, but I expect that that alone is several weeks of risk. If all goes well, my plan is to never deal directly with print versions or selling on Amazon and just work with a publisher to handle that for a second edition.
+And I could figure out printing a physical version, but I expect that alone is several weeks of risk. If all goes well, my plan is to never deal directly with print versions or selling on Amazon and just work with a publisher to handle that for a second edition.
 
 ### Adapted chapters to the blog format
 
@@ -218,11 +218,11 @@ Apparently they were enabled for my project but not per-item. And then you can't
 
 ### Offered an "I just want to give you extra money" option
 
-I recently spoke to someone who had self-published a successful video course. The course was $300, but he offered a premium $1k option that included a 40-minute 1:1 video call with him.
+I recently attended a talk that Aaron Francis gave about creating educational technical videos. I asked him about pricing because he sells [his course](https://screencasting.com) for $300, but he offered a premium $1k option that included a 40-minute 1:1 video call with him.
 
-I asked, "Are those customers entitled or demanding? I'd worry that if someone paid me $1k for a 40-minute video call, they'd expect the moon."
+At the talk, I asked Aaron if he feels pressure on those $1k calls to deliver something outstanding, as I'd imagine customers who paid $1k for a 40-minute call might feel entitled to something unreasonable.
 
-He said, "Honestly, only a couple of people have purchased that package, and they basically didn't want anything except to hang out. They treated it as a generous way to tip me."
+Surprisingly, Aaron said that he experienced the opposite. When customers paid $1k to get a 1:1 call with him, he found that they "somewhat want help, somewhat just want to hang out." His sense was the $1k customers chose that package as a generous tip. "It's like I turned the iPad around and they tipped $1,000."
 
 I thought about offering something like a 1:1 call, but I figured that if someone wanted to pay me above the asking price, Kickstarter lets them do that. And they could always buy something like a personalized writing review.
 
