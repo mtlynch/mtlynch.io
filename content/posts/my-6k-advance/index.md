@@ -1,6 +1,6 @@
 ---
 title: "My $6k Advance as a First-Time Technical Author"
-date: 2025-04-18
+date: 2025-04-25
 ---
 
 I'm working on [my first technical book](https://refactoringenglish.com), and I just received $5,946.92 in advance sales, even though the book is only 25% complete, and I'm self-publishing it.
@@ -222,7 +222,7 @@ I recently attended a talk that Aaron Francis gave about creating educational te
 
 At the talk, I asked Aaron if he feels pressure on those $1k calls to deliver something outstanding, as I'd imagine customers who paid $1k for a 40-minute call might feel entitled to something unreasonable.
 
-Surprisingly, Aaron said that he experienced the opposite. When customers paid $1k to get a 1:1 call with him, he found that they "somewhat want help, somewhat just want to hang out." His sense was the $1k customers chose that package as a generous tip. "It's like I turned the iPad around and they tipped $1,000."
+Surprisingly, Aaron said that he experienced the opposite. When customers paid $1k to get a 1:1 call with him, he found that they "somewhat want help, somewhat just want to hang out." His sense was the $1k customers chose that package as a generous tip. "It's like I turned the iPad around, and they tipped $1,000."
 
 I thought about offering something like a 1:1 call, but I figured that if someone wanted to pay me above the asking price, Kickstarter lets them do that. And they could always buy something like a personalized writing review.
 
