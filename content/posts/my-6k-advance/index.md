@@ -115,6 +115,14 @@ Manning doesn't publish current rates for first-time authors, but Teiva Harsanyi
 
 The cool thing about self-publishing is that you still have the option to publish a future edition with a traditional publisher. The only person who I've seen talk about this is _Tracy Osborn_, who originally self-published _Hello Web Design_ (great book), and then published [a second edition with No Starch Press](https://nostarch.com/hello-web-design).
 
+## A pre-sale connects me with my most enthusiastic readers
+
+One of the best things about the pre-sale.
+
+I announced a live class. I got 14 sign-ups, and six attended, but that's who I want. Like the people that are most enthusiastic.
+
+Cool that I can offer an extra benefit to early customers.
+
 ## Other things I'm glad I did
 
 ### Used Kickstarter for the pre-sale
