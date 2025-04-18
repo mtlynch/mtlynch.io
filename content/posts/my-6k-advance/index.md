@@ -22,7 +22,11 @@ I haven't seen many authors write books this way, so I thought I'd share more ab
 
 ## My unfair advantages
 
-One of my pet peeves is posts on social media like, "Wow, I put up a basic checkout form to pre-order my USB-powered flashlight, and I got $100k in pre-orders in just two hours. Business is so easy!" And then I check their profile, and they have 40M followers and a long track record of successful products.
+One of my social media pet peeves is seeing posts like this:
+
+> Wow, I put up a basic checkout form to pre-order my USB-powered flashlight. Two hours later, I had $100k in pre-orders! Business is so easy!
+
+And then I check their profile, and they have 40M followers and a long track record of successful products.
 
 So, I want to be upfront that I had some advantages that made my pre-sale succeed:
 
@@ -49,13 +53,13 @@ I set a crowdfunding goal of $5k. I thought it would be difficult to reach that 
 
 The most effective way I found customers was by writing excerpts from the book and sharing them with my mailing lists and on social media. At the end of each post, I included a self-ad for the pre-sale that invited readers to help me expand the article they just read into a full-length ebook:
 
-{{<img src="self-ad.webp" max-width="400px" has-border="true" caption="Self-ads for the book that appeared at the bottom of my sample chapters online">}}
+{{<img src="self-ad.webp" max-width="325px" has-border="true" caption="Self-ads for the book that appeared at the bottom of my sample chapters online">}}
 
 During the pre-sale, I published two new excerpts from the book. I published one right at the start of the pre-sale. I didn't finish the second excerpt until five days before the pre-sale ended. Luckily, the second excerpt got traction on Hacker News and Lobsters, and readers from those sites doubled pre-orders for my book in a few days.
 
 TODO: Graph showing when things happened
 
-## Which attempts for finding customers failed?
+## Which attempts at finding customers failed?
 
 ### Soliciting sponsorships from companies
 
@@ -81,23 +85,37 @@ But even when the one company offered to sponsor for $1k, I didn't feel great ab
 
 ### Creating a web app to pander to Hacker News
 
-I'm the only author on the list with special flair:
+I've often wondered who the most popular bloggers are on Hacker News, so I wrote a quick and dirty tool last summer to figure out the answer. And then I became a father and shelved the tool.
 
-I rank in the top 50 of all time in the list, and I gave myself unique flair to lead readers to my book.
+But during the pre-sale, I realized the tool would be a good way to get attention from Hacker News, and people who care about the top Hacker News bloggers might also be interested in a book about improving their writing.
 
-The post successfully reached the front page of Hacker News, but it had no effect on sales.
+To lead visitors to the book, I put a prominent pre-order link in the navigation menu:
 
-## How would this look with a traditional publisher?
+TODO: Screenshot
+
+I rank in the top 50 of all time in the list, and I gave myself unique flair to lead readers to my book:
+
+TODO: Screenshot
+
+Hacker News did get excited about the tool, and it reached the XX spot of the front page. John Gruber, the XXth most popular blogger on Hacker News to write an article about my tool.
+
+Unfortunately, none of it translated to pre-orders. Pre-orders the week that the ranking tool received attention were almost zero.
+
+## How does a pre-sale compare to an advance from a traditional publisher?
 
 Most publishers don't disclose the deals they make with first-time authors, so it's difficult to say how my results compare.
 
 No Starch Press pays up to $8k, but it reduces your royalties to just 10% of sales.
 
-Manning doesn't publish current rates for first-time authors, but Teiva Harsanyi [recently shared](https://www.thecoder.cafe/p/100-go-mistakes) that Manning paid him a $4k advance.
+- no advance, 15% royalties on print sales, 25% royalties on ebook sales
+- $5k advance, 12% royalties on print sales, 25% royalties on ebook sales
+- $8k advance, 10% royalties on print sales, 25% royalties on ebook sales
+
+Manning doesn't publish current rates for first-time authors, but Teiva Harsanyi [recently shared](https://www.thecoder.cafe/p/100-go-mistakes) about his experience publishing with Manning as a first time author. They paid him $2k upfront, $2k after delivering the first 1/3rd, and then 10% of sales for a total of $47k over four years (11,452 copies sold).
 
 The cool thing about self-publishing is that you still have the option to publish a future edition with a traditional publisher. The only person who I've seen talk about this is _Tracy Osborn_, who originally self-published _Hello Web Design_ (great book), and then published [a second edition with No Starch Press](https://nostarch.com/hello-web-design).
 
-## Other things that worked well for me
+## Other things I'm glad I did
 
 ### Used Kickstarter for the pre-sale
 
@@ -152,19 +170,35 @@ https://www.kickstarter.com/projects/robwalling/the-saas-playbook-by-rob-walling
 
 https://www.kickstarter.com/projects/tracyosborn/hello-web-app-intro-to-building-web-apps-with-djan
 
+https://www.kickstarter.com/discover/categories/publishing/nonfiction
+
 ### Didn't overinvest in a slick presentation
+
+You can spend infinite time making a Kickstarter project. Some projects have intro videos and testimonials that look like they took months to create.
+
+I didn't want to do that.
+
+Mainly because I don't enjoy working on that kind of stuff, but also because I didn't want to do all that stuff before I even knew if anyone wanted this book.
+
+In total, I spent 5-10 hours on my Kickstarter project. I was able to recycle a lot of the material that was already on my website. I made a short intro video because that's what other people seemed to do and it felt like a good way to demonstrate that I'm a real person and this isn't just an AI-generated money grab. The video only took me about 90 minutes. I just wrote a short script, memorized it, and then recorded it about ten times until I had a take I liked.
 
 You can spend infinite time polishing a presentation and making an amazing video. If you're good at that, that's a good edge, but I just wanted to see if anyone was interested in my book, so I didn't want to spend weeks and weeks making a jaw-dropping Kickstarter page only to find out that nobody was interested in the book to begin with.
 
+### Limited to ebook PDF format
+
+I know I can produce an ebook as a PDF.
+
+I _think_ I can also produce an epub version.
+
+And I could figure out printing a physical version, but I expect that that alone is several weeks of risk. If all goes well, my plan is to never deal directly with print versions or selling on Amazon and just work with a publisher to handle that for a second edition.
+
 ### Adapted chapters to the blog format
 
-Early in writing, I was struggling with how to write chapters I could publish for free that would drive attention to the book.
+As I started working on the book, I had a hard time picking which chapters to release as free samples. I wanted to publish chapters that felt like regular blog posts that you'd find on Hacker News or reddit, but how I'd present material in a blog post is different from how I wanted it to appear in the book.
 
-The problem is that a standalone blog post is different from a chapter that's part of a book.
+And then I finally realized I can adapt the material however I want between the free web excerpts and the book. For example, the web excerpt of, "How to Write Blog Posts that Developers Read" is one article, but in the book, I'm going to split the material across a few chapters and expand more on some of the subjects. I suspect that none of my readers are going to say, "Hey! This chapter of the book isn't word-for-word what I saw in the excerpt, so I want my money back!"
 
-And then I realized the obvious thing: I don't have to publish material the same way in a sample chapter and the actual book. I can just call the free preview an "excerpt" and edit it however I want to work well as a blog post.
-
-So, for example, my article, "How to Write Blog Posts that Developers Read" is going to be organized differently in the real book, but that's fine.
+Personally, I'm disappointed when I buy a book, and it's just a bunch of blog posts taped together with some light editing. I want my book to feel like a cohesive book and not like a collection of independent essays.
 
 ## What I wish I'd done differently
 
@@ -194,6 +228,8 @@ Kickstarter has an option to pay above the asking price for any package, and
 
 I also have a friend who has managed a popular mobile app for the past decade, and his observation is that part of pricing is how the customer views themselves. There's a large segment of customers who choose the top-tier plan but never use any of the premium features. When he speaks with them, it's clear that they'd just choose the top-tier plan for anything regardless of what it is.
 
+I thought I was offering that with the "I review your blog post" option, but in retrospect, there were probably people who would have been interested in a premium option but didn't have a blog post for me to review. If I did this again, I'd have offered 1:1 private consultations for $300.
+
 ### Included the book in every reward tier
 
 I find Kickstarter's tier system pretty confusing. There are two components to it: there are reward items and reward tiers. An item is a thing like an ebook or a shoutout on the website. An item can appear in one or more reward tiers.
@@ -206,8 +242,8 @@ One thing I screwed up in creating the rewards was that I didn't include the boo
 
 ## Kickstarter projects attract spam
 
-I got [a ton of spam](/retrospectives/2025/03/#except-for-kickstarter-spammers) from companies trying to "help out" with my presale.
+One thing to be aware of if you offer a project on Kickstarter: spammers will immediately swarm you. I got emails from about ten different spammers offering to ["help out" with my presale](/retrospectives/2025/03/#except-for-kickstarter-spammers). Even though my email isn't in the Kickstarter itself, they found my email address by digging through the book website and then finding my contact information on my personal blog.
 
-Just be aware of this when you start a Kickstarter. Even though my email isn't in the Kickstarter itself, they found my email address by digging through the book website and then finding my contact information on my personal blog.
+Annoyingly, a few of the spammers pose as interested customers, so they'll keep asking one vague question per email about the product until they eventually offer to introduce you to their friend who's good at Kickstarter.
 
 I had a big surge in spam for the first week of the campaign, but then no new outreach after that, though the original spammers kept pestering me to respond.
