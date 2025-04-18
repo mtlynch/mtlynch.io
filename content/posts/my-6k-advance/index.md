@@ -202,10 +202,6 @@ Personally, I'm disappointed when I buy a book, and it's just a bunch of blog po
 
 ## What I wish I'd done differently
 
-### Started with my most excerpt-able chapters
-
-I wrote "Passive Voice Considered Harmful" and realized it's a useful book chapter, but it's not an exciting excerpt. There's rarely a viral article that everyone's obsessing over about the passive voice.
-
 ### Enabled late pledges
 
 Kickstarter has a surprising behavior where you stop being able to edit certain things at surprising times. For example, once a customer purchases a reward tier. And once the fundraising window ends, you can't enable late pledges.
@@ -237,6 +233,10 @@ That makes sense, right?
 Here's where it gets confusing: the rewards also have descriptions and delivery dates, but they're on the _tiers_ not the items. So if I have a tier that
 
 One thing I screwed up in creating the rewards was that I didn't include the book itself in the $75 personal sponsor. So a few people purchased the $75 tier and then were surprised to realize it technically doesn't include the book itself. And once someone has purchased a reward, I can't edit it, even to add items. So, my workaround was just to tell people
+
+### Started with my most excerpt-able material
+
+I wrote "Passive Voice Considered Harmful" and realized it's a useful book chapter, but it's not an exciting excerpt. There's rarely a viral article that everyone's obsessing over about the passive voice.
 
 ## Kickstarter projects attract spam
 
