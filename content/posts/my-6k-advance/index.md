@@ -64,6 +64,12 @@ During the pre-sale, I published two new excerpts from the book. I published one
 
 TODO: Graph showing when things happened
 
+As I started working on the book, I had a hard time picking which chapters to release as free samples. I wanted to publish chapters that felt like regular blog posts that you'd find on Hacker News or reddit, but how I'd present material in a blog post is different from how I wanted it to appear in the book.
+
+And then I finally realized I can adapt the material however I want between the free web excerpts and the book. For example, the web excerpt of, "How to Write Blog Posts that Developers Read" is one article, but in the book, I'm going to split the material across a few chapters and expand more on some of the subjects. I suspect that none of my readers are going to say, "Hey! This chapter of the book isn't word-for-word what I saw in the excerpt, so I want my money back!"
+
+Personally, I'm disappointed when I buy a book, and it's just a bunch of blog posts taped together with some light editing. I want my book to feel like a cohesive book and not like a collection of independent essays.
+
 ### Advertising the book on my personal blog
 
 TODO: Show screenshot
@@ -144,7 +150,7 @@ Cool that I can offer an extra benefit to early customers.
 
 ## Underpromise and overdeliver
 
-When Tracy Osborn used Kickstarter to offer pre-orders for her first book, one of the rewards she offered was home baked cookies. But then XX people bought that option and she felt stressed having to bake XX cookies.
+When Tracy Osborn used Kickstarter to offer pre-orders for her first book, one of the rewards she offered was home baked cookies. But then six people bought that option, and she felt stressed [having to bake hundreds cookies](https://hellowebbooks.com/news/reviewing-hello-web-apps-kickstarter-campaign/).
 
 I definitely felt the temptation to offer attention-grabbing rewards. Especially as sales hit a lull, I felt desperate to offer bigger, better rewards to people who participated in the pre-sale.
 
@@ -152,110 +158,13 @@ Looking back, I'm relieved. Everything I offered is something that still feels g
 
 And now that I'm offering live classes, it relieves pressure. It's something nobody expected to get, so it's just a nice thing. It has a different feeling than if I said that part of the payment is that they get access to monthly classes and then I decided they weren't helpful or fun.
 
-I also limited the promise to the book as a PDF. I'm pretty sure I'll be able to deliver an epub version too, but I don't want to paint myself into a corner where I'm limited in tooling because I have to offer epub format. And I'm sure I could figure out print versions, but I'm glad I didn't offer that because that's a whole beast in itself. I'm planning to sell all I can in ebook format, and if that goes well, I'll work with a publisher to figure out the print version.
-
-## I'm pleasantly surprised with Kickstarter
-
-### Pro: No upsells, no dark patterns
-
-I've tried a lot of other "creator platforms" and it quickly becomes obvious that the platform is trying to milk creators every step of the way.
-
-### Pro: Good expectations around risk
-
-I considered selling the pre-orders directly through a platform like Stripe or PayPal. I ended up choosing Kickstarter, and I'm glad I did for a few reasons.
-
-First, Kickstarter does a good job of letting customers and authors share risk.
-
-Normally, an author assumes nearly all the risk of writing a book. It takes months or years to complete a book. Lots of things can come up in that time that prevent the author from completing the book, in which case, they receive no compensation for years of work.
-
-If I tried to sell pre-orders through PayPal and then something happened where the book was late or I couldn't complete it, customers could complain to PayPal and say I didn't hold up my end of the deal, and I'm a fraud, and I should be in the "no compensation for months of work" category.
-
-Kickstarter lets customers take on the risk instead of the author.
-
-With Kickstarter, customers technically are not purchasing the book but rather inside access to the process of writing it. They're buying a 90% chance (or less, depending on their faith in me) that I'll deliver a book by the end of the year. And as a reward for the risk, they get a discounted price, early access to the book, and a voice in the book's direction.
-
-What happens if something happens, and I can't finish the book?
-
-- Do I walk away with zero?
-- Do I have to negotiate with everyone about how much they think is fair for me to keep?
-- Do I have to deal with a whole mess of headaches trying to give people refunds six months after the fact?
-
-The thing that Kickstarter does well is set expectations around uncertainty.
-
-TODO: You're along for the ride.
-
-### Pro: Kickstarter found customers for me
-
-Beyond that, Kickstarter found some customers for me.
-
-### Pro: I succeeded even with an amateurish profile
-
-You can spend infinite time making a Kickstarter project. Some projects have intro videos and testimonials that look like they took months to create.
-
-I didn't want to do that.
-
-Mainly because I don't enjoy working on that kind of stuff, but also because I didn't want to do all that stuff before I even knew if anyone wanted this book.
-
-In total, I spent 5-10 hours on my Kickstarter project. I was able to recycle a lot of the material that was already on my website. I made a short intro video because that's what other people seemed to do and it felt like a good way to demonstrate that I'm a real person and this isn't just an AI-generated money grab. The video only took me about 90 minutes. I just wrote a short script, memorized it, and then recorded it about ten times until I had a take I liked.
-
-You can spend infinite time polishing a presentation and making an amazing video. If you're good at that, that's a good edge, but I just wanted to see if anyone was interested in my book, so I didn't want to spend weeks and weeks making a jaw-dropping Kickstarter page only to find out that nobody was interested in the book to begin with.
-
-### Con: Late pledges have gotchas
-
-Kickstarter has a surprising behavior where you stop being able to edit certain things at surprising times. For example, once a customer purchases a reward tier. And once the fundraising window ends, you can't enable late pledges.
-
-Apparently they were enabled for my project but not per-item. And then you can't flip them on after without talking to support, but it meant losing momentum.
-
-### Con: Kickstarter payouts are confusing
-
-### Con: Kickstarter ties your hands in some places
-
-Can't change the price of late pledge.
-
-### Con: Spammers will find you
-
-One thing to be aware of if you offer a project on Kickstarter: spammers will immediately swarm you. I got emails from about ten different spammers offering to ["help out" with my presale](/retrospectives/2025/03/#except-for-kickstarter-spammers). Even though my email isn't in the Kickstarter itself, they found my email address by digging through the book website and then finding my contact information on my personal blog.
-
-Annoyingly, a few of the spammers pose as interested customers, so they'll keep asking one vague question per email about the product until they eventually offer to introduce you to their friend who's good at Kickstarter.
-
-I had a big surge in spam for the first week of the campaign, but then no new outreach after that, though the original spammers kept pestering me to respond.
-
-### Tip: Allocate time for bank verification
-
-I was able to get my Kickstarter up and running quickly, but I'm glad I gave myself lead time for Kickstarter to verify my banking information, as that took a few days and required giving a bunch of documentation to Stripe, Kickstarter's payment provider.
-
-### Tip: Look at similar non-fiction book projects
-
-https://www.kickstarter.com/projects/robwalling/the-saas-playbook-by-rob-walling
-
-https://www.kickstarter.com/projects/tracyosborn/hello-web-app-intro-to-building-web-apps-with-djan
-
-https://www.kickstarter.com/discover/categories/publishing/nonfiction
-
-### Tip: Set the delivery date to the slowest item in the reward tier
-
-### Offering premium rewards
-
-I offered pre-orders of the book for $25 as the standard item in the Kickstarter, but I also offered other options for people who wanted to contribute more:
-
-- $75: Your name and a link on the website, plus a thank you in the first edition of the book.
-- $150: Personalized writing feedback on a blog post or draft.
-  - I originally priced this at $300 and nobody bought, but four people purchased after I reduced the price to $150.
-- $150: Team license to the book for up to 10 people within an organization.
+I also limited the promise to the book as a PDF. I'm pretty sure I'll be able to deliver an epub version too, but I don't want to paint myself into a corner where I'm limited in tooling because I have to offer epub format. And I'm sure I could figure out print versions, but I'm glad I didn't offer that because that's a whole beast in itself, and then figuring out how to ship a physical product to customers is so much harder than just handing them a digital file. I'm planning to sell all I can in ebook format, and if that goes well, I'll work with a publisher to figure out the print version.
 
 ### Avoided offering forever placement in the book
 
 One path I want to keep open is potentially republishing this book later with a tech publisher like No Starch Press. There are a lot of authors who self-published a book and then did a second edition with a publisher, and that seems like the best of both worlds.
 
 So, given that I might do a second edition with a publisher, I didn't want to commit to something like, "Backers will always be mentioned by name in the book," because I don't know if that will complicate things if I eventually go to a publisher and bring them these requirements. I made sure to say that I'd thank backers specifically in the first edition, though I'll try to keep them in forever.
-
-### Adapted chapters to the blog format
-
-As I started working on the book, I had a hard time picking which chapters to release as free samples. I wanted to publish chapters that felt like regular blog posts that you'd find on Hacker News or reddit, but how I'd present material in a blog post is different from how I wanted it to appear in the book.
-
-And then I finally realized I can adapt the material however I want between the free web excerpts and the book. For example, the web excerpt of, "How to Write Blog Posts that Developers Read" is one article, but in the book, I'm going to split the material across a few chapters and expand more on some of the subjects. I suspect that none of my readers are going to say, "Hey! This chapter of the book isn't word-for-word what I saw in the excerpt, so I want my money back!"
-
-Personally, I'm disappointed when I buy a book, and it's just a bunch of blog posts taped together with some light editing. I want my book to feel like a cohesive book and not like a collection of independent essays.
 
 ## What I wish I'd done differently
 
@@ -270,20 +179,6 @@ Surprisingly, Aaron said that he experienced the opposite. When customers paid $
 I thought about offering something like a 1:1 call, but I figured that if someone wanted to pay me above the asking price, Kickstarter lets them do that. And they could always buy something like a personalized writing review.
 
 In retrospect, I think I should have offered a 1:1 call for something like $400-500. I think there might have been people interested in that option who weren't interested in having me review their writing or just overpaying for the book.
-
-### Collected better data about what led customers to order
-
-Kickstarter can analyze UTM parameters, but I never added them to any of my links. It probably would have been helpful to know which readers came from my personal blog vs. the book's website vs. the mailing list. They collect data based on the HTTP referer header, but that's not as reliable as UTM parameters.
-
-### Included the book in every reward tier
-
-I find Kickstarter's tier system pretty confusing. There are two components to it: there are reward items and reward tiers. An item is a thing like an ebook or a shoutout on the website. An item can appear in one or more reward tiers.
-
-That makes sense, right?
-
-Here's where it gets confusing: the rewards also have descriptions and delivery dates, but they're on the _tiers_ not the items. So if I have a tier that
-
-One thing I screwed up in creating the rewards was that I didn't include the book itself in the $75 personal sponsor. So a few people purchased the $75 tier and then were surprised to realize it technically doesn't include the book itself. And once someone has purchased a reward, I can't edit it, even to add items. So, my workaround was just to tell people
 
 ### Started with my most excerpt-able material
 
