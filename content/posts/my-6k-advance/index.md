@@ -30,16 +30,14 @@ One of my social media pet peeves is seeing posts like this:
 
 And then I check their profile, and they have 40M followers and a long track record of successful products.
 
-So, I want to be upfront that I had some advantages that helped my pre-sale succeed:
+So, I want to be upfront that I had advantages that helped my pre-sale succeed:
 
-- I've been blogging for nine years.
+- My personal blog receives 300-500k unique readers per year.
 - I'm atypically successful at writing articles that succeed [on Hacker News](https://refactoringenglish.com/tools/hn-popularity/domain/?d=mtlynch.io) and [reddit](https://www.reddit.com/search?q=url%3Amtlynch.io&sort=relevance&t=all).
   - During my pre-sale, an excerpt from my book gained [positive attention on Hacker News](https://news.ycombinator.com/item?id=43503872).
 - I have 2.1k subscribers on my blog's mailing list and 1.5k subscribers for the book's mailing list.
-  - There's surprisingly low overlap between the two lists, so it's about 3.5k total subscribers.
+  - There's surprisingly low overlap between the two lists, so it's about 3.5k subscribers, excluding duplicates.
 - I have 9.2k followers on Twitter and 600 followers on Bluesky.
-
-That said, I'm not especially online famous, so I think that most of what I did is repeatable.
 
 ## At worst, 200 people want to read this book
 
@@ -165,7 +163,7 @@ I have a few quibbles with Kickstarter, but on the whole, it did what it said. I
 
 I have [more detailed notes about Kickstarter](/notes/lessons-from-my-first-kickstarter/) for anyone interested in using that for a similar project.
 
-### Underpromise and overdeliver
+### Underpromised on rewards
 
 When Tracy Osborn used Kickstarter to offer pre-orders for her first book, one of the rewards she offered was home baked cookies. But then six people bought that option, and she felt stressed [having to bake hundreds cookies](https://hellowebbooks.com/news/reviewing-hello-web-apps-kickstarter-campaign/).
 

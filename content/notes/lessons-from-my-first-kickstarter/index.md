@@ -57,7 +57,7 @@ Apparently they were enabled for my project but not per-item. And then you can't
 
 ### Con: Kickstarter payouts are confusing
 
-### Con: Kickstarter ties your hands in some places
+### Con: Kickstarter inconveniently ties my hands
 
 Can't change the price of late pledge.
 
