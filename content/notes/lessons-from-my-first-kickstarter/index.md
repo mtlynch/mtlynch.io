@@ -1,3 +1,8 @@
+---
+title: "Lessons From My First Kickstarter"
+date: 2025-04-21
+---
+
 ## I'm pleasantly surprised with Kickstarter
 
 ### Pro: No upsells, no dark patterns

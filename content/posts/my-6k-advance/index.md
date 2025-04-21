@@ -35,9 +35,8 @@ So, I want to be upfront that I had some advantages that helped my pre-sale succ
 - I've been blogging for nine years.
 - I'm atypically successful at writing articles that succeed [on Hacker News](https://refactoringenglish.com/tools/hn-popularity/domain/?d=mtlynch.io) and [reddit](https://www.reddit.com/search?q=url%3Amtlynch.io&sort=relevance&t=all).
   - During my pre-sale, an excerpt from my book gained [positive attention on Hacker News](https://news.ycombinator.com/item?id=43503872).
-- I have 2k subscribers on my blog's mailing list and XX subscribers for the book's mailing list.
-  - There's heavy overlap between the two lists.
-  - There are at most XX unique subscribers between the two mailing lists.
+- I have 2.1k subscribers on my blog's mailing list and 1.5k subscribers for the book's mailing list.
+  - There's surprisingly low overlap between the two lists, so it's about 3.5k total subscribers.
 - I have 9.2k followers on Twitter and 600 followers on Bluesky.
 
 That said, I'm not especially online famous, so I think that most of what I did is repeatable.
@@ -134,7 +133,13 @@ Best of all, I still have the option to publish a future edition with a traditio
 
 I'm not sure how many publishers are willing to re-publish a book that the author previously self-published, but _No Starch Press_ and _Manning_ both confirmed to me that they regularly do this.
 
-## A pre-sale connects me with my most enthusiastic customers
+## A pre-sale connects me with my most enthusiastic readers
+
+People have a lot of opinions, and they feel like they're being helpful in sharing those opinions with you. But a lot of opinions people share with me are from people who would never buy the product they're talking about. Listening to these people is actually counterproductive because it's catering to the exact wrong audience.
+
+The great thing about a pre-sale is that you suddenly have a direct line of communication to hundreds of people who are your target audience. Not only that, they're the early adopters, so they're the most enthusiastic to talk about it and give you feedback.
+
+I don't want to write in a vacuum. I want to make sure what I'm writing makes readers feel like they got what they paid for and then some.
 
 One benefit of the pre-sale is that I now have a great source of feedback about the book from real readers.
 
@@ -142,13 +147,25 @@ One of the things that inspired me to write a book was reading Rob Fitzpatrick's
 
 I announced a live class. I got 14 sign-ups, and six attended, but that's who I want. Like the people that are most enthusiastic.
 
+People were sharing the Kickstarter campaign on social media and encouraging others to support the book.
+
 It turned out that a lot of them had been reading my writing for years.
 
 One of the best things about the pre-sale.
 
 Cool that I can offer an extra benefit to early customers.
 
-## Underpromise and overdeliver
+## What I'm glad I did
+
+### Ran the pre-sale on Kickstarter
+
+I was pleasantly surprised by Kickstarter. I kept waiting for the dark patterns and upsells to show up, but they never did.
+
+I have a few quibbles with Kickstarter, but on the whole, it did what it said. It helped me raise a successful crowdfunding project, and it focused on that goal. It didn't try to milk me for money or pull any bait and switch tricks at the last minute.
+
+I have [more detailed notes about Kickstarter](/notes/lessons-from-my-first-kickstarter/) for anyone interested in using that for a similar project.
+
+### Underpromise and overdeliver
 
 When Tracy Osborn used Kickstarter to offer pre-orders for her first book, one of the rewards she offered was home baked cookies. But then six people bought that option, and she felt stressed [having to bake hundreds cookies](https://hellowebbooks.com/news/reviewing-hello-web-apps-kickstarter-campaign/).
 
