@@ -110,7 +110,7 @@ Hacker News did get excited about the tool, and it reached the XX spot of the fr
 
 Unfortunately, none of it translated to pre-orders. Pre-orders the week that the ranking tool received attention were almost zero.
 
-## How does a pre-sale compare to an advance from a traditional publisher?
+## How does crowdfunding compare to an advance from a traditional publisher?
 
 Most publishers don't disclose the deals they make with first-time authors, so it's difficult to say how my results compare.
 
@@ -122,25 +122,39 @@ No Starch Press is the most transparent publisher in terms of author pay. It off
 
 Manning doesn't publish current rates for first-time authors, but Teiva Harsanyi [recently shared](https://www.thecoder.cafe/p/100-go-mistakes) his experience publishing with Manning as a first time author. They paid him $2k upfront, $2k after delivering the first 1/3rd, and then 10% of sales for a total of $47k over four years (11,452 copies sold).
 
-Even though the initial pre-sale is over, I'm still selling pre-orders for the book for a slightly higher price. I've had 14 more sales for a total of $520. I plan to continue letting customers pre-order the book and offer a discount proportional to how early the reader pre-orders.
+Even though my initial pre-sale is over, I'm still selling pre-orders for the book for a slightly higher price. I've had 14 more sales for a total of $520. I plan to continue offering pre-orders until I complete the book with a bigger discount the earlier that customers order.
 
 Best of all, I still have the option to publish a future edition with a traditional publisher. The only person who I've seen talk about this is _Tracy Osborn_, who originally self-published _Hello Web Design_ (great book), and then published [a second edition with No Starch Press](https://nostarch.com/hello-web-design).
 
-I'm not sure how many publishers are willing to re-publish a book that the author previously self-published, but _No Starch Press_ and _Manning_ both confirmed to me directly that they regularly do this.
+I'm not sure how many publishers are willing to re-publish a book that the author previously self-published, but _No Starch Press_ and _Manning_ both confirmed to me that they regularly do this.
 
-## A pre-sale connects me with my most enthusiastic readers
+## A pre-sale connects me with my most enthusiastic customers
 
-One benefit I didn't anticipate about the pre-sale
+One benefit of the pre-sale is that I now have a great source of feedback about the book from real readers.
+
+One of the things that inspired me to write a book was reading Rob Fitzpatrick's book, _Write Useful Books_. It's a guide to writing non-fiction books. Rob recommends that authors teach their material to students before writing the book. That way, they
+
+I announced a live class. I got 14 sign-ups, and six attended, but that's who I want. Like the people that are most enthusiastic.
 
 It turned out that a lot of them had been reading my writing for years.
 
 One of the best things about the pre-sale.
 
-I announced a live class. I got 14 sign-ups, and six attended, but that's who I want. Like the people that are most enthusiastic.
-
 Cool that I can offer an extra benefit to early customers.
 
-## Other things I'm glad I did
+## Underpromise and overdeliver
+
+When Tracy Osborn created a Kickstarter, she
+
+- I didn't
+
+## I'm pleasantly surprised with Kickstarter
+
+### Pro: No upsells, no dark patterns
+
+I've tried a lot of other "creator platforms" and it quickly becomes obvious that the platform is trying to milk creators every step of the way.
+
+### Pro: Sets good expectations around risk
 
 ### Used Kickstarter for the pre-sale
 
@@ -170,7 +184,7 @@ Beyond that, Kickstarter found some customers for me.
 
 Finally, I appreciated that Kickstarter
 
-### Didn't overinvest in a slick presentation
+### Pro: I succeeded even with an amateurish profile
 
 You can spend infinite time making a Kickstarter project. Some projects have intro videos and testimonials that look like they took months to create.
 
@@ -181,6 +195,22 @@ Mainly because I don't enjoy working on that kind of stuff, but also because I d
 In total, I spent 5-10 hours on my Kickstarter project. I was able to recycle a lot of the material that was already on my website. I made a short intro video because that's what other people seemed to do and it felt like a good way to demonstrate that I'm a real person and this isn't just an AI-generated money grab. The video only took me about 90 minutes. I just wrote a short script, memorized it, and then recorded it about ten times until I had a take I liked.
 
 You can spend infinite time polishing a presentation and making an amazing video. If you're good at that, that's a good edge, but I just wanted to see if anyone was interested in my book, so I didn't want to spend weeks and weeks making a jaw-dropping Kickstarter page only to find out that nobody was interested in the book to begin with.
+
+### Con: Spammers will find you
+
+### Con: Late p
+
+### Con: Kickstarter payouts are confusing
+
+### Con: Kickstarter assumes physical products
+
+### Con: Kickstarter ties your hands in some places
+
+Can't change price.
+
+### Tip: Allocate time for bank verification
+
+### Tip: Set the delivery date to the slowest item in the reward tier
 
 ### Offering premium rewards
 
