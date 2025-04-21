@@ -91,6 +91,14 @@ Cool that I can offer an extra benefit to early customers.
 
 ## How did I find customers?
 
+| Source              | %   |
+| ------------------- | --- |
+| Refactoring English | 42  |
+| Kickstarter         | 12  |
+| Personal Blog       | 11  |
+| Twitter             | 4   |
+| Other / Unknown     | XX  |
+
 ### Publishing book excerpts
 
 The most effective way I found customers was by writing excerpts from the book and sharing them with my mailing lists and on social media. At the end of each post, I included a self-ad for the pre-sale that invited readers to help me expand the article they just read into a full-length ebook:
