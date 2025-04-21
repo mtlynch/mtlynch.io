@@ -39,7 +39,25 @@ So, I want to be upfront that I had advantages that helped my pre-sale succeed:
   - There's surprisingly low overlap between the two lists, so it's about 3.5k subscribers, excluding duplicates.
 - I have 9.2k followers on Twitter and 600 followers on Bluesky.
 
-## At worst, 200 people want to read this book
+## How does crowdfunding compare to an advance from a traditional publisher?
+
+Most publishers don't disclose the deals they make with first-time authors, so it's difficult to say how my results compare.
+
+No Starch Press is the most transparent publisher in terms of author pay. It offers three different royalty options to first-time authors:
+
+- no advance, 15% royalties on print sales, 25% royalties on ebook sales
+- $5k advance, 12% royalties on print sales, 25% royalties on ebook sales
+- $8k advance, 10% royalties on print sales, 25% royalties on ebook sales
+
+Manning doesn't publish current rates for first-time authors, but Teiva Harsanyi [recently shared](https://www.thecoder.cafe/p/100-go-mistakes) his experience publishing with Manning as a first time author. They paid him $2k upfront, $2k after delivering the first 1/3rd, and then 10% of sales for a total of $47k over four years (11,452 copies sold).
+
+Even though my initial pre-sale is over, I'm still selling pre-orders for the book for a slightly higher price. I've had 14 more sales for a total of $520. I plan to continue offering pre-orders until I complete the book with a bigger discount the earlier that customers order.
+
+Best of all, I still have the option to publish a future edition with a traditional publisher. The only person who I've seen talk about this is _Tracy Osborn_, who originally self-published _Hello Web Design_ (great book), and then published [a second edition with No Starch Press](https://nostarch.com/hello-web-design).
+
+I'm not sure how many publishers are willing to re-publish a book that the author previously self-published, but _No Starch Press_ and _Manning_ both confirmed to me that they regularly do this.
+
+## Worst-case: 200 people want to read my book
 
 Writing a book is a long commitment. I don't want to spend a year writing a book only to find out afterwards that nobody wants to read it.
 
@@ -48,6 +66,28 @@ My book is called _Refactoring English_. It's a book that aims to teach writing 
 The pre-sale was a way to confirm that there were readers out there interested enough in my book to purchase it.
 
 I set a crowdfunding goal of $5k. I thought it would be difficult to reach that goal, but I picked a number where, even if I make no further sales, I'd still feel satisfied writing a book for that amount of money.
+
+## A pre-sale connects me with my most enthusiastic readers
+
+People have a lot of opinions, and they feel like they're being helpful in sharing those opinions with you. But a lot of opinions people share with me are from people who would never buy the product they're talking about. Listening to these people is actually counterproductive because it's catering to the exact wrong audience.
+
+The great thing about a pre-sale is that you suddenly have a direct line of communication to hundreds of people who are your target audience. Not only that, they're the early adopters, so they're the most enthusiastic to talk about it and give you feedback.
+
+I don't want to write in a vacuum. I want to make sure what I'm writing makes readers feel like they got what they paid for and then some.
+
+One benefit of the pre-sale is that I now have a great source of feedback about the book from real readers.
+
+One of the things that inspired me to write a book was reading Rob Fitzpatrick's book, _Write Useful Books_. It's a guide to writing non-fiction books. Rob recommends that authors teach their material to students before writing the book. That way, they
+
+I announced a live class. I got 14 sign-ups, and six attended, but that's who I want. Like the people that are most enthusiastic.
+
+People were sharing the Kickstarter campaign on social media and encouraging others to support the book.
+
+It turned out that a lot of them had been reading my writing for years.
+
+One of the best things about the pre-sale.
+
+Cool that I can offer an extra benefit to early customers.
 
 ## How did I find customers?
 
@@ -112,46 +152,6 @@ TODO: Screenshot
 Hacker News did get excited about the tool, and it reached the XX spot of the front page. John Gruber, the XXth most popular blogger on Hacker News to write an article about my tool.
 
 Unfortunately, none of it translated to pre-orders. Pre-orders the week that the ranking tool received attention were almost zero.
-
-## How does crowdfunding compare to an advance from a traditional publisher?
-
-Most publishers don't disclose the deals they make with first-time authors, so it's difficult to say how my results compare.
-
-No Starch Press is the most transparent publisher in terms of author pay. It offers three different royalty options to first-time authors:
-
-- no advance, 15% royalties on print sales, 25% royalties on ebook sales
-- $5k advance, 12% royalties on print sales, 25% royalties on ebook sales
-- $8k advance, 10% royalties on print sales, 25% royalties on ebook sales
-
-Manning doesn't publish current rates for first-time authors, but Teiva Harsanyi [recently shared](https://www.thecoder.cafe/p/100-go-mistakes) his experience publishing with Manning as a first time author. They paid him $2k upfront, $2k after delivering the first 1/3rd, and then 10% of sales for a total of $47k over four years (11,452 copies sold).
-
-Even though my initial pre-sale is over, I'm still selling pre-orders for the book for a slightly higher price. I've had 14 more sales for a total of $520. I plan to continue offering pre-orders until I complete the book with a bigger discount the earlier that customers order.
-
-Best of all, I still have the option to publish a future edition with a traditional publisher. The only person who I've seen talk about this is _Tracy Osborn_, who originally self-published _Hello Web Design_ (great book), and then published [a second edition with No Starch Press](https://nostarch.com/hello-web-design).
-
-I'm not sure how many publishers are willing to re-publish a book that the author previously self-published, but _No Starch Press_ and _Manning_ both confirmed to me that they regularly do this.
-
-## A pre-sale connects me with my most enthusiastic readers
-
-People have a lot of opinions, and they feel like they're being helpful in sharing those opinions with you. But a lot of opinions people share with me are from people who would never buy the product they're talking about. Listening to these people is actually counterproductive because it's catering to the exact wrong audience.
-
-The great thing about a pre-sale is that you suddenly have a direct line of communication to hundreds of people who are your target audience. Not only that, they're the early adopters, so they're the most enthusiastic to talk about it and give you feedback.
-
-I don't want to write in a vacuum. I want to make sure what I'm writing makes readers feel like they got what they paid for and then some.
-
-One benefit of the pre-sale is that I now have a great source of feedback about the book from real readers.
-
-One of the things that inspired me to write a book was reading Rob Fitzpatrick's book, _Write Useful Books_. It's a guide to writing non-fiction books. Rob recommends that authors teach their material to students before writing the book. That way, they
-
-I announced a live class. I got 14 sign-ups, and six attended, but that's who I want. Like the people that are most enthusiastic.
-
-People were sharing the Kickstarter campaign on social media and encouraging others to support the book.
-
-It turned out that a lot of them had been reading my writing for years.
-
-One of the best things about the pre-sale.
-
-Cool that I can offer an extra benefit to early customers.
 
 ## What I'm glad I did
 
