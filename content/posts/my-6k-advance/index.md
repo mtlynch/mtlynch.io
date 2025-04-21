@@ -3,13 +3,15 @@ title: "My $6k Advance as a First-Time Technical Author"
 date: 2025-04-25
 ---
 
-I'm working on [my first technical book](https://refactoringenglish.com), and I just received $5,946.92 in advance sales, even though the book is only 25% complete, and I'm self-publishing it.
+I just received $5,946.92 in advance sales for [my first technical book](https://refactoringenglish.com) even though the book is only 25% complete, and I'm self-publishing it.
 
-TODO: Show screenshot
+{{<img src="kickstarter-payout.webp" max-width="650px" has-border="true">}}
 
 In March, I ran a three-week pre-sale for the book [on Kickstarter](https://www.kickstarter.com/projects/mtlynch/refactoring-english). The pre-sale raised $6,551 from 191 customers. After Kickstarter's fees, I get $5,946.92, or 91% of the total.
 
-I haven't seen many authors write books this way, so I thought I'd share more about how and why I crowdfunded my book:
+I haven't seen many authors write books this way, so I thought I'd share more about how and why I crowdfunded my book.
+
+## Benefits of crowdfunding a self-published book
 
 - $6k is a higher advance than most traditional publishers offer to first-time authors.
 - The money has no strings attached.
@@ -17,7 +19,7 @@ I haven't seen many authors write books this way, so I thought I'd share more ab
 - The pre-sale gives me confidence that when I complete the book, I can find readers willing to purchase it.
 - I didn't have to beg a publisher for permission to write my book.
 - When I publish the book, I don't have to split sales with a publisher.
-  - My only cost will be commissions on whatever payment platform I choose, so I'll only lose 3-13% in fees, depending on the platform.
+  - My only cost will be payment processor fees, so I'll only lose 3-13% in fees, depending on the platform.
 - I still have the option to publish the same book with a traditional publisher in the future.
 
 ## My unfair advantages
@@ -28,10 +30,11 @@ One of my social media pet peeves is seeing posts like this:
 
 And then I check their profile, and they have 40M followers and a long track record of successful products.
 
-So, I want to be upfront that I had some advantages that made my pre-sale succeed:
+So, I want to be upfront that I had some advantages that helped my pre-sale succeed:
 
 - I've been blogging for nine years.
 - I'm atypically successful at writing articles that succeed [on Hacker News](https://refactoringenglish.com/tools/hn-popularity/domain/?d=mtlynch.io) and [reddit](https://www.reddit.com/search?q=url%3Amtlynch.io&sort=relevance&t=all).
+  - During my pre-sale, an excerpt from my book gained [positive attention on Hacker News](https://news.ycombinator.com/item?id=43503872).
 - I have 2k subscribers on my blog's mailing list and XX subscribers for the book's mailing list.
   - There's heavy overlap between the two lists.
   - There are at most XX unique subscribers between the two mailing lists.
@@ -39,7 +42,7 @@ So, I want to be upfront that I had some advantages that made my pre-sale succee
 
 That said, I'm not especially online famous, so I think that most of what I did is repeatable.
 
-## Why a pre-sale?
+## A pre-sale protects me from writing a book nobody wants
 
 Writing a book is a long commitment. I don't want to spend a year writing a book only to find out afterwards that nobody wants to read it.
 
@@ -51,6 +54,8 @@ I set a crowdfunding goal of $5k. I thought it would be difficult to reach that 
 
 ## How did I find customers?
 
+### Publishing book excerpts
+
 The most effective way I found customers was by writing excerpts from the book and sharing them with my mailing lists and on social media. At the end of each post, I included a self-ad for the pre-sale that invited readers to help me expand the article they just read into a full-length ebook:
 
 {{<img src="self-ad.webp" max-width="325px" has-border="true" caption="Self-ads for the book that appeared at the bottom of my sample chapters online">}}
@@ -58,6 +63,10 @@ The most effective way I found customers was by writing excerpts from the book a
 During the pre-sale, I published two new excerpts from the book. I published one right at the start of the pre-sale. I didn't finish the second excerpt until five days before the pre-sale ended. Luckily, the second excerpt got traction on Hacker News and Lobsters, and readers from those sites doubled pre-orders for my book in a few days.
 
 TODO: Graph showing when things happened
+
+### Advertising the book on my personal blog
+
+TODO: Show screenshot
 
 ## Which attempts at finding customers failed?
 
@@ -69,19 +78,19 @@ I thought, "Why not do the same thing with an ebook?" I didn't mind showing some
 
 But company sponsors didn't work. I reached out to ten companies, and none of the discussions went anywhere:
 
-- One offered $1k to buy a page in the book's acknowledgments section and a banner ad on the website.
+- One company offered $1k to buy a page in the book's acknowledgments section and a banner ad on the website.
   - I asked whether they'd be open to something time-limited, as I didn't want a "forever" obligation, and they stopped responding.
-- One was interested but then stopped responding when they realized I wanted them to purchase the sponsorship through Kickstarter.
-- One gave a quick, polite "no."
-- Seven (the rest) never responded.
+- One company was interested but then stopped responding when they realized I wanted them to purchase the sponsorship through Kickstarter.
+- One company gave a quick, polite "no."
+- Seven companies (the rest) never responded.
 
-Part of the problem was that I waited until the last ten days of the pre-sale to reach out, and at that point, it looked like my project was a flop. I kept thinking I'd have a hit post during the pre-sale so that I could show potential sponsors that 50k readers can see their logo, but I didn't have that until the end.
+Part of the problem was that I waited until the last ten days of the pre-sale to reach out, and at that point, it looked like my project was a flop. I kept thinking I'd have a hit post during the pre-sale so that I could wow potential sponsors with flashy metrics about how many of my readers would see their logo, but I didn't have that until the end.
 
 {{<img src="sponsor-email.webp" has-border="true" max-width="550px">}}
 
 Again, with the benefit of hindsight, it's easy to say I should have skipped soliciting sponsors, but I think the decision made sense at the time.
 
-But even when the one company offered to sponsor for $1k, I didn't feel great about that because it felt like a single company carrying too much of the pre-sale. I expect that the number of pre-orders from regular readers to be predictive of how many customers purchase the finished book, so if I can only sell $3k to regular people, that would have been a bad sign for long-term sales.
+Even when the one company offered to sponsor for $1k, I didn't feel great about that because it felt like a single company carrying too much of the pre-sale. I expect that the number of pre-orders from regular readers to be predictive of how many customers purchase the finished book, so if I can only sell $3k to regular people, that would have been a bad sign for long-term sales.
 
 ### Creating a web app to pander to Hacker News
 
@@ -105,17 +114,25 @@ Unfortunately, none of it translated to pre-orders. Pre-orders the week that the
 
 Most publishers don't disclose the deals they make with first-time authors, so it's difficult to say how my results compare.
 
-No Starch Press pays up to $8k, but it reduces your royalties to just 10% of sales.
+No Starch Press is the most transparent publisher in terms of author pay. It offers three different royalty options to first-time authors:
 
 - no advance, 15% royalties on print sales, 25% royalties on ebook sales
 - $5k advance, 12% royalties on print sales, 25% royalties on ebook sales
 - $8k advance, 10% royalties on print sales, 25% royalties on ebook sales
 
-Manning doesn't publish current rates for first-time authors, but Teiva Harsanyi [recently shared](https://www.thecoder.cafe/p/100-go-mistakes) about his experience publishing with Manning as a first time author. They paid him $2k upfront, $2k after delivering the first 1/3rd, and then 10% of sales for a total of $47k over four years (11,452 copies sold).
+Manning doesn't publish current rates for first-time authors, but Teiva Harsanyi [recently shared](https://www.thecoder.cafe/p/100-go-mistakes) his experience publishing with Manning as a first time author. They paid him $2k upfront, $2k after delivering the first 1/3rd, and then 10% of sales for a total of $47k over four years (11,452 copies sold).
 
-The cool thing about self-publishing is that you still have the option to publish a future edition with a traditional publisher. The only person who I've seen talk about this is _Tracy Osborn_, who originally self-published _Hello Web Design_ (great book), and then published [a second edition with No Starch Press](https://nostarch.com/hello-web-design).
+Even though the initial pre-sale is over, I'm still selling pre-orders for the book for a slightly higher price. I've had 14 more sales for a total of $520. I plan to continue letting customers pre-order the book and offer a discount proportional to how early the reader pre-orders.
+
+Best of all, I still have the option to publish a future edition with a traditional publisher. The only person who I've seen talk about this is _Tracy Osborn_, who originally self-published _Hello Web Design_ (great book), and then published [a second edition with No Starch Press](https://nostarch.com/hello-web-design).
+
+I'm not sure how many publishers are willing to re-publish a book that the author previously self-published, but _No Starch Press_ and _Manning_ both confirmed to me directly that they regularly do this.
 
 ## A pre-sale connects me with my most enthusiastic readers
+
+One benefit I didn't anticipate about the pre-sale
+
+It turned out that a lot of them had been reading my writing for years.
 
 One of the best things about the pre-sale.
 
@@ -153,6 +170,18 @@ Beyond that, Kickstarter found some customers for me.
 
 Finally, I appreciated that Kickstarter
 
+### Didn't overinvest in a slick presentation
+
+You can spend infinite time making a Kickstarter project. Some projects have intro videos and testimonials that look like they took months to create.
+
+I didn't want to do that.
+
+Mainly because I don't enjoy working on that kind of stuff, but also because I didn't want to do all that stuff before I even knew if anyone wanted this book.
+
+In total, I spent 5-10 hours on my Kickstarter project. I was able to recycle a lot of the material that was already on my website. I made a short intro video because that's what other people seemed to do and it felt like a good way to demonstrate that I'm a real person and this isn't just an AI-generated money grab. The video only took me about 90 minutes. I just wrote a short script, memorized it, and then recorded it about ten times until I had a take I liked.
+
+You can spend infinite time polishing a presentation and making an amazing video. If you're good at that, that's a good edge, but I just wanted to see if anyone was interested in my book, so I didn't want to spend weeks and weeks making a jaw-dropping Kickstarter page only to find out that nobody was interested in the book to begin with.
+
 ### Offering premium rewards
 
 I offered pre-orders of the book for $25 as the standard item in the Kickstarter, but I also offered other options for people who wanted to contribute more:
@@ -179,18 +208,6 @@ https://www.kickstarter.com/projects/robwalling/the-saas-playbook-by-rob-walling
 https://www.kickstarter.com/projects/tracyosborn/hello-web-app-intro-to-building-web-apps-with-djan
 
 https://www.kickstarter.com/discover/categories/publishing/nonfiction
-
-### Didn't overinvest in a slick presentation
-
-You can spend infinite time making a Kickstarter project. Some projects have intro videos and testimonials that look like they took months to create.
-
-I didn't want to do that.
-
-Mainly because I don't enjoy working on that kind of stuff, but also because I didn't want to do all that stuff before I even knew if anyone wanted this book.
-
-In total, I spent 5-10 hours on my Kickstarter project. I was able to recycle a lot of the material that was already on my website. I made a short intro video because that's what other people seemed to do and it felt like a good way to demonstrate that I'm a real person and this isn't just an AI-generated money grab. The video only took me about 90 minutes. I just wrote a short script, memorized it, and then recorded it about ten times until I had a take I liked.
-
-You can spend infinite time polishing a presentation and making an amazing video. If you're good at that, that's a good edge, but I just wanted to see if anyone was interested in my book, so I didn't want to spend weeks and weeks making a jaw-dropping Kickstarter page only to find out that nobody was interested in the book to begin with.
 
 ### Limited to ebook PDF format
 
