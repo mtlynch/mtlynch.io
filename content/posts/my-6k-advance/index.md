@@ -5,9 +5,9 @@ date: 2025-04-25
 
 I just received $5,946.92 in advance sales for [my first technical book](https://refactoringenglish.com) even though the book is only 25% complete, and I'm self-publishing it.
 
-{{<img src="kickstarter-payout.webp" max-width="650px" has-border="true">}}
-
 In March, I ran a three-week pre-sale for the book [on Kickstarter](https://www.kickstarter.com/projects/mtlynch/refactoring-english). The pre-sale raised $6,551 from 191 customers. After Kickstarter's fees, I get $5,946.92, or 91% of the total.
+
+{{<img src="kickstarter-payout.webp" max-width="650px" has-border="true" caption="Proceeds from my pre-sale on Kickstarter">}}
 
 I haven't seen many authors write books this way, so I thought I'd share more about how and why I crowdfunded my book.
 
@@ -42,7 +42,7 @@ So, I want to be upfront that I had some advantages that helped my pre-sale succ
 
 That said, I'm not especially online famous, so I think that most of what I did is repeatable.
 
-## A pre-sale protects me from writing a book nobody wants
+## At worst, 200 people want to read this book
 
 Writing a book is a long commitment. I don't want to spend a year writing a book only to find out afterwards that nobody wants to read it.
 
@@ -144,9 +144,15 @@ Cool that I can offer an extra benefit to early customers.
 
 ## Underpromise and overdeliver
 
-When Tracy Osborn created a Kickstarter, she
+When Tracy Osborn used Kickstarter to offer pre-orders for her first book, one of the rewards she offered was home baked cookies. But then XX people bought that option and she felt stressed having to bake XX cookies.
 
-- I didn't
+I definitely felt the temptation to offer attention-grabbing rewards. Especially as sales hit a lull, I felt desperate to offer bigger, better rewards to people who participated in the pre-sale.
+
+Looking back, I'm relieved. Everything I offered is something that still feels good to offer.
+
+And now that I'm offering live classes, it relieves pressure. It's something nobody expected to get, so it's just a nice thing. It has a different feeling than if I said that part of the payment is that they get access to monthly classes and then I decided they weren't helpful or fun.
+
+I also limited the promise to the book as a PDF. I'm pretty sure I'll be able to deliver an epub version too, but I don't want to paint myself into a corner where I'm limited in tooling because I have to offer epub format. And I'm sure I could figure out print versions, but I'm glad I didn't offer that because that's a whole beast in itself. I'm planning to sell all I can in ebook format, and if that goes well, I'll work with a publisher to figure out the print version.
 
 ## I'm pleasantly surprised with Kickstarter
 
@@ -154,9 +160,7 @@ When Tracy Osborn created a Kickstarter, she
 
 I've tried a lot of other "creator platforms" and it quickly becomes obvious that the platform is trying to milk creators every step of the way.
 
-### Pro: Sets good expectations around risk
-
-### Used Kickstarter for the pre-sale
+### Pro: Good expectations around risk
 
 I considered selling the pre-orders directly through a platform like Stripe or PayPal. I ended up choosing Kickstarter, and I'm glad I did for a few reasons.
 
@@ -180,9 +184,9 @@ The thing that Kickstarter does well is set expectations around uncertainty.
 
 TODO: You're along for the ride.
 
-Beyond that, Kickstarter found some customers for me.
+### Pro: Kickstarter found customers for me
 
-Finally, I appreciated that Kickstarter
+Beyond that, Kickstarter found some customers for me.
 
 ### Pro: I succeeded even with an amateurish profile
 
@@ -196,19 +200,37 @@ In total, I spent 5-10 hours on my Kickstarter project. I was able to recycle a 
 
 You can spend infinite time polishing a presentation and making an amazing video. If you're good at that, that's a good edge, but I just wanted to see if anyone was interested in my book, so I didn't want to spend weeks and weeks making a jaw-dropping Kickstarter page only to find out that nobody was interested in the book to begin with.
 
-### Con: Spammers will find you
+### Con: Late pledges have gotchas
 
-### Con: Late p
+Kickstarter has a surprising behavior where you stop being able to edit certain things at surprising times. For example, once a customer purchases a reward tier. And once the fundraising window ends, you can't enable late pledges.
+
+Apparently they were enabled for my project but not per-item. And then you can't flip them on after without talking to support, but it meant losing momentum.
 
 ### Con: Kickstarter payouts are confusing
 
-### Con: Kickstarter assumes physical products
-
 ### Con: Kickstarter ties your hands in some places
 
-Can't change price.
+Can't change the price of late pledge.
+
+### Con: Spammers will find you
+
+One thing to be aware of if you offer a project on Kickstarter: spammers will immediately swarm you. I got emails from about ten different spammers offering to ["help out" with my presale](/retrospectives/2025/03/#except-for-kickstarter-spammers). Even though my email isn't in the Kickstarter itself, they found my email address by digging through the book website and then finding my contact information on my personal blog.
+
+Annoyingly, a few of the spammers pose as interested customers, so they'll keep asking one vague question per email about the product until they eventually offer to introduce you to their friend who's good at Kickstarter.
+
+I had a big surge in spam for the first week of the campaign, but then no new outreach after that, though the original spammers kept pestering me to respond.
 
 ### Tip: Allocate time for bank verification
+
+I was able to get my Kickstarter up and running quickly, but I'm glad I gave myself lead time for Kickstarter to verify my banking information, as that took a few days and required giving a bunch of documentation to Stripe, Kickstarter's payment provider.
+
+### Tip: Look at similar non-fiction book projects
+
+https://www.kickstarter.com/projects/robwalling/the-saas-playbook-by-rob-walling
+
+https://www.kickstarter.com/projects/tracyosborn/hello-web-app-intro-to-building-web-apps-with-djan
+
+https://www.kickstarter.com/discover/categories/publishing/nonfiction
 
 ### Tip: Set the delivery date to the slowest item in the reward tier
 
@@ -227,26 +249,6 @@ One path I want to keep open is potentially republishing this book later with a 
 
 So, given that I might do a second edition with a publisher, I didn't want to commit to something like, "Backers will always be mentioned by name in the book," because I don't know if that will complicate things if I eventually go to a publisher and bring them these requirements. I made sure to say that I'd thank backers specifically in the first edition, though I'll try to keep them in forever.
 
-### Start early
-
-I was able to get my Kickstarter up and running quickly, but I'm glad I gave myself lead time for Kickstarter to verify my banking information, as that took a few days and required giving a bunch of documentation to Stripe, Kickstarter's payment provider.
-
-### Looked at other non-fiction book projects
-
-https://www.kickstarter.com/projects/robwalling/the-saas-playbook-by-rob-walling
-
-https://www.kickstarter.com/projects/tracyosborn/hello-web-app-intro-to-building-web-apps-with-djan
-
-https://www.kickstarter.com/discover/categories/publishing/nonfiction
-
-### Limited to ebook PDF format
-
-I know I can produce an ebook as a PDF.
-
-I _think_ I can also produce an epub version.
-
-And I could figure out printing a physical version, but I expect that alone is several weeks of risk. If all goes well, my plan is to never deal directly with print versions or selling on Amazon and just work with a publisher to handle that for a second edition.
-
 ### Adapted chapters to the blog format
 
 As I started working on the book, I had a hard time picking which chapters to release as free samples. I wanted to publish chapters that felt like regular blog posts that you'd find on Hacker News or reddit, but how I'd present material in a blog post is different from how I wanted it to appear in the book.
@@ -256,12 +258,6 @@ And then I finally realized I can adapt the material however I want between the 
 Personally, I'm disappointed when I buy a book, and it's just a bunch of blog posts taped together with some light editing. I want my book to feel like a cohesive book and not like a collection of independent essays.
 
 ## What I wish I'd done differently
-
-### Enabled late pledges
-
-Kickstarter has a surprising behavior where you stop being able to edit certain things at surprising times. For example, once a customer purchases a reward tier. And once the fundraising window ends, you can't enable late pledges.
-
-Apparently they were enabled for my project but not per-item. And then you can't flip them on after without talking to support, but it meant losing momentum.
 
 ### Offered an "I just want to give you extra money" option
 
@@ -292,11 +288,3 @@ One thing I screwed up in creating the rewards was that I didn't include the boo
 ### Started with my most excerpt-able material
 
 I wrote "Passive Voice Considered Harmful" and realized it's a useful book chapter, but it's not an exciting excerpt. There's rarely a viral article that everyone's obsessing over about the passive voice.
-
-## Kickstarter projects attract spam
-
-One thing to be aware of if you offer a project on Kickstarter: spammers will immediately swarm you. I got emails from about ten different spammers offering to ["help out" with my presale](/retrospectives/2025/03/#except-for-kickstarter-spammers). Even though my email isn't in the Kickstarter itself, they found my email address by digging through the book website and then finding my contact information on my personal blog.
-
-Annoyingly, a few of the spammers pose as interested customers, so they'll keep asking one vague question per email about the product until they eventually offer to introduce you to their friend who's good at Kickstarter.
-
-I had a big surge in spam for the first week of the campaign, but then no new outreach after that, though the original spammers kept pestering me to respond.
