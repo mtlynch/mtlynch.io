@@ -5,11 +5,13 @@ date: 2025-04-21
 
 ## I'm pleasantly surprised with Kickstarter
 
-### Pro: No upsells, no dark patterns
+## What I liked
+
+### No upsells, no dark patterns
 
 I've tried a lot of other "creator platforms" and it quickly becomes obvious that the platform is trying to milk creators every step of the way.
 
-### Pro: Good expectations around risk
+### Manage expectations well
 
 I considered selling the pre-orders directly through a platform like Stripe or PayPal. I ended up choosing Kickstarter, and I'm glad I did for a few reasons.
 
@@ -33,11 +35,11 @@ The thing that Kickstarter does well is set expectations around uncertainty.
 
 TODO: You're along for the ride.
 
-### Pro: Kickstarter found customers for me
+### Kickstarter found customers for me
 
 Beyond that, Kickstarter found some customers for me.
 
-### Pro: I succeeded even with an amateurish profile
+### I succeeded even with an amateurish profile
 
 You can spend infinite time making a Kickstarter project. Some projects have intro videos and testimonials that look like they took months to create.
 
@@ -49,19 +51,21 @@ In total, I spent 5-10 hours on my Kickstarter project. I was able to recycle a 
 
 You can spend infinite time polishing a presentation and making an amazing video. If you're good at that, that's a good edge, but I just wanted to see if anyone was interested in my book, so I didn't want to spend weeks and weeks making a jaw-dropping Kickstarter page only to find out that nobody was interested in the book to begin with.
 
-### Con: Late pledges have gotchas
+## What I disliked
+
+### Late pledges are confusing
 
 Kickstarter has a surprising behavior where you stop being able to edit certain things at surprising times. For example, once a customer purchases a reward tier. And once the fundraising window ends, you can't enable late pledges.
 
 Apparently they were enabled for my project but not per-item. And then you can't flip them on after without talking to support, but it meant losing momentum.
 
-### Con: Kickstarter payouts are confusing
+### Payouts are confusing
 
-### Con: Kickstarter inconveniently ties my hands
+### Anti-fraud measures make things hard for honest creators
 
 Can't change the price of late pledge.
 
-### Con: Spammers will find you
+### Spammers will find you
 
 One thing to be aware of if you offer a project on Kickstarter: spammers will immediately swarm you. I got emails from about ten different spammers offering to ["help out" with my presale](/retrospectives/2025/03/#except-for-kickstarter-spammers). Even though my email isn't in the Kickstarter itself, they found my email address by digging through the book website and then finding my contact information on my personal blog.
 
@@ -69,17 +73,19 @@ Annoyingly, a few of the spammers pose as interested customers, so they'll keep 
 
 I had a big surge in spam for the first week of the campaign, but then no new outreach after that, though the original spammers kept pestering me to respond.
 
-### Tip: Allocate time for bank verification
+## Suggestions
+
+### Allocate time for bank verification
 
 I was able to get my Kickstarter up and running quickly, but I'm glad I gave myself lead time for Kickstarter to verify my banking information, as that took a few days and required giving a bunch of documentation to Stripe, Kickstarter's payment provider.
 
-### Tip: Don't offer "forever" rewards
+### Don't offer "forever" rewards
 
 Don't offer things that set an expecation that you have to fulfill an obligation forever.
 
 For example, when I said I'd thank backers in a particular reward tier, I said it applies to the first edition. I wanted to avoid running into issues if I want to work with a publisher later. When I offered company sponsorships, I limited the time to six months, and ensured that I'm not agreeing to present a company's logo on the book's website forever.
 
-### Tip: Look at similar non-fiction book projects
+### Look at similar non-fiction book projects
 
 https://www.kickstarter.com/projects/robwalling/the-saas-playbook-by-rob-walling
 
@@ -87,7 +93,7 @@ https://www.kickstarter.com/projects/tracyosborn/hello-web-app-intro-to-building
 
 https://www.kickstarter.com/discover/categories/publishing/nonfiction
 
-### Tip: Set the delivery date to the slowest item in the reward tier
+### Set the delivery date to the slowest item in the reward tier
 
 I find Kickstarter's tier system pretty confusing. There are two components to it: there are reward items and reward tiers. An item is a thing like an ebook or a shoutout on the website. An item can appear in one or more reward tiers.
 
@@ -97,7 +103,7 @@ Here's where it gets confusing: the rewards also have descriptions and delivery 
 
 One thing I screwed up in creating the rewards was that I didn't include the book itself in the $75 personal sponsor. So a few people purchased the $75 tier and then were surprised to realize it technically doesn't include the book itself. And once someone has purchased a reward, I can't edit it, even to add items. So, my workaround was just to tell people
 
-### Tip: Keep track of what led customers to order
+### Keep track of how customers found you
 
 Kickstarter can analyze UTM parameters, but I never added them to any of my links. It probably would have been helpful to know which readers came from my personal blog vs. the book's website vs. the mailing list. They collect data based on the HTTP referer header, but that's not as reliable as UTM parameters.
 

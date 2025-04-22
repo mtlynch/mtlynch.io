@@ -194,6 +194,18 @@ I considered promising signed copies of the book, but that meant committing to a
 
 Looking back, I'm relieved that I didn't cave to my desperation. I still feel good about everything I offered and the prices I accepted for them.
 
+### Limited investment in Kickstarter itself
+
+You can spend infinite time making a Kickstarter project. Some projects have intro videos and testimonials that look like they took months to create.
+
+I didn't want to do that.
+
+Mainly because I don't enjoy working on that kind of stuff, but also because I didn't want to do all that stuff before I even knew if anyone wanted this book.
+
+In total, I spent 5-10 hours on my Kickstarter project. I was able to recycle a lot of the material that was already on my website. I made a short intro video because that's what other people seemed to do and it felt like a good way to demonstrate that I'm a real person and this isn't just an AI-generated money grab. The video only took me about 90 minutes. I just wrote a short script, memorized it, and then recorded it about ten times until I had a take I liked.
+
+You can spend infinite time polishing a presentation and making an amazing video. If you're good at that, that's a good edge, but I just wanted to see if anyone was interested in my book, so I didn't want to spend weeks and weeks making a jaw-dropping Kickstarter page only to find out that nobody was interested in the book to begin with.
+
 ## What I wish I'd done differently
 
 ### Offered an "I just want to give you extra money" option
