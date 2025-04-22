@@ -152,6 +152,8 @@ I've often wondered who the most popular bloggers are on Hacker News, so, last s
 
 During the pre-sale, I realized the tool would be a good way to get attention from Hacker News. And people who care about the top Hacker News bloggers might also be interested in my book.
 
+{{<img src="popularity-contest.webp" has-border="true" max-width="700px">}}
+
 To lead visitors to the book, I put a prominent pre-order link in the navigation menu:
 
 TODO: Screenshot
@@ -160,7 +162,7 @@ My blog ranks in the top 50 of all time, so I gave myself unique flair to lead r
 
 TODO: Screenshot
 
-Hacker News did get excited about the tool, and it reached the XX spot of the front page. John Gruber, the XXth most popular blogger on Hacker News wrote an article about my tool.
+Hacker News did [get excited about the tool](https://news.ycombinator.com/item?id=43474505), and it reached [the top 10 for the day](https://news.ycombinator.com/front?day=2025-03-25) spot of the front page. [John Gruber](https://en.wikipedia.org/wiki/John_Gruber), the 5th most popular blogger on Hacker News [wrote an article about my tool](https://daringfireball.net/2025/03/the_website_hacker_news_is_afraid_to_discuss).
 
 Unfortunately, none of that attention translated to pre-orders. Sales were nearly zero the entire week that the blog ranking tool was most popular.
 
