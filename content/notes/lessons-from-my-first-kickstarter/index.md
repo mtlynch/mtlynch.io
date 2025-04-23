@@ -5,7 +5,7 @@ date: 2025-04-21
 
 ## I'm pleasantly surprised with Kickstarter
 
-## What I liked
+## What I liked about Kickstarter
 
 ### No upsells, no dark patterns
 
@@ -51,7 +51,7 @@ In total, I spent 5-10 hours on my Kickstarter project. I was able to recycle a 
 
 You can spend infinite time polishing a presentation and making an amazing video. If you're good at that, that's a good edge, but I just wanted to see if anyone was interested in my book, so I didn't want to spend weeks and weeks making a jaw-dropping Kickstarter page only to find out that nobody was interested in the book to begin with.
 
-## What I disliked
+## What I disliked about Kickstarter
 
 ### Late pledges are confusing
 
@@ -59,11 +59,19 @@ Kickstarter has a surprising behavior where you stop being able to edit certain 
 
 Apparently they were enabled for my project but not per-item. And then you can't flip them on after without talking to support, but it meant losing momentum.
 
-### Payouts are confusing
+### Payouts UX is confusing and bad
+
+Doesn't show you how much is pending.
+
+When you receive a payment, it tells you to check payouts, but nothing is there. It takes about a day to update.
+
+It's surprising that Kickstarter is so bad at this.
 
 ### Anti-fraud measures make things hard for honest creators
 
 Can't change the price of late pledge.
+
+You can't experiment with pricing because once someone buys it, that's the price. For premium rewards that you expect only a handful of people to buy, err on making them too expensive and bring down the price.
 
 ### Spammers will find you
 
@@ -73,7 +81,7 @@ Annoyingly, a few of the spammers pose as interested customers, so they'll keep 
 
 I had a big surge in spam for the first week of the campaign, but then no new outreach after that, though the original spammers kept pestering me to respond.
 
-## Suggestions
+## Suggestions for authors considering Kickstarter to pre-sell their books
 
 ### Allocate time for bank verification
 
