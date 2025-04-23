@@ -228,3 +228,7 @@ With the benefit of hindsight, the best strategy would have been to start with m
 The thing I was confident about ahead of time was that "Passive Voice Considered Harmful" would never be a hit. I personally care a lot about the passive voice, but I know that an impassioned rant about it will never be #1 on Hacker News.
 
 If I had to do this over, I'd have queued up two excerpts that I thought would be most popular and released them both during the pre-sale while I worked on the third. I'd save low-excitement posts like "Passive Voice Considered Harmful" for when I was certain there's enough of a readership for me to complete the book.
+
+### Kept better track of how customers found me
+
+Kickstarter can analyze UTM parameters, but I never added them to any of my links. It probably would have been helpful to know which readers came from my personal blog vs. the book's website vs. the mailing list. They collect data based on the HTTP referer header, but that's not as reliable as UTM parameters.

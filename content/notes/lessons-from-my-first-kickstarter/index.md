@@ -115,10 +115,6 @@ Here's where it gets confusing: the rewards also have descriptions and delivery 
 
 One thing I screwed up in creating the rewards was that I didn't include the book itself in the $75 personal sponsor. So a few people purchased the $75 tier and then were surprised to realize it technically doesn't include the book itself. And once someone has purchased a reward, I can't edit it, even to add items. So, my workaround was just to tell people
 
-### Keep track of how customers found you
-
-Kickstarter can analyze UTM parameters, but I never added them to any of my links. It probably would have been helpful to know which readers came from my personal blog vs. the book's website vs. the mailing list. They collect data based on the HTTP referer header, but that's not as reliable as UTM parameters.
-
 ### Offering premium rewards
 
 I offered pre-orders of the book for $25 as the standard item in the Kickstarter, but I also offered other options for people who wanted to contribute more:
