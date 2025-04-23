@@ -140,17 +140,19 @@ I expect that the number of pre-orders from regular readers to be predictive of 
 
 I've often wondered who the most popular bloggers are on Hacker News, so, last summer, I wrote a quick and dirty tool to figure out the answer.
 
-During the pre-sale, I realized the tool would be a good way to attract attention from Hacker News to my book's website. People who care about the top Hacker News bloggers might also be interested in my book, so I published the tool on the book's website. To lead visitors to the book, I put a prominent pre-order link in the navigation menu:
+During the pre-sale, I realized the tool would be a good way to attract attention from Hacker News to my book's website. People who care about the top Hacker News bloggers might also be interested in my book, so I [published the tool](https://refactoringenglish.com/tools/hn-popularity/) on the book's website. To lead visitors to the book, I put a prominent pre-order link in the navigation menu:
 
-{{<img src="popularity-contest.webp" has-border="true" max-width="700px" caption="In an attempt to get Hacker News to notice my book, I created a tool ranking popular bloggers on Hacker News and included a pre-order button for my book in the navigation bar.">}}
+{{<img src="popularity-contest.webp" has-border="true" max-width="700px" caption="In an attempt to get Hacker News to notice my book, I created a tool to  [rank popular bloggers on Hacker News](https://refactoringenglish.com/tools/hn-popularity/) and included a pre-order button for my book in the navigation bar.">}}
 
 My blog ranks in the top 50 of all time, so I gave myself unique flair to lead readers to my book:
 
-TODO: Screenshot
+{{<img src="blog-flair.webp" has-border="true" caption="To make my blog stand out, I gave [my entry in the list](https://refactoringenglish.com/tools/hn-popularity/?domain=mtlynch.io) a little animated image to advertise my book." max-width="700px">}}
 
 Hacker News did [get excited about the tool](https://news.ycombinator.com/item?id=43474505), and it reached [the top 10 of the front page for the day](https://news.ycombinator.com/front?day=2025-03-25). [John Gruber](https://en.wikipedia.org/wiki/John_Gruber), the 5th most popular blogger on Hacker News [wrote an article about my tool](https://daringfireball.net/2025/03/the_website_hacker_news_is_afraid_to_discuss).
 
 Unfortunately, none of that attention translated to pre-orders. Sales were nearly zero the entire week that the blog ranking tool was most popular.
+
+TODO: Screenshot
 
 ## What I'm glad I did
 
@@ -160,9 +162,9 @@ I'd never used Kickstarter before, and I was pleasantly surprised by how smooth 
 
 I'm so jaded by "indie-friendly" platforms at this point because I've used so many that just smother me in upsells and try to trick me with dark patterns. I kept waiting for Kickstarter to tell me that I had to pay some surprise $500 fee to be "featured" or some other gotcha at the last minute, but it never happened.
 
-Kickstarter did what it said it would do. They facilitated the pre-sale, and they never tried to milk me for money. Throughout the process, I felt like Kickstarter was aligning our interests so that they only make money if I succeed.
+Kickstarter did what it said it would do. They facilitated the pre-sale, and they never tried to milk me for money. Throughout the process, I felt like Kickstarter was aligning our interests so that they only make money if I succeeded.
 
-I have a few quibbles with Kickstarter, but I'd recommend them overall. I wrote [more detailed notes about Kickstarter](/notes/lessons-from-my-first-kickstarter/) for anyone interested in using the platform for a similar project.
+I have a few quibbles with Kickstarter, but I'd still recommend them to anyone interested in a similar project.
 
 ### Edited my sample chapters to work as blog posts
 
@@ -195,6 +197,8 @@ Honestly, the main reason was that I hate working on marketing stuff. But also, 
 In total, I spent 5-10 hours on my Kickstarter project. I was able to recycle a lot of the material that was already on my website.
 
 I recorded a short intro video because that's what other successful projects seemed to do, and it felt like a good way to demonstrate that I'm a real person and not a money-stealing AI bot. The video took me about 90 minutes. I wrote a short script, memorized it, and then recorded it about ten times until I had a take I liked.
+
+TODO: Show screenshot from intro video
 
 ## What I wish I'd done differently
 
