@@ -14,8 +14,8 @@ I haven't seen many authors write books this way, so I thought I'd share more ab
 ## Benefits of crowdfunding a self-published book
 
 - $6k is a higher advance than most traditional publishers offer to first-time authors.
-- The money has no strings attached.
-  - Even if I deliver late or fail to deliver entirely, I get to keep the money.
+- The money has looser obligations than a traditional publisher.
+  - I have to make a good-faith effort to complete the book, but I don't owe the money back if the book runs late or if I fail to complete it.
 - The pre-sale gives me confidence that when I complete the book, I can find readers willing to purchase it.
 - I didn't have to beg a publisher for permission to write my book.
 - When I publish the book, I don't have to split sales with a publisher.

@@ -3,7 +3,7 @@ title: "Lessons From My First Kickstarter"
 date: 2025-04-21
 ---
 
-## I'm pleasantly surprised with Kickstarter
+## Overall: I'm pleasantly surprised with Kickstarter
 
 ## What I liked about Kickstarter
 
@@ -15,7 +15,11 @@ I've tried a lot of other "creator platforms" and it quickly becomes obvious tha
 
 I considered selling the pre-orders directly through a platform like Stripe or PayPal. I ended up choosing Kickstarter, and I'm glad I did for a few reasons.
 
-First, Kickstarter does a good job of letting customers and authors share risk.
+First, Kickstarter does a good job of letting customers and authors share risk. Their [help documentation](https://help.kickstarter.com/hc/en-us/articles/1260805506289-A-project-I-backed-isn-t-able-to-fulfill-what-does-this-mean-for-the-backers):
+
+> The funds that you pledged to a project went directly to the creator to help them with bringing their creative idea to life. If the creator has already used the funds to pay for project costs, they may not be in a position to offer refunds.
+>
+> Remember, backing a project on Kickstarter is not the same as buying an existing item in a store, and as such **receiving a reward in return for pledging is not guaranteed**.
 
 Normally, an author assumes nearly all the risk of writing a book. It takes months or years to complete a book. Lots of things can come up in that time that prevent the author from completing the book, in which case, they receive no compensation for years of work.
 
@@ -53,6 +57,12 @@ You can spend infinite time polishing a presentation and making an amazing video
 
 ## What I disliked about Kickstarter
 
+### Anti-fraud measures add onerous constraints
+
+Can't change the price of late pledge.
+
+You can't experiment with pricing because once someone buys it, that's the price. For premium rewards that you expect only a handful of people to buy, err on making them too expensive and bring down the price.
+
 ### Late pledges are confusing
 
 Kickstarter has a surprising behavior where you stop being able to edit certain things at surprising times. For example, once a customer purchases a reward tier. And once the fundraising window ends, you can't enable late pledges.
@@ -66,12 +76,6 @@ Doesn't show you how much is pending.
 When you receive a payment, it tells you to check payouts, but nothing is there. It takes about a day to update.
 
 It's surprising that Kickstarter is so bad at this.
-
-### Anti-fraud measures make things hard for honest creators
-
-Can't change the price of late pledge.
-
-You can't experiment with pricing because once someone buys it, that's the price. For premium rewards that you expect only a handful of people to buy, err on making them too expensive and bring down the price.
 
 ### Spammers will find you
 
