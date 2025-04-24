@@ -95,7 +95,7 @@ According to Kickstarter, here's how pre-sales for my book broke down:
 
 Sharing book excerpts on my mailing lists and social media turned out to be the most effective way I found customers during the pre-sale.
 
-I published the [excerpts](https://refactoringenglish.com/chapters/) on the book's website for free, and I included a self-ad at the end asking readers to help me expand the article into a full-length ebook:
+I published the [excerpts](https://refactoringenglish.com/chapters/) on the book's website for free, and I included a self-ad at the end of each post to lead readers to the full book:
 
 {{<img src="self-ad.webp" max-width="325px" has-border="true" caption="Self-ads for the book that appeared at the bottom of my sample chapters online">}}
 
@@ -103,7 +103,7 @@ During the pre-sale, I published two new excerpts from the book. I published [th
 
 It's tough to say how much of an effect the first excerpt had, as I released it at the same time I announced the pre-sale to my mailing list.
 
-The second excerpt definitely made a difference. It got traction [on Hacker News](https://news.ycombinator.com/item?id=43503872) and [Lobsters](https://lobste.rs/s/youq7y/how_write_blog_posts_developers_read), and readers from those sites doubled pre-orders for my book a matter of days. Without that second excerpt, the pre-sale would have almost certainly failed, and I'd have walked away with nothing.
+The second excerpt definitely made a difference. It got traction [on Hacker News](https://news.ycombinator.com/item?id=43503872) and [Lobsters](https://lobste.rs/s/youq7y/how_write_blog_posts_developers_read), and readers from those sites doubled pre-orders for my book a matter of days. Without that second excerpt, the pre-sale would have failed, and I'd have walked away with nothing.
 
 {{<img src="publish-excerpts.webp" has-border="true">}}
 
@@ -208,9 +208,11 @@ Honestly, the main reason was that I hate working on marketing stuff. But also, 
 
 In total, I spent 5-10 hours creating my Kickstarter project. I had to write a pitch for my book, but I had already done most of that work when I created the book's website.
 
-I recorded a short intro video because that's what other successful projects seemed to do, and it felt like a good way to demonstrate that I'm a real person and not a money-stealing AI bot. The video took me about 90 minutes to make. I wrote a short script, memorized it, and then recorded it about ten times until I had a take I liked.
+I recorded a short intro video because that's what other successful projects seemed to do, and it felt like a good way to demonstrate that I'm a real person and not a money-stealing AI bot.
 
-TODO: Show screenshot from intro video
+{{<video src="refactoring-english-intro.mp4">}}
+
+The video took me about 90 minutes to make. I wrote a short script, memorized it, and then recorded it about ten times until I captured a take I liked.
 
 ## What I wish I'd done differently
 
