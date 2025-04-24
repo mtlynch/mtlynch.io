@@ -111,15 +111,15 @@ The second excerpt definitely made a difference. It got traction [on Hacker News
 
 Similar to the self-ad on the book's website, I added a little box at the bottom of all my blog post to say that I want to write a book and that readers can support it with a pre-order.
 
-I wrote [one new blog post](/no-longer-my-favorite-git-commit/) during the pre-sale, which seemed to bring a small bump in sales. But I also have a deep archive of posts that attract 0.5-1.2k readers per day even when I'm not publishing anything new, so I suspect that some readers purchased based on stumbling across my old posts.
+{{<img src="blog-self-ad.webp" max-width="500px" has-border="true" caption="I added a self-ad for the book at the bottom of every post on my personal blog.">}}
 
-TODO: Show screenshot
+I wrote [one new blog post](/no-longer-my-favorite-git-commit/) during the pre-sale, which seemed to bring a small bump in sales. But I also have a deep archive of posts that attract 0.5-1.2k readers per day even when I'm not publishing anything new, so I suspect that some readers purchased based on stumbling across my old posts.
 
 ### Sharing progress updates on Twitter
 
 According to Kickstarter's metrics, 4% of orders came from Twitter. I didn't invest a ton there &mdash; I just [created a thread announcing the pre-sale](https://x.com/deliberatecoder/status/1899106915126239720) and posted occasional updates on progress toward my goal amount.
 
-{{<img src="twitter-post.webp" max-width="600px" caption="I shared progress updates on Twitter">}}
+{{<img src="twitter-post.webp" max-width="600px" caption="Sharing progress updates Twitter accounted for about 4% of sales">}}
 
 I tried the same thing on [Bluesky](https://bsky.app/profile/mtlynch.io/post/3ljzrjoqg3k2b) and [Mastodon](https://m.mtlynch.io/@michael/114138636617854162), as I prefer those platforms, but my posts there got almost zero response.
 
@@ -173,6 +173,8 @@ I'd never used Kickstarter before, and I was pleasantly surprised by how smooth 
 I'm so jaded by "indie-friendly" platforms that just smother me in upsells and try to trick me with dark patterns. I kept waiting for Kickstarter to tell me that I had to pay $500 to be "featured" or some other gotcha at the last minute, but it never happened.
 
 Kickstarter did what it said it would do. They facilitated the pre-sale, and they never tried to milk me for money. Throughout the process, I felt like Kickstarter aligned incentives so that they only make money if I succeeded.
+
+I was surprised at how many customers discovered my book through Kickstarter itself. Part of Kickstarter's pitch is that they have a community of members interested in funding indie projects, but I didn't expect to find customers that way. But according to Kickstarter's metrics, 12% of sales were from people who discovered my book on Kickstarter.
 
 I have a few quibbles with Kickstarter, but I'd still recommend them to anyone interested in a similar project.
 
