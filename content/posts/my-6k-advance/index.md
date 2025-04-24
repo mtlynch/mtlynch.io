@@ -208,7 +208,7 @@ Honestly, the main reason was that I hate working on marketing stuff. But also, 
 
 In total, I spent 5-10 hours creating my Kickstarter project. I had to write a pitch for my book, but I had already done most of that work when I created the book's website.
 
-I recorded a short intro video because that's what other successful projects seemed to do, and it felt like a good way to demonstrate that I'm a real person and not a money-stealing AI bot.
+I recorded a short intro video because that's what other successful projects seemed to do. It felt like a good way to demonstrate that I'm a real person and not a money-stealing AI bot.
 
 {{<video src="refactoring-english-intro.mp4">}}
 
