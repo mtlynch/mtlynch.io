@@ -115,6 +115,8 @@ TODO: Show screenshot
 
 TODO
 
+{{<img src="twitter-post.webp" max-width="600px">}}
+
 ## Which attempts at finding customers failed?
 
 ### Soliciting sponsorships from companies
