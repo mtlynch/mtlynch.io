@@ -103,9 +103,9 @@ During the pre-sale, I published two new excerpts from the book. I published [th
 
 It's tough to say how much of an effect the first excerpt had, as I released it at the same time I announced the pre-sale to my mailing list.
 
-The second excerpt definitely made a difference. It got traction [on Hacker News](https://news.ycombinator.com/item?id=43503872) and [Lobsters](https://lobste.rs/s/youq7y/how_write_blog_posts_developers_read), and readers from those sites doubled pre-orders for my book a matter of days. Without that second blog post, the pre-sale would have almost certainly failed, and I'd have walked away with nothing.
+The second excerpt definitely made a difference. It got traction [on Hacker News](https://news.ycombinator.com/item?id=43503872) and [Lobsters](https://lobste.rs/s/youq7y/how_write_blog_posts_developers_read), and readers from those sites doubled pre-orders for my book a matter of days. Without that second excerpt, the pre-sale would have almost certainly failed, and I'd have walked away with nothing.
 
-TODO: Graph showing when things happened
+{{<img src="publish-excerpts.webp" has-border="true">}}
 
 ### Advertising the book on my personal blog
 
@@ -160,9 +160,9 @@ My personal blog is one of the top 50 in the list, so I gave myself unique flair
 
 Hacker News did [get excited about the tool](https://news.ycombinator.com/item?id=43474505), and it reached [the top 10 of the front page for the day](https://news.ycombinator.com/front?day=2025-03-25). [John Gruber](https://en.wikipedia.org/wiki/John_Gruber), the 5th most popular blogger on Hacker News [wrote an article about my tool](https://daringfireball.net/2025/03/the_website_hacker_news_is_afraid_to_discuss).
 
-Unfortunately, none of that attention translated to pre-orders. Sales were nearly zero the entire week that the blog ranking tool was most popular.
+Unfortunately, none of that attention translated to pre-orders. Sales were nearly zero the two days that the blog ranking tool was most popular.
 
-TODO: Screenshot
+{{<img src="tool-frontpage.webp" has-border="true" caption="Getting my blog ranking tool to the front page of Hacker News had no effect on sales.">}}
 
 ## What I'm glad I did
 
@@ -222,7 +222,7 @@ When customers paid $1k for a private consultation with him, he found that they 
 
 I thought about offering something like a 1:1 call as part of my pre-sale, but I figured that if someone wanted to pay me above my asking price for the book, Kickstarter already offers that option. Or they could buy one of the premium rewards like a personalized writing review.
 
-In retrospect, I should have offered a 1:1 call for $300-500. A 1:1 call feels different than just paying above the asking price and getting nothing in return, so there might have been people interested in that option, and it would have been a nice hourly rate for me and would give me valuable feedback from readers.
+In retrospect, I should have offered a 1:1 call for $300-500. A 1:1 call feels different than just paying above the asking price and getting nothing in return, so there might have been people interested in that option. It would have been a nice hourly rate for me and would give me valuable feedback from readers.
 
 ### Started with my most excerpt-able material
 
@@ -245,4 +245,8 @@ If I had to do this over, I'd have queued up two excerpts that I thought would b
 
 ### Kept better track of how customers found me
 
-Kickstarter can analyze UTM parameters, but I never added them to any of my links. It probably would have been helpful to know which readers came from my personal blog vs. the book's website vs. the mailing list. They collect data based on the HTTP referer header, but that's not as reliable as UTM parameters.
+Kickstarter can generate custom links to identify how customers found your project, but I never used them.
+
+{{<img src="ks-tags.webp" has-border="true" max-width="600px" caption="Kickstarter allows you to create custom links to identify how customers found your project, but I never used them.">}}
+
+Looking back, it would have been convenient to have better insight into how I found customers. Without the custom tags, Kickstarter goes by the HTTP referer header, which is not as reliable as custom links.
