@@ -1,5 +1,5 @@
 ---
-title: "My $6k Advance as a First-Time Technical Author"
+title: "My $6k Advance as a Self-Published Technical Author"
 date: 2025-04-25
 ---
 
@@ -9,7 +9,7 @@ In March, I ran a three-week pre-sale for the book [on Kickstarter](https://www.
 
 {{<img src="kickstarter-payout.webp" max-width="650px" has-border="true" caption="Proceeds from my pre-sale on Kickstarter">}}
 
-I haven't seen many authors write books this way, so I thought I'd share more about how and why I crowdfunded my book.
+I haven't seen many authors write books this way, so I'm sharing how and why I crowdfunded my book.
 
 ## Benefits of crowdfunding a self-published book
 
@@ -24,7 +24,7 @@ I haven't seen many authors write books this way, so I thought I'd share more ab
 
 ## My unfair advantages
 
-One of my social media pet peeves is seeing posts like this:
+One of my pet peeves is seeing social media posts like this:
 
 > Wow, I put up a checkout form to let people pre-order my USB-powered flashlight. Within two hours, I'd made $100k! Business is so easy!
 
@@ -34,7 +34,7 @@ So, I want to be upfront that I had advantages that helped my pre-sale succeed:
 
 - My personal blog receives 300-500k unique readers per year.
 - I'm atypically successful at writing articles that reach the front page [of Hacker News](https://refactoringenglish.com/tools/hn-popularity/domain/?d=mtlynch.io) and [reddit](https://www.reddit.com/search?q=url%3Amtlynch.io&sort=relevance&t=all).
-  - During my pre-sale, an excerpt from my book gained [positive attention on Hacker News](https://news.ycombinator.com/item?id=43503872).
+  - During my pre-sale, an excerpt from my book reached [the #10 spot for the day on Hacker News](https://news.ycombinator.com/item?id=43503872).
 - I have 2.1k subscribers on my blog's mailing list and 1.5k subscribers for the book's mailing list.
   - There's surprisingly little overlap between the two, so it's about 3.5k unique subscribers.
 - I have 9.2k followers on [Twitter](https://x.com/deliberatecoder) and 600 followers on [Bluesky](https://bsky.app/profile/mtlynch.io).
@@ -110,6 +110,10 @@ Similar to the self-ad on the book's website, I added a little box at the bottom
 I wrote [one new blog post](/no-longer-my-favorite-git-commit/) during the pre-sale, which seemed to bring a small bump in sales. But I've been blogging for nine years, so I have a large archive of posts that attracts 0.5-1.2k readers per day even when I'm not publishing anything new, so I suspect that some readers purchased based on stumbling across my old posts.
 
 TODO: Show screenshot
+
+### Sharing progress updates on Twitter
+
+TODO
 
 ## Which attempts at finding customers failed?
 
