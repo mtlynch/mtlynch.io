@@ -3,7 +3,7 @@ title: "My $6k Advance as a Self-Published Technical Author"
 date: 2025-04-25
 ---
 
-I just received $5,946.92 in advance sales for my first technical book even though it's only 25% complete, and I'm self-publishing it. The book is called [_Refactoring English_](https://refactoringenglish.com), and it's a guide for software developers to improve their writing.
+I just received $5,946.92 in advance sales for my first technical book, even though it's only 25% complete, and I'm self-publishing it. The book is called [_Refactoring English_](https://refactoringenglish.com), and it's a guide for software developers to improve their writing.
 
 In March, I ran a three-week pre-sale for the book [on Kickstarter](https://www.kickstarter.com/projects/mtlynch/refactoring-english). The pre-sale raised $6,551 from 191 customers. After Kickstarter's fees, I get $5,946.92, or 91% of the total.
 
@@ -35,13 +35,13 @@ So, I want to be upfront that I had advantages that helped my pre-sale succeed:
 - My personal blog receives 300-500k unique readers per year.
 - I'm atypically successful at writing articles that reach the front page [of Hacker News](https://refactoringenglish.com/tools/hn-popularity/domain/?d=mtlynch.io) and [reddit](https://www.reddit.com/search?q=url%3Amtlynch.io&sort=relevance&t=all).
   - During my pre-sale, an excerpt from my book reached [the #10 spot for the day on Hacker News](https://news.ycombinator.com/item?id=43503872).
-- I have 2.1k subscribers on my blog's mailing list and 1.5k subscribers for the book's mailing list.
+- I have 2.1k subscribers on my blog's mailing list and 1.5k subscribers on the book's mailing list.
   - There's surprisingly little overlap between the two, so it's about 3.5k unique subscribers.
 - I have 9.2k followers on [Twitter](https://x.com/deliberatecoder) and 600 followers on [Bluesky](https://bsky.app/profile/mtlynch.io).
 
 ## How does crowdfunding compare to an advance from a traditional publisher?
 
-Most publishers don't disclose the deals they offer to first-time authors, so it's difficult to compare my results directly to most publishers.
+Most publishers don't disclose the deals they offer to first-time authors, so it's difficult to compare my results directly with most publishers.
 
 [No Starch Press](https://nostarch.com/) is the most transparent publisher in terms of [author pay](https://nostarch.com/writeforus). It offers three different royalty options to first-time authors:
 
@@ -49,11 +49,11 @@ Most publishers don't disclose the deals they offer to first-time authors, so it
 - $5k advance, 12% royalties on print sales, 25% royalties on ebook sales
 - $8k advance, 10% royalties on print sales, 25% royalties on ebook sales
 
-Manning doesn't publish their rates, but Teiva Harsanyi [recently shared](https://www.thecoder.cafe/p/100-go-mistakes) his experience publishing with Manning as a first time author. They paid him $2k upfront, $2k after delivering the first 1/3rd, and then 10% of sales. This earned him a total of $47k over four years (11,452 copies sold).
+Manning doesn't publish their rates, but Teiva Harsanyi [recently shared](https://www.thecoder.cafe/p/100-go-mistakes) his experience publishing with Manning as a first-time author. They paid him $2k upfront, $2k after delivering the first 1/3rd, and then 10% of sales. This earned him a total of $47k over four years (11,452 copies sold).
 
 By self-publishing, I get a better deal on my advance, I can continue selling pre-orders as I write the book, and I still have the option to publish a future edition with a traditional publisher.
 
-## Worst-case: 200 people want to read my book
+## Worst case: 200 people want to read my book
 
 Writing a book is a risky venture. I expect it to take me 6-12 months, so I'd be devastated to spend all that time writing and then find out that nobody wanted to read my book.
 
@@ -61,21 +61,21 @@ A pre-sale guarantees some people are interested in my book enough to pay for it
 
 With Kickstarter, you set a goal amount for the pre-sale. If you don't hit the goal, none of your customers pay anything, and you walk away with nothing.
 
-Kicktarter's all-or-nothing structure sounds brutal, but it was ideal for me. It protects me from an awkward "half-success" where pre-orders fall short of my expectations, and then I'm stuck either writing a book for a tiny readership or awkwardly refunding a bunch of pre-orders and eating tons of fees from my payment processor.
+Kickstarter's all-or-nothing structure sounds brutal, but it was ideal for me. It protects me from an awkward "half-success" where pre-orders fall short of my expectations, and then I'm stuck either writing a book for a tiny readership or awkwardly refunding a bunch of pre-orders and eating tons of fees from my payment processor.
 
-I chose $5k as my pre-sale goal because it's the lowest figure where I'd still feel satisfied if that were my total earnings for the lifetime of the book. I'd, of course, enjoy selling more copies of my book later, but I'd still feel good about making $5k from a self-published book. My more realistic expectation is that if customers make $5k in pre-orders when the book is only 25% complete, I can likely sell another $10-15k worth of copies when I finish the book.
+I chose $5k as my pre-sale goal because it's the lowest figure that would feel okay as my total earnings for the book. I'd, of course, enjoy selling more copies of my book later, but I'd still feel good about making $5k from a self-published book. My more realistic expectation is that if customers make $5k in pre-orders when the book is only 25% complete, I can likely sell another $10-15k worth of copies when I finish the book.
 
-I priced the pre-orders at $25 per copy, so I figured that if 150 people bought, it would get me to $3,750, and then I'd make up the rest in the premium rewards like a public thank you or personalized writing feedback. The "worst case" would be if I reached the goal with everyone paying $25, but that still means 200 people want to read my book, which is pretty good.
+I priced the pre-orders at $25 per copy, so I figured that if 150 people bought, it would get me to $3,750, and then I'd make up the rest in the premium rewards like a public thank you or personalized writing feedback. The "worst case" would be if I reached my goal with everyone paying $25, but that still means 200 people want to read my book, which is pretty good.
 
 ## A pre-sale connects me with my most enthusiastic readers
 
 One unexpected benefit of the pre-sale was that it connected me with the readers who are most excited about my book. These are exactly the readers I want to hear early feedback from.
 
-Before the pre-sale, I published sample chapters, and people signed up for my mailing list, but I didn't know how to start useeful conversations them. When I'd email subscribers new chapters, I'd invite them to give me feedback on the material, but nobody did.
+Before the pre-sale, I published sample chapters, and people signed up for my mailing list, but I didn't know how to initiate useful conversations with them. When I'd email subscribers new chapters, I'd invite them to give me feedback on the material, but nobody did.
 
-Once the pre-sale ended, I realized that I suddenly know 200 people who are excited about my book and feel invested in its future.
+Once the pre-sale ended, I realized that I suddenly knew 200 people who feel engaged and invested in the book's future.
 
-Last week, I invited all the people who pre-ordered to attend a live video class where I taught a live version of the material from the book's next chapter. Six people attended the class, and their feedback was incredibly helpful. The attendees seemed excited to ask their questions to me directly and help shape the book, so it felt like a win-win for everyone.
+Last week, I invited all the people who pre-ordered to attend a live video class where I taught a live version of the material from the book's next chapter. Six people attended the class, and their feedback was incredibly helpful. The attendees seemed excited to ask questions and help shape the book, so it felt like a win-win for everyone.
 
 ## How did I find customers?
 
@@ -103,13 +103,13 @@ During the pre-sale, I published two new excerpts from the book. I published [th
 
 It's tough to say how much of an effect the first excerpt had, as I released it at the same time I announced the pre-sale to my mailing list.
 
-The second excerpt definitely made a difference. It got traction [on Hacker News](https://news.ycombinator.com/item?id=43503872) and [Lobsters](https://lobste.rs/s/youq7y/how_write_blog_posts_developers_read), and readers from those sites doubled pre-orders for my book a matter of days. Without that second excerpt, the pre-sale would have failed, and I'd have walked away with nothing.
+The second excerpt definitely made a difference. It got traction [on Hacker News](https://news.ycombinator.com/item?id=43503872) and [Lobsters](https://lobste.rs/s/youq7y/how_write_blog_posts_developers_read), and readers from those sites doubled pre-orders for my book in a matter of days. Without that second excerpt, the pre-sale would have failed, and I'd have walked away with nothing.
 
 {{<img src="publish-excerpts.webp" has-border="true">}}
 
 ### Advertising the book on my personal blog
 
-Similar to the self-ad on the book's website, I added a little box at the bottom of all my blog post to say that I want to write a book and that readers can support it with a pre-order.
+Similar to the self-ad on the book's website, I added a little box at the bottom of all my blog posts to say that I want to write a book and that readers can support it with a pre-order.
 
 {{<img src="blog-self-ad.webp" max-width="500px" has-border="true" caption="I added a self-ad for the book at the bottom of every post on my personal blog.">}}
 
@@ -144,7 +144,7 @@ I kept thinking I'd have a hit post during the pre-sale so that I could wow pote
 
 {{<img src="sponsor-email.webp" has-border="true" max-width="550px">}}
 
-Even when the one company offered to sponsor for $1k, I was hesitant to let a single company carry so much of the pre-sale. I expect that the number of pre-orders from regular readers to be predictive of how many customers purchase the book when I complete it. If I can't reach my pre-sale goal without one whale of a sponsor, that would have been a bad sign for long-term sales.
+Even when the one company offered to sponsor for $1k, I was hesitant to let a single company carry so much of the pre-sale. I expect the number of pre-orders to correlate with how many customers purchase the completed book. If I can't reach my pre-sale goal without one whale of a sponsor, that would have been a bad sign for long-term sales.
 
 ### Creating a web app to pander to Hacker News
 
@@ -152,15 +152,15 @@ I've often wondered who the most popular bloggers are on Hacker News, so, last s
 
 During the pre-sale, I realized my blog popularity tool would be a good way to attract attention from Hacker News. People who care about the top Hacker News bloggers might also be interested in my book, so I [published the tool](https://refactoringenglish.com/tools/hn-popularity/) on the book's website. To lead visitors to the book, I put a prominent pre-order link in the navigation menu:
 
-{{<img src="popularity-contest.webp" has-border="true" max-width="700px" caption="In an attempt to get Hacker News to notice my book, I created a tool to  [rank popular bloggers on Hacker News](https://refactoringenglish.com/tools/hn-popularity/) and included a pre-order button for my book in the navigation bar.">}}
+{{<img src="popularity-contest.webp" has-border="true" max-width="700px" caption="In an attempt to get Hacker News to notice my book, I created a tool to [rank popular bloggers on Hacker News](https://refactoringenglish.com/tools/hn-popularity/) and included a pre-order button for my book in the navigation bar.">}}
 
-My personal blog is one of the top 50 in the list, so I gave myself unique flair to lead readers to my book:
+My personal blog is one of the top 50 on the list, so I gave myself unique flair to lead readers to my book:
 
 {{<img src="blog-flair.webp" has-border="true" caption="To make my blog stand out, I gave [my entry in the list](https://refactoringenglish.com/tools/hn-popularity/?domain=mtlynch.io) a little animated image to advertise my book." max-width="700px">}}
 
-Hacker News did [get excited about the tool](https://news.ycombinator.com/item?id=43474505), and it reached [the top 10 of the front page for the day](https://news.ycombinator.com/front?day=2025-03-25). [John Gruber](https://en.wikipedia.org/wiki/John_Gruber), the 5th most popular blogger on Hacker News [wrote an article about my tool](https://daringfireball.net/2025/03/the_website_hacker_news_is_afraid_to_discuss).
+Hacker News did [get excited about the tool](https://news.ycombinator.com/item?id=43474505), and it reached [the top 10 of the front page for the day](https://news.ycombinator.com/front?day=2025-03-25). [John Gruber](https://en.wikipedia.org/wiki/John_Gruber), the 5th most popular blogger on Hacker News, [wrote an article about my tool](https://daringfireball.net/2025/03/the_website_hacker_news_is_afraid_to_discuss).
 
-Unfortunately, none of that attention translated to pre-orders. Sales were nearly zero the two days that the blog ranking tool was most popular.
+Unfortunately, none of that attention translated to pre-orders. Sales were nearly zero over the two days that the blog ranking tool was most popular.
 
 {{<img src="tool-frontpage.webp" has-border="true" caption="Getting my blog ranking tool to the front page of Hacker News had no effect on sales.">}}
 
@@ -174,7 +174,7 @@ I'm so jaded by "indie-friendly" platforms that just smother me in upsells and t
 
 Kickstarter did what it said it would do. They facilitated the pre-sale, and they never tried to milk me for money. Throughout the process, I felt like Kickstarter aligned incentives so that they only make money if I succeeded.
 
-I was surprised at how many customers discovered my book through Kickstarter itself. Part of Kickstarter's pitch is that they have a community of members interested in funding indie projects, but I didn't expect to find customers that way. But according to Kickstarter's metrics, 12% of sales were from people who discovered my book on Kickstarter.
+I was surprised at how many customers discovered my book through Kickstarter itself. Part of Kickstarter's pitch is that they have a community of members interested in funding indie projects, but I didn't expect to find customers that way. According to Kickstarter's metrics, 12% of sales were from people who discovered my book on Kickstarter.
 
 I have a few quibbles with Kickstarter, but I'd still recommend them to anyone interested in a similar project.
 
@@ -190,7 +190,7 @@ I think adapting the material for a blog post worked well. I doubt that the exce
 
 ### Underpromised on rewards
 
-When Tracy Osborn [ran a pre-sale for her first book](https://www.kickstarter.com/projects/tracyosborn/hello-web-app-intro-to-building-web-apps-with-djan), one of the rewards she offered was home baked-cookies. But then when her Kickstarter finished, and she [felt stressed having to bake and ship hundreds of cookies](https://hellowebbooks.com/news/reviewing-hello-web-apps-kickstarter-campaign/).
+When Tracy Osborn [ran a pre-sale for her first book](https://www.kickstarter.com/projects/tracyosborn/hello-web-app-intro-to-building-web-apps-with-djan), one of the rewards she offered was home-baked cookies. When her Kickstarter succeeded, she [felt stressed having to bake and ship hundreds of cookies](https://hellowebbooks.com/news/reviewing-hello-web-apps-kickstarter-campaign/).
 
 I definitely felt the temptation to offer better, more eye-catching rewards during my pre-sale. Especially as sales slowed down, desperation set in, and I wondered what I could offer to reach my $5k goal.
 
@@ -204,7 +204,7 @@ You can spend infinite time making a Kickstarter project. Some projects have sli
 
 I didn't want to do that.
 
-Honestly, the main reason was that I hate working on marketing stuff. But also, I felt like it was a rational choice becuase I didn't want to sink weeks of work into the Kickstarter presentation before I even knew if anyone wanted this book.
+Honestly, the main reason was that I hate working on marketing stuff. But also, I felt like it was a rational choice because I didn't want to sink weeks of work into the Kickstarter presentation before I even knew if anyone wanted this book.
 
 In total, I spent 5-10 hours creating my Kickstarter project. I had to write a pitch for my book, but I had already done most of that work when I created the book's website.
 
@@ -220,7 +220,9 @@ The video took me about 90 minutes to make. I wrote a short script, memorized it
 
 I recently attended a talk that [Aaron Francis](https://aaronfrancis.com/) gave about creating educational software videos. He [offers a course](https://screencasting.com) on this topic for $300, but he also sells a premium $1k package that includes a 40-minute 1:1 video call with him.
 
-After the talk, I asked Aaron if those $1k customers ever pressure him to deliver something unreasonable on those calls or demand more of his time afterwards. Surprisingly, Aaron said that he experienced the opposite.
+After the talk, I asked Aaron if those $1k customers ever pressured him to deliver something unreasonable on those calls or demanded more of his time afterward.
+
+Surprisingly, Aaron said that he experienced the opposite.
 
 When customers paid $1k for a private consultation with him, he found that they "somewhat want help, somewhat just want to hang out." His sense was that customers viewed the $1k package as a generous tip. "It's like I turned the iPad around, and they tipped $1,000."
 
@@ -230,7 +232,7 @@ In retrospect, I should have offered a 1:1 call for $300-500. A 1:1 call feels d
 
 ### Started with my most excerpt-able material
 
-By the end of the pre-sale, I'd published four excerpts from my book: two beforehand, and two during.
+By the end of the pre-sale, I'd published four excerpts from my book: two beforehand and two during.
 
 Here are the metrics on how well those excerpts did at attracting readers, sorted from earliest to latest published:
 
