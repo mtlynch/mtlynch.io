@@ -1,6 +1,8 @@
 ---
 title: "My $6k Advance as a Self-Published Technical Author"
 date: 2025-04-25
+images:
+  - my-6k-advance/og-cover.webp
 ---
 
 I just received $5,946.92 in advance sales for my first technical book, even though it's only 25% complete, and I'm self-publishing it. The book is called [_Refactoring English_](https://refactoringenglish.com), and it's a guide for software developers to improve their writing.
