@@ -18,7 +18,7 @@ I haven't seen many authors write books this way, so I'm sharing how and why I c
   - I have to make a good-faith effort to complete the book, but I don't owe the money back if the book runs late or if I fail to complete it.
 - The pre-sale gives me confidence that when I complete the book, I can find readers willing to purchase it.
 - I didn't have to beg a publisher for permission to write my book.
-- When I publish the book, I don't have to split sales with a publisher.
+- I don't have to split sales with a publisher when I complete the book.
   - My only cost will be payment processor fees, so I'll receive 97% of what customers pay for the book.
 - I still have the option to publish the same book with a traditional publisher in the future.
 
@@ -26,7 +26,7 @@ I haven't seen many authors write books this way, so I'm sharing how and why I c
 
 One of my pet peeves is seeing social media posts like this:
 
-> Wow, I put up a checkout form to let people pre-order my USB-powered flashlight. Within two hours, I'd made $100k! Business is so easy!
+> Wow, I put up a checkout form to let people pre-order my USB-powered toilet paper. Within two hours, I'd made $100k! Business is so easy!
 
 And then I check their profile, and they have 40M followers and a long track record of successful products.
 
@@ -49,7 +49,7 @@ Most publishers don't disclose the deals they offer to first-time authors, so it
 - $5k advance, 12% royalties on print sales, 25% royalties on ebook sales
 - $8k advance, 10% royalties on print sales, 25% royalties on ebook sales
 
-Manning doesn't publish their rates, but Teiva Harsanyi [recently shared](https://www.thecoder.cafe/p/100-go-mistakes) his experience publishing with Manning as a first-time author. They paid him $2k upfront, $2k after delivering the first 1/3rd, and then 10% of sales. This earned him a total of $47k over four years (11,452 copies sold).
+Manning doesn't publish their rates, but Teiva Harsanyi [recently shared](https://www.thecoder.cafe/p/100-go-mistakes) his experience publishing with Manning as a first-time author. They paid him $2k upfront, $2k after delivering the first 1/3rd, and then 10% of sales. This earned him $47k over four years (11,452 copies sold).
 
 By self-publishing, I get a better deal on my advance, I can continue selling pre-orders as I write the book, and I still have the option to publish a future edition with a traditional publisher.
 
@@ -75,7 +75,7 @@ Before the pre-sale, I published sample chapters, and people signed up for my ma
 
 Once the pre-sale ended, I realized that I suddenly knew 200 people who feel engaged and invested in the book's future.
 
-Last week, I invited all the people who pre-ordered to attend a live video class where I taught a live version of the material from the book's next chapter. Six people attended the class, and their feedback was incredibly helpful. The attendees seemed excited to ask questions and help shape the book, so it felt like a win-win for everyone.
+Last week, I invited everyone who pre-ordered to attend a live video class where I taught a live version of the material from the book's next chapter. Six people attended the class, and their feedback was incredibly helpful. The attendees seemed excited to ask questions and help shape the book, so it felt like a win-win for everyone.
 
 ## How did I find customers?
 
@@ -113,7 +113,7 @@ Similar to the self-ad on the book's website, I added a little box at the bottom
 
 {{<img src="blog-self-ad.webp" max-width="500px" has-border="true" caption="I added a self-ad for the book at the bottom of every post on my personal blog.">}}
 
-I wrote [one new blog post](/no-longer-my-favorite-git-commit/) during the pre-sale, which seemed to bring a small bump in sales. But I also have a deep archive of posts that attract 0.5-1.2k readers per day even when I'm not publishing anything new, so I suspect that some readers purchased based on stumbling across my old posts.
+I wrote [one new blog post](/no-longer-my-favorite-git-commit/) during the pre-sale, which seemed to bring a small bump in sales. But I also have a deep archive of posts that attract 0.5-1.2k readers per day even when I'm not publishing anything new, so I suspect some readers purchased based on stumbling across my old posts.
 
 ### Sharing progress updates on Twitter
 
@@ -152,7 +152,7 @@ I've often wondered who the most popular bloggers are on Hacker News, so, last s
 
 During the pre-sale, I realized my blog popularity tool would be a good way to attract attention from Hacker News. People who care about the top Hacker News bloggers might also be interested in my book, so I [published the tool](https://refactoringenglish.com/tools/hn-popularity/) on the book's website. To lead visitors to the book, I put a prominent pre-order link in the navigation menu:
 
-{{<img src="popularity-contest.webp" has-border="true" max-width="700px" caption="In an attempt to get Hacker News to notice my book, I created a tool to [rank popular bloggers on Hacker News](https://refactoringenglish.com/tools/hn-popularity/) and included a pre-order button for my book in the navigation bar.">}}
+{{<img src="popularity-contest.webp" has-border="true" max-width="700px" caption="To court attention from Hacker News, I created a tool to [rank popular bloggers on Hacker News](https://refactoringenglish.com/tools/hn-popularity/) and included a pre-order button for my book in the navigation bar.">}}
 
 My personal blog is one of the top 50 on the list, so I gave myself unique flair to lead readers to my book:
 
@@ -170,9 +170,9 @@ Unfortunately, none of that attention translated to pre-orders. Sales were nearl
 
 I'd never used Kickstarter before, and I was pleasantly surprised by how smooth and easy the process was.
 
-I'm so jaded by "indie-friendly" platforms that just smother me in upsells and try to trick me with dark patterns. I kept waiting for Kickstarter to tell me that I had to pay $500 to be "featured" or some other gotcha at the last minute, but it never happened.
+I'm so jaded by "indie creator" platforms that hammer me with upsells and use deceptive techniques to squeeze me for money. I kept waiting for Kickstarter to tell me that I had to pay $500 to be "featured" or some other gotcha at the last minute, but it never happened.
 
-Kickstarter did what it said it would do. They facilitated the pre-sale, and they never tried to milk me for money. Throughout the process, I felt like Kickstarter aligned incentives so that they only make money if I succeeded.
+Kickstarter did what it said it would do. They facilitated the pre-sale and never tried to milk me for money. Throughout the process, I felt like Kickstarter aligned incentives so that they only make money if I succeeded.
 
 I was surprised at how many customers discovered my book through Kickstarter itself. Part of Kickstarter's pitch is that they have a community of members interested in funding indie projects, but I didn't expect to find customers that way. According to Kickstarter's metrics, 12% of sales were from people who discovered my book on Kickstarter.
 
@@ -180,23 +180,23 @@ I have a few quibbles with Kickstarter, but I'd still recommend them to anyone i
 
 ### Edited my sample chapters to work as blog posts
 
-As I started working on my book, I struggled to choose which chapters to release as free samples. I wanted the samples to read like standalone blog posts rather than out-of-context book chapters. But which of my chapters would work as both book chapters and self-contained blog posts?
+As I started working on my book, I struggled to choose which chapters to release as free samples. I wanted the samples to read like standalone blog posts rather than out-of-context book chapters. But which of my chapters would work both as book chapters and self-contained blog posts?
 
 Finally, I realized that there's no rule saying that what I call an "excerpt" has to 100% match what appears in the book. I could adapt the material however I wanted to fit the medium of a blog post.
 
 For example, I published ["How to Write Blog Posts that Developers Read"](https://refactoringenglish.com/chapters/write-blog-posts-developers-read/) as a single article on the book's website, but in the full book, I plan to split that material across several chapters and expand on the ideas.
 
-I think adapting the material for a blog post worked well. I doubt that the excerpt about blogging would have had the success it did had I presented it exactly as it will appear in the book.
+I think adapting the material for a blog post worked well. I doubt that my blogging excerpt would have reached as many readers had I presented it exactly as it will appear in the book.
 
 ### Underpromised on rewards
 
 When Tracy Osborn [ran a pre-sale for her first book](https://www.kickstarter.com/projects/tracyosborn/hello-web-app-intro-to-building-web-apps-with-djan), one of the rewards she offered was home-baked cookies. When her Kickstarter succeeded, she [felt stressed having to bake and ship hundreds of cookies](https://hellowebbooks.com/news/reviewing-hello-web-apps-kickstarter-campaign/).
 
-I definitely felt the temptation to offer better, more eye-catching rewards during my pre-sale. Especially as sales slowed down, desperation set in, and I wondered what I could offer to reach my $5k goal.
+I definitely felt the temptation to offer better, more eye-catching rewards during my pre-sale. Especially as sales slowed down, desperation set in, and I wondered [what I could offer](my-secret-weapon.mp4) to reach my $5k goal.
 
 I considered offering signed prints of the book, but that meant committing to a print run and shipping physical products, which is months of work in itself.
 
-Looking back, I'm relieved that I didn't cave to my desperation. I still feel good about everything I offered and the prices I accepted for them.
+Looking back, I'm relieved that I didn't succumb to desperation. I still feel good about everything I offered and the prices I accepted for them.
 
 ### Didn't go overboard on a fancy Kickstarter promotion
 
@@ -210,7 +210,7 @@ In total, I spent 5-10 hours creating my Kickstarter project. I had to write a p
 
 I recorded a short intro video because that's what other successful projects seemed to do. It felt like a good way to demonstrate that I'm a real person and not a money-stealing AI bot.
 
-{{<video src="refactoring-english-intro.mp4">}}
+{{<video src="refactoring-english-intro.mp4" caption="My intro video for the Kickstarter pre-sale">}}
 
 The video took me about 90 minutes to make. I wrote a short script, memorized it, and then recorded it about ten times until I captured a take I liked.
 
@@ -218,17 +218,17 @@ The video took me about 90 minutes to make. I wrote a short script, memorized it
 
 ### Offered an "I just want to give you extra money" option
 
-I recently attended a talk that [Aaron Francis](https://aaronfrancis.com/) gave about creating educational software videos. He [offers a course](https://screencasting.com) on this topic for $300, but he also sells a premium $1k package that includes a 40-minute 1:1 video call with him.
+I recently attended a talk by [Aaron Francis](https://aaronfrancis.com/) about creating educational software videos. He [offers a course](https://screencasting.com) on this topic for $300, but he also sells a premium $1k package that includes a 40-minute 1:1 video call with him.
 
 After the talk, I asked Aaron if those $1k customers ever pressured him to deliver something unreasonable on those calls or demanded more of his time afterward.
 
 Surprisingly, Aaron said that he experienced the opposite.
 
-When customers paid $1k for a private consultation with him, he found that they "somewhat want help, somewhat just want to hang out." His sense was that customers viewed the $1k package as a generous tip. "It's like I turned the iPad around, and they tipped $1,000."
+When customers paid $1k for a private consultation with him, he found that they "somewhat want help, somewhat just want to hang out." He sensed that customers viewed the $1k package as a generous tip. "It's like I turned the iPad around, and they tipped $1,000."
 
-I thought about offering something like a 1:1 call as part of my pre-sale, but I figured that if someone wanted to pay me above my asking price for the book, Kickstarter already offers that option. Or they could buy one of the premium rewards like a personalized writing review.
+I thought about offering a 1:1 call as part of my pre-sale, but I figured that if someone wanted to pay me above my asking price for the book, Kickstarter already offers that option. Or they could buy one of the premium rewards like a personalized writing review.
 
-In retrospect, I should have offered a 1:1 call for $300-500. A 1:1 call feels different than just paying above the asking price and getting nothing in return, so there might have been people interested in that option. It would have been a nice hourly rate for me and would give me valuable feedback from readers.
+In retrospect, I should have offered a 1:1 call for $300-500. A 1:1 call feels different than just paying above the asking price and getting nothing in return, so that offer might have appealed to some people. It would have been a nice hourly rate for me and would give me valuable feedback from readers.
 
 ### Started with my most excerpt-able material
 
