@@ -1,5 +1,6 @@
 ---
 title: "My $6k Advance as a Self-Published Technical Author"
+description: I just received $5,947 in advance sales for my first technical book, even though it's only 25% complete, and I'm self-publishing it.
 date: 2025-04-25
 images:
   - my-6k-advance/og-cover.webp
