@@ -112,7 +112,7 @@ It's tough to say how much the first excerpt impacted sales, as I released it at
 
 The second excerpt definitely made a difference. It gained traction [on Hacker News](https://news.ycombinator.com/item?id=43503872) and [Lobsters](https://lobste.rs/s/youq7y/how_write_blog_posts_developers_read), and readers from those sites doubled pre-orders for my book in a matter of days. Without that second excerpt, the pre-sale would have failed, and I'd have walked away with nothing.
 
-{{<img src="publish-excerpts.webp" has-border="true">}}
+{{<img src="publish-excerpts.webp" has-border="true" caption="The effects of sharing excerpts on sales">}}
 
 ### Advertising the book on my personal blog
 
@@ -149,7 +149,7 @@ Part of the problem was that I waited until the last ten days of the pre-sale to
 
 I kept thinking I'd have a hit post during the pre-sale so that I could wow potential sponsors with flashy metrics about how many of my readers would see their logo, but I didn't have that until the end.
 
-{{<img src="sponsor-email.webp" has-border="true" max-width="550px">}}
+{{<img src="sponsor-email.webp" has-border="true" max-width="550px" caption="An example email I sent soliciting sponsorship from a company">}}
 
 Even when the one company offered to sponsor for $1k, I was hesitant to let a single company carry so much of the pre-sale. I expect the number of pre-orders to correlate with how many customers purchase the completed book. If I can't reach my pre-sale goal without one whale of a sponsor, that would have been a bad sign for long-term sales.
 
