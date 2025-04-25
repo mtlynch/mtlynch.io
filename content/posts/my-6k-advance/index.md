@@ -6,6 +6,8 @@ images:
   - my-6k-advance/og-cover.webp
 tags:
   - refactoring-english
+discuss_urls:
+  hacker_news: https://news.ycombinator.com/item?id=43793676
 ---
 
 I just received $5,947 in advance sales for my first technical book, even though it's only 25% complete, and I'm self-publishing it. The book is called [_Refactoring English_](https://refactoringenglish.com), and it's a guide for software developers to improve their writing.
@@ -14,7 +16,7 @@ In March, I ran a three-week pre-sale for the book [on Kickstarter](https://www.
 
 {{<img src="kickstarter-payout.webp" max-width="650px" has-border="true" caption="Proceeds from my pre-sale on Kickstarter">}}
 
-I haven't seen many authors crowdfund their books ahead of time, so I'm sharing how and why I did this.
+I haven’t seen many authors crowdfund their books ahead of time, so I thought I'd write about why I did this, which parts of the process worked well, and which parts turned out to be a waste of time:
 
 ## Benefits of crowdfunding a self-published book
 
