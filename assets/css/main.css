@@ -280,6 +280,11 @@ h4 {
   text-shadow: none;
 }
 
+.content .social-discuss {
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+
 .list {
   .blurb-list {
     li {
