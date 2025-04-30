@@ -119,3 +119,5 @@ zpool attach usbpool2 raidz1-0 /dev/sdd
 $ zpool status usbpool2 | grep "expand:"
 expand: expanded raidz1-0 copied 562K in 00:01:57, on Wed Apr 30 03:30:02 2025
 ```
+
+{{<img src="finished-pool.webp">}}
