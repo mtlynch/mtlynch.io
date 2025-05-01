@@ -45,6 +45,10 @@ sudo zpool offline usbpool /dev/sdf
 ```
 
 ```bash
+zpool set readonly=on usbpool
+```
+
+```bash
 $ zpool status usbpool
   pool: usbpool
  state: DEGRADED
