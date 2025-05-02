@@ -26,7 +26,7 @@ TODO
 
 TODO
 
-### Coordinate rewards with all the Kickstarter backers who opted for a public thanks or editorial help with a blog post
+### Coordinate rewards with Kickstarter backers
 
 - **Result**: XX
 - **Grade**: XX
@@ -52,20 +52,41 @@ I'm not sure if I'll support all three formats. It will depend on how easy it is
 
 So far, I'm finding Asciidoctor easy to work with. I haven't tried to do anything advanced yet.
 
-The biggest limitation is that I can't do live reload. I'm used to writing in Hugo, so I have VS Code open in one window, and the rendered output open in a browser window. Every time I hit save in VS Code, I see how it renders in under a second. With Asciidoctor, my flow is:
+The biggest limitation is that I can't do live reload. I'm used to writing in Hugo, so I have VS Code open in one window, and the rendered output open in a browser window. Every time I hit save in VS Code, I see how it renders in under a second.
+
+With Asciidoctor, my write-build-read flow is:
 
 1. Save the file.
 1. Run `nix run .#pdf`.
 1. Switch to my browser window.
 1. Reload the PDF.
 
-Now that I write this out, I realize it probably wouldn't be that hard to set up my own hokey autoreload flow using something like modd. I know it's easy to re-run a script every time I save a file. It'll be a bit trickier to trigger a reload in an already-open browser, but there's probably a way to do it with Puppeteer or server sent events.
+Now that I write this out, I realize I should automate this, so I asked an LLM and got this simple script:
+
+```bash
+#!/usr/bin/env bash
+set -euo pipefail
+
+nix run .#pdf
+
+zathura dist/Refactoring\ English.pdf &
+ZATHURAPID=$!
+
+trap 'kill $ZATHURAPID' EXIT
+
+find book -type f \
+  | entr -dr nix run .#pdf
+```
+
+I'd never heard of zathura, but it's an [open-source PDF reader](https://pwmt.org/projects/zathura/) that automatically reloads on file changes.
+
+It's significantly slower than the near-instant performance I'm used to with Hugo, but it's 5x easier than my previous flow.
 
 One other Asciidoc gotcha is that it doesn't seem to support footnotes, only endnotes.
 
-## Topic 3
-
 ## Side project: Hacker News Observer
+
+I'm currently generating 30-40 MB per day
 
 ### Rant: Is there a charting library for simpletons?
 
