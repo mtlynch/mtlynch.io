@@ -40,6 +40,14 @@ This is a test file
 
 ## Offline a disk
 
+Find the weakest disk:
+
+```bash
+for drive in /dev/sd?; do
+  [ -e "$drive" ] && echo -e "\n=== $drive ===" && smartctl -A $drive | grep -E '(Power_On_Hours|Wear_Leveling|Media_Wearout|Reallocated_Sector)'
+done
+```
+
 ```bash
 sudo zpool offline usbpool /dev/sdf
 ```
