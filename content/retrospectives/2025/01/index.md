@@ -56,7 +56,7 @@ Salvatore went on to say that programmers should learn from novelists and resist
 
 For _Refactoring English_, I'm trying to publish chapters in near-finished state, but I also want to let reader feedback shape my writing.
 
-Having chapters live in flux creates a problem I've never dealt with before: I'm messing up comment threads. On Hacker News, Lobsters, and reddit, commenters disagreed with my point about ["Let computers evaluate conditional logic."](https://6776b3d35623f593a0e9dc40--refactoring-english.netlify.app/chapters/rules-for-software-tutorials/#let-computers-evaluate-conditional-logic) And I think they're right. That was my weakest point, so I've cut it.
+Having chapters live in flux creates a problem I've never dealt with before: I'm messing up comment threads. On Hacker News, Lobsters, and reddit, commenters disagreed with my point about ["Let computers evaluate conditional logic."](https://web.archive.org/web/20250102175032/https://refactoringenglish.com/chapters/rules-for-software-tutorials/#let-computers-evaluate-conditional-logic) And I think they're right. That was my weakest point, so I've cut it.
 
 The problem is that anyone reading those discussions will wonder why people are disagreeing with a point that never appears in my article.
 
