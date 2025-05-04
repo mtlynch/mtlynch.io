@@ -1,6 +1,7 @@
 ---
 title: "A Simple Example of Calling a C Library from Zig"
 date: 2023-11-19
+lastmod: 2025-05-04
 tags:
   - nix
   - zig
@@ -17,7 +18,7 @@ I found a few articles that described how to call C code from Zig. They all had 
 - ["C/C++/Zig"](https://zig.news/kristoff/compile-a-c-c-project-with-zig-368j) by Loris Cro
   - This is a great tutorial, but it's complex. It's not just calling into a C library &mdash; it's figuring out how to build a huge C application with Zig and then writing a new function that both calls the original C code and receives calls from the C code.
   - I learned a lot from the tutorial, but I had a hard time figuring out from this series how to call C from Zig in a simpler scenario.
-  - This tutorial was also written for Zig 0.8.1, and the code no longer compiles with Zig 0.11.0.
+  - This tutorial was also written for Zig 0.8.1, and the code no longer compiles with Zig 0.14.0.
 - ["Extending a C Project with Zig" (2023)](https://nivethan.dev/devlog/extending-a-c-project-with-zig.html)
   - This is a recent article, so it still compiles with the current version of Zig.
   - Similar to the above tutorial, this article tackles how to compile a large, complex C application, so I had a hard time understanding how to apply the lessons to a simpler scenario.
@@ -91,9 +92,9 @@ The complete example at this stage [is on GitHub](https://github.com/mtlynch/zig
 
 So far, this is a pure C project, and I haven't used Zig at all.
 
-Now, I'll install Zig. There are a few ways to install Zig, but I'm using [Nix](https://nixos.org/), as it's [my new favorite package manager](/tags/nix/). I only use Nix for the installation, so feel free to install Zig 0.11.0 another way if you're not yet [in the cult of Nix](https://zero-to-nix.com/).
+Now, I'll install Zig. There are a few ways to install Zig, but I'm using [Nix](https://nixos.org/), as it's [my new favorite package manager](/tags/nix/). I only use Nix for the installation, so feel free to install Zig 0.14.0 another way if you're not yet [in the cult of Nix](https://zero-to-nix.com/).
 
-I added the following `flake.nix` file to my project, which pulls Zig 0.11.0 into my environment:
+I added the following `flake.nix` file to my project, which pulls Zig 0.14.0 into my environment:
 
 ```nix
 {
@@ -102,8 +103,8 @@ I added the following `flake.nix` file to my project, which pulls Zig 0.11.0 int
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
 
-    # 0.11.0
-    zig-nixpkgs.url = "github:NixOS/nixpkgs/46688f8eb5cd6f1298d873d4d2b9cf245e09e88e";
+    # 0.14.0
+    zig-nixpkgs.url = "github:NixOS/nixpkgs/f6db44a8daa59c40ae41ba6e5823ec77fe0d2124";
   };
 
   outputs = { self, flake-utils, zig-nixpkgs }@inputs :
@@ -125,11 +126,11 @@ I added the following `flake.nix` file to my project, which pulls Zig 0.11.0 int
 }
 ```
 
-From here, I can run `nix develop`, and I see that Nix 0.11.0 is available in my project environment:
+From here, I can run `nix develop`, and I see that Nix 0.14.0 is available in my project environment:
 
 ```bash
 $ nix develop
-zig 0.11.0
+zig 0.14.0
 ```
 
 Zig has a built-in C compiler that can act as a drop-in replacement for `gcc`. I'll retry the previous compilation, but instead of calling `gcc`, I call `zig cc`:
@@ -216,22 +217,22 @@ Next, I adjust my `build.zig` so that my Zig application has access to my C sour
 ```zig
     const exe = b.addExecutable(.{
         .name = "zig-c-simple",
-        .root_source_file = .{ .path = "src/main.zig" },
+        .root_source_file = b.path("src/main.zig"),
         .target = target,
         .optimize = optimize,
     });
-    exe.addIncludePath(.{ .path = "c-src" });   // Look for C source files
+    exe.addIncludePath(b.path("c-src"));   // Look for C source files
 ```
 
 And I do the same thing for Zig's unit test build target:
 
 ```zig
     const unit_tests = b.addTest(.{
-        .root_source_file = .{ .path = "src/main.zig" },
+        .root_source_file = b.path("src/main.zig"),
         .target = target,
         .optimize = optimize,
     });
-    unit_tests.addIncludePath(.{ .path = "c-src" }); // Look for C source files
+    unit_tests.addIncludePath(b.path("c-src"));   // Look for C source files
 ```
 
 I've now adjusted my Zig build so that it has access to my C arithmetic library, but I haven't called the library yet. To complete this example, I need to make the following change to my `src/main.zig` file:
@@ -289,15 +290,23 @@ I ran my unit tests to see what would happen:
 
 ```bash
 $ zig build test --summary all
-run test: error: 'test.simple test' failed: expected 21, found 20
-/nix/store/bg6hyfzr1wzk795ii48mc1v15bswcvp3-zig-0.11.0/lib/zig/std/testing.zig:84:17: 0x2244b3 in expectEqual__anon_1014 (test)
+test
+└─ run test 0/1 passed, 1 failed
+error: 'main.test.test add' failed: expected 21, found 20
+/nix/store/dzdlr4lms4wgjvi02r1pcqh54iiq9pn5-zig-0.14.0/lib/zig/std/testing.zig:103:17: 0x1048bad in expectEqualInner__anon_421 (test)
                 return error.TestExpectedEqual;
                 ^
-/home/mike/zig-c-simple/src/main.zig:27:5: 0x2245fb in test.simple test (test)
-    try std.testing.expectEqual(@as(i32, 21), add(x, y));
+/tmp/tmp.LCH7Soiq5V/src/main.zig:25:5: 0x1048c7f in test.test add (test)
+    try std.testing.expectEqual(@as(i32, 21), add(5, 16));
     ^
-run test: error: while executing test 'test.simple test', the following test command failed:
-/home/mike/zig-c-simple/zig-cache/o/60df9dade81f9ba62609a6cbf833478c/test --listen=-
+error: while executing test 'main.test.test add', the following test command failed:
+/tmp/tmp.LCH7Soiq5V/.zig-cache/o/ab02faa31a7c5067027f9f3a2e4ce1f9/test --seed=0x4b485ae6 --cache-dir=/tmp/tmp.LCH7Soiq5V/.zig-cache --listen=-
+Build Summary: 1/3 steps succeeded; 1 failed; 0/1 tests passed; 1 failed
+test transitive failure
+└─ run test 0/1 passed, 1 failed
+   └─ zig test Debug native success 1s MaxRSS:257M
+error: the following build command failed with exit code 1:
+/tmp/tmp.LCH7Soiq5V/.zig-cache/o/159f82a7dcc12c245254f0919e2ecdf2/build /nix/store/dzdlr4lms4wgjvi02r1pcqh54iiq9pn5-zig-0.14.0/bin/zig /nix/store/dzdlr4lms4wgjvi02r1pcqh54iiq9pn5-zig-0.14.0/lib/zig /tmp/tmp.LCH7Soiq5V /tmp/tmp.LCH7Soiq5V/.zig-cache /home/mike/.cache/zig --seed 0x4b485ae6 -Zabdc51211068b123 test --summary all
 ```
 
 Great! That test failed as expected with the error `expected 21, found 20`. The unit test correctly identified the bug I introduced into my C `add` function.
@@ -363,4 +372,4 @@ The full source code is available on GitHub. I split it up into the different st
 
 ---
 
-_Thanks to [Stéphane Bortzmeyer](https://www.bortzmeyer.org) and [IntegratedQuantum](https://github.com/IntegratedQuantum) for [offering suggestions](https://ziggit.dev/t/a-simple-example-of-calling-a-c-library-from-zig/2225/3?u=mtlynch) that helped me simplify this solution._
+_Thanks to [Stéphane Bortzmeyer](https://www.bortzmeyer.org) and [IntegratedQuantum](https://github.com/IntegratedQuantum) for [offering suggestions](https://ziggit.dev/t/a-simple-example-of-calling-a-c-library-from-zig/2225/3?u=mtlynch) that helped me simplify this solution. Thanks to [Daniel Bartley](https://github.com/dbrtly) for updating the solution to Zig 0.14.0)._
