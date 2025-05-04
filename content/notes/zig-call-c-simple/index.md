@@ -372,4 +372,4 @@ The full source code is available on GitHub. I split it up into the different st
 
 ---
 
-_Thanks to [Stéphane Bortzmeyer](https://www.bortzmeyer.org) and [IntegratedQuantum](https://github.com/IntegratedQuantum) for [offering suggestions](https://ziggit.dev/t/a-simple-example-of-calling-a-c-library-from-zig/2225/3?u=mtlynch) that helped me simplify this solution. Thanks to [Daniel Bartley](https://github.com/dbrtly) for updating the solution to Zig 0.14.0)._
+_Thanks to [Stéphane Bortzmeyer](https://www.bortzmeyer.org) and [IntegratedQuantum](https://github.com/IntegratedQuantum) for [offering suggestions](https://ziggit.dev/t/a-simple-example-of-calling-a-c-library-from-zig/2225/3?u=mtlynch) that helped me simplify this solution. Thanks to [Daniel Bartley](https://github.com/dbrtly) for updating the solution to Zig 0.14.0._
