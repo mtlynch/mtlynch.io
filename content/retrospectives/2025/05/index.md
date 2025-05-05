@@ -12,7 +12,7 @@ description: TODO - One-line summary
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
-### Write a blog post about lessons from Kickstarter.
+### Write a blog post about lessons from Kickstarter
 
 - **Result**: XX
 - **Grade**: XX
@@ -43,6 +43,8 @@ I hit diminishing returns the longer I write
 
 - Look at my calendar
 - Look at my to-do list
+
+I tried LeechBlockNG, but it caused Firefox to hang frequently. I assume it's related to the known issue, [LeechBlock doesn't get along well with Firefox's GC](https://github.com/proginosko/LeechBlockNG/issues/124). I submitted a couple of [small](https://github.com/proginosko/LeechBlockNG/pull/573) [fixes](https://github.com/proginosko/LeechBlockNG/pull/578) but ran out of motivation to keep debugging it.
 
 ## Asciidoctor: So far, so good
 
@@ -84,9 +86,30 @@ It's significantly slower than the near-instant performance I'm used to with Hug
 
 One other Asciidoc gotcha is that it doesn't seem to support footnotes, only endnotes.
 
+I haven't tried any custom formatting yet or even embedding images or tables, so I'll have more to report next month.
+
 ## Side project: Hacker News Observer
 
-I'm currently generating 30-40 MB per day
+One of my special Hacker News skills is that I can tell people what happened when they ask why their post disappeared from the front page. The secret is that anyone can do this if they know about [Hacker News Rankings](https://hnrankings.info/), a site that charts historical Hacker News data. You just have to recognize a few patterns.
+
+The two main things you can see from historical Hacker News chart is when a post's rank suddenly incrases or decreases dramatically. Like if a post is slowly increasing to the #5 spot, and then the next tick in the chart, it's suddenly at the #200 spot. That means that a moderator probably downranked the story manually.
+
+Charts can also reveal when moderators manually boost a story. If you see a post drowning in the #300 spot, and then suddenly it's ranked #10, it means that a moderator boosted the story, possibly due to the [second chance pool](https://news.ycombinator.com/item?id=26998308), a system where moderators and volunteers hand pick stories that missed the front page in regular voting.
+
+Hacker News Rankings is great, but I'd like to see more data like upvote counts and comment counts alongside rankings. So I built my own version. I haven't published it yet, as I'm still figuring it out.
+
+It polls the [Hacker News API](https://github.com/HackerNews/API) every minute to track the metadata about all of the current Hacker News stories.
+
+Here are some features on my list:
+
+- Automatically tag stories that the moderators have boosted or suppressed.
+- Calculate whether it's difficult or easy for a new story to reach the front page at the current time.
+  - In other words, automatically determine whether it's a slow news day or a crowded front page.
+- Predict a story's trajectory based on how voting and commenting begins.
+
+This is the closest thing I've had to a "big data" project in a long time, as most of my sites generate about 1 MB per month of data, whereas the frequent polls and rich data here generate 30-40 MB per day.
+
+This might be a good opportunity to try out Turso, as it seems like a good way to have a database as a service without forfeiting the benefits of using SQLite.
 
 ### Rant: Is there a charting library for simpletons?
 
