@@ -47,3 +47,15 @@ LLMs have an easy time with this question because this is knowledge that hasn't 
 
 - Useful for complex problems.
   - For simple problems, better off using a non-thinking model as thinking models add significant cost and processing time.
+- Karpathy tries a problem first on a non-thinking model, then switches to a thinking model if the non-thinking model failed.
+
+## Integrating web search
+
+- When LLMs integrate web search, what they're actually doing is searching the web, then scraping text from pages in the top results, then stuffing that text into the model's context window.
+- Karpathy's example is, "When does the second episode of _The White Lotus_ season three come out?"
+  - This information is after the training knowledge cutoff of all LLMs at the time, so he needs web search for the answer.
+- Some chat interfaces have an option to explicitly search the web for answers. Some interfaces try to auto-infer when they need to search the web for the user.
+- Karpathy uses search-enabled LLMs when it's a question whose answer may change over time.
+  - e.g., "Does Vercel offer managed PostgreSQL hosting?" "What is the Apple launch tomorrow? Are there any rumors on what it could be?"
+
+End at 41m45s.
