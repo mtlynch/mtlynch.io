@@ -14,24 +14,24 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Write a blog post about lessons from Kickstarter
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: Wrote [My $6k Advance as a Self-Published Technical Author](/my-6k-advance/)
+- **Grade**: A
 
-TODO
+I originally set out to write a guide that focused on Kickstarter, but the more I wrote, the less I felt like Kickstarter was the interesting part. It felt more interesting that crowdfunding is a viable path for self-published authors, and Kickstarter is just one way of crowdfunding.
 
 ### Complete a new book chapter or teach a live session about a topic from the book
 
-- **Result**: XX
+- **Result**: Taught a live session and started working on a new chapter
 - **Grade**: XX
 
 TODO
 
 ### Coordinate rewards with Kickstarter backers
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: Reached out to all Kickstarter backers who purchased a premium reward
+- **Grade**: A
 
-TODO
+I'm surprised that not all of them have claimed the rewards. 16 of the 19 backers who purchased a personal thanks responded to give their approval on listing. Two of the four backers who purchased personalized writing feedback responded to my message, but nobody has asked me to provide feedback yet.
 
 ## Managing my time as I write a book
 
@@ -110,14 +110,6 @@ Here are some features on my list:
 This is the closest thing I've had to a "big data" project in a long time, as most of my sites generate about 1 MB per month of data, whereas the frequent polls and rich data here generate 30-40 MB per day.
 
 This might be a good opportunity to try out Turso, as it seems like a good way to have a database as a service without forfeiting the benefits of using SQLite.
-
-### Rant: Is there a charting library for simpletons?
-
-One thing that always drives me crazy in web development is charts. I have data that I'd love to put in a chart, but I feel like if I try, it's going to be three days of work to generate a simple line chart.
-
-I started out a few years ago with d3.js, which I found incredibly difficult. I gave up when they switched the documentation to be all notebook-based so that . I'm still baffled by that decision. Were they like, "Why would anyone ever want to use our JS library on a _web page_?"
-
-I switched to Chart.js, and it was simpler, but I still feel like way harder than it could be. I wish there was something that's like Google Sheets or Excel but for JavaScript development. Like, I hand the library an array
 
 ## Wrap up
 
