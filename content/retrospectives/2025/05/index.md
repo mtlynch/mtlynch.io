@@ -14,7 +14,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Write a blog post about lessons from Kickstarter
 
-- **Result**: Wrote [My $6k Advance as a Self-Published Technical Author](/my-6k-advance/)
+- **Result**: Published [My $6k Advance as a Self-Published Technical Author](/my-6k-advance/)
 - **Grade**: A
 
 I originally set out to write a guide that focused on Kickstarter, but the more I wrote, the less I felt like Kickstarter was the interesting part. It felt more interesting that crowdfunding is a viable path for self-published authors, and Kickstarter is just one way of crowdfunding.
@@ -94,7 +94,9 @@ find book -type f \
   | entr -dr nix run .#pdf
 ```
 
-I'd never heard of zathura, but it's an [open-source PDF reader](https://pwmt.org/projects/zathura/) that automatically reloads on file changes.
+I'd never heard of zathura, but it's an [open-source PDF reader](https://pwmt.org/projects/zathura/) that automatically reloads on file changes. Here's what it looks like in practice:
+
+{{<video src="live-reload-pdf.mp4" caption="My DIY hot reloading PDF workflow with Asciidoctor, Zathura, and Nix">}}
 
 My DIY hot-reload flow is significantly slower than the near-instant performance I'm used to with Hugo, but it's 5x easier than doing it manually.
 
@@ -110,11 +112,15 @@ The two main things you can see from historical Hacker News chart is when a post
 
 Charts can also reveal when moderators manually boost a story. If you see a post drowning in the #300 spot, and then suddenly it's ranked #10, it means that a moderator boosted the story, possibly due to the [second chance pool](https://news.ycombinator.com/item?id=26998308), a system where moderators and volunteers hand pick stories that missed the front page in regular voting.
 
-Hacker News Rankings is great, but I'd like to see more data like upvote counts and comment counts alongside rankings. So I built my own version. I haven't published it yet, as I'm still figuring it out.
-
-{{<img src="top30.webp" has-border="true">}}
+Hacker News Rankings is great, but I'd like to see more data like upvote counts and comment counts alongside rankings. It's been interesting to see more details on my submissions, like [the HN discussion](https://news.ycombinator.com/item?id=43803343) for "My $6k Advance asa Self-Published Author."
 
 {{<img src="6k-advance.webp" has-border="true">}}
+
+It's a strange graph, and I can't figure it out. It continued receiving upvotes for days even though it never reached the front page, so I don't know how users were finding it. I didn't link to it in the post itself.
+
+So I built my own version. I haven't published it yet, as I'm still figuring it out.
+
+{{<img src="top30.webp" has-border="true">}}
 
 It polls the [Hacker News API](https://github.com/HackerNews/API) every minute to track the metadata about all of the current Hacker News stories.
 
