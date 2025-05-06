@@ -1,7 +1,7 @@
 ---
 title: "Educational Products: Month 7"
 date: "2025-05-09"
-description: How do I stop myself from rewriting the same chapter forever?
+description: How do I stop myself from rewriting the same chapter fifty times?
 ---
 
 ## Highlights
@@ -86,9 +86,9 @@ set -euo pipefail
 nix run .#pdf
 
 zathura dist/Refactoring\ English.pdf &
-ZATHURAPID=$!
+ZATHURA_PID=$!
 
-trap 'kill $ZATHURAPID' EXIT
+trap 'kill $ZATHURA_PID' EXIT
 
 find book -type f \
   | entr -dr nix run .#pdf
@@ -96,9 +96,7 @@ find book -type f \
 
 I'd never heard of zathura, but it's an [open-source PDF reader](https://pwmt.org/projects/zathura/) that automatically reloads on file changes.
 
-It's significantly slower than the near-instant performance I'm used to with Hugo, but it's 5x easier than my previous flow.
-
-One other Asciidoc gotcha is that it doesn't seem to support footnotes, only endnotes.
+My DIY hot-reload flow is significantly slower than the near-instant performance I'm used to with Hugo, but it's 5x easier than doing it manually.
 
 I haven't tried any custom formatting yet or even embedding images or tables, so I'll have more to report next month.
 
