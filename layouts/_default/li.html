@@ -1,0 +1,6 @@
+<li>
+  <span class="date">{{ .Date.Format .Site.Params.dateFormat }}</span>
+  <a class="title" href="{{ .Params.ExternalLink | default .RelPermalink }}"
+    >{{ .Title }}</a
+  >
+</li>

@@ -1,5 +1,12 @@
+.direnv
+flake.lock
+package-lock.json
 .netlify/state.json
 node_modules/
 public/
 resources/
-static/js/chart.js/
+**/third-party/
+static/**/*.html
+
+# TODO: Make these play nicely with prettier
+layouts/shortcodes/

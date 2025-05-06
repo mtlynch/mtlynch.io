@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 20"
-date: 2022-03-08T00:00:00-05:00
+date: 2022-03-08
 description: Hiring TinyPilot's first support engineer
 images:
   - /retrospectives/2022/03/og-image.png
@@ -12,7 +12,7 @@ images:
 - I learned that hiring a support engineer is even harder than I expected.
 - I'm evaluating platforms for paying international contractors.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -37,7 +37,7 @@ It was a lot of work to hire for this role, but I'm excited to have this new mem
 
 The design firm I'm working with had too few hours to complete the design in February. I've negotiated guaranteed hours with them in March and April, so I expect to complete this by the end of the month.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -239,7 +239,7 @@ Lenny is a chatbot that responds to spam emails on my behalf.
 
 Spam is getting more aggressive. Spammers are now sending automated message sequences when I don't respond to their first message.
 
-{{<img src="spammer-sequence.png" maxWidth="700px" hasBorder="true" caption="Some spammers continue sending automated pester sequences when I don't respond.">}}
+{{<img src="spammer-sequence.png" max-width="700px" has-border="true" caption="Some spammers continue sending automated pester sequences when I don't respond.">}}
 
 It annoyed me that spammers can keep invading my inbox and wasting my time, and all it costs them is a fraction of a penny per email and a new domain every few months. And they're doing this to thousands of people because they don't have to put in any effort until they get a response. I wanted a way to increase the spammers' costs so that bulk, semi-targeted emails aren't as cost-effective.
 
@@ -252,8 +252,8 @@ I've built my own version of Lenny, but for email rather than voice calls. Now, 
 The following are two different spammers responding to the same message sequence I wrote for my chatbot. Lenny manages to get five responses from each spammer before they each give up at the same point. In the second example, Lenny's responses stop making sense in the context of the spammer's messages, but the spammer keeps going for a while.
 
 {{<gallery  caption="Lenny is a service I built to send automated responses to spammers that go nowhere.">}}
-{{<img src="lenny-1.png" maxWidth="400px" hasBorder="true">}}
-{{<img src="lenny-2.png" maxWidth="400px" hasBorder="true">}}
+{{<img src="lenny-1.png" max-width="400px" has-border="true">}}
+{{<img src="lenny-2.png" max-width="400px" has-border="true">}}
 {{</gallery>}}
 
 I'm trying to keep the third-party dependencies to a minimum, but in February, I started using the [Bulma CSS framework](https://bulma.io/), and it makes the UI look a lot better.

@@ -1,0 +1,526 @@
+:root {
+  --text-font: Rubik;
+  --heading-font: Lato, Helvetica, sans-serif;
+  --code-font: "Source Code Pro", "Lucida Console", monospace;
+  --bg-color: #fafafa;
+  --fg-color: #212121;
+  --alt-bg-color: #e0e0e0;
+  --alt-fg-color: #000;
+  --link-color: #1565c0;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  color: var(--fg-color);
+  background-color: var(--bg-color);
+  font-family: var(--text-font);
+  font-size: 1.9em;
+  font-weight: 300;
+  line-height: 1.65em;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 1.6em;
+    line-height: 1.6em;
+  }
+}
+
+a {
+  font-weight: 300;
+  color: var(--link-color);
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+p {
+  margin: 2rem 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  color: var(--alt-fg-color);
+  margin: 6.4rem 0 3.2rem 0;
+}
+
+h2,
+h3,
+h4,
+h5,
+hr {
+  clear: both;
+}
+
+h1 {
+  margin-top: 0.5rem;
+  font-size: 3.2rem;
+  line-height: 3.6rem;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 3rem;
+    line-height: 3.4rem;
+  }
+}
+
+h2 {
+  font-size: 2.8rem;
+  line-height: 3.2rem;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 2.6rem;
+    line-height: 3rem;
+  }
+}
+
+h3 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  color: #707070;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+  }
+}
+
+h4 {
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+  margin-top: 2rem;
+  margin-bottom: 1.4rem;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+}
+
+h5 {
+  font-size: 2rem;
+  line-height: 2.4rem;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+}
+
+h6 {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+pre {
+  display: block;
+  font-family: var(--code-font);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.6rem;
+  margin: 2rem 0;
+  padding: 2rem;
+  overflow-x: auto;
+
+  /* Prevent Safari on iPhone from messing with text sizes. Michael has not
+     tested this on an actual iPhone, so this is based on user suggestions.
+     https://cue.gerrithub.io/c/cue-lang/cuelang.org/+/1206289
+     https://fosstodon.org/@jonathanmatthews/113793278512401976
+     */
+  -webkit-text-size-adjust: 100%;
+
+  code {
+    display: inline-block;
+    background-color: inherit;
+    color: inherit;
+  }
+}
+
+code {
+  font-family: var(--code-font);
+  font-size: 1.6rem;
+  font-weight: 400;
+  background-color: var(--alt-bg-color);
+  color: var(--fg-color);
+  padding: 0.2rem 0.4rem;
+}
+
+blockquote {
+  margin: 1rem 0em;
+  padding: 0.5em 0 0.5em 1.5em;
+  border-left: 4px solid #797979;
+  background-color: #eaeaea;
+  font-style: normal;
+  position: relative;
+
+  p {
+    margin: 0.5em 0;
+    line-height: 1.6;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  max-width: 100%;
+  width: fit-content;
+  overflow-x: auto;
+  display: block;
+
+  td,
+  th {
+    padding: 1.6rem;
+    border: 2px solid var(--alt-fg-color);
+  }
+
+  tr {
+    &:first-child th {
+      border-top: 0;
+    }
+
+    &:last-child td {
+      border-bottom: 0;
+    }
+
+    td,
+    th {
+      &:first-child {
+        border-left: 0;
+      }
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 90rem;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+hr {
+  margin-top: 50px;
+}
+
+article {
+  word-wrap: break-word;
+}
+
+.hanchor {
+  visibility: hidden;
+  color: rgb(61, 155, 231);
+
+  &:hover {
+    visibility: hidden;
+    color: rgb(15, 81, 134);
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  &:hover .hanchor {
+    visibility: visible;
+    text-decoration: none;
+  }
+}
+
+.btn-primary {
+  width: 100%;
+  float: none;
+  color: #fff;
+  background: #0d6db8;
+  border-radius: 3px;
+  cursor: pointer;
+  border: none;
+  text-shadow: none;
+}
+
+.list {
+  .blurb-list {
+    li {
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (min-width: 768px) {
+        flex-direction: row;
+      }
+
+      .date {
+        text-align: left;
+        margin: 0;
+      }
+
+      h2 {
+        margin: 0 0 0.5rem 0 !important;
+      }
+    }
+
+    img {
+      object-fit: contain;
+      max-width: 100%;
+
+      @media screen and (min-width: 768px) {
+        max-height: 200px;
+      }
+    }
+
+    .img-wrapper {
+      display: flex;
+      justify-content: center;
+
+      @media screen and (min-width: 768px) {
+        display: block;
+        margin-right: 2.5rem;
+        min-width: 280px;
+        max-width: 280px;
+      }
+    }
+
+    &.book-reports-list {
+      li {
+        margin: 2rem 0;
+
+        @media screen and (min-width: 768px) {
+          margin-bottom: 3rem;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .summary {
+          @media screen and (min-width: 768px) {
+            display: flex;
+            flex-direction: row;
+          }
+        }
+
+        .title {
+          font-size: 24pt !important;
+          margin-bottom: 3rem !important;
+
+          a {
+            text-decoration: none;
+            font-weight: 700;
+          }
+        }
+
+        img {
+          @media screen and (min-width: 768px) {
+            max-height: inherit;
+          }
+        }
+      }
+
+      .img-wrapper {
+        display: flex;
+        justify-content: center;
+
+        @media screen and (min-width: 768px) {
+          justify-content: flex-start;
+          margin-right: 2.5rem;
+          min-width: 260px;
+          max-width: 260px;
+        }
+      }
+
+      .full-review-link {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.1em;
+        background-color: rgb(225, 255, 208);
+        border: 1px solid rgb(119, 197, 119);
+        padding: 1rem 2rem;
+        margin: 0 auto;
+
+        @media screen and (min-width: 768px) {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .posts-list {
+    li {
+      border-bottom: 1px solid rgba(177, 177, 177, 0.623);
+      margin: 0 0 4rem 0;
+
+      @media screen and (min-width: 768px) {
+        padding-bottom: 2rem !important;
+      }
+    }
+  }
+
+  ul {
+    margin: 3.2rem 0;
+    list-style: none;
+    padding: 0;
+
+    li {
+      font-size: 1.8rem;
+
+      @media only screen and (max-width: 768px) {
+        margin: 1.6rem 0;
+      }
+
+      .date {
+        display: inline-block;
+        width: 20rem;
+        text-align: right;
+        margin-right: 3rem;
+
+        @media only screen and (max-width: 768px) {
+          display: block;
+          text-align: left;
+        }
+      }
+
+      .title {
+        font-size: 1.8rem;
+        color: var(--fg-color);
+        font-family: var(--heading-font);
+        font-weight: 700;
+
+        &:hover,
+        &:focus {
+          color: var(--link-color);
+        }
+      }
+    }
+  }
+}
+
+.book-reports {
+  .book-cover {
+    @media screen and (min-width: 768px) {
+      max-width: 300px;
+      padding-right: 1rem;
+      margin: 0 3rem 0 0 !important;
+    }
+  }
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .about {
+    text-align: center;
+
+    h1 {
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      font-size: 2.4rem;
+
+      @media only screen and (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin: 3rem 0 1rem 0;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        position: relative;
+
+        a {
+          color: var(--fg-color);
+          text-transform: uppercase;
+          margin-left: 1rem;
+          margin-right: 1rem;
+          font-size: 1.6rem;
+
+          &:hover,
+          &:focus {
+            color: var(--link-color);
+          }
+
+          @media only screen and (max-width: 768px) {
+            font-size: 1.4rem;
+          }
+
+          i {
+            font-size: 3.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .error {
+    text-align: center;
+
+    h1 {
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+      font-size: 4.6rem;
+
+      @media only screen and (max-width: 768px) {
+        font-size: 3.2rem;
+      }
+    }
+
+    h2 {
+      margin-top: 2rem;
+      margin-bottom: 3.2rem;
+      font-size: 3.2rem;
+
+      @media only screen and (max-width: 768px) {
+        font-size: 2.8rem;
+      }
+    }
+  }
+}

@@ -1,15 +1,15 @@
 ---
-title: 'Hiring Content Writers: Part Two - Creating a Detailed Job Description'
+title: "Hiring Content Writers: Part Two - Creating a Detailed Job Description"
 url: /hiring-content-writers/2-creating-a-job-description/
-date: '2019-09-30'
+date: "2019-09-30"
 ---
 
-* [Overview: Hiring Content Writers](/hiring-content-writers/)
-* [Part One: Finding Writers](/hiring-content-writers/1-finding-writers/)
-* **Part Two - Creating a Detailed Job Description** (this section)
-* [Part Three: Screening Candidates](/hiring-content-writers/3-screening-candidates/)
-* [Part Four - Working with Writers](/hiring-content-writers/4-working-with-writers/)
-* [Part Five - Terminating Writers](/hiring-content-writers/5-terminating-writers/)
+- [Overview: Hiring Content Writers](/hiring-content-writers/)
+- [Part One: Finding Writers](/hiring-content-writers/1-finding-writers/)
+- **Part Two - Creating a Detailed Job Description** (this section)
+- [Part Three: Screening Candidates](/hiring-content-writers/3-screening-candidates/)
+- [Part Four - Working with Writers](/hiring-content-writers/4-working-with-writers/)
+- [Part Five - Terminating Writers](/hiring-content-writers/5-terminating-writers/)
 
 ---
 
@@ -19,52 +19,52 @@ A clear, concise job description shows candidates that you're an organized profe
 
 Below, I've included the job description I use to hire writers for Is It Keto. It's a Google Doc, and I always link candidates directly to it to ensure a single, authoritative version. When I fix mistakes or clarify the wording, I never worry about who has which draft of my document.
 
-{{<img src="job-description.jpg" alt="Screenshot of Is It Keto's job description" caption="Is It Keto's [job description Google Doc](https://docs.google.com/document/d/1sPkmViKqOc9GXhkiL7UUcR315H68YYWGDgKn-r4BKJE/edit#)" maxWidth="825px" hasBorder="True" linkUrl="https://docs.google.com/document/d/1sPkmViKqOc9GXhkiL7UUcR315H68YYWGDgKn-r4BKJE/edit#">}}
+{{<img src="job-description.jpg" alt="Screenshot of Is It Keto's job description" caption="Is It Keto's [job description Google Doc](https://docs.google.com/document/d/1sPkmViKqOc9GXhkiL7UUcR315H68YYWGDgKn-r4BKJE/edit#)" max-width="825px" has-border="true" href="https://docs.google.com/document/d/1sPkmViKqOc9GXhkiL7UUcR315H68YYWGDgKn-r4BKJE/edit#">}}
 
 ## Elements of a good job description
 
 Here are the essential elements to cover in the job description:
 
-* Overview
-  * What kind of content will they write?
-  * What is the goal of the content?
-    * Attracting attention to a product?
-    * Improving search engine rankings?
-    * Building a brand?
-* Requirements
-  * Does the writer need specialized knowledge in a particular field of study?
-    * e.g., medical writing, financial writing
-  * Should they have specific skills?
-    * e.g., writing for search engine optimization, appealing to young professionals
-* Assignment details
-  * What is the typical word count for your assignments?
-  * Are they required to revise the piece based on your feedback?
-  * How will they collaborate with you?
-    * Google Docs? Word?
-  * Will you assign article topics, or does the writer pitch ideas to you?
-* Attribution and rights
-  * Do you keep full rights to the articles, or can the writer republish them on other sites?
-  * Does the writer receive a byline?
-    * e.g., "by Michael Lynch"
-    * Is the author allowed to link to their own website in the byline?
-* Timing
-  * How many hours do you expect the writer to work each week?
-  * How quickly must the writer complete work after they receive an assignment?
-  * Is it critical for the writer's working hours to overlap with yours?
-* Payment
-  * How do you [structure payment](#pay-per-hour-per-word-or-per-article)?
-  * What method of payment will you use?
-    * Check? PayPal? Venmo?
-  * How quickly can writers expect payment?
-  * Do you need to collect tax information from the writer?
-    * In the US, you'll need to [collect a 1099](https://www.irs.gov/forms-pubs/about-form-1099-misc) from any freelancer that you pay more than $600 per year. This is often unnecessary if you pay them through a marketplace like Upwork.
-  * Will you pay a kill fee if you decide not to publish the writer's work?
-    * Publishers sometimes pay a "kill fee" if a writer completes an assignment, but the publisher doesn't use it.
-* Example articles
-  * Provide links to content that provides inspiration for what you want.
-    * Be specific about what you like about the examples.
-  * You can also link to counter-examples of writing you dislike.
-    * What aspects of the counter-examples should writers avoid?
+- Overview
+  - What kind of content will they write?
+  - What is the goal of the content?
+    - Attracting attention to a product?
+    - Improving search engine rankings?
+    - Building a brand?
+- Requirements
+  - Does the writer need specialized knowledge in a particular field of study?
+    - e.g., medical writing, financial writing
+  - Should they have specific skills?
+    - e.g., writing for search engine optimization, appealing to young professionals
+- Assignment details
+  - What is the typical word count for your assignments?
+  - Are they required to revise the piece based on your feedback?
+  - How will they collaborate with you?
+    - Google Docs? Word?
+  - Will you assign article topics, or does the writer pitch ideas to you?
+- Attribution and rights
+  - Do you keep full rights to the articles, or can the writer republish them on other sites?
+  - Does the writer receive a byline?
+    - e.g., "by Michael Lynch"
+    - Is the author allowed to link to their own website in the byline?
+- Timing
+  - How many hours do you expect the writer to work each week?
+  - How quickly must the writer complete work after they receive an assignment?
+  - Is it critical for the writer's working hours to overlap with yours?
+- Payment
+  - How do you [structure payment](#pay-per-hour-per-word-or-per-article)?
+  - What method of payment will you use?
+    - Check? PayPal? Venmo?
+  - How quickly can writers expect payment?
+  - Do you need to collect tax information from the writer?
+    - In the US, you'll need to [collect a 1099](https://www.irs.gov/forms-pubs/about-form-1099-misc) from any freelancer that you pay more than $600 per year. This is often unnecessary if you pay them through a marketplace like Upwork.
+  - Will you pay a kill fee if you decide not to publish the writer's work?
+    - Publishers sometimes pay a "kill fee" if a writer completes an assignment, but the publisher doesn't use it.
+- Example articles
+  - Provide links to content that provides inspiration for what you want.
+    - Be specific about what you like about the examples.
+  - You can also link to counter-examples of writing you dislike.
+    - What aspects of the counter-examples should writers avoid?
 
 ## Save money by offering flexibility
 
@@ -78,11 +78,11 @@ Instead, offer writers as much flexibility as you can. Instead of imagining your
 
 When it comes to pay structure for your freelancers, you have several options:
 
-| Pay structure | Description |
-|---------------|-------------|
-| Pay per hour  | Writer earns an hourly rate regardless of how much content they produce. |
-| Pay per word  | Writer's fee is the final word count of the piece multiplied by an agreed price per word.<br> *(typically [$0.10 to $0.75 per word](http://whopayswriters.com))* |
-| Pay per article | Writer earns a fixed price for each assignment they complete, regardless of word count or hours invested. |
+| Pay structure   | Description                                                                                                                                                      |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Pay per hour    | Writer earns an hourly rate regardless of how much content they produce.                                                                                         |
+| Pay per word    | Writer's fee is the final word count of the piece multiplied by an agreed price per word.<br> _(typically [$0.10 to $0.75 per word](http://whopayswriters.com))_ |
+| Pay per article | Writer earns a fixed price for each assignment they complete, regardless of word count or hours invested.                                                        |
 
 **Pay per article** is the most common arrangement for experienced freelance writers, but I chose **pay per hour** for Is It Keto for two reasons:
 
@@ -101,8 +101,8 @@ In my experience, talented people deliver quality work if you empower them to do
 
 Which writer costs more in the long run?
 
-* A writer who charges $30/hr
-* A writer who charges $40/hr
+- A writer who charges $30/hr
+- A writer who charges $40/hr
 
 **Answer**: Not enough information.
 
@@ -128,11 +128,11 @@ There are limits, of course. I never pay more than $60/hr because it's simply to
 
 The table below shows the rates I paid depending on how I foud the candidate:
 
-| Candidate source   | What I paid |
-|--------------------|-------------|
-| [College job boards](/hiring-content-writers/1-finding-writers/#college-job-boards) | $13-$15/hr  |
-| [Upwork](/hiring-content-writers/1-finding-writers/#upwork)             | $20-$65/hr <sup>1</sup>  |
-| [Personal referrals](/hiring-content-writers/1-finding-writers/#personal-referrals) | $50-60/hr   |
+| Candidate source                                                                    | What I paid             |
+| ----------------------------------------------------------------------------------- | ----------------------- |
+| [College job boards](/hiring-content-writers/1-finding-writers/#college-job-boards) | $13-$15/hr              |
+| [Upwork](/hiring-content-writers/1-finding-writers/#upwork)                         | $20-$65/hr <sup>1</sup> |
+| [Personal referrals](/hiring-content-writers/1-finding-writers/#personal-referrals) | $50-60/hr               |
 
 <small><sup>1</sup> The $65/hr writer was one of my first hires, and that rate was far too expensive given their writing quality. Today, I wouldn't hire someone at $65/hr unless I was supremely confident in their writing.</small>
 
@@ -142,13 +142,13 @@ By this point, you've created a job description and shown it to potential writer
 
 ---
 
-* [Overview: Hiring Content Writers](/hiring-content-writers/)
-* [Part One: Finding Writers](/hiring-content-writers/1-finding-writers/)
-* **Part Two - Creating a Detailed Job Description** (this section)
-* [Part Three: Screening Candidates](/hiring-content-writers/3-screening-candidates/)
-* [Part Four - Working with Writers](/hiring-content-writers/4-working-with-writers/)
-* [Part Five - Terminating Writers](/hiring-content-writers/5-terminating-writers/)
+- [Overview: Hiring Content Writers](/hiring-content-writers/)
+- [Part One: Finding Writers](/hiring-content-writers/1-finding-writers/)
+- **Part Two - Creating a Detailed Job Description** (this section)
+- [Part Three: Screening Candidates](/hiring-content-writers/3-screening-candidates/)
+- [Part Four - Working with Writers](/hiring-content-writers/4-working-with-writers/)
+- [Part Five - Terminating Writers](/hiring-content-writers/5-terminating-writers/)
 
 ---
 
-*Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for offering insight to help me create this guide. Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide me with feedback.*
+_Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for offering insight to help me create this guide. Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide me with feedback._

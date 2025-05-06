@@ -1,16 +1,15 @@
 {{ define "title" }}
-  {{ .Title }} · {{ .Site.Title }}
+  {{ .Title }} ·
+  {{ .Site.Title }}
 {{ end }}
 {{ define "content" }}
   <section class="container list">
     <h1 class="title">{{ .Title }}</h1>
 
-    <ul class="posts-list">
-      {{- range .Paginator.Pages -}}
+    <ul class="blurb-list posts-list">
+      {{- range .Pages -}}
         {{- .Render "li" -}}
       {{- end -}}
     </ul>
-
-    {{ partial "pagination.html" . }}
   </section>
 {{ end }}

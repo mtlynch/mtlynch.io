@@ -1,5 +1,6 @@
 public/
 resources/
+.direnv
 .hugo_build.lock
 .sw?
 push-preview

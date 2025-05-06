@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 21"
-date: 2022-04-06T00:00:00-04:00
+date: 2022-04-06
 description: Should I build more or optimize what I have?
 images:
   - /retrospectives/2022/04/og-image.png
@@ -12,7 +12,7 @@ images:
 - I'm now five months and $32k over budget on a website redesign.
 - I launched PicoShare, and it's the fastest-growing project I've ever published.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -37,7 +37,7 @@ This project is continuing to take longer than I expected. We're done with the d
 
 It took a long time to find the right engineer, but I'm happy this is working out. It's freeing up a significant amount of time for me already.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -55,7 +55,7 @@ March was TinyPilot's best month ever in terms of sales and total revenue. We on
 
 My profit was negative, but that's more a function of how my expenses were timed. Profit for the first quarter of 2022 is at ~~a healthy $16k, averaging $5.3k per month~~ (**Edit (2022-04-29)**: I had the numbers wrong &mdash; I actually took a $10k _loss_ in the first quarter of 2022).
 
-{{<img src="sales-per-unique-visitor.png" maxWidth="700px" hasBorder="true" caption="Sales Per Unique Visitor reached its highest-ever level in March 2022.">}}
+{{<img src="sales-per-unique-visitor.png" max-width="700px" has-border="true" caption="Sales Per Unique Visitor reached its highest-ever level in March 2022.">}}
 
 Revenue per unique visitor reached $10.49, its highest ever. To put that in context, my average revenue per visitor this time last year was about $4. This is great news, as my plan was to focus on increasing the conversion rate on my website ("bottom of funnel") before focusing on marketing. The growth in this metric suggests my plan is working. I think improvements in the product, pricing, and website have made people more likely to purchase.
 
@@ -69,7 +69,7 @@ I'm happy to report that we're now over the hump. Diego, TinyPilot's first suppo
 
 I've also been making an effort to let TinyPilot's local staff take on more responsibility. For example, this week, we found out that the model of screw we use to assemble the Voyager 2 is now out of stock everywhere.
 
-{{<img src="mcmaster-out.png" maxWidth="700px" hasBorder="true" caption="Normally, a supply shortage would be something I'd manage directly, but it's a good opportunity for others on my team to take on a new task.">}}
+{{<img src="mcmaster-out.png" max-width="700px" has-border="true" caption="Normally, a supply shortage would be something I'd manage directly, but it's a good opportunity for others on my team to take on a new task.">}}
 
 Normally, I would work with our case designer to find a replacement and try building with the new screw, but I caught myself before emailing him. This was a good opportunity for TinyPilot's local staff to take on more responsibility, so I asked them to take the lead.
 
@@ -163,7 +163,7 @@ If I were to do it again, I'd buy one 30-hour block as a trial hire for the agen
 
 PicoShare is an open-source, minimalist file-sharing tool I created in February.
 
-{{<video src="picoshare-demo.mp4" caption="PicoShare is a tool for sharing images, videos, or other files." maxWidth="800px">}}
+{{<video src="picoshare-demo.mp4" caption="PicoShare is a tool for sharing images, videos, or other files." max-width="800px">}}
 
 I often share images, videos, and PDFs with other people. If I'm sending a file for business, I feel silly sending a link to a file I uploaded to imgur or mega.nz. Those services don't exactly scream "professional business communication." I don't like dealing with Google Drive or Dropbox either because their UI gets in the way and sometimes pushes the recipient to create an account before viewing the file. PicoShare lets me create easy-to-share links without relying on a third-party service.
 
@@ -171,7 +171,7 @@ I officially released [PicoShare v1.0.0](https://github.com/mtlynch/picoshare/re
 
 YouTube creator David Burgess made [a video about PicoShare](https://www.youtube.com/watch?v=9eJeA8If0dY), and then Hal Gus [made another](https://www.youtube.com/watch?v=E0G5mSe04NE). A self-hosting blogger [wrote a tutorial](https://mariushosting.com/how-to-install-picoshare-on-your-synology-nas/) for installing PicoShare on a Synology NAS (fun for me because my first-ever blog post was about [setting up a Docker image on my Synology NAS](/sia-via-docker/)).
 
-PicoShare is now the fastest-growing project I've ever created. The [first commit](https://github.com/mtlynch/picoshare/commit/bd4b3c38a680ffc06f95174d0e062cb429e2e4d1) was February 13th, and the project currently has 664 stars on Github. For comparison, [TinyPilot](https://github.com/tiny-pilot/tinypilot) has 1.8k stars after almost two years, and [LogPaste](https://github.com/mtlynch/logpaste) has 201 stars after one year.
+PicoShare is now the fastest-growing project I've ever created. The [first commit](https://github.com/mtlynch/picoshare/commit/bd4b3c38a680ffc06f95174d0e062cb429e2e4d1) was February 13th, and the project currently has 664 stars on GitHub. For comparison, [TinyPilot](https://github.com/tiny-pilot/tinypilot) has 1.8k stars after almost two years, and [LogPaste](https://github.com/mtlynch/logpaste) has 201 stars after one year.
 
 Open-source developers made cool code contributions as well:
 

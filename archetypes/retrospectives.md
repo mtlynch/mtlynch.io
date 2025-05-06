@@ -1,6 +1,6 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+title: "{{ .Site.Params.currentproject }}: Month XX"
+date: "{{ now.Format "2006-01-02" }}"
 description: TODO - One-line summary
 ---
 
@@ -8,7 +8,7 @@ description: TODO - One-line summary
 
 -
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -33,10 +33,6 @@ TODO
 
 TODO
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
-
-{{<revenue-graph project="tinypilot">}}
-
 ## Topic 1
 
 ## Topic 2
@@ -58,3 +54,7 @@ TODO
 ### Goals for next month
 
 -
+
+### Requests for help
+
+TODO

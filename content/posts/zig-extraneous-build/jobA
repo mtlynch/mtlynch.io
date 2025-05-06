@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+function print_status() {
+    local message="$1"
+    local timestamp=$(date +"%T.%3N")
+    echo "$timestamp $message" >&2
+}
+
+print_status 'jobA is starting'
+
+sleep 3
+
+echo 'result of jobA is...'
+
+sleep 2
+
+echo '42'
+
+print_status 'jobA is terminating'

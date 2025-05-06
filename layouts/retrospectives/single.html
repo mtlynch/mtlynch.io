@@ -1,5 +1,6 @@
 {{ define "title" }}
-  {{- .Title }} · {{ .Site.Title -}}
+  {{- .Title }} ·
+  {{ .Site.Title -}}
 {{ end }}
 {{ define "content" }}
   {{ partial "retrospectives/page.html" . }}

@@ -12,7 +12,7 @@
   become: True
   become_method: sudo
   vars:
-    cifs_share: //diskstation/VMs    # Change to your NFS share
+    cifs_share: //diskstation/VMs # Change to your NFS share
     cifs_username: your-nfs-username # Change to your NFS username
     cifs_password: your-nfs-password # Change to your NFS password
     media_mount: /media/VMs

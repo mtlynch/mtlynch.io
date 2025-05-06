@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Exit build script on first failure.
+set -e
+
+# Echo commands to stdout.
+set -x
+
+# Exit on unset variable.
+set -u
+
+PORT="${PORT:-1313}"
+
+hugo server \
+  --bind "0.0.0.0" \
+  --port "${PORT}" \
+  --baseURL "http://${HOSTNAME}:${PORT}"

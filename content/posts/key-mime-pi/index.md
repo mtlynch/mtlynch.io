@@ -18,7 +18,7 @@ This post demonstrates how Key Mime Pi works and how you can build one for yours
 
 ## Demo
 
-{{< youtube EYMGQxiu-kI >}}
+{{<youtube EYMGQxiu-kI>}}
 
 ## What you'll need
 
@@ -46,8 +46,8 @@ Enable SSH access by placing a file called `ssh` on the microSD's boot partition
 Connect the USB cable to your Pi's USB OTG port. On the Pi 4, this is the USB-C port. For the Pi Zero, it's the Micro-USB port labeled "USB."
 
 {{<gallery caption="For the Raspberry Pi 4 (left), connect to the USB-C port. For the Raspberry Pi Zero W (right), connect to the Micro-USB data port.">}}
-{{< img src="pi4-connection.jpg" alt="Pi 4 with cable inserted into USB-C port" maxWidth="400px" >}}
-{{< img src="pi-zero-connection.jpg" alt="Pi Zero W with cable inserted into USB micro-USB data port" maxWidth="445px" >}}
+{{<img src="pi4-connection.jpg" alt="Pi 4 with cable inserted into USB-C port" max-width="400px">}}
+{{<img src="pi-zero-connection.jpg" alt="Pi Zero W with cable inserted into USB micro-USB data port" max-width="445px">}}
 {{</gallery>}}
 
 Connect the other end of the USB cable to the computer that you want to connect to as a keyboard. USB 3.0 ports work better because they output more power, but all the USB 2.0 ports I tested worked fine as well.
@@ -139,7 +139,7 @@ After you run the install script, Key Mime Pi will be available at:
 
 Its interface looks like this:
 
-{{<img src="key-mime-pi-interface.png" alt="Screenshot of Key Mime Pi web interface" caption="Key Mime Pi web interface awaiting input" maxWidth="650px">}}
+{{<img src="key-mime-pi-interface.png" alt="Screenshot of Key Mime Pi web interface" caption="Key Mime Pi web interface awaiting input" max-width="650px">}}
 
 And like, magic, when you type into your browser, the keys will appear on the machine connected to the Pi.
 
@@ -245,10 +245,23 @@ Standard USB ports come up short:
 | USB 2.0       | 5 V / 0.5 A  |
 | USB 3.0       | 5 V / 0.9 A  |
 
-I currently am still searching for a solution tot his problem. Here are some possible solutions I have not yet tested:
+I currently am still searching for a solution to this problem. Here are some possible solutions I have not yet tested:
 
-- Use a [PoE HAT](https://www.raspberrypi.org/products/poe-hat/) to draw power from the Ethernet port
-- Use the [Zero2Go Power Adaptor](http://www.uugear.com/product/zero2go-omini-wide-input-range-multi-channel-power-supply-for-raspberry-pi/) to connect an [AC to microUSB adaptor](https://smile.amazon.com/Raspberry-Supply-SoulBay-Adapter-Android/dp/B07CVH21NC/).
+- ~~Use a [PoE HAT](https://www.raspberrypi.org/products/poe-hat/) to draw power from the Ethernet port~~
+- ~~Use the Zero2Go Power Adaptor to connect an AC to microUSB adaptor.~~
+
+**Update**: To solve this problem, I worked with an engineering firm to create [a custom circuit board](https://tinypilotkvm.com/product/tinypilot-power-connector) that splits the Pi's USB-C port into two. The first port accepts USB power, so you can still deliver a full 3 Amps to the Pi. The second accepts USB data out, so the Pi can still impersonate a USB keyboard.
+
+{{<gallery caption="The [TinyPilot Power Connector](https://tinypilotkvm.com/product/tinypilot-power-connector) allows the Pi to receive 3 Amps of power through its USB-C port without losing USB OTG functionality.">}}
+{{<img src="power-connector.jpg" alt="Close-up of power connector" max-width="500px">}}
+{{<img src="power-connector-cables.jpg" alt="Power connector hooked up to Raspberry Pi and microUSB cables" max-width="500px">}}
+{{</gallery>}}
+
+Importantly, the power connector's data port excludes a USB power line. This ensures that voltage differences between the computer's power source and the Pi's power source won't cause undesirable power backflows.
+
+{{<notice type="warning">}}
+**Note**: Without a proper connector, there's a risk of hardware damage if you power the Pi from an external power source while it's connected to a computer. See [the TinyPilot wiki](https://github.com/tiny-pilot/tinypilot/wiki/Powering-your-TinyPilot-safely) for additional details.
+{{</notice>}}
 
 ## Troubleshooting
 
@@ -296,7 +309,7 @@ I now have a working solution that both captures video output from a target devi
 
 A detailed follow-up post is coming soon, but in the meantime, you can pre-order pre-configured KVM Pi kits that include everything you need to build your own KVM Pi:
 
-- [tinypilotkvm.com](https://tinypilotkvm.com/?ref=mtlynch.io)
+- [tinypilotkvm.com](https://tinypilotkvm.com/)
 
 ## Source code
 

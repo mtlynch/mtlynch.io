@@ -1,10 +1,10 @@
 {{ $srcRaw := .Get "src" }}
 {{ $altText := .Get "alt" }}
 {{ $caption := .Get "caption" }}
-{{ $maxWidth := .Get "maxWidth" }}
-{{ $hasBorder := .Get "hasBorder" }}
+{{ $maxWidth := .Get "max-width" }}
+{{ $hasBorder := .Get "has-border" }}
 {{ $align := .Get "align" }}
-{{ $linkUrl := .Get "linkUrl" }}
+{{ $href := .Get "href" }}
 
 {{ $image := .Page.Resources.GetMatch $srcRaw }}
 {{ $src := $image.RelPermalink }}
@@ -22,30 +22,31 @@
 
 {{ $maxWidth = printf "%dpx" $maxWidthPixels }}
 
+{{ $containerAttrs := printf `class="img%s"%s`
+  (cond (ne $align "") (printf " align-%s" $align) "")
+  (cond (ne $maxWidth "") (printf ` style="max-width: %s"` $maxWidth) "") | safeHTMLAttr }}
+
+{{ $srcset := "" }}
+{{ range $.Site.Params.photoWidths }}
+  {{- if ge $image.Width . }}
+    {{ $resized := $image.Resize (printf "%dx" .) }}
+    {{ $srcset = printf "%s%s %dw, " $srcset $resized.RelPermalink . }}
+  {{ end }}
+{{ end }}
+{{ $srcset = printf "%s%s %dw" $srcset $image.RelPermalink $image.Width }}
+
 {{ if $caption }}
-<figure
-  class="img{{ if $align }} align-{{ $align }}{{ end }}"
-  {{- if $maxWidth }} style="max-width: {{ $maxWidth }}"{{ end -}}
-  >
+<figure {{ $containerAttrs }}>
 {{ else }}
-<div
-  class="img{{ if $align }} align-{{ $align }}{{ end }}"
-  {{- if $maxWidth }} style="max-width: {{ $maxWidth }}"{{ end -}}
-  >
+<div {{ $containerAttrs }}>
 {{ end }}
 
 {{ if $src }}
-  <a href="{{ if $linkUrl }}{{ $linkUrl }}{{ else }}{{ $src }}{{ end }}">
+  <a href="{{ if $href }}{{ $href }}{{ else }}{{ $src }}{{ end }}">
     <img
       {{ if $hasBorder }}class="img-border"{{ end }}
       sizes="(min-width: 768px) {{ if $maxWidth }}{{ $maxWidth }}{{ else }}{{ index (last 1 $.Site.Params.photoWidths) 0 }}px{{ end }}, 98vw"
-      srcset='{{ range $.Site.Params.photoWidths }}
-                {{- if ge $image.Width . }}
-                  {{ $resized := $image.Resize (printf "%dx" .) }}
-                  {{ $resized.RelPermalink }} {{ . }}w,
-                {{ end }}
-              {{ end }}
-              {{ $image.RelPermalink }} {{ $image.Width }}w'
+      srcset='{{ $srcset }}'
       src="{{ $src }}" alt="{{$altText}}" loading="lazy"/>
   </a>
 {{ else }}

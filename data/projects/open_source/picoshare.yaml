@@ -1,0 +1,11 @@
+title: PicoShare
+external_url: https://github.com/mtlynch/picoshare
+start_date: 2021
+end_date: present
+blurb: A minimalist web app for sharing files that's easy to self-host.
+weight: 100
+technologies:
+  - golang
+  - sqlite
+  - docker
+  - litestream
