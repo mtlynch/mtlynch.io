@@ -106,9 +106,15 @@ One of my special Hacker News superpowers is that I usually know why a post disa
 
 The two main things you can see from historical Hacker News chart is when a post's rank suddenly incrases or decreases dramatically. Like if a post is slowly increasing to the #5 spot, and then the next tick in the chart, it's suddenly at the #200 spot. That means that a moderator probably downranked the story manually.
 
+{{<img src="downranked.webp" max-width="700px" caption="When a Hacker News post suddenly drops in rank, a moderator probably downranked it manually.">}}
+
 Charts can also reveal when moderators manually boost a story. If you see a post drowning in the #300 spot, and then suddenly it's ranked #10, it means that a moderator boosted the story, possibly due to the [second chance pool](https://news.ycombinator.com/item?id=26998308), a system where moderators and volunteers hand pick stories that missed the front page in regular voting.
 
 Hacker News Rankings is great, but I'd like to see more data like upvote counts and comment counts alongside rankings. So I built my own version. I haven't published it yet, as I'm still figuring it out.
+
+{{<img src="top30.webp" has-border="true">}}
+
+{{<img src="6k-advance.webp" has-border="true">}}
 
 It polls the [Hacker News API](https://github.com/HackerNews/API) every minute to track the metadata about all of the current Hacker News stories.
 
