@@ -3,7 +3,7 @@ title: "Raidz1 to Raidz2"
 date: 2025-04-29
 ---
 
-For t
+My home TrueNAS server is now three years old, and I've reached 83% of
 
 ```bash
 sudo fdisk --list
