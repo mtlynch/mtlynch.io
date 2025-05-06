@@ -7,6 +7,8 @@ description: How do I stop myself from rewriting the same chapter fifty times?
 ## Highlights
 
 - I try to diagnose why I'm making slower progress than I'd like on my book.
+- I optimize my Asciidoctor write and preview workflow.
+- I'm working on a side project to track Hacker News performance in real time.
 
 ## Goal grades
 
@@ -33,9 +35,7 @@ I invited everyone who pre-ordered on Kickstarter to a live class on a Friday af
 
 I felt stressed about not reaching out to people soon enough. I worried that backers would feel like, "Hey, why are you writing new blog posts about your Kickstarter instead of talking to the people that actually supported you?" And I also didn't want to send bulk messages because if people pre-ordered $75-150 packages, I felt like that deserves more than a mass email.
 
-I kept putting it off the emails, but when I finally did, it only took me about two hours to write to everyone. I tried to personalize it if the person had a website I could check out or we'd talked before.
-
-I'm a bit surprised at how many people never responded to claim the rewards they purchased. 3 of the 19 backers who purchased a personal thanks never responded. Two of the four backers who purchased personalized writing feedback responded to my message, but nobody has asked me to provide feedback yet. It could just be that Kickstarter messages go to their spam folder, and they'll get back to me when they remember the project.
+I kept putting it off the emails, but when I finally did, it only took me about two hours to write to everyone. If the backer had a website or we'd talked before, I tried to personalize the message to make it clear I was writing them one by one.
 
 ## Managing my time as I write a book
 
@@ -112,17 +112,17 @@ The two main things you can see from historical Hacker News chart is when a post
 
 Charts can also reveal when moderators manually boost a story. If you see a post drowning in the #300 spot, and then suddenly it's ranked #10, it means that a moderator boosted the story, possibly due to the [second chance pool](https://news.ycombinator.com/item?id=26998308), a system where moderators and volunteers hand pick stories that missed the front page in regular voting.
 
-Hacker News Rankings is great, but I'd like to see more data like upvote counts and comment counts alongside rankings. It's been interesting to see more details on my submissions, like [the HN discussion](https://news.ycombinator.com/item?id=43803343) for "My $6k Advance asa Self-Published Author."
+Hacker News Rankings is great, but I'd like to see more data like upvote counts and comment counts alongside rankings.
+
+So I built my own version. I haven't published it yet, but it polls the [Hacker News API](https://github.com/HackerNews/API) every minute to track the metadata about all of the current Hacker News stories.
+
+It's been interesting to see more details on my submissions, like [the HN discussion](https://news.ycombinator.com/item?id=43803343) for "My $6k Advance asa Self-Published Author."
 
 {{<img src="6k-advance.webp" has-border="true">}}
 
 It's a strange graph, and I can't figure it out. It continued receiving upvotes for days even though it never reached the front page, so I don't know how users were finding it. I didn't link to it in the post itself.
 
-So I built my own version. I haven't published it yet, as I'm still figuring it out.
-
 {{<img src="top30.webp" has-border="true">}}
-
-It polls the [Hacker News API](https://github.com/HackerNews/API) every minute to track the metadata about all of the current Hacker News stories.
 
 Here are some features I'd still like to add:
 
@@ -152,4 +152,4 @@ This might be a good opportunity to try out Turso, as it seems like a good way t
 
 ### Requests for help
 
-TODO
+If you know any developers trying to improve their writing, especially blog posts, [send them my way](https://refactoringenglish.com/consulting/). I enjoy giving feedback to other developers, and working with real people helps me write my book.
