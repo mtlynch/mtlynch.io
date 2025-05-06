@@ -47,12 +47,12 @@ With writing, I also find that my efficiency drops significantly after about an 
 
 Fortunately, I haven't experienced writer's block or a loss of motivation. I'm always able to write, and I still feel excited about the book.
 
-With all those things in mind, here's my plan for more focused writing going forward.
+With all those things in mind, here's my plan for more focused writing going forward:
 
 - Dedicate time to writing in flow state for at least 60 minutes per day.
-  - If there are things I need to research more, fix formatting, or add an image, I add TODOs so I don't have to break flow.
+  - If there are things I need to research more, fix formatting, or add an image, I add TODOs, so I don't have to break flow.
   - If I get bored, resist the urge to check email or social media and just keep writing until the end of the block, even if I don't like the writing.
-    - I found LeechBlockNG helpful for this, but it caused Firefox to hang frequently, so I stopped using it. I assume it's related to the known issue, [LeechBlock doesn't get along well with Firefox's GC](https://github.com/proginosko/LeechBlockNG/issues/124). I submitted a couple of [small](https://github.com/proginosko/LeechBlockNG/pull/573) [fixes](https://github.com/proginosko/LeechBlockNG/pull/578) but they didn't seem to make a difference.
+    - I initially found [LeechBlockNG](https://www.proginosko.com/leechblock/) helpful for this, but it caused Firefox to hang frequently, so I stopped using it. I assume it's related to the known issue, [LeechBlock doesn't get along well with Firefox's GC](https://github.com/proginosko/LeechBlockNG/issues/124). I submitted a couple of [small](https://github.com/proginosko/LeechBlockNG/pull/573) [fixes](https://github.com/proginosko/LeechBlockNG/pull/578) but they didn't seem to make a difference.
 - Plan my workday the first thing in the morning so I decide how much time I allocate to which writing tasks.
   - I check my calendar and to-do list, then break my day into 30-minute blocks and write on a piece of paper how I'll spend each block of time.
 - Decide how much writing time each chapter deserves.
