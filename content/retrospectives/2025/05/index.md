@@ -116,13 +116,15 @@ Hacker News Rankings is great, but I'd like to see more data like upvote counts 
 
 So I built my own version. I haven't published it yet, but it polls the [Hacker News API](https://github.com/HackerNews/API) every minute to track the metadata about all of the current Hacker News stories.
 
-It's been interesting to see more details on my submissions, like [the HN discussion](https://news.ycombinator.com/item?id=43803343) for "My $6k Advance asa Self-Published Author."
-
-{{<img src="6k-advance.webp" has-border="true">}}
-
-It's a strange graph, and I can't figure it out. It continued receiving upvotes for days even though it never reached the front page, so I don't know how users were finding it. I didn't link to it in the post itself.
+I've always been curious what patterns emerge if you aggregate vote and comments of the top 30:
 
 {{<img src="top30.webp" has-border="true">}}
+
+The thing that jumps out to me most is that around noon ET every day, the average age of posts drops significantly, so that's when older posts drop off the front page and make room for newer posts.
+
+It's been interesting to see more details on my submissions, like [the HN discussion](https://news.ycombinator.com/item?id=43803343) for "My $6k Advance asa Self-Published Author." The chart reveals that the post never made it to the front page, but it curiously continued receiving upvotes regardless:
+
+{{<img src="6k-advance.webp" has-border="true">}}
 
 Here are some features I'd still like to add:
 
@@ -131,9 +133,27 @@ Here are some features I'd still like to add:
 - Automatically tag stories that the moderators have boosted or suppressed.
 - Predict a story's trajectory based on how voting and commenting begins.
 
-This is the closest thing I've had to a "big data" project in a long time, as most of my sites generate about 1 MB per month of data, whereas the frequent polls and rich data here generate 30-40 MB per day.
+One of the interesting challenges is figuring out how to manage disk space. This is the closest thing I've had to a "big data" project in a long time, as most of my sites generate about 1 MB per month of data, whereas HN Observer generates 30-40 MB per day. I can dial that up or down depending on how much data I collect and how frequently I update it.
 
-This might be a good opportunity to try out Turso, as it seems like a good way to have a database as a service without forfeiting the benefits of using SQLite.
+HN's data storage feels like a good opportunity to try out Turso. I've been watching it distantly, and it seems like a database as a service that preserves most of the benefits of using SQLite.
+
+## Buying DRM-free movies
+
+I was complaining to a friend recently that I'm surprised nobody's offering DRM-free movies or TV shows. I know big studios and streaming platforms have no interest in giving up DRM, but I'm surprised smaller studios and indie filmmakers aren't bothering to put up a checkout page where you can buy a 4K mp4 for $10 or something.
+
+And then I searched around and found that there _kind of_ is something like this. [Vimeo on Demand](https://vimeo.com/ondemand/) offers DRM-free.
+
+I tried out Vimeo on Demand, and the experience was only so-so. But they're the only ones I can see selling DRM-free, so I'll recommend them with caveats.
+
+Make sure the title you're buying offers downloads, as not all titles do. If the button says "Stream anytime," that's not DRM-free:
+
+{{<img src="stream-anytime.webp" caption="Avoid 'Stream anytime' purchases, as they're not DRM-free.">}}
+
+{{<img src="download-option.webp" caption="Look for the download option, which indicates actual DRM-free options.">}}
+
+The experience of making this mistake and canceling the purchase also made me reluctant to recommend Vimeo. They don't give any obvious option to talk to a human. Instead, I had to talk to a chatbot who told me that "for security reasons" they can't refund video on demand purchases (despite the fact that they can see that I haven't viewed the purchase). The only option was to contact the company that distributes the movie to ask them for a refund, so I did that. But if I don't hear back in a week, I'm just going to do a credit card chargeback.
+
+Vimeo's terms of service require binding arbitration, so you can't sue them in court or participate in class action lawsuits in case Vimeo does something illegal. It's absurd that clauses like this exist, as [arbitrators heavily favor](https://arbitrationinformation.org/) corporations over consumers. You can [opt-out of the binding arbitration](https://vimeo.com/terms#30_day_right_to_opt_out), which I did.
 
 ## Wrap up
 
