@@ -8,7 +8,7 @@ description: How do I stop myself from rewriting the same chapter fifty times?
 
 - Why am I making slower progress than I'd like on my book?
 - I optimize my Asciidoctor write and preview workflow.
-- I'm working on a side project to track Hacker News performance in real time.
+- I'm working on a side project to track Hacker News performance in real-time.
 
 ## Goal grades
 
@@ -33,7 +33,7 @@ I invited everyone who pre-ordered on Kickstarter to attend a live class, and I 
 - **Result**: Reached out to all Kickstarter backers who purchased a premium reward.
 - **Grade**: A
 
-I felt stressed about not reaching out to people soon enough. I worried that backers would feel like, "Hey, why are you writing [new](/retrospectives/2025/04/) [blog](/book-pre-sale-just-barely-succeeded/) [posts](/my-6k-advance/) about your Kickstarter instead of talking to the people that actually supported you?" But I didn't want to send bulk messages because if people pre-ordered $75-150 packages, I felt like that deserves a personalized response.
+I felt stressed about not reaching out to people soon enough. I worried that backers would feel like, "Hey, why are you writing [new](/retrospectives/2025/04/) [blog](/book-pre-sale-just-barely-succeeded/) [posts](/my-6k-advance/) about your Kickstarter instead of talking to the people who actually supported you?" But I didn't want to send bulk messages because if people pre-ordered $75-150 packages, I felt like that deserves a personalized response.
 
 I kept putting it off the emails, but when I finally did, it only took me about two hours to write to everyone. If the backer had a website or we'd talked before, I tried to personalize the message to make it clear I was writing them one by one.
 
@@ -45,7 +45,7 @@ It's difficult to gauge my progress because I know which chapters I've completed
 
 Another issue is that I can keep writing and rewriting the same chapter forever. I have to reach a point where I decide it's good enough and move on to other chapters. If there's no pressure to finish any particular chapter by a certain time, I feel like I can just keep rewriting forever.
 
-I also find that my efficiency drops significantly after about an hour of writing. I just run out of steam get distracted more easily or overinvest in things that don't matter. I can somewhat mitigate this by writing about a different topic in the morning and afternoon, but I still run out of steam after about an hour in either session.
+I also find that my efficiency drops significantly after about an hour of writing. I just run out of steam and get distracted more easily or overinvest in things that don't matter. I can somewhat mitigate this by writing about a different topic in the morning and afternoon, but I still run out of steam after about an hour in either session.
 
 Fortunately, I haven't experienced writer's block or a loss of motivation. I'm always able to write, and I still feel excited about the book.
 
@@ -54,8 +54,8 @@ With all those things in mind, here's my plan for more focused writing going for
 - Dedicate time to writing in flow state for at least 60 minutes per day.
   - If there are things I need to research more, fix formatting, or add an image, I add TODOs, so I don't have to break flow.
   - If I get bored, resist the urge to check email or social media and just keep writing until the end of the block, even if I don't like the writing.
-    - I initially found [LeechBlockNG](https://www.proginosko.com/leechblock/) helpful for this, but it caused Firefox to hang frequently, so I stopped using it. I assume it's related to the known issue, ["LeechBlock doesn't get along well with Firefox's GC."](https://github.com/proginosko/LeechBlockNG/issues/124) I submitted a couple of [small](https://github.com/proginosko/LeechBlockNG/pull/573) [fixes](https://github.com/proginosko/LeechBlockNG/pull/578) but they didn't seem to make a difference.
-- Plan my workday the first thing in the morning so I decide how much time I allocate to which writing tasks.
+    - I initially found [LeechBlockNG](https://www.proginosko.com/leechblock/) helpful for this, but it caused Firefox to hang frequently, so I stopped using it. I assume it's related to the known issue, ["LeechBlock doesn't get along well with Firefox's GC."](https://github.com/proginosko/LeechBlockNG/issues/124) I submitted a couple of [small](https://github.com/proginosko/LeechBlockNG/pull/573) [fixes](https://github.com/proginosko/LeechBlockNG/pull/578), but they didn't seem to make a difference.
+- Plan my workday the first thing in the morning, so I decide how much time I allocate to which writing tasks.
   - I check my calendar and to-do list, then schedule my day as a series of 30-minute blocks on a piece of paper.
 - Decide how much writing time each chapter deserves.
   - For example, I should decide ahead of time that I only want to spend 10 hours writing the chapter on emails before I send a draft to readers.
@@ -68,9 +68,9 @@ I wrote last month about evaluating different options for writing a book, and I 
 
 I used Liran Tal's [asciidoc-book-starter](https://github.com/lirantal/asciidoc-book-starter) as a starting point and adapted it to Nix. I now have a Nix flake set up so that if I run `nix run`, it renders the book as PDF, epub3, and HTML. I can also render individual formats with commands like `nix run .#pdf`.
 
-I'm not sure if I'll support all three formats. I haven't tried any custom formatting yet or even embedding images or tables, so it will come down to how much extra work it is to get layout and style to look good in all three formats.
+I'm not sure if I'll support all three formats. I haven't tried any custom formatting yet or even embedding images or tables, so it will come down to how much extra work it is to get the layout and style to look good in all three formats.
 
-The biggest limitation is that I can't do live reload. I'm used to writing in Hugo, so I have VS Code open in one window, and the rendered output open in a browser window. Every time I hit save in VS Code, I see it render in the browser in a few hundred milliseconds.
+The biggest limitation is that I can't do live reload. I'm used to writing in Hugo, so I have VS Code open in one window and the rendered output open in a browser window. Every time I hit save in VS Code, I see it render in the browser in a few hundred milliseconds.
 
 With Asciidoctor, my write-build-read flow is:
 
@@ -106,21 +106,21 @@ My DIY hot-reload flow is significantly slower than the near-instant performance
 
 One of my special Hacker News superpowers is that I usually know why a post disappeared from the front page. But really, anyone can do this if they know about [HN Rankings](https://hnrankings.info/), a site that charts historical Hacker News data. You just have to recognize a few patterns.
 
-The main thing you can see in HN Rankings is when a post's rank suddenly incrases or decreases dramatically. If a post is slowly increasing to the #3 spot, and then the next tick in the chart, it's suddenly at the #45 spot, that means a moderator probably downranked the story.
+The main thing you can see in HN Rankings is when a post's rank suddenly increases or decreases dramatically. If a post is slowly increasing to the #3 spot, and then the next tick in the chart, it's suddenly at the #45 spot, that means a moderator probably downranked the story.
 
 {{<img src="downranked.webp" max-width="700px" caption="When a Hacker News post suddenly drops in rank, a moderator probably downranked it manually.">}}
 
-Charts can also reveal when moderators manually boost a story. If you see a post drowning in the #300 spot, and then suddenly it's ranked #10, it means that a moderator boosted the story, possibly due to the [second chance pool](https://news.ycombinator.com/item?id=26998308), a system where moderators and volunteers hand pick stories that missed the front page in regular voting.
+Charts can also reveal when moderators manually boost a story. If you see a post drowning in the #300 spot, and then suddenly it's ranked #10, it means that a moderator boosted the story, possibly due to the [second chance pool](https://news.ycombinator.com/item?id=26998308), a system where moderators and volunteers hand-pick stories that missed the front page in regular voting.
 
 HN Rankings is great, but I'd like to see more data like upvote counts and comment counts alongside rankings, so I built my own version. I haven't published it yet, but it polls the [Hacker News API](https://github.com/HackerNews/API) every minute to track the metadata about all of the current Hacker News stories.
 
-I've always been curious what patterns emerge if you aggregate vote and comments of the top 30:
+I've always been curious about what patterns emerge if you aggregate votes and comments of all the stories on the front page of Hacker News over time:
 
 {{<img src="top30.webp" has-border="true">}}
 
 The thing that jumps out to me most is that around noon ET every day, the average age of posts drops significantly, so that's when older posts drop off the front page and make room for newer posts.
 
-It's been interesting to see more details on my submissions, like [the HN discussion](https://news.ycombinator.com/item?id=43803343) for "My $6k Advance asa Self-Published Author." The chart reveals that the post never made it to the front page, but it curiously continued receiving upvotes, which is surprising. I'm still not sure how that happened, as I didn't link to it anywhere:
+It's been interesting to see more details on my submissions, like [the HN discussion](https://news.ycombinator.com/item?id=43803343) for "My $6k Advance as a Self-Published Author." The chart reveals that the post never made it to the front page, but it curiously continued receiving upvotes, which is surprising. I'm still not sure how that happened, as I didn't link to it anywhere:
 
 {{<img src="6k-advance.webp" has-border="true">}}
 
@@ -137,9 +137,9 @@ HN's data storage feels like a good opportunity to try out [Turso](https://turso
 
 ## Buying DRM-free movies
 
-I was complaining to a friend recently that nobody offers DRM-free movies or TV shows. I know big studios and streaming platforms have no interest in giving up DRM, but it seems easy for a small studios or indie filmmakers to put up a checkout page where you can a 4K copy of their movie as an mp4 for $10.
+I was complaining to a friend recently that nobody offers DRM-free movies or TV shows. I know big studios and streaming platforms have no interest in giving up DRM, but it seems easy for small studios or indie filmmakers to put up a checkout page where customers can buy a 4K DRM-free mp4 of their movie for $10.
 
-And then I searched around and found that there _kind of_ is something like this. [Vimeo on Demand](https://vimeo.com/ondemand/) offers DRM-free movies. They're mostly indie films and non-English films, but it's the biggest selection I've ever seen of DRM-free films to purchase legally.
+I searched around and found that there _kind of_ is something like this. [Vimeo on Demand](https://vimeo.com/ondemand/) offers DRM-free movies. They're mostly indie films and non-English films, but it's the biggest selection I've ever seen of DRM-free films to purchase legally.
 
 {{<img src="vimeo-on-demand.webp" has-border="true" max-width="600px" caption="[Vimeo on Demand](https://vimeo.com/ondemand/) is the largest collection I've found of legal DRM-free movies to purchase.">}}
 
