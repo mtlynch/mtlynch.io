@@ -5,6 +5,12 @@ date: 2025-05-08
 
 These were my takeaways. This is not meant to be a summary of the whole interview, just the parts that stood out to me that I'd like to remember.
 
+## Plugins as a form of open-source contribution
+
+> The beauty of a plugin system in an open-source project is that features can be added without requiring me to review every piece of code. I can wake up one morning to find my software has new capabilities because someone else released a plugin. This is an excellent form of open-source contribution because developers can release their plugins without needing my direct involvement or time for code reviews.
+
+\[_Editor's note: I found this to be an interesting observation. I've never designed any software to accept plugins, but Simon makes an excellent case for this type of architecture._]
+
 ## Blogging every day
 
 - Inspired by Tom Scott, who made a video every day for 10 years.
@@ -17,12 +23,16 @@ These were my takeaways. This is not meant to be a summary of the whole intervie
 
 ## Everything is a Github issue
 
+- Simon maintains personal todo lists as Github issues.
+
+> I can drop back into a project I haven't touched in a year, read the documentation as if I didn't know what the project was, and then start working on it.
+
 - Maintains 250 projects. The only way to do it is if he pretends he's going to forget every detail.
 - He writes design documents as issues as well.
 
 > I've got issue threads that are over a hundred comments long, and they're all me. It's just me talking to myself.
 
-\[_Editor's note: I would hate this._\]
+\[_Editor's note: This is a surprising workflow, as it optimizes for writes over reads. When you'd want to understand the issue, you're forced to read hundreds of comments instead of reading a single comment that summarizes the current state of affairs._\]
 
 ### "Temporal documentation"
 
@@ -50,6 +60,10 @@ These were my takeaways. This is not meant to be a summary of the whole intervie
 
 ## Bing chat incident
 
+- In 2023, Simon published, a blog post called [Bing: “I will not harm you unless you harm me first”](https://simonwillison.net/2023/Feb/15/bing/).
+  - The post summarized people's surprising experiences with AI-powered Bing, which was later revealed to be an early preview of GPT-4.
+- Elon Musk [tweeted the article](https://x.com/elonmusk/status/1625936009841213440).
+- It was one of the most popular articles of 2023 [on Hacker News](https://news.ycombinator.com/item?id=34804874).
 - Led to 1.4 million views on that page.
 
 ## Plugins vs. contributions
