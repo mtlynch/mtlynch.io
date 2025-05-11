@@ -23,15 +23,18 @@ I already have data backups, but they're at the filesystem level not at the ZFS 
 
 After considering a few different options, I managed to migrate all of my data by only buying three extra disks.
 
+## The strategy
+
 1. Buy three new 8 TB disks.
 1. Offline one disk from my old RAIDZ1 pool.
 1. Create a RAIDZ2 pool using my three new disks, one disk from my RAIDZ1 pool, and one fake disk
    - The new pool has 24 TB of capacity.
 1. Offline the fake disk from the RAIDZ2 pool.
    - The new pool can tolerate this as it's equivalent to just one disk failure.
-1. Migrate each dataset from the old pool to the new pool.
+1. Migrate a snapshot of the old pool to the new pool.
 1. Destroy the old pool.
-1. Add the three disks from the old RAIDZ1 pool to the new RAIDZ2 pool
+1. Use one disk from the old RAIDZ1 pool to replace the fake disk in the RAIDZ2 pool.
+1. Add the remaining two disks from the old RAIDZ1 pool to the new RAIDZ2 pool
 
 Sidenote: I'm saying these are "pools" although they're technically vdevs within the pool. My pool consists of only a single vdev.
 
@@ -51,8 +54,8 @@ I find it easier to visit the Storage > Disks dashboard in TrueNAS:
 
 So, for this experiment, I want to use the disks like the following:
 
-- RAIDZ1 disks: `sdb`, `sdg`, `sdh`, `sdj`
-- RAIDZ2 disks: `sdb`, `sdi`, `sde`, `sdf`
+- RAIDZ1 disks: `sdb`, `sdi`, `sde`, `sdf`
+- RAIDZ2 disks: `sdb`, `sdg`, `sdh`, `sdj`
 
 Note that sdb appears in both, as I'm going to move it from the RAIDZ1 pool to the RAIDZ2 pool.
 
@@ -74,9 +77,9 @@ get_disk_id() {
 
 ```bash
 DISK_1="$(get_disk_id sdb)"
-DISK_2="$(get_disk_id sdg)"
-DISK_3="$(get_disk_id sdh)"
-DISK_4="$(get_disk_id sdj)"
+DISK_2="$(get_disk_id sdi)"
+DISK_3="$(get_disk_id sde)"
+DISK_4="$(get_disk_id sdf)"
 ```
 
 ```bash
@@ -108,20 +111,26 @@ zpool create \
 ```
 
 ```bash
-$ zpool status "${OLDPOOL}"
+root@truenas:/home/truenas_admin# zpool status "${OLDPOOL}"
   pool: testpool1
  state: ONLINE
 config:
 
-        NAME                                 STATE     READ WRITE CKSUM
-        testpool1                            ONLINE       0     0     0
-          raidz1-0                           ONLINE       0     0     0
-            usb-Samsung_Flash_Drive_FIT_0:0  ONLINE       0     0     0
-            usb-SanDisk_Extreme-0:0          ONLINE       0     0     0
-            usb-USB_SanDisk_3.2Gen1-0:0      ONLINE       0     0     0
-            usb-USB_SanDisk_3.2Gen1_-0:0     ONLINE       0     0     0
+        NAME                                                  STATE     READ WRITE CKSUM
+        testpool1                                             ONLINE       0     0     0
+          raidz1-0                                            ONLINE       0     0     0
+            usb-Samsung_Flash_Drive_FIT_0371022030001364-0:0  ONLINE       0     0     0
+            usb-Samsung_Flash_Drive_FIT_0373417030009828-0:0  ONLINE       0     0     0
+            usb-Samsung_Flash_Drive_FIT_0347017070021373-0:0  ONLINE       0     0     0
+            usb-Samsung_Flash_Drive_FIT_0375022030006895-0:0  ONLINE       0     0     0
 
 errors: No known data errors
+```
+
+```bash
+$ zpool list "${OLDPOOL}"
+NAME        SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT
+testpool1   476G   215K   476G        -         -     0%     0%  1.00x    ONLINE  -
 ```
 
 Everything works!
@@ -177,23 +186,15 @@ action: Online the device using 'zpool online' or replace the device with
         'zpool replace'.
 config:
 
-        NAME                                 STATE     READ WRITE CKSUM
-        testpool1                            DEGRADED     0     0     0
-          raidz1-0                           DEGRADED     0     0     0
-            usb-Samsung_Flash_Drive_FIT-0:0  OFFLINE      0     0     0
-            usb-SanDisk_Extreme-0:0          ONLINE       0     0     0
-            usb-USB_SanDisk_3.2Gen1-0:0      ONLINE       0     0     0
-            usb-USB_SanDisk_3.2Gen1-0:0      ONLINE       0     0     0
+        NAME                                                  STATE     READ WRITE CKSUM
+        testpool1                                             DEGRADED     0     0     0
+          raidz1-0                                            DEGRADED     0     0     0
+            usb-Samsung_Flash_Drive_FIT_0371022030001364-0:0  OFFLINE      0     0     0
+            usb-Samsung_Flash_Drive_FIT_0373417030009828-0:0  ONLINE       0     0     0
+            usb-Samsung_Flash_Drive_FIT_0347017070021373-0:0  ONLINE       0     0     0
+            usb-Samsung_Flash_Drive_FIT_0375022030006895-0:0  ONLINE       0     0     0
 
 errors: No known data errors
-```
-
-## Snapshot old pool
-
-```bash
-SNAPSHOT_NAME="fullpool_$(date +%Y%m%d)"
-
-zfs snapshot -r "${OLDPOOL}@${SNAPSHOT_NAME}"
 ```
 
 ## Move the old disk
@@ -203,9 +204,9 @@ wipefs --all "${MOVED_DISK}"
 ```
 
 ```bash
-DISK_5="$(get_disk_id sdi)"
-DISK_6="$(get_disk_id sde)"
-DISK_7="$(get_disk_id sdf)"
+DISK_5="$(get_disk_id sdg)"
+DISK_6="$(get_disk_id sdh)"
+DISK_7="$(get_disk_id sdj)"
 ```
 
 Create a fake drive:
@@ -233,19 +234,19 @@ zpool create \
 ```
 
 ```bash
-$ zpool status "${NEWPOOL}"
+$  zpool status "${NEWPOOL}"
   pool: testpool2
  state: ONLINE
 config:
 
-        NAME                                 STATE     READ WRITE CKSUM
-        testpool2                            ONLINE       0     0     0
-          raidz2-0                           ONLINE       0     0     0
-            usb-Samsung_Flash_Drive_FIT-0:0  ONLINE       0     0     0
-            usb-Samsung_Flash_Drive_FIT-0:0  ONLINE       0     0     0
-            usb-Samsung_Flash_Drive_FIT-0:0  ONLINE       0     0     0
-            usb-Samsung_Flash_Drive_FIT-0:0  ONLINE       0     0     0
-            /tmp/fake-drive.img              ONLINE       0     0     0
+        NAME                                                                                                                                                      STATE     READ WRITE CKSUM
+        testpool2                                                                                                                                                 ONLINE       0     0     0
+          raidz2-0                                                                                                                                                ONLINE       0     0     0
+            usb-SanDisk_Extreme_AA010110141601114860-0:0                                                                                                          ONLINE       0     0     0
+            usb-USB_SanDisk_3.2Gen1_0101420f852a9d28e04c8e417cf3fab3690eb536b2ae07cf5bd65ad8a89596eebee2000000000000000000008a891c540010470081558107c62cd91d-0:0  ONLINE       0     0     0
+            usb-USB_SanDisk_3.2Gen1_01010c7a5697abd4685016482e932af13a383daa1864476162b1f6f175ee6565383300000000000000000000a1b0161d0001470081558107c62cd903-0:0  ONLINE       0     0     0
+            usb-Samsung_Flash_Drive_FIT_0371022030001364-0:0                                                                                                      ONLINE       0     0     0
+            /tmp/fake-drive.img                                                                                                                                   ONLINE       0     0     0
 
 errors: No known data errors
 ```
@@ -253,7 +254,7 @@ errors: No known data errors
 ```bash
 $ zpool list "${NEWPOOL}"
 NAME        SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT
-testpool2   596G   322K   596G        -         -     0%     0%  1.00x    ONLINE  -
+testpool2    73G   318K  73.0G        -         -     0%     0%  1.00x    ONLINE  -
 ```
 
 Remove the fake disk:
@@ -266,7 +267,7 @@ zpool offline testpool2 "${FAKE_DISK}" && \
 Check the status:
 
 ```bash
-$ zpool status "${NEWPOOL}"
+$  zpool status "${NEWPOOL}"
   pool: testpool2
  state: DEGRADED
 status: One or more devices has been taken offline by the administrator.
@@ -276,14 +277,14 @@ action: Online the device using 'zpool online' or replace the device with
         'zpool replace'.
 config:
 
-        NAME                                 STATE     READ WRITE CKSUM
-        testpool2                            DEGRADED     0     0     0
-          raidz2-0                           DEGRADED     0     0     0
-            usb-Samsung_Flash_Drive_FIT-0:0  ONLINE       0     0     0
-            usb-Samsung_Flash_Drive_FIT-0:0  ONLINE       0     0     0
-            usb-Samsung_Flash_Drive_FIT-0:0  ONLINE       0     0     0
-            usb-Samsung_Flash_Drive_FIT-0:0  ONLINE       0     0     0
-            /tmp/fake-drive.img              OFFLINE      0     0     0
+        NAME                                                                                                                                                      STATE     READ WRITE CKSUM
+        testpool2                                                                                                                                                 DEGRADED     0     0     0
+          raidz2-0                                                                                                                                                DEGRADED     0     0     0
+            usb-SanDisk_Extreme_AA010110141601114860-0:0                                                                                                          ONLINE       0     0     0
+            usb-USB_SanDisk_3.2Gen1_0101420f852a9d28e04c8e417cf3fab3690eb536b2ae07cf5bd65ad8a89596eebee2000000000000000000008a891c540010470081558107c62cd91d-0:0  ONLINE       0     0     0
+            usb-USB_SanDisk_3.2Gen1_01010c7a5697abd4685016482e932af13a383daa1864476162b1f6f175ee6565383300000000000000000000a1b0161d0001470081558107c62cd903-0:0  ONLINE       0     0     0
+            usb-Samsung_Flash_Drive_FIT_0371022030001364-0:0                                                                                                      ONLINE       0     0     0
+            /tmp/fake-drive.img                                                                                                                                   OFFLINE      0     0     0
 
 errors: No known data errors
 ```
@@ -297,21 +298,28 @@ testpool2   596G   322K   596G        -         -     0%     0%  1.00x  DEGRADED
 ## Transfer the data
 
 ```bash
-zfs send -R "${OLDPOOL}@${SNAPSHOT_NAME}" \
+SNAPSHOT_NAME="fullpool_$(date +%Y%m%d)"
+zfs snapshot -r "${OLDPOOL}@${SNAPSHOT_NAME}" && \
+  zfs send -R "${OLDPOOL}@${SNAPSHOT_NAME}" \
     | zfs receive -F "${NEWPOOL}"
 ```
 
 Update the mount point so they won't conflict:
 
 ```bash
-zfs set mountpoint="/mnt/${OLDPOOL}-old" "${OLDPOOL}"
-zfs set mountpoint="/mnt/${NEWPOOL}" "${NEWPOOL}"
+zfs set mountpoint="/mnt/${OLDPOOL}-old" "${OLDPOOL}" && \
+  zfs set mountpoint="/mnt/${NEWPOOL}" "${NEWPOOL}"
 ```
 
 ```bash
 $ echo 'This is a new file' > /mnt/testpool2/dataset123/testfile2.txt
 $ cat /mnt/testpool2/dataset123/testfile2.txt
 This is a new file
+```
+
+It doesn't affect the old pool:
+
+```bash
 $ ls /mnt/testpool1-old/dataset123/
 testfile.txt
 ```
@@ -322,42 +330,108 @@ testfile.txt
 zpool destroy "${OLDPOOL}"
 ```
 
+## Replace the fake disk
+
 ```bash
-zpool attach "${NEWPOOL}" raidz2-0 "${DISK_2}"
+zpool replace "${NEWPOOL}" /tmp/fake-drive.img "${DISK_2}"
 ```
 
 ```bash
-$ zpool status testpool2 | grep "expand:"
-expand: expanded raidz1-0 copied 648K in 00:00:03, on Wed Apr 30 03:27:03 2025
+zpool status "${NEWPOOL}"
+  pool: testpool2
+ state: ONLINE
+  scan: resilvered 156K in 00:00:09 with 0 errors on Sun May 11 13:07:53 2025
+config:
+
+        NAME                                                                                                                                                      STATE     READ WRITE CKSUM
+        testpool2                                                                                                                                                 ONLINE       0     0     0
+          raidz2-0                                                                                                                                                ONLINE       0     0     0
+            usb-SanDisk_Extreme_AA010110141601114860-0:0                                                                                                          ONLINE       0     0     0
+            usb-USB_SanDisk_3.2Gen1_0101420f852a9d28e04c8e417cf3fab3690eb536b2ae07cf5bd65ad8a89596eebee2000000000000000000008a891c540010470081558107c62cd91d-0:0  ONLINE       0     0     0
+            usb-USB_SanDisk_3.2Gen1_01010c7a5697abd4685016482e932af13a383daa1864476162b1f6f175ee6565383300000000000000000000a1b0161d0001470081558107c62cd903-0:0  ONLINE       0     0     0
+            usb-Samsung_Flash_Drive_FIT_0371022030001364-0:0                                                                                                      ONLINE       0     0     0
+            usb-Samsung_Flash_Drive_FIT_0373417030009828-0:0                                                                                                      ONLINE       0     0     0
+
+errors: No known data errors
+```
+
+Reports `ONLINE` instead of `DEGRADED`.
+
+## Add the extra disks
+
+```bash
+zpool attach "${NEWPOOL}" raidz2-0 "${DISK_3}"
 ```
 
 ```bash
-zpool attach testpool2 raidz1-0 "${DISK_3}"
+$ zpool status "${NEWPOOL}" | grep --after-context=1 "expand:"
+expand: expansion of raidz2-0 in progress since Sun May 11 13:13:06 2025
+        563K / 588K copied at 14.8K/s, 95.75% done, 00:00:01 to go
+```
+
+Note that this is a bit buggy. It shows me above 100% progress:
+
+```bash
+$ zpool status "${NEWPOOL}" | grep --after-context=1 "expand:"
+expand: expansion of raidz2-0 in progress since Sun May 11 13:13:06 2025
+        924K / 768K copied at 8.47K/s, 120.25% done, (copy is slow, no estimated time)
+```
+
+You should eventually see this:
+
+```bash
+$ zpool status "${NEWPOOL}" | grep --after-context=1 "expand:"
+expand: expanded raidz2-0 copied 944K in 00:02:17, on Sun May 11 13:15:23 2025
+```
+
+And then just repeat with the last disk:
+
+```bash
+zpool attach "${NEWPOOL}" raidz2-0 "${DISK_4}"
 ```
 
 ```bash
-$ zpool status testpool2 | grep "expand:"
+$ zpool status "${NEWPOOL}" | grep --after-context=1 "expand:"
 expand: expanded raidz1-0 copied 562K in 00:01:57, on Wed Apr 30 03:30:02 2025
 ```
 
+## Final state
+
 ```bash
-zpool attach testpool2 raidz1-0 "${DISK_4}"
+$ zpool status "${NEWPOOL}"
+  pool: testpool2
+ state: ONLINE
+  scan: scrub repaired 0B in 00:00:01 with 0 errors on Sun May 11 13:18:14 2025
+expand: expanded raidz2-0 copied 743K in 00:02:03, on Sun May 11 13:18:13 2025
+config:
+
+        NAME                                                                                                                                                      STATE     READ WRITE CKSUM
+        testpool2                                                                                                                                                 ONLINE       0     0     0
+          raidz2-0                                                                                                                                                ONLINE       0     0     0
+            usb-SanDisk_Extreme_AA010110141601114860-0:0                                                                                                          ONLINE       0     0     0
+            usb-USB_SanDisk_3.2Gen1_0101420f852a9d28e04c8e417cf3fab3690eb536b2ae07cf5bd65ad8a89596eebee2000000000000000000008a891c540010470081558107c62cd91d-0:0  ONLINE       0     0     0
+            usb-USB_SanDisk_3.2Gen1_01010c7a5697abd4685016482e932af13a383daa1864476162b1f6f175ee6565383300000000000000000000a1b0161d0001470081558107c62cd903-0:0  ONLINE       0     0     0
+            usb-Samsung_Flash_Drive_FIT_0371022030001364-0:0                                                                                                      ONLINE       0     0     0
+            usb-Samsung_Flash_Drive_FIT_0373417030009828-0:0                                                                                                      ONLINE       0     0     0
+            usb-Samsung_Flash_Drive_FIT_0347017070021373-0:0                                                                                                      ONLINE       0     0     0
+            usb-Samsung_Flash_Drive_FIT_0375022030006895-0:0                                                                                                      ONLINE       0     0     0
+
+errors: No known data errors
 ```
 
 ```bash
-$ zpool status testpool2 | grep "expand:"
-expand: expanded raidz1-0 copied 562K in 00:01:57, on Wed Apr 30 03:30:02 2025
+$ zpool list "${NEWPOOL}"
+NAME        SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT
+testpool2   102G   669K   102G        -         -     0%     0%  1.00x    ONLINE  -
 ```
-
-{{<img src="finished-pool.webp">}}
 
 ## Appendix: Alternatives I considered
 
 ### Back up ZFS pool to Wasabi
 
-The best option I found was to back up all my data to Wasabi. I have 2 Gbps fiber Internet, so I could theoretically upload 18.5 GB in 2.5 hours.
+The best option I found was to back up all my data to Wasabi. I have decently fast fiber Internet, so I can upload 19 TB to Wasabi in about 36 hours.
 
-Wasabi charges $7/TB/month, so I'd pay $129.50 to back up my ZFS pool for a month. Except Wasabi charges by the day, so if I only kept the data on Wasabi for two days, I'd only have to pay 1/15th the monthly price, or about $9, which is pretty good.
+Wasabi charges $7/TB/month, so I'd pay $133 to back up my ZFS pool for a month. Except Wasabi charges by the day, so if I only kept the data on Wasabi for two days, I'd only have to pay 1/15th the monthly price, or about $9, which is pretty good.
 
 And even though Wasabi doesn't support ZFS, but they support the S3 API, and AWS S3 command-line client supports piping from stdout. This means I could do something like this:
 
@@ -366,13 +440,15 @@ zfs send -R mypool@20250510 \
   | aws s3 cp - s3://s3.us-east-2.wasabisys.com/michaels-zfs-backup/20250510.zfs
 ```
 
-Except that probably wouldn't work because the file would exceed S3's limit of 5 TB per file. And I found [the z3 utility](https://www.presslabs.com/docs/code/z3/how-to-use-z3/) to work around the file size limitation, but that feels like bringing in too much complexity to my backup workflow.
+Except that wouldn't work because the file would exceed S3's limit of 5 TB per file.
+
+I found [the z3 utility](https://www.presslabs.com/docs/code/z3/how-to-use-z3/) to work around the file size limitation, but that feels like bringing in too much complexity to my backup workflow.
 
 Worst of all, I wouldn't be able to test backup and restore before deleting all of my local data, so it felt too risky.
 
 ### Back up ZFS pool to rsync.net
 
-rsync.net claims to be the only platform that natively supports ZFS backup. I was considering it, but they charge $10/TB/month, and it doesn't look like you can purchase fractions of a month. I had 18.5 TB, which would mean spending $185 to back up and restore my data over a few days.
+rsync.net claims to be the only platform that natively supports ZFS backup. I was considering it, but they charge $10/TB/month, and it doesn't look like you can purchase fractions of a month. I had 19 TB, which would mean spending $190 to back up and restore my data over a few days.
 
 ### Back up to temporary large disks
 
