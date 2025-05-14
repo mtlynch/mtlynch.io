@@ -181,7 +181,7 @@ At the time, I thought, "Faster would be better, but I'm a patient person. What'
 
 I quickly learned that a slower closing isn't about a few months of patience &mdash; it's about how much additional risk and work the seller absorbs with each passing week of due diligence.
 
-When you sell a house, the buyer has to put down a deposit of 1-5% to hold their claim on the house. If financing falls through or the buyer changes their mind, the seller keeps the money as compensation for the time they lost.
+When you sell a house, the buyer has to put down a deposit of 1-5% to hold their claim on the house. If the buyer changes their mind, the seller keeps the money as compensation for the time they lost.
 
 When you sell a business at TinyPilot's scale, there's no deposit. You can invest hundreds of hours into preparing reports for due diligence, reveal all your confidential business secrets, and spend thousands of dollars negotiating legal documents and still walk away with nothing if the buyer backs out.
 
