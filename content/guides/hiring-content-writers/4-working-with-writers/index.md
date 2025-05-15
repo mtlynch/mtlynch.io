@@ -55,7 +55,7 @@ When you hire a writer, you need a contract to eliminate any ambiguity about the
 
 Creating a contract is easier than it sounds. There are plenty of free, example contracts online for freelance writing. Obviously, the best contract is one that your lawyer creates for you, but if you can't afford a lawyer, an online template is infinitely better than no contract at all.
 
-I used [this template](https://www.docracy.com/0vc0u7keb75/work-for-hire-freelance-writing-master-agreement) with some modifications and then used [Docracy](https://www.docracy.com) to collect e-signatures from my writers.
+I used [this template](https://web.archive.org/web/20210801142151/https://www.docracy.com/0vc0u7keb75/work-for-hire-freelance-writing-master-agreement) with some modifications and then used [Docracy](https://www.docracy.com) to collect e-signatures from my writers.
 
 {{<notice type="info">}}
 **Sidenote**: I find the Docracy interface buggy and unintuitive. I only mention it because it's the service I used, but if you find a better service, choose that (and tell me about it).

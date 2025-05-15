@@ -371,7 +371,7 @@ If I pay you more than $600 per calendar year, I need some forms for tax purpose
 
 ## Intellectual property
 
-If we're working together on a project where I want to retain intellectual property rights, I'll send you [a contract](https://www.docracy.com/0wceme3njsd/sample-freelance-developer-agreement) to e-sign. It declares that I'm purchasing the copyright to the code you write for me.
+If we're working together on a project where I want to retain intellectual property rights, I'll send you [a contract](https://web.archive.org/web/20220522192345/https://www.docracy.com/0wceme3njsd/sample-freelance-developer-agreement) to e-sign. It declares that I'm purchasing the copyright to the code you write for me.
 
 The contract relates specifically to work I pay you to produce, not anything you create outside of your paid hours for me.
 
