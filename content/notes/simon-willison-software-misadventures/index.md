@@ -1,16 +1,20 @@
 ---
 title: "Notes from Simon Willison's Interview on Software Misadventures"
-date: 2025-05-19
+date: 2025-05-21
+images:
+  - /notes/simon-willison-software-misadventures/cover.webp
 ---
 
 I just finished listening to [Simon Willison's interview on the _Software Misadventures_ podcast](https://softwaremisadventures.com/p/simon-willison-llm-weird-intern). I learned a lot from the interview, so I wrote up my notes.
 
 This is not a summary of the whole interview, just the parts that were new to me or that I'd like to remember.
 
+{{<img src="cover.webp" max-width="700px" caption="Simon Willison on the [_Software Misadventures_ podcast](https://softwaremisadventures.com/p/simon-willison-llm-weird-intern)">}}
+
 ## Who's Simon Willison?
 
 - One of the co-creators of Django, the most popular web framework for Python.
-- One of the [most popular indepedent bloggers on Hacker News](https://refactoringenglish.com/tools/hn-popularity/).
+- One of the [most popular indepedent bloggers on Hacker News](https://refactoringenglish.com/tools/hn-popularity/domain/?d=simonwillison.net).
 - For the last few years, has focused [his blog](https://simonwillison.net) primarily on AI, especially on applications of AI technology in everyday software development.
 - Currently working on an open-source data analysis tool called [Datasette](https://datasette.io/).
 
@@ -31,20 +35,20 @@ _\[Editor's note: I found this to be an interesting observation. I've never desi
 
 [_Original discussion_](https://www.youtube.com/watch?v=6U_Zk_PZ6Kg&t=2001s)
 
-- LLMs are deceptively difficult to use because the limitations aren't obvious.
-  - They seem easy because they're just chatbots, but you need to use them for several hours on a variety of tasks to develop an accurate intuition about what they can and can't do.
+- LLMs are deceptively hard to use because the limitations aren't obvious.
+  - They seem easy because they're just chatbots, but you need to use them for several hours on a variety of tasks to develop an intuition about what they can and can't do.
   - Example: LLMs are bad at counting, which is surprising given that computers generally are great at counting.
 - Simon recommends the [Anthropic prompt engineering documentation](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview) as an effective way to improve your use of LLMs.
-- Simon recommends learning with self-hostable models (e.g., Phi-3, LLama 3.1), as they hallucinate and make mistakes more frequently, so you'll develop a better intuition of what LLMs are capable of.
+- Simon recommends learning with self-hostable models (e.g., Phi-3, LLama 3.1), as they hallucinate and make mistakes more frequently, so you'll develop a better intuition of what LLMs are bad at.
 
 ### How Simon uses LLMs
 
 [_Original discussion_](https://www.youtube.com/watch?v=6U_Zk_PZ6Kg&t=1942s)
 
 - Summarizing information
-  > If a friend of mine could read a Wikipedia page and then answer my question, then I know that the LLM will be able to answer that question. But if it's the kind of thing which the Wikipedia page probably isn't going to cover, it's less likely that the LLM will be able to answer it.
   - Take advantage of long context windows to accelerate research. For example, to research a person, dump into the chat their Wikipedia page, articles about them, and their writing, and ask the LLM to summarize key themes with examples.
   - Ask for direct quotes, and check the original source to verify that the LLM didn't hallucinate the quote.
+    > If a friend of mine could read a Wikipedia page and then answer my question, then I know that the LLM will be able to answer that question. But if it's the kind of thing which the Wikipedia page probably isn't going to cover, it's less likely that the LLM will be able to answer it.
 - Asking about domains in which you have expertise
   > I'll ask it legal questions, like I'll paste in the terms of service and say, "Hey, is there anything in here that looks a bit dodgy?"
   >
@@ -75,7 +79,7 @@ _\[Editor's note: I found this to be an interesting observation. I've never desi
   >
   > It'll write some code, and you say, "Do better," and it goes, "Oh I'm sorry," and then it will churn out better code, which is so stupid that that's how this technology works, but it's kinda fun.
 
-### LLMs make viable projects that previously weren't worth the effort
+### LLMs make projects viable that previously weren't worth the effort
 
 [_Original discussion_](https://www.youtube.com/watch?v=6U_Zk_PZ6Kg&t=4115s)
 
@@ -101,7 +105,7 @@ _\[Editor's note: I found this to be an interesting observation. I've never desi
 - The downside of LLMs is that code is going into production that its authors don't even understand.
   - That's a risk for the world, as it suggests that LLMs will degrade overall software quality.
 - Simon points out how much of the world runs on code that's worse than the "goop" code that LLMs generate:
-  > ...We currently live in \[a\] world where half of the world runs on Excel spreadsheets with no unit tests, and no backup, no version control.. and anyone can muck up a formula, and the valuation of a company goes down by half overnight...
+  > We currently live in \[a\] world where half of the world runs on Excel spreadsheets with no unit tests, and no backup, no version control.. and anyone can muck up a formula, and the valuation of a company goes down by half overnight...
   >
   > That's the world we live in today, right? Excel spreadsheets are kind of goop already, and somehow society functions.
   >
@@ -136,7 +140,7 @@ _\[Editor's note: I found this to be an interesting observation. I've never desi
 
 _\[Editor's note: Simon doesn't address this, but I think the way he's syndicating to Substack negatively impacts SEO, as it creates two copies of the same content at different URLs, and Google won't know which is the original.]_
 
-_\[Editor's note: I also find it surprising that Simon uses the Substack domain rather than some subdomain under simonwillison.net, which Substack supports.]_
+_\[Editor's note: I also find it surprising that Simon uses the Substack domain rather than some subdomain under simonwillison.net, as I believe Substack lets you bring your own domain.]_
 
 ### Blog infrastructure
 
@@ -155,20 +159,20 @@ _\[Editor's note: I also find it surprising that Simon uses the Substack domain 
 - Elon Musk [tweeted the article](https://x.com/elonmusk/status/1625936009841213440).
 - It was one of the most popular articles of 2023 [on Hacker News](https://news.ycombinator.com/item?id=34804874).
 - The blog post received 1.4 million views.
-- Simon was [interviewed live on TV](https://simonwillison.net/2023/Feb/19/live-tv/) by a news station in Chicago.
+- The post led to Simon's [first TV interview](https://simonwillison.net/2023/Feb/19/live-tv/) by a news station in Chicago.
 
 ## Making everything a Github issue
 
 [_Original discussion_](https://www.youtube.com/watch?v=6U_Zk_PZ6Kg&t=684s)
 
-- Simon maintains personal todo lists as Github issues.
-  > I can drop back into a project I haven't touched in a year, read the documentation as if I didn't know what the project was, and then start working on it.
+- Simon maintains personal to-do lists as Github issues.
 - He maintains 250 projects.
   - He documents them by pretending he's going to forget every detail.
+    > I can drop back into a project I haven't touched in a year, read the documentation as if I didn't know what the project was, and then start working on it.
 - He writes design documents as issues as well.
   > I've got issue threads that are over a hundred comments long, and they're all me. It's just me talking to myself.
 
-_\[Editor's note: This is a surprising workflow, as it optimizes for writes over reads. When you'd want to understand the issue, you're forced to read hundreds of comments instead of reading a single comment that summarizes the current state of affairs.\]_
+_\[Editor's note: This is a surprising workflow, as it optimizes for writes over reads. When you want to understand an issue, you're forced to read hundreds of comments instead of reading a single comment that summarizes the current state.\]_
 
 ### "Temporal" documentation vs. current documentation
 
@@ -248,7 +252,7 @@ VIDEO_FILE="~/LLMs\ are\ like\ your\ weird,\ over-confident\ intern\ ｜\ Simon\
 whisper $VIDEO_FILE
 ```
 
-My GPU setup was messed up, so it used my CPU, which was slow and error-prone, so I cleaned it up in segments using Google Gemini 2.5 Pro Preview:
+My NixOS system's CUDA configuration mysteriously stopped working, so Whisper used my CPU, which was slow and error-prone. I used Google Gemini 2.5 Pro Preview to clean it up:
 
 ````text
 Split this transcript into sections by topic.
