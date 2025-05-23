@@ -17,6 +17,7 @@ date: 2025-05-23
 
 - There's a book
 - Has native testing tools
+- Static typing
 
 # Candidates
 
@@ -24,11 +25,15 @@ date: 2025-05-23
 
 ## Gleam
 
+## Scala
+
 ## OCaml
 
 ## Clojure
 
 ## Haskell
+
+## Haxe
 
 ## Ruby / Rails
 
