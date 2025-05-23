@@ -1,6 +1,6 @@
 ---
 title: "Notes from Simon Willison's Interview on Software Misadventures"
-date: 2025-05-21
+date: 2025-05-23
 images:
   - /notes/simon-willison-software-misadventures/cover.webp
 ---
