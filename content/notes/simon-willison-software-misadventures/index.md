@@ -23,7 +23,7 @@ This is not a summary of the whole interview, just the parts that were new to me
 [_Original discussion_](https://www.youtube.com/watch?v=6U_Zk_PZ6Kg&t=1826s)
 
 - Designing an application to accept plug-ins that extend its functionality is a form of collaboration that's even lower-friction than accepting open-source contributions.
-  - External collaborators can add features with you having to review or approve anything, and you're not responsible for maintaining their code.
+  - External collaborators can add features without you having to review or approve anything, and you're not responsible for maintaining their code.
 
 > The great thing about plugins is it's a way of building an open-source project where you don't need to review people's code to add features to your thing. I can wake up one morning and my software can do a new thing because somebody else released a plugin for it.
 
