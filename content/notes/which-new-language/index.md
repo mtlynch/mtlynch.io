@@ -42,11 +42,16 @@ I like that Elixir has a very official web framework: Phoenix. I'm not crazy abo
 
 ## Ruby / Rails
 
+- Bad
+  - ❌ No static typing
+
 ## PHP / Laravel
 
 Sounds elitist, but no.
 
 ## Haskell
+
+Haskell are like language nerds who love weird compiler features more than building the software.
 
 The popular web frameworks seem to be [IHP](https://ihp.digitallyinduced.com/) and [Yesod](https://www.yesodweb.com/). IHP seems to strictly require PostgreSQL, which I dislike, so I guess it would be Yesod.
 
