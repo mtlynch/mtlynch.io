@@ -7,6 +7,8 @@ date: 2025-05-28
 
 - Different from what I know
 - Web apps are a first-class citizen
+- Makes it easy to build small, simple apps
+  - Basically the opposite of Angular, which feels designed for large teams
 - Supports backend and frontend
   - It doesn't have to have a frontend framework, but I want to be able to use the same toolchain for backend and frontend like I can in Go or Python. I don't want to use something like Elm that's frontend-only.
 - Has good support for unit testing
@@ -20,6 +22,21 @@ date: 2025-05-28
   - I find languages like Angular and Vue to be too "magical" in that there's a bunch of Node.js packages in the mix that I don't understand. And starting out, it feels fine, but once I dig into the language, I realize the abstractions are leaky, and I don't understand what the code is doing. The other end of the spectrum is Zig, which feels [extremely easy to reason about](/solo-developer-year-7/#zig).
 - Static typing
 - Has native testing tools
+
+# How much I enjoy various languages
+
+For reference, here's how much I enjoy working in some other programming languages I know:
+
+| Language   | Rating | Notes                                                                                                                                                       |
+| ---------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Go         | 9      | Go is beautifully designed for web apps.                                                                                                                    |
+| Zig        | 8      | Very fun for highly efficient or performant code, though not my ideal tool for web apps.                                                                    |
+| Python     | 6      | I've done a lot in Python but the poor packaging and lack of typing has started to bother me.                                                               |
+| JavaScript | 5      | I wish there were better packaging / testing tools that didn't depend on node.js.                                                                           |
+| Angular    | 2      | Way too magical and complex.                                                                                                                                |
+| Vue        | 4      | I loved Vue2 for a while, but I've been burned too many times on my app breaking due to some bug or gotcha in the framework rather than in my code.         |
+| C++        | 4      | I haven't written it in a while. It's okay in environments like Google with great tooling support, but I wouldn't enjoy dropping into a random C++ project. |
+| C          | 6      | Same issues as C++ but I appreciate the simplicity.                                                                                                         |
 
 # Candidates
 
@@ -35,6 +52,8 @@ I like that Elixir has a very official web framework: Phoenix. I'm not crazy abo
   - ❌ No static typing
 
 ## Gleam / Lustre
+
+It hasn't reached critical mass yet, so there's a risk that the language won't be around in five years, but that's okay. I'm not planning to build a business on Gleam, just play around and learn some new things.
 
 - Bad
   - ❌ Relatively new and immature language
