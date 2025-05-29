@@ -24,8 +24,8 @@ Here's what I'm looking for:
 
 # Nice-to-haves
 
-- There's a good book or ebook available.
-  - Paid products are fine.
+- There's a good ebook available.
+  - Paid books are fine.
 - Low abstraction / limited "magic."
   - I find languages like Angular and Vue to be too "magical" in that there's a bunch of Node.js packages in the mix that I don't understand. And starting out, it feels fine, but once I get beyond trivial programs, I realize [the abstractions are leaky](https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/), and there are complicated systems under the covers that I don't understand. The other end of the spectrum is Zig, which feels [extremely easy to reason about](/solo-developer-year-7/#zig).
 - Static typing
@@ -53,12 +53,12 @@ For reference, here's how much I enjoy working in some other programming languag
 
 # Methodology
 
-To research each language, I'm doing the following:
+To research each language, I:
 
-- Reading the features page for the language
-- Reading the features page of the dominant web frameworks for that language
-- Looking for examples of simple, "hello world" web apps in each language
-- Asking LLMs to compare language features of languages to languages I know
+- Read the features page for the language
+- Read the features page of the dominant web frameworks for that language
+- Looked for examples of simple, "hello world" web apps in each language
+- Asked LLMs to compare language features of languages to languages I know
 
 # Candidates
 
@@ -66,9 +66,9 @@ To research each language, I'm doing the following:
 
 Elixir is high on my list because a lot of bloggers I think are smart seem to enjoy it. It also seems to have concepts and features that sound weird and interesting.
 
-I like that Elixir has a very official web framework: Phoenix. I'm not crazy about Phoenix depending on Tailwind CSS by default, though it looks like I can turn that off.
+I like that Elixir has a very official web framework: [Phoenix](https://www.phoenixframework.org/). I'm not crazy about Phoenix depending on Tailwind CSS by default, though it looks like I can turn that off.
 
-The new thing is Phoenix LiveView, which seems to be a way to create web apps without writing much JavaScript because LiveView uses websockets. But LiveView generates SPAs, and I'm [so tired of SPAs](https://gomakethings.com/spas-were-a-mistake/) and don't want to invest in them anymore. You can use Phoenix without LiveView, but I get the sense that LiveView is where they're investing a lot of their resources.
+The new thing is [Phoenix LiveView](https://hexdocs.pm/phoenix_live_view/welcome.html), which seems to be a way to create web apps without writing much JavaScript because LiveView uses websockets to push backend state down to the frontend without a page reload. But LiveView generates SPAs, and I'm [so tired of SPAs](https://gomakethings.com/spas-were-a-mistake/) and don't want to invest in them anymore. You can use Phoenix without LiveView, but I get the sense that LiveView is where they're investing a lot of their resources.
 
 - Good
   - ✅ Cool language features
@@ -118,7 +118,7 @@ Gleam hasn't reached critical mass yet, so there's a risk that the language won'
 
 ## Haskell
 
-The people I know who enjoy Haskell tend to be extra-smart programming language nerds who love thinking about compiler and language design, which is not me.
+The people I know who enjoy Haskell tend to be annoyingly smart language nerds who love thinking about compiler and language design. That's not me.
 
 The thing that made me most curious about Haskell is Alexis King's ["Parse, don't validate"](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/), which made me appreciate static typing when I'd never cared that much before. I apply Alexis' ideas in Go, but Haskell expresses way more with data types, which sounds cool.
 
@@ -142,6 +142,8 @@ Haskell / Yesod feels like the stack I _should_ learn, but it doesn't seem as fu
 
 Ruby on Rails is attractive because I know a lot of people love it and feel incredibly productive in it. But looking at the language features, I'm not seeing anything that feels new or innovative coming from Python.
 
+My impression of Rails is that it's an opinionated framework, but the opinions are really good. Rails fans rave about how well the framework abstracts away toil without taking power or customizability away from the developer.
+
 - Good
   - ✅ Rich, mature ecosystem
   - ✅ Designed to scale down well
@@ -154,9 +156,11 @@ Ruby on Rails is attractive because I know a lot of people love it and feel incr
 
 I'll admit that I have an elitist aversion to PHP.
 
-PHP and I had some fun together in college, but when I learned other languages, PHP just felt gross. For the last few years, I keep hearing that PHP has matured and Laravel makes PHP web development feel professional and smooth.
+PHP and I had some fun together in college, but when I learned other languages, PHP just felt gross.
 
-I found it surprisingly difficult to find examples of basic Laravel apps. The Laravel docs don't seem to offer any "hello world" examples. I'm guessing that because part of Laravel's business model is selling video courses via Laracasts, the public, text-based documentation isn't so good.
+In the last few years, I've heard that PHP has matured and Laravel makes PHP web development feel professional and smooth, so I took a look.
+
+I found it surprisingly difficult to find examples of basic Laravel apps. The [Laravel docs](https://laravel.com/docs/12.x/installation) show the commands for creating a basic app, but they don't show what the code looks like or how it renders. I'm guessing that because part of Laravel's business model is selling video courses via Laracasts, the public, text-based documentation isn't so good.
 
 The closest thing to basic examples I could find were [starter kits](https://laravel.com/docs/12.x/starter-kits), which pull in React (no thanks), Vue (no thanks), or Livewire (don't know it, but it's in bad company). But it looks like Laravel's built-in frontend solution is [Blade Templates](https://laravel.com/docs/12.x/blade), which actually look pretty nice to me, as far as HTML templating languages go.
 
@@ -165,19 +169,24 @@ The closest thing to basic examples I could find were [starter kits](https://lar
   - ✅ From a first glance, I like Blade templating
 - Bad
   - ❌ Language looks gross
-  - ❌ I couldn't find good written introductions
+  - ❌ I couldn't find good written introductions to Laravel
 
 ## Scala
 
-I hear positive things about Scala, but I browsed around the language, and it feels stuffy and boring.
+I hear positive things about Scala. The language looks interesting and has a lot of features I've never used. The syntax looks like a less verbose Java, which is nice.
+
+Scala seems to be strongly object-oriented. I used to like OO, but after years of using Go's much more restrictive OO features, I've come to feel like inheritance and polymorphism are more trouble than they're worth.
 
 It seems like the dominant web framework is Play, but reading through the documentation, it feels dated and Enterprise-y. The hello world tutorial starts out with a complicated chart of Play's architecture, which is super boring and does not make me excited to learn the language.
+
+Scalatra is another Scala web framework that focuses more on simplicity, but the documentation is pretty light on examples. Though there is [an ebook](https://www.manning.com/books/scalatra-in-action) I could buy.
 
 - Good
   - ✅ Interesting features around typing like variance annotations and compound types
 - Bad
   - ❌ Scala's object-oriented aspects remind me of the bad parts of C++, though not quite as bad
   - ❌ Seems tightly entwined in the Java ecosystem, which I don't enjoy
+  - ❌ I can't get excited about any of the web frameworks
 
 # Summary
 
