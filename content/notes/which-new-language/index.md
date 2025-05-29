@@ -120,11 +120,11 @@ Gleam hasn't reached critical mass yet, so there's a risk that the language won'
 
 The people I know who enjoy Haskell tend to be extra-smart programming language nerds who love thinking about compiler and language design, which is not me.
 
-The thing that made me most curious about Haskell is Alexis King's ["Parse, don't validate"](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/), which made me appreciate static typing when I'd never cared that much before. I apply Alexis' ideas in Go, but it seems like Haskell lets you express way more with data types, which sounds cool.
+The thing that made me most curious about Haskell is Alexis King's ["Parse, don't validate"](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/), which made me appreciate static typing when I'd never cared that much before. I apply Alexis' ideas in Go, but Haskell expresses way more with data types, which sounds cool.
 
 Haskell has lots of wacky features that feel like they'll expand my mind like monads, infinite data structures, and algebraic data types, but I also feel like there might be a steep learning curve to becoming productive in the language.
 
-The popular web frameworks seem to be [IHP](https://ihp.digitallyinduced.com/) and [Yesod](https://www.yesodweb.com/). IHP seems to strictly require PostgreSQL, which I dislike, so I guess that leaves Yesod.
+The popular web frameworks seem to be [IHP](https://ihp.digitallyinduced.com/) and [Yesod](https://www.yesodweb.com/). IHP seems to strictly require PostgreSQL, which is a dealbreaker, so I guess that leaves Yesod. But Yesod looks nice. There's [a free O'Reilly book](https://www.yesodweb.com/book) for it, and the simple examples seem straightforward, if a bit alien in syntax.
 
 Haskell / Yesod feels like the stack I _should_ learn, but it doesn't seem as fun as Elixir or Gleam.
 
@@ -154,9 +154,9 @@ Ruby on Rails is attractive because I know a lot of people love it and feel incr
 
 I'll admit that I have an elitist aversion to PHP.
 
-PHP and I had some fun together in college, but when I learned other languages, PHP just felt gross. But I keep hearing people say that PHP has matured a lot and that Laravel makes PHP development a professional experience.
+PHP and I had some fun together in college, but when I learned other languages, PHP just felt gross. For the last few years, I keep hearing that PHP has matured and Laravel makes PHP web development feel professional and smooth.
 
-I found it surprisingly difficult to find examples of basic Laravel apps. The Laravel docs don't seem to offer any "hello world" examples. I'm guessing that because part of Laravel's business model is selling video courses, the public, text-based documentation isn't so good.
+I found it surprisingly difficult to find examples of basic Laravel apps. The Laravel docs don't seem to offer any "hello world" examples. I'm guessing that because part of Laravel's business model is selling video courses via Laracasts, the public, text-based documentation isn't so good.
 
 The closest thing to basic examples I could find were [starter kits](https://laravel.com/docs/12.x/starter-kits), which pull in React (no thanks), Vue (no thanks), or Livewire (don't know it, but it's in bad company). But it looks like Laravel's built-in frontend solution is [Blade Templates](https://laravel.com/docs/12.x/blade), which actually look pretty nice to me, as far as HTML templating languages go.
 
