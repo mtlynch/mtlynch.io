@@ -5,7 +5,7 @@ date: 2025-05-29
 
 One of my goals for the year is to learn a new programming language. It's been a while since I learned a new language, and I feel like a lot of the languages I know well (Go, Python, C++) are similar to each other, so I want to try getting out of my comfort zone a bit with a language that feels weird to me.
 
-# Requirements
+## Requirements
 
 Here's what I'm looking for:
 
@@ -22,7 +22,7 @@ Here's what I'm looking for:
 - Open-source
 - Actively-maintained
 
-# Nice-to-haves
+## Nice-to-haves
 
 - There's a good ebook available.
   - Paid books are fine.
@@ -30,13 +30,13 @@ Here's what I'm looking for:
   - I find languages like Angular and Vue to be too "magical" in that there's a bunch of Node.js packages in the mix that I don't understand. And starting out, it feels fine, but once I get beyond trivial programs, I realize [the abstractions are leaky](https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/), and there are complicated systems under the covers that I don't understand. The other end of the spectrum is Zig, which feels [extremely easy to reason about](/solo-developer-year-7/#zig).
 - Static typing
 
-# Non-goals
+## Non-goals
 
 - Maximum performance
   - Most of the apps I write have tiny performance requirements. Usually, the only user is me, and other times, I don't expect more than a few dozen users simultaneously.
   - I don't want to use something that's slow for a single user, but I want to avoid things that make tradeoffs in the name of achieving high scale.
 
-# How much I enjoy various languages
+## How much I enjoy various languages
 
 For reference, here's how much I enjoy working in some other programming languages I know:
 
@@ -51,7 +51,7 @@ For reference, here's how much I enjoy working in some other programming languag
 | C++        | 4      | Medium        | I haven't written it in a while. It's okay in environments like Google with great tooling support, but I wouldn't enjoy building a C++ dev environment from scratch in 2025. |
 | C          | 6      | Low           | Same issues as C++ but I appreciate the simplicity.                                                                                                                          |
 
-# Methodology
+## Methodology
 
 To research each language, I:
 
@@ -60,9 +60,9 @@ To research each language, I:
 - Looked for examples of simple, "hello world" web apps in each language
 - Asked LLMs to compare language features of languages to languages I know
 
-# Candidates
+## Candidates
 
-## Elixir / Phoenix / LiveView
+### Elixir / Phoenix / LiveView
 
 Elixir is high on my list because a lot of bloggers I think are smart seem to enjoy it. It also seems to have concepts and features that sound weird and interesting.
 
@@ -79,7 +79,7 @@ The new thing is [Phoenix LiveView](https://hexdocs.pm/phoenix_live_view/welcome
   - ❌ LiveView is designed for SPAs
   - ❌ LiveView feels "magical"
 
-## Gleam / Lustre
+### Gleam / Lustre
 
 Gleam seems like Elixir's scrappy little brother. It has a lot of language features in common with Elixir like pattern-matching and pipelining, but it has static typing (nice!).
 
@@ -116,7 +116,7 @@ Gleam hasn't reached critical mass yet, so there's a risk that the language won'
   - ❌ Relatively new and immature language
   - ❌ Not many learning resources outside of the official docs
 
-## Haskell
+### Haskell
 
 The people I know who enjoy Haskell tend to be annoyingly smart language nerds who love thinking about compiler and language design. That's not me.
 
@@ -138,7 +138,7 @@ Haskell / Yesod feels like the stack I _should_ learn, but it doesn't seem as fu
   - ❌ Learning curve seems steep
   - ❌ I'd become a weird Haskell person
 
-## Ruby / Rails
+### Ruby / Rails
 
 Ruby on Rails is attractive because I know a lot of people love it and feel incredibly productive in it. But looking at the language features, I'm not seeing anything that feels new or innovative coming from Python.
 
@@ -152,7 +152,7 @@ My impression of Rails is that it's an opinionated framework, but the opinions a
   - ❌ No static typing
   - ❌ Ruby looks pretty similar to Python, so I don't know how much I'd learn
 
-## PHP / Laravel
+### PHP / Laravel
 
 I'll admit that I have an elitist aversion to PHP.
 
@@ -171,7 +171,7 @@ The closest thing to basic examples I could find were [starter kits](https://lar
   - ❌ Language looks gross
   - ❌ I couldn't find good written introductions to Laravel
 
-## Scala
+### Scala
 
 I hear positive things about Scala. The language looks interesting and has a lot of features I've never experienced in a language. The syntax looks like a less verbose Java, which is nice.
 
@@ -188,7 +188,7 @@ It seems like the dominant web framework is [Play](https://www.playframework.com
   - ❌ Seems tightly entwined in the Java ecosystem, which I don't enjoy
   - ❌ I can't get excited about any of the web frameworks
 
-# Summary
+## Summary
 
 Gleam feels like the best match for my goals and experience, with Elixir as a close second. Haskell is the language I should learn when I work up the courage and patience.
 
