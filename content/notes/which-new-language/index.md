@@ -173,13 +173,13 @@ The closest thing to basic examples I could find were [starter kits](https://lar
 
 ## Scala
 
-I hear positive things about Scala. The language looks interesting and has a lot of features I've never used. The syntax looks like a less verbose Java, which is nice.
+I hear positive things about Scala. The language looks interesting and has a lot of features I've never experienced in a language. The syntax looks like a less verbose Java, which is nice.
 
 Scala seems to be strongly object-oriented. I used to like OO, but after years of using Go's much more restrictive OO features, I've come to feel like inheritance and polymorphism are more trouble than they're worth.
 
-It seems like the dominant web framework is Play, but reading through the documentation, it feels dated and Enterprise-y. The hello world tutorial starts out with a complicated chart of Play's architecture, which is super boring and does not make me excited to learn the language.
+It seems like the dominant web framework is [Play](https://www.playframework.com/), but reading through the documentation, it feels dated and Enterprise-y. The [hello world tutorial](https://www.playframework.com/documentation/3.0.x/HelloWorldTutorial) opens with a complicated chart of Play's architecture, which is super boring and does not make me excited to learn the framework.
 
-Scalatra is another Scala web framework that focuses more on simplicity, but the documentation is pretty light on examples. Though there is [an ebook](https://www.manning.com/books/scalatra-in-action) I could buy.
+[Scalatra](https://scalatra.org/) is another Scala web framework that focuses more on simplicity, but the documentation is pretty light on examples. Though there is [an ebook](https://www.manning.com/books/scalatra-in-action) I could buy.
 
 - Good
   - ✅ Interesting features around typing like variance annotations and compound types
