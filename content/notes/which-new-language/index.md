@@ -160,7 +160,7 @@ PHP and I had some fun together in college, but when I learned other languages, 
 
 In the last few years, I've heard that PHP has matured and Laravel makes PHP web development feel professional and smooth, so I took a look.
 
-I found it surprisingly difficult to find examples of basic Laravel apps. The [Laravel docs](https://laravel.com/docs/12.x/installation) show the commands for creating a basic app, but they don't show what the code looks like or how it renders. I'm guessing that because part of Laravel's business model is selling video courses via Laracasts, the public, text-based documentation isn't so good.
+I found it surprisingly difficult to find examples of basic Laravel apps. The [Laravel docs](https://laravel.com/docs/12.x/installation) show the commands for creating a basic app, but they don't show what the code looks like or how it renders. ~~I'm guessing that because part of Laravel's business model is selling video courses via Laracasts, the public, text-based documentation isn't so good~~ (Edit: Laravel does not own Laracasts, although some Laravel core developers have published courses on Laracasts).
 
 The closest thing to basic examples I could find were [starter kits](https://laravel.com/docs/12.x/starter-kits), which pull in React (no thanks), Vue (no thanks), or Livewire (don't know it, but it's in bad company). But it looks like Laravel's built-in frontend solution is [Blade Templates](https://laravel.com/docs/12.x/blade), which actually look pretty nice to me, as far as HTML templating languages go.
 
