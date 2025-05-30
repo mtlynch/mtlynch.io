@@ -316,6 +316,17 @@ zfs snapshot -r "${OLDPOOL}@${SNAPSHOT_NAME}" && \
     | zfs receive -v -F "${NEWPOOL}"
 ```
 
+For some reason, only some of the datasets transferred over, so I had to do the remaining datasets one-by-one.
+
+```bash
+DATASET="data"
+```
+
+```bash
+zfs send -v -w -R "${OLDPOOL}/${DATASET}@${SNAPSHOT_NAME}" \
+  | zfs receive -v -F "${NEWPOOL}/${DATASET}"
+```
+
 {{<img src="reads-writes.webp">}}
 
 Update the mount point so they won't conflict:
@@ -323,19 +334,6 @@ Update the mount point so they won't conflict:
 ```bash
 zfs set mountpoint="/mnt/${OLDPOOL}-old" "${OLDPOOL}" && \
   zfs set mountpoint="/mnt/${NEWPOOL}" "${NEWPOOL}"
-```
-
-```bash
-$ echo 'This is a new file' > /mnt/testpool2/dataset123/testfile2.txt
-$ cat /mnt/testpool2/dataset123/testfile2.txt
-This is a new file
-```
-
-It doesn't affect the old pool:
-
-```bash
-$ ls /mnt/testpool1-old/dataset123/
-testfile.txt
 ```
 
 ## Absorb the old disks
