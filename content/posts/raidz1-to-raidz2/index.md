@@ -327,6 +327,8 @@ zfs send -v -w -R "${OLDPOOL}/${DATASET}@${SNAPSHOT_NAME}" \
   | zfs receive -v -F "${NEWPOOL}/${DATASET}"
 ```
 
+But then when I'd mount it at `/mnt/tank/data`, it showed up as empty. I tried `zpool export` and `zpool import`, and no change. What finally fixed it was rebooting my whole TrueNAS server.
+
 {{<img src="reads-writes.webp">}}
 
 Update the mount point so they won't conflict:
