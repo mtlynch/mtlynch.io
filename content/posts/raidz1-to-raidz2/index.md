@@ -54,110 +54,10 @@ I find it easier to visit the Storage > Disks dashboard in TrueNAS:
 
 So, for this experiment, I want to use the disks like the following:
 
-- RAIDZ1 disks: `sdb`, `sdi`, `sde`, `sdf`
-- RAIDZ2 disks: `sdb`, `sdg`, `sdh`, `sdj`
+- Existing disks: `sda`, `sdc`, `sde`, `sdf`
+- New disks: `sdb`, `sdg`, `sdh`
 
-Note that sdb appears in both, as I'm going to move it from the RAIDZ1 pool to the RAIDZ2 pool.
-
-You're not supposed to create the disks by the `/dev/sdX` path, as that can change across reboots, so I wrote this bash snippet to convert the `/dev/sdX` path to the disk's stable identifier, which will persists across boots:
-
-```bash
-get_disk_id() {
-    local dev=$1
-    local target="/dev/$dev"
-    for path in /dev/disk/by-id/*; do
-        # Check if it's a symlink, its target matches, and the penultimate char is ':'.
-        if [ -L "$path" ] && [ "$(readlink -f "$path")" = "$target" ] && [[ "${path: -2:1}" == ":" ]]; then
-            echo "$path"
-            break
-        fi
-    done
-}
-```
-
-```bash
-DISK_1="$(get_disk_id sdb)"
-DISK_2="$(get_disk_id sdi)"
-DISK_3="$(get_disk_id sde)"
-DISK_4="$(get_disk_id sdf)"
-```
-
-```bash
-OLDPOOL='testpool1'
-```
-
-```bash
-# Uncomment the following lines, but be careful, as they'll erase disks with no
-# further confirmation:
-
-# wipefs --all "${DISK_1}"
-# wipefs --all "${DISK_2}"
-# wipefs --all "${DISK_3}"
-# wipefs --all "${DISK_4}"
-```
-
-To start:
-
-```bash
-zpool create \
-  -f \
-  "${OLDPOOL}" \
-  raidz1 \
-  -m "/mnt/${OLDPOOL}" \
-  "${DISK_1}" \
-  "${DISK_2}" \
-  "${DISK_3}" \
-  "${DISK_4}"
-```
-
-```bash
-root@truenas:/home/truenas_admin# zpool status "${OLDPOOL}"
-  pool: testpool1
- state: ONLINE
-config:
-
-        NAME                                                  STATE     READ WRITE CKSUM
-        testpool1                                             ONLINE       0     0     0
-          raidz1-0                                            ONLINE       0     0     0
-            usb-Samsung_Flash_Drive_FIT_0371022030001364-0:0  ONLINE       0     0     0
-            usb-Samsung_Flash_Drive_FIT_0373417030009828-0:0  ONLINE       0     0     0
-            usb-Samsung_Flash_Drive_FIT_0347017070021373-0:0  ONLINE       0     0     0
-            usb-Samsung_Flash_Drive_FIT_0375022030006895-0:0  ONLINE       0     0     0
-
-errors: No known data errors
-```
-
-```bash
-$ zpool list "${OLDPOOL}"
-NAME        SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT
-testpool1   476G   215K   476G        -         -     0%     0%  1.00x    ONLINE  -
-```
-
-Everything works!
-
-## Create some data
-
-```bash
-DATASET_NAME='dataset123'
-```
-
-```bash
-zfs create \
-  "${OLDPOOL}/${DATASET_NAME}"
-```
-
-```bash
-echo "This is a test file" > "/mnt/${OLDPOOL}/${DATASET_NAME}/testfile.txt"
-```
-
-```bash
-$ cat "/mnt/${OLDPOOL}/${DATASET_NAME}/testfile.txt"
-This is a test file
-```
-
-## Steal a disk from the old pool
-
-Find the weakest disk:
+## Find the weakest disk
 
 ```bash
 for drive in /dev/sd?; do
@@ -165,34 +65,134 @@ for drive in /dev/sd?; do
 done
 ```
 
-In my case, let's pretend `DISK_1` is the weakest, so I run the following:
+```text
+=== /dev/sda ===
+  5 Reallocated_Sector_Ct   0x0033   100   100   050    Pre-fail  Always       -       0
+  9 Power_On_Hours          0x0032   032   032   000    Old_age   Always       -       27228
+
+=== /dev/sdb ===
+  5 Reallocated_Sector_Ct   0x0033   100   100   005    Pre-fail  Always       -       0
+  9 Power_On_Hours          0x0012   100   100   000    Old_age   Always       -       423
+
+=== /dev/sdc ===
+  5 Reallocated_Sector_Ct   0x0033   100   100   010    Pre-fail  Always       -       0
+  9 Power_On_Hours          0x0032   077   077   000    Old_age   Always       -       20998
+
+=== /dev/sdd ===
+  9 Power_On_Hours          0x0032   100   100   000    Old_age   Always       -       29606
+
+=== /dev/sde ===
+  5 Reallocated_Sector_Ct   0x0033   100   100   010    Pre-fail  Always       -       0
+  9 Power_On_Hours          0x0032   067   067   000    Old_age   Always       -       29599
+
+=== /dev/sdf ===
+  5 Reallocated_Sector_Ct   0x0033   100   100   010    Pre-fail  Always       -       0
+  9 Power_On_Hours          0x0032   067   067   000    Old_age   Always       -       29603
+
+=== /dev/sdg ===
+  5 Reallocated_Sector_Ct   0x0033   100   100   005    Pre-fail  Always       -       0
+  9 Power_On_Hours          0x0012   100   100   000    Old_age   Always       -       141
+
+=== /dev/sdh ===
+  5 Reallocated_Sector_Ct   0x0033   100   100   005    Pre-fail  Always       -       0
+  9 Power_On_Hours          0x0012   100   100   000    Old_age   Always       -       147
+```
+
+- `sda`: 032
+- `sdc`: 077
+- `sde`: 067
+- `sdf`: 067
+
+They all seem healthy, but sda's value of 32 is closest to zero, so that's the disk I'll move.
+
+## ID the disk
+
+You're not supposed to create the disks by the `/dev/sdX` path, as that can change across reboots, so I wrote this bash snippet to convert the `/dev/sdX` path to the disk's stable identifier, which will persists across boots:
+
+```bash
+get_disk_id() {
+    local dev=$1
+    local target="/dev/$dev"
+
+    for path in /dev/disk/by-id/*; do
+        if [ -L "$path" ] && [ "$(readlink -f "$path")" = "$target" ] &&
+           ([[ "${path: -2:1}" == ":" ]] || [[ "${path: -2:1}" != ":" ]]); then
+            echo "$path"
+            return 0
+        fi
+    done
+    echo "Disk ID not found for device: $dev" >&2
+    return 1
+}
+
+```
+
+```bash
+# Old disks
+DISK_1="$(get_disk_id sda)"
+DISK_2="$(get_disk_id sdc)"
+DISK_3="$(get_disk_id sde)"
+DISK_4="$(get_disk_id sdf)"
+```
+
+```bash
+OLDPOOL='pool1'
+```
+
+```bash
+# New disks
+DISK_5="$(get_disk_id sdb)"
+DISK_6="$(get_disk_id sdg)"
+DISK_7="$(get_disk_id sdh)"
+```
+
+`DISK_1` is the weakest, so I run the following:
 
 ```bash
 MOVED_DISK="${DISK_1}"
 ```
 
 ```bash
-sudo zpool offline "${OLDPOOL}" "${MOVED_DISK}"
+$ sudo zpool status ${OLDPOOL}
+  pool: pool1
+ state: ONLINE
+  scan: scrub repaired 68K in 10:40:08 with 0 errors on Wed May 14 06:25:26 2025
+config:
+
+        NAME        STATE     READ WRITE CKSUM
+        pool1       ONLINE       0     0     0
+          raidz1-0  ONLINE       0     0     0
+            sde2    ONLINE       0     0     0
+            sdf2    ONLINE       0     0     0
+            sdc2    ONLINE       0     0     0
+            sda2    ONLINE       0     0     0
+
+errors: No known data errors
 ```
 
 ```bash
-$ zpool status "${OLDPOOL}"
-  pool: testpool1
+$ sudo zpool offline "${OLDPOOL}" sda2
+```
+
+```bash
+$ sudo zpool status ${OLDPOOL}
+  pool: pool1
  state: DEGRADED
 status: One or more devices has been taken offline by the administrator.
         Sufficient replicas exist for the pool to continue functioning in a
         degraded state.
 action: Online the device using 'zpool online' or replace the device with
         'zpool replace'.
+  scan: scrub repaired 68K in 10:40:08 with 0 errors on Wed May 14 06:25:26 2025
 config:
 
-        NAME                                                  STATE     READ WRITE CKSUM
-        testpool1                                             DEGRADED     0     0     0
-          raidz1-0                                            DEGRADED     0     0     0
-            usb-Samsung_Flash_Drive_FIT_0371022030001364-0:0  OFFLINE      0     0     0
-            usb-Samsung_Flash_Drive_FIT_0373417030009828-0:0  ONLINE       0     0     0
-            usb-Samsung_Flash_Drive_FIT_0347017070021373-0:0  ONLINE       0     0     0
-            usb-Samsung_Flash_Drive_FIT_0375022030006895-0:0  ONLINE       0     0     0
+        NAME        STATE     READ WRITE CKSUM
+        pool1       DEGRADED     0     0     0
+          raidz1-0  DEGRADED     0     0     0
+            sde2    ONLINE       0     0     0
+            sdf2    ONLINE       0     0     0
+            sdc2    ONLINE       0     0     0
+            sda2    OFFLINE      0     0     0
 
 errors: No known data errors
 ```
@@ -203,21 +203,31 @@ errors: No known data errors
 wipefs --all "${MOVED_DISK}"
 ```
 
+Find the bytes of the disks:
+
 ```bash
-DISK_5="$(get_disk_id sdg)"
-DISK_6="$(get_disk_id sdh)"
-DISK_7="$(get_disk_id sdj)"
+$  fdisk --list | grep "^Disk.*bytes"
+Disk /dev/sdf: 7.28 TiB, 8001563222016 bytes, 15628053168 sectors
+Disk /dev/sdd: 111.79 GiB, 120034123776 bytes, 234441648 sectors
+Disk /dev/sda: 7.28 TiB, 8001563222016 bytes, 15628053168 sectors
+Disk /dev/sdc: 7.28 TiB, 8001563222016 bytes, 15628053168 sectors
+Disk /dev/sde: 7.28 TiB, 8001563222016 bytes, 15628053168 sectors
+Disk /dev/sdb: 7.28 TiB, 8001563222016 bytes, 15628053168 sectors
+Disk /dev/mapper/sdd3: 16 GiB, 17179869184 bytes, 33554432 sectors
+Disk /dev/zd0: 10 GiB, 10737418240 bytes, 20971520 sectors
+Disk /dev/sdg: 7.28 TiB, 8001563222016 bytes, 15628053168 sectors
+Disk /dev/sdh: 7.28 TiB, 8001563222016 bytes, 15628053168 sectors
 ```
 
 Create a fake drive:
 
 ```bash
 FAKE_DISK='/tmp/fake-drive.img'
-truncate --size 128GB "${FAKE_DISK}"
+truncate --size 8001563222016 "${FAKE_DISK}"
 ```
 
 ```bash
-NEWPOOL='testpool2'
+NEWPOOL='tank'
 ```
 
 ```bash
@@ -233,42 +243,44 @@ zpool create \
   "${FAKE_DISK}"
 ```
 
+{{<img src="created-tank.webp">}}
+
 ```bash
-$  zpool status "${NEWPOOL}"
-  pool: testpool2
+$ zpool status "${NEWPOOL}"
+  pool: tank
  state: ONLINE
 config:
 
-        NAME                                                                                                                                                      STATE     READ WRITE CKSUM
-        testpool2                                                                                                                                                 ONLINE       0     0     0
-          raidz2-0                                                                                                                                                ONLINE       0     0     0
-            usb-SanDisk_Extreme_AA010110141601114860-0:0                                                                                                          ONLINE       0     0     0
-            usb-USB_SanDisk_3.2Gen1_0101420f852a9d28e04c8e417cf3fab3690eb536b2ae07cf5bd65ad8a89596eebee2000000000000000000008a891c540010470081558107c62cd91d-0:0  ONLINE       0     0     0
-            usb-USB_SanDisk_3.2Gen1_01010c7a5697abd4685016482e932af13a383daa1864476162b1f6f175ee6565383300000000000000000000a1b0161d0001470081558107c62cd903-0:0  ONLINE       0     0     0
-            usb-Samsung_Flash_Drive_FIT_0371022030001364-0:0                                                                                                      ONLINE       0     0     0
-            /tmp/fake-drive.img                                                                                                                                   ONLINE       0     0     0
+        NAME                                   STATE     READ WRITE CKSUM
+        tank                                   ONLINE       0     0     0
+          raidz2-0                             ONLINE       0     0     0
+            ata-HGST_HUS728T8TALE6L1_VGGGYUEG  ONLINE       0     0     0
+            ata-HGST_HUS728T8TALE6L1_VRGMRVJK  ONLINE       0     0     0
+            ata-HGST_HUS728T8TALE6L1_VRGNZU9K  ONLINE       0     0     0
+            ata-TOSHIBA_HDWG480_71R0A14YFR0H   ONLINE       0     0     0
+            /tmp/fake-drive.img                ONLINE       0     0     0
 
 errors: No known data errors
 ```
 
 ```bash
 $ zpool list "${NEWPOOL}"
-NAME        SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT
-testpool2    73G   318K  73.0G        -         -     0%     0%  1.00x    ONLINE  -
+NAME   SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT
+tank  36.4T  1.27M  36.4T        -         -     0%     0%  1.00x    ONLINE  -
 ```
 
 Remove the fake disk:
 
 ```bash
-zpool offline testpool2 "${FAKE_DISK}" && \
+zpool offline "${NEWPOOL}" "${FAKE_DISK}" && \
   rm "${FAKE_DISK}"
 ```
 
 Check the status:
 
 ```bash
-$  zpool status "${NEWPOOL}"
-  pool: testpool2
+$ zpool status "${NEWPOOL}"
+  pool: tank
  state: DEGRADED
 status: One or more devices has been taken offline by the administrator.
         Sufficient replicas exist for the pool to continue functioning in a
@@ -277,22 +289,22 @@ action: Online the device using 'zpool online' or replace the device with
         'zpool replace'.
 config:
 
-        NAME                                                                                                                                                      STATE     READ WRITE CKSUM
-        testpool2                                                                                                                                                 DEGRADED     0     0     0
-          raidz2-0                                                                                                                                                DEGRADED     0     0     0
-            usb-SanDisk_Extreme_AA010110141601114860-0:0                                                                                                          ONLINE       0     0     0
-            usb-USB_SanDisk_3.2Gen1_0101420f852a9d28e04c8e417cf3fab3690eb536b2ae07cf5bd65ad8a89596eebee2000000000000000000008a891c540010470081558107c62cd91d-0:0  ONLINE       0     0     0
-            usb-USB_SanDisk_3.2Gen1_01010c7a5697abd4685016482e932af13a383daa1864476162b1f6f175ee6565383300000000000000000000a1b0161d0001470081558107c62cd903-0:0  ONLINE       0     0     0
-            usb-Samsung_Flash_Drive_FIT_0371022030001364-0:0                                                                                                      ONLINE       0     0     0
-            /tmp/fake-drive.img                                                                                                                                   OFFLINE      0     0     0
+        NAME                                   STATE     READ WRITE CKSUM
+        tank                                   DEGRADED     0     0     0
+          raidz2-0                             DEGRADED     0     0     0
+            ata-HGST_HUS728T8TALE6L1_VGGGYUEG  ONLINE       0     0     0
+            ata-HGST_HUS728T8TALE6L1_VRGMRVJK  ONLINE       0     0     0
+            ata-HGST_HUS728T8TALE6L1_VRGNZU9K  ONLINE       0     0     0
+            ata-TOSHIBA_HDWG480_71R0A14YFR0H   ONLINE       0     0     0
+            /tmp/fake-drive.img                OFFLINE      0     0     0
 
 errors: No known data errors
 ```
 
 ```bash
 $ zpool list "${NEWPOOL}"
-NAME        SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT
-testpool2   596G   322K   596G        -         -     0%     0%  1.00x  DEGRADED  -
+NAME   SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT
+tank  36.4T  1.41M  36.4T        -         -     0%     0%  1.00x  DEGRADED  -
 ```
 
 ## Transfer the data
@@ -300,9 +312,13 @@ testpool2   596G   322K   596G        -         -     0%     0%  1.00x  DEGRADED
 ```bash
 SNAPSHOT_NAME="fullpool_$(date +%Y%m%d)"
 zfs snapshot -r "${OLDPOOL}@${SNAPSHOT_NAME}" && \
-  zfs send -R "${OLDPOOL}@${SNAPSHOT_NAME}" \
+  zfs send -w -R "${OLDPOOL}@${SNAPSHOT_NAME}" \
     | zfs receive -F "${NEWPOOL}"
 ```
+
+Very long wait with no progress.
+
+{{<img src="reads-writes.webp">}}
 
 Update the mount point so they won't conflict:
 
