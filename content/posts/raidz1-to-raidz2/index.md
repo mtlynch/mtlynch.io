@@ -312,11 +312,9 @@ tank  36.4T  1.41M  36.4T        -         -     0%     0%  1.00x  DEGRADED  -
 ```bash
 SNAPSHOT_NAME="fullpool_$(date +%Y%m%d)"
 zfs snapshot -r "${OLDPOOL}@${SNAPSHOT_NAME}" && \
-  zfs send -w -R "${OLDPOOL}@${SNAPSHOT_NAME}" \
-    | zfs receive -F "${NEWPOOL}"
+  zfs send -v -w -R "${OLDPOOL}@${SNAPSHOT_NAME}" \
+    | zfs receive -v -F "${NEWPOOL}"
 ```
-
-Very long wait with no progress.
 
 {{<img src="reads-writes.webp">}}
 
