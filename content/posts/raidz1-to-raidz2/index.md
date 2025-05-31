@@ -319,17 +319,30 @@ zfs snapshot -r "${OLDPOOL}@${SNAPSHOT_NAME}" && \
 For some reason, only some of the datasets transferred over, so I had to do the remaining datasets one-by-one.
 
 ```bash
-DATASET="data"
+DATASET='data'
 ```
 
 ```bash
-zfs send -v -w -R "${OLDPOOL}/${DATASET}@${SNAPSHOT_NAME}" \
-  | zfs receive -v -F "${NEWPOOL}/${DATASET}"
+zfs send -v -w -R -s "${OLDPOOL}/${DATASET}@${SNAPSHOT_NAME}" \
+  | zfs receive -v -F -s "${NEWPOOL}/${DATASET}"
 ```
 
 But then when I'd mount it at `/mnt/tank/data`, it showed up as empty. I tried `zpool export` and `zpool import`, and no change. What finally fixed it was rebooting my whole TrueNAS server.
 
 {{<img src="reads-writes.webp">}}
+
+## Resuming interrupted transfers
+
+```bash
+RESUME_TOKEN="$(zfs get -H -o value receive_resume_token "${NEWPOOL}/${DATASET}")"
+
+
+zfs send -v -t "${RESUME_TOKEN}" | zfs receive -v -s "${NEWPOOL}/${DATASET}"
+```
+
+I don't know if it actually resumes because it seems to start the progress back from zero, but it claims it's parsing the resume token correctly.
+
+## Update mount point
 
 Update the mount point so they won't conflict:
 
