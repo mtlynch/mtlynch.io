@@ -310,9 +310,9 @@ tank  36.4T  1.41M  36.4T        -         -     0%     0%  1.00x  DEGRADED  -
 ## Transfer the data
 
 ```bash
-SNAPSHOT_NAME="fullpool_$(date +%Y%m%d)"
-zfs snapshot -r "${OLDPOOL}@${SNAPSHOT_NAME}" && \
-  zfs send -v -w -R "${OLDPOOL}@${SNAPSHOT_NAME}" \
+SNAPSHOT_1="fullpool_$(date +%Y%m%d)"
+zfs snapshot -r "${OLDPOOL}@${SNAPSHOT_1}" && \
+  zfs send -v -w -R "${OLDPOOL}@${SNAPSHOT_1}" \
     | zfs receive -v -F "${NEWPOOL}"
 ```
 
@@ -323,7 +323,7 @@ DATASET='data'
 ```
 
 ```bash
-zfs send -v -w -R -s "${OLDPOOL}/${DATASET}@${SNAPSHOT_NAME}" \
+zfs send -v -w -R -s "${OLDPOOL}/${DATASET}@${SNAPSHOT_1}" \
   | zfs receive -v -F -s "${NEWPOOL}/${DATASET}"
 ```
 
@@ -342,19 +342,65 @@ zfs send -v -t "${RESUME_TOKEN}" | zfs receive -v -s "${NEWPOOL}/${DATASET}"
 
 I don't know if it actually resumes because it seems to start the progress back from zero, but it claims it's parsing the resume token correctly.
 
-## Update mount point
-
-Update the mount point so they won't conflict:
+## Final cleanup
 
 ```bash
-zfs set mountpoint="/mnt/${OLDPOOL}-old" "${OLDPOOL}" && \
-  zfs set mountpoint="/mnt/${NEWPOOL}" "${NEWPOOL}"
+SNAPSHOT_2="migrate2"
+zfs snapshot -r "${OLDPOOL}@${SNAPSHOT_2}"
 ```
+
+```bash
+zfs send -v \
+  -i "${OLDPOOL}/${DATASET}@${SNAPSHOT_1}" \
+     "${OLDPOOL}/${DATASET}@${SNAPSHOT_2}" \
+  | zfs receive -v "${NEWPOOL}/${DATASET}"
+```
+
+## Rename pools
+
+```bash
+sudo systemctl stop k3s
+sudo umount -l /var/lib/kubelet
+sudo systemctl stop smbd
+sudo systemctl stop nmbd
+sudo systemctl stop winbind
+sudo systemctl stop middlewared
+sudo systemctl stop netdata
+```
+
+```bash
+zpool export -f "${OLDPOOL}" && \
+  zpool export -f "${NEWPOOL}" && \
+  zpool import "${OLDPOOL}" "${OLDPOOL}-old"
+
+zpool import ${NEWPOOL} ${OLDPOOL}
+zfs set mountpoint="/mnt/${OLDPOOL}" "${OLDPOOL}"
+```
+
+```bash
+sudo systemctl start middlewared
+sudo systemctl start smbd
+sudo systemctl start nmbd
+sudo systemctl start winbind
+sudo systemctl start netdata
+sudo systemctl start k3s
+```
+
+Needed to reboot
+
+## Dashboard
+
+{{<img src="dashboard-after-import.webp">}}
+
+## Scrub
+
+Ran a scrub on pool1 just to be safe before I blow away the old pool.
 
 ## Absorb the old disks
 
 ```bash
-zpool destroy "${OLDPOOL}"
+zpool destroy "${OLDPOOL}-old"
+NEWPOOL=${OLDPOOL}
 ```
 
 ## Replace the fake disk
