@@ -124,7 +124,6 @@ get_disk_id() {
     echo "Disk ID not found for device: $dev" >&2
     return 1
 }
-
 ```
 
 ```bash
@@ -396,41 +395,72 @@ Needed to reboot
 
 Ran a scrub on pool1 just to be safe before I blow away the old pool.
 
+{{<img src="scrub-complete.webp">}}
+
 ## Absorb the old disks
 
 ```bash
 zpool destroy "${OLDPOOL}-old"
-NEWPOOL=${OLDPOOL}
 ```
 
 ## Replace the fake disk
 
 ```bash
-zpool replace "${NEWPOOL}" /tmp/fake-drive.img "${DISK_2}"
+root@truenas:~# REPLACEMENT_DISK="$(get_disk_id sde)"
+root@truenas:~# echo $REPLACEMENT_DISK
+/dev/disk/by-id/ata-ST8000VN004-2M2101_WSD5B9XY
 ```
 
 ```bash
-zpool status "${NEWPOOL}"
-  pool: testpool2
- state: ONLINE
-  scan: resilvered 156K in 00:00:09 with 0 errors on Sun May 11 13:07:53 2025
+NEWPOOL='pool1'
+zpool replace "${NEWPOOL}" /tmp/fake-drive.img "${REPLACEMENT_DISK}"
+```
+
+![alt text](image-1.png)
+
+```bash
+$ zpool status "${NEWPOOL}"
+  pool: pool1
+ state: DEGRADED
+status: One or more devices is currently being resilvered.  The pool will
+        continue to function, possibly in a degraded state.
+action: Wait for the resilver to complete.
+  scan: resilver in progress since Sat May 31 19:58:51 2025
+        2.04T / 28.5T scanned at 56.6G/s, 0B / 28.5T issued
+        0B resilvered, 0.00% done, no estimated completion time
 config:
 
-        NAME                                                                                                                                                      STATE     READ WRITE CKSUM
-        testpool2                                                                                                                                                 ONLINE       0     0     0
-          raidz2-0                                                                                                                                                ONLINE       0     0     0
-            usb-SanDisk_Extreme_AA010110141601114860-0:0                                                                                                          ONLINE       0     0     0
-            usb-USB_SanDisk_3.2Gen1_0101420f852a9d28e04c8e417cf3fab3690eb536b2ae07cf5bd65ad8a89596eebee2000000000000000000008a891c540010470081558107c62cd91d-0:0  ONLINE       0     0     0
-            usb-USB_SanDisk_3.2Gen1_01010c7a5697abd4685016482e932af13a383daa1864476162b1f6f175ee6565383300000000000000000000a1b0161d0001470081558107c62cd903-0:0  ONLINE       0     0     0
-            usb-Samsung_Flash_Drive_FIT_0371022030001364-0:0                                                                                                      ONLINE       0     0     0
-            usb-Samsung_Flash_Drive_FIT_0373417030009828-0:0                                                                                                      ONLINE       0     0     0
+        NAME                                   STATE     READ WRITE CKSUM
+        pool1                                  DEGRADED     0     0     0
+          raidz2-0                             DEGRADED     0     0     0
+            ata-HGST_HUS728T8TALE6L1_VGGGYUEG  ONLINE       0     0     0
+            ata-HGST_HUS728T8TALE6L1_VRGMRVJK  ONLINE       0     0     0
+            ata-HGST_HUS728T8TALE6L1_VRGNZU9K  ONLINE       0     0     0
+            ata-TOSHIBA_HDWG480_71R0A14YFR0H   ONLINE       0     0     0
+            replacing-4                        DEGRADED     0     0     0
+              /tmp/fake-drive.img              OFFLINE      0     0     0
+              ata-ST8000VN004-2M2101_WSD5B9XY  ONLINE       0     0     0
 
 errors: No known data errors
 ```
 
 Reports `ONLINE` instead of `DEGRADED`.
 
+## Backblaze
+
+![alt text](image-2.png)
+
 ## Add the extra disks
+
+![alt text](image-3.png)
+
+import pool. It already showed up, so ???
+
+![alt text](image-4.png)
+
+![alt text](image-5.png)
+
+### Test
 
 ```bash
 zpool attach "${NEWPOOL}" raidz2-0 "${DISK_3}"
@@ -466,6 +496,54 @@ zpool attach "${NEWPOOL}" raidz2-0 "${DISK_4}"
 ```bash
 $ zpool status "${NEWPOOL}" | grep --after-context=1 "expand:"
 expand: expanded raidz1-0 copied 562K in 00:01:57, on Wed Apr 30 03:30:02 2025
+```
+
+### Actual
+
+```bash
+$ zpool attach "${NEWPOOL}" raidz2-0 "${NEWDISK}"
+cannot attach /dev/disk/by-id/ata-ST8000VN004-3CP101_WRQ02GX5 to raidz2-0: can only attach to mirrors and top-level disks
+```
+
+```bash
+# zfs --version
++ zfs --version
+zfs-2.2.4-1
+zfs-kmod-2.2.4-1
+```
+
+Realized I was on 24.05 the wrong update train.
+
+---
+
+```bash
+root@truenas:~# NEW_DISK=$(get_disk_id sdd)
+root@truenas:~# NEWPOOL='pool1'
+root@truenas:~# zpool attach "${NEWPOOL}" raidz2-0 "${NEWDISK}"
+cannot use '/dev/mapper/': must be a block device or regular file
+root@truenas:~# zfs --version
+zfs-2.3.0-1
+zfs-kmod-2.3.0-1
+
++ zpool attach pool1 raidz2-0 /dev/disk/by-id/ata-ST8000VN004-3CP101_WRQ02GX5
+cannot attach /dev/disk/by-id/ata-ST8000VN004-3CP101_WRQ02GX5 to raidz2-0: raidz_expansion feature must be enabled in order to attach a device to raidz
+
++ zpool get feature@raidz_expansion pool1
+NAME   PROPERTY                 VALUE                    SOURCE
+pool1  feature@raidz_expansion  disabled                 local
+
+root@truenas:~# zpool get feature@raidz_expansion pool1
++ zpool get feature@raidz_expansion pool1
+NAME   PROPERTY                 VALUE                    SOURCE
+pool1  feature@raidz_expansion  enabled                  local
+```
+
+```bash
+# zpool status "${NEWPOOL}" | grep --after-context=1 "expand:"
++ grep --after-context=1 expand:
++ zpool status pool1
+expand: expansion of raidz2-0 in progress since Sun Jun  1 08:08:03 2025
+        17.1G / 28.5T copied at 501M/s, 0.06% done, 16:36:03 to go
 ```
 
 ## Final state
