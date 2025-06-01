@@ -23,6 +23,10 @@ I already have data backups, but they're at the filesystem level not at the ZFS 
 
 After considering a few different options, I managed to migrate all of my data by only buying three extra disks.
 
+https://github.com/openzfs/zfs/pull/15022
+
+available in 2.3.0
+
 ## The strategy
 
 1. Buy three new 8 TB disks.
