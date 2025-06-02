@@ -35,11 +35,69 @@ TODO
 
 ## One hour of good writing per day works
 
-## How do I keep talking to readers?
+Last month, I was trying to improve [how I manage my time as I write my book](/retrospectives/2025/05/#managing-my-time-as-i-write-a-book). I found it difficult to decide how much time to invest in each chapter and how many hours per day to spend on writing given that I have no strict deadline and no objective way to decide if any chapter is polished enough.
+
+My plan was:
+
+- Write in flow state for 60 minutes per day (just writing, no browsing the web or my phone).
+- Plan out each workday how I'll spend each 30-minute block in my day.
+- Assign soft limits to how much I can spend on each chapter.
+
+I'm happy to report that these techniques all worked pretty well. I didn't have perfect discipline every day, but when I know the goal is to only write for an hour per day, I found it easier to resist distractions and focus on writing.
+
+Knowing that I have to do 60 minutes of flow state writing per day also helps me capitalize on that time better. I used to just call the first hour of my day "writing time," and I'd allow myself to do anything writing-related, which included things like looking up references, getting screenshots, and improving formatting.
+
+Recognizing that my flow state time is limited made me better at using that hour just for writing and editing, which are the most cognitively demanding tasks. So, I still make time in my day for less challenging book tasks, but I schedule them outside of my focus hour.
+
+## Becoming less precious about my writing
+
+There's a quote I love in Rob Fitzpatrick's book, [_Write Useful Books_](https://www.usefulbooks.com/book), about how it's more important for non-fiction authors to give practical advice than it is for them to have beautiful phrasing and perfect grammar:
+
+> In fact, it’s so rare for a book to deliver on its promise that readers will adore you for doing just that one thing. I’ve heard plenty of people recommend a messy-but-effective book by saying:
+>
+> > Listen, it’s terribly written and full of typos and has a cover that appears to have been drawn by a distracted toddler, but it’s got something inside that’s just too important to miss. It’s going to change your life. You’ve got to read it. Trust me.
+>
+> But I’ve never heard even a single person recommend a problem-solver with the inverse argument of:
+>
+> > This book is a real zero-impact way to spend thirteen dollars and three hours. But you can tell that the author is super smart, the cover is gorgeous, and there’s not even a single typo. You’re going to love it.
+>
+> Rob Fitzpatrick, [_Write Useful Books_](https://www.usefulbooks.com/book)
+
+At the start of last month, I went through every chapter and assigned a time for how long I want to spend on it. So, to declare that I wanted to spend just five hours on my content marketing chapter, I added this comment to the top:
+
+```c
+// Target: 5h
+```
+
+I ended up exceeding the limit by three hours, so I updated it to this:
+
+```c
+// Original Target: 5h
+// Target: 9h
+// Elapsed: 8h
+```
+
+And I wrote a short script to tell me my progress on the full book:
+
+```bash
+$ ./dev-scripts/evaluate-time-remaining
+Total target (current): 119.5h / 23.9wks
+Total target (original): 114.0h / 22.8wks
+Total elapsed: 19.5h / 3.9wks
+Total remaining: 100.0h / 20.0wks
+```
+
+I'm not perfect at obeying my time limits yet, but setting a limit discourages me from overinvesting in the wording at this point. I have this mental block that because I'm writing a book about writing, all of the writing in the book has to be as good as possible. I'm trying to adopt the attitude that I'm currently just working on a first draft, and it's more important to convey useful ideas than to maximize eloquence.
+
+## How can I keep talking to readers?
 
 I can just do one-off.
 
-## Topic 3
+## $7k for a brand new project is still pretty good
+
+One of the things I've found stressful about writing the book is that it feels like .
+
+On a per-hour basis, this is the second most profitable product I've ever created.
 
 ## Side projects
 
@@ -47,7 +105,9 @@ I can just do one-off.
 
 ### What got done?
 
--
+- Published ["Which New Language Should I Learn for Web Development?"](/notes/which-new-language/)
+- Published my [notes from Simon Willison's Interview on Software Misadventures](/notes/simon-willison-software-misadventures/)
+  - I always feel like I should do more of this because I find it valuable to myself and for other people. But then I do it, and it takes longer than I expect, and I can't share it anywhere, which discourages me from having the discipline to record what I learn from technical podcasts.
 
 ### Lessons learned
 
