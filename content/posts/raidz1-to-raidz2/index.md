@@ -521,7 +521,7 @@ Realized I was on 24.05 the wrong update train.
 ---
 
 ```bash
-root@truenas:~# NEW_DISK=$(get_disk_id sdd)
+root@truenas:~# NEWDISK=$(get_disk_id sdd)
 root@truenas:~# NEWPOOL='pool1'
 root@truenas:~# zpool attach "${NEWPOOL}" raidz2-0 "${NEWDISK}"
 cannot use '/dev/mapper/': must be a block device or regular file
