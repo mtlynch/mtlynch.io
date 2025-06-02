@@ -21,17 +21,17 @@ TODO
 
 ### Assign soft writing time limits to every chapter of my book
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: Added time limits to each chapter and wrote a quick script to process them all.
+- **Grade**: A
 
-TODO
+Adding soft time limits helped me avoid spinning
 
 ### Adapt [preview chapters](https://refactoringenglish.com/chapters/) of my book to Asciidoctor
 
 - **Result**: XX
 - **Grade**: F
 
-TODO
+I kept putting this off because it's so boring to adapt existing chapters from Hugo to Asciidoc, but it will be good to get done. It ended up seeming harder than I expected to port over the custom CSS styles I'd applied on the web versions of the samples to Asciidoc, so I need to get creative in how I style the PDF/epub versions.
 
 ## One hour of good writing per day works
 
