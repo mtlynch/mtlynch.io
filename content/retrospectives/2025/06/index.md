@@ -17,7 +17,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: Published "You're Qualified to Write a Blog Post" and "Good vs. Bad Content Marketing"
 - **Grade**: A
 
-TODO
+I completed these chapters and sent them to pre-order customers.
 
 ### Assign soft writing time limits to every chapter of my book
 
@@ -37,7 +37,9 @@ It was harder than I expected to port over the custom CSS styles I'd applied on 
 
 ## One hour of good writing per day works
 
-Last month, I was trying to improve [how I manage my time as I write my book](/retrospectives/2025/05/#managing-my-time-as-i-write-a-book). I found it difficult to decide how much time to invest in each chapter and how many hours per day to spend on writing given that I have no strict deadline and no objective way to decide if any chapter is polished enough.
+In last month's retrospective, I brainstormed ideas about [how to manage my time better as I write my book](/retrospectives/2025/05/#managing-my-time-as-i-write-a-book).
+
+I found it difficult to decide how much time to invest in each chapter and how many hours per day to spend on writing given that I have no strict deadline and no objective way to decide if any chapter is polished enough to publish.
 
 My plan was:
 
@@ -45,17 +47,15 @@ My plan was:
 - Plan out each workday how I'll spend each 30-minute block in my day.
 - Assign soft limits to how much I can spend on each chapter.
 
-I'm happy to report that these techniques all worked pretty well. I didn't have perfect discipline every day, but when I know the goal is to only write for an hour per day, I found it easier to resist distractions and focus on writing.
+I'm happy to report that these techniques worked pretty well. I didn't have perfect discipline every day, but when I know the goal is to only write for an hour per day, I found it easier to resist distractions and focus on writing.
 
-Knowing that I have to do 60 minutes of flow state writing per day also helps me capitalize on that time better. I used to just call the first hour of my day "writing time," and I'd allow myself to do anything writing-related, which included fixing grammar or writing easier posts (like these retrospectives).
-
-Recognizing that my flow state time is limited made me better at using that hour just for writing and editing, which are the most cognitively demanding tasks. So, I still make time in my day for less challenging book tasks, but I schedule them outside of my focus hour.
+Knowing that I have to do 60 minutes of flow state writing per day also helps me capitalize on that time better. I used to just call the first hour of my day "writing time," and I'd allow myself to do anything writing-related, which included fixing grammar or writing easier posts (like these retrospectives). Recognizing that my flow state time is limited made me better at using that hour just for writing and editing, which are the most cognitively demanding tasks. So, I still make time in my day for less challenging book tasks, but I schedule them outside of my focus hour.
 
 ## Becoming less precious about my writing
 
-There's a quote I love in Rob Fitzpatrick's book, [_Write Useful Books_](https://www.usefulbooks.com/book), about how it's more important for non-fiction authors to give practical advice than it is for them to have beautiful phrasing and perfect grammar:
+There's a quote I love in Rob Fitzpatrick's book, [_Write Useful Books_](https://www.usefulbooks.com/book), about how it's more important for non-fiction authors to give practical, impactful advice than it is for them to have beautiful phrasing and perfect grammar:
 
-> In fact, it’s so rare for a book to deliver on its promise that readers will adore you for doing just that one thing. I’ve heard plenty of people recommend a messy-but-effective book by saying:
+> I’ve heard plenty of people recommend a messy-but-effective book by saying:
 >
 > > Listen, it’s terribly written and full of typos and has a cover that appears to have been drawn by a distracted toddler, but it’s got something inside that’s just too important to miss. It’s going to change your life. You’ve got to read it. Trust me.
 >
@@ -65,7 +65,7 @@ There's a quote I love in Rob Fitzpatrick's book, [_Write Useful Books_](https:/
 >
 > Rob Fitzpatrick, [_Write Useful Books_](https://www.usefulbooks.com/book)
 
-At the start of last month, I went through every chapter and assigned a time for how long I want to spend on it. So, to declare that I wanted to spend just five hours on my content marketing chapter, I added this comment to the top:
+At the start of last month, I went through every chapter and assigned a time limit for the first draft. So, to declare that I wanted to spend just five hours on my content marketing chapter, I added this comment to the top:
 
 ```c
 // Target: 5h
@@ -89,15 +89,15 @@ Total elapsed: 19.5h / 3.9wks
 Total remaining: 100.0h / 20.0wks
 ```
 
-I'm not perfect at obeying my time limits yet, but setting a limit discourages me from overinvesting in the wording at this point.
+Obviously, I'm not perfect at obeying my time limits yet, but setting a limit discourages me from overinvesting in the wording at this point.
 
-I have this mental block that because I'm writing a book about writing, all of the writing in the book has to be as good as possible. I'm trying to adopt the attitude that I'm currently just working on a first draft, and it's more important to convey useful ideas than to maximize eloquence.
+I have this mental block that because I'm writing a book about writing, all of the writing in the book has to be perfect before any readers see it. I'm trying to adopt the attitude that I'm currently just working on a first draft, and it's more important to convey useful ideas than to maximize eloquence.
 
 ## How can I keep talking to readers?
 
 When I publish new blog posts, I get satisfaction in hearing feedback from readers and seeing discussions about my posts on places like Hacker News and Lobsters.
 
-With my book, I'm finding it hard to replicate that feeling of feedback. I've tried sending out questionnaires
+With my book, I'm finding it hard to replicate that feeling of feedback. I've tried sending out questionnaires, but only a handful of readers fill them out.
 
 I got a bit gunshy about video calls teaching [my live class last summer](/notes/htfp-live/). The class sessions went fine, but I'd spend about three hours a week just to prepare the presentation, another 90 minutes to deliver the real thing, and then I found the technical logistics and recording stressful.
 
