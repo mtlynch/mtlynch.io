@@ -117,7 +117,7 @@ I haven't run the numbers, but I think that hour-for-hour, my book has had the t
 - Published my [notes from Simon Willison's Interview on Software Misadventures](/notes/simon-willison-software-misadventures/)
   - I always feel like I should do more of this because I find it valuable to myself and for other people.
   - But then I do it, and it takes longer than I expect, and I can't share it anywhere, which discourages me from having the discipline to record what I learn from technical podcasts.
-- Upgraded my home NAS server from XX TB to XX TB.
+- Upgraded my home NAS server from XX TB to 33 TB.
 
 ### Lessons learned
 
