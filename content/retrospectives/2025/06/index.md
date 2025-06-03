@@ -28,10 +28,12 @@ Adding soft time limits helped me avoid spinning
 
 ### Adapt [preview chapters](https://refactoringenglish.com/chapters/) of my book to Asciidoctor
 
-- **Result**: XX
+- **Result**: Started this but never finished
 - **Grade**: F
 
-I kept putting this off because it's so boring to adapt existing chapters from Hugo to Asciidoc, but it will be good to get done. It ended up seeming harder than I expected to port over the custom CSS styles I'd applied on the web versions of the samples to Asciidoc, so I need to get creative in how I style the PDF/epub versions.
+I kept putting this off because it's so boring to adapt existing chapters from Hugo to Asciidoc, but it will be good to get done.
+
+It was harder than I expected to port over the custom CSS styles I'd applied on the web versions of the samples to Asciidoc, so I need to get creative in how I style the PDF/epub versions.
 
 ## One hour of good writing per day works
 
