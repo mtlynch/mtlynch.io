@@ -1,12 +1,13 @@
 ---
 title: "Educational Products: Month 8"
 date: "2025-06-09"
-description: TODO - One-line summary
+description: I just need to focus for one hour per day.
 ---
 
 ## Highlights
 
--
+- The writing techniques I planned last month are helping me publish more and focus better.
+- I need to find more ways to keep having conversations with readers about the book.
 
 ## Goal grades
 
@@ -24,7 +25,7 @@ I completed these chapters and sent them to pre-order customers.
 - **Result**: Added time limits to each chapter and wrote a quick script to process them all.
 - **Grade**: A
 
-Adding soft time limits helped me avoid spinning
+Soft time limits helped me avoid spinning on the same chapter forever.
 
 ### Adapt [preview chapters](https://refactoringenglish.com/chapters/) of my book to Asciidoctor
 
@@ -44,12 +45,12 @@ I found it difficult to decide how much time to invest in each chapter and how m
 My plan was:
 
 - Write in flow state for 60 minutes per day (just writing, no browsing the web or my phone).
-- Plan out each workday how I'll spend each 30-minute block in my day.
+- Start each workday by planning how I'll spend each 30-minute block in my schedule.
 - Assign soft limits to how much I can spend on each chapter.
 
 I'm happy to report that these techniques worked pretty well. I didn't have perfect discipline every day, but when I know the goal is to only write for an hour per day, I found it easier to resist distractions and focus on writing.
 
-Knowing that I have to do 60 minutes of flow state writing per day also helps me capitalize on that time better. I used to just call the first hour of my day "writing time," and I'd allow myself to do anything writing-related, which included fixing grammar or writing easier posts (like these retrospectives). Recognizing that my flow state time is limited made me better at using that hour just for writing and editing, which are the most cognitively demanding tasks. So, I still make time in my day for less challenging book tasks, but I schedule them outside of my focus hour.
+The 60-minute limit also helped me capitalize on that time better. I used to just call the first hour of my day "writing time," and I'd allow myself to do anything writing-related, which included fixing grammar or writing easier posts (like these retrospectives). Recognizing that my flow state time is limited made me better at using that hour just for writing and editing, which are the most cognitively demanding tasks. So, I still make time in my day for less challenging book tasks, but I schedule them outside of my focus hour.
 
 ## Becoming less precious about my writing
 
@@ -97,19 +98,21 @@ I have this mental block that because I'm writing a book about writing, all of t
 
 When I publish new blog posts, I get satisfaction in hearing feedback from readers and seeing discussions about my posts on places like Hacker News and Lobsters.
 
-With my book, I'm finding it hard to replicate that feeling of feedback. I've tried sending out questionnaires, but only a handful of readers fill them out.
+I find it hard to replicate that feeling of feedback for my book. I've tried sending out questionnaires, but only a handful of readers fill them out.
 
-I got a bit gunshy about video calls teaching [my live class last summer](/notes/htfp-live/). The class sessions went fine, but I'd spend about three hours a week just to prepare the presentation, another 90 minutes to deliver the real thing, and then I found the technical logistics and recording stressful.
+I need a way to keep talking to readers about the book, both for my motivation and to make sure I'm writing about things readers care about and my explanations make sense.
 
-I was resistant to doing more live stuff, but at a local founder's meetup recently, my friend David pointed out that I could do live calls as more of a one-off thing rather than making a multi-week committment. That was helpful, and so I've tried two one-off video calls with readers who pre-ordered the book, and both of those sessions were fun. The stress is lower offering video calls when it's an unexpected bonus for the reader's purchase rather than when the calls are the product people paid for.
-
-So, video calls feel like a good way to keep that feedback loop, but I feel my hesitation pushing back against all my ideas. Like, I'll think, "Maybe I should open up my calendar and let readers book 30-minute sessions with me," and then I shoot down the idea thinking, "What if I end up booked on 50 calls, and I don't have time for anything?" But in reality, I can do it and place limits to prevent me from getting overwhelmed with calls.
+I'd like to do more video calls. I've done two live video calls with groups of readers so far, and those have been fun and helpful in understanding what readers want to learn from me and from the book.
 
 ## $7k for a brand new project is still pretty good
 
-One of the things I've found stressful about writing the book is that it feels like I'm betting a lot on a product that generates less money than a software product would. And then I suddenly realized that $7k in profit would still be pretty good for a product that I only started working on five months ago.
+I'm still struggling with nagging doubts about my book. I'm betting a lot on a product that generates less money than a software product would. I've made about $7k from pre-orders, but I worry that I committed myself to the book for the next several months, and I might not make any money in that time.
 
-I haven't run the numbers, but I think that hour-for-hour, my book has had the third-best return on investment of any of my products (after TinyPilot and Hit the Front Page of Hacker News). I have a ways to go to hit my goal of $50k profit for 2025, but I'm doing better than I feel like I'm doing.
+Then, I realized that $7k in profit is pretty good five months in!
+
+If I started working on a software product five months ago and already had $7k in profits, that would be a great start.
+
+I haven't run the numbers, but I think that hour-for-hour, my book has had the third-best return on investment of any of my products (after TinyPilot and Hit the Front Page of Hacker News). I'm still falling shy of my $50k profit goal for 2025, but I'm doing better than I feel like I'm doing.
 
 ## Wrap up
 
@@ -118,12 +121,16 @@ I haven't run the numbers, but I think that hour-for-hour, my book has had the t
 - Published ["Which New Language Should I Learn for Web Development?"](/notes/which-new-language/)
 - Published my [notes from Simon Willison's Interview on Software Misadventures](/notes/simon-willison-software-misadventures/)
   - I always feel like I should do more of this because I find it valuable to myself and for other people.
-  - But then I do it, and it takes longer than I expect, and I can't share it anywhere, which discourages me from having the discipline to record what I learn from technical podcasts.
+  - But then I do it, and it takes longer than I expect, and I can't share it anywhere, and I remember why I don't do it very often.
+- I appeared as a guest on [The TMPDIR podcast](https://tmpdir.org/044/).
 - Upgraded my home NAS server from 23 TB to 33 TB.
 
 ### Lessons learned
 
--
+- Limit your focused writing time, but make the most of it.
+  - Knowing that I have to stay in flow state for 60 minutes per day helps me focus and makes me value that time more.
+- Prioritize conversations with readers.
+  - Conversations with readers help my motivation and give me confidence that I'm writing something people want to read.
 
 ### Goals for next month
 
