@@ -29,7 +29,7 @@ Soft time limits helped me avoid spinning on the same chapter forever.
 
 ### Adapt [preview chapters](https://refactoringenglish.com/chapters/) of my book to Asciidoctor
 
-- **Result**: Started this but never finished
+- **Result**: Started this but never finished.
 - **Grade**: F
 
 I kept putting this off because it's so boring to adapt existing chapters from Hugo to Asciidoc, but it will be good to get done.
@@ -96,7 +96,7 @@ I have this mental block that because I'm writing a book about writing, all of t
 
 ## How can I keep talking to readers?
 
-When I publish new blog posts, I get satisfaction in hearing feedback from readers and seeing discussions about my posts on places like Hacker News and Lobsters.
+When I publish new blog posts, I get satisfaction from hearing reader feedback and seeing discussions about my posts on places like Hacker News and Lobsters.
 
 I find it hard to replicate that feeling of feedback for my book. I've tried sending out questionnaires, but only a handful of readers fill them out.
 
@@ -104,7 +104,7 @@ I need a way to keep talking to readers about the book, both for my motivation a
 
 I'd like to do more video calls. I've done two live video calls with groups of readers so far, and those have been fun and helpful in understanding what readers want to learn from me and from the book.
 
-## $7k for a brand new project is still pretty good
+## $7k for a brand-new project is still pretty good
 
 I'm still struggling with nagging doubts about my book. I'm betting a lot on a product that generates less money than a software product would. I've made about $7k from pre-orders, but I worry that I committed myself to the book for the next several months, and I might not make any money in that time.
 
