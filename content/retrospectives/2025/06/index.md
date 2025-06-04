@@ -1,6 +1,6 @@
 ---
 title: "Educational Products: Month 8"
-date: "2025-06-09"
+date: "2025-06-04"
 description: I just need to focus for one hour per day.
 ---
 
