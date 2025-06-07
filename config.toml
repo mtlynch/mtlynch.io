@@ -65,6 +65,12 @@ buildFuture = true
 quality = 90
 resampleFilter = "Lanczos"
 
+[privacy]
+  [privacy.x]
+    disable = false
+    enableDNT = true
+    simple = false
+
 # Social links
 [[params.social]]
     name = "GitHub"
