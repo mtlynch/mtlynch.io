@@ -142,7 +142,7 @@ My long-term unprofitability often perplexes people. They assume I fund my money
 
 Zestful launched in mid-2018 as my first attempt at a software-as-a-service (SaaS) business. It allows food apps to recognize the structure of recipe ingredients. Given an ingredient like, "2 1/2 tablespoons finely chopped parsley," Zestful infers that `2.5` is the quantity, `tablespoons` is the unit of measure, `parsley` is the product, and `finely chopped` is a preparation step.
 
-After earning [a big fat zero](/solo-developer-year-1/#zestfulhttpszestfuldatacom) last year, Zestful finally realized significant revenue throughout 2019. [A single enterprise sale in December](/retrospectives/2020/01/#zestfulhttpszestfuldatacom) accounted for 79% of its annual revenue. That sale also represented 53% of total revenue across all my businesses.
+After earning [a big fat zero](/solo-developer-year-1/#zestful) last year, Zestful finally realized significant revenue throughout 2019. [A single enterprise sale in December](/retrospectives/2020/01/#zestful) accounted for 79% of its annual revenue. That sale also represented 53% of total revenue across all my businesses.
 
 | Income/Expense | 2018        | 2019        | Change                                      |
 | -------------- | ----------- | ----------- | ------------------------------------------- |
@@ -300,7 +300,7 @@ In last year's update, I [gave myself four goals](/solo-developer-year-1/#goals-
 
 **Grade**: B+
 
-I did hit this goal in that my revenue was $604/month for the year and $1,657/month for Q4, though it feels like cheating to include [my huge outlier sale](/retrospectives/2020/01/#zestfulhttpszestfuldatacom) from December. Without it, I'd be at $441 in total revenue for December, which is closer to what the likely trend will be through early 2020. It's not quite $500, but it's satisfyingly close.
+I did hit this goal in that my revenue was $604/month for the year and $1,657/month for Q4, though it feels like cheating to include [my huge outlier sale](/retrospectives/2020/01/#zestful) from December. Without it, I'd be at $441 in total revenue for December, which is closer to what the likely trend will be through early 2020. It's not quite $500, but it's satisfyingly close.
 
 ### Present talks at three software conferences
 

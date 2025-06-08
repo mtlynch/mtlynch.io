@@ -202,7 +202,7 @@ The first two and a half years of working on my own, I'd spend hundreds of hours
 
 With TinyPilot, it feels like the product drives the business, and I'm just along for the ride. There have been several months where I made critical mistakes in managing the business, and it continued growing anyway.
 
-When I do improve the product, the results are immediate and substantial. In November, I released [a new, high-end model](https://tinypilotkvm.com/blog/introducing-voyager) of TinyPilot. It sold 55 units in the first month, generating an extra $14k in revenue. That felt a whole lot better than [my 0.1% signup rate](#is-it-ketohttpsisitketoorg) on Is It Keto and Portfolio Rebalancer.
+When I do improve the product, the results are immediate and substantial. In November, I released [a new, high-end model](https://tinypilotkvm.com/blog/introducing-voyager) of TinyPilot. It sold 55 units in the first month, generating an extra $14k in revenue. That felt a whole lot better than [my 0.1% signup rate](#is-it-keto) on Is It Keto and Portfolio Rebalancer.
 
 ### You can build a successful business without being available 24/7
 

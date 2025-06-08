@@ -125,7 +125,7 @@ Lastly, I have to actually _write_ these interview articles. I estimate that eac
 
 In my last retrospective, I had this [fantastic revelation](/retrospectives/2020/06/#doing-more-with-is-it-ketos-audience) that with 50k+ monthly visitors, Is It Keto now has a large enough audience to make direct affiliate partnerships with keto companies. Instead of showing their ads through Google AdSense, I could cut out the middle man and earn much better payouts.
 
-A month later, I've come to realize that being an affiliate is kind of awful. If you depend on one affiliate, they have a ton of power over you, as I saw when the [Amazon Affiliates program](#is-it-ketohttpsisitketoorg) slashed my revenue by 60% overnight. Outside of Amazon, most of the keto merchants are pretty difficult to work with and have limited selections of products &mdash; generally less than 50.
+A month later, I've come to realize that being an affiliate is kind of awful. If you depend on one affiliate, they have a ton of power over you, as I saw when the [Amazon Affiliates program](#is-it-keto) slashed my revenue by 60% overnight. Outside of Amazon, most of the keto merchants are pretty difficult to work with and have limited selections of products &mdash; generally less than 50.
 
 Here's a paraphrased email exchange I had with one of the merchants whose affiliate program I joined:
 
