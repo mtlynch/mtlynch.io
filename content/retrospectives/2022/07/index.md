@@ -197,7 +197,7 @@ We sometimes get these types of complaints from customers who order directly, bu
 
 ## Still searching for a lovable web framework
 
-As I mentioned in [my last update](/retrospectives/2022/06/#wanderjesthttpswanderjestcom), I'm rebuilding [WanderJest](https://wanderjest.com), a tool for finding live comedy that I put on hold [at the start of the pandemic](/retrospectives/2020/04/#putting-wanderjest-on-hold).
+As I mentioned in [my last update](/retrospectives/2022/06/#wanderjest), I'm rebuilding [WanderJest](https://wanderjest.com), a tool for finding live comedy that I put on hold [at the start of the pandemic](/retrospectives/2020/04/#putting-wanderjest-on-hold).
 
 {{<img src="wanderjest-wip.png" alt="Screenshot of new WanderJest website" has-border="true" caption="My work-in-progress reimplementation of the WanderJest website using Go, VanillaJS, and SQLite." max-width="700px">}}
 

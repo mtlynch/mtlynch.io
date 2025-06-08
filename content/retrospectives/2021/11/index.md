@@ -184,7 +184,7 @@ I haven't done anything to promote my blogging course, but a couple of people pu
 
 Zestful keeps doing its thing in the background. It's had a good run these past few months with $100-600/month in revenue. I suspect that the sales are coming from users who are doing bulk parsing rather than clients with recurring needs, but it's been a nice bump in revenue.
 
-The person who [expressed interest in acquiring Zestful](/retrospectives/2021/09/#zestfulhttpszestfuldatacom) stopped following up and hasn't replied to my emails, so I think that deal is dead.
+The person who [expressed interest in acquiring Zestful](/retrospectives/2021/09/#zestful) stopped following up and hasn't replied to my emails, so I think that deal is dead.
 
 ## Wrap up
 

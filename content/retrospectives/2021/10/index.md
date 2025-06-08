@@ -139,7 +139,7 @@ I was hoping the site would quietly generate steady passive income for another f
 | Blogging for Devs Revenue | $0.00       | $27.30         | <font color="green">+$27.30 (+inf%)</font>   |
 | **Total Revenue**         | **$728.90** | **$216.44**    | **<font color="red">-$512.46 (-70%)</font>** |
 
-In August, I ran a [pay-what-you-want promotion](/retrospectives/2021/09/#hit-the-front-page-of-hacker-newshttpshitthefrontpagecom) for the course, and that led to a jump in sales. I worried that anyone who had any interest in the course purchased it during that promotion, but September showed that a modest number of customers are still buying.
+In August, I ran a [pay-what-you-want promotion](/retrospectives/2021/09/#hit-the-front-page-of-hacker-news) for the course, and that led to a jump in sales. I worried that anyone who had any interest in the course purchased it during that promotion, but September showed that a modest number of customers are still buying.
 
 ### [Zestful](https://zestfuldata.com)
 
