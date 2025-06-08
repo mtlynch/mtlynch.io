@@ -227,26 +227,15 @@ The function is simple. It takes data in the form of a list of list of strings, 
 
 This is the only function in my `csv` module that I declare as public, as the other wrappers are too low-level to be useful to Gleam clients of this module.
 
+The full module looks like this:
+
+{{<inline-file filename="csv.gleam" language="gleam">}}
+
 ## Calling my wrapper function
 
 Now that I have a Gleam-native wrapper for the `CSV.encode` function, I can write a simple Gleam app to call my wrapper:
 
-```gleam
-import gleam/io
-import gleam/string
-import csv
-
-pub fn main() {
-  [
-    ["Title", "Author", "Release Year"],
-    ["Infinite Jest", "David Foster Wallace", "1996"],
-    ["Emma", "Jane Austen", "1815"],
-    ["Catch-22", "Joseph Heller", "1961"]
-  ] |> csv.encode()
-    |> string.concat()
-    |> io.print()
-}
-```
+{{<inline-file filename="call_elixir.gleam" language="gleam">}}
 
 I'm creating a simple list of list of strings, passing it to my `csv.encode` Gleam wrapper. It returns a list of strings, so I call [Gleam's `string.concat`](https://hexdocs.pm/gleam_stdlib/gleam/string.html#concat) standard library function to join strings into a single string. Finally, I call `io.print` to print the result to the console.
 
