@@ -87,9 +87,9 @@ Bumps in this process projected negative perceptions of Sia:
 
 ## Timeline
 
-- 2017-07-19: Nebulous Labs [announces a series of Sia bounties](https://blog.sia.tech/announcing-sia-bounties-800daf90398b), starting with a bounty for [integrating Sia with Minio](https://github.com/NebulousLabs/Sia/issues/2155).
+- 2017-07-19: Nebulous Labs [announces a series of Sia bounties](https://archive.is/FHHBf), starting with a bounty for [integrating Sia with Minio](https://github.com/NebulousLabs/Sia/issues/2155).
 - 2017-07-24: @dvstate [publishes proof of concept integration](https://github.com/NebulousLabs/Sia/issues/2155#issuecomment-317488613).
-- 2017-08-03: Nebulous Labs [awards @dvstate the full bounty](https://blog.sia.tech/introducing-s3-style-file-sharing-for-sia-through-the-new-minio-integration-bb880af2366a).
+- 2017-08-03: Nebulous Labs [awards @dvstate the full bounty](https://archive.is/Ra4Y9).
 - 2017-08-09: @dvstate [makes the first PR](https://github.com/minio/minio/pull/4802) for the Sia integration into the Minio source.
 - 2017-08-09: @harshavardhana [requests](https://github.com/minio/minio/pull/4802#discussion_r132325301) @dvstate rewrite the PR to use BoltDB instead of SQLite.
 - 2017-08-13: @harshavardhana [agrees to accept](https://github.com/NebulousLabs/Sia/issues/2155#issuecomment-322053440) Sia-Minio integration.
@@ -206,7 +206,7 @@ Key discussions about required changes to the PR happened privately. Nobody outs
 
 ### “First to complete” bounties create perverse incentives
 
-The bounty program [rules](https://blog.sia.tech/announcing-sia-bounties-800daf90398b) state:
+The bounty program [rules](https://archive.is/FHHBf) state:
 
 > A bounty will only be paid once to one submission and, unless specified otherwise, it will be paid to the first individual or team to meet ALL the criteria set out for the bounty.
 
