@@ -1,11 +1,41 @@
 ---
-title: "Converting a ZFS pool from RAIDZ1 to RAIDZ2"
+title: "Migrating a ZFS pool from RAIDZ1 to RAIDZ2"
 date: 2025-04-29
 ---
 
+I recently upgraded my home TrueNAS server and migrated 18 TB of data from my four-disk RAIDZ1 ZFS pool to a new seven-disk RAIDZ2 pool. The neat trick is that I only added three disks to my server and never transferred my data to external storage.
+
+This migration was an interesting challenge for two reasons:
+
+1. You can't convert a RAIDZ1 pool to a RAIDZ2 pool in place.
+1. Using the new disks to create a 3x8TB RAIDZ2 pool would mean too little capacity for my 18 TB of data.
+
+## How I did it
+
+This was my strategy from a high level:
+
+1. Buy three new 8 TB disks.
+1. Offline one disk from my old RAIDZ1 pool.
+1. Create a RAIDZ2 pool using my three new disks, one disk from my RAIDZ1 pool, and one fake disk
+   - The new pool has 24 TB of capacity.
+1. Offline the fake disk from the RAIDZ2 pool.
+   - The new pool can tolerate this as it's equivalent to just one disk failure, and it can tolerate two.
+1. Migrate a snapshot of the old pool to the new pool.
+1. Destroy the old pool.
+1. Use one disk from the old RAIDZ1 pool to replace the fake disk in the RAIDZ2 pool.
+1. Add the remaining two disks from the old RAIDZ1 pool to the new RAIDZ2 pool
+
+It sounds simple in theory, but in practice, I ran into a few hiccups which I'll share.
+
+## Why this is hard
+
+The primary challenge in this migrationn is that you can't remove disks from a ZFS pool. Otherwise, you could create a new RAIDZ2 pool with just three physical disks, down
+
+## Why switch from RAIDZ1 to RAIDZ2?
+
 My home TrueNAS server is now three years old, and I've reached 80% of its capacity. I'm using about 19 TB of data.
 
-I set up the server with four 8 TB drives set up as RAIDZ1, meaning that it can tolerate a single drive failure.
+I set up the server with four 8 TB disk in using RAIDZ1, meaning that a single disk can fail without losing data. If a second disk dies before I can replace the first dead one, I lose data.
 
 When I built the server, I was betting on ZFS adding support for expanding pools by adding disks, which they did (TODO: link). The problem is that if I add drives, I'm increasing the risk of a pool failure. With only four disks, I feel like the odds are low of two disks failing at the same time. But if I expand to six or more disks, I worry a bit more.
 
@@ -27,22 +57,15 @@ https://github.com/openzfs/zfs/pull/15022
 
 available in 2.3.0
 
-## The strategy
-
-1. Buy three new 8 TB disks.
-1. Offline one disk from my old RAIDZ1 pool.
-1. Create a RAIDZ2 pool using my three new disks, one disk from my RAIDZ1 pool, and one fake disk
-   - The new pool has 24 TB of capacity.
-1. Offline the fake disk from the RAIDZ2 pool.
-   - The new pool can tolerate this as it's equivalent to just one disk failure.
-1. Migrate a snapshot of the old pool to the new pool.
-1. Destroy the old pool.
-1. Use one disk from the old RAIDZ1 pool to replace the fake disk in the RAIDZ2 pool.
-1. Add the remaining two disks from the old RAIDZ1 pool to the new RAIDZ2 pool
-
-Sidenote: I'm saying these are "pools" although they're technically vdevs within the pool. My pool consists of only a single vdev.
-
 ## Make backups
+
+I said I never moved my data to external storage, but that's not entirely true. I did use external storage for backups.
+
+I already back up most of my data, but the vast majority of my data is media. I have 15 TB of movies and TV shows, and, because I'm a data hoarder, I keep the raw images of all of my disks. Because what if one day, I decide I really need to watch the director's commentary for my DVD copy of _There's Something About Mary_?
+
+So, I back up all of my important personal data to multiple cloud storage buckets using restic (TODO: link), but it would cost me $XX/mo to keep backups of my TV shows and movies, so I don't back them up.
+
+I compared backup options
 
 ## Identifying the disks
 
@@ -63,9 +86,14 @@ So, for this experiment, I want to use the disks like the following:
 
 ## Find the weakest disk
 
+The riskiest part of the migration is the time from when I borrow a disk from my old RAIDZ1 pool until I migrate the data to my new RAIDZ2 pool. I'm running my old pool in degraded state with a missing disk, so if any of the other disks in my old pool die during the data migration, I lose data.
+
+Because of this risky window, I wanted the weakest disk from my old pool to be the one I borrow to build the new pool. The RAIDZ2 pool can tolerate the weak disk failing, but the RAIDZ1 can't tolerate a second disk failure after I borrow the first one.
+
 ```bash
 for drive in /dev/sd?; do
-  [ -e "$drive" ] && echo -e "\n=== $drive ===" && smartctl -A $drive | grep -E '(Power_On_Hours|Wear_Leveling|Media_Wearout|Reallocated_Sector)'
+  [ -e "$drive" ] && echo -e "\n=== $drive ===" && smartctl -A $drive | \
+    grep -E '(Power_On_Hours|Wear_Leveling|Media_Wearout|Reallocated_Sector)'
 done
 ```
 
@@ -129,6 +157,8 @@ get_disk_id() {
     return 1
 }
 ```
+
+And then I saved the disk IDs to environment variables:
 
 ```bash
 # Old disks
@@ -203,6 +233,7 @@ errors: No known data errors
 ## Move the old disk
 
 ```bash
+# Be careful, as this completely wipes the disk with no confirmation.
 wipefs --all "${MOVED_DISK}"
 ```
 
