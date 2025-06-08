@@ -9,7 +9,7 @@ description: How I chose parts, built, and configured my first custom home stora
 images:
   - budget-nas/og-cover.jpg
 date: 2022-05-23
-lastmod: 2025-01-17
+lastmod: 2025-05-13
 discuss_urls:
   reddit: https://www.reddit.com/r/truenas/comments/uw5hly/how_i_built_my_first_home_truenas_server_22_tb/
   hacker_news: https://news.ycombinator.com/item?id=31548829
@@ -258,7 +258,7 @@ With scarce physical space and motherboard ports, I didn't want a dedicated grap
 
 Many NAS builds include a [host bus adaptor](https://www.truenas.com/community/threads/whats-all-the-noise-about-hbas-and-why-cant-i-use-a-raid-controller.81931/) (HBA). An HBA is a chip that goes into the PCI slot of a motherboard and increases the number of disks the motherboard can support.
 
-ZFS requires you to [reflash the HBA's firmware](https://www.servethehome.com/ibm-serveraid-m1015-part-4/) in a process that sounds tedious and confusing. I decided to punt on the HBA until I need more storage. The ASUS A320I-K has four SATA ports, which is enough for my initial needs. I made sure to leave a PCI slot empty for a future HBA.
+~~ZFS requires you to [reflash the HBA's firmware](https://www.servethehome.com/ibm-serveraid-m1015-part-4/) in a process that sounds tedious and confusing~~ (Edit: Apparently, [re-flashing is only necessary on RAID HBAs](https://mtlynch.io/budget-nas/#comment-6)). I decided to punt on the HBA until I need more storage. The ASUS A320I-K has four SATA ports, which is enough for my initial needs. I made sure to leave a PCI slot empty for a future HBA.
 
 ### ECC RAM
 
@@ -527,6 +527,8 @@ I replaced it with another 8 TB Seagate IronWolf and haven't had any issues sinc
 A year after building my NAS, I [purchased a server rack](/building-first-homelab-rack/) and began migrating all of my infrastructure to the rack.
 
 For my NAS, I purchased a [Sliger CX3701 10-bay server chassis](https://www.sliger.com/products/rackmount/3u/cx3701/). I like the chassis and would recommend it as long as you're certain you'll use your motherboard's only PCI slot to gain more SATA ports. If you need the PCI slot for graphics or 10 G networking, you can only use four of the 10 drive bays, as a mini-ITX motherboard typically only has four SATA ports.
+
+When I switched to the Sliger server chassis, I also needed a new PSU, as the Sliger only supports SFX and SFX-L form factor PSUs. I went with the [SilverStone 300W 80 Plus Bronze ST30SF-V2](https://www.silverstonetek.com/en/product/info/power-supplies/ST30SF/). I was glad to reduce from a 500 W PSU, as my system only draws about 150 W at peak.
 
 ### Switched to TrueNAS Scale
 

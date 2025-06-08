@@ -90,7 +90,7 @@ Is It Keto is officially in maintenance mode now. I had hoped the site's freelan
 | Enterprise Plan Earnings | $3883.70      | $0.00        | <font color="red">-$3883.70 (-100%)</font>    |
 | **Total Revenue**        | **$3934.13**  | **$79.67**   | **<font color="red">-$3854.46 (-98%)</font>** |
 
-It might appear that Zestful experienced a disastrous drop in revenue, but it's just that [December](/retrospectives/2020/01/#zestfulhttpszestfuldatacom) was a huge outlier.
+It might appear that Zestful experienced a disastrous drop in revenue, but it's just that [December](/retrospectives/2020/01/#zestful) was a huge outlier.
 
 Zestful's income is bursty, and anything in the $50-100 range is a good month. There was an eight-fold increase in traffic, but that's a mostly meaningless side effect of my blog posts reaching the front page of Hacker News with mentions of Zestful.
 

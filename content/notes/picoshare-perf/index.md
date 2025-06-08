@@ -23,7 +23,7 @@ I didn't have time to debug the crash, so I just increased the server's memory f
 
 It's unsatisfying to fix a crash by just throwing more RAM at the problems, so for the past two weeks, I've been debugging the crashes and sharing my progress on Twitter.
 
-{{<tweet user="deliberatecoder" id="1552438652537835521">}}
+{{<x user="deliberatecoder" id="1552438652537835521">}}
 
 At this point, I've fixed all the issues that were causing crashes and learned some useful lessons along the way about Go, SQLite, and debugging.
 
@@ -286,7 +286,7 @@ I tested running the `VACUUM` command on my server and saw that it did indeed re
 
 At this point, Ben asked me why I need to `VACUUM` at all:
 
-{{<tweet user="benbjohnson" id="1556003355901603841">}}
+{{<x user="benbjohnson" id="1556003355901603841">}}
 
 Yeah, why _am_ I doing that?
 
@@ -362,7 +362,7 @@ One useful technique I discovered during this investigation was to test each hyp
 
 With so many different hypotheses flying around, it was difficult to remember what state the code was in when I tested each idea. For example, at one point, I was seeing crashes due to a new bug I had introduced while debugging:
 
-{{<tweet user="deliberatecoder" id="1552801134913458176">}}
+{{<x user="deliberatecoder" id="1552801134913458176">}}
 
 Having a record of what state the code was in and what I did to test it helped me organize my thoughts and avoid duplicating effort.
 
@@ -390,7 +390,7 @@ To test this theory, I used the `fio` disk benchmarking utility, which I'd never
 
 Kurt Mackey confirmed that the measurements were likely correct because Fly's local disks are Enterprise NVMe drives:
 
-{{<tweet user="mrkurt" id="1552495902190735360">}}
+{{<x user="mrkurt" id="1552495902190735360">}}
 
 ## Dead ends
 
@@ -416,7 +416,7 @@ When I couldn't reproduce the crashes on my local VMs or under Docker, I started
 
 Still, I wanted to eliminate Fly as a possibility. I deployed PicoShare to [Lightsail](https://aws.amazon.com/lightsail/), Amazon's managed Docker container service. They don't have a 256 MB RAM option, so I deployed to a 512 MB instance. Within a few minutes, I was able to reproduce the crash there, eliminating Fly as the culprit:
 
-{{<tweet user="deliberatecoder" id="1552466794971107328">}}
+{{<x user="deliberatecoder" id="1552466794971107328">}}
 
 ### /tmp is not a RAMdisk
 

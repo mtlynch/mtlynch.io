@@ -186,7 +186,7 @@ Is It Keto took a big hit this month after a strong start to the year. I suppose
 
 Zestful remains quiet with a handful of occasional pay-as-you-go users.
 
-My one [enterprise client](/retrospectives/2020/01/#zestfulhttpszestfuldatacom) was up for a plan renewal in early March, but they decided to cancel. I anticipated that because, from the beginning, they needed the high-tier plan so they could process their existing corpus of ingredients, and their ongoing needs wouldn't be as significant. When they canceled, I asked if there was anything they felt was missing from Zestful or needed improvement, but they never responded.
+My one [enterprise client](/retrospectives/2020/01/#zestful) was up for a plan renewal in early March, but they decided to cancel. I anticipated that because, from the beginning, they needed the high-tier plan so they could process their existing corpus of ingredients, and their ongoing needs wouldn't be as significant. When they canceled, I asked if there was anything they felt was missing from Zestful or needed improvement, but they never responded.
 
 ## Wrap up
 

@@ -31,7 +31,7 @@ The thing that saved me was a lucky post on Hacker News.
 
 ## Before the pre-sale
 
-I started working on _Refactoring English_ back in 2021. As soon as I started, my main business grew unexpectedly, and I spent so much time managing my company that I [never had time to work on the book](/solo-developer-year-4/#_refactoring-english_).
+I started working on _Refactoring English_ back in 2021. As soon as I started, my main business grew unexpectedly, and I spent so much time managing my company that I [never had time to work on the book](/solo-developer-year-4/#refactoring-english).
 
 Until 2025, all I had of the book was a rough table of contents and a signup form for email updates about the book.
 

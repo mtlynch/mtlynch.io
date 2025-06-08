@@ -26,7 +26,7 @@ buildFuture = true
     unsafe= true
 
 [permalinks]
-    posts = "/:filename/"
+    posts = "/:contentbasename/"
 
 [params]
     dateFormat = "January 2, 2006"
@@ -64,6 +64,12 @@ buildFuture = true
 [imaging]
 quality = 90
 resampleFilter = "Lanczos"
+
+[privacy]
+  [privacy.x]
+    disable = false
+    enableDNT = true
+    simple = false
 
 # Social links
 [[params.social]]

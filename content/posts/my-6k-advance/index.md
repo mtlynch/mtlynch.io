@@ -6,8 +6,6 @@ images:
   - my-6k-advance/og-cover.webp
 tags:
   - refactoring-english
-discuss_urls:
-  hacker_news: https://news.ycombinator.com/item?id=43793676
 ---
 
 I just received $5,947 in advance sales for my first technical book, even though it's only 25% complete, and I'm self-publishing it. The book is called [_Refactoring English_](https://refactoringenglish.com), and it's a guide for software developers to improve their writing.

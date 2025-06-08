@@ -136,7 +136,7 @@ I knew I'd used programmatic SEO to generate pages for [my local comedy site](ht
 
 A few hours later, Josh ended up finding the thing he'd remembered reading: a Twitter thread I'd completely forgotten:
 
-{{<tweet user="deliberatecoder" id="1411709346845650944">}}
+{{<x user="deliberatecoder" id="1411709346845650944">}}
 
 Ever since that exchange, I've been thinking about how I can write more on my blog and less on other platforms. Twitter is an especially bad medium for preserving knowledge because it's ephemeral by design. I forget what I post there, and searching my post history is slow and tedious.
 
@@ -152,7 +152,7 @@ My logs say I spent just under 6 hours writing it, so I feel like it was a good 
 
 Though I'm trying to keep more content on my blog, I think some things are still a better fit for Twitter. For the past two weeks, I've been trying to figure out why PicoShare keeps crashing on systems with low RAM, and I've been tweeting my progress.
 
-{{<tweet user="deliberatecoder" id="1552438652537835521">}}
+{{<x user="deliberatecoder" id="1552438652537835521">}}
 
 People seem to enjoy the thread, and I've received lots of great advice that helped me identify issues much more quickly than if I'd been doing it by myself. That's the ideal content for Twitter because I'm sharing live progress and not a finished result.
 

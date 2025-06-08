@@ -144,6 +144,62 @@ That tells Bunny to only store a copy of your podcast's feed for a maximum of 20
 
 I recommend against "Do not cache." If you have a popular podcast where hundreds of listeners might check your feed at once, that would cause Bunny to send your podcast provider hundreds of requests at once, which might cause your podcast provider to block requests from Bunny, which would cause your listeners to see an error message.
 
+### Replace the canonical URL
+
+One subtlety of the RSS feed is that it contains a `self` tag that looks like this:
+
+```xml
+<atom:link href="https://feeds.libsyn.com/12345/rss" rel="self" type="application/rss+xml"/>
+```
+
+Even if you distribute your `https://feeds.myawesomedinosaurpodcast.com` URL, some podcast players will prefer the `self` tag to the original URL, which would bypass your CDN-hosted version.
+
+To prevent this, you'll need to use a custom Bunny edge script.
+
+1. Go to Edge Platfrom > Scripting and click "Add Script."
+1. Choose "Deploy and edit on Bunny.net"
+1. Name the script "Replace RSS self tag"
+1. Change the Type to "Middleware"
+1. Click "Add Script"
+1. In the code editor, enter the following code:
+
+```javascript
+import * as BunnySDK from "https://esm.sh/@bunny.net/edgescript-sdk@0.11.2";
+
+// Replace with the vendor-specific URL to your RSS feed.
+const SOURCE_URL = "https://feeds.libsyn.com/12345/rss";
+
+// Replace with the domain name that you own.
+const TARGET_URL = "https://feeds.myawesomedinosaurpodcast.com";
+
+/**
+ * Modifies the response from the origin to replace a specific URL.
+ *
+ * @param {Context} context - The context of the middleware.
+ * @param {Request} request - The current request done to the origin.
+ * @param {Response} response - The HTTP response or string.
+ */
+async function onOriginResponse(context: { request: Request, response: Response }): Promise<Response> | Response | void {
+  const responseText = await context.response.text();
+
+  // Replace the URL with simple string replacement
+  const modifiedText = responseText.replace(SOURCE_URL, TARGET_URL);
+
+  // Create a new response with the modified text
+  return new Response(modifiedText, {
+    status: context.response.status,
+    statusText: context.response.statusText,
+    headers: context.response.headers
+  });
+}
+
+BunnySDK.net.http.servePullZone()
+  .onOriginResponse(onOriginResponse);
+
+```
+
+Finally, hit the "Connect Pull Zone" button to attach this script to your RSS feed.
+
 ## You're done!
 
 If you set things up correctly, you should now have a custom URL that serves your podcast feed.

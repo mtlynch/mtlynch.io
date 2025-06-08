@@ -31,7 +31,7 @@ I find myself "chasing the high" in wanting another hit article, as none of my b
 - **Result**: I abandoned this goal and focused instead on expanding Is It Keto.
 - **Grade**: F
 
-As I was writing my July retrospective, I [questioned my decision](/retrospectives/2019/08/#is-it-ketohttpsisitketoorg) to keep ignoring Is It Keto, given that it's my only successful project. I ended up thinking that thought more and decided to postpone the new product in favor of returning my focus to Is It Keto for a while.
+As I was writing my July retrospective, I [questioned my decision](/retrospectives/2019/08/#is-it-keto) to keep ignoring Is It Keto, given that it's my only successful project. I ended up thinking that thought more and decided to postpone the new product in favor of returning my focus to Is It Keto for a while.
 
 I'm still interested in pursuing the email tool idea, but I've deferred it to October at the earliest.
 

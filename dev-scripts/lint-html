@@ -66,6 +66,9 @@ IGNORE_PATTERNS+=("/www.sciencedirect.com/")
 IGNORE_PATTERNS+=("/www.servicenow.com/")
 IGNORE_PATTERNS+=("/www.usta.com/")
 
+# Ignore links to comments that only load in production.
+IGNORE_PATTERNS+=("/mtlynch.io\/.*#comment-.*/")
+
 URL_IGNORE="$(join_by , "${IGNORE_PATTERNS[@]}")"
 
 IGNORED_FILES_ARR=()

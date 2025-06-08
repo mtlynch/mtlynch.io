@@ -15,7 +15,7 @@ In mid-2020, yet another of my businesses [had flopped](/retrospectives/2020/04/
 
 {{<img src="tinypilot-prototype.webp" alt="Photo of a laptop open with 'Hello, World' printed on the screen. On another laptop, the same desktop is displayed within a TinyPilot web interface." max-width="450px" caption="The prototype of TinyPilot, which allowed me to control computers in my home remotely without installing any software">}}
 
-I [blogged about creating TinyPilot](/tinypilot/), and I immediately knew I was onto something. My post reached the [#1 spot on Hacker News](https://news.ycombinator.com/item?id=23927380) and [several](https://www.reddit.com/r/programming/comments/hwt1it/tinypilot_build_a_kvm_over_ip_for_under_100/) [popular](https://www.reddit.com/r/HomeServer/comments/jeoc74/tinypilot_build_a_kvm_over_ip_for_under_100/) [subreddits](https://www.reddit.com/r/homelab/comments/hwimys/tinypilot_build_a_kvm_over_ip_for_under_100/).
+I [blogged about creating TinyPilot](/tinypilot/), and I could tell right away that I was onto something. My post reached the [#1 spot on Hacker News](https://news.ycombinator.com/item?id=23927380) and [several](https://www.reddit.com/r/programming/comments/hwt1it/tinypilot_build_a_kvm_over_ip_for_under_100/) [popular](https://www.reddit.com/r/HomeServer/comments/jeoc74/tinypilot_build_a_kvm_over_ip_for_under_100/) [subreddits](https://www.reddit.com/r/homelab/comments/hwimys/tinypilot_build_a_kvm_over_ip_for_under_100/).
 
 I started offering pre-packaged kits so my readers could build their own TinyPilots, and they immediately sold out. With every other project, I had to beg and plead with people even to try my product. With TinyPilot, there was so much demand that I struggled for months to keep the product stocked.
 
@@ -181,7 +181,7 @@ At the time, I thought, "Faster would be better, but I'm a patient person. What'
 
 I quickly learned that a slower closing isn't about a few months of patience &mdash; it's about how much additional risk and work the seller absorbs with each passing week of due diligence.
 
-When you sell a house, the buyer has to put down a deposit of 1-5% to hold their claim on the house. If financing falls through or the buyer changes their mind, the seller keeps the money as compensation for the time they lost.
+When you sell a house, the buyer has to put down a deposit of 1-5% to hold their claim on the house. If the buyer changes their mind, the seller keeps the money as compensation for the time they lost.
 
 When you sell a business at TinyPilot's scale, there's no deposit. You can invest hundreds of hours into preparing reports for due diligence, reveal all your confidential business secrets, and spend thousands of dollars negotiating legal documents and still walk away with nothing if the buyer backs out.
 
