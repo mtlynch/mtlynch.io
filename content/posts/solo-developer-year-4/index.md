@@ -57,7 +57,7 @@ I went into more detail [in my year two retrospective](/solo-developer-year-2/#h
 
 TinyPilot is an open-source KVM over IP device [built on the Raspberry Pi](/tinypilot). It allows you to control another computer from your browser without installing any software, even if the computer has no operating system or network connectivity.
 
-<a href="tinypilot-demo-2.1.2-full.gif" style="display: block; margin: auto 0;"><img src="tinypilot-demo-2.1.2-opt.gif" style="margin: 0 auto; display: block; object-fit: contain; max-width: 630px"></a>
+<a href="tinypilot-demo-2.1.2-full.gif" style="display: block; margin: auto 0;"><img src="small-tinypilot-demo-2.1.2.gif" style="margin: 0 auto; display: block; object-fit: contain; max-width: 630px"></a>
 
 At the start of 2021, I was TinyPilot's sole developer, customer support agent, salesperson, and marketer. The only other employee was my girlfriend, who managed inventory and fulfilled orders. We ran TinyPilot out of our Western Massachusetts home, which was slowly transforming into a TinyPilot warehouse.
 
