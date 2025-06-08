@@ -235,13 +235,13 @@ I was hoping the promotion might jump-start sales even after I went back to regu
 | Total Pageviews   | 1,300       | 1,467       | <font color="green">+167 (+13%)</font>       |
 | **Total Revenue** | **$620.67** | **$390.80** | **<font color="red">-$229.87 (-37%)</font>** |
 
-Last month, I saw an unexpected spike in Zestful revenue, and I [dismissed it as likely fraud](/retrospectives/2021/08/#zestfulhttpszestfuldatacom). To my surprise, it was a legitimate customer, and they paid their balance in full.
+Last month, I saw an unexpected spike in Zestful revenue, and I [dismissed it as likely fraud](/retrospectives/2021/08/#zestful). To my surprise, it was a legitimate customer, and they paid their balance in full.
 
 This month, another customer had a big spike in usage, and this one seems legitimate as well. Both charges seem to be one-off bulk processing, but it's good to see more usage.
 
 These past two months bring me to an exciting Zestful milestone: I've earned back my investment!
 
-I [spent $7.4k](/solo-developer-year-1/#zestfulhttpszestfuldatacom) hiring a freelancer to help me launch the first version, and I had a few other smaller costs leading to a total cost of $8k. Including August, my lifetime revenue from Zestful is now $8,246, so the project has officially turned a profit. Of course, this was possible because I paid myself $0. On an hourly basis, Zestful has probably earned me about a nickel per hour.
+I [spent $7.4k](/solo-developer-year-1/#zestful) hiring a freelancer to help me launch the first version, and I had a few other smaller costs leading to a total cost of $8k. Including August, my lifetime revenue from Zestful is now $8,246, so the project has officially turned a profit. Of course, this was possible because I paid myself $0. On an hourly basis, Zestful has probably earned me about a nickel per hour.
 
 Lastly, a company reached out in August about potentially acquiring Zestful. I was upfront with them that its earnings are small, but if they want to acquire my solution instead of rolling their own, I'm open to it. We had a preliminary call, and they requested some historical data from me. They said they're considering an offer. I'm not getting my hopes up, but it will be a nice bonus if it happens.
 

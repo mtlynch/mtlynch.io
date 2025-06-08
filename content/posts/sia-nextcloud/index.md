@@ -417,6 +417,6 @@ The Nextcloud app includes a barebones text editor for editing plaintext files w
 
 This tutorial showed you how to deploy your own instance of Nextcloud and add low-cost file backup with Sia.
 
-I expect more and more apps to integrate with Sia in the coming months. A few days ago, [Sia announced](https://blog.sia.tech/introducing-s3-style-file-sharing-for-sia-through-the-new-minio-integration-bb880af2366a) a new integration with [Minio](https://www.minio.io/), a distributed object storage server. The techniques you used in this tutorial will help you deploy other apps and integrate them with Sia.
+I expect more and more apps to integrate with Sia in the coming months. A few days ago, [Sia announced](https://archive.is/Ra4Y9) a new integration with [Minio](https://www.minio.io/), a distributed object storage server. The techniques you used in this tutorial will help you deploy other apps and integrate them with Sia.
 
 - **Update** (2017-09-13): The Minio integration is [almost complete](https://github.com/minio/minio/pull/4802).

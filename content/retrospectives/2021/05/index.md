@@ -242,7 +242,7 @@ Here are some brief updates on projects that I still maintain but are not the pr
 
 Is It Keto is still running quietly in the background. It's following the same pattern as last year: slowly dropping in popularity as people lose interest in diets they started for the new year.
 
-Amazon Affiliate revenue dropped disproportionately, but that's just because [last month was an outlier](/retrospectives/2021/04/#is-it-ketohttpsisitketoorg).
+Amazon Affiliate revenue dropped disproportionately, but that's just because [last month was an outlier](/retrospectives/2021/04/#is-it-keto).
 
 ### [Hit the Front Page of Hacker News](https://hitthefrontpage.com/)
 
