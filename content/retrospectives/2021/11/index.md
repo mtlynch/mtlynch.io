@@ -117,7 +117,7 @@ Trimming out the accessory products allowed me to focus the TinyPilot website ar
 
 Reducing to a single product offers a lot of benefits. There's less complexity for customer support, it gives us more room to store inventory, and it simplifies our order fulfillment process.
 
-Sales have been stronger since the change, but it's difficult to say whether there's a causal connection. There's definitely a trend upwards after the change, but it could just be trailing effects from last month's [positive press](/retrospectives/2021/10/#tinypilothttpstinypilotkvmcom-stats).
+Sales have been stronger since the change, but it's difficult to say whether there's a causal connection. There's definitely a trend upwards after the change, but it could just be trailing effects from last month's [positive press](/retrospectives/2021/10/#tinypilot-stats).
 
 {{<img src="sales-trends.png" alt="Screenshot of TinyPilot website, offering only one product" max-width="800px" caption="Total TinyPilot sales for the last 90 days">}}
 
@@ -184,7 +184,7 @@ I haven't done anything to promote my blogging course, but a couple of people pu
 
 Zestful keeps doing its thing in the background. It's had a good run these past few months with $100-600/month in revenue. I suspect that the sales are coming from users who are doing bulk parsing rather than clients with recurring needs, but it's been a nice bump in revenue.
 
-The person who [expressed interest in acquiring Zestful](/retrospectives/2021/09/#zestfulhttpszestfuldatacom) stopped following up and hasn't replied to my emails, so I think that deal is dead.
+The person who [expressed interest in acquiring Zestful](/retrospectives/2021/09/#zestful) stopped following up and hasn't replied to my emails, so I think that deal is dead.
 
 ## Wrap up
 

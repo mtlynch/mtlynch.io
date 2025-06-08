@@ -238,7 +238,7 @@ Here are some brief updates on projects that I still maintain but are not the pr
 {{<notice type="info">}} \* This is an estimate from memory. AdThrive locked me out of my dashboard when I terminated my contract with them, so I won't know my exact earnings until they (hopefully) pay me in November.
 {{</notice>}}
 
-Is It Keto is languishing a bit, as I'm focusing entirely on TinyPilot. Some of the dip is also seasonal, as I [saw a slowdown during September last year](/retrospectives/2019/10/#is-it-ketohttpsisitketoorg).
+Is It Keto is languishing a bit, as I'm focusing entirely on TinyPilot. Some of the dip is also seasonal, as I [saw a slowdown during September last year](/retrospectives/2019/10/#is-it-keto).
 
 The only notable update is that I switched back from AdThrive to AdSense. I'd heard that AdThrive was the fancy advertiser. They only work with publishers who reach 100k monthly pageviews, and their payout rates are supposed to be significantly higher than Google AdSense.
 

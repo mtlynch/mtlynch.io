@@ -57,7 +57,7 @@ In anticipation of a surge in traffic in January, I offered my writer additional
 | Amazon Affiliate Earnings | $118.00       | $157.08       | <font color="green">+$39.08 (+33%)</font>      |
 | **Total Revenue**         | **$269.07**   | **$392.79**   | **<font color="green">+$123.72 (+46%)</font>** |
 
-This was a record month for Is It Keto, beating out the previous record of [$379.80 in August 2019](/retrospectives/2019/09/#is-it-ketohttpsisitketoorg).
+This was a record month for Is It Keto, beating out the previous record of [$379.80 in August 2019](/retrospectives/2019/09/#is-it-keto).
 
 The revenue was a bit of a surprise given that traffic has been waning for the past few months, as nobody wants to think about dieting over the holidays. But the holidays also mean higher advertiser spend and increased customer purchasing on Amazon, so my revenue per mille (RPM) rose substantially to $5.70 per thousand pageviews, also a record high.
 

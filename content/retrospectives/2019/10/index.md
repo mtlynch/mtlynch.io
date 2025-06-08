@@ -74,7 +74,7 @@ Everything stayed relatively flat except for AdSense earnings. I'm not sure if t
 | -------------- | ----------- | -------------- | ---------------------------------------- |
 | Total Earnings | $728.49     | $4.51          | <font color="red">-$723.98 (-99%)</font> |
 
-No surprises here. I knew my spike in revenue [last month](/retrospectives/2019/09/#zestfulhttpszestfuldatacom) was an anomaly, and now it's settled back into the normal territory of $3-$40 per month.
+No surprises here. I knew my spike in revenue [last month](/retrospectives/2019/09/#zestful) was an anomaly, and now it's settled back into the normal territory of $3-$40 per month.
 
 ## Creating premium meal plans for Is It Keto
 
