@@ -107,7 +107,7 @@ TinyPilot's order fulfillment had always been extremely smooth, which was why I'
 
 In March 2023, TinyPilot switched from fulfilling orders in-house to [using a third-party logistics (3PL) warehouse](/retrospectives/2023/04/). We were still assembling devices at our office, but we'd send customer-ready packages to the warehouse in bulk, and the 3PL would handle the final step of shipping orders to customers.
 
-At the time of the 3PL shift, we were in ["urgent mode."](/retrospectives/2023/05/#getting-out-of-ldquourgent-moderdquo) Our team of two part-time employees assembled about fifty devices per week, but customers were buying at the same rate. It was a stressful situation because any interruption put us at risk of halting sales.
+At the time of the 3PL shift, we were in ["urgent mode."](/retrospectives/2023/05/#getting-out-of-urgent-mode) Our team of two part-time employees assembled about fifty devices per week, but customers were buying at the same rate. It was a stressful situation because any interruption put us at risk of halting sales.
 
 I hoped that outsourcing fulfillment would free up enough of the team's time to produce about 100 devices per week. It turned out that our full capacity was only about 70. At that rate, it would take months of working at maximum capacity to build up a healthy inventory at the warehouse. I ended up hiring a third employee temporarily to get us through the summer.
 

@@ -55,7 +55,7 @@ It's exciting to see that the site is still growing even though I stopped workin
 
 [Zestful](https://zestfuldata.com), the ingredient parsing service I built last year, earned $123.85 of revenue in May. That's the first time its monthly earnings have been more than a couple of dollars.
 
-Almost the full amount comes from a single customer who needed Zestful for a one-time project, so it's unlikely to repeat for long, but it's fun to get a bit of money back on a project that [cost me ~$8k](/solo-developer-year-1/#zestfulhttpszestfuldatacom).
+Almost the full amount comes from a single customer who needed Zestful for a one-time project, so it's unlikely to repeat for long, but it's fun to get a bit of money back on a project that [cost me ~$8k](/solo-developer-year-1/#zestful).
 
 ## What Got Done: business or hobby?
 

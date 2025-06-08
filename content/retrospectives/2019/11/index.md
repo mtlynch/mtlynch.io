@@ -54,7 +54,7 @@ It still feels unfortunate that I can't connect my [guide to hiring writers](/hi
 | Meal Plan Sales           | N/A            | $23.87       | N/A                                         |
 | **Total Revenue**         | **$328.85**    | **$258.54**  | **<font color="red">-$70.31 (-21%)</font>** |
 
-Revenues are way down from my [August peak](/retrospectives/2019/09/#is-it-ketohttpsisitketoorg) of $389. The loss comes from reductions in AdSense earnings, which I believe have two causes:
+Revenues are way down from my [August peak](/retrospectives/2019/09/#is-it-keto) of $389. The loss comes from reductions in AdSense earnings, which I believe have two causes:
 
 - I reduced the sizes of my ads, as the previous sizes were overwhelming the page ([before](https://imgur.com/oAeqEDB) vs. [after](https://imgur.com/O3VPlM1)).
 - I replaced some of my AdSense ads with [self-ads](#i-added-self-ads) for Is It Keto paid meal plans.

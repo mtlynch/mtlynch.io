@@ -20,7 +20,7 @@ I find [the idea of social capital](/book-reports/bowling-alone/#social-capital)
 ## What I liked
 
 - The history of social and political group membership in the US was interesting.
-- The [correlations](#social-capital-indexhttpswwwoecdorginnovationresearch1825848pdf) between measures of civic engagement and other measures of social well-being were surprising and enlightening.
+- The [correlations](#social-capital-index) between measures of civic engagement and other measures of social well-being were surprising and enlightening.
 - The middle third of the book was engaging, especially the discussion of how television has affected social capital.
 
 ## What I disliked
