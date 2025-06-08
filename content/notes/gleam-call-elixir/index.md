@@ -1,6 +1,9 @@
 ---
 title: "A Simple Example of Calling an Elixir Library from Gleam"
-date: 2025-05-31
+date: 2025-06-08
+tags:
+  - gleam
+  - elixir
 ---
 
 I've been experimenting a bit with Gleam and Elixir lately as part of [my search for a new programming language](/notes/which-new-language/).
