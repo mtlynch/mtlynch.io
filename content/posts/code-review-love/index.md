@@ -62,7 +62,7 @@ Before sending code to your teammate, read it yourself. Don't just check for mis
 
 I find it helpful to take a break between writing my code and reviewing it. People often fire off their changes at the end of the day, but that's when you're most likely to overlook careless errors. Wait until morning, and look at the changelist with fresh eyes before handing it over to your teammate.
 
-{{<img src="what-idiot.jpg" alt="First panel: Dog reads changelist and asks 'What idiot wrote this?' Second panel: PR title is 'Sync cron jobs to lunar cycle' with description 'I've added this sync logic to ensure that nature is in harmony with our ETL pipeline. Dictated but not read' signed by the same Dog from the first panel. Third panel: Dog is grimacing.">}}
+{{<img src="what-idiot.jpg" alt="First panel: Dog reads changelist and asks 'What idiot wrote this?' Second panel: PR title is 'Sync cron jobs to lunar cycle' with description 'I've added this sync logic to ensure that nature is in harmony with our ETL pipeline. Dictated but not read' signed by the same Dog from the first panel. Third panel: Dog is grimacing." has-border="false">}}
 
 Adopt your reviewer's environment as much as possible. Use the same diff view that they'll see. It's easier to catch dumb mistakes in a diff view than in your regular source editor.
 
@@ -84,7 +84,7 @@ For a deeper dive into excellent changelist descriptions, see my article, ["How 
 
 If you rely on your reviewer to tell you when your curly braces are on the wrong line or that your change broke the automated test suite, you're wasting their time.
 
-{{<img src="verify-syntax.jpg" alt="Dog interrupts cat's work, asking 'Can you verify that my code syntax is correct? I'd ask the compiler, but I don't want to waste its time.'">}}
+{{<img src="verify-syntax.jpg" alt="Dog interrupts cat's work, asking 'Can you verify that my code syntax is correct? I'd ask the compiler, but I don't want to waste its time.'" has-border="false">}}
 
 Automated tests should be part of your team's standard workflow. The review begins after [all automated checks pass in a continuous integration environment](/human-code-reviews-1/#let-computers-do-the-boring-parts).
 
@@ -100,7 +100,7 @@ The author helped me understand the function, but what about the next person who
 
 When your reviewer expresses confusion about how the code works, the solution isn't to explain it to that one person. You need to explain it to _everyone_.
 
-{{<img src="late-night-question.jpg" max-width="600px" alt="Dog: Hello? Cat: When you wrote bill.py six years ago, why'd you make t=6? Dog: I'm glad you called! It's because sales tax is 6%. Cat: Of course! Dog: This is a good way to communicate implementation choices. Cat: smiles">}}
+{{<img src="late-night-question.jpg" max-width="600px" alt="Dog: Hello? Cat: When you wrote bill.py six years ago, why'd you make t=6? Dog: I'm glad you called! It's because sales tax is 6%. Cat: Of course! Dog: This is a good way to communicate implementation choices. Cat: smiles" has-border="false">}}
 
 The best way to answer someone's question is to refactor the code and eliminate the confusion. Can you rename things or restructure logic to make it more clear? Code comments are an acceptable solution, but they're strictly inferior to code that documents itself naturally.
 
@@ -210,7 +210,7 @@ A few months ago, a user contributed a small change to an open-source project I 
 
 Six weeks later, the mysterious developer reappeared to submit their revisions. While I appreciated their effort, the lag between rounds of review had doubled my workload. Not only did I have to re-read their code, but I also had to re-read my feedback to restore my memory of the discussion. Had they followed up within a day or two, I wouldn't have had to do all that extra work.
 
-{{<img src="effort-graph.jpg" alt="Graph of reviewer's memory vs review latency shows wasted effort when there are long delays between review rounds.">}}
+{{<img src="effort-graph.jpg" alt="Graph of reviewer's memory vs review latency shows wasted effort when there are long delays between review rounds." has-border="false">}}
 
 A six-week pause is extreme, but I frequently see long, unnecessary delays among teammates. Someone sends out a changelist for review, receives feedback, then puts it on the back burner for a week because another task distracted them.
 

@@ -37,7 +37,7 @@ ClipBucket's business ran on a consulting model &mdash; they released their code
 
 After a few months of frustration with ClipBucket, I reassessed what was available and found [MediaGoblin](https://mediagoblin.org/).
 
-{{<img src="mediagoblin-homepage.png" alt="MediaGoblin's homepage" max-width="800px" caption="[MediaGoblin](https://mediagoblin.org/) is a self-hosted media sharing platform.">}}
+{{<img src="mediagoblin-homepage.png" alt="MediaGoblin's homepage" max-width="800px" caption="[MediaGoblin](https://mediagoblin.org/) is a self-hosted media sharing platform." has-border="false">}}
 
 There was plenty to like about MediaGoblin. Unlike ClipBucket's unsightly PHP, MediaGoblin was written in Python, a language in which I have plenty of experience. It included a [command-line interface](https://mediagoblin.readthedocs.io/en/v0.9.0/siteadmin/commandline-upload.html) that made it easy to automate video uploads. Best of all, MediaGoblin [offered a Docker image](https://wiki.mediagoblin.org/index.php?title=EasyDeployment&oldid=1874), which would eliminate any installation guesswork.
 
@@ -140,11 +140,11 @@ My family loved how easy it was to browse through videos. With the Nginx perform
 
 The browse screen looked like this:
 
-{{<img src="mediagoblin-home.png" alt="MediaGoblin browse screen" max-width="800px" caption="Browse screen of my family's home video sharing server">}}
+{{<img src="mediagoblin-home.png" alt="MediaGoblin browse screen" max-width="800px" caption="Browse screen of my family's home video sharing server" has-border="false">}}
 
 Clicking a thumbnail brought you to a screen like this:
 
-{{<img src="mediagoblin-single-video.jpg" alt="Screenshot of MediaGoblin displaying a video" max-width="800px" caption="Viewing an individual clip on the media server">}}
+{{<img src="mediagoblin-single-video.jpg" alt="Screenshot of MediaGoblin displaying a video" max-width="800px" caption="Viewing an individual clip on the media server" has-border="false">}}
 
 After years of work, it was incredibly gratifying to give my family the YouTube-like experience for exploring our videos that I originally envisioned.
 

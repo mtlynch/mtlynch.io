@@ -79,7 +79,7 @@ One of my goals last month was to do something more substantial with Is It Keto'
 
 My first idea was something basically like [wip.chat](https://wip.chat). People could post photos and progress updates and encourage each other. I created a landing page that loosely described the idea:
 
-{{<img src="social-landing-page.png" alt="Screenshot of Cornerstone social network landing page" max-width="400px" caption="Landing page for my first idea: a keto social network">}}
+{{<img src="social-landing-page.png" alt="Screenshot of Cornerstone social network landing page" max-width="400px" caption="Landing page for my first idea: a keto social network" has-border="false">}}
 
 Of people who reached the landing page, 4.6% signed up, but only 20-30 users per day clicked the landing page at all. 1,500-2,200 people visit Is It Keto each day, and an average of one person signed up each day, so the page converted less than 0.1% of total visitors.
 
@@ -91,7 +91,7 @@ Nobody replied or joined the Slack. I tried writing direct emails to people, but
 
 After reaching out to users on Reddit, one woman told me that their primary keto community is a local [Telegram](https://telegram.org/) chat group. She said that her group of keto friends swap tips about local restaurants and grocery stores and share recipes. That sounded like an interesting idea, so I created a landing page to see if it clicked for other people.
 
-{{<img src="chat-landing-page.png" alt="Screenshot of Cornerstone group chat landing page" max-width="200px" caption="Landing page for my second idea: a keto-specialized local group chat app">}}
+{{<img src="chat-landing-page.png" alt="Screenshot of Cornerstone group chat landing page" max-width="200px" caption="Landing page for my second idea: a keto-specialized local group chat app" has-border="false">}}
 
 That landing page performed even worse, with only a 2% signup rate. I've since removed the links and ads for those landing pages until I have the bandwidth to test a new idea.
 
@@ -173,7 +173,7 @@ Okay, I feel like this retrospective has been mostly negative, so now for some g
 
 It's the first time I've ever sold a pre-order of anything, so it was pretty fun.
 
-{{<img src="kvmpi-assembled.jpg" alt="Photo of KVM Pi device" max-width="600px" caption="My KVM Pi demo device">}}
+{{<img src="kvmpi-assembled.jpg" alt="Photo of KVM Pi device" max-width="600px" caption="My KVM Pi demo device" has-border="false">}}
 
 Here was my process:
 

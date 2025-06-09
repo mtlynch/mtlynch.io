@@ -7,7 +7,7 @@ images:
 
 I'm teaching a small-group, live course about attracting readers to your blog through Hacker News. [Sign up](#sign-up) by Monday (June 24th) to reserve your slot.
 
-{{<img src="cover.webp">}}
+{{<img src="cover.webp" has-border="false">}}
 
 ## Why take a class with me?
 

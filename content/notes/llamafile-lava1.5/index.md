@@ -11,7 +11,7 @@ I read [Simon Willison's post](https://simonwillison.net/2023/Nov/29/llamafile/)
 
 One of my longtime hobby projects is [WanderJest](https://wanderjest.com), a site for finding live comedy. One of the challenges of that site is that the canonical information about an upcoming show is often the poster for it. Here's an example:
 
-{{<img src="luthiers-show.jpg" max-width="400px">}}
+{{<img src="luthiers-show.jpg" max-width="400px" has-border="false">}}
 
 I've been scraping this information by hand, but that's tedious and time-consuming.
 

@@ -23,13 +23,13 @@ This is part two of a three-part series about how I resurrected [ingredient-phra
 - **Part Two: Stabilization (this post)** - In which I prevent functionality from regressing while I restore the code
 - [Part Three: Rehabilitation](/resurrecting-3/) - In which I begin refactoring the code
 
-{{<img src="cover.jpg" alt="Beavers stabilizing shaky house" max-width="800px">}}
+{{<img src="cover.jpg" alt="Beavers stabilizing shaky house" max-width="800px" has-border="false">}}
 
 ## Running it in continuous integration
 
 At the end of part one, I created a Docker image that allowed the library to run on any system. The next step was to run the library in continuous integration.
 
-{{<img src="travis-ci-logo.png" alt="Travis CI logo" max-width="300px" align="right" href="https://travis-ci.org/">}}
+{{<img src="travis-ci-logo.png" alt="Travis CI logo" max-width="300px" align="right" href="https://travis-ci.org/" has-border="false">}}
 
 Continuous integration is the practice of using an indepedent, controlled environment to test software on each change to the code. My preferred continuous integration solution is [Travis](https://travis-ci.org). Their configuration files are intuitive, and they offer unlimited free builds for open-source projects.
 
@@ -257,7 +257,7 @@ This sounded promising.
 
 I compared the CRF++ output on Travis to the same output lines in my local environment:
 
-{{<img src="thread-delta.png" alt="Difference in crf_learn thread count between local machine and Travis" caption="crf_learn runs with two threads on Travis, but eight in my local environment" max-width="800px">}}
+{{<img src="thread-delta.png" alt="Difference in crf_learn thread count between local machine and Travis" caption="crf_learn runs with two threads on Travis, but eight in my local environment" max-width="800px" has-border="false">}}
 
 Ah ha!
 

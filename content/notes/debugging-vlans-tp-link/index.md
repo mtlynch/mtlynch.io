@@ -11,7 +11,7 @@ tags:
 
 I recently bought my first-ever managed networking switch, a [TP-Link JetStream TL-SG3428X](https://www.tp-link.com/us/business-networking/omada-sdn-switch/tl-sg3428x/).
 
-{{<img src="tp-link-exterior.webp" alt="Photo of my TP-Link managed switch">}}
+{{<img src="tp-link-exterior.webp" alt="Photo of my TP-Link managed switch" has-border="false">}}
 
 The main feature of a managed switch is that it lets you segment your network into VLANs. I was excited about this functionality, but it took me hours of trial and error to get VLANs working.
 
@@ -83,7 +83,7 @@ The "Port Config" tab lets you configure the PVID for any ports. Again, you'd on
 
 Some switches leave PVID out of the configuration. They just show tagged ports and untagged ports &mdash; the switch automatically sets the PVID for you.
 
-{{<img src="qnap-vlan.webp" alt="Still from Raid Owl video showing a better VLAN management interface on a QNAP switch" caption="A screenshot of the VLAN admin interface on a QNAP managed switch. QNAP's interface is vastly more intuitive than TP-Link's.">}}
+{{<img src="qnap-vlan.webp" alt="Still from Raid Owl video showing a better VLAN management interface on a QNAP switch" caption="A screenshot of the VLAN admin interface on a QNAP managed switch. QNAP's interface is vastly more intuitive than TP-Link's." has-border="false">}}
 
 On switches that don't expose a PVID setting, adding a port to VLAN 20 as an untagged port implicitly sets the port's PVID to 20. I wish TP-Link had taken this approach because their implementation is needlessly complicated.
 
@@ -143,7 +143,7 @@ After that configuration change, my WiFi devices got Internet again. The switch 
 
 I ran into another issue when I tried to add an untrusted device to my network. I have solar panels on my house, and to monitor their status, I have to use this proprietary IoT device.
 
-{{<img src="iot-device.webp" alt="Photo of small device in my hand with an RJ45 cable plugged in" caption="An untrusted IoT device on my network that tracks the status of my outdoor solar panels" max-width="300px">}}
+{{<img src="iot-device.webp" alt="Photo of small device in my hand with an RJ45 cable plugged in" caption="An untrusted IoT device on my network that tracks the status of my outdoor solar panels" max-width="300px" has-border="false">}}
 
 The IoT device needs Internet access to upload metrics to the vendor's cloud dashboard. I have no idea what other mischief this little box might be doing, so I don't want it to have access to anything on my home network.
 
@@ -156,8 +156,8 @@ I then added the solar monitoring IoT device's port on the TP-Link switch to the
 Assigning the port to the VLAN as an untagged port strips the VLAN tag from packets before they reach the IoT device. Assigning the PVID adds the VLAN tag to packets that the IoT device sends into the switch.
 
 {{<gallery caption="I added the untrusted IoT device to the Purgatory VLAN as an untagged port.">}}
-{{<img src="purgatory-ports.png" alt="Screenshot of Purgatory VLAN on TP-Link switch. Port 24 is a member of the VLAN as an untagged port. The VLAN has no other members.">}}
-{{<img src="purgatory-pvid.webp" alt="Screenshot of port 24 in TP-Link's port config showing a PVID of 80">}}
+{{<img src="purgatory-ports.png" alt="Screenshot of Purgatory VLAN on TP-Link switch. Port 24 is a member of the VLAN as an untagged port. The VLAN has no other members." has-border="false">}}
+{{<img src="purgatory-pvid.webp" alt="Screenshot of port 24 in TP-Link's port config showing a PVID of 80" has-border="false">}}
 {{</gallery>}}
 
 But it didn't work. The cloud dashboard immediately reported the IoT device as offline.
@@ -200,7 +200,7 @@ I'm normally reluctant to pull in Wireshark. It's a fantastic tool, but I always
 
 In this case, I didn't have to do anything clever with Wireshark at all. As soon as I pulled it up and saw traffic trying to exit my device and nothing coming back, I realized what was wrong.
 
-{{<img src="wireshark.webp" max-width="800px" alt="Screenshot of Wireshark" caption="Wireshark's output made me realize when my switch was dropping all traffic from my test device.">}}
+{{<img src="wireshark.webp" max-width="800px" alt="Screenshot of Wireshark" caption="Wireshark's output made me realize when my switch was dropping all traffic from my test device." has-border="false">}}
 
 ### Rebooting
 

@@ -21,7 +21,7 @@ Three years ago, I took things to the next level by [building my own homelab ser
 
 In the past few months, I began hitting the limits of my VM server. My projects have become more resource-hungry, and mistakes I'd made in my first build were coming back to bite me. I decided to build a brand new homelab VM server for 2020.
 
-{{<img src="build-components.jpg" alt="Photo of my server build components" max-width="600px" caption="Components of my new VM server build (most of them, anyway)">}}
+{{<img src="build-components.jpg" alt="Photo of my server build components" max-width="600px" caption="Components of my new VM server build (most of them, anyway)" has-border="false">}}
 
 ## I don't care about the backstory; show me your build!
 
@@ -81,7 +81,7 @@ Over time, Kimchi's shortcomings became more and more apparent. I often had to c
 
 ### 3. Plan for remote administration
 
-{{<img src="vm-server-front.jpg" alt="Photo of my old VM server" max-width="250px" align="right" caption="My VM server is tucked away in the corner, which is convenient except for the occasional instance where I need physical access.">}}
+{{<img src="vm-server-front.jpg" alt="Photo of my old VM server" max-width="250px" align="right" caption="My VM server is tucked away in the corner, which is convenient except for the occasional instance where I need physical access." has-border="false">}}
 
 If you read the above and thought, "Kimchi is just software. Why did Michael have to build a whole new server just to install a different VM manager?" It's because I failed to anticipate the importance of remote administration.
 
@@ -89,7 +89,7 @@ My VM server is just a PC that sits in the corner of my office with no monitor o
 
 For my next build, I wanted a virtual console with physical-level access to the machine as soon as it powered on. I was thinking something like [Dell's iDRAC](https://en.wikipedia.org/wiki/Dell_DRAC) or [HP's iLO](https://en.wikipedia.org/wiki/HP_Integrated_Lights-Out).
 
-{{<img src="idrac.png" alt="Screenshot of Dell iDRAC interface" max-width="600px" caption="Dell iDRAC was one option I considered for remote server management.">}}
+{{<img src="idrac.png" alt="Screenshot of Dell iDRAC interface" max-width="600px" caption="Dell iDRAC was one option I considered for remote server management." has-border="false">}}
 
 ## Choosing components
 
@@ -97,7 +97,7 @@ For my next build, I wanted a virtual console with physical-level access to the 
 
 My first VM server's CPU was a [Ryzen 7 1700](https://www.amd.com/en/products/cpu/amd-ryzen-7-1700). At eight cores and 16 threads, it was [the hot new CPU at the time](https://www.tomshardware.com/reviews/amd-ryzen-7-1700-cpu-review,5009.html). But when I showed off my build on [/r/homelab](https://www.reddit.com/r/homelab/), reddit's homelab subcommunity, they mocked me as a filthy casual because I used _consumer_ parts. The cool kids used enterprise gear.
 
-{{<img src="do-u-even.png" alt="redditor /u/pylori asks 'Bro, do you even homelab? Seriously you're worried about hardware failure on enterprise gear that's built to outlast newer consumer stuff?'" caption="[/r/homelab was unimpressed](https://www.reddit.com/r/homelab/comments/69sk2v/building_a_homelab_vm_server/dh93sur/) with my first build.">}}
+{{<img src="do-u-even.png" alt="redditor /u/pylori asks 'Bro, do you even homelab? Seriously you're worried about hardware failure on enterprise gear that's built to outlast newer consumer stuff?'" caption="[/r/homelab was unimpressed](https://www.reddit.com/r/homelab/comments/69sk2v/building_a_homelab_vm_server/dh93sur/) with my first build." has-border="false">}}
 
 Resolved never to let /r/homelab make fun of me again, I ventured into the world of enterprise server hardware. I even got fancy and chose to build a system with two physical CPUs.
 
@@ -106,7 +106,7 @@ To get the best performance for my dollar, I restricted my search to used CPUs, 
 The most cost-efficient performance seemed to be in the [Intel Xeon E5 v3](https://ark.intel.com/content/www/us/en/ark/products/series/78583/intel-xeon-processor-e5-v3-family.html) family, especially the 2600 models. I settled on the [E5-2680 v3](https://ark.intel.com/content/www/us/en/ark/products/81908/intel-xeon-processor-e5-2680-v3-30m-cache-2-50-ghz.html). It had an average benchmark of 15,618 and cost ~$130 used on eBay.
 
 {{<gallery  caption="The Intel Xeon E5-2680 v3 [scores 15,618 on cpubenchmark.net](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2680+v3+%40+2.50GHz&id=2390).">}}
-{{<img src="xeon-e5-2680v3.jpg" alt="Photo of Intel Xeon E5-2680 v3 CPU" max-width="420px" href="https://www.newegg.com/supermicro-mbd-x10dal-i-o-intel-xeon-processor-e5-2600-v4-v3-family/p/N82E16813182967">}}
+{{<img src="xeon-e5-2680v3.jpg" alt="Photo of Intel Xeon E5-2680 v3 CPU" max-width="420px" href="https://www.newegg.com/supermicro-mbd-x10dal-i-o-intel-xeon-processor-e5-2600-v4-v3-family/p/N82E16813182967" has-border="false">}}
 {{<img src="xeon-benchmark.png" alt="Screenshot of Xeon E5-2680 v3's 15618 score on cpubenchmark.net" max-width="490px" has-border="true">}}
 {{</gallery>}}
 
@@ -114,7 +114,7 @@ For context, my previous build's Ryzen 7 had a benchmark of 14,611. So with dual
 
 ### Motherboard
 
-{{<img src="supermicro-mbd-x10dal.jpg" alt="Photo of SuperMicro MBD-X10DAL-I-O motherboard" max-width="280px" align="left" href="https://www.newegg.com/supermicro-mbd-x10dal-i-o-intel-xeon-processor-e5-2600-v4-v3-family/p/N82E16813182967">}}
+{{<img src="supermicro-mbd-x10dal.jpg" alt="Photo of SuperMicro MBD-X10DAL-I-O motherboard" max-width="280px" align="left" href="https://www.newegg.com/supermicro-mbd-x10dal-i-o-intel-xeon-processor-e5-2600-v4-v3-family/p/N82E16813182967" has-border="false">}}
 
 The downside of a dual-CPU system was that it limited my options for motherboards. Only a handful of motherboards support dual Intel 2011-v3 CPUs. Their prices ranged from $300 to $850, which was far more than I expected to spend on a motherboard.
 
@@ -122,7 +122,7 @@ I chose the [SuperMicro MBD-X10DAL-I-O](https://www.newegg.com/supermicro-mbd-x1
 
 ### Memory
 
-{{<img src="crucial-ct4k16g4rfd4213.jpg" alt="Photo of Crucial RAM sticks" max-width="200px" align="right" href="https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278">}}
+{{<img src="crucial-ct4k16g4rfd4213.jpg" alt="Photo of Crucial RAM sticks" max-width="200px" align="right" href="https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278" has-border="false">}}
 
 There seems to be a lot less informed choice for server memory. With consumer hardware, plenty of websites publish reviews and benchmarks of different RAM sticks, but I didn't see anything like that for server RAM.
 
@@ -130,7 +130,7 @@ I went with [Crucial CT4K16G4RFD4213 64 GB (4 x 16 GB)](https://www.newegg.com/c
 
 ### Storage
 
-{{<img src="ssd.jpg" alt="Photo of Samsung 860 EVO" max-width="200px" align="right" href="https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278">}}
+{{<img src="ssd.jpg" alt="Photo of Samsung 860 EVO" max-width="200px" align="right" href="https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278" has-border="false">}}
 
 I love M.2 SSDs, as they're small, perform outstandingly, and neatly tuck away in the motherboard without any cabling. Sadly, the MBD-X10DAL doesn't support the M.2 interface.
 
@@ -138,7 +138,7 @@ Instead, I stuck with traditional old SATA. I bought a [1 TB Samsung 860 EVO](ht
 
 ### Power
 
-{{<img src="psu.jpg" alt="Photo of Corsair CX550M 550W 80 Plus Bronze" max-width="200px" align="left" href="https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278">}}
+{{<img src="psu.jpg" alt="Photo of Corsair CX550M 550W 80 Plus Bronze" max-width="200px" align="left" href="https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278" has-border="false">}}
 
 Choosing a power supply unit (PSU) isn't that interesting, so I again chose mainly by trusted brand, the [Corsair CX550M 550W 80 Plus Bronze](https://www.newegg.com/corsair-cx-series-cx550m-550w/p/N82E16817139147?Item=N82E16817139147).
 
@@ -148,13 +148,13 @@ The only other important feature to me was semi-modular cabling. In my last buil
 
 ### Fans
 
-{{<img src="hyper-212.jpg" alt="Photo of Hyper 212 CPU fan" max-width="200px" align="right" href="https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278">}}
+{{<img src="hyper-212.jpg" alt="Photo of Hyper 212 CPU fan" max-width="200px" align="right" href="https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278" has-border="false">}}
 
 The dual-CPU build made cooling an unexpected challenge. The MBD-X10DAL doesn't leave much space between the two CPU sockets, so I looked carefully for fans thin enough to work side-by-side. A pair of [Cooler Master Hyper 212s](https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278) fit the bill.
 
 ### Case
 
-{{<img src="fractal-meshify.jpg" alt="Photo of Fractal Meshify C case" max-width="200px" align="left" href="https://www.newegg.com/black-fractal-design-meshify-c-atx-mid-tower/p/N82E16811352085?Item=N82E16811352085">}}
+{{<img src="fractal-meshify.jpg" alt="Photo of Fractal Meshify C case" max-width="200px" align="left" href="https://www.newegg.com/black-fractal-design-meshify-c-atx-mid-tower/p/N82E16811352085?Item=N82E16811352085" has-border="false">}}
 
 My server sits inconspicuously in the corner of my office, so I didn't want a case with clear panels or flashy lights.
 
@@ -162,7 +162,7 @@ The [Fractal Design Meshify C Black](https://www.newegg.com/black-fractal-design
 
 ### Graphics
 
-{{<img src="msi-geforce-gt-710.jpg" alt="Photo of MSI GeForce GT170 GPU" max-width="200px" align="right" href="https://www.newegg.com/black-fractal-design-meshify-c-atx-mid-tower/p/N82E16811352085?Item=N82E16811352085">}}
+{{<img src="msi-geforce-gt-710.jpg" alt="Photo of MSI GeForce GT170 GPU" max-width="200px" align="right" href="https://www.newegg.com/black-fractal-design-meshify-c-atx-mid-tower/p/N82E16811352085?Item=N82E16811352085" has-border="false">}}
 
 For a headless server, the graphics card doesn't matter much. It's still necessary so I can see the screen during the initial install and the occasional debugging session, so I went with the [MSI GeForce GT 710](https://www.newegg.com/msi-geforce-gt-710-gt-710-1gd3h-lp/p/N82E16814127931?Item=N82E16814127931) as a cheap, easy option.
 
@@ -175,7 +175,7 @@ I looked into remote administration solutions and was blown away by how expensiv
 To achieve remote administration, I took the unusual approach of [building my own KVM over IP device](/tinypilot) out of a Raspberry Pi. I call it [TinyPilot](https://tinypilotkvm.com/).
 
 {{<gallery caption="Using [TinyPilot](https://tinypilotkvm.com/) to install an OS on my server">}}
-{{<img src="tinypilot-server.jpg" alt="Photo of TinyPilot plugged into server" max-width="260px">}}
+{{<img src="tinypilot-server.jpg" alt="Photo of TinyPilot plugged into server" max-width="260px" has-border="false">}}
 
 <a href="bios-mouse.gif"><img src="bios-mouse.gif" alt="Screen capture of Proxmox install through TinyPilot" class="img" style="width: 500px; max-width: 100%; object-fit: contain;"></a>
 
@@ -201,18 +201,18 @@ TinyPilot captures HDMI output and forwards keyboard and mouse input from the br
 &nbsp;
 
 {{<gallery caption="The Meshify C has been my all-time favorite case for cable management. Its built-in velcro straps organize the cables, and little rubber dividers hide them in the far side of the case.">}}
-{{<img src="cable-management-1.jpg" alt="Photo of outer side of empty case">}}
-{{<img src="cable-management-2.jpg" alt="Photo of empty case interior">}}
+{{<img src="cable-management-1.jpg" alt="Photo of outer side of empty case" has-border="false">}}
+{{<img src="cable-management-2.jpg" alt="Photo of empty case interior" has-border="false">}}
 {{</gallery>}}
 
 &nbsp;
 
 {{<gallery caption="Installing the motherboard, CPU, RAM, and fans">}}
-{{<img src="installing-cpu.jpg" alt="Photo of motherboard with CPUs installed">}}
-{{<img src="install-everything.jpg" alt="Photo of motherboard with all components installed">}}
+{{<img src="installing-cpu.jpg" alt="Photo of motherboard with CPUs installed" has-border="false">}}
+{{<img src="install-everything.jpg" alt="Photo of motherboard with all components installed" has-border="false">}}
 {{</gallery>}}
 
-{{<img src="build-completed.jpg" alt="My completed homelab VM server build" max-width="600px" caption="My completed build in its new home">}}
+{{<img src="build-completed.jpg" alt="My completed homelab VM server build" max-width="600px" caption="My completed build in its new home" has-border="false">}}
 
 ## VM Management: Proxmox
 
@@ -252,7 +252,7 @@ The first benchmark I took was provisioning a new VM. I have a standard Ubuntu 1
 1. Reboot the VM to pick up the new hostname.
 1. Pick up the latest software with `apt update && apt upgrade`.
 
-{{<img src="provision-vm.png" alt="Graph showing 2020 server outperforms my 2017 server on both NAS and SSD">}}
+{{<img src="provision-vm.png" alt="Graph showing 2020 server outperforms my 2017 server on both NAS and SSD" has-border="false">}}
 
 My new server brought a huge speedup to this workflow. Cloning a VM went from 15 minutes on my old server to less than four minutes on the new one.
 
@@ -262,7 +262,7 @@ If I skip the package upgrade step, the speedup is a little less impressive. The
 
 From the moment I power on a VM, how long does it take for me to see the login prompt?
 
-{{<img src="boot-vm.png" alt="Graph showing 2017 server completed in 48.5 seconds on NAS, 32.4 seconds on SSD vs. my 2020 server completed in 18.5 seconds">}}
+{{<img src="boot-vm.png" alt="Graph showing 2017 server completed in 48.5 seconds on NAS, 32.4 seconds on SSD vs. my 2020 server completed in 18.5 seconds" has-border="false">}}
 
 My old VMs booted in 48 seconds. The few SSD VMs on my old system did a little better, showing the login prompt in 32 seconds. My new server blows both away, booting up a VM in only 18 seconds.
 
@@ -272,7 +272,7 @@ My weekly journaling app, [What Got Done](https://whatgotdone.com), has automate
 
 {{<video src="wgt-test.mp4" max-width="600px">}}
 
-{{<img src="build-wgt.png" alt="Graph showing 2017 SSD server completed in 5.4 minutes vs. 2020 server completed in 5.6 minutes">}}
+{{<img src="build-wgt.png" alt="Graph showing 2017 SSD server completed in 5.4 minutes vs. 2020 server completed in 5.6 minutes" has-border="false">}}
 
 Surprisingly, there was no significant performance difference between the two servers. For a cold start (downloading all of the Docker base images), the new server is 2% slower than the old one. When the base Docker images are available locally, my new server beats my old, but only by 6%. It looks like the bottleneck is mainly the disk and browser interaction, so the new server doesn't make much of a difference.
 
@@ -280,7 +280,7 @@ Surprisingly, there was no significant performance difference between the two se
 
 One frequent workflow I have is building [Is It Keto](https://isitketo.org), my resource for keto dieters. I generate the site using [Gridsome](https://gridsome.org/), a static site generator for [Vue](https://vuejs.org/).
 
-{{<img src="build-isitketo.png" alt="Graph showing 2017 SSD server completed in 3.7 minutes vs. 2020 server completed in 4 minutes">}}
+{{<img src="build-isitketo.png" alt="Graph showing 2017 SSD server completed in 3.7 minutes vs. 2020 server completed in 4 minutes" has-border="false">}}
 
 I expected a significant speedup here, so I was surprised when my build got slower. The build seemed to be mostly CPU-bound on my old server, but doubling CPU resources on my new server did nothing. My next guess was that it was disk-bound, so I tried moving the files to a RAMdisk, but build speeds remained the same.
 
@@ -290,7 +290,7 @@ My hypothesis is that the workflow is CPU-bound but parallelizes poorly. My old 
 
 [Zestful](https://zestfuldata.com) is my machine-learning-based API for parsing recipe ingredients. Every few months, I train it on new data. This is my most CPU-intensive workflow, so I was interested to see how the new system would handle it.
 
-{{<img src="train-zestful.png" alt="Graph showing 2017 SSD server completed in 18.3 minutes vs. 2020 server completed in 8 minutes">}}
+{{<img src="train-zestful.png" alt="Graph showing 2017 SSD server completed in 18.3 minutes vs. 2020 server completed in 8 minutes" has-border="false">}}
 
 Finally, a case where my 48 CPU cores shine! The new server blows the old one away, training the model in less than half the time. Unfortunately, it's a workflow I only run a few times per year.
 

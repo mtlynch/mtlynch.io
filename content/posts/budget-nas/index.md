@@ -33,8 +33,8 @@ In this post, I'll walk through how I chose the parts, what mistakes I made, and
 - [2.5-year update](#25-year-update) - Added November 2024
 
 {{<gallery caption="Before and after of my 2022 homelab TrueNAS server build">}}
-{{<img src="all-parts.jpg" alt="Photo of NAS server parts in retail packaging" max-width="450px">}}
-{{<img src="completed-build.jpg" alt="Photo of completed server build" max-width="450px">}}
+{{<img src="all-parts.jpg" alt="Photo of NAS server parts in retail packaging" max-width="450px" has-border="false">}}
+{{<img src="completed-build.jpg" alt="Photo of completed server build" max-width="450px" has-border="false">}}
 {{</gallery>}}
 
 If you'd prefer a video explanation, I recorded one on YouTube.
@@ -55,7 +55,7 @@ I also have a _lot_ of data. I'm a [data hoarder](https://www.reddit.com/r/DataH
 
 The biggest data source is my DVD and Blu-Ray collection. I don't like relying on streaming services to keep my favorite content available, so I still buy physical copies of movies and TV shows. As soon as I get a new disc, I rip the raw image and make a streamable video file. Between the raw ISO copy and the streamable MP4s, a single disc can occupy 60 GB of disk space.
 
-{{<img src="dvd-collection.jpg" alt="Photo of two 500-disc binders of DVDs and Blu-Rays" max-width="600px" caption="I still buy physical DVDs or Blu-Rays for anything I might watch a second time.">}}
+{{<img src="dvd-collection.jpg" alt="Photo of two 500-disc binders of DVDs and Blu-Rays" max-width="600px" caption="I still buy physical DVDs or Blu-Rays for anything I might watch a second time." has-border="false">}}
 
 ### What's a homelab?
 
@@ -71,7 +71,7 @@ There are off-the-shelf solutions that offer similar functionality with a gentle
 
 Before building my own homelab NAS, I used a 4-disk [Synology DS412+](https://www.newegg.com/synology-ds412/p/N82E16822108113) for seven years. Honestly, I loved my Synology. It was one of the best purchases I ever made. It was a gentle introduction to the world of NAS servers, and it's where I'd recommend you start if you're not sure about the whole NAS thing.
 
-{{<img src="ds412-plus.jpg" alt="Photo of Synology DS412+ on my shelf" caption="My 10 TB Synology DS412+ has served me well for seven years." max-width="600px">}}
+{{<img src="ds412-plus.jpg" alt="Photo of Synology DS412+ on my shelf" caption="My 10 TB Synology DS412+ has served me well for seven years." max-width="600px" has-border="false">}}
 
 A few months ago, my Synology failed to boot and started making a clicking noise. A chill ran up my spine as I realized how dependent I'd become on this single device. Synology servers are not user-repairable, so if a part breaks after warranty, you have to replace the whole server. And if you're dumb like me, and you've used a Synology-proprietary storage format, ~~you can't access your data without another Synology system~~. (Edit: A [commenter on Hacker News](https://news.ycombinator.com/item?id=31549755) showed me that you can [recover a Synology Hybrid RAID volume from a non-Synology system](https://kb.synology.com/en-us/DSM/tutorial/How_can_I_recover_data_from_my_DiskStation_using_a_PC).)
 
@@ -150,7 +150,7 @@ Further, rebuilding a ZFS pool puts an unusual amount of strain on all of the su
 
 Given these risks, I did what I could to reduce the risk of concurrent disk failures. I chose two different models of disk from two different manufacturers. To reduce the chances of getting disks from the same manufacturing batch, I bought them from different vendors. I can't say how much this matters, but it didn't increase costs significantly, so why not?
 
-{{<img src="ironwolf-disks.jpg" alt="Photo of me holding Seagate IronWolf drives with different packaging" max-width="700px" caption="I purchased the same model of disk from two different vendors to decrease the chances of getting two disks from the same manufacturing batch.">}}
+{{<img src="ironwolf-disks.jpg" alt="Photo of me holding Seagate IronWolf drives with different packaging" max-width="700px" caption="I purchased the same model of disk from two different vendors to decrease the chances of getting two disks from the same manufacturing batch." has-border="false">}}
 
 ## How I chose parts
 
@@ -164,7 +164,7 @@ I chose the [ASUS Prime A320I-K](https://www.asus.com/Motherboards-Components/Mo
 - It supports Radeon graphics, which would spare me from buying a separate graphics card
 - It's affordable, at only $98
 
-{{<img src="a320i-k.jpg" alt="Photo of ASUS Prime A320I-K motherboard" max-width="600px" caption="The [ASUS Prime A320I-K](https://www.asus.com/Motherboards-Components/Motherboards/PRIME/PRIME-A320I-K/) supports onboard graphics in a mini-ITX form factor.">}}
+{{<img src="a320i-k.jpg" alt="Photo of ASUS Prime A320I-K motherboard" max-width="600px" caption="The [ASUS Prime A320I-K](https://www.asus.com/Motherboards-Components/Motherboards/PRIME/PRIME-A320I-K/) supports onboard graphics in a mini-ITX form factor." has-border="false">}}
 
 {{<notice type="danger">}}
 
@@ -180,7 +180,7 @@ From what I had read, ZFS is not very CPU-intensive. I ran a basic test by insta
 
 My main criteria in a CPU was support for Radeon graphics so that I could use the A320 motherboard's onboard HDMI output.
 
-{{<img src="amd-3000g.jpg" alt="Photo of AMD Athlon 3000G" max-width="600px" caption="The AMD Athlon 3000G is inexpensive and has native graphics support.">}}
+{{<img src="amd-3000g.jpg" alt="Photo of AMD Athlon 3000G" max-width="600px" caption="The AMD Athlon 3000G is inexpensive and has native graphics support." has-border="false">}}
 
 I settled on the AMD Athlon 3000G. At only $105, it's a good value, it supports Radeon graphics, and it has decent [CPU benchmarks](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Athlon+3000G&id=3614).
 
@@ -213,7 +213,7 @@ I chose the [Toshiba N300](https://www.newegg.com/toshiba-n300-hdwg480xzsta-8tb/
 
 TrueNAS needs a dedicated OS disk, but from what I'd read, it doesn't demand much of it. The OS needs at least 2 GB of space, but TrueNAS infrequently reads or writes to the OS disk.
 
-{{<img src="kingston-a400.jpg" alt="Kingston A400" max-width="600px" caption="The [Kingston A400](https://www.newegg.com/kingston-a400-120gb/p/N82E16820242474) is a fantastic value as a 120 GB M.2 SSD for only $32.">}}
+{{<img src="kingston-a400.jpg" alt="Kingston A400" max-width="600px" caption="The [Kingston A400](https://www.newegg.com/kingston-a400-120gb/p/N82E16820242474) is a fantastic value as a 120 GB M.2 SSD for only $32." has-border="false">}}
 
 I went with the [Kingston A400](https://www.newegg.com/kingston-a400-120gb/p/N82E16820242474) because it was incredibly inexpensive &mdash; $32 for a 120 GB M.2 disk. I love M.2 disks! They don't require any cabling. They just tuck away into the motherboard, take up nearly zero space, and you never have to touch them again.
 
@@ -230,21 +230,21 @@ I find memory extremely boring to shop for. I wish I had a more rigorous process
 
 That process led me to the [CORSAIR Vengeance LPX 32GB CMK32GX4M2A2400C14 (2 x 16GB)](https://www.newegg.com/corsair-32gb-288-pin-ddr4-sdram/p/N82E16820233854) for $128.
 
-{{<img src="corsair-vengeance.jpg" alt="Photo of CORSAIR Vengeance LPX 32GB CMK32GX4M2A2400C14 RAM" max-width="600px" caption="The [CORSAIR Vengeance LPX 32GB CMK32GX4M2A2400C14 (2 x 16GB)](https://www.newegg.com/corsair-32gb-288-pin-ddr4-sdram/p/N82E16820233854) is compatible with the A320I-K motherboard and is a decent price for 32 GB.">}}
+{{<img src="corsair-vengeance.jpg" alt="Photo of CORSAIR Vengeance LPX 32GB CMK32GX4M2A2400C14 RAM" max-width="600px" caption="The [CORSAIR Vengeance LPX 32GB CMK32GX4M2A2400C14 (2 x 16GB)](https://www.newegg.com/corsair-32gb-288-pin-ddr4-sdram/p/N82E16820233854) is compatible with the A320I-K motherboard and is a decent price for 32 GB." has-border="false">}}
 
 ### Power supply unit (PSU)
 
 In terms of power capacity, basically any consumer PSU would have been sufficient. According to [PCPartPicker](https://pcpartpicker.com/), my system only requires 218 W. I would have picked a PSU in the 300-400 W range, but there weren't semi-modular options with lower wattage. I went with the 500 W [EVGA 110-BQ-0500-K1](https://www.newegg.com/evga-500-bq-110-bq-0500-k1-500w/p/N82E16817438101).
 
-{{<img src="evga-psu.jpg" alt="EVGA 110-BQ-0500-K1" max-width="600px" caption="The [EVGA 110-BQ-0500-K1](https://www.newegg.com/evga-500-bq-110-bq-0500-k1-500w/p/N82E16817438101) is a semi-modular PSU. At 500 W, it offers more than enough power for my build.">}}
+{{<img src="evga-psu.jpg" alt="EVGA 110-BQ-0500-K1" max-width="600px" caption="The [EVGA 110-BQ-0500-K1](https://www.newegg.com/evga-500-bq-110-bq-0500-k1-500w/p/N82E16817438101) is a semi-modular PSU. At 500 W, it offers more than enough power for my build." has-border="false">}}
 
 ### 90-degree SATA cables
 
-{{<img src="holding-sata.jpg" alt="Me holding 90-degree SATA cable" max-width="400px" caption="I needed 90-degree SATA cables to work within the case's space constraints">}}
+{{<img src="holding-sata.jpg" alt="Me holding 90-degree SATA cable" max-width="400px" caption="I needed 90-degree SATA cables to work within the case's space constraints" has-border="false">}}
 
 One item I've never purchased before was a 90-degree SATA cable. I didn't realize I needed them until I saw that there wasn't enough space between my motherboard and PSU to plug in a standard SATA cable. These slim 90-degree cables solved the problem.
 
-{{<img src="sata-just-barely.jpg" alt="Photo of 90-degree SATA cable just barely fitting between the SATA port and the power supply" max-width="500px" caption="It was such a tight squeeze between my PSU and motherboard that I needed 90-degree slim SATA cables.">}}
+{{<img src="sata-just-barely.jpg" alt="Photo of 90-degree SATA cable just barely fitting between the SATA port and the power supply" max-width="500px" caption="It was such a tight squeeze between my PSU and motherboard that I needed 90-degree slim SATA cables." has-border="false">}}
 
 ## What's missing?
 
@@ -309,28 +309,28 @@ The total cost of my build is similar to off-the-shelf solutions, but I get more
 
 ## Build photos
 
-{{<img src="all-parts.jpg" alt="Photo of parts in retail packages" caption="All the parts in their retail boxes" max-width="600px">}}
+{{<img src="all-parts.jpg" alt="Photo of parts in retail packages" caption="All the parts in their retail boxes" max-width="600px" has-border="false">}}
 
-{{<img src="motherboard-installed.jpg" alt="Photo of motherboard in the case" caption="I had no issues installing the motherboard in the Fractal Design mini-ITX case." max-width="600px">}}
+{{<img src="motherboard-installed.jpg" alt="Photo of motherboard in the case" caption="I had no issues installing the motherboard in the Fractal Design mini-ITX case." max-width="600px" has-border="false">}}
 
-{{<img src="ssd-installed.jpg" alt="Photo of motherboard with M.2 SSD installed" caption="I love installing M.2 SSDs. No wires or rails &mdash; one screw, and you're done." max-width="600px">}}
+{{<img src="ssd-installed.jpg" alt="Photo of motherboard with M.2 SSD installed" caption="I love installing M.2 SSDs. No wires or rails &mdash; one screw, and you're done." max-width="600px" has-border="false">}}
 
-{{<img src="psu-installed.jpg" alt="Photo of PSU installed" caption="This is the first system I've ever built that doesn't expose the back face of the PSU outside of the case. Instead, the case has a short NEMA extension cable that routes the internal PSU to the case's own external power input." max-width="600px">}}
+{{<img src="psu-installed.jpg" alt="Photo of PSU installed" caption="This is the first system I've ever built that doesn't expose the back face of the PSU outside of the case. Instead, the case has a short NEMA extension cable that routes the internal PSU to the case's own external power input." max-width="600px" has-border="false">}}
 
 {{<gallery caption="It was such a tight squeeze between the motherboard's SATA ports and the PSU that I had to buy special 90-degree slim SATA cables.">}}
-{{<img src="90-degree-sata-installed.jpg" alt="Photo of SATA cables before PSU is installed" max-width="500px">}}
-{{<img src="sata-just-barely.jpg" alt="Photo of SATA cables with just barely enough space next to the PSU" max-width="280px">}}
+{{<img src="90-degree-sata-installed.jpg" alt="Photo of SATA cables before PSU is installed" max-width="500px" has-border="false">}}
+{{<img src="sata-just-barely.jpg" alt="Photo of SATA cables with just barely enough space next to the PSU" max-width="280px" has-border="false">}}
 {{</gallery>}}
 
-{{<img src="cpu-ram-pwr.jpg" alt="Photo of motherboard with everything connected" caption="After connecting everything to the motherboard (except for the CPU fan)" max-width="600px">}}
+{{<img src="cpu-ram-pwr.jpg" alt="Photo of motherboard with everything connected" caption="After connecting everything to the motherboard (except for the CPU fan)" max-width="600px" has-border="false">}}
 
-{{<img src="completed-build.jpg" alt="Photo of NAS server on my desk" caption="The completed build" max-width="800px">}}
+{{<img src="completed-build.jpg" alt="Photo of NAS server on my desk" caption="The completed build" max-width="800px" has-border="false">}}
 
 ## Building the server with TinyPilot
 
 Longtime readers of this blog may recall that I used the Raspberry Pi to create a tool specifically for building and managing servers. It's called [TinyPilot](/tinypilot/). This was the third server I've built with TinyPilot and the first I built with the new [TinyPilot Voyager 2](https://tinypilotkvm.com/product/tinypilot-voyager2).
 
-{{<img src="voyager2-install.jpg" alt="Photo of Voyager 2 PoE device on top of TrueNAS server" caption="Instead of connecting a keyboard, mouse, and monitor to the TrueNAS server, I managed the installation with a [TinyPilot Voyager 2](https://tinypilotkvm.com/product/tinypilot-voyager2)." max-width="600px">}}
+{{<img src="voyager2-install.jpg" alt="Photo of Voyager 2 PoE device on top of TrueNAS server" caption="Instead of connecting a keyboard, mouse, and monitor to the TrueNAS server, I managed the installation with a [TinyPilot Voyager 2](https://tinypilotkvm.com/product/tinypilot-voyager2)." max-width="600px" has-border="false">}}
 
 I'm obviously biased, but building this server with the Voyager 2 was a lot of fun! I never had to connect a keyboard or monitor to the server. I could see video output, boot to BIOS, and mount the TrueNAS installer image all from my web browser.
 
@@ -358,7 +358,7 @@ Strangely, even after I got the system to boot with borrowed parts, the motherbo
 
 After upgrading to 5862, I _still_ couldn't get a boot. Then, I realized that I was plugging my HDMI cable into the server's DisplayPort output.
 
-{{<img src="hdmi-vs-dp.jpg" alt="Screenshot of TrueNAS web dashboard" max-width="650px" caption="Why did the DisplayPort designers make it so easy to plug in HDMI cables by mistake?">}}
+{{<img src="hdmi-vs-dp.jpg" alt="Screenshot of TrueNAS web dashboard" max-width="650px" caption="Why did the DisplayPort designers make it so easy to plug in HDMI cables by mistake?" has-border="false">}}
 
 Was this whole parts-borrowing rigamarole even necessary? There are two possibilities:
 
@@ -421,8 +421,8 @@ My biggest complaint about the ASUS Prime A320I-K was its limited compatibility,
 Beyond that, I wasn't crazy about the BIOS. Its upgrade utility was completely broken. It's supposed to be able to download and install the latest BIOS versions, but when I tried upgrading, it kept telling me that I had the latest BIOS when I didn't. I had to upgrade manually by downloading the files and loading them on a thumb drive.
 
 {{<gallery caption="The ASUS EZ Flash utility claimed I had the latest BIOS at version 2203. The ASUS website offered BIOS version 5862, so I had to update manually.">}}
-{{<img src="ez-bios-1.png" alt="Screenshot showing ASUS EZ Flash saying my 2203 BIOS was the latest" max-width="450px">}}
-{{<img src="ez-bios-2.png" alt="Screenshot of ASUS website showing BIOS version 5862 available" max-width="450px">}}
+{{<img src="ez-bios-1.png" alt="Screenshot showing ASUS EZ Flash saying my 2203 BIOS was the latest" max-width="450px" has-border="false">}}
+{{<img src="ez-bios-2.png" alt="Screenshot of ASUS website showing BIOS version 5862 available" max-width="450px" has-border="false">}}
 {{</gallery>}}
 
 I also missed that the A320I-K supports a maximum of 32 GB of RAM. I'm not sure if I'll ever need to expand memory, but it would have been good to give myself some more breathing room.
@@ -451,7 +451,7 @@ It's my first mini-ITX build, and I know the case designers have to make sacrifi
 
 I'm happy with the Athlon 3000G, but it turned out to be massively overpowered for my needs. My TrueNAS dashboard reports that CPU load has been 99% idle for the past month of usage:
 
-{{<img src="truenas-cpu.png" alt="Graph of CPU usage in March showing almost entirely <10% usage" max-width="800px" caption="TrueNAS barely uses any CPU capacity.">}}
+{{<img src="truenas-cpu.png" alt="Graph of CPU usage in March showing almost entirely <10% usage" max-width="800px" caption="TrueNAS barely uses any CPU capacity." has-border="false">}}
 
 The most important thing about the CPU was that it supported AMD's Radeon video technology, which saved me from needing a GPU. For $105, it was a great deal.
 
@@ -471,7 +471,7 @@ The Kingston A400 is working fine. TrueNAS puts such a minimal load on the OS di
 
 There's almost zero disk activity in TrueNAS' reporting. There's a tiny I/O read every week as part of a default scheduled task for error checking, but that's it.
 
-{{<img src="truenas-io.png" alt="Graph of disk I/O on OS disk showing minimal activity" max-width="800px" caption="TrueNAS rarely touches its OS disk after booting.">}}
+{{<img src="truenas-io.png" alt="Graph of disk I/O on OS disk showing minimal activity" max-width="800px" caption="TrueNAS rarely touches its OS disk after booting." has-border="false">}}
 
 ### TrueNAS
 
@@ -482,8 +482,8 @@ Coming into TrueNAS, I knew my Synology's web UI would be hard to beat. It's the
 TrueNAS has its hacker charm, but I find it a huge usability downgrade from Synology. The interface seems like it was designed by someone with disdain for anything outside of the command line.
 
 {{<gallery caption="The Synology web interface (left) is leaps and bounds ahead of TrueNAS (right).">}}
-{{<img src="synology-dashboard.png" alt="Screenshot of Synology web dashboard" max-width="500px">}}
-{{<img src="truenas-dashboard.png" alt="Screenshot of TrueNAS web dashboard" max-width="500px">}}
+{{<img src="synology-dashboard.png" alt="Screenshot of Synology web dashboard" max-width="500px" has-border="false">}}
+{{<img src="truenas-dashboard.png" alt="Screenshot of TrueNAS web dashboard" max-width="500px" has-border="false">}}
 {{</gallery>}}
 
 On TrueNAS, it took me several tries to create a new volume and share it on my network. You have to jump between several disconnected menus, and there aren't any hints about what action you need to perform next. With Synology, there's a smooth UI flow that guides you through all the required settings.

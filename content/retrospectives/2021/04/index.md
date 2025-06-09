@@ -69,11 +69,11 @@ Only two items need to wait until the order actually comes in. The first is the 
 
 So we couldn't completely pre-pack boxes, but we could do 95% of the work and leave the last 5% until shipping time.
 
-{{<img src="pre-packed-voyagers.jpg" alt="Photo of me holding A6-sized paper in my hand" caption="We now pre-pack our orders and add the commercial invoice and any add-ons at fulfillment time." max-width="620px">}}
+{{<img src="pre-packed-voyagers.jpg" alt="Photo of me holding A6-sized paper in my hand" caption="We now pre-pack our orders and add the commercial invoice and any add-ons at fulfillment time." max-width="620px" has-border="false">}}
 
 When discussing other bottlenecks, I was surprised to learn that _folding paper_ is a significant time-suck. The boxes we use for TinyPilot are 6x6x2", which means we have to fold normal 8.5x11" paper into quarters to fit into the box. My girlfriend realized that A6 paper is 4.1x5.9", which is the perfect size for our boxes, so we bought a ream:
 
-{{<img src="a6-paper.jpg" alt="Photo of me holding A6-sized paper in my hand" caption="Printing order documents on A6-sized paper means we don't have to waste time folding paper before placing it in the box." max-width="500px">}}
+{{<img src="a6-paper.jpg" alt="Photo of me holding A6-sized paper in my hand" caption="Printing order documents on A6-sized paper means we don't have to waste time folding paper before placing it in the box." max-width="500px" has-border="false">}}
 
 ## How can TinyPilot run while I'm on vacation?
 
@@ -102,8 +102,8 @@ I was planning to continue using my house as TinyPilot's central warehouse, but 
 I wasn't planning to begin searching yet, but I saw a "for lease" sign on an office park that's only a 15-minute walk from my house. I called for pricing, expecting something in the range of $1,200-$1,500/month plus utilities. It turns out it's $550/month, including utilities and Internet. And the last tenants didn't want their furniture anymore, so it comes furnished with decent desks.
 
 {{<gallery caption="TinyPilot's new official headquarters, potentially">}}
-{{<img src="office1.jpg" alt="Freelancer hours spreadsheet">}}
-{{<img src="office2.jpg" alt="Freelancer payment spreadsheet">}}
+{{<img src="office1.jpg" alt="Freelancer hours spreadsheet" has-border="false">}}
+{{<img src="office2.jpg" alt="Freelancer payment spreadsheet" has-border="false">}}
 {{</gallery>}}
 
 I'm going to try to get a 1-year lease and establish the first official TinyPilot headquarters.

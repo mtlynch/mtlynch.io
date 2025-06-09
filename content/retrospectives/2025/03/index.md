@@ -73,7 +73,7 @@ My second idea is to reach out to companies that invest heavily in public writin
 
 I recently got a free [4x ARM CPU / 24 GB RAM Oracle Cloud server](/notes/nix-oracle-cloud/). The problem is that this rather competent server is about 99% idle:
 
-{{<img src="server-grafana.webp" max-width="700px" caption="My poor server is so bored.">}}
+{{<img src="server-grafana.webp" max-width="700px" caption="My poor server is so bored." has-border="false">}}
 
 So far, I've installed:
 

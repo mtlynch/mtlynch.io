@@ -17,7 +17,7 @@ Earlier this year, I created an open-source app called [PicoShare](https://pico.
 
 A few months ago, I started seeing my PicoShare server die every few days. When I checked the logs, I saw an out of memory error:
 
-{{<img src="oom-crash.png" alt="Out of memory: Killed process 515 (picoshare)">}}
+{{<img src="oom-crash.png" alt="Out of memory: Killed process 515 (picoshare)" has-border="false">}}
 
 I didn't have time to debug the crash, so I just increased the server's memory from 512 MB to 1 GB. And then I kept seeing crashes, so I increased it again to 2 GB.
 
@@ -50,7 +50,7 @@ I only saw PicoShare crash every few days, so my first step was to find a way to
 
 I managed to reproduce the error by deploying PicoShare on a [Fly](https://fly.io) instance with only 256 MB of RAM and then uploading large files. I used [high-resolution versions](https://mirror.clarkson.edu/blender/demo/movies/BBB/) of the short film [_Big Buck Bunny_](https://peach.blender.org/) with sizes ranging from 269 MB to 618 MB.
 
-{{<img src="bbb.jpg" alt="Still from Big Buck Bunny short film" max-width="600px" caption="I used the short film [_Big Buck Bunny_](https://peach.blender.org/) as my test file as it was large enough to test big uploads.">}}
+{{<img src="bbb.jpg" alt="Still from Big Buck Bunny short film" max-width="600px" caption="I used the short film [_Big Buck Bunny_](https://peach.blender.org/) as my test file as it was large enough to test big uploads." has-border="false">}}
 
 Uploading two copies of the 618 MB version in parallel consistently caused PicoShare to die with an out of memory error within a minute or so.
 
@@ -68,7 +68,7 @@ _ "net/http/pprof"
 
 Now, when you run your app, there will be a `/debug/pprof/` route with lots of useful debugging information.
 
-{{<img src="debug-pprof.png" alt="Debug interface at http://ps:4001/debug/pprof" max-width="700px">}}
+{{<img src="debug-pprof.png" alt="Debug interface at http://ps:4001/debug/pprof" max-width="700px" has-border="false">}}
 
 I was surprised at how easy this was to add. There's a lot of interesting data in this web interface, but the one that I used was `heap`. To use it, I uploaded a large file to PicoShare and then ran this the following command:
 
@@ -238,8 +238,8 @@ At this point, I was measuring RAM usage from three different angles that all di
 - Fly's RAM metrics from the VM host
 
 {{<gallery caption="My different tools for measuring RAM usage disagreed with one another">}}
-{{<img src="htop-ram.png" max-width="600px" alt="Screenshot showing htop reporting 154 MB of RAM usage and Go reporting 148.62 MB of RAM">}}
-{{<img src="fly-ram-count.png" alt="Screenshot of Fly reporting 217.4 of RAM usage">}}
+{{<img src="htop-ram.png" max-width="600px" alt="Screenshot showing htop reporting 154 MB of RAM usage and Go reporting 148.62 MB of RAM" has-border="false">}}
+{{<img src="fly-ram-count.png" alt="Screenshot of Fly reporting 217.4 of RAM usage" has-border="false">}}
 {{</gallery>}}
 
 In particular, Fly's metrics would frequently show RAM maxed out when Go and `htop` showed barely any usage. It was frustrating to debug because the further I drilled down, the further RAM measurements diverged from the crash behavior I was observing.
@@ -264,7 +264,7 @@ Given what Andrew Ayer said about RAM bloat, I revisited PicoShare's SQLite tran
 
 I tried running the transactionless implementation again. Sure enough, RAM bloated but PicoShare kept running. I uploaded three 618 MB files in parallel, and every upload succeeded with PicoShare continuing to serve HTTP requests.
 
-{{<img src="success.png" alt="Screenshot of three parallel PicoShare uploads succeeding without crashes" max-width="700px">}}
+{{<img src="success.png" alt="Screenshot of three parallel PicoShare uploads succeeding without crashes" max-width="700px" has-border="false">}}
 
 It worked! I'd finally gotten to the bottom of the performance issues.
 
@@ -272,7 +272,7 @@ Or so I thought...
 
 I left my server running overnight, and when I checked it the next morning, it had failed with the same out of memory crash.
 
-{{<img src="oom-kill-overnight.png" alt="Screenshot of log showing 'Process appears to have been OOM killed!'" max-width="700px">}}
+{{<img src="oom-kill-overnight.png" alt="Screenshot of log showing 'Process appears to have been OOM killed!'" max-width="700px" has-border="false">}}
 
 ### Eliminating SQLite vacuuming
 
@@ -282,7 +282,7 @@ Nobody was using the PicoShare server when it crashed, but it did line up with P
 
 I tested running the `VACUUM` command on my server and saw that it did indeed reduce the size of my main `.db` file, but it was increasing the size of the [SQLite write-ahead log](https://sqlite.org/wal.html).
 
-{{<img src="vacuum-bloat.png" alt="store.db-wal increasing in size by 310 MB after each call to sqlite3 /data/store.db 'VACUUM'" max-width="250px">}}
+{{<img src="vacuum-bloat.png" alt="store.db-wal increasing in size by 310 MB after each call to sqlite3 /data/store.db 'VACUUM'" max-width="250px" has-border="false">}}
 
 At this point, Ben asked me why I need to `VACUUM` at all:
 
@@ -308,7 +308,7 @@ I ran PicoShare for 24 hours without any crashes on a Fly VM with just 256 MB of
 
 {{<img src="256-mb-ram.png" alt="Fly dashboard showing PicoShare has 256 RAM" max-width="700px" has-border="true">}}
 
-{{<img src="cronitor-checks.png" alt="Uptime checks showing 100% availability" caption="100% uptime over the last 24 hours">}}
+{{<img src="cronitor-checks.png" alt="Uptime checks showing 100% availability" caption="100% uptime over the last 24 hours" has-border="false">}}
 
 ## Other lessons learned
 

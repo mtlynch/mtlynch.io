@@ -29,7 +29,7 @@ In this three-part series, I'll show you how I resurrected it and built a busine
 - [Part Two: Stabilization](/resurrecting-2/) - In which I prevent functionality from regressing while I restore the code
 - [Part Three: Rehabilitation](/resurrecting-3/) - In which I begin refactoring the code
 
-{{<img src="cover.jpg" alt="Bear doctors resuscitating python" max-width="800px">}}
+{{<img src="cover.jpg" alt="Bear doctors resuscitating python" max-width="800px" has-border="false">}}
 
 ## The library
 
@@ -118,7 +118,7 @@ The CRF++ error message about `winmain.h` was a bad sign, but if the _Times_ dev
 
 Maybe someone had already fixed it, but the maintainers never merged in the change. I checked the repo's outstanding pull requests. [One, in particular](https://github.com/taku910/crfpp/pull/15), seemed promising:
 
-{{<img src="winmain-pr.png" alt="CRF++ pull requests" caption="[Pending pull requests](https://github.com/taku910/crfpp/pulls) into CRF++" max-width="800px">}}
+{{<img src="winmain-pr.png" alt="CRF++ pull requests" caption="[Pending pull requests](https://github.com/taku910/crfpp/pulls) into CRF++" max-width="800px" has-border="false">}}
 
 The pull request might as well have been titled, "Hey look, Michael! I solved the exact problem you're struggling with," so I applied [@humem](http://github.com/humem)'s patch:
 
@@ -280,7 +280,7 @@ It worked!
 
 Well, it mostly worked. The model failed to identify "Cup" as the unit of measurement in "1 Cup Mozzarella, shredded." The machine learning model apparently thought there was a product called, "Cup Mozzarella," and the recipe needed one of those.
 
-{{<img src="cup-mozzarella.jpg" alt="Picture of Cup Mozzarella product" caption="A product invented by the machine learning model" max-width="300px">}}
+{{<img src="cup-mozzarella.jpg" alt="Picture of Cup Mozzarella product" caption="A product invented by the machine learning model" max-width="300px" has-border="false">}}
 
 {{<zestful-ad>}}
 

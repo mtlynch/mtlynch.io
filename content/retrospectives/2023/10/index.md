@@ -72,8 +72,8 @@ Unfortunately, the first article sample didn't go so well.
 Paint was chipping on two out of the four samples, and the rubber feet had fallen off three of them. The cabling was disconnected on one of the devices, which prevented it from capturing audio. When I held the device sideways, the fan started scraping the case.
 
 {{<gallery caption="The first article samples had issues with paint chipping and rubber feet detaching in transit.">}}
-{{<img src="chipping-paint.webp" max-width="400px" alt="Photo of paint chipping on TinyPilot logo on case">}}
-{{<img src="no-feet.webp" max-width="250px" alt="Photo of case bottom with feet detached">}}
+{{<img src="chipping-paint.webp" max-width="400px" alt="Photo of paint chipping on TinyPilot logo on case" has-border="false">}}
+{{<img src="no-feet.webp" max-width="250px" alt="Photo of case bottom with feet detached" has-border="false">}}
 {{</gallery>}}
 
 The issues in the sample worried me.
@@ -247,7 +247,7 @@ I've tolerated RapidAPI this long because I've relegated Zestful to a weekend ho
 
 Now, I'm motivated enough by spite for RapidAPI that I've begun experimenting on Paddle and LemonSqueezy to see if I can free myself from RapidAPI. It's not _really_ worth the dev time to save $15/month, but I'd like to stop giving money to RapidAPI, and it's handy to become familiar with a SaaS payment gateway that I'll like.
 
-{{<img src="reasons.png" max-width="600px" caption="&ldquo;What are your reasons for switching SaaS payment gateways?&rdquo;" alt="Screenshot from The Simpsons Season 4 Episode 14 of list of reasosn to adobe a little brother, including spite, malice, revenge, and profit">}}
+{{<img src="reasons.png" max-width="600px" caption="&ldquo;What are your reasons for switching SaaS payment gateways?&rdquo;" alt="Screenshot from The Simpsons Season 4 Episode 14 of list of reasosn to adobe a little brother, including spite, malice, revenge, and profit" has-border="false">}}
 
 ## Wrap up
 

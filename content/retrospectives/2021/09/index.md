@@ -70,7 +70,7 @@ When I first launched TinyPilot's website, I meant for the design to be a placeh
 One of the hurdles was finding a skilled developer to work on the website. After going through six hires who didn't work out, I found a developer in July with design ideas and worked with him throughout August on implementing them. I think the site looks more professional as a result:
 
 {{<gallery caption="In August, I worked with one of TinyPilot's developers to redesign the TinyPilot homepage.<br>Original design (left), revised design (right)">}}
-{{<img src="home-before.png" alt="Screenshot of TinyPilot homepage before changes" max-width="300px">}}
+{{<img src="home-before.png" alt="Screenshot of TinyPilot homepage before changes" max-width="300px" has-border="false">}}
 {{<img src="home-after.png" alt="Screenshot of TinyPilot homepage before changes" max-width="300px" has-border="true">}}
 {{</gallery>}}
 

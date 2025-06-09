@@ -7,7 +7,7 @@ discuss_urls:
 
 [Cypress](https://cypress.io) is an open-source tool for testing web applications end-to-end. I first saw Gleb Bahmutov [demo Cypress at a 2018 web dev meetup](https://youtu.be/wApmbgPGmqQ) in New York, and I was blown away.
 
-{{<img src="gleb-demo.jpg" caption="I've been using Cypress since I saw it [demoed at a dev meetup](https://youtu.be/wApmbgPGmqQ) in 2018." alt="Screenshot of Cypress live demo" max-width="600px">}}
+{{<img src="gleb-demo.jpg" caption="I've been using Cypress since I saw it [demoed at a dev meetup](https://youtu.be/wApmbgPGmqQ) in 2018." alt="Screenshot of Cypress live demo" max-width="600px" has-border="false">}}
 
 Before discovering Cypress, I had begrudgingly used [Selenium](https://www.selenium.dev/). Cypress was a refreshing leap forward, as it offered elegant solutions to tons of pain points that made Selenium impractical to use.
 
@@ -89,7 +89,7 @@ expect(page.locator("#error-message")).toBeVisible();
 
 One of Cypress' most touted features is their desktop GUI app:
 
-{{<img src="cypress-gui.png" alt="Screenshot of Cypress Desktop app" caption="Cypress uses a desktop app to show test execution">}}
+{{<img src="cypress-gui.png" alt="Screenshot of Cypress Desktop app" caption="Cypress uses a desktop app to show test execution" has-border="false">}}
 
 The Cypress desktop app lets you "time travel" through your tests, so you can see what the browser window looked like at each point in your test.
 
@@ -337,7 +337,7 @@ In contrast, Playwright has just [603 open bugs](https://github.com/microsoft/pl
 
 Playwright offers [an official VS Code plugin](https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright), which gives you context-aware auto-complete. It's something I never realized I'd been missing from Cypress until I saw it in Playwright:
 
-{{<img src="playwright-auto-complete.png" max-width="800px" alt="Autocomplete options in VS Code for Playwright APIs" caption="Playwright's VS Code plugin offers context-aware auto-complete.">}}
+{{<img src="playwright-auto-complete.png" max-width="800px" alt="Autocomplete options in VS Code for Playwright APIs" caption="Playwright's VS Code plugin offers context-aware auto-complete." has-border="false">}}
 
 In Cypress, there are a small number of functions, and you exercise different functionality by passing special string values. It's hard for IDEs to help with those semantics, but Playwright's list of explicit TypeScript functions make it easier for the IDE to help you out. There are third-party VS Code plugins for Cypress but nothing the Cypress team officially supports.
 

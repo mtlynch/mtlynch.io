@@ -144,7 +144,7 @@ As someone who still sees themselves as an indie developer, it feels scary to ow
 
 Every time we publish a new release of TinyPilot, I create a microSD image with the latest version of TinyPilot pre-installed. My process for building a microSD image requires a Raspberry Pi, so I'd been using a spare Pi and SSD that sit in the corner of my office.
 
-{{<img src="pi-build-server.jpg" max-width="600px" alt="Photo of Pi and SSD drive" caption="The official TinyPilot build server, until recently">}}
+{{<img src="pi-build-server.jpg" max-width="600px" alt="Photo of Pi and SSD drive" caption="The official TinyPilot build server, until recently" has-border="false">}}
 
 Even though TinyPilot's developers are perfectly capable of managing the code, it was too difficult to coordinate shared access to a single server silo'ed in my house. As a result, I remained the sole maintainer of the build code.
 

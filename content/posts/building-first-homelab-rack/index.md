@@ -16,15 +16,15 @@ Seven years ago, I built my [first home server](/building-a-vm-homelab-2017/). I
 At some point, my wife gently observed that my office was filling with unsightly wires. "What?" I asked. "This is a _normal_ amount of wires." But then I looked around and realized it was kind of a lot of wires...
 
 {{<gallery caption="My office, upon closer inspection, kind of had a lot of wires">}}
-{{<img src="office-wires-1.webp" max-width="350px" alt="Photo of lots of wires in my office">}}
-{{<img src="office-wires-2.webp" max-width="350px" alt="Photo of lots of wires in my office">}}
+{{<img src="office-wires-1.webp" max-width="350px" alt="Photo of lots of wires in my office" has-border="false">}}
+{{<img src="office-wires-2.webp" max-width="350px" alt="Photo of lots of wires in my office" has-border="false">}}
 {{</gallery>}}
 
 A lot of home server enthusiasts buy server racks, but I never thought of myself as a rack guy. I wasn't _so_ into servers that I needed a whole rack; I just had a VM server here, a data server there. Maybe a few switches scattered around. Buying a rack meant admitting that I wasn't just a casual home server guy but an intense homelab weirdo.
 
 One day, I gave in and bought a rack, and I'm better for it. It makes my servers more pleasant to work with and eliminates my sprawling mess of wires.
 
-{{<img src="full-rack.webp" max-width="400px">}}
+{{<img src="full-rack.webp" max-width="400px" has-border="false">}}
 
 ## I don't want your life story &mdash; just show me the rack
 
@@ -108,7 +108,7 @@ Here's the process I followed to pick a server rack:
 
 Racks have capacity measured in rack units (RUs). 1 rack unit is 1.75". You typically see racks sized as a number followed by a U, so an 8U rack would have eight RUs or 8 x 1.75" = 14" of height for components.
 
-{{<img src="1ru.webp" max-width="600px" caption="Server racks are sized in rack units where each rack unit is 1.75&quot;.">}}
+{{<img src="1ru.webp" max-width="600px" caption="Server racks are sized in rack units where each rack unit is 1.75&quot;." has-border="false">}}
 
 If a component is designed to mount in a rack, its height will be some multiple of a rack unit. Most network switches are 1U, battery backups are usually 2U, and servers are typically 2U.
 
@@ -152,7 +152,7 @@ StarTech is a popular brand for server racks. They have a good reputation and a 
 
 ### Review: StarTech 4POSTRACK18U 18U rack
 
-{{<img src="star-tech-rack.webp" max-width="400px">}}
+{{<img src="star-tech-rack.webp" max-width="400px" has-border="false">}}
 
 - Grade: A
 
@@ -208,7 +208,7 @@ Certain low-power devices can run entirely from the power they draw from the Eth
 
 For example, my home WiFi access point, the [Ruckus R310](https://support.ruckuswireless.com/products/88-ruckus-r310), supports PoE, so it only needs a single Ethernet cable for power and network connectivity.
 
-{{<img src="ruckus-r310.webp" max-width="400px" caption="My Ruckus R310 WiFi access point supports PoE, so it only needs a single Ethernet cable for  power and data.">}}
+{{<img src="ruckus-r310.webp" max-width="400px" caption="My Ruckus R310 WiFi access point supports PoE, so it only needs a single Ethernet cable for  power and data." has-border="false">}}
 
 To use PoE devices, you need a PoE-enabled networking switch.
 
@@ -247,7 +247,7 @@ I considered the [TP-Link T1600G-28PS](https://www.amazon.com/TP-Link-JetStream-
 
 ### Review: TP-Link TL-SG3428X
 
-{{<img src="switch-patch-panel.webp" max-width="600px">}}
+{{<img src="switch-patch-panel.webp" max-width="600px" has-border="false">}}
 
 - Grade: B-
 
@@ -259,7 +259,7 @@ It took me a long time to figure out [how to configure VLANs](/notes/debugging-v
 
 ### Review: Netgear GS116LP 16-Port unmanaged PoE switch
 
-{{<img src="poe-switch.webp" max-width="600px">}}
+{{<img src="poe-switch.webp" max-width="600px" has-border="false">}}
 
 - Grade: A
 
@@ -299,7 +299,7 @@ When I lived in Manhattan, I'd experience around five power outages per year. Th
 
 To avoid surprise shutdowns, I bought a battery backup system, also known as an uninterruptible power supply (UPS). It was an [APC BR1500G](https://www.apc.com/us/en/product/BR1500G/apc-backups-pro-1500va-865w-tower-120v-10x-nema-515r-outlets-avr-lcd-user-replaceable-battery/), and I've used that same battery backup for six years.
 
-{{<img src="apc-ups.webp" max-width="350px">}}
+{{<img src="apc-ups.webp" max-width="350px" has-border="false">}}
 
 For short power outages, the battery saves me from any downtime. For extended outages, the battery gives me enough time to shut down my systems to avoid data loss.
 
@@ -329,7 +329,7 @@ For me, automating shutdowns from my UPS isn't worth the trouble, but you might 
 
 ### Review: CyberPower CP1500PFCRM2U
 
-{{<img src="cyberpower-ups.webp" max-width="800px">}}
+{{<img src="cyberpower-ups.webp" max-width="800px" has-border="false">}}
 
 - Grade: A
 
@@ -351,7 +351,7 @@ Another plus is that the UPS is silent, which I thought was a given for battery 
 
 ### Review: Tripp Lite SMART1500LCD
 
-{{<img src="tripp-lite-ups.webp" max-width="800px">}}
+{{<img src="tripp-lite-ups.webp" max-width="800px" has-border="false">}}
 
 - Grade: D
 
@@ -390,7 +390,7 @@ Power strips are, frankly, not so exciting, so I didn't shop around very much. I
 
 ### Review: Tripp Lite RS-1215-RA
 
-{{<img src="tripp-lite-strip.webp" max-width="800px">}}
+{{<img src="tripp-lite-strip.webp" max-width="800px" has-border="false">}}
 
 - Grade: B+
 
@@ -421,7 +421,7 @@ I already had a few [existing components](#what-i-already-had) from my pre-rack 
 
 I had never heard of Pyle as a brand, but I found these shelves online, and they've worked out well.
 
-{{<img src="rack-shelves.webp" max-width="600px" caption="I keep non-mountable components on two 2U Pyle rack shelves.">}}
+{{<img src="rack-shelves.webp" max-width="600px" caption="I keep non-mountable components on two 2U Pyle rack shelves." has-border="false">}}
 
 They're easy to install, decently priced, and they have a lip that prevents components from sliding off the shelf.
 
@@ -433,7 +433,7 @@ I originally purchased the StarTech shelves because StarTech has such a good rep
 
 When I installed them into my rack, I thought I must be misunderstanding how they work. They have a bottom lip that bends downward into the next rack slot.
 
-{{<img src="star-tech-shelf-lip.webp" max-width="600px" caption="StarTech shelves have a downward-facing lip that messes up the rest of the rack layout.">}}
+{{<img src="star-tech-shelf-lip.webp" max-width="600px" caption="StarTech shelves have a downward-facing lip that messes up the rest of the rack layout." has-border="false">}}
 
 This downward lip forces you to either allocate 3U to each of your 2U shelves or shift everything down by 0.5U.
 
@@ -459,7 +459,7 @@ Shopping around for patch panels made me even more confused. It's just a row of 
 
 The concept didn't click for me until I built my rack. In short, the patch panel keeps the clutter of your networking cables behind your rack rather than in front of it.
 
-{{<img src="switch-patch-panel.webp" max-width="600px" caption="Patch panels keep the front of your rack clean by routing network cables to the rear of the rack.">}}
+{{<img src="switch-patch-panel.webp" max-width="600px" caption="Patch panels keep the front of your rack clean by routing network cables to the rear of the rack." has-border="false">}}
 
 {{<notice type="info">}}
 **Tip**: I recommend having a patch panel adjacent to every switch in your rack.
@@ -480,15 +480,15 @@ At the end of the day, a patch panel is just some metal and plastic, so there's 
 
 One of the reasons I chose the NewYork brand patch panel was that I saw reviews mention a rear bar that helps support Ethernet cables. In my rack, the rear bar doesn't do anything. It's too close to the Ethernet ports to provide support, and they don't seem to need it anyway.
 
-{{<img src="panel-rear.webp" max-width="600px" caption="I thought the rear bar of the patch panel would help support my Ethernet cables, but they turned out not to need it.">}}
+{{<img src="panel-rear.webp" max-width="600px" caption="I thought the rear bar of the patch panel would help support my Ethernet cables, but they turned out not to need it." has-border="false">}}
 
 My one complaint is with the port labels. They're slips of paper under plastic, like a landline phone would have for speed dial in the 90s. Other patch panels have little whiteboard strips for easy erasing, and I prefer that style to strips of paper.
 
-{{<img src="patch-panel-labels.webp" max-width="550px" caption="The labels on the NewYork patch panel are like the little speed dial labels that landline phones had in the 90s.">}}
+{{<img src="patch-panel-labels.webp" max-width="550px" caption="The labels on the NewYork patch panel are like the little speed dial labels that landline phones had in the 90s." has-border="false">}}
 
 ### Review: Tripp Lite 16-port 1U Patch Panel
 
-{{<img src="tripp-lite-patch-panel.webp" max-width="600px">}}
+{{<img src="tripp-lite-patch-panel.webp" max-width="600px" has-border="false">}}
 
 - Grade: A
 
@@ -496,7 +496,7 @@ As with the NewYork cables patch panel, the Tripp Lite model is fine, but there'
 
 I like that the labels are tiny whiteboards. I had whiteboard markers on hand, but they were too big to write in such tight spaces, so I bought [ultra fine-tip whiteboard markers](https://www.amazon.com/gp/product/B0C9WH9LPV/), and those worked well.
 
-{{<img src="tripp-lite-labels.webp" max-width="600px" caption="The Tripp Lite patch panel features tiny labels you can write on with ultra fine-tip whiteboard markers.">}}
+{{<img src="tripp-lite-labels.webp" max-width="600px" caption="The Tripp Lite patch panel features tiny labels you can write on with ultra fine-tip whiteboard markers." has-border="false">}}
 
 ## Choosing a Raspberry Pi rack mount
 
@@ -510,7 +510,7 @@ I'd seen rack mounts for the Raspberry Pi, so I thought it would be fun to add o
 
 ### Review: UCTRONICS Ultimate Rack
 
-{{<img src="uctronics-pi-mount.webp" max-width="700px">}}
+{{<img src="uctronics-pi-mount.webp" max-width="700px" has-border="false">}}
 
 - Grade: C+
 
@@ -520,7 +520,7 @@ It's a decent value for the price. PoE HATs for a Raspberry Pi 4 are generally a
 
 The craftsmanship on the rack mount itself is mediocre. The pieces don't fit together that well. There are noticeable gaps around the HDMI and microSD ports.
 
-{{<img src="uctronics-gaps.webp" max-width="500px" caption="The UCTRONICS Pi rack mount had significant gaps around the HDMI and microSD ports.">}}
+{{<img src="uctronics-gaps.webp" max-width="500px" caption="The UCTRONICS Pi rack mount had significant gaps around the HDMI and microSD ports." has-border="false">}}
 
 The HDMI ports are also secured poorly to the mount. When I plug in an HDMI cable, the connector bends and strains. I worry they're going to snap off one day.
 
@@ -528,7 +528,7 @@ PoE generates extra heat, so it's good that these come with an integrated fan, b
 
 The instructions are terrible. Step one is to screw in the OLED. Okay, that's fine. Step two is to screw in the power button. Sure, easy peasy. Step three is to put together the five remaining components simultaneously.
 
-{{<img src="pi-rack-instructions.webp" max-width="700px" caption="The UCTRONICS Pi rack mount instructions rapidly increase in difficulty.">}}
+{{<img src="pi-rack-instructions.webp" max-width="700px" caption="The UCTRONICS Pi rack mount instructions rapidly increase in difficulty." has-border="false">}}
 
 ## Choosing Ethernet cables
 
@@ -536,7 +536,7 @@ If you're converting an existing setup to a server rack, you'll likely need new 
 
 You'll likely need a mix of different patch cable lengths. For example, on my rack, port 16 on my switch is just 1.5" from port 16 on my patch panel, but port 1 on my switch is 6" from its corresponding patch panel port.
 
-{{<img src="switch-patch-panel-gap.webp" max-width="600px" caption="Consider that the distance between ports on your switch and patch panel may vary depending on the port layout of each component.">}}
+{{<img src="switch-patch-panel-gap.webp" max-width="600px" caption="Consider that the distance between ports on your switch and patch panel may vary depending on the port layout of each component." has-border="false">}}
 
 I bought 6", 12", and 3' Ethernet cables at a ratio of about 5:2:1.
 
@@ -608,7 +608,7 @@ I've included all the cables I purchased [below](#my-final-rack-setup).
 My home router is a cheap Qotom Q355G4 unit running OPNsense. It doesn't have rack mounts, so now it lives on its own dedicated rack shelf.
 
 {{<gallery caption="My OPNsense firewall running on Qotom Q355G4 mini PC">}}
-{{<img src="qotom-router.webp" max-width="520px">}}
+{{<img src="qotom-router.webp" max-width="520px" has-border="false">}}
 {{<img src="opnsense-dashboard.webp" max-width="350px" has-border="true">}}
 {{</gallery>}}
 
@@ -617,8 +617,8 @@ My home router is a cheap Qotom Q355G4 unit running OPNsense. It doesn't have ra
 My access point doesn't technically live in my rack, but it plugs in to my PoE switch. It's a nice access point, and it allows me to create multiple WiFi networks with different VLAN tags, so my guest WiFi has Internet access but can't reach any of my other devices.
 
 {{<gallery caption="My Ruckus R310 WiFi access point">}}
-{{<img max-width="300px" src="ruckus-r310.webp">}}
-{{<img max-width="315px" src="ruckus-dashboard.webp">}}
+{{<img max-width="300px" src="ruckus-r310.webp" has-border="false">}}
+{{<img max-width="315px" src="ruckus-dashboard.webp" has-border="false">}}
 {{</gallery>}}
 
 ### Out-of-band management: TinyPilot Voyager 2a PoE
@@ -632,13 +632,13 @@ I generally connect to components in my rack over SSH or web interfaces. When I 
 Instead of having to drag a keyboard and monitor over to my rack, I can plug in my TinyPilot Voyager 2a when I need hardware-level access:
 
 {{<gallery caption="I use TinyPilot to get physical-level access to my homelab servers through the  browser.">}}
-{{<img src="tinypilot-rack.webp" max-width="364px">}}
-{{<img src="tinypilot-dell-bios.webp" max-width="400px">}}
+{{<img src="tinypilot-rack.webp" max-width="364px" has-border="false">}}
+{{<img src="tinypilot-dell-bios.webp" max-width="400px" has-border="false">}}
 {{</gallery>}}
 
 ### Software testing: Dell Optiplex 7040 mini PC
 
-{{<img src="dell-mini-pc.webp" max-width="400px">}}
+{{<img src="dell-mini-pc.webp" max-width="400px" has-border="false">}}
 
 For development work on TinyPilot, I often test new software features by remotely controlling a real device. This Dell mini PC is a handy test device because I can frequently reboot it or blow away the OS without disrupting any other work.
 
@@ -672,9 +672,9 @@ Maybe minimizing cable length is important in a data center where you're replica
 
 ## My final rack setup
 
-{{<img src="full-rack.webp" max-width="800px">}}
+{{<img src="full-rack.webp" max-width="800px" has-border="false">}}
 
-{{<img src="rack-side.webp" max-width="800px">}}
+{{<img src="rack-side.webp" max-width="800px" has-border="false">}}
 
 | Component                       | Choice                                                                                                                                                                     | Price  | Satisfaction |
 | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | ------------ |
@@ -749,7 +749,7 @@ When you install components into your rack, you secure it to your rack using a c
 
 I thought cage nuts worked like all other nuts I've ever encountered &mdash; I hold them behind the thing I'm screwing into and then tighten the screw into the nut.
 
-{{<img src="cage-nuts-wrong.webp" max-width="600px" caption="How I was incorrectly installing cage nuts">}}
+{{<img src="cage-nuts-wrong.webp" max-width="600px" caption="How I was incorrectly installing cage nuts" has-border="false">}}
 
 After installing about eight cage nuts, I cursed the stupidity of whoever decided to put sharp corners on a thing that required me to squeeze it between my fingertips. And then I realized I might be doing something wrong.
 
@@ -759,7 +759,7 @@ After installing about eight cage nuts, I cursed the stupidity of whoever decide
 
 Cage nuts have a clever design in that they clip into the rack. That way, you don't have to hold the nut in place when screwing the component into your rack.
 
-{{<img src="cage-nuts-right.webp" max-width="600px" caption="The correct way to install cage nuts is to let them clip in from behind the hole in the rack post.">}}
+{{<img src="cage-nuts-right.webp" max-width="600px" caption="The correct way to install cage nuts is to let them clip in from behind the hole in the rack post." has-border="false">}}
 
 ### Don't install patch keys backward
 
@@ -769,15 +769,15 @@ Now that I've seen the right way, what I thought was correct before looks absurd
 
 So, my first attempt was like this:
 
-{{<img src="key-wrong.webp" max-width="400px">}}
+{{<img src="key-wrong.webp" max-width="400px" has-border="false">}}
 
 It fit snugly, and it was easy to plug Ethernet cables into it, so I thought that was right. But almost every time I removed an Ethernet cable, the patch key popped out with it.
 
 "I must have done this backward," I thought. So I plugged the keys in from the rear. It was tougher to get them in, but they stayed in place better.
 
 {{<gallery caption="Embarrassingly, I thought this was how RJ45 patch keys were supposed to work for about six months.">}}
-{{<img src="still-wrong1.webp" max-width="398px">}}
-{{<img src="still-wrong2.webp" max-width="360px">}}
+{{<img src="still-wrong1.webp" max-width="398px" has-border="false">}}
+{{<img src="still-wrong2.webp" max-width="360px" has-border="false">}}
 {{</gallery>}}
 
 I had them like this for six months!
@@ -787,8 +787,8 @@ It wasn't until I bought my second patch panel and experimented with the keys th
 It turns out that the little notch on the top isn't for decoration. You'll hear a little click when the notch clicks into the correct position. The front face should be roughly flush with the front of the patch panel.
 
 {{<gallery caption="Patch keys should be flush with the face of the patch panel, and their tabs click into place in the rear.">}}
-{{<img src="patch-panel-correct-1.webp" max-width="380px">}}
-{{<img src="patch-panel-correct-2.webp" max-width="380px">}}
+{{<img src="patch-panel-correct-1.webp" max-width="380px" has-border="false">}}
+{{<img src="patch-panel-correct-2.webp" max-width="380px" has-border="false">}}
 {{</gallery>}}
 
 ### If the motherboard doesn't detect a 10G NIC, try a different PCI slot
@@ -809,7 +809,7 @@ A day later, the problem came back. I tried connecting the cable from my desktop
 
 Finally, I spotted it: my patch cables were single mode, whereas the rest of my system was multimode. I didn't even know there were different "modes" of fiber cables, but [apparently there are](https://community.fs.com/article/single-mode-cabling-cost-vs-multimode-cabling-cost.html), and they don't get along.
 
-{{<img src="single-mode-multi-mode.webp" max-width="400px" caption="My network connection went into a reset loop every 24 hours because I accidentally used multimode patch cables in a single mode fiber system.">}}
+{{<img src="single-mode-multi-mode.webp" max-width="400px" caption="My network connection went into a reset loop every 24 hours because I accidentally used multimode patch cables in a single mode fiber system." has-border="false">}}
 
 I bought a new set of multimode fiber cables, and the problem went away. Unfortunately, I discovered the problem three days after the return window for my $70 box of single mode fiber cables had closed.
 

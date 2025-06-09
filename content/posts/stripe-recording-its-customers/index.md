@@ -251,7 +251,7 @@ The previous two steps are sufficient to prevent Stripe's tracking. For addition
 
 Here's what it looks like for my app:
 
-{{<img src="stripe-csp.png" alt="Screenshot of CSP headers on my payment page vs. a normla page" max-width="815px" caption="[Portfolio Rebalancer](https://assetrebalancer.com) uses per-page [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) to prevent Stripe from loading anywhere in the app except the payment page.">}}
+{{<img src="stripe-csp.png" alt="Screenshot of CSP headers on my payment page vs. a normla page" max-width="815px" caption="[Portfolio Rebalancer](https://assetrebalancer.com) uses per-page [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) to prevent Stripe from loading anywhere in the app except the payment page." has-border="false">}}
 
 It's a bit tricky to implement per-page CSP in a single-page app because the browser, by default, won't query the server for new policies when the user navigates to a new page. To force a policy refresh, I use Vue's [`beforeRouteEnter`](https://router.vuejs.org/guide/advanced/navigation-guards.html#in-component-guards) guard on my payment page to force a new HTTP request when the page loads.
 

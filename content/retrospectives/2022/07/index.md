@@ -159,7 +159,7 @@ Then, Amazon froze my account for a day because they couldn't verify my credit c
 
 Then, Amazon froze my account so they could verify I'm entitled to use the "TinyPilot" brand name. I showed them proof that I'm the owner of TinyPilot, LLC, and I sent them photos of my product with "TinyPilot" written on the side.
 
-{{<img src="first-proof.jpg" alt="Photo of TinyPilot Voyager from the side with TinyPilot brand name showing" caption="Photo I sent to Amazon as proof that the brand name &ldquo;TinyPilot&rdquo; appears on my product" max-width="500px">}}
+{{<img src="first-proof.jpg" alt="Photo of TinyPilot Voyager from the side with TinyPilot brand name showing" caption="Photo I sent to Amazon as proof that the brand name &ldquo;TinyPilot&rdquo; appears on my product" max-width="500px" has-border="false">}}
 
 They said they'd review within three days, but it actually took 10. Their conclusion was that my photos didn't sufficiently prove that "TinyPilot" was permanently affixed to my product...
 
@@ -167,7 +167,7 @@ They said they'd review within three days, but it actually took 10. Their conclu
 
 So, I sent new photos much more focused on the brand name, and only then did they finally approve the product.
 
-{{<img src="new-affixed-proof.jpg" alt="Photo of me holding a TinyPilot Voyager 2 with a dated note to Amazon" caption="Is this affixed enough for you, Amazon?" max-width="600px">}}
+{{<img src="new-affixed-proof.jpg" alt="Photo of me holding a TinyPilot Voyager 2 with a dated note to Amazon" caption="Is this affixed enough for you, Amazon?" max-width="600px" has-border="false">}}
 
 The new problem was that TinyPilot didn't show up in search results if you search for "tinypilot":
 

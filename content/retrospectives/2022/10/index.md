@@ -76,7 +76,7 @@ We've been selling 200+ devices per month, so the cases will soon become the lim
 
 Our hardware partner suggested metal cases, similar to what you'd find on consumer networking hardware:
 
-{{<img src="tp-link-switch.png" max-width="500px" alt="Photo of metal TP-Link TL-SG1005P 5-port switch" caption="What if we switched TinyPilot to use a metal case like this?">}}
+{{<img src="tp-link-switch.png" max-width="500px" alt="Photo of metal TP-Link TL-SG1005P 5-port switch" caption="What if we switched TinyPilot to use a metal case like this?" has-border="false">}}
 
 A metal case would reduce costs and eliminate the 160/month production constraint, as we could manufacture thousands each month.
 
@@ -125,7 +125,7 @@ Each TinyPilot requires a microSD that we flash with TinyPilot software. I curre
 
 I'm not sure how to outsource the process of flashing microSDs. We use custom, branded microSDs, and the company that makes them is perfectly happy to flash software onto them. I'm reluctant to do that, as I feel like there's too high a risk of malware. In theory, I could randomly spot-check their output to make sure it matches the disk image I gave them, but even that wouldn't give me complete confidence.
 
-{{<img src="tinypilot-microsds.jpg" max-width="400px" alt="Photo of TinyPilot branded microSDs" caption="We currently use a vendor that can flash images onto microSDs for us, but I have reservations.">}}
+{{<img src="tinypilot-microsds.jpg" max-width="400px" alt="Photo of TinyPilot branded microSDs" caption="We currently use a vendor that can flash images onto microSDs for us, but I have reservations." has-border="false">}}
 
 We could potentially keep flashing microSDs ourselves and send them to the manufacturer. That assumes the manufacturer is honest, but it's probably the same risk every company is taking by having computer products manufactured overseas.
 
@@ -155,7 +155,7 @@ Of all the parts of our workflow, order fulfillment is the one that would be eas
 
 We always have a queue of ready-to-ship boxes, so we could hand those to a 3PL vendor instead of keeping them at our office.
 
-{{<img src="ready-to-ship.jpg" caption="We keep pre-assembled Voyager 2 devices in ready-to-ship boxes at our office." alt="Photo of Voyager 2 in cardboard shipping box" max-width="500px">}}
+{{<img src="ready-to-ship.jpg" caption="We keep pre-assembled Voyager 2 devices in ready-to-ship boxes at our office." alt="Photo of Voyager 2 in cardboard shipping box" max-width="500px" has-border="false">}}
 
 The benefit of outsourcing fulfillment is that our already flexible hours become more flexible. Currently, we staff the TinyPilot office six days per week for a few hours per day. If we have a 3PL vendor, nobody needs to be at the office on any particular day as long as we're assembling enough devices to keep orders flowing.
 

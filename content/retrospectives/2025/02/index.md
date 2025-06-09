@@ -177,7 +177,7 @@ I wanted to buy a router from a trusted hardware vendor like OPNsense or Protect
 
 I ended up buying the [Qotom C3758R 1U 10 Gbps router](https://www.servethehome.com/everything-homelab-node-goes-1u-rackmount-qotom-intel-review/) ($417 after shipping and taxes) and installed OPNsense business on it.
 
-{{<img src="10g-router.webp" max-width="600px" caption="I bought a Qotom C3758R 10 Gbps router (third from the top) to take advantage of a newly available 2 Gbps option from my ISP.">}}
+{{<img src="10g-router.webp" max-width="600px" caption="I bought a Qotom C3758R 10 Gbps router (third from the top) to take advantage of a newly available 2 Gbps option from my ISP." has-border="false">}}
 
 I always worry that I'm not getting enough RAM or disk space on my router, but OPNsense barely needs anything. I went with 8 GB of RAM and 128 GB of disk. I just checked system load while running a speed test, and RAM never went above 13% and CPU peaked at about 30%, so the hardware is more than sufficient for my needs. Note that I don't have a ton of firewall rules, and I don't use OPNsense's IDS/IPS features.
 
@@ -187,7 +187,7 @@ I always worry that I'm not getting enough RAM or disk space on my router, but O
 
 After I published my article about building my first home server rack, several readers recommended I try [Rackstuds](https://www.rackstuds.com/) instead of cage nuts.
 
-{{<img src="rack-studs.webp" caption="I like Rackstuds way more than standard cage nuts." max-width="600px">}}
+{{<img src="rack-studs.webp" caption="I like Rackstuds way more than standard cage nuts." max-width="600px" has-border="false">}}
 
 I was skeptical because Rackstuds are plastic, so they seem more liable to break than metal cage nuts. But Rackstuds has lab tests showing they can [support equipment of up to 40 lbs](https://www.rackstuds.com/certification).
 
@@ -207,7 +207,7 @@ I think of "rails" in a server rack as the things attach to the server to slide 
 
 I finally figured out that when Rackstuds talks about rail thickness, they mean the piece of metal on the front of the rack:
 
-{{<img src="rail-thickness.webp" max-width="700px">}}
+{{<img src="rail-thickness.webp" max-width="700px" has-border="false">}}
 
 On my StarTech rack, purple Rackstuds seemed to fit more comfortably.
 

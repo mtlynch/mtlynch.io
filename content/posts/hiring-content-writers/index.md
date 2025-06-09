@@ -11,7 +11,7 @@ images:
   - hiring-content-writers/cover.jpg
 ---
 
-{{<img src="cover.jpg" alt="Hiring Content Writers A Guide for Small Businesses (cover image)" max-width="1000px">}}
+{{<img src="cover.jpg" alt="Hiring Content Writers A Guide for Small Businesses (cover image)" max-width="1000px" has-border="false">}}
 
 If you write original content for your business, you know how quickly it drains your time and mental energy. It's extremely challenging to write articles or blog posts that readers find engaging, clear, and eloquent.
 

@@ -93,7 +93,7 @@ For now, we're pausing development on TinyPilot Cloud. We've documented our desi
 
 The first TinyPilot product I ever offered was the TinyPilot Hobbyist Kit. Before I had any custom hardware or cases, I offered this kit of off-the-shelf hardware that allowed customers to build a TinyPilot the same way I built my first one. As TinyPilot has evolved and I've added the high-end [TinyPilot Voyager](https://tinypilotkvm.com/blog/introducing-voyager), I continued to offer the Hobbyist Kit for price-conscious customers.
 
-{{<img src="hobbyist-parts.jpg" alt="Photo of parts in TinyPilot hobbyist kit" max-width="600px" caption="TinyPilot Hobbyist Kit, which I stopped offering this month">}}
+{{<img src="hobbyist-parts.jpg" alt="Photo of parts in TinyPilot hobbyist kit" max-width="600px" caption="TinyPilot Hobbyist Kit, which I stopped offering this month" has-border="false">}}
 
 I began working with a design firm in September on a rebrand for TinyPilot. When they asked me which customers TinyPilot should to appeal to, I said small-to-medium-sized businesses and tech-savvy consumers.
 
@@ -119,7 +119,7 @@ Reducing to a single product offers a lot of benefits. There's less complexity f
 
 Sales have been stronger since the change, but it's difficult to say whether there's a causal connection. There's definitely a trend upwards after the change, but it could just be trailing effects from last month's [positive press](/retrospectives/2021/10/#tinypilot-stats).
 
-{{<img src="sales-trends.png" alt="Screenshot of TinyPilot website, offering only one product" max-width="800px" caption="Total TinyPilot sales for the last 90 days">}}
+{{<img src="sales-trends.png" alt="Screenshot of TinyPilot website, offering only one product" max-width="800px" caption="Total TinyPilot sales for the last 90 days" has-border="false">}}
 
 The Voyager 2 is on track to ship in a month or two. My original plan was to sell Voyagers models 1 and 2 side-by-side and experiment with their respective pricing. Seeing how much easier it is to sell a single product, I'm probably going to phase out Voyager 1 soon after I start shipping its successor.
 

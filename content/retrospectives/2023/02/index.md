@@ -91,7 +91,7 @@ Finally, the Saturday after I thought they closed for the new year, I got an ema
 
 A week later, the cases arrived! And to my great relief, the quality on all of them was just as good as the prototypes.
 
-{{<img src="new-cases.webp" alt="Photo of a TinyPilot metal case in a cardboard box full of other cases" caption="One of our 16 boxes of new cases" max-width="500px">}}
+{{<img src="new-cases.webp" alt="Photo of a TinyPilot metal case in a cardboard box full of other cases" caption="One of our 16 boxes of new cases" max-width="500px" has-border="false">}}
 
 We were able to ship the Voyager 2a as planned, and we have enough cases to last us until we receive the second manufacturing batch.
 

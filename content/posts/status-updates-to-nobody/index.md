@@ -13,7 +13,7 @@ images:
   - status-updates-to-nobody/cover.jpg
 ---
 
-{{<img src="cover.jpg" alt="Staying Motivated by Sending Status Updates to Nobody (cover image)" max-width="1000px">}}
+{{<img src="cover.jpg" alt="Staying Motivated by Sending Status Updates to Nobody (cover image)" max-width="1000px" has-border="false">}}
 
 At my last job, status meetings with my manager were outstandingly efficient. He never ran me through the typical drill of listing list off everything I did since our last meeting. Instead, we jumped right to the meaty topics of career growth, team development, and challenging technical problems.
 
@@ -83,7 +83,7 @@ After writing private updates for a year, it still gave me satisfaction, but I m
 
 One of [my 2019 goals](/solo-developer-year-1/#goals-for-year-two) was to gain expertise in a JavaScript framework, so that felt like a convenient excuse to create my own status sharing web app. It's called [What Got Done](https://whatgotdone.com):
 
-{{<img src="whatgotdone-screenshot.jpg" alt="Screenshot of Monday.com feature page" caption="My [most recent update](https://whatgotdone.com/michael/2019-06-21) on What Got Done" max-width="800px">}}
+{{<img src="whatgotdone-screenshot.jpg" alt="Screenshot of Monday.com feature page" caption="My [most recent update](https://whatgotdone.com/michael/2019-06-21) on What Got Done" max-width="800px" has-border="false">}}
 
 I record my status updates in it every week. In the last month, the site has attracted **three** other users. Hear that, investors? 300% month-over-month growth!
 

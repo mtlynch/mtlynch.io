@@ -19,7 +19,7 @@ My most significant professional development of the last year is that I sold [Ti
 
 My wife and I wanted to start a family, and I didn't think I could be the sole manager of a seven-person company and a good father to a newborn. I found a buyer whose vision for the company aligned with mine, and we completed the sale in April 2024.
 
-{{<img src="sold-tinypilot.webp"  max-width="600px" alt="Illustration of me waving goodbye to TinyPilot mascot flying away in tiny prop plane" caption="Me selling TinyPilot so I could start a family">}}
+{{<img src="sold-tinypilot.webp"  max-width="600px" alt="Illustration of me waving goodbye to TinyPilot mascot flying away in tiny prop plane" caption="Me selling TinyPilot so I could start a family" has-border="false">}}
 
 I already wrote and [podcasted](https://softwaremisadventures.com/p/michael-lynch-indie-hacking) about [the sale](/i-sold-tinypilot/) and [the lessons I learned](/lessons-from-my-first-exit/), but the short version is that I'm grateful for how everything worked out.
 
@@ -204,7 +204,7 @@ I now consider a process to be documented only when a teammate can follow the pr
 
 One of the biggest lessons from selling TinyPilot was how big a difference closing time makes. I didn't realize how much [additional risk and paperwork the seller bears](/i-sold-tinypilot/#due-diligence-makes-me-weaker-by-the-day) for every month the sale drags on.
 
-{{<img src="due-diligence.webp" alt="Cartoon of a man growing increasingly weak as he receives due diligence requests over several weeks">}}
+{{<img src="due-diligence.webp" alt="Cartoon of a man growing increasingly weak as he receives due diligence requests over several weeks" has-border="false">}}
 
 The buyer's financing has a major impact on closing time. If the buyer borrows money from a bank, the bank becomes a key decision-maker in the deal. Banks move slowly, demand a lot of paperwork, and are hard to negotiate with because they don't care if the deal falls through.
 

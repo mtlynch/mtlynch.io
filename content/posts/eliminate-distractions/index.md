@@ -39,7 +39,7 @@ If you observed my _actual_ use of Facebook, you'd notice me spending time on de
 - Reading glamourized, envy-baiting updates from distant acquaintances
 - Escaping the experience of sitting alone with my thoughts for more than three seconds at a time
 
-{{<img src="ideal-facebook.jpg" alt="Ideal Facebook vs. Actual Facebook" max-width="900px">}}
+{{<img src="ideal-facebook.jpg" alt="Ideal Facebook vs. Actual Facebook" max-width="900px" has-border="false">}}
 
 Until a few years ago, I checked Facebook 20-30 times per day. At the first hint of boredom, I'd open a new browser tab and check Facebook. During a 30-second elevator ride, I'd take my phone out and cycle through Facebook, Twitter, and reddit.
 
@@ -59,11 +59,11 @@ The Trending Topics play on your natural desire to feel involved, but they're al
 
 You can't disable the Trending Topics panel, but you can make it boring. Configure [your Trends locale](https://twitter.com/settings/trends) to a city whose language you can't read and whose news you don't follow. Twitter now shows me trends for Abu Dhabi.
 
-{{<img src="twitter-settings.jpg" alt="Twitter's trending topics for Abu Dhabi" caption="Adjusting location for Twitter Trending Topics." max-width="600px">}}
+{{<img src="twitter-settings.jpg" alt="Twitter's trending topics for Abu Dhabi" caption="Adjusting location for Twitter Trending Topics." max-width="600px" has-border="false">}}
 
 Here's how my trends panel looks after I set it to Abu Dhabi.
 
-{{<img src="abu-dhabi-trends.jpg" alt="Setting Twitter trends to Abu Dhabi results in mostly Arabic hashtags" caption="Twitter Trending Topics for Abu Dhabi, UAE">}}
+{{<img src="abu-dhabi-trends.jpg" alt="Setting Twitter trends to Abu Dhabi results in mostly Arabic hashtags" caption="Twitter Trending Topics for Abu Dhabi, UAE" has-border="false">}}
 
 The trends are mostly in Arabic, which I can't read. Even the English hashtag is specific to the United Arab Emirates.
 
@@ -73,7 +73,7 @@ I initially joined Twitter to share my blog posts and find other interesting con
 
 Eliminating irrelevant accounts cleared most of the low-quality content, and I eradicated the remainder by adding [muted words](https://twitter.com/settings/muted_keywords):
 
-{{<img src="twitter-muted.jpg" alt="Twitter's trending topics" caption="Use [muted words](https://twitter.com/settings/muted_keywords) to filter out current events and topics you're uninterested in engaging with on Twitter." max-width="600px">}}
+{{<img src="twitter-muted.jpg" alt="Twitter's trending topics" caption="Use [muted words](https://twitter.com/settings/muted_keywords) to filter out current events and topics you're uninterested in engaging with on Twitter." max-width="600px" has-border="false">}}
 
 Twitter evolves quickly, so this is a continuous process. When too much of my feed fills with uninteresting content, I review my follow list for accounts whose signal-to-noise ratio is poor and look for new muted words.
 
@@ -83,7 +83,7 @@ Twitter evolves quickly, so this is a continuous process. When too much of my fe
 
 StackOverflow offers valuable solutions to many programming roadblocks. Unfortunately, they also try to steal my focus and drag me deeper into their platform. Their sidebar is teeming with distractions: "hot questions," blog posts, and job listings. The "hot questions" are especially pernicious because StackOverflow no doubt fills this panel with the questions that attract the most clicks.
 
-{{<img src="stackoverflow-sidebars.jpg" alt="Twitter's trending topics" caption="&ldquo;Hot Questions&rdquo; on StackOverflow distract you from the problem you're trying to solve" max-width="800px">}}
+{{<img src="stackoverflow-sidebars.jpg" alt="Twitter's trending topics" caption="&ldquo;Hot Questions&rdquo; on StackOverflow distract you from the problem you're trying to solve" max-width="800px" has-border="false">}}
 
 The "hot questions" are never relevant to the problem I came to StackOverflow to solve. But if I'm on StackOverflow, I'm frustrated with a technical problem and easily tempted by distractions.
 
@@ -157,7 +157,7 @@ One way I've found to curb my bad habits is to put obstacles in front of them. F
 
 Free of obstacles, it's painfully easy for me to indulge in social media on my computer. I get bored, hit Ctrl+T to open a new tab, then visit Facebook, Twitter, or reddit.
 
-{{<img src="typewriter.png" alt="relevant xkcd cartoon" caption="\"Typewriter\" by [xkcd](https://xkcd.com/477/)">}}
+{{<img src="typewriter.png" alt="relevant xkcd cartoon" caption="\"Typewriter\" by [xkcd](https://xkcd.com/477/)" has-border="false">}}
 
 To curb my social media usage, I add mildly annoying hurdles to interrupt my habits. I sign out of time-waster sites in my main browser and access them only through a separate, dedicated browser profile.
 
@@ -167,13 +167,13 @@ This seemingly minor speed bump prevents me from mindlessly popping open a new t
 
 This is sufficient for sites like Facebook or Twitter that are near useless when you're signed out. For others, like a news site, I add its URL to uBlock Origin's filter rules. That way, any time I visit out of habit, uBlock Origin forces me to make a conscious choice about spending time on the site.
 
-{{<img src="block-news3.jpg" alt="The browser blocks subsequent visits to uBlock Origin" caption="Blocking Google News" max-width="650px">}}
+{{<img src="block-news3.jpg" alt="The browser blocks subsequent visits to uBlock Origin" caption="Blocking Google News" max-width="650px" has-border="false">}}
 
 Here's how to set that up:
 
 {{<gallery caption="Using [uBlock Origin](https://github.com/gorhill/uBlock) rules to block Google News.">}}
-{{<img src="block-news1.jpg" alt="Open uBlock Origin settings">}}
-{{<img src="block-news2.jpg" alt="Adding Google News as a blocked site in uBlock Origin">}}
+{{<img src="block-news1.jpg" alt="Open uBlock Origin settings" has-border="false">}}
+{{<img src="block-news2.jpg" alt="Adding Google News as a blocked site in uBlock Origin" has-border="false">}}
 {{</gallery>}}
 
 ## Phone
@@ -200,11 +200,11 @@ I originally met my friend [David Toth](https://twitter.com/jupiterunknown) at a
 
 David loves meeting other tech founders, but he only has finite time to do it. He found that his in-person interactions were almost always richer and longer-lasting than relationships he formed online, so he dedicates nearly all of his networking time to real-life events.
 
-{{<img src="indiehackers-august.jpg" alt="Group photo of Indie Hackers meetup" caption="Photo from a recent Indie Hackers Western Mass Meetup, which David and I now co-organize" max-width="650px">}}
+{{<img src="indiehackers-august.jpg" alt="Group photo of Indie Hackers meetup" caption="Photo from a recent Indie Hackers Western Mass Meetup, which David and I now co-organize" max-width="650px" has-border="false">}}
 
 David's philosophy made complete sense to me. I'm still in touch with several people today after meeting them at a meetup or conference years ago for only 30 minutes. That's not true of anyone I interact with on Twitter or reddit. In my social media history, there are countless examples of me spending an hour or more to engage with someone, but now I have no memory of the conversation and am not in touch with the person at all.
 
-{{<img src="indiehackers-feedback.jpg" alt="Chat settings in Gmail" caption="I probably spent 90+ minutes testing this user's app and giving him [feedback on Indie Hackers](https://www.indiehackers.com/product/libate/-L_2noyl2XS5xGWrIwTp?commentId=-L_QMW3ruNo_97Jevk4T). I barely remember the interaction and doubt that he remembers me." max-width="450px">}}
+{{<img src="indiehackers-feedback.jpg" alt="Chat settings in Gmail" caption="I probably spent 90+ minutes testing this user's app and giving him [feedback on Indie Hackers](https://www.indiehackers.com/product/libate/-L_2noyl2XS5xGWrIwTp?commentId=-L_QMW3ruNo_97Jevk4T). I barely remember the interaction and doubt that he remembers me." max-width="450px" has-border="false">}}
 
 ## Schedule time for email, texts, and social media
 

@@ -39,7 +39,7 @@ It's hard to say because I wasn't collecting fine-grained metrics in January, bu
 
 ### Amazon Affiliate Stats
 
-{{<img src="amazon-earnings-2019-02.jpg" alt="Amazon Earnings - Feb. 2019" caption="Amazon affiliate earnings - February 2019" max-width="800px">}}
+{{<img src="amazon-earnings-2019-02.jpg" alt="Amazon Earnings - Feb. 2019" caption="Amazon affiliate earnings - February 2019" max-width="800px" has-border="false">}}
 
 | Metric         | January 2019 | February 2019 | Change                                  |
 | -------------- | ------------ | ------------- | --------------------------------------- |
@@ -61,7 +61,7 @@ In any case, even an optimistic revenue of $30 is still far below my target of $
 
 ### Visitor Stats
 
-{{<img src="ga-2019-02-trailing-12.jpg" alt="Google Analytics screenshot" caption="User sessions - March 2018 through February 2019" max-width="800px">}}
+{{<img src="ga-2019-02-trailing-12.jpg" alt="Google Analytics screenshot" caption="User sessions - March 2018 through February 2019" max-width="800px" has-border="false">}}
 
 | Metric                        | January 2019 | February 2019 | Change                                 |
 | ----------------------------- | ------------ | ------------- | -------------------------------------- |
@@ -75,7 +75,7 @@ Visitor growth flattened out in February, although it's not as flat as it seems.
 
 Many people begin diets as part of their new year's resolution but then lose interest a few weeks later. According to Google Trends, search interest for "keto" dropped by 25% between January and February:
 
-{{<img src="gtrends-keto.jpg" alt="Google Analytics screenshot" caption="Search interest over for keyword 'keto' between January and February 2018" max-width="563px">}}
+{{<img src="gtrends-keto.jpg" alt="Google Analytics screenshot" caption="Search interest over for keyword 'keto' between January and February 2018" max-width="563px" has-border="false">}}
 
 In addition, February is just a shorter month than January by about 10%.
 
@@ -85,7 +85,7 @@ Referrals from Facebook shrank to almost nothing, as I stopped promoting the sit
 
 ### SEO Stats
 
-{{<img src="google-search-console.jpg" alt="Google Search Console screenshot" caption="Google Search Console - Dec. 2018 to Feb. 2019" max-width="800px">}}
+{{<img src="google-search-console.jpg" alt="Google Search Console screenshot" caption="Google Search Console - Dec. 2018 to Feb. 2019" max-width="800px" has-border="false">}}
 
 | Metric                            | January 2019 | February 2019 | Change                                 |
 | --------------------------------- | ------------ | ------------- | -------------------------------------- |
@@ -157,7 +157,7 @@ The box displays three random keto foods. Well, not completely random. It random
 
 I can't tell if this made any real difference. I implemented the change on Feb. 11th, but any change that occurred is still within the noise of my metrics:
 
-{{<img src="pages-per-session.jpg" alt="Google Analytics pages per session" caption="Pages per session before and after 'Other Foods' section" max-width="783px">}}
+{{<img src="pages-per-session.jpg" alt="Google Analytics pages per session" caption="Pages per session before and after 'Other Foods' section" max-width="783px" has-border="false">}}
 
 ### My hail mary: data visualizations
 
@@ -165,7 +165,7 @@ Is It Keto's biggest limiting factor is its domain authority, which continues to
 
 My plan is to write blog posts on Is It Keto using recipe data from [KetoHub](https://recipe-search.isitketo.org) to make interesting visualizations about trends in keto. For example, here's a rough draft of a bubble cloud I made showing the most popular ingredients in over 4,500 different keto recipes:
 
-{{<img src="ingredients-rough.jpg" alt="Bubble cloud  of ingredient frequency" caption="Ingredient frequency in 4,500 keto recipes from the most popular keto websites" max-width="600px">}}
+{{<img src="ingredients-rough.jpg" alt="Bubble cloud  of ingredient frequency" caption="Ingredient frequency in 4,500 keto recipes from the most popular keto websites" max-width="600px" has-border="false">}}
 
 It's a longshot because keto websites don't often link to other keto sites, but it's the best idea I can come up with that I can complete in under one month. If I can produce interesting visualizations and get other high-ranking sites to link to my blog posts, then I'll increase the site's domain authority and drastically increase site traffic.
 

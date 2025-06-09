@@ -130,11 +130,11 @@ I [posted my question on Ziggit](https://ziggit.dev/t/zig-build-run-is-10x-faste
 
 Andrew Kelly, Zig's founder and lead developer made [a surprise appearance in the thread](https://ziggit.dev/t/zig-build-run-is-10x-faster-than-compiled-binary/3446/8?u=mtlynch). He couldn't explain the phenomenon I was seeing, but he pointed out that I was making a different performance mistake:
 
-{{<img src="akelly-post.png"  alt="Looks like you’re doing 1 syscall per byte read? That’s going to perform extremely poorly. My guess is that the extra steps of using the build system incidentally introduced some buffering. Not sure why though. The build system is making the child process inherit the file descriptors directly.">}}
+{{<img src="akelly-post.png"  alt="Looks like you’re doing 1 syscall per byte read? That’s going to perform extremely poorly. My guess is that the extra steps of using the build system incidentally introduced some buffering. Not sure why though. The build system is making the child process inherit the file descriptors directly." has-border="false">}}
 
 Finally, my friend [Andrew Ayer](https://www.agwa.name) saw my post about this on Mastodon and [solved the mystery](https://m.mtlynch.io/@agwa@agwa.name/112039058255070708):
 
-{{<img src="agwa-masto.png" alt="Do you still see the 10x disparity with significantly larger inputs (i.e. > 1MB)? Do you still the disparity if you redirect stdin from a file instead of a pipe? My guess is that when you execute the program directly, xxd and count-bytes start at the same time, so the pipe buffer is empty when count-bytes first tries to read from stdin, requiring it to wait until xxd fills it. But when you use zig build run, xxd gets a head start while the program is compiling, so by the time count-bytes reads from stdin, the pipe buffer has been filled.">}}
+{{<img src="agwa-masto.png" alt="Do you still see the 10x disparity with significantly larger inputs (i.e. > 1MB)? Do you still the disparity if you redirect stdin from a file instead of a pipe? My guess is that when you execute the program directly, xxd and count-bytes start at the same time, so the pipe buffer is empty when count-bytes first tries to read from stdin, requiring it to wait until xxd fills it. But when you use zig build run, xxd gets a head start while the program is compiling, so by the time count-bytes reads from stdin, the pipe buffer has been filled." has-border="false">}}
 
 Andrew Ayer got it exactly right, and I'll break it down below.
 

@@ -87,7 +87,7 @@ One night, I read a blog post about [fuzzing a random open-source utility that F
 
 A few nights later, I spent a couple of hours [writing a fuzzer](https://gitlab.com/mtlynch/fuzz-openc2e) for [openc2e](https://openc2e.github.io/), the open-source reimplementation of the [_Creatures_ game series](<https://en.wikipedia.org/wiki/Creatures_(video_game_series)>).
 
-{{<img src="Openc2e-c1-april2008.jpg" max-width="600px" caption="[openc2e](https://openc2e.github.io/) is the open-source reimplementation of the [_Creatures_ game series](https://en.wikipedia.org/wiki/Creatures_(video_game_series)).">}}
+{{<img src="Openc2e-c1-april2008.jpg" max-width="600px" caption="[openc2e](https://openc2e.github.io/) is the open-source reimplementation of the [_Creatures_ game series](https://en.wikipedia.org/wiki/Creatures_(video_game_series))." has-border="false">}}
 
 The original _Creatures_ game from 1996 included a custom scripting language and corresponding virtual machine. The language is called [Creatures Agent Object Script (CAOS)](https://creatures.fandom.com/wiki/CAOS), and it lets players create custom add-ons for the game.
 
@@ -103,7 +103,7 @@ Enthusiasts have reimplemented a CAOS interpreter within openc2e, and I doubted 
 
 I started by fuzzing the lexer for the CAOS language, and I immediately found a bunch of crashes.
 
-{{<img src="fuzz-openc2e.webp" caption="Within a minute of fuzzing, I found 20 unique crashes in openc2e." max-width="800px">}}
+{{<img src="fuzz-openc2e.webp" caption="Within a minute of fuzzing, I found 20 unique crashes in openc2e." max-width="800px" has-border="false">}}
 
 One of the crashes was just an unterminated double quote, which confirmed my suspicion that nobody had ever fuzzed the code.
 
@@ -160,7 +160,7 @@ The CPU is fast but not top-of-the-line. When I'm buying CPUs, I look at benchma
 
 The biggest extravagance is the monitor. It's a ridiculous 49" ultrawide OLED:
 
-{{<img src="new-monitor.webp" max-width="700px" caption="The 49&quot; Samsung Odyssey G9 is the biggest indulgence of my new desktop.">}}
+{{<img src="new-monitor.webp" max-width="700px" caption="The 49&quot; Samsung Odyssey G9 is the biggest indulgence of my new desktop." has-border="false">}}
 
 I distinctly recall the joy I felt when I was 11 years old, and my dad came back from CompUSA and presented me with a box containing one of the largest monitors available, which was probably a 17" CRT. "Given the amount of time you'll spend looking at your monitor," he explained, "we might as well invest in a good one." For context, both of my parents are programmers, and from a young age, I spent most of my free time at a computer.
 
@@ -190,8 +190,8 @@ I generally only dock web browsers and VS code windows. Everything else is just 
 Limiting VS Code to 1000px in width is helpful because I prefer to keep only the editing pane open. If there's more screen real estate, I forget and leave other panels open like the file explorer. But at 1000px, I can open side-panels occasionally, but it's noticeable enough that I close them afterward and get back to focusing on the main editing panel.
 
 {{<gallery caption="VS Code with side panels open (left) vs. only the editor open (right)">}}
-{{<img src="distracting-panels.webp" max-width="400px">}}
-{{<img src="just-editor.webp" max-width="400px">}}
+{{<img src="distracting-panels.webp" max-width="400px" has-border="false">}}
+{{<img src="just-editor.webp" max-width="400px" has-border="false">}}
 {{</gallery>}}
 
 I also didn't think I'd care about the sharpness of OLED vs. LED, but I do appreciate the difference. The blacks are blacker, which makes the image feel more crisp.

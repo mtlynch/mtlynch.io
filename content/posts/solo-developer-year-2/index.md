@@ -16,7 +16,7 @@ discuss_urls:
   reddit: https://redd.it/ewp2rw
 ---
 
-{{<img src="cover.jpg" alt="My second year as a solo developer (cover image)">}}
+{{<img src="cover.jpg" alt="My second year as a solo developer (cover image)" has-border="false">}}
 
 Two years ago, I [quit my developer job at Google](/why-i-quit-google/) to build my own software business. A year later, I [posted an update](/solo-developer-year-1/) about my finances, happiness, and lessons learned. Today marks the end of my second year, so it's time for another update.
 
@@ -212,7 +212,7 @@ Blog revenue is also down, which is fine because I don't go out of my way to ear
 
 ### What Got Done
 
-{{<img src="whatgotdone-screenshot.png" alt="Screenshot of What Got Done website" max-width="550px" caption="What Got Done is a task journaling app.">}}
+{{<img src="whatgotdone-screenshot.png" alt="Screenshot of What Got Done website" max-width="550px" caption="What Got Done is a task journaling app." has-border="false">}}
 
 What Got Done is a tool for recording and sharing weekly work accomplishments. It's [a technique that I learned](/status-updates-to-nobody/) while working at Google, and I've been using it to record [my progress](https://whatgotdone.com/michael) every week for the last 10 months.
 

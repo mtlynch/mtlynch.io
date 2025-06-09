@@ -85,7 +85,7 @@ Still, the enterprise customer approached me only a few days after I rewrote the
 
 At the end of November, I met the owner of a [sheet metal shop](/retrospectives/2019/12/#interviewing-machine-shops) who was interested in talking with me about creating software specifically for sheet metal producers.
 
-{{<img src="russ-ward-aMlbxs8SYig-unsplash.jpg" alt="Photograph of a person cutting metal" max-width="600px">}}
+{{<img src="russ-ward-aMlbxs8SYig-unsplash.jpg" alt="Photograph of a person cutting metal" max-width="600px" has-border="false">}}
 
 Software for sheet metal shops ticked a lot of my boxes:
 

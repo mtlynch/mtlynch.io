@@ -119,7 +119,7 @@ Or so I thought.
 
 I published to Netlify, updated the DNS entries for `tinypilotkvm.com`, tried visiting the site, and: TLS error.
 
-{{<img src="tls-error.webp" max-width="650px" caption="Immediately after updating DNS entries, I saw a TLS error when visiting the TinyPilot website." alt="Screenshot of Firefox visiting tinypilotkvm.com, and the browser shows 'Warning: Potential Security Risk Ahead'">}}
+{{<img src="tls-error.webp" max-width="650px" caption="Immediately after updating DNS entries, I saw a TLS error when visiting the TinyPilot website." alt="Screenshot of Firefox visiting tinypilotkvm.com, and the browser shows 'Warning: Potential Security Risk Ahead'" has-border="false">}}
 
 That's bad. Nobody wants to shop on a site right after the browser just told them it was going to steal their credit card information.
 

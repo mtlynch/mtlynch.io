@@ -81,7 +81,7 @@ In the first few months of TinyPilot, I struggled to keep up with inventory and 
 
 A shipment of HDMI capture chips was running late, and I needed them to build more [Voyagers](https://tinypilotkvm.com/product/tinypilot-voyager), my high-end TinyPilots.
 
-{{<img src="voyager-connected.jpg" max-width="500px" caption="To build more [TinyPilot Voyagers](https://tinypilotkvm.com/product/tinypilot-voyager), I needed a delivery of HDMI capture chips that was stuck in transit from China.">}}
+{{<img src="voyager-connected.jpg" max-width="500px" caption="To build more [TinyPilot Voyagers](https://tinypilotkvm.com/product/tinypilot-voyager), I needed a delivery of HDMI capture chips that was stuck in transit from China." has-border="false">}}
 
 It was Monday, and the chips were supposed to arrive that Saturday. I had six Voyagers left. I generally sell about one every day or two, so I thought I might skate by. Then two customers purchased that day.
 

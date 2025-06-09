@@ -64,7 +64,7 @@ I basically just removed a link from the site's navigation bar.
 
 In last month's retrospective, I mentioned that I was [starting to see sales trending upwards](/retrospectives/2021/11/#simplifying-to-just-one-product) and wondered whether it was related to simplifying the product offering. After a month of extra data, I'm pretty convinced that it made a huge difference:
 
-{{<img src="tp-sales-consolidated.png" alt="Graph of TinyPilot sales over time, trending upwards after the consolidation to one product" max-width="800px" caption="TinyPilot's weekly sales before and after consolidating the website to a single product">}}
+{{<img src="tp-sales-consolidated.png" alt="Graph of TinyPilot sales over time, trending upwards after the consolidation to one product" max-width="800px" caption="TinyPilot's weekly sales before and after consolidating the website to a single product" has-border="false">}}
 
 We've had spikes in sales before, but they always followed some obvious event like a mention on YouTube or a review on a popular website. Sales would spike and then slowly subside.
 
@@ -82,7 +82,7 @@ The latest sales increase has brought back some growing pains. We have contingen
 
 First, we noticed that we were using [power connectors](https://tinypilotkvm.com/product/tinypilot-power-connector) at a fast enough rate that we'd run out before our next delivery of circuit boards, which would prevent us from selling Voyagers.
 
-{{<img src="power-connector-connected.jpg" alt="Photo of TinyPilot Power Connector" max-width="500px" caption="We came within days of running out of TinyPilot Power Connectors.">}}
+{{<img src="power-connector-connected.jpg" alt="Photo of TinyPilot Power Connector" max-width="500px" caption="We came within days of running out of TinyPilot Power Connectors." has-border="false">}}
 
 I listed them out of stock for individual sale, and that slowed down the pace _just_ enough to last us until the new shipment arrived.
 
@@ -92,7 +92,7 @@ _\[Sidenote: If you're wondering why I was still selling power connectors even t
 
 Next, we started running low on ribbon cables. We typically buy them in bulk, and we have so many on hand that it's not even worth tracking them in our inventory system. But because we're not tracking them, we didn't notice that our last order was running late. We were down to just 30 cables, enough to make only a few days' worth of Voyagers.
 
-{{<img src="ribbon-cables.jpg" alt="Photo of ribbon cable we use for TinyPilot" max-width="400px" caption="TinyPilot's sales almost ground to a halt because we ran out of 70mm ribbon cables.">}}
+{{<img src="ribbon-cables.jpg" alt="Photo of ribbon cable we use for TinyPilot" max-width="400px" caption="TinyPilot's sales almost ground to a halt because we ran out of 70mm ribbon cables." has-border="false">}}
 
 We use a non-standard ribbon cable size, so we get them special-ordered. Was I going to have to halt sales for weeks because of something as stupid as ribbon cables?
 
@@ -160,7 +160,7 @@ To replace AppEngine, I used [fly.io](https://fly.io). I've been experimenting w
 
 My move to fly.io was mainly about reducing costs and gaining vendor independence, but the changes ended up improving performance tremendously. Most of What Got Done's API requests had 2-20x speedups after I migrated to SQLite and fly.io.
 
-{{<img src="appengine-vs-fly.png" alt="Graph of AppEngine performance vs fly.io" max-width="800px">}}
+{{<img src="appengine-vs-fly.png" alt="Graph of AppEngine performance vs fly.io" max-width="800px" has-border="false">}}
 
 | Request                             | AppEngine Latency (ms) | fly.io Latency (ms) | Latency Reduction |
 | ----------------------------------- | ---------------------- | ------------------- | ----------------- |

@@ -96,7 +96,7 @@ The situation reminded me of an event from my adolescence. Real estate developer
 
 I called Al, a friend from my old dance crew, to see if he'd participate in another breakdancing performance for TinyPilot. Irritatingly, he pointed out that neither of us know anything about breakdancing and that I seemed to be describing the plot of the 80s movie, [_Breakin' 2: Electric Boogaloo_](https://www.imdb.com/title/tt0086999/).
 
-{{<img src="breakin2.jpg" max-width="600px" alt="Movie poster for Breakin' 2: Electric Boogaloo" caption="Could I raise the money I needed by putting on a breakdancing show?">}}
+{{<img src="breakin2.jpg" max-width="600px" alt="Movie poster for Breakin' 2: Electric Boogaloo" caption="Could I raise the money I needed by putting on a breakdancing show?" has-border="false">}}
 
 So, that plan was out.
 
@@ -183,7 +183,7 @@ I wanted to encourage comedians to enter information about their own shows. If i
 
 I frequently see comedians do this thing on social media where they'll post an image with a list of their upcoming shows:
 
-{{<img src="comedy-dates.webp">}}
+{{<img src="comedy-dates.webp" has-border="false">}}
 
 From the looks of it, the comedians seem to be creating these images by hand using general-purpose image editing tools. As show details changed, the comedians would sometimes clunkily edit on top of their previous image, presumably because they didn't have a way of going back and editing the original.
 

@@ -200,7 +200,7 @@ WanderJest is a web app I started a few years ago to help people find live comed
 
 One of the biggest challenges of WanderJest was finding out information about upcoming shows. The canonical information about a comedy show is typically a poster that looks like this:
 
-{{<img src="luthiers-show.jpg" max-width="400px" alt="Poster for a local comedy show">}}
+{{<img src="luthiers-show.jpg" max-width="400px" alt="Poster for a local comedy show" has-border="false">}}
 
 Performers don't want to make a poster and then re-type all the information somewhere else, so I've been thinking about ways to get the information from the poster "for free."
 

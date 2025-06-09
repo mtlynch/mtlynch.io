@@ -22,7 +22,7 @@ TinyPilot is my inexpensive, open-source device for controlling computers remote
 
 This post details my experience creating TinyPilot and shows how you can build your own for under $100 using a Raspberry Pi.
 
-{{<img src="win-ubuntu.jpg" alt="Photo of TinyPilot connecting two computers" max-width="600px" caption="Using TinyPilot to control my Ubuntu laptop from Chrome on my Microsoft Surface">}}
+{{<img src="win-ubuntu.jpg" alt="Photo of TinyPilot connecting two computers" max-width="600px" caption="Using TinyPilot to control my Ubuntu laptop from Chrome on my Microsoft Surface" has-border="false">}}
 
 ## I don't want your life story; just tell me how to build it
 
@@ -36,7 +36,7 @@ If you're a grinch who wants to skip my fascinating tale of triumph and despair 
 
 A few years ago, I built my own home server for testing software. It's been a valuable investment, and I use it every day.
 
-{{<img src="homelab-server.jpg" alt="Photo of my homelab VM server" caption="The homelab server I built in 2017 to host my virtual machines" max-width="650px">}}
+{{<img src="homelab-server.jpg" alt="Photo of my homelab VM server" caption="The homelab server I built in 2017 to host my virtual machines" max-width="650px" has-border="false">}}
 
 The server has no keyboard or monitor attached because I access it over ssh or a web interface. This is a convenient setup, but it also turns small issues into a colossal pain.
 
@@ -60,7 +60,7 @@ So, I did what any appropriately irrational programmer would do: spend several h
 
 The [Raspberry Pi](https://www.raspberrypi.org/) is a small, inexpensive single-board computer. The devices are powerful enough to run a full desktop operating system, so their $30-60 price point makes them a popular tool among hobbyists and programmers.
 
-{{<img src="pi-in-hand.jpg" alt="Raspberry Pi in the palm of my hand" caption="The Raspberry Pi is a fully-functional computer that fits on a single chip and costs only $30-60." max-width="600px">}}
+{{<img src="pi-in-hand.jpg" alt="Raspberry Pi in the palm of my hand" caption="The Raspberry Pi is a fully-functional computer that fits on a single chip and costs only $30-60." max-width="600px" has-border="false">}}
 
 Recent versions of the Pi [support USB on-the-go (USB OTG)](https://www.raspberrypi.org/documentation/hardware/raspberrypi/usb/README.md#overview_pi4), which allows the Pi to impersonate USB devices such as keyboards, thumb drives, and microphones.
 
@@ -76,7 +76,7 @@ Keyboard forwarding isn't so useful if you can't see what's happening on the scr
 
 My first attempt at video capture was to use the [Lenkeng LKV373A HDMI extender](https://smile.amazon.com/AEMYO-Extender-V3-0-Ethernet-Supports/dp/B01LGUT9HW/). Daniel Kučera (aka [danman](https://blog.danman.eu/)) did an excellent job [reverse engineering](https://blog.danman.eu/new-version-of-lenkeng-hdmi-over-ip-extender-lkv373a/) this device. It was available from Chinese merchants on eBay for around $40, so it seemed like my best option.
 
-{{<img src="lkv373a.jpg" alt="Photo of Lenkeng LKV373A HDMI extender" caption="The [Lenkeng LKV373A HDMI extender](https://smile.amazon.com/AEMYO-Extender-V3-0-Ethernet-Supports/dp/B01LGUT9HW/) was my first attempt at HDMI video capture." max-width="600px">}}
+{{<img src="lkv373a.jpg" alt="Photo of Lenkeng LKV373A HDMI extender" caption="The [Lenkeng LKV373A HDMI extender](https://smile.amazon.com/AEMYO-Extender-V3-0-Ethernet-Supports/dp/B01LGUT9HW/) was my first attempt at HDMI video capture." max-width="600px" has-border="false">}}
 
 Capturing video was tricky because the LKV373A transmitter isn't a video capture device. Its intended purpose is to pair with an LKV373A receiver that converts the network stream back to HDMI output. In danman's investigation, he discovered a way to intercept and capture the video stream, but the LKV373A speaks a non-standard variant of the RTP protocol that few video tools understand.
 
@@ -86,11 +86,11 @@ Fortunately, danman [contributed a patch to ffmpeg](https://ffmpeg.org/pipermail
 ffplay -i udp://239.255.42.42:5004
 ```
 
-{{<img src="ffplay-screenshot.jpg" alt="Screenshot of ffplay rendering video stream from LKV373A" caption="Rendering the video stream from the LKV373A with ffplay" max-width="800px">}}
+{{<img src="ffplay-screenshot.jpg" alt="Screenshot of ffplay rendering video stream from LKV373A" caption="Rendering the video stream from the LKV373A with ffplay" max-width="800px" has-border="false">}}
 
 It was here that I received my first taste of a problem that dogged me throughout the project: latency. There was almost a one-second delay between the target computer and the video playback on my desktop.
 
-{{<img src="lkv373a-latency.jpg" alt="Photo of Lenkeng LKV373A HDMI extender" caption="The LKV373A introduced 838 milliseconds of latency before any re-encoding." max-width="600px">}}
+{{<img src="lkv373a-latency.jpg" alt="Photo of Lenkeng LKV373A HDMI extender" caption="The LKV373A introduced 838 milliseconds of latency before any re-encoding." max-width="600px" has-border="false">}}
 
 I tried playing around with ffplay's many command-line flags to speed up the stream, but I never pushed past 800 milliseconds. And that was on my desktop with its high-end GPU and CPU. It didn't bode well performance-wise for my scrappy little Raspberry Pi.
 
@@ -100,7 +100,7 @@ Fortunately, I found a better solution by complete coincidence.
 
 While mindlessly scrolling through Twitter, I happened to see [a tweet by Arsenio Dev](https://twitter.com/Ascii211/status/1268631069051453448) about a low-cost HDMI to USB dongle he had just purchased:
 
-{{<img src="arsenio-dev-tweet.jpg" alt="Screenshot of Rufus" caption="A [tweet from Arsenio Dev](https://twitter.com/Ascii211/status/1268631069051453448) tipped me off to a better video capture solution." href="https://twitter.com/Ascii211/status/1268631069051453448">}}
+{{<img src="arsenio-dev-tweet.jpg" alt="Screenshot of Rufus" caption="A [tweet from Arsenio Dev](https://twitter.com/Ascii211/status/1268631069051453448) tipped me off to a better video capture solution." href="https://twitter.com/Ascii211/status/1268631069051453448" has-border="false">}}
 
 Capturing video at 1080p resolution and 30 frames per second seemed a little too good to be true, so I ordered one from eBay. It was only $11, including shipping. I don't even know what you call it &mdash; it has no brand name, so I'll just call it "the HDMI dongle." There are several variants, but they're all just different housing over the same [MacroSilicon MS2109 chip](https://twitter.com/Ascii211/status/1268641527531741186).
 
@@ -137,11 +137,11 @@ ffplay.exe -i udp://@10.0.0.100:1234/stream
 
 It was so darn convenient, too. The LKV373A was nearly brick-sized and required its own power source and Ethernet cable. The HDMI dongle was as small as a thumb drive and required nothing more than a USB port.
 
-{{<img src="lkv373a-vs-dongle.jpg" alt="Comparison of Lenkeng LKV373A with HDMI dongle" caption="The [Lenkeng LKV373A HDMI extender](https://smile.amazon.com/AEMYO-Extender-V3-0-Ethernet-Supports/dp/B01LGUT9HW/) (left) was larger and required more connections than the HDMI dongle (right)." max-width="700px">}}
+{{<img src="lkv373a-vs-dongle.jpg" alt="Comparison of Lenkeng LKV373A with HDMI dongle" caption="The [Lenkeng LKV373A HDMI extender](https://smile.amazon.com/AEMYO-Extender-V3-0-Ethernet-Supports/dp/B01LGUT9HW/) (left) was larger and required more connections than the HDMI dongle (right)." max-width="700px" has-border="false">}}
 
 The only problem was, again, latency. The Pi's rebroadcast of the video stream lagged the source computer by 7-10 seconds.
 
-{{<img src="dongle-ffmpeg.jpg" alt="Comparison of Lenkeng LKV373A with HDMI dongle" caption="Using ffmpeg to stream video from my Pi, there was a delay in the video of up to 10 seconds." max-width="700px">}}
+{{<img src="dongle-ffmpeg.jpg" alt="Comparison of Lenkeng LKV373A with HDMI dongle" caption="Using ffmpeg to stream video from my Pi, there was a delay in the video of up to 10 seconds." max-width="700px" has-border="false">}}
 
 I wasn't sure if this delay came from dongle itself, ffmpeg on the Pi, or ffplay on my desktop. Arsenio Dev reported latency of 20 ms, so it seemed like faster performance was possible if I delved into [ffmpeg's arcane and mysterious command-line flags](https://ffmpeg.org/ffmpeg.html).
 
@@ -153,7 +153,7 @@ When I published [my previous blog post](/key-mime-pi/) about Key Mime Pi, I rec
 
 {{<img src="maxim-comment.png" alt="Max's comment: Hi:) Take a look at this project: https://github.com/pikvm/pikvm We have already done and debugged many things" has-border="true" caption="Max Devaev pointed me to his existing [Pi-KVM](https://github.com/pikvm/pikvm) project.">}}
 
-{{<img src="melty-breadboard.jpg" align="right" alt="GPIO pins" max-width="500px" caption="My previous experience with breadboards involved [accidentally melting them](/greenpithumb/#why-make-another-raspberry-pi-gardening-bot).">}}
+{{<img src="melty-breadboard.jpg" align="right" alt="GPIO pins" max-width="500px" caption="My previous experience with breadboards involved [accidentally melting them](/greenpithumb/#why-make-another-raspberry-pi-gardening-bot)." has-border="false">}}
 
 I had looked at Pi-KVM briefly, but its [requirements of breadboards and soldering](https://github.com/pikvm/pikvm#v2-diagram) scared me off.
 
@@ -169,7 +169,7 @@ Have you ever found a tool that's so good, it solves problems you hadn't even an
 
 Right out of the box, uStreamer reduced my latency from 8 seconds to 500-600 milliseconds. But it also eliminated a whole chain of extra work.
 
-{{<img src="ustreamer-1.jpg" alt="500 ms latency with uStreamer and the HDMI dongle" caption="uStreamer reduced my latency by a factor of 15." max-width="700px">}}
+{{<img src="ustreamer-1.jpg" alt="500 ms latency with uStreamer and the HDMI dongle" caption="uStreamer reduced my latency by a factor of 15." max-width="700px" has-border="false">}}
 
 Prior to uStreamer, I wasn't sure how to get video from ffmpeg into the user's browser, but I knew it was possible somehow. I tested this [mostly-accurate tutorial](https://docs.peer5.com/guides/setting-up-hls-live-streaming-server-using-nginx/) for piping video from ffmpeg to nginx using HLS, but it added even more latency. And it still left open problems like how to start and stop streaming on HDMI cable connects and disconnects and how to translate the video to a browser-friendly format.
 
@@ -183,7 +183,7 @@ uStreamer reduced my latency from 10 seconds down to ~600 milliseconds. That was
 
 Max was interested in the HDMI dongle I was using since he'd never seen that particular device. He invited me to create a shared shell session using [tmate](https://tmate.io/) so that he could access my Pi remotely.
 
-{{<img src="maxim-tmate.png" alt="Screenshot of conversation where Max ofers to help me via tmate" caption="Max offered to either help improve latency or frame me for a federal crime. Fortunately, he ended up doing the former.">}}
+{{<img src="maxim-tmate.png" alt="Screenshot of conversation where Max ofers to help me via tmate" caption="Max offered to either help improve latency or frame me for a federal crime. Fortunately, he ended up doing the former." has-border="false">}}
 
 After a few minutes of testing how uStreamer ran on my hardware, Max ran the [`v4l2-ctl` utility](https://www.mankier.com/1/v4l2-ctl) and saw a line that fascinated him but totally went over my head:
 
@@ -206,7 +206,7 @@ The HDMI dongle was delivering the video stream in Motion JPEG format! uStreamer
 
 We configured uStreamer to skip re-encoding and just pass through the video stream as-is.
 
-{{<img src="tinypilot-latency.jpg" max-width="700px" alt="Photo showing 200ms of latency after eliminating re-encode step" caption="Skipping the extra re-encode step on the Pi reduced latency from 600 ms down to 200 ms.">}}
+{{<img src="tinypilot-latency.jpg" max-width="700px" alt="Photo showing 200ms of latency after eliminating re-encode step" caption="Skipping the extra re-encode step on the Pi reduced latency from 600 ms down to 200 ms." has-border="false">}}
 
 Latency went from 600 milliseconds all the way down to 200 ms. It's not instantaneous, but it's low enough to forget the delay after using it for a few minutes.
 
@@ -244,7 +244,7 @@ TinyPilot allowed me to manage the entire install from my browser. It was defini
 
 To begin, install [Raspberry Pi OS lite](https://www.raspberrypi.org/downloads/raspberry-pi-os/) (formerly known as Raspbian) on a microSD card.
 
-{{<img src="rufus-install.png" alt="Screenshot of Rufus" caption="I use [Rufus](https://rufus.ie) to write my Pi micro SD cards, but any whole disk imaging tool will work.">}}
+{{<img src="rufus-install.png" alt="Screenshot of Rufus" caption="I use [Rufus](https://rufus.ie) to write my Pi micro SD cards, but any whole disk imaging tool will work." has-border="false">}}
 
 Enable SSH access by placing a file called `ssh` on the microSD's boot partition. If you're connecting over wireless, you also need a [`wpa_supplicant.conf` file](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md).
 
@@ -256,15 +256,15 @@ The Raspberry Pi 4 famously [generates a lot of heat](https://www.jeffgeerling.c
 
 I like [this minimalist case](https://shop.pimoroni.com/products/aluminium-heatsink-case-for-raspberry-pi-4?variant=29430673178707) because it's inexpensive and passively cools the Pi without the complexity of a powered fan:
 
-{{<img src="minimal-case.jpg" alt="Minimal aluminum case for Raspberry Pi" caption="This [minimalist aluminum case](https://shop.pimoroni.com/products/aluminium-heatsink-case-for-raspberry-pi-4?variant=29430673178707) cools your Pi well without the complexity of a fan." max-width="600px">}}
+{{<img src="minimal-case.jpg" alt="Minimal aluminum case for Raspberry Pi" caption="This [minimalist aluminum case](https://shop.pimoroni.com/products/aluminium-heatsink-case-for-raspberry-pi-4?variant=29430673178707) cools your Pi well without the complexity of a fan." max-width="600px" has-border="false">}}
 
 ### Connect to the machine via USB
 
 To enable TinyPilot to function as a virtual keyboard, connect your Pi's USB-C port to a USB-A port on the target machine:
 
 {{<gallery caption="With a USB-C to USB-A cable, connect the USB-C end to the Pi's USB-C port and the USB-A end to the target computer.">}}
-{{<img src="usb-cable.jpg" alt="USB connection to Raspberry Pi" max-width="500px">}}
-{{<img src="usb-server.jpg" alt="USB connection to target computer" max-width="500px">}}
+{{<img src="usb-cable.jpg" alt="USB connection to Raspberry Pi" max-width="500px" has-border="false">}}
+{{<img src="usb-server.jpg" alt="USB connection to target computer" max-width="500px" has-border="false">}}
 {{</gallery>}}
 
 {{<notice type="info">}}
@@ -276,8 +276,8 @@ To enable TinyPilot to function as a virtual keyboard, connect your Pi's USB-C p
 To complete the physical assembly, insert the HDMI dongle into one of the Pi's USB ports. Then, connect an HDMI cable to the dongle, and plug the other end into the display output of your target computer.
 
 {{<gallery caption="Connect the display output of the target computer to the HDMI dongle and insert it into the Pi's USB port.">}}
-{{<img src="hdmi-insert.jpg" alt="HDMI input connection to Raspberry Pi" max-width="500px">}}
-{{<img src="hdmi-server.jpg" alt="HDMI output connection from target computer" max-width="500px">}}
+{{<img src="hdmi-insert.jpg" alt="HDMI input connection to Raspberry Pi" max-width="500px" has-border="false">}}
+{{<img src="hdmi-server.jpg" alt="HDMI output connection from target computer" max-width="500px" has-border="false">}}
 {{</gallery>}}
 
 {{<notice type="info">}}
@@ -288,7 +288,7 @@ To complete the physical assembly, insert the HDMI dongle into one of the Pi's U
 
 If you're connecting to your Pi over wired LAN, attach a network cable to your Pi's Ethernet port:
 
-{{<img src="ethernet-cable.jpg" alt="Photo of Ethernet cable connected to Pi device" max-width="700px" caption="Connect an Ethernet cable to your Pi.">}}
+{{<img src="ethernet-cable.jpg" alt="Photo of Ethernet cable connected to Pi device" max-width="700px" caption="Connect an Ethernet cable to your Pi." has-border="false">}}
 
 {{<notice type="info">}}
 **Note**: You can skip this step if you configured wireless access by adding a `wpa_supplicant.conf` file [above](#install-raspberry-pi-os-lite).
@@ -319,7 +319,7 @@ After you run the install script, TinyPilot will be available at:
 
 - [http://raspberrypi/](http://raspberrypi/)
 
-{{<img src="tinypilot-hello-world.png" alt="Screenshot of TinyPilot web interface" max-width="700px" caption="When setup is complete, you can access TinyPilot's web interface at [http://raspberrypi/](http://raspberrypi/) on your local network.">}}
+{{<img src="tinypilot-hello-world.png" alt="Screenshot of TinyPilot web interface" max-width="700px" caption="When setup is complete, you can access TinyPilot's web interface at [http://raspberrypi/](http://raspberrypi/) on your local network." has-border="false">}}
 
 ## The power problem
 
@@ -335,8 +335,8 @@ Jun 28 06:23:15 tinypilot kernel: Under-voltage detected! (0x00050005)
 To solve this problem, I worked with an engineering firm to create [a custom circuit board](https://tinypilotkvm.com/product/tinypilot-power-connector) that splits the Pi's USB-C port into two. The first port accepts USB power, so you can still deliver a full 3 Amps to the Pi. The second accepts USB data out, so the Pi can still impersonate a USB keyboard.
 
 {{<gallery caption="The [TinyPilot Power Connector](https://tinypilotkvm.com/product/tinypilot-power-connector) allows the Pi to receive 3 Amps of power through its USB-C port without losing USB OTG functionality.">}}
-{{<img src="power-connector.jpg" alt="Close-up of power connector" max-width="500px">}}
-{{<img src="power-connector-cables.jpg" alt="Power connector hooked up to Raspberry Pi and microUSB cables" max-width="500px">}}
+{{<img src="power-connector.jpg" alt="Close-up of power connector" max-width="500px" has-border="false">}}
+{{<img src="power-connector-cables.jpg" alt="Power connector hooked up to Raspberry Pi and microUSB cables" max-width="500px" has-border="false">}}
 {{</gallery>}}
 
 Importantly, the power connector's data port excludes a USB power line. This ensures that voltage differences between the computer's power source and the Pi's power source won't cause undesirable power backflows.

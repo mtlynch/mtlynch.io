@@ -40,13 +40,13 @@ To understand what makes _Aardvark'd_ a fun watch, you need to understand what w
 
 At the time of filming, [Joel Spolsky](https://en.wikipedia.org/wiki/Joel_Spolsky) was 40 years old. He had co-founded Fog Creek in 2000 with Michael Pryor. Aside from the founders, Fog Creek had six employees. They sold two products: FogBugz, a bug-tracking application, and CityDesk, a web publishing tool. The company was profitable enough to get by without external investors, but they weren't experiencing any kind of exponential hypergrowth.
 
-{{<img src="joel.webp" max-width="400px" caption="Joel Spolsky, Fog Creek co-founder, in 2005">}}
+{{<img src="joel.webp" max-width="400px" caption="Joel Spolsky, Fog Creek co-founder, in 2005" has-border="false">}}
 
 ### Y Combinator
 
 [Paul Graham](<https://en.wikipedia.org/wiki/Paul_Graham_(programmer)>) and [Jessica Livingston](https://en.wikipedia.org/wiki/Jessica_Livingston) had just co-founded [Y Combinator](https://en.wikipedia.org/wiki/Y_Combinator), which would become one of the most successful startup accelerators in the world, launching companies like Airbnb, Dropbox, and Stripe.
 
-{{<img src="paul-jessica.webp" max-width="700px" caption="Y Combinator co-cofounders Paul Graham and Jessica Livingston in 2005">}}
+{{<img src="paul-jessica.webp" max-width="700px" caption="Y Combinator co-cofounders Paul Graham and Jessica Livingston in 2005" has-border="false">}}
 
 Graham was 41 years old, and Livingston was 34. Seven years prior, Graham had sold his startup [Viaweb](https://en.wikipedia.org/wiki/Viaweb) to Yahoo for $50M. He then became popular online for [his essays about startups and software](http://paulgraham.com/articles.html). Livingston was not active in the startup community at the time, having come from a career in marketing.
 
@@ -62,7 +62,7 @@ At the time, reddit only allowed users to post links &mdash; there was no commen
 
 Early in 2005, college roommates Steve Huffman and Alexis Ohanian drove to Boston to attend one of Paul Graham's lectures about startups. After the talk, Graham had dinner with Huffman, Ohanian, and a few other attendees. The conversations inspired Graham to create Y Combinator, and reddit was in the first batch of investments.
 
-{{<img src="ohanian-swartz-huffman.webp" max-width="700px" caption="reddit co-founders (left to right) Alexis Ohanian, Aaron Swartz, and Steve Huffman in 2005">}}
+{{<img src="ohanian-swartz-huffman.webp" max-width="700px" caption="reddit co-founders (left to right) Alexis Ohanian, Aaron Swartz, and Steve Huffman in 2005" has-border="false">}}
 
 Aaron Swartz was 19 at the time of filming. He already impacted the early web as one of the authors of the [RSS specification](https://www.rssboard.org/rss-validator/docs/rss1.html) and a founding contributor to [Creative Commons](https://creativecommons.org/).
 
@@ -72,7 +72,7 @@ An undergrad at Stanford in 2005, Swartz was also accepted into Y Combinator's f
 
 As a documentary, _Aardvark’d_ is not very good. The filmmaker didn't have much experience, so the shots are always uncomfortably close to people's faces, often with harsh lighting and mediocre sound quality.
 
-{{<img src="joel-lighting.webp" max-width="500px" caption="Joel Spolsky isn't this luminescent in real life.">}}
+{{<img src="joel-lighting.webp" max-width="500px" caption="Joel Spolsky isn't this luminescent in real life." has-border="false">}}
 
 The film flits from topic to topic without ever landing on a cohesive story. Is it about the interns' project? Or is it about the interns themselves? Or is it a story about Fog Creek as a company?
 
@@ -91,8 +91,8 @@ This vulnerability is what makes the film's interviews with Steve Huffman so fas
 Huffman is currently the target of widespread ire for [cutting third-party clients out of the platform they helped build](https://techcrunch.com/2023/06/16/reddit-ceo-lashes-out-on-protests-moderators-and-third-party-apps/). But in 2005, Huffman was just a lovably doofy kid. In his interview, he admits that he had such intense nightmares about reddit having an outage that he slept with his laptop in bed with him.
 
 {{<gallery caption="Steve Huffman in 2005 (left) and in 2017 (right) (photo [by Cody Glenn/Web Summit](https://www.flickr.com/photos/websummit/26487734439/in/photostream/), used under [CC-BY-2.0](https://creativecommons.org/licenses/by/2.0/))">}}
-{{<img src="steve-huffman-2005.webp" max-width="500px">}}
-{{<img src="steve-huffman-2017.webp" max-width="487px">}}
+{{<img src="steve-huffman-2005.webp" max-width="500px" has-border="false">}}
+{{<img src="steve-huffman-2017.webp" max-width="487px" has-border="false">}}
 {{</gallery>}}
 
 ## The infuriating launch day scene
@@ -111,13 +111,13 @@ So, it's the end of the internship, and Fog Creek is finally launching Copilot. 
 
 The interns and employees compete to predict when their first sale will come through. Some guessed it would happen within a minute of launch, while others thought it might take up to an hour.
 
-{{<img src="sale-predictions.webp" max-width="600px" caption="Fog Creek employees and interns make optimistic predictions about the first sale of Copilot">}}
+{{<img src="sale-predictions.webp" max-width="600px" caption="Fog Creek employees and interns make optimistic predictions about the first sale of Copilot" has-border="false">}}
 
 But the sale doesn't come. As each minute rolls by, the interns glumly cross out predictions that turned out to be too optimistic. You're watching the team grow increasingly worried that their product might be a complete flop.
 
 {{<gallery caption="Fog Creek interns anxiously awaiting their first customer">}}
-{{<img src="cross-off.webp" max-width="600px">}}
-{{<img src="waiting.webp" max-width="600px">}}
+{{<img src="cross-off.webp" max-width="600px" has-border="false">}}
+{{<img src="waiting.webp" max-width="600px" has-border="false">}}
 {{</gallery>}}
 
 As a founder, I found this moment extremely relatable. There have been so many times where I put weeks or months of work into something that I was sure people would love. Then, I launched it only to discover that I was completely wrong and nobody was interested.
@@ -128,7 +128,7 @@ The documentary does a great job of capturing that anxiously ambiguous time for 
 
 There's no resolution whatsoever! We cut to the next scene, and Joel is popping champagne. It's not even clear if there's been a sale or if they're just celebrating the launch. You never see anyone sighing in relief or admitting defeat.
 
-{{<img src="joel-champagne.webp" max-width="600px" caption="What are we celebrating, exactly?">}}
+{{<img src="joel-champagne.webp" max-width="600px" caption="What are we celebrating, exactly?" has-border="false">}}
 
 It would be like if you ended the story of Little Red Riding Hood by saying, "And then Little Red Riding Hood realized her grandmother was a wolf! Suddenly, the wolf threw her to the floor and bared his razor-sharp teeth inches from her neck. Anyway, she ended up being fine. The End."
 
@@ -138,7 +138,7 @@ The documentary's interviews are fun overall, but a couple of quotes delighted m
 
 ### Paul Graham, on developers and businesspeople
 
-> {{<img src="graham-no-business-guys.webp" max-width="600px">}}
+> {{<img src="graham-no-business-guys.webp" max-width="600px" has-border="false">}}
 >
 > I think the relationship between hackers and business guys &mdash; at least in the beginning &mdash; is that you need hackers, and you don't need business guys.
 >
@@ -146,7 +146,7 @@ The documentary's interviews are fun overall, but a couple of quotes delighted m
 
 ### Aaron Swartz, on schoolwork vs. hobby projects
 
-> {{<img src="aaron-swartz.webp" max-width="600px">}}
+> {{<img src="aaron-swartz.webp" max-width="600px" has-border="false">}}
 >
 > You don't have to be in this fake world of school doing some silly assignment that has no real purpose. You can build something that's actually useful. You can go put it up on your website, and people can really use it. If you can build something real, why spend your life doing stuff that's fake?
 >
@@ -180,21 +180,21 @@ I unfortunately couldn't find the source code for the original version of Copilo
 
 [Tyler Griffin Hicks-Wright](https://tghw.com) accepted a full-time position at Fog Creek after his internship and worked there for several years. He left in 2012 to start a photo backup startup called Snaposit. He sought funding from his _Aardvark'd_ co-star, Paul Graham, but [Y Combinator rejected Tyler's pitch](https://web.archive.org/web/20240529135543/https://tghw.com/blog/well-that-sucks-what-else-you-got). Tyler shuttered the business a year later.
 
-{{<img src="tyler-2005.webp" max-width="500px" caption="Tyler Griffin Hicks-Wright, software development intern on Aardvark">}}
+{{<img src="tyler-2005.webp" max-width="500px" caption="Tyler Griffin Hicks-Wright, software development intern on Aardvark" has-border="false">}}
 
 In 2014, Fog Creek restructured to spin out [Trello](https://en.wikipedia.org/wiki/Trello), its ultra-successful project management app. As part of the restructuring, Fog Creek sold the Copilot product to Tyler [for an undisclosed sum](https://web.archive.org/web/20240412135226/https://tghw.com/blog/copilot-coming-full-circle). He ran Copilot on the side for eight years before [shutting it down in April 2022](https://news.ycombinator.com/item?id=31192812).
 
 [Michael Lehenbauer](https://twitter.com/mikelehen) took a job at Microsoft after his _Aardvark'd_ internship. He left in 2011 to join Firebase as employee #2, which I can only assume means he's now relaxing on a superyacht somewhere.
 
-{{<img src="michael-2005.webp" max-width="500px" caption="Michael Lehenbauer, software development intern on Aardvark">}}
+{{<img src="michael-2005.webp" max-width="500px" caption="Michael Lehenbauer, software development intern on Aardvark" has-border="false">}}
 
 [Ben Pollack](https://www.bitquabit.com/meta/about/) worked at Fog Creek for several years. He seems to have ~~never caught the startup bug~~ (**Edit**: Ben [responded](https://news.ycombinator.com/item?id=37435723) to say that he has worked mainly at startups, though not as early-stage as Fog Creek), mainly working at larger, more established companies. He has followed in Joel's footsteps in blogging, as he writes regularly about software, technology, and his passion for functional programming, sometimes engaging in [geeky online arguments with Tyler](https://web.archive.org/web/20090523175306/http://hicks-wright.net/blog/my-language-features-are-your-libraries/).
 
-{{<img src="ben-2005.webp" max-width="500px" caption="Ben Pollack, software development intern on Aardvark">}}
+{{<img src="ben-2005.webp" max-width="500px" caption="Ben Pollack, software development intern on Aardvark" has-border="false">}}
 
 [Yaron Guez](https://www.yaronguez.com/) worked for several medtech and enterprise-y SaaS businesses. He's the co-founder of [a buzzwordy consulting firm](https://www.trestian.com/#about) and a dev manager at [ServiceNow](https://www.servicenow.com).
 
-{{<img src="yaron-2005.webp" max-width="500px" caption="Yaron Guez, project management intern on Aardvark">}}
+{{<img src="yaron-2005.webp" max-width="500px" caption="Yaron Guez, project management intern on Aardvark" has-border="false">}}
 
 ## Liz Gordon's satisfying career trajectory
 
@@ -202,11 +202,11 @@ One of the most affable characters in _Aardvark'd_ is Liz Gordon, Fog Creek's th
 
 Liz is presented in the film as the non-nerd outsider at Fog Creek. She ends up having to coddle and indulge a bunch of college interns, most of whom have somewhat inflated egos as subjects of a documentary.
 
-{{<img src="liz-gordon-laughing.webp" max-width="700px" caption="&ldquo;There's always a better way to do something, and that's what \[the interns\] are always trying to figure out... what star trooper is going to kick some other superhero's butt, and how they're going to do it. Or what's the best way to use a lightsaber.&rdquo; -Liz Gordon">}}
+{{<img src="liz-gordon-laughing.webp" max-width="700px" caption="&ldquo;There's always a better way to do something, and that's what \[the interns\] are always trying to figure out... what star trooper is going to kick some other superhero's butt, and how they're going to do it. Or what's the best way to use a lightsaber.&rdquo; -Liz Gordon" has-border="false">}}
 
 In one scene, she's being interviewed on her birthday. Nobody remembered, so she had to buy herself a birthday hat. While she's explaining this to the camera, one of her co-workers _shushes_ her for making too much noise. On her birthday!
 
-{{<img src="liz-gordon-shush.webp" max-width="700px" caption="Liz Gordon being shushed on her birthday at the Fog Creek office">}}
+{{<img src="liz-gordon-shush.webp" max-width="700px" caption="Liz Gordon being shushed on her birthday at the Fog Creek office" has-border="false">}}
 
 It turns out Liz stuck with Fog Creek and rose along with the company, eventually taking on the role of Head of People.
 
@@ -229,8 +229,8 @@ I'm watching it, and it's pretty good. It's kind of like a video version of Joel
 Most of the Fog Creek characters from _Aardvark'd_ are still there. You get to see slightly more grown-up versions of Tyler and Ben, who had at that point had several years of real-world experience.
 
 {{<gallery caption="Tyler (left) and Ben (right) appear as full-time Fog Creek employees in *Make Better Software* five years after the filming of *Aardvark'd*.">}}
-{{<img src="tyler-later.webp" max-width="400px">}}
-{{<img src="ben-later.webp" max-width="441px">}}
+{{<img src="tyler-later.webp" max-width="400px" has-border="false">}}
+{{<img src="ben-later.webp" max-width="441px" has-border="false">}}
 {{</gallery>}}
 
 ## Watch the films

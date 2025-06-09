@@ -13,7 +13,7 @@ images:
   - keep-growing-never-profit/cover.jpg
 ---
 
-{{<img src="cover.jpg" alt="How to Keep Growing and Never Turn a Profit (cover image)" max-width="1000px">}}
+{{<img src="cover.jpg" alt="How to Keep Growing and Never Turn a Profit (cover image)" max-width="1000px" has-border="false">}}
 
 Early last year, I launched a nutrition site called [Is It Keto](https://isitketo.org). From November 2018 until March 2019, the site was my full-time focus. Every month, visitors increased by 50% to 150%, an exhilarating growth rate that far outpaced any of my previous projects.
 
@@ -25,7 +25,7 @@ This is my postmortem for Is It Keto. I'll talk about where I succeeded, how I c
 
 Is It Keto had a simple business model. Every article explained why a food did or did not fit [the keto diet](https://www.ruled.me/guide-keto-diet/). If a food was keto-friendly, the site displayed an affiliate link for the reader to purchase it from Amazon. I received a commission on every order.
 
-{{<img src="isitketo-affiliate-links.jpg" alt="Is It Keto screenshot showing affiliate links" caption="Amazon Affiliate links on Is It Keto" max-width="500px">}}
+{{<img src="isitketo-affiliate-links.jpg" alt="Is It Keto screenshot showing affiliate links" caption="Amazon Affiliate links on Is It Keto" max-width="500px" has-border="false">}}
 
 {{<img src="revenues.jpg" alt="Google Analytics screenshot" caption="Is It Keto monthly revenue" max-width="763px" has-border="true">}}
 
@@ -35,7 +35,7 @@ My most significant ongoing cost was content. Early on, I wrote every article my
 
 The only other cost worth mentioning is development. I wrote almost all the code, but a friend briefly freelanced for me while she had time between projects.
 
-{{<img src="costs.jpg" alt="Donut chart of expenses" caption="Is It Keto expenses" max-width="600px">}}
+{{<img src="costs.jpg" alt="Donut chart of expenses" caption="Is It Keto expenses" max-width="600px" has-border="false">}}
 
 ## What went well
 
@@ -97,7 +97,7 @@ There's something enticing about these dashboards beyond the graphs and stats. T
 
 As I toiled away on the site in solitude, a spike in visitors or a jump in revenue made my day. The problem was that for every "good" day where I made $3-4 in revenue, there were five days where I earned nothing and felt miserable.
 
-{{<img src="amazon-affiliate.jpg" alt="Screenshot of Amazon Affiliate Dashboard" caption="Amazon Affiliate earnings - March 2019" max-width="800px">}}
+{{<img src="amazon-affiliate.jpg" alt="Screenshot of Amazon Affiliate Dashboard" caption="Amazon Affiliate earnings - March 2019" max-width="800px" has-border="false">}}
 
 Starting in February, I limited my metric checking to one thirty-minute session per week. I do it Friday afternoons as something to look forward to before the weekend.
 

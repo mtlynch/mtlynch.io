@@ -21,7 +21,7 @@ images:
   - solo-developer-year-1/cover.jpg
 ---
 
-{{<img src="cover.jpg" alt="My first year as a solo developer (cover image)" max-width="1000px">}}
+{{<img src="cover.jpg" alt="My first year as a solo developer (cover image)" max-width="1000px" has-border="false">}}
 
 On February 1st, 2018, I [quit my job](/why-i-quit-google) as a software engineer at Google to start my own single-person software company. It's exactly one year later, so it feels like an apt time to reflect on how that decision affected my finances, lifestyle, and happiness.
 

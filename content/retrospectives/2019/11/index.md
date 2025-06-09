@@ -142,8 +142,8 @@ I couldn't discount the $4.99 price in a meaningful way, so I raised prices back
 It felt like a great idea. I'd get feedback from my users, and they'd feel invested in the meal plans and more likely to make a purchase.
 
 {{<gallery caption="Incentivizing users to provide feedback on the meal plans">}}
-{{<img src="survey1.jpg" alt="Meal plan discount link" max-width="400px">}}
-{{<img src="survey2.jpg" alt="Meal plan discount explanation" max-width="400px">}}
+{{<img src="survey1.jpg" alt="Meal plan discount link" max-width="400px" has-border="false">}}
+{{<img src="survey2.jpg" alt="Meal plan discount explanation" max-width="400px" has-border="false">}}
 {{</gallery>}}
 
 The link led to a short survey.

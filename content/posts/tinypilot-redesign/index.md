@@ -133,7 +133,7 @@ The real issue, Isaac said, was that I was their only hourly client. I would alw
 
 I felt duped and manipulated. DesignAgency structured the work so that everything was 80% done, but nothing was usable. If I took the work to a new vendor, there'd be a massive amount of rework. And now they were holding the last 20% hostage until I signed an expensive retainer agreement?
 
-{{<img src="not-sure-what-would-help.png" max-width="700px" alt="Cartoon of a cat building a mostly complete doghouse for a dog. The cat is holding open an empty bag for money, saying 'I&rsquo;m not sure what would help me finish...'">}}
+{{<img src="not-sure-what-would-help.png" max-width="700px" alt="Cartoon of a cat building a mostly complete doghouse for a dog. The cat is holding open an empty bag for money, saying 'I&rsquo;m not sure what would help me finish...'" has-border="false">}}
 
 As diplomatically as possible, I told Isaac that I felt like the situation was DesignAgency's fault. If a retainer agreement was better for everyone, why didn't they propose it months ago? The project could have been done by now.
 
@@ -291,7 +291,7 @@ If I work with a design agency in the future, I'll insist on a tool that lets us
 
 When we started the project, DesignAgency told me that most of their clients were larger than I was, but they wanted to help me grow. It sounded like a great deal &mdash; I'd enjoy service normally reserved for large companies despite my limited budget.
 
-{{<img src="big-airline.jpg" max-width="400px" caption="My initial conversation with DesignAgency, as I remember it." alt="Scene from Mad Men where Mohawk Airlines tells Don Draper, 'You said Sterling Cooper Didn&rsquo;t need a big airline... you were going to make *us* a big airline.'">}}
+{{<img src="big-airline.jpg" max-width="400px" caption="My initial conversation with DesignAgency, as I remember it." alt="Scene from Mad Men where Mohawk Airlines tells Don Draper, 'You said Sterling Cooper Didn&rsquo;t need a big airline... you were going to make *us* a big airline.'" has-border="false">}}
 
 In reality, I didn't get the same service as their larger clients. When I was an hourly client, DesignAgency kept deprioritizing me in favor of their retainer clients. When I upgraded to a retainer plan, they struggled to work effectively within my budget.
 

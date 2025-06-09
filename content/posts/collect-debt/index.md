@@ -206,7 +206,7 @@ You may have noticed a logical inconsistency in my demand to Kiss My Keto. My or
 
 Something changed on July 16th that was very much in my favor. Suddenly, Kiss My Keto started crediting me for sales of bread, the thing they privately had claimed was ineligible for commission. Interestingly, my first commission occurred less than 24 hours after I emailed their CEO, Alex Bird:
 
-{{<img src="kmk-bread-purchase.png" alt="Herscu responds: 'No worries Michael. $88 seems fair to me.'" max-width="600px">}}
+{{<img src="kmk-bread-purchase.png" alt="Herscu responds: 'No worries Michael. $88 seems fair to me.'" max-width="600px" has-border="false">}}
 
 That was great news for me because it gave me hard numbers to extrapolate my missing sales. When I had zero commissions, Kiss My Keto could simply claim that none of the customers who came from my site completed purchases. Without access to their internal receipts, I'd have no evidence to argue. By flipping on commissions for bread, they gave me a view into what my commissions _should_ have looked like the entire time.
 

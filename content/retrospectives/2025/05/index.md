@@ -111,7 +111,7 @@ One of my special Hacker News superpowers is that I usually know why a post disa
 
 The main thing you can see in HN Rankings is when a post's rank suddenly increases or decreases dramatically. If a post is slowly increasing to the #3 spot, and then the next tick in the chart, it's suddenly at the #45 spot, that means a moderator probably downranked the story.
 
-{{<img src="downranked.webp" max-width="700px" caption="When a Hacker News post suddenly drops in rank, a moderator probably downranked it manually.">}}
+{{<img src="downranked.webp" max-width="700px" caption="When a Hacker News post suddenly drops in rank, a moderator probably downranked it manually." has-border="false">}}
 
 Charts can also reveal when moderators manually boost a story. If you see a post drowning in the #300 spot, and then suddenly it's ranked #10, it means that a moderator boosted the story, possibly due to the [second chance pool](https://news.ycombinator.com/item?id=26998308), a system where moderators and volunteers hand-pick stories that missed the front page in regular voting.
 

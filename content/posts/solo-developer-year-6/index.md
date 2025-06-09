@@ -23,8 +23,8 @@ For the first few years, all of my businesses flopped. The best of them earned a
 Halfway through my third year, I created a device called [TinyPilot](https://tinypilotkvm.com). It allows users to control their computers remotely. The product quickly caught on, and it's been my main focus ever since.
 
 {{<gallery caption="TinyPilot is a small device that allows users to control their computers remotely.">}}
-{{<img src="2a-front.webp" alt="Front view of TinyPilot Voyager 2a device" max-width="400px">}}
-{{<img src="tinypilot-bios-menu-2.webp" alt="Screenshot of TinyPilot web interface" max-width="500px">}}
+{{<img src="2a-front.webp" alt="Front view of TinyPilot Voyager 2a device" max-width="400px" has-border="false">}}
+{{<img src="tinypilot-bios-menu-2.webp" alt="Screenshot of TinyPilot web interface" max-width="500px" has-border="false">}}
 {{</gallery>}}
 
 In 2023, TinyPilot generated $997k in revenue, which I'll generously round up to a cool million. More importantly, the business earned $236k in profit, a 20x increase from 2022.
@@ -93,7 +93,7 @@ When I reached my floor, I was relieved to see that the sprinkler had actually b
 
 My relief was short-lived, as the landlord told me he might have to kick us out for "weeks to months" to repair the wall we shared with the conference room.
 
-{{<img src="office-damage.webp" max-width="450px" caption="A sprinkler burst in the office adjacent to TinyPilot's, destroying everything inside." alt="Photo of a room with ceiling, carpets, and furniture all removed">}}
+{{<img src="office-damage.webp" max-width="450px" caption="A sprinkler burst in the office adjacent to TinyPilot's, destroying everything inside." alt="Photo of a room with ceiling, carpets, and furniture all removed" has-border="false">}}
 
 Normally, being forced to move my entire office on a few days' notice would be disruptive, but it was _especially_ disruptive this week. I was about to take a two-week trip to Europe, my longest travel since starting TinyPilot.
 
@@ -125,32 +125,32 @@ One of the most notable changes to TinyPilot in 2023 was how we improved the pro
 
 At the end of 2022, we were still making TinyPilot's cases with a fleet of seven high-end 3D printers running nonstop. As far as 3D printing goes, our cases were especially nice, but they still had the "just a prototype" feel of a 3D-printed product.
 
-{{<img src="voyager2-angled.webp" max-width="500px" caption="Before: TinyPilot's 3D-printed case" alt="TinyPilot in a black plastic 3D-printed case">}}
+{{<img src="voyager2-angled.webp" max-width="500px" caption="Before: TinyPilot's 3D-printed case" alt="TinyPilot in a black plastic 3D-printed case" has-border="false">}}
 
 In February 2023, we [switched to a metal case](https://tinypilotkvm.com/blog/introducing-voyager-2a).
 
-{{<img src="metal-case.webp" max-width="500px" caption="After: TinyPilot's metal case" alt="TinyPilot in a new metal case">}}
+{{<img src="metal-case.webp" max-width="500px" caption="After: TinyPilot's metal case" alt="TinyPilot in a new metal case" has-border="false">}}
 
 I was surprised at how much the metal case impacted sales. Not only did it increase the absolute number of sales, it increased the price customers were willing to pay. After [experimenting with pricing](/retrospectives/2023/05/#what-price-maximizes-profits), I ended up increasing our price by 10%, and our monthly sales were still higher than when we had a 3D-printed case.
 
 We also updated TinyPilot's packaging. Until late last year, we were still bunching the device and all the cables together in a bubble wrap pouch and dropping that into a plain brown box.
 
 {{<gallery caption="Our previous packaging for TinyPilot was just neatly wrapping the device, cables, and instructions in a bubble pouch.">}}
-{{<img src="labeled-blob.webp" max-width="500px" alt="Overhead view of TinyPilot, instructions, and cables in a bubble pouch">}}
-{{<img src="bundle-stacked.webp" max-width="370px" alt="Stack of TinyPilot bubble pouches on a shelf">}}
+{{<img src="labeled-blob.webp" max-width="500px" alt="Overhead view of TinyPilot, instructions, and cables in a bubble pouch" has-border="false">}}
+{{<img src="bundle-stacked.webp" max-width="370px" alt="Stack of TinyPilot bubble pouches on a shelf" has-border="false">}}
 {{</gallery>}}
 
 Every time a reviewer shared their experience unboxing TinyPilot, I winced a little.
 
-{{<img src="unboxing.webp" max-width="700px" caption="A [homelab reviewer](https://noted.lol/tinypilot-voyager-2a-2/) shows TinyPilot's old, embarrassing packaging in a review" alt="Screenshot of review from noted.lol showing TinyPilot's old packaging in plain brown box" >}}
+{{<img src="unboxing.webp" max-width="700px" caption="A [homelab reviewer](https://noted.lol/tinypilot-voyager-2a-2/) shows TinyPilot's old, embarrassing packaging in a review" alt="Screenshot of review from noted.lol showing TinyPilot's old packaging in plain brown box"  has-border="false">}}
 
 I'd had a few conversations with designers about making a nice retail box for the product, but it never came together, and it was never my top priority. After we switched to metal cases, TinyPilot's packaging stood out as particularly immature.
 
 In the second half of 2023, we worked with a contract manufacturer to take over our entire production process. As part of that work, they offered to make a retail box for us.
 
 {{<gallery caption="TinyPilot's new contract manufacturer made a branded retail box for our product.">}}
-{{<img src="box-angled.webp" max-width="400px" alt="Angled view of TinyPilot branded box, closed">}}
-{{<img src="box-open.webp" max-width="400px" alt="Front view of TinyPilot box open with components organized inside">}}
+{{<img src="box-angled.webp" max-width="400px" alt="Angled view of TinyPilot branded box, closed" has-border="false">}}
+{{<img src="box-open.webp" max-width="400px" alt="Front view of TinyPilot box open with components organized inside" has-border="false">}}
 {{</gallery>}}
 
 Our contract manufacturer did a great job on the box. It's not going to catch your eye if it was on the shelf at Best Buy, but it feels like professional packaging for a networking hardware product.

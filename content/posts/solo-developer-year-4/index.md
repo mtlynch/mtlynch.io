@@ -149,7 +149,7 @@ I kept my habit of writing [monthly retrospectives](/retrospectives/). I budget 
 
 ### Hit the Front Page of Hacker News
 
-{{<img src="htfp-cover.png" max-width="550px" caption="[*Hit the Front Page of Hacker News*](https://hitthefrontpage.com) is my course about blogging for technically sophisticated readers.">}}
+{{<img src="htfp-cover.png" max-width="550px" caption="[*Hit the Front Page of Hacker News*](https://hitthefrontpage.com) is my course about blogging for technically sophisticated readers." has-border="false">}}
 
 At the beginning of the year, I released my first-ever [paid course](https://hitthefrontpage.com). It explained my approach to writing blog posts that gain traction on tech-oriented sites like Hacker News and reddit.
 
@@ -223,7 +223,7 @@ Instead, I focused the website exclusively on our flagship product, the TinyPilo
 
 Sales jumped immediately. At first, I thought it might be a coincidence, but they've stayed in their new range for several months now.
 
-{{<img src="weekly-revenue.png" alt="Graph of TinyPilot weekly revenue, where an increase in revenue immediately follows consolidation to one product" max-width="700px" caption="TinyPilot’s weekly sales before and after simplifying the website to sell a single product">}}
+{{<img src="weekly-revenue.png" alt="Graph of TinyPilot weekly revenue, where an increase in revenue immediately follows consolidation to one product" max-width="700px" caption="TinyPilot’s weekly sales before and after simplifying the website to sell a single product" has-border="false">}}
 
 I think the change eliminated friction and decision-making from the buying process. Customers didn't always understand the difference between our products or whether they needed to buy accessories separately. Now that there's only a single option, the purchase decision reduces to a straightforward question: do you want this product?
 
@@ -233,7 +233,7 @@ I think the change eliminated friction and decision-making from the buying proce
 
 ### Good leadership means helping teammates grow
 
-{{<img src="jason-cohen-usual-saaspects.jpg" alt="Screenshot of Jason Cohen being interviewed on The Usual Saaspects podcast" max-width="800px" caption="Jason Cohen (left) speaking to Ch Daniel (right) on [*The Usual Saaspects* podcast](https://youtu.be/Sjs5gEUlZyU?t=3605)">}}
+{{<img src="jason-cohen-usual-saaspects.jpg" alt="Screenshot of Jason Cohen being interviewed on The Usual Saaspects podcast" max-width="800px" caption="Jason Cohen (left) speaking to Ch Daniel (right) on [*The Usual Saaspects* podcast](https://youtu.be/Sjs5gEUlZyU?t=3605)" has-border="false">}}
 
 In a [recent interview](https://youtu.be/Sjs5gEUlZyU?t=3605), [WPEngine](https://wpengine.com) founder Jason Cohen described leadership in a way that stuck with me:
 

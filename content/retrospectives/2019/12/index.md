@@ -133,7 +133,7 @@ The challenge, I'm learning, is connecting with those niches.
 
 Suppose, for example, that you're the owner of a custom auto shop. You have to purchase car parts from many different boutique suppliers all over the country, and each of them has a different payment system and ordering process. To do your accounting properly, you have to comb through your email and file each receipt in your accounting software.
 
-{{<img src="neonbrand-ZSz1m4JPDqU-unsplash.jpg" alt="Zestful on first page of Google results" caption="That iron cabinet would be less dirty if this auto shop had better software." max-width="700px">}}
+{{<img src="neonbrand-ZSz1m4JPDqU-unsplash.jpg" alt="Zestful on first page of Google results" caption="That iron cabinet would be less dirty if this auto shop had better software." max-width="700px" has-border="false">}}
 
 If you saw this as a developer, there are a few problems you could solve with software. Maybe you could create a service that allows the shop owner to forward their receipts to you. You'd automatically parse them and import the data into the customer's QuickBooks account. Or, if you're ambitious, maybe you develop a marketplace for custom auto parts so that the owner doesn't have to hunt parts across different websites.
 

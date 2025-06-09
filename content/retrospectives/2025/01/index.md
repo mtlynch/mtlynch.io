@@ -97,7 +97,7 @@ The only valid bid came from Gary, who offered to do the cover for £350 (US$434
 
 A week went by, and I hadn't heard anything from Gary. After my first payment was auto-billed, I asked for an ETA on initial drafts. Gary said he'd send concepts the next day, which he did.
 
-{{<img src="cover-ideas.webp" max-width="800px" caption="Initial book cover ideas from the designer I hired through Reedsy">}}
+{{<img src="cover-ideas.webp" max-width="800px" caption="Initial book cover ideas from the designer I hired through Reedsy" has-border="false">}}
 
 Sample 1 looked good, but it was a pretty on-the-nose ripoff of [_Beautiful Code_](https://www.oreilly.com/library/view/beautiful-code/9780596510046/), which I had cited in my brief.
 I found the rest underwhelming, but I blamed myself for not spending more time on my brief.

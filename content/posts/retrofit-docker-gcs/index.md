@@ -20,7 +20,7 @@ I recently installed a media sharing app to one of my servers. It was simple to 
 
 Every time a user uploaded a file, the web app saved it to the local filesystem. If I ever blew away the server and rebuilt it, I'd have to backup and restore every file manually. The better architecture would be for the app to write its files to a separate storage server, but I didn't want to spend months rewriting the app to make that possible.
 
-{{<img src="naive-vs-desired.jpg" alt="Naive architecture vs desired architecture" max-width="800px">}}
+{{<img src="naive-vs-desired.jpg" alt="Naive architecture vs desired architecture" max-width="800px" has-border="false">}}
 
 Using Docker, Google Cloud Storage, and the [gcsfuse](https://github.com/GoogleCloudPlatform/gcsfuse) utility, I achieved this separation without changing a single line of the app's code.
 
@@ -37,7 +37,7 @@ If you're unfamiliar with Google Cloud Platform, here are a few abbreviations to
 | **GCR**      | Google Container Registry | Google's hosting service for Docker images                                 | Docker Hub                             |
 | **GCP**      | Google Cloud Platform     | Google's cloud computing platform (GCS, GCE, and GCR are all parts of GCP) | Amazon Web Services or Microsoft Azure |
 
-{{<img src="docker-logo.png" alt="Docker logo" max-width="260px">}}
+{{<img src="docker-logo.png" alt="Docker logo" max-width="260px" has-border="false">}}
 
 **Docker** allows developers to build self-contained environments for an application that run anywhere:
 
@@ -70,11 +70,11 @@ gunicorn \
 
 The app lets you choose a file and upload it:
 
-{{<img src="flask-app1.png" alt="Screenshot of demo app landing page" caption="Upload page of flask-upload-demo" max-width="685px">}}
+{{<img src="flask-app1.png" alt="Screenshot of demo app landing page" caption="Upload page of flask-upload-demo" max-width="685px" has-border="false">}}
 
 Then, it serves the file permanently at the URL `http://[server address]:5000/uploads/[filename]`:
 
-{{<img src="flask-app2.png" alt="Screenshot of demo app upload result" caption="flask-upload-demo serving an uploaded image" max-width="685px">}}
+{{<img src="flask-app2.png" alt="Screenshot of demo app upload result" caption="flask-upload-demo serving an uploaded image" max-width="685px" has-border="false">}}
 
 From within the server, you can see that the app saved the file to the `demo/uploads` folder of its local filesystem:
 
@@ -378,13 +378,13 @@ flask-demo-app-vm  us-east1-b  n1-standard-1               10.142.0.2   35.211.1
 
 If you type the address from `EXTERNAL_IP` into your browser, it works just like the local version of the app:
 
-{{<img src="gce-app-1.png" alt="Screenshot of flask-upload-demo on GCE" caption="flask-upload-demo running on GCE" max-width="667px">}}
+{{<img src="gce-app-1.png" alt="Screenshot of flask-upload-demo on GCE" caption="flask-upload-demo running on GCE" max-width="667px" has-border="false">}}
 
-{{<img src="gce-app-2.png" alt="Screenshot of file uploaded to flask-upload-demo on GCE" caption="flask-upload-demo serving image file from GCE" max-width="667px">}}
+{{<img src="gce-app-2.png" alt="Screenshot of file uploaded to flask-upload-demo on GCE" caption="flask-upload-demo serving image file from GCE" max-width="667px" has-border="false">}}
 
 The problem is that if you kill that VM and launch a new one with the same Docker image, the file you uploaded is no longer there:
 
-{{<img src="gce-app-3.png" alt="Screenshot of 404 for previously uploaded file" caption="The new GCE VM can't serve the file because it was stored on the previous VM" max-width="667px">}}
+{{<img src="gce-app-3.png" alt="Screenshot of 404 for previously uploaded file" caption="The new GCE VM can't serve the file because it was stored on the previous VM" max-width="667px" has-border="false">}}
 
 This is, of course, the problem that inspired this whole tutorial. The container stores the file on its internal filesystem. When you terminate the host VM, you lose all the files.
 
@@ -623,7 +623,7 @@ I purposely designed the Docker image to be agnostic to GCS bucket's name until 
 
 You finally have a Docker container that persists its state to GCS. You can test this by uploading a file to the deployed app:
 
-{{<img src="gcsfuse-1.png" alt="Screenshot of flask-upload-demo serving file" caption="flask-upload-demo serves the file from permanent storage on GCS" max-width="667px">}}
+{{<img src="gcsfuse-1.png" alt="Screenshot of flask-upload-demo serving file" caption="flask-upload-demo serves the file from permanent storage on GCS" max-width="667px" has-border="false">}}
 
 If you check your GCS bucket, you will see the file you just uploaded:
 

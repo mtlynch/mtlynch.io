@@ -80,7 +80,7 @@ Homerun has a nice Kanban-style view of candidates at various stages of the hiri
 
 At first, I was overwhelmed by Homerun's job posting UI. By default, they drop you into a full-blown landing page builder with complicated layouts, when all I really wanted was a job description and initial questions.
 
-{{<img src="homerun-builder.png" max-width="500px" alt="Complicated landing page builder on Homerun" caption="At first, I was put off by Homerun's complicated landing page builder.">}}
+{{<img src="homerun-builder.png" max-width="500px" alt="Complicated landing page builder on Homerun" caption="At first, I was put off by Homerun's complicated landing page builder." has-border="false">}}
 
 It turns out that you can opt-out of a "job listing" page and use Homerun exclusively for a "job application." I appreciated that, because it allows me to delegate the job posting to other sites that specialize in it.
 

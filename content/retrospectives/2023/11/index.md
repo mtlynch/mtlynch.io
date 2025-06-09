@@ -194,7 +194,7 @@ Then, I got curious and started reading more about high-end keyboards. I spend m
 
 After checking out a few of the options like Kinesis, Ergodox, and ZSA, I ended up going with the [Kinesis Advantage 360](https://kinesis-ergo.com/keyboards/advantage360/).
 
-{{<img src="kinesis-keyboard.jpg" max-width="700px" caption="I've just switched to the [Kinesis Advantage 360](https://kinesis-ergo.com/keyboards/advantage360/) keyboard.">}}
+{{<img src="kinesis-keyboard.jpg" max-width="700px" caption="I've just switched to the [Kinesis Advantage 360](https://kinesis-ergo.com/keyboards/advantage360/) keyboard." has-border="false">}}
 
 The first day with the keyboard was a real struggle. I was going about 5% of my usual typing speed. I had a lot of paperwork to get through, so I put aside the keyboard for the next morning.
 

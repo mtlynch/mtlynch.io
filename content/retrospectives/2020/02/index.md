@@ -115,8 +115,8 @@ I'm hoping show tickets will be easier to sell than comedy classes. The cost to 
 I've been attending two comedy shows per week to meet new comedians and ask them how WanderJest can be useful to them. In person, performers seem enthusiastic about WanderJest, but when I follow up later asking for their photo and bio to list on the site, only about half respond. A small minority are vocal enough champions that they promote the site without me even asking:
 
 {{<gallery caption="Comedians promoting WanderJest on Facebook">}}
-{{<img src="todd-therrien-share.jpg" alt="Screenshot of Todd Therrien sharing WanderJest on Facebook">}}
-{{<img src="matt-woodland-share.jpg" alt="Screenshot of Matt Woodland sharing WanderJest on Facebook">}}
+{{<img src="todd-therrien-share.jpg" alt="Screenshot of Todd Therrien sharing WanderJest on Facebook" has-border="false">}}
+{{<img src="matt-woodland-share.jpg" alt="Screenshot of Matt Woodland sharing WanderJest on Facebook" has-border="false">}}
 {{</gallery>}}
 
 That said, WanderJest is still far from being part of any performer's or show organizer's workflow. Even the most passionate WanderJest supporters still use Facebook events as their primary channel for promotion. I don't blame them, as event creation on WanderJest is still clunky &mdash; they have to fill out a [Typeform](https://typeform.com/), and then I add their show manually. I want to add enough features to the site that using WanderJest makes show organizers' lives easier than promoting a show without it.
@@ -143,7 +143,7 @@ Fancy features and promotions mean nothing unless I can demonstrate to show orga
 I've posted on my town's local Facebook group and two local subreddits: [/r/northampton](https://redd.it/evoo77) and [/r/springfield](https://redd.it/ey90il). The response to every post has been uniformly positive, with the /r/springfield subreddit even adding WanderJest to their permanent sidebar.
 
 {{<gallery caption="Response to WanderJest social media posts">}}
-{{<img src="fb-wanderjest-share.jpg" alt="Screenshot of WanderJest share on Facebook">}}
+{{<img src="fb-wanderjest-share.jpg" alt="Screenshot of WanderJest share on Facebook" has-border="false">}}
 {{<img src="reddit-wanderjest-share.jpg" alt="Screenshot of WanderJest share on Reddit" has-border="true">}}
 {{</gallery>}}
 
@@ -165,7 +165,7 @@ One of the most important lessons I've learned in launching new businesses is th
 
 Instead, with each project, I look for new ways to cut corners and launch faster. With WanderJest, I skipped the database &mdash; I just hardcoded all of my data right into the source code.
 
-{{<img src="wanderjest-data-in-code.jpg" alt="Screenshot of WanderJest source code with hardcoded data" caption="Hardcoding data into source code is ugly but effective for launching your first version quickly." max-width="650px">}}
+{{<img src="wanderjest-data-in-code.jpg" alt="Screenshot of WanderJest source code with hardcoded data" caption="Hardcoding data into source code is ugly but effective for launching your first version quickly." max-width="650px" has-border="false">}}
 
 I told myself that I'd migrate to a database when hardcoded data got too annoying, but I found that working with hardcoded data was, in fact, far easier. It meant that all the data in my dev environment stayed perfectly in sync with my prod environment. There were never issues where I only noticed after deploying that something didn't work (e.g., "Whoops, this looks horrendous when a title is longer than 80 characters!"). And because my code is under source control, my data is too, so I could jump back to any version of my site and know that I'm seeing both the code and data as it existed at that point in time.
 

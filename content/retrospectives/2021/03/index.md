@@ -105,11 +105,11 @@ I even tried switching to another variant of the same chip, but I'm getting the 
 
 After TinyPilot's [first YouTube review](/retrospectives/2021/02/#tinypilots-first-youtube-review), the business experienced its largest-ever surge in sales. Naturally, I thought, "Wow! I really need to get more YouTubers to review TinyPilot."
 
-{{<img src="sales-jan.png" caption="[First YouTube review](/retrospectives/2021/02/#tinypilots-first-youtube-review) causes an enormous spike in sales">}}
+{{<img src="sales-jan.png" caption="[First YouTube review](/retrospectives/2021/02/#tinypilots-first-youtube-review) causes an enormous spike in sales" has-border="false">}}
 
 I worked with two more YouTubers to get reviews, but the results were less dramatic. The subsequent reviews were positive, but they had no measurable impact on sales.
 
-{{<img src="all-reviews.png" caption="The [second](https://www.youtube.com/watch?v=jq2X2ofedyQ) and [third](https://www.youtube.com/watch?v=0aGbglFZi8g) YouTube reviews had no measurable impact on sales">}}
+{{<img src="all-reviews.png" caption="The [second](https://www.youtube.com/watch?v=jq2X2ofedyQ) and [third](https://www.youtube.com/watch?v=0aGbglFZi8g) YouTube reviews had no measurable impact on sales" has-border="false">}}
 
 I still see a great deal of potential in YouTube. Tons of YouTubers teach server maintenance. If I can win them over to TinyPilot when they show demos of low-level administration, that has tremendous value for the TinyPilot brand.
 

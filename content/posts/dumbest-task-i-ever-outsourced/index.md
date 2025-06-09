@@ -14,7 +14,7 @@ images:
   - dumbest-task-i-ever-outsourced/cover.jpg
 ---
 
-{{<img src="cover.jpg" alt="The Dumbest Task I Ever Outsourced (cover image)" max-width="1000px">}}
+{{<img src="cover.jpg" alt="The Dumbest Task I Ever Outsourced (cover image)" max-width="1000px" has-border="false">}}
 
 I derive immense satisfaction from outsourcing my chores. All of my friends have heard me encourage them to place a higher value on their free time and delegate their errands. Few of them heed my advice, and it's probably because they know about the time I paid someone $96 to clean a $39 keyboard.
 
@@ -24,7 +24,7 @@ Back in 2016, I lived in a small studio apartment in Manhattan. It was a Monday 
 
 Desperate for any distraction, I became fixated on my keyboard. It was so dusty and grimy. How had I not noticed this before? I used the same keyboard for six years, typed on it 20-30 hours per week, and ate all my meals in front of it.
 
-{{<img src="keyboard.jpg" alt="My keyboard on my desk" caption="My keyboard, in need of cleaning" max-width="600px">}}
+{{<img src="keyboard.jpg" alt="My keyboard on my desk" caption="My keyboard, in need of cleaning" max-width="600px" has-border="false">}}
 
 Growing up, my parents routinely popped all the keys from our keyboards to deep clean them in rubbing alcohol. Did people still do that?
 
@@ -114,7 +114,7 @@ Jaclyn S. emerges from my kitchen, triumphantly carrying my now sparkling clean 
 
 The final cost for Jaclyn's three and a half hours of keyboard cleaning: $95.55.
 
-{{<img src="taskrabbit-receipt.jpg" alt="$95.55 receipt for my TaskRabbit task" caption="TaskRabbit receipt from my keyboard cleaning task" max-width="600px">}}
+{{<img src="taskrabbit-receipt.jpg" alt="$95.55 receipt for my TaskRabbit task" caption="TaskRabbit receipt from my keyboard cleaning task" max-width="600px" has-border="false">}}
 
 Out of curiosity, I checked what I paid for that keyboard brand new: $38.89.
 

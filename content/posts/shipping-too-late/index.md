@@ -132,7 +132,7 @@ This wasn't at all like working in sales. That job required me to sell fiber Int
 
 Now, I was selling something I created. What's more, it was _software_ I created. Writing software is such a strong part of my identity. There's nothing else I do better or take more pride in. If I showed my product to a customer, they might think, “This isn’t very good. You’re trying to sell it, so you must think it’s good. Therefore, **you** are not very good.”
 
-{{<img src="rejection.jpg" alt="Fear of rejection cartoon" max-width="800px">}}
+{{<img src="rejection.jpg" alt="Fear of rejection cartoon" max-width="800px" has-border="false">}}
 
 ## The harsh reality
 

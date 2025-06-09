@@ -99,8 +99,8 @@ I initially resisted Framework because the idea of building my own laptop sounde
 The experience of building my Framework laptop was surprisingly the best unboxing experience I've ever had with anything.
 
 {{<gallery caption="The Framework 13 surprised me by delivering one of the best unboxing experiences I've had with any technology.">}}
-{{<img src="framework-unboxing-1.webp" max-width="550px">}}
-{{<img src="framework-unboxing-2.webp" max-width="210px">}}
+{{<img src="framework-unboxing-1.webp" max-width="550px" has-border="false">}}
+{{<img src="framework-unboxing-2.webp" max-width="210px" has-border="false">}}
 {{</gallery>}}
 
 Assembling my Framework was incredibly easy. I was expecting it to be like building a desktop from scratch where you're assembling the chassis, the motherboard, etc., but most of the Framework is actually pre-assembled. The user portion of the assembly only took me 30 minutes, and I was going very slowly.

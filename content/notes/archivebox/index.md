@@ -50,7 +50,7 @@ One of my all-time favorite reddit stories is the /r/legaladvice saga from [a gu
 
 The reddit poster's neighbor owned property that included a driveway connecting their house to public roads, but they sold part of their land that included their driveway. As a result, the neighbor had no way of getting on or off their property without trespassing on property they didn't own. The neighbor was trying to solve this by demanding access to the reddit poster's private driveway.
 
-{{<img src="cTGdIPu.png" max-width="600px" caption="Crude drawing that captured the excitement of /r/legaladvice board">}}
+{{<img src="cTGdIPu.png" max-width="600px" caption="Crude drawing that captured the excitement of /r/legaladvice board" has-border="false">}}
 
 The story is told in three reddit threads:
 

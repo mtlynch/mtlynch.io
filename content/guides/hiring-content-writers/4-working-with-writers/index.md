@@ -154,8 +154,8 @@ To maintain a healthy relationship with your freelancers, define when they shoul
 When I pay writers directly (rather than through a freelancing platform), I ask them to enter their hours in a shared [Google Sheets spreadsheet](https://docs.google.com/spreadsheets/d/1LDMdzBiNDkiL3EdsOhP9yxDETjcXaRlAXV03Cd6gViI/edit?usp=sharing).
 
 {{<gallery caption="Simple timesheets and invoicing with [Google Sheets](https://docs.google.com/spreadsheets/d/1LDMdzBiNDkiL3EdsOhP9yxDETjcXaRlAXV03Cd6gViI/edit?usp=sharing)">}}
-{{<img src="spreadsheet-1.jpg" alt="Freelancer hours spreadsheet">}}
-{{<img src="spreadsheet-2.jpg" alt="Freelancer payment spreadsheet">}}
+{{<img src="spreadsheet-1.jpg" alt="Freelancer hours spreadsheet" has-border="false">}}
+{{<img src="spreadsheet-2.jpg" alt="Freelancer payment spreadsheet" has-border="false">}}
 {{</gallery>}}
 
 On alternating Mondays, I mail them a check for the hours they've accrued in the pay period.

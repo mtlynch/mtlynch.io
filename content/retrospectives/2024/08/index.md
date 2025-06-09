@@ -50,7 +50,7 @@ To get a good camera angle, I was adjusting my monitor arm and desk height to ke
 
 I solved my camera problem with a small, desk-sized tripod: the [SmallRig VT-20](https://www.bhphotovideo.com/c/product/1799670-REG/smallrig_aluminum_mini_tripod_vt_20.html).
 
-{{<img src="desk-tripod.webp" max-width="600px"  caption="I bought a desktop tripod so that I don't have to reposition my desk or monitor to begin recording.">}}
+{{<img src="desk-tripod.webp" max-width="600px"  caption="I bought a desktop tripod so that I don't have to reposition my desk or monitor to begin recording." has-border="false">}}
 
 I keep the tripod between me and my monitor during recording sessions. I marked the position of the legs on my desk with painter's tape so that I can reproduce the position each time.
 
@@ -59,8 +59,8 @@ Having the tripod means that when I want to record, I just drop the tripod and c
 The one downside of the tripod is that it partially obstructs my view of my slides, but by the time I'm recording, I've memorized them anyway.
 
 {{<gallery caption="Mounting the webcam on top of my monitor (left) vs on a desk tripod in front of my monitor (right). The tripod makes it easier for me to look directly into the camera.">}}
-{{<img src="mounted-on-monitor.webp" max-width="354px">}}
-{{<img src="mounted-on-tripod.webp" max-width="400px">}}
+{{<img src="mounted-on-monitor.webp" max-width="354px" has-border="false">}}
+{{<img src="mounted-on-tripod.webp" max-width="400px" has-border="false">}}
 {{</gallery>}}
 
 ### Keep recording equipment connected

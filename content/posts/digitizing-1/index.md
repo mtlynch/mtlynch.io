@@ -13,13 +13,13 @@ discuss_urls:
 
 For the last eight years, I've carried around this box of videotapes through four different apartments and one house. They're family home videos from my childhood.
 
-{{<img src="videotapes.jpg" alt="All of my family's old home videos" max-width="500px">}}
+{{<img src="videotapes.jpg" alt="All of my family's old home videos" max-width="500px" has-border="false">}}
 
 After 600+ hours of work, I finally digitized and organized them well enough to throw away the original tapes. Here's what the footage looks like now:
 
 {{<gallery caption="All of my home videos, digitized and watchable from a private media sharing server">}}
-{{<img src="mediagoblin-home.png" alt="MediaGoblin browse screen" max-width="440px">}}
-{{<img src="mediagoblin-single-video.jpg" alt="Screenshot of MediaGoblin displaying a video" max-width="413px">}}
+{{<img src="mediagoblin-home.png" alt="MediaGoblin browse screen" max-width="440px" has-border="false">}}
+{{<img src="mediagoblin-single-video.jpg" alt="Screenshot of MediaGoblin displaying a video" max-width="413px" has-border="false">}}
 {{</gallery>}}
 
 There are 513 separate clips, each with a title, description, a recording date, tags for everyone in the video, and everyone's ages at the time of the recording. I host everything on a private media-sharing website that only my family can access, and it costs less than $1 per month to keep it running.
@@ -30,7 +30,7 @@ This post explains how I did it, why it took me eight years, and how you can ach
 
 Around 2010, my mom bought some sort of VHS to DVD converter and ran all of our home videos through it.
 
-{{<img src="original-dvds.jpg" alt="Photo of rewritable DVDs labeled by letter" caption="The original DVD copies of the tapes my mom made (I'm not sure what happened to the missing letters)" max-width="600px">}}
+{{<img src="original-dvds.jpg" alt="Photo of rewritable DVDs labeled by letter" caption="The original DVD copies of the tapes my mom made (I'm not sure what happened to the missing letters)" max-width="600px" has-border="false">}}
 
 The problem was that there was only one set of DVDs. Everyone in my family lived in a different state, which made it inconvenient to pass discs around.
 
@@ -112,7 +112,7 @@ Here's the part where Magic jumps, slowed to 1/5th speed:
 
 Audio correction alone took hours of tedious, maddening work. It finally occurred to me that I might avoid this headache if I chose something other than Amazon's cheapest video capture device. After a bit more research, I bought a new one:
 
-{{<img src="S-Video-capture.jpg" alt="GV-USB2 video capture device" caption="My second attempt at [purchasing a video capture device](https://smile.amazon.com/gp/product/B00428BF1Y/)" max-width="300px">}}
+{{<img src="S-Video-capture.jpg" alt="GV-USB2 video capture device" caption="My second attempt at [purchasing a video capture device](https://smile.amazon.com/gp/product/B00428BF1Y/)" max-width="300px" has-border="false">}}
 
 Even with the new device, there was still audio skew.
 
@@ -124,7 +124,7 @@ Of course! What was I doing messing around with my dumb _regular_ VCR when there
 
 Nobody makes S-VHS VCRs anymore, but they're still available on eBay. I spent $179 on a JVC SR-V10U, a VCR model that's supposedly well-suited to VHS digitization:
 
-{{<img src="jvc-vcr.jpg" alt="Photo of expensive VCR with S-VHS support" caption="The vintage JVC SR-V10U VCR that I bought on eBay for $179" max-width="650px">}}
+{{<img src="jvc-vcr.jpg" alt="Photo of expensive VCR with S-VHS support" caption="The vintage JVC SR-V10U VCR that I bought on eBay for $179" max-width="650px" has-border="false">}}
 
 The super VCR arrived in the mail. After months of struggling with mismatched sound, I was overjoyed to have right in my hands the equipment that promised to solve all my problems.
 
@@ -230,7 +230,7 @@ What's more, spreadsheets dramatically expanded the type of information I captur
 
 Later, I was able to use that metadata to add information to the clips like how old we all were and a detailed description of what's going on in the clip.
 
-{{<img src="spreadsheet-to-meta.png" alt="Visualization of how items in my spreadsheet translate to metadata in my media sharing solution" caption="With the added flexibility of a spreadsheet, I can record metadata that gives more information about the clips and makes them easier to browse." max-width="800px">}}
+{{<img src="spreadsheet-to-meta.png" alt="Visualization of how items in my spreadsheet translate to metadata in my media sharing solution" caption="With the added flexibility of a spreadsheet, I can record metadata that gives more information about the clips and makes them easier to browse." max-width="800px" has-border="false">}}
 
 ### The glory of an automated solution
 

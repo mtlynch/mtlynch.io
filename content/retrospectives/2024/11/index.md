@@ -228,7 +228,7 @@ I'd heard of this show, but I think the name always dissuaded me from watching. 
 
 And then I saw [this clip](https://www.youtube.com/watch?v=yWBqnpCCasg) from the show and realized that great people are in it, and the tone is like a slightly more grounded version of _I Think You Should Leave_ in sitcom format. I just finished season 1, and I thought it was great.
 
-{{<img src="detroiters.webp" alt="Still from Detroiters showing Tim Robinson and Sam Richardson eating chips in front of an unconscious Jason Sudeikis" max-width="800px" caption="_Detroiters_ is a slightly more grounded version of _I Think You Should Leave_ in sitcom format.">}}
+{{<img src="detroiters.webp" alt="Still from Detroiters showing Tim Robinson and Sam Richardson eating chips in front of an unconscious Jason Sudeikis" max-width="800px" caption="_Detroiters_ is a slightly more grounded version of _I Think You Should Leave_ in sitcom format." has-border="false">}}
 
 ## Wrap up
 

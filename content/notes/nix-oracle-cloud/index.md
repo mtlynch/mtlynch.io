@@ -301,7 +301,7 @@ If you run [neofetch](https://github.com/dylanaraps/neofetch), you should see ou
 nix-shell -p neofetch --command neofetch
 ```
 
-{{<img src="neofetch.webp">}}
+{{<img src="neofetch.webp" has-border="false">}}
 
 ## Step 11: (optional) Install a package
 

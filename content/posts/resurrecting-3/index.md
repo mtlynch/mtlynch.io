@@ -28,7 +28,7 @@ This is the final post in a three-part series about how I resurrected [ingredien
 - [Part Two: Stabilization](/resurrecting-2/) - In which I prevent functionality from regressing while I restore the code
 - **Part Three: Rehabilitation (this post)** - In which I begin refactoring the code
 
-{{<img src="cover.jpg" alt="Hermit crab being pulled from shell" max-width="800px">}}
+{{<img src="cover.jpg" alt="Hermit crab being pulled from shell" max-width="800px" has-border="false">}}
 
 ## Where are we?
 
@@ -196,7 +196,7 @@ Unit tests aren't much fun unless they're integrated into the build process, so 
 
 Because Travis continuous integration was already running my build script on every code change, I saw the unit test output on [the next Travis build](https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/416406390):
 
-{{<img src="travis-unit-tests.png" alt="Unit test logging output" caption="Unit test logging in [Travis' build output](https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/416406390)" max-width="715px">}}
+{{<img src="travis-unit-tests.png" alt="Unit test logging output" caption="Unit test logging in [Travis' build output](https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/416406390)" max-width="715px" has-border="false">}}
 
 ## Adding code coverage
 

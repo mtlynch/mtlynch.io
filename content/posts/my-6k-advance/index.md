@@ -124,7 +124,7 @@ I wrote [one new blog post](/no-longer-my-favorite-git-commit/) during the pre-s
 
 According to Kickstarter's metrics, 4% of orders came from Twitter. I didn't invest a ton there &mdash; I just [created a thread announcing the pre-sale](https://x.com/deliberatecoder/status/1899106915126239720) and posted occasional updates on progress toward my goal amount.
 
-{{<img src="twitter-post.webp" max-width="600px" caption="Sharing progress updates Twitter accounted for about 4% of sales">}}
+{{<img src="twitter-post.webp" max-width="600px" caption="Sharing progress updates Twitter accounted for about 4% of sales" has-border="false">}}
 
 I tried the same thing on [Bluesky](https://bsky.app/profile/mtlynch.io/post/3ljzrjoqg3k2b) and [Mastodon](https://m.mtlynch.io/@michael/114138636617854162), as I prefer those platforms, but my posts there got almost zero response.
 
