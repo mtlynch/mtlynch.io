@@ -264,4 +264,4 @@ The full source of this example is available below:
 
 --
 
-_Thanks to [Louis Pilford](https://lpil.uk/) and [Ruben Cespon Sisto](https://github.com/DisguisedPigeon) for their helpful feedback on this post._
+_Thanks to [Louis Pilford](https://lpil.uk/) and [DisguisedPigeon](https://github.com/DisguisedPigeon) for their helpful feedback on this post._
