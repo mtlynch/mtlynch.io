@@ -196,7 +196,9 @@ type ElixirEnumerable
 fn csv_encode(data: List(List(String))) -> ElixirEnumerable
 ```
 
-The [`@external` attribute](https://tour.gleam.run/everything/#advanced-features-externals) allows me to call Elixir code from Gleam. I define the input paramater as a Gleam list of list of strings (`List(List(String)))`, which is compatible with Erlang's `Enumerable` type.
+The [`@external` attribute](https://tour.gleam.run/everything/#advanced-features-externals) allows me to call Elixir code from Gleam. Gleam, Elixir, and Erlang all can compile to bytecode that runs on the [BEAM virtual machine](<https://en.wikipedia.org/wiki/BEAM_(Erlang_virtual_machine)>). Within BEAM, the `CSV.encode` function would appear in the namespace `Elixir.CSV.encode`, so that's why I need to specify `Elixir` in the `@external` attribute.
+
+I define the input paramater as a Gleam list of list of strings (`List(List(String)))`, which is compatible with Erlang's `Enumerable` type.
 
 `CSV.encode` returns an Elixir `Enumerable`, but I don't know a Gleam equivalent to that, so I define a custom type of `ElixirEnumerable`.
 
@@ -262,4 +264,4 @@ The full source of this example is available below:
 
 --
 
-_Thanks to [Louis Pilford](https://lpil.uk/) and jajamemeh for their helpful feedback on this post._
+_Thanks to [Louis Pilford](https://lpil.uk/) and [Ruben Cespon Sisto](https://github.com/DisguisedPigeon) for their helpful feedback on this post._
