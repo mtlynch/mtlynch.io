@@ -259,3 +259,7 @@ It works! I successfully called the Elixir CSV library from my simple Gleam appl
 The full source of this example is available below:
 
 - <https://codeberg.org/mtlynch/gleam-call-elixir-simple>
+
+--
+
+_Thanks to [Louis Pilford](https://lpil.uk/) and jajamemeh for their helpful feedback on this post._
