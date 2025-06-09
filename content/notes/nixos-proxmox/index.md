@@ -24,11 +24,11 @@ First, download the latest [NixOS x86_x64 lxdContainerImage image](https://hydra
 
 At the time of this writing, the latest NixOS container build is [275970650](https://hydra.nixos.org/build/275970650), but you can just click whatever is the latest build as you read this.
 
-{{<img src="download-build.webp" alt="Screenshot of latest builds page, showing a NixOS container image build each day." has-border="true" max-width="724px">}}
+{{<img src="download-build.webp" alt="Screenshot of latest builds page, showing a NixOS container image build each day." max-width="724px">}}
 
 From the build result page, click the link labeled `nixos-system-x86_64-linux.tar.xz` to download the image:
 
-{{<img src="build-result.webp" alt="Screenshot of metadata page for a NixOS build from 2023-09-21" has-border="true" max-width="700px">}}
+{{<img src="build-result.webp" alt="Screenshot of metadata page for a NixOS build from 2023-09-21" max-width="700px">}}
 
 ## Upload the image to Proxmox
 
@@ -36,11 +36,11 @@ Now, it's time to upload the image to Proxmox. Scroll down to one of your Proxmo
 
 Click the storage node you'd like to use. The default is called `local`, but you may have others.
 
-{{<img src="click-local.webp" alt="Screenshot of local storage node menu item in the Server View of Proxmox" has-border="true">}}
+{{<img src="click-local.webp" alt="Screenshot of local storage node menu item in the Server View of Proxmox">}}
 
 From the storage node, click "CT Templates," and then click "Download from URL."
 
-{{<img src="ct-templates.webp" alt="Screenshot of settings pages for storage node, showing the CT Templates tab is selected and an arrow pointing to the Upload button" has-border="true">}}
+{{<img src="ct-templates.webp" alt="Screenshot of settings pages for storage node, showing the CT Templates tab is selected and an arrow pointing to the Upload button">}}
 
 The NixOS container image download doesn't include any version or date information. For organization, I renamed my image file to:
 
@@ -48,7 +48,7 @@ The NixOS container image download doesn't include any version or date informati
 
 Renaming will help you identify which version of NixOS this is when you see it later in Proxmox, though this step is optional.
 
-{{<img src="download-from-url.webp" alt="Screenshot of download settings showing the build URL at the top and the custom filename in the middle field" has-border="true">}}
+{{<img src="download-from-url.webp" alt="Screenshot of download settings showing the build URL at the top and the custom filename in the middle field">}}
 
 Click "Download" to download the template to Proxmox.
 
@@ -107,11 +107,11 @@ Your NixOS container is now configured and should be running.
 
 Confusingly, if you visit the Console tab for your new container, you'll see only a black screen:
 
-{{<img src="black-screen.webp" alt="Screenshot of a black screen in the Proxmox container on the Console tab" has-border="true">}}
+{{<img src="black-screen.webp" alt="Screenshot of a black screen in the Proxmox container on the Console tab">}}
 
 If you hit "Enter," you should see the standard NixOS prompt. You can log in with username `root` and no password.
 
-{{<img src="nixos-prompt.webp" alt="Screenshot of nixos default login prompt in a Proxmox container on the Console tab" has-border="true">}}
+{{<img src="nixos-prompt.webp" alt="Screenshot of nixos default login prompt in a Proxmox container on the Console tab">}}
 
 ## Get SSH access to NixOS
 

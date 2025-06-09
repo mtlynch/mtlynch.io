@@ -38,7 +38,7 @@ I got the chapter to about 60% done, but I didn't focus as much as I could have.
 
 I started working on the first chapter of my book, but I kept feeling distracted by my site's mediocre design.
 
-{{<img src="before-font.jpg" has-border="true" max-width="700px">}}
+{{<img src="before-font.jpg" max-width="700px">}}
 
 My book's website uses I simple design theme that I created. It's just Bootstrap's default CSS with some custom styling that I've added. I couldn't point to any specific problem, but the look just felt off.
 
@@ -51,8 +51,8 @@ I began looking at blogs and websites that I liked and tried out their fonts on 
 The font that looked best for the book's website was [Concourse](https://mbtype.com/fonts/concourse/), which led me to explore all of [Matthew Butterick's fonts](https://mbtype.com). For the first time ever, I purchased fonts instead of using a free font from Google Fonts. I used [Concourse](https://mbtype.com/fonts/concourse/) for the headings and [Heliotrope](https://mbtype.com/fonts/heliotrope/) for the text.
 
 {{<gallery caption="I switched the *Refactoring English* website's font to [Concourse](https://mbtype.com/fonts/concourse/) and [Heliotrope](https://mbtype.com/fonts/heliotrope/)">}}
-{{<img src="before-font.jpg" has-border="true">}}
-{{<img src="after-font.jpg" has-border="true">}}
+{{<img src="before-font.jpg">}}
+{{<img src="after-font.jpg">}}
 {{</gallery>}}
 
 I was surprised at how much of a difference nice fonts made. It felt like cheating that I didn't have to make any other design changes, and my site looked 3x better.
@@ -168,7 +168,7 @@ Ever since then, I've used my dad's logic to justify buying premium monitors, an
 
 Plus, now that I've experienced [Hacker News](https://news.ycombinator.com/) at 5120x1440px resolution, I can never go back.
 
-{{<img src="hn-ultrawide.webp" max-width="700px" has-border="true" caption="You haven't truly browsed [Hacker News](https://news.ycombinator.com/) until you've done it at 5120x1400px resolution.">}}
+{{<img src="hn-ultrawide.webp" max-width="700px" caption="You haven't truly browsed [Hacker News](https://news.ycombinator.com/) until you've done it at 5120x1400px resolution.">}}
 
 ## Learning to use an ultrawide monitor
 

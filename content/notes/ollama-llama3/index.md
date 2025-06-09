@@ -83,26 +83,26 @@ Once the server is up and running, visit the following URL in your browser:
 
 You'll first see a page prompting for a login. Click "Sign up."
 
-{{<img src="open-webui-signup.webp" has-border="true">}}
+{{<img src="open-webui-signup.webp">}}
 
 Then enter any details. You don't really need a valid email, as far as I can tell.
 
-{{<img src="open-webui-create-account.webp" has-border="true">}}
+{{<img src="open-webui-create-account.webp">}}
 
 From here, you need to download a model to use. Click the settings button:
 
-{{<img src="open-webui-settings-button.webp" has-border="true">}}
+{{<img src="open-webui-settings-button.webp">}}
 
 I don't know the differences between the models, but Llama 3 is the newest one that just came out a few days ago, so I decided to try that. It says on ollama.com that `llama3:70b` is optimized for chatbot use cases, so I initially went with that one, but it was incredibly slow. I switched to `llama3` and that performed decently:
 
-{{<img src="open-webui-download-model.webp" has-border="true">}}
+{{<img src="open-webui-download-model.webp">}}
 
 It's going to sit at 100% for a while, but it's not done until you see a popup announcing the model is fully downloaded.
 
 Once that's downloaded, close the settings dialog and select `llama3:latest` from the dropdown:
 
-{{<img src="llama3-model.webp" has-border="true">}}
+{{<img src="llama3-model.webp">}}
 
 From there, you can start playing with Llama 3. Here's me having a conversation with Llama 3 as it pretends to be Nathan Fielder:
 
-{{<img src="llama3-answer.webp" has-border="true">}}
+{{<img src="llama3-answer.webp">}}

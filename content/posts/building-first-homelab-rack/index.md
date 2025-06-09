@@ -237,7 +237,7 @@ I currently have eight devices with Ethernet ports, so I looked for switches wit
 
 I've tried Microtik in the past, and I want to like them. They're a small, independent hardware company. Some people love their weird 90s-style UI, but I found it confusing and difficult to navigate.
 
-{{<img src="microtik-interface.webp" max-width="800px" has-border="true" caption="I want to like Microtik, but I can't get over their weird 90s-style admin UI">}}
+{{<img src="microtik-interface.webp" max-width="800px" caption="I want to like Microtik, but I can't get over their weird 90s-style admin UI">}}
 
 I've had great experience with unmanaged TP-Link switches, so I felt good about the brand.
 
@@ -255,7 +255,7 @@ Overall, I like the TP-Link TL-SG3428X switch pretty well. It's silent, which is
 
 It took me a long time to figure out [how to configure VLANs](/notes/debugging-vlans-tp-link/). I've seen how other [brands like QNAP represent VLAN controls](https://www.youtube.com/watch?v=XdqP14NclZ0), and I think they did a much better job than TP-Link.
 
-{{<img src="tp-link-web-ui.webp" max-width="650px" has-border="true" caption="This page in the TP-Link web UI shows which ports are members of the `Guest` VLAN, but it always takes me a few minutes to remember how to interpret the screen.">}}
+{{<img src="tp-link-web-ui.webp" max-width="650px" caption="This page in the TP-Link web UI shows which ports are members of the `Guest` VLAN, but it always takes me a few minutes to remember how to interpret the screen.">}}
 
 ### Review: Netgear GS116LP 16-Port unmanaged PoE switch
 
@@ -339,7 +339,7 @@ The UPS reports 30 minutes of battery life while powering a VM server, a storage
 
 CyberPower offers [PowerPanel Business](https://www.cyberpowersystems.com/products/software/power-panel-business/), a free management tool for controlling the UPS. To use it, you need to connect a computer to the UPS via a USB cable. It's the kind of thing a Raspberry Pi would be great for, but CyberPower sadly doesn't offer a way to install PowerPanel on ARM systems.
 
-{{<img src="powerpanel-webui.webp" max-width="600px" has-border="true" caption="I rate CyberPower's UPS management software as &quot;okay.&quot;">}}
+{{<img src="powerpanel-webui.webp" max-width="600px" caption="I rate CyberPower's UPS management software as &quot;okay.&quot;">}}
 
 I played with PowerPanel for a few minutes, and I thought it was okay but unnecessary. The quality is what you'd expect from closed-source, vendor-specific hardware management software. The physical controls on the UPS are good enough for me.
 
@@ -443,7 +443,7 @@ I couldn't even figure out a purpose for the lip. It would make sense if it curv
 
 I scoured reviews to see if anyone else was talking about this shelf's bizarre design choice. When other reviewers mentioned it, they didn't seem to mind. The comments had the tone of, "Oh, yeah, it extends past 2U a bit. Whatevs."
 
-{{<img src="3u-shelf.webp" has-border="true" caption="Reviewer acknowledges that StarTech's 2U rack shelf takes up 3U of space, still rates it 4 out of 5.">}}
+{{<img src="3u-shelf.webp" caption="Reviewer acknowledges that StarTech's 2U rack shelf takes up 3U of space, still rates it 4 out of 5.">}}
 
 I'm baffled that anyone would accept a 2U shelf that takes up 3U of space. I promptly returned mine and bought the Pyle shelves instead.
 
@@ -609,7 +609,7 @@ My home router is a cheap Qotom Q355G4 unit running OPNsense. It doesn't have ra
 
 {{<gallery caption="My OPNsense firewall running on Qotom Q355G4 mini PC">}}
 {{<img src="qotom-router.webp" max-width="520px" has-border="false">}}
-{{<img src="opnsense-dashboard.webp" max-width="350px" has-border="true">}}
+{{<img src="opnsense-dashboard.webp" max-width="350px">}}
 {{</gallery>}}
 
 ### WiFi access point: Ruckus R310
@@ -648,7 +648,7 @@ Once I selected my rack components, the next step was figuring out how to lay ev
 
 To plan the layout, I used a spreadsheet and color-coded it. This was also helpful in thinking about what size rack to purchase.
 
-{{<img src="rack-spreadsheet.webp" max-width="200px" has-border="true" caption="I considered different rack layouts by just swapping elements in a spreadsheet.">}}
+{{<img src="rack-spreadsheet.webp" max-width="200px" caption="I considered different rack layouts by just swapping elements in a spreadsheet.">}}
 
 ### Place heavy components on the bottom of your rack
 

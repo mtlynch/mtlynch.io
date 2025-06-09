@@ -177,7 +177,7 @@ Our current pace felt glacial compared to the early days when we were releasing 
 
 I reviewed the complete list of tasks for the release, including all the work that wasn't visible to end-users. Even with the benefit of hindsight, I felt like I had chosen the right tasks. And the time we invested in each task felt reasonable as well.
 
-{{<img src="three-category-2.6.1.webp" max-width="350px" has-border="true" caption="The tasks in TinyPilot's [2.6.1 release](https://tinypilotkvm.com/pro/changes#261), colored according to improving the product (green), automation and reducing complexity (blue), and regular maintenance (red)" alt="A screenshot of TinyPilot's dev tasks for 2.6.1 release">}}
+{{<img src="three-category-2.6.1.webp" max-width="350px" caption="The tasks in TinyPilot's [2.6.1 release](https://tinypilotkvm.com/pro/changes#261), colored according to improving the product (green), automation and reducing complexity (blue), and regular maintenance (red)" alt="A screenshot of TinyPilot's dev tasks for 2.6.1 release">}}
 
 So, how could our progress be so much slower when we were prioritizing well and working efficiently?
 

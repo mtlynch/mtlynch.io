@@ -13,7 +13,7 @@ I've collected them here for the sake of saving others time retrying the same st
 
 When I checked the NixOS download page, I saw that they offered 64-bit ARM images.
 
-{{<img src="nixos-arm64.webp" alt="Screenshot of 64-bit ARM download links on NixOS download page" max-width="700px" has-border="true" caption="NixOS offers bootable images for 64-bit ARM systems">}}
+{{<img src="nixos-arm64.webp" alt="Screenshot of 64-bit ARM download links on NixOS download page" max-width="700px" caption="NixOS offers bootable images for 64-bit ARM systems">}}
 
 "Wonderful!" I thought to myself, as the Pi 4 has a 64-bit ARM CPU. But then the Pi [couldn't boot the image at all](/notes/nix-first-impressions/#failed-attempt-2-nixos-on-the-raspberry-pi-4).
 

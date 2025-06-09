@@ -86,7 +86,7 @@ Where was I going to get $250k in cash?
 
 Shopify, Amazon, and Mercury are always bombarding me with offers for eCommerce loans, so I finally read some of the details. They'll loan you some multiple of your monthly revenue, charge an origination fee of 5-15%, and then take an ongoing 10-20% of your revenue until you pay off the loan.
 
-{{<img src="shopify-loan.webp" has-border="true" max-width="600px" caption="Shopify offered me a $100k loan for a $13k origination fee.">}}
+{{<img src="shopify-loan.webp" max-width="600px" caption="Shopify offered me a $100k loan for a $13k origination fee.">}}
 
 If I took a $100k loan from Shopify, it would cost me $13k, and I'd pay off the loan in about seven months. But that's longer than I'd need the loan. My monthly revenue is about $90k. If all of my materials and manufacturing bills were already paid, I'd only have about $25k/month in expenses, leaving $65k/month in cash profits. I'd only need the loan for a month or two, so $13k is a bit steep.
 

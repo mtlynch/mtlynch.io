@@ -70,7 +70,7 @@ Most TinyPilot repositories are ["push on green,"](https://www.usenix.org/public
 
 We store our secrets as CircleCI environment variables. This initially seemed fine because environment variables are write-only, meaning that you can't read the values after you store them.
 
-{{<img src="ci-env-vars.webp" has-border="true" max-width="700px" caption="CircleCI's admin interface only shows a portion of the values of environment variables, and only the CircleCI admin can see them. Note that I'm showing fake values.">}}
+{{<img src="ci-env-vars.webp" max-width="700px" caption="CircleCI's admin interface only shows a portion of the values of environment variables, and only the CircleCI admin can see them. Note that I'm showing fake values.">}}
 
 Once we started thinking more critically about protecting secrets, we realized that despite what CircleCI's web UI suggested, all five team members effectively had access to our environment variables. A malicious team member could extract secrets in one of two ways:
 

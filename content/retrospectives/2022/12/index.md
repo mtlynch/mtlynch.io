@@ -80,13 +80,13 @@ For any workflow, there are generally obvious ways to free up time. It could be 
 
 For the past few months, I've been drawing [beautiful](/retrospectives/2022/10/#does-outsourcing-increase-or-decrease-complexity) [graphs](/retrospectives/2022/09/#remember-how-time-consuming-it-is) of time commitment for outsourcing and delegation. In that spirit, here's the amount of time I spend on a task before and after I hire someone to take it over:
 
-{{<img src="outsourcing-1.png" max-width="500px" has-border="true" alt="Graph showing time commitment increasing as I interview and onboard someone, then slowly decrease as they take over the task.">}}
+{{<img src="outsourcing-1.png" max-width="500px" alt="Graph showing time commitment increasing as I interview and onboard someone, then slowly decrease as they take over the task.">}}
 
 At the beginning, the task is time-consuming because I'm doing all the work myself. When I hire someone, I'm doing even more work because I still have to do the task myself in addition to the work of hiring and training a new person. I eventually reach net savings when the new hire is fully trained, but that can take weeks or months, depending on the task's complexity.
 
 In practice, there are only so many hours in the day. What happens if I take into account the limits of my working hours?
 
-{{<img src="outsourcing-2.png" max-width="500px" has-border="true" alt="Graph showing time commitment taking into account a ceiling on hours per day, where I'm unable to hire someone because I don't have enough spare capacity.">}}
+{{<img src="outsourcing-2.png" max-width="500px" alt="Graph showing time commitment taking into account a ceiling on hours per day, where I'm unable to hire someone because I don't have enough spare capacity.">}}
 
 Whoops, now I can't reach the post-hiring state because I don't have available short-term capacity to hire and train someone. I don't have enough time to save myself time.
 
@@ -155,7 +155,7 @@ I've checked around for apps that let you track movies and TV the same way you'd
 
 I've started working on an app for sharing movie reviews with friends. It's called [ScreenJournal](https://github.com/mtlynch/screenjournal):
 
-{{<img src="screenjournal.png" max-width="800px" has-border="true" caption="[ScreenJournal](https://github.com/mtlynch/screenjournal) is like Goodreads but for couch potatoes." alt="Screenshot of my movie reviews on ScreenJournal">}}
+{{<img src="screenjournal.png" max-width="800px" caption="[ScreenJournal](https://github.com/mtlynch/screenjournal) is like Goodreads but for couch potatoes." alt="Screenshot of my movie reviews on ScreenJournal">}}
 
 It's not quite ready for prime time yet, as the reviews are private, and it only supports a single user. Right now, it's only effective as a private movie journal for one person, but the next feature on my list is support for multiple users.
 

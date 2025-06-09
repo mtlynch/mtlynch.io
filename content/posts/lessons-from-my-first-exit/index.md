@@ -357,11 +357,11 @@ The one account that couldn't transfer over was Google. I used Google Cloud Plat
 
 There's a big "Migrate" button at the top of the GCP project settings page, so I naïvely thought pushing that button would let me &mdash; I don't know, _migrate_ the project to the new owner's GCP account.
 
-{{<img src="gcp-migrate.webp" has-border="true">}}
+{{<img src="gcp-migrate.webp">}}
 
 When the sale closed, I finally clicked that button and immediately saw this error message:
 
-{{<img src="gcp-error.png" has-border="true">}}
+{{<img src="gcp-error.png">}}
 
 GCP's [project migration docs](https://cloud.google.com/resource-manager/docs/project-migration) are a maze of confusing and incorrect instructions. The gist seemed to be that the new owner and I would each need to create paid Google Workspace accounts and go through some complicated process from there. We had a similar issue with some notes and old documents that I'd stored in Google Drive.
 

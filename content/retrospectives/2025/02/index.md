@@ -63,7 +63,7 @@ The [first chapter I released](https://refactoringenglish.com/chapters/rules-for
 
 The problem is that most of the chapters in my book are "eat your vegetables" chapters.
 
-{{<img src="fun-chapters.webp" max-width="650px" has-border="true">}}
+{{<img src="fun-chapters.webp" max-width="650px">}}
 
 I could restructure it so that I talk about a tip like "read your post aloud" as part of the blogging chapter, but it wouldn't quite make sense because that applies to all kinds of writing, not just blog posts.
 
@@ -89,7 +89,7 @@ In the past few years, several things have increased my interest in RSS:
 
 So, I installed [the fusion RSS reader](https://github.com/0x2E/fusion), and I've found it to be one of my favorite ways to read new blog posts. Whenever I find a blog post on social media that I like, I skim their other posts. If they write about things I find interesting, I just add them to my feeds.
 
-{{<img src="fusion.webp" max-width="650px" has-border="true" caption="I recently started using fusion, an RSS reader, so that I can follow interesting blogs">}}
+{{<img src="fusion.webp" max-width="650px" caption="I recently started using fusion, an RSS reader, so that I can follow interesting blogs">}}
 
 ## Side projects
 
@@ -181,7 +181,7 @@ I ended up buying the [Qotom C3758R 1U 10 Gbps router](https://www.servethehome.
 
 I always worry that I'm not getting enough RAM or disk space on my router, but OPNsense barely needs anything. I went with 8 GB of RAM and 128 GB of disk. I just checked system load while running a speed test, and RAM never went above 13% and CPU peaked at about 30%, so the hardware is more than sufficient for my needs. Note that I don't have a ton of firewall rules, and I don't use OPNsense's IDS/IPS features.
 
-{{<img src="opnsense-load.webp" has-border="true">}}
+{{<img src="opnsense-load.webp">}}
 
 ### Officially converted to rack studs
 
@@ -203,7 +203,7 @@ Huh?
 
 I think of "rails" in a server rack as the things attach to the server to slide it in, and they're way bigger than 3mm in every dimension.
 
-{{<img src="server-rails.webp" max-width="300px" has-border="true" caption="What I thought &ldquo;rails&rdquo; are in a server rack.">}}
+{{<img src="server-rails.webp" max-width="300px" caption="What I thought &ldquo;rails&rdquo; are in a server rack.">}}
 
 I finally figured out that when Rackstuds talks about rail thickness, they mean the piece of metal on the front of the rack:
 

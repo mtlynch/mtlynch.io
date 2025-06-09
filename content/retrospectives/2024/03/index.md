@@ -135,7 +135,7 @@ The customer service team ran the test, and they reported no issues. The page lo
 
 I reviewed the video and saw a major problem. For a few moments before the web interface loaded at the new address, the user saw this scary error screen:
 
-{{<img src="site-cannot-be-reached.webp" max-width="600px" has-border="true" caption="The dev team did not want the user to hit this error message, even briefly">}}
+{{<img src="site-cannot-be-reached.webp" max-width="600px" caption="The dev team did not want the user to hit this error message, even briefly">}}
 
 When I showed the dev team, they were heartbroken.
 
@@ -165,13 +165,13 @@ Zig gives developers a high degree of control over performance, so one of my ear
 
 For a while, my Zig version was slightly underperforming the Go version. Then, I [refactored my benchmarking scripts](https://github.com/mtlynch/eth-zvm/pull/24), and my performance mysteriously tanked.
 
-{{<img src="eth-benchmarks-before.webp" max-width="600px" has-border="true" caption="The official Go implementation was pummeling my Zig implementation (lower is better)">}}
+{{<img src="eth-benchmarks-before.webp" max-width="600px" caption="The official Go implementation was pummeling my Zig implementation (lower is better)">}}
 
 I [asked for help on Ziggit](https://ziggit.dev/t/zig-build-run-is-10x-faster-than-compiled-binary/3446?u=mtlynch), a Zig forum, and it turned out I had a bug in both [my benchmarking scripts and in my Zig code](/zig-extraneous-build/). Once I fixed those two simple bugs, my Zig version zoomed past the Go version.
 
 My Zig Ethereum implementation now outperforms the official Go implementation by 30-40%.
 
-{{<img src="eth-benchmarks-after.webp" max-width="600px" has-border="true" caption="After fixing a few simple bugs, my Zig Ethereum implementation outperforms the official implementation by 30-40% (lower is better)">}}
+{{<img src="eth-benchmarks-after.webp" max-width="600px" caption="After fixing a few simple bugs, my Zig Ethereum implementation outperforms the official implementation by 30-40% (lower is better)">}}
 
 To be fair, my version only implements about 3% of Ethereum, so I have an unfair advantage, but it continues to be a fun project.
 

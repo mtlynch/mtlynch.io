@@ -152,11 +152,11 @@ Imagine a simple bash pipeline like the following:
 
 My mental model was that `jobA` would start and run to completion and then `jobB` would start with `jobA`'s output as its input.
 
-{{<img src="jobs-serial.webp" has-border="true" alt="Gantt chart of jobB starting after jobA finishes" caption="My incorrect mental model of how jobs in a bash pipeline work">}}
+{{<img src="jobs-serial.webp" alt="Gantt chart of jobB starting after jobA finishes" caption="My incorrect mental model of how jobs in a bash pipeline work">}}
 
 It turns out that all commands in a bash pipeline start at the same time.
 
-{{<img src="jobs-parallel.webp" has-border="true" alt="Gantt chart of jobA and jobB starting simultaneously, but jobB is longer because it has to wait for jobA's results" caption="The actual way that jobs in a bash pipeline work">}}
+{{<img src="jobs-parallel.webp" alt="Gantt chart of jobA and jobB starting simultaneously, but jobB is longer because it has to wait for jobA's results" caption="The actual way that jobs in a bash pipeline work">}}
 
 To demonstrate parallel execution in a bash pipeline, I wrote a proof of concept with two simple bash scripts.
 
@@ -214,11 +214,11 @@ It looks like the time to run the `echo '00010203040506070809' | xxd -r -p` part
 
 By the time the `count-bytes` application actually begins in the `zig build` version, it doesn't have to wait for the previous jobs to complete. The input is already waiting on stdin.
 
-{{<img src="count-bytes-zig-run.webp" has-border="true" alt="Gantt chart where echo, xxd, and zig build run start at the same time, but the execute phase of zig build run starts after echo and xxd are complete" caption="With `zig build run`, there's a delay before my application executes, so previous jobs in the pipeline have already completed by the time `count-bytes` starts.">}}
+{{<img src="count-bytes-zig-run.webp" alt="Gantt chart where echo, xxd, and zig build run start at the same time, but the execute phase of zig build run starts after echo and xxd are complete" caption="With `zig build run`, there's a delay before my application executes, so previous jobs in the pipeline have already completed by the time `count-bytes` starts.">}}
 
 When I skip the `zig build` step and run the compiled binary directly, `count-bytes` starts immediately and the timer begins. The problem is that `count-bytes` has to sit around waiting ~150 microseconds for the `echo` and `xxd` commands to deliver input to stdin.
 
-{{<img src="count-bytes-compiled.webp" has-border="true" alt="Gantt chart where echo, xxd, and count-bytes all start at the same time, but count-bytes can't begin processing input until 150 microseconds after starting, as it's waiting on results from xxd" caption="When I run `count-bytes` directly, it has to wait around for ~150 microseconds until `echo` and `xxd` feed input to stdin.">}}
+{{<img src="count-bytes-compiled.webp" alt="Gantt chart where echo, xxd, and count-bytes all start at the same time, but count-bytes can't begin processing input until 150 microseconds after starting, as it's waiting on results from xxd" caption="When I run `count-bytes` directly, it has to wait around for ~150 microseconds until `echo` and `xxd` feed input to stdin.">}}
 
 ## Fixing my benchmark
 

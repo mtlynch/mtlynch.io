@@ -136,11 +136,11 @@ I broke up the work by making a changelist for each page in the TV show review f
 
 The first step of leaving a review is to search for the thing you want to review. It used to only be movies, so my first step in supporting TV shows was to [add a radio button](https://github.com/mtlynch/screenjournal/pull/329/files) that let the user choose between a movie or TV show:
 
-{{<img src="movie-or-tv.webp" alt="Screenshot of radio button for TV vs Movies added to the title search screen of ScreenJournal" max-width="550px" has-border="true" caption="My first task was to modify the title search UI to support TV shows.">}}
+{{<img src="movie-or-tv.webp" alt="Screenshot of radio button for TV vs Movies added to the title search screen of ScreenJournal" max-width="550px" caption="My first task was to modify the title search UI to support TV shows.">}}
 
 The next thing I needed was a way for the user to pick a TV show season, as that's something that I didn't have when it was movies only. So, [that was its own change](https://github.com/mtlynch/screenjournal/pull/342).
 
-{{<img src="pick-season.webp" alt="Screenshot of TV season picker screen from ScreenJournal" max-width="550px" has-border="true" caption="My second task was to implement a web UI for picking the season of the TV show to review.">}}
+{{<img src="pick-season.webp" alt="Screenshot of TV season picker screen from ScreenJournal" max-width="550px" caption="My second task was to implement a web UI for picking the season of the TV show to review.">}}
 
 I kept going like that, where each stage of the flow was a new branch and separate pull request.
 
@@ -158,7 +158,7 @@ The thing I dislike most about the stacked diff workflow is that I end up deleti
 
 Whenever I realize I should have made a change earlier in the stack, I have to do `git rebase`, which rewrites history. That means I have to force push to GitHub, which litters my changelist with all these ugly `force-pushed` entries:
 
-{{<img src="force-pushes.webp" alt="Screenshot of a GitHub PR showing lots of force-pushed entries" max-width="650px" has-border="true" caption="Rebasing frequently in git causes ugly `force-pushed` entries to litter my changelist on GitHub">}}
+{{<img src="force-pushes.webp" alt="Screenshot of a GitHub PR showing lots of force-pushed entries" max-width="650px" caption="Rebasing frequently in git causes ugly `force-pushed` entries to litter my changelist on GitHub">}}
 
 I know some people want all of their changes preserved exactly as they occurred as if each commit was evidence in a murder trial. I don't care about that, but I do want a sensible undo history in case I make a mistake. I don't like that force pushes overwrite the undo history on the remote end and require complicated surgery to recover from the local end.
 

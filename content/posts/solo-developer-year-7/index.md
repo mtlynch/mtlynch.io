@@ -29,7 +29,7 @@ In August, my wife and I welcomed our first child, a son.
 
 Shortly after the birth, one of the nurses took a beautiful photo of the three of us, which I've included below. I'm protective of my son's privacy, so I ran the picture through a hand-tuned fast Fourier transform to remove biometric details:
 
-{{<img src="baby-photo.webp" has-border="true" max-width="450px" alt="Stick figure drawing of my family" caption="Photo of me, my wife, and our newborn son, post-processed with a privacy-preserving photo filter">}}
+{{<img src="baby-photo.webp" max-width="450px" alt="Stick figure drawing of my family" caption="Photo of me, my wife, and our newborn son, post-processed with a privacy-preserving photo filter">}}
 
 I'm thankful for the flexibility I get from being an indie founder and for the timing of the TinyPilot sale, as the past five months have been the happiest time of my life.
 
@@ -43,7 +43,7 @@ I decided the best product for those three months would be a downloadable course
 
 My only experience creating educational products was in 2021. I recorded a video course about [blogging for technical audiences](https://hitthefrontpage.com). It made $7.6k in its first year and another $2.2k since then. It's not a smash hit by course creator standards, but it took me about 100 hours to produce, and I'm proud of the material. It's the highest return on investment project I've completed since becoming an indie founder.
 
-{{<img src="htfp.webp" max-width="650px" has-border="true" caption="My 2021 course about [blogging for technical audiences](https://hitthefrontpage.com) has made a total of $10k in four years.">}}
+{{<img src="htfp.webp" max-width="650px" caption="My 2021 course about [blogging for technical audiences](https://hitthefrontpage.com) has made a total of $10k in four years.">}}
 
 Over the summer, I revised the material from my 2021 blogging course. I started by teaching it to a small group of students on live weekly video calls. My plan was to continue refining the course based on the students' feedback and then record a final, downloadable version of the course to sell.
 

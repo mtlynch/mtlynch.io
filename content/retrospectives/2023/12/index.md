@@ -106,8 +106,8 @@ After months of back and forth, we narrowed the problem down to ShipStation. The
 Yes, you read correctly. ShipStation, a company whose primary job is to sell you postage for shipping packages, doesn't understand why anyone would choose one-day shipping if it's more expensive than two-day shipping.
 
 {{<gallery caption="ShipStation can't understand why anyone would choose USPS Priority Mail Express when the non-Express option is cheaper but slower.">}}
-{{<img src="ship1.webp" max-width="600px" has-border="true">}}
-{{<img src="ship2.webp" max-width="400px" has-border="true">}}
+{{<img src="ship1.webp" max-width="600px">}}
+{{<img src="ship2.webp" max-width="400px">}}
 {{</gallery>}}
 
 I was having so many issues with ShipStation that I decided to switch back to the old stack for presenting shipping options to customers. Now, we just show the customer the shipping options and rates through Shopify and don't even bother querying rates from ShipStation.
@@ -212,7 +212,7 @@ When I read [Simon Willison's post](https://simonwillison.net/2023/Nov/29/llamaf
 
 Unfortunately, LLaVA 1.5 accuracy with images doesn't seem to be high enough to do what I need. When I show it a comedy show poster and ask questions, its answers are only about 70% accurate:
 
-{{<img src="q1-gpu.png" max-width="600px" has-border="true" alt="Screenshot of llamafile web interface, where LLaVA 1.5 gives semi-accurate answers to my question about the poster. LLaVA identifies one of the names correctly, but it hallucinates variations on two of the others." caption="It was easy to get LLaVA up and running using Llamafile, but its accuracy in describing comedy show posters is still weak.">}}
+{{<img src="q1-gpu.png" max-width="600px" alt="Screenshot of llamafile web interface, where LLaVA 1.5 gives semi-accurate answers to my question about the poster. LLaVA identifies one of the names correctly, but it hallucinates variations on two of the others." caption="It was easy to get LLaVA up and running using Llamafile, but its accuracy in describing comedy show posters is still weak.">}}
 
 I tried blindly fiddling with the settings, but I wasn't able to improve the results.
 

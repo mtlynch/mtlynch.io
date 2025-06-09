@@ -85,23 +85,23 @@ Once the server is up and running, visit the following URL in your browser:
 
 You'll first see a page prompting for a login. Click "Sign up."
 
-{{<img src="open-webui-signup.webp" has-border="true">}}
+{{<img src="open-webui-signup.webp">}}
 
 Then enter any details. You don't really need a valid email, as far as I can tell.
 
-{{<img src="open-webui-create-account.webp" has-border="true">}}
+{{<img src="open-webui-create-account.webp">}}
 
 From here, you need to download a model to use. Click the settings button:
 
-{{<img src="open-webui-settings-button.webp" has-border="true">}}
+{{<img src="open-webui-settings-button.webp">}}
 
 Click where it says `Pull a model from Ollama.com`:
 
-{{<img src="open-webui-select-model.webp" has-border="true">}}
+{{<img src="open-webui-select-model.webp">}}
 
 For the model, enter `nemotron` and hit the download button:
 
-{{<img src="open-webui-specify-nemotron.webp" has-border="true">}}
+{{<img src="open-webui-specify-nemotron.webp">}}
 
 It's a large file, so it's going to take a few minutes to download. The download progress sits at 100% for a while, but it's not done until you see a popup announcing the model is fully downloaded.
 

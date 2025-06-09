@@ -132,7 +132,7 @@ You can compare my interpreter's results to the JavaScript implementation on the
 
 I thought I would easily crush other interpreters in terms of performance because Zig itself is so performance-optimized, but it turns out that the official Go implementation of Ethereum is pretty fast:
 
-{{<img src="eth-zvm-benchmarks.png" max-width="800px" has-border="true" caption="Benchmarks comparing my Ethereum virtual machine implementation to the official Go-based version (lower is better)">}}
+{{<img src="eth-zvm-benchmarks.png" max-width="800px" caption="Benchmarks comparing my Ethereum virtual machine implementation to the official Go-based version (lower is better)">}}
 
 My interpreter is still leaving a lot of performance optimizations on the table, so I bet I can beat the other implementations if I spend some time cutting out memory allocations.
 

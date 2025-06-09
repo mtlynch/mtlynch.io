@@ -11,7 +11,7 @@ description: How to deploy Syncthing on a Fly.io cloud VM and configure it using
 
 I recently discovered [Syncthing](https://syncthing.net/), an open-source tool for syncing files across multiple machines.
 
-{{<img src="syncthing-dashboard.png" has-border="true" max-width="700px">}}
+{{<img src="syncthing-dashboard.png" max-width="700px">}}
 
 Setting up Syncthing on my personal devices was easy, but I went on an interesting journey deploying it to a cloud server.
 
@@ -29,7 +29,7 @@ I'm going to share some approaches to deploying Syncthing that failed. If you wa
 
 For the past two years, [Fly.io](https://fly.io) has been my preferred cloud hosting provider, so I checked if anyone had written about Syncthing on Fly.io. It turned out that [Andrew Katz had written a nice tutorial](https://web.archive.org/web/20240523091036/https://akatz.org/running-syncthing-on-fly-io-with-tailscale/) less than a year ago.
 
-{{<img src="akatz-tutorial.png" has-border="true" max-width="600px" alt="Screenshot of post 'Running Syncthing on Fly.io with Tailscale'">}}
+{{<img src="akatz-tutorial.png" max-width="600px" alt="Screenshot of post 'Running Syncthing on Fly.io with Tailscale'">}}
 
 Andrew's tutorial was great news because it proved that my idea was feasible. One quibble I had was that it depended on Tailscale, a popular VPN solution. I love Tailscale, but it has some serious drawbacks in this context.
 
@@ -129,11 +129,11 @@ And it worked! From the logs, Syncthing was up and running.
 
 The logs showed the Syncthing server's device ID, so I could add it as a peer from my local Syncthing server:
 
-{{<img src="syncthing-add-device.webp" has-border="true" max-width="700px"  alt="Screenshot showing add device with device ID of GHLLBWT-QJ4LGHJ-RT43QUV-DWFRMGS-5OTXHGH-LAZAIMG-HQ3TVAE-UUC2SA5">}}
+{{<img src="syncthing-add-device.webp" max-width="700px"  alt="Screenshot showing add device with device ID of GHLLBWT-QJ4LGHJ-RT43QUV-DWFRMGS-5OTXHGH-LAZAIMG-HQ3TVAE-UUC2SA5">}}
 
 Unfortunately, my local Syncthing instance failed to connect to the cloud server.
 
-{{<img src="syncthing-cant-connect.webp" has-border="true" alt="Screenshot showing syncthing-mtlynch in disconnected state">}}
+{{<img src="syncthing-cant-connect.webp" alt="Screenshot showing syncthing-mtlynch in disconnected state">}}
 
 That's expected because I haven't configured my Fly.io server to allow any inbound traffic.
 
@@ -327,7 +327,7 @@ fly proxy 8384:8386
 
 And voila! It worked. I was able to access my Syncthing cloud server's admin dashboard from my local device.
 
-{{<img src="cloud-dashboard.webp" has-border="true" max-width="450px" alt="Screenshot of Syncthing dashboard on fly.io">}}
+{{<img src="cloud-dashboard.webp" max-width="450px" alt="Screenshot of Syncthing dashboard on fly.io">}}
 
 Andrew Katz's solution has the advantage of making his Fly.io server's admin interface available to him at any time. If I want to make administrative changes to my Fly.io server, I have to go through the ugly dance of setting up an ad-hoc proxy, but that's actually fine for me. I expect maintenance to be infrequent, so I don't mind some kludginess there.
 
@@ -537,15 +537,15 @@ $ fly logs | grep "My ID: "
 
 On your local Syncthing devices, add your cloud Syncthing server by clicking "Add Device" and entering the Device ID. You can give the server any device name. I chose the wildly creative name, `cloud-syncthing`.
 
-{{<img src="add-device.webp" has-border="true" alt="Screenshot showing add device with device ID of GHLLBWT-QJ4LGHJ-RT43QUV-DWFRMGS-5OTXHGH-LAZAIMG-HQ3TVAE-UUC2SA5">}}
+{{<img src="add-device.webp" alt="Screenshot showing add device with device ID of GHLLBWT-QJ4LGHJ-RT43QUV-DWFRMGS-5OTXHGH-LAZAIMG-HQ3TVAE-UUC2SA5">}}
 
 You can improve the security of your cloud Syncthing server by treating it as "Untrusted." That tells your other devices to send data to the server only after encrypting it. If an attacker ever compromises your Fly.io server, they'll only get unreadable encrypted data.
 
-{{<img src="mark-untrusted.webp" has-border="true" alt="Screenshot showing checking the Untrusted box in Add Device > Advanced">}}
+{{<img src="mark-untrusted.webp" alt="Screenshot showing checking the Untrusted box in Add Device > Advanced">}}
 
 Finally, share one of your folders with your new Syncthing server. Go to Edit Folder > Sharing and check the box for the new peer. If you marked it as untrusted, set a strong passphrase to encrypt the data.
 
-{{<img src="add-cloud-syncthing.webp" has-border="true" alt="Screenshot showing checking box for cloud-syncthing and adding a password in Edit Folder > Sharing">}}
+{{<img src="add-cloud-syncthing.webp" alt="Screenshot showing checking box for cloud-syncthing and adding a password in Edit Folder > Sharing">}}
 
 ### Access web UI
 
@@ -561,7 +561,7 @@ With the proxy in place, you should be able to access your cloud server's Syncth
 
 You should see an admin dashboard like the following:
 
-{{<img src="cloud-dashboard.webp" has-border="true" max-width="450px" alt="Screenshot of Syncthing dashboard on fly.io">}}
+{{<img src="cloud-dashboard.webp" max-width="450px" alt="Screenshot of Syncthing dashboard on fly.io">}}
 
 Congratulations! You've deployed your Syncthing server to the cloud, and you now have full access to it. From here, you can configure it just like you would any other device running Syncthing.
 

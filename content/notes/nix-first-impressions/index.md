@@ -31,7 +31,7 @@ I'm seeing more and more people talk about Nix and NixOS. A lot of the developer
 
 The most impactful endorsement I've seen was from [Mitchell Hashimoto](https://mitchellh.com/), co-founder of Hashicorp, the company responsible for creating a lot of widely-used open-source infrastructure tools like Vagrant, Packer, Consul, and Terraform. He called Nix, "the #1 most positively impactful technology I've learned in recent years."
 
-{{<img src="hashimoto-tweet.png" has-border="true" alt="My Nix journey so far. I still stand by that its the #1 most positively impactful technology I've learned in recent years.">}}
+{{<img src="hashimoto-tweet.png" alt="My Nix journey so far. I still stand by that its the #1 most positively impactful technology I've learned in recent years.">}}
 
 The idea of Nix feels a lot like Ansible. Nix lets you define a configuration in code, and then it brings the system into that state.
 

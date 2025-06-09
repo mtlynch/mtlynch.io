@@ -2,7 +2,7 @@
 {{ $altText := .Get "alt" }}
 {{ $caption := .Get "caption" }}
 {{ $maxWidth := .Get "max-width" }}
-{{ $hasBorder := .Get "has-border" }}
+{{ $hasBorder := ne (.Get "has-border") "false" }}
 {{ $align := .Get "align" }}
 {{ $href := .Get "href" }}
 

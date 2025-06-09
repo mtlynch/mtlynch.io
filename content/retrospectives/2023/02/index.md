@@ -103,7 +103,7 @@ In December, we started shifting our fulfillment to a 3PL vendor, and things got
 
 Then, they gave me instructions for integrating with their warehouse management software, Veracore. The instructions were a PDF, which was the first red flag. When I logged into the system, I found an ASP app that looked like it hadn't been updated in 20 years.
 
-{{<img src="veracore-instructions.png" alt="A page from Veracore's PDF instructions showing horrible ASP app screenshots" caption="Veracore's onboarding instructions PDF with screenshots of its web interface" max-width="600px" has-border="true">}}
+{{<img src="veracore-instructions.png" alt="A page from Veracore's PDF instructions showing horrible ASP app screenshots" caption="Veracore's onboarding instructions PDF with screenshots of its web interface" max-width="600px">}}
 
 Seeing horribly outdated software certainly gave me pause, but I told myself it would be fine. The TinyPilot team would continue managing orders in Shopify. Veracore was how the 3PL would synchronize with our system, but I didn't expect to use it much myself.
 

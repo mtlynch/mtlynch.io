@@ -14,7 +14,7 @@ tags:
 
 Two years ago, I created a website for my business. By combining my terrible design skills with a decent-looking template, I created a site that looked okay. I told myself that if the business took off, I'd hire a real designer to make it look professional.
 
-{{<img src="landing-before-cropped.png" alt="Screenshot of old landing page" max-width="400px" has-border="true" caption="[TinyPilot website](https://tinypilotkvm.com), before design changes">}}
+{{<img src="landing-before-cropped.png" alt="Screenshot of old landing page" max-width="400px" caption="[TinyPilot website](https://tinypilotkvm.com), before design changes">}}
 
 A year later, the business was generating $45k/month in revenue, but my website still looked like a college student's hobby project. It was time for that professional redesign I'd promised myself.
 
@@ -22,7 +22,7 @@ There were only three pages I cared about, so I expected the redesign to be stra
 
 Here's how the site looked after the redesign:
 
-{{<img src="landing-after-cropped.png" alt="Screenshot of new landing page" max-width="400px" has-border="true" caption="[TinyPilot website](https://tinypilotkvm.com), after design changes">}}
+{{<img src="landing-after-cropped.png" alt="Screenshot of new landing page" max-width="400px" caption="[TinyPilot website](https://tinypilotkvm.com), after design changes">}}
 
 Except it didn't take a few months and $15k. It took eight months, $46k, and a lot of headache.
 
@@ -63,21 +63,21 @@ DesignAgency invited me to meetings every two weeks with their lead designer, a 
 Within six weeks, we narrowed in on a concept we all liked.
 
 {{<gallery caption="From oldest to newest, the progression of TinyPilot logo drafts that DesignAgency showed me in the first few weeks of the project.">}}
-{{<img src="logos-1.png" has-border="true">}}
-{{<img src="logos-2.png" has-border="true">}}
-{{<img src="logos-5.png" has-border="true">}}
-{{<img src="logos-6.png" has-border="true">}}
+{{<img src="logos-1.png">}}
+{{<img src="logos-2.png">}}
+{{<img src="logos-5.png">}}
+{{<img src="logos-6.png">}}
 {{</gallery>}}
 
 ## The first red flag: scope creep
 
 In our first few meetings, DesignAgency showed me mockups of my site with different color options.
 
-{{<img src="design-sketches1.png" alt="Basic designs of TinyPilot website with different colors and logos" max-width="800px" has-border="true" caption="At first, the design agency showed me how different color options would look on different basic website designs.">}}
+{{<img src="design-sketches1.png" alt="Basic designs of TinyPilot website with different colors and logos" max-width="800px" caption="At first, the design agency showed me how different color options would look on different basic website designs.">}}
 
 As the project progressed, the mockups became more elaborate. DesignAgency started showing me custom images and icons for the site.
 
-{{<img src="design-sketches2.png" alt="Basic designs of TinyPilot website with different colors and logos" max-width="800px" has-border="true" caption="The design agency became less interested in branding and started focusing on the overall website design.">}}
+{{<img src="design-sketches2.png" alt="Basic designs of TinyPilot website with different colors and logos" max-width="800px" caption="The design agency became less interested in branding and started focusing on the overall website design.">}}
 
 We'd never discussed custom illustrations, but it seemed like a small amount of work, so I let it go.
 
@@ -95,13 +95,13 @@ I was eager to finalize the logo because it would be the project's first complet
 
 All I needed was a couple more hours of work. But I didn't get them.
 
-{{<img src="new-logo-places.jpg" alt="Photos of TinyPilot website, app interface, and case showing the old logo" max-width="500px" has-border="true" caption="All the locations I could place the new TinyPilot logo once DesignAgency delivered the final result.">}}
+{{<img src="new-logo-places.jpg" alt="Photos of TinyPilot website, app interface, and case showing the old logo" max-width="500px" caption="All the locations I could place the new TinyPilot logo once DesignAgency delivered the final result.">}}
 
 Instead, DesignAgency kept redesigning the website. Their lead designer didn't have availability to work on the logo, but what did I think about this new design idea for the landing page?
 
 The breaking point came when DesignAgency started showing me new designs for my site's blog. From the beginning, I had said that I only cared about three pages: the landing page, the product page, and the shopping cart page. All other pages were explicitly out of scope.
 
-{{<img src="design-non-goals.png" alt="Non-Goals: Redesign pages outside the checkout flow. The flow I care about is landing page > product page > checkout. We don’t want to completely break pages outside that flow, but we don’t need to improve their design as part of this effort." max-width="550px" has-border="true" caption="Excerpt from [project specification](tinypilot-redesign-spec.pdf) listing the blog as explicitly out of scope.">}}
+{{<img src="design-non-goals.png" alt="Non-Goals: Redesign pages outside the checkout flow. The flow I care about is landing page > product page > checkout. We don’t want to completely break pages outside that flow, but we don’t need to improve their design as part of this effort." max-width="550px" caption="Excerpt from [project specification](tinypilot-redesign-spec.pdf) listing the blog as explicitly out of scope.">}}
 
 I pointed this out to DesignAgency, and Isaac called me, embarrassed. He admitted that the designers went beyond mere sketching. They were so excited about the project and got carried away, but he was going to remove the hours they'd spent redesigning the blog.
 
@@ -155,7 +155,7 @@ For two weeks, there was no activity from the dev team. I asked Isaac what was g
 
 When the month ended, DesignAgency hadn't moved the website any closer to the new design. Instead, they spent the last few days of the month fixing minor bugs from my issue tracker.
 
-{{<img src="console-log.png" alt="Screenshot of new landing page" has-border="true" caption="One of the DesignAgency developers used 15 of the month's 60 hours to fix the minor bugs from the end of the task queue.">}}
+{{<img src="console-log.png" alt="Screenshot of new landing page" caption="One of the DesignAgency developers used 15 of the month's 60 hours to fix the minor bugs from the end of the task queue.">}}
 
 What inspired DesignAgency to take on these insignificant bugs, you ask? Well, DesignAgency had asked me to create GitHub tickets for each redesign task. DesignAgency warned that they don't refund or roll over unused hours, so they encouraged me to overbook the schedule with tasks beyond the redesign work.
 
@@ -176,8 +176,8 @@ Days stretched into weeks, and there were no updates about the new theme. Was th
 The following month's invoice gave me the answer. The "one-week" task of replacing the Bootstrap theme ultimately took five weeks and 38 billable hours for a total cost of $6.1k.
 
 {{<gallery caption="Before and after five weeks and $6.1k of web development">}}
-{{<img src="before-theme.png" has-border="true">}}
-{{<img src="after-theme.png" has-border="true">}}
+{{<img src="before-theme.png">}}
+{{<img src="after-theme.png">}}
 {{</gallery>}}
 
 ## The final month
@@ -203,18 +203,18 @@ And then it was finally done! This project had spiraled so far beyond what I ini
 Here's what the site looked like after the redesign:
 
 {{<gallery caption="Before and after landing page redesign">}}
-{{<img src="landing-before.png" alt="Screenshot of old landing page" max-width="300px" has-border="true">}}
-{{<img src="landing-after.png" alt="Screenshot of new landing page" max-width="260px" has-border="true">}}
+{{<img src="landing-before.png" alt="Screenshot of old landing page" max-width="300px">}}
+{{<img src="landing-after.png" alt="Screenshot of new landing page" max-width="260px">}}
 {{</gallery>}}
 
 {{<gallery caption="Before and after product page redesign">}}
-{{<img src="product-before.png" alt="Screenshot of old Voyager 2 product page" max-width="300px" has-border="true">}}
-{{<img src="product-after.png" alt="Screenshot of new Voyager 2 product page" max-width="220px" has-border="true">}}
+{{<img src="product-before.png" alt="Screenshot of old Voyager 2 product page" max-width="300px">}}
+{{<img src="product-after.png" alt="Screenshot of new Voyager 2 product page" max-width="220px">}}
 {{</gallery>}}
 
 {{<gallery caption="Before and after shopping cart page redesign">}}
-{{<img src="cart-before.png" alt="Screenshot of old shopping cart page" max-width="400px" has-border="true">}}
-{{<img src="cart-after.png" alt="Screenshot of new shopping cart page" max-width="340px" has-border="true">}}
+{{<img src="cart-before.png" alt="Screenshot of old shopping cart page" max-width="400px">}}
+{{<img src="cart-after.png" alt="Screenshot of new shopping cart page" max-width="340px">}}
 {{</gallery>}}
 
 ## The postmortem
@@ -277,13 +277,13 @@ Many of the issues with scope bloat resulted from the slow feedback loop in Desi
 DesignAgency's process is to report hours twice per month. On the 15th, they share the total number of hours they've used with no details about which tasks contributed to the total. At the end of the month, they send a per-task breakdown.
 
 {{<gallery caption="DesignAgency reports a simple total of hours on the 15th of the month and then a detailed breakdown at the end of the month.">}}
-{{<img src="mid-month-report.png" alt="Screenshot of DesignAgency's billing breakdown by task" max-width="400px"  has-border="true">}}
-{{<img src="hours-summary.png" alt="Screenshot of DesignAgency's billing breakdown by task" max-width="600px" has-border="true">}}
+{{<img src="mid-month-report.png" alt="Screenshot of DesignAgency's billing breakdown by task" max-width="400px" >}}
+{{<img src="hours-summary.png" alt="Screenshot of DesignAgency's billing breakdown by task" max-width="600px">}}
 {{</gallery>}}
 
 In contrast, TinyPilot's in-house developers report their hours at the end of each working session, so I have a better sense of their progress. If a 10-hour task starts looking more like a 25-hour task, we re-evaluate whether to eliminate or downscope the task.
 
-{{<img src="work-timing.png" alt="Screenshot of TinyPilot hours reporting on Deel" has-border="true" caption="TinyPilot's in-house developers report their hours as they go.">}}
+{{<img src="work-timing.png" alt="Screenshot of TinyPilot hours reporting on Deel" caption="TinyPilot's in-house developers report their hours as they go.">}}
 
 If I work with a design agency in the future, I'll insist on a tool that lets us share a view of billable hours as they happen, similar to what I use with TinyPilot's regular devs.
 
@@ -338,7 +338,7 @@ If I had to do it over again, I wouldn't. But despite all the missteps and stres
 
 It's too early to tell, but I'm optimistic about earning a positive return on the $46k I paid DesignAgency.
 
-{{<img src="sales-timeline.png" alt="Graph of TinyPilot sales showing a permanent increase in November when we discontinued our low-cost product, a temporary spike in March for a new product, and an increase for the last two months of having the new website." has-border="true" caption="Sales through the TinyPilot website over the last year">}}
+{{<img src="sales-timeline.png" alt="Graph of TinyPilot sales showing a permanent increase in November when we discontinued our low-cost product, a temporary spike in March for a new product, and an increase for the last two months of having the new website." caption="Sales through the TinyPilot website over the last year">}}
 
 ---
 

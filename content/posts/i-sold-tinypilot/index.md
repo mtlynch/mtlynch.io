@@ -62,7 +62,7 @@ TinyPilot fell into an odd, in-between business category. It was a hardware manu
 
 There were larger competitors selling equivalent devices to TinyPilot for twice the price. I considered approaching enterprise competitors and saying, "Give me a million dollars, and I'll never build another TinyPilot."
 
-{{<img src="aten.webp" max-width="500px" has-border="true" alt="Screenshot of ATEN KVM over IP device selling for $929.95" caption="TinyPilot's enterprise competitors sell similar devices for twice the price.">}}
+{{<img src="aten.webp" max-width="500px" alt="Screenshot of ATEN KVM over IP device selling for $929.95" caption="TinyPilot's enterprise competitors sell similar devices for twice the price.">}}
 
 But I didn't want to sell out. I'd asked customers to take a chance on me as a new, unproven hardware manufacturer. Running off with the cash would have felt like a massive betrayal to my customers and the TinyPilot team.
 
@@ -135,7 +135,7 @@ At the event, I spoke with Chris Guthrie, an advisor at Quiet Light. He seemed o
 
 Chris recommened presenting TinyPilot mainly as an eCommerce business with an asking price of around 3x the last twelve months of earnings. At the time, earnings were $208k, so we agreed to list at $599k, roughly 2.9x earnings.
 
-{{<img src="quiet-light-launch.png" has-border="true" alt="Listing card for TinyPilot showing $599,000 asking price on $1,022,090 in revenue and $207,816 in income" caption="TinyPilot's listing card on Quiet Light's website">}}
+{{<img src="quiet-light-launch.png" alt="Listing card for TinyPilot showing $599,000 asking price on $1,022,090 in revenue and $207,816 in income" caption="TinyPilot's listing card on Quiet Light's website">}}
 
 For the first two months, things looked bleak. Chris received a handful of inquiries, but they were from buyers who either wanted me to stay on as a co-founder or wanted me to finance the majority of the purchase.
 
@@ -209,7 +209,7 @@ The first thing I did after I got the money was eat dessert.
 
 My wife and I were at dinner the night of the closing, and the email confirmation of the wire transfer arrived right before the server brought over our desserts.
 
-{{<img src="final-wire.webp" max-width="700px" has-border="true" alt="Screenshot of email confirming receipt of $610,147.83 in wire transfer payment" caption="The payment is sale price + cost of inventory - broker's fee.">}}
+{{<img src="final-wire.webp" max-width="700px" alt="Screenshot of email confirming receipt of $610,147.83 in wire transfer payment" caption="The payment is sale price + cost of inventory - broker's fee.">}}
 
 Over the next 48 hours, I had celebratory meals with friends and family in different parts of Massachusetts, during which I ate the following desserts (in order):
 

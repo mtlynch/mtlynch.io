@@ -30,7 +30,7 @@ As a longtime Joel Spolsky fanboy, I've always been curious to watch _Aardvark'd
 
 At the time of this writing, _Aardvark'd_ has only 41 views on YouTube, which is surprisingly low given the rarity of its interviews.
 
-{{<img src="41-views.webp" max-width="650px" has-border="true" caption="*Aardvark'd* currently has only 41 views [on YouTube](https://www.youtube.com/watch?v=YbrkZ07LKbk)." href="https://www.youtube.com/watch?v=YbrkZ07LKbk">}}
+{{<img src="41-views.webp" max-width="650px" caption="*Aardvark'd* currently has only 41 views [on YouTube](https://www.youtube.com/watch?v=YbrkZ07LKbk)." href="https://www.youtube.com/watch?v=YbrkZ07LKbk">}}
 
 ## What was going on in 2005?
 
@@ -58,7 +58,7 @@ reddit had launched a few months before the documentary began filming, and it wa
 
 At the time, reddit only allowed users to post links &mdash; there was no commenting. [Fark](https://en.wikipedia.org/wiki/Fark), [digg](https://en.wikipedia.org/wiki/Digg), and [slashdot](https://en.wikipedia.org/wiki/Slashdot) were still the dominant platforms for social link sharing.
 
-{{<img src="reddit-2005.webp" max-width="650px" has-border="true" caption="The reddit homepage [in 2005](https://web.archive.org/web/20050804002153/http://www.reddit.com/)">}}
+{{<img src="reddit-2005.webp" max-width="650px" caption="The reddit homepage [in 2005](https://web.archive.org/web/20050804002153/http://www.reddit.com/)">}}
 
 Early in 2005, college roommates Steve Huffman and Alexis Ohanian drove to Boston to attend one of Paul Graham's lectures about startups. After the talk, Graham had dinner with Huffman, Ohanian, and a few other attendees. The conversations inspired Graham to create Y Combinator, and reddit was in the first batch of investments.
 
@@ -105,7 +105,7 @@ No, not the AI coding assistant.
 
 Fog Creek Copilot was a tool that let people provide remote computer assistance to friends, family, and co-workers.
 
-{{<img src="fog-creek-copilot.webp" has-border="true" max-width="600px" caption="[Fog Creek Copilot](https://web.archive.org/web/20080829161613/https://www.copilot.com/) let people provide remote computer assistance to friends, family, and co-workers.">}}
+{{<img src="fog-creek-copilot.webp" max-width="600px" caption="[Fog Creek Copilot](https://web.archive.org/web/20080829161613/https://www.copilot.com/) let people provide remote computer assistance to friends, family, and co-workers.">}}
 
 So, it's the end of the internship, and Fog Creek is finally launching Copilot. This is the make-or-break moment for all the work we've watched the interns do throughout the movie.
 
@@ -170,7 +170,7 @@ Fog Creek no longer cares about Copilot or _Aardvark'd_. They've taken [the inte
 
 After Fog Creek released Copilot, Joel Spolsky [published the original functional spec](https://www.joelonsoftware.com/2005/08/17/the-project-aardvark-spec/). The link to the actual PDF is now dead, but the Internet Archive [has a copy](https://web.archive.org/web/20051028171624/https://www.joelonsoftware.com/RandomStuff/copilot_spec.pdf).
 
-{{<img src="aardvark-spec.webp" has-border="true" max-width="300px" caption="Joel Spolsky's [original functional spec](https://web.archive.org/web/20051028171624/https://www.joelonsoftware.com/RandomStuff/copilot_spec.pdf) for Fog Creek Copilot (codename Aardvark)">}}
+{{<img src="aardvark-spec.webp" max-width="300px" caption="Joel Spolsky's [original functional spec](https://web.archive.org/web/20051028171624/https://www.joelonsoftware.com/RandomStuff/copilot_spec.pdf) for Fog Creek Copilot (codename Aardvark)">}}
 
 Fog Creek adapted open-source VNC code for the Copilot client, so they were required under the [GPL](https://en.wikipedia.org/wiki/GNU_General_Public_License) to publish their source code.
 
@@ -214,7 +214,7 @@ When Fog Creek spun out Trello into its own company, Liz became Trello's VP of P
 
 She's now [Liz Hall](https://www.linkedin.com/in/elizabeth-hall-8939551b/) and is a C-suite executive at [Splash](https://splashthat.com), where I presume nobody tries to shush her on her birthday.
 
-{{<img src="liz-hall.webp" max-width="450px" has-border="true" caption="Liz Hall is now Chief People Officer at Splash.">}}
+{{<img src="liz-hall.webp" max-width="450px" caption="Liz Hall is now Chief People Officer at Splash.">}}
 
 **Edit**: According to [a comment from Ben Pollack](https://news.ycombinator.com/item?id=37435723) in response to this post, the sound was not actually a "shush":
 

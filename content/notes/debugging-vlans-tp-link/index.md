@@ -39,7 +39,7 @@ On tagged ports, the switch preserves VLAN tags on packets, so you should add VL
 
 For example, if you add port 5 to VLANs 10 and 20 as a tagged port, then the switch will send packets to that port with VLAN tags 10 and 20. It won't strip off the tags, so the device on port 5 will receive packets with the VLAN tag still set. The device won't receive packets with any other VLAN tag, as only 10 and 20 are allowed.
 
-{{<img src="tagged-port.webp" has-border="true" caption="Example: Adding a port to VLANs 10 and 20 as a tagged port. The switch will allow traffic tagged with VLANs 10 and 20 but reject other traffic, such as packets tagged with VLAN 30.">}}
+{{<img src="tagged-port.webp" caption="Example: Adding a port to VLANs 10 and 20 as a tagged port. The switch will allow traffic tagged with VLANs 10 and 20 but reject other traffic, such as packets tagged with VLAN 30.">}}
 
 ### Untagged ports
 
@@ -49,7 +49,7 @@ Untagged ports are for non-VLAN-aware devices, like regular desktop PCs, scanner
 
 For example, if you add port 6 to VLAN 10 as an untagged port, then the switch will send packets with VLAN tags 10 to that port, but it will strip off the tag before passing the packet along. The device on port 6 will receive packets without any VLAN tag. The device won't receive packets with any other VLAN tag, as only VLAN 10 is allowed.
 
-{{<img src="untagged-port.webp" has-border="true">}}
+{{<img src="untagged-port.webp">}}
 
 ### PVIDs
 
@@ -57,7 +57,7 @@ On TP-Link switches, each port has a **PVID**, or [port VLAN identifier](https:/
 
 While tagged and untagged ports define how packets go from the switch to the port, the PVID affects packets that come from the port into the switch.
 
-{{<img src="pvid.webp" has-border="true">}}
+{{<img src="pvid.webp">}}
 
 You don't need to set a PVID for ports that are connected to VLAN-aware devices because those devices are adding their own VLAN tags.
 
@@ -73,7 +73,7 @@ If you have a TP-Link switch with a similar interface to mine, you can find your
 1. From the left sidebar, click "VLAN"
 1. From the submenu, click "802.1Q VLAN"
 
-{{<img src="tplink-vlan-settings.webp" alt="Screenshot of VLAN settings on a TP-Link web interface" has-border="true" caption="How to find VLAN settings on a TP-Link managed switch">}}
+{{<img src="tplink-vlan-settings.webp" alt="Screenshot of VLAN settings on a TP-Link web interface" caption="How to find VLAN settings on a TP-Link managed switch">}}
 
 The "VLAN Config" tab lets you add VLANs to the switch and configure which ports are members of the VLAN.
 
@@ -109,7 +109,7 @@ The relevant network devices in my setup were:
 - My OPNSense firewall, which enforces firewall rules on packets crossing VLANs or to the Internet
 - My [Proxmox server](/building-a-vm-homelab/), which tags certain VMs' network interfaces with VLAN IDs
 
-{{<img src="unmanaged-network.webp" has-border="true" caption="My home network before I added a managed switch">}}
+{{<img src="unmanaged-network.webp" caption="My home network before I added a managed switch">}}
 
 Note that in this diagram, I have no VLAN-aware devices connected in series. This simplified configuration a lot, which I didn't realize until I upgraded to a managed switch.
 
@@ -117,7 +117,7 @@ Note that in this diagram, I have no VLAN-aware devices connected in series. Thi
 
 When I purchased my TP-Link TL-SG3428X, I just dropped it in as a replacement for my previous unmanaged switch. Not much changed about my network diagram:
 
-{{<img src="managed-network.webp" has-border="true" caption="My home network before I added a managed switch">}}
+{{<img src="managed-network.webp" caption="My home network before I added a managed switch">}}
 
 A few minutes after installing the new managed switch, my fiance told me she lost Internet access on her laptop. I checked my phone and saw the same thing.
 
@@ -125,7 +125,7 @@ The WiFi devices could all join the WiFi network, but the network didn't have In
 
 After several hours, I realized what the problem was. My managed switch was dropping all tagged packets. Traffic could get from WiFi devices to the access point, but the switch was rejecting VLAN-tagged packets because it didn't know anything about my VLANs.
 
-{{<img src="unrecognized-vlan.webp" has-border="true" caption="When I replaced my unmanaged switch with a managed switch, the managed switch began dropping VLAN-tagged traffic from my wireless access point.">}}
+{{<img src="unrecognized-vlan.webp" caption="When I replaced my unmanaged switch with a managed switch, the managed switch began dropping VLAN-tagged traffic from my wireless access point.">}}
 
 The solution was to tell my VLANs managed switch about my existing VLANs. Otherwise, the switch would just continue dropping all VLAN-tagged packets.
 
@@ -149,7 +149,7 @@ The IoT device needs Internet access to upload metrics to the vendor's cloud das
 
 I created [a new VLAN from my OPNsense firewall](https://homenetworkguy.com/how-to/configure-vlans-opnsense/) called "Purgatory" for devices I trust even less than guests. Devices in Purgatory can access DNS servers and public Internet IPs, but they can't access any other VLAN.
 
-{{<img src="purgatory-firewall.png" alt="Screenshot of OPNsense firewall rules for Purgatory, which allows DNS and rejects traffic to internal networks" has-border="true" caption="Firewall rules for Purgatory VLAN">}}
+{{<img src="purgatory-firewall.png" alt="Screenshot of OPNsense firewall rules for Purgatory, which allows DNS and rejects traffic to internal networks" caption="Firewall rules for Purgatory VLAN">}}
 
 I then added the solar monitoring IoT device's port on the TP-Link switch to the Purgatory VLAN. The IoT device is a non-VLAN-aware device, so I set it as an untagged port for Purgatory and assigned the Purgatory VLAN ID (80) as the port's PVID.
 
@@ -178,7 +178,7 @@ Here's what was happening:
 
 The solution was simple: add the OPNsense firewall to the Purgatory VLAN. Because the firewall is VLAN-aware, I added it as a tagged port:
 
-{{<img src="purgatory-ports-corrected.webp" alt="Screenshot of Purgatory VLAN on TP-Link switch. Port 24 is a member of the VLAN as an untagged port and Port 1 is a member as a tagged port." max-width="600px" has-border="true" caption="My corrected TP-Link VLAN configuration for the Purgatory VLAN, which allows the IoT device to reach the Internet through my OPNsense firewall">}}
+{{<img src="purgatory-ports-corrected.webp" alt="Screenshot of Purgatory VLAN on TP-Link switch. Port 24 is a member of the VLAN as an untagged port and Port 1 is a member as a tagged port." max-width="600px" caption="My corrected TP-Link VLAN configuration for the Purgatory VLAN, which allows the IoT device to reach the Internet through my OPNsense firewall">}}
 
 | VLAN ID | VLAN Name | Ports (Tagged) | Ports (Untagged) |
 | ------- | --------- | -------------- | ---------------- |
