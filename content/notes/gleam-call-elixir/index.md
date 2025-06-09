@@ -189,17 +189,18 @@ It doesn't look like [the Gleam standard library](https://hexdocs.pm/gleam_stdli
 So, first, I'll define a Gleam wrapper function for the Elixir `CSV.encode` API:
 
 ```gleam
+// Create a custom Gleam type to represent the type we receive from Elixir.
+type ElixirEnumerable
+
 @external(erlang, "Elixir.CSV", "encode")
-fn csv_encode(data: List(List(String))) -> a
+fn csv_encode(data: List(List(String))) -> ElixirEnumerable
 ```
 
 The [`@external` attribute](https://tour.gleam.run/everything/#advanced-features-externals) allows me to call Elixir code from Gleam. I define the input paramater as a Gleam list of list of strings (`List(List(String)))`, which is compatible with Erlang's `Enumerable` type.
 
-`CSV.encode` returns an Elixir `Enumerable`, but I don't know a Gleam equivalent to that, so I'm using a return type of `a`, which is a generic type variable. It looks to me like Go's [`any` type](https://go.dev/ref/spec#Basic_interfaces), though the documentation says [it's not](https://tour.gleam.run/functions/generic-functions/), though I don't understand the distinction they're making.
+`CSV.encode` returns an Elixir `Enumerable`, but I don't know a Gleam equivalent to that, so I define a custom type of `ElixirEnumerable`.
 
-The name `a` is arbitrary. The code will work if I call it `kitten`, though the convention I've seen in the Gleam docs is to use `a`.
-
-So, I still need a way to convert the `a`-type return value from `CSV.encode` to a Gleam-native type.
+Gleam code can't do anything with `ElixirEnumerable` because it doesn't have any data that Gleam knows how to access natively, so I need a way to convert `ElixirEnumerable` to a Gleam-native type.
 
 ### Converting an Elixir `Enumerable` to a Gleam `List`
 
@@ -207,12 +208,10 @@ To convert from Elixir's `Enumerable` type to a Gleam `List`, I declare another 
 
 ```gleam
 @external(erlang, "Elixir.Enum", "to_list")
-fn enum_to_list(elixir_enum: a) -> List(String)
+fn enum_to_list(elixir_enum: ElixirEnumerable) -> List(String)
 ```
 
-Here, I'm using Elixir's [Enum.to_list function](https://hexdocs.pm/elixir/1.18.4/Enum.html#to_list/1) to convert the `Enumerable` to an Elixir list, which seems to match the Gleam `List` type.
-
-Again, the `a` parameter type is the generic type variable, which is just `a` by convention but could have any name (as could `elixir_enum`).
+Here, I'm using Elixir's [Enum.to_list function](https://hexdocs.pm/elixir/1.18.4/Enum.html#to_list/1) to convert the `ElixirEnumerable` to an [Elixir List type](https://hexdocs.pm/elixir/1.16.2/List.html), which seems to match the [Gleam `List` type](https://hexdocs.pm/gleam_stdlib/0.60.0/index.html).
 
 ### Creating a Gleam-friendly wrapper
 
@@ -260,3 +259,7 @@ It works! I successfully called the Elixir CSV library from my simple Gleam appl
 The full source of this example is available below:
 
 - <https://codeberg.org/mtlynch/gleam-call-elixir-simple>
+
+--
+
+_Thanks to [Louis Pilford](https://lpil.uk/) and jajamemeh for their helpful feedback on this post._
