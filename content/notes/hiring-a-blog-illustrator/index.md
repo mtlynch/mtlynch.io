@@ -17,7 +17,7 @@ images:
 
 I'm a blogger, and I often commission custom cartoons for my blog posts like this one:
 
-{{<img src="year-6-cover.webp" max-width="700px" caption="An example of a cartoon I commissioned for the blog, part of my [year-in-review series](/tags/annual-review/)">}}
+{{<img src="year-6-cover.webp" max-width="700px" caption="An example of a cartoon I commissioned for the blog, part of my [year-in-review series](/tags/annual-review/)" has-border="false">}}
 
 The blog's previous cartoonist was the awesome Loraine Yow, who worked with me for six years. She recently changed careers, so I'm looking for someone who can take over as the blog's official cartoonist.
 

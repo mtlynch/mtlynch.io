@@ -71,8 +71,8 @@ When I launched TinyPilot in 2020, I told myself the website and logo were just 
 In 2022, I finally hired a design agency to create a new logo and redesign the website.
 
 {{<gallery caption="Before and after the [TinyPilot website redesign](/tinypilot-redesign)">}}
-{{<img src="landing-before-cropped.png" alt="Screenshot of old landing page" max-width="400px" has-border="true">}}
-{{<img src="landing-after-cropped.png" alt="Screenshot of new landing page" max-width="400px" has-border="true">}}
+{{<img src="landing-before-cropped.png" alt="Screenshot of old landing page" max-width="400px">}}
+{{<img src="landing-after-cropped.png" alt="Screenshot of new landing page" max-width="400px">}}
 {{</gallery>}}
 
 I wrote previously about how [frustrating and expensive](/tinypilot-redesign) it was working with the design agency, but I'm pleased with the result. My old website looked like a hobby project, and the new design looks like a real company. I suspect that at least a portion of my increased sales resulted from the new design.
@@ -117,7 +117,7 @@ There are a few open-source tools that offer [similar functionality](https://git
 
 PicoShare became the fastest-growing open-source project I ever published. It received 600 GitHub stars within two weeks of its release. As of this writing, PicoShare has [over 100k installs](https://hub.docker.com/r/mtlynch/picoshare/).
 
-{{<img src="picoshare-growth.png" max-width="600px" has-border="true">}}
+{{<img src="picoshare-growth.png" max-width="600px">}}
 
 ## Lessons learned
 

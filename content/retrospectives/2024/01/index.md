@@ -77,7 +77,7 @@ I've tried to delegate hard product decisions to the TinyPilot team, but I haven
 
 It would be great if I could create a chart showing how much a feature costs vs. how much it will satisfy users, and then tell the team to stay above the line.
 
-{{<img src="csat-v-dev-cost.webp" max-width="600px" has-border="true" caption="I wish I could just define a curve of customer satisfaction vs. development cost and advise the team to just stay above the curve.">}}
+{{<img src="csat-v-dev-cost.webp" max-width="600px" caption="I wish I could just define a curve of customer satisfaction vs. development cost and advise the team to just stay above the curve.">}}
 
 But there are many more factors for deciding how much to invest in a new feature, including:
 
@@ -111,7 +111,7 @@ I've considered pulling in a freelance technical writer, but that would complica
 
 One of the challenges I run into when reviewing writing is that I have a model in my head of what the typical TinyPilot customer is like, and I don't know how to articulate that model accurately to other people. And even when others understand the model, it's hard for them to write in a way that fits TinyPilot's customer model.
 
-{{<img src="write-for-the-average.png" alt="Write for the average TinyPilot customer. The average TinyPilot customer understands these terms: Ethernet, WiFi, Local network, Keyboard / mouse input, USB / USB-C / USB 3.0, AC adapter, HDMI / VGA, Router / switch, Web browser, SSH. We assume that the average TinyPilot customer **does not** understand these terms / concepts: cached , PCB / HAT , audio breakout board , VPN , EDID , virtual display , NTP server. The best way to avoid confusing customers is to speak in terms they already understand. If that’s not possible, you can still use terms that customers might not recognize, but you should first define them." has-border="true" caption="Excerpt from TinyPilot's internal style guide about level of technical jargon to use" max-width="500px">}}
+{{<img src="write-for-the-average.png" alt="Write for the average TinyPilot customer. The average TinyPilot customer understands these terms: Ethernet, WiFi, Local network, Keyboard / mouse input, USB / USB-C / USB 3.0, AC adapter, HDMI / VGA, Router / switch, Web browser, SSH. We assume that the average TinyPilot customer **does not** understand these terms / concepts: cached , PCB / HAT , audio breakout board , VPN , EDID , virtual display , NTP server. The best way to avoid confusing customers is to speak in terms they already understand. If that’s not possible, you can still use terms that customers might not recognize, but you should first define them." caption="Excerpt from TinyPilot's internal style guide about level of technical jargon to use" max-width="500px">}}
 
 Perhaps one way of improving this is to revisit past reviews and look for patterns. If I see patterns, I can say, "Before you send this out for review, check for whether there are sections that would benefit from a screenshot, check that you're explaining new terms before you use them, etc."
 
@@ -139,7 +139,7 @@ Nix seems very inspired by Haskell and other functional languages, which I've ne
 
 Zig doesn't have tooling for [package management](https://news.ycombinator.com/item?id=38837410) or code coverage. One of my disappointments with Zig so far has been that its support for microcrontrollers seems [mostly absent](https://github.com/ZigEmbeddedGroup).
 
-{{<img src="zig-embedded-support.png" max-width="550px" has-border="true" caption="Zig has immature or non-existent support for all popular microcontrollers except the Raspberry Pi Pico.">}}
+{{<img src="zig-embedded-support.png" max-width="550px" caption="Zig has immature or non-existent support for all popular microcontrollers except the Raspberry Pi Pico.">}}
 
 But when Zig claims it can do something, it does it well. I was skeptical of its claims that it can be a drop-in replacement for `gcc`, but every time I've swapped out `gcc` for `zig`, everything just works. Zig claims that you can just import a `.c` file into a Zig file, and [you can](/notes/zig-call-c-simple/).
 

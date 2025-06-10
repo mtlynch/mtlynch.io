@@ -154,7 +154,7 @@ if got, want := users[0].username, adminUsername; got != want {
 
 Once you know the pattern, your eye can quickly find the important information in a test assertion:
 
-{{<img src="eye-locations.webp" max-width="750px" caption="When you recognize this pattern, your eye can quickly find the actual and expected values of the assertion.">}}
+{{<img src="eye-locations.webp" max-width="750px" caption="When you recognize this pattern, your eye can quickly find the actual and expected values of the assertion." has-border="false">}}
 
 ### It's easy to copy/paste
 

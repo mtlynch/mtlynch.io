@@ -44,7 +44,7 @@ The chapter's reception was on the high end of my expectations. It's a list of r
 
 The main metric I'm tracking is mailing list subscribers. 245 new subscribers signed up the week after the post, increasing total subscribers of the book by 31%.
 
-{{<img src="confirmed-subscribers.webp" has-border="true" caption="The first chapter caused a major jump in subscribers to the book's mailing list.">}}
+{{<img src="confirmed-subscribers.webp" caption="The first chapter caused a major jump in subscribers to the book's mailing list.">}}
 
 ### What's the right way to iterate on an article after I publish it?
 
@@ -97,7 +97,7 @@ The only valid bid came from Gary, who offered to do the cover for £350 (US$434
 
 A week went by, and I hadn't heard anything from Gary. After my first payment was auto-billed, I asked for an ETA on initial drafts. Gary said he'd send concepts the next day, which he did.
 
-{{<img src="cover-ideas.webp" max-width="800px" caption="Initial book cover ideas from the designer I hired through Reedsy">}}
+{{<img src="cover-ideas.webp" max-width="800px" caption="Initial book cover ideas from the designer I hired through Reedsy" has-border="false">}}
 
 Sample 1 looked good, but it was a pretty on-the-nose ripoff of [_Beautiful Code_](https://www.oreilly.com/library/view/beautiful-code/9780596510046/), which I had cited in my brief.
 I found the rest underwhelming, but I blamed myself for not spending more time on my brief.
@@ -122,13 +122,13 @@ I asked Gary whether the images were AI-generated and if they met the license re
 
 I gave Gary a 3-star review across the board. I didn't think he was awful, but just kinda meh and bad at communicating timelines. My review is public, but Reedsy still claims that Gary has a perfect 5.0 rating even though I gave him a 3.0, and he only has four other reviews.
 
-{{<img src="gary-reedsy-reviews.webp" max-width="800px" caption="Despite me giving Gary a 3-star review, he still has a perfect 5.0 rating with five reviews." has-border="true">}}
+{{<img src="gary-reedsy-reviews.webp" max-width="800px" caption="Despite me giving Gary a 3-star review, he still has a perfect 5.0 rating with five reviews.">}}
 
 ### My DIY book cover
 
 With Gary out of the picture, I decided to try making my own cover. I found [a royalty-free image on Unsplash](https://unsplash.com/photos/shallow-focus-photo-gray-balance-stone-HWRAHxoBlpU) that captured the spirit of quiet, careful work, and I added some text.
 
-{{<img src="refactoring-english-cover-800px.webp" max-width="350px" has-border="true">}}
+{{<img src="refactoring-english-cover-800px.webp" max-width="350px">}}
 
 I know it looks amateurish, but I'm about 80% as satisfied as I expected to be with Gary's work. But this was free and took me an hour. I'm treating it as a placeholder. I can always hire someone or invest more time later.
 

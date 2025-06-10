@@ -76,27 +76,27 @@ It's a simple enough board that they're able to design it and order 100 printed 
 
 I reach out to a 3D printing lab and ask them to design a case for the power board. Within hours, they send me a work-in-progress image of the case design.
 
-{{<img src="case-design-wip.jpg" alt="CAD image of a partially completed case design" caption="Early draft of a 3D printed case for the TinyPilot power connector" max-width="400px">}}
+{{<img src="case-design-wip.jpg" alt="CAD image of a partially completed case design" caption="Early draft of a 3D printed case for the TinyPilot power connector" max-width="400px" has-border="false">}}
 
 ### Day 5
 
 The 3D printing lab completes their design and gets ready to begin printing a few prototype cases.
 
 {{<gallery>}}
-{{<img src="case-v1-4.png" alt="3D rendering of case, bottom view, open" max-width="400px">}}
-{{<img src="case-v1-3.png" alt="3D rendering of case, top view, open" max-width="400px">}}
+{{<img src="case-v1-4.png" alt="3D rendering of case, bottom view, open" max-width="400px" has-border="false">}}
+{{<img src="case-v1-3.png" alt="3D rendering of case, top view, open" max-width="400px" has-border="false">}}
 {{</gallery>}}
 
 {{<gallery>}}
-{{<img src="case-v1-2.png" alt="3D rendering of case, bottom view" max-width="400px">}}
-{{<img src="case-v1-1.png" alt="3D rendering of case, top view" max-width="400px">}}
+{{<img src="case-v1-2.png" alt="3D rendering of case, bottom view" max-width="400px" has-border="false">}}
+{{<img src="case-v1-1.png" alt="3D rendering of case, top view" max-width="400px" has-border="false">}}
 {{</gallery>}}
 
 ### Day 8
 
 The engineering firm receives the bare PCBs from their overseas manufacturer.
 
-{{<img src="v1-pcbs.jpg" alt="Photo of a panel of uncut, unassembled PCBs" caption="First batch of PCBs for the TinyPilot Power Connector" max-width="600px">}}
+{{<img src="v1-pcbs.jpg" alt="Photo of a panel of uncut, unassembled PCBs" caption="First batch of PCBs for the TinyPilot Power Connector" max-width="600px" has-border="false">}}
 
 At this point, the PCBs have an electrical circuit embedded in them, but the engineering firm still has to attach components to the boards, most notably the USB ports.
 
@@ -107,8 +107,8 @@ The same day, the 3D printing lab produces their first two cases. I pick up the 
 The engineering firm reports that the cases fit the boards. The only noticeable issue is that there are wide gaps around the microUSB ports.
 
 {{<gallery caption="First attempt to assemble cases on the board. The fit was great, except for some small gaps around the microUSB ports.">}}
-{{<img src="first-cases.jpg" alt="Photo of a panel of uncut, unassembled PCBs" max-width="460px">}}
-{{<img src="microusb-gaps.jpg" alt="Photo of a panel of uncut, unassembled PCBs" max-width="300px">}}
+{{<img src="first-cases.jpg" alt="Photo of a panel of uncut, unassembled PCBs" max-width="460px" has-border="false">}}
+{{<img src="microusb-gaps.jpg" alt="Photo of a panel of uncut, unassembled PCBs" max-width="300px" has-border="false">}}
 {{</gallery>}}
 
 The large gaps turned out to be intentional. Because I emphasized urgency, the 3D printing lab used wide holes to minimize the risk that the case would get in the way of any plugs. Once we confirm that my USB cables will fit a smaller opening, the lab revises their design to tighten the opening.
@@ -134,13 +134,13 @@ It's a huge relief that the chip works.
 
 The 3D printing shop prints their first batch of 30 cases. There's still a small gap around the microUSB ports, but it's definitely not a showstopper.
 
-{{<img src="case-fit.jpg" alt="Photo of 24 completed boards" caption="First batch of completed boards for the TinyPilot Power Connector" max-width="500px">}}
+{{<img src="case-fit.jpg" alt="Photo of 24 completed boards" caption="First batch of completed boards for the TinyPilot Power Connector" max-width="500px" has-border="false">}}
 
 ### Day 19
 
 I receive the first completed panel of 24 PCBs from the engineering firm.
 
-{{<img src="first-batch.jpg" alt="Photo of 24 completed boards" caption="First batch of completed boards for the TinyPilot Power Connector" max-width="500px">}}
+{{<img src="first-batch.jpg" alt="Photo of 24 completed boards" caption="First batch of completed boards for the TinyPilot Power Connector" max-width="500px" has-border="false">}}
 
 The manufacturing process is still a work in progress, so the engineers produced these using a combination of automated mechanisms and manual fixes.
 
@@ -148,7 +148,7 @@ The manufacturing process is still a work in progress, so the engineers produced
 
 The 3D printer finishes the remaining 70 cases. They include an experimental case that's dyed black with laser etching to reveal a white print underneath.
 
-{{<img src="power-connector-black.jpg" alt="Photo of black case for power connector" caption="The 3D print designer sends an experimental black case." max-width="450px">}}
+{{<img src="power-connector-black.jpg" alt="Photo of black case for power connector" caption="The 3D print designer sends an experimental black case." max-width="450px" has-border="false">}}
 
 I like this new design so much that I switch all future production to black cases.
 
@@ -184,13 +184,13 @@ So far, maintaining inventory has been the biggest challenge of selling TinyPilo
 
 When my inventory is healthy, the relationship between my order backlog and stress levels look like this:
 
-{{<img src="manageable-inventory.png" alt="Photo of Y-cable" has-border="true" caption="When inventory is well-stocked, I can fulfill orders at a steady, relaxed pace.">}}
+{{<img src="manageable-inventory.png" alt="Photo of Y-cable" caption="When inventory is well-stocked, I can fulfill orders at a steady, relaxed pace.">}}
 
 I get a few orders a day, my assistant packs them up and schedules a pickup from USPS or DHL. Life is easy!
 
 When I'm backordered, it's a different picture:
 
-{{<img src="backlogged-inventory.png" alt="Graph showing large order backlogs and consequent spikes in stress" has-border="true" caption="When there are inventory shortages, orders pile up and need to be cleared quickly, increasing overall stress.">}}
+{{<img src="backlogged-inventory.png" alt="Graph showing large order backlogs and consequent spikes in stress" caption="When there are inventory shortages, orders pile up and need to be cleared quickly, increasing overall stress.">}}
 
 With a backlog, everything gets harder. Instead of a nice, predictable stream of work, there's nothing to ship for days or weeks. There are other tasks my assistant can do, but it's more time-consuming for both of us to learn lots of new one-off tasks as opposed to a smaller set of consistent jobs.
 

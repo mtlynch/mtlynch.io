@@ -70,7 +70,7 @@ rake spec` or `bundle exec rspec modules/router/spec`. But when run as
 
 The "punchline" is that, after this lengthy preamble, Thompson shows the actual diff:
 
-{{<img src="one-char-diff.webp" has-border="true">}}
+{{<img src="one-char-diff.webp">}}
 
 Yes, the commit message contains six paragraphs and five code snippets, all to describe a one-character whitespace change.
 

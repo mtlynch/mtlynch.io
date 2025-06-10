@@ -162,7 +162,7 @@ Compiled with: go1.22.8
 
 I can also view the service in a web browser:
 
-{{<img src="firefox-service.webp" has-border="true">}}
+{{<img src="firefox-service.webp">}}
 
 The service is deliberately simple and kind of boring because I want to focus on the NixOS packaging part.
 

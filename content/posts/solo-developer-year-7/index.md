@@ -19,7 +19,7 @@ My most significant professional development of the last year is that I sold [Ti
 
 My wife and I wanted to start a family, and I didn't think I could be the sole manager of a seven-person company and a good father to a newborn. I found a buyer whose vision for the company aligned with mine, and we completed the sale in April 2024.
 
-{{<img src="sold-tinypilot.webp"  max-width="600px" alt="Illustration of me waving goodbye to TinyPilot mascot flying away in tiny prop plane" caption="Me selling TinyPilot so I could start a family">}}
+{{<img src="sold-tinypilot.webp"  max-width="600px" alt="Illustration of me waving goodbye to TinyPilot mascot flying away in tiny prop plane" caption="Me selling TinyPilot so I could start a family" has-border="false">}}
 
 I already wrote and [podcasted](https://softwaremisadventures.com/p/michael-lynch-indie-hacking) about [the sale](/i-sold-tinypilot/) and [the lessons I learned](/lessons-from-my-first-exit/), but the short version is that I'm grateful for how everything worked out.
 
@@ -29,7 +29,7 @@ In August, my wife and I welcomed our first child, a son.
 
 Shortly after the birth, one of the nurses took a beautiful photo of the three of us, which I've included below. I'm protective of my son's privacy, so I ran the picture through a hand-tuned fast Fourier transform to remove biometric details:
 
-{{<img src="baby-photo.webp" has-border="true" max-width="450px" alt="Stick figure drawing of my family" caption="Photo of me, my wife, and our newborn son, post-processed with a privacy-preserving photo filter">}}
+{{<img src="baby-photo.webp" max-width="450px" alt="Stick figure drawing of my family" caption="Photo of me, my wife, and our newborn son, post-processed with a privacy-preserving photo filter">}}
 
 I'm thankful for the flexibility I get from being an indie founder and for the timing of the TinyPilot sale, as the past five months have been the happiest time of my life.
 
@@ -43,7 +43,7 @@ I decided the best product for those three months would be a downloadable course
 
 My only experience creating educational products was in 2021. I recorded a video course about [blogging for technical audiences](https://hitthefrontpage.com). It made $7.6k in its first year and another $2.2k since then. It's not a smash hit by course creator standards, but it took me about 100 hours to produce, and I'm proud of the material. It's the highest return on investment project I've completed since becoming an indie founder.
 
-{{<img src="htfp.webp" max-width="650px" has-border="true" caption="My 2021 course about [blogging for technical audiences](https://hitthefrontpage.com) has made a total of $10k in four years.">}}
+{{<img src="htfp.webp" max-width="650px" caption="My 2021 course about [blogging for technical audiences](https://hitthefrontpage.com) has made a total of $10k in four years.">}}
 
 Over the summer, I revised the material from my 2021 blogging course. I started by teaching it to a small group of students on live weekly video calls. My plan was to continue refining the course based on the students' feedback and then record a final, downloadable version of the course to sell.
 
@@ -204,7 +204,7 @@ I now consider a process to be documented only when a teammate can follow the pr
 
 One of the biggest lessons from selling TinyPilot was how big a difference closing time makes. I didn't realize how much [additional risk and paperwork the seller bears](/i-sold-tinypilot/#due-diligence-makes-me-weaker-by-the-day) for every month the sale drags on.
 
-{{<img src="due-diligence.webp" alt="Cartoon of a man growing increasingly weak as he receives due diligence requests over several weeks">}}
+{{<img src="due-diligence.webp" alt="Cartoon of a man growing increasingly weak as he receives due diligence requests over several weeks" has-border="false">}}
 
 The buyer's financing has a major impact on closing time. If the buyer borrows money from a bank, the bank becomes a key decision-maker in the deal. Banks move slowly, demand a lot of paperwork, and are hard to negotiate with because they don't care if the deal falls through.
 

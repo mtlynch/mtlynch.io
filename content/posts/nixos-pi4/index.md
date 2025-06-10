@@ -61,7 +61,7 @@ When you flash the microSD, choose the `.img` file rather than the `.img.zst` fi
 
 If you don't know which microSD flashing tool to use, I recommend [balenaEtcher](https://etcher.balena.io/). It's user-friendly and works on every major OS.
 
-{{<img src="balena-etcher-nixos.webp" alt="Screenshot of balenaEtcher">}}
+{{<img src="balena-etcher-nixos.webp" alt="Screenshot of balenaEtcher" has-border="false">}}
 
 ### Option 2: caligula
 
@@ -74,25 +74,25 @@ caligula burn \
 
 caligula natively supports Zstandard file compression, so you don't need to decompress the image first.
 
-{{<img src="caligula.webp">}}
+{{<img src="caligula.webp" has-border="false">}}
 
 ## Insert the microSD card into your Pi
 
 After you flash the microSD, insert it into the microSD slot of your Raspberry Pi:
 
-{{<img src="insert-microsd.webp" max-width="360px" alt="Photo of microSD inserted into microSD slot of Raspberry Pi" caption="Insert the flashed microSD card into your Pi's microSD slot.">}}
+{{<img src="insert-microsd.webp" max-width="360px" alt="Photo of microSD inserted into microSD slot of Raspberry Pi" caption="Insert the flashed microSD card into your Pi's microSD slot." has-border="false">}}
 
 ## Connect a display and keyboard to your Pi
 
 Most Raspberry Pi images offer a way to access the device over the network on the first boot. I haven't found a way to do that with NixOS, so you'll need to temporarily connect a keyboard and HDMI display to your Pi to see what's happening.
 
-{{<img src="keyboard-setup.webp" alt="Photo of HDMI display and keyboard connected to a Raspberry Pi as it boots NixOS" max-width="500px" caption="NixOS has no fully-networked install, so you'll need to connect a keyboard and HDMI display during the initial setup.">}}
+{{<img src="keyboard-setup.webp" alt="Photo of HDMI display and keyboard connected to a Raspberry Pi as it boots NixOS" max-width="500px" caption="NixOS has no fully-networked install, so you'll need to connect a keyboard and HDMI display during the initial setup." has-border="false">}}
 
 For this tutorial, I'm controlling my Pi with [TinyPilot](https://tinypilotkvm.com), a device [I created for situations just like this](/tinypilot/).
 
 {{<gallery caption="I installed NixOS on my Raspberry Pi using TinyPilot device, as it saved me from having to hop back and forth between keyboards.">}}
-{{<img src="tinypilot-setup.webp" max-width="360px" alt="Photo of TinyPilot connected to a Raspberry Pi 4">}}
-{{<img src="plasma-desktop2.webp" max-width="410px" alt="Screenshot of TinyPilot controlling a NixOS system running the Plasma desktop environment">}}
+{{<img src="tinypilot-setup.webp" max-width="360px" alt="Photo of TinyPilot connected to a Raspberry Pi 4" has-border="false">}}
+{{<img src="plasma-desktop2.webp" max-width="410px" alt="Screenshot of TinyPilot controlling a NixOS system running the Plasma desktop environment" has-border="false">}}
 {{</gallery>}}
 
 You don't need a TinyPilot for this tutorial, as you can follow along with a plain old keyboard and HDMI display.
@@ -188,7 +188,7 @@ sudo nixos-rebuild boot && \
 
 When the reboot completes, you should see a screen that looks like this:
 
-{{<img src="tempuser-login.webp">}}
+{{<img src="tempuser-login.webp" has-border="false">}}
 
 Your Pi is now running NixOS with a [Gnome desktop environment](https://www.gnome.org/)!
 
@@ -233,8 +233,8 @@ sudo nixos-rebuild boot && sudo reboot
 When you reboot, you should see a desktop like the following:
 
 {{<gallery caption="Switching desktop managers from Gnome to Plasma is a two-line change in NixOS.">}}
-{{<img src="plasma-desktop.webp" max-width="410px" alt="Screenshot of TinyPilot controlling a NixOS system running the Plasma desktop environment, at the login screen">}}
-{{<img src="plasma-desktop2.webp" max-width="410px" alt="Screenshot of TinyPilot controlling a NixOS system running the Plasma desktop environment, on the desktop screen">}}
+{{<img src="plasma-desktop.webp" max-width="410px" alt="Screenshot of TinyPilot controlling a NixOS system running the Plasma desktop environment, at the login screen" has-border="false">}}
+{{<img src="plasma-desktop2.webp" max-width="410px" alt="Screenshot of TinyPilot controlling a NixOS system running the Plasma desktop environment, on the desktop screen" has-border="false">}}
 {{</gallery>}}
 
 All it took to change your whole desktop environment was just a two-line change.

@@ -207,7 +207,7 @@ If I run the shell script, it starts a new fuzzing session:
 
 That command should produce a screen like this:
 
-{{<img src="hfuzz.webp" caption="I can now run honggfuzz from my launcher script">}}
+{{<img src="hfuzz.webp" caption="I can now run honggfuzz from my launcher script" has-border="false">}}
 
 This works, but I'd have to remember to run the `nix build` command first every time I execute the shell script. Nix offers an even simpler solution with its `apps` feature.
 
@@ -246,7 +246,7 @@ Now, the fuzzing workflow is complete.
 
 I can put this Nix flake in a brand new directory, and when I run `nix run`, it will download all the tricky PDFs, compile xpdf, and start fuzzing. I can let honggfuzz run indefinitely and see what crashes it finds.
 
-{{<img src="hfuzz.webp" caption="With the addition of a `fuzz-xpdf` app in my Nix flake, I have a complete fuzzing workflow. I could run the fuzzer indefinitely and let it find bugs.">}}
+{{<img src="hfuzz.webp" caption="With the addition of a `fuzz-xpdf` app in my Nix flake, I have a complete fuzzing workflow. I could run the fuzzer indefinitely and let it find bugs." has-border="false">}}
 
 ## Turning subtle memory errors into loud crashes with ASAN
 
@@ -291,7 +291,7 @@ nix run
 
 I let honggfuzz run for two hours and checked back to find that it discovered its first crash:
 
-{{<img src="hfuzz-crash.webp">}}
+{{<img src="hfuzz-crash.webp" has-border="false">}}
 
 honggfuzz saved the PDF that caused the crash in a file named:
 

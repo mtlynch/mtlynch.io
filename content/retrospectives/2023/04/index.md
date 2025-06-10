@@ -101,7 +101,7 @@ If anyone discovers this post who's in the same boat with Shopify and Shipstatio
 - Manage settings
 - Manage and install apps and channels
 
-{{<img src="shipstation-permissions.png" max-width="400px" has-border="true" caption="The minimal set of Shopify permissions a user must have to link to a Shipstation account" alt="Screenshot of Shopify permissions for user to integrate with Shipstation">}}
+{{<img src="shipstation-permissions.png" max-width="400px" caption="The minimal set of Shopify permissions a user must have to link to a Shipstation account" alt="Screenshot of Shopify permissions for user to integrate with Shipstation">}}
 
 I was surprised the process of integrating Shopify with the 3PL's Shipstation account was so complicated. The 3PL told me that they have dozens of Shopify customers, so I asked how they'd solved this process in the past.
 
@@ -127,7 +127,7 @@ I saw from Shipstation's documentation that it could share shipping rates with S
 
 I looked at Shopify's feature page and confirmed that the "Third-party calculated shipping rates" was only available in Shopify's Advanced plan:
 
-{{<img src="third-party-shipping-rates.webp" has-border="true" alt="Screenshot of Shopify plans showing that third-party shipping rates are only available on Shopify's Advanced plan" caption="Shopify will only fetch third-party shipping rates on their $399/mo Advanced plan.">}}
+{{<img src="third-party-shipping-rates.webp" alt="Screenshot of Shopify plans showing that third-party shipping rates are only available on Shopify's Advanced plan" caption="Shopify will only fetch third-party shipping rates on their $399/mo Advanced plan.">}}
 
 That would take TinyPilot from Shopify's $105/mo tier to a whopping $399/mo plan, making Shopify TinyPilot's most expensive cloud service.
 
@@ -155,7 +155,7 @@ So, how sensitive are TinyPilot customers to price?
 | Mar. 7 - Mar. 12  | $399  | 34 (5.7/day)  |
 | Mar. 13 - Mar. 30 | $429  | 65 (3.6/day)  |
 
-{{<img src="elasticity-usbc.png" has-border="true" alt="Graph of price elasticity for TinyPilot Voyager 2a (USB-C)">}}
+{{<img src="elasticity-usbc.png" alt="Graph of price elasticity for TinyPilot Voyager 2a (USB-C)">}}
 
 ### Voyager 2a PoE
 
@@ -166,7 +166,7 @@ So, how sensitive are TinyPilot customers to price?
 | Mar. 13 - Mar. 19 | $528  | 9 (1.3/day)  |
 | Mar. 20 - Mar. 30 | $558  | 13 (1.2/day) |
 
-{{<img src="elasticity-poe.png" has-border="true" alt="Graph of price elasticity for TinyPilot Voyager 2a (PoE)">}}
+{{<img src="elasticity-poe.png" alt="Graph of price elasticity for TinyPilot Voyager 2a (PoE)">}}
 
 ### Reflections
 
@@ -215,7 +215,7 @@ If I had to do it over, I would have still offered the trade-ins, but with these
 
 Back in 2018, when I was [launching Zestful](/retrospectives/2018/07/), my recipe ingredient parsing service, I wanted a low-friction way for prospective customers to try out the service. Other services required you to create an account or put in a credit card, but I wanted to offer a [no-friction demo](https://zestfuldata.com/demo) on the Zestful website:
 
-{{<img src="zestful-demo.webp" alt="Screenshot of Zestful demo page" caption="Zestful offers a [no-friction demo](https://zestfuldata.com/demo) to allow potential customers to test the ingredient parsing functionality." has-border="true" max-width="600px">}}
+{{<img src="zestful-demo.webp" alt="Screenshot of Zestful demo page" caption="Zestful offers a [no-friction demo](https://zestfuldata.com/demo) to allow potential customers to test the ingredient parsing functionality." max-width="600px">}}
 
 I needed the demo to limit each user to 30 parses per day. After that, they'd have to sign up for a paid plan. I decided to build a demo server with an API interface identical to the paid server, except that it limited users to 30 ingredients per day.
 

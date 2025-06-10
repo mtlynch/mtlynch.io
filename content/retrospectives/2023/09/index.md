@@ -112,7 +112,7 @@ I've been thinking about that essay a lot lately in terms of TinyPilot's dev wor
 
 I divided the tasks from TinyPilot's last sprint into "essential difficulties" (green) and "accidental difficulties" (red):
 
-{{<img src="essential-vs-accidental-2.6.1.webp" max-width="350px" has-border="true" caption="The tasks in TinyPilot's 2.6.1, colored according to essential difficulty (green) vs. accidental difficulty (red)">}}
+{{<img src="essential-vs-accidental-2.6.1.webp" max-width="350px" caption="The tasks in TinyPilot's 2.6.1, colored according to essential difficulty (green) vs. accidental difficulty (red)">}}
 
 Nine tasks (24%) dealt with essential difficulty like adding or refining features, while 28 (76%) dealt with accidental difficulty like regressions, package updates, or refactoring.
 
@@ -142,7 +142,7 @@ Revisiting the last release through that lens, we had:
 | Automation and reducing complexity | 26         | 70%        |
 | Regular maintenance                | 3          | 8%         |
 
-{{<img src="three-category-2.6.1.webp" max-width="350px" has-border="true" caption="The tasks in TinyPilot's [2.6.1 release](https://tinypilotkvm.com/pro/changes#261), colored according to improving the product (green), automation and reducing complexity (blue), and regular maintenance (red)">}}
+{{<img src="three-category-2.6.1.webp" max-width="350px" caption="The tasks in TinyPilot's [2.6.1 release](https://tinypilotkvm.com/pro/changes#261), colored according to improving the product (green), automation and reducing complexity (blue), and regular maintenance (red)">}}
 
 We were skewed toward automation because we made a big push to eliminate Ansible, but we were closer to my ideal split than I realized.
 

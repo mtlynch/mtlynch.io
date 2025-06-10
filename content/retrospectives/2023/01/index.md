@@ -69,7 +69,7 @@ TinyPilot has lucked out in that we placed a year of orders in early 2021 direct
 
 As our sales have grown, I've been nervous about whether Raspberry Pi would allocate more units to TinyPilot. In mid-December, I saw some good news from Raspberry Pi's CEO, Eben Upton. In fact, the blog post was literally titled, ["it's good news!"](https://www.raspberrypi.com/news/supply-chain-update-its-good-news/)
 
-{{<img src="good-news.png" has-border="true" max-width="600px" alt="'Supply chain update - it's good news!' by Eben Upton">}}
+{{<img src="good-news.png" max-width="600px" alt="'Supply chain update - it's good news!' by Eben Upton">}}
 
 The most important part of the blog post was this sentence:
 
@@ -105,7 +105,7 @@ In other words, that email was letting me know I'd be losing $450k in revenue ov
 
 Okay, I'm not really "losing" $450k if that money is dependent on an unlimited supply of low-cost Raspberry Pis. A monkey could get rich buying Raspberry Pis at the $45 manufacturer price. There's a huge unmet demand for Raspberry Pis, so scalpers sell them on eBay and Amazon for $125 apiece. Still, I was hoping TinyPilot would get enough allocation to keep up with its growth.
 
-{{<img src="pi-amazon.png" has-border="true" max-width="600px" caption="Scalpers sell Raspberry Pis on Amazon and eBay for 3x the manufacturer's price." alt="Raspberry Pi 4B listed on Amazon for $125.97">}}
+{{<img src="pi-amazon.png" max-width="600px" caption="Scalpers sell Raspberry Pis on Amazon and eBay for 3x the manufacturer's price." alt="Raspberry Pi 4B listed on Amazon for $125.97">}}
 
 It's still possible for TinyPilot to receive more allocation before August, but it's also possible for the supply chain to worsen. China has been seeing increasing COVID rates recently, and shutdowns there would impact Raspberry Pi production.
 
@@ -139,7 +139,7 @@ So far, we seem to be on track. The ratio of customers choosing the PoE version 
 
 Amazon is penalizing me for having lower prices on the TinyPilot website by hiding the buy button on our Amazon listings:
 
-{{<img src="amazon-buy-button.png" has-border="true" max-width="800px" caption="Amazon has hidden the buy button from my TinyPilot listings to punish me for offering lower prices on TinyPilot's website." alt="Screenshot of Amazon listing for TinyPilot Voyager 2 with buy button hidden">}}
+{{<img src="amazon-buy-button.png" max-width="800px" caption="Amazon has hidden the buy button from my TinyPilot listings to punish me for offering lower prices on TinyPilot's website." alt="Screenshot of Amazon listing for TinyPilot Voyager 2 with buy button hidden">}}
 
 It's still possible for customers to buy through Amazon, but they have to click the more subtle "See All Buying Options" button. And customers still purchase that way, despite the higher price. Not as many as before, but not zero either.
 
@@ -169,7 +169,7 @@ Similarly, when large customers send me pushy emails demanding discounts or unre
 
 I didn't have much time to work on it over the holidays, but I still made some progress by adding multi-user support. Previously, only a hardcoded admin user could log in, but in December, I added support for user signups and invite codes.
 
-{{<img src="sj-invites.png" has-border="true"  caption="ScreenJournal now supports signups and invite codes." alt="Screenshot of invite screen on ScreenJournal">}}
+{{<img src="sj-invites.png"  caption="ScreenJournal now supports signups and invite codes." alt="Screenshot of invite screen on ScreenJournal">}}
 
 I also got my first beta tester! My fiancé used ScreenJournal for almost a full three minutes. It was a short test, but it was still useful to observe what she expected the app to do and where she got stuck.
 
@@ -179,7 +179,7 @@ Over the past few months, I've seen a lot of chatter on Hacker News about [Kagi]
 
 I tried Kagi for a weekend, and I was impressed enough after two days that I signed up as a paying customer. The result quality is on par with Google, which is an astounding feat considering it's a bootstrapped company with a team of [under 20 people](https://blog.kagi.com/status-update-first-three-months).
 
-{{<img src="kagi.png" has-border="true" max-width="450px" caption="Kagi search results for &quot;raspberry pi shortage&quot;." alt="Screenshot of search results from Kagi">}}
+{{<img src="kagi.png" max-width="450px" caption="Kagi search results for &quot;raspberry pi shortage&quot;." alt="Screenshot of search results from Kagi">}}
 
 Kagi lets you see Google results if you prefix your query with `!g`, but in my two weeks of using it, I've probably only done that in 5% of my searches.
 
@@ -188,8 +188,8 @@ An ad-free search engine that's as good as Google 95% of the time would be enoug
 For example, in the search results for `raspberry pi shortage`, Kagi's sixth result seems to be a site that either uses AI to generate content or hires writers who have no idea what they're talking about. Google ranks the same article in the seventh slot, but the difference is that Kagi lets me block that site from future results.
 
 {{<gallery caption="One of my search results was Make Use Of, which churns out low-quality, factually incorrect articles. Kagi lets me block that domain from future search results.">}}
-{{<img src="dumb-recommendations.png" has-border="true" max-width="450px" alt="Screenshot of article by Make Use Of with bad recommendations">}}
-{{<img src="rank-adjust.png" has-border="true" max-width="300px" alt="Screenshot of Kagi interface with Make Use Of domain blocked">}}
+{{<img src="dumb-recommendations.png" max-width="450px" alt="Screenshot of article by Make Use Of with bad recommendations">}}
+{{<img src="rank-adjust.png" max-width="300px" alt="Screenshot of Kagi interface with Make Use Of domain blocked">}}
 {{</gallery>}}
 
 I've only scratched the surface of Kagi's power features, but I'm happy to cut another Google dependency from my life.
