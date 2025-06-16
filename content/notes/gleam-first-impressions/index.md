@@ -113,6 +113,35 @@ plaintext_logs_test.beam
 
 Those appear to be BEAM bytecode, so I can't execute them directly. So, I'll stick to `gleam run` to run my app, but I wish `gleam build` had a better explanation of what it produced and what the developer can do with it.
 
+## Let's just get a basic function working
+
+To start, I decided to write a function that does just basic parsing, so I wrote a test with what I wanted.
+
+```gleam
+pub fn parse_simple_plaintext_log_test() {
+  "
+Session Start (DumbAIMScreenName:Jane): Mon Sep 12 18:44:17 2005
+[18:44] Jane: hi
+[18:55] Me: hey whats up
+Session Close (Jane): Mon Sep 12 18:56:02 2005
+"
+  |> string.trim
+  |> plaintext_logs.parse
+  |> should.equal(["hi", "hey whats up"])
+}
+```
+
+Eventually, I want to parse all the metadata in the conversation, but just to get up and running, all my function has to do is extract only the chat messages out of an AIM chat log.
+
+That meant my actual function would look like this:
+
+```gleam
+pub fn parse(contents: String) -> List(String) {
+  // Note: todo is a Gleam language keyword to indicate unfinished code.
+  todo
+}
+```
+
 ## Getting used to a functional language
 
 My
@@ -121,26 +150,26 @@ My
 - No loops
 - No `return` keyword
 
+I knew that in order to process the logs line by line, I'd need to call a function like `list.map`, but I had a hard time getting my brain to accept it. I'm so used to doing that in a loop that it feels difficult to recognize the Gleam path forward.
+
+Caught me by surprise that there's no `return` keyword. It's just whatever the last line is in the function.
+
 ## I love pipelines
 
 Pipe syntax is amazing! I feel like now that I've seen it, I'm going to miss it in every other language. I've used it in bash and always liked it, but it never occurred to me how strange it is that other programming languages never adopted it.
 
 ## Error handling ruins pipelines
 
-I find the error handling pretty awkward.
+I find the error handling pretty awkward. I find myself not wanting to use functions that can fail because they ruin my tidy pipeline. Strangely, `string.split_once` can fail but `string.split` cannot.
 
 ## Labeled arguments with no defaults
 
-```
+```gleam
 fn string_split_ignore_error(string: String, substring: String) -> List(String) {
   todo
 }
 ```
 
-## Pipelines are great
+## Built-in unused symbol detection
 
-## Errors are not
-
-## Functions
-
-Caught me by surprise that there's no `return` keyword. It's just whatever the last line is in the function.
+I like that the language natively warns about unused functions, variables, and imports. And I like that these are warnings rather than errors. In Go, I get frustrated during development when I temporarily comment something out and then the compiler just refuses to do anything because I have an unused import.
