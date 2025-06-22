@@ -560,23 +560,21 @@ The `Ok(#(_, message))` pattern will match a successful result from `split_once`
 
 One of the compelling features of Gleam for me is its static typing, so it feels hacky that I'm abusing the empty string to represent a lack of message on a particular line. Can I use the type system instead of using empty strings as sentinel values?
 
-The [`gleam/option` module](https://tour.gleam.run/standard-library/option-module/) has the types `Some` and `None` that I can use. They're for when code might return a value or might not, but not returning a value isn't an error.
-
-Rewriting to take advantage of `Option` gives me this:
+The pattern in Gleam for indicating that something might fail but the failure isn't necessarily an error is `Result(<type>, Nil)`, so let me try to rewrite it that way:
 
 ```gleam
 import gleam/list
-import gleam/option.{type Option, Some, None}
+import gleam/result
 import gleam/string
 
-fn parse_line(line: String) -> Option(String) {
+fn parse_line(line: String) -> Result(String, Nil) {
   case line {
-    "Session Start" <> _ -> None
-    "Session Close" <> _ -> None
+    "Session Start" <> _ -> Error(Nil)
+    "Session Close" <> _ -> Error(Nil)
     line -> {
        case string.split_once(line, on: ": ") {
-        Ok(#(_, message)) -> Some(message)
-        _ -> None
+        Ok(#(_, message)) -> Ok(message)
+        _ -> Error(Nil)
        }
     }
   }
@@ -585,11 +583,11 @@ fn parse_line(line: String) -> Option(String) {
 pub fn parse(contents: String) -> List(String) {
   string.split(contents, on: "\n")
   |> list.map(parse_line)
-  |> option.values
+  |> result.values
 }
 ```
 
-Great! I like being more explicit that the lines without messages return `None` rather than an empty string. Also, `option.values` is more succinct for filtering empty lines than the previous `list.filter(fn(s) { !string.is_empty(s) })`.
+Great! I like being more explicit that the lines without messages return `Error(Nil)` rather than an empty string. Also, `result.values` is more succinct for filtering empty lines than the previous `list.filter(fn(s) { !string.is_empty(s) })`.
 
 ## Overall reflections
 
@@ -779,4 +777,8 @@ The source code for this project is available on Codeberg:
 
 - <https://codeberg.org/mtlynch/gleam-chat-log-parser>
 
-Commit [81807](https://codeberg.org/mtlynch/gleam-chat-log-parser/src/commit/81807762410678a9c12fc6ad8accc1c5be779074) is the version that matches this blog post.
+Commit [291e6d](https://codeberg.org/mtlynch/gleam-chat-log-parser/src/commit/291e6d77a0ae00e4962f12253c356568b679aab6) is the version that matches this blog post.
+
+---
+
+_Thanks to [Isaac Harris-Holt](https://www.ihh.dev/) for helpful feedback on this post._
