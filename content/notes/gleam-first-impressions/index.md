@@ -595,6 +595,8 @@ The biggest downside I'm finding with Gleam is that it's a young language with a
 
 ### Love: Pipelines
 
+<!-- wordword-next-line-ignore-word: love -->
+
 I love love love Gleam's pipeline syntax. You can see me using it in the test with the `|>` characters:
 
 ```gleam
