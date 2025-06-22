@@ -327,6 +327,8 @@ hey whats up
 
 My instinct is to use a string split function and split on the `:` character. I see that there's [`string.split`](https://hexdocs.pm/gleam_stdlib/gleam/string.html#split) which returns `List(String)`.
 
+<!-- markdownlint-disable-next-line no-space-in-code -->
+
 There's also a [`string.split_once`](https://hexdocs.pm/gleam_stdlib/gleam/string.html#split_once) function, which should work because I can split once on `: ` (note the trailing space after the colon).
 
 The problem is that `split_once` returns `Result(#(String, String), Nil)`, a type that feels scarier to me. It's a two-tuple wrapped in a `Result`, which means that the function can return an error on failure. It's confusing that `split_once` can fail whereas `split` cannot, so for simplicity, I'll go with `split`.
