@@ -1,6 +1,7 @@
 ---
 title: "My First Impressions of Gleam"
-date: 2025-06-15
+date: 2025-06-22
+description: What I've learned in my first few hours using Gleam for a small project.
 ---
 
 I'm [looking for a new programming language](/notes/which-new-language/) to learn this year, and [Gleam](https://gleam.run) looks like the most fun. It's an Elixir-like language that supports static typing.
@@ -615,7 +616,7 @@ pub fn parse_simple_plaintext_log_test() {
 }
 ```
 
-Way less elegant, right?
+It looks like wet garbage by comparison.
 
 Now that I've seen pipelines, they feel so obvious and conspicuously missing in every other programming language I use.
 
@@ -623,11 +624,13 @@ I've enjoyed pipelining in bash, but it never occurred to me how strange it is t
 
 ### Like: Example-centric documentation
 
-The Gleam documentation is a bit terse, but I like that it's so example-heavy. I learn best by reading examples, so I appreciate that so much of the Gleam standard library is documented with examples showing simple usage of each API function.
+The Gleam documentation is a bit terse, but I like that it's so example-heavy.
+
+I learn best by reading examples, so I appreciate that so much of the Gleam standard library is documented with examples showing simple usage of each API function.
 
 ### Like: Built-in unused symbol warnings
 
-I like that the language natively warns about unused functions, variables, and imports. And I like that these are warnings rather than errors.
+I like that the Gleam compiler natively warns about unused functions, variables, and imports. And I like that these are warnings rather than errors.
 
 In Go, I get frustrated during debugging when I temporarily comment something out and then the compiler stubbornly refuses to do anything until I fix the stupid import, which I then have to un-fix when I finish whatever I was debugging.
 
@@ -635,7 +638,7 @@ In Go, I get frustrated during debugging when I temporarily comment something ou
 
 One of my favorite dumb programming jokes happened at my first programming job about 15 years ago. On a group email thread with several C++ developers, my friend shared a hot tip about C++ development.
 
-He said that if we were ever confused about an arcane C++ compilation error, we could just add a special line to our source code, and then even invalid C++ code would compile successfully:
+He said that if we were ever got fed up with arcane C++ compilation errors, we could just add a special line to our source code, and then even invalid C++ code would compile successfully:
 
 ```c++
 #pragma always_compile
@@ -718,11 +721,13 @@ Finished in 0.007 seconds
 
 ### Like: Pattern matching
 
-I find pattern matching elegant and concise, though it's the part of Gleam I find hardest to adjust to. It feels so different from procedural style programming in other languages I know, so I have a hard time recognizing when pattern matching is the right tool, and I also find pattern matching harder to read. But I think that's just inexperience, and I think with more practice, I'll be able to think in pattern matching.
+I find pattern matching elegant and concise, though it's the part of Gleam I find hardest to adjust to. It feels so different from procedural style of programming I'm accustomed to in other languages I know.
+
+The downside is that I have a hard time recognizing when pattern matching is the right tool, and I also find pattern matching harder to read. But I think that's just inexperience, and I think with more practice, I'll be able to think in pattern matching.
 
 ### Dislike: Error handling
 
-I find the error handling pretty awkward, but it's mainly because they ruin the beauty of a nice, tidy pipeline.
+I find Gleam's error handling pretty awkward, especially because errors ruin the beauty of nice, tidy pipelines.
 
 For example, if I had a string processing pipeline like this:
 
