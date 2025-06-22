@@ -748,7 +748,7 @@ That `result.unwrap` line feels so ugly and out of place to me. I wish the synta
 string.split(line, on: ": ")
 |> try list.last
 |> string.uppercase
-|> Result
+|> Ok
 ```
 
 Where `try` causes the function to return an error, kind of like [in Zig](https://ziglang.org/documentation/0.14.1/#try).
