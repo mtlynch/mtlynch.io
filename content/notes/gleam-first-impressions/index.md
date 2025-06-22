@@ -274,9 +274,44 @@ Finished in 0.008 seconds
 
 Cool, that's what I expected. The test is failing because it's returning hardcoded dummy results that don't match my test.
 
-## I love pipelines
+## Getting used to a functional language
 
-I'll take this opportunity to say how much I love Gleam's pipeline syntax. You can see me using it in the test with the `|>` characters:
+Okay, now it's time to implement the parsing for real. I need to implement this function:
+
+```gleam
+pub fn parse(contents: String) -> List(String) {
+  todo
+}
+```
+
+At this point, I kind of froze up. It struck me that Gleam excludes so many of the tools I'm used to in other languages:
+
+- There are no `if` statements
+- There are no loops
+- There's no `return` keyword
+- There are no list index accessors
+  - e.g., you can't access the nth element of a `List`
+
+What do I even do? Split the string into tokens and then do something with that?
+
+Eventually, I realized for a simple implementation, I wanted to just split the string into lines, so I want to do this:
+
+```gleam
+pub fn parse(contents: String) -> List(String) {
+  string.split(contents, on: "\n")
+  todo
+}
+```
+
+I knew that in order to process the logs line by line, I'd need to call a function like `list.map`, but I had a hard time getting my brain to accept it. I'm so used to doing that in a loop that it feels difficult to recognize the Gleam path forward.
+
+Caught me by surprise that there's no `return` keyword. It's just whatever the last line is in the function.
+
+## Reflections on my first few hours with Gleam
+
+### Love: Pipelines
+
+I love Gleam's pipeline syntax. You can see me using it in the test with the `|>` characters:
 
 ```gleam
  "..."
@@ -303,49 +338,20 @@ I feel like now that I've seen it, I'm going to miss it in every other language.
 
 I've used pipelining in bash and always liked it, but it never occurred to me how strange it is that other programming languages never adopted it.
 
-## Getting used to a functional language
+### Like: Built-in unused symbol detection
 
-Okay, now it's time to implement the parsing for real. I need to implement this function:
+I like that the language natively warns about unused functions, variables, and imports. And I like that these are warnings rather than errors. In Go, I get frustrated during development when I temporarily comment something out and then the compiler just refuses to do anything because I have an unused import.
 
-```gleam
-pub fn parse(contents: String) -> List(String) {
-  todo
-}
-```
+### Like: Pattern matching
 
-At this point, I kind of froze up. It struck me that Gleam excludes so many of the tools I'm used to in other languages:
-
-- There are no `if` statements
-- There are no loops
-- There's no `return` keyword
-
-What do I even do? Split the string into tokens and then do something with that?
-
-Eventually, I realized for a simple implementation, I wanted to just split the string into lines, so I want to do this:
-
-```gleam
-pub fn parse(contents: String) -> List(String) {
-  string.split(contents, on: "\n")
-  todo
-}
-```
-
-I knew that in order to process the logs line by line, I'd need to call a function like `list.map`, but I had a hard time getting my brain to accept it. I'm so used to doing that in a loop that it feels difficult to recognize the Gleam path forward.
-
-Caught me by surprise that there's no `return` keyword. It's just whatever the last line is in the function.
-
-## Error handling ruins pipelines
+### Dislike: Error handling
 
 I find the error handling pretty awkward. I find myself not wanting to use functions that can fail because they ruin my tidy pipeline. Strangely, `string.split_once` can fail but `string.split` cannot.
 
-## Labeled arguments with no defaults
+### Dislike: Labeled arguments with no defaults
 
 ```gleam
 fn string_split_ignore_error(string: String, substring: String) -> List(String) {
   todo
 }
 ```
-
-## Built-in unused symbol detection
-
-I like that the language natively warns about unused functions, variables, and imports. And I like that these are warnings rather than errors. In Go, I get frustrated during development when I temporarily comment something out and then the compiler just refuses to do anything because I have an unused import.
