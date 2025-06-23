@@ -1,19 +1,21 @@
 ---
 title: "goHardDrive Leaked Personal Data for Thousands of Customers"
-date: 2025-06-05
+date: 2025-06-25
 ---
 
-I recently purchased a set of three refurbished 8 TB hard drives from goHardDrive, a company that specializes in selling used hard drives. Two of my three drives were defective, so I had to return them. When I went through the return process, I was surprised to discover that goHardDrive's return status page allowed me to view the full address, email address, phone number, and order details of any customer that had returned merchandise to goHardDrive. I believe this affected between 10k-100k customers.
+I recently purchased a set of three refurbished 8 TB hard drives from a company called goHardDrive, a merchant that specializes in selling used hard drives. I had to return drives that arrived dead, and when I did, I discovered that goHardDrive had published my full personal details on its RMA website, including my name, mailing address, email address, and the products I purchased.
+
+The RMA numbers appear to be sequential, so by changing the RMA number in the URL, anyone could view the full personal details of any of the tens of thousands of goHardDrive customers who had returned merchandise.
 
 ## The leak
 
 The leak is painfully trivial. You don't need special tools or any special knowledge of web security. All you need is a regular web browser.
 
-When I requested a return from goHardDrive, they assigned me a (RMA) number ending in five numeric digits. goHardDrive never emailed me confirmation of my RMA, so every time I checked the status, I had to type it manually in this form.
+When I requested a return from goHardDrive, they assigned me a return merchandise authorization (RMA) number ending in five numeric digits. goHardDrive never emailed me confirmation of my RMA, so every time I checked the status, I had to type it manually in this form.
 
 {{<img src="rma-form.webp" has-border="true" max-width="800px">}}
 
-Note that the form says email address, but it actually expects an RMA number. This form is public and has no authentication, rate limits, or CAPTCHA.
+Note that the form says email address, but it actually expects an RMA number. This form was public and had no authentication, rate limits, or CAPTCHA.
 
 When I entered my RMA number, I saw this screen:
 
@@ -36,17 +38,25 @@ The URL for this page had the form of:
 https://ghdwebapps.com/rma/check?rmaNo=XYZ12345&fromButton=1
 ```
 
-Where `XYZ12345` was just my RMA number. It would be trivial to write a script that sends an HTTP GET request for every RMA number from 00001 to 99999 and scrapes the personal details of every goHardDrive customer who had requested a return.
+`XYZ12345` was the format of my RMA number. It would be trivial to write a script that sends an HTTP GET request for every RMA number from 00001 to 99999 and scrapes the personal details of every goHardDrive customer who had requested a return.
 
 ## Scale of leak
 
-I didn't enumerate every possible RMA number, as some companies use the [Computer Fraud and Abuse Act (CFAA)](https://www.justice.gov/jm/jm-9-48000-computer-fraud) as a way to prevent public disclosure of vulnerabilities, so I didn't want to do anything that potentially violated the CFAA.
+I didn't enumerate every possible RMA number, as some companies use the [Computer Fraud and Abuse Act (CFAA)](https://www.justice.gov/jm/jm-9-48000-computer-fraud) as a way to prevent public disclosure of vulnerabilities. I didn't want to do anything that potentially violated the CFAA, but I can deduce a lot without doing the actual scraping.
 
 I can't say for certain how many goHardDrive customers this vulnerability affected, but assuming that goHardDrive started their RMA numbers at somewhere at `10000` or below and increments each by one (as it appeared when I mistyped my RMA number by 1), that means that 10k-100k customers were exposed in this leak.
 
-## goHardDrive's fix
+## goHardDrive's attempted fix
 
-TODO
+I notified goHardDrive, and, to their credit, they responded two hours later to acknowledge the issue and confirm that they would fix it within three to five business days.
+
+I didn't hear back from them, so I checked back a week later, and they said they'd updated the form to prevent attackers from enumerating RMA numbers. Checking RMA status now required the customer to enter their postal code and house number.
+
+{{<img src="ghd-zip-search.webp" max-width="500px">}}
+
+brutecat recently wrote about enumerating phone numbers on a Google web API. They were able to make [40k HTTP requests per second](https://brutecat.com/articles/leaking-google-phones#time-required-to-brute-the-number) on a $0.30/hr cloud server. I doubt goHardDrive's RMA server could _serve_ 40k requests per second, but
+
+## goHardDrive removes RMA status checks entirely
 
 ## Sidenote: The many other issues with goHardDrive's return process
 
@@ -66,7 +76,7 @@ goHardDrives never emailed me to say they received my return nor that they were 
 
 ## Bug bounty
 
-I asked goHardDrive if they offer a bug bounty program for people who offer coordinated disclosure of security vulnerabilities. They said that they did not but they gave me a $20 refund on my $XX purchase as a thank you.
+I asked goHardDrive if they offer a bug bounty program for people who offer coordinated disclosure of security vulnerabilities. They said that they did not but they gave me a $20 refund on my $330 purchase as a thank you. That almost covered the cost of shipping their defective drives back to them.
 
 The bounty on an information disclosure of this scale is [normally hundreds to thousands of dollars](https://www.tabcut.com/blog/post/How-I-made-200-in-2-Minutes-on-Hackerone-Zomato-Bug-Bounty-Program-POC), so $20 is quite low.
 
@@ -76,4 +86,5 @@ The bounty on an information disclosure of this scale is [normally hundreds to t
 - 2025-05-21: (two hours later) goHardDrive acknowledges the issue and says that they are working on a fix. They say to expect an update in 3-5 business days.
 - 2025-05-29: I request a status update from goHardDrive.
 - 2025-05-29: goHardDrive responds to say that they've remediated the issue by requiring the customer to enter the matching zip code and street number for the RMA.
-- 2025-06-05: I
+- 2025-06-05: I express concerns to goHardDrive about their new RMA search feature.
+- 2025-06-20: goHardDrive confirms to me that they've permanently removed their RMA search form and now share RMA status exclusively over email.
