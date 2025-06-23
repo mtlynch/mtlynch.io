@@ -195,15 +195,15 @@ Ever since building [my first homelab server](/building-a-vm-homelab-2017/), my 
 My fiancé has pointed out that my office gets dirty because I have wires everywhere that discourage vacuuming. I thought, "What? No, this is a normal amount of wires." But then I started looking at them and realized it was kind of a lot of wires...
 
 {{<gallery caption="My office, upon closer inspection, kind of had a lot of wires">}}
-{{<img src="office-wires-1.webp" max-width="400px" alt="Photo of lots of wires in my office">}}
-{{<img src="office-wires-2.webp" max-width="400px" alt="Photo of lots of wires in my office">}}
+{{<img src="office-wires-1.webp" max-width="400px" alt="Photo of lots of wires in my office" has-border="false">}}
+{{<img src="office-wires-2.webp" max-width="400px" alt="Photo of lots of wires in my office" has-border="false">}}
 {{</gallery>}}
 
 It occurred to me that I could make us both happy by building a server rack. I'd enjoy a fun homelab project, and she'd appreciate the tidiness of having all the wires in a self-contained unit.
 
 So, I built my first server rack. It was fun to build, and it does make everything a lot tidier. With everything stacked vertically, there are fewer wires on the floor, and the whole thing moves on wheels for easy cleaning.
 
-{{<img src="server-rack.webp" max-width="400px" alt="Photo of server rack with patch panel, TP-Link switch, Tripp-Lite surge protector, CyberPower UPS, and shelves" caption="My first home server rack">}}
+{{<img src="server-rack.webp" max-width="400px" alt="Photo of server rack with patch panel, TP-Link switch, Tripp-Lite surge protector, CyberPower UPS, and shelves" caption="My first home server rack" has-border="false">}}
 
 I'm using a [managed switch and VLANs](/notes/debugging-vlans-tp-link/) for the first time. At first, I found VLANs too cumbersome and hard to debug. Now that I've got the basics, I enjoy them and want to make VLANs for everything.
 

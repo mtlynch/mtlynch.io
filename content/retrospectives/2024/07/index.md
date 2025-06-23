@@ -18,7 +18,7 @@ When I released the course, TinyPilot was growing quickly, and I didn't have tim
 
 In [my last blog post](/i-sold-tinypilot/), I surveyed readers about what they'd like to see me do next. Of the people who expressed interest in seeing me teach something, here were the results:
 
-{{<img src="survey-results.png" has-border="true" alt="Stacked bar graph of interest in what I teach next. 'Helping developers improve their writing' is tied for first with 'Applying deliberate practice techniques to software development' with 32 interested. 'Blogging for an audience of developers' is in third with 31 interested." caption="Responses to the reader survey in my last blog post">}}
+{{<img src="survey-results.png" alt="Stacked bar graph of interest in what I teach next. 'Helping developers improve their writing' is tied for first with 'Applying deliberate practice techniques to software development' with 32 interested. 'Blogging for an audience of developers' is in third with 31 interested." caption="Responses to the reader survey in my last blog post">}}
 
 There are different ways to interpret the data, but my takeaway is that people were especially interested in having me teach writing techniques. I was surprised that deliberate practice was a top answer as well, albeit with slightly less enthusiasm.
 
@@ -151,11 +151,11 @@ And then htmx makes everything just work without you having to write any custom 
 
 To test out htmx, I've been [rewriting](https://www.whatgotdone.com/michael/2024-07-05) parts of [ScreenJournal](https://github.com/mtlynch/screenjournal) using htmx. ScreenJournal is my open-source movie review app. It's like Goodreads for movies. Or it's like letterboxd, but open-source and ugly.
 
-{{<img src="screenjournal.png" max-width="800px" has-border="true" caption="[ScreenJournal](https://github.com/mtlynch/screenjournal) is my hobby project web app for reviewing movies.">}}
+{{<img src="screenjournal.png" max-width="800px" caption="[ScreenJournal](https://github.com/mtlynch/screenjournal) is my hobby project web app for reviewing movies.">}}
 
 A good example of my rewrite was [reimplementing the notification preferences page with htmx](https://github.com/mtlynch/screenjournal/pull/291/files). I've got a page that allows users to specify which emails they'd like to receive:
 
-{{<img src="screenjournal-notifications.png" has-border="true" caption="Page on ScrenJournal for controlling notifications">}}
+{{<img src="screenjournal-notifications.png" caption="Page on ScrenJournal for controlling notifications">}}
 
 The notifications page required a lot of custom JavaScript to do the following:
 

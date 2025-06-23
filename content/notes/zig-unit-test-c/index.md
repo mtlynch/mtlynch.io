@@ -22,7 +22,7 @@ For the past three years, I've been working on [TinyPilot](https://tinypilotkvm.
 
 To stream the target computer's display, TinyPilot uses [uStreamer](https://github.com/pikvm/ustreamer), a video streaming utility that's optimized for Raspberry Pi's hardware.
 
-{{<img src="ustreamer-display.webp" max-width="800px" alt="Screenshot of TinyPilot in a browser window displaying a Dell boot screen" caption="TinyPilot uses the C uStreamer application to stream video">}}
+{{<img src="ustreamer-display.webp" max-width="800px" alt="Screenshot of TinyPilot in a browser window displaying a Dell boot screen" caption="TinyPilot uses the C uStreamer application to stream video" has-border="false">}}
 
 I've been working with uStreamer for several years, but I find the codebase difficult to approach. It's implemented in C, and it doesn't have any automated tests.
 

@@ -110,7 +110,7 @@ We reached out to four different local sheet metal vendors. Only one of the loca
 
 A few weeks later, I received the US vendor's prototype and immediately felt deflated.
 
-{{<img src="us-prototype-1.jpg" max-width="600px" caption="First TinyPilot metal case prototype from US manufacturer" alt="Photo of metal case that looks similar to the steel box behind an electrical outlet">}}
+{{<img src="us-prototype-1.jpg" max-width="600px" caption="First TinyPilot metal case prototype from US manufacturer" alt="Photo of metal case that looks similar to the steel box behind an electrical outlet" has-border="false">}}
 
 The case looked like something I'd find if I smashed a hole in my wall and pulled out some wiring. It definitely didn't look like something I'd hand to a customer. The bends had large, visible gaps along the seams. The edges didn't feel sharp enough to cut skin but were definitely too sharp for comfort. And most of the screws were visible from the outside, which looked sloppy.
 
@@ -118,23 +118,23 @@ When I shared my disappointment with TinyPilot's hardware partner, they said tha
 
 I was skeptical, but I awaited the prototype we ordered from China. I received that one a few weeks later, and it was a night and day difference.
 
-{{<img src="cn-prototype-1.jpg" max-width="600px" caption="First TinyPilot metal case prototype from Chinese manufacturer" alt="Photo of black metal case that looks more like a consumer product">}}
+{{<img src="cn-prototype-1.jpg" max-width="600px" caption="First TinyPilot metal case prototype from Chinese manufacturer" alt="Photo of black metal case that looks more like a consumer product" has-border="false">}}
 
 The powder coating made the surface feel completely different, much more like a user-friendly product. There were no sharp edges or debris in the gaps. The seams were barely visible. The gaps in the American prototype looked massive by comparison.
 
 {{<gallery caption="The US vendor's case (left) had relatively large gaps along the seams, whereas the Chinese vendor's (left) seams were cleaner, leaving almost no empty space.">}}
-{{<img src="us-gap.jpg" max-width="400px" alt="Photo of wide gap hole in seam on US vendor case">}}
-{{<img src="cn-gap.jpg" max-width="400px" alt="Photo of nearly flush seam Chinese vendor case">}}
+{{<img src="us-gap.jpg" max-width="400px" alt="Photo of wide gap hole in seam on US vendor case" has-border="false">}}
+{{<img src="cn-gap.jpg" max-width="400px" alt="Photo of nearly flush seam Chinese vendor case" has-border="false">}}
 {{</gallery>}}
 
 {{<gallery caption="The holes for corners were drastically larger on the US vendor's case (left) than the Chinese vendor's (right).">}}
-{{<img src="us-corner.jpg" max-width="400px" alt="Photo of large hole in corner on US vendor case">}}
-{{<img src="cn-corner.jpg" max-width="400px" alt="Photo of small hole in corner on Chinese vendor case">}}
+{{<img src="us-corner.jpg" max-width="400px" alt="Photo of large hole in corner on US vendor case" has-border="false">}}
+{{<img src="cn-corner.jpg" max-width="400px" alt="Photo of small hole in corner on Chinese vendor case" has-border="false">}}
 {{</gallery>}}
 
 {{<gallery caption="The US vendor's case (left) left jagged edges in some of the cuts, whereas the Chinese vendor's (right) had fewer instances of this.">}}
-{{<img src="us-debris.jpg" max-width="400px" alt="Photo of wide gap hole in seam on US vendor case">}}
-{{<img src="cn-debris.jpg" max-width="400px" alt="Photo of nearly flush seam Chinese vendor case">}}
+{{<img src="us-debris.jpg" max-width="400px" alt="Photo of wide gap hole in seam on US vendor case" has-border="false">}}
+{{<img src="cn-debris.jpg" max-width="400px" alt="Photo of nearly flush seam Chinese vendor case" has-border="false">}}
 {{</gallery>}}
 
 The most shocking part was the difference in price. The Chinese prototype cost $139, while the American one cost $857, more than six times as expensive for far worse quality.

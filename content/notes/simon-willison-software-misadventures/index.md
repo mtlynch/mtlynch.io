@@ -9,7 +9,7 @@ I just finished listening to [Simon Willison's interview on the _Software Misadv
 
 This is not a summary of the whole interview, just the parts that were new to me or that I'd like to remember.
 
-{{<img src="cover.webp" max-width="700px" caption="Simon Willison on the [_Software Misadventures_ podcast](https://softwaremisadventures.com/p/simon-willison-llm-weird-intern)">}}
+{{<img src="cover.webp" max-width="700px" caption="Simon Willison on the [_Software Misadventures_ podcast](https://softwaremisadventures.com/p/simon-willison-llm-weird-intern)" has-border="false">}}
 
 ## Who's Simon Willison?
 

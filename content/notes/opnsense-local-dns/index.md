@@ -24,7 +24,7 @@ Check these options:
 - Register ISC DHCP4 Leases
 - Register DHCP Static Mappings
 
-{{<img src="unbound-general.webp" has-border="true" max-width="700px" caption="Check &ldquo;Register ISC DHCP4 Leases&rdquo; and &ldquo;Register DHCP Static Mappings&rdquo;in Unbound settings">}}
+{{<img src="unbound-general.webp" max-width="700px" caption="Check &ldquo;Register ISC DHCP4 Leases&rdquo; and &ldquo;Register DHCP Static Mappings&rdquo;in Unbound settings">}}
 
 Click Apply to apply the changes.
 
@@ -43,7 +43,7 @@ In situations where I just need OPNsense to resolve, I force the mappings manual
    - According to the IETF's definition, the domain should actually be `home.arpa.` (with a trailing dot), but OPNsense rejects that as a domain and recommends `home.arpa`, so I'm sticking with that.
 1. Click "Save" to apply the change.
 
-{{<img src="home.arpa-setting.webp" has-border="true" max-width="800px">}}
+{{<img src="home.arpa-setting.webp" max-width="800px">}}
 
 ### Create a static mapping for the host
 

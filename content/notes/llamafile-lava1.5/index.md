@@ -11,7 +11,7 @@ I read [Simon Willison's post](https://simonwillison.net/2023/Nov/29/llamafile/)
 
 One of my longtime hobby projects is [WanderJest](https://wanderjest.com), a site for finding live comedy. One of the challenges of that site is that the canonical information about an upcoming show is often the poster for it. Here's an example:
 
-{{<img src="luthiers-show.jpg" max-width="400px">}}
+{{<img src="luthiers-show.jpg" max-width="400px" has-border="false">}}
 
 I've been scraping this information by hand, but that's tedious and time-consuming.
 
@@ -42,11 +42,11 @@ And then I spun up my server:
 
 That worked, and I saw the web interface in my browser:
 
-{{<img src="initial-interface.png" max-width="400px" has-border="true">}}
+{{<img src="initial-interface.png" max-width="400px">}}
 
 I tried uploading the show poster, and nothing happened. It turned out that I had to upload the poster _and_ ask it a question.
 
-{{<img src="q1.png" max-width="600px" has-border="true">}}
+{{<img src="q1.png" max-width="600px">}}
 
 So, a bit of a rough start. It gets all three names incorrect, hallucinating variations on the actual names.
 
@@ -70,7 +70,7 @@ I was also curious if I could get the information in JSON format, but I had a ha
 
 In the [research paper](https://arxiv.org/abs/2310.03744), LLaVA's authors showed an example of convincing LLaVA to respond in JSON:
 
-{{<img src="json-example.png" max-width="450px" has-border="true" caption="Example of asking LLaVA to respond in JSON, from the [research paper](https://arxiv.org/abs/2310.03744)">}}
+{{<img src="json-example.png" max-width="450px" caption="Example of asking LLaVA to respond in JSON, from the [research paper](https://arxiv.org/abs/2310.03744)">}}
 
 I tried repeating the format from the paper, and it just gave back nothing:
 
@@ -158,7 +158,7 @@ But I got the same result.
 
 I had to file a support ticket for access to a higher GPU from Scaleway. When I tried with Scaleway's `H100-1-80G` instance with 240 GB of RAM and 80 GB of VRAM, everything worked, and the performance was 10.6x faster when I ran it on the CPU.
 
-{{<img src="q1-gpu.png" max-width="600px" has-border="true" caption="Running LLaVA on a GPU was 10.6x faster than using the CPU">}}
+{{<img src="q1-gpu.png" max-width="600px" caption="Running LLaVA on a GPU was 10.6x faster than using the CPU">}}
 
 ## Wrap up
 

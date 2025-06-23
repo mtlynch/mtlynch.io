@@ -24,7 +24,7 @@ I've been experimenting with LLM assistants for the past two years. I started us
 
 I use [Kagi](https://kagi.com/) as my search engine, and their Ultimate package includes unlimited access to all the major LLMs. I mainly interact with LLMs through the Kagi Assistant feature, which is just a web UI for chatting with LLMs.
 
-{{<img src="kagi-assistant.webp" max-width="600px" caption="My search engine, [Kagi](https://kagi.com/), comes with a nice web chat interface for all the major LLMs.">}}
+{{<img src="kagi-assistant.webp" max-width="600px" caption="My search engine, [Kagi](https://kagi.com/), comes with a nice web chat interface for all the major LLMs." has-border="false">}}
 
 _Full disclosure: I participated in Kagi's crowdfund, so I have some financial investment in them that I don't understand._
 
@@ -33,8 +33,8 @@ _Full disclosure: I participated in Kagi's crowdfund, so I have some financial i
 The problem I found recently was that AI tools make me feel like I'm the machine. I just sit there mindlessly copying the code between my editor and the chat interface, then saying, "It didn't work," pasting the error message, and doing the whole thing over four or five times.
 
 {{<gallery caption="A chatbot LLM keeps giving me the wrong fix to a bug and then requires a lot of prodding to show the full solution.">}}
-{{<img src="issue-remains.webp" max-width="400px">}}
-{{<img src="llm-confirmations.webp" max-width="400px">}}
+{{<img src="issue-remains.webp" max-width="400px" has-border="false">}}
+{{<img src="llm-confirmations.webp" max-width="400px" has-border="false">}}
 {{</gallery>}}
 
 ## There has to be a tool for this
@@ -128,7 +128,7 @@ fn testFindDupes(input: []const u8, expected: []const DupeWord) !void {
 
 Within about 30 seconds and $0.09 of LLM credit spending, Cline got the tests to pass:
 
-{{<img src="cline-results.webp">}}
+{{<img src="cline-results.webp" has-border="false">}}
 
 Cline had updated `FindAdjacentDupes` with this implementation:
 
@@ -222,7 +222,7 @@ This is my first time ever using a metered LLM API. I've seen people talk about 
 
 Cline helpfully shows you how much each coding task has run up in credits as you go.
 
-{{<img src="cline-cost.webp">}}
+{{<img src="cline-cost.webp" has-border="false">}}
 
 So, I definitely am getting the better end of Kagi's $25/month unlimited plan. I spent $6 in five hours with Cline, and Cline does a lot of things to minimize token consumption. I use Kagi Assistant every day and frequently paste giant files into a chat 10+ times during a conversation. Now that I see the costs, I'm probably spending costing Kagi $5-10 in API credits per day.
 

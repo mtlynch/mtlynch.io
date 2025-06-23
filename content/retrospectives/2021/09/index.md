@@ -70,8 +70,8 @@ When I first launched TinyPilot's website, I meant for the design to be a placeh
 One of the hurdles was finding a skilled developer to work on the website. After going through six hires who didn't work out, I found a developer in July with design ideas and worked with him throughout August on implementing them. I think the site looks more professional as a result:
 
 {{<gallery caption="In August, I worked with one of TinyPilot's developers to redesign the TinyPilot homepage.<br>Original design (left), revised design (right)">}}
-{{<img src="home-before.png" alt="Screenshot of TinyPilot homepage before changes" max-width="300px">}}
-{{<img src="home-after.png" alt="Screenshot of TinyPilot homepage before changes" max-width="300px" has-border="true">}}
+{{<img src="home-before.png" alt="Screenshot of TinyPilot homepage before changes" max-width="300px" has-border="false">}}
+{{<img src="home-after.png" alt="Screenshot of TinyPilot homepage before changes" max-width="300px">}}
 {{</gallery>}}
 
 One promising indicator is my revenue per unique visitor. The site tends to earn $4-5 per unique visitor, but in August, the number spiked to $7.20, a 60% increase over the previous month.
@@ -121,19 +121,19 @@ I'll go through the changes piece by piece.
 
 First, we adjusted the navbar so that it now lines up with the content on the page:
 
-{{<img src="navbar.png" alt="Before and after shots of TinyPilot navbar" max-width="800px" has-border="true">}}
+{{<img src="navbar.png" alt="Before and after shots of TinyPilot navbar" max-width="800px">}}
 
 The feature brags are now more compact. You can't see it in the screenshot, but we removed the animations, which were a bit distracting.
 
-{{<img src="feature-brags.png" alt="Before and after shots of feature boxes on TinyPilot website" max-width="800px" has-border="true">}}
+{{<img src="feature-brags.png" alt="Before and after shots of feature boxes on TinyPilot website" max-width="800px">}}
 
 We changed the reviews from a stack of boxes to a carousel that rotates every few seconds with a new review:
 
-{{<img src="reviews.png" alt="Before and after shots of reviews on TinyPilot website" max-width="800px" has-border="true">}}
+{{<img src="reviews.png" alt="Before and after shots of reviews on TinyPilot website" max-width="800px">}}
 
 And lastly, we redesigned the footer. It was a jumbled mess before, but now it looks deliberate and organized:
 
-{{<img src="footer.png" alt="Before and after shots of TinyPilot footer" max-width="800px" has-border="true">}}
+{{<img src="footer.png" alt="Before and after shots of TinyPilot footer" max-width="800px">}}
 
 This is just a first pass. I'm going to hire a professional designer to [iterate on this](https://docs.google.com/document/d/1dypa3pwaTbzdOJzGrcYiiERuYSJ9GMrqxh80D-t_NKk/edit?usp=sharing). If you have recommendations, [let me know](/about).
 
@@ -141,7 +141,7 @@ This is just a first pass. I'm going to hire a professional designer to [iterate
 
 One of my biggest projects for the last few months has been arranging a distribution partnership with a German company, [punkt.de](https://punkt.de). They launched [their website](https://www.kvm-ip.de) at the end of August, and they're now accepting orders.
 
-{{<img src="kvm-ip-voyager.png" alt="Screenshot of European distributor's site" max-width="800px" has-border="true" caption="TinyPilot Voyager now also [ships from Europe](https://www.kvm-ip.de).">}}
+{{<img src="kvm-ip-voyager.png" alt="Screenshot of European distributor's site" max-width="800px" caption="TinyPilot Voyager now also [ships from Europe](https://www.kvm-ip.de).">}}
 
 Sales have been slower than I expected. Historically, I've sold 10-15 Voyagers per month to European customers, so I thought it would be easy for punkt.de to exceed that, as shipment from within the EU means faster delivery and more transparent pricing.
 
@@ -165,7 +165,7 @@ It's a classic "do things that don't scale" task. I never prioritized it because
 
 In August, one of TinyPilot's developers added a serverless function that checks purchase records from our Shopify store, and we implemented a simple web UI for it. This means that customers can download the latest disk image instantly without me being in the critical path.
 
-{{<img src="license-check.png" alt="Screenshot of license check form on TinyPilot website" has-border="true" caption="TinyPilot customers used to email me when they needed a replacement disk image, but now the process is automatic.">}}
+{{<img src="license-check.png" alt="Screenshot of license check form on TinyPilot website" caption="TinyPilot customers used to email me when they needed a replacement disk image, but now the process is automatic.">}}
 
 ### QA testing
 
@@ -235,13 +235,13 @@ I was hoping the promotion might jump-start sales even after I went back to regu
 | Total Pageviews   | 1,300       | 1,467       | <font color="green">+167 (+13%)</font>       |
 | **Total Revenue** | **$620.67** | **$390.80** | **<font color="red">-$229.87 (-37%)</font>** |
 
-Last month, I saw an unexpected spike in Zestful revenue, and I [dismissed it as likely fraud](/retrospectives/2021/08/#zestfulhttpszestfuldatacom). To my surprise, it was a legitimate customer, and they paid their balance in full.
+Last month, I saw an unexpected spike in Zestful revenue, and I [dismissed it as likely fraud](/retrospectives/2021/08/#zestful). To my surprise, it was a legitimate customer, and they paid their balance in full.
 
 This month, another customer had a big spike in usage, and this one seems legitimate as well. Both charges seem to be one-off bulk processing, but it's good to see more usage.
 
 These past two months bring me to an exciting Zestful milestone: I've earned back my investment!
 
-I [spent $7.4k](/solo-developer-year-1/#zestfulhttpszestfuldatacom) hiring a freelancer to help me launch the first version, and I had a few other smaller costs leading to a total cost of $8k. Including August, my lifetime revenue from Zestful is now $8,246, so the project has officially turned a profit. Of course, this was possible because I paid myself $0. On an hourly basis, Zestful has probably earned me about a nickel per hour.
+I [spent $7.4k](/solo-developer-year-1/#zestful) hiring a freelancer to help me launch the first version, and I had a few other smaller costs leading to a total cost of $8k. Including August, my lifetime revenue from Zestful is now $8,246, so the project has officially turned a profit. Of course, this was possible because I paid myself $0. On an hourly basis, Zestful has probably earned me about a nickel per hour.
 
 Lastly, a company reached out in August about potentially acquiring Zestful. I was upfront with them that its earnings are small, but if they want to acquire my solution instead of rolling their own, I'm open to it. We had a preliminary call, and they requested some historical data from me. They said they're considering an offer. I'm not getting my hopes up, but it will be a nice bonus if it happens.
 

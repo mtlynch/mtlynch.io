@@ -12,7 +12,7 @@ I just received $5,947 in advance sales for my first technical book, even though
 
 In March, I ran a three-week pre-sale for the book [on Kickstarter](https://www.kickstarter.com/projects/mtlynch/refactoring-english). The pre-sale raised $6,551 from 191 customers. After Kickstarter's fees, I get $5,946.92, or 91% of the total.
 
-{{<img src="kickstarter-payout.webp" max-width="650px" has-border="true" caption="Proceeds from my pre-sale on Kickstarter">}}
+{{<img src="kickstarter-payout.webp" max-width="650px" caption="Proceeds from my pre-sale on Kickstarter">}}
 
 I haven’t seen many authors crowdfund their books ahead of time, so I thought I'd write about why I did this, which parts of the process worked well, and which parts turned out to be a waste of time:
 
@@ -102,7 +102,7 @@ Sharing book excerpts on my mailing lists and social media turned out to be the 
 
 I published the [excerpts](https://refactoringenglish.com/chapters/) on the book's website for free, and I included a self-ad at the end of each post to lead readers to the full book:
 
-{{<img src="self-ad.webp" max-width="325px" has-border="true" caption="Self-ads for the book that appeared at the bottom of my sample chapters online">}}
+{{<img src="self-ad.webp" max-width="325px" caption="Self-ads for the book that appeared at the bottom of my sample chapters online">}}
 
 During the pre-sale, I published two new excerpts from the book. I published [the first](https://refactoringenglish.com/chapters/commit-messages/) at the start of the pre-sale to kick things off and [the second](https://refactoringenglish.com/chapters/write-blog-posts-developers-read/) five days before the pre-sale ended.
 
@@ -110,13 +110,13 @@ It's tough to say how much the first excerpt impacted sales, as I released it at
 
 The second excerpt definitely made a difference. It gained traction [on Hacker News](https://news.ycombinator.com/item?id=43503872) and [Lobsters](https://lobste.rs/s/youq7y/how_write_blog_posts_developers_read), and readers from those sites doubled pre-orders for my book in a matter of days. Without that second excerpt, the pre-sale would have failed, and I'd have walked away with nothing.
 
-{{<img src="publish-excerpts.webp" has-border="true" caption="The effects of sharing excerpts on sales">}}
+{{<img src="publish-excerpts.webp" caption="The effects of sharing excerpts on sales">}}
 
 ### Advertising the book on my personal blog
 
 Similar to the self-ad on my book's website, I added a little box at the bottom of all my blog posts to say that I want to write a book and that readers can support it with a pre-order.
 
-{{<img src="blog-self-ad.webp" max-width="500px" has-border="true" caption="I added a self-ad for the book at the bottom of every post on my personal blog.">}}
+{{<img src="blog-self-ad.webp" max-width="500px" caption="I added a self-ad for the book at the bottom of every post on my personal blog.">}}
 
 I wrote [one new blog post](/no-longer-my-favorite-git-commit/) during the pre-sale, which seemed to bring a small bump in sales. I also have a deep archive of posts that attract 6-7k readers per week even when I'm not publishing anything new. I suspect some readers purchased based on stumbling across my old posts.
 
@@ -124,7 +124,7 @@ I wrote [one new blog post](/no-longer-my-favorite-git-commit/) during the pre-s
 
 According to Kickstarter's metrics, 4% of orders came from Twitter. I didn't invest a ton there &mdash; I just [created a thread announcing the pre-sale](https://x.com/deliberatecoder/status/1899106915126239720) and posted occasional updates on progress toward my goal amount.
 
-{{<img src="twitter-post.webp" max-width="600px" caption="Sharing progress updates Twitter accounted for about 4% of sales">}}
+{{<img src="twitter-post.webp" max-width="600px" caption="Sharing progress updates Twitter accounted for about 4% of sales" has-border="false">}}
 
 I tried the same thing on [Bluesky](https://bsky.app/profile/mtlynch.io/post/3ljzrjoqg3k2b) and [Mastodon](https://m.mtlynch.io/@michael/114138636617854162), as I prefer those platforms, but my posts there got almost zero response.
 
@@ -147,7 +147,7 @@ Part of the problem was that I waited until the last ten days of the pre-sale to
 
 I kept thinking I'd have a hit post during the pre-sale so that I could wow potential sponsors with flashy metrics about how many of my readers would see their logo, but I didn't have that until the end.
 
-{{<img src="sponsor-email.webp" has-border="true" max-width="550px" caption="An example email I sent soliciting sponsorship from a company">}}
+{{<img src="sponsor-email.webp" max-width="550px" caption="An example email I sent soliciting sponsorship from a company">}}
 
 Even when the one company offered to sponsor for $1k, I was hesitant to let a single company carry so much of the pre-sale. I expect the number of pre-orders to correlate with how many customers purchase the completed book. If I can't reach my pre-sale goal without one whale of a sponsor, that would have been a bad sign for long-term sales.
 
@@ -159,17 +159,17 @@ I've often wondered who the most popular bloggers are on Hacker News, so, last s
 
 During the pre-sale, I realized my blog popularity tool would be a good way to attract attention from Hacker News. People who care about the top Hacker News bloggers might also be interested in my book, so I [published the tool](https://refactoringenglish.com/tools/hn-popularity/) on the book's website. To lead visitors to the book, I put a prominent pre-order link in the navigation menu:
 
-{{<img src="popularity-contest.webp" has-border="true" max-width="700px" caption="To court attention from Hacker News, I created a tool to [rank popular bloggers on Hacker News](https://refactoringenglish.com/tools/hn-popularity/) and included a pre-order button for my book in the navigation bar.">}}
+{{<img src="popularity-contest.webp" max-width="700px" caption="To court attention from Hacker News, I created a tool to [rank popular bloggers on Hacker News](https://refactoringenglish.com/tools/hn-popularity/) and included a pre-order button for my book in the navigation bar.">}}
 
 My personal blog is one of the top 50 on the list, so I gave myself unique flair to lead readers to my book:
 
-{{<img src="blog-flair.webp" has-border="true" caption="To make my blog stand out, I gave [my entry in the list](https://refactoringenglish.com/tools/hn-popularity/?domain=mtlynch.io) a little animated image to advertise my book." max-width="700px">}}
+{{<img src="blog-flair.webp" caption="To make my blog stand out, I gave [my entry in the list](https://refactoringenglish.com/tools/hn-popularity/?domain=mtlynch.io) a little animated image to advertise my book." max-width="700px">}}
 
 Hacker News did [get excited about the tool](https://news.ycombinator.com/item?id=43474505), and it reached [the top 10 of the front page for the day](https://news.ycombinator.com/front?day=2025-03-25). [John Gruber](https://en.wikipedia.org/wiki/John_Gruber), the 5th most popular blogger on Hacker News, [wrote an article about my tool](https://daringfireball.net/2025/03/the_website_hacker_news_is_afraid_to_discuss).
 
 Unfortunately, none of that attention translated to pre-orders. Sales were nearly zero over the two days that the blog ranking tool was most popular.
 
-{{<img src="tool-frontpage.webp" has-border="true" caption="Getting my blog ranking tool to the front page of Hacker News had no effect on sales.">}}
+{{<img src="tool-frontpage.webp" caption="Getting my blog ranking tool to the front page of Hacker News had no effect on sales.">}}
 
 ## What I'm glad I did
 
@@ -260,6 +260,6 @@ If I had to do this over, I'd have queued up two excerpts that I thought would b
 
 Kickstarter can generate custom links to identify how customers found your project, but I never used them.
 
-{{<img src="ks-tags.webp" has-border="true" max-width="600px" caption="Kickstarter allows you to create custom links to identify how customers found your project, but I never used them.">}}
+{{<img src="ks-tags.webp" max-width="600px" caption="Kickstarter allows you to create custom links to identify how customers found your project, but I never used them.">}}
 
 Looking back, the custom links would have provided helpful insight into how customers found me. Without the custom tags, Kickstarter goes by the HTTP referer header, which is not as reliable as custom links.

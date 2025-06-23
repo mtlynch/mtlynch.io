@@ -9,7 +9,7 @@ date: 2024-07-11
 
 I'm looking for someone to take over my old content website, [Is It Keto](https://isitketo.org).
 
-{{<img src="isitketo-homepage.png" max-width="700px" has-border="true" caption="[Is It Keto](https://isitketo.org) is for sale">}}
+{{<img src="isitketo-homepage.png" max-width="700px" caption="[Is It Keto](https://isitketo.org) is for sale">}}
 
 I worked on the site [on and off between 2019 and 2020](/retrospectives/2020/07/), but I no longer have time for it, so it's just been neglected for the past several years. Still, it consistently earns $1-2k/yr in fully passive revenue.
 

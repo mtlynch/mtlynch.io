@@ -7,11 +7,11 @@ images:
 
 Have you ever used archive.org's [Internet Wayback Machine](https://web.archive.org/)? It's a free tool that's been archiving the web since 1996. So, if you want to see what Google looked like in 1999, [they've got it](https://web.archive.org/web/19990422191353/http://google.com/).
 
-{{<img src="google-1999.png" caption="Internet Archive capture of Google from April 22, 1999" has-border="true">}}
+{{<img src="google-1999.png" caption="Internet Archive capture of Google from April 22, 1999">}}
 
 [ArchiveBox](https://archivebox.io/) is like your own, personal Internet Wayback Machine. It's free and open-source, and you can use it to archive most websites.
 
-{{<img src="archivebox-overview.png" max-width="700px" has-border="true" caption="ArchiveBox is a free, open-source tool that lets you archive websites locally." alt="Screenshot of ArchiveBox dashboard">}}
+{{<img src="archivebox-overview.png" max-width="700px" caption="ArchiveBox is a free, open-source tool that lets you archive websites locally." alt="Screenshot of ArchiveBox dashboard">}}
 
 ## Why archive?
 
@@ -50,7 +50,7 @@ One of my all-time favorite reddit stories is the /r/legaladvice saga from [a gu
 
 The reddit poster's neighbor owned property that included a driveway connecting their house to public roads, but they sold part of their land that included their driveway. As a result, the neighbor had no way of getting on or off their property without trespassing on property they didn't own. The neighbor was trying to solve this by demanding access to the reddit poster's private driveway.
 
-{{<img src="cTGdIPu.png" max-width="600px" caption="Crude drawing that captured the excitement of /r/legaladvice board">}}
+{{<img src="cTGdIPu.png" max-width="600px" caption="Crude drawing that captured the excitement of /r/legaladvice board" has-border="false">}}
 
 The story is told in three reddit threads:
 
@@ -60,11 +60,11 @@ The story is told in three reddit threads:
 
 So I pasted the three URLs into ArchiveBox:
 
-{{<img src="add-reddit.png" max-width="800px" has-border="true">}}
+{{<img src="add-reddit.png" max-width="800px">}}
 
 Within a few seconds, ArchiveBox had archived those posts and made them available to me locally, offline:
 
-{{<img src="reddit-archived.png" has-border="true" caption="ArchiveBox downloaded the three reddit threads so that they're available offline">}}
+{{<img src="reddit-archived.png" caption="ArchiveBox downloaded the three reddit threads so that they're available offline">}}
 
 ArchiveBox downloads the page in a few formats: PDF, PNG, WARC, but one of the formats is single-file HTML, which I'd never heard of before:
 
@@ -84,15 +84,15 @@ There are more specialized tools for archiving YouTube videos, but ArchiveBox al
 
 If I want to make sure I always have a copy of the _Lonely Island_ / _SNL_ classic, ["Like a Boss,"](https://www.youtube.com/watch?v=NisCkxU544c) I can hand it to ArchiveBox like any other website.
 
-{{<img src="youtube-archived.png" has-border="true" caption="ArchiveBox downloaded the YouTube video">}}
+{{<img src="youtube-archived.png" caption="ArchiveBox downloaded the YouTube video">}}
 
 ArchiveBox isn't able to perfectly recreate the real YouTube experience, but it creates a snapshot of the page and then saves the video separately:
 
 {{<gallery caption="ArchiveBox can't perfectly archive a YouTube page, so it instead shows a still image insted of the video player and saves the video to a separate file">}}
 
-{{<img src="youtube-screenshot.png" has-border="true">}}
+{{<img src="youtube-screenshot.png">}}
 
-{{<img src="like-a-boss-webm.webp" has-border="true">}}
+{{<img src="like-a-boss-webm.webp">}}
 
 {{</gallery>}}
 

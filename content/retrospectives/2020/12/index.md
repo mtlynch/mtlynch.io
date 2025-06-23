@@ -59,7 +59,7 @@ TinyPilot had another month of strong growth, with a $2k increase in overall rev
 
 The biggest TinyPilot event this past month was [the release of TinyPilot Voyager](https://tinypilotkvm.com/blog/introducing-voyager). It's the new model that uses a higher-quality video capture device. I worked with a 3D printing lab to create a custom case that neatly packages together all the components.
 
-{{<img src="voyager-angled.jpg" max-width="600px" alt="3/4 view photo of TinyPilot Voyager" caption="[Voyager](https://tinypilotkvm.com/product/tinypilot-voyager) is the new model of TinyPilot, aimed at business customers.">}}
+{{<img src="voyager-angled.jpg" max-width="600px" alt="3/4 view photo of TinyPilot Voyager" caption="[Voyager](https://tinypilotkvm.com/product/tinypilot-voyager) is the new model of TinyPilot, aimed at business customers." has-border="false">}}
 
 Unlike my previous products, which ship as "some assembly required" kits, Voyager comes pre-assembled, so it's plug 'n play.
 
@@ -90,7 +90,7 @@ After the third inquiry about VGA support, I purchased a VGA to HDMI adapter fro
 
 As I continued receiving questions about VGA, I started thinking about ways to answer the customer's question before they have to email me. So I did this:
 
-{{<img src="vga-add-on.png" alt="Screenshot of TinyPilot's order page showing an 'Add VGA to HDMI adapter' checkbox" has-border="true" caption="Adding a VGA add-on option eliminated my customers' most common pre-sales question.">}}
+{{<img src="vga-add-on.png" alt="Screenshot of TinyPilot's order page showing an 'Add VGA to HDMI adapter' checkbox" caption="Adding a VGA add-on option eliminated my customers' most common pre-sales question.">}}
 
 About one-third of my customers now choose the VGA add-on, so the experiment was a success. I sell the adapter at cost, but it creates convenience for my customers who don't have to go elsewhere to purchase it separately.
 
@@ -102,7 +102,7 @@ The first was TinyPilot. In the back of my mind, I felt embarrassed to sell a co
 
 The other factor was [Daniel Vasallo's interview on the Indie Hackers podcast](https://www.indiehackers.com/podcast/177-daniel-vassallo). I've been following Daniel's progress ever since he [left Amazon](https://danielvassallo.com/only-intrinsic-motivation-lasts/) in an exit similar to [my departure from Google](https://mtlynch.io/why-i-quit-google/). In the year after he started working for himself, he released an [ebook about AWS](https://gumroad.com/l/aws-good-parts/dv), which earned $100k, and [a video course about Twitter](https://gumroad.com/l/twitter-audience/dv) that earned $150k. He recorded and published the Twitter course in just 16 hours to test his theory that people care more about information quality than production value.
 
-{{<img src="177-daniel-vassallo.png" alt="Video still from Indie Hackers interview with Daniel Vassallo" max-width="650px" href="https://www.indiehackers.com/podcast/177-daniel-vassallo" caption="[Daniel Vasallo's interview on the Indie Hackers podcast](https://www.indiehackers.com/podcast/177-daniel-vassallo) made me realize how accessible and profitable it is to make a paid video course.">}}
+{{<img src="177-daniel-vassallo.png" alt="Video still from Indie Hackers interview with Daniel Vassallo" max-width="650px" href="https://www.indiehackers.com/podcast/177-daniel-vassallo" caption="[Daniel Vasallo's interview on the Indie Hackers podcast](https://www.indiehackers.com/podcast/177-daniel-vassallo) made me realize how accessible and profitable it is to make a paid video course." has-border="false">}}
 
 $150k for 16 hours of work? That sounded like a great deal to me!
 
@@ -110,11 +110,11 @@ Okay, I didn't really expect to make $150k, but I thought $20k was achievable. A
 
 In the last year, I've realized that one of my unique skills is writing articles that reach the front page of [Hacker News](https://news.ycombinator.com/), so I decided to make a course that teaches everything I've learned about doing that.
 
-{{<img src="htfp-cover.jpg" alt="Cover image to my video course" max-width="750px" caption="[*Hit the Front Page of Hacker News*](https://hitthefrontpage.com/) is my new video course about writing articles that succeed on [Hacker News](https://news.ycombinator.com/).">}}
+{{<img src="htfp-cover.jpg" alt="Cover image to my video course" max-width="750px" caption="[*Hit the Front Page of Hacker News*](https://hitthefrontpage.com/) is my new video course about writing articles that succeed on [Hacker News](https://news.ycombinator.com/)." has-border="false">}}
 
 I announced the course two days ago, and sales have been... slow.
 
-{{<img src="htfp-sales.png" max-width="740px" has-border="true" alt="Screenshot from Gumroad showing 478 visits to my sales page and 5 sales for $300 total.">}}
+{{<img src="htfp-sales.png" max-width="740px" alt="Screenshot from Gumroad showing 478 visits to my sales page and 5 sales for $300 total.">}}
 
 As of this writing, I've sold five pre-orders for $300 total. I'm happy to have sales, but I'm a bit worried that I overestimated the market for this course. One of the authors who gave me advice about self-publishing a course told me that she made more in pre-sales than she did post-launch, so the current sales numbers don't bode well.
 

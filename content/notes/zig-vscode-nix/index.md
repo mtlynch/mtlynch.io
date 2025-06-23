@@ -12,7 +12,7 @@ images:
 
 I finally found a solution that makes VS Code work consistently with Zig, so I'm sharing my setup in the hope that it saves someone else a headache.
 
-{{<img src="vscode-zig-working.webp" has-border="true" max-width="700px" caption="Zig extension for VS Code working correctly">}}
+{{<img src="vscode-zig-working.webp" max-width="700px" caption="Zig extension for VS Code working correctly">}}
 
 Before I landed on a working solution, I kept running into issues with Zig version mismatches or VS Code completely failing to recognize Zig semantics and failing over to naive autocomplete.
 
@@ -30,7 +30,7 @@ I personally manage Zig versions per-project using [Nix development shells](/not
 
 When I open a Zig project, VS Code helpfully prompts me to enable the Zig Language Server, but when I say yes, I get this error message:
 
-{{<img src="zls-fail.webp" has-border="true" caption="ZLS install fails">}}
+{{<img src="zls-fail.webp" caption="ZLS install fails">}}
 
 The problem is that I start VS Code before I launch my Nix dev environment, so the Zig VS Code plugin doesn't know where to find my local Zig compiler or the Zig Language Server binary, `zls`.
 
@@ -121,7 +121,7 @@ Finally, in VS Code, go to "Extensions: Show Recommended Extensions" and install
 
 At this point, you can run `zig init` to create a new project, and you should find that the Zig VS Code extension works properly with Zig.
 
-{{<img src="vscode-zig-working.webp" has-border="true" max-width="700px" caption="If everything works, you should see language overlays in `src/main.zig`, and you should be able to jump to Zig library definitions.">}}
+{{<img src="vscode-zig-working.webp" max-width="700px" caption="If everything works, you should see language overlays in `src/main.zig`, and you should be able to jump to Zig library definitions.">}}
 
 ### Changing Zig versions
 
@@ -161,7 +161,7 @@ I didn't realize that the Zig VS Code extension could manage Zig installs, so I 
 
 - Zig Setup: Install Zig
 
-{{<img src="zig-setup.webp" max-width="700px" has-border="true">}}
+{{<img src="zig-setup.webp" max-width="700px">}}
 
 Then, choose the Zig version you want, and it should work. I had to [set my `settings.json` manually](https://github.com/ziglang/vscode-zig/issues/398) and reload VS Code for it to take effect.
 

@@ -80,8 +80,8 @@ Jeff loved TinyPilot and shared the many ways it impressed him. I was anxious th
 The results were strong and immediate. The next day, I received 33 orders and earned $5k in revenue, far exceeding previous sales records. The next day, the number of orders dropped, but more customers purchased high-end kits, so the total revenue remained roughly the same.
 
 {{<gallery caption="TinyPilot revenues, orders by day, January 2021">}}
-{{<img src="sales-jan.png">}}
-{{<img src="orders-jan.png">}}
+{{<img src="sales-jan.png" has-border="false">}}
+{{<img src="orders-jan.png" has-border="false">}}
 {{</gallery>}}
 
 I expected things to subside on the third day, and they did a little bit, but they kept coming. My inventory is set up to absorb a rush like this, but I didn't expect it to continue for so long.
@@ -102,7 +102,7 @@ After the Craft Computing review, my fulfillment manager and I conducted TinyPil
 
 We manage inventory with a spreadsheet. For each part we carry, we define a minimum and maximum to keep in stock. For example, Raspberry Pis had a minimum of 40 and a maximum of 80. That means that anytime our inventory of Raspberry Pis drops below 40, we order enough to get our supply back to 80.
 
-{{<img src="tinypilot-inventory.png" alt="Screenshot of TinyPilot inventory spreadsheet" caption="TinyPilot's inventory spreadsheet" maxWidth="700px" hasBorder="true">}}
+{{<img src="tinypilot-inventory.png" alt="Screenshot of TinyPilot inventory spreadsheet" caption="TinyPilot's inventory spreadsheet" maxWidth="700px" hasBorder="true" has-border="false">}}
 
 The problem was that we only adjusted these targets until we run out and realize we planned poorly. Then, when we're in a shortage, we're so panicked that it's hard to think rationally about what the new targets should be.
 

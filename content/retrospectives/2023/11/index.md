@@ -73,7 +73,7 @@ I was expecting numbers to drop a bit because I've been focused on our manufactu
 
 TinyPilot devices store data on tiny disks called microSDs. A few days before our manufacturer was supposed to send the first sample of the TinyPilot devices, they noticed that the reference devices I sent them had microSDs in them. Did I want microSDs?
 
-{{<img src="microsd-card.jpg" max-width="250px" has-border="true" caption="A TinyPilot microSD disk">}}
+{{<img src="microsd-card.jpg" max-width="250px" caption="A TinyPilot microSD disk">}}
 
 It turned out that the manufacturer never included microSDs in the bill of materials (BOM). I never noticed that they were missing, either.
 
@@ -180,13 +180,13 @@ In Lex Fridman's interview with Python creator Guido von Rossum, Lex has [an ext
 
 Kinesis is a popular vendor for mechanical keyboards. Their keyboards are unique in that the keys are in a concave well, and the two halves of the keyboard are several inches apart.
 
-{{<img src="fridman-tweet.png" max-width="500px" has-border="true" caption="Lex Fridman [loves his Kinesis Advantage 2](https://twitter.com/lexfridman/status/1206238129180549120) mechanical keyboard.">}}
+{{<img src="fridman-tweet.png" max-width="500px" caption="Lex Fridman [loves his Kinesis Advantage 2](https://twitter.com/lexfridman/status/1206238129180549120) mechanical keyboard.">}}
 
 Lex loves his Kinesis keyboard so much so that he brings it with him on flights because he'd rather lug around a giant keyboard than use his laptop's built-in keys.
 
 I've been using a Microsoft Ergonomic Keyboard of some variation since I was 14 years old. I like it, but I don't love it the way Lex talks about Kinesis, so I've been curious about mechanical keyboards for the past few months.
 
-{{<img src="microsoft-ergo-keyboard.jpg" max-width="600px" caption="Microsoft Natural Ergonomic Keyboard 4000, my main keyboard until recently" has-border="true">}}
+{{<img src="microsoft-ergo-keyboard.jpg" max-width="600px" caption="Microsoft Natural Ergonomic Keyboard 4000, my main keyboard until recently">}}
 
 I only know a couple of people who use mechanical keyboards, but I never understood the appeal. It was fine if they wanted to nerd out about something, but I felt like the maximum enjoyment I'd ever get from a keyboard was pretty limited, so why bother?
 
@@ -194,7 +194,7 @@ Then, I got curious and started reading more about high-end keyboards. I spend m
 
 After checking out a few of the options like Kinesis, Ergodox, and ZSA, I ended up going with the [Kinesis Advantage 360](https://kinesis-ergo.com/keyboards/advantage360/).
 
-{{<img src="kinesis-keyboard.jpg" max-width="700px" caption="I've just switched to the [Kinesis Advantage 360](https://kinesis-ergo.com/keyboards/advantage360/) keyboard.">}}
+{{<img src="kinesis-keyboard.jpg" max-width="700px" caption="I've just switched to the [Kinesis Advantage 360](https://kinesis-ergo.com/keyboards/advantage360/) keyboard." has-border="false">}}
 
 The first day with the keyboard was a real struggle. I was going about 5% of my usual typing speed. I had a lot of paperwork to get through, so I put aside the keyboard for the next morning.
 

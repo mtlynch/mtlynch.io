@@ -107,7 +107,7 @@ Now, it's three years later, and I still haven't made any progress on license en
 
 We advertise to customers that TinyPilot devices come with 12 months of free updates. Our dirty secret is that once you have TinyPilot Pro installed on your device, you can keep updating the software forever through the device's web interface.
 
-{{<img src="update-dialog.png" caption="TinyPilot's web app allows any device to retrieve the latest version of TinyPilot Pro" has-border="true" alt="Screenshot of update dialog in TinyPilot web app" max-width="700px">}}
+{{<img src="update-dialog.png" caption="TinyPilot's web app allows any device to retrieve the latest version of TinyPilot Pro" alt="Screenshot of update dialog in TinyPilot web app" max-width="700px">}}
 
 TinyPilot Pro's software doesn't track whether it's associated with a valid license. There are users who purchased in August 2020 that are now in year three of their one-year license.
 
@@ -119,7 +119,7 @@ TinyPilot uses microSD cards for storage. microSDs are especially vulnerable to 
 
 In order to download a TinyPilot Pro image, customers enter their order details. Before serving the image, we check if the customer still has a valid license.
 
-{{<img src="license-check.png" caption="License check on [page to download TinyPilot Pro microSD image](https://tinypilotkvm.com/pro/license-check)" has-border="true" alt="Screenshot of form asking the user to input their order number and email address to download TinyPilot Pro image">}}
+{{<img src="license-check.png" caption="License check on [page to download TinyPilot Pro microSD image](https://tinypilotkvm.com/pro/license-check)" alt="Screenshot of form asking the user to input their order number and email address to download TinyPilot Pro image">}}
 
 From the customer's perspective, this is a terrible way to find out that their license expired. Their filesystem got corrupted, so TinyPilot has interrupted their work. To fix the issue, they have to physically walk over to the device, remove the microSD, and reflash it. And now we're shaking them down for more money?
 
@@ -170,7 +170,7 @@ There are a few factors that bias the rate of renewals lower than they might oth
 
 I had an idea this month to try sending email notifications when customers' licenses had expired. This is something we could certainly automate, but before investing too much in automation, I tried sending out a few emails manually to see if anyone would respond or purchase based on my email.
 
-{{<img src="license-expired-note.png" has-border="true" alt="I'm Michael Lynch, the founder of TinyPilot. I'm reaching out because I saw that your one-year TinyPilot Pro license recently expired. Renewing your license is optional, but it gives you continued access to new features and bugfixes in TinyPilot's software. We publish updates every two to three months, and you can see some of our recent work in the public changelog. Renewing your TinyPilot Pro license also gives you access to private email support as well as priority support in our public help forums. As a small company, we rely on license renewals to help fund improvements to the software, so thank you in advance if you choose to renew! If you'd rather not renew, I recommend downloading a copy of the latest version of TinyPilot Pro you qualify for (TinyPilot Pro 2.6.0). The image will allow you to factory reset your device if you ever need to.">}}
+{{<img src="license-expired-note.png" alt="I'm Michael Lynch, the founder of TinyPilot. I'm reaching out because I saw that your one-year TinyPilot Pro license recently expired. Renewing your license is optional, but it gives you continued access to new features and bugfixes in TinyPilot's software. We publish updates every two to three months, and you can see some of our recent work in the public changelog. Renewing your TinyPilot Pro license also gives you access to private email support as well as priority support in our public help forums. As a small company, we rely on license renewals to help fund improvements to the software, so thank you in advance if you choose to renew! If you'd rather not renew, I recommend downloading a copy of the latest version of TinyPilot Pro you qualify for (TinyPilot Pro 2.6.0). The image will allow you to factory reset your device if you ever need to.">}}
 
 I sent seven emails in order to test out the idea, but none of the recipients renewed or responded to the email. It's too small a sample to draw conclusions. If I need 7.8% of customers to renew, then that's only one customer out of 12 or 13.
 

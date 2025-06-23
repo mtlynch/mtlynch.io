@@ -16,7 +16,7 @@ discuss_urls:
   reddit: https://redd.it/ewp2rw
 ---
 
-{{<img src="cover.jpg" alt="My second year as a solo developer (cover image)">}}
+{{<img src="cover.jpg" alt="My second year as a solo developer (cover image)" has-border="false">}}
 
 Two years ago, I [quit my developer job at Google](/why-i-quit-google/) to build my own software business. A year later, I [posted an update](/solo-developer-year-1/) about my finances, happiness, and lessons learned. Today marks the end of my second year, so it's time for another update.
 
@@ -138,11 +138,11 @@ My long-term unprofitability often perplexes people. They assume I fund my money
 
 ### [Zestful](https://zestfuldata.com)
 
-{{<img src="zestful-screenshot.png" alt="Screenshot of Zestful website" has-border="true" max-width="550px" caption="Zestful is a SaaS for parsing recipe ingredients.">}}
+{{<img src="zestful-screenshot.png" alt="Screenshot of Zestful website" max-width="550px" caption="Zestful is a SaaS for parsing recipe ingredients.">}}
 
 Zestful launched in mid-2018 as my first attempt at a software-as-a-service (SaaS) business. It allows food apps to recognize the structure of recipe ingredients. Given an ingredient like, "2 1/2 tablespoons finely chopped parsley," Zestful infers that `2.5` is the quantity, `tablespoons` is the unit of measure, `parsley` is the product, and `finely chopped` is a preparation step.
 
-After earning [a big fat zero](/solo-developer-year-1/#zestfulhttpszestfuldatacom) last year, Zestful finally realized significant revenue throughout 2019. [A single enterprise sale in December](/retrospectives/2020/01/#zestfulhttpszestfuldatacom) accounted for 79% of its annual revenue. That sale also represented 53% of total revenue across all my businesses.
+After earning [a big fat zero](/solo-developer-year-1/#zestful) last year, Zestful finally realized significant revenue throughout 2019. [A single enterprise sale in December](/retrospectives/2020/01/#zestful) accounted for 79% of its annual revenue. That sale also represented 53% of total revenue across all my businesses.
 
 | Income/Expense | 2018        | 2019        | Change                                      |
 | -------------- | ----------- | ----------- | ------------------------------------------- |
@@ -153,7 +153,7 @@ After earning [a big fat zero](/solo-developer-year-1/#zestfulhttpszestfuldataco
 | Development    | -$7,440     | $0          | <font color="green">-$7,440 (-100%)</font>  |
 | **Net profit** | **-$7,854** | **$4,930‬** | <font color="green">+$12,784 (+162%)</font> |
 
-{{<img src="zestful-seo.jpg" alt="Screenshot of Zestful's appearances in Google search results" has-border="true" max-width="400px" align="right" caption="My efforts to keep Zestful relevant in search results">}}
+{{<img src="zestful-seo.jpg" alt="Screenshot of Zestful's appearances in Google search results" max-width="400px" align="right" caption="My efforts to keep Zestful relevant in search results">}}
 
 Zestful is in a strange position because companies who parse ingredients [never want to switch to Zestful](/shipping-too-late/#the-harsh-reality). The cost of migrating to a new API outweighs potential price and performance improvements. Instead, all of Zestful's customers are companies building a brand new product.
 
@@ -161,7 +161,7 @@ How do you sell to companies if they don't even exist yet? My strategy has been 
 
 ### [Is It Keto](https://isitketo.org)
 
-{{<img src="isitketo-screenshot.png" alt="Screenshot of Is It Keto website" has-border="true" max-width="550px" caption="Is It Keto is a reference site for followers of the keto diet.">}}
+{{<img src="isitketo-screenshot.png" alt="Screenshot of Is It Keto website" max-width="550px" caption="Is It Keto is a reference site for followers of the keto diet.">}}
 
 Is It Keto gives readers clear, straightforward answers about which foods are compatible with [the keto diet](https://en.wikipedia.org/wiki/Ketogenic_diet). It generates revenue through Google AdSense display ads and receives commission for every Amazon purchase through the site.
 
@@ -182,7 +182,7 @@ Is It Keto gives readers clear, straightforward answers about which foods are co
 
 At $2.3k of revenue, Is It Keto was my second-highest-grossing product for 2019. I [abandoned the site in April](/retrospectives/2019/04/) but [came back four months later](/retrospectives/2019/09/) after realizing that it had grown by itself without me.
 
-{{<img src="isitketo-pageviews.jpg" alt="Graph of Is It Keto pageviews increasing each month until flattening out in August" has-border="true" max-width="650px" caption="Is It Keto traffic by month">}}
+{{<img src="isitketo-pageviews.jpg" alt="Graph of Is It Keto pageviews increasing each month until flattening out in August" max-width="650px" caption="Is It Keto traffic by month">}}
 
 88% of Is It Keto's visitors come from search engines, but I've never been able to connect improvements in search traffic to any change I made to the site. There were months when I added lots of content, [optimized page titles](/retrospectives/2019/09/#taking-affiliate-revenue-advice-from-reddit), and [earned high-ranking backlinks](/retrospectives/2019/09/#finally-a-backlink-for-is-it-keto), yet traffic remained flat. Other times, I ignored the site for months, and Google traffic grew the entire time.
 
@@ -212,7 +212,7 @@ Blog revenue is also down, which is fine because I don't go out of my way to ear
 
 ### What Got Done
 
-{{<img src="whatgotdone-screenshot.png" alt="Screenshot of What Got Done website" max-width="550px" caption="What Got Done is a task journaling app.">}}
+{{<img src="whatgotdone-screenshot.png" alt="Screenshot of What Got Done website" max-width="550px" caption="What Got Done is a task journaling app." has-border="false">}}
 
 What Got Done is a tool for recording and sharing weekly work accomplishments. It's [a technique that I learned](/status-updates-to-nobody/) while working at Google, and I've been using it to record [my progress](https://whatgotdone.com/michael) every week for the last 10 months.
 
@@ -300,7 +300,7 @@ In last year's update, I [gave myself four goals](/solo-developer-year-1/#goals-
 
 **Grade**: B+
 
-I did hit this goal in that my revenue was $604/month for the year and $1,657/month for Q4, though it feels like cheating to include [my huge outlier sale](/retrospectives/2020/01/#zestfulhttpszestfuldatacom) from December. Without it, I'd be at $441 in total revenue for December, which is closer to what the likely trend will be through early 2020. It's not quite $500, but it's satisfyingly close.
+I did hit this goal in that my revenue was $604/month for the year and $1,657/month for Q4, though it feels like cheating to include [my huge outlier sale](/retrospectives/2020/01/#zestful) from December. Without it, I'd be at $441 in total revenue for December, which is closer to what the likely trend will be through early 2020. It's not quite $500, but it's satisfyingly close.
 
 ### Present talks at three software conferences
 
@@ -322,7 +322,7 @@ I'll continue applying to and attending conferences in 2020, but I'll be more se
 
 **Grade**: B
 
-Depending on how you count, I either published 9 or 13 blog posts in 2019. There were nine separate updates to my blog, but one of them was [a five-part series on hiring content writers](/hiring-content-writers/). Overall, I'm pleased with my writing for the year, though I did [wish more of my posts had gained traction](#mtlynchio-_this-blog_).
+Depending on how you count, I either published 9 or 13 blog posts in 2019. There were nine separate updates to my blog, but one of them was [a five-part series on hiring content writers](/hiring-content-writers/). Overall, I'm pleased with my writing for the year, though I did [wish more of my posts had gained traction](#mtlynchio-this-blog).
 
 ### Gain comfort with a JavaScript framework
 
@@ -336,7 +336,7 @@ After years of banging my head against the wall with [Angular](https://angular.i
 
 The project that I hope to focus on for a large portion of the coming year is [WanderJest](https://wanderjest.com), a website I created a few weeks ago.
 
-{{<img src="wanderjest-feb-2020.jpg" alt="Screenshot of WanderJest website" max-width="600px" caption="[WanderJest](https://wanderjest.com) is a resource for finding live comedy shows." has-border="true">}}
+{{<img src="wanderjest-feb-2020.jpg" alt="Screenshot of WanderJest website" max-width="600px" caption="[WanderJest](https://wanderjest.com) is a resource for finding live comedy shows.">}}
 
 It's difficult to find local comedy shows, as listings are scattered amongst Facebook groups, comedy club websites, and ticket sellers like TicketMaster and Eventbrite. My hope is for WanderJest to unify these disparate sources, making it easier for audiences to find shows. Basically, the idea is <a href="https://bandsintown.com" rel="nofollow">Bandsintown</a>, but for comedy.
 

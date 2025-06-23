@@ -7,13 +7,13 @@ images:
 
 I'm teaching a small-group, live course about attracting readers to your blog through Hacker News. [Sign up](#sign-up) by Monday (June 24th) to reserve your slot.
 
-{{<img src="cover.webp">}}
+{{<img src="cover.webp" has-border="false">}}
 
 ## Why take a class with me?
 
 My blog receives 300k-500k unique readers per year. After Google, Hacker News is the primary way that new readers find my writing.
 
-{{<img src="blog-stats.png" max-width="600px" has-border="true" caption="My blog receives 300k-500k unique readers per year, with Hacker News largely connecting me with new readers.">}}
+{{<img src="blog-stats.png" max-width="600px" caption="My blog receives 300k-500k unique readers per year, with Hacker News largely connecting me with new readers.">}}
 
 In the past five years, [40+ of my posts](https://hn.algolia.com/?dateRange=all&page=0&prefix=true&query=mtlynch.io&sort=byPopularity&type=story) have reached the front page of Hacker News. Seven of them have landed in the #1 spot.
 

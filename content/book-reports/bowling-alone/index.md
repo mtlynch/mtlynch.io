@@ -20,7 +20,7 @@ I find [the idea of social capital](/book-reports/bowling-alone/#social-capital)
 ## What I liked
 
 - The history of social and political group membership in the US was interesting.
-- The [correlations](#social-capital-indexhttpswwwoecdorginnovationresearch1825848pdf) between measures of civic engagement and other measures of social well-being were surprising and enlightening.
+- The [correlations](#social-capital-index) between measures of civic engagement and other measures of social well-being were surprising and enlightening.
 - The middle third of the book was engaging, especially the discussion of how television has affected social capital.
 
 ## What I disliked
@@ -150,7 +150,7 @@ I find [the idea of social capital](/book-reports/bowling-alone/#social-capital)
 - Putnam's index correlates closely with many measures of a healthy society.
   - Unexpected bit of trivia: South Dakota scores well on almost all of these metrics.
 
-{{<img src="murder-rate.png" has-border="true" alt="Scatter chart showing negative correlation between murder rate and social capital">}}
-{{<img src="equality.png" has-border="true" alt="Scatter chart showing positive correlation between tolerance for gender and racial equality and social capital">}}
-{{<img src="public-health.png" has-border="true" alt="Scatter chart showing positive correlation between public health outcomes and social capital">}}
-{{<img src="child-welfare.png" has-border="true" alt="Scatter chart showing positive correlation between child welfare and social capital">}}
+{{<img src="murder-rate.png" alt="Scatter chart showing negative correlation between murder rate and social capital">}}
+{{<img src="equality.png" alt="Scatter chart showing positive correlation between tolerance for gender and racial equality and social capital">}}
+{{<img src="public-health.png" alt="Scatter chart showing positive correlation between public health outcomes and social capital">}}
+{{<img src="child-welfare.png" alt="Scatter chart showing positive correlation between child welfare and social capital">}}

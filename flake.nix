@@ -13,8 +13,8 @@
     # 5.0.8 release
     html-proofer-nixpkgs.url = "github:NixOS/nixpkgs/5ed627539ac84809c78b2dd6d26a5cebeb5ae269";
 
-    # 0.139.3 release
-    hugo-nixpkgs.url = "github:NixOS/nixpkgs/dd51f52372a20a93c219e8216fe528a648ffcbf4";
+    # 0.147.5 release
+    hugo-nixpkgs.url = "github:NixOS/nixpkgs/e0042dedfbc9134ef973f64e5c7f56a38cc5cc97";
 
     wordword-pkg.url = "git+https://codeberg.org/mtlynch/wordword.git";
   };

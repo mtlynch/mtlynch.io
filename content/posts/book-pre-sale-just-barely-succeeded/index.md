@@ -13,7 +13,7 @@ I didn't want to spend a year writing the book only to find out that nobody want
 
 Over the weekend, I hit my goal. As of this writing, I've reached $6,000 in pre-orders from 174 customers with eight hours remaining in the sale.
 
-{{<img src="kickstarter-prog.webp" has-border="true">}}
+{{<img src="kickstarter-prog.webp">}}
 
 To the casual observer, it looks like I hit my goal comfortably.
 
@@ -21,21 +21,21 @@ In reality, for most of the month, I thought the book had failed, and I felt emb
 
 Here's what pre-orders looked like just four days ago:
 
-{{<img src="progress-26th.webp" has-border="true">}}
+{{<img src="progress-26th.webp">}}
 
 Sales had long since plateaued. I'd already exhausted every idea I had for finding customers, and I was still $2,000 from my goal.
 
 The thing that saved me was a lucky post on Hacker News.
 
-{{<img src="hn-recovery.webp" has-border="true">}}
+{{<img src="hn-recovery.webp">}}
 
 ## Before the pre-sale
 
-I started working on _Refactoring English_ back in 2021. As soon as I started, my main business grew unexpectedly, and I spent so much time managing my company that I [never had time to work on the book](/solo-developer-year-4/#_refactoring-english_).
+I started working on _Refactoring English_ back in 2021. As soon as I started, my main business grew unexpectedly, and I spent so much time managing my company that I [never had time to work on the book](/solo-developer-year-4/#refactoring-english).
 
 Until 2025, all I had of the book was a rough table of contents and a signup form for email updates about the book.
 
-{{<img src="book-website-original.webp" max-width="500px" has-border="true" caption="Between 2021 and 2024, my book was [just a website](https://web.archive.org/web/20211125050655/https://refactoringenglish.com/) with a rough table of contents and a signup form.">}}
+{{<img src="book-website-original.webp" max-width="500px" caption="Between 2021 and 2024, my book was [just a website](https://web.archive.org/web/20211125050655/https://refactoringenglish.com/) with a rough table of contents and a signup form.">}}
 
 This year, I started working on the book again, and I published a couple of [sample chapters](https://refactoringenglish.com/chapters). I heard positive feedback from readers, but I wasn't sure if any developers would pay to read a book about improving their writing skills.
 
@@ -49,13 +49,13 @@ I wanted to launch the pre-orders on Kickstarter right after I published a new s
 
 So I published ["How to Write Useful Commit Messages"](https://refactoringenglish.com/chapters/commit-messages/) and put a little self-ad at the bottom for the pre-sale on Kickstarter:
 
-{{<img src="self-ad.webp" has-border="true" max-width="500px" caption="I added self-ads at the bottom of my sample chapters, letting readers know about the pre-sale on Kickstarter.">}}
+{{<img src="self-ad.webp" max-width="500px" caption="I added self-ads at the bottom of my sample chapters, letting readers know about the pre-sale on Kickstarter.">}}
 
 I emailed the book's mailing list to share the new chapter and announce the pre-sale on Kickstarter.
 
 1,100 people had signed up for updates about the book, but when I offered pre-orders, only 49 people ordered. That didn't bode well. Maybe they weren't that interested after all? Or maybe they didn't like what I was writing?
 
-{{<img src="ks-dashboard.webp" max-width="700px" has-border="true" caption="After a week, 49 customers had pre-ordered *Refactoring English*, though this was lower than I expected given the 1,100 mailing list subscribers.">}}
+{{<img src="ks-dashboard.webp" max-width="700px" caption="After a week, 49 customers had pre-ordered *Refactoring English*, though this was lower than I expected given the 1,100 mailing list subscribers.">}}
 
 But that was okay. I still had other ideas for marketing my book.
 
@@ -75,11 +75,11 @@ So, now, the moderators removing my post actually worked in my favor. I had a po
 
 I submitted my annual retrospective to Hacker News again, but, this time, it barely made a blip. It got a paltry two upvotes:
 
-{{<img src="annual-retro-hn.webp" has-border="true">}}
+{{<img src="annual-retro-hn.webp">}}
 
 I tried again on a weekend, as there's less competition outside of the work week, and it did even worse:
 
-{{<img src="annual-retro-hn2.webp" has-border="true">}}
+{{<img src="annual-retro-hn2.webp">}}
 
 How could Hacker News love this post so much in February and then completely ignore it a few weeks later?
 
@@ -89,7 +89,7 @@ But I had another idea. There was a 2019 blog post called ["My Favourite Git Com
 
 I wrote a new blog post called ["No Longer My Favorite Git Commit"](/no-longer-my-favorite-git-commit/) and submitted it to Hacker News, but it flopped too.
 
-{{<img src="no-longer-my-favorite-hn.webp" has-border="true">}}
+{{<img src="no-longer-my-favorite-hn.webp">}}
 
 I was growing concerned, as Hacker News usually has a better response to my writing, and I now had two consecutive flops. Still, I was hopeful that I could get something to land by the end of the month.
 
@@ -113,7 +113,7 @@ I reached out to ten companies, and here were the results:
 
 Last summer, I was curious who the most popular personal bloggers were on Hacker News, so I wrote some ugly Python scripts to crunch the data and show me the rankings. After another 5-10 hours of work, I polished my tool into a usable web app to promote my book.
 
-{{<img src="popularity-contest.webp" has-border="true" max-width="800px" caption="A tool I created to promote the book">}}
+{{<img src="popularity-contest.webp" max-width="800px" caption="A tool I created to promote the book">}}
 
 I was extremely confident this tool would be a hit on Hacker News.
 
@@ -125,13 +125,13 @@ It didn't reach the top 10.
 
 It barely even appeared on the front page at all.
 
-{{<img src="pop-cont.webp" has-border="true">}}
+{{<img src="pop-cont.webp">}}
 
 ## Finally, a bit of Hacker News success
 
 A few days later, I was browsing Hacker News and saw a post called "The highest-ranking personal blogs of Hacker News."
 
-{{<img src="other-submit.webp" has-border="true">}}
+{{<img src="other-submit.webp">}}
 
 What?!?
 
@@ -139,7 +139,7 @@ Someone had stolen my idea!
 
 Oh, wait. It was a link to my site.
 
-{{<img src="my-site.webp" has-border="true">}}
+{{<img src="my-site.webp">}}
 
 Another Hacker News user had just submitted my tool (nothing wrong with that). For whatever reason, their submission caught on even though my previous attempt failed. My guess is that it was better without the "Popularity Contest" title.
 
@@ -147,11 +147,11 @@ But, finally, I was on the front page! From there, it got the attention of [John
 
 In two days, 20k people had visited the _Refactoring English_ website to try out my tool.
 
-{{<img src="first-frontpage-plausible.webp" has-border="true">}}
+{{<img src="first-frontpage-plausible.webp">}}
 
 I checked out how Kickstarter was doing: virtually no change.
 
-{{<img src="first-frontpage-kickstarter.webp" has-border="true">}}
+{{<img src="first-frontpage-kickstarter.webp">}}
 
 Between the day the tool was on Hacker News and the next day when John Gruber blogged about my tool, there were only four sales for a total of $100. The pre-orders were indistinguishable from days I wasn't on the front page at all.
 
@@ -171,11 +171,11 @@ The problem with writing about blogging is that there's so much low-quality, spa
 
 That's why I was unsurprised when I [posted the chapter to reddit](https://www.reddit.com/r/programming/comments/1jl3wgw/how_to_write_blog_posts_that_developers_read/), and users downvoted it to zero. The [top comment](https://www.reddit.com/r/programming/comments/1jl3wgw/how_to_write_blog_posts_that_developers_read/mk0elxt/) was someone complaining about the topic itself:
 
-{{<img src="top-reddit-comment.webp" has-border="true">}}
+{{<img src="top-reddit-comment.webp">}}
 
 I submitted the chapter to Hacker News, and it slowly accrued a few upvotes and comments but never got enough momentum to hit the front page.
 
-{{<img src="hn-blog-posts.webp" has-border="true">}}
+{{<img src="hn-blog-posts.webp">}}
 
 Because my "Popularity Contest" tool performed so much better with a different title, I tried submitting it the next day with the title, "What I Learned from Nine Years of Blogging." Hacker News immediately marked it as a duplicate.
 
@@ -183,23 +183,23 @@ Huh? Usually, you can resubmit a failed post a day later, and it doesn't count a
 
 And then I looked on the front page, and my post was there! Another user had posted it on my behalf, and it had reached the #11 spot.
 
-{{<img src="hn-11th-slot.webp" has-border="true" max-width="700px">}}
+{{<img src="hn-11th-slot.webp" max-width="700px">}}
 
 And this time, readers were interested in the book. Within a few hours, there were $1,000 in new pre-orders. The chapter continued getting positive reactions on Hacker News, eventually reaching 581 upvotes and 154 comments:
 
-{{<img src="final-hn-score.webp" has-border="true">}}
+{{<img src="final-hn-score.webp">}}
 
 When I went to bed that night, the Kickstarter was less than $300 from its $5k goal with three days left.
 
 When I woke up Saturday morning, I had reached my goal, and people continued pre-ordering.
 
-{{<img src="hn-recovery.webp" has-border="true" max-width="650px">}}
+{{<img src="hn-recovery.webp" max-width="650px">}}
 
 The pre-sale ended with $6,551 in sales from 191 customers.
 
-{{<img src="final-total.webp" has-border="true" max-width="550px">}}
+{{<img src="final-total.webp" max-width="550px">}}
 
-{{<img src="final-graph.webp" has-border="true">}}
+{{<img src="final-graph.webp">}}
 
 ## I get to write my book!
 

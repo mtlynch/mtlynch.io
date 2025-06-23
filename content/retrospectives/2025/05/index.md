@@ -111,7 +111,7 @@ One of my special Hacker News superpowers is that I usually know why a post disa
 
 The main thing you can see in HN Rankings is when a post's rank suddenly increases or decreases dramatically. If a post is slowly increasing to the #3 spot, and then the next tick in the chart, it's suddenly at the #45 spot, that means a moderator probably downranked the story.
 
-{{<img src="downranked.webp" max-width="700px" caption="When a Hacker News post suddenly drops in rank, a moderator probably downranked it manually.">}}
+{{<img src="downranked.webp" max-width="700px" caption="When a Hacker News post suddenly drops in rank, a moderator probably downranked it manually." has-border="false">}}
 
 Charts can also reveal when moderators manually boost a story. If you see a post drowning in the #300 spot, and then suddenly it's ranked #10, it means that a moderator boosted the story, possibly due to the [second chance pool](https://news.ycombinator.com/item?id=26998308), a system where moderators and volunteers hand-pick stories that missed the front page in regular voting.
 
@@ -119,13 +119,13 @@ HN Rankings is great, but I'd like to see more data like upvote counts and comme
 
 I've always been curious about what patterns emerge if you aggregate votes and comments of all the stories on the front page of Hacker News over time:
 
-{{<img src="top30.webp" has-border="true">}}
+{{<img src="top30.webp">}}
 
 The thing that jumps out to me most is that around noon ET every day, the average age of posts drops significantly, so that's when older posts drop off the front page and make room for newer posts.
 
 It's been interesting to see more details on my submissions, like [the HN discussion](https://news.ycombinator.com/item?id=43803343) for "My $6k Advance as a Self-Published Author." The chart reveals that the post never made it to the front page, but it continued receiving upvotes, which is surprising. I'm still not sure how that happened, as I didn't link to the Hacker News discussion anywhere:
 
-{{<img src="6k-advance.webp" has-border="true">}}
+{{<img src="6k-advance.webp">}}
 
 Here are some features I'd still like to add:
 
@@ -143,15 +143,15 @@ I was complaining to a friend recently that nobody offers DRM-free movies or TV 
 
 I searched around and found that there _kind of_ is something like this. [Vimeo on Demand](https://vimeo.com/ondemand/) offers DRM-free movies. They're mostly indie and non-English films, but it's the biggest selection I've ever seen of DRM-free films to purchase legally.
 
-{{<img src="vimeo-on-demand.webp" has-border="true" max-width="600px" caption="[Vimeo on Demand](https://vimeo.com/ondemand/) is the largest collection I've found of legal DRM-free movies to purchase.">}}
+{{<img src="vimeo-on-demand.webp" max-width="600px" caption="[Vimeo on Demand](https://vimeo.com/ondemand/) is the largest collection I've found of legal DRM-free movies to purchase.">}}
 
 I tried out Vimeo on Demand, and the experience was only so-so. But they're the only ones selling DRM-free films, so I'll recommend them with caveats.
 
 Make sure the title you're buying offers downloads, as not all titles do. If the button says "Stream anytime," that's not DRM-free:
 
 {{<gallery caption="Look for the download option, which indicates actual DRM-free options. Avoid 'Stream anytime' purchases, as they're not DRM-free or downloadable.">}}
-{{<img src="stream-anytime.webp" has-border="true">}}
-{{<img src="download-option.webp" has-border="true">}}
+{{<img src="stream-anytime.webp">}}
+{{<img src="download-option.webp">}}
 {{</gallery>}}
 
 The experience of making this mistake and canceling the purchase also made me reluctant to recommend Vimeo. They don't give any obvious option to talk to a human. Instead, I had to talk to a chatbot who told me that "for security reasons" they can't refund video on demand purchases (despite the fact that they can see that I haven't viewed the purchase). The only option was to contact the film's distributor to request a refund, so I did that. But if I don't hear back in a week, I'm just going to do a credit card chargeback.

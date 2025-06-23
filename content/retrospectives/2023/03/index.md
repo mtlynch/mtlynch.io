@@ -84,7 +84,7 @@ I got in the car to follow him to the TinyPilot office, mentally calculating whe
 
 When I arrived on our floor, I saw that the sprinklers had gone off in the conference room adjacent to TinyPilot. I unlocked the TinyPilot office and breathed a sigh of relief. No water had gotten into our suite at all.
 
-{{<img src="office-damage.webp" max-width="450px" caption="A pipe exploded in the office adjacent to TinyPilot's, destroying everything inside." alt="Photo of a room with ceiling, carpets, and furniture all removed">}}
+{{<img src="office-damage.webp" max-width="450px" caption="A pipe exploded in the office adjacent to TinyPilot's, destroying everything inside." alt="Photo of a room with ceiling, carpets, and furniture all removed" has-border="false">}}
 
 They said we couldn't enter our suite for a few days until the fire department signed off on it, as the building no longer had sprinklers. On Monday, I called the landlord, and he said we could resume our normal use of the office.
 
@@ -110,7 +110,7 @@ In February, I took my longest vacation since starting TinyPilot. I was travelin
 
 The trip began with a wedding I attended in Tübingen, Germany. During this time, I didn't check work emails at all.
 
-{{<img src="tubingen.webp" max-width="450px" caption="Attending a wedding at town hall in Tubingen, Germany" alt="Photo of me in a Germany town square">}}
+{{<img src="tubingen.webp" max-width="450px" caption="Attending a wedding at town hall in Tubingen, Germany" alt="Photo of me in a Germany town square" has-border="false">}}
 
 Many of the people I work with for TinyPilot live in Europe, so I stayed for another week for what I called my "TinyPilot tour of Europe." It consisted of:
 

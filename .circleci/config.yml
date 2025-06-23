@@ -51,7 +51,7 @@ jobs:
           command: wordword --verbose ./content
   build:
     docker:
-      - image: peaceiris/hugo:v0.139.3
+      - image: hugomods/hugo:0.147.5
     steps:
       - checkout
       - attach_workspace:

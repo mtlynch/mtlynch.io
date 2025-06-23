@@ -65,7 +65,7 @@ All of TinyPilot's previous record-breaking months were related to some one-time
 
 {{</notice>}}
 
-Site visitors are down relative to the previous month but only because May was [atypically high](/retrospectives/2022/06/#tinypilothttpstinypilotkvmcom-stats) due to my last blog post. Our overall visit count is still significantly higher than the first quarter. I credit the increase in visitors to our new marketing campaign.
+Site visitors are down relative to the previous month but only because May was [atypically high](/retrospectives/2022/06/#tinypilot-stats) due to my last blog post. Our overall visit count is still significantly higher than the first quarter. I credit the increase in visitors to our new marketing campaign.
 
 ## How do TinyPilot Pro users prove their license?
 
@@ -103,7 +103,7 @@ We could record the device IDs from each Pi before we sell them to a customer. W
 
 Today, when a customer wants to download the official TinyPilot disk image, we ask for the order number and the email address associated with their purchase:
 
-{{<img src="download-image.png" alt="Screenshot of image download page on TinyPilot website" has-border="true" caption="The TinyPilot website currently grants TinyPilot image downloads based on the user proving they know the details of their order.">}}
+{{<img src="download-image.png" alt="Screenshot of image download page on TinyPilot website" caption="The TinyPilot website currently grants TinyPilot image downloads based on the user proving they know the details of their order.">}}
 
 We could use the same logic within the TinyPilot web app to gate upgrades.
 
@@ -159,29 +159,29 @@ Then, Amazon froze my account for a day because they couldn't verify my credit c
 
 Then, Amazon froze my account so they could verify I'm entitled to use the "TinyPilot" brand name. I showed them proof that I'm the owner of TinyPilot, LLC, and I sent them photos of my product with "TinyPilot" written on the side.
 
-{{<img src="first-proof.jpg" alt="Photo of TinyPilot Voyager from the side with TinyPilot brand name showing" caption="Photo I sent to Amazon as proof that the brand name &ldquo;TinyPilot&rdquo; appears on my product" max-width="500px">}}
+{{<img src="first-proof.jpg" alt="Photo of TinyPilot Voyager from the side with TinyPilot brand name showing" caption="Photo I sent to Amazon as proof that the brand name &ldquo;TinyPilot&rdquo; appears on my product" max-width="500px" has-border="false">}}
 
 They said they'd review within three days, but it actually took 10. Their conclusion was that my photos didn't sufficiently prove that "TinyPilot" was permanently affixed to my product...
 
-{{<img src="not-permanently-affixed.png" alt="Thank you for your patience. This is the follow up regarding 5665 error. We have completed our review and we are sorry to inform you that your brand does not meet our criteria for approval. In the provided images, we do not see sufficient proof that the branding is permanently affixed to the product and/or packaging, per the Brand Name Policy. In future, if you would like to request another review, we require new images that show 'TinyPilot' is permanently affixed to the product and/or packaging." has-border="true" caption="Amazon thinks &ldquo;TinyPilot&rdquo; is not affixed permanently enough to my product.">}}
+{{<img src="not-permanently-affixed.png" alt="Thank you for your patience. This is the follow up regarding 5665 error. We have completed our review and we are sorry to inform you that your brand does not meet our criteria for approval. In the provided images, we do not see sufficient proof that the branding is permanently affixed to the product and/or packaging, per the Brand Name Policy. In future, if you would like to request another review, we require new images that show 'TinyPilot' is permanently affixed to the product and/or packaging." caption="Amazon thinks &ldquo;TinyPilot&rdquo; is not affixed permanently enough to my product.">}}
 
 So, I sent new photos much more focused on the brand name, and only then did they finally approve the product.
 
-{{<img src="new-affixed-proof.jpg" alt="Photo of me holding a TinyPilot Voyager 2 with a dated note to Amazon" caption="Is this affixed enough for you, Amazon?" max-width="600px">}}
+{{<img src="new-affixed-proof.jpg" alt="Photo of me holding a TinyPilot Voyager 2 with a dated note to Amazon" caption="Is this affixed enough for you, Amazon?" max-width="600px" has-border="false">}}
 
 The new problem was that TinyPilot didn't show up in search results if you search for "tinypilot":
 
-{{<img src="tinypilot-results.png" alt="Screenshot of Amazon search results for term 'tinypilot'" has-border="true" caption="TinyPilot doesn't appear in search results for 'tinypilot'" max-width="700px">}}
+{{<img src="tinypilot-results.png" alt="Screenshot of Amazon search results for term 'tinypilot'" caption="TinyPilot doesn't appear in search results for 'tinypilot'" max-width="700px">}}
 
 This is especially weird given that Amazon's own autocomplete suggestions were all clearly about my product:
 
-{{<img src="autocomplete.png" alt="Screenshot of Amazon autocomplete suggestions for tinypilot as 'tinypilot kvm over ip' 'tinypilot ip kvm' 'tinypilotkvm' 'tinypilot voyager 2 kvm over ip poe'" has-border="true" caption="Amazon's search suggestions for 'tinypilot' are all clearly about my product, but it still doesn't appear in search results." max-width="700px">}}
+{{<img src="autocomplete.png" alt="Screenshot of Amazon autocomplete suggestions for tinypilot as 'tinypilot kvm over ip' 'tinypilot ip kvm' 'tinypilotkvm' 'tinypilot voyager 2 kvm over ip poe'" caption="Amazon's search suggestions for 'tinypilot' are all clearly about my product, but it still doesn't appear in search results." max-width="700px">}}
 
 Even "tinypilot kvm over ip" didn't show my product until page two or three of search results.
 
 I ended up just purchasing ads on Amazon, which finally led to my first few sales.
 
-{{<img src="tinypilot-sponsored.png" alt="Photo of me holding a TinyPilot Voyager 2 with a dated note to Amazon" has-border="true" caption="TinyPilot doesn't appear in search results for 'tinypilot'" max-width="700px">}}
+{{<img src="tinypilot-sponsored.png" alt="Photo of me holding a TinyPilot Voyager 2 with a dated note to Amazon" caption="TinyPilot doesn't appear in search results for 'tinypilot'" max-width="700px">}}
 
 I'm hoping the hard parts are over for getting up and running, so I'll stick with it and see if Amazon grows our sales as we accrue ratings there.
 
@@ -197,9 +197,9 @@ We sometimes get these types of complaints from customers who order directly, bu
 
 ## Still searching for a lovable web framework
 
-As I mentioned in [my last update](/retrospectives/2022/06/#wanderjesthttpswanderjestcom), I'm rebuilding [WanderJest](https://wanderjest.com), a tool for finding live comedy that I put on hold [at the start of the pandemic](/retrospectives/2020/04/#putting-wanderjest-on-hold).
+As I mentioned in [my last update](/retrospectives/2022/06/#wanderjest), I'm rebuilding [WanderJest](https://wanderjest.com), a tool for finding live comedy that I put on hold [at the start of the pandemic](/retrospectives/2020/04/#putting-wanderjest-on-hold).
 
-{{<img src="wanderjest-wip.png" alt="Screenshot of new WanderJest website" has-border="true" caption="My work-in-progress reimplementation of the WanderJest website using Go, VanillaJS, and SQLite." max-width="700px">}}
+{{<img src="wanderjest-wip.png" alt="Screenshot of new WanderJest website" caption="My work-in-progress reimplementation of the WanderJest website using Go, VanillaJS, and SQLite." max-width="700px">}}
 
 I'm rewriting WanderJest in Go + VanillaJS + SQLite as a "back to basics" tech stack after years of trying to work with SPA frameworks like Angular and Vue. Chris Ferdinandi articulates some of my frustrations in his article, ["SPAs were a mistake."](https://gomakethings.com/spas-were-a-mistake/)
 
