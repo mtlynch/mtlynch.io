@@ -54,25 +54,27 @@ I didn't hear back from them, so I checked back a week later, and they said they
 
 {{<img src="ghd-zip-search.webp" max-width="500px">}}
 
-brutecat recently wrote about enumerating phone numbers on a Google web API. They were able to make [40k HTTP requests per second](https://brutecat.com/articles/leaking-google-phones#time-required-to-brute-the-number) on a $0.30/hr cloud server. I doubt goHardDrive's RMA server could _serve_ 40k requests per second, but
+The security researcher brutecat recently wrote about enumerating phone numbers on a Google web API. They were able to make [40k HTTP requests per second](https://brutecat.com/articles/leaking-google-phones#time-required-to-brute-the-number) on a $0.30/hr cloud server. I doubt goHardDrive's RMA server could _serve_ 40k requests per second, but
 
 ## goHardDrive removes RMA status checks entirely
 
 ## Sidenote: The many other issues with goHardDrive's return process
 
-Even if the data leak hadn't happened, goHardDrive has the worst RMA process of any merchant I've encountered.
+Data leak aside, goHardDrive has the worst RMA process of any merchant I've encountered.
 
 I originally chose goHardDrive because of glowing comments about goHardDrive on reddit, like this user who reported that goHardDrive replaced a bad drive before even receiving the return and gave the customer a postage-paid label to send the defective unit back:
 
 {{<img src="reddit-review.webp" alt="I just bought a 24TB Seagate Exos from them. Installed it yesterday and found it was DOA (motor making a beeping sound and nothing else). Emailed them at 6:30am and they responded that afternoon and had a replacement in the mail with two day shipping (at their expense) before the end of the day. Gave me a pre-paid label to return the defective drive 'at my convenience.' Obviously would have been better if it worked on arrival, but they handled it perfectly. Replacement should be here tomorrow, hopefully it works.">}}
 
-In my case, two out of the three hard drives I purchased from goHardDrive arrived dead. I started the return process and was surprised to find that goHardDrive makes me re-enter all my order information manually. Normally, an RMA process lets you enter your order details, and the merchant pulls up your information, and you just let them know which item you need to return. With goHardDrive, it was as if they completely forgot who I was in the two weeks since I'd made my purchase.
+In my case, two out of the three hard drives I purchased from goHardDrive arrived dead. I wasted a lot of time trying to diagnose hardware issues on my server because I thought it was so unlikely that two separate drives would arrive dead, but I ultimately realized they were just dead drives.
 
-Also, contrary to the claim I saw on reddit, goHardDrives does not pay return shipping. I had to pay postage out of pocket even though goHardDrive was at fault for shipping me defective hardware.
+I started the return process and was surprised to find that goHardDrive makes me re-enter all my order information manually. Normally, an RMA process lets you enter your order details, and the merchant pulls up your information, and you just let them know which item you need to return. With goHardDrive, it was as if they completely forgot who I was in the two weeks since I'd made my purchase.
 
-Finally, there's no email confirmmation or updates. I'm glad I thought to photograph my package before shipping it because I otherwise wouldn't have any record of my RMA number, and goHardDrive offers no way to look it up.
+Also, contrary to the claim I saw on reddit, goHardDrive does not pay return shipping. I had to pay postage out of pocket even though goHardDrive was at fault for shipping me defective hardware.
 
-goHardDrives never emailed me to say they received my return nor that they were sending a replacement. From checking the insecure RMA status page, I could see my request go from `OPEN` to `RECEIVED` to `CLOSED` with no further information. Two weeks after I shipped my return, I received working replacements from goHardDrive, but they had never sent me tracking information beforehand.
+Finally, there's no email confirmation or updates. I'm glad I thought to photograph my package before shipping it because I otherwise wouldn't have any record of my RMA number, and goHardDrive offers no way to look it up.
+
+goHardDrive never emailed me to say they received my return nor that they were sending a replacement. From checking the insecure RMA status page, I could see my request go from `OPEN` to `RECEIVED` to `CLOSED` with no further information. Two weeks after I shipped my return, I received working replacements from goHardDrive, but they never sent me tracking information for my replacements.
 
 ## Bug bounty
 
