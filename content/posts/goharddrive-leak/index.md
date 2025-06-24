@@ -1,21 +1,15 @@
 ---
 title: "goHardDrive Leaked Personal Data for Thousands of Customers"
-date: 2025-06-25
+date: 2025-06-26
 ---
 
-I recently purchased a set of three refurbished 8 TB hard drives from a company called goHardDrive, a merchant that specializes in selling used hard drives. I had to return drives that arrived dead, and when I did, I discovered that goHardDrive had published my full personal details on its RMA website, including my name, mailing address, email address, and the products I purchased.
-
-The RMA numbers appear to be sequential, so by changing the RMA number in the URL, anyone could view the full personal details of any of the tens of thousands of goHardDrive customers who had returned merchandise.
+I recently purchased a set of three refurbished 8 TB hard drives from a company called goHardDrive, a merchant that specializes in selling used hard drives. Two of the drives arrived dead, I discovered during the return process that goHardDrive had accidentally published private details of thousands of its customer, including their full names, mailing addresses, email addresses, and order details.
 
 ## The leak
 
-The leak is painfully trivial. You don't need special tools or any special knowledge of web security. All you need is a regular web browser.
-
 When I requested a return from goHardDrive, they assigned me a return merchandise authorization (RMA) number ending in five numeric digits. goHardDrive never emailed me confirmation of my RMA, so every time I checked the status, I had to type it manually in this form.
 
-{{<img src="rma-form.webp" has-border="true" max-width="800px">}}
-
-Note that the form says email address, but it actually expects an RMA number. This form was public and had no authentication, rate limits, or CAPTCHA.
+{{<img src="rma-form.webp" has-border="true" max-width="800px" caption="goHardDrive's RMA status check form. Yes, it says &ldquo;Enter email&rdquo; when it actually wants an RMA number.">}}
 
 When I entered my RMA number, I saw this screen:
 
@@ -38,23 +32,33 @@ The URL for this page had the form of:
 https://ghdwebapps.com/rma/check?rmaNo=XYZ12345&fromButton=1
 ```
 
-`XYZ12345` was the format of my RMA number. It would be trivial to write a script that sends an HTTP GET request for every RMA number from 00001 to 99999 and scrapes the personal details of every goHardDrive customer who had requested a return.
+`XYZ12345` was the format of my RMA number. It would be trivial to write a script that sends an HTTP GET request for every RMA number from 00001 to 99999 and scrapes the personal details of every goHardDrive customer who had requested a return. Even someone with no specialized knowledge could just type any RMA number in the form and get all of that customer's data.
+
+This form was public and had no authentication, rate limits, or CAPTCHA.
 
 ## Scale of leak
 
-I didn't enumerate every possible RMA number, as some companies use the [Computer Fraud and Abuse Act (CFAA)](https://www.justice.gov/jm/jm-9-48000-computer-fraud) as a way to prevent public disclosure of vulnerabilities. I didn't want to do anything that potentially violated the CFAA, but I can deduce a lot without doing the actual scraping.
+I didn't enumerate every possible RMA number to get an exact count of how many customers this affected. Some companies use the [Computer Fraud and Abuse Act (CFAA)](https://www.justice.gov/jm/jm-9-48000-computer-fraud) as a way to prevent public disclosure of vulnerabilities. I didn't want to do anything that potentially violated the CFAA, but I can deduce a lot without doing the actual scraping.
 
-I can't say for certain how many goHardDrive customers this vulnerability affected, but assuming that goHardDrive started their RMA numbers at somewhere at `10000` or below and increments each by one (as it appeared when I mistyped my RMA number by 1), that means that 10k-100k customers were exposed in this leak.
+I can't say for certain how many goHardDrive customers this vulnerability affected, but assuming that goHardDrive started their RMA numbers at `10000` or below and increments by one, that means that 10k-100k customers were exposed in this leak.
 
 ## goHardDrive's attempted fix
 
-I notified goHardDrive, and, to their credit, they responded two hours later to acknowledge the issue and confirm that they would fix it within three to five business days.
+I notified goHardDrive of this issue on May 21, 2025. To their credit, they responded two hours later to acknowledge the issue and confirm that they would deploy a fix within three to five business days.
 
 I didn't hear back from them, so I checked back a week later, and they said they'd updated the form to prevent attackers from enumerating RMA numbers. Checking RMA status now required the customer to enter their postal code and house number.
 
 {{<img src="ghd-zip-search.webp" max-width="500px">}}
 
-The security researcher brutecat recently wrote about enumerating phone numbers on a Google web API. They were able to make [40k HTTP requests per second](https://brutecat.com/articles/leaking-google-phones#time-required-to-brute-the-number) on a $0.30/hr cloud server. I doubt goHardDrive's RMA server could _serve_ 40k requests per second, but
+At first this seemed sufficient to me. Given a sequential RMA number, you can trivially guess every other valid RMA number. What are the odds of guessing an RMA number and the corresponding ZIP and house number?
+
+Then, I thought about it a bit more. US ZIP codes are only five digits, meaning there are only 100k possible zip codes. And, actually, it's less than half that, as there are only [41,642 valid ZIP codes](https://facts.usps.com/42000-zip-codes/). And ZIP codes are not evenly distributed, so [certain ZIP codes](https://datacommons.org/ranking/Count_Person/CensusZipCodeTabulationArea/country/USA?h=zip%2F14607) are much more common.
+
+There's a wide range of possible house numbers, but the majority are likely to fall in the range of 1 to 100, likely with heavy clustering in the lower numbers.
+
+So, the worst case is that an attacker has to try about 416k possible combinations to leak details associated with an RMA number, but optimizing by ZIP codes and house numbers probably means the attacker has &gt;50% chance of success after about 40k guesses.
+
+How long does it take to make 40k guesses against a web API? The security researcher brutecat recently wrote about enumerating phone numbers on a Google web API. They were able to make [40k HTTP requests per second](https://brutecat.com/articles/leaking-google-phones#time-required-to-brute-the-number) on a $0.30/hr cloud server. I doubt goHardDrive's RMA server could _serve_ 40k requests per second, but still.
 
 ## goHardDrive removes RMA status checks entirely
 
