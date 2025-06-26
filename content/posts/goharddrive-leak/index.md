@@ -24,7 +24,7 @@ That screen shows every bit of private information that goHardDrive knew about m
 - My order number and date
 - The products I was returning and the reason for their return
 
-I didn't notice how much it was exposing until I accidentally mistyped the last digit of my RMA number and saw the full information from another customer who had returned their merchandise on the same date that I had.
+I didn't notice how much it was exposing until I accidentally mistyped the last digit of my RMA number and saw the full information from another customer who had returned their merchandise on the same date.
 
 The URL for this page had the form of:
 
@@ -62,9 +62,9 @@ How long does it take to make 40k guesses against a web API? The security resear
 
 ## goHardDrive removes RMA status checks entirely
 
-## Sidenote: The many other issues with goHardDrive's return process
+## Sidenote: Leaks aside, this is a terrible return process
 
-Data leak aside, goHardDrive has the worst RMA process of any merchant I've encountered.
+goHardDrive has the worst RMA process of any merchant I've encountered.
 
 I originally chose goHardDrive because of glowing comments about goHardDrive on reddit, like this user who reported that goHardDrive replaced a bad drive before even receiving the return and gave the customer a postage-paid label to send the defective unit back:
 
@@ -82,7 +82,7 @@ goHardDrive never emailed me to say they received my return nor that they were s
 
 ## Bug bounty
 
-I asked goHardDrive if they offer a bug bounty program for people who offer coordinated disclosure of security vulnerabilities. They said that they did not but they gave me a $20 refund on my $330 purchase as a thank you. That almost covered the cost of shipping their defective drives back to them.
+I asked goHardDrive if they offer a bug bounty program for people who offer coordinated disclosure of security vulnerabilities. They said that they had no bug bounty program, but that they'd refund $20 of my $330 purchase as a thank you.
 
 The bounty on an information disclosure of this scale is [normally hundreds to thousands of dollars](https://www.tabcut.com/blog/post/How-I-made-200-in-2-Minutes-on-Hackerone-Zomato-Bug-Bounty-Program-POC), so $20 is quite low.
 
