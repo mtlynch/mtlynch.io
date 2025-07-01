@@ -45,6 +45,8 @@ This form was public and had no authentication, rate limits, or CAPTCHA.
 
 ## Scale of leak
 
+I estimate that this leak affected between 10k and 100k customers.
+
 I didn't enumerate every possible RMA number to get an exact count of how many customers this affected. Some companies use the [Computer Fraud and Abuse Act (CFAA)](https://www.justice.gov/jm/jm-9-48000-computer-fraud) as a way to prevent public disclosure of vulnerabilities. I didn't want to do anything that potentially violated the CFAA, but I can deduce a lot without doing the actual scraping.
 
 I can't say for certain how many goHardDrive customers this vulnerability affected, but assuming that goHardDrive started their RMA numbers at `10000` or below and increments by one, that means that 10k-100k customers were exposed in this leak.
