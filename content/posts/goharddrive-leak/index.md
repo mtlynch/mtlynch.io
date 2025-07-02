@@ -112,6 +112,6 @@ I started the return process and was surprised to find that goHardDrive made me 
 
 Normally, an RMA process lets you enter your order number, and the merchant pulls up your information, and you just let them know which item you need to return. With goHardDrive, it was as if they completely forgot who I was in the two weeks since I'd made my purchase.
 
-Also, contrary to the claim I saw on reddit, goHardDrive does not pay return shipping. I had to pay postage out of pocket even though goHardDrive had shipped me broken hardware. Rather than have a replacement in-hand two days after reporting the defect, I had to wait two weeks.
+Also, contrary to the claim on reddit, goHardDrive does not pay return shipping. I had to pay postage out of pocket even though goHardDrive had shipped me broken hardware. Rather than have a replacement in-hand two days after reporting the defect, I had to wait two weeks.
 
 Finally, goHardDrive never sent any email confirmation or updates throughout the return process. I'm glad I thought to photograph my return package before shipping it because I otherwise wouldn't have any record of my RMA number. From checking the insecure RMA status page, I could see my request go from `OPEN` to `RECEIVED` to `CLOSED` with no further information or tracking numbers.
