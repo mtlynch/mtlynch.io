@@ -1,6 +1,6 @@
 ---
 title: "Migrating a ZFS pool from RAIDZ1 to RAIDZ2"
-date: 2025-04-29
+date: 2025-07-15
 ---
 
 I recently upgraded my home TrueNAS server and migrated 18 TB of data from my four-disk RAIDZ1 ZFS pool to a new seven-disk RAIDZ2 pool. The neat trick is that I only added three disks to my server and never transferred my data to external storage.
@@ -79,7 +79,7 @@ I find it easier to visit the Storage > Disks dashboard in TrueNAS:
 
 {{<img src="truenas-disks.webp" max-width="700px">}}
 
-So, for this experiment, I want to use the disks like the following:
+So, for this process, I want to use the disks like the following:
 
 - Existing disks: `sda`, `sdc`, `sde`, `sdf`
 - New disks: `sdb`, `sdg`, `sdh`
