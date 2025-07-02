@@ -98,7 +98,7 @@ It didn't make sense to buy a dedicated monitor for this system because 99.99% o
 
 I planned to just use the motherboard's onboard 1 Gbps NIC because I only have a 1 Gbps network. It did work out of the box with Ubuntu 16.04, but I soon noticed that my network speeds were limited to about 10 Mbps. After a bit of research, I discovered that Ubuntu 16.04 does not include the correct drivers, so I had to add a separate `apt-get` repo to install the `r8168-dkms` package. I did this, but on reboot, Ubuntu would fail to detect the NIC...
 
-At this point, I was tired of tinkering with the onboard NIC and just bought a PCI NIC that I'd read was supported out of the box on Ubuntu: [Broadcom BCM5751 Netxtreme](https://smile.amazon.com/gp/product/B005NX1DAK/). It got 1 Gbps speeds with zero tinkering, so for $23, I decided it wasn't worth the time to keep trying to investigate the problems with the onboard NIC.
+At this point, I was tired of tinkering with the onboard NIC and just bought a PCI NIC that I'd read was supported out of the box on Ubuntu: Broadcom BCM5751 Netxtreme. It got 1 Gbps speeds with zero tinkering, so for $23, I decided it wasn't worth the time to keep trying to investigate the problems with the onboard NIC.
 
 Also of note: the onboard NIC was _not_ compatible with ESXi 6.5, but the Broadcom NIC _was_ compatible.
 
@@ -112,7 +112,7 @@ Also of note: the onboard NIC was _not_ compatible with ESXi 6.5, but the Broadc
 | Memory         | [G.SKILL Flare X Series 32GB (2 x 16GB) F4-2400C15D-32GFXR](https://smile.amazon.com/G-SKILL-Flare-288-Pin-Memory-F4-3200C14D-16GFX/dp/B06XFT7DF9/) | $224.99     |
 | Power          | [EVGA 430 W1, 80+ WHITE 430W 100-W1-0430-KR](https://smile.amazon.com/gp/product/B00H33SDR4/)                                                       | $29.99      |
 | Graphics       | [EVGA 512-P3-1300-LR GeForce 8400 GS](https://smile.amazon.com/gp/product/B004BQKQ8A/)                                                              | $29.99      |
-| Network        | [Broadcom BCM5751 Netxtreme](https://smile.amazon.com/gp/product/B005NX1DAK/)                                                                       | $22.95      |
+| Network        | Broadcom BCM5751 Netxtreme                                                                                                                          | $22.95      |
 | Case           | [Rosewill Micro ATX SRM-01](https://smile.amazon.com/ROSEWILL-Micro-Computer-plastic-computer/dp/B00ZPWOA6I/)                                       | $21.99      |
 | **Total Cost** |                                                                                                                                                     | **$823.55** |
 
