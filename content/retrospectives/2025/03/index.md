@@ -48,14 +48,14 @@ I also like that I can set a goal and make the project all or nothing. I set the
 
 The one downside of Kickstarter is spam. A ton of spammers must watch Kickstarter because I get about three new emails per day offering some scammy way to help my campaign succeed. They start the conversation by posing (poorly) as an interested customer, and then they steer the conversation towards their friend I should pay to help me.
 
-{{<img src="ks-spam.webp" has-border="true" max-width="700px" caption="The spammers start with an innocuous message that feigns interest in your product." alt="Hello, An investor promoted your campaign to me, and I was immediately intrigued by your approach to improving writing for software developers. Your experience and success in blogging are impressive! I’d love to support the project. How do you plan to tailor the writing techniques for developers with varying levels of experience and expertise? Best regards, David">}}
-{{<img src="ks-spam2.webp" has-border="true" max-width="700px" caption="...and then they shift the conversation to their &ldquo;friend&rdquo; who offers paid Kickstarter publicity services." alt="Hi Michael, Great ! Have you considered reaching out to a creator like yourself on Kickstarter for advice on how they reached their potential goal? I have a friend who's a successful creator on there, and I'm not sure if you're interested, but it might be worth connecting with him for some insights. It could be really helpful for your campaign! Wishing you success with your campaign! Best wishes, David">}}
+{{<img src="ks-spam.webp" max-width="700px" caption="The spammers start with an innocuous message that feigns interest in your product." alt="Hello, An investor promoted your campaign to me, and I was immediately intrigued by your approach to improving writing for software developers. Your experience and success in blogging are impressive! I’d love to support the project. How do you plan to tailor the writing techniques for developers with varying levels of experience and expertise? Best regards, David">}}
+{{<img src="ks-spam2.webp" max-width="700px" caption="...and then they shift the conversation to their &ldquo;friend&rdquo; who offers paid Kickstarter publicity services." alt="Hi Michael, Great ! Have you considered reaching out to a creator like yourself on Kickstarter for advice on how they reached their potential goal? I have a friend who's a successful creator on there, and I'm not sure if you're interested, but it might be worth connecting with him for some insights. It could be really helpful for your campaign! Wishing you success with your campaign! Best wishes, David">}}
 
 ## Fundraising: How it's going so far
 
 As of today, there have been $1,585 in pledges to my Kickstarter project, so I'm at 31% of my goal.
 
-{{<img src="ks-dashboard.webp" max-width="700px" has-border="true" caption="At 24% through the fundraising window for [my Kickstarter project](https://www.kickstarter.com/projects/mtlynch/refactoring-english/), I've reached 31% of my revenue goal.">}}
+{{<img src="ks-dashboard.webp" max-width="700px" caption="At 24% through the fundraising window for [my Kickstarter project](https://www.kickstarter.com/projects/mtlynch/refactoring-english/), I've reached 31% of my revenue goal.">}}
 
 I launched the project on Friday, and it ends at the end of the month, so I'm on day 6 of 25 of the fundraising period (24% complete).
 
@@ -73,7 +73,7 @@ My second idea is to reach out to companies that invest heavily in public writin
 
 I recently got a free [4x ARM CPU / 24 GB RAM Oracle Cloud server](/notes/nix-oracle-cloud/). The problem is that this rather competent server is about 99% idle:
 
-{{<img src="server-grafana.webp" max-width="700px" caption="My poor server is so bored.">}}
+{{<img src="server-grafana.webp" max-width="700px" caption="My poor server is so bored." has-border="false">}}
 
 So far, I've installed:
 

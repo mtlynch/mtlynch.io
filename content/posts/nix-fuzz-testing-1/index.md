@@ -24,7 +24,7 @@ nix run gitlab:mtlynch/fuzz-xpdf
 
 The command should work on any Linux system with Nix installed, and maybe MacOS, too. After a few minutes of building, you should see a terminal UI that looks like this:
 
-{{<img src="hfuzz.webp" caption="Nix allows me to install all dependencies and begin fuzz testing in a single command." alt="Screenshot of honggfuzz's terminal UI, showing progress fuzz testing pdftotext">}}
+{{<img src="hfuzz.webp" caption="Nix allows me to install all dependencies and begin fuzz testing in a single command." alt="Screenshot of honggfuzz's terminal UI, showing progress fuzz testing pdftotext" has-border="false">}}
 
 Here's everything that happens when you run the command above:
 
@@ -512,7 +512,7 @@ Here's how it works:
 
 I run the command and am greeted to the honggfuzz fuzzing interface:
 
-{{<img src="hfuzz.webp" caption="honggfuzz shows a terminal UI to display fuzz testing progress">}}
+{{<img src="hfuzz.webp" caption="honggfuzz shows a terminal UI to display fuzz testing progress" has-border="false">}}
 
 It worked! I could let honggfuzz run for a few days to see if it catches anything, but I want to polish the workflow a bit more to increase the probability of finding bugs.
 

@@ -90,7 +90,7 @@ Give your Pull Zone a name. It doesn't matter what name. For this example, I'm u
 
 Under Origin Type, select "Origin URL" and enter your vendor's podcast's RSS URL:
 
-{{<img src="origin.webp" has-border="true">}}
+{{<img src="origin.webp">}}
 
 Choose "Standard Tier."
 
@@ -102,7 +102,7 @@ Finally, click "Add Pull Zone."
 
 When Bunny creates your Pull Zone, try visiting the URL `b-cdn.net` URL it created at the top:
 
-{{<img src="url.webp" has-border="true">}}
+{{<img src="url.webp">}}
 
 If this worked, you should see your podcast's RSS feed when you visit that link (your browser may download the file automatically).
 
@@ -124,7 +124,7 @@ Enter your podcast's domain like:
 
 Bunny will give you a DNS record that you need to activate on your domain registrar's side.
 
-{{<img src="cname.png" has-border="true">}}
+{{<img src="cname.png">}}
 
 Go back to where you registered your domain, and add the DNS entry that Bunny showed you.
 

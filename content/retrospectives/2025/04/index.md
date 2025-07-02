@@ -45,7 +45,7 @@ Four days before the pre-sale closed, one of my blog posts got attention on Hack
 
 In the end, the Kickstarter raised $6,551, exceeding its $5k goal. It's now at $6,701, including late pre-orders.
 
-{{<img src="ks-total.webp" max-width="500px" has-border="true">}}
+{{<img src="ks-total.webp" max-width="500px">}}
 
 I wrote a longer account of the pre-sale last week:
 
@@ -118,7 +118,7 @@ I've had an idea to build a Hacker News blog ranking system for a long time beca
 
 When I shelved my course and focused on _Refactoring English_, I didn't know what to do with the blog ranking tool. When March rolled around, and I was desperate to make the pre-sale succeed, I realized I could invest a day or two of work into getting my prototype ready to publish.
 
-{{<img src="popularity-contest.webp" has-border="true" max-width="800px" caption="Popularity Contest is a tool I created to promote *Refactoring English*">}}
+{{<img src="popularity-contest.webp" max-width="800px" caption="Popularity Contest is a tool I created to promote *Refactoring English*">}}
 
 The tool successfully [reached the front page of Hacker News](https://news.ycombinator.com/item?id=43503872), but it didn't have any impact on book sales.
 
@@ -128,7 +128,7 @@ A lot of the top bloggers seemed especially interested in how their rank changed
 
 Based on that reaction, I added functionality to view more detailed stats for [individual blogs](https://refactoringenglish.com/tools/hn-popularity/domain/?d=mtlynch.io), but I haven't seen much reaction to that feature yet.
 
-{{<img src="domain-view.webp" max-width="600px" has-border="true" caption="Top bloggers seemed interested in sharing their domain's stats, so I created [per-blog views](https://refactoringenglish.com/tools/hn-popularity/domain/?d=mtlynch.io).">}}
+{{<img src="domain-view.webp" max-width="600px" caption="Top bloggers seemed interested in sharing their domain's stats, so I created [per-blog views](https://refactoringenglish.com/tools/hn-popularity/domain/?d=mtlynch.io).">}}
 
 ## Picking a markup language for the book
 
@@ -165,7 +165,7 @@ I spent a few hours with Typst. I like that it's open-source, and it's simpler t
 
 Since switching to NixOS a few months ago, I've enjoyed hosting [more services on my personal machine](/retrospectives/2025/02/#late-to-the-game-rss-is-great). My favorite is [fusion](https://github.com/0x2E/fusion), a minimal RSS reader built with Go, Svelte, and SQLite.
 
-{{<img src="fusion.webp" has-border="true" max-width="700px" caption="[fusion](https://github.com/0x2E/fusion) is a minimal RSS reader built with Go, Svelte, and SQLite.">}}
+{{<img src="fusion.webp" max-width="700px" caption="[fusion](https://github.com/0x2E/fusion) is a minimal RSS reader built with Go, Svelte, and SQLite.">}}
 
 My favorite thing about fusion is that its maintainer has been friendly and receptive to code contributions, so I've been working on [small improvements](https://github.com/0x2E/fusion/pulls?q=is%3Apr+author%3Amtlynch) to the code in my spare time.
 

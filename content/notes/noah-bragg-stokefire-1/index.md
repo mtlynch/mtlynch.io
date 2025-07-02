@@ -12,14 +12,14 @@ Every few months, I check back in on the Base website's developer section to see
 
 So, I was excited to see that [Noah Bragg](https://noahbragg.com/), an indie founder I follow on Twitter, has started livestreaming his process of building a simple game on top of the Base ecosystem.
 
-{{<img src="noah.png" max-width="600px" caption="Indie founder [Noah Bragg](https://noahbragg.com/) is livestreaming the process of building a game on top of the Ethereum blockchain.">}}
+{{<img src="noah.png" max-width="600px" caption="Indie founder [Noah Bragg](https://noahbragg.com/) is livestreaming the process of building a game on top of the Ethereum blockchain." has-border="false">}}
 
 I watched [Noah's first stream](https://www.youtube.com/watch?v=iwYNWwHg_tY), and I've shared my takeaways below.
 
 ## The game: Stoke Fire
 
 - Stoke Fire is a resource management game where you chop wood in your village to stoke an ongoing fire to keep the village warm.
-  {{<img src="screenshot.webp" max-width="350px">}}
+  {{<img src="screenshot.webp" max-width="350px" has-border="false">}}
 - Inspirations
   - Age of Empires II, which Noah played as a kid.
   - [A Dark Room](https://adarkroom.doublespeakgames.com/), a text-based web game.
@@ -63,7 +63,7 @@ _**Note from Michael**: Managing facets [seems tedious](https://www.youtube.com/
   - He likes that Forge allows him to write tests in Solidity because he can share a lot of code with his production smart contracts.
   - Forge makes it easy to test different blockchain conditions like timestamps and wallet balance.
 - Noah had trouble parsing Forge's output at times, and I personally found it extremely noisy and difficult to read.
-  {{<img src="forge-output.png" max-width="600px" caption="I found Forge's test output very noisy">}}
+  {{<img src="forge-output.png" max-width="600px" caption="I found Forge's test output very noisy" has-border="false">}}
   - When an assert fails in Forge, it doesn't print the line number that caused the failure. At [one point in the stream](https://www.youtube.com/live/iwYNWwHg_tY?feature=shared&t=5055), the failure Forge prints is just `5 != 4`, and it's on the developer to figure out where the assertion is in source. I've never seen a test framework _not_ print out the line number of where an assertion failed.
 - In order to assert that Noah's production code threw a particular error, he [has to redefine the error in his test code](https://www.youtube.com/live/iwYNWwHg_tY?feature=shared&t=5473), which I found strange.
 
@@ -150,7 +150,7 @@ Similarly, I don't yet have an answer to the question I was hoping to answer of,
 
 I noticed that Noah frequently uses `uint256` in places where it seems like massive overkill, like timestamps or counts of wood. When the game currently awards 2-4 pieces of wood per "chop" action, it's hard to imagine needing to store the result in a `uint256`.
 
-{{<img src="uint256.png" max-width="800px" caption="Don't such large integer types increase gas fees?">}}
+{{<img src="uint256.png" max-width="800px" caption="Don't such large integer types increase gas fees?" has-border="false">}}
 
 From working on [my own EVM implementation](https://github.com/mtlynch/zenith), I know the Ethereum network charges for data that has to be processed, ~~so pushing a 256-bit value onto the stack is 8x more expensive than pushing a 32-bit word.~~ (Edit: Pushing a 256-bit word and a 32-bit word actually cost the same. Thanks to a14u for the correction.)
 
@@ -160,6 +160,6 @@ I'm not sure if this is just an oversight, or if the gas fees are actually less 
 
 Noah is using a naming convention where he prepends all function parameter names with underscores.
 
-{{<img src="underscores.webp" max-width="800px" caption="I've never seen the convention of preprending function paramter names with underscores, and I'm not sure why Noah is doing it.">}}
+{{<img src="underscores.webp" max-width="800px" caption="I've never seen the convention of preprending function paramter names with underscores, and I'm not sure why Noah is doing it." has-border="false">}}
 
 I recognize this convention from Python and JavaScript to hint to the reader that the variable is private/protected, but aren't function argments already private? I've never seen this convention before in my admittedly limited reading of Solidity code.

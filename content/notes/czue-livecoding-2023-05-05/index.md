@@ -19,7 +19,7 @@ I've read a lot of Cory's blog. We're both Python developers, but he specializes
 
 ## Dev environment
 
-{{<img src="dev-env.png" max-width="800px" caption="[Timestamp 0:10](https://youtu.be/zEDaeG6nw48?t=0m10s)">}}
+{{<img src="dev-env.png" max-width="800px" caption="[Timestamp 0:10](https://youtu.be/zEDaeG6nw48?t=0m10s)" has-border="false">}}
 
 - OS: Ubuntu
   - I expected Cory to be an OS X guy.
@@ -29,7 +29,7 @@ I've read a lot of Cory's blog. We're both Python developers, but he specializes
 
 ## Models
 
-{{<img src="models.png" max-width="800px" caption="[Timestamp 2:53](https://youtu.be/zEDaeG6nw48?t=2m53s)">}}
+{{<img src="models.png" max-width="800px" caption="[Timestamp 2:53](https://youtu.be/zEDaeG6nw48?t=2m53s)" has-border="false">}}
 
 - I'm getting worried that I'm going to get lost with Django stuff.
 - Cory shows the `ChatMessage` model, which seems to be an ORM object that tells the framework how to store and retrieve the object from a database.
@@ -37,7 +37,7 @@ I've read a lot of Cory's blog. We're both Python developers, but he specializes
 
 ## Migrations
 
-{{<img src="migrations.png" max-width="800px" caption="[Timestamp 3:35](https://youtu.be/zEDaeG6nw48?t=3m35s)">}}
+{{<img src="migrations.png" max-width="800px" caption="[Timestamp 3:35](https://youtu.be/zEDaeG6nw48?t=3m35s)" has-border="false">}}
 
 - Cory runs a command `./manage.py makemigrations chat`, which seems to generate a database migration so that his database can support the two models he just defined.
 - Cory then runs `./manage.py migrate` to perform the migration he just created.
@@ -46,19 +46,19 @@ I've read a lot of Cory's blog. We're both Python developers, but he specializes
 
 ## Creating admin UI
 
-{{<img src="chatgpt-defs.png" max-width="800px" caption="[Timestamp 3:50](https://youtu.be/zEDaeG6nw48?t=3m50s)">}}
+{{<img src="chatgpt-defs.png" max-width="800px" caption="[Timestamp 3:50](https://youtu.be/zEDaeG6nw48?t=3m50s)" has-border="false">}}
 
 - Cory uses ChatGPT to create the boilerplate definitions of an admin page based on the models he added.
   - ChatGPT gets it right, but Cory needs to tweak it to match his preferred Django syntax.
 
-{{<img src="admin-ui.png" max-width="800px" caption="[Timestamp 5:49](https://youtu.be/zEDaeG6nw48?t=5m49s)">}}
+{{<img src="admin-ui.png" max-width="800px" caption="[Timestamp 5:49](https://youtu.be/zEDaeG6nw48?t=5m49s)" has-border="false">}}
 
 - It looks like Django uses the definitions to auto-generate an admin UI to add/edit the new models in the database.
   - That's neat. When I do this, I end up just querying the database directly, but this is certainly easier.
 
 ## Translations
 
-{{<img src="translations.png" max-width="800px" caption="[Timestamp 10:05](https://youtu.be/zEDaeG6nw48?t=10m5s)">}}
+{{<img src="translations.png" max-width="800px" caption="[Timestamp 10:05](https://youtu.be/zEDaeG6nw48?t=10m5s)" has-border="false">}}
 
 - Cory seems like he's designing this app for localizability, which is something I haven't thought about in ~15 years.
 - The [syntax for an internationalizable string](https://docs.djangoproject.com/en/4.2/topics/i18n/translation/#translate-template-tag) seems pretty straightforward.
@@ -67,14 +67,14 @@ I've read a lot of Cory's blog. We're both Python developers, but he specializes
 
 ## Django control flow
 
-{{<img src="get-object-or-404.png" max-width="800px" caption="[Timestamp 14:52](https://youtu.be/zEDaeG6nw48?t=14m52s)">}}
+{{<img src="get-object-or-404.png" max-width="800px" caption="[Timestamp 14:52](https://youtu.be/zEDaeG6nw48?t=14m52s)" has-border="false">}}
 
 - Django is weird! You can just do a `get_object_or_404`, which seems to exit the function and return an HTTP 404 error if it can't find the object.
   - This is quite foreign to me coming from Python Flask or Go, which both force the developer to be more explicit about returning an HTTP error (except for unhandled exceptions, which become HTTP 500 errors).
 
 ## git GUI
 
-{{<img src="git-gui.png" max-width="800px" caption="[Timestamp 25:08](https://youtu.be/zEDaeG6nw48?t=25m08s)">}}
+{{<img src="git-gui.png" max-width="800px" caption="[Timestamp 25:08](https://youtu.be/zEDaeG6nw48?t=25m08s)" has-border="false">}}
 
 - Cory uses a GUI for git that I've never seen before.
   - He spawns it by calling `git g`, which I think is a Cory-specific git alias.
@@ -85,7 +85,7 @@ I've read a lot of Cory's blog. We're both Python developers, but he specializes
 
 ## Sharing code between client-side and server-side rendering
 
-{{<img src="htmx.png" max-width="800px" caption="[Timestamp 29:06](https://youtu.be/zEDaeG6nw48?t=29m06s)">}}
+{{<img src="htmx.png" max-width="800px" caption="[Timestamp 29:06](https://youtu.be/zEDaeG6nw48?t=29m06s)" has-border="false">}}
 
 - Cory seems to be able to use [htmx](https://htmx.org) to solve a problem I struggle with: how to avoid duplicating code between client-side rendering and server-side rendering.
 
@@ -100,7 +100,7 @@ I've read a lot of Cory's blog. We're both Python developers, but he specializes
 
 ## ChatGPT API
 
-{{<img src="chatgpt-api.png" max-width="800px" caption="[Timestamp 36:48](https://youtu.be/zEDaeG6nw48?t=36m48s)">}}
+{{<img src="chatgpt-api.png" max-width="800px" caption="[Timestamp 36:48](https://youtu.be/zEDaeG6nw48?t=36m48s)" has-border="false">}}
 
 - ChatGPT API is surprisingly easy to use.
   - The API is just a model name and a list of messages in the conversation.

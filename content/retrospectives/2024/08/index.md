@@ -42,7 +42,7 @@ When I'm recording videos for my course, there are a lot of things that can inte
 
 For video recording, I use a Razer Kiyo webcam that sits on top of my monitor. The problem is that getting the camera to a good height requires a lot of manual adjustment.
 
-{{<img src="razer-kiyo-webcam.webp" max-width="200px" has-border="true" caption="I use a Razer Kiyo webcam for recording.">}}
+{{<img src="razer-kiyo-webcam.webp" max-width="200px" caption="I use a Razer Kiyo webcam for recording.">}}
 
 I normally keep my desktop monitor so that the center of my monitor is roughly at my eye level. But if my monitor is at eye level and the webcam sits on top of the monitor, then the camera angle is looking down on me.
 
@@ -50,7 +50,7 @@ To get a good camera angle, I was adjusting my monitor arm and desk height to ke
 
 I solved my camera problem with a small, desk-sized tripod: the [SmallRig VT-20](https://www.bhphotovideo.com/c/product/1799670-REG/smallrig_aluminum_mini_tripod_vt_20.html).
 
-{{<img src="desk-tripod.webp" max-width="600px"  caption="I bought a desktop tripod so that I don't have to reposition my desk or monitor to begin recording.">}}
+{{<img src="desk-tripod.webp" max-width="600px"  caption="I bought a desktop tripod so that I don't have to reposition my desk or monitor to begin recording." has-border="false">}}
 
 I keep the tripod between me and my monitor during recording sessions. I marked the position of the legs on my desk with painter's tape so that I can reproduce the position each time.
 
@@ -59,8 +59,8 @@ Having the tripod means that when I want to record, I just drop the tripod and c
 The one downside of the tripod is that it partially obstructs my view of my slides, but by the time I'm recording, I've memorized them anyway.
 
 {{<gallery caption="Mounting the webcam on top of my monitor (left) vs on a desk tripod in front of my monitor (right). The tripod makes it easier for me to look directly into the camera.">}}
-{{<img src="mounted-on-monitor.webp" max-width="354px">}}
-{{<img src="mounted-on-tripod.webp" max-width="400px">}}
+{{<img src="mounted-on-monitor.webp" max-width="354px" has-border="false">}}
+{{<img src="mounted-on-tripod.webp" max-width="400px" has-border="false">}}
 {{</gallery>}}
 
 ### Keep recording equipment connected
@@ -77,7 +77,7 @@ I found Aaron's course helpful, but some of the best lessons weren't even things
 
 The first iteration of my course consisted of seven lessons that were 30-60 minutes each. Aaron's lessons are roughly the same length, but he subdivides his lessons into separate chapters of only a few minutes each.
 
-{{<img src="aaron-chapters.png" max-width="600px" has-border="true" caption="Aaron Francis divides [his lessons](https://screencasting.com) into short chapters, where each chapter is only a few minutes long.">}}
+{{<img src="aaron-chapters.png" max-width="600px" caption="Aaron Francis divides [his lessons](https://screencasting.com) into short chapters, where each chapter is only a few minutes long.">}}
 
 As a student, I like the short-chapter approach, as it lets me skip to the chapters I'm most interested in.
 
@@ -101,7 +101,7 @@ It turned out that I had an inaccurate mental model of shirt smelliness. After j
 
 So, I just bought three of the same shirt:
 
-{{<img src="bonobos-tees.webp" has-border="true" caption="I ordered three of the same T-shirt for video continuity.">}}
+{{<img src="bonobos-tees.webp" caption="I ordered three of the same T-shirt for video continuity.">}}
 
 It's a simple navy Bonobos T-shirt, the same style that I'd wear on a normal day. I figure that having three will mean that at least one is available, even if two are in the laundry.
 
@@ -139,7 +139,7 @@ For the live group Q&A, it's hard to make that repeatable unless I create a YouT
 
 Expert interviews are, uncoincidentally, something that Aaron Francis uses to promote his courses:
 
-{{<img src="aaron-youtube.webp" max-width="450px" has-border="true" caption="Aaron Francis publishes long-form interviews with experts in the domain of SQLite as a way to build interest in his upcoming course about SQLite.">}}
+{{<img src="aaron-youtube.webp" max-width="450px" caption="Aaron Francis publishes long-form interviews with experts in the domain of SQLite as a way to build interest in his upcoming course about SQLite.">}}
 
 The live teardowns, on the other hand, are easy to replicate. I could just turn on my camera right now and record my stream of consciousness as I read Hacker News submissions. I'm not sure if that would be entertaining, but it's quick and easy to experiment with that idea.
 
@@ -169,7 +169,7 @@ In my last retrospective, I [talked about](/retrospectives/2024/07/#my-experienc
 
 As an example, here's a form on [ScreenJournal](https://github.com/mtlynch/screenjournal), my movie review web app.
 
-{{<img src="screenjournal-notifications.png" max-width="700px" has-border="true" caption="A simple HTML form from the [ScreenJournal](https://github.com/mtlynch/screenjournal) web app.">}}
+{{<img src="screenjournal-notifications.png" max-width="700px" caption="A simple HTML form from the [ScreenJournal](https://github.com/mtlynch/screenjournal) web app.">}}
 
 When the user submits the form, there can only be two results:
 

@@ -120,7 +120,7 @@ The line `# 2.7.18.7 release` is just a comment for my own reference. Nix ignore
 
 How did I know that long version string? I used [Nixhub](https://www.nixhub.io/).
 
-{{<img src="nixhub-landing.png" max-width="600px" has-border="true" alt="Screenshot of NixHub landing page showing a search dialog">}}
+{{<img src="nixhub-landing.png" max-width="600px" alt="Screenshot of NixHub landing page showing a search dialog">}}
 
 Nixhub is a free package search service created by [Jetpack](https://www.jetpack.io), a company that sells developer tooling on top of Nix.
 
@@ -128,7 +128,7 @@ Nixhub was only released [three months ago](https://www.jetpack.io/blog/introduc
 
 So, to find the version string for Python 2.7.18.7, I [searched Nixhub for `python`](https://www.nixhub.io/packages/python) and then scrolled down the list of results for the latest available Python 2.7.x version:
 
-{{<img src="nixhub-info.webp" max-width="600px" has-border="true" alt="Screenshot of NixHub results showing that the human-readable version string appears first, followed by the nixpkgs version string, followed by the package name" caption="NixHub allows me to translate the human-friendly version string to a nixpkgs reference and package name.">}}
+{{<img src="nixhub-info.webp" max-width="600px" alt="Screenshot of NixHub results showing that the human-readable version string appears first, followed by the nixpkgs version string, followed by the package name" caption="NixHub allows me to translate the human-friendly version string to a nixpkgs reference and package name.">}}
 
 Pinning exact package versions is, honestly, [a huge pain](https://github.com/NixOS/nixpkgs/issues/9682). I hope that Nix tooling evolves to the point where you can just specify that you want version `2.7.18.7` rather than go through this roundabout dance of looking up the git commit hash that corresponds to the version you want. But for now, this is the best way I know of for
 pinning versions.

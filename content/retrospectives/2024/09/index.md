@@ -36,7 +36,7 @@ In August, my wife and I became parents with the birth of our son.
 
 We're trying to be protective of our son's privacy, so I took a photo of the three of us shortly after the birth and ran it through a hand-tuned Fast Fourier transform to remove identifying biometric details:
 
-{{<img src="baby-photo.webp" has-border="true" max-width="450px" alt="Stick figure drawing of my family" caption="Photo of me, my wife, and our child soon after birth, post-processed with a privacy-preserving photo filter">}}
+{{<img src="baby-photo.webp" max-width="450px" alt="Stick figure drawing of my family" caption="Photo of me, my wife, and our child soon after birth, post-processed with a privacy-preserving photo filter">}}
 
 ## Caring for a newborn takes longer than two hours per day
 
@@ -70,11 +70,11 @@ But my son arrived a bit early, so I'd only recorded 20% of the material for the
 
 One other red flag I've noticed is that I put self-ads to my course all over my blog, and they're not attracting any interest from my blog readers.
 
-{{<img src="self-ads.webp" max-width="700px" has-border="true" caption="I added self-ads from this blog to my blogging course.">}}
+{{<img src="self-ads.webp" max-width="700px" caption="I added self-ads from this blog to my blogging course.">}}
 
 I get about 500 visitors per day on this blog, and the ads have brought no significant change in visitors to the course website.
 
-{{<img src="no-new-visitors.webp" max-width="700px" has-border="true" caption="I started running self-ads on mtlynch.io for my blogging course, but they had no noticeable impact on visits.">}}
+{{<img src="no-new-visitors.webp" max-width="700px" caption="I started running self-ads on mtlynch.io for my blogging course, but they had no noticeable impact on visits.">}}
 
 I have other ideas for marketing the course, but I'd like there to be a large overlap between the kind of people who read my blog and the kind of people who would be interested in taking one of my courses.
 
@@ -99,8 +99,8 @@ I initially resisted Framework because the idea of building my own laptop sounde
 The experience of building my Framework laptop was surprisingly the best unboxing experience I've ever had with anything.
 
 {{<gallery caption="The Framework 13 surprised me by delivering one of the best unboxing experiences I've had with any technology.">}}
-{{<img src="framework-unboxing-1.webp" max-width="550px">}}
-{{<img src="framework-unboxing-2.webp" max-width="210px">}}
+{{<img src="framework-unboxing-1.webp" max-width="550px" has-border="false">}}
+{{<img src="framework-unboxing-2.webp" max-width="210px" has-border="false">}}
 {{</gallery>}}
 
 Assembling my Framework was incredibly easy. I was expecting it to be like building a desktop from scratch where you're assembling the chassis, the motherboard, etc., but most of the Framework is actually pre-assembled. The user portion of the assembly only took me 30 minutes, and I was going very slowly.

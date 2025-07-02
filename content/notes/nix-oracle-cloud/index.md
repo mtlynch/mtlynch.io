@@ -16,7 +16,7 @@ The AMD one is not that exciting, but a 4-CPU / 24 GB system is more powerful th
 
 GCP's price for an equivalent 4-CPU ARM VM is $132/month and it has 30% less RAM than Oracle's.
 
-{{<img src="gcp-price.webp" max-width="600px" has-border="true" caption="Google charges $132/month for a slightly worse VM than Oracle's free-tier ARM option.">}}
+{{<img src="gcp-price.webp" max-width="600px" caption="Google charges $132/month for a slightly worse VM than Oracle's free-tier ARM option.">}}
 
 ## The challenge: Install NixOS on an Oracle Cloud VM
 
@@ -53,7 +53,7 @@ Once you're logged in to your Oracle Cloud account, create your free VM:
 
 The image and shape screen should look like this:
 
-{{<img src="vm-settings.webp" has-border="true" max-width="700px">}}
+{{<img src="vm-settings.webp" max-width="700px">}}
 
 Verify that the reported cost for "Shape" is $0.
 
@@ -71,7 +71,7 @@ Finally, hit "Create" to create the VM.
 
 Wait until your VM shows as running:
 
-{{<img src="vm-running.webp" has-border="true">}}
+{{<img src="vm-running.webp">}}
 
 Once your VM is running, open a terminal on your local system.
 
@@ -115,7 +115,7 @@ Go back to the VM page for your instance on Oracle Cloud in your web browser.
 
 Scroll down to the "Resources" section at the bottom of the VM page and click "Console connection"
 
-{{<img src="console-connection.webp" has-border="true">}}
+{{<img src="console-connection.webp">}}
 
 From there, click "Launch Cloud Shell connection."
 
@@ -141,11 +141,11 @@ Quickly, switch over to Cloud Shell in your browser. Click on the remote screen 
 
 If you do it correctly, you should see the EFI boot manager:
 
-{{<img src="boot-manager.webp" has-border="true">}}
+{{<img src="boot-manager.webp">}}
 
 From the boot screen, go to Boot Manager > EFI Internal Shell.
 
-{{<img src="internal-shell.webp" has-border="true">}}
+{{<img src="internal-shell.webp">}}
 
 Press any key to skip `startup.nsh`.
 
@@ -301,7 +301,7 @@ If you run [neofetch](https://github.com/dylanaraps/neofetch), you should see ou
 nix-shell -p neofetch --command neofetch
 ```
 
-{{<img src="neofetch.webp">}}
+{{<img src="neofetch.webp" has-border="false">}}
 
 ## Step 11: (optional) Install a package
 
