@@ -35,9 +35,16 @@ TODO
 
 ## Topic 1
 
-## Topic 2
+## How can I juggle fewer drafts at once?
 
-## Topic 3
+## How can I attract new readers?
+
+- Improve the website.
+- Publish the interview with a blogger I recorded a year ago.
+- Offer custom presentations - book me for your team.
+- Improve the early access page.
+  - I've already rebranded it from "pre-order" to "early access."
+- Identify people who keep unsuccessfully submitting to Hacker News.
 
 ## Side projects
 
@@ -53,6 +60,7 @@ TODO
 
 ### Goals for next month
 
+- Publish a video interview.
 -
 
 ### Requests for help
