@@ -641,3 +641,7 @@ rsync.net claims to be the only platform that natively supports ZFS backup. I wa
 Another possibility is buying a 20 TB disk and moving all my data there while I do the migration. But that costs about $300, and I risk total data loss if that disk fails mid-migration. I can mitigate it by buying two large disks, but then I've spent about $600.
 
 I could theoretically just send the disks back for a refund after the migration, but that's not a very kind thing to do to the merchant
+
+### Back up to Hetzner
+
+https://www.hetzner.com/storage/storage-box/
