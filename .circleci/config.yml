@@ -60,8 +60,13 @@ jobs:
           keys:
             - resources-gen-v{{ .Environment.RESOURCES_CACHE_VERSION }}
       - run:
-          name: Build prod site
-          command: hugo version && hugo --minify
+          name: Build site
+          command: |
+            hugo version
+            if [[ "$CIRCLE_BRANCH" != "master" ]]; then
+              export HUGO_ENV=dev
+            fi
+            hugo --minify
       - persist_to_workspace:
           root: ./
           paths:
