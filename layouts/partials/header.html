@@ -25,7 +25,7 @@
     {{ with .Page.Params.Tags }}
       {{ partial "taxonomy/tags.html" . }}
     {{ end }}
-    {{ if hugo.IsProduction }}
+    {{ if hugo.IsServer }}
       <br />
       <span style="color: green"
         >PREVIEW DRAFT: {{ .Content | countwords }} words
