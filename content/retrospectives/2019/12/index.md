@@ -220,4 +220,4 @@ Web developer [Bruno Simon](https://bruno-simon.com/) made his portfolio page in
 
 ---
 
-_Auto shop photo by [NeONBRAND](https://unsplash.com/@neonbrand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/auto-shop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)._
+_Auto shop photo by NeONBRAND on [Unsplash](https://unsplash.com/s/photos/auto-shop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)._
