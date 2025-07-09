@@ -110,7 +110,3 @@ I want to keep experimenting with Gleam, but I'm also feeling like I might end u
 ### Requests for help
 
 TODO
-
-```
-
-```

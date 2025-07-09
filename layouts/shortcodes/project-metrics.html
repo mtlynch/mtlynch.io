@@ -46,6 +46,10 @@
   {{- errorf "Could not find data for project \"%s\" with months \"%s\" and \"%s\". Available data: %s" $project $prev $current $projectData -}}
 {{- end -}}
 
+{{- /* Calculate unique visitors values */ -}}
+{{- $prevUniqueVisitors := $prevData.unique_visitors | default 0 | int -}}
+{{- $currentUniqueVisitors := $currentData.unique_visitors | default 0 | int -}}
+
 {{- /* Calculate revenue values */ -}}
 {{- $prevPreOrders := $prevData.revenue_pre_orders | default 0.0 | float -}}
 {{- $prevConsulting := $prevData.revenue_consulting | default 0.0 | float -}}
@@ -58,12 +62,18 @@
 {{- $currentTotal := add (add $currentPreOrders $currentConsulting) $currentSponsors -}}
 
 {{- /* Calculate changes */ -}}
+{{- $uniqueVisitorsChange := sub $currentUniqueVisitors $prevUniqueVisitors -}}
 {{- $preOrdersChange := sub $currentPreOrders $prevPreOrders -}}
 {{- $consultingChange := sub $currentConsulting $prevConsulting -}}
 {{- $sponsorsChange := sub $currentSponsors $prevSponsors -}}
 {{- $totalChange := sub $currentTotal $prevTotal -}}
 
 {{- /* Calculate percentage changes */ -}}
+{{- $uniqueVisitorsPercent := 0.0 -}}
+{{- if gt $prevUniqueVisitors 0 -}}
+  {{- $uniqueVisitorsPercent = div (mul (float $uniqueVisitorsChange) 100.0) (float $prevUniqueVisitors) -}}
+{{- end -}}
+
 {{- $preOrdersPercent := 0.0 -}}
 {{- if gt $prevPreOrders 0 -}}
   {{- $preOrdersPercent = div (mul $preOrdersChange 100) $prevPreOrders -}}
@@ -98,6 +108,12 @@
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>Unique visitors</td>
+      <td>{{ $prevUniqueVisitors | lang.FormatNumber 0 }}</td>
+      <td>{{ $currentUniqueVisitors | lang.FormatNumber 0 }}</td>
+      <td>{{- if gt $uniqueVisitorsChange 0 -}}{{- if le $prevUniqueVisitors 0 -}}<span style="color: green;">+{{ $uniqueVisitorsChange | lang.FormatNumber 0 }} (+inf%)</span>{{- else -}}<span style="color: green;">+{{ $uniqueVisitorsChange | lang.FormatNumber 0 }} (+{{ printf "%.0f" $uniqueVisitorsPercent }}%)</span>{{- end -}}{{- else if lt $uniqueVisitorsChange 0 -}}<span style="color: red;">{{ $uniqueVisitorsChange | lang.FormatNumber 0 }} ({{ printf "%.0f" $uniqueVisitorsPercent }}%)</span>{{- else -}}0 (0%){{- end -}}</td>
+    </tr>
     <tr>
       <td>Revenue from pre-orders</td>
       <td>${{ printf "%.2f" $prevPreOrders }}</td>
