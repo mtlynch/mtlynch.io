@@ -76,6 +76,8 @@ I wrote a longer post about [my initial impressions of Gleam](/notes/gleam-first
 
 One of the hardest adjustments in Gleam is working without loops. Gleam deliberately has no loops. Instead, you're supposed to use recursive functions or call a mapping function for each element in the loop.
 
+<!-- markdownlint-disable no-space-in-code -->
+
 The lack of loops is giving me the most trouble when I'm trying to split my chat logs into tokens for parsing. The delimiters I care about are `[' ', '\n', '[', ']', ]`. I also care about colon, but only if a single space follows it, like this: `': '`.
 
 In a language like Go, I'd iterate through the string in a `for` loop and if I hit a space, I'd check if the previous character was a `:` so that I could handle the `: ` case.
