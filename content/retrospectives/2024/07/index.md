@@ -149,7 +149,7 @@ And then htmx makes everything just work without you having to write any custom 
 
 ### My experience with htmx so far
 
-To test out htmx, I've been [rewriting](https://www.weeks.mtlynch.io/2024-07-05) parts of [ScreenJournal](https://github.com/mtlynch/screenjournal) using htmx. ScreenJournal is my open-source movie review app. It's like Goodreads for movies. Or it's like letterboxd, but open-source and ugly.
+To test out htmx, I've been [rewriting](https://weeks.mtlynch.io/2024-07-05) parts of [ScreenJournal](https://github.com/mtlynch/screenjournal) using htmx. ScreenJournal is my open-source movie review app. It's like Goodreads for movies. Or it's like letterboxd, but open-source and ugly.
 
 {{<img src="screenjournal.png" max-width="800px" caption="[ScreenJournal](https://github.com/mtlynch/screenjournal) is my hobby project web app for reviewing movies.">}}
 
