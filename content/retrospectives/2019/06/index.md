@@ -19,7 +19,7 @@ date: "2019-06-07"
 - **Result**: What Got Done is now [live](https://whatgotdone.com).
 - **Grade**: A
 
-I launched What Got Done on [May 24th](https://whatgotdone.com/michael/2019-05-24). It hasn't gained much traction, so I'm debating whether to stick with it or focus on other ideas.
+I launched What Got Done on [May 24th](https://weeks.mtlynch.io/2019-05-24). It hasn't gained much traction, so I'm debating whether to stick with it or focus on other ideas.
 
 ### Meet with 10 potential customers for my next product
 
@@ -59,7 +59,7 @@ Almost the full amount comes from a single customer who needed Zestful for a one
 
 ## What Got Done: business or hobby?
 
-{{<img src="whatgotdone.jpg" alt="What Got Done screenshot" caption="My [What Got Done entry](https://whatgotdone.com/michael/2019-06-07) for last week" max-width="800px" has-border="false">}}
+{{<img src="whatgotdone.jpg" alt="What Got Done screenshot" caption="My [What Got Done entry](https://weeks.mtlynch.io/2019-06-07) for last week" max-width="800px" has-border="false">}}
 
 I'm not sure what to do with What Got Done. I built it primarily to get practical experience with [Vue.js](https://vuejs.org/), as learning a web framework was one of my [goals for 2019](/solo-developer-year-1/#goals-for-year-two). As a tool, it's useful for me because I like logging my tasks to close out the week. I never thought it was my most promising business idea, but I figured it wouldn't be that much more work to see if it had potential as a paid product.
 

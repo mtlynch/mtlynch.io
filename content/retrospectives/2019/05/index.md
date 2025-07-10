@@ -101,7 +101,7 @@ My April goal was to learn Vue.js, and there's no better way to learn a new tech
 
 Here's my entry for last week:
 
-- [What Got Done - May 3rd, 2019](https://whatgotdone.com/michael/2019-05-03)
+- [What Got Done - May 3rd, 2019](https://weeks.mtlynch.io/2019-05-03)
 
 User registration isn't ready yet, but keep an eye out for a Twitter announcement in the next couple weeks about a working minimum viable product.
 

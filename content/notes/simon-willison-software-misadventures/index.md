@@ -205,7 +205,7 @@ _\[Editor's note: This is a surprising workflow, as it optimizes for writes over
   - Simon promises features in time for a conference, which forces him to prioritize implementation by a deadline.
 - Weeknotes
   - Simon wrote blog posts he called ["weeknotes"](https://simonwillison.net/tags/weeknotes/) every few weeks to summarize his past few weeks of work.
-  - _\[Editor's note: I do [something similar](https://www.whatgotdone.com/michael), a practice I [picked up from Google](https://mtlynch.io/status-updates-to-nobody/).\]_
+  - _\[Editor's note: I do [something similar](https://weeks.mtlynch.io), a practice I [picked up from Google](https://mtlynch.io/status-updates-to-nobody/).\]_
   - _\[Editor's note: Simon coincidentally [stopped doing this](https://simonwillison.net/2025/Mar/20/calling-a-wrap-on-my-weeknotes/) shortly after the interview.\]_
 
 ### Working towards financial independence
