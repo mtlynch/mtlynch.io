@@ -64,6 +64,7 @@ TODO
 - Offer custom presentations - book me for your team.
 - Publish the interview with a blogger I recorded a year ago.
 - Identify people who keep unsuccessfully submitting to Hacker News.
+- Port web versions of excerpts to ebook.
 
 ## Programming in Gleam and missing the humble `for` loop
 
