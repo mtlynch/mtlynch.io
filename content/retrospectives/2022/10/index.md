@@ -261,7 +261,7 @@ I'm hoping that we're currently at a local minimum in terms of complexity. The f
 
 I've been [a fan of the Cypress end-to-end testing tool](https://mtlynch.io/painless-web-app-testing/) ever since I saw Gleb Bahmutov demo it at [a 2018 web dev meetup](https://youtu.be/wApmbgPGmqQ). Over the years, I've been hearing more chatter over the years about [Playwright](https://playwright.dev/), Microsoft's competitor to Cypress.
 
-I tried Playwright a year ago and [wasn't that impressed](https://whatgotdone.com/michael/2021-08-06). I was recently reading [a Hacker News thread](https://news.ycombinator.com/item?id=33047136) where everyone seemed to agree that Playwright had surpassed Cypress, so I gave Playwright another try.
+I tried Playwright a year ago and [wasn't that impressed](https://weeks.mtlynch.io/2021-08-06). I was recently reading [a Hacker News thread](https://news.ycombinator.com/item?id=33047136) where everyone seemed to agree that Playwright had surpassed Cypress, so I gave Playwright another try.
 
 I now must admit that I agree with Hacker News. As an experiment, I [rewrote all of PicoShare's end-to-end tests in Playwright](https://github.com/mtlynch/picoshare/pull/340). I found Playwright easier to work with than Cypress in almost every dimension.
 

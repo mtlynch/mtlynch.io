@@ -83,7 +83,7 @@ After writing private updates for a year, it still gave me satisfaction, but I m
 
 One of [my 2019 goals](/solo-developer-year-1/#goals-for-year-two) was to gain expertise in a JavaScript framework, so that felt like a convenient excuse to create my own status sharing web app. It's called [What Got Done](https://whatgotdone.com):
 
-{{<img src="whatgotdone-screenshot.jpg" alt="Screenshot of Monday.com feature page" caption="My [most recent update](https://whatgotdone.com/michael/2019-06-21) on What Got Done" max-width="800px" has-border="false">}}
+{{<img src="whatgotdone-screenshot.jpg" alt="Screenshot of Monday.com feature page" caption="My [most recent update](https://weeks.mtlynch.io/2019-06-21) on What Got Done" max-width="800px" has-border="false">}}
 
 I record my status updates in it every week. In the last month, the site has attracted **three** other users. Hear that, investors? 300% month-over-month growth!
 
