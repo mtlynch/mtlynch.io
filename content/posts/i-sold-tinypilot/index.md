@@ -258,6 +258,10 @@ In the short term, I'm looking for simple projects that I can step away from abr
 
 As for TinyPilot, Scott plans to keep improving the product and bring it to a wider audience. Everyone on the team received offers to stay on, and they all accepted. The company will continue to publish updates on [TinyPilot's blog](https://tinypilotkvm.com/blog), and Scott is continuing my tradition of [blogging about TinyPilot's behind-the-scenes strategy](https://www.aftertheladder.com).
 
+## Follow-up
+
+- [Lessons from my First Exit](/lessons-from-my-first-exit/)
+
 ---
 
 _Original illustrations by [Piotr Letachowicz](https://cartoony.eu). Thanks to other founders who shared their acquisition stories, especially [Josh Pigford](https://baremetrics.com/blog/i-sold-baremetrics), [Kareem Mayan](https://blog.codetree.com/articles/what-its-like-buying-a-128k-side-project.html), and [Laura Roeder](https://lauraroeder.com/exactly-how-i-cold-emailed-my-way-to-a-life-changing-exit-and-you-can-too-165d8eaf8306)._
