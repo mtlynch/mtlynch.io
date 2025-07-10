@@ -49,9 +49,24 @@ The problem with my strategy is that forbidding myself from non-hard writing tas
 
 I guess the underlying problem was that I kept starting new blog posts, so maybe that's the real thing I have to cut back on rather than adjusting my writing habit.
 
-## How can I offer value to early access readers?
+## How can I offer something useful to early access readers?
 
-TODO
+One of the benefits of selling _Refactoring English_ as I write it is that people willing to pre-order an incomplete book are probably especially enthusiastic relative to the average reader. My plan was to talk to the early readers frequently to get feedback and make sure I'm covering topics they find interesting and explaining things in an accessible way.
+
+In practice, I've had a hard time connecting with readers. I've sent short surveys about sample chapters or invited people to reply with feedback, but I've only received a couple of responses from \~1,400 mailing list subscribers and \~250 pre-order customers.
+
+I started doing live video sessions, and I've tried different things in those sessions including lectures, writing workshops, office hours, and book club-style discussions of popular software blog posts. The live sessions have been fun and are a great way to get feedback from readers, but only a couple of readers attend each call, so it feels like I'm still only reaching a tiny sliver of readers.
+
+Three clients have taken me up on my offer for [1:1 feedback](https://refactoringenglish.com/consulting/), and those have been helpful in understanding what issues people run into in their writing and what kind of feedback resonates with them.
+
+I suspect the price is a blocker for people, but there's risk in lowering the price. I find that when I offer people free or very inexpensive feedback, they don't value it or act on it because they haven't invested anything.
+
+Some ideas:
+
+- Offer "book me for your team" option so I can present a writing topic to a team and answer their questions.
+- Polish my consulting package page a bit to make it more appealing.
+- Offer a discounted consulting option for people who are motivated to learn but limited by the price.
+- Reach out to users on Hacker News who keep submitting articles but fail to gain traction to see if they're interested in hiring me for feedback.
 
 ## What do I want to do with the website?
 
@@ -61,9 +76,7 @@ TODO
   - Improve the early access page.
     - I've already rebranded it from "pre-order" to "early access."
     - Show prospective readers which chapters are complete and available.
-- Offer custom presentations - book me for your team.
 - Publish the interview with a blogger I recorded a year ago.
-- Identify people who keep unsuccessfully submitting to Hacker News.
 - Port web versions of excerpts to ebook.
 
 ## Programming in Gleam and missing the humble `for` loop
