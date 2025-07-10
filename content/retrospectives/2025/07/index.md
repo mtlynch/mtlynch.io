@@ -49,7 +49,11 @@ The problem with my strategy is that forbidding myself from non-hard writing tas
 
 I guess the underlying problem was that I kept starting new blog posts, so maybe that's the real thing I have to cut back on rather than adjusting my writing habit.
 
-## How can I attract new readers?
+## How can I offer value to early access readers?
+
+TODO
+
+## What do I want to do with the website?
 
 - Improve the website.
   - Add a favicon.
