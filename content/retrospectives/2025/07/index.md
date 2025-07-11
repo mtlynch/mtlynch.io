@@ -1,12 +1,14 @@
 ---
 title: "Educational Products: Month 9"
 date: "2025-07-09"
-description: TODO - One-line summary
+description: Juggling too many half-finished tasks.
 ---
 
 ## Highlights
 
--
+- I look for ways to limit the number of half-complete tasks I'm juggling.
+- I brainstorm ways to talk with more of my early readers.
+- I talk about a design decision in the Gleam language that I have trouble accepting.
 
 ## Goal grades
 
@@ -17,16 +19,18 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: Switched from Kickstarter pre-orders to Stripe payment links.
 - **Grade**: A
 
-I was sticking with Kickstarter because that's where I ran the pre-sale and it was easy to leave up, but I realized it required customers to create an account to buy the book. Switching to Stripe seemed to make a difference, as there were 22 pre-orders on Stripe in 30 days vs. just 7 pre-orders when it was Kickstarter only. It's not a perfect apples-to-apples comparison because I also published a new sample chapter after switching to Stripe.
+I ran the initial pre-sale through Kickstarter, so I decided to just stick with it for subsequent pre-orders. After a couple of months, I realized Kickstarter requires customers to create an account to buy the book, which adds a lot of friction and discourages people from buying.
+
+Switching to Stripe seemed to make a difference, as there were 22 pre-orders on Stripe in 30 days vs. just 7 pre-orders when it was Kickstarter only. It's not a perfect apples-to-apples comparison because I also published a new sample chapter after switching to Stripe.
 
 ### Publish a new sample chapter on the book website
 
 - **Result**: Published ["How to Write Compelling Software Release Announcements"](https://refactoringenglish.com/chapters/release-announcements/)
 - **Grade**: A
 
-This got a positive reception on [Lobsters](https://lobste.rs/s/ntl2iw/how_write_compelling_release) and was doing well on [Hacker News](https://news.ycombinator.com/item?id=44377666), but it got moderated off the front page. I suspect too many Hacker News users had an allergic reaction to the chapter as too focused on marketing.
+This got a positive reception on [Lobsters](https://lobste.rs/s/ntl2iw/how_write_compelling_release) and was doing well on [Hacker News](https://news.ycombinator.com/item?id=44377666), but it got moderated off the front page. I suspect it got flagged on many Hacker News by users who disliked the chapter's emphasis on marketing.
 
-I got more useful feedback on this chapter than on any previous chapter. A lot of it was negative feedback, but that was legitimately helpful because commenters had fair points about weaknesses in the post, mainly in my examples. I revised the post based on the feedback, and the discussions gave me ideas for two new sections I added to the post (["Briefly introduce your product"](https://refactoringenglish.com/chapters/release-announcements/#briefly-introduce-your-product) and ["Turn your numbers into graphs"](https://refactoringenglish.com/chapters/release-announcements/#turn-your-numbers-into-graphs)).
+I got more useful feedback on this chapter than on any previous chapter. A lot of it was negative feedback, but that was legitimately helpful because I found the criticism fair. I revised the post based on the feedback, and the discussions gave me ideas for two new sections I added to the post (["Briefly introduce your product"](https://refactoringenglish.com/chapters/release-announcements/#briefly-introduce-your-product) and ["Turn your numbers into graphs"](https://refactoringenglish.com/chapters/release-announcements/#turn-your-numbers-into-graphs)).
 
 ### Meet at least 10 readers on video calls
 
