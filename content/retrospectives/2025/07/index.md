@@ -1,6 +1,6 @@
 ---
 title: "Educational Products: Month 9"
-date: "2025-07-09"
+date: "2025-07-11"
 description: Juggling too many half-finished tasks.
 ---
 
