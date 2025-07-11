@@ -73,9 +73,9 @@ Based on this, here are my ideas for talking more with readers:
 
 ## How can I improve marketing for the book?
 
-Along with half-finished blog posts, I feel like there are a lot of simple things I want to do to market my book, but I haven't allocated time for them, so they just keep taking up space in my mind.
+Along with half-finished blog posts, there are a lot of simple things I want to do to market my book, but I haven't allocated time for them, so they just keep taking up space in my mind.
 
-So, here's my braindump of all the low-hanging fruit tasks I'd like to complete:
+Here's my braindump of all the low-hanging fruit tasks I'd like to complete:
 
 - Improve the website.
   - Add a favicon.
@@ -83,10 +83,11 @@ So, here's my braindump of all the low-hanging fruit tasks I'd like to complete:
   - Improve the [early access page](https://refactoringenglish.com/early-access/).
     - I've already rebranded it from "pre-order" to "early access."
     - Show prospective readers which chapters are complete and available.
+  - Show on the website which chapters are available rather than just the count.
 - Publish the interview with a blogger I recorded a year ago.
-- Port web versions of excerpts to ebook and mark those chapters as complete on the website.
+  - I recorded this for my planned reboot of _Hit the Front Page of Hacker News_, but I ended up shelving that product, and it's been bothering me that I asked someone to do an interview and have just been sitting on it forever.
+- Port web versions of excerpts to the ebook and mark those chapters as complete on the website.
   - I've done most of these, but it's so boring that I put it off, and there are still three chapters that exist in the web excerpts that I haven't yet integratedinto the ebook.
-- Show which chapters are available rather than just the count.
 
 ## Programming in Gleam and missing the humble `for` loop
 
@@ -129,14 +130,10 @@ I'm going to keep experimenting with Gleam, but I'm also going to give Elixir or
 ### Lessons learned
 
 - Resist the temptation to start new blog posts when I already have partially-finished posts.
--
+- I should seek more conversations with readers by doubling down on what's working.
 
 ### Goals for next month
 
+- Talk to at least 10 readers I haven't spoken to before.
 - Clear the backlog of my marketing ideas.
-- Invest at least 10 hours into [_Refactoring English_ website](https://refactoringenglish.com) improvements aimed at increasing sales.
 - Publish a new chapter of _Refactoring English_.
-
-### Requests for help
-
-TODO
