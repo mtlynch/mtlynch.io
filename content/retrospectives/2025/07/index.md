@@ -24,18 +24,22 @@ I was sticking with Kickstarter because that's where I ran the pre-sale and it w
 - **Result**: Published ["How to Write Compelling Software Release Announcements"](https://refactoringenglish.com/chapters/release-announcements/)
 - **Grade**: A
 
-This got a positive reception on [Lobsters](https://lobste.rs/s/ntl2iw/how_write_compelling_release) and was doing well on Hacker News
+This got a positive reception on [Lobsters](https://lobste.rs/s/ntl2iw/how_write_compelling_release) and was doing well on [Hacker News](https://news.ycombinator.com/item?id=44377666), but it got moderated off the front page. I suspect too many Hacker News users had an allergic reaction to the chapter as too focused on marketing.
 
-### - Meet at least 10 readers on video calls
+I got more useful feedback on this chapter than on any previous chapter. A lot of it was negative feedback, but that was legitimately helpful because commenters had fair points about weaknesses in the post, mainly in my examples. I revised the post based on the feedback, and the discussions gave me ideas for two new sections I added to the post (["Briefly introduce your product"](https://refactoringenglish.com/chapters/release-announcements/#briefly-introduce-your-product) and ["Turn your numbers into graphs"](https://refactoringenglish.com/chapters/release-announcements/#turn-your-numbers-into-graphs)).
+
+### Meet at least 10 readers on video calls
 
 - **Result**: Met three readers on video calls.
 - **Grade**: D
 
-TODO
+I fell way below my goal on this. Part of the problem was that I only scheduled two calls for the whole month, but another issue is that I'm failing to draw attendance from early readers on the calls I have.
 
-## Business metrics
+## _Refactoring English_ metrics
 
-Metrics are back! I used to [publish my finances every month](/retrospectives/2024/04/#tinypilot-stats), but I stopped after I sold TinyPilot, as there weren't really finances to report. Now, that I have income coming in more regularly from the book, I can share numbers again.
+Metrics are back!
+
+I used to [publish my finances every month](/retrospectives/2024/04/#tinypilot-stats), but I stopped after I sold TinyPilot, as there weren't any interesting numbers to report. Now, that I have income coming in more regularly from the book, I have relevant numbers to share again.
 
 {{<project-metrics project="refactoring_english">}}
 
@@ -45,39 +49,43 @@ One of the strategies that's been successful for this book is committing to at l
 
 My strategy has worked well. In June, I thin I published more than in any other month of my career. I added three new chapters to the _Refactoring English_ ebook, published [one new sample chapter](https://refactoringenglish.com/chapters/release-announcements/), and I wrote [three](/goharddrive-leak/) [new](/notes/gleam-first-impressions/) [posts](/notes/gleam-call-elixir/) on this blog.
 
-The problem with my strategy is that forbidding myself from non-hard writing tasks means I keep deferring the "fit and finish" tasks for a week. I end up accruing a bunch of partially finished posts. Particularly last month, I had a lot of partially-finished writing, and I felt like I was wasting mental cycles keeping track of what was published and what still needed final edits.
+The problem with my strategy is that abstaining from easier writing tasks means I accrue posts that are almost done but need some grammar checking and proofreading. Particularly last month, I had a lot of partially-finished writing, and I felt like I was wasting mental cycles keeping track of what was published and what still needed final edits.
 
-I guess the underlying problem was that I kept starting new blog posts, so maybe that's the real thing I have to cut back on rather than adjusting my writing habit.
+I guess the underlying problem was that I kept starting new blog posts, so maybe the simple answer is that I have to cut back on that before adjusting anything else about my writing habits.
 
-## How can I offer something useful to early access readers?
+## How can I talk more with early access readers?
 
-One of the benefits of selling _Refactoring English_ as I write it is that people willing to pre-order an incomplete book are probably especially enthusiastic relative to the average reader. My plan was to talk to the early readers frequently to get feedback and make sure I'm covering topics they find interesting and explaining things in an accessible way.
+One of the benefits of selling _Refactoring English_ as I write it is that people willing to pre-order an incomplete book are probably especially enthusiastic relative to the average reader. My plan was to talk frequently to early readers to make sure the book answers their questions and feels accessible.
 
 In practice, I've had a hard time connecting with readers. I've sent short surveys about sample chapters or invited people to reply with feedback, but I've only received a couple of responses from \~1,400 mailing list subscribers and \~250 pre-order customers.
 
-I started doing live video sessions, and I've tried different things in those sessions including lectures, writing workshops, office hours, and book club-style discussions of popular software blog posts. The live sessions have been fun and are a great way to get feedback from readers, but only a couple of readers attend each call, so it feels like I'm still only reaching a tiny sliver of readers.
+I started doing live video sessions, and I've tried different things in those sessions including lectures, writing workshops, office hours, and book club-style discussions of popular software blog posts. The live sessions have been fun and the attendees have given me excellent feedback, but only a couple of readers attend each call, so it feels like I'm still only reaching a tiny sliver of readers.
 
-Three clients have taken me up on my offer for [1:1 feedback](https://refactoringenglish.com/consulting/), and those have been helpful in understanding what issues people run into in their writing and what kind of feedback resonates with them.
+The other successful source of feedback has been [1:1 feedback clients](https://refactoringenglish.com/consulting/). I've only had three paying clients, but working with them helps me see what writing issues people in my target audience want help with.
 
-I suspect the price is a blocker for people, but there's risk in lowering the price. I find that when I offer people free or very inexpensive feedback, they don't value it or act on it because they haven't invested anything.
+Based on this, here are my ideas for talking more with readers:
 
-Some ideas:
-
+- Reach out to readers individually after they purchase to ask about what they want to learn from the book and whether it meets their expectations so far.
 - Offer "book me for your team" option so I can present a writing topic to a team and answer their questions.
-- Polish my consulting package page a bit to make it more appealing.
-- Offer a discounted consulting option for people who are motivated to learn but limited by the price.
+- Polish [my writing consulting page](https://refactoringenglish.com/consulting/) a bit to make it more appealing.
+- Offer a discounted consulting option for people who are motivated to learn but can't afford the price.
 - Reach out to users on Hacker News who keep submitting articles but fail to gain traction to see if they're interested in hiring me for feedback.
 
-## What do I want to do with the website?
+## How can I improve marketing for the book?
+
+Along with half-finished blog posts, I feel like there are a lot of simple things I want to do to market my book, but I haven't allocated time for them, so they just keep taking up space in my mind.
+
+So, here's my braindump of all the low-hanging fruit tasks I'd like to complete:
 
 - Improve the website.
   - Add a favicon.
   - Tweak the UI so that the call-to-action is to buy early access rather than sign up for the mailing list.
-  - Improve the early access page.
+  - Improve the [early access page](https://refactoringenglish.com/early-access/).
     - I've already rebranded it from "pre-order" to "early access."
     - Show prospective readers which chapters are complete and available.
 - Publish the interview with a blogger I recorded a year ago.
-- Port web versions of excerpts to ebook.
+- Port web versions of excerpts to ebook and mark those chapters as complete on the website.
+  - I've done most of these, but it's so boring that I put it off, and there are still three chapters that exist in the web excerpts that I haven't yet integratedinto the ebook.
 - Show which chapters are available rather than just the count.
 
 ## Programming in Gleam and missing the humble `for` loop
@@ -99,13 +107,13 @@ One of the hardest adjustments in Gleam is working without loops. Gleam delibera
 
 The lack of loops is giving me the most trouble when I'm trying to split my chat logs into tokens for parsing. The delimiters I care about are `[' ', '\n', '[', ']', ]`. I also care about colon, but only if a single space follows it, like this: `': '`.
 
-In a language like Go, I'd iterate through the string in a `for` loop and if I hit a space, I'd check if the previous character was a `:` so that I could handle the `: ` case.
+In a language like Go, I'd iterate through the string in a `for` loop. When I found a space character, I'd check if the previous character was a `:` so that I could handle the `: ` case.
 
-To achieve this in Gleam and work around the lack of loops, I end up building this odd decision tree where a lot of the leaves [end up repeating code](https://codeberg.org/mtlynch/gleam-chat-log-parser/src/commit/0988084b633d8382261276b2979d4f06508999a2/src/string_manipulation.gleam#L5-L63).
+Without loops in Gleam, I end up building this odd decision tree where a lot of the leaves [end up repeating code](https://codeberg.org/mtlynch/gleam-chat-log-parser/src/commit/0988084b633d8382261276b2979d4f06508999a2/src/string_manipulation.gleam#L5-L63).
 
 I find a lot of Gleam's design choices interesting in that when I do something "the Gleam way," it feels elegant, but with loops, it just feels like I'm working without the right tools.
 
-I want to keep experimenting with Gleam, but I'm also feeling like I might end up switching to Elixir or OCaml, as they have a lot of the features I like in Gleam while addressing some of my pain points.
+I'm going to keep experimenting with Gleam, but I'm also going to give Elixir or OCaml a shot, as they have a lot of the features I like in Gleam while addressing some of my pain points.
 
 ## Wrap up
 
@@ -120,11 +128,12 @@ I want to keep experimenting with Gleam, but I'm also feeling like I might end u
 
 ### Lessons learned
 
+- Resist the temptation to start new blog posts when I already have partially-finished posts.
 -
 
 ### Goals for next month
 
-- Publish a video interview I've been sitting on for a year.
+- Clear the backlog of my marketing ideas.
 - Invest at least 10 hours into [_Refactoring English_ website](https://refactoringenglish.com) improvements aimed at increasing sales.
 - Publish a new chapter of _Refactoring English_.
 
