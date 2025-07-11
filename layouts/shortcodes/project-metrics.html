@@ -1,0 +1,142 @@
+{{- $project := .Get "project" -}}
+
+{{- /* Extract year and month from page URL */ -}}
+{{- $permalink := .Page.RelPermalink -}}
+{{- /* Expected format: /retrospectives/YYYY/MM/ */ -}}
+{{- $pathParts := split $permalink "/" -}}
+{{- $year := "" -}}
+{{- $month := "" -}}
+
+{{- /* Find retrospectives, year, and month in the path */ -}}
+{{- range $i, $part := $pathParts -}}
+  {{- if eq $part "retrospectives" -}}
+    {{- if gt (len $pathParts) (add $i 2) -}}
+      {{- $year = index $pathParts (add $i 1) -}}
+      {{- $month = index $pathParts (add $i 2) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Early return: Check if year and month were extracted */ -}}
+{{- if not (and $year $month) -}}
+  {{- errorf "Could not extract year and month from URL: %s. Expected format: /retrospectives/YYYY/MM/" $permalink -}}
+{{- end -}}
+
+{{- /* Early return: Validate year and month format */ -}}
+{{- $yearInt := int $year -}}
+{{- $monthInt := int $month -}}
+{{- if not (and (ge $yearInt 2000) (le $yearInt 3000) (ge $monthInt 1) (le $monthInt 12)) -}}
+  {{- errorf "Invalid year (%s) or month (%s) extracted from URL: %s. Year must be 2000-3000, month must be 1-12." $year $month $permalink -}}
+{{- end -}}
+
+{{- /* Create a time object for the retrospective date and calculate previous months using Go's time functions */ -}}
+{{- $retroDate := time (printf "%d-%02d-01" $yearInt $monthInt) -}}
+{{- $currentDate := $retroDate.AddDate 0 -1 0 -}}
+{{- $prevDate := $retroDate.AddDate 0 -2 0 -}}
+{{- $current := $currentDate.Format "200601" -}}
+{{- $prev := $prevDate.Format "200601" -}}
+
+{{- $data := index .Site.Data "project_metrics" -}}
+{{- $projectData := index $data $project -}}
+{{- $prevData := index $projectData $prev -}}
+{{- $currentData := index $projectData $current -}}
+
+{{- /* Early return: Check if data exists for both months */ -}}
+{{- if not (and $prevData $currentData) -}}
+  {{- errorf "Could not find data for project \"%s\" with months \"%s\" and \"%s\". Available data: %s" $project $prev $current $projectData -}}
+{{- end -}}
+
+{{- /* Calculate unique visitors values */ -}}
+{{- $prevUniqueVisitors := $prevData.unique_visitors | default 0 | int -}}
+{{- $currentUniqueVisitors := $currentData.unique_visitors | default 0 | int -}}
+
+{{- /* Calculate revenue values */ -}}
+{{- $prevPreOrders := $prevData.revenue_pre_orders | default 0.0 | float -}}
+{{- $prevConsulting := $prevData.revenue_consulting | default 0.0 | float -}}
+{{- $prevSponsors := $prevData.revenue_sponsors | default 0.0 | float -}}
+{{- $prevTotal := add (add $prevPreOrders $prevConsulting) $prevSponsors -}}
+
+{{- $currentPreOrders := $currentData.revenue_pre_orders | default 0.0 | float -}}
+{{- $currentConsulting := $currentData.revenue_consulting | default 0.0 | float -}}
+{{- $currentSponsors := $currentData.revenue_sponsors | default 0.0 | float -}}
+{{- $currentTotal := add (add $currentPreOrders $currentConsulting) $currentSponsors -}}
+
+{{- /* Calculate changes */ -}}
+{{- $uniqueVisitorsChange := sub $currentUniqueVisitors $prevUniqueVisitors -}}
+{{- $preOrdersChange := sub $currentPreOrders $prevPreOrders -}}
+{{- $consultingChange := sub $currentConsulting $prevConsulting -}}
+{{- $sponsorsChange := sub $currentSponsors $prevSponsors -}}
+{{- $totalChange := sub $currentTotal $prevTotal -}}
+
+{{- /* Calculate percentage changes */ -}}
+{{- $uniqueVisitorsPercent := 0.0 -}}
+{{- if gt $prevUniqueVisitors 0 -}}
+  {{- $uniqueVisitorsPercent = div (mul (float $uniqueVisitorsChange) 100.0) (float $prevUniqueVisitors) -}}
+{{- end -}}
+
+{{- $preOrdersPercent := 0.0 -}}
+{{- if gt $prevPreOrders 0 -}}
+  {{- $preOrdersPercent = div (mul $preOrdersChange 100) $prevPreOrders -}}
+{{- end -}}
+
+{{- $consultingPercent := 0.0 -}}
+{{- if gt $prevConsulting 0 -}}
+  {{- $consultingPercent = div (mul $consultingChange 100) $prevConsulting -}}
+{{- end -}}
+
+{{- $sponsorsPercent := 0.0 -}}
+{{- if gt $prevSponsors 0 -}}
+  {{- $sponsorsPercent = div (mul $sponsorsChange 100) $prevSponsors -}}
+{{- end -}}
+
+{{- $totalPercent := 0.0 -}}
+{{- if gt $prevTotal 0 -}}
+  {{- $totalPercent = div (mul $totalChange 100) $prevTotal -}}
+{{- end -}}
+
+{{- /* Generate month names using Go's time formatting from the time objects we already created */ -}}
+{{- $prevMonth := $prevDate.Format "January 2006" -}}
+{{- $currentMonth := $currentDate.Format "January 2006" -}}
+
+<table>
+  <thead>
+    <tr>
+      <th>Metric</th>
+      <th>{{ $prevMonth }}</th>
+      <th>{{ $currentMonth }}</th>
+      <th>Change</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Unique visitors</td>
+      <td>{{ $prevUniqueVisitors | lang.FormatNumber 0 }}</td>
+      <td>{{ $currentUniqueVisitors | lang.FormatNumber 0 }}</td>
+      <td>{{- if gt $uniqueVisitorsChange 0 -}}{{- if le $prevUniqueVisitors 0 -}}<span style="color: green;">+{{ $uniqueVisitorsChange | lang.FormatNumber 0 }} (+inf%)</span>{{- else -}}<span style="color: green;">+{{ $uniqueVisitorsChange | lang.FormatNumber 0 }} (+{{ printf "%.0f" $uniqueVisitorsPercent }}%)</span>{{- end -}}{{- else if lt $uniqueVisitorsChange 0 -}}<span style="color: red;">{{ $uniqueVisitorsChange | lang.FormatNumber 0 }} ({{ printf "%.0f" $uniqueVisitorsPercent }}%)</span>{{- else -}}0 (0%){{- end -}}</td>
+    </tr>
+    <tr>
+      <td>Revenue from pre-orders</td>
+      <td>${{ printf "%.2f" $prevPreOrders }}</td>
+      <td>${{ printf "%.2f" $currentPreOrders }}</td>
+      <td>{{- if gt $preOrdersChange 0 -}}{{- if le $prevPreOrders 0 -}}<span style="color: green;">+${{ printf "%.2f" $preOrdersChange }} (+inf%)</span>{{- else -}}<span style="color: green;">+${{ printf "%.2f" $preOrdersChange }} (+{{ printf "%.0f" $preOrdersPercent }}%)</span>{{- end -}}{{- else if lt $preOrdersChange 0 -}}<span style="color: red;">-${{ printf "%.2f" (mul $preOrdersChange -1) }} ({{ printf "%.0f" $preOrdersPercent }}%)</span>{{- else -}}$0.00 (0%){{- end -}}</td>
+    </tr>
+    <tr>
+      <td>Revenue from consulting</td>
+      <td>${{ printf "%.2f" $prevConsulting }}</td>
+      <td>${{ printf "%.2f" $currentConsulting }}</td>
+      <td>{{- if gt $consultingChange 0 -}}{{- if le $prevConsulting 0 -}}<span style="color: green;">+${{ printf "%.2f" $consultingChange }} (+inf%)</span>{{- else -}}<span style="color: green;">+${{ printf "%.2f" $consultingChange }} (+{{ printf "%.0f" $consultingPercent }}%)</span>{{- end -}}{{- else if lt $consultingChange 0 -}}<span style="color: red;">-${{ printf "%.2f" (mul $consultingChange -1) }} ({{ printf "%.0f" $consultingPercent }}%)</span>{{- else -}}$0.00 (0%){{- end -}}</td>
+    </tr>
+    <tr>
+      <td>Revenue from sponsors</td>
+      <td>${{ printf "%.2f" $prevSponsors }}</td>
+      <td>${{ printf "%.2f" $currentSponsors }}</td>
+      <td>{{- if gt $sponsorsChange 0 -}}{{- if le $prevSponsors 0 -}}<span style="color: green;">+${{ printf "%.2f" $sponsorsChange }} (+inf%)</span>{{- else -}}<span style="color: green;">+${{ printf "%.2f" $sponsorsChange }} (+{{ printf "%.0f" $sponsorsPercent }}%)</span>{{- end -}}{{- else if lt $sponsorsChange 0 -}}<span style="color: red;">-${{ printf "%.2f" (mul $sponsorsChange -1) }} ({{ printf "%.0f" $sponsorsPercent }}%)</span>{{- else -}}$0.00 (0%){{- end -}}</td>
+    </tr>
+    <tr style="font-weight: bold;">
+      <td>Total Revenue</td>
+      <td>${{ printf "%.2f" $prevTotal }}</td>
+      <td>${{ printf "%.2f" $currentTotal }}</td>
+      <td>{{- if gt $totalChange 0 -}}{{- if le $prevTotal 0 -}}<span style="color: green;">+${{ printf "%.2f" $totalChange }} (+inf%)</span>{{- else -}}<span style="color: green;">+${{ printf "%.2f" $totalChange }} (+{{ printf "%.0f" $totalPercent }}%)</span>{{- end -}}{{- else if lt $totalChange 0 -}}<span style="color: red;">-${{ printf "%.2f" (mul $totalChange -1) }} ({{ printf "%.0f" $totalPercent }}%)</span>{{- else -}}$0.00 (0%){{- end -}}</td>
+    </tr>
+  </tbody>
+</table>
