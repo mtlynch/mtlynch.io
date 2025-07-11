@@ -28,7 +28,7 @@ Switching to Stripe seemed to make a difference, as there were 22 pre-orders on 
 - **Result**: Published ["How to Write Compelling Software Release Announcements"](https://refactoringenglish.com/chapters/release-announcements/)
 - **Grade**: A
 
-This got a positive reception on [Lobsters](https://lobste.rs/s/ntl2iw/how_write_compelling_release) and was doing well on [Hacker News](https://news.ycombinator.com/item?id=44377666), but it got moderated off the front page. I suspect it got flagged on many Hacker News by users who disliked the chapter's emphasis on marketing.
+This got a positive reception on [Lobsters](https://lobste.rs/s/ntl2iw/how_write_compelling_release) and was doing well on [Hacker News](https://news.ycombinator.com/item?id=44377666), but it got moderated off the front page. I suspect users on Hacker News disliked the emphasis on marketing and flagged it.
 
 I got more useful feedback on this chapter than on any previous chapter. A lot of it was negative feedback, but that was legitimately helpful because I found the criticism fair. I revised the post based on the feedback, and the discussions gave me ideas for two new sections I added to the post (["Briefly introduce your product"](https://refactoringenglish.com/chapters/release-announcements/#briefly-introduce-your-product) and ["Turn your numbers into graphs"](https://refactoringenglish.com/chapters/release-announcements/#turn-your-numbers-into-graphs)).
 
@@ -51,7 +51,7 @@ I used to [publish my finances every month](/retrospectives/2024/04/#tinypilot-s
 
 One of the strategies that's been successful for this book is committing to at least an hour per day of "difficult" writing. That means that I can't use the hour to do formatting, grammar checking, or proofreading.
 
-My strategy has worked well. In June, I thin I published more than in any other month of my career. I added three new chapters to the _Refactoring English_ ebook, published [one new sample chapter](https://refactoringenglish.com/chapters/release-announcements/), and I wrote [three](/goharddrive-leak/) [new](/notes/gleam-first-impressions/) [posts](/notes/gleam-call-elixir/) on this blog.
+My strategy has worked well. In June, I think I published more than in any other month of my career. I added three new chapters to the _Refactoring English_ ebook, published [one new sample chapter](https://refactoringenglish.com/chapters/release-announcements/), and I wrote [three](/goharddrive-leak/) [new](/notes/gleam-first-impressions/) [posts](/notes/gleam-call-elixir/) on this blog.
 
 The problem with my strategy is that abstaining from easier writing tasks means I accrue posts that are almost done but need some grammar checking and proofreading. Particularly last month, I had a lot of partially-finished writing, and I felt like I was wasting mental cycles keeping track of what was published and what still needed final edits.
 
@@ -91,7 +91,7 @@ Here's my braindump of all the low-hanging fruit tasks I'd like to complete:
 - Publish the interview with a blogger I recorded a year ago.
   - I recorded this for my planned reboot of _Hit the Front Page of Hacker News_, but I ended up shelving that product, and it's been bothering me that I asked someone to do an interview and have just been sitting on it forever.
 - Port web versions of excerpts to the ebook and mark those chapters as complete on the website.
-  - I've done most of these, but it's so boring that I put it off, and there are still three chapters that exist in the web excerpts that I haven't yet integratedinto the ebook.
+  - I've done most of these, but it's so boring that I put it off, and there are still three chapters that exist in the web excerpts that I haven't yet integrated into the ebook.
 
 ## Programming in Gleam and missing the humble `for` loop
 
@@ -110,7 +110,7 @@ One of the hardest adjustments in Gleam is working without loops. Gleam delibera
 
 <!-- markdownlint-disable no-space-in-code -->
 
-The lack of loops is giving me the most trouble when I'm trying to split my chat logs into tokens for parsing. The delimiters I care about are `[' ', '\n', '[', ']', ]`. I also care about colon, but only if a single space follows it, like this: `': '`.
+The lack of loops is giving me the most trouble when I'm trying to split my chat logs into tokens for parsing. The delimiters I care about are `[' ', '\n', '[', ']']`. I also care about colon, but only if a single space follows it, like this: `': '`.
 
 In a language like Go, I'd iterate through the string in a `for` loop. When I found a space character, I'd check if the previous character was a `:` so that I could handle the `: ` case.
 
