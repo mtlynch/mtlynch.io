@@ -14,17 +14,17 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Offer a lower-friction way for users to pre-order my book
 
-- **Result**: Switched to Stripe payment links
-- **Grade**: XX
+- **Result**: Switched from Kickstarter pre-orders to Stripe payment links.
+- **Grade**: A
 
-7 customers in May via Kickstarter vs. 21 (ending in tdmack on Jul 2)
+I was sticking with Kickstarter because that's where I ran the pre-sale and it was easy to leave up, but I realized it required customers to create an account to buy the book. Switching to Stripe seemed to make a difference, as there were 22 pre-orders on Stripe in 30 days vs. just 7 pre-orders when it was Kickstarter only. It's not a perfect apples-to-apples comparison because I also published a new sample chapter after switching to Stripe.
 
 ### Publish a new sample chapter on the book website
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: Published ["How to Write Compelling Software Release Announcements"](https://refactoringenglish.com/chapters/release-announcements/)
+- **Grade**: A
 
-TODO
+This got a positive reception on [Lobsters](https://lobste.rs/s/ntl2iw/how_write_compelling_release) and was doing well on Hacker News
 
 ### - Meet at least 10 readers on video calls
 
@@ -78,6 +78,7 @@ Some ideas:
     - Show prospective readers which chapters are complete and available.
 - Publish the interview with a blogger I recorded a year ago.
 - Port web versions of excerpts to ebook.
+- Show which chapters are available rather than just the count.
 
 ## Programming in Gleam and missing the humble `for` loop
 
