@@ -1,35 +1,82 @@
 ---
 title: "Migrating a ZFS pool from RAIDZ1 to RAIDZ2"
-date: 2025-07-15
+date: 2025-07-22
 ---
 
-I recently upgraded my home TrueNAS server and migrated 18 TB of data from my four-disk RAIDZ1 ZFS pool to a new seven-disk RAIDZ2 pool. The neat trick is that I only added three disks to my server and never transferred my data to external storage.
+<style>
+p img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
 
-This migration was an interesting challenge for two reasons:
+I recently upgraded my home TrueNAS server and migrated 18 TB of data from my four-disk RAIDZ1 ZFS pool to a new seven-disk RAIDZ2 pool.
+
+The neat trick is that I never transferred my data to external storage. That's tricky because:
 
 1. You can't convert a RAIDZ1 pool to a RAIDZ2 pool in place.
 1. Using the new disks to create a 3x8TB RAIDZ2 pool would mean too little capacity for my 18 TB of data.
 
 ## How I did it
 
-This was my strategy from a high level:
+### Step 0: Initial state
 
-1. Buy three new 8 TB disks.
-1. Offline one disk from my old RAIDZ1 pool.
-1. Create a RAIDZ2 pool using my three new disks, one disk from my RAIDZ1 pool, and one fake disk
-   - The new pool has 24 TB of capacity.
-1. Offline the fake disk from the RAIDZ2 pool.
-   - The new pool can tolerate this as it's equivalent to just one disk failure, and it can tolerate two.
-1. Migrate a snapshot of the old pool to the new pool.
-1. Destroy the old pool.
-1. Use one disk from the old RAIDZ1 pool to replace the fake disk in the RAIDZ2 pool.
-1. Add the remaining two disks from the old RAIDZ1 pool to the new RAIDZ2 pool
+Starting out, I have a 4x8TB RAIDZ1 ZFS pool, and I'm using 18 TB of its 23 TB capacity. I have three new disks that I want to integrate into my storage server.
+
+![](migration-0.svg)
+
+### Step 1: Borrow one disk to create a RAIDZ2 pool
+
+To begin, I remove one disk from my original RAIDZ1 pool, leaving it in a degraded state.
+
+I then create a new 5x8TB RAIDZ2 pool using:
+
+1.  My three new disks
+1.  One disk from my RAIDZ1 pool
+1.  One 8 TB sparse file to act as a fake disk
+
+The sparse file is just a hack to allow me to create a 5-disk pool, and it won't actually receive any data.
+
+![](migration-1.svg)
+
+### Step 2: Offline the fake disk
+
+Next, I offline the fake disk (the 8 TB sparse file) from the RAIDZ2 pool. I only used it to trick ZFS into allowing me to create a 5x8TB RAIDZ2 pool with only four disks, but I don't want ZFS to write data to the fake disk because I don't actually have storage for that file.
+
+After offlining the fake disk, the pool is still healthy, as RAIDZ2 can operate with up to two disks missing.
+
+![](migration-2.svg)
+
+### Step 3: Migrate a snapshot of the RAIDZ1 pool to the RAIDZ2 pool
+
+I snapshot all datasets in my RAIDZ1 pool and migrate all my data to the new RAIDZ2 pool using `zfs send`.
+
+![](migration-3.svg)
+
+### Step 4: Destroy the old pool
+
+Once I verify that I've successfully migrated my data to the RAIDZ2 pool, I destroy my old RAIDZ1 pool, leaving me with three extra disks.
+
+![](migration-4.svg)
+
+### Step 5: Replace the fake disk with an old disk
+
+I use one disk from my old RAIDZ1 pool to replace the fake disk in my RAIDZ2 pool, so it is no longer missing a disk.
+
+![](migration-5.svg)
+
+### Step 6: Expand the new pool with the old disks
+
+Finally, I use ZFS expansion to add the last two disks from my old RAIDZ1 pool to my new RAIDZ2 pool, giving me a total of 33 TB of usable storage and a healthy 7x8TB RAIDZ2 pool.
+
+![](migration-6.svg)
+
+## Why is this hard?
+
+The primary challenge in this migration is that you can't remove disks from a ZFS pool. Otherwise, you could create a new RAIDZ2 pool with just three physical disks, down
 
 It sounds simple in theory, but in practice, I ran into a few hiccups which I'll share.
-
-## Why this is hard
-
-The primary challenge in this migrationn is that you can't remove disks from a ZFS pool. Otherwise, you could create a new RAIDZ2 pool with just three physical disks, down
 
 ## Why switch from RAIDZ1 to RAIDZ2?
 
@@ -57,15 +104,32 @@ https://github.com/openzfs/zfs/pull/15022
 
 available in 2.3.0
 
-## Make backups
+## Backing up my data
 
-I said I never moved my data to external storage, but that's not entirely true. I did use external storage for backups.
+I said I never moved my data to external storage, but that's not strictly true. I did use external storage for backups, though I didn't end up needing them.
 
-I already back up most of my data, but the vast majority of my data is media. I have 15 TB of movies and TV shows, and, because I'm a data hoarder, I keep the raw images of all of my disks. Because what if one day, I decide I really need to watch the director's commentary for my DVD copy of _There's Something About Mary_?
+I already back up most of my data, but the vast majority of ZFS pool is media. I have 15 TB of movies and TV shows, and, because I'm a data hoarder, I keep the raw images of all of my disks. Because what if one day, I decide I really need to watch the director's commentary for my DVD copy of 1998's _There's Something About Mary_?
+
+TODO: Show photo of DVDs
 
 So, I back up all of my important personal data to multiple cloud storage buckets using restic (TODO: link), but it would cost me $XX/mo to keep backups of my TV shows and movies, so I don't back them up.
 
-I compared backup options
+I'm aware of two cloud vendors that offer ZFS-native backup:
+
+- rsync.net: Minimum billing is one month ($180 for 18 TB).
+- zfs.rent: Requires me to send them my own hard disks.
+
+There are tools for backing up ZFS to S3-compatible storage, but I didn't want to try those, as it felt too complex, and I wouldn't have a way of verifying the backups worked.
+
+That left just using my standard restic backup to a cloud storage vendor that billed at the granularity of per-day or shorter.
+
+### Gotcha: Wasabi has a minimum retention policy
+
+I initially backed up to Wasabi on a migration attempt that didn't work. Okay, that's fine. I just owe Wasabi $30 or so for a few days of backup. It turned out that Wasabi does support per-XX billing, but you have to pay for a minimum of 90 days for any data you back up. So now, instead of a $30 Wassabi bill, I was looking at a $XX bill.
+
+I emailed Wasabi support asking for mercy, and they had strange advice for me. Apparently, you can escape the minimum storage requirement by deleting your entire Wasabi account. This isn't a hack or trick or anything but actual guidance that official Wasabi support gave me.
+
+But then without me even pushing back, another Wasabi rep joined the ticket and told me that as a one-time courtesy, they'd credit me the cost of my overages.
 
 ## Identifying the disks
 
@@ -495,44 +559,6 @@ import pool. It already showed up, so ???
 
 ![alt text](image-5.png)
 
-### Test
-
-```bash
-zpool attach "${NEWPOOL}" raidz2-0 "${DISK_3}"
-```
-
-```bash
-$ zpool status "${NEWPOOL}" | grep --after-context=1 "expand:"
-expand: expansion of raidz2-0 in progress since Sun May 11 13:13:06 2025
-        563K / 588K copied at 14.8K/s, 95.75% done, 00:00:01 to go
-```
-
-Note that this is a bit buggy. It shows me above 100% progress:
-
-```bash
-$ zpool status "${NEWPOOL}" | grep --after-context=1 "expand:"
-expand: expansion of raidz2-0 in progress since Sun May 11 13:13:06 2025
-        924K / 768K copied at 8.47K/s, 120.25% done, (copy is slow, no estimated time)
-```
-
-You should eventually see this:
-
-```bash
-$ zpool status "${NEWPOOL}" | grep --after-context=1 "expand:"
-expand: expanded raidz2-0 copied 944K in 00:02:17, on Sun May 11 13:15:23 2025
-```
-
-And then just repeat with the last disk:
-
-```bash
-zpool attach "${NEWPOOL}" raidz2-0 "${DISK_4}"
-```
-
-```bash
-$ zpool status "${NEWPOOL}" | grep --after-context=1 "expand:"
-expand: expanded raidz1-0 copied 562K in 00:01:57, on Wed Apr 30 03:30:02 2025
-```
-
 ### Actual
 
 ```bash
@@ -579,36 +605,6 @@ pool1  feature@raidz_expansion  enabled                  local
 + zpool status pool1
 expand: expansion of raidz2-0 in progress since Sun Jun  1 08:08:03 2025
         17.1G / 28.5T copied at 501M/s, 0.06% done, 16:36:03 to go
-```
-
-## Final state
-
-```bash
-$ zpool status "${NEWPOOL}"
-  pool: testpool2
- state: ONLINE
-  scan: scrub repaired 0B in 00:00:01 with 0 errors on Sun May 11 13:18:14 2025
-expand: expanded raidz2-0 copied 743K in 00:02:03, on Sun May 11 13:18:13 2025
-config:
-
-        NAME                                                                                                                                                      STATE     READ WRITE CKSUM
-        testpool2                                                                                                                                                 ONLINE       0     0     0
-          raidz2-0                                                                                                                                                ONLINE       0     0     0
-            usb-SanDisk_Extreme_AA010110141601114860-0:0                                                                                                          ONLINE       0     0     0
-            usb-USB_SanDisk_3.2Gen1_0101420f852a9d28e04c8e417cf3fab3690eb536b2ae07cf5bd65ad8a89596eebee2000000000000000000008a891c540010470081558107c62cd91d-0:0  ONLINE       0     0     0
-            usb-USB_SanDisk_3.2Gen1_01010c7a5697abd4685016482e932af13a383daa1864476162b1f6f175ee6565383300000000000000000000a1b0161d0001470081558107c62cd903-0:0  ONLINE       0     0     0
-            usb-Samsung_Flash_Drive_FIT_0371022030001364-0:0                                                                                                      ONLINE       0     0     0
-            usb-Samsung_Flash_Drive_FIT_0373417030009828-0:0                                                                                                      ONLINE       0     0     0
-            usb-Samsung_Flash_Drive_FIT_0347017070021373-0:0                                                                                                      ONLINE       0     0     0
-            usb-Samsung_Flash_Drive_FIT_0375022030006895-0:0                                                                                                      ONLINE       0     0     0
-
-errors: No known data errors
-```
-
-```bash
-$ zpool list "${NEWPOOL}"
-NAME        SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT
-testpool2   102G   669K   102G        -         -     0%     0%  1.00x    ONLINE  -
 ```
 
 ## Appendix: Alternatives I considered
