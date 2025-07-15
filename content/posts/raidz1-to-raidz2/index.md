@@ -641,3 +641,5 @@ I could theoretically just send the disks back for a refund after the migration,
 ### Back up to Hetzner
 
 https://www.hetzner.com/storage/storage-box/
+
+They advertise that the storage boxes use "a RAID configuration which can withstand several drive failures," which I assume means at least RAIDZ2.
