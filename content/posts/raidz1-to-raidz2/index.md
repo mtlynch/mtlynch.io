@@ -113,13 +113,13 @@ I said above that I never moved my data to external storage, but that's not stri
 
 I already run nightly backups with restic (TODO: link), but they're at the filesystem level not at the ZFS level. In other words, if I blew everything away, I'd have to recreate each of my ZFS datasets.
 
-And even though I run nightly backups, there's one type of data I don't back up: media. I have 15 TB of movies and TV shows, and, because I'm a data hoarder, I keep the raw images of all of my DVDs and Blu-rays. What if one day, I decide I really need to watch the director's commentary for my DVD copy of 1998's _There's Something About Mary_?
+And even though I run nightly backups, there's one type of data I don't back up: media. I have 15 TB of movies and TV shows, and, because I'm a data hoarder, I keep the raw images of all of my DVDs and Blu-rays. Because what if I one day get the urge to watch the director's commentary on my DVD copy of 1998's _There's Something About Mary_? I'd feel pretty stupid to have not kept the raw DVD image for almost two decades.
 
-TODO: Show photo of DVDs
+{{<img src="dvd-collection.webp" max-width="600px" caption="Most of the space on my disk server is DVDs and Blu-rays that I've ripped." >}}
 
-I don't back up my media because it would cost me about $XX/mo even on low-cost cloud storage providers like Wasabi and Backblaze B2.
+I don't back up my media because it would cost me \~$90/mo even on low-cost cloud storage providers like Wasabi or Backblaze B2.
 
-I tell myself that if I ever lost my media data, I could re-rip everything from the original DVDs and Blu-rays. But at the start of this process, I was considering the prospect of re-ripping and re-encoding 500+ disks one by one, and I decided to just back up my media files temporarily during the migration.
+I tell myself that if I ever lost my media data, I could re-rip everything from the original discs. But at the start of this process, I was considering the prospect of re-ripping and re-encoding 500+ disks one by one, and I decided to just back up my media files temporarily during the migration.
 
 #### Where can I back up 15 TB for three days?
 
@@ -165,7 +165,7 @@ But then without me even pushing back, another Wasabi rep joined the ticket and 
 
 OpenZFS added the raidz expansion feature in 2.3.0, which is available in TrueNAS as of the [25.04 (Fangtooth) release](https://www.truenas.com/docs/scale/25.04/gettingstarted/scalereleasenotes/).
 
-You need a version of ZFS that's >= 2.3.0, which you can check from the shell:
+To do the migration, need ZFS >= 2.3.0, which I verify from the shell:
 
 ```bash
 root@truenas:~# zfs --version
@@ -175,15 +175,17 @@ zfs-kmod-2.3.0-1
 
 {{<notice type="warning">}}
 
-**Gotcha**: Check your release train when updating
+**Gotcha**: Check your release train when updating.
 
-By default, TrueNAS does not select the latest release train, so it's easy to get stuck on an old version, which is what happened to me. I didn't realize it until I got to one of the last steps in the migration and found that I was still on a version of ZFS that didn't have the raidz expansion feature available.
+I accidentally skipped the update step because TrueNAS told me that I was on the latest version. It turned out that I was on the latest version _for my release train_, which was still set to 24.x by default. So, you may have to update TrueNAS to pick a later major version if you don't see ZFS 2.3.0 or higher.
 
 {{</notice>}}
 
 ### Step 3: Identifying the disks
 
-To start, I need to identify which disks
+To begin this migration, I need to identify all of my disks so I can refer to them in ZFS command-line utilities.
+
+The simplest way to show my disks is through this command:
 
 ```bash
 fdisk --list
@@ -193,16 +195,18 @@ I find it easier to visit the Storage > Disks dashboard in TrueNAS:
 
 {{<img src="truenas-disks.webp" max-width="700px">}}
 
-So, for this process, I want to use the disks like the following:
+Based on the screenshot above, I see that my disks have IDs as follows:
 
-- Existing disks: `sda`, `sdc`, `sde`, `sdf`
+- Disks in existing pool: `sda`, `sdc`, `sde`, `sdf`
 - New disks: `sdb`, `sdg`, `sdh`
 
-## Find the weakest disk
+### Step 4: Find the weakest disk
 
-The riskiest part of the migration is the time from when I borrow a disk from my old RAIDZ1 pool until I migrate the data to my new RAIDZ2 pool. I'm running my old pool in degraded state with a missing disk, so if any of the other disks in my old pool die during the data migration, I lose data.
+The riskiest part of the migration is the time from when I [borrow a disk from my old RAIDZ1 pool](#step-1-borrow-one-disk-to-create-a-raidz2-pool) until I [migrate the data to my new RAIDZ2 pool](#step-3-migrate-a-snapshot-of-the-raidz1-pool-to-the-raidz2-pool). Removing a disk from my RAIDZ1 pool puts it into a degraded state. If any of the other disks in my old pool die during the data migration, I lose data.
 
 Because of this risky window, I wanted the weakest disk from my old pool to be the one I borrow to build the new pool. The RAIDZ2 pool can tolerate the weak disk failing, but the RAIDZ1 can't tolerate a second disk failure after I borrow the first one.
+
+To find the weakest disk, I ran this quick bash snippet to query [SMART diagnostic data](https://en.wikipedia.org/wiki/Self-Monitoring,_Analysis_and_Reporting_Technology) for my disks:
 
 ```bash
 for drive in /dev/sd?; do
@@ -244,12 +248,19 @@ done
   9 Power_On_Hours          0x0012   100   100   000    Old_age   Always       -       147
 ```
 
-- `sda`: 032
-- `sdc`: 077
-- `sde`: 067
-- `sdf`: 067
+Based on that, they all seem pretty healthy. The only metric they differ is in [Power-on hours](https://en.wikipedia.org/wiki/Power-on_hours):
 
-They all seem healthy, but sda's value of 32 is closest to zero, so that's the disk I'll move.
+- Existing disks
+  - `sda`: 032
+  - `sdc`: 077
+  - `sde`: 067
+  - `sdf`: 067
+- New disks
+  - `sdb`: 100
+  - `sdg`: 100
+  - `sdh`: 100
+
+The new disks are all at 100%, which makes sense, as they're freshly refurbished. `sda` is the lowest at 32%,, so I'll designate that one as the weakest and move it to the new pool first.
 
 ## ID the disk
 
