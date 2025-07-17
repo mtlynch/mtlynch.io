@@ -118,7 +118,7 @@ It wasn't a perfect experiment because the drives were different sizes, but the 
 
 I said above that I never moved my data to external storage, but that's not strictly true. I did use external storage for backups, though I didn't end up needing it.
 
-I already run nightly backups with restic (TODO: link), but they're at the filesystem level not at the ZFS level. In other words, if I blew everything away, I'd have to recreate each of my ZFS datasets.
+I already run nightly backups with [restic](https://github.com/mtlynch/mtlynch-backup), but they're at the filesystem level not at the ZFS level. In other words, if I blew everything away, I'd have to recreate each of my ZFS datasets.
 
 And even though I run nightly backups, there's one type of data I don't back up: media. I have 15 TB of movies and TV shows, and, because I'm a data hoarder, I keep the raw images of all of my DVDs and Blu-rays. Because what if I one day get the urge to watch the director's commentary on my DVD copy of 1998's _There's Something About Mary_? I'd feel pretty stupid to have not kept the raw DVD image for almost two decades.
 
