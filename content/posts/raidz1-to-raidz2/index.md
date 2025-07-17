@@ -663,34 +663,3 @@ pool1  feature@raidz_expansion  enabled                  local
 expand: expansion of raidz2-0 in progress since Sun Jun  1 08:08:03 2025
         17.1G / 28.5T copied at 501M/s, 0.06% done, 16:36:03 to go
 ```
-
-## Appendix: Alternatives I considered
-
-### Back up ZFS pool to Wasabi
-
-The best option I found was to back up all my data to Wasabi. I have decently fast fiber Internet, so I can upload 18 TB to Wasabi in about 36 hours.
-
-Wasabi charges $7/TB/month, so I'd pay $133 to back up my ZFS pool for a month. Except Wasabi charges by the day, so if I only kept the data on Wasabi for two days, I'd only have to pay 1/15th the monthly price, or about $9, which is pretty good.
-
-And even though Wasabi doesn't support ZFS, but they support the S3 API, and AWS S3 command-line client supports piping from stdout. This means I could do something like this:
-
-```bash
-zfs send -R mypool@20250510 \
-  | aws s3 cp - s3://s3.us-east-2.wasabisys.com/michaels-zfs-backup/20250510.zfs
-```
-
-Except that wouldn't work because the file would exceed S3's limit of 5 TB per file.
-
-I found [the z3 utility](https://www.presslabs.com/docs/code/z3/how-to-use-z3/) to work around the file size limitation, but that feels like bringing in too much complexity to my backup workflow.
-
-Worst of all, I wouldn't be able to test backup and restore before deleting all of my local data, so it felt too risky.
-
-### Back up ZFS pool to rsync.net
-
-rsync.net claims to be the only platform that natively supports ZFS backup. I was considering it, but they charge $10/TB/month, and it doesn't look like you can purchase fractions of a month. I had 18 TB, which would mean spending $190 to back up and restore my data over a few days.
-
-### Back up to temporary large disks
-
-Another possibility is buying a 20 TB disk and moving all my data there while I do the migration. But that costs about $300, and I risk total data loss if that disk fails mid-migration. I can mitigate it by buying two large disks, but then I've spent about $600.
-
-I could theoretically just send the disks back for a refund after the migration, but that's not a very kind thing to do to the merchant
