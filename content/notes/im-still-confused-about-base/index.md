@@ -60,5 +60,5 @@ If you don't feel like watching the whole video, my key points are:
 - When Jesse talked about how Base was supposed to solve common problems from Ethereum development, how does it do that?
 - Am I the target audience for Base? Or is it designed for people who are already comfortable developing with Ethereum?
 - All the tutorials and examples I can find on Base's website use heavy tech stacks with Typescript, Next.js, React, and friends. Are those necessary for Base development, or is Coinbase just using those technologies to court frontend developers?
-  - Jesse has pointed me to [OnchainKit](https://onchainkit.xyz/), but learning React and Typescript as a pre-requisite for learning Base is very unappealing.
+  - Jesse has pointed me to [OnchainKit](https://github.com/coinbase/onchainkit), but learning React and Typescript as a pre-requisite for learning Base is very unappealing.
   - Is there a version of onchain development where I just write some code in a text editor and deploy it with a command-line tool?
