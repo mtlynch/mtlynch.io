@@ -11,12 +11,13 @@ p img {
 }
 </style>
 
-I recently upgraded my home TrueNAS server and migrated 18 TB of data from my four-disk RAIDZ1 ZFS pool to a new seven-disk RAIDZ2 pool.
+I recently upgraded my TrueNAS server and migrated 18 TB of data from a 4-disk RAIDZ1 ZFS pool to a new 7-disk RAIDZ2 pool.
 
 The neat trick is that I never transferred my data to external storage. That's tricky because:
 
 1. You can't convert a RAIDZ1 pool to a RAIDZ2 pool in place.
 1. Using the new disks to create a 3x8TB RAIDZ2 pool would mean too little capacity for my 18 TB of data.
+1. You can't shrink a ZFS pool to a smaller number of disks.
 
 ## How I did it
 
@@ -36,21 +37,21 @@ I then create a new 5x8TB RAIDZ2 pool using:
 1.  One disk from my RAIDZ1 pool
 1.  One 8 TB sparse file to act as a fake disk
 
-The sparse file is just a hack to allow me to create a 5-disk pool, and it won't actually receive any data.
+The sparse file is a file in my `/tmp` directory, even though the filesystem there can't actually store 8 TB of data. That's okay because the sparse file is only temporary. It's a hack that allows me to create a 5-disk pool, but I won't write any data to it.
 
 ![](migration-1.svg)
 
 ### Step 2: Offline the fake disk
 
-Next, I offline the fake disk (the 8 TB sparse file) from the RAIDZ2 pool. I only used it to trick ZFS into allowing me to create a 5x8TB RAIDZ2 pool with only four disks, but I don't want ZFS to write data to the fake disk because I don't actually have storage for that file.
-
-After offlining the fake disk, the pool is still healthy, as RAIDZ2 can operate with up to two disks missing.
+Next, I offline the fake disk (the 8 TB sparse file) from the RAIDZ2 pool.
 
 ![](migration-2.svg)
 
+After offlining the fake disk, the pool is still healthy, as RAIDZ2 can operate with up to two disks missing.
+
 ### Step 3: Migrate a snapshot of the RAIDZ1 pool to the RAIDZ2 pool
 
-I snapshot all datasets in my RAIDZ1 pool and migrate all my data to the new RAIDZ2 pool using `zfs send`.
+I snapshot all datasets in my RAIDZ1 pool and migrate the snapshot to my new RAIDZ2 pool using `zfs send`.
 
 ![](migration-3.svg)
 
@@ -72,58 +73,85 @@ Finally, I use ZFS expansion to add the last two disks from my old RAIDZ1 pool t
 
 ![](migration-6.svg)
 
-## Why is this hard?
-
-The primary challenge in this migration is that you can't remove disks from a ZFS pool. Otherwise, you could create a new RAIDZ2 pool with just three physical disks, down
-
-It sounds simple in theory, but in practice, I ran into a few hiccups which I'll share.
-
 ## Why switch from RAIDZ1 to RAIDZ2?
 
-My home TrueNAS server is now three years old, and I've reached 80% of its capacity. I'm using about 19 TB of data.
+My home TrueNAS server was three years old, and I'd reached 18 TB of data, which consumed 80% of the server's storage capacity.
 
-I set up the server with four 8 TB disk in using RAIDZ1, meaning that a single disk can fail without losing data. If a second disk dies before I can replace the first dead one, I lose data.
+I initially set up the server with four 8 TB disk in RAIDZ1 (TODO: Link), meaning that a single disk can fail without losing data. If a second disk dies before I can replace the first dead one, I lose data.
 
-When I built the server, I was betting on ZFS adding support for expanding pools by adding disks, which they did (TODO: link). The problem is that if I add drives, I'm increasing the risk of a pool failure. With only four disks, I feel like the odds are low of two disks failing at the same time. But if I expand to six or more disks, I worry a bit more.
+When I built the server, it wasn't possible to expand a ZFS pool by adding disks, but that feature was in progress. I hoped that by the time I needed extra storage, OpenZFS would include RAIDZ expansion, [and they did](https://github.com/openzfs/zfs/pull/15022).
 
-So, I'd like to convert my ZFS pool from RAIDZ1 to RAIDZ2, which means that it can tolerate two disk failures without data loss.
+What I failed to consider when I built my server was that each new disk increases my odds of a catastrophic pool failure. With only four disks, the odds are low of two disks failing simultaneously. If I expand to six or more disks, I'm tempting fate a bit that two disks might fail together.
 
-But I had 18 TB of data. To match that on RAIDZ2, I'd need one more 8 TB drive, as 5 x 8 TB on a RAIDZ2 pool would give me 24 TB of usable storage.
+If I was going to expand my ZFS pool, I wanted to switch from RAIDZ1 to RAIDZ2, as RAIDZ2 can tolerate two disk failures without data loss.
 
-So, I just buy one more disk, right? Unfortunately, ZFS doesn't support switching from RAIDZ1 to RAIDZ2. The RAIDZ mode is something you have to decide at pool creation time.
+## Why is switching from RAIDZ1 to RAIDZ2 hard?
 
-The process I see recommended for converting a pool from RAIDZ1 to RAIDZ2 is to move all of your data to a temporary location, destroy your pool, create a new pool as RAIDZ2, then restore all your data.
+ZFS doesn't support switching from RAIDZ1 to RAIDZ2. The RAIDZ mode is something you have to decide at pool creation time.
 
-The problem is that I don't have an extra 19 TB of spare storage lying around. The naive solution would be to buy five extra disks, build a RAIDZ2 pool, then move all of my data over to the new pool. But I'd end up with nine disks when I only wanted five.
+The advice to convert a pool from RAIDZ1 to RAIDZ2 is to move all of your data to a temporary location, destroy your pool, create a new pool as RAIDZ2, then restore all your data. The problem is that I had 18 TB of data, and I didn't have an extra 18 TB of spare storage lying around to hold it while I upgraded the ZFS pool.
 
-I already have data backups, but they're at the filesystem level not at the ZFS level. In other words, if I blew everything away, I'd have to recreate each of my ZFS datasets.
+The naive solution would be to buy five extra disks, build a RAIDZ2 pool, then move all of my data over to the new pool. That would leave me with 4 original disks + 5 new dissk = 9 total disks when I only wanted 6-7.
 
-After considering a few different options, I managed to migrate all of my data by only buying three extra disks.
+## How I did it
 
-https://github.com/openzfs/zfs/pull/15022
+In theory, my RAIDZ1 to RAIDZ2 migration plan is straightforward, but I ran into a few hiccups actually performing this migration, so I'm including a detailed joural of the exact commands and output for anyone who wants to repeat this process.
 
-available in 2.3.0
+### Step 1: A practice migration with USB sticks
 
-## Backing up my data
+My migration plan involves some risky maneuvers. Before I tried it on my main TrueNAS server with all of my data, I first tried it on a test server.
 
-I said I never moved my data to external storage, but that's not strictly true. I did use external storage for backups, though I didn't end up needing them.
+I installed TrueNAS Core 25.04 on an old mini PC and then connected 7 USB thumbdrives.
 
-I already back up most of my data, but the vast majority of ZFS pool is media. I have 15 TB of movies and TV shows, and, because I'm a data hoarder, I keep the raw images of all of my disks. Because what if one day, I decide I really need to watch the director's commentary for my DVD copy of 1998's _There's Something About Mary_?
+TODO: Show photo
+
+It wasn't a perfect experiment because the drives were different sizes, but the process worked, and it gave me the confidence to try my migration plan with my real data.
+
+### Step 2: Backing up my data
+
+I said above that I never moved my data to external storage, but that's not strictly true. I did use external storage for backups, though I didn't end up needing it.
+
+I already run nightly backups with restic (TODO: link), but they're at the filesystem level not at the ZFS level. In other words, if I blew everything away, I'd have to recreate each of my ZFS datasets.
+
+And even though I run nightly backups, there's one type of data I don't back up: media. I have 15 TB of movies and TV shows, and, because I'm a data hoarder, I keep the raw images of all of my DVDs and Blu-rays. What if one day, I decide I really need to watch the director's commentary for my DVD copy of 1998's _There's Something About Mary_?
 
 TODO: Show photo of DVDs
 
-So, I back up all of my important personal data to multiple cloud storage buckets using restic (TODO: link), but it would cost me $XX/mo to keep backups of my TV shows and movies, so I don't back them up.
+I don't back up my media because it would cost me about $XX/mo even on low-cost cloud storage providers like Wasabi and Backblaze B2.
+
+I tell myself that if I ever lost my media data, I could re-rip everything from the original DVDs and Blu-rays. But at the start of this process, I was considering the prospect of re-ripping and re-encoding 500+ disks one by one, and I decided to just back up my media files temporarily during the migration.
+
+#### Where can I back up 15 TB for three days?
+
+I only needed to back up 15 TB. If I could find a vendor that did per-day or per-hour billing, that should be pretty affordable.
 
 I'm aware of two cloud vendors that offer ZFS-native backup:
 
 - rsync.net: Minimum billing is one month ($180 for 18 TB).
 - zfs.rent: Requires me to send them my own hard disks.
 
+So, neither of those options were good for backing up data for only a couple of days.
+
 There are tools for backing up ZFS to S3-compatible storage, but I didn't want to try those, as it felt too complex, and I wouldn't have a way of verifying the backups worked.
 
-That left just using my standard restic backup to a cloud storage vendor that billed at the granularity of per-day or shorter.
+That left just using my standard restic backup to a cloud storage vendor that billed at the granularity of per-day or shorter. I checked:
 
-### Gotcha: Wasabi has a minimum retention policy
+- Amazon S3 (Standard): $0.76/TB/day
+- Google Cloud Storage (Standard): $0.66/TB/day
+- Cloudflare R2: $0.50/TB/day
+- Backblaze B2: $0.20/TB/day
+- [Hetzner storage boxes](https://www.hetzner.com/storage/storage-box/): $0.09/TB/day
+  - I unfortunately didn't discover this option until after doing the migration.
+
+I chose Backblaze B2, and somehow my 15 TB of data turned into 24.6 TB on Backblaze's end.
+
+{{<img src="backblaze-storage.webp" max-width="600px">}}
+
+It took me almost a week to upload everything to Backblaze, so I had to store the data longer than I expected, but my bill at the end of the month was only a few dollars more than normal, so I'm not sure how they calculated my costs.
+
+{{<notice type="warning">}}
+
+**Warning**: Check your cloud storage vendor's minimum retention policy
 
 I initially backed up to Wasabi on a migration attempt that didn't work. Okay, that's fine. I just owe Wasabi $30 or so for a few days of backup. It turned out that Wasabi does support per-XX billing, but you have to pay for a minimum of 90 days for any data you back up. So now, instead of a $30 Wassabi bill, I was looking at a $XX bill.
 
@@ -131,7 +159,29 @@ I emailed Wasabi support asking for mercy, and they had strange advice for me. A
 
 But then without me even pushing back, another Wasabi rep joined the ticket and told me that as a one-time courtesy, they'd credit me the cost of my overages.
 
-## Identifying the disks
+{{</notice>}}
+
+### Step 3: Update TrueNAS
+
+OpenZFS added the raidz expansion feature in 2.3.0, which is available in TrueNAS as of the [25.04 (Fangtooth) release](https://www.truenas.com/docs/scale/25.04/gettingstarted/scalereleasenotes/).
+
+You need a version of ZFS that's >= 2.3.0, which you can check from the shell:
+
+```bash
+root@truenas:~# zfs --version
+zfs-2.3.0-1
+zfs-kmod-2.3.0-1
+```
+
+{{<notice type="warning">}}
+
+**Gotcha**: Check your release train when updating
+
+By default, TrueNAS does not select the latest release train, so it's easy to get stuck on an old version, which is what happened to me. I didn't realize it until I got to one of the last steps in the migration and found that I was still on a version of ZFS that didn't have the raidz expansion feature available.
+
+{{</notice>}}
+
+### Step 3: Identifying the disks
 
 To start, I need to identify which disks
 
@@ -545,10 +595,6 @@ errors: No known data errors
 
 Reports `ONLINE` instead of `DEGRADED`.
 
-## Backblaze
-
-![alt text](image-2.png)
-
 ## Add the extra disks
 
 ![alt text](image-3.png)
@@ -611,7 +657,7 @@ expand: expansion of raidz2-0 in progress since Sun Jun  1 08:08:03 2025
 
 ### Back up ZFS pool to Wasabi
 
-The best option I found was to back up all my data to Wasabi. I have decently fast fiber Internet, so I can upload 19 TB to Wasabi in about 36 hours.
+The best option I found was to back up all my data to Wasabi. I have decently fast fiber Internet, so I can upload 18 TB to Wasabi in about 36 hours.
 
 Wasabi charges $7/TB/month, so I'd pay $133 to back up my ZFS pool for a month. Except Wasabi charges by the day, so if I only kept the data on Wasabi for two days, I'd only have to pay 1/15th the monthly price, or about $9, which is pretty good.
 
@@ -630,16 +676,10 @@ Worst of all, I wouldn't be able to test backup and restore before deleting all 
 
 ### Back up ZFS pool to rsync.net
 
-rsync.net claims to be the only platform that natively supports ZFS backup. I was considering it, but they charge $10/TB/month, and it doesn't look like you can purchase fractions of a month. I had 19 TB, which would mean spending $190 to back up and restore my data over a few days.
+rsync.net claims to be the only platform that natively supports ZFS backup. I was considering it, but they charge $10/TB/month, and it doesn't look like you can purchase fractions of a month. I had 18 TB, which would mean spending $190 to back up and restore my data over a few days.
 
 ### Back up to temporary large disks
 
 Another possibility is buying a 20 TB disk and moving all my data there while I do the migration. But that costs about $300, and I risk total data loss if that disk fails mid-migration. I can mitigate it by buying two large disks, but then I've spent about $600.
 
 I could theoretically just send the disks back for a refund after the migration, but that's not a very kind thing to do to the merchant
-
-### Back up to Hetzner
-
-https://www.hetzner.com/storage/storage-box/
-
-They advertise that the storage boxes use "a RAID configuration which can withstand several drive failures," which I assume means at least RAIDZ2.
