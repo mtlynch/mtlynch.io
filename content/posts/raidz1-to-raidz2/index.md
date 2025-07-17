@@ -1,6 +1,9 @@
 ---
 title: "Migrating a ZFS pool from RAIDZ1 to RAIDZ2"
 date: 2025-07-22
+tags:
+  - homelab
+  - truenas
 ---
 
 <style>
@@ -11,19 +14,21 @@ p img {
 }
 </style>
 
-I recently upgraded my TrueNAS server and migrated 18 TB of data from a 4-disk RAIDZ1 ZFS pool to a new 7-disk RAIDZ2 pool.
+I recently upgraded my TrueNAS server and migrated 18 TB of data from a 4-disk RAIDZ1 ZFS pool to a new RAIDZ2 pool, and I did it with only three additional 8 TB disks.
 
-The neat trick is that I never transferred my data to external storage. That's tricky because:
+The neat part is that I never transferred my data to external storage. That's tricky because:
 
 1. You can't convert a RAIDZ1 pool to a RAIDZ2 pool in place.
 1. Using the new disks to create a 3x8TB RAIDZ2 pool would mean too little capacity for my 18 TB of data.
 1. You can't shrink a ZFS pool to a smaller number of disks.
 
+So, how did I do it? If I only added three 8 TB disks, and that's not enough to make a big enough RAIDZ2 pool, how is this possible?
+
 ## How I did it
 
 ### Step 0: Initial state
 
-Starting out, I have a 4x8TB RAIDZ1 ZFS pool, and I'm using 18 TB of its 23 TB capacity. I have three new disks that I want to integrate into my storage server.
+Starting out, I have a 4x8TB RAIDZ1 ZFS pool, and I'm using 18 TB of its 23 TB capacity. I purchased three refubrbished 8 TB disks that I have available for this migration.
 
 ![](migration-0.svg)
 
@@ -37,7 +42,7 @@ I then create a new 5x8TB RAIDZ2 pool using:
 1.  One disk from my RAIDZ1 pool
 1.  One 8 TB sparse file to act as a fake disk
 
-The sparse file is a file in my `/tmp` directory, even though the filesystem there can't actually store 8 TB of data. That's okay because the sparse file is only temporary. It's a hack that allows me to create a 5-disk pool, but I won't write any data to it.
+The sparse file is in my `/tmp` directory, even though the filesystem there can't actually store 8 TB of data. That's okay because the sparse file is only temporary. It's a hack that allows me to create a 5-disk pool, but I won't write any data to it.
 
 ![](migration-1.svg)
 
@@ -79,23 +84,25 @@ My home TrueNAS server was three years old, and I'd reached 18 TB of data, which
 
 I initially set up the server with four 8 TB disk in RAIDZ1 (TODO: Link), meaning that a single disk can fail without losing data. If a second disk dies before I can replace the first dead one, I lose data.
 
-When I built the server, it wasn't possible to expand a ZFS pool by adding disks, but that feature was in progress. I hoped that by the time I needed extra storage, OpenZFS would include RAIDZ expansion, [and they did](https://github.com/openzfs/zfs/pull/15022).
+When [I built the server in 2022](/budget-nas/), it wasn't possible to expand a ZFS pool by adding disks, but that feature was in progress. I hoped that by the time I needed extra storage, OpenZFS would include RAIDZ expansion, [and they did](https://github.com/openzfs/zfs/pull/15022).
 
-What I failed to consider when I built my server was that each new disk increases my odds of a catastrophic pool failure. With only four disks, the odds are low of two disks failing simultaneously. If I expand to six or more disks, I'm tempting fate a bit that two disks might fail together.
+What I failed to consider when I built my server was that each new disk increases my odds of a catastrophic pool failure. With only four disks, the odds of 50% of my disks failing simultaneously feels low. If I expand to six or more disks, I'm tempting fate a bit that two disks might fail together.
 
-If I was going to expand my ZFS pool, I wanted to switch from RAIDZ1 to RAIDZ2, as RAIDZ2 can tolerate two disk failures without data loss.
+If I was going to expand my ZFS pool, I wanted to switch from RAIDZ1 to RAIDZ2, as RAIDZ2 can tolerate two disk failures without data loss. Even if I expanded to 10 disks, I feel pretty safe from three disks failing concurrently.
 
 ## Why is switching from RAIDZ1 to RAIDZ2 hard?
 
 ZFS doesn't support switching from RAIDZ1 to RAIDZ2. The RAIDZ mode is something you have to decide at pool creation time.
 
-The advice to convert a pool from RAIDZ1 to RAIDZ2 is to move all of your data to a temporary location, destroy your pool, create a new pool as RAIDZ2, then restore all your data. The problem is that I had 18 TB of data, and I didn't have an extra 18 TB of spare storage lying around to hold it while I upgraded the ZFS pool.
+The typical advice to convert a ZFS pool from RAIDZ1 to RAIDZ2 is to move all of your data to a temporary location, destroy your RAIDZ1 pool, create a new pool as RAIDZ2, then restore all your data. The problem is that I had 18 TB of data, and I didn't have an extra 18 TB of spare storage lying around to hold it while I upgraded my ZFS pool.
 
-The naive solution would be to buy five extra disks, build a RAIDZ2 pool, then move all of my data over to the new pool. That would leave me with 4 original disks + 5 new dissk = 9 total disks when I only wanted 6-7.
+The naïve solution would be to buy five extra disks, build a RAIDZ2 pool, then move all of my data over to the new pool. That would leave me with 4 original disks + 5 new disks = 9 total disks when I only wanted 6-7.
 
 ## How I did it
 
-In theory, my RAIDZ1 to RAIDZ2 migration plan is straightforward, but I ran into a few hiccups actually performing this migration, so I'm including a detailed joural of the exact commands and output for anyone who wants to repeat this process.
+In theory, my RAIDZ1 to RAIDZ2 migration plan was straightforward, but I ran into a few hiccups actually performing this migration.
+
+I'm sharing a detailed joural of the exact commands and output for anyone who wants to repeat this process.
 
 ### Step 1: A practice migration with USB sticks
 
@@ -103,9 +110,9 @@ My migration plan involves some risky maneuvers. Before I tried it on my main Tr
 
 I installed TrueNAS Core 25.04 on an old mini PC and then connected 7 USB thumbdrives.
 
-TODO: Show photo
+{{<img src="test-server.webp" max-width="500px" caption="Testing my migration strategy on a spare TrueNAS server and seven USB thumbdrives">}}
 
-It wasn't a perfect experiment because the drives were different sizes, but the process worked, and it gave me the confidence to try my migration plan with my real data.
+It wasn't a perfect experiment because the drives were different sizes, but the process worked. It gave me the confidence to try my migration plan with my real data.
 
 ### Step 2: Backing up my data
 
@@ -657,7 +664,7 @@ pool1  feature@raidz_expansion  enabled                  local
 ```
 
 ```bash
-# zpool status "${NEWPOOL}" | grep --after-context=1 "expand:"
+$ zpool status "${NEWPOOL}" | grep --after-context=1 "expand:"
 + grep --after-context=1 expand:
 + zpool status pool1
 expand: expansion of raidz2-0 in progress since Sun Jun  1 08:08:03 2025
