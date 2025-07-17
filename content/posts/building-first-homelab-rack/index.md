@@ -287,7 +287,7 @@ I got a 10G NIC working on my Windows desktop after a bit of tinkering, but I te
 - Chelsio Dual Port T520-CR
   - My TrueNAS server [couldn't recognize this one, either](https://www.truenas.com/community/threads/no-success-with-three-different-10-gb-nics.111026/).
 
-My best guess is that the motherbord on my TrueNAS server has limited compatibility. It's [a consumer-grade ASUS motherboard](/budget-nas/#motherboard), so it may not support these enterprise-oriented 10G NICs.
+My best guess is that the motherboard on my TrueNAS server has limited compatibility. It's [a consumer-grade ASUS motherboard](/budget-nas/#motherboard), so it may not support these enterprise-oriented 10G NICs.
 
 I plan to build a new storage server in the next few months, so I'll try a fancier motherboard to see if that lets me use one of the three spare 10G NICs I've now accrued.
 
