@@ -14,15 +14,13 @@ p img {
 }
 </style>
 
-I recently upgraded my TrueNAS server and migrated 18 TB of data from a 4-disk RAIDZ1 ZFS pool to a new RAIDZ2 pool, and I did it with only three additional 8 TB disks.
+I recently upgraded my home TrueNAS server and migrated 18 TB of data from a 4-disk RAIDZ1 ZFS pool to a new RAIDZ2 pool, and I did it with only three additional 8 TB disks.
 
 The neat part is that I never transferred my data to external storage. That's tricky because:
 
 1. You can't convert a RAIDZ1 pool to a RAIDZ2 pool in place.
-1. Using the new disks to create a 3x8TB RAIDZ2 pool would mean too little capacity for my 18 TB of data.
 1. You can't shrink a ZFS pool to a smaller number of disks.
-
-So, how did I do it? If I only added three 8 TB disks, and that's not enough to make a big enough RAIDZ2 pool, how is this possible?
+1. You can't fit 18 TB of data on a 3-disk, 8TB RAIDZ2 pool (the three new disks).
 
 ## How I did it
 
@@ -80,25 +78,25 @@ Finally, I use ZFS expansion to add the last two disks from my old RAIDZ1 pool t
 
 ## Why switch from RAIDZ1 to RAIDZ2?
 
-My home TrueNAS server was three years old, and I'd reached 18 TB of data, which consumed 80% of the server's storage capacity.
+I built my [home TrueNAS server in 2022](/budget-nas/) with a 4x8TB RAIDZ1 pool. I was comfortable with RAIDZ1 because it could tolerate one disk failure, and I considered it unlikely for two out of my four disks to fail simultaneously.
 
-I initially set up the server with four 8 TB disk in RAIDZ1 (TODO: Link), meaning that a single disk can fail without losing data. If a second disk dies before I can replace the first dead one, I lose data.
+What I failed to consider was that each new disk would increase my odds of a catastrophic pool failure. I'm not worried about two disks failing out of four, but if I have six or eight disks, then concurrent failures begin to feel more likely.
 
-When [I built the server in 2022](/budget-nas/), it wasn't possible to expand a ZFS pool by adding disks, but that feature was in progress. I hoped that by the time I needed extra storage, OpenZFS would include RAIDZ expansion, [and they did](https://github.com/openzfs/zfs/pull/15022).
+RAIDZ2 can tolerate two disk failures without data loss. Even if I expanded to 10 disks (the max capacity of my current server chassis), the odds of three simultaneous disk failures feels low enough to be safe.
 
-What I failed to consider when I built my server was that each new disk increases my odds of a catastrophic pool failure. With only four disks, the odds of 50% of my disks failing simultaneously feels low. If I expand to six or more disks, I'm tempting fate a bit that two disks might fail together.
-
-If I was going to expand my ZFS pool, I wanted to switch from RAIDZ1 to RAIDZ2, as RAIDZ2 can tolerate two disk failures without data loss. Even if I expanded to 10 disks, I feel pretty safe from three disks failing concurrently.
+Every disk I add to my RAIDZ1 pool makes a migration to RAIDZ2 harder because it means my new pool has to be even bigger, and I have even fewer physical disk slots available to a new pool.
 
 ## Why is switching from RAIDZ1 to RAIDZ2 hard?
 
-ZFS doesn't support switching from RAIDZ1 to RAIDZ2. The RAIDZ mode is something you have to decide at pool creation time.
-
-The typical advice to convert a ZFS pool from RAIDZ1 to RAIDZ2 is to move all of your data to a temporary location, destroy your RAIDZ1 pool, create a new pool as RAIDZ2, then restore all your data. The problem is that I had 18 TB of data, and I didn't have an extra 18 TB of spare storage lying around to hold it while I upgraded my ZFS pool.
+ZFS doesn't support switching from RAIDZ1 to RAIDZ2. You set the RAIDZ mode at pool creation time and can never change it.
 
 The naïve solution would be to buy five extra disks, build a RAIDZ2 pool, then move all of my data over to the new pool. That would leave me with 4 original disks + 5 new disks = 9 total disks when I only wanted 6-7.
 
-## How I did it
+If you search online for how to convert from RAIDZ1 to RAIDZ2, all the advice says to do it the naïve way or to move all your data temporarily to a spare ZFS server, destroy your RAIDZ1 pool, create a RAIDZ2 pool in its place, then migrate your data back. But what if, like me, you don't have a spare 18 TB ZFS server lying around?
+
+The reason there isn't much guidance on a more efficient way to switch from RAIDZ1 to RAIDZ2 is that my solution depends on [RAIDZ expansion](https://github.com/openzfs/zfs/pull/15022), which only became available in ZFS [six months ago](https://github.com/openzfs/zfs/releases/tag/zfs-2.3.0).
+
+## Migrating from RAIDZ1 to RAIDZ2: in practice
 
 In theory, my RAIDZ1 to RAIDZ2 migration plan was straightforward, but I ran into a few hiccups actually performing this migration.
 
@@ -118,15 +116,15 @@ It wasn't a perfect experiment because the drives were different sizes, but the 
 
 I said above that I never moved my data to external storage, but that's not strictly true. I did use external storage for backups, though I didn't end up needing it.
 
-I already run nightly backups with [restic](https://github.com/mtlynch/mtlynch-backup), but they're at the filesystem level not at the ZFS level. In other words, if I blew everything away, I'd have to recreate each of my ZFS datasets.
+I already run nightly backups with [restic](https://github.com/mtlynch/mtlynch-backup), but they're at the filesystem level not at the ZFS level. In other words, if I corrupted my ZFS pool during the migration, I'd have to recreate each of my ZFS datasets.
 
-And even though I run nightly backups, there's one type of data I don't back up: media. I have 15 TB of movies and TV shows, and, because I'm a data hoarder, I keep the raw images of all of my DVDs and Blu-rays. Because what if I one day get the urge to watch the director's commentary on my DVD copy of 1998's _There's Something About Mary_? I'd feel pretty stupid to have not kept the raw DVD image for almost two decades.
+Even though I run nightly backups, there's one type of data I don't back up: media. Because I'm a data hoarder, I keep the raw images of all of my DVDs and Blu-rays. Because what if I one day get the urge to watch the director's commentary on my DVD copy of 1998's _There's Something About Mary_?
 
 {{<img src="dvd-collection.webp" max-width="600px" caption="Most of the space on my disk server is DVDs and Blu-rays that I've ripped." >}}
 
-I don't back up my media because it would cost me \~$90/mo even on low-cost cloud storage providers like Wasabi or Backblaze B2.
+Between the raw disc images and encoded video files, I have about 15 TB of movies and TV shows. I don't back those files up to cloud storage because it would cost me \~$90/mo even on low-cost cloud storage providers like Wasabi or Backblaze B2.
 
-I tell myself that if I ever lost my media data, I could re-rip everything from the original discs. But at the start of this process, I was considering the prospect of re-ripping and re-encoding 500+ disks one by one, and I decided to just back up my media files temporarily during the migration.
+I tell myself that if I ever lost my media data, I could re-rip everything from the original discs. But at the start of this process, I was considering the prospect of re-ripping and re-encoding 500+ disks one by one, and I decided to make an exception and back them up on a short-term basis in case anything went wrong with the migration.
 
 #### Where can I back up 15 TB for three days?
 
@@ -139,9 +137,9 @@ I'm aware of two cloud vendors that offer ZFS-native backup:
 
 So, neither of those options were good for backing up data for only a couple of days.
 
-There are tools for backing up ZFS to S3-compatible storage, but I didn't want to try those, as it felt too complex, and I wouldn't have a way of verifying the backups worked.
+There are tools for backing up ZFS to S3-compatible storage, but I didn't want to try those, as it felt too complex, and I couldn't easily verify that the backups worked without a spare server with 18 TB of capacity.
 
-That left just using my standard restic backup to a cloud storage vendor that billed at the granularity of per-day or shorter. I checked:
+That left just using my standard restic backup to a cloud storage vendor that billed at the granularity of per-day or shorter. These were the options I found:
 
 - Amazon S3 (Standard): $0.76/TB/day
 - Google Cloud Storage (Standard): $0.66/TB/day
@@ -160,7 +158,7 @@ It took me almost a week to upload everything to Backblaze, so I had to store th
 
 **Warning**: Check your cloud storage vendor's minimum retention policy
 
-I initially backed up to Wasabi on a migration attempt that didn't work. Okay, that's fine. I just owe Wasabi $30 or so for a few days of backup. It turned out that Wasabi does support per-XX billing, but you have to pay for a minimum of 90 days for any data you back up. So now, instead of a $30 Wassabi bill, I was looking at a $XX bill.
+I initially backed up to Wasabi on a migration attempt that didn't work. Okay, that's fine. I just owe Wasabi $30 or so for a few days of backup. It turned out that Wasabi does support per-day billing, but you have to pay for [a minimum of 90 days](https://docs.wasabi.com/docs/how-does-wasabis-minimum-storage-duration-policy-work) for any data you back up. So now, instead of a $30 Wassabi bill, I was looking at a $300 bill.
 
 I emailed Wasabi support asking for mercy, and they had strange advice for me. Apparently, you can escape the minimum storage requirement by deleting your entire Wasabi account. This isn't a hack or trick or anything but actual guidance that official Wasabi support gave me.
 
@@ -170,9 +168,9 @@ But then without me even pushing back, another Wasabi rep joined the ticket and 
 
 ### Step 3: Update TrueNAS
 
-OpenZFS added the raidz expansion feature in 2.3.0, which is available in TrueNAS as of the [25.04 (Fangtooth) release](https://www.truenas.com/docs/scale/25.04/gettingstarted/scalereleasenotes/).
+This migration requires ZFS's [RAIDZ expansion feature](https://github.com/openzfs/zfs/pull/15022), which is in [OpenZFS 2.3.0](https://github.com/openzfs/zfs/releases/tag/zfs-2.3.0) and TrueNAS' [25.04 (Fangtooth) release](https://www.truenas.com/docs/scale/25.04/gettingstarted/scalereleasenotes/).
 
-To do the migration, need ZFS >= 2.3.0, which I verify from the shell:
+I can verify my ZFS version from from the TrueNAS shell:
 
 ```bash
 root@truenas:~# zfs --version
@@ -255,7 +253,7 @@ done
   9 Power_On_Hours          0x0012   100   100   000    Old_age   Always       -       147
 ```
 
-Based on that, they all seem pretty healthy. The only metric they differ is in [Power-on hours](https://en.wikipedia.org/wiki/Power-on_hours):
+Based on that, they all seem pretty healthy. The only metric where they differ is [Power-on hours](https://en.wikipedia.org/wiki/Power-on_hours):
 
 - Existing disks
   - `sda`: 032
@@ -267,11 +265,13 @@ Based on that, they all seem pretty healthy. The only metric they differ is in [
   - `sdg`: 100
   - `sdh`: 100
 
-The new disks are all at 100%, which makes sense, as they're freshly refurbished. `sda` is the lowest at 32%,, so I'll designate that one as the weakest and move it to the new pool first.
+The new disks are all at 100%, which makes sense, as they're freshly refurbished. `sda` is the lowest at 32%, so I'll designate it as the weakest and move it to the new pool first.
 
-## ID the disk
+### Step 5: Create stable disk identifiers
 
-You're not supposed to create the disks by the `/dev/sdX` path, as that can change across reboots, so I wrote this bash snippet to convert the `/dev/sdX` path to the disk's stable identifier, which will persists across boots:
+The `/dev/sdX` paths are not stable across reboots. A disk that's at `/dev/sda` can show up as `/dev/sdf` on my next reboot. It's unclear to me if ZFS resolves disks to more stable identifiers, but I didn't want to take any chances.
+
+I wrote this bash function to convert the `/dev/sdX` path to a stable identifier for the disk:
 
 ```bash
 get_disk_id() {
@@ -290,7 +290,14 @@ get_disk_id() {
 }
 ```
 
-And then I saved the disk IDs to environment variables:
+To use my `get_disk_id` bash function, I give it the `sdX` identiier, and it returns the stable path to that disk:
+
+```bash
+$ get_disk_id sda
+/dev/disk/by-id/ata-HGST_HUS728T8TALE6L1_VGGGYUEG
+```
+
+To make my process reusable, I saved my disk IDs to environment variables:
 
 ```bash
 # Old disks
@@ -300,9 +307,7 @@ DISK_3="$(get_disk_id sde)"
 DISK_4="$(get_disk_id sdf)"
 ```
 
-```bash
-OLDPOOL='pool1'
-```
+And I create environment variables for my new disks:
 
 ```bash
 # New disks
@@ -311,11 +316,15 @@ DISK_6="$(get_disk_id sdg)"
 DISK_7="$(get_disk_id sdh)"
 ```
 
-`DISK_1` is the weakest, so I run the following:
+I also created an environment variable to refer to my existing RAIDZ1 pool:
 
 ```bash
-MOVED_DISK="${DISK_1}"
+OLDPOOL='pool1'
 ```
+
+### Step 6: Offline the weak disk
+
+Before I touch anything, I verify that my old pool is healthy and has the disks I expect:
 
 ```bash
 $ sudo zpool status ${OLDPOOL}
@@ -335,9 +344,15 @@ config:
 errors: No known data errors
 ```
 
+`sda2` (`DISK_1`) is the weak disk that I want to move to the new RAIDZ2 pool, so I run the following:
+
 ```bash
-$ sudo zpool offline "${OLDPOOL}" sda2
+DISK_TO_OFFLINE='sda2'
+
+sudo zpool offline "${OLDPOOL}" "${DISK_TO_OFFLINE}"
 ```
+
+Checking `zpool status`, I see that offlining the disk has put the pool into a degraded state, as I expected:
 
 ```bash
 $ sudo zpool status ${OLDPOOL}
@@ -362,14 +377,38 @@ config:
 errors: No known data errors
 ```
 
-## Move the old disk
+### Step 7: Wipe the weak disk
+
+There's a bit of a hitch with creating my RAIDZ2 pool. If I try to create a new pool with the weak disk (`DISK_1`) , ZFS will tell me that it already belongs to another pool.
+
+To stop my RAIDZ1 pool from claiming ownership over the weak disk, I need to fully wipe it.
+
+I define an environment variable to track the disk I'm moving:
 
 ```bash
-# Be careful, as this completely wipes the disk with no confirmation.
+MOVED_DISK="${DISK_1}"
+```
+
+And then I wipe all data from the disk:
+
+{{<notice type="danger">}}
+
+**Caution**: Run the `wipefs` command carefully, as it wipes the entire disk with zero confirmation.
+
+{{</notice>}}
+
+```bash
+# Be careful! This command completely wipes the disk with no confirmation.
 wipefs --all "${MOVED_DISK}"
 ```
 
-Find the bytes of the disks:
+### Step 8: Create a fake disk with a sparse file
+
+I could create a 4x8TB RAIDZ2 pool, but that would only give me 16 TB of usable capacity, not enough to store my 18 TB of data.
+
+Instead, I create a 5x8TB RAIDZ2 pool, except the fifth disk doesn't really exist. ZFS allows me to create a ZFS pool using a sparse file as a disk, so I'll do that.
+
+To create a fake disk as a sparse file, I need to know the exact size of the other disks in my pool, which I can find with `fdisk`:
 
 ```bash
 $  fdisk --list | grep "^Disk.*bytes"
@@ -385,16 +424,24 @@ Disk /dev/sdg: 7.28 TiB, 8001563222016 bytes, 15628053168 sectors
 Disk /dev/sdh: 7.28 TiB, 8001563222016 bytes, 15628053168 sectors
 ```
 
-Create a fake drive:
+Based on that, I see that each of my real disks has `8001563222016` bytes, so I create a fake drive with the `truncate` command:
 
 ```bash
 FAKE_DISK='/tmp/fake-drive.img'
 truncate --size 8001563222016 "${FAKE_DISK}"
 ```
 
+Finally, I need a name for my new pool. I used the name `pool1` before I knew that it's convention to name your ZFS pool `tank`, so I thought this would be my opportunity to fit in with the cool kids of the ZFS community.
+
 ```bash
 NEWPOOL='tank'
 ```
+
+Unforutnately, I didn't get to keep `tank` as a pool name. TrueNAS has a lot of dependencies on the pool name, so I chose to go back to `pool1` rather than update all of my shares and cron jobs to point to `tank` instead. (TODO: link)
+
+### Step 9: Create the RAIDZ2 pool
+
+Finally, it's time to create my 5x8TB RAIDZ2 pool:
 
 ```bash
 zpool create \
@@ -409,7 +456,7 @@ zpool create \
   "${FAKE_DISK}"
 ```
 
-{{<img src="created-tank.webp">}}
+Creating the pool succeeded, and I can check it with ZFS utilities:
 
 ```bash
 $ zpool status "${NEWPOOL}"
@@ -427,22 +474,26 @@ config:
             /tmp/fake-drive.img                ONLINE       0     0     0
 
 errors: No known data errors
-```
 
-```bash
 $ zpool list "${NEWPOOL}"
 NAME   SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT
 tank  36.4T  1.27M  36.4T        -         -     0%     0%  1.00x    ONLINE  -
 ```
 
-Remove the fake disk:
+I can also see my new RAIDZ2 pool from the TrueNAS web UI, which reports 21.4 TiB (23.5 TB) of usable capacity:
+
+{{<img src="created-tank.webp" caption="My new RAIDZ2 pool is visible from the TrueNAS web UI." max-width="600px" has-border="false">}}
+
+### Step 10: Remove the fake disk
+
+The fake disk is just a file in my `/tmp` directory, and it can't really store the 8 TB it claims it can hold. To prevent ZFS from catching on to my trick, I immediately remove the fake disk from my RAIDZ2 pool:
 
 ```bash
 zpool offline "${NEWPOOL}" "${FAKE_DISK}" && \
   rm "${FAKE_DISK}"
 ```
 
-Check the status:
+As expected, ZFS utilities report that my RAIDZ2 pool is degraded, but it can tolerate up to two disk failures, so a single offline disk is fine:
 
 ```bash
 $ zpool status "${NEWPOOL}"
@@ -465,15 +516,13 @@ config:
             /tmp/fake-drive.img                OFFLINE      0     0     0
 
 errors: No known data errors
-```
 
-```bash
 $ zpool list "${NEWPOOL}"
 NAME   SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT
 tank  36.4T  1.41M  36.4T        -         -     0%     0%  1.00x  DEGRADED  -
 ```
 
-## Transfer the data
+### Step 11: Migrate my data from RAIDZ1 to RAIDZ2
 
 ```bash
 SNAPSHOT_1="fullpool_$(date +%Y%m%d)"
@@ -497,7 +546,7 @@ But then when I'd mount it at `/mnt/tank/data`, it showed up as empty. I tried `
 
 {{<img src="reads-writes.webp">}}
 
-## Resuming interrupted transfers
+#### Resuming interrupted transfers
 
 ```bash
 RESUME_TOKEN="$(zfs get -H -o value receive_resume_token "${NEWPOOL}/${DATASET}")"
@@ -508,7 +557,7 @@ zfs send -v -t "${RESUME_TOKEN}" | zfs receive -v -s "${NEWPOOL}/${DATASET}"
 
 I don't know if it actually resumes because it seems to start the progress back from zero, but it claims it's parsing the resume token correctly.
 
-## Final cleanup
+#### Final cleanup
 
 ```bash
 SNAPSHOT_2="migrate2"
@@ -522,7 +571,7 @@ zfs send -v \
   | zfs receive -v "${NEWPOOL}/${DATASET}"
 ```
 
-## Rename pools
+### Step 12: Swap pool names
 
 ```bash
 sudo systemctl stop k3s
@@ -554,23 +603,19 @@ sudo systemctl start k3s
 
 Needed to reboot
 
-## Dashboard
-
 {{<img src="dashboard-after-import.webp">}}
 
-## Scrub
+### Step 13: Destroy my old RAIDZ1 pool
 
 Ran a scrub on pool1 just to be safe before I blow away the old pool.
 
 {{<img src="scrub-complete.webp">}}
 
-## Absorb the old disks
-
 ```bash
 zpool destroy "${OLDPOOL}-old"
 ```
 
-## Replace the fake disk
+### Step 14: Replace the fake disk with a real disk
 
 ```bash
 root@truenas:~# REPLACEMENT_DISK="$(get_disk_id sde)"
@@ -613,7 +658,7 @@ errors: No known data errors
 
 Reports `ONLINE` instead of `DEGRADED`.
 
-## Add the extra disks
+### Step 15: Absorb the two remaining disks
 
 ![alt text](image-3.png)
 
@@ -622,8 +667,6 @@ import pool. It already showed up, so ???
 ![alt text](image-4.png)
 
 ![alt text](image-5.png)
-
-### Actual
 
 ```bash
 $ zpool attach "${NEWPOOL}" raidz2-0 "${NEWDISK}"
@@ -638,8 +681,6 @@ zfs-kmod-2.2.4-1
 ```
 
 Realized I was on 24.05 the wrong update train.
-
----
 
 ```bash
 root@truenas:~# NEWDISK=$(get_disk_id sdd)
@@ -670,3 +711,7 @@ $ zpool status "${NEWPOOL}" | grep --after-context=1 "expand:"
 expand: expansion of raidz2-0 in progress since Sun Jun  1 08:08:03 2025
         17.1G / 28.5T copied at 501M/s, 0.06% done, 16:36:03 to go
 ```
+
+---
+
+_Thanks to [@NugentS on the TrueNAS forums](https://forums.truenas.com/t/raidz1-to-raidz2-without-doubling-drives/40718/2?u=mtlynch) for teaching me the clever sparse file hack for creating a larger RAIDZ2 pool._
