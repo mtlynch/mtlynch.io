@@ -1,0 +1,32 @@
+{{/* Partial for generating responsive images with srcset
+  Parameters:
+  - .image: Hugo image resource
+  - .sizes: sizes attribute value (optional, defaults to responsive)
+  - .class: CSS class for the img tag (optional)
+  - .loading: loading attribute (optional, defaults to "lazy")
+*/}}
+
+{{ $image := .image }}
+{{ $sizes := .sizes | default "(min-width: 768px) 400px, 98vw" }}
+{{ $class := .class | default "" }}
+{{ $loading := .loading | default "lazy" }}
+
+{{ if $image }}
+  {{ $srcset := "" }}
+  {{ range .photoWidths }}
+    {{- if le . $image.Width }}
+      {{ $resized := $image.Resize (printf "%dx" .) }}
+      {{ $srcset = printf "%s%s %dw, " $srcset $resized.RelPermalink . }}
+    {{ end }}
+  {{ end }}
+  {{ $srcset = printf "%s%s %dw" $srcset $image.RelPermalink $image.Width }}
+
+
+  <img
+    {{ if $class }}class="{{ $class }}"{{ end }}
+    src="{{ $image.RelPermalink }}"
+    srcset="{{ $srcset }}"
+    sizes="{{ $sizes }}"
+    loading="{{ $loading }}"
+  />
+{{ end }}
