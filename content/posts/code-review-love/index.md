@@ -6,9 +6,9 @@ tags:
   - code style
 description: Best practices for code review when you're the author.
 date: "2020-12-02"
-hero_image: cover.png
+hero_image: cover.webp
 images:
-  - code-review-love/og-cover.jpg
+  - code-review-love/og-cover.webp
 discuss_urls:
   reddit: https://www.reddit.com/r/programming/comments/k5cbln/how_to_make_your_code_reviewer_fall_in_love_with/
   hacker_news: https://news.ycombinator.com/item?id=25330182
