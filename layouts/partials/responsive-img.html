@@ -11,22 +11,20 @@
 {{ $class := .class | default "" }}
 {{ $loading := .loading | default "lazy" }}
 
-{{ if $image }}
-  {{ $srcset := "" }}
-  {{ range .photoWidths }}
-    {{- if le . $image.Width }}
-      {{ $resized := $image.Resize (printf "%dx" .) }}
-      {{ $srcset = printf "%s%s %dw, " $srcset $resized.RelPermalink . }}
-    {{ end }}
+{{ $srcset := "" }}
+{{ range .photoWidths }}
+  {{- if le . $image.Width }}
+    {{ $resized := $image.Resize (printf "%dx" .) }}
+    {{ $srcset = printf "%s%s %dw, " $srcset $resized.RelPermalink . }}
   {{ end }}
-  {{ $srcset = printf "%s%s %dw" $srcset $image.RelPermalink $image.Width }}
-
-
-  <img
-    {{ if $class }}class="{{ $class }}"{{ end }}
-    src="{{ $image.RelPermalink }}"
-    srcset="{{ $srcset }}"
-    sizes="{{ $sizes }}"
-    loading="{{ $loading }}"
-  />
 {{ end }}
+{{ $srcset = printf "%s%s %dw" $srcset $image.RelPermalink $image.Width }}
+
+
+<img
+  {{ if $class }}class="{{ $class }}"{{ end }}
+  src="{{ $image.RelPermalink }}"
+  srcset="{{ $srcset }}"
+  sizes="{{ $sizes }}"
+  loading="{{ $loading }}"
+/>
