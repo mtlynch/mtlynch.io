@@ -30,7 +30,7 @@ Upgrading a ZFS pool without moving data to external storage is tricky because:
 
 ### Step 0: Initial state
 
-Starting out, I have a 4x8TB RAIDZ1 ZFS pool, and I'm using 18 TB of its 23 TB capacity. I purchased three refubrbished 8 TB disks that I have available for this migration.
+Starting out, I have a 4x8TB RAIDZ1 ZFS pool, and I'm using 18 TB of its 23 TB capacity. I purchased three refurbished 8 TB disks that I have available for this migration.
 
 ![](migration-0.svg)
 
@@ -104,7 +104,7 @@ The reason there isn't much guidance on a more efficient way to switch from RAID
 
 In theory, my RAIDZ1 to RAIDZ2 migration plan was straightforward, but I ran into a few hiccups actually performing this migration.
 
-I'm sharing a detailed joural of the exact commands and output for anyone who wants to repeat this process.
+I'm sharing a detailed journal of the exact commands and output for anyone who wants to repeat this process.
 
 ### Step 1: A practice migration with USB sticks
 
@@ -284,7 +284,7 @@ get_disk_id() {
 
     for path in /dev/disk/by-id/*; do
         if [ -L "$path" ] && [ "$(readlink -f "$path")" = "$target" ] &&
-           ([[ "${path: -2:1}" == ":" ]] || [[ "${path: -2:1}" != ":" ]]); then
+           [[ "${path: -2:1}" != ":" ]]; then
             echo "$path"
             return 0
         fi
@@ -294,7 +294,7 @@ get_disk_id() {
 }
 ```
 
-To use my `get_disk_id` bash function, I give it the `sdX` identiier, and it returns the stable path to that disk:
+To use my `get_disk_id` bash function, I give it the `sdX` identifier, and it returns the stable path to that disk:
 
 ```bash
 $ get_disk_id sda
@@ -441,7 +441,7 @@ Finally, I need a name for my new pool. I used the name `pool1` before I knew th
 NEWPOOL='tank'
 ```
 
-Unforutnately, I didn't get to keep `tank` as a pool name. TrueNAS has a lot of dependencies on the pool name, so I chose to go back to `pool1` rather than update all of my shares and cron jobs to point to `tank` instead. (TODO: link)
+Unfortunately, I didn't get to keep `tank` as a pool name. TrueNAS has a lot of dependencies on the pool name, so I chose to go back to `pool1` rather than update all of my shares and cron jobs to point to `tank` instead.
 
 ### Step 9: Create the RAIDZ2 pool
 
