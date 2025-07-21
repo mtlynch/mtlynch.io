@@ -1,6 +1,8 @@
 ---
 title: "Migrating a ZFS pool from RAIDZ1 to RAIDZ2"
 date: 2025-07-22
+images:
+  - raidz1-to-raidz2/og-cover.webp
 tags:
   - homelab
   - truenas
@@ -172,7 +174,7 @@ But then without me even pushing back, another Wasabi rep joined the ticket and 
 
 This migration requires ZFS's [RAIDZ expansion feature](https://github.com/openzfs/zfs/pull/15022), which is in [OpenZFS 2.3.0](https://github.com/openzfs/zfs/releases/tag/zfs-2.3.0) and TrueNAS' [25.04 (Fangtooth) release](https://www.truenas.com/docs/scale/25.04/gettingstarted/scalereleasenotes/).
 
-I can verify my ZFS version from from the TrueNAS shell:
+I can verify my ZFS version from the TrueNAS shell:
 
 ```bash
 root@truenas:~# zfs --version
