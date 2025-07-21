@@ -14,9 +14,11 @@ p img {
 }
 </style>
 
-I recently upgraded my home TrueNAS server and migrated 18 TB of data from a 4-disk RAIDZ1 ZFS pool to a new RAIDZ2 pool, and I did it with only three additional 8 TB disks.
+I recently upgraded my home TrueNAS server and migrated 18 TB of data from a 4-disk RAIDZ1 ZFS pool to a new RAIDZ2 pool.
 
-The neat part is that I never transferred my data to external storage. That's tricky because:
+The neat part is that I did it with only three additional 8 TB disks and never transferred my data to external storage.
+
+Upgrading a ZFS pool without moving data to external storage is tricky because:
 
 1. You can't convert a RAIDZ1 pool to a RAIDZ2 pool in place.
 1. You can't shrink a ZFS pool to a smaller number of disks.
@@ -114,11 +116,11 @@ It wasn't a perfect experiment because the drives were different sizes, but the 
 
 ### Step 2: Backing up my data
 
-I said above that I never moved my data to external storage, but that's not strictly true. I did use external storage for backups, though I didn't end up needing it.
+I said above that I never moved my data to external storage, but that's not strictly true. I did use external storage for backup, though I didn't end up needing it.
 
-I already run nightly backups with [restic](https://github.com/mtlynch/mtlynch-backup), but they're at the filesystem level not at the ZFS level. In other words, if I corrupted my ZFS pool during the migration, I'd have to recreate each of my ZFS datasets.
+I already run nightly backups with [restic](https://github.com/mtlynch/mtlynch-backup), but they're at the filesystem level rather than the ZFS level. In other words, if I corrupted my ZFS pool during the migration, I'd have to recreate each of my ZFS datasets.
 
-Even though I run nightly backups, there's one type of data I don't back up: media. Because I'm a data hoarder, I keep the raw images of all of my DVDs and Blu-rays. Because what if I one day get the urge to watch the director's commentary on my DVD copy of 1998's _There's Something About Mary_?
+Even though I run nightly backups, there's one type of data I don't back up: media. I'm a data hoarder, so I keep the raw images of all of my DVDs and Blu-rays. Because what if I one day get the urge to watch the director's commentary on my DVD copy of 1998's _There's Something About Mary_?
 
 {{<img src="dvd-collection.webp" max-width="600px" caption="Most of the space on my disk server is DVDs and Blu-rays that I've ripped." >}}
 
@@ -406,7 +408,7 @@ wipefs --all "${MOVED_DISK}"
 
 I could create a 4x8TB RAIDZ2 pool, but that would only give me 16 TB of usable capacity, not enough to store my 18 TB of data.
 
-Instead, I create a 5x8TB RAIDZ2 pool, except the fifth disk doesn't really exist. ZFS allows me to create a ZFS pool using a sparse file as a disk, so I'll do that.
+Instead, I create a 5x8TB RAIDZ2 pool, except the fifth disk doesn't really exist. ZFS allows me to create a ZFS pool using a sparse file as a disk.
 
 To create a fake disk as a sparse file, I need to know the exact size of the other disks in my pool, which I can find with `fdisk`:
 
@@ -431,7 +433,7 @@ FAKE_DISK='/tmp/fake-drive.img'
 truncate --size 8001563222016 "${FAKE_DISK}"
 ```
 
-Finally, I need a name for my new pool. I used the name `pool1` before I knew that it's convention to name your ZFS pool `tank`, so I thought this would be my opportunity to fit in with the cool kids of the ZFS community.
+Finally, I need a name for my new pool. I used the name `pool1` before I knew that it's convention to name your ZFS pool `tank`, so I thought this would be my opportunity to fit in with the cool kids of the ZFS community by naming my new pool `tank`:
 
 ```bash
 NEWPOOL='tank'
@@ -442,6 +444,8 @@ Unforutnately, I didn't get to keep `tank` as a pool name. TrueNAS has a lot of 
 ### Step 9: Create the RAIDZ2 pool
 
 Finally, it's time to create my 5x8TB RAIDZ2 pool:
+
+![](migration-1.svg)
 
 ```bash
 zpool create \
@@ -486,7 +490,7 @@ I can also see my new RAIDZ2 pool from the TrueNAS web UI, which reports 21.4 Ti
 
 ### Step 10: Remove the fake disk
 
-The fake disk is just a file in my `/tmp` directory, and it can't really store the 8 TB it claims it can hold. To prevent ZFS from catching on to my trick, I immediately remove the fake disk from my RAIDZ2 pool:
+The fake disk is just a file in my `/tmp` directory, and it can't really store the 8 TB it claims it can hold. To prevent strange behavior when the fake file exhausts the space on my `/tmp` filesystem, I immediately remove the fake disk from my RAIDZ2 pool:
 
 ```bash
 zpool offline "${NEWPOOL}" "${FAKE_DISK}" && \
@@ -522,42 +526,60 @@ NAME   SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALT
 tank  36.4T  1.41M  36.4T        -         -     0%     0%  1.00x  DEGRADED  -
 ```
 
+![](migration-2.svg)
+
 ### Step 11: Migrate my data from RAIDZ1 to RAIDZ2
 
+With my new RAIDZ2 pool online with 23.5 TB of capacity, I move my 18 TB of data from my old RAIDZ1 pool.
+
+To transfer everything, I snapshot my entire RAIDZ1 pool and then send the snapshot from my old pool to my new pool:
+
 ```bash
-SNAPSHOT_1="fullpool_$(date +%Y%m%d)"
+SNAPSHOT_1="migrate1"
 zfs snapshot -r "${OLDPOOL}@${SNAPSHOT_1}" && \
-  zfs send -v -w -R "${OLDPOOL}@${SNAPSHOT_1}" \
+  zfs send --verbose --raw --replicate "${OLDPOOL}@${SNAPSHOT_1}" \
     | zfs receive -v -F "${NEWPOOL}"
 ```
 
-For some reason, only some of the datasets transferred over, so I had to do the remaining datasets one-by-one.
+![](migration-3.svg)
+
+Strangely, the command completes without reporting any errors, but I notice some datasets missing on my RAIDZ2 pool.
+
+#### Troubleshooting my migration
+
+To complete the data migration, I send the missing datasets one-by-one:
 
 ```bash
-DATASET='data'
+DATASET='logs'
 ```
 
 ```bash
-zfs send -v -w -R -s "${OLDPOOL}/${DATASET}@${SNAPSHOT_1}" \
+zfs send --verbose --raw --replicate --skip-missing \
+    "${OLDPOOL}/${DATASET}@${SNAPSHOT_1}" \
   | zfs receive -v -F -s "${NEWPOOL}/${DATASET}"
 ```
 
-But then when I'd mount it at `/mnt/tank/data`, it showed up as empty. I tried `zpool export` and `zpool import`, and no change. What finally fixed it was rebooting my whole TrueNAS server.
+When I mount the pool at `/mnt/tank/logs` the directory still shows up as empty.
 
-{{<img src="reads-writes.webp">}}
+I try `zpool export` and `zpool import`, but there was no change.
+
+Finally, I try rebooting my whole TrueNAS server, which magically fixes it. I'm able to see my files in `/mnt/tank/logs`.
 
 #### Resuming interrupted transfers
+
+From interrupting large transfers, I discover that ZFS, by default, does not send data with support for resuming interruptions. To resume, I have to do this complicated dance of retrieving a "resume token" and then including that in my `zfs send` command:
 
 ```bash
 RESUME_TOKEN="$(zfs get -H -o value receive_resume_token "${NEWPOOL}/${DATASET}")"
 
-
 zfs send -v -t "${RESUME_TOKEN}" | zfs receive -v -s "${NEWPOOL}/${DATASET}"
 ```
 
-I don't know if it actually resumes because it seems to start the progress back from zero, but it claims it's parsing the resume token correctly.
+The output claims it parsed the resume token successfully, but the progress always resets to zero, so I don't know if this command actually worked.
 
-#### Final cleanup
+#### Finalizing the migration
+
+Because the migration took several hours, I make a new snapshot and did an incremental send of all the data that's changed since my previous snapshot:
 
 ```bash
 SNAPSHOT_2="migrate2"
@@ -573,6 +595,12 @@ zfs send -v \
 
 ### Step 12: Swap pool names
 
+I originally thought I'd switch to using my new pool name of `tank`, but I realized that TrueNAS ties network shares and cron jobs to the pool name. If I renamed my main pool from `pool1` to `tank`, I'd have to recreate or edit a bunch of network shares and cron jobs manually with the new name.
+
+The easier solution is to just let my new pool take over the name of my old pool, so I choose that.
+
+I first try to export the pools to take them offline but various TrueNAS system services block me from doing that. So, I force a bunch of services offline:
+
 ```bash
 sudo systemctl stop k3s
 sudo umount -l /var/lib/kubelet
@@ -583,14 +611,20 @@ sudo systemctl stop middlewared
 sudo systemctl stop netdata
 ```
 
+From there, I'm free to offline the pools to perform the renames:
+
 ```bash
+# Rename my old pool with the suffix `-old`.
 zpool export -f "${OLDPOOL}" && \
   zpool export -f "${NEWPOOL}" && \
   zpool import "${OLDPOOL}" "${OLDPOOL}-old"
 
+# Rename my new pool to my old pool's name.
 zpool import ${NEWPOOL} ${OLDPOOL}
 zfs set mountpoint="/mnt/${OLDPOOL}" "${OLDPOOL}"
 ```
+
+After that, I restarted all the services I had stopped:
 
 ```bash
 sudo systemctl start middlewared
@@ -601,34 +635,46 @@ sudo systemctl start netdata
 sudo systemctl start k3s
 ```
 
-Needed to reboot
+But that didn't work, so I had to reboot again.
 
-{{<img src="dashboard-after-import.webp">}}
+After rebooting, TrueNAS recognized `pool1` as my new 5x8TB RAIDZ2 pool:
 
-### Step 13: Destroy my old RAIDZ1 pool
+{{<img src="dashboard-after-import.webp" has-border="false" max-width="600px">}}
 
-Ran a scrub on pool1 just to be safe before I blow away the old pool.
+### Step 13: Scrub the new RAIDZ2 pool
+
+I'm not sure if it's necessary, but I run a scrub on my new pool for some extra confidence about my data integrity before I destroy my old pool. The scrub completes with no errors:
 
 {{<img src="scrub-complete.webp">}}
+
+### Step 14: Destroy my old pool
+
+Now, the scariest part: destroying my old pool. I blow it away with `zpool destroy`:
 
 ```bash
 zpool destroy "${OLDPOOL}-old"
 ```
 
-### Step 14: Replace the fake disk with a real disk
+### Step 15: Replace the fake disk with a real disk
+
+With my old RAIDZ1 pool destroyed, I now have three disks to migrate to my new RAIDZ2 pool.
+
+![](migration-4.svg)
+
+The first disk migration requires a special flow because I'm replacing the fake disk (the 8 TB sparse file) on my RAIDZ2 pool.
+
+![](migration-5.svg)
+
+I use `zpool replace` to replace my fake disk with a real disk:
 
 ```bash
-root@truenas:~# REPLACEMENT_DISK="$(get_disk_id sde)"
-root@truenas:~# echo $REPLACEMENT_DISK
-/dev/disk/by-id/ata-ST8000VN004-2M2101_WSD5B9XY
-```
-
-```bash
+FAKE_DISK='/tmp/fake-drive.img'
+REPLACEMENT_DISK="$(get_disk_id sde)"
 NEWPOOL='pool1'
-zpool replace "${NEWPOOL}" /tmp/fake-drive.img "${REPLACEMENT_DISK}"
+zpool replace "${NEWPOOL}" "${FAKE_DISK}" "${REPLACEMENT_DISK}"
 ```
 
-![alt text](image-1.png)
+Checking `zpool status` shows that ZFS is resilvering (reorganizing) my data onto the disk I just swapped in:
 
 ```bash
 $ zpool status "${NEWPOOL}"
@@ -656,62 +702,70 @@ config:
 errors: No known data errors
 ```
 
-Reports `ONLINE` instead of `DEGRADED`.
+The TrueNAS UI also shows that I'm replacing a disk:
+
+{{<img src="replacing-fake-disk.webp" has-border="false" max-width="600px">}}
 
 ### Step 15: Absorb the two remaining disks
 
-![alt text](image-3.png)
+Finally, it's time to expand the new RAIDZ2 pool with the remaining two disks from my old, destroyed RAIDZ1 pool:
 
-import pool. It already showed up, so ???
+![](migration-6.svg)
 
-![alt text](image-4.png)
-
-![alt text](image-5.png)
+Again, I hit a snag.
 
 ```bash
+$ NEWDISK=$(get_disk_id sdd)
 $ zpool attach "${NEWPOOL}" raidz2-0 "${NEWDISK}"
-cannot attach /dev/disk/by-id/ata-ST8000VN004-3CP101_WRQ02GX5 to raidz2-0: can only attach to mirrors and top-level disks
-```
-
-```bash
-# zfs --version
-+ zfs --version
-zfs-2.2.4-1
-zfs-kmod-2.2.4-1
-```
-
-Realized I was on 24.05 the wrong update train.
-
-```bash
-root@truenas:~# NEWDISK=$(get_disk_id sdd)
-root@truenas:~# NEWPOOL='pool1'
-root@truenas:~# zpool attach "${NEWPOOL}" raidz2-0 "${NEWDISK}"
-cannot use '/dev/mapper/': must be a block device or regular file
-root@truenas:~# zfs --version
-zfs-2.3.0-1
-zfs-kmod-2.3.0-1
-
-+ zpool attach pool1 raidz2-0 /dev/disk/by-id/ata-ST8000VN004-3CP101_WRQ02GX5
 cannot attach /dev/disk/by-id/ata-ST8000VN004-3CP101_WRQ02GX5 to raidz2-0: raidz_expansion feature must be enabled in order to attach a device to raidz
+```
 
-+ zpool get feature@raidz_expansion pool1
+Apparently, the RAIDZ expansion feature is off by default, or perhaps it's only off if you upgrade from an earlier version of TrueNAS, as I had:
+
+```bash
+$ zpool get feature@raidz_expansion "${NEWPOOL}"
 NAME   PROPERTY                 VALUE                    SOURCE
 pool1  feature@raidz_expansion  disabled                 local
+```
 
-root@truenas:~# zpool get feature@raidz_expansion pool1
-+ zpool get feature@raidz_expansion pool1
+I enable the RAIDZ expansion feature with `zpool upgrade`:
+
+```bash
+zpool upgrade -o feature@raidz_expansion=enabled "${NEWPOOL}"
+```
+
+From there, I confirm that the RAIDZ expansion feature is enabled:
+
+```bash
+$ zpool get feature@raidz_expansion "${NEWPOOL}"
 NAME   PROPERTY                 VALUE                    SOURCE
 pool1  feature@raidz_expansion  enabled                  local
 ```
 
+Now, I can try to add the disk again:
+
+```bash
+zpool attach "${NEWPOOL}" raidz2-0 "${NEWDISK}"
+```
+
+And the `zpool status` confirms that it's adding the disk:
+
 ```bash
 $ zpool status "${NEWPOOL}" | grep --after-context=1 "expand:"
 + grep --after-context=1 expand:
-+ zpool status pool1
++ zpool status "${NEWPOOL}"
 expand: expansion of raidz2-0 in progress since Sun Jun  1 08:08:03 2025
         17.1G / 28.5T copied at 501M/s, 0.06% done, 16:36:03 to go
 ```
 
+After `zpool status` shows expansion has reached 100%, I repeat the process with the remaining disk and reach my final state.
+
+## My complete 7x8TB RAIDZ2 pool
+
+With all the disks migrated, I now have a happy, healthy 7x8TB RAIDZ2 pool with 33 TB (30 TiB) of usable capacity:
+
+{{<img src="dashboard-complete.webp" has-border="false" max-width="600px">}}
+
 ---
 
-_Thanks to [@NugentS on the TrueNAS forums](https://forums.truenas.com/t/raidz1-to-raidz2-without-doubling-drives/40718/2?u=mtlynch) for teaching me the clever sparse file hack for creating a larger RAIDZ2 pool._
+_Thanks to [@NugentS](https://forums.truenas.com/u/nugents/summary) on the TrueNAS forums for [teaching me the clever sparse file hack](https://forums.truenas.com/t/raidz1-to-raidz2-without-doubling-drives/40718/2?u=mtlynch) for creating a larger RAIDZ2 pool._
