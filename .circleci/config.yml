@@ -49,6 +49,17 @@ jobs:
       - run:
           name: Check for duplicate words
           command: wordword --verbose ./content
+  check_exif_data:
+    docker:
+      - image: davidanson/exiftool:v13.10
+    steps:
+      - checkout
+      - run:
+          name: Install bash
+          command: apk add bash
+      - run:
+          name: Check EXIF data
+          command: ./dev-scripts/check-exif-data ./content/
   build:
     docker:
       - image: hugomods/hugo:0.147.5
@@ -147,6 +158,7 @@ workflows:
       - check_html_format
       - lint-markdown
       - check_duplicate_words
+      - check_exif_data
       - build
       - lint-html:
           requires:
@@ -171,6 +183,7 @@ workflows:
             - build
             - check-seo-metadata
             - check_duplicate_words
+            - check_exif_data
           filters:
             branches:
               only: master

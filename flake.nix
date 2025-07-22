@@ -35,9 +35,11 @@
       markdownlint = markdown-lint-nixpkgs.legacyPackages.${system}.markdownlint-cli2;
       wordword = wordword-pkg.packages.${system}.default;
       libxml2 = hugo-nixpkgs.legacyPackages.${system}.libxml2;
+      exiftool = hugo-nixpkgs.legacyPackages.${system}.exiftool;
     in {
       devShells.default = hugo-nixpkgs.legacyPackages.${system}.mkShell {
         packages = [
+          exiftool
           hugo
           libxml2
           nodejs
@@ -48,6 +50,7 @@
 
         shellHook = ''
           wordword --version
+          exiftool "$(exiftool -ver)"
           echo "htmlproofer" "$(htmlproofer --version)"
           markdownlint-cli2 | head -n 1
           echo "node" "$(node --version)"
