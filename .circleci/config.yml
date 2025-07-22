@@ -55,7 +55,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install bash
+          name: Install dependencies
           command: apk add bash git
       - run:
           name: Check EXIF data
