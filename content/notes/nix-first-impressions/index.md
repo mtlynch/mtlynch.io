@@ -189,7 +189,7 @@ And it worked! After that, I could ssh into my NixOS system from my main compute
 
 The first thing that struck me about the OS was that there was lots of clutter. It had a bunch of built-in apps I didn't want, like a contact list and a weather app:
 
-{{<img src="TinyPilot-2023-06-17T16_23_23.163z.webp" has-border="false">}}
+{{<img src="TinyPilot-2023-06-17T16_23_23.163Z.webp" has-border="false">}}
 
 I searched for how to get rid of them and discovered that [they're default applications as part of the Gnome shell](https://discourse.nixos.org/t/howto-disable-most-gnome-default-applications-and-what-they-are/13505). You can disable them by adding this line to your `/etc/nixos/configuration.nix`:
 
@@ -239,7 +239,7 @@ sudo nixos-rebuild switch
 
 And voila! All of the clutter disappeared:
 
-{{<img src="TinyPilot-2023-06-17T16 27 37.615z.webp" has-border="false">}}
+{{<img src="TinyPilot-2023-06-17T16 27 37.615Z.webp" has-border="false">}}
 
 ## Task 3: Bringing back the System Monitor (failed)
 
@@ -264,7 +264,7 @@ I tried other possible names like `gnome-shell-system-monitor`, but I couldn't f
 
 **Edit (2023-06-19)**: Thanks to readers who pointed out that the correct package name is `gnome.gnome-system-monitor`. The piece I was missing was that I can search for packages at [search.nixos.org](https://search.nixos.org/packages?channel=23.05&from=0&size=50&sort=relevance&type=packages&query=gnome+system+monitor).
 
-{{<img src="TinyPilot-2023-06-20T01 40 54.869z.webp" has-border="false">}}
+{{<img src="TinyPilot-2023-06-20T01 40 54.869Z.webp" has-border="false">}}
 
 ## Things I'd like to understand next
 
