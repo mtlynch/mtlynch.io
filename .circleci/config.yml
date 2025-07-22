@@ -55,6 +55,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install bash
+          command: apk add bash
+      - run:
           name: Check EXIF data
           command: ./dev-scripts/check-exif-data ./content/
   build:
