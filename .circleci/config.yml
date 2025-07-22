@@ -55,11 +55,11 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install bash
-          command: apk add bash
+          name: Install bash and git
+          command: apk add bash git
       - run:
           name: Check EXIF data
-          command: ./dev-scripts/check-exif-data ./content/
+          command: ./dev-scripts/check-exif-data
   build:
     docker:
       - image: hugomods/hugo:0.147.5

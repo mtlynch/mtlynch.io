@@ -4,9 +4,37 @@
 set -eu
 
 # Script to check for specific GPS and camera EXIF data
-# Usage: ./check_specific_exif.sh [directory_path]
+# Usage: ./check_specific_exif.sh [-full] [directory_path]
 
-DIRECTORY="${1:-.}"
+# Parse arguments
+FULL_CHECK=false
+DIRECTORY="."
+
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        -full)
+            FULL_CHECK=true
+            shift
+            ;;
+        -*)
+            echo "Error: Unknown option $1" >&2
+            echo "Usage: $0 [-full] [directory_path]" >&2
+            exit 1
+            ;;
+        *)
+            DIRECTORY="$1"
+            shift
+            ;;
+    esac
+done
+
+# Check if exiftool is installed and fail if not
+if ! command -v exiftool &> /dev/null; then
+    echo "Error: exiftool is not installed or not in PATH" >&2
+    echo "On Ubuntu/Debian: sudo apt-get install libimage-exiftool-perl" >&2
+    echo "On macOS: brew install exiftool" >&2
+    exit 1
+fi
 
 # Print exiftool version
 echo "ExifTool version: $(exiftool -ver)"
@@ -17,10 +45,51 @@ if [ ! -d "${DIRECTORY}" ]; then
     exit 1
 fi
 
-echo "Checking for GPS and camera data in directory: ${DIRECTORY}"
+# Function to get list of files to check
+get_files_to_check() {
+    if [ "${FULL_CHECK}" = true ]; then
+        echo "Checking ALL files in directory: ${DIRECTORY}"
+        find "${DIRECTORY}" -type f -print0
+    else
+        echo "Checking files that differ from master branch in directory: ${DIRECTORY}"
+
+        # Check if we're in a git repository
+        if ! git rev-parse --git-dir &> /dev/null; then
+            echo "Warning: Not in a git repository. Falling back to full check." >&2
+            find "${DIRECTORY}" -type f -print0
+            return
+        fi
+
+        # Check if master branch exists
+        if ! git show-ref --verify --quiet refs/heads/master && ! git show-ref --verify --quiet refs/remotes/origin/master; then
+            echo "Warning: No master branch found. Falling back to full check." >&2
+            find "${DIRECTORY}" -type f -print0
+            return
+        fi
+
+        # Get files that differ from master (added, modified, or renamed)
+        # Use origin/master if available, otherwise local master
+        local master_ref
+        if git show-ref --verify --quiet refs/remotes/origin/master; then
+            master_ref="origin/master"
+        else
+            master_ref="master"
+        fi
+
+        # Get changed files and filter by directory, then convert to null-delimited
+        git diff --name-only --diff-filter=AMR "${master_ref}" | \
+        while IFS= read -r file; do
+            # Check if file exists and is within our target directory
+            if [ -f "${file}" ] && [[ "${file}" == "${DIRECTORY%/}"/* || "${DIRECTORY}" == "." ]]; then
+                printf '%s\0' "${file}"
+            fi
+        done
+    fi
+}
 
 sensitive_data_found=false
 files_with_sensitive_data=()
+files_checked=0
 
 # Function to check for sensitive EXIF data
 check_sensitive_data() {
@@ -69,17 +138,21 @@ check_sensitive_data() {
     fi
 }
 
-# Process all files
+# Process files
 while IFS= read -r -d '' file; do
     [ -d "${file}" ] && continue
+
+    ((files_checked++))
 
     if check_sensitive_data "${file}"; then
         files_with_sensitive_data+=("${file}")
         sensitive_data_found=true
     fi
-done < <(find "${DIRECTORY}" -type f -print0)
+done < <(get_files_to_check)
 
 # Report results
+echo "Files checked: ${files_checked}"
+
 if [ "${sensitive_data_found}" = true ]; then
     echo "" >&2
     echo "❌ FAILURE: Found GPS/camera data in ${#files_with_sensitive_data[@]} file(s)" >&2
