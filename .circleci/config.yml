@@ -59,7 +59,9 @@ jobs:
           command: apk add bash
       - run:
           name: Check EXIF data
-          command: PATH="/extract/Image-ExifTool-*:${PATH}" ./dev-scripts/check-exif-data ./content/
+          command: |
+            export PATH="/extract/Image-ExifTool-13.10:$PATH"
+            ./dev-scripts/check-exif-data ./content/
   build:
     docker:
       - image: hugomods/hugo:0.147.5
