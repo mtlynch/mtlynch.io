@@ -1,0 +1,90 @@
+#!/usr/bin/env bash
+
+# Enable strict error handling
+set -eu
+
+# Script to check for specific GPS and camera EXIF data
+# Usage: ./check_specific_exif.sh [directory_path]
+
+DIRECTORY="${1:-.}"
+
+# Print exiftool version
+echo "ExifTool version: $(exiftool -ver)"
+
+# Check if directory exists
+if [ ! -d "${DIRECTORY}" ]; then
+    echo "Error: Directory '${DIRECTORY}' does not exist" >&2
+    exit 1
+fi
+
+echo "Checking for GPS and camera data in directory: ${DIRECTORY}"
+
+sensitive_data_found=false
+files_with_sensitive_data=()
+
+# Function to check for sensitive EXIF data
+check_sensitive_data() {
+    local file="$1"
+    local has_sensitive=false
+    local details=""
+
+    # Get all relevant EXIF data in one call
+    local exif_data
+    exif_data=$(exiftool -q -s \
+        -GPSLatitude -GPSLongitude -GPSAltitude -GPSDateTime -GPSMapDatum \
+        -Make -Model \
+        -SerialNumber -CameraSerialNumber -LensSerialNumber \
+        "${file}" 2>/dev/null || true)
+
+    # Check for GPS coordinates (most sensitive)
+    if echo "${exif_data}" | grep -q -E "(GPSLatitude|GPSLongitude)"; then
+        has_sensitive=true
+        details="${details}  📍 GPS coordinates\n"
+    fi
+
+    # Check for other GPS data
+    if echo "${exif_data}" | grep -q -E "(GPSAltitude|GPSDateTime|GPSMapDatum)"; then
+        has_sensitive=true
+        details="${details}  📍 GPS metadata\n"
+    fi
+
+    # Check for camera make/model (device identification)
+    if echo "${exif_data}" | grep -q -E "(Make|Model)"; then
+        has_sensitive=true
+        details="${details}  📷 Camera make/model\n"
+    fi
+
+    # Check for serial numbers
+    if echo "${exif_data}" | grep -q -E "(SerialNumber|CameraSerialNumber|LensSerialNumber)"; then
+        has_sensitive=true
+        details="${details}  🔢 Serial numbers\n"
+    fi
+
+    if [ "${has_sensitive}" = true ]; then
+        echo "Sensitive data found in: ${file}"
+        echo -e "${details}"
+        return 0
+    else
+        return 1
+    fi
+}
+
+# Process all files
+while IFS= read -r -d '' file; do
+    [ -d "${file}" ] && continue
+
+    if check_sensitive_data "${file}"; then
+        files_with_sensitive_data+=("${file}")
+        sensitive_data_found=true
+    fi
+done < <(find "${DIRECTORY}" -type f -print0)
+
+# Report results
+if [ "${sensitive_data_found}" = true ]; then
+    echo "" >&2
+    echo "❌ FAILURE: Found GPS/camera data in ${#files_with_sensitive_data[@]} file(s)" >&2
+    exit 1
+else
+    echo "✅ SUCCESS: No GPS or camera data found in any files"
+    exit 0
+fi
