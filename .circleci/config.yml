@@ -201,13 +201,7 @@ workflows:
               ignore: master
       - deploy:
           requires:
-            - check-whitespace
-            - check_html_format
-            - lint-markdown
             - build
-            - check-seo-metadata
-            - check_duplicate_words
-            - check_exif_data
           filters:
             branches:
               only: master
