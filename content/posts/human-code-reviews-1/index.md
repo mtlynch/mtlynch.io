@@ -43,7 +43,7 @@ In this article, I discuss techniques that treat the code review as not only a t
 
 The term "code review" can refer to a range of activities, from simply reading some code over your teammate's shoulder to a 20-person meeting where you dissect code line by line. I use the term to refer to a process that's formal and written, but not so heavyweight as a series of in-person code inspection meetings.
 
-{{<img src="flowchart.png" alt="Code review flow" max-width="600px" has-border="false">}}
+{{<img src="flowchart.webp" alt="Code review flow" max-width="600px" has-border="false">}}
 
 The participants in a code review are the **author**, who writes the code and sends it for review, and the **reviewer**, who reads the code and decides when it's ready to be merged in to the team's codebase. A review can have multiple reviewers, but I assume for simplicity that you are the sole reviewer.
 
