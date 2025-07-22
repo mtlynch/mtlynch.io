@@ -60,7 +60,7 @@ jobs:
       - run:
           name: Check EXIF data
           command: |
-            export PATH="/extract/Image-ExifTool-13.10:$PATH"
+            export PATH="/extract/Image-ExifTool-13.10:${PATH}"
             ./dev-scripts/check-exif-data ./content/
   build:
     docker:
