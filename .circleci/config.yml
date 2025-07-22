@@ -55,11 +55,13 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install bash and git
+          name: Install bash
           command: apk add bash git
       - run:
           name: Check EXIF data
-          command: ./dev-scripts/check-exif-data
+          command: |
+            export PATH="/extract/Image-ExifTool-13.10:${PATH}"
+            ./dev-scripts/check-exif-data
   build:
     docker:
       - image: hugomods/hugo:0.147.5
