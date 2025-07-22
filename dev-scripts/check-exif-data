@@ -8,6 +8,12 @@ set -eu
 
 DIRECTORY="${1:-.}"
 
+# Check if exiftool is installed and fail if not
+if ! command -v exiftool &> /dev/null; then
+    echo "Error: exiftool is not installed or not in PATH" >&2
+    exit 1
+fi
+
 # Print exiftool version
 echo "ExifTool version: $(exiftool -ver)"
 
