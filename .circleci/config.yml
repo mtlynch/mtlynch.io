@@ -56,12 +56,37 @@ jobs:
       - checkout
       - run:
           name: Install bash
-          command: apk add bash
+          command: apk add bash git
       - run:
           name: Check EXIF data
           command: |
             export PATH="/extract/Image-ExifTool-13.10:${PATH}"
-            ./dev-scripts/check-exif-data ./content/
+
+            if [[ "${CIRCLE_BRANCH}" == "master" ]]; then
+              echo "On master branch, checking all content files..."
+              ./dev-scripts/check-exif-data ./content/
+            else
+              echo "On branch ${CIRCLE_BRANCH}, checking only changed files..."
+
+              # Fetch master branch for comparison
+              git fetch origin master:refs/remotes/origin/master
+
+              # Get changed files in content directory
+              changed_files=$(git diff --name-only origin/master...HEAD | grep '^content/' || true)
+
+              if [ -n "${changed_files}" ]; then
+                echo "Changed files in content directory:"
+                echo "${changed_files}"
+                echo ""
+
+                # Convert newline-separated list to space-separated arguments
+                # shellcheck disable=SC2086
+                ./dev-scripts/check-exif-data ${changed_files}
+              else
+                echo "No content files changed compared to master"
+                echo "✅ SUCCESS: No content files to check"
+              fi
+            fi
   build:
     docker:
       - image: hugomods/hugo:0.147.5

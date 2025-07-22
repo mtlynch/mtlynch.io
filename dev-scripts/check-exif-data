@@ -4,9 +4,17 @@
 set -eu
 
 # Script to check for specific GPS and camera EXIF data
-# Usage: ./check_specific_exif.sh [directory_path]
+# Usage: ./check-exif-data [file_or_directory...]
+# Examples:
+#   ./check-exif-data                    # Check current directory
+#   ./check-exif-data foo/               # Check foo directory
+#   ./check-exif-data bar.jpg            # Check bar.jpg file
+#   ./check-exif-data foo/ bar.jpg baz/  # Check multiple files/directories
 
-DIRECTORY="${1:-.}"
+# If no arguments provided, default to current directory
+if [ $# -eq 0 ]; then
+    set -- "."
+fi
 
 # Check if exiftool is installed and fail if not
 if ! command -v exiftool &> /dev/null; then
@@ -17,16 +25,39 @@ fi
 # Print exiftool version
 echo "ExifTool version: $(exiftool -ver)"
 
-# Check if directory exists
-if [ ! -d "${DIRECTORY}" ]; then
-    echo "Error: Directory '${DIRECTORY}' does not exist" >&2
-    exit 1
-fi
-
-echo "Checking for GPS and camera data in directory: ${DIRECTORY}"
-
 sensitive_data_found=false
 files_with_sensitive_data=()
+
+# Function to process a single path (file or directory)
+process_path() {
+    local path="$1"
+
+    if [ ! -e "${path}" ]; then
+        echo "Warning: '${path}' does not exist, skipping" >&2
+        return 0
+    fi
+
+    if [ -f "${path}" ]; then
+        # It's a file, check it directly
+        if check_sensitive_data "${path}"; then
+            files_with_sensitive_data+=("${path}")
+            sensitive_data_found=true
+        fi
+    elif [ -d "${path}" ]; then
+        # It's a directory, process all files within it
+        echo "Checking directory: ${path}"
+        while IFS= read -r -d '' file; do
+            [ -d "${file}" ] && continue
+
+            if check_sensitive_data "${file}"; then
+                files_with_sensitive_data+=("${file}")
+                sensitive_data_found=true
+            fi
+        done < <(find "${path}" -type f -print0)
+    else
+        echo "Warning: '${path}' is neither a file nor directory, skipping" >&2
+    fi
+}
 
 # Function to check for sensitive EXIF data
 check_sensitive_data() {
@@ -75,15 +106,10 @@ check_sensitive_data() {
     fi
 }
 
-# Process all files
-while IFS= read -r -d '' file; do
-    [ -d "${file}" ] && continue
-
-    if check_sensitive_data "${file}"; then
-        files_with_sensitive_data+=("${file}")
-        sensitive_data_found=true
-    fi
-done < <(find "${DIRECTORY}" -type f -print0)
+# Process all provided paths
+for path in "$@"; do
+    process_path "${path}"
+done
 
 # Report results
 if [ "${sensitive_data_found}" = true ]; then
