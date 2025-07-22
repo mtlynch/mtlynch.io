@@ -49,6 +49,41 @@ jobs:
       - run:
           name: Check for duplicate words
           command: wordword --verbose ./content
+  check_exif_data:
+    docker:
+      - image: davidanson/exiftool:v13.10
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: apk add bash git
+      - run:
+          name: Check EXIF data
+          command: |
+            export PATH="/extract/Image-ExifTool-13.10:${PATH}"
+
+            if [[ "${CIRCLE_BRANCH}" == "master" ]]; then
+              echo "On "${CIRCLE_BRANCH}" branch, checking all content files..."
+              ./dev-scripts/check-exif-data ./content/
+            else
+              echo "On branch ${CIRCLE_BRANCH}, checking only changed files..."
+
+              # Get changed files in content directory
+              changed_files=$(git diff --name-only origin/master...HEAD | grep '^content/' || true)
+
+              if [ -n "${changed_files}" ]; then
+                echo "Changed files in content directory:"
+                echo "${changed_files}"
+                echo ""
+
+                # Convert newline-separated list to space-separated arguments
+                # shellcheck disable=SC2086
+                ./dev-scripts/check-exif-data ${changed_files}
+              else
+                echo "No content files changed compared to master"
+                echo "✅ SUCCESS: No content files to check"
+              fi
+            fi
   build:
     docker:
       - image: hugomods/hugo:0.147.5
@@ -147,6 +182,7 @@ workflows:
       - check_html_format
       - lint-markdown
       - check_duplicate_words
+      - check_exif_data
       - build
       - lint-html:
           requires:
@@ -165,12 +201,7 @@ workflows:
               ignore: master
       - deploy:
           requires:
-            - check-whitespace
-            - check_html_format
-            - lint-markdown
             - build
-            - check-seo-metadata
-            - check_duplicate_words
           filters:
             branches:
               only: master

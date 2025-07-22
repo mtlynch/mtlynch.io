@@ -13,7 +13,7 @@ description:
   \ almost every..."
 date: "2017-10-12"
 images:
-  - human-code-reviews-1/code-reviews-cover1.png
+  - human-code-reviews-1/code-reviews-cover1.webp
 ---
 
 Lately, I've been reading articles about best practices for code reviews. I notice that these articles focus on finding bugs to the exclusion of almost every other component of a review. Communicating issues you discover in a constructive and professional way? Irrelevant! Just identify all the bugs, and the rest will take care of itself.
@@ -43,7 +43,7 @@ In this article, I discuss techniques that treat the code review as not only a t
 
 The term "code review" can refer to a range of activities, from simply reading some code over your teammate's shoulder to a 20-person meeting where you dissect code line by line. I use the term to refer to a process that's formal and written, but not so heavyweight as a series of in-person code inspection meetings.
 
-{{<img src="flowchart.png" alt="Code review flow" max-width="600px" has-border="false">}}
+{{<img src="flowchart.webp" alt="Code review flow" max-width="600px" has-border="false">}}
 
 The participants in a code review are the **author**, who writes the code and sends it for review, and the **reviewer**, who reads the code and decides when it's ready to be merged in to the team's codebase. A review can have multiple reviewers, but I assume for simplicity that you are the sole reviewer.
 

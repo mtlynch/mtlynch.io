@@ -12,7 +12,7 @@ tags:
   - sia
 date: "2018-02-28"
 images:
-  - why-i-quit-google/spoiled-coder.png
+  - why-i-quit-google/spoiled-coder.webp
 ---
 
 For the past four years, I've worked as a software developer at Google. On February 1st, I quit. It was because they refused to buy me a Christmas present.
@@ -27,7 +27,7 @@ When the annual employee survey asked me whether I expected to be at Google in f
 
 Of _course_ I'd still be at Google in five years. I was surrounded by the best engineers in the world, using the most advanced development tools in the world, and eating the free-est food in the world.
 
-{{<img src="spoiled-coder.png" alt="My typical day at Google" max-width="750px" has-border="false">}}
+{{<img src="spoiled-coder.webp" alt="My typical day at Google" max-width="750px" has-border="false">}}
 
 My most recent performance rating was "Strongly Exceeds Expectations." If I just kept going, I'd soon be promoted to the next level, Senior Software Engineer. What a great title! Forever after in my career, I'd be able to say, "Yes, I was a _Senior_ Software Engineer. At _Google_." People would be so impressed.
 

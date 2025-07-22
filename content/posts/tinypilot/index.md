@@ -9,7 +9,7 @@ tags:
   - kvm
   - tinypilot
 images:
-  - tinypilot/opengraph.jpg
+  - tinypilot/opengraph.webp
 description: Using only a Raspberry Pi and an $11 video capture dongle, you can create your own KVM over IP device, allowing you to send keyboard input to a remote computer and capture its display.
 custom_css: true
 discuss_urls:

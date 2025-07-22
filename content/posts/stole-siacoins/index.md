@@ -12,7 +12,7 @@ discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=14568558
 date: "2017-06-16"
 images:
-  - stole-siacoins/american-psycho.jpg
+  - stole-siacoins/american-psycho.webp
 ---
 
 ## A seedy reddit post
@@ -247,7 +247,7 @@ There was no real penalty for guessing too low except that I'd pay more in trans
 
 I admit that I did entertain quite a few fantasies about what I could spend the €10 on if I kept it for myself: private jets, Rolexes, a mansion with one of those Scrooge McDuck swimming pools of money. But in the end, I decided I had to do the right thing and return the Siacoin to the user who posted their seed.
 
-{{<img src="american-psycho.jpg" alt="American Psycho" caption="Me, if I had kept the money." has-border="false">}}
+{{<img src="american-psycho.webp" alt="American Psycho" caption="Me, if I had kept the money." has-border="false">}}
 
 Still, the discrepancy between the amount I found and the amount they lost could potentially make things awkward. It would be like calling someone up and saying, "Hey, are you the guy who put up those posters about the lost wallet with €2,000 cash inside? I found it, but it only had- uh... _€10_ inside..." (shifts eyes).
 
