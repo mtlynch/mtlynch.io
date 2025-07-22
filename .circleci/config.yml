@@ -63,7 +63,7 @@ jobs:
             export PATH="/extract/Image-ExifTool-13.10:${PATH}"
 
             if [[ "${CIRCLE_BRANCH}" == "master" ]]; then
-              echo "On master branch, checking all content files..."
+              echo "On "${CIRCLE_BRANCH}" branch, checking all content files..."
               ./dev-scripts/check-exif-data ./content/
             else
               echo "On branch ${CIRCLE_BRANCH}, checking only changed files..."
