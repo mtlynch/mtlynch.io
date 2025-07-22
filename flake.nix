@@ -50,7 +50,7 @@
 
         shellHook = ''
           wordword --version
-          exiftool "$(exiftool -ver)"
+          echo "exiftool" "$(exiftool -ver)"
           echo "htmlproofer" "$(htmlproofer --version)"
           markdownlint-cli2 | head -n 1
           echo "node" "$(node --version)"
