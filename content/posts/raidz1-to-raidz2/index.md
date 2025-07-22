@@ -20,7 +20,7 @@ I recently upgraded my home TrueNAS server and migrated 18 TB of data from a 4-d
 
 The neat part is that I did it with only three additional 8 TB disks and never transferred my data to external storage.
 
-Upgrading a ZFS pool without moving data to external storage is tricky because:
+Upgrading from RAIDZ1 to RAIDZ2 without moving data to external storage is tricky because:
 
 1. You can't convert a RAIDZ1 pool to a RAIDZ2 pool in place.
 1. You can't shrink a ZFS pool to a smaller number of disks.
@@ -30,7 +30,7 @@ Upgrading a ZFS pool without moving data to external storage is tricky because:
 
 ### Step 0: Initial state
 
-Starting out, I have a 4x8TB RAIDZ1 ZFS pool, and I'm using 18 TB of its 23 TB capacity. I purchased three refurbished 8 TB disks that I have available for this migration.
+Starting out, I have a 4x8TB RAIDZ1 ZFS pool, and I'm using 18 TB of its 23 TB capacity. I purchased three refurbished 8 TB disks for this migration.
 
 ![](migration-0.svg)
 
@@ -54,7 +54,7 @@ Next, I offline the fake disk (the 8 TB sparse file) from the RAIDZ2 pool.
 
 ![](migration-2.svg)
 
-After offlining the fake disk, the pool is still healthy, as RAIDZ2 can operate with up to two disks missing.
+After offlining the fake disk, the pool is still healthy, as RAIDZ2 can operate with two disks missing.
 
 ### Step 3: Migrate a snapshot of the RAIDZ1 pool to the RAIDZ2 pool
 
@@ -76,7 +76,7 @@ I use one disk from my old RAIDZ1 pool to replace the fake disk in my RAIDZ2 poo
 
 ### Step 6: Expand the new pool with the old disks
 
-Finally, I use ZFS expansion to add the last two disks from my old RAIDZ1 pool to my new RAIDZ2 pool, giving me a total of 33 TB of usable storage and a healthy 7x8TB RAIDZ2 pool.
+Finally, I use ZFS expansion to add the last two disks from my old RAIDZ1 pool to my new RAIDZ2 pool, giving me a total of 33 TB of usable storage on a healthy 7x8TB RAIDZ2 pool.
 
 ![](migration-6.svg)
 
@@ -84,11 +84,11 @@ Finally, I use ZFS expansion to add the last two disks from my old RAIDZ1 pool t
 
 I built my [home TrueNAS server in 2022](/budget-nas/) with a 4x8TB RAIDZ1 pool. I was comfortable with RAIDZ1 because it could tolerate one disk failure, and I considered it unlikely for two out of my four disks to fail simultaneously.
 
-What I failed to consider was that each new disk would increase my odds of a catastrophic pool failure. I'm not worried about two disks failing out of four, but if I have six or eight disks, then concurrent failures begin to feel more likely.
-
-RAIDZ2 can tolerate two disk failures without data loss. Even if I expanded to 10 disks (the max capacity of my current server chassis), the odds of three simultaneous disk failures feels low enough to be safe.
+What I failed to consider was when I add disks to the pool, each new disk increases my odds of data loss. I'm not worried about two disks failing out of four, but if I have six or eight disks, then concurrent failures begin to feel more likely.
 
 Every disk I add to my RAIDZ1 pool makes a migration to RAIDZ2 harder because it means my new pool has to be even bigger, and I have even fewer physical disk slots available to a new pool.
+
+RAIDZ2 can tolerate two disk failures without data loss. Even if I expanded to 10 disks (the max capacity of my current server chassis), three simultaneous disk failures feels unlikely enough that I'm not worried.
 
 ## Why is switching from RAIDZ1 to RAIDZ2 hard?
 
