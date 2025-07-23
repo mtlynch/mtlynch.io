@@ -41,9 +41,9 @@ To begin, I remove one disk from my original RAIDZ1 pool, leaving it in a degrad
 
 I then create a new 5x8TB RAIDZ2 pool using:
 
-1.  My three new disks
-1.  One disk from my RAIDZ1 pool
-1.  One 8 TB sparse file to act as a fake disk
+1. My three new disks
+1. One disk from my RAIDZ1 pool
+1. One 8 TB sparse file to act as a fake disk
 
 The sparse file is in my `/tmp` directory, even though the filesystem there can't actually store 8 TB of data. That's okay because the sparse file is only temporary. It's a hack that allows me to create a 5-disk pool, but I won't write any data to it.
 
