@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  check-whitespace:
+  check_whitespace:
     docker:
       - image: cimg/base:2020.01
     resource_class: small
@@ -23,7 +23,7 @@ jobs:
       - run:
           name: Check formatting
           command: ./dev-scripts/check-formatting
-  lint-markdown:
+  lint_markdown:
     docker:
       - image: davidanson/markdownlint-cli2:v0.17.2
     steps:
@@ -112,7 +112,7 @@ jobs:
           key: resources-gen-v{{ .Environment.RESOURCES_CACHE_VERSION }}
           paths:
             - resources
-  lint-html:
+  lint_html:
     docker:
       - image: mtlynch/htmlproofer:5.0.6
     steps:
@@ -121,7 +121,7 @@ jobs:
       - run:
           name: Check HTML and external links
           command: ./dev-scripts/lint-html
-  lint-xml:
+  lint_xml:
     docker:
       - image: alpine:3.21.2
     steps:
@@ -133,7 +133,7 @@ jobs:
       - run:
           name: Lint XML
           command: ./dev-scripts/lint-xml
-  check-seo-metadata:
+  check_seo_metadata:
     docker:
       - image: cimg/base:2020.01
     resource_class: small
@@ -176,21 +176,21 @@ jobs:
           command: ./node_modules/.bin/netlify deploy --dir=public --site="${NETLIFY_SITE_ID}" --prod
 workflows:
   version: 2
-  test-deploy:
+  test_deploy:
     jobs:
-      - check-whitespace
+      - check_whitespace
       - check_html_format
-      - lint-markdown
+      - lint_markdown
       - check_duplicate_words
       - check_exif_data
       - build
-      - lint-html:
+      - lint_html:
           requires:
             - build
-      - lint-xml:
+      - lint_xml:
           requires:
             - build
-      - check-seo-metadata:
+      - check_seo_metadata:
           requires:
             - build
       - publish_draft:
