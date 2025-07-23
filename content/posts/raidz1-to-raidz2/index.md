@@ -6,6 +6,7 @@ images:
 tags:
   - homelab
   - truenas
+description: How to migrate from RAIDZ1 to RAIDZ2 without a spare ZFS server or a boatload of extra disks.
 ---
 
 <style>
