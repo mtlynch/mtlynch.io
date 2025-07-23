@@ -175,7 +175,7 @@ But then without me even pushing back, another Wasabi rep joined the ticket and 
 
 ### Step 3: Update TrueNAS
 
-This migration requires ZFS's [RAIDZ expansion feature](https://github.com/openzfs/zfs/pull/15022), which is in [OpenZFS 2.3.0](https://github.com/openzfs/zfs/releases/tag/zfs-2.3.0) and TrueNAS' [25.04 (Fangtooth) release](https://www.truenas.com/docs/scale/25.04/gettingstarted/scalereleasenotes/).
+This migration requires ZFS's [RAIDZ expansion feature](https://github.com/openzfs/zfs/pull/15022), which is in [OpenZFS 2.3.0](https://github.com/openzfs/zfs/releases/tag/zfs-2.3.0) and TrueNAS' [24.10 (Electric Eel) release](https://www.truenas.com/docs/scale/24.10/gettingstarted/scalereleasenotes/).
 
 I verify my ZFS version from the TrueNAS shell:
 
@@ -773,4 +773,4 @@ With all the disks migrated, I now have a happy, healthy 7x8TB RAIDZ2 pool with 
 
 ---
 
-_Thanks to [@NugentS](https://forums.truenas.com/u/nugents/summary) on the TrueNAS forums for [teaching me the clever sparse file hack](https://forums.truenas.com/t/raidz1-to-raidz2-without-doubling-drives/40718/2?u=mtlynch) for creating a larger RAIDZ2 pool._
+_Thanks to [@NugentS](https://forums.truenas.com/u/nugents/summary) on the TrueNAS forums for [teaching me the clever sparse file hack](https://forums.truenas.com/t/raidz1-to-raidz2-without-doubling-drives/40718/2?u=mtlynch) for creating a larger RAIDZ2 pool. Thanks to Chris from iXsystems for [correcting some of these details](https://www.reddit.com/r/truenas/comments/1m7b5e0/migrating_a_zfs_pool_from_raidz1_to_raidz2/n4rd6uh/?context=3)._
