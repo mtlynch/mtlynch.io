@@ -1,6 +1,6 @@
 ---
 title: "Migrating a ZFS pool from RAIDZ1 to RAIDZ2"
-date: 2025-07-22
+date: 2025-07-23
 images:
   - raidz1-to-raidz2/og-cover.webp
 tags:
