@@ -1,6 +1,7 @@
 ---
 title: "Migrating a ZFS pool from RAIDZ1 to RAIDZ2"
 date: 2025-07-23
+lastmod: 2025-07-25
 images:
   - raidz1-to-raidz2/og-cover.webp
 tags:
@@ -80,6 +81,27 @@ I use one disk from my old RAIDZ1 pool to replace the fake disk in my RAIDZ2 poo
 Finally, I use ZFS expansion to add the last two disks from my old RAIDZ1 pool to my new RAIDZ2 pool, giving me a total of 33 TB of usable storage on a healthy 7x8TB RAIDZ2 pool.
 
 ![](migration-6.svg)
+
+## Update: A safer strategy
+
+{{<notice type="info">}}
+
+**Update (2025-07-25)**: Thanks to readers for suggesting an alternative strategy that better mitigates the risks of disk failure.
+
+{{</notice>}}
+
+Readers have suggested a variation on this strategy that I prefer to my original:
+
+1. Create a 5x8TB RAIDZ2 pool using the three new disks and two fake disks (sparse files).
+1. Offline the fake disks from the RAIDZ2 pool.
+1. Migrate data from the old RAIDZ1 pool to the new RAIDZ2 pool.
+1. Offline a disk from the RAIDZ1 pool and use it to replace a fake disk on the RAIDZ2 pool.
+1. Destroy the RAIDZ2 pool.
+1. Migrate the remaining three disks from the destroyed RAIDZ1 pool to the RAIDZ2 pool.
+
+I like this strategy because it's robust to any single disk failure during the migration process. In my original process, the migration could withstand a disk failure in any of the RAIDZ2 pool disks, but the RAIDZ1 pool would fail if any of its disks died during the migration.
+
+The only downside of the new strategy is that I haven't tested it, as I did with [my original strategy](#migrating-from-raidz1-to-raidz2-in-practice).
 
 ## Why switch from RAIDZ1 to RAIDZ2?
 
@@ -770,6 +792,12 @@ After `zpool status` shows expansion has reached 100%, I repeat the process with
 With all the disks migrated, I now have a happy, healthy 7x8TB RAIDZ2 pool with 33 TB (30 TiB) of usable capacity:
 
 {{<img src="dashboard-complete.webp" has-border="false" max-width="600px">}}
+
+## Optional: Force data restriping
+
+Reader [@intelfx](https://lobste.rs/s/w2l7hb/migrating_zfs_pool_from_raidz1_raidz2#c_rrgvwc) alerted me to a gotcha in the RAIDZ expansion feature. The data that exists on the disks prior to the RAIDZ expansion does not automatically restripe from 3x data + 2x parity to 5x data + 2x parity, so it can't take advantage of the improved storage efficiency of the 7-disk array. The net effect is that you can't use all of the capacity on your RAIDZ2 pool.
+
+You can work around this by forcing a rewrite of the pre-migration datasets (e.g., `zfs send` each dataset [to a backup](/zfs-encrypted-backups/), then `zfs receive` to restore it). OpenZFS contributor [Rob Norris](https://robn.au/) [points out](https://lobste.rs/s/w2l7hb/migrating_zfs_pool_from_raidz1_raidz2#c_osjgsa) that there's a [`zfs rewrite` command](https://openzfs.github.io/openzfs-docs/man/master/8/zfs-rewrite.8.html) coming in OpenZFS 2.4.x that achieves the same thing more elegantly.
 
 ---
 
