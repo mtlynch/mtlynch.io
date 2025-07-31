@@ -1,4 +1,8 @@
 version: 2.1
+executors:
+  node:
+    docker:
+      - image: cimg/node:24.4.1
 jobs:
   check_whitespace:
     docker:
@@ -13,8 +17,7 @@ jobs:
           name: Check for trailing newlines
           command: ./dev-scripts/check-trailing-newline
   check_html_format:
-    docker:
-      - image: cimg/node:18.14.1
+    executor: node
     steps:
       - checkout
       - run:
@@ -144,8 +147,7 @@ jobs:
           name: Check that SEO meta tags rendered properly
           command: ./dev-scripts/check-seo-metadata
   publish_draft:
-    docker:
-      - image: cimg/node:18.14.1
+    executor: node
     resource_class: small
     steps:
       - attach_workspace:
@@ -162,8 +164,7 @@ jobs:
           name: Deploy a live draft
           command: ./node_modules/.bin/netlify deploy --dir=public --site="${NETLIFY_SITE_ID}"
   deploy:
-    docker:
-      - image: cimg/node:18.14.1
+    executor: node
     resource_class: small
     steps:
       - attach_workspace:
