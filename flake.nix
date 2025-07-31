@@ -4,8 +4,8 @@
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
 
-    # 18.14.1 release
-    nodejs-nixpkgs.url = "github:NixOS/nixpkgs/6adf48f53d819a7b6e15672817fa1e78e5f4e84f";
+    # 24.4.1 release
+    nodejs-nixpkgs.url = "github:NixOS/nixpkgs/6027c30c8e9810896b92429f0092f624f7b1aace";
 
     # 0.17.2
     markdown-lint-nixpkgs.url = "github:NixOS/nixpkgs/102a39bfee444533e6b4e8611d7e92aa39b7bec1";
@@ -30,7 +30,7 @@
   } @ inputs:
     flake-utils.lib.eachDefaultSystem (system: let
       hugo = hugo-nixpkgs.legacyPackages.${system}.hugo;
-      nodejs = nodejs-nixpkgs.legacyPackages.${system}.nodejs-18_x;
+      nodejs = nodejs-nixpkgs.legacyPackages.${system}.nodejs_24;
       html-proofer = html-proofer-nixpkgs.legacyPackages.${system}.html-proofer;
       markdownlint = markdown-lint-nixpkgs.legacyPackages.${system}.markdownlint-cli2;
       wordword = wordword-pkg.packages.${system}.default;
