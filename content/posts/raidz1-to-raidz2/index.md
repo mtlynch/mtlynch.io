@@ -96,7 +96,7 @@ Readers have suggested a variation on this strategy that I prefer to my original
 1. Offline the fake disks from the RAIDZ2 pool.
 1. Migrate data from the old RAIDZ1 pool to the new RAIDZ2 pool.
 1. Offline a disk from the RAIDZ1 pool and use it to replace a fake disk on the RAIDZ2 pool.
-1. Destroy the RAIDZ2 pool.
+1. Destroy the RAIDZ1 pool.
 1. Migrate the remaining three disks from the destroyed RAIDZ1 pool to the RAIDZ2 pool.
 
 I like this strategy because it's robust to any single disk failure during the migration process. In my original process, the migration could withstand a disk failure in any of the RAIDZ2 pool disks, but the RAIDZ1 pool would fail if any of its disks died during the migration.
