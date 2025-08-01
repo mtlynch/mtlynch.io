@@ -96,7 +96,7 @@ Readers have suggested a variation on this strategy that I prefer to my original
 1. Offline the fake disks from the RAIDZ2 pool.
 1. Migrate data from the old RAIDZ1 pool to the new RAIDZ2 pool.
 1. Offline a disk from the RAIDZ1 pool and use it to replace a fake disk on the RAIDZ2 pool.
-1. Destroy the RAIDZ2 pool.
+1. Destroy the RAIDZ1 pool.
 1. Migrate the remaining three disks from the destroyed RAIDZ1 pool to the RAIDZ2 pool.
 
 I like this strategy because it's robust to any single disk failure during the migration process. In my original process, the migration could withstand a disk failure in any of the RAIDZ2 pool disks, but the RAIDZ1 pool would fail if any of its disks died during the migration.
@@ -798,6 +798,59 @@ With all the disks migrated, I now have a happy, healthy 7x8TB RAIDZ2 pool with 
 Reader [@intelfx](https://lobste.rs/s/w2l7hb/migrating_zfs_pool_from_raidz1_raidz2#c_rrgvwc) alerted me to a gotcha in the RAIDZ expansion feature. The data that exists on the disks prior to the RAIDZ expansion does not automatically restripe from 3x data + 2x parity to 5x data + 2x parity, so it can't take advantage of the improved storage efficiency of the 7-disk array. The net effect is that you can't use all of the capacity on your RAIDZ2 pool.
 
 You can work around this by forcing a rewrite of the pre-migration datasets (e.g., `zfs send` each dataset [to a backup](/zfs-encrypted-backups/), then `zfs receive` to restore it). OpenZFS contributor [Rob Norris](https://robn.au/) [points out](https://lobste.rs/s/w2l7hb/migrating_zfs_pool_from_raidz1_raidz2#c_osjgsa) that there's a [`zfs rewrite` command](https://openzfs.github.io/openzfs-docs/man/master/8/zfs-rewrite.8.html) coming in OpenZFS 2.4.x that achieves the same thing more elegantly.
+
+## Optional: Match TrueNAS feature configuration
+
+A member of the iXsystems team (the team that maintains TrueNAS) [commented on reddit](https://www.reddit.com/r/truenas/comments/1m7b5e0/migrating_a_zfs_pool_from_raidz1_to_raidz2/n4rd6uh/) to say that TrueNAS [technically doesn't support users creating ZFS pools from the command line](https://www.reddit.com/r/truenas/comments/1m7b5e0/migrating_a_zfs_pool_from_raidz1_to_raidz2/n5ui5pc/). He suggested that I create a test pool in TrueNAS, dump its feature flags, then apply those flags to the new RAIDZ2 pool I created from the command-line.
+
+It's not clear to me what difference it makes to apply the TrueNAS flags to the pool I created from the CLI, but here are the flags I believe iXsystems are recommending, as of 25.04:
+
+```bash
+zpool set feature@lz4_compress=enabled "${NEWPOOL}"
+zpool set feature@async_destroy=enabled "${NEWPOOL}"
+zpool set feature@empty_bpobj=enabled "${NEWPOOL}"
+zpool set feature@multi_vdev_crash_dump=enabled "${NEWPOOL}"
+zpool set feature@spacemap_histogram=enabled "${NEWPOOL}"
+zpool set feature@enabled_txg=enabled "${NEWPOOL}"
+zpool set feature@hole_birth=enabled "${NEWPOOL}"
+zpool set feature@extensible_dataset=enabled "${NEWPOOL}"
+zpool set feature@embedded_data=enabled "${NEWPOOL}"
+zpool set feature@bookmarks=enabled "${NEWPOOL}"
+zpool set feature@filesystem_limits=enabled "${NEWPOOL}"
+zpool set feature@large_blocks=enabled "${NEWPOOL}"
+zpool set feature@large_dnode=enabled "${NEWPOOL}"
+zpool set feature@sha512=enabled "${NEWPOOL}"
+zpool set feature@skein=enabled "${NEWPOOL}"
+zpool set feature@edonr=enabled "${NEWPOOL}"
+zpool set feature@userobj_accounting=enabled "${NEWPOOL}"
+zpool set feature@encryption=enabled "${NEWPOOL}"
+zpool set feature@project_quota=enabled "${NEWPOOL}"
+zpool set feature@device_removal=enabled "${NEWPOOL}"
+zpool set feature@obsolete_counts=enabled "${NEWPOOL}"
+zpool set feature@zpool_checkpoint=enabled "${NEWPOOL}"
+zpool set feature@spacemap_v2=enabled "${NEWPOOL}"
+zpool set feature@allocation_classes=enabled "${NEWPOOL}"
+zpool set feature@resilver_defer=enabled "${NEWPOOL}"
+zpool set feature@bookmark_v2=enabled "${NEWPOOL}"
+zpool set feature@redaction_bookmarks=enabled "${NEWPOOL}"
+zpool set feature@redacted_datasets=enabled "${NEWPOOL}"
+zpool set feature@bookmark_written=enabled "${NEWPOOL}"
+zpool set feature@log_spacemap=enabled "${NEWPOOL}"
+zpool set feature@livelist=enabled "${NEWPOOL}"
+zpool set feature@device_rebuild=enabled "${NEWPOOL}"
+zpool set feature@zstd_compress=enabled "${NEWPOOL}"
+zpool set feature@draid=enabled "${NEWPOOL}"
+zpool set feature@zilsaxattr=enabled "${NEWPOOL}"
+zpool set feature@head_errlog=enabled "${NEWPOOL}"
+zpool set feature@blake3=enabled "${NEWPOOL}"
+zpool set feature@block_cloning=enabled "${NEWPOOL}"
+zpool set feature@vdev_zaps_v2=enabled "${NEWPOOL}"
+zpool set feature@redaction_list_spill=enabled "${NEWPOOL}"
+zpool set feature@raidz_expansion=enabled "${NEWPOOL}"
+zpool set feature@fast_dedup=enabled "${NEWPOOL}"
+zpool set feature@longname=enabled "${NEWPOOL}"
+zpool set feature@large_microzap=enabled "${NEWPOOL}"
+```
 
 ---
 
