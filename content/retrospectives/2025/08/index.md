@@ -1,6 +1,6 @@
 ---
-title: "{{ .Site.Params.currentproject }}: Month XX"
-date: "{{ now.Format "2006-01-02" }}"
+title: "Educational Products: Month 10"
+date: "2025-08-08"
 description: TODO - One-line summary
 ---
 
@@ -12,21 +12,21 @@ description: TODO - One-line summary
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
-### Goal 1
+### Talk to at least 10 readers I haven't spoken to before
 
 - **Result**: XX
 - **Grade**: XX
 
 TODO
 
-### Goal 2
+### Clear the backlog of my marketing ideas.
 
 - **Result**: XX
 - **Grade**: XX
 
 TODO
 
-### Goal 3
+### Publish a new chapter of _Refactoring English_
 
 - **Result**: XX
 - **Grade**: XX
