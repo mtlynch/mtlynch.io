@@ -28,8 +28,8 @@ TODO
 
 ### Publish a new chapter of _Refactoring English_
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: Published ["Underused Techniques for Effective Emails"](https://refactoringenglish.com/chapters/techniques-for-writing-emails/)
+- **Grade**: A
 
 TODO
 
@@ -37,13 +37,17 @@ TODO
 
 {{<project-metrics project="refactoring_english">}}
 
-## Topic 1
+## What if everyone just likes the _feeling_ of buying a book?
+
+Concerned that everyone just is buying it to feel like they're investing in writing.
 
 ## Topic 2
 
 ## Topic 3
 
 ## Side projects
+
+### Replacing a 300-hour Vue app with a static site generator in 10 hours
 
 ## Wrap up
 
