@@ -277,6 +277,7 @@ Functional programming nerds: am I cheating? Or is this the right way to pass ar
 
 - Write personalized emails to 20 readers I haven't spoken to before.
 - Publish a new chapter of _Refactoring English_.
+- Complete [my remaining marketing tasks](/retrospectives/2025/07/#how-can-i-improve-marketing-for-the-book).
 
 ### Requests for help
 
