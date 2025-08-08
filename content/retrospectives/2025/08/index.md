@@ -81,6 +81,8 @@ A few months ago, I realized I was [spending too much time wordsmithing my writi
 
 For the emails chapter I wrote in July, my budget was five hours, but I actually spent 17.5 hours on it. Part of that was intentional because I realized after I set the target that it would work well as a standalone excerpt on the website. It takes longer to write a standalone version and then fold it back into the book.
 
+But I'm also doing the same thing on the first chapter. I'm 6.5 hours into my 6-hour budget, and I probably have at least 3 hours of writing left before I'm comfortable sharing it with readers.
+
 ### Extracurricular blog posts
 
 Because I have so much unstructured time, it's tempting to just
