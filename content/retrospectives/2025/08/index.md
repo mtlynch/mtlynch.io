@@ -43,11 +43,13 @@ Total revenue is down slightly, but it's just because I went from one paid consu
 
 ## What if everyone just likes the _feeling_ of buying a book?
 
+### "I haven't started reading it yet."
+
 As I reach out to readers and meet them on video calls, there's one piece of feedback I'm hearing over and over: "I haven't started reading it yet."
 
 I hear this from people who purchased a few days prior and from people who had access to the book for months.
 
-One of my biggest fears for this book is that it's a "vitamin rather than a painkiller." People see good writing as something that's good for them long-term, but it's not the kind of thing that's going to make a big difference in their life next week. Whereas a book called, "How to Double Your Twitter Followers Every Week," there's a faster payoff.
+One of my biggest fears for this book is that it's a "vitamin rather than a painkiller." People see good writing as something that's [important but not urgent](/book-reports/7-habits-of-highly-effective-people/#time-management-matrix). In contrast, they might read a book called, "How to Double Your Instagram Followers Every Week," because they have an immediate need to grow their Instagram following.
 
 Part of my motivation in [pre-selling the book](/my-6k-advance/) before writing it was to see if there were enough people willing to pay for the book. There were, and people continue to buy it, but I'm worried that might not be as predictive a signal as I thought.
 
@@ -75,9 +77,13 @@ July was that kind of month. I worked my regular, full-time hours, but I'm looki
 
 ### Overinvesting in chapters
 
-My target for the emails chapter was five hours but I actually spent 17.5 hours on it.
+A few months ago, I realized I was [spending too much time wordsmithing my writing](/retrospectives/2025/06/#becoming-less-precious-about-my-writing) rather than just getting 90% good chapters to readers. My solution was to set time limits up front on each chapter and write whatever I could complete within my time budget.
+
+For the emails chapter I wrote in July, my budget was five hours, but I actually spent 17.5 hours on it. Part of that was intentional because I realized after I set the target that it would work well as a standalone excerpt on the website. It takes longer to write a standalone version and then fold it back into the book.
 
 ### Extracurricular blog posts
+
+Because I have so much unstructured time, it's tempting to just
 
 I also knew that writing my RAIDZ post wouldn't help with my book. It's not the kind of thing likely to make a big splash on Hacker News or reddit, and readers who care about ZFS don't have much overlap with readers who care about improving their writing. I told myself it would be quick. In reality, it took 7 hours.
 
@@ -99,17 +105,17 @@ I initially built What Got Done with Vue, Firestore, and AppEngine, and I've com
 
 Every week when I'd post my updates to What Got Done, I'd think about how I actually prefer the authoring workflow of writing my blog posts in VS Code and publishing them with Hugo. So, one weekend, I just reimplemented What Got Done as a simple static site with Hugo, which I now host at [weeks.mtlynch.io](https://weeks.mtlynch.io).
 
-So, in six years, I probably spent about 300 hours implementing and maintaining What Got Done as a Go + Vue + SQLite + fly.io app, and it took me 10 hours to reimplement it as a static site with simple Markdown files and Hugo. And because it's now a just-for-me app, I can add hyper-personal features like [pre-populating my weekly updates from my git commits](https://github.com/mtlynch/weeks.mtlynch.io/blob/b7a79b5f7d8b6ed8d1ed93e19b221c2f889efc4b/dev-scripts/new-week). And of course, it's orders of magnitude simpler and cheaper to host, maintain, and back up because it's just a static site with source control instead of a full-blown frontend and backend with a database.
+So, in six years, I probably spent about 300 hours implementing and maintaining What Got Done as a Go + Vue + SQLite + fly.io app, and it took me 10 hours to reimplement it as a static site with simple Markdown files and Hugo. And because it's now a just-for-me app, I can add hyper-personal features like [pre-populating my weekly updates from my git commits](https://github.com/mtlynch/weeks.mtlynch.io/blob/b7a79b5f7d8b6ed8d1ed93e19b221c2f889efc4b/dev-scripts/new-week). And of course, it's orders of magnitude simpler and cheaper to host, maintain, and back up because it's just a static site with source control instead of a full-blown web app with separate tech stacks for the frontend, backend, and database.
 
 ### Sunsetting What Got Done
 
-I hate abandoning users who depended on something I offered, so I tried to make the offboarding experience on What Got Done nice:
+Even though What Got Done only has a handful of active users, I hate abandoning people who started using something I offered, so I tried to make the offboarding experience on What Got Done nice:
 
 - I [announced on the website](https://www.whatgotdone.com/shutdown-notice) that What Got Done would stop running at the end of the year.
 - I added a feature to [let users export their posts in Markdown format](https://github.com/mtlynch/whatgotdone/pull/963).
   - I needed to do this anyway to port my data to Hugo, so I figured it would be nice to build this feature into the web app itself so that any user could do it.
 - I added a feature that lets users to [set up a forwarding address for post-WhatGotDone shutdown](https://github.com/mtlynch/whatgotdone/pull/970).
-  - For example, I've configured my user page `whatgotdone.com/michael` to permanently redirect to `weeks.mtlynch.io`.
+  - For example, I've configured my profile page [whatgotdone.com/michael](https://whatgotdone.com/michael) to permanently redirect to [weeks.mtlynch.io](https://weeks.mtlynch.io).
 
 ### Progress on my AIM log parser in Gleam
 
@@ -169,11 +175,11 @@ I initially thought it was more proper and elegant to split the logs into a list
 
 But that meant I needed a secret first pass to split the string into substrings that the tokenizer could recognize like `["Session", " ", "Start"]`, and I had to implement my own string split logic because Gleam's built in libraries have no way of splitting a string by substring and then keeping the substring, too.
 
-It felt like I was actually parsing the input three times: once for the string splitting, once for the lexing, and once for the actual parser. I initially assumed it was because I don't know enough about functional languages or text parsers.
+It felt like I was actually parsing the input three times: once for the string splitting, once for the lexing, and once for the actual parser. I initially assumed it was because I don't know enough about functional languages or text parsers, and I'd find a more elegant way to lex and parse.
 
-I used my confusiong to justify finally purchasing a print copy of [_Crafting Interpreters_](https://craftinginterpreters.com/), the most well-designed software book I've ever seen. And after reading the lexing chapter of the book, I concluded that my AIM logs weren't structured enough for lexing.
+I used my confusion to justify finally purchasing a print copy of [_Crafting Interpreters_](https://craftinginterpreters.com/), the most well-designed software book I've ever seen. And after reading the lexing chapter of the book, I concluded that my AIM logs weren't structured enough for lexing.
 
-I tried collapsing everything down to a parser that reads the input character by character, and that felt simpler.
+I tried [collapsing everything down to a parser](https://codeberg.org/mtlynch/gleam-chat-log-parser/pulls/20) that reads the input character by character, and that felt simpler.
 
 The bummer of parsing character by character is that Gleam's pattern matching looks much uglier. In the old implementation, I could look for string patterns [like this](https://codeberg.org/mtlynch/gleam-chat-log-parser/src/commit/480c45c9e76117635ff7b0509f500799297eaa94/src/plaintext_tokenizer.gleam#L76-L79):
 
@@ -253,7 +259,7 @@ Functional programming nerds: am I cheating? Or is this the right way to pass ar
 - Migrated the last of the web-only content of _Refactoring English_ into the ebook.
 - Published ["Migrating a ZFS pool from RAIDZ1 to RAIDZ2"](https://mtlynch.io/raidz1-to-raidz2/)
 - Created a better [password reset flow for ScreenJournal](https://github.com/mtlynch/screenjournal/pull/429).
-- Added [file expiration options for guests on PicoShare](https://github.com/mtlynch/picoshare/pull/694)
+- Added [file expiration options for guests on PicoShare](https://github.com/mtlynch/picoshare/pull/694).
 - Did unpaid editing on an upcoming blog post in exchange for publishing the feedback as marketing for my editing services.
 - Created a [sunsetting plan for What Got Done](https://www.whatgotdone.com/shutdown-notice) and migrated my data to [weeks.mtlynch.io](https://weeks.mtlynch.io).
 
