@@ -69,9 +69,9 @@ The most effective way I've found enthusiastic readers is to email them one by o
 
 ## Where does my time go?
 
-Every few years, I'll look back at what I accomplished in the past month and think, "Wait, why is that all I did last month? What was I doing instead?"
+[Every](/retrospectives/2022/02/#how-can-i-manage-tinypilot-with-only-20-hours-per-week) [year](/retrospectives/2023/07/) [or so](/retrospectives/2024/09/), I'll look back at what I accomplished in the past month and think, "Wait, why is that all I did last month? What was I doing instead?"
 
-July was that kind of month. I only took off a weekday or two, but I'm looking back at the month thinking, "How did I only finish one new chapter?
+July was that kind of month. I worked my regular, full-time hours, but I'm looking back at the month thinking, "How did I only finish one new chapter?
 
 ### Overinvesting in chapters
 
@@ -81,56 +81,69 @@ My target for the emails chapter was five hours but I actually spent 17.5 hours 
 
 I also knew that writing my RAIDZ post wouldn't help with my book. It's not the kind of thing likely to make a big splash on Hacker News or reddit, and readers who care about ZFS don't have much overlap with readers who care about improving their writing. I told myself it would be quick. In reality, it took 7 hours, plus I spent almost an entire day responding to feedback about it. It turns out some people feel very strongly about storage safety and found my post offensive. But the upside was that the feedback led to a legitimately better solution than what I came up with.
 
+### Editing work
+
+I also did some editing work this month, so that accounts for a few hours. I only spent about six hours writng the actual notes for the client, but I also procrastinated a lot because I find critiquing other people's writing even harder than writing. Because it's easy for me to say that I don't like something, but it's much harder to articulate what my issue is, and extremely hard for me to propose a solution that addresses my issue.
+
 ## Side projects
 
 ### Replacing a 300-hour Vue app with a static site generator in 10 hours
 
+In 2019, I [tried to build a business called What Got Done](/retrospectives/2019/06/#what-got-done-business-or-hobby). It was an app that allowed teammates to write weekly summaries of their work and share them with each other. When I was at Google, they had an internal tool called Snippets that did the same thing. I loved it, and [kept writing weekly updates after leaving Google](/status-updates-to-nobody/), even when I was working by myself.
+
+I initially built What Got Done with Vue, Firestore, and AppEngine, and I've come to strongly dislike all of those technologies. I spent a long time [replacing Firestore with SQLite and AppEngine with fly.io](/retrospectives/2021/12/#migrating-my-side-projects-away-from-google-cloud-platform), but Vue stuck around, and it made development unpleasant.
+
+Every week when I'd post my updates to What Got Done, I'd think about how I actually prefer the authoring workflow of writing my blog posts in VS Code and publishing them with Hugo. So, one weekend, I just reimplemented What Got Done as a simple static site with Hugo, which I now host at [weeks.mtlynch.io](https://weeks.mtlynch.io).
+
+So, in six years, I probably spent about 300 hours implementing and maintaining What Got Done as a Go + Vue + SQLite + fly.io app, and it took me 10 hours to reimplement it as a static site with simple Markdown files and Hugo. And because it's now a just-for-me app, I can add hyper-personal features like [pre-populating my weekly updates from my git commits](https://github.com/mtlynch/weeks.mtlynch.io/blob/b7a79b5f7d8b6ed8d1ed93e19b221c2f889efc4b/dev-scripts/new-week). And of course, it's orders of magnitude simpler and cheaper to host, maintain, and back up because it's just a static site with source control instead of a full-blown frontend and backend with a database.
+
 ### Sunsetting What Got Done
 
-- [Announced shutdown of What Got Done](https://github.com/mtlynch/whatgotdone/pull/966)
-- Added a feature to [let users export their posts in Markdown format](https://github.com/mtlynch/whatgotdone/pull/963)
-- Added support to [include externally referenced images in Markdown exports](https://github.com/mtlynch/whatgotdone/pull/964)
-  - But then I realized it was pretty resource-intensive and error-prone, so I [reverted the image part](https://github.com/mtlynch/whatgotdone/pull/965) and rely instead on importers to handle that.
-- Added a feature that lets users to [set up a forwarding address for post-WhatGotDone shutdown](https://github.com/mtlynch/whatgotdone/pull/970)
-  - Example (profile)
-    - Original: `whatgotdone.com/michael`
-    - Redirects to: `weeks.mtlynch.io`
-  - Example (weekly update)
-    - Original: `whatgotdone.com/michael/2025-07-04`
-    - Redirects to: `weeks.mtlynch.io/2025-07-04`
-- Moved the data export feature [to its own page](https://github.com/mtlynch/whatgotdone/pull/968)
+I hate abandoning users who depended on something I offered, so I tried to make the offboarding experience on What Got Done nice:
+
+- I [announced on the website](https://www.whatgotdone.com/shutdown-notice) that What Got Done would stop running at the end of the year.
+- I added a feature to [let users export their posts in Markdown format](https://github.com/mtlynch/whatgotdone/pull/963)
+  - I needed to do this anyway to port my data to Hugo, so I figured it would be nice to make this available to all users.
+- I added a feature that lets users to [set up a forwarding address for post-WhatGotDone shutdown](https://github.com/mtlynch/whatgotdone/pull/970)
+  - For example, `whatgotdone.com/michael` now redirects to `weeks.mtlynch.io`.
 
 ### Simplifying my AIM log parser in Gleam
 
-TODO: Talk about throwing out splitting and lexing.
+I'm still learning the Gleam programming language by tinkering with a parser for my old AIM logs from high school and college.
 
-I also got it to parse timestamps, which is a pain in some AIM logs, as the messages themselves are only fragments of a timestamp:
+In June, I had it working at a basic level in that it could scrape basic messages out of my logs, but it didn't understand the metadata like the sender or timestamps.
 
-```gleam
-pub fn parse_simple_plaintext_log_test() {
-  "
+I also got it to parse timestamps, which is a pain in some AIM logs, as the messages themselves are only fragments of a timestamp. So, now given a simple conversation log like this:
+
+```text
 Session Start (AIM - DumbAIMScreenName:Jane): Mon Sep 12 18:44:17 2005
 [18:44] Jane: hi
 [18:55] Me: hey whats up
 Session Close (Jane): Mon Sep 12 18:56:02 2005
-
-"
-  |> string.trim_start
-  |> plaintext_parser.parse
-  |> should.equal([
-    plaintext_parser.Message(
-      timestamp: must_parse_rfc3339("2005-09-12T18:44:00-04:00"),
-      sender: "Jane",
-      body: "hi",
-    ),
-    plaintext_parser.Message(
-      timestamp: must_parse_rfc3339("2005-09-12T18:55:00-04:00"),
-      sender: "Me",
-      body: "hey whats up",
-    ),
-  ])
-}
 ```
+
+My log parser can convert it to this:
+
+```gleam
+[
+  plaintext_parser.Message(
+    timestamp: must_parse_rfc3339("2005-09-12T18:44:00-04:00"),
+    sender: "Jane",
+    body: "hi",
+  ),
+  plaintext_parser.Message(
+    timestamp: must_parse_rfc3339("2005-09-12T18:55:00-04:00"),
+    sender: "Me",
+    body: "hey whats up",
+  ),
+]
+```
+
+The other change I made was getting rid of lexing and skipping straight to parsing. I thought of lexing as the thing that "real" parsers do, but then
+
+One of the things that feels strange about my code now is that I don't have classes because Gleam doesn't have classes, but I'm writing code as if I have a class because I'm passing around a `state` variable to all of my functions.
+
+Functional programming nerds: am I cheating? Or is this correct functional programming?
 
 ## Wrap up
 
@@ -141,6 +154,7 @@ Session Close (Jane): Mon Sep 12 18:56:02 2005
 - Published ["Migrating a ZFS pool from RAIDZ1 to RAIDZ2"](https://mtlynch.io/raidz1-to-raidz2/)
 - Added [file expiration options for guests on PicoShare](https://github.com/mtlynch/picoshare/pull/694)
 - Did unpaid editing on an upcoming blog post in exchange for publishing the feedback as marketing for my editing services.
+- Created a [sunsetting plan for What Got Done](https://www.whatgotdone.com/shutdown-notice) and migrated my data to [weeks.mtlynch.io](https://weeks.mtlynch.io).
 
 ### Lessons learned
 
