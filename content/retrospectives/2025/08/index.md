@@ -93,6 +93,10 @@ I also knew that writing my RAIDZ post wouldn't help with my book. It's not the 
 
 I spent almost an entire day responding to feedback about it. It turns out some people feel very strongly about storage safety and found my post offensive. But the upside was that the feedback led to a legitimately better solution than what I came up with.
 
+### Recovering from sleep disruptions
+
+My toddler is sleeping poorly, which means my wife and I are sleeping poorly. That alone isn't such a big deal, but I also use it to justify bad habits, like skipping writing sessions or checking social media when I'm not feeling focused.
+
 ### Editing work
 
 I also did some editing work this month, so that accounts for a few hours. I only spent about six hours writng the actual notes for the client, but I also procrastinated a lot because I find critiquing other people's writing even harder than writing. Because it's easy for me to say that I don't like something, but it's much harder to articulate what my issue is, and extremely hard for me to propose a solution that addresses my issue.
@@ -271,7 +275,8 @@ Functional programming nerds: am I cheating? Or is this the right way to pass ar
 
 ### Goals for next month
 
--
+- Write personalized emails to 20 readers I haven't spoken to before.
+- Publish a new chapter of _Refactoring English_.
 
 ### Requests for help
 
