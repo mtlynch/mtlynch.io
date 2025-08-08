@@ -79,7 +79,11 @@ My target for the emails chapter was five hours but I actually spent 17.5 hours 
 
 ### Extracurricular blog posts
 
-I also knew that writing my RAIDZ post wouldn't help with my book. It's not the kind of thing likely to make a big splash on Hacker News or reddit, and readers who care about ZFS don't have much overlap with readers who care about improving their writing. I told myself it would be quick. In reality, it took 7 hours, plus I spent almost an entire day responding to feedback about it. It turns out some people feel very strongly about storage safety and found my post offensive. But the upside was that the feedback led to a legitimately better solution than what I came up with.
+I also knew that writing my RAIDZ post wouldn't help with my book. It's not the kind of thing likely to make a big splash on Hacker News or reddit, and readers who care about ZFS don't have much overlap with readers who care about improving their writing. I told myself it would be quick. In reality, it took 7 hours.
+
+### Bad social media habits
+
+I spent almost an entire day responding to feedback about it. It turns out some people feel very strongly about storage safety and found my post offensive. But the upside was that the feedback led to a legitimately better solution than what I came up with.
 
 ### Editing work
 
@@ -102,18 +106,14 @@ So, in six years, I probably spent about 300 hours implementing and maintaining 
 I hate abandoning users who depended on something I offered, so I tried to make the offboarding experience on What Got Done nice:
 
 - I [announced on the website](https://www.whatgotdone.com/shutdown-notice) that What Got Done would stop running at the end of the year.
-- I added a feature to [let users export their posts in Markdown format](https://github.com/mtlynch/whatgotdone/pull/963)
-  - I needed to do this anyway to port my data to Hugo, so I figured it would be nice to make this available to all users.
-- I added a feature that lets users to [set up a forwarding address for post-WhatGotDone shutdown](https://github.com/mtlynch/whatgotdone/pull/970)
-  - For example, `whatgotdone.com/michael` now redirects to `weeks.mtlynch.io`.
+- I added a feature to [let users export their posts in Markdown format](https://github.com/mtlynch/whatgotdone/pull/963).
+  - I needed to do this anyway to port my data to Hugo, so I figured it would be nice to build this feature into the web app itself so that any user could do it.
+- I added a feature that lets users to [set up a forwarding address for post-WhatGotDone shutdown](https://github.com/mtlynch/whatgotdone/pull/970).
+  - For example, I've configured my user page `whatgotdone.com/michael` to permanently redirect to `weeks.mtlynch.io`.
 
-### Simplifying my AIM log parser in Gleam
+### Progress on my AIM log parser in Gleam
 
-I'm still learning the Gleam programming language by tinkering with a parser for my old AIM logs from high school and college.
-
-In June, I had it working at a basic level in that it could scrape basic messages out of my logs, but it didn't understand the metadata like the sender or timestamps.
-
-I also got it to parse timestamps, which is a pain in some AIM logs, as the messages themselves are only fragments of a timestamp. So, now given a simple conversation log like this:
+I'm still learning the [Gleam programming language](https://gleam.run) by tinkering with a parser for my old AIM logs from high school and college. The most basic logs look like this:
 
 ```text
 Session Start (AIM - DumbAIMScreenName:Jane): Mon Sep 12 18:44:17 2005
@@ -122,16 +122,27 @@ Session Start (AIM - DumbAIMScreenName:Jane): Mon Sep 12 18:44:17 2005
 Session Close (Jane): Mon Sep 12 18:56:02 2005
 ```
 
-My log parser can convert it to this:
+#### Parsing timestamps
+
+In June, I had my parser working at a basic level in that it could take the log above and extract the sender and messages like this:
 
 ```gleam
 [
-  plaintext_parser.Message(
+  Message(sender: "Jane", body: "hi"),
+  Message(sender: "Me", body: "hey whats up"),
+]
+```
+
+I made progress in July, so the parser can now understand the timestamps, which are a little tricky because it has to combine the date from the session metadata with the simple `HH:MM` information from the message. So, my log parser can convert the above log to this:
+
+```gleam
+[
+  Message(
     timestamp: must_parse_rfc3339("2005-09-12T18:44:00-04:00"),
     sender: "Jane",
     body: "hi",
   ),
-  plaintext_parser.Message(
+  Message(
     timestamp: must_parse_rfc3339("2005-09-12T18:55:00-04:00"),
     sender: "Me",
     body: "hey whats up",
@@ -139,11 +150,100 @@ My log parser can convert it to this:
 ]
 ```
 
-The other change I made was getting rid of lexing and skipping straight to parsing. I thought of lexing as the thing that "real" parsers do, but then
+#### Collapsing lexing and parsing to a single step
 
-One of the things that feels strange about my code now is that I don't have classes because Gleam doesn't have classes, but I'm writing code as if I have a class because I'm passing around a `state` variable to all of my functions.
+I also simplified the parser to basically a single pass instead of separate lexing and parsing.
 
-Functional programming nerds: am I cheating? Or is this correct functional programming?
+I initially thought it was more proper and elegant to split the logs into a list of tokens then parse those tokens. So instead of the parser seeing a line like `Session Start (AIM - DumbAIMScreenName:Jane): Mon Sep 12 18:44:17 2005` and parsing it, I wanted the lexer to first change it to [a series of tokens](https://codeberg.org/mtlynch/gleam-chat-log-parser/src/commit/480c45c9e76117635ff7b0509f500799297eaa94/test/plaintext_tokenizer_test.gleam#L84) like this:
+
+```gleam
+[
+    SessionStart,
+    Word("(DumbAIMScreenName:Jane)"),
+    ColonSpace,
+    Word("Mon"),
+    Word("Sep"),
+    ...
+]
+```
+
+But that meant I needed a secret first pass to split the string into substrings that the tokenizer could recognize like `["Session", " ", "Start"]`, and I had to implement my own string split logic because Gleam's built in libraries have no way of splitting a string by substring and then keeping the substring, too.
+
+It felt like I was actually parsing the input three times: once for the string splitting, once for the lexing, and once for the actual parser. I initially assumed it was because I don't know enough about functional languages or text parsers.
+
+I used my confusiong to justify finally purchasing a print copy of [_Crafting Interpreters_](https://craftinginterpreters.com/), the most well-designed software book I've ever seen. And after reading the lexing chapter of the book, I concluded that my AIM logs weren't structured enough for lexing.
+
+I tried collapsing everything down to a parser that reads the input character by character, and that felt simpler.
+
+The bummer of parsing character by character is that Gleam's pattern matching looks much uglier. In the old implementation, I could look for string patterns [like this](https://codeberg.org/mtlynch/gleam-chat-log-parser/src/commit/480c45c9e76117635ff7b0509f500799297eaa94/src/plaintext_tokenizer.gleam#L76-L79):
+
+```gleam
+  case contents {
+    ["Session", "Start", ..rest] -> tokenize_list(rest, [SessionStart, ..acc])
+    ["Session", "Close", ..rest] -> tokenize_list(rest, [SessionClose, ..acc])
+```
+
+And now it's [a longer, messier pattern match](https://codeberg.org/mtlynch/gleam-chat-log-parser/src/commit/926124b4a660adeea0795e10a2979f73cfa6dcb5/src/plaintext_parser.gleam#L218-L242):
+
+```gleam
+  case state.remaining_graphemes {
+    [
+      "S",
+      "e",
+      "s",
+      "s",
+      "i",
+      "o",
+      "n",
+      " ",
+      "S",
+      "t",
+      "a",
+      "r",
+      "t",
+      ...
+```
+
+#### Am I forcing classes into Gleam?
+
+As I progressed with my parser, I found that I was writing functions that had the same signature:
+
+```gleam
+fn parse_tokens_with_messages(
+  tokens: List(Token),
+  messages: List(Message),
+) -> List(Message) {
+```
+
+A bunch of my functions took the same parameters and had the same return value, and as I added more code, the list of parameters and return values grew larger.
+
+So, I created a `ParseState` type and passed that around instead:
+
+```gleam
+type ParseState {
+  ParseState(
+    last_timestamp: timestamp.Timestamp,
+    messages: List(Message),
+    remaining_graphemes: List(String),
+  )
+}
+
+fn parse_graphemes(state: ParseState) -> ParseState {
+```
+
+But I knew as I was doing it that I was essentially just writing object-oriented classes in Gleam. Because if this was Go, the code would look like this:
+
+```go
+type Parser struct {
+  LastTimestamp       time.Time
+  Messages            []Message
+  RemainingGraphemes  []rune
+}
+
+func (p Parser) Parse() {
+```
+
+Functional programming nerds: am I cheating? Or is this the right way to pass around state in functional languages?
 
 ## Wrap up
 
@@ -152,6 +252,7 @@ Functional programming nerds: am I cheating? Or is this correct functional progr
 - Published ["Underused Techniques for Effective Emails"](https://refactoringenglish.com/chapters/techniques-for-writing-emails/) and sent early access readers an expanded version.
 - Migrated the last of the web-only content of _Refactoring English_ into the ebook.
 - Published ["Migrating a ZFS pool from RAIDZ1 to RAIDZ2"](https://mtlynch.io/raidz1-to-raidz2/)
+- Created a better [password reset flow for ScreenJournal](https://github.com/mtlynch/screenjournal/pull/429).
 - Added [file expiration options for guests on PicoShare](https://github.com/mtlynch/picoshare/pull/694)
 - Did unpaid editing on an upcoming blog post in exchange for publishing the feedback as marketing for my editing services.
 - Created a [sunsetting plan for What Got Done](https://www.whatgotdone.com/shutdown-notice) and migrated my data to [weeks.mtlynch.io](https://weeks.mtlynch.io).
@@ -166,4 +267,4 @@ Functional programming nerds: am I cheating? Or is this correct functional progr
 
 ### Requests for help
 
-TODO
+If you're a developer who's interested in improving your writing, or you know someone who is, [reach out](/about/).
