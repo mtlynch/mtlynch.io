@@ -263,7 +263,7 @@ Functional programming nerds: am I cheating? Or is this the right way to pass ar
 
 - Published ["Underused Techniques for Effective Emails"](https://refactoringenglish.com/chapters/techniques-for-writing-emails/) and sent early access readers an expanded version.
 - Migrated the last of the web-only content of _Refactoring English_ into the ebook.
-- Published ["Migrating a ZFS pool from RAIDZ1 to RAIDZ2"](https://mtlynch.io/raidz1-to-raidz2/)
+- Published ["Migrating a ZFS pool from RAIDZ1 to RAIDZ2."](https://mtlynch.io/raidz1-to-raidz2/)
 - Created a better [password reset flow for ScreenJournal](https://github.com/mtlynch/screenjournal/pull/429).
 - Added [file expiration options for guests on PicoShare](https://github.com/mtlynch/picoshare/pull/694).
 - Did unpaid editing on an upcoming blog post in exchange for publishing the feedback as marketing for my editing services.
