@@ -1,21 +1,53 @@
 ---
 title: "Flash AirGradient from the Command Line"
-date: 2024-01-31T19:57:39-05:00
+date: 2025-08-11
 ---
+
+I've purchased two AirGradient ONE indoor quality monitors. Everyone is pretty excited about them. I think they're kinda okay.
+
+My biggest gripe is that they advertise themselves as open-source and hackable, but they don't document how to reflash them.
+
+AirGradient by default pushes you to buy their paid dashboard product, but I don't want to buy a subscription to see my air quality, and I don't want to share with a third party detailed logs that effectively show when I'm in my house and when I leave.
 
 Annoyingly, AirGradient doesn't publish official instructions for flashing software onto your AirGradient ONE. I learned how to do it from these blog posts:
 
 - https://www.jeffgeerling.com/blog/2021/airgradient-diy-air-quality-monitor-co2-pm25
 - https://www.cnx-software.com/2023/11/29/airgradient-one-kit-review-an-open-source-indoor-air-quality-monitor/
 
-## Prep
+## Requirements
 
-Install arduino-cli
+- git
+- Python 3
+- Python 3 venv
+
+## Get AirGradient source
 
 ```bash
-mkdir -p ./venv && \
-  python3 -m venv ./venv && \
-  . venv/bin/activate && \
+# Current latest release, as of this writing.
+AIRGRADIENT_RELEASE='3.3.9'
+
+mkdir -p airgradient-one && \
+  cd airgradient-one && \
+  git clone https://github.com/airgradienthq/arduino.git . &&
+  git checkout "${AIRGRADIENT_RELEASE}"
+```
+
+## Install arduino-cli
+
+```bash
+ARDUINO_CLI_VERSION='1.2.2'
+
+curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | BINDIR="~/.local/arduino-cli/" sh -s "${ARDUINO_CLI_VERSION}"
+```
+
+## Prep
+
+Download arduino-cli
+
+```bash
+mkdir -p ./.venv && \
+  python3 -m venv ./.venv && \
+  . .venv/bin/activate && \
   pip install pyserial
 ```
 
@@ -54,6 +86,7 @@ arduino-cli lib install \
   --git-url 'https://github.com/Ibuprofen/PMS.git#d972759f47a700b1c091d19b61eefdbfacb8b828'
 arduino-cli config set library.enable_unsafe_install false
 ```
+
 
 ## Flash sotware
 
