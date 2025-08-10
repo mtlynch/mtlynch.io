@@ -20,6 +20,67 @@ Annoyingly, AirGradient doesn't publish official instructions for flashing softw
 - Python 3
 - Python 3 venv
 
+## Install arduino-cli
+
+```bash
+ARDUINO_CLI_VERSION='1.2.2'
+ARDUINO_BIN_DIR="${HOME}/.local/arduino-cli"
+
+mkdir -p "${ARDUINO_BIN_DIR}" && \
+  curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh \
+  | BINDIR="${ARDUINO_BIN_DIR}" sh -s "${ARDUINO_CLI_VERSION}"
+export PATH="${PATH}:${ARDUINO_BIN_DIR}"
+```
+
+If the install was successful, you should be able to print out the version string for arduino-cli:
+
+```bash
+$ arduino-cli version
+arduino-cli  Version: 1.2.2 Commit: c11b9dd5 Date: 2025-04-22T13:51:01Z
+```
+
+## Find the path to your device
+
+Next, I need the device path to my AirGradient ONE. The simplest way to find this is to run `dmesg --follow`, plug in my AirGradient, and look for the
+
+```bash
+$ sudo dmesg --follow
+[517021.978880] usb 1-4: New USB device found, idVendor=303a, idProduct=1001, bcdDevice= 1.01
+[517021.978884] usb 1-4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[517021.978894] usb 1-4: Product: USB JTAG/serial debug unit
+[517021.978896] usb 1-4: Manufacturer: Espressif
+[517021.978898] usb 1-4: SerialNumber: D8:3B:DA:1A:EE:C4
+[517022.017678] cdc_acm 1-4:1.0: ttyACM0: USB ACM device
+                                 ^^^^^^^
+                                 Path name
+```
+
+Given this output, the path on my system to my AirGradient ONE is `/dev/ttyACM0`:
+
+```bash
+AIRGRADIENT_PATH='/dev/ttyACM0'
+```
+
+## Make device path writeable
+
+```bash
+sudo chmod a+rw "${AIRGRADIENT_PATH}"
+```
+
+The AirGradient path should now have these permissions:
+
+```bash
+$ ls -l "${AIRGRADIENT_PATH}"
+crw-rw-rw- 1 root dialout 166, 0 Aug 10 10:34 /dev/ttyACM0
+ ^^^^^^^^
+```
+
+Add myself to the `dialout` group so I can write to the path:
+
+```bash
+sudo adduser "$(whoami)" dialout
+```
+
 ## Get AirGradient source
 
 ```bash
@@ -32,17 +93,7 @@ mkdir -p airgradient-one && \
   git checkout "${AIRGRADIENT_RELEASE}"
 ```
 
-## Install arduino-cli
-
-```bash
-ARDUINO_CLI_VERSION='1.2.2'
-
-curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | BINDIR="~/.local/arduino-cli/" sh -s "${ARDUINO_CLI_VERSION}"
-```
-
 ## Prep
-
-Download arduino-cli
 
 ```bash
 mkdir -p ./.venv && \
@@ -51,17 +102,35 @@ mkdir -p ./.venv && \
   pip install pyserial
 ```
 
-```bash
-sudo adduser "$(whoami)" dialout && \
-  sudo chmod a+rw /dev/ttyACM0
-```
-
 ## Initialize Arduino CLI
 
 ```bash
-  arduino-cli config init \
-    --additional-urls https://espressif.github.io/arduino-esp32/package_esp32_index.json
+arduino-cli config init \
+  --additional-urls https://espressif.github.io/arduino-esp32/package_esp32_index.json && \
+  arduino-cli core install esp32:esp32
 ```
+
+## Flash sotware
+
+```bash
+cd examples/OneOpenAir
+```
+
+```bash
+arduino-cli compile \
+  --verbose \
+  --fqbn esp32:esp32:lolin_c3_mini \
+  --upload \
+  --port "${AIRGRADIENT_PATH}" \
+  --verify \
+  OneOpenAir.ino
+```
+
+## Stream
+
+arduino-cli monitor --port /dev/ttyACM0
+
+---
 
 ## Install third-party libraries
 
@@ -86,20 +155,3 @@ arduino-cli lib install \
   --git-url 'https://github.com/Ibuprofen/PMS.git#d972759f47a700b1c091d19b61eefdbfacb8b828'
 arduino-cli config set library.enable_unsafe_install false
 ```
-
-
-## Flash sotware
-
-```bash
-arduino-cli compile \
-  --verbose \
-  --fqbn esp32:esp32:lolin_c3_mini \
-  --upload \
-  --port /dev/ttyACM0 \
-  --verify \
-  ONE_V9.ino
-```
-
-## Stream
-
-arduino-cli monitor --port /dev/ttyACM0
