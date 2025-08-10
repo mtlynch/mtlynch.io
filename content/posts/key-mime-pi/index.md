@@ -37,7 +37,7 @@ This post demonstrates how Key Mime Pi works and how you can build one for yours
 
 To begin, install [Raspberry Pi OS lite](https://www.raspberrypi.org/downloads/raspberry-pi-os/) (formerly known as Raspbian) on a microSD card.
 
-{{<img src="rufus-install.png" alt="Screenshot of Rufus" caption="I use [Rufus](https://rufus.ie) to write my Pi micro SD cards, but any whole disk imaging tool will work.">}}
+{{<img src="rufus-install.png" alt="Screenshot of Rufus" caption="I use [Rufus](https://rufus.ie) to write my Pi micro SD cards, but any whole disk imaging tool will work." has-border="false">}}
 
 Enable SSH access by placing a file called `ssh` on the microSD's boot partition, and insert the microSD card into your Pi device. If you're connecting over wireless, you'll also need to [create a `wpa_supplicant.conf` file](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md) on the boot partition.
 
@@ -46,8 +46,8 @@ Enable SSH access by placing a file called `ssh` on the microSD's boot partition
 Connect the USB cable to your Pi's USB OTG port. On the Pi 4, this is the USB-C port. For the Pi Zero, it's the Micro-USB port labeled "USB."
 
 {{<gallery caption="For the Raspberry Pi 4 (left), connect to the USB-C port. For the Raspberry Pi Zero W (right), connect to the Micro-USB data port.">}}
-{{<img src="pi4-connection.jpg" alt="Pi 4 with cable inserted into USB-C port" max-width="400px">}}
-{{<img src="pi-zero-connection.jpg" alt="Pi Zero W with cable inserted into USB micro-USB data port" max-width="445px">}}
+{{<img src="pi4-connection.jpg" alt="Pi 4 with cable inserted into USB-C port" max-width="400px" has-border="false">}}
+{{<img src="pi-zero-connection.jpg" alt="Pi Zero W with cable inserted into USB micro-USB data port" max-width="445px" has-border="false">}}
 {{</gallery>}}
 
 Connect the other end of the USB cable to the computer that you want to connect to as a keyboard. USB 3.0 ports work better because they output more power, but all the USB 2.0 ports I tested worked fine as well.
@@ -139,11 +139,11 @@ After you run the install script, Key Mime Pi will be available at:
 
 Its interface looks like this:
 
-{{<img src="key-mime-pi-interface.png" alt="Screenshot of Key Mime Pi web interface" caption="Key Mime Pi web interface awaiting input" max-width="650px">}}
+{{<img src="key-mime-pi-interface.png" alt="Screenshot of Key Mime Pi web interface" caption="Key Mime Pi web interface awaiting input" max-width="650px" has-border="false">}}
 
 And like, magic, when you type into your browser, the keys will appear on the machine connected to the Pi.
 
-{{<img src="key-mime-pi-usage.jpg" alt="Key Mime Pi transmitting keystrokes from the browser" caption="Key Mime Pi allows you to send keystrokes through the browser to a remote computer.">}}
+{{<img src="key-mime-pi-usage.jpg" alt="Key Mime Pi transmitting keystrokes from the browser" caption="Key Mime Pi allows you to send keystrokes through the browser to a remote computer." has-border="false">}}
 
 ## How it works
 
@@ -250,11 +250,11 @@ I currently am still searching for a solution to this problem. Here are some pos
 - ~~Use a [PoE HAT](https://www.raspberrypi.org/products/poe-hat/) to draw power from the Ethernet port~~
 - ~~Use the Zero2Go Power Adaptor to connect an AC to microUSB adaptor.~~
 
-**Update**: To solve this problem, I worked with an engineering firm to create [a custom circuit board](https://tinypilotkvm.com/product/tinypilot-power-connector?ref=mtlynch.io) that splits the Pi's USB-C port into two. The first port accepts USB power, so you can still deliver a full 3 Amps to the Pi. The second accepts USB data out, so the Pi can still impersonate a USB keyboard.
+**Update**: To solve this problem, I worked with an engineering firm to create [a custom circuit board](https://tinypilotkvm.com/product/tinypilot-power-connector) that splits the Pi's USB-C port into two. The first port accepts USB power, so you can still deliver a full 3 Amps to the Pi. The second accepts USB data out, so the Pi can still impersonate a USB keyboard.
 
-{{<gallery caption="The [TinyPilot Power Connector](https://tinypilotkvm.com/product/tinypilot-power-connector?ref=mtlynch.io) allows the Pi to receive 3 Amps of power through its USB-C port without losing USB OTG functionality.">}}
-{{<img src="power-connector.jpg" alt="Close-up of power connector" max-width="500px">}}
-{{<img src="power-connector-cables.jpg" alt="Power connector hooked up to Raspberry Pi and microUSB cables" max-width="500px">}}
+{{<gallery caption="The [TinyPilot Power Connector](https://tinypilotkvm.com/product/tinypilot-power-connector) allows the Pi to receive 3 Amps of power through its USB-C port without losing USB OTG functionality.">}}
+{{<img src="power-connector.jpg" alt="Close-up of power connector" max-width="500px" has-border="false">}}
+{{<img src="power-connector-cables.jpg" alt="Power connector hooked up to Raspberry Pi and microUSB cables" max-width="500px" has-border="false">}}
 {{</gallery>}}
 
 Importantly, the power connector's data port excludes a USB power line. This ensures that voltage differences between the computer's power source and the Pi's power source won't cause undesirable power backflows.
@@ -295,7 +295,7 @@ My next step is to capture HDMI output from the target computer and embed it in 
 
 I have a working prototype using [ffplay](https://ffmpeg.org/ffplay.html) and an [HDMI extender](https://smile.amazon.com/AEMYO-Extender-V3-0-Ethernet-Supports/dp/B01LGUT9HW/), but I'm still working on a solution that puts everything in a single browser window with low latency.
 
-{{<img src="ffplay-key-mime-pi.jpg" alt="Screenshot of Key Mime Pi showing the remote machine's screen" caption="I can view the remote machine's monitor output using an [HDMI extender](https://smile.amazon.com/AEMYO-Extender-V3-0-Ethernet-Supports/dp/B01LGUT9HW/), but I'm still working on integrating everything into the browser.">}}
+{{<img src="ffplay-key-mime-pi.jpg" alt="Screenshot of Key Mime Pi showing the remote machine's screen" caption="I can view the remote machine's monitor output using an [HDMI extender](https://smile.amazon.com/AEMYO-Extender-V3-0-Ethernet-Supports/dp/B01LGUT9HW/), but I'm still working on integrating everything into the browser." has-border="false">}}
 
 ## Want a pre-configured kit?
 
@@ -309,7 +309,7 @@ I now have a working solution that both captures video output from a target devi
 
 A detailed follow-up post is coming soon, but in the meantime, you can pre-order pre-configured KVM Pi kits that include everything you need to build your own KVM Pi:
 
-- [tinypilotkvm.com](https://tinypilotkvm.com/?ref=mtlynch.io)
+- [tinypilotkvm.com](https://tinypilotkvm.com/)
 
 ## Source code
 

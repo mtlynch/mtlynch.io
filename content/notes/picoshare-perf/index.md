@@ -1,7 +1,7 @@
 ---
 title: "Fixing Memory Exhaustion Bugs in My Golang Web App"
 description: Using profiling tools and debugging techniques to improve performance of PicoShare.
-date: 2022-08-09T00:00:00-04:00
+date: 2022-08-09
 images:
   - /notes/picoshare-perf/oom-crash.png
 tags:
@@ -17,13 +17,13 @@ Earlier this year, I created an open-source app called [PicoShare](https://pico.
 
 A few months ago, I started seeing my PicoShare server die every few days. When I checked the logs, I saw an out of memory error:
 
-{{<img src="oom-crash.png" alt="Out of memory: Killed process 515 (picoshare)">}}
+{{<img src="oom-crash.png" alt="Out of memory: Killed process 515 (picoshare)" has-border="false">}}
 
 I didn't have time to debug the crash, so I just increased the server's memory from 512 MB to 1 GB. And then I kept seeing crashes, so I increased it again to 2 GB.
 
 It's unsatisfying to fix a crash by just throwing more RAM at the problems, so for the past two weeks, I've been debugging the crashes and sharing my progress on Twitter.
 
-{{<tweet user="deliberatecoder" id="1552438652537835521">}}
+{{<x user="deliberatecoder" id="1552438652537835521">}}
 
 At this point, I've fixed all the issues that were causing crashes and learned some useful lessons along the way about Go, SQLite, and debugging.
 
@@ -50,7 +50,7 @@ I only saw PicoShare crash every few days, so my first step was to find a way to
 
 I managed to reproduce the error by deploying PicoShare on a [Fly](https://fly.io) instance with only 256 MB of RAM and then uploading large files. I used [high-resolution versions](https://mirror.clarkson.edu/blender/demo/movies/BBB/) of the short film [_Big Buck Bunny_](https://peach.blender.org/) with sizes ranging from 269 MB to 618 MB.
 
-{{<img src="bbb.jpg" alt="Still from Big Buck Bunny short film" max-width="600px" caption="I used the short film [_Big Buck Bunny_](https://peach.blender.org/) as my test file as it was large enough to test big uploads.">}}
+{{<img src="bbb.jpg" alt="Still from Big Buck Bunny short film" max-width="600px" caption="I used the short film [_Big Buck Bunny_](https://peach.blender.org/) as my test file as it was large enough to test big uploads." has-border="false">}}
 
 Uploading two copies of the 618 MB version in parallel consistently caused PicoShare to die with an out of memory error within a minute or so.
 
@@ -68,7 +68,7 @@ _ "net/http/pprof"
 
 Now, when you run your app, there will be a `/debug/pprof/` route with lots of useful debugging information.
 
-{{<img src="debug-pprof.png" alt="Debug interface at http://ps:4001/debug/pprof" max-width="700px">}}
+{{<img src="debug-pprof.png" alt="Debug interface at http://ps:4001/debug/pprof" max-width="700px" has-border="false">}}
 
 I was surprised at how easy this was to add. There's a lot of interesting data in this web interface, but the one that I used was `heap`. To use it, I uploaded a large file to PicoShare and then ran this the following command:
 
@@ -82,13 +82,13 @@ go tool pprof \
 
 That popped up a web interface and rendered this graph:
 
-{{<img src="pprof1.png" alt="Graph showing all memory allocations" max-width="700px" has-border="true">}}
+{{<img src="pprof1.png" alt="Graph showing all memory allocations" max-width="700px">}}
 
 At the bottom, you can see a large red block labeled `bytes makeSlice 63.99 MB`, meaning that 64 MB of PicoShare's allocated RAM came from Go's `makeSlice` function.
 
 `makeSlice` is in the Go standard library, not my code. To find what code in PicoShare caused this memory allocation, I traced up the graph until I found a PicoShare function:
 
-{{<img src="pprof2.png" alt="Zoom in on graph showing call from fileFromRequest to ParseMultipartForm" max-width="300px" has-border="true">}}
+{{<img src="pprof2.png" alt="Zoom in on graph showing call from fileFromRequest to ParseMultipartForm" max-width="300px">}}
 
 The last PicoShare function in this chain is [`handlers.fileFromRequest`](https://github.com/mtlynch/picoshare/blob/1.1.7/handlers/upload.go#L242), which calls the Go standard library function [`*Request.ParseMultipartForm`](https://pkg.go.dev/net/http@go1.18.4#Request.ParseMultipartForm). That function is responsible for parsing multipart HTTP data, which is how PicoShare accepts file uploads.
 
@@ -106,7 +106,7 @@ Even though we were specifying a limit of 32 MB, Go was allocating 64 MB of RAM.
 
 Ben tried reducing the `maxMemory` parameter to `1 << 20` (1 MB), and the RAM usage from `ParseMultipartForm` dropped to only 2.5 MB:
 
-{{<img src="pprof3.png" alt="Graph showing 2572.91kB in makeSlice after the fix" max-width="400px" has-border="true">}}
+{{<img src="pprof3.png" alt="Graph showing 2572.91kB in makeSlice after the fix" max-width="400px">}}
 
 This was a huge reduction in memory, so I thought for sure Ben had solved it.
 
@@ -141,7 +141,7 @@ defer func() {
 
 This fix looked promising, as I saw huge reductions in RAM usage on Fly after freeing resources explicitly:
 
-{{<img src="free-ram.png" alt="Fly graph showing memory increase when I call ParseMultipartForm and decrease when I call r.MultipartForm.RemoveAll" has-border="true">}}
+{{<img src="free-ram.png" alt="Fly graph showing memory increase when I call ParseMultipartForm and decrease when I call r.MultipartForm.RemoveAll">}}
 
 Sadly, even with this fix, the crashes continued.
 
@@ -238,19 +238,19 @@ At this point, I was measuring RAM usage from three different angles that all di
 - Fly's RAM metrics from the VM host
 
 {{<gallery caption="My different tools for measuring RAM usage disagreed with one another">}}
-{{<img src="htop-ram.png" max-width="600px" alt="Screenshot showing htop reporting 154 MB of RAM usage and Go reporting 148.62 MB of RAM">}}
-{{<img src="fly-ram-count.png" alt="Screenshot of Fly reporting 217.4 of RAM usage">}}
+{{<img src="htop-ram.png" max-width="600px" alt="Screenshot showing htop reporting 154 MB of RAM usage and Go reporting 148.62 MB of RAM" has-border="false">}}
+{{<img src="fly-ram-count.png" alt="Screenshot of Fly reporting 217.4 of RAM usage" has-border="false">}}
 {{</gallery>}}
 
 In particular, Fly's metrics would frequently show RAM maxed out when Go and `htop` showed barely any usage. It was frustrating to debug because the further I drilled down, the further RAM measurements diverged from the crash behavior I was observing.
 
 The game-changing insight came from Andrew Ayer, who pointed out that RAM bloat was likely a red herring:
 
-{{<tweet user="__agwa" id="1553767839156379649">}}
+{{<img src="agwa-tweet.png" alt="Also, I think you're looking at the wrong metric here. It's not a bad thing for the VM to use a lot of RAM, if that RAM is being used for the page cache. It's only an issue if the Go process gets OOM killed." >}}
 
 Kurt Mackey, Fly's CEO, popped into the thread to confirm Andrew's hypothesis:
 
-{{<img src="mrkurt-cache.png" alt="This is the page cache usage for your -dbg app over the last 3 hours. Page cache shows as usage in our UI, but it's almost the same as free memory. It should be evicted when there's memory pressure." has-border="true" href="https://twitter.com/mrkurt/status/1553768082354601985">}}
+{{<img src="mrkurt-cache.png" alt="This is the page cache usage for your -dbg app over the last 3 hours. Page cache shows as usage in our UI, but it's almost the same as free memory. It should be evicted when there's memory pressure." href="https://twitter.com/mrkurt/status/1553768082354601985">}}
 
 So, Fly's memory metrics included the page cache, but the VM should reclaim that RAM if running applications needed it.
 
@@ -264,7 +264,7 @@ Given what Andrew Ayer said about RAM bloat, I revisited PicoShare's SQLite tran
 
 I tried running the transactionless implementation again. Sure enough, RAM bloated but PicoShare kept running. I uploaded three 618 MB files in parallel, and every upload succeeded with PicoShare continuing to serve HTTP requests.
 
-{{<img src="success.png" alt="Screenshot of three parallel PicoShare uploads succeeding without crashes" max-width="700px">}}
+{{<img src="success.png" alt="Screenshot of three parallel PicoShare uploads succeeding without crashes" max-width="700px" has-border="false">}}
 
 It worked! I'd finally gotten to the bottom of the performance issues.
 
@@ -272,7 +272,7 @@ Or so I thought...
 
 I left my server running overnight, and when I checked it the next morning, it had failed with the same out of memory crash.
 
-{{<img src="oom-kill-overnight.png" alt="Screenshot of log showing 'Process appears to have been OOM killed!'" max-width="700px">}}
+{{<img src="oom-kill-overnight.png" alt="Screenshot of log showing 'Process appears to have been OOM killed!'" max-width="700px" has-border="false">}}
 
 ### Eliminating SQLite vacuuming
 
@@ -282,11 +282,11 @@ Nobody was using the PicoShare server when it crashed, but it did line up with P
 
 I tested running the `VACUUM` command on my server and saw that it did indeed reduce the size of my main `.db` file, but it was increasing the size of the [SQLite write-ahead log](https://sqlite.org/wal.html).
 
-{{<img src="vacuum-bloat.png" alt="store.db-wal increasing in size by 310 MB after each call to sqlite3 /data/store.db 'VACUUM'" max-width="250px">}}
+{{<img src="vacuum-bloat.png" alt="store.db-wal increasing in size by 310 MB after each call to sqlite3 /data/store.db 'VACUUM'" max-width="250px" has-border="false">}}
 
 At this point, Ben asked me why I need to `VACUUM` at all:
 
-{{<tweet user="benbjohnson" id="1556003355901603841">}}
+{{<x user="benbjohnson" id="1556003355901603841">}}
 
 Yeah, why _am_ I doing that?
 
@@ -306,9 +306,9 @@ With `VACUUM` disabled by default and my other performance fixes in place, PicoS
 
 I ran PicoShare for 24 hours without any crashes on a Fly VM with just 256 MB of RAM.
 
-{{<img src="256-mb-ram.png" alt="Fly dashboard showing PicoShare has 256 RAM" max-width="700px" has-border="true">}}
+{{<img src="256-mb-ram.png" alt="Fly dashboard showing PicoShare has 256 RAM" max-width="700px">}}
 
-{{<img src="cronitor-checks.png" alt="Uptime checks showing 100% availability" caption="100% uptime over the last 24 hours">}}
+{{<img src="cronitor-checks.png" alt="Uptime checks showing 100% availability" caption="100% uptime over the last 24 hours" has-border="false">}}
 
 ## Other lessons learned
 
@@ -358,11 +358,11 @@ It still wasn't super fast because there's about 30 seconds of latency before Fl
 
 One useful technique I discovered during this investigation was to test each hypothesis in its own git branch and then record the results with a commit message:
 
-{{<img src="named-branches.png" alt="Branch repro-no-tx has commit name 'Working - no OOM crashes with 3x parallel 600 MB uploads'" has-border="true">}}
+{{<img src="named-branches.png" alt="Branch repro-no-tx has commit name 'Working - no OOM crashes with 3x parallel 600 MB uploads'">}}
 
 With so many different hypotheses flying around, it was difficult to remember what state the code was in when I tested each idea. For example, at one point, I was seeing crashes due to a new bug I had introduced while debugging:
 
-{{<tweet user="deliberatecoder" id="1552801134913458176">}}
+{{<x user="deliberatecoder" id="1552801134913458176">}}
 
 Having a record of what state the code was in and what I did to test it helped me organize my thoughts and avoid duplicating effort.
 
@@ -370,11 +370,11 @@ Having a record of what state the code was in and what I did to test it helped m
 
 One of my earliest debugging steps was adding a page to PicoShare that showed some of the RAM metrics from `runtime.ReadMemStats` (I later realized that `net/http/pprof` [did this better](#using-profiling-tools-to-identify-ram-bloat)).
 
-{{<img src="debug-page.png" alt="PicoShare debug page showing Alloc: 96.47 MB, TotalAlloc: 395.47 MB" has-border="true">}}
+{{<img src="debug-page.png" alt="PicoShare debug page showing Alloc: 96.47 MB, TotalAlloc: 395.47 MB">}}
 
 James Tucker pointed out that this measurement would exclude any resources I allocated through cgo:
 
-{{<img src="raggi-cgo.png" alt="are you using sqlite via cgo, or a pure go implementation? a cgo version would allocate memory unknown to the go heap statistics." has-border="true">}}
+{{<img src="raggi-cgo.png" alt="are you using sqlite via cgo, or a pure go implementation? a cgo version would allocate memory unknown to the go heap statistics.">}}
 
 I was indeed using SQLite via cgo. PicoShare uses [mattn/go-sqlite3](https://github.com/mattn/go-sqlite3), the most popular SQLite library for Go.
 
@@ -390,7 +390,7 @@ To test this theory, I used the `fio` disk benchmarking utility, which I'd never
 
 Kurt Mackey confirmed that the measurements were likely correct because Fly's local disks are Enterprise NVMe drives:
 
-{{<tweet user="mrkurt" id="1552495902190735360">}}
+{{<x user="mrkurt" id="1552495902190735360">}}
 
 ## Dead ends
 
@@ -416,7 +416,7 @@ When I couldn't reproduce the crashes on my local VMs or under Docker, I started
 
 Still, I wanted to eliminate Fly as a possibility. I deployed PicoShare to [Lightsail](https://aws.amazon.com/lightsail/), Amazon's managed Docker container service. They don't have a 256 MB RAM option, so I deployed to a 512 MB instance. Within a few minutes, I was able to reproduce the crash there, eliminating Fly as the culprit:
 
-{{<tweet user="deliberatecoder" id="1552466794971107328">}}
+{{<x user="deliberatecoder" id="1552466794971107328">}}
 
 ### /tmp is not a RAMdisk
 

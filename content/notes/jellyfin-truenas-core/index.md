@@ -1,6 +1,6 @@
 ---
 title: "Installing Jellyfin on TrueNAS Core"
-date: 2023-10-29T15:27:18-04:00
+date: 2023-10-29
 ---
 
 I always run into issues installing Jellyfin on TrueNAS core. I fix them, and then I forget a few months later, so these are just my notes to myself of how to install Jellyfin on TrueNAS core.

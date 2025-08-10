@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 12"
-date: 2021-07-08T00:00:00-04:00
+date: 2021-07-08
 description: I'm feeling stuck and scrambling for more time.
 images:
   - /retrospectives/2021/07/cover.png
@@ -11,7 +11,7 @@ images:
 - I'm struggling to get unstuck in two areas that have stalled for months: hardware development and hiring.
 - I'm partnering with a distributor in Germany to begin selling TinyPilot within the EU.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -38,7 +38,7 @@ There wasn't as much progress here as I'd hoped. Even with me drastically increa
 
 We ultimately decided to drop PoE as a Voyager 2 feature and instead reduced the number of external wires and connectors. We likely won't have the first prototype until mid-July.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -85,11 +85,11 @@ Finding a developer for the sales website has been a different story. Since Octo
 
 The design of the website has always been a placeholder until I can find someone to come in and make it look more professional. Without a stable developer, the website has limped along with the same design it had when I first launched. To me, it looks like a hobby project, and I want to make it look like A Real Product.
 
-{{<img src="tinypilot-home.png" max-width="800px" alt="Screenshot of TinyPilot website" caption="The TinyPilot website design was meant to be a placeholder, but it's still the same as it was a year ago." has-border="true">}}
+{{<img src="tinypilot-home.png" max-width="800px" alt="Screenshot of TinyPilot website" caption="The TinyPilot website design was meant to be a placeholder, but it's still the same as it was a year ago.">}}
 
 My biggest mistake in hiring for the web development role was limiting its scope too much. For the first six months, I advertised it as a freelance job that required three to five hours per week. It's a simple sales site, so I just wanted someone to fix small bugs and add non-urgent features. But I think capping the hours so low made the job unappealing to most freelance developers and instead attracted people whose schedule was mostly booked.
 
-I've since updated [the job description](https://tinypilotkvm.com/jobs/vue-developer) to say 10-15 hours per week. At this point, there's such a long issue backlog that there's lots of work to do. And once I find someone I like, I'll hire a designer to redesign the website and then have a developer spend a few weeks transitioning over to the new design. I can also have them work on web development tasks for the TinyPilot software itself if they're ever in need of hours.
+I've since updated the job description to say 10-15 hours per week. At this point, there's such a long issue backlog that there's lots of work to do. And once I find someone I like, I'll hire a designer to redesign the website and then have a developer spend a few weeks transitioning over to the new design. I can also have them work on web development tasks for the TinyPilot software itself if they're ever in need of hours.
 
 My other hiring mistake for this job was that I weighed design skills too heavily. Maintaining the website requires a lot of grungy work, chasing down weird issues that only show up at certain screen sizes or on certain platforms. There are jack-of-all-trades developers who can design something amazing, write maintainable code, and chase down confusing issues, but it's easier to just look for a good developer and find a specialist designer later for a one-time redesign.
 
@@ -113,7 +113,7 @@ To try to get unstuck, I'm reaching out to larger electrical engineering firms. 
 
 By chance, I stumbled upon Raspberry Pi's [list of approved design partners](https://www.raspberrypi.org/for-industry/design-partners/), which turned out to be an excellent resource. The vendors all have experience with Raspberry Pi and cater to clients at my scale.
 
-{{<img src="pi-partners.png" max-width="800px" alt="Screenshot of Raspberry Pi vendor partner website" caption="Raspberry Pi maintains [a list of electrical engineering design firms](https://www.raspberrypi.org/for-industry/design-partners/) that specialize in Raspberry Pi projects." has-border="true">}}
+{{<img src="pi-partners.png" max-width="800px" alt="Screenshot of Raspberry Pi vendor partner website" caption="Raspberry Pi maintains [a list of electrical engineering design firms](https://www.raspberrypi.org/for-industry/design-partners/) that specialize in Raspberry Pi projects.">}}
 
 I reached out to the three US-based firms on that list. Of the firms I contacted, Vendor A never responded, Vendor B declined my project after three weeks of back and forth, and Vendor C sent me a proposal.
 

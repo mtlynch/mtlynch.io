@@ -18,7 +18,7 @@ I used this workflow to edit and share my family's home videos at a cost of only
 - Docker
 - ffmpeg
 - A video player
-  - Ideally one with an edit timeline like [Adobe Premiere Elements](https://www.adobe.com/products/premiere-elements.html) or [OpenShot](https://www.openshot.org/).
+  - Ideally one with an edit timeline like Adobe Premiere Elements or [OpenShot](https://www.openshot.org/).
 - A free Heroku account
   - And the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 - A Google Cloud Platform account (with billing enabled)
@@ -56,17 +56,17 @@ ffmpeg \
 
 That creates a copy of the video that looks like this:
 
-{{<img src="frame-annotation.jpg" alt="Public domain video with added frame count overlay">}}
+{{<img src="frame-annotation.jpg" alt="Public domain video with added frame count overlay" has-border="false">}}
 
 ## Cataloging
 
 Now, it's time to catalog the footage on the tape. You'll go through the video to identify individual scenes, who appears in them, and what's happening.
 
-Open up your favorite video player. I think [Adobe Premiere Elements](https://www.adobe.com/products/premiere-elements.html) is best for this, but you can also try the free [OpenShot editor](https://www.openshot.org/). Any video player will technically work, but you'll save time if you choose one that supports stepping through frame by frame and a zoomable timeline.
+Open up your favorite video player. I think Adobe Premiere Elements is best for this, but you can also try the free [OpenShot editor](https://www.openshot.org/). Any video player will technically work, but you'll save time if you choose one that supports stepping through frame by frame and a zoomable timeline.
 
 Next, create a spreadsheet. You can start with [mine](https://docs.google.com/spreadsheets/d/1kuamVFEYBrOI097IWBQ8sB0q37ZRACYe2o389Ag92zI/edit?usp=sharing). I'll explain the fields below:
 
-{{<img src="spreadsheet.png" alt="Screenshot of my Google Sheets spreadsheet" caption="Catalog all the metadata in a spreadsheet that has the same format as [mine](https://docs.google.com/spreadsheets/d/1kuamVFEYBrOI097IWBQ8sB0q37ZRACYe2o389Ag92zI/edit?usp=sharing)." has-border="true">}}
+{{<img src="spreadsheet.png" alt="Screenshot of my Google Sheets spreadsheet" caption="Catalog all the metadata in a spreadsheet that has the same format as [mine](https://docs.google.com/spreadsheets/d/1kuamVFEYBrOI097IWBQ8sB0q37ZRACYe2o389Ag92zI/edit?usp=sharing).">}}
 
 - `tape_id`: This is the filename (without extension) of the video file.
 - `tape_shortname`: This is a shortname you want to identify files that came from this raw file. It can be the same as `tape_id`.
@@ -287,11 +287,11 @@ app/publish_to_mediagoblin.py \
 
 When the script completes, you should see all the clips appear in MediaGoblin's web interface at [http://localhost:6543](http://localhost:6543).
 
-{{<img src="mediagoblin-local-populated.png" alt="All clips appear in MediaGoblin" caption="You should see thumbnails for all eight clips on MediaGoblin's web interface." max-width="600px">}}
+{{<img src="mediagoblin-local-populated.png" alt="All clips appear in MediaGoblin" caption="You should see thumbnails for all eight clips on MediaGoblin's web interface." max-width="600px" has-border="false">}}
 
 If you click a video, you won't be able to view it in the normal video player because MediaGoblin uses a web player that's too old for modern streaming-optimized video formats. You can still watch it if you click the "Original file" link.
 
-{{<img src="mediagoblin-single-local.png" alt="Screenshot of single video view" caption="View of a single video in the local MediaGoblin instance" max-width="600px">}}
+{{<img src="mediagoblin-single-local.png" alt="Screenshot of single video view" caption="View of a single video in the local MediaGoblin instance" max-width="600px" has-border="false">}}
 
 Don't worry; we'll fix this in the next step so that you'll be able to watch all videos normally in the embedded player.
 
@@ -479,7 +479,7 @@ If you're using this process to store family videos, you probably want your fami
 
 If you want to do that, click the "Original file" link in the MediaGoblin interface:
 
-{{<img src="share-single-file.png" alt="Screenshot with pointer to 'Original file' link" max-width="700px">}}
+{{<img src="share-single-file.png" alt="Screenshot with pointer to 'Original file' link" max-width="700px" has-border="false">}}
 
 This will give the guest access to that individual file, but because of the way you [configured Google Cloud Storage bucket permissions](#create-a-storage-bucket), they won't be able to explore the library and access other videos.
 

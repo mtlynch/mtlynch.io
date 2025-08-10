@@ -13,7 +13,7 @@ I expected basic advice about how you shouldn't ask customers leading questions,
 
 ---
 
-## What I Liked
+## What I liked
 
 - Provides a practical, well-reasoned methodology for interviewing customers
   - Lots of examples of good questions, bad questions, and the rationale behind them
@@ -22,7 +22,7 @@ I expected basic advice about how you shouldn't ask customers leading questions,
 - I appreciated the guidance about requesting interviews from customers in a way that's sincere and offers value to the interviewee
 - The focus is on casual conversations, and the book has the tone of a friend giving you advice
 
-## What I Disliked
+## What I disliked
 
 - At a time when inclusiveness in tech is front-of-mind, this book feels tone-deaf when it comes to gender.
   - The book's title relies on stereotypes about mothers being too kind to give their children honest, critical feedback.
@@ -39,7 +39,7 @@ I expected basic advice about how you shouldn't ask customers leading questions,
 - Feels a bit Silicon Valley-centric in that it assumes it's easy to meet your customers in person or serendipitously encounter them during your daily routine
 - Recommends arranging customer interviews under false pretenses, such as pretending that you're writing a book or Ph.D. thesis
 
-## Key Takeaways
+## Key takeaways
 
 ### The Mom Test elicits honest feedback
 

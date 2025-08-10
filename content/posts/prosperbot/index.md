@@ -34,7 +34,7 @@ To invest in peer to peer loans with Prosper, investors can use Prosper's web si
 
 I chose the API route and developed ProsperBot, a lending bot that continuously searches for new loans on Prosper and invests in them when they meet certain criteria. It also includes a web dashboard, which shows ProsperBot's current status and my Prosper account activity over time:
 
-{{<img src="prosperbot-frontend.png" alt="ProsperBot screenshot" max-width="700px" has-border="true">}}
+{{<img src="prosperbot-frontend.png" alt="ProsperBot screenshot" max-width="700px">}}
 
 As you can see in the graph, my account has been steadily increasing in value since April, as ProsperBot receives repayments on loans and reinvests the cash in new loans. My total account value begins to decline in October, as I have begun withdrawing money from my Prosper account.
 
@@ -81,7 +81,7 @@ ProsperBot includes several different pieces and imposes some dependencies on th
 - **[mtlynch.prosperbot](https://galaxy.ansible.com/mtlynch/prosperbot/)** is the role that installs the core (headless) ProsperBot application.
 - **[mtlynch.prosperbot-frontend](https://galaxy.ansible.com/mtlynch/prosperbot-frontend/)** deploys the frontend.
 
-Splitting it this way makes it possible for someone to deploy ProsperBot, ProsperBot Frontend, and Redis each on a separate machine. I personally install all the components on a single server (example Ansible playbook for this is shown in the Github [README example](https://github.com/mtlynch/ansible-role-prosperbot-frontend#example-playbook)).
+Splitting it this way makes it possible for someone to deploy ProsperBot, ProsperBot Frontend, and Redis each on a separate machine. I personally install all the components on a single server (example Ansible playbook for this is shown in the GitHub [README example](https://github.com/mtlynch/ansible-role-prosperbot-frontend#example-playbook)).
 
 ## Thoughts on Prosper
 

@@ -1,0 +1,122 @@
+#!/usr/bin/env bash
+
+# Enable strict error handling
+set -eu
+
+# Script to check for specific GPS and camera EXIF data
+# Usage: ./check-exif-data [file_or_directory...]
+# Examples:
+#   ./check-exif-data                    # Check current directory
+#   ./check-exif-data foo/               # Check foo directory
+#   ./check-exif-data bar.jpg            # Check bar.jpg file
+#   ./check-exif-data foo/ bar.jpg baz/  # Check multiple files/directories
+
+# If no arguments provided, default to current directory
+if [ $# -eq 0 ]; then
+    set -- "."
+fi
+
+# Check if exiftool is installed and fail if not
+if ! command -v exiftool &> /dev/null; then
+    echo "Error: exiftool is not installed or not in PATH" >&2
+    exit 1
+fi
+
+# Print exiftool version
+echo "ExifTool version: $(exiftool -ver)"
+
+sensitive_data_found=false
+files_with_sensitive_data=()
+
+# Function to process a single path (file or directory)
+process_path() {
+    local path="$1"
+
+    if [ ! -e "${path}" ]; then
+        echo "Warning: '${path}' does not exist, skipping" >&2
+        return 0
+    fi
+
+    if [ -f "${path}" ]; then
+        # It's a file, check it directly
+        if check_sensitive_data "${path}"; then
+            files_with_sensitive_data+=("${path}")
+            sensitive_data_found=true
+        fi
+    elif [ -d "${path}" ]; then
+        # It's a directory, process all files within it
+        echo "Checking directory: ${path}"
+        while IFS= read -r -d '' file; do
+            [ -d "${file}" ] && continue
+
+            if check_sensitive_data "${file}"; then
+                files_with_sensitive_data+=("${file}")
+                sensitive_data_found=true
+            fi
+        done < <(find "${path}" -type f -print0)
+    else
+        echo "Warning: '${path}' is neither a file nor directory, skipping" >&2
+    fi
+}
+
+# Function to check for sensitive EXIF data
+check_sensitive_data() {
+    local file="$1"
+    local has_sensitive=false
+    local details=""
+
+    # Get all relevant EXIF data in one call
+    local exif_data
+    exif_data=$(exiftool -q -s \
+        -GPSLatitude -GPSLongitude -GPSAltitude -GPSDateTime -GPSMapDatum \
+        -Make -Model \
+        -SerialNumber -CameraSerialNumber -LensSerialNumber \
+        "${file}" 2>/dev/null || true)
+
+    # Check for GPS coordinates (most sensitive)
+    if echo "${exif_data}" | grep -q -E "(GPSLatitude|GPSLongitude)"; then
+        has_sensitive=true
+        details="${details}  📍 GPS coordinates\n"
+    fi
+
+    # Check for other GPS data
+    if echo "${exif_data}" | grep -q -E "(GPSAltitude|GPSDateTime|GPSMapDatum)"; then
+        has_sensitive=true
+        details="${details}  📍 GPS metadata\n"
+    fi
+
+    # Check for camera make/model (device identification)
+    if echo "${exif_data}" | grep -q -E "(Make|Model)"; then
+        has_sensitive=true
+        details="${details}  📷 Camera make/model\n"
+    fi
+
+    # Check for serial numbers
+    if echo "${exif_data}" | grep -q -E "(SerialNumber|CameraSerialNumber|LensSerialNumber)"; then
+        has_sensitive=true
+        details="${details}  🔢 Serial numbers\n"
+    fi
+
+    if [ "${has_sensitive}" = true ]; then
+        echo "Sensitive data found in: ${file}"
+        echo -e "${details}"
+        return 0
+    else
+        return 1
+    fi
+}
+
+# Process all provided paths
+for path in "$@"; do
+    process_path "${path}"
+done
+
+# Report results
+if [ "${sensitive_data_found}" = true ]; then
+    echo "" >&2
+    echo "❌ FAILURE: Found GPS/camera data in ${#files_with_sensitive_data[@]} file(s)" >&2
+    exit 1
+else
+    echo "✅ SUCCESS: No GPS or camera data found in any files"
+    exit 0
+fi

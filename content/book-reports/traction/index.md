@@ -1,6 +1,6 @@
 ---
 title: "Traction by Gabriel Weinberg and Justin Mares"
-date: 2020-08-23T09:45:33-04:00
+date: 2020-08-23
 rating: 5
 purchase_url: https://www.indiebound.org/book/9781591848363
 ---
@@ -19,12 +19,12 @@ The first few chapters had the most value to me. They describe a high-level appr
 
 ---
 
-## What I Liked
+## What I liked
 
 - It provides a good jumping-off point for brainstorming marketing ideas.
 - The book describes marketing meta-strategies that I found compelling, such as [the 50% rule](#50-rule) and [Bullseye](#the-bullseye-method).
 
-## What I Disliked
+## What I disliked
 
 - The quality of the writing was poor.
   - Most of the book is in the passive voice.
@@ -35,7 +35,7 @@ The first few chapters had the most value to me. They describe a high-level appr
 - It's aimed more toward VC-backed startups that have money to blow.
   - They repeatedly cited Noah Kagan's strategy of [offering dozens of bloggers $500 each](https://okdork.com/james-clear/) to write articles about Mint.
 
-## Key Takeaways
+## Key takeaways
 
 ### Defining traction
 
@@ -109,7 +109,8 @@ The book includes a few pages of strategies for each of these channels, but I di
 - Blogs
   - Reach out to niche blogs that match your audience and offer them a direct affiliate deal or paid display ad.
 - Publicity
-  - Use [HARO](https://www.helpareporter.com/) to connect with reporters interested in your market.
+  - ~~Use Help a Reporter Out (HARO) to connect with reporters interested in your market.~~
+    - **Update (2025-04-08)**: This service no longer seems to exist.
   - Pitch your product to small bloggers, as larger blogs often source from smaller niche blogs.
 - Unconventional PR (PR stunts)
 - Search engine marketing

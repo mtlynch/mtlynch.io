@@ -222,7 +222,7 @@ As we work together more, I'll increase or eliminate the time cap to give you mo
 
 I value documentation highly.
 
-If a project has documented processes or Github templates, please follow them. If the documentation tells you to do something that seems incorrect, let me know. Don't assume that instructions are out of date or not meant for you.
+If a project has documented processes or GitHub templates, please follow them. If the documentation tells you to do something that seems incorrect, let me know. Don't assume that instructions are out of date or not meant for you.
 
 When you begin working with me on a project, you become the new owner of its ramp-up documents. If you got stuck because something was documented poorly or not at all, please submit edits to fill the gaps.
 
@@ -274,17 +274,17 @@ I use Git for source control. You don't need to be a Git expert as long as you u
 - Push and pull changes
 - Rebase a commit (occasionally)
 
-### Github permissions
+### GitHub permissions
 
 I assign access on a [least-privilege basis](https://en.wikipedia.org/wiki/Principle_of_least_privilege). If you're working on one of my public repositories, you can fork it and begin making pull requests with no additional permissions.
 
-I use two Github integrations that require annoyingly broad permissions: [CircleCI](https://circleci.com/) and [Reviewable](https://reviewable.io/). Both applications require write access to all repos in your Github account. If you don't feel comfortable with those permissions, you'll need to create a dedicated Github user account for your work with me so that you can grant those tools full access.
+I use two GitHub integrations that require annoyingly broad permissions: [CircleCI](https://circleci.com/) and [Reviewable](https://reviewable.io/). Both applications require write access to all repos in your GitHub account. If you don't feel comfortable with those permissions, you'll need to create a dedicated GitHub user account for your work with me so that you can grant those tools full access.
 
 ### Commit hygiene
 
 Some developers believe that every commit is beautiful and sacred. I'm not one of them.
 
-It's important to me that the _main_ branch has a sane commit history. In all other branches, commit however you like. You can make one commit per code review note or address all notes in a single commit. Whatever workflow you prefer is fine with me. I use Github's [squash and merge functionality](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-merges#squash-and-merge-your-pull-request-commits), so every pull request collapses down to a single commit.
+It's important to me that the _main_ branch has a sane commit history. In all other branches, commit however you like. You can make one commit per code review note or address all notes in a single commit. Whatever workflow you prefer is fine with me. I use GitHub's [squash and merge functionality](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-merges#squash-and-merge-your-pull-request-commits), so every pull request collapses down to a single commit.
 
 If you submit a pull request with many commits, I'll read the pull request title, description, and comments. I don't dig through the individual commits, as I assume they represent your intermediate work. The article ["How to Write a Git Commit Message"](https://chris.beams.io/posts/git-commit/) describes my preferred style of documenting contributions, except applied to the pull request, not the individual commits.
 
@@ -342,9 +342,9 @@ It's difficult to specify exactly how frequently to share updates, as there's a 
 
 For tasks where the scope is obvious, like feature work that's well-understood, share an update once every eight to ten hours of billable work. For tasks where the scope is variable, such as bug investigations or features that require experimentation, aim to update once for every two to four hours of billable work. The absolute upper-limit on time without a status update should be three calendar days of billable work or 10 billable hours, whichever happens first.
 
-The best way to share status update is with pull requests that reflect progress. Ideally, you can peel off a part of your work that makes a complete pull request, but if not, you can share a pull request and mark it as "draft" to indicate it's still a work in progress. To share progress during a bug investigation, update the Github issue summarizing what you've investigated and what you've learned.
+The best way to share status update is with pull requests that reflect progress. Ideally, you can peel off a part of your work that makes a complete pull request, but if not, you can share a pull request and mark it as "draft" to indicate it's still a work in progress. To share progress during a bug investigation, update the GitHub issue summarizing what you've investigated and what you've learned.
 
-You can email me privately for meta-discussions about the work that you prefer not to share widely on Github, but try to keep as much discussion as possible on Github.
+You can email me privately for meta-discussions about the work that you prefer not to share widely on GitHub, but try to keep as much discussion as possible on GitHub.
 
 ## Payment
 
@@ -371,14 +371,12 @@ If I pay you more than $600 per calendar year, I need some forms for tax purpose
 
 ## Intellectual property
 
-If we're working together on a project where I want to retain intellectual property rights, I'll send you [a contract](https://www.docracy.com/0wceme3njsd/sample-freelance-developer-agreement) to e-sign. It declares that I'm purchasing the copyright to the code you write for me.
+If we're working together on a project where I want to retain intellectual property rights, I'll send you [a contract](https://web.archive.org/web/20220522192345/https://www.docracy.com/0wceme3njsd/sample-freelance-developer-agreement) to e-sign. It declares that I'm purchasing the copyright to the code you write for me.
 
 The contract relates specifically to work I pay you to produce, not anything you create outside of your paid hours for me.
 
 ---
 
-_Cover art by [Loraine Yow](https://www.lolo-ology.com/)._
+_Cover art by Loraine Yow._
 
 Are you a client or freelancer? I'd love to see similar documents or hear how others approach this problem, so feel free to share in the comments.
-
-{{<tweet user="deliberatecoder" id="1370392431049474048">}}

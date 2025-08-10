@@ -31,7 +31,7 @@ All the software I write depends on a particular software environment. For examp
 
 ### Security: VM isolation
 
-VMs also provide security by keeping software isolated from my main system. I like to experiment with new tools and apps, but it's always possible that an app could be malicious (maybe the developer made a malicious app, maybe it's a legitimate app but an attacker compromised it to spread malware). If I install an app directly to my Windows machine and it infects it with malware, it's game over. Very basic malware running on my machine could record everything on my screen, control my Gmail, Facebook, Github, or hold all my files [for ransom](https://en.wikipedia.org/wiki/Ransomware).
+VMs also provide security by keeping software isolated from my main system. I like to experiment with new tools and apps, but it's always possible that an app could be malicious (maybe the developer made a malicious app, maybe it's a legitimate app but an attacker compromised it to spread malware). If I install an app directly to my Windows machine and it infects it with malware, it's game over. Very basic malware running on my machine could record everything on my screen, control my Gmail, Facebook, GitHub, or hold all my files [for ransom](https://en.wikipedia.org/wiki/Ransomware).
 
 Malware running in a VM is much more limited in the damage it can cause. If I install software in a VM and it covertly installs a keylogger, it can only record my keystrokes in that VM, not my main desktop machine. VMs are not a complete defense, as advanced malware could [escape the VM](https://arstechnica.com/security/2017/03/hack-that-escapes-vm-by-exploiting-edge-browser-fetches-105000-at-pwn2own/), but they still provide a large degree of protection.
 
@@ -50,7 +50,7 @@ There are also some peer-to-peer projects I think are neat (e.g. [OpenBazaar](ht
 
 ### CPU
 
-{{<img src="amd-ryzen.jpg" alt="AMD Ryzen 7 1700" max-width="390px" align="right" href="https://smile.amazon.com/dp/B06WP5YCX6/">}}
+{{<img src="amd-ryzen.jpg" alt="AMD Ryzen 7 1700" max-width="390px" align="right" href="https://smile.amazon.com/dp/B06WP5YCX6/" has-border="false">}}
 
 In Brian's blog post, he was excited to take advantage of the [low price of used Intel Xeon CPUs](http://www.techspot.com/review/1155-affordable-dual-xeon-pc/). This was a neat idea, but I was afraid of the risk of hardware failure from used server hardware, so I preferred a new, retail CPU.
 
@@ -60,7 +60,7 @@ I ended up going with the [AMD Ryzen 7 1700](https://smile.amazon.com/dp/B06WP5Y
 
 ### Motherboard
 
-{{<img src="motherboard.png" alt="ASRock AB350M-HDV" max-width="250px" align="left" href="https://smile.amazon.com/ASRock-AB350M-HDV-Socket-MicroATX-Motherboard/dp/B06WWC7BTJ/">}}
+{{<img src="motherboard.png" alt="ASRock AB350M-HDV" max-width="250px" align="left" href="https://smile.amazon.com/ASRock-AB350M-HDV-Socket-MicroATX-Motherboard/dp/B06WWC7BTJ/" has-border="false">}}
 
 I live in a pretty small 1 BR apartment in Manhattan, so physical space is at a premium. My requirements also obviated a lot of components that typically requires a lot of physical space in a PC, such as disk drives, GPUs, or premium CPU fans.
 
@@ -70,19 +70,19 @@ In retrospect, I wish I'd gotten a motherboard with integrated graphics (see the
 
 ### Memory
 
-{{<img src="gskill-ram.png" alt="G.SKILL Flare X Series 32GB" max-width="250px" align="right" href="https://smile.amazon.com/G-SKILL-Flare-288-Pin-Memory-F4-3200C14D-16GFX/dp/B06XFT7DF9/">}}
+{{<img src="gskill-ram.png" alt="G.SKILL Flare X Series 32GB" max-width="250px" align="right" href="https://smile.amazon.com/G-SKILL-Flare-288-Pin-Memory-F4-3200C14D-16GFX/dp/B06XFT7DF9/" has-border="false">}}
 
 My main PC has 32 GB of RAM and tends to use around 15 GB during daily usage (even with Windows 10 and multiple VMs running). I figured I could probably get by with 16 GB, but 32 GB will probably be a safe upper limit for the next 2-3 years. I chose the [G.SKILL Flare X Series 32GB (2 x 16GB)](https://smile.amazon.com/G-SKILL-Flare-288-Pin-Memory-F4-3200C14D-16GFX/dp/B06XFT7DF9/) because these were the fastest RAM sticks tested compatible with my motherboard.
 
 ### Disk
 
-{{<img src="samsung-850-evo.jpg" alt="Samsung 850 EVO" max-width="590px" align="left" href="https://smile.amazon.com/gp/product/B00TGIVZTW/">}}
+{{<img src="samsung-850-evo.jpg" alt="Samsung 850 EVO" max-width="590px" align="left" href="https://smile.amazon.com/gp/product/B00TGIVZTW/" has-border="false">}}
 
 Like Brian, [I have a NAS](/sia-via-docker/) with plenty of space available, so all I needed as far as local storage was a small disk to hold the host / hypervisor OS. I went with a 250 GB [Samsung 850 EVO](https://smile.amazon.com/gp/product/B00TGIVZTW/) mainly because I find the M.2 interface very clean. It's just a chip you screw into your motherboard and you're done. No need to deal with mounts or SATA cables. 250 GB is way more than I need, but for an M.2 SSD, that seems to be about the entry level.
 
 ### Case
 
-{{<img src="micro-atx.jpg" alt="Rosewill Micro ATX SRM-01" max-width="180px" align="right" href="https://smile.amazon.com/ROSEWILL-Micro-Computer-plastic-computer/dp/B00ZPWOA6I/">}}
+{{<img src="micro-atx.jpg" alt="Rosewill Micro ATX SRM-01" max-width="180px" align="right" href="https://smile.amazon.com/ROSEWILL-Micro-Computer-plastic-computer/dp/B00ZPWOA6I/" has-border="false">}}
 
 For the case, I was primarily looking for something very small. I plan to tuck the server out of sight, so it didn't need to be pretty or have fancy aesthetics. The [Rosewill Micro ATX SRM-01](https://smile.amazon.com/ROSEWILL-Micro-Computer-plastic-computer/dp/B00ZPWOA6I/) is a nice, small, inexpensive, and functional.
 
@@ -98,41 +98,41 @@ It didn't make sense to buy a dedicated monitor for this system because 99.99% o
 
 I planned to just use the motherboard's onboard 1 Gbps NIC because I only have a 1 Gbps network. It did work out of the box with Ubuntu 16.04, but I soon noticed that my network speeds were limited to about 10 Mbps. After a bit of research, I discovered that Ubuntu 16.04 does not include the correct drivers, so I had to add a separate `apt-get` repo to install the `r8168-dkms` package. I did this, but on reboot, Ubuntu would fail to detect the NIC...
 
-At this point, I was tired of tinkering with the onboard NIC and just bought a PCI NIC that I'd read was supported out of the box on Ubuntu: [Broadcom BCM5751 Netxtreme](https://smile.amazon.com/gp/product/B005NX1DAK/). It got 1 Gbps speeds with zero tinkering, so for $23, I decided it wasn't worth the time to keep trying to investigate the problems with the onboard NIC.
+At this point, I was tired of tinkering with the onboard NIC and just bought a PCI NIC that I'd read was supported out of the box on Ubuntu: Broadcom BCM5751 Netxtreme. It got 1 Gbps speeds with zero tinkering, so for $23, I decided it wasn't worth the time to keep trying to investigate the problems with the onboard NIC.
 
 Also of note: the onboard NIC was _not_ compatible with ESXi 6.5, but the Broadcom NIC _was_ compatible.
 
 ### Final parts list
 
-| Category       | Component                                                                                                                                           |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CPU            | [AMD Ryzen 7 1700](https://smile.amazon.com/dp/B06WP5YCX6/)                                                                                         |
-| Motherboard    | [ASRock AB350M-HDV](https://smile.amazon.com/ASRock-AB350M-HDV-Socket-MicroATX-Motherboard/dp/B06WWC7BTJ/)                                          |
-| Disk           | [Samsung 850 EVO - 250GB](https://smile.amazon.com/gp/product/B00TGIVZTW/)                                                                          |
-| Memory         | [G.SKILL Flare X Series 32GB (2 x 16GB) F4-2400C15D-32GFXR](https://smile.amazon.com/G-SKILL-Flare-288-Pin-Memory-F4-3200C14D-16GFX/dp/B06XFT7DF9/) |
-| Power          | [EVGA 430 W1, 80+ WHITE 430W 100-W1-0430-KR](https://smile.amazon.com/gp/product/B00H33SDR4/)                                                       |
-| Graphics       | [EVGA 512-P3-1300-LR GeForce 8400 GS](https://smile.amazon.com/gp/product/B004BQKQ8A/)                                                              |
-| Network        | [Broadcom BCM5751 Netxtreme](https://smile.amazon.com/gp/product/B005NX1DAK/)                                                                       |
-| Case           | [Rosewill Micro ATX SRM-01](https://smile.amazon.com/ROSEWILL-Micro-Computer-plastic-computer/dp/B00ZPWOA6I/)                                       |
-| **Total Cost** | **$823.55**                                                                                                                                         |
+| Category       | Component                                                                                                                                           | I paid      |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| CPU            | [AMD Ryzen 7 1700](https://smile.amazon.com/dp/B06WP5YCX6/)                                                                                         | $323.66     |
+| Motherboard    | [ASRock AB350M-HDV](https://smile.amazon.com/ASRock-AB350M-HDV-Socket-MicroATX-Motherboard/dp/B06WWC7BTJ/)                                          | $69.99      |
+| Disk           | [Samsung 850 EVO - 250GB](https://smile.amazon.com/gp/product/B00TGIVZTW/)                                                                          | $99.99      |
+| Memory         | [G.SKILL Flare X Series 32GB (2 x 16GB) F4-2400C15D-32GFXR](https://smile.amazon.com/G-SKILL-Flare-288-Pin-Memory-F4-3200C14D-16GFX/dp/B06XFT7DF9/) | $224.99     |
+| Power          | [EVGA 430 W1, 80+ WHITE 430W 100-W1-0430-KR](https://smile.amazon.com/gp/product/B00H33SDR4/)                                                       | $29.99      |
+| Graphics       | [EVGA 512-P3-1300-LR GeForce 8400 GS](https://smile.amazon.com/gp/product/B004BQKQ8A/)                                                              | $29.99      |
+| Network        | Broadcom BCM5751 Netxtreme                                                                                                                          | $22.95      |
+| Case           | [Rosewill Micro ATX SRM-01](https://smile.amazon.com/ROSEWILL-Micro-Computer-plastic-computer/dp/B00ZPWOA6I/)                                       | $21.99      |
+| **Total Cost** |                                                                                                                                                     | **$823.55** |
 
 ## Build
 
 With all my parts, it was time to start the build!
 
-{{<img src="vm-server-parts.jpg" alt="Server PC parts">}}
+{{<img src="vm-server-parts.jpg" alt="Server PC parts" has-border="false">}}
 
 These are all the components pre-assembly. The NIC and GPU are missing from this picture because I didn't realize I needed them until I actually tried running the system.
 
-{{<img src="vm-server-assembled.jpg" alt="Server after assembly">}}
+{{<img src="vm-server-assembled.jpg" alt="Server after assembly" has-border="false">}}
 
 This is the server with all the parts assembled. There's not much to it because there aren't many components. It was particularly nice to not have to deal with power or SATA cables for disk drives because the only disk is the M.2 SSD connected directly to the motherboard.
 
 Because of my apartment's limited space, I wanted a server I could hide out of sight. I decided to place it behind my desk drawers, adjacent to my desk. It's still as physically reachable as my main desktop, but it's mostly out of view:
 
 {{<gallery caption="Completed build">}}
-{{<img src="vm-server-front.jpg" alt="Assembled server - front view">}}
-{{<img src="vm-server-above.jpg" alt="Assembled server - overhead view">}}
+{{<img src="vm-server-front.jpg" alt="Assembled server - front view" has-border="false">}}
+{{<img src="vm-server-above.jpg" alt="Assembled server - overhead view" has-border="false">}}
 {{</gallery>}}
 
 ## Installing a host OS
@@ -140,8 +140,6 @@ Because of my apartment's limited space, I wanted a server I could hide out of s
 The VM server's host OS should be as lightweight as possible. It needs to host a hypervisor and not much else. The more software we add to the host, the more packages we need to keep up to date to have a stable server.
 
 I tried a few different Linux distros, but Ubuntu server was the only one that worked out of the box on my hardware (successfully tested both 16.04 and 17.04) . I think [Ryzen's SMT functionality](https://www.phoronix.com/scan.php?page=news_item&px=AMD-Ryzen-Newer-Kernel) is what causes the installations to fail on other distros. I suspect I could work around this by disabling SMT in the BIOS, installing another distro, then upgrading the kernel to >= 4.10, then re-enabling SMT, but I decided to just stick with **Ubuntu 16.04 server** since it's the distro I'm most familiar with anyway.
-
-{{<tinypilot-ad headline="Install a new server OS right from your browser" copy="TinyPilot is an affordable, open-source solution that provides a remote console for your headless server.">}}
 
 ## Running virtual machines
 
@@ -156,8 +154,8 @@ I enjoy being able to manage my infrastructure through a web UI, so I installed 
 I'd describe Kimchi as "okay." Some of the dashboards are pretty slick:
 
 {{<gallery caption="Kimchi web UI screenshots">}}
-{{<img src="kimchi-host-utilization.png" alt="Kimchi host utilization dashboard">}}
-{{<img src="kimchi-guests.png" alt="Kimchi guest view">}}
+{{<img src="kimchi-host-utilization.png" alt="Kimchi host utilization dashboard" has-border="false">}}
+{{<img src="kimchi-guests.png" alt="Kimchi guest view" has-border="false">}}
 {{</gallery>}}
 
 It also does certain things really well, like creating a bridged network adapter (which is kind of a pain to figure out on the command line).
@@ -228,8 +226,6 @@ The power supply has sufficient wattage for the system, and it's pretty quiet. I
 The one downside is that it uses non-modular cabling. My system is so bare bones that I only need the 24-pin motherboard cable and 8-pin CPU cable. All the rest are clutter, but they hide away pretty cleanly in my case's 5.25" bay for an optical disc reader (obviously empty in my case).
 
 If I were to do it over, I'd consider a semi-modular or full-modular PSU so I could get rid of the extraneous PSU cables.
-
-{{<tinypilot-ad headline="BIOS-level access right in your browser" copy="TinyPilot is an easy-to-use, open source KVM over IP solution for homelab enthusiasts. Starting at $169.99.">}}
 
 ## Conclusion
 

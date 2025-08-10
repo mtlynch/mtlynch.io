@@ -15,7 +15,7 @@ discuss_urls:
 - After lots of research and customer interviews, I gave up on my idea for creating sheet metal software.
 - I published my first version of an app for finding live comedy.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I [declare what I'd like to accomplish](/retrospectives/2019/12/#goals-for-next-month). Here's how I did against those goals:
 
@@ -57,7 +57,7 @@ In anticipation of a surge in traffic in January, I offered my writer additional
 | Amazon Affiliate Earnings | $118.00       | $157.08       | <font color="green">+$39.08 (+33%)</font>      |
 | **Total Revenue**         | **$269.07**   | **$392.79**   | **<font color="green">+$123.72 (+46%)</font>** |
 
-This was a record month for Is It Keto, beating out the previous record of [$379.80 in August 2019](/retrospectives/2019/09/#is-it-ketohttpsisitketoorg).
+This was a record month for Is It Keto, beating out the previous record of [$379.80 in August 2019](/retrospectives/2019/09/#is-it-keto).
 
 The revenue was a bit of a surprise given that traffic has been waning for the past few months, as nobody wants to think about dieting over the holidays. But the holidays also mean higher advertiser spend and increased customer purchasing on Amazon, so my revenue per mille (RPM) rose substantially to $5.70 per thousand pageviews, also a record high.
 
@@ -77,7 +77,7 @@ December was a huge month for Zestful. A fast-moving startup told me that Zestfu
 
 Last month, I [got all excited](/retrospectives/2019/12/#rewriting-the-zestful-website-out-of-spite) because I thought that rewriting the Zestful website as a static site would improve its SEO. Sadly, Google Search Console suggests that it had a negligible impact:
 
-{{<img src="zestful-search-console.jpg" alt="Screenshot from Zestful's Google Search Console performance" caption="Rewriting the Zestful website as a static site seems not to have affected Google search performance." max-width="704px" has-border="true">}}
+{{<img src="zestful-search-console.jpg" alt="Screenshot from Zestful's Google Search Console performance" caption="Rewriting the Zestful website as a static site seems not to have affected Google search performance." max-width="704px">}}
 
 Still, the enterprise customer approached me only a few days after I rewrote the site, so I can pretend to myself that the rewrite was responsible for ~$3.9k in additional revenue.
 
@@ -85,7 +85,7 @@ Still, the enterprise customer approached me only a few days after I rewrote the
 
 At the end of November, I met the owner of a [sheet metal shop](/retrospectives/2019/12/#interviewing-machine-shops) who was interested in talking with me about creating software specifically for sheet metal producers.
 
-{{<img src="russ-ward-aMlbxs8SYig-unsplash.jpg" alt="Photograph of a person cutting metal" max-width="600px">}}
+{{<img src="russ-ward-aMlbxs8SYig-unsplash.jpg" alt="Photograph of a person cutting metal" max-width="600px" has-border="false">}}
 
 Software for sheet metal shops ticked a lot of my boxes:
 
@@ -99,13 +99,19 @@ I spent most of December researching existing solutions and visiting sheet metal
 
 One of my most interesting interviews was with a shop owner who described himself as technically illiterate. He told me that he was currently paying thousands of dollars per year for <a href="https://www.shoptech.com/" rel="nofollow">E2 ShopTech</a>, a general-purpose enterprise planning application for mid-sized machine shops.
 
-{{<img src="shoptech.png" alt="Screenshot of E2 ShopTech software" max-width="600px" caption="E2 ShopTech is a enterprise planning application for mid-sized machine shops." has-border="true">}}
+{{<img src="shoptech.png" alt="Screenshot of E2 ShopTech software" max-width="600px" caption="E2 ShopTech is a enterprise planning application for mid-sized machine shops.">}}
 
 The owner seemed satisfied with his software but said that he only used 2% of its features. My ears perked right up when I heard that. This is the exact scenario that books like [_Start Small, Stay Small_](/book-reports/start-small-stay-small/) describe. If a business uses bloated software because nobody caters to their specific niche, you can outcompete a larger vendor if you focus on the 2% of features that matter to your customer niche.
 
 The owner had repeatedly said he didn't like dealing with software, so I thought offering a simpler solution would be a slam dunk:
 
-> **Me**: What if I made something that just focused on the 2% that you use, so that there's less complexity?<br> > **Owner**: Wouldn't be interested.<br> > **Me**: Really? Why not?<br> > **Owner**: Because ShopTech already has everything we could ever need built-in. Suppose we get ISO 9001 certified. With ShopTech, we just flip a switch, and we have all the ISO 9001 features we need. If you made something that's only what we use **now**, we'd be stuck.
+> **Me**: What if I made something that just focused on the 2% that you use, so that there's less complexity?
+>
+> **Owner**: Wouldn't be interested.
+>
+> **Me**: Really? Why not?
+>
+> **Owner**: Because ShopTech already has everything we could ever need built-in. Suppose we get ISO 9001 certified. With ShopTech, we just flip a switch, and we have all the ISO 9001 features we need. If you made something that's only what we use **now**, we'd be stuck.
 
 It made me realize that there's some nuance to the idea that people want software that perfectly matches their use case. The example in _Start Small, Stay Small_ is that if you design accounting software specifically for web designers, your target audience will choose you over general-purpose accounting software like Xero or QuickBooks, even if you're more expensive. But that works because web designers' accounting needs stay relatively static. Even if they drastically change the jobs they take on, they likely don't need to change much about their accounting software.
 
@@ -157,7 +163,7 @@ Finding shows was always a challenge for two reasons:
 
 I wished for an app like <a href="https://bandsintown.com" rel="nofollow">Bandsintown</a>, but for comedy.
 
-{{<img src="bandsintown.png" alt="Screenshot of Bandsintown website" max-width="700px" has-border="true" caption="Bandsintown is an app that helps you discover when your favorite musical performers are nearby.">}}
+{{<img src="bandsintown.png" alt="Screenshot of Bandsintown website" max-width="700px" caption="Bandsintown is an app that helps you discover when your favorite musical performers are nearby.">}}
 
 Brian and Heather found this idea exciting. What's more, they saw that it energized _me_. "Look at the way you light up when you talk about that idea!" Heather said. "You're so much more excited about that than the sheet metal idea." Still, I was apprehensive. Most comedians earn very little, so how could a new business in this space earn enough to survive?
 
@@ -174,7 +180,7 @@ These options would make it easy for me to pivot to different strategies if one 
 
 After only five days of development, I had a minimum viable product (MVP) for my app, WanderJest:
 
-{{<img src="wanderjest.png" alt="Screenshot of WanderJest website" has-border="true" caption="My initial version of [WanderJest](https://wanderjest.com), an app for discovering local live comedy.">}}
+{{<img src="wanderjest.png" alt="Screenshot of WanderJest website" caption="My initial version of [WanderJest](https://wanderjest.com), an app for discovering local live comedy.">}}
 
 It's currently just a directory of shows and comedians performing in the Western Massachusetts area, but it's enough that people understand the idea and are excited about it.
 

@@ -11,7 +11,7 @@ images:
   - hiring-content-writers/cover.jpg
 ---
 
-{{<img src="cover.jpg" alt="Hiring Content Writers A Guide for Small Businesses (cover image)" max-width="1000px">}}
+{{<img src="cover.jpg" alt="Hiring Content Writers A Guide for Small Businesses (cover image)" max-width="1000px" has-border="false">}}
 
 If you write original content for your business, you know how quickly it drains your time and mental energy. It's extremely challenging to write articles or blog posts that readers find engaging, clear, and eloquent.
 
@@ -53,7 +53,7 @@ If you want talented writers, create work conditions that are fair, pleasant, an
 
 Everything in this guide is based on my real experiences of hiring and working with writers over several months. My business is a website called [Is It Keto](https://isitketo.org), which explains whether or not popular foods fit the keto diet.
 
-{{<img src="isitketo-screenshot.jpg" alt="Screenshot of Is It Keto broccoli article" caption="Is It Keto article on [broccoli](https://isitketo.org/broccoli)" max-width="800px" has-border="true">}}
+{{<img src="isitketo-screenshot.jpg" alt="Screenshot of Is It Keto broccoli article" caption="Is It Keto article on [broccoli](https://isitketo.org/broccoli)" max-width="800px">}}
 
 At [~73,000 pageviews per month](/retrospectives/2019/09/#stats), Is It Keto is still relatively small, but its audience has grown by 30-50% every month this year. I believe its success results from its succinct, clear writing.
 
@@ -91,4 +91,4 @@ If a writer consistently fails to meet your expectations, you need to cut your l
 
 ---
 
-_Cover art by [Loraine Yow](https://www.lolo-ology.com/). Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for offering insight to help me create this guide. Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide me with feedback._
+_Cover art by Loraine Yow. Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for offering insight to help me create this guide. Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide me with feedback._

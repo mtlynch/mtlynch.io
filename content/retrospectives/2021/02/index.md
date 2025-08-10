@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 7"
-date: 2021-02-04T00:00:00-05:00
+date: 2021-02-04
 description: TinyPilot is facing good problems to have.
 images:
   - /retrospectives/2021/02/og-cover.png
@@ -12,7 +12,7 @@ images:
 - Most of TinyPilot's sales came from a single positive YouTube review.
 - TinyPilot is experiencing growing pains as I scramble to meet demand.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -53,7 +53,7 @@ I tried [several different techniques](https://twitter.com/deliberatecoder/statu
 | Donations         | $9.00          | $0.00          | <font color="red">-$9.00 (-100%)</font>            |
 | **Total Revenue** | **$15,367.05** | **$41,992.92** | **<font color="green">+$26,625.87 (+173%)</font>** |
 
-This was a enormous month for [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io). Sales jumped from $15k to $42k.
+This was a enormous month for [TinyPilot](https://tinypilotkvm.com/). Sales jumped from $15k to $42k.
 
 Every month, I think, "Wow, that was a lucky month! I won't be able to do _that_ again." And then there's even more growth the following month, so here's hoping that luck continues.
 
@@ -80,8 +80,8 @@ Jeff loved TinyPilot and shared the many ways it impressed him. I was anxious th
 The results were strong and immediate. The next day, I received 33 orders and earned $5k in revenue, far exceeding previous sales records. The next day, the number of orders dropped, but more customers purchased high-end kits, so the total revenue remained roughly the same.
 
 {{<gallery caption="TinyPilot revenues, orders by day, January 2021">}}
-{{<img src="sales-jan.png">}}
-{{<img src="orders-jan.png">}}
+{{<img src="sales-jan.png" has-border="false">}}
+{{<img src="orders-jan.png" has-border="false">}}
 {{</gallery>}}
 
 I expected things to subside on the third day, and they did a little bit, but they kept coming. My inventory is set up to absorb a rush like this, but I didn't expect it to continue for so long.
@@ -102,7 +102,7 @@ After the Craft Computing review, my fulfillment manager and I conducted TinyPil
 
 We manage inventory with a spreadsheet. For each part we carry, we define a minimum and maximum to keep in stock. For example, Raspberry Pis had a minimum of 40 and a maximum of 80. That means that anytime our inventory of Raspberry Pis drops below 40, we order enough to get our supply back to 80.
 
-{{<img src="tinypilot-inventory.png" alt="Screenshot of TinyPilot inventory spreadsheet" caption="TinyPilot's inventory spreadsheet" maxWidth="700px" hasBorder="true">}}
+{{<img src="tinypilot-inventory.png" alt="Screenshot of TinyPilot inventory spreadsheet" caption="TinyPilot's inventory spreadsheet" maxWidth="700px" hasBorder="true" has-border="false">}}
 
 The problem was that we only adjusted these targets until we run out and realize we planned poorly. Then, when we're in a shortage, we're so panicked that it's hard to think rationally about what the new targets should be.
 
@@ -229,7 +229,7 @@ Zestful is growing slightly, even though it's in maintenance mode. The growth se
 ### What got done?
 
 - [_Hit the Front Page of Hacker News_](https://hitthefrontpage.com/) launched.
-- [TinyPilot Pro](https://tinypilotkvm.com/product/tinypilot-pro?ref=mtlynch.io) graduated from beta to a real relase.
+- [TinyPilot Pro](https://tinypilotkvm.com/product/tinypilot-pro) graduated from beta to a real relase.
 - Conducted TinyPilot's first postmortem.
 - Hired two freelance developers on a trial basis.
 

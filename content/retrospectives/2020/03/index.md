@@ -12,7 +12,7 @@ images:
 - WanderJest finally earned its first dollar of revenue, but in a way that is definitely unsustainable.
 - Poor work habits have left me with the most stress I've felt in a year.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I [declare what I'd like to accomplish](/retrospectives/2020/02/#goals-for-next-month). Here's how I did against those goals:
 
@@ -43,7 +43,7 @@ Again, I expected the scavenger hunt to drive more visits, but the contest so fa
 
 ## WanderJest stats
 
-{{<img src="google-analytics.jpg" alt="Screenshot of Google Analytics traffic for WanderJest" caption="WanderJest visit statistics - February 2020" max-width="833px" has-border="true">}}
+{{<img src="google-analytics.jpg" alt="Screenshot of Google Analytics traffic for WanderJest" caption="WanderJest visit statistics - February 2020" max-width="833px">}}
 
 <div style="height: 1.5em"><!-- hack to add whitespace between graph and table --></div>
 
@@ -66,7 +66,7 @@ When I shared WanderJest in local social media groups, people responded positive
 
 So, I came up with the Comedy Scavenger Hunt:
 
-{{<img src="banner.png" alt="WanderJest Comedy Scavenger Hunt banner" caption="The Scavenger Hunt is a contest I launched to market WanderJest to local residents." max-width="650px">}}
+{{<img src="banner.png" alt="WanderJest Comedy Scavenger Hunt banner" caption="The Scavenger Hunt is a contest I launched to market WanderJest to local residents." max-width="650px" has-border="false">}}
 
 Fans can win prizes by attending shows and posting photos to social media. Comedians win prizes based on how many photos fans take of them. Show organizers can contribute money to the contest to give their shows special status.
 
@@ -98,8 +98,8 @@ I tried that with 10 separate reporters, and my success rate was still small, bu
 Promoting the contest on social media also turned out to be harder than I expected. Groups that welcomed my initial WanderJest announcement with open arms totally ignored my announcement about the scavenger hunt:
 
 {{<gallery caption="My post in a local Facebook group about launching WanderJest earned 33 likes, 12 comments, whereas my later scavenger hunt post received only 6 likes and no comments.">}}
-{{<img src="fb-announce-1.jpg" alt="Screenshot of initial WanderJest announcement on Facebook">}}
-{{<img src="fb-announce-2.jpg" alt="Screenshot of scavenger hunt announcement on Facebook">}}
+{{<img src="fb-announce-1.jpg" alt="Screenshot of initial WanderJest announcement on Facebook" has-border="false">}}
+{{<img src="fb-announce-2.jpg" alt="Screenshot of scavenger hunt announcement on Facebook" has-border="false">}}
 {{</gallery>}}
 
 One of the ways users can earn a chance at the $200 grand prize is by re-sharing WanderJest's contest announcement post, but not a single person has done that, save for a few performers, and they're ineligible for the grand prize.
@@ -110,7 +110,7 @@ My plan for revenue was to have show organizers contribute money to the contest.
 
 By February 29th, I was still at $0 in revenue. Thank goodness for [Leap Day](https://www.youtube.com/watch?v=uK0KTH0ezgc), because in the final 24 hours before the deadline, five separate show producers contributed a total of $100 to the contest.
 
-{{<img src="scavenger-cards.jpg" alt="Photo of WanderJest promotional cards" caption="Promotional cards I printed and will distribute at local shows to encourage contest participation." max-width="500px">}}
+{{<img src="scavenger-cards.jpg" alt="Photo of WanderJest promotional cards" caption="Promotional cards I printed and will distribute at local shows to encourage contest participation." max-width="500px" has-border="false">}}
 
 I'm trying as hard as I can to ensure that each partner earns a return on their investment, even if it means I lose a lot more money. I had hoped the contest would market itself on social media, but since that's not happening, I ordered business cards and flyers and am hiring someone to distribute them in the area.
 
@@ -201,7 +201,7 @@ Long ago, I experimented with tools like [RescueTime](https://www.rescuetime.com
 
 This is the first post I've written since installing WakaTime, and I can see that it took me 7 hours and 12 minutes to write (including updating [the script I use](https://github.com/mtlynch/make-mtlynch-stats) to spit out my stats tables). That's pretty close to what I expected. I generally dedicate half of the first two days of the month to writing my retrospective post, so that feels like the right amount of time.
 
-{{<img src="wakatime.jpg" alt="Screenshot of WakaTime dashboard" caption="[WakaTime](https://wakatime.com) dashboard showing the time I spent authoring this post." max-width="700px">}}
+{{<img src="wakatime.jpg" alt="Screenshot of WakaTime dashboard" caption="[WakaTime](https://wakatime.com) dashboard showing the time I spent authoring this post." max-width="700px" has-border="false">}}
 
 I'm liking WakaTime more than expected, and I'm even considering it for my non-blog projects.
 

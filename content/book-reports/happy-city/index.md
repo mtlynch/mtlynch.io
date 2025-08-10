@@ -13,17 +13,17 @@ I took for granted the idea that cities should be friendly to car-travel, but th
 
 ---
 
-## What I Liked
+## What I liked
 
 - Lively style made for an engaging read
 - Interesting case studies examining different angles of cities in a variety of cities around the globe.
 - Good mix of scientific studies, interviews, and personal research
 
-## What I Disliked
+## What I disliked
 
 - Some of the concept felt as though the author overgeneralized based on limited academic studies or anecdotal data.
 
-## Key Takeaways
+## Key takeaways
 
 - People are [bad at predicting](http://www.people.virginia.edu/~tdw/dunn.location.pspb.2003.pdf) which factors will make them happy with their living space
   - Aesthetics matter much less than how the living space facilitates interaction between members of the community.
@@ -40,7 +40,7 @@ I took for granted the idea that cities should be friendly to car-travel, but th
   - When communities occupy a large, sparse area, it's more expensive to run buses, maintain roads, offer police/fire protection.
   - Denser communities lead to more positive relationships with neighbors and easier lifestyle because it puts more shops and services within walking distance.
 - Private cars impose many external costs that are borne by the community as a whole rather than the drivers themselves.
-  - [Take up more space per person](https://web.archive.org/web/20151123071501/https://www.880cities.org/doablecity/wp-content/uploads/2014/11/space-needed-transport-perp.jpg) than almost all other modes of transportation, cause faster road wear, pollute the air, create noise pollution, limit places where pedestrians can walk.
+  - [Take up more space per person](https://wearetraffic.org/sites/default/files/images/Bike_Car_Comparison.jpg) than almost all other modes of transportation, cause faster road wear, pollute the air, create noise pollution, limit places where pedestrians can walk.
 - There is a common notion that for an area of the city to attract people, it needs lots of road and parking access, but there have been several examples where banning cars has revitalized an area
   - e.g., [Times Square Plaza](http://www.landezine.com/index.php/2017/04/times-square-redesign-by-snohetta-opens-today/) in New York, [Strøget](https://en.wikipedia.org/wiki/Str%C3%B8get) in Copenhagen
 - There's an important distinction between "crowding" and "population density."

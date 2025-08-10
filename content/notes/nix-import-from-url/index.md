@@ -1,6 +1,6 @@
 ---
 title: "Import from a URL in Nix"
-date: 2023-09-17T00:00:00-04:00
+date: 2023-09-17
 tags:
   - nix
 ---
@@ -59,12 +59,12 @@ The solution above works, but it requires me to copy the same file on each of my
 
 I'd rather host the file at a publicly accessible URL, and then I can have a standard `configuration.nix` file that references the URL.
 
-Here's how I adjust my `configuration.nix` to pull in [my `shell.nix` file]({{<baseurl>}}/notes/nix-import-from-url/shell.nix) from a remote URL:
+Here's how I adjust my `configuration.nix` to pull in [my `shell.nix` file]({{<baseurl>}}notes/nix-import-from-url/shell.nix) from a remote URL:
 
 ```nix
 let
   shellAliases = builtins.fetchurl {
-    url = "{{<baseurl>}}/notes/nix-import-from-url/shell.nix";
+    url = "{{<baseurl>}}notes/nix-import-from-url/shell.nix";
   };
 in {
   imports = [
@@ -79,7 +79,7 @@ Once again, if I save these changes to `configuration.nix`, run `sudo nixos-rebu
 
 Another option for fetching remote Nix files is to store them in a public Git repository and then use `fetchGit` to retrieve the files.
 
-Here's an example of a `configuration.nix` file that fetches my `shell.nix` from a public Github repo:
+Here's an example of a `configuration.nix` file that fetches my `shell.nix` from a public GitHub repo:
 
 ```nix
 let
@@ -94,9 +94,9 @@ in {
 }
 ```
 
-The `url` is the public URL of my Github repo, and `rev` is the Git commit hash of the version of the file I want to import.
+The `url` is the public URL of my GitHub repo, and `rev` is the Git commit hash of the version of the file I want to import.
 
-After I make those changes to `configuration.nix`, I can re-run `sudo nixos-rebuild switch`, and Nix imports my `shell.nix` file from my Github repo.
+After I make those changes to `configuration.nix`, I can re-run `sudo nixos-rebuild switch`, and Nix imports my `shell.nix` file from my GitHub repo.
 
 ## More advanced shell configuration
 
@@ -151,7 +151,7 @@ Nix failed with this error:
  error: undefined variable 'MAIN_BRANCH'
 ```
 
-I need to [escape the `${`](https://nixos.org/manual/nix/stable/language/values.html?highlight=escape#primitives) by prepending it with two single quotes (`''`) like this:
+I need to [escape the `${`](https://web.archive.org/web/20231001024315/https://nixos.org/manual/nix/stable/language/values.html?highlight=escape#primitives) by prepending it with two single quotes (`''`) like this:
 
 ```bash
 git checkout "''${MAIN_BRANCH}"

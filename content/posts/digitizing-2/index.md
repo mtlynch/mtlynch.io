@@ -25,9 +25,9 @@ In [part one](/digitizing-1), I described my arduous journey to capture my old h
 
 The first solution I tried was [ClipBucket](https://github.com/arslancb/clipbucket), which advertises itself as an open-source YouTube clone that you can self-host.
 
-{{<img src="clipbucket-github.png" alt="ClipBucket's repository on Github" max-width="500px" has-border="true" caption="[ClipBucket](https://github.com/arslancb/clipbucket) is an open-source clone of YouTube that users can self-host (theoretically).">}}
+{{<img src="clipbucket-github.png" alt="ClipBucket's repository on GitHub" max-width="500px" caption="[ClipBucket](https://github.com/arslancb/clipbucket) is an open-source clone of YouTube that users can self-host (theoretically).">}}
 
-Puzzlingly, ClipBucket offered no installation instructions. Using a [third-party guide](https://linoxide.com/linux-how-to/setup-clipbucket-video-sharing-website-linux/), I [automated the installation process](/ansible-role-clipbucket/) using [Ansible](https://docs.ansible.com/ansible/latest/index.html), a configuration management tool for servers.
+Puzzlingly, ClipBucket offered no installation instructions. Using a [third-party guide](https://web.archive.org/web/20160202164342/http://linoxide.com/linux-how-to/setup-clipbucket-video-sharing-website-linux/), I [automated the installation process](/ansible-role-clipbucket/) using [Ansible](https://docs.ansible.com/ansible/latest/index.html), a configuration management tool for servers.
 
 Part of the difficulty was that ClipBucket's installation scripts were flat-out broken. As a [Google employee](/why-i-quit-google/) at the time, I couldn't contribute patches to a YouTube clone, but [I submitted a bug report](https://github.com/arslancb/clipbucket/issues/223) that should have made the fixes obvious. Months went by, and they never acknowledged the problem. Instead, they introduced even _more_ breaking errors on every release.
 
@@ -37,7 +37,7 @@ ClipBucket's business ran on a consulting model &mdash; they released their code
 
 After a few months of frustration with ClipBucket, I reassessed what was available and found [MediaGoblin](https://mediagoblin.org/).
 
-{{<img src="mediagoblin-homepage.png" alt="MediaGoblin's homepage" max-width="800px" caption="[MediaGoblin](https://mediagoblin.org/) is a self-hosted media sharing platform.">}}
+{{<img src="mediagoblin-homepage.png" alt="MediaGoblin's homepage" max-width="800px" caption="[MediaGoblin](https://mediagoblin.org/) is a self-hosted media sharing platform." has-border="false">}}
 
 There was plenty to like about MediaGoblin. Unlike ClipBucket's unsightly PHP, MediaGoblin was written in Python, a language in which I have plenty of experience. It included a [command-line interface](https://mediagoblin.readthedocs.io/en/v0.9.0/siteadmin/commandline-upload.html) that made it easy to automate video uploads. Best of all, MediaGoblin [offered a Docker image](https://wiki.mediagoblin.org/index.php?title=EasyDeployment&oldid=1874), which would eliminate any installation guesswork.
 
@@ -77,7 +77,7 @@ When I was using ClipBucket, I solved this problem using [gcsfuse](https://githu
 
 The difference was that ClipBucket ran in a full virtual machine, whereas MediaGoblin ran in a Docker container. Mounting cloud storage files under Docker turned out to be far more complicated. I spent dozens of hours solving all the gotchas and wrote a [whole blog post](/retrofit-docker-gcs/) about it.
 
-{{<img src="mg-gcs-architecture.jpg" alt="Architecture diagram of MediaGoblin + Docker + gcsfuse" caption="Initial architecture for integrating MediaGoblin with Google Cloud Storage, documented in my [2018 blog post](/retrofit-docker-gcs/)" max-width="500px" has-border="true">}}
+{{<img src="mg-gcs-architecture.jpg" alt="Architecture diagram of MediaGoblin + Docker + gcsfuse" caption="Initial architecture for integrating MediaGoblin with Google Cloud Storage, documented in my [2018 blog post](/retrofit-docker-gcs/)" max-width="500px">}}
 
 After weeks of coercing all the components to play nicely together, it worked. Without making any changes to MediaGoblin's code, I was able to trick it into reading and writing its media files to Google Cloud Storage.
 
@@ -85,7 +85,7 @@ The only problem was that it made MediaGoblin unusably slow. Loading the video t
 
 The underlying issue was that video and image files followed a long, circuitous route to the user. They had to go from Google Cloud Storage through gcsfuse to MediaGoblin to Nginx and then finally to the user's browser. gcsfuse was a major bottleneck, as it's not optimized for speed. It warns about its poor latency right [on the project homepage](https://github.com/GoogleCloudPlatform/gcsfuse#latency-and-rsync):
 
-{{<img src="gcsfuse-latency.png" alt="Latency warning from gcsfuse Github repository" caption="Warnings in gcsfuse documentation [about slow performance](https://github.com/GoogleCloudPlatform/gcsfuse#latency-and-rsync)" max-width="700px" has-border="true">}}
+{{<img src="gcsfuse-latency.png" alt="Latency warning from gcsfuse GitHub repository" caption="Warnings in gcsfuse documentation [about slow performance](https://github.com/GoogleCloudPlatform/gcsfuse#latency-and-rsync)" max-width="700px">}}
 
 Ideally, the browser would fetch files directly from Google Cloud Storage, bypassing all the intermediate layers. How could I do that without delving into MediaGoblin's codebase and adding complicated integration logic for Google Cloud Storage?
 
@@ -124,7 +124,7 @@ Nginx modifies the response to look like this:
 
 Here's how it all fits together:
 
-{{<img src="final-architecture.jpg" alt="Architecture diagram of MediaGoblin + Docker + nginx rewriting responses to GCS" caption="Nginx rewrites responses from MediaGoblin so that clients can retrieve media files directly from Google Cloud Storage." max-width="600px" has-border="true">}}
+{{<img src="final-architecture.jpg" alt="Architecture diagram of MediaGoblin + Docker + nginx rewriting responses to GCS" caption="Nginx rewrites responses from MediaGoblin so that clients can retrieve media files directly from Google Cloud Storage." max-width="600px">}}
 
 The neat part of my solution was that it required no modification to MediaGoblin's code. A two-line Nginx directive seamlessly integrated MediaGoblin and Google Cloud Storage even though the two services had zero awareness of one another.
 
@@ -140,11 +140,11 @@ My family loved how easy it was to browse through videos. With the Nginx perform
 
 The browse screen looked like this:
 
-{{<img src="mediagoblin-home.png" alt="MediaGoblin browse screen" max-width="800px" caption="Browse screen of my family's home video sharing server">}}
+{{<img src="mediagoblin-home.png" alt="MediaGoblin browse screen" max-width="800px" caption="Browse screen of my family's home video sharing server" has-border="false">}}
 
 Clicking a thumbnail brought you to a screen like this:
 
-{{<img src="mediagoblin-single-video.jpg" alt="Screenshot of MediaGoblin displaying a video" max-width="800px" caption="Viewing an individual clip on the media server">}}
+{{<img src="mediagoblin-single-video.jpg" alt="Screenshot of MediaGoblin displaying a video" max-width="800px" caption="Viewing an individual clip on the media server" has-border="false">}}
 
 After years of work, it was incredibly gratifying to give my family the YouTube-like experience for exploring our videos that I originally envisioned.
 
@@ -158,7 +158,7 @@ For reasons I no longer remember, Cloud Run didn't work with my MediaGoblin imag
 
 With a free app server, my only cost is data storage. Google's standard regional storage is 2.3 cents/GB, and the video collection takes up 33 GB, so I only pay $0.77/month.
 
-{{<img src="gcs-bill.png" alt="Bill for $0.77 from Google Cloud Platform" caption="The cost of this entire solution is only $0.77 per month." has-border="true">}}
+{{<img src="gcs-bill.png" alt="Bill for $0.77 from Google Cloud Platform" caption="The cost of this entire solution is only $0.77 per month.">}}
 
 ## Tips for anyone about to try this
 
@@ -205,6 +205,6 @@ If you want the nitty-gritty of how I did this, I created a [tutorial](/digitizi
 
 ---
 
-_Illustrations by [Loraine Yow](https://www.lolo-ology.com/)._
+_Illustrations by Loraine Yow._
 
 _Special thanks to my family for allowing me to share a selection of these clips and stills, for recording everything in the first place, and for being so supportive throughout this process._

@@ -34,15 +34,15 @@ This tutorial uses free, open-source tools, and you can run them without registe
 
 The tool that makes this testing possible is [Cypress](https://cypress.io/), a recent entrant to the field of browser automation. It's an [open-source](https://github.com/cypress-io/cypress) end-to-end testing framework with a [full-time team](https://www.cypress.io/about/#our-team) actively developing it. Their business model is similar to [Docker's](https://www.docker.com/) in that both companies publish free-open source tools and fund development by selling managed services for those tools.
 
-{{<img src="cypress-logo-dark.png" alt="Cypress logo" caption="[Cypress](https://cypress.io) is an open-source tool for automated web app testing." max-width="403px" href="https://cypress.io">}}
+{{<img src="cypress-logo-dark.png" alt="Cypress logo" caption="[Cypress](https://cypress.io) is an open-source tool for automated web app testing." max-width="403px" href="https://cypress.io" has-border="false">}}
 
 I first discovered Cypress last year after seeing [Gleb Bahmutov](https://glebbahmutov.com/) demonstrate it at a regional software conference. When he mentioned that Cypress had no dependencies on [Selenium](https://www.seleniumhq.org/), I was intrigued. All my previous experience with end-to-end testing was awful, and Selenium was always at the root of my pain.
 
-{{<img src="selenium-logo.png" alt="Selenium logo" caption="Selenium is the oldest and most prevalent browser automation tool, but it's clunky and outdated." max-width="200px" href="https://www.seleniumhq.org">}}
+{{<img src="selenium-logo.png" alt="Selenium logo" caption="Selenium is the oldest and most prevalent browser automation tool, but it's clunky and outdated." max-width="200px" href="https://www.seleniumhq.org" has-border="false">}}
 
 Selenium is, by far, the most popular browser automation framework, but it also has all of the problems you'd expect of a Java-based tool designed 15 years ago. It's a pain to install, its syntax is awkward, and it offers scant insights when your tests fail. In Gleb's slick demos of Cypress, it promised to address all of these headaches.
 
-{{<img src="cypress-screenshot.png" alt="Cypress logo" caption="One slick feature of Cypress is that it records the browser at every step of your test to help you diagnose failures." max-width="650px">}}
+{{<img src="cypress-screenshot.png" alt="Cypress logo" caption="One slick feature of Cypress is that it records the browser at every step of your test to help you diagnose failures." max-width="650px" has-border="false">}}
 
 I eagerly read [the Cypress docs](https://docs.cypress.io/guides/getting-started/installing-cypress.html) but was disappointed to learn that virtually all of Cypress' documentation assumed that the user had a [Node.js](https://nodejs.org/en/) stack and developed in a graphical environment rather than a headless console.
 
@@ -52,7 +52,7 @@ Still, Cypress seemed to have a promising future. A year later, I checked in on 
 
 Combining Cypress with Docker Compose yields a test pattern that's flexible enough to apply to almost any web app. Unlike other testing tools that make assumptions about your app's implementation, this solution wholly decouples your test framework from the app you're testing.
 
-{{<img src="architecture-diagram.jpg" alt="Diagram of Docker container architecture" caption="How Docker Compose, Cypress, and the web app fit together" max-width="800px">}}
+{{<img src="architecture-diagram.jpg" alt="Diagram of Docker container architecture" caption="How Docker Compose, Cypress, and the web app fit together" max-width="800px" has-border="false">}}
 
 Docker Compose allows you to run Cypress in one container and your app in another. Your app doesn't need to know anything about Cypress, and the only thing Cypress needs to know about your app is the network port to send HTTP requests.
 
@@ -63,15 +63,15 @@ As an example web app to test, I present Sentimentalyzer: the world's dumbest te
 If you enter the text `It's a nice day today`, Sentimentalyzer deduces that you're happy:
 
 {{<gallery caption="Sentimentalyzer analyzing happy text">}}
-{{<img src="sentimentalyzer-analyze-content.png" alt="Entering text in Sentimentalyzer">}}
-{{<img src="sentimentalyzer-results-content.png" alt="Sentimentalyzer produces results">}}
+{{<img src="sentimentalyzer-analyze-content.png" alt="Entering text in Sentimentalyzer" has-border="false">}}
+{{<img src="sentimentalyzer-results-content.png" alt="Sentimentalyzer produces results" has-border="false">}}
 {{</gallery>}}
 
 If you enter the text `Who ate ALL MY WAFFLES?`, Sentimentalyzer assumes that you're angry:
 
 {{<gallery caption="Sentimentalyzer analyzing angry text">}}
-{{<img src="sentimentalyzer-analyze-angry.png" alt="Entering text in Sentimentalyzer">}}
-{{<img src="sentimentalyzer-results-angry.png" alt="Sentimentalyzer produces results">}}
+{{<img src="sentimentalyzer-analyze-angry.png" alt="Entering text in Sentimentalyzer" has-border="false">}}
+{{<img src="sentimentalyzer-results-angry.png" alt="Sentimentalyzer produces results" has-border="false">}}
 {{</gallery>}}
 
 The algorithm is simple: if more than 50% of the characters are uppercase, the user is yelling, so they must be mad. Otherwise, Sentimentalyzer assumes the user feels okay.
@@ -94,7 +94,7 @@ All of the production logic is in the root folder, while all the end-to-end test
 
 ## Run Sentimentalyzer locally
 
-I'm deliberately not showing the app's source code here to emphasize the fact that you can write Cypress tests without ever seeing the implementation of the app itself. Sentimentalyzer happens to be a Go app, but the tests would be the same had I implemented it in Python or Angular. If you're curious, the source code is [on Github](https://github.com/mtlynch/hello-world-cypress).
+I'm deliberately not showing the app's source code here to emphasize the fact that you can write Cypress tests without ever seeing the implementation of the app itself. Sentimentalyzer happens to be a Go app, but the tests would be the same had I implemented it in Python or Angular. If you're curious, the source code is [on GitHub](https://github.com/mtlynch/hello-world-cypress).
 
 To play with Sentimentalyzer on your machine, run the following commands:
 
@@ -198,7 +198,7 @@ cy.get("#feelings").type("I REALLY need some COFFEE");
 
 Next, I tell Cypress to find the text field. This is easy because the text field has a unique ID, `feelings`, so I specify the element using CSS selector syntax: `#feelings`.
 
-{{<img src="feelings-element.png" alt="Finding HTML id of feelings element" max-width="710px">}}
+{{<img src="feelings-element.png" alt="Finding HTML id of feelings element" max-width="710px" has-border="false">}}
 
 The [`type()` function](https://docs.cypress.io/api/commands/type.html), tells Cypress to type some text into the field I specified.
 
@@ -210,7 +210,7 @@ cy.get("form").submit();
 
 Submitting the form should bring Cypress to Sentimentalyzer's results page. Cypress needs to check for the text `"You are feeling: Angry"` but it's a bit trickier since the `<p>` tag that contains it lacks an ID attribute:
 
-{{<img src="results-element.png" alt="Finding CSS selector for result <p> tag" max-width="704px">}}
+{{<img src="results-element.png" alt="Finding CSS selector for result <p> tag" max-width="704px" has-border="false">}}
 
 I again use CSS selector syntax to locate the relevant text by specifying a `<p>` element under a DOM node whose class is `"results"`:
 
@@ -245,7 +245,7 @@ Cypress creates a video recording of every test run. This is my favorite feature
 
 Above, I showed you a test that passed. What happens when a Cypress test fails? It still generates a video of the test run, but it also outputs a screenshot showing the assertion that failed:
 
-{{<img src="detects angry sentiment (failed).png" alt="Cypress screenshot output on failure" caption="Screenshot that Cypress generated when my test failed (Cypress expected the word \"Furious\" but instead found \"Angry\")" max-width="800px" has-border="true">}}
+{{<img src="detects angry sentiment (failed).png" alt="Cypress screenshot output on failure" caption="Screenshot that Cypress generated when my test failed (Cypress expected the word \"Furious\" but instead found \"Angry\")" max-width="800px">}}
 
 This solves a major pain point I experienced with other tools. Selenium supports screenshots but only before or after an assertion. That limitation led to frustrating scenarios where Selenium claimed the test failed, but the screenshot showed correct behavior because the browser state changed after the test failed.
 
@@ -261,7 +261,7 @@ Those three files are all you need to start end-to-end testing your web app. Her
 
 ## Source code and additional examples
 
-The full source for this demo is available on Github:
+The full source for this demo is available on GitHub:
 
 - [mtlynch/hello-world-cypress](https://github.com/mtlynch/hello-world-cypress)
 
@@ -283,4 +283,4 @@ This guide provided a basic introduction to Cypress. For more advanced functiona
 
 ---
 
-_Illustrations by [Loraine Yow](https://www.lolo-ology.com/). Thanks to [Gleb Bahmutov](https://glebbahmutov.com/) from the Cypress team for providing early feedback on this article._
+_Illustrations by Loraine Yow. Thanks to [Gleb Bahmutov](https://glebbahmutov.com/) from the Cypress team for providing early feedback on this article._

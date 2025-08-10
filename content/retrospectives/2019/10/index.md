@@ -12,7 +12,7 @@ date: "2019-10-05"
 - I'm preparing to sell premium meal plans on Is It Keto.
 - I'm ready to make bigger bets on my businesses.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I [declare what I'd like to accomplish](/retrospectives/2019/09/#goals-for-next-month). Here's how I did against those goals:
 
@@ -44,7 +44,7 @@ One thing I'm struggling with is finding an audience for my less technical posts
 - **Result**: What Got Done is now [open-source](https://github.com/mtlynch/whatgotdone).
 - **Grade**: A
 
-I published What Got Done's source on Github and released it under the [Apache 2 license](https://choosealicense.com/licenses/apache-2.0/). The project has already received contributions from [three external developers](https://github.com/mtlynch/whatgotdone/graphs/contributors), and it's entirely because I added the label `hacktoberfest` [to a few bugs](https://github.com/mtlynch/whatgotdone/issues?q=is%3Aissue+label%3AHacktoberfest). It's a program that Digital Ocean is [running in October](https://hacktoberfest.digitalocean.com) to encourage contributions to open source projects.
+I published What Got Done's source on GitHub and released it under the [Apache 2 license](https://choosealicense.com/licenses/apache-2.0/). The project has already received contributions from [three external developers](https://github.com/mtlynch/whatgotdone/graphs/contributors), and it's entirely because I added the label `hacktoberfest` [to a few bugs](https://github.com/mtlynch/whatgotdone/issues?q=is%3Aissue+label%3AHacktoberfest). It's a program that Digital Ocean is [running in October](https://hacktoberfest.digitalocean.com) to encourage contributions to open source projects.
 
 ## Stats
 
@@ -74,7 +74,7 @@ Everything stayed relatively flat except for AdSense earnings. I'm not sure if t
 | -------------- | ----------- | -------------- | ---------------------------------------- |
 | Total Earnings | $728.49     | $4.51          | <font color="red">-$723.98 (-99%)</font> |
 
-No surprises here. I knew my spike in revenue [last month](/retrospectives/2019/09/#zestfulhttpszestfuldatacom) was an anomaly, and now it's settled back into the normal territory of $3-$40 per month.
+No surprises here. I knew my spike in revenue [last month](/retrospectives/2019/09/#zestful) was an anomaly, and now it's settled back into the normal territory of $3-$40 per month.
 
 ## Creating premium meal plans for Is It Keto
 
@@ -83,8 +83,8 @@ In September, I tested an affiliate partnership with a company that claimed to o
 I tried testing the service myself, and I quickly realized why nobody wanted to use it: it was terrible.
 
 {{<gallery caption="My former affiliate partner expects users to buy 102 different grocery store items and spend 12 hours per day cooking.">}}
-{{<img src="meal-planner.jpg" alt="Meal planner screenshot">}}
-{{<img src="grocery-list.jpg" alt="Grocery list screenshot">}}
+{{<img src="meal-planner.jpg" alt="Meal planner screenshot" has-border="false">}}
+{{<img src="grocery-list.jpg" alt="Grocery list screenshot" has-border="false">}}
 {{</gallery>}}
 
 Their service didn't create meal "plans." It randomly threw together a bunch of breakfast, lunch, and dinner meals. To cook all the meals would take you hours. Ridiculously, the plan called for the user to purchase **102 different items** from the grocery store. This is to feed a single person for a single week. The items include things like 1/8th of a cucumber and 1/2 of a jicama, which is clearly impractical.
@@ -93,7 +93,7 @@ I took down the referral link and thought of a better solution: sell my own meal
 
 I put up a crude landing page with a "Buy" button. The button currently just brings you to a message saying that the meal plans are coming, but the page has had 254 unique visitors and 10 unique clicks on the Buy button, which implies a conversion rate of ~4%. That's an optimistic estimate because some of those users probably would not have completed the checkout process, but it's promising nonetheless that such a basic page would convince anyone to click at all.
 
-{{<img src="buy-button.jpg" alt="Screenshot of Buy button on sales page" caption="Testing sales for Is It Keto's meal plans" max-width="823px" has-border="true">}}
+{{<img src="buy-button.jpg" alt="Screenshot of Buy button on sales page" caption="Testing sales for Is It Keto's meal plans" max-width="823px">}}
 
 I'm excited to start selling these plans. It feels much better to sell a product where you're in direct contact with the creator as opposed to just throwing users to a faceless affiliate partner and hoping for the best. The meal plans will focus on optimizing for our readers' time and budget, so instead of a grocery list of 102 items, it will be more like 20. And the recipes make multiple servings that you can refrigerate and eat later instead of expecting the reader to cook entire meals from scratch 21 times per week.
 

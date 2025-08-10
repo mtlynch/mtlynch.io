@@ -33,7 +33,7 @@ The tradeoff for Vue's responsiveness is that you have less control over your pa
 </html>
 ```
 
-Because it's a _single page_ app, that HTML stub is the same for every page on your site. In other words, if the user visits `yoursite.com/about` or `yoursite.com/contact`, the server sends them the same HTML stub for both pages. JavaScript is responsible for for figuring out the path and drawing the appropriate page after it executes in the user's browser.
+Because it's a _single page_ app, that HTML stub is the same for every page on your site. In other words, if the user visits `yoursite.com/about` or `yoursite.com/contact`, the server sends them the same HTML stub for both pages. JavaScript is responsible for figuring out the path and drawing the appropriate page after it executes in the user's browser.
 
 Dynamic page rendering is a neat innovation that makes site navigation faster, but it creates problems when you connect your site to social networks or search engines.
 
@@ -41,7 +41,7 @@ Dynamic page rendering is a neat innovation that makes site navigation faster, b
 
 When I share my blog posts on Twitter, they look like this:
 
-{{<img src="twitter-card.jpg" alt="Example of a rich Twitter card" caption="Using Open Graph tags so that Twitter generates rich cards for my posts." max-width="590px" has-border="true">}}
+{{<img src="twitter-card.jpg" alt="Example of a rich Twitter card" caption="Using Open Graph tags so that Twitter generates rich cards for my posts." max-width="590px">}}
 
 Twitter generates that card based on HTML tags in my page that follow the [Open Graph](https://ogp.me/) standard. For example, to specify the image in the card, I add a tag that looks like this:
 
@@ -61,7 +61,7 @@ Many websites use JavaScript to continuously update a page's contents while the 
 
 On the modern web, social networks and SEO are fairly important, so it would be a huge bummer if using Vue meant that your app couldn't fully integrate with those services.
 
-{{<img src="NuxtJS_Logo.png" alt="Nuxt.js logo" max-width="250px" href="https://nuxtjs.org/">}}
+{{<img src="NuxtJS_Logo.png" alt="Nuxt.js logo" max-width="250px" href="https://nuxtjs.org/" has-border="false">}}
 
 [Nuxt](https://nuxtjs.org/) is the framework that addresses this issue. It adds a layer on top of Vue to move some of the browser's work back to the server. Instead of sending down a bare HTML stub and waiting for client-side JavaScript to render everything, Nuxt pre-processes the page server-side to generate more fully-rendered HTML.
 
@@ -99,7 +99,7 @@ Pre-rendering is not right for every situation. You'll need to decide what your 
 
 To demonstrate pre-rendering, I'll show you a basic, pre-rendered "Hello, world!" app in just three files.
 
-The only pre-requisite is [Node.js](https://nodejs.org/en/download/). I used [Node v12.13.1](https://nodejs.org/dist/v12.13.1/), which is the latest stable release at the time of this writing.
+The only pre-requisite is [Node.js](https://nodejs.org). I used [Node v12.13.1](https://nodejs.org/dist/v12.13.1/), which is the latest stable release at the time of this writing.
 
 ### `pages/index.vue`
 
@@ -279,7 +279,7 @@ Here's a [live version](https://hello-world-vue-pre-rendered.web.app) of the Abo
 
 The About page demonstrates how Nuxt and Vue work together to create a pre-rendered page. You should see two versions of the page depending on how you navigate the site.
 
-{{<img src="about-versions.jpg" alt="Screenshot of different versions of About page" caption="The About page displays different information depending on how you arrived to the page." max-width="850px" has-border="true">}}
+{{<img src="about-versions.jpg" alt="Screenshot of different versions of About page" caption="The About page displays different information depending on how you arrived to the page." max-width="850px">}}
 
 If you start on the [`/about` page](https://hello-world-vue-pre-rendered.web.app/about), you should see the version on the left. If you start on the [root page](https://hello-world-vue-pre-rendered.web.app), then click the "about page" link, you should see the version on the right.
 
@@ -335,7 +335,7 @@ npm run dev
 
 You'll notice that when you navigate to [https://localhost:3600/about](https://localhost:3600/about), the build time and the load time roughly match one another. That's because when you run `npm run dev`, Nuxt uses server-side rendering to create the page just in time.
 
-{{<img src="about-ssr.jpg" alt="Screenshot of About page rendered with server-side rendering" caption="`npm run dev` renders pages as the user requests them, so build times and load times match." max-width="650px" has-border="true">}}
+{{<img src="about-ssr.jpg" alt="Screenshot of About page rendered with server-side rendering" caption="`npm run dev` renders pages as the user requests them, so build times and load times match." max-width="650px">}}
 
 Unlike pre-rendering, which generates the page once and keeps serving that same page, server-side rendering generates a fresh version of the page each time the user visits.
 
@@ -352,7 +352,7 @@ Below are instructions for publishing static files with a few popular providers:
 
 ## Source code
 
-All code for this example is available on Github under the [MIT license](https://choosealicense.com/licenses/mit/):
+All code for this example is available on GitHub under the [MIT license](https://choosealicense.com/licenses/mit/):
 
 - [hello-world-vue-pre-rendered](https://github.com/mtlynch/hello-world-vue-pre-rendered)
 

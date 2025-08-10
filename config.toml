@@ -3,7 +3,6 @@ title = "mtlynch.io"
 languagecode = "en"
 defaultcontentlanguage = "en"
 
-paginate = 15
 timeout = 300000
 
 # We don't want to canonify URLs because it prevents us from
@@ -27,15 +26,15 @@ buildFuture = true
     unsafe= true
 
 [permalinks]
-    posts = "/:filename/"
-
-[social]
-twitter = "deliberatecoder"
+    posts = "/:contentbasename/"
 
 [params]
+    dateFormat = "January 2, 2006"
     author = "Michael Lynch"
     info = "By day, a simple software engineer. By night, also a software engineer."
     description = "Updates about my life and what I learn about creating software"
+    twitter = "deliberatecoder"
+    currentproject = "Educational Products"
     keywords = "blog,developer,personal"
     avatarurl = "images/avatar.jpg"
 
@@ -45,9 +44,17 @@ twitter = "deliberatecoder"
     hidecredits = false
     hidecopyright = false
 
-    rtl = false
+     popularPosts = [
+      "i-sold-tinypilot",
+      "why-i-quit-google",
+      "tinypilot-redesign",
+      "code-review-love",
+      "human-code-reviews-1",
+      "tinypilot",
+      "stole-siacoins"
+    ]
 
-    custom_css = ["css/main.css"]
+    rtl = false
 
     photoWidths = [300, 600, 800, 1200]
 
@@ -58,15 +65,26 @@ twitter = "deliberatecoder"
 quality = 90
 resampleFilter = "Lanczos"
 
+[privacy]
+  [privacy.x]
+    disable = false
+    enableDNT = true
+    simple = false
+
 # Social links
 [[params.social]]
-    name = "Github"
-    icon = "fab fa-github fa-2x"
+    name = "GitHub"
+    icon = "fa-brands fa-github fa-2x"
     weight = 1
     url = "https://github.com/mtlynch/"
 [[params.social]]
+    name = "Bluesky"
+    icon = "fa-brands fa-bluesky fa-2x"
+    weight = 2
+    url = "https://bsky.app/profile/mtlynch.io"
+[[params.social]]
     name = "Twitter"
-    icon = "fab fa-twitter fa-2x"
+    icon = "fa-brands fa-twitter fa-2x"
     weight = 3
     url = "https://twitter.com/deliberatecoder/"
 
@@ -88,6 +106,10 @@ resampleFilter = "Lanczos"
     weight = 4
     url = "/book-reports/"
 [[menu.main]]
-    name = "About"
+    name = "Notes"
     weight = 5
+    url = "/notes/"
+[[menu.main]]
+    name = "About"
+    weight = 6
     url = "/about/"

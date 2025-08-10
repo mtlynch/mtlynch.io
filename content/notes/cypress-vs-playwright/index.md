@@ -1,13 +1,13 @@
 ---
 title: "On Migrating from Cypress to Playwright"
-date: 2022-10-25T00:00:00-04:00
+date: 2022-10-25
 discuss_urls:
   reddit: https://www.reddit.com/r/javascript/comments/yd3dr8/on_migrating_from_cypress_to_playwright/
 ---
 
 [Cypress](https://cypress.io) is an open-source tool for testing web applications end-to-end. I first saw Gleb Bahmutov [demo Cypress at a 2018 web dev meetup](https://youtu.be/wApmbgPGmqQ) in New York, and I was blown away.
 
-{{<img src="gleb-demo.jpg" caption="I've been using Cypress since I saw it [demoed at a dev meetup](https://youtu.be/wApmbgPGmqQ) in 2018." alt="Screenshot of Cypress live demo" max-width="600px">}}
+{{<img src="gleb-demo.jpg" caption="I've been using Cypress since I saw it [demoed at a dev meetup](https://youtu.be/wApmbgPGmqQ) in 2018." alt="Screenshot of Cypress live demo" max-width="600px" has-border="false">}}
 
 Before discovering Cypress, I had begrudgingly used [Selenium](https://www.selenium.dev/). Cypress was a refreshing leap forward, as it offered elegant solutions to tons of pain points that made Selenium impractical to use.
 
@@ -89,7 +89,7 @@ expect(page.locator("#error-message")).toBeVisible();
 
 One of Cypress' most touted features is their desktop GUI app:
 
-{{<img src="cypress-gui.png" alt="Screenshot of Cypress Desktop app" caption="Cypress uses a desktop app to show test execution">}}
+{{<img src="cypress-gui.png" alt="Screenshot of Cypress Desktop app" caption="Cypress uses a desktop app to show test execution" has-border="false">}}
 
 The Cypress desktop app lets you "time travel" through your tests, so you can see what the browser window looked like at each point in your test.
 
@@ -182,7 +182,7 @@ Here's an example `<p>` element from PicoShare:
 ```html
 <p data-test-id="github-instructions">
   Visit our
-  <a href="https://github.com/mtlynch/picoshare">Github repo</a> to create your
+  <a href="https://github.com/mtlynch/picoshare">GitHub repo</a> to create your
   own PicoShare server.
 </p>
 ```
@@ -194,7 +194,7 @@ Here's the naïve approach to asserting the text value in Cypress:
 ```javascript
 cy.get("[data-test-id='github-instructions']").should(
   "have.text",
-  "Visit our Github repo to create your own PicoShare server."
+  "Visit our GitHub repo to create your own PicoShare server.",
 );
 ```
 
@@ -204,8 +204,8 @@ Unfortunately, this test will fail:
 Timed out retrying after 10000ms
 + expected - actual
 
--'\n      Visit our\n      Github repo to create\n      your own PicoShare server.\n    '
-+'Visit our Github repo to create your own PicoShare server.'
+-'\n      Visit our\n      GitHub repo to create\n      your own PicoShare server.\n    '
++'Visit our GitHub repo to create your own PicoShare server.'
 ```
 
 Cypress is grabbing the [textContent](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent) property, which includes all the whitespace around the text as it appears in the raw HTML instead of how the text appears in the browser.
@@ -215,7 +215,7 @@ You can work around this by grabbing the element's `innerText`, but the syntax i
 ```javascript
 cy.get("[data-test-id='github-instructions']").should(($el) => {
   expect($el.get(0).innerText).to.eq(
-    "Visit our Github repo to create your own PicoShare server."
+    "Visit our GitHub repo to create your own PicoShare server.",
   );
 });
 ```
@@ -226,7 +226,7 @@ In Playwright, the naïve assertion yields the correct behavior:
 
 ```javascript
 await expect(page.locator("data-test-id=github-instructions")).toHaveText(
-  "Visit our Github repo to create your own PicoShare server."
+  "Visit our GitHub repo to create your own PicoShare server.",
 );
 ```
 
@@ -236,8 +236,8 @@ You can force Playwright to look at `innerText` instead with a much simpler synt
 
 ```javascript
 await expect(page.locator("data-test-id=github-instructions")).toHaveText(
-  "Visit our Github repo to create your own PicoShare server.",
-  { useInnerText: true }
+  "Visit our GitHub repo to create your own PicoShare server.",
+  { useInnerText: true },
 );
 ```
 
@@ -269,13 +269,13 @@ Playwright pierces the shadow DOM by default, resulting in concise CSS selectors
 
 ```javascript
 await expect(
-  page.locator("#upload-result upload-links #verbose-link-box #link")
+  page.locator("#upload-result upload-links #verbose-link-box #link"),
 ).toBeVisible();
 ```
 
 {{<notice type="info">}}
 
-**Update (2022-10-26)**: reddit user /u/Daffodils2 [points out](https://www.reddit.com/r/javascript/comments/yd3dr8/on_migrating_from_cypress_to_playwright/ittrxnx/) that Cypress offers [an `includeShadowDom` option](https://docs.cypress.io/api/commands/shadow#See-also) that makes makes it behave like Playwright in selecting elements through the shadow DOM.
+**Update (2022-10-26)**: reddit user /u/Daffodils2 [points out](https://www.reddit.com/r/javascript/comments/yd3dr8/on_migrating_from_cypress_to_playwright/ittrxnx/) that Cypress offers [an `includeShadowDom` option](https://docs.cypress.io/api/commands/shadow#See-also) that makes it behave like Playwright in selecting elements through the shadow DOM.
 
 {{</notice>}}
 
@@ -337,7 +337,7 @@ In contrast, Playwright has just [603 open bugs](https://github.com/microsoft/pl
 
 Playwright offers [an official VS Code plugin](https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright), which gives you context-aware auto-complete. It's something I never realized I'd been missing from Cypress until I saw it in Playwright:
 
-{{<img src="playwright-auto-complete.png" max-width="800px" alt="Autocomplete options in VS Code for Playwright APIs" caption="Playwright's VS Code plugin offers context-aware auto-complete.">}}
+{{<img src="playwright-auto-complete.png" max-width="800px" alt="Autocomplete options in VS Code for Playwright APIs" caption="Playwright's VS Code plugin offers context-aware auto-complete." has-border="false">}}
 
 In Cypress, there are a small number of functions, and you exercise different functionality by passing special string values. It's hard for IDEs to help with those semantics, but Playwright's list of explicit TypeScript functions make it easier for the IDE to help you out. There are third-party VS Code plugins for Cypress but nothing the Cypress team officially supports.
 
@@ -365,7 +365,7 @@ In Playwright, the ordering is a little muddled. Before I start locating the ele
 
 ```javascript
 await expect(
-  page.locator(".navbar-item [data-test-id='log-in']")
+  page.locator(".navbar-item [data-test-id='log-in']"),
 ).toBeVisible();
 ```
 
@@ -393,7 +393,7 @@ If this were a movie, Cypress would be the scrappy underdog you can't help but r
 
 When a Cypress test fails, it screenshots your app at the point of failure and saves the image to disk. It's easy to configure your CI platform to keep these images as test artifacts for easy debugging. Similarly, Cypress lets you save videos of each of your tests that you can also publish as CI test artifacts.
 
-{{<img src="circleci-resources.png" max-width="600px" alt="Screenshot of Cypress video files in CircleCI dashboard's artifacts tab" has-border="true" caption="Cypress produces test artifacts that are easy to view as CI artifacts">}}
+{{<img src="circleci-resources.png" max-width="600px" alt="Screenshot of Cypress video files in CircleCI dashboard's artifacts tab" caption="Cypress produces test artifacts that are easy to view as CI artifacts">}}
 
 Playwright produces a more complicated set of test artifacts. Instead of simple images and videos, Playwright generates a static web app for viewing all the test artifacts.
 

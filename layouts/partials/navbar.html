@@ -1,0 +1,26 @@
+<nav class="navigation">
+  <section class="container">
+    <div class="navigation-author">
+      <a class="navigation-avatar" href="{{ .Site.BaseURL }}">
+        {{ with .Site.Params.avatarurl }}
+          <img src="{{ . | relURL }}" alt="Author photo" />
+        {{ end }}
+      </a>
+      <a class="name" href="{{ .Site.BaseURL }}">Michael Lynch</a>
+    </div>
+
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"
+      ><i class="fa-solid fa-bars"></i
+    ></label>
+    <ul class="navigation-list">
+      {{ with .Site.Menus.main }}
+        {{ range sort . }}
+          <li class="navigation-item">
+            <a class="navigation-link" href="{{ .URL }}">{{ .Name }}</a>
+          </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  </section>
+</nav>

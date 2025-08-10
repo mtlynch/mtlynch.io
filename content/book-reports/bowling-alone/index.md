@@ -1,6 +1,6 @@
 ---
 title: "Bowling Alone by Robert D. Putnam"
-date: 2020-11-14T17:55:30-05:00
+date: 2020-11-14
 rating: 3
 purchase_url: https://www.indiebound.org/book/9780743203043
 ---
@@ -17,13 +17,13 @@ I find [the idea of social capital](/book-reports/bowling-alone/#social-capital)
 
 ---
 
-## What I Liked
+## What I liked
 
 - The history of social and political group membership in the US was interesting.
-- The [correlations](#social-capital-indexhttpswwwoecdorginnovationresearch1825848pdf) between measures of civic engagement and other measures of social well-being were surprising and enlightening.
+- The [correlations](#social-capital-index) between measures of civic engagement and other measures of social well-being were surprising and enlightening.
 - The middle third of the book was engaging, especially the discussion of how television has affected social capital.
 
-## What I Disliked
+## What I disliked
 
 - It's extremely dry.
   - It buries the reader in graphs and statistics to an extent far beyond what was necessary to make the point.
@@ -32,7 +32,7 @@ I find [the idea of social capital](/book-reports/bowling-alone/#social-capital)
 - Putnam's proposed remediations felt vague.
   - There's a whole section of the book about ways to fix the issues he raises, but it frames the answers as, "what should we do as a society?" as opposed to concrete steps that an individual can take.
 
-## Key Takeaways
+## Key takeaways
 
 ### Social capital
 
@@ -150,7 +150,7 @@ I find [the idea of social capital](/book-reports/bowling-alone/#social-capital)
 - Putnam's index correlates closely with many measures of a healthy society.
   - Unexpected bit of trivia: South Dakota scores well on almost all of these metrics.
 
-{{<img src="murder-rate.png" has-border="true" alt="Scatter chart showing negative correlation between murder rate and social capital">}}
-{{<img src="equality.png" has-border="true" alt="Scatter chart showing positive correlation between tolerance for gender and racial equality and social capital">}}
-{{<img src="public-health.png" has-border="true" alt="Scatter chart showing positive correlation between public health outcomes and social capital">}}
-{{<img src="child-welfare.png" has-border="true" alt="Scatter chart showing positive correlation between child welfare and social capital">}}
+{{<img src="murder-rate.png" alt="Scatter chart showing negative correlation between murder rate and social capital">}}
+{{<img src="equality.png" alt="Scatter chart showing positive correlation between tolerance for gender and racial equality and social capital">}}
+{{<img src="public-health.png" alt="Scatter chart showing positive correlation between public health outcomes and social capital">}}
+{{<img src="child-welfare.png" alt="Scatter chart showing positive correlation between child welfare and social capital">}}

@@ -1,6 +1,10 @@
 version: 2.1
+executors:
+  node:
+    docker:
+      - image: cimg/node:24.4.1
 jobs:
-  check-whitespace:
+  check_whitespace:
     docker:
       - image: cimg/base:2020.01
     resource_class: small
@@ -13,8 +17,7 @@ jobs:
           name: Check for trailing newlines
           command: ./dev-scripts/check-trailing-newline
   check_html_format:
-    docker:
-      - image: cimg/node:18.14.1
+    executor: node
     steps:
       - checkout
       - run:
@@ -23,17 +26,70 @@ jobs:
       - run:
           name: Check formatting
           command: ./dev-scripts/check-formatting
-  lint-markdown:
+  lint_markdown:
     docker:
-      - image: davidanson/markdownlint-cli2:v0.9.0
+      - image: davidanson/markdownlint-cli2:v0.17.2
     steps:
       - checkout
       - run:
           name: Lint Markdown
           command: ./dev-scripts/lint-markdown
+  check_duplicate_words:
+    docker:
+      - image: nixos/nix:2.26.1
+    steps:
+      - checkout
+      - run:
+          name: Install wordword
+          command: |
+            nix \
+              --extra-experimental-features 'nix-command flakes' \
+              profile \
+              install git+https://codeberg.org/mtlynch/wordword
+      - run:
+          name: Verify wordword installation
+          command: wordword --version
+      - run:
+          name: Check for duplicate words
+          command: wordword --verbose ./content
+  check_exif_data:
+    docker:
+      - image: davidanson/exiftool:v13.10
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: apk add bash git
+      - run:
+          name: Check EXIF data
+          command: |
+            export PATH="/extract/Image-ExifTool-13.10:${PATH}"
+
+            if [[ "${CIRCLE_BRANCH}" == "master" ]]; then
+              echo "On "${CIRCLE_BRANCH}" branch, checking all content files..."
+              ./dev-scripts/check-exif-data ./content/
+            else
+              echo "On branch ${CIRCLE_BRANCH}, checking only changed files..."
+
+              # Get changed files in content directory
+              changed_files=$(git diff --name-only origin/master...HEAD | grep '^content/' || true)
+
+              if [ -n "${changed_files}" ]; then
+                echo "Changed files in content directory:"
+                echo "${changed_files}"
+                echo ""
+
+                # Convert newline-separated list to space-separated arguments
+                # shellcheck disable=SC2086
+                ./dev-scripts/check-exif-data ${changed_files}
+              else
+                echo "No content files changed compared to master"
+                echo "✅ SUCCESS: No content files to check"
+              fi
+            fi
   build:
     docker:
-      - image: peaceiris/hugo:v0.119.0
+      - image: hugomods/hugo:0.147.5
     steps:
       - checkout
       - attach_workspace:
@@ -42,8 +98,13 @@ jobs:
           keys:
             - resources-gen-v{{ .Environment.RESOURCES_CACHE_VERSION }}
       - run:
-          name: Build prod site
-          command: hugo version && hugo --minify
+          name: Build site
+          command: |
+            hugo version
+            if [[ "$CIRCLE_BRANCH" != "master" ]]; then
+              export HUGO_ENV=dev
+            fi
+            hugo --minify
       - persist_to_workspace:
           root: ./
           paths:
@@ -54,7 +115,7 @@ jobs:
           key: resources-gen-v{{ .Environment.RESOURCES_CACHE_VERSION }}
           paths:
             - resources
-  lint-html:
+  lint_html:
     docker:
       - image: mtlynch/htmlproofer:5.0.6
     steps:
@@ -63,7 +124,19 @@ jobs:
       - run:
           name: Check HTML and external links
           command: ./dev-scripts/lint-html
-  check-seo-metadata:
+  lint_xml:
+    docker:
+      - image: alpine:3.21.2
+    steps:
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Install bash and xmllint
+          command: apk add bash libxml2-utils
+      - run:
+          name: Lint XML
+          command: ./dev-scripts/lint-xml
+  check_seo_metadata:
     docker:
       - image: cimg/base:2020.01
     resource_class: small
@@ -74,8 +147,7 @@ jobs:
           name: Check that SEO meta tags rendered properly
           command: ./dev-scripts/check-seo-metadata
   publish_draft:
-    docker:
-      - image: cimg/node:18.14.1
+    executor: node
     resource_class: small
     steps:
       - attach_workspace:
@@ -92,8 +164,7 @@ jobs:
           name: Deploy a live draft
           command: ./node_modules/.bin/netlify deploy --dir=public --site="${NETLIFY_SITE_ID}"
   deploy:
-    docker:
-      - image: cimg/node:18.14.1
+    executor: node
     resource_class: small
     steps:
       - attach_workspace:
@@ -106,16 +177,21 @@ jobs:
           command: ./node_modules/.bin/netlify deploy --dir=public --site="${NETLIFY_SITE_ID}" --prod
 workflows:
   version: 2
-  test-deploy:
+  test_deploy:
     jobs:
-      - check-whitespace
+      - check_whitespace
       - check_html_format
-      - lint-markdown
+      - lint_markdown
+      - check_duplicate_words
+      - check_exif_data
       - build
-      - lint-html:
+      - lint_html:
           requires:
             - build
-      - check-seo-metadata:
+      - lint_xml:
+          requires:
+            - build
+      - check_seo_metadata:
           requires:
             - build
       - publish_draft:
@@ -126,11 +202,7 @@ workflows:
               ignore: master
       - deploy:
           requires:
-            - check-whitespace
-            - check_html_format
-            - lint-markdown
             - build
-            - check-seo-metadata
           filters:
             branches:
               only: master

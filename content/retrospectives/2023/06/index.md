@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 35"
-date: 2023-06-13T00:00:00-04:00
+date: 2023-06-13
 description: How do I come up with $250k in cash?
 images:
   - /retrospectives/2023/06/og-cover.webp
@@ -21,7 +21,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - I evaluate how a contract manufacturer will change my finances.
 - Outsourcing to a 3PL vendor is less expensive than I expected.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -50,7 +50,7 @@ The problem with Amazon is that the only way to get them to show a "Buy" button 
 
 I reached out to three YouTubers. Two of them are interested and plan to feature TinyPilot in a video. The third doesn't do reviews but is open to giving TinyPilot a cameo if they can find a use for it.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -86,7 +86,7 @@ Where was I going to get $250k in cash?
 
 Shopify, Amazon, and Mercury are always bombarding me with offers for eCommerce loans, so I finally read some of the details. They'll loan you some multiple of your monthly revenue, charge an origination fee of 5-15%, and then take an ongoing 10-20% of your revenue until you pay off the loan.
 
-{{<img src="shopify-loan.webp" has-border="true" max-width="600px" caption="Shopify offered me a $100k loan for a $13k origination fee.">}}
+{{<img src="shopify-loan.webp" max-width="600px" caption="Shopify offered me a $100k loan for a $13k origination fee.">}}
 
 If I took a $100k loan from Shopify, it would cost me $13k, and I'd pay off the loan in about seven months. But that's longer than I'd need the loan. My monthly revenue is about $90k. If all of my materials and manufacturing bills were already paid, I'd only have about $25k/month in expenses, leaving $65k/month in cash profits. I'd only need the loan for a month or two, so $13k is a bit steep.
 
@@ -96,7 +96,7 @@ The situation reminded me of an event from my adolescence. Real estate developer
 
 I called Al, a friend from my old dance crew, to see if he'd participate in another breakdancing performance for TinyPilot. Irritatingly, he pointed out that neither of us know anything about breakdancing and that I seemed to be describing the plot of the 80s movie, [_Breakin' 2: Electric Boogaloo_](https://www.imdb.com/title/tt0086999/).
 
-{{<img src="breakin2.jpg" max-width="600px" alt="Movie poster for Breakin' 2: Electric Boogaloo" caption="Could I raise the money I needed by putting on a breakdancing show?">}}
+{{<img src="breakin2.jpg" max-width="600px" alt="Movie poster for Breakin' 2: Electric Boogaloo" caption="Could I raise the money I needed by putting on a breakdancing show?" has-border="false">}}
 
 So, that plan was out.
 
@@ -183,7 +183,7 @@ I wanted to encourage comedians to enter information about their own shows. If i
 
 I frequently see comedians do this thing on social media where they'll post an image with a list of their upcoming shows:
 
-{{<img src="comedy-dates.webp">}}
+{{<img src="comedy-dates.webp" has-border="false">}}
 
 From the looks of it, the comedians seem to be creating these images by hand using general-purpose image editing tools. As show details changed, the comedians would sometimes clunkily edit on top of their previous image, presumably because they didn't have a way of going back and editing the original.
 

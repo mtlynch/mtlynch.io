@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 39"
-date: 2023-10-17T00:00:00-04:00
+date: 2023-10-17
 description: Working around manufacturing delays
 images:
   - /retrospectives/2023/10/chipping-paint.webp
@@ -21,7 +21,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - I've decided to hang onto TinyPilot's office for two more months.
 - I'm planning my escape from a miserable seller experience on RapidAPI.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -46,7 +46,7 @@ I ended up deciding to [stay in the office](#slowing-down-the-transition-to-full
 
 Our assembly went according to plan, and now all of our new devices are at the warehouse. We're on track to sell off our refurbished devices in the next few weeks.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -72,8 +72,8 @@ Unfortunately, the first article sample didn't go so well.
 Paint was chipping on two out of the four samples, and the rubber feet had fallen off three of them. The cabling was disconnected on one of the devices, which prevented it from capturing audio. When I held the device sideways, the fan started scraping the case.
 
 {{<gallery caption="The first article samples had issues with paint chipping and rubber feet detaching in transit.">}}
-{{<img src="chipping-paint.webp" max-width="400px" alt="Photo of paint chipping on TinyPilot logo on case">}}
-{{<img src="no-feet.webp" max-width="250px" alt="Photo of case bottom with feet detached">}}
+{{<img src="chipping-paint.webp" max-width="400px" alt="Photo of paint chipping on TinyPilot logo on case" has-border="false">}}
+{{<img src="no-feet.webp" max-width="250px" alt="Photo of case bottom with feet detached" has-border="false">}}
 {{</gallery>}}
 
 The issues in the sample worried me.
@@ -233,7 +233,7 @@ Naturally, RapidAPI's billing system confuses customers. They make a bunch of re
 
 I got a particularly egregious case of this two months ago. I saw that a user was racking up thousands of dollars in charges, so I messaged them through the platform, letting them know, and offered a custom plan that would save them money. They ignored me, and their final bill was $14.5k. RapidAPI tried billing their credit card a month later, and the payment was declined.
 
-{{<img src="rapidapi-billing.png" max-width="800px" alt="Screenshot of RapidAPI showing failed payment of $14,512.23" caption="RapidAPI allowed a customer to rack up $14k in charges before trying to bill them weeks later." has-border="true">}}
+{{<img src="rapidapi-billing.png" max-width="800px" alt="Screenshot of RapidAPI showing failed payment of $14,512.23" caption="RapidAPI allowed a customer to rack up $14k in charges before trying to bill them weeks later.">}}
 
 RapidAPI does nothing to resolve this situation. They don't attempt to charge the customer again, and they don't even deactivate the customer's account. The user can just happily keep running up charges against my service and never pay.
 
@@ -247,7 +247,7 @@ I've tolerated RapidAPI this long because I've relegated Zestful to a weekend ho
 
 Now, I'm motivated enough by spite for RapidAPI that I've begun experimenting on Paddle and LemonSqueezy to see if I can free myself from RapidAPI. It's not _really_ worth the dev time to save $15/month, but I'd like to stop giving money to RapidAPI, and it's handy to become familiar with a SaaS payment gateway that I'll like.
 
-{{<img src="reasons.png" max-width="600px" caption="&ldquo;What are your reasons for switching SaaS payment gateways?&rdquo;" alt="Screenshot from The Simpsons Season 4 Episode 14 of list of reasosn to adobe a little brother, including spite, malice, revenge, and profit">}}
+{{<img src="reasons.png" max-width="600px" caption="&ldquo;What are your reasons for switching SaaS payment gateways?&rdquo;" alt="Screenshot from The Simpsons Season 4 Episode 14 of list of reasosn to adobe a little brother, including spite, malice, revenge, and profit" has-border="false">}}
 
 ## Wrap up
 

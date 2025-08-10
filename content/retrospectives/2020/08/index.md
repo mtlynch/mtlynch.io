@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 1"
-date: 2020-08-05T09:47:05-04:00
+date: 2020-08-05
 description: "I finally created a business that gained traction immediately."
 images:
   - /retrospectives/2020/08/hn-no-1.png
@@ -9,10 +9,10 @@ images:
 ## Highlights
 
 - This is my highest revenue month ever, at $9.8k across all of my projects.
-- [Tiny Pilot](https://tinypilotkvm.com/?ref=mtlynch.io) had the biggest first month of anything I've ever launched, at 52 sales and $8.7k in revenue.
+- [Tiny Pilot](https://tinypilotkvm.com/) had the biggest first month of anything I've ever launched, at 52 sales and $8.7k in revenue.
 - The sudden surge in customers also made it one of my highest-stress months since [going full-time to work for myself](/why-i-quit-google/).
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -55,13 +55,13 @@ For the past few years, I've had several minor hit blog posts, attracting 30k-20
 
 For most indie developers, reaching #1 on Hacker News would be a massive boon to their business. My problem has always been that my businesses cater to a different market than my blog audience. Nobody says, "I really like Michael's [opinions on code reviews](/human-code-reviews-1/). Now, I'm going to visit [his keto website](https://isitketo.org/) and purchase a lot of food through his affiliate links."
 
-I knew the [TinyPilot blog post](/tinypilot/) would be different before I published it. The audience for that article obviously had a strong overlap with likely customers of my [TinyPilot kits](https://tinypilotkvm.com/?ref=mtlynch.io). If I could attract interest in the blog post, sales would likely follow.
+I knew the [TinyPilot blog post](/tinypilot/) would be different before I published it. The audience for that article obviously had a strong overlap with likely customers of my [TinyPilot kits](https://tinypilotkvm.com/). If I could attract interest in the blog post, sales would likely follow.
 
 Fortunately, the blog post got a positive response. It reached the #1 spot on Hacker News and stayed there for most of the day. It attracted 22k readers on its first day and 52k total since then.
 
 {{<gallery caption="My TinyPilot blog post received a positive reception on Hacker News and several popular subreddits.">}}
-{{<img src="hn-no-1.png" alt="Screenshot of TinyPilot blog post at #1 slot" has-border="true">}}
-{{<img src="reddit-submissions.png" alt="Screenshot of TinyPilot submissions on reddit" has-border="true">}}
+{{<img src="hn-no-1.png" alt="Screenshot of TinyPilot blog post at #1 slot">}}
+{{<img src="reddit-submissions.png" alt="Screenshot of TinyPilot submissions on reddit">}}
 {{</gallery>}}
 
 The downside of this response was that I underestimated demand. I only had enough inventory on hand to ship nine kits, so I was sold out midday through my blog post launch.
@@ -87,7 +87,7 @@ I've searched for inventory management software to match my use case but come up
 
 My current solution is a dopey spreadsheet where I track all the parts I need along with what I have in stock and what's in transit. It's an inelegant solution, but it's mostly working in the short term.
 
-{{<img src="tinypilot-inventory.png" alt="Screenshot of a spreadsheet tracking all of my in transit orders" has-border="true" caption="My TinyPilot inventory spreadsheet" max-width="800px">}}
+{{<img src="tinypilot-inventory.png" alt="Screenshot of a spreadsheet tracking all of my in transit orders" caption="My TinyPilot inventory spreadsheet" max-width="800px">}}
 
 I'm hoping that once I get through this backlog, inventory won't be so complicated. For each part, I can set a range of units I want to keep in stock and resupply when I fall below the lower threshold. Hopefully, I can pick numbers high enough to absorb spikes in purchases and have enough left to sustain me until a delivery of new parts arrives.
 
@@ -126,7 +126,7 @@ I'm looking for ways to make what I offer to customers more valuable than what t
 
 Because I'm a software developer, I'm leaning toward (3).
 
-Last Friday, I put up a teaser for [TinyPilot Pro](https://tinypilotkvm.com/pro?ref=mtlynch.io) and braced myself for a backlash from people who felt betrayed that I'm not staying pure and open source, but there's been no pushback yet.
+Last Friday, I put up a teaser for [TinyPilot Pro](https://tinypilotkvm.com/product/tinypilot-pro) and braced myself for a backlash from people who felt betrayed that I'm not staying pure and open source, but there's been no pushback yet.
 
 Several customers have asked for cloud management features, which sound lucrative but also require major adjustments to my lifestyle. The idea is that TinyPilots could phone home to a cloud server, and then customers would be able to access their devices anywhere on the Internet without configuring VPNs or firewall rules. This would be an obvious way to collect recurring revenue because users would likely pay upwards of $50/month for TinyPilot cloud management.
 

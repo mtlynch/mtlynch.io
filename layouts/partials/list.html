@@ -8,9 +8,8 @@
     {{- .Title -}}
   </h1>
   <ul class="blurb-list">
-    {{ range .Paginator.Pages }}
+    {{ range .Pages }}
       {{- .Render "li" -}}
     {{ end }}
   </ul>
-  {{ partial "pagination.html" . }}
 </section>

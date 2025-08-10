@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 4"
-date: 2020-11-03T08:18:10-05:00
+date: 2020-11-03
 description: My first $10k month.
 images:
   - /retrospectives/2020/11/shopify-dashboard.png
@@ -12,7 +12,7 @@ images:
 - I interviewed several IT consultants and business owners about what TinyPilot features would be useful to them.
 - I tested several new marketing channels and realized I'm failing to measure results accurately.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -39,7 +39,7 @@ I didn't arrange as many interviews as I had hoped, but I think I got enough inf
 
 ## Stats
 
-### [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io)
+### [TinyPilot](https://tinypilotkvm.com/)
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -71,11 +71,11 @@ The two main changes that allowed me to stay ahead of inventory were:
 
 When I first started, I made an ugly spreadsheet that looked like this:
 
-{{<img src="inventory-old.png" alt="Screenshot of old, cluttered inventory spreadsheet" has-border="true">}}
+{{<img src="inventory-old.png" alt="Screenshot of old, cluttered inventory spreadsheet">}}
 
 The new spreadsheet looks like this:
 
-{{<img src="inventory-overview.png" alt="New spreadsheet shows totals of what's in stock and when to reorder" has-border="true">}}
+{{<img src="inventory-overview.png" alt="New spreadsheet shows totals of what's in stock and when to reorder">}}
 
 The key difference is that it quickly answers questions like, "How many of this part do we have?" and "What parts are due for a reorder?"
 
@@ -93,8 +93,8 @@ At the other end of the spectrum, the $55/unit 4 GB Raspberry Pi is TinyPilot's 
 When we place orders for new inventory or fulfill customer orders, we update two child spreadsheets that automatically update the counts in the main inventory overview:
 
 {{<gallery caption="Outgoing customer orders (left) and incoming inventory shipments (right) automatically update the counts in our inventory overview spreadsheet.">}}
-{{<img src="inventory-orders.png" alt="Google Sheet screenshot of order count by day." has-border="true">}}
-{{<img src="inventory-incoming.png" alt="Google Sheet screenshot of incoming inventory orders." has-border="true">}}
+{{<img src="inventory-orders.png" alt="Google Sheet screenshot of order count by day.">}}
+{{<img src="inventory-incoming.png" alt="Google Sheet screenshot of incoming inventory orders.">}}
 {{</gallery>}}
 
 ## Customer research
@@ -123,7 +123,7 @@ Next was **power management**. People wanted a way to power a machine on and off
 
 The last feature that people asked for was **drive mounting**. Some KVMs allow you to upload a disk image, and then the KVM makes that disk appear as a removable drive on the target computer. Only a couple of interviewees mentioned this, but it's also a common request among my existing users.
 
-The good news is that my intuitions were correct. These were all features I teased a few months ago when advertising a possible paid version of TinyPilot's software called [TinyPilot Pro](https://tinypilotkvm.com/pro?ref=mtlynch.io). Without my prompting, these interviewees often brought up these same features independently.
+The good news is that my intuitions were correct. These were all features I teased a few months ago when advertising a possible paid version of TinyPilot's software called [TinyPilot Pro](https://tinypilotkvm.com/product/tinypilot-pro). Without my prompting, these interviewees often brought up these same features independently.
 
 ## Experimenting with paid reddit ads
 
@@ -148,8 +148,8 @@ The click-through-rate is pretty good, but nobody purchased anything through tho
 It seems like mentioning the subreddit by name makes a difference. I ran ads that were identical except that one started with "Hey /r/homelab," and its click-through-rate was 3x higher than the one that skipped the salutation:
 
 {{<gallery caption="Two ads that I posted to reddit, identical except for the opening salutation. The version that begins with 'Hey /r/homelab' had a click-through-rate of 1.675%, while the version without had a click-through rate of 0.479%.">}}
-{{<img src="hey-stop-paying.png" alt="Hey /r/homelab, stop paying $600+ for KVM over IP devices. TinyPilot is an open source KVM over IP starting at just $169.99." has-border="true">}}
-{{<img src="stop-paying.png" alt="Stop paying $600+ for KVM over IP devices. TinyPilot is an open source KVM over IP starting at just $169.99." has-border="true">}}
+{{<img src="hey-stop-paying.png" alt="Hey /r/homelab, stop paying $600+ for KVM over IP devices. TinyPilot is an open source KVM over IP starting at just $169.99.">}}
+{{<img src="stop-paying.png" alt="Stop paying $600+ for KVM over IP devices. TinyPilot is an open source KVM over IP starting at just $169.99.">}}
 {{</gallery>}}
 
 ### Going broader
@@ -164,7 +164,7 @@ As I look back on these numbers, I'm questioning their accuracy. I paid $360 for
 
 Looking at Google Analytics, that seems questionable:
 
-{{<img src="reddit-ga.png" has-border="true">}}
+{{<img src="reddit-ga.png">}}
 
 Paid reddit visitors perform worse on most metrics than my typical user, but not _that_ much worse.
 
@@ -178,7 +178,7 @@ What I should have done (and what I'll do in the coming weeks) is click the ads 
 
 Organic search is TinyPilot's largest source of customers. When I started the business, I was hoping to reach the first page of Google results for searches like "raspberry pi kvm over ip." [My TinyPilot blog post](/tinypilot/) performed better than I expected, so TinyPilot is now on the front page for broader terms like "kvm over ip."
 
-{{<img src="tinypilot-google.png" alt="Screenshot of Google search results showing TinyPilot at the bottom of the first page of results" max-width="350px" has-border="true" caption="TinyPilot appears on the front page of Google search result for the query `kvm over ip`">}}
+{{<img src="tinypilot-google.png" alt="Screenshot of Google search results showing TinyPilot at the bottom of the first page of results" max-width="350px" caption="TinyPilot appears on the front page of Google search result for the query `kvm over ip`">}}
 
 ### Writing more blog posts
 
@@ -186,7 +186,7 @@ This month, I published a new post about building my [homelab VM server](/buildi
 
 I submitted the new post to several subreddits, including one I wasn't aware of before, [/r/HomeServer](https://www.reddit.com/r/HomeServer/). When my VM server post [did well](https://www.reddit.com/r/HomeServer/comments/j7eiuo/my_home_vm_server_for_software_development/), I also submitted my original TinyPilot article, which [got a positive reception as well](https://www.reddit.com/r/HomeServer/comments/jeoc74/tinypilot_build_a_kvm_over_ip_for_under_100/).
 
-{{<img src="homeserver.png" alt="96 upvotes for VM server post, 119 for TinyPilot post" has-border="true">}}
+{{<img src="homeserver.png" alt="96 upvotes for VM server post, 119 for TinyPilot post">}}
 
 ### The TinyPilot mailing list
 
@@ -198,7 +198,7 @@ Only one customer purchased with the coupon, so I guess there wasn't really a ba
 
 [NetworkProfile](https://blog.networkprofile.org) is a cool blog I found through self-hosting and homelab communities on reddit. I asked the author if he'd be interested in reviewing a TinyPilot device, and he needed a new KVM over IP for his security camera server. He published [a thorough review](https://blog.networkprofile.org/tinypilot-open-sourve-ipkvm/) within days of receiving the device that covered both the good and the bad of TinyPilot:
 
-{{<img src="networkprofile-review.png" alt="Screenshot of NetworkProfile review header" has-border="true" max-width="600px" href="https://blog.networkprofile.org/tinypilot-open-sourve-ipkvm/" caption="TinyPilot received its first public review [in the NetworkProfile blog](https://blog.networkprofile.org/tinypilot-open-sourve-ipkvm/).">}}
+{{<img src="networkprofile-review.png" alt="Screenshot of NetworkProfile review header" max-width="600px" href="https://blog.networkprofile.org/tinypilot-open-sourve-ipkvm/" caption="TinyPilot received its first public review [in the NetworkProfile blog](https://blog.networkprofile.org/tinypilot-open-sourve-ipkvm/).">}}
 
 I also reached out to a large hardware blog that's interested in featuring TinyPilot in November, so I hope to share a positive update about that next month.
 
@@ -294,5 +294,5 @@ I received an inquiry from a large customer about an enterprise package for Zest
 ### Goals for next month
 
 - Release a high-end version of TinyPilot that arrives pre-assembled in a custom case.
-- Release the first version of [TinyPilot Pro](https://tinypilotkvm.com/pro?ref=mtlynch.io).
+- Release the first version of [TinyPilot Pro](https://tinypilotkvm.com/product/tinypilot-pro).
 - Figure out how to properly track the source of customers who end up completing purchases.

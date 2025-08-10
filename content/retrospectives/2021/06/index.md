@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 11"
-date: 2021-06-03T00:00:00-04:00
+date: 2021-06-03
 description: How do I increase TinyPilot's profit margins?
 images:
   - /retrospectives/2021/06/pie-chart.png
@@ -12,7 +12,7 @@ images:
 - I'm exploring options to get big companies to pay more for TinyPilot.
 - I need to come to terms with the fact that managing people is a real job.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -41,7 +41,7 @@ People seemed more interested in the high-level tasks like "Write better blog po
 
 Exciting outcomes are naturally more attractive than fundamentals. If I wrote a book about creating a video game, people would be interested in chapters like "How to build enemies with intelligent AI" and probably not so interested in "the basics of linear algebra." That doesn't mean that I can just skip the fundamentals, but maybe it means I need to find ways to keep the lessons practical and easy to apply while teaching the fundamentals
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -100,7 +100,7 @@ That was a helpful wake-up call. I knew my profits were low, but it still felt l
 
 Based on Mike's advice, I took a closer look at my expenses. I haven't done my bookkeeping for May yet, so I'm using April as an example.
 
-{{<img src="pie-chart.png" max-width="700px" alt="Pie chart of TinyPilot expenses" caption="TinyPilot expenses by category" hasLink="false">}}
+{{<img src="pie-chart.png" max-width="700px" alt="Pie chart of TinyPilot expenses" caption="TinyPilot expenses by category" hasLink="false" has-border="false">}}
 
 | Category                          | Total      |
 | --------------------------------- | ---------- |

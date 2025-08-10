@@ -1,6 +1,6 @@
 ---
 title: "Go Programming Blueprints by Mat Ryer"
-date: 2023-01-02T00:00:00-04:00
+date: 2023-01-02
 rating: 8
 purchase_url: https://www.packtpub.com/product/go-programming-blueprints-second-edition/9781786468949
 ---
@@ -11,7 +11,7 @@ I'm a fan of [Mat Ryer](https://twitter.com/matryer)'s work, and his blog posts 
 
 ---
 
-## What I Liked
+## What I liked
 
 - The variety of example apps did a good job of demonstrating features of Go in realistic scenarios.
 - Features wonderfully elegant Go code that taught me several new idiomatic language patterns.
@@ -19,15 +19,15 @@ I'm a fan of [Mat Ryer](https://twitter.com/matryer)'s work, and his blog posts 
 - Finally made HTTP contexts click for me when I'd never understood them in the past.
 - Available in DRM-free formats.
 
-## What I Disliked
+## What I disliked
 
 - Most of the examples focus on highly scalable applications rather than single-server Go applications that I typically write.
 - The book felt overly dependent on heavy Google libraries (e.g., Google Maps, OAuth, gRPC, AppEngine).
   - Many of the examples went deeply into the minutiae of a particular library rather than the Go-relevant parts of the solution.
 - Recommends several horribly insecure software practices:
   - Advises developers to [use `0777` as the default bitmask](https://github.com/matryer/goblueprints/issues/78) when they don't know what permissions to assign.
-  - Fails to protect against directory traversal, leading to an arbitrary write vulnerability in an example application that can [gain remote code execution](https://github.com/matryer/goblueprints/issues/79)
-  - Fails to protect against trivial [denial of service attacks on user uploads](https://github.com/matryer/goblueprints/issues/80)
+  - Fails to protect against directory traversal, leading to an arbitrary write vulnerability in an example application that can [gain remote code execution](https://github.com/matryer/goblueprints/issues/79).
+  - Fails to protect against trivial [denial of service attacks on user uploads](https://github.com/matryer/goblueprints/issues/80).
 - Poor editing in the prose and error checking in the code.
   - There were a high number of careless grammar and code mistakes.
   - Users have [submitted fixes](https://github.com/matryer/goblueprints/pulls?q=is%3Aopen+is%3Apr), but they've been ignored for years.
@@ -35,19 +35,19 @@ I'm a fan of [Mat Ryer](https://twitter.com/matryer)'s work, and his blog posts 
 - The bash script examples felt sloppy.
 - Code quality was inconsistent throughout the book.
   - Some examples are elegant and intuitive, while others feel like a first draft.
-- There are two independent Github repos: one [from the author](https://github.com/matryer/goblueprints) and one [from the publisher](https://github.com/PacktPublishing/Go-Programming-Blueprints).
+- There are two independent GitHub repos: one [from the author](https://github.com/matryer/goblueprints) and one [from the publisher](https://github.com/PacktPublishing/Go-Programming-Blueprints).
   - [The author's repo](https://github.com/matryer/goblueprints) seems to be the correct one.
 - There are instructions for running the examples on Windows, but they feel like an untested afterthought.
 - Some of the examples no longer compile due to third-party dependencies that have disappeared.
 
-## Key Takeaways
+## Key takeaways
 
 ### Go language and standard library tips
 
 #### [Signal channels](https://medium.com/@matryer/golang-advent-calendar-day-two-starting-and-stopping-things-with-a-signal-channel-f5048161018)
 
 - Signal channels are an idiomatic way of implementing thread-safe events in Go.
-- Signal channels are just a `chan` of of type `struct{}`
+- Signal channels are just a `chan` of type `struct{}`
   - Signal channels don't pass any data &mdash; they just signal that an event has occurred.
   - The [Twitter votes app](https://github.com/matryer/goblueprints/blob/aae50b4b30fa6dfd73e3c411b3bfe1972294be61/chapter6/twittervotes/main.go) is a good example of using signal channels to:
     1. Allow clients to interrupt the server.
@@ -68,7 +68,7 @@ I use `time.Ticker` in [PicoShare](https://github.com/mtlynch/picoshare) to sche
 #### [`flags.Duration`](https://pkg.go.dev/flag#Duration) is impressively flexible
 
 - `flags.Duration` natively supports different time units like `55s` or `10m`.
-  - i.e., when you use `flags.Duration` as a command-line flag, your comman-line interface can take a flag like `--interval 10m`, and the flags package will natively parse it into a `time.Duration` for you.
+  - i.e., when you use `flags.Duration` as a command-line flag, your command-line interface can take a flag like `--interval 10m`, and the `flags` package will natively parse it into a `time.Duration` for you.
 
 ### Separating test packages from production
 
@@ -209,7 +209,7 @@ var contextKeyAPIKey = &contextKey{"api-key"}
 
 ~~For reasons I still can't totally grok, the key needs to be a struct containing a string rather than a simple string.~~
 
-**Update (2023-01-02)**: I was confused at first why they `contextKey` is a struct containing a string rather than just a string. In the book, Ryer explains that this decision is prevents collisions with other keys that have the same value, but I didn't understand why the developer wouldn't just avoid re-using the same key for different purposes. Matthew Riley [clarified this behavior](https://twitter.com/mdriley25519/status/1609988055989116928) for me and helped me realize that the local type prevents collisions across packages, whereas a simple string wouldn't.
+**Update (2023-01-02)**: I was confused at first why they `contextKey` is a struct containing a string rather than just a string. In the book, Ryer explains that this decision prevents collisions with other keys that have the same value, but I didn't understand why the developer wouldn't just avoid re-using the same key for different purposes. Matthew Riley [clarified this behavior](https://twitter.com/mdriley25519/status/1609988055989116928) for me and helped me realize that the local type prevents collisions across packages, whereas a simple string wouldn't.
 
 If you used a context key like `const contextKeyToken := "token"` and another package processed the same request and also used the key `"token"`, then you'd scribble over each other's context values. By defining a custom type local to your package, you're guaranteed that `Context` won't evaluate tokens from any other package as equal to yours because they'll have different types.
 

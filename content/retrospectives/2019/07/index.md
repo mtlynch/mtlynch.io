@@ -12,7 +12,7 @@ date: "2019-07-03"
 - [Zestful](https://zestfuldata.com) may be rising from the dead, with four new inbound customer inquiries.
 - [Is It Keto](https://isitketo.org) earned $184, and [Zestful](https://zestfuldata.com) earned $26, making it my highest revenue month since quitting my job.
 
-## Goal Grades
+## Goal grades
 
 ### Publish a new blog post that explains why I built What Got Done
 
@@ -51,7 +51,7 @@ Now that Is It Keto is on the back burner, I'm not going to dive as deeply into 
 | Ranking Keywords (Moz) | 949         | 862         | <font color="red">-87 (-9%)</font>            |
 | **Total Revenue**      | **$107.25** | **$138.76** | **<font color="green">+$31.51 (+29%)</font>** |
 
-After my [blog post about Is It Keto](/keep-growing-never-profit/) last month, I received some good suggestions for small tweaks to the site and spent a few days implementing those. Notably, I added a [browse by category](https://isitketo.org/category/) feature and made my food cards [a little prettier](https://imgur.com/w11ZWEK).
+After my [blog post about Is It Keto](/keep-growing-never-profit/) last month, I received some good suggestions for small tweaks to the site and spent a few days implementing those. Notably, I added a [browse by category](https://isitketo.org/categories/) feature and made my food cards [a little prettier](https://imgur.com/w11ZWEK).
 
 ## Bouncing around too much
 
@@ -89,7 +89,7 @@ Next is [What Got Done](https://whatgotdone.com), the weekly team status app I l
 
 What Got Done had almost zero sign-ups for a month, but ever since publishing the blog post, there have been three to eight sign-ups per day:
 
-{{<img src="whatgotdone-metrics.jpg" alt="What Got Done signup graph" caption="Sign-ups to What Got Done - June 2019" max-width="800px" has-border="true">}}
+{{<img src="whatgotdone-metrics.jpg" alt="What Got Done signup graph" caption="Sign-ups to What Got Done - June 2019" max-width="800px">}}
 
 The downside is that these users are all on the free plan. I've had three inquiries about a Pro plan, but only one of them seems like a strong possibility.
 
@@ -133,15 +133,15 @@ They promised that I wouldn't have to do any work &mdash; just point my DNS reco
 
 As soon as I saw the results, I hated it. I've never considered Is It Keto to be the most beautiful site on the web, but Ezoic's ads made it look like cheap, spammy garbage.
 
-{{<img src="isitketo-ads.png" alt="Before and after screenshots of Is It Keto" caption="Is It Keto - Before and after Ezoic ads" max-width="800px" has-border="true">}}
+{{<img src="isitketo-ads.png" alt="Before and after screenshots of Is It Keto" caption="Is It Keto - Before and after Ezoic ads" max-width="800px">}}
 
 The final straw was when Ezoic inserted ads that screwed up my site layout on mobile devices.
 
-{{<img src="ads-too-wide.png" alt="Screenshot of bad ad on Is It Keto" caption="Ezoic ad screws up Is It Keto's layout on mobile devices" max-width="413px" has-border="true">}}
+{{<img src="ads-too-wide.png" alt="Screenshot of bad ad on Is It Keto" caption="Ezoic ad screws up Is It Keto's layout on mobile devices" max-width="413px">}}
 
 I reported this to Ezoic, and they claimed that it should never happen. They asked how I observed it, and I told them I used dev tools on Chrome desktop to emulate a Pixel 2 device. Ezoic said it was just a bug in Chrome's mobile emulation but wouldn't happen on real devices. A few days later, I saw that Google Search was downranking me because they detected that my layout was broken on mobile:
 
-{{<img src="ezoic-errors.jpg" alt="Graph of errors in Google Search Console" caption="Google Search Mobile Usability Dashboard - before and after Ezoic ads" max-width="800px" has-border="true">}}
+{{<img src="ezoic-errors.jpg" alt="Graph of errors in Google Search Console" caption="Google Search Mobile Usability Dashboard - before and after Ezoic ads" max-width="800px">}}
 
 I immediately turned off Ezoic and have no plans to return.
 

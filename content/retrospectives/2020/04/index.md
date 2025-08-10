@@ -1,6 +1,6 @@
 ---
 title: "An Unexpected Reset Month"
-date: 2020-04-02T00:00:00Z
+date: 2020-04-02
 description: I'm safe and healthy, but my businesses have taken a tumble.
 images:
   - /retrospectives/2020/04/og-image.jpg
@@ -24,7 +24,7 @@ In February, I found myself [backsliding into social media addiction](/retrospec
 
 In my last retrospective, I had [invested $600 into publicity for a comedy scavenger hunt](/retrospectives/2020/03/#100-in-revenue-but-at-what-cost), and I was worried that it would flop. It did indeed flop, and not even due to COVID-19.
 
-{{<img src="canceled-contest.png" alt="Banner for scavenger hunt with canceled stamp over it" max-width="500px" caption="I canceled the WanderJest Scavenger Hunt on March 11th.">}}
+{{<img src="canceled-contest.png" alt="Banner for scavenger hunt with canceled stamp over it" max-width="500px" caption="I canceled the WanderJest Scavenger Hunt on March 11th." has-border="false">}}
 
 In the first week of March, people were still attending local comedy shows as usual. I'd go to these shows and hand out promotional cards about the scavenger hunt and explain to people that if they took a picture during the show and tagged it @WanderJest on social media, they'd enter a grand prize drawing for $200. People generally seemed receptive. "$200? Wow, cool!"
 
@@ -44,7 +44,7 @@ Because of the contest's pitiful engagement, only one person had taken a photo d
 
 A week later, performances were still happening, but I didn't want WanderJest to tacitly endorse them by listing upcoming shows. I replaced the WanderJest show listings page with a notice saying that the site was going on a temporary hiatus until the COVID-19 pandemic was over. Looking back, March 18th feels like too late a reaction, and I wish I'd shuttered the site earlier.
 
-{{<img src="wanderjest.png" alt="Screenshot of WanderJest website with hiatus notice" max-width="600px" caption="WanderJest is on indefinite hiatus until the US gets COVID-19 under control." has-border="true">}}
+{{<img src="wanderjest.png" alt="Screenshot of WanderJest website with hiatus notice" max-width="600px" caption="WanderJest is on indefinite hiatus until the US gets COVID-19 under control.">}}
 
 ## Takeaways from the scavenger hunt
 
@@ -52,7 +52,7 @@ A week later, performances were still happening, but I didn't want WanderJest to
 
 The contest cost $600 for marketing another $100 in prizes, but it failed miserably at [my goal of spurring 40 new user signups](/retrospectives/2020/03/#goals-for-next-month). At first, I felt stupid for spending so much money without any evidence that people would participate. I could have limited the cost had I started slower and left myself room to cancel the contest if it failed to gain traction early on.
 
-{{<img src="promo-cards.jpg" alt="Banner for scavenger hunt with canceled stamp over it" max-width="600px" caption="These 500 unused promotional cards will come in handy the next time I launch a contest happening in March 2020.">}}
+{{<img src="promo-cards.jpg" alt="Banner for scavenger hunt with canceled stamp over it" max-width="600px" caption="These 500 unused promotional cards will come in handy the next time I launch a contest happening in March 2020." has-border="false">}}
 
 In retrospect, I'm glad I rushed into the contest and spent the money. I certainly could have set a later start date and given myself more time to evaluate people's interest, but my top priority was finding ways to attract users to WanderJest. If $700 got me the results of my experiment a few weeks earlier than a more measured approach, that's an acceptable tradeoff.
 
@@ -64,7 +64,7 @@ The results? Two visitors.
 
 I paid ~$200 for the design, printing, and distribution, and **two people** visited the URL. It's possible that other people saw the flyer and just Googled "wanderjest," but I didn't see any measurable uptick in search traffic.
 
-{{<img src="flyer-litter.png" alt="Text conversation of my sister showing me a flyer that showed up on her lawn" caption="The only real engagement from my flyers was my sister texting me to complain sarcastically about one that blew onto her lawn." has-border="true">}}
+{{<img src="flyer-litter.png" alt="Text conversation of my sister showing me a flyer that showed up on her lawn" caption="The only real engagement from my flyers was my sister texting me to complain sarcastically about one that blew onto her lawn.">}}
 
 **WanderJest isn't working**
 
@@ -93,11 +93,11 @@ And because of the recent market volatility, interest in portfolio rebalancing i
 
 <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2152_RC02/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"rebalance portfolio","geo":"US","time":"2015-04-01 2020-04-01"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&geo=US&q=rebalance%20portfolio","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
 
-I spent the last two weeks making a minimum viable product of [Portfolio Rebalancer](https://assetrebalancer.com), a web app that shows you the trades you need to make in your [Vanguard](https://vanguard.com) account to achieve your desired asset allocation strategy:
+I spent the last two weeks making a minimum viable product of [Portfolio Rebalancer](https://rebalancer.mtlynch.io), a web app that shows you the trades you need to make in your [Vanguard](https://vanguard.com) account to achieve your desired asset allocation strategy:
 
-{{<gallery caption="Prototype of my [portfolio rebalancer](https://assetrebalancer.com), which helps investors adjust their holdings based on their investment strategy">}}
-{{<img src="rebalancer-current-holdings.png" alt="Screenshot of Portfolio Rebalancer showing current holdings" has-border="true">}}
-{{<img src="rebalancer-rebalanced.png" alt="Screenshot of Portfolio Rebalancer showing rebalanced assets" has-border="true">}}
+{{<gallery caption="Prototype of my [portfolio rebalancer](https://rebalancer.mtlynch.io), which helps investors adjust their holdings based on their investment strategy">}}
+{{<img src="rebalancer-current-holdings.png" alt="Screenshot of Portfolio Rebalancer showing current holdings">}}
+{{<img src="rebalancer-rebalanced.png" alt="Screenshot of Portfolio Rebalancer showing rebalanced assets">}}
 {{</gallery>}}
 
 I'm still trying to figure out how to market it. I sent cold emails to several local financial advisors offering to pay them their hourly rate to talk with me about what sort of tool would be useful to them or their clients, but none of them responded. I tried sharing it on [reddit](https://redd.it/fpyqmc) and got a small positive response, but nobody was banging down my door to get a paid version. My next idea is to write about the technical lessons I'm learning as I build the site and hope that it draws attention from programmers in my audience who invest their money similarly.
@@ -127,8 +127,8 @@ I created a new conference talk for [NERD Summit](https://nerdsummit.org/) this 
 I used [reveal-hugo](https://reveal-hugo.dzello.com/) because I already knew how to use the [Hugo static site generator](https://gohugo.io) (which powers this site).
 
 {{<gallery caption="[reveal-hugo](https://reveal-hugo.dzello.com/) lets you create slide decks in Markdown.">}}
-{{<img src="reveal-code.png" alt="Source code for my presentation" has-border="true">}}
-{{<img src="reveal-rendered.png" alt="HTML rendering of the presentation" has-border="true">}}
+{{<img src="reveal-code.png" alt="Source code for my presentation">}}
+{{<img src="reveal-rendered.png" alt="HTML rendering of the presentation">}}
 {{</gallery>}}
 
 The biggest advantage is that writing in Markdown allows me to focus on the content first and worry about the layout later. Google Slides requires me to choose the placement for any text before writing it, so I get distracted thinking about the aesthetics. reveal-hugo is also nice for formatting code snippets, which can be a challenge in Google Slides. The other neat feature is that it lends itself to more automation, so I now have [an index for all of my talks](https://decks.mtlynch.io), which is cool. And the source is all [public](https://github.com/mtlynch/slide-decks).
@@ -141,7 +141,7 @@ The other big missing piece is drag and drop layouts. In Google Slides, it's tri
 
 I always felt like other indie projects had such slick stock imagery, but I wasn't sure if they were buying it or if it came from some template I didn't know about. It turns out that most of what I was seeing came from [unDraw](https://undraw.co), a collection of openly-licensed illustrations by [Katerina Limpitsouni](https://twitter.com/ninaLimpi). If you need free illustrations for a new product, I recommend checking out unDraw.
 
-{{<img src="undraw.png" alt="Screenshot of unDraw website" max-width="600px" caption="[unDraw](https://undraw.co) is an open collection of illustrations that you can use in any project." has-border="true">}}
+{{<img src="undraw.png" alt="Screenshot of unDraw website" max-width="600px" caption="[unDraw](https://undraw.co) is an open collection of illustrations that you can use in any project.">}}
 
 ## Legacy project stats
 
@@ -186,13 +186,13 @@ Is It Keto took a big hit this month after a strong start to the year. I suppose
 
 Zestful remains quiet with a handful of occasional pay-as-you-go users.
 
-My one [enterprise client](/retrospectives/2020/01/#zestfulhttpszestfuldatacom) was up for a plan renewal in early March, but they decided to cancel. I anticipated that because, from the beginning, they needed the high-tier plan so they could process their existing corpus of ingredients, and their ongoing needs wouldn't be as significant. When they canceled, I asked if there was anything they felt was missing from Zestful or needed improvement, but they never responded.
+My one [enterprise client](/retrospectives/2020/01/#zestful) was up for a plan renewal in early March, but they decided to cancel. I anticipated that because, from the beginning, they needed the high-tier plan so they could process their existing corpus of ingredients, and their ongoing needs wouldn't be as significant. When they canceled, I asked if there was anything they felt was missing from Zestful or needed improvement, but they never responded.
 
 ## Wrap up
 
 ### What got done?
 
-- Created a minimum viable product of the [Portfolio Rebalancer](https://assetrebalancer.com).
+- Created a minimum viable product of the [Portfolio Rebalancer](https://rebalancer.mtlynch.io).
 - Presented my talk at NERD Summit: ["How I Used Python to Steal Money."](https://decks.mtlynch.io/nerds-2020/#/)
   - There's a [recording](https://youtu.be/W05vGbi8B4A), but the audio quality is pretty bad.
 - Updated my blog newsletter so that subscribers can choose what type of updates to receive.

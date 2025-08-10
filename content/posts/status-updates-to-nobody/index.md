@@ -13,7 +13,7 @@ images:
   - status-updates-to-nobody/cover.jpg
 ---
 
-{{<img src="cover.jpg" alt="Staying Motivated by Sending Status Updates to Nobody (cover image)" max-width="1000px">}}
+{{<img src="cover.jpg" alt="Staying Motivated by Sending Status Updates to Nobody (cover image)" max-width="1000px" has-border="false">}}
 
 At my last job, status meetings with my manager were outstandingly efficient. He never ran me through the typical drill of listing list off everything I did since our last meeting. Instead, we jumped right to the meaty topics of career growth, team development, and challenging technical problems.
 
@@ -59,7 +59,7 @@ In early 2018, [I left Google](/why-i-quit-google/). Without access to my belove
 
 There are dozens of "share status with your team" services, but they're all top-down rather than bottom-up. That is, they're designed for _managers_. They promise pretty graphs and dashboards so that the manager feels like they have their finger on the pulse of the team.
 
-{{<img src="monday-screenshot.jpg" alt="Screenshot of Monday.com feature page" caption="Monday.com promises managers slick dashboards to track their employees' work but forces the employees to enter their status in a rigid format." max-width="475px" has-border="true">}}
+{{<img src="monday-screenshot.jpg" alt="Screenshot of Monday.com feature page" caption="Monday.com promises managers slick dashboards to track their employees' work but forces the employees to enter their status in a rigid format." max-width="475px">}}
 
 Everyone enjoys cool visualizations, but generating them requires the employees to enter information in whatever rigid format the tool expects. Team members have to do bookkeeping for the sake of bookkeeping and concoct numbers to represent how "complete" each task is.
 
@@ -73,7 +73,7 @@ One day, a profound and obvious realization struck me &mdash; Snippets is just a
 
 I immediately created a new Google Doc and wrote my update for the week:
 
-{{<img src="docs-snippets.jpg" alt="Screenshot of my first Snippet in Google Docs" caption="Recording weekly status updates in Google Docs" max-width="500px" has-border="true">}}
+{{<img src="docs-snippets.jpg" alt="Screenshot of my first Snippet in Google Docs" caption="Recording weekly status updates in Google Docs" max-width="500px">}}
 
 I recorded my status updates in that private Google Doc every week for a year. Nobody else saw it, but that was fine. It gave me back the habit I was missing. Each week ended with a reminder of how much I accomplished, and it felt great.
 
@@ -81,14 +81,16 @@ I recorded my status updates in that private Google Doc every week for a year. N
 
 After writing private updates for a year, it still gave me satisfaction, but I missed writing for an audience. I saw the myriad of benefits I gained by [publishing my monthly retrospectives](/keep-growing-never-profit/#i-published-monthly-goals-and-stuck-to-them) and wanted to do the same thing for weekly updates.
 
-One of [my 2019 goals](/solo-developer-year-1/#goals-for-year-two) was to gain expertise in a JavaScript framework, so that felt like a convenient excuse to create my own status sharing web app. It's called [What Got Done](https://whatgotdone.com):
+One of [my 2019 goals](/solo-developer-year-1/#goals-for-year-two) was to gain expertise in a JavaScript framework, so that felt like a convenient excuse to create my own status sharing web app. It's called What Got Done:
 
-{{<img src="whatgotdone-screenshot.jpg" alt="Screenshot of Monday.com feature page" caption="My [most recent update](https://whatgotdone.com/michael/2019-06-21) on What Got Done" max-width="800px">}}
+{{<img src="whatgotdone-screenshot.jpg" alt="Screenshot of Monday.com feature page" caption="My [most recent update](https://weeks.mtlynch.io/2019-06-21) on What Got Done" max-width="800px" has-border="false">}}
 
 I record my status updates in it every week. In the last month, the site has attracted **three** other users. Hear that, investors? 300% month-over-month growth!
 
-If you'd like to experience the joy of reviewing your accomplishments each week, come [take it for a spin](https://whatgotdone.com). It's free.
+## Update (2025-08): Shutting down What Got Done
+
+After six fun years, I've decided to shut down What Got Done. I now post my weekly updates to [weeks.mtlynch.io](https://weeks.mtlynch.io), where I'm the sole poster.
 
 ---
 
-_Edited by [Samantha Mason](https://www.samanthamasonfreelancer.com). Cover art by [Loraine Yow](https://www.lolo-ology.com/)._
+_Edited by [Samantha Mason](https://www.samanthamasonfreelancer.com). Cover art by Loraine Yow._

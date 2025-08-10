@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 22"
-date: 2022-05-12T12:09:29-04:00
+date: 2022-05-12
 description: Where is all of my money going?
 images:
   - /retrospectives/2022/05/expenses-pie.png
@@ -12,7 +12,7 @@ images:
 - It's more important than I thought to have low-latency insight into developers' hours.
 - I'm trying paid advertising again for the first time in almost two years.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -39,7 +39,7 @@ I've canceled the contract with the design agency, so they're wrapping up their 
 
 The month's theme is, "this took a little longer than I expected." The release is code complete, but I still have to wrap up some last manual tests before publishing the build to customers.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -65,7 +65,7 @@ The numbers surprised me since I had $58k/month in revenue, and I sell each Tiny
 
 To find out, I took a closer look at my monthly expenses for 2022 Q1.
 
-{{<img src="expenses-pie.png" max-width="800px" has-border="true">}}
+{{<img src="expenses-pie.png" max-width="800px">}}
 
 | Expense                          | Cost Per Month |
 | -------------------------------- | -------------- |
@@ -115,8 +115,8 @@ The agency pointed out that this architecture was convoluted, and we should repl
 The theme work ended up taking five weeks for a total cost of $6.1k. Here are the results in terms of what the user can see:
 
 {{<gallery caption="Before (left) and after (right) $6.1k of web development">}}
-{{<img src="before-refactoring.png" alt="Screenshot of TinyPilot website before changes" has-border="true" max-width="250px">}}
-{{<img src="after-refactoring.png" alt="Screenshot of TinyPilot website after changes, where the font and colors are slightly different" has-border="true" max-width="250px">}}
+{{<img src="before-refactoring.png" alt="Screenshot of TinyPilot website before changes" max-width="250px">}}
+{{<img src="after-refactoring.png" alt="Screenshot of TinyPilot website after changes, where the font and colors are slightly different" max-width="250px">}}
 {{</gallery>}}
 
 Long-term, this refactoring is helpful, but I wouldn't have chosen to do it right now. The redesign is already six months late and 5x over budget. I'd rather have a pretty website while we work on fixing ugly code than a dumpy-looking website with beautifully-factored code.
@@ -125,15 +125,15 @@ So, how did I let this happen? TinyPilot's regular devs rarely get lost in the w
 
 One critical difference is that TinyPilot's developers give me low-latency insight into how they spend their time. At the end of each working session, they record their hours with a short note saying what they were working on.
 
-{{<img src="work-timing.png" alt="Screenshot of TinyPilot hours reporting on Deel" has-border="true" caption="TinyPilot's in-house developers report their hours as they go.">}}
+{{<img src="work-timing.png" alt="Screenshot of TinyPilot hours reporting on Deel" caption="TinyPilot's in-house developers report their hours as they go.">}}
 
 If I'm expecting work from them, I check their hours. If I see that they've spent 14 hours on a task that I expected to take two, it means I either underestimated the difficulty or explained the task poorly. In either case, I check in with the dev, and we decide whether to continue or course-correct.
 
 With the design agency, there's a much slower feedback loop. They send me an update on the 15th of the month telling me only the total number of hours they've worked. At the end of the month, they send me a full report of where the hours went, but by then, it's too late.
 
 {{<gallery caption="The design agency only reports hours twice per month &mdash; once at the midpoint with an opaque hours total (left) and once at the end with a more granular breakdown (right).">}}
-{{<img src="mid-month-report.png" alt="An email saying &ldquo;You've currently used 16.02 out of 40 hours for April 2022.&rdqo;" has-border="true" max-width="400px">}}
-{{<img src="monthly-report.png" alt="A report of hours broken down by task" has-border="true" max-width="500px">}}
+{{<img src="mid-month-report.png" alt="An email saying &ldquo;You've currently used 16.02 out of 40 hours for April 2022.&rdqo;" max-width="400px">}}
+{{<img src="monthly-report.png" alt="A report of hours broken down by task" max-width="500px">}}
 {{</gallery>}}
 
 The other issue with the design agency is that they commit to hours only on a monthly basis, not on a weekly basis. In February, they did no dev work for the first three weeks and then squeezed all of their work into the last ten days. This compounded the poor feedback loop since I couldn't distinguish between a task that was taking too long and a task that they hadn't started yet.
@@ -148,7 +148,7 @@ When I experimented with affiliate advertisers, I ended up accidentally solving 
 
 I realized I could use the same solution to track paid ads. I can just treat the referral information in an ad URL as if it were an affiliate ID. With this, I revisited paid advertising by running ads on Google and Bing.
 
-{{<img src="mobile-gs-copy.png" has-border="true" alt="Google ad: TinyPilot KVM over IP | Easy Remote Access | Open-Source, PoE, HTML5 TinyPilot is a simple, modern KVM over IP device with PoE. No software installation or Java plugins. Setup takes 5 minutes." caption="My first Google search ad.">}}
+{{<img src="mobile-gs-copy.png" alt="Google ad: TinyPilot KVM over IP | Easy Remote Access | Open-Source, PoE, HTML5 TinyPilot is a simple, modern KVM over IP device with PoE. No software installation or Java plugins. Setup takes 5 minutes." caption="My first Google search ad.">}}
 
 | Metric                     | Google    | Bing      |
 | -------------------------- | --------- | --------- |
@@ -172,9 +172,11 @@ I've increased my Google budget to $150/day, and I'll keep cranking it up as lon
 
 I'm keeping my Bing budget to $50/day and tuning the ads a bit. Bing was showing my ads for irrelevant queries like "unifi 24 port switch" (a product that serves a completely different function) and "kvms pro" (some kind of CCTV management software).
 
+<!-- wordword-ignore-word: duck -->
+
 I originally intended to advertise on [Duck Duck Go](https://duckduckgo.com) because I suspect their users to be a good match for my product. Bizarrely, Duck Duck Go only sells ads indirectly through Bing, its direct competitor. To buy Ads on Duck Duck Go, you have to advertise on Bing and then enable advertising through Bing's syndicated partners, which include AOL, Yahoo, and Duck Duck Go.
 
-{{<img src="dg-policy.png" has-border="true" max-width="600px" caption="The only way to [advertise on Duck Duck Go](https://help.duckduckgo.com/duckduckgo-help-pages/company/advertising-and-affiliates/) is to advertise on Bing, Yahoo, and AOL.">}}
+{{<img src="dg-policy.png" max-width="600px" caption="The only way to [advertise on Duck Duck Go](https://help.duckduckgo.com/duckduckgo-help-pages/company/advertising-and-affiliates/) is to advertise on Bing, Yahoo, and AOL.">}}
 
 ## Side projects
 
@@ -186,19 +188,19 @@ One feature I'm excited about is the ability to create guest upload links. Often
 
 With PicoShare's guest uploading, I can create a guest link like this:
 
-{{<img src="picoshare-create-guest-link.png" alt="Screenshot of PicoShare's screen for creating a guest link" has-border="true" max-width="600px">}}
+{{<img src="picoshare-create-guest-link.png" alt="Screenshot of PicoShare's screen for creating a guest link" max-width="600px">}}
 
 Then, PicoShare generates a custom guest link like `https://picoshare.tinypilotkvm.com/g/sWy2Pi5Dm8afJuxs`. When the guest visits that link, they can upload files to my PicoShare server without any signup:
 
-{{<img src="picoshare-guest-upload.png" alt="Screenshot of PicoShare's screen for uploading through a guest link" has-border="true" max-width="600px">}}
+{{<img src="picoshare-guest-upload.png" alt="Screenshot of PicoShare's screen for uploading through a guest link" max-width="600px">}}
 
 I've already started using it at TinyPilot, and it's much smoother than the tools I was using before, like Mega.nz and Dropbox.
 
 The other feature I added was support for private notes that you can attach to your uploads in case you want to remember details about the file:
 
 {{<gallery caption="PicoShare now allows you to attach private notes to your uploads.">}}
-{{<img src="picoshare-note-1.png" alt="Screenshot of PicoShare upload page with note text field" has-border="true" max-width="400px">}}
-{{<img src="picoshare-note-2.png" alt="Screenshot of PicoShare file index page with note showing" has-border="true" max-width="400px">}}
+{{<img src="picoshare-note-1.png" alt="Screenshot of PicoShare upload page with note text field" max-width="400px">}}
+{{<img src="picoshare-note-2.png" alt="Screenshot of PicoShare file index page with note showing" max-width="400px">}}
 {{</gallery>}}
 
 ## Wrap up

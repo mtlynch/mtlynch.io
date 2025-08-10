@@ -1,21 +1,29 @@
-{{ $image := "" }}
+{{ $imageResource := "" }}
+{{ $imagePath := "" }}
 {{ if .Page.Params.hero_image }}
-  {{ $image = printf "%s%s" .RelPermalink .Page.Params.hero_image }}
+  {{ $imagePath = .Page.Params.hero_image }}
 {{ else }}
   {{- with .Page.Params.images -}}
-    {{ $image = printf "/%s"  (index . 0) }}
+    {{ $imagePath = index . 0 }}
   {{ end }}
+{{ end }}
+
+{{ if $imagePath }}
+  {{ $imageFilename := path.Base $imagePath }}
+  {{ $imageResource = .Page.Resources.GetMatch $imageFilename }}
 {{ end }}
 
 
 <li>
   <a class="img-wrapper" href="{{ .RelPermalink }}">
-    <img src="{{ $image }}" />
+    {{ if $imageResource }}
+      {{ partial "responsive-img.html" (dict "image" $imageResource "sizes" "(min-width: 768px) 400px, 98vw" "photoWidths" .Site.Params.photoWidths) }}
+    {{ end }}
   </a>
   <div>
     <h2><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     <p class="date">
-      {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
+      {{ .Date.Format .Site.Params.dateFormat }}
     </p>
     <p>{{ .Page.Params.description }}</p>
   </div>

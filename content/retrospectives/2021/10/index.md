@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 15"
-date: 2021-10-07T11:58:24-04:00
+date: 2021-10-07
 description: What to do when a competitor raises $800k overnight?
 images:
   - /retrospectives/2021/10/cover.png
@@ -12,7 +12,7 @@ images:
 - One of TinyPilot's competitors raised $800k almost overnight.
 - I'm working with a design firm to improve TinyPilot's brand and website.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -37,7 +37,7 @@ I was hoping to start development by the end of the month, but there are more de
 
 We're running a little late on this, but we're still on track to ship the first Voyager 2 by the end of November. The electrical engineers have built several prototypes, and they've passed all tests. We're now in the process of ordering the first production batch from a PCB manufacturer.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -71,7 +71,7 @@ PiKVM gives all of its software away for free and doesn't offer a paid version. 
 
 When I heard about PiKVM's Kickstarter, I estimated that it would earn $15-20k, enough to manufacture a few hundred units. It ended up **far** exceeding my expectations. The final total was $789k from 3,572 backers. That's twice as much as TinyPilot's total sales revenue since launch.
 
-{{<img src="pikvm-kickstarter.png" alt="Screenshot of PiKVM Kickstarter, showing $789,191 in funds raised" max-width="800px" has-border="true" caption="PiKVM's Kickstarter raised $789,191.">}}
+{{<img src="pikvm-kickstarter.png" alt="Screenshot of PiKVM Kickstarter, showing $789,191 in funds raised" max-width="800px" caption="PiKVM's Kickstarter raised $789,191.">}}
 
 I'm happy for Maxim, and he certainly deserves the success for all the work he's put into PiKVM. That said, it's a bit scary to see a competitor suddenly raise close to a million dollars. Scarier still, he's expressed interest in a plug 'n play version of PiKVM to compete directly with TinyPilot.
 
@@ -97,7 +97,7 @@ I interviewed six different designers and firms and ended up picking the most ex
 
 I might be a rube who got hornswoggled into an expensive project, but I felt like they made a compelling case. The brand forms the foundation of everything else, so it makes sense to invest more in that now.
 
-{{<img src="tinypilot-logo.jpg" alt="TinyPilot's logo, a chipmunk in an airplane" max-width="600px" has-border="true" caption="TinyPilot's chipmunk mascot may not be long for this world.">}}
+{{<img src="tinypilot-logo.jpg" alt="TinyPilot's logo, a chipmunk in an airplane" max-width="600px" caption="TinyPilot's chipmunk mascot may not be long for this world.">}}
 
 As much as I love the TinyPilot chipmunk, I think the company has outgrown the mascot. The cartoonishness worked in the beginning when we were catering mainly to hobbyists, but now that more of our customers are businesses, I want a logo that's a bit more serious &mdash; not IBM-level serious, but maybe like a notch or two more playful than [Ubiquiti](https://ui.com) or [Proxmox](https://www.proxmox.com/en/).
 
@@ -139,7 +139,7 @@ I was hoping the site would quietly generate steady passive income for another f
 | Blogging for Devs Revenue | $0.00       | $27.30         | <font color="green">+$27.30 (+inf%)</font>   |
 | **Total Revenue**         | **$728.90** | **$216.44**    | **<font color="red">-$512.46 (-70%)</font>** |
 
-In August, I ran a [pay-what-you-want promotion](/retrospectives/2021/09/#hit-the-front-page-of-hacker-newshttpshitthefrontpagecom) for the course, and that led to a jump in sales. I worried that anyone who had any interest in the course purchased it during that promotion, but September showed that a modest number of customers are still buying.
+In August, I ran a [pay-what-you-want promotion](/retrospectives/2021/09/#hit-the-front-page-of-hacker-news) for the course, and that led to a jump in sales. I worried that anyone who had any interest in the course purchased it during that promotion, but September showed that a modest number of customers are still buying.
 
 ### [Zestful](https://zestfuldata.com)
 

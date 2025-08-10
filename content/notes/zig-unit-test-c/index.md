@@ -1,6 +1,6 @@
 ---
 title: "Using Zig to Unit Test a C Application"
-date: 2023-12-18T00:00:00-05:00
+date: 2023-12-18
 tags:
   - zig
 discuss_urls:
@@ -22,7 +22,7 @@ For the past three years, I've been working on [TinyPilot](https://tinypilotkvm.
 
 To stream the target computer's display, TinyPilot uses [uStreamer](https://github.com/pikvm/ustreamer), a video streaming utility that's optimized for Raspberry Pi's hardware.
 
-{{<img src="ustreamer-display.webp" max-width="800px" alt="Screenshot of TinyPilot in a browser window displaying a Dell boot screen" caption="TinyPilot uses the C uStreamer application to stream video">}}
+{{<img src="ustreamer-display.webp" max-width="800px" alt="Screenshot of TinyPilot in a browser window displaying a Dell boot screen" caption="TinyPilot uses the C uStreamer application to stream video" has-border="false">}}
 
 I've been working with uStreamer for several years, but I find the codebase difficult to approach. It's implemented in C, and it doesn't have any automated tests.
 
@@ -146,7 +146,7 @@ $ printf 'hello, world!' | base64
 aGVsbG8sIHdvcmxkIQ==
 ```
 
-The complete example at this stage [is on Github](https://github.com/tiny-pilot/ustreamer/tree/zig-00-c-test).
+The complete example at this stage [is on GitHub](https://github.com/tiny-pilot/ustreamer/tree/zig-00-c-test).
 
 ## Adding Zig to my uStreamer project environment
 
@@ -162,18 +162,18 @@ I added the following `flake.nix` file to my project, which pulls Zig 0.11.0 int
     flake-utils.url = "github:numtide/flake-utils";
 
     # 0.11.0
-    zig_dep.url = "github:NixOS/nixpkgs/46688f8eb5cd6f1298d873d4d2b9cf245e09e88e";
+    zig-nixpkgs.url = "github:NixOS/nixpkgs/46688f8eb5cd6f1298d873d4d2b9cf245e09e88e";
   };
 
-  outputs = { self, flake-utils, zig_dep }@inputs :
+  outputs = { self, flake-utils, zig-nixpkgs }@inputs :
     flake-utils.lib.eachDefaultSystem (system:
     let
-      zig_dep = inputs.zig_dep.legacyPackages.${system};
+      zig-nixpkgs = inputs.zig-nixpkgs.legacyPackages.${system};
     in
     {
-      devShells.default = zig_dep.mkShell {
+      devShells.default = zig-nixpkgs.mkShell {
         packages = [
-          zig_dep.zig
+          zig-nixpkgs.zig
         ];
 
         shellHook = ''
@@ -514,7 +514,7 @@ output size: 21
 
 Great! That worked. And the results are identical to [my C implementation above](#whats-the-simplest-c-function-in-ustreamer).
 
-The complete example at this stage [is on Github](https://github.com/tiny-pilot/ustreamer/tree/zig-10-simple-exe).
+The complete example at this stage [is on GitHub](https://github.com/tiny-pilot/ustreamer/tree/zig-10-simple-exe).
 
 ## Creating a Zig wrapper for the native C implementation
 
@@ -685,7 +685,7 @@ output size: 20
 
 The output size is now `20` instead of `21` because the underlying data type changed. Previously, I was printing the output size parameter that `us_base64_encode` populated, which included the null terminator. Now, I'm using the `.len` property of the output string, which does not include the null terminator.
 
-The complete example at this stage [is on Github](https://github.com/tiny-pilot/ustreamer/tree/zig-20-wrapper-fn).
+The complete example at this stage [is on GitHub](https://github.com/tiny-pilot/ustreamer/tree/zig-20-wrapper-fn).
 
 ## Creating the first unit test
 
@@ -730,7 +730,7 @@ test success
 
 Success! My first unit test is working and exercising the C code.
 
-The complete example at this stage [is on Github](https://github.com/tiny-pilot/ustreamer/tree/zig-30-unit-test).
+The complete example at this stage [is on GitHub](https://github.com/tiny-pilot/ustreamer/tree/zig-30-unit-test).
 
 ## Checking for false positive test results
 
@@ -817,7 +817,7 @@ test success
    └─ zig test Debug native success 2s MaxRSS:195M
 ```
 
-The complete example at this stage [is on Github](https://github.com/tiny-pilot/ustreamer/tree/zig-40-multi-test).
+The complete example at this stage [is on GitHub](https://github.com/tiny-pilot/ustreamer/tree/zig-40-multi-test).
 
 ## Wrap up
 

@@ -6,14 +6,13 @@ description:
 discuss_urls:
   reddit: https://redd.it/80whkc
   hacker_news: https://news.ycombinator.com/item?id=16483241
-  indie_hackers: https://www.indiehackers.com/forum/why-i-quit-google-to-work-for-myself-284c36ec48
 tags:
   - entrepreneurship
   - google
   - sia
 date: "2018-02-28"
 images:
-  - why-i-quit-google/spoiled-coder.png
+  - why-i-quit-google/spoiled-coder.webp
 ---
 
 For the past four years, I've worked as a software developer at Google. On February 1st, I quit. It was because they refused to buy me a Christmas present.
@@ -28,7 +27,7 @@ When the annual employee survey asked me whether I expected to be at Google in f
 
 Of _course_ I'd still be at Google in five years. I was surrounded by the best engineers in the world, using the most advanced development tools in the world, and eating the free-est food in the world.
 
-{{<img src="spoiled-coder.png" alt="My typical day at Google" max-width="750px">}}
+{{<img src="spoiled-coder.webp" alt="My typical day at Google" max-width="750px" has-border="false">}}
 
 My most recent performance rating was "Strongly Exceeds Expectations." If I just kept going, I'd soon be promoted to the next level, Senior Software Engineer. What a great title! Forever after in my career, I'd be able to say, "Yes, I was a _Senior_ Software Engineer. At _Google_." People would be so impressed.
 
@@ -70,7 +69,7 @@ My other work didn't look so good on paper either. On several occasions, I put m
 
 I submitted my first promo packet, and the results were what I feared: the promotion committee said that I hadn't proven I could handle technical complexity, and they couldn't see the impact I had on Google.
 
-{{<img src="promo-committee.png" alt="Arguing my case to the promotion committee" max-width="800px">}}
+{{<img src="promo-committee.png" alt="Arguing my case to the promotion committee" max-width="800px" has-border="false">}}
 
 ## Learning from rejection
 
@@ -126,7 +125,7 @@ Well, Google kept telling me that it couldn't judge my work until it saw me comp
 
 The dynamic felt absurd.
 
-{{<img src="book-publisher.png" alt="The Google promotion committee approach to book publishing" max-width="750px">}}
+{{<img src="book-publisher.png" alt="The Google promotion committee approach to book publishing" max-width="750px" has-border="false">}}
 
 My career was being dictated by a shifting, anonymous committee who thought about me for an hour of their lives. Management decisions that I had no input into were erasing months of my career progress.
 
@@ -136,9 +135,9 @@ Even if I got the promotion, what then? Popular wisdom said that each promotion 
 
 ## What's the alternative?
 
-Around this time, I discovered [Indie Hackers](https://www.indiehackers.com/).
+Around this time, I discovered Indie Hackers.
 
-{{<img src="indie-hackers.png" alt="Screenshot of Indie Hackers website" max-width="750px">}}
+{{<img src="indie-hackers.png" alt="Screenshot of Indie Hackers website" max-width="550px" has-border="false">}}
 
 It's an online community for founders of small software businesses. Emphasis on small. These weren't Zuckerberg hopefuls, but rather people who wanted to build modest, profitable businesses that pay their bills.
 
@@ -188,7 +187,9 @@ Google was a great place to work, and I learned valuable skills during my time t
 - **Update (Jan. 31, 2020)**: [My Second Year as a Solo Developer](/solo-developer-year-2/)
 - **Update (Feb. 1, 2021)**: [My Third Year as a Solo Developer](/solo-developer-year-3/)
 - **Update (Feb. 1, 2022)**: [My Fourth Year as a Bootstrapped Founder](/solo-developer-year-4/)
+- **Update (Feb. 10, 2023)**: [My Fifth Year as a Bootstrapped Founder](/solo-developer-year-5/)
+- **Update (Feb. 10, 2024)**: [My Sixth Year as a Bootstrapped Founder](/solo-developer-year-6/)
 
 ---
 
-_Illustrations by [Loraine Yow](https://www.lolo-ology.com/)._
+_Illustrations by Loraine Yow._

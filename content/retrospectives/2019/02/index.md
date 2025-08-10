@@ -10,7 +10,7 @@ date: "2019-02-06"
 - Revenues increased substantially from the previous month but missed targets for January.
 - I figured out an easy and inexpensive way to attract users via Twitter.
 
-## Goal Grades
+## Goal grades
 
 At the start of the month, I laid out some high-level goals. Here's how I did against those goals.
 
@@ -39,7 +39,7 @@ I did find a reliable writer, but it still takes me almost as long to edit their
 
 ### Amazon Affiliate Stats
 
-{{<img src="amazon-earnings-2019-01.jpg" alt="Amazon Earnings - Jan. 2019" caption="Amazon affiliate earnings - January, 2019" max-width="800px">}}
+{{<img src="amazon-earnings-2019-01.jpg" alt="Amazon Earnings - Jan. 2019" caption="Amazon affiliate earnings - January, 2019" max-width="800px" has-border="false">}}
 
 | Metric         | December 2018 | January 2019 | Change                                       |
 | -------------- | ------------- | ------------ | -------------------------------------------- |
@@ -51,7 +51,7 @@ Revenues and clicks increased, but my experience with Amazon is that it's bursty
 
 ### Visitor Stats
 
-{{<img src="ga-2019-01-trailing-12.jpg" alt="Google Analytics - Jan. 2019" caption="User sessions - February 2018 through January 2019" max-width="800px">}}
+{{<img src="ga-2019-01-trailing-12.jpg" alt="Google Analytics - Jan. 2019" caption="User sessions - February 2018 through January 2019" max-width="800px" has-border="false">}}
 
 | Metric                        | December 2018 | January 2019 | Change                                    |
 | ----------------------------- | ------------- | ------------ | ----------------------------------------- |
@@ -67,7 +67,7 @@ One big takeaway is that organic search dominates my traffic. While I'm pleased 
 
 ### SEO Stats
 
-{{<img src="google-search-console.jpg" alt="Google Search Console screenshot" caption="Google Search Console - January, 2019" max-width="800px">}}
+{{<img src="google-search-console.jpg" alt="Google Search Console screenshot" caption="Google Search Console - January, 2019" max-width="800px" has-border="false">}}
 
 | Metric                            | December 2018 | January 2019 | Change                                 |
 | --------------------------------- | ------------- | ------------ | -------------------------------------- |

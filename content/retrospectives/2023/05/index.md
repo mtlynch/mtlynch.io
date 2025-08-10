@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 34"
-date: 2023-05-11T00:00:00-04:00
+date: 2023-05-11
 description: 'Getting out of "urgent mode"'
 images:
   - /retrospectives/2023/05/price-profit-usb-c.webp
@@ -21,7 +21,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 - The local team is escaping their months-long stint in "urgent mode."
 - Now that production speed isn't a bottleneck, I can choose a price that optimizes for profitability.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -46,7 +46,7 @@ I found a contract manufacturer I like but still haven't signed with them offici
 
 This was not an exciting release feature-wise, but it created a path for users to migrate off of Debian Buster, which is now a legacy OS. Dropping support for Buster means eliminating a lot of complexity in our codebase, where we had conditional logic for that OS version.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -96,7 +96,7 @@ Worst of all, I couldn't get excited about strong sales days. When I'd check Sho
 
 I felt like we'd be able to relax when the warehouse had a month's worth of inventory. I did some quick spreadsheet calculations and estimated that it would take us until July to reach that point, but I didn't want everyone to feel this way for another two months.
 
-{{<img src="hypothetical-builds.webp" has-border="true" alt="Spreadsheet calculations showing inventory balance relative to our current sale and production rate" caption="By my estimates, it would take us until July to build up a healthy inventory at our 3PL.">}}
+{{<img src="hypothetical-builds.webp" alt="Spreadsheet calculations showing inventory balance relative to our current sale and production rate" caption="By my estimates, it would take us until July to build up a healthy inventory at our 3PL.">}}
 
 For the past few months, I'd considered hiring a third local employee. I was reticent because I expected load to drop once we moved fulfillment to a 3PL and then drop a lot once we moved production to a contract manufacturer. At that point, the local team's job would reduce to only customer support, and I didn't expect there to be enough support work for three people.
 
@@ -123,7 +123,7 @@ I had experimented with pricing last month, but now that I have more data, let's
 | $429  | Mar. 13 - Apr. 10 | 29   | 4.6           | $1,953          | $1,338         |
 | $499  | Apr. 11 - May 3   | 23   | 3.3           | $1,671          | $1,219         |
 
-{{<img src="price-profit-usb-c.webp" has-border="true" alt="Graph of price vs. daily revenue and profit for TinyPilot Voyager 2a (USB-C)">}}
+{{<img src="price-profit-usb-c.webp" alt="Graph of price vs. daily revenue and profit for TinyPilot Voyager 2a (USB-C)">}}
 
 Last month, I was surprised at [how inelastic](/retrospectives/2023/04/#reflections) the demand was for TinyPilot. I expected more of a drop in sales as I increased prices. With more data, the demand curve is a little closer to my expectations. A $120 price increase (32%) caused a 34% decrease in orders.
 
@@ -139,7 +139,7 @@ Interestingly, profit was almost perfectly equal at the $379 and $499 price poin
 | $558  | Mar. 20 - Apr. 10 | 22   | 1.1           | $609            | $440           |
 | $638  | Apr. 11 - May 3   | 23   | 0.9           | $583            | $441           |
 
-{{<img src="price-profit-poe.webp" has-border="true" alt="Graph of price vs. daily revenue and profit for TinyPilot Voyager 2a (PoE)">}}
+{{<img src="price-profit-poe.webp" alt="Graph of price vs. daily revenue and profit for TinyPilot Voyager 2a (PoE)">}}
 
 Customers of the higher-end PoE version seem indifferent to prices between $478 and $528. They bought at roughly the same rate at either price, though the sample size is small.
 
@@ -177,7 +177,7 @@ My current solution is to assign a cookie to each client and associate that cook
 - Published TinyPilot Pro 2.5.4.
 - Attended Microconf US 2023.
 - Hired a new employee for the TinyPilot office.
-- Dealt with [Section 174 headaches](https://ssballiance.org/contactcongress.html) for my 2022 taxes.
+- Dealt with [Section 174 headaches](https://ssballiance.org/2023/04/18/letter-to-congress/) for my 2022 taxes.
 
 ### Lessons learned
 

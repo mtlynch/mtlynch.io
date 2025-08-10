@@ -12,7 +12,7 @@ images:
 - Two of my blog posts reached the front page of [Hacker News](https://news.ycombinator.com/news).
 - Is It Keto earned its all-time-highest monthly revenue, doubling its previous record.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I [declare what I'd like to accomplish](/retrospectives/2020/01/#goals-for-next-month). Here's how I did against those goals:
 
@@ -39,7 +39,7 @@ This was useful to write, as it helped me re-evaluate my long term strategy. It 
 
 ## Stats
 
-{{<img src="wanderjest-google-analytics.jpg" alt="Screenshot of Google Analytics traffic" caption="WanderJest visit statistics - January 2020" max-width="701px" has-border="true">}}
+{{<img src="wanderjest-google-analytics.jpg" alt="Screenshot of Google Analytics traffic" caption="WanderJest visit statistics - January 2020" max-width="701px">}}
 
 ### [WanderJest](https://wanderjest.com)
 
@@ -90,7 +90,7 @@ Is It Keto is officially in maintenance mode now. I had hoped the site's freelan
 | Enterprise Plan Earnings | $3883.70      | $0.00        | <font color="red">-$3883.70 (-100%)</font>    |
 | **Total Revenue**        | **$3934.13**  | **$79.67**   | **<font color="red">-$3854.46 (-98%)</font>** |
 
-It might appear that Zestful experienced a disastrous drop in revenue, but it's just that [December](/retrospectives/2020/01/#zestfulhttpszestfuldatacom) was a huge outlier.
+It might appear that Zestful experienced a disastrous drop in revenue, but it's just that [December](/retrospectives/2020/01/#zestful) was a huge outlier.
 
 Zestful's income is bursty, and anything in the $50-100 range is a good month. There was an eight-fold increase in traffic, but that's a mostly meaningless side effect of my blog posts reaching the front page of Hacker News with mentions of Zestful.
 
@@ -100,13 +100,13 @@ With previous businesses, I've focused too much on growth and failed to consider
 
 My first arrangement was with an experienced comedian in Connecticut. He was posting on Facebook inviting students to sign up for his comedy classes. I offered to create an ad for his course on WanderJest in exchange for 10% of the tuition for students I referred. His class only had three open slots, and tuition was $200, so it wouldn't be a sustainable source of income, but I just wanted to see if I could make _any_ money with affiliate deals.
 
-{{<img src="wanderjest-sponsored.jpg" alt="Screenshot of WanderJest's first affiliate ad" caption="WanderJest's first affiliate advertisement" max-width="650px" has-border="true">}}
+{{<img src="wanderjest-sponsored.jpg" alt="Screenshot of WanderJest's first affiliate ad" caption="WanderJest's first affiliate advertisement" max-width="650px">}}
 
 Unfortunately, this attempt failed. The ad was live for a few weeks, but no WanderJest users enrolled by the time classes began. It was a longshot, as my audience is still small, and the classes were in Hartford, CT, roughly an hour's drive from most of my users in Western Mass.
 
 I now have affiliate partnerships with one theater and a one-time show. Their show listings appear on WanderJest with distinctive flair and discount labels, but I plan to do a little more in February to draw users' attention to those shows.
 
-{{<img src="wanderjest-flaired-listing.jpg" alt="Screenshot of partner show listings on WanderJest" caption="Shows that partner with WanderJest get special flair for their show listings." max-width="650px" has-border="true">}}
+{{<img src="wanderjest-flaired-listing.jpg" alt="Screenshot of partner show listings on WanderJest" caption="Shows that partner with WanderJest get special flair for their show listings." max-width="650px">}}
 
 I'm hoping show tickets will be easier to sell than comedy classes. The cost to the consumer is lower, my users receive a discount, and they're geographically close to the towns where I advertise WanderJest.
 
@@ -115,8 +115,8 @@ I'm hoping show tickets will be easier to sell than comedy classes. The cost to 
 I've been attending two comedy shows per week to meet new comedians and ask them how WanderJest can be useful to them. In person, performers seem enthusiastic about WanderJest, but when I follow up later asking for their photo and bio to list on the site, only about half respond. A small minority are vocal enough champions that they promote the site without me even asking:
 
 {{<gallery caption="Comedians promoting WanderJest on Facebook">}}
-{{<img src="todd-therrien-share.jpg" alt="Screenshot of Todd Therrien sharing WanderJest on Facebook">}}
-{{<img src="matt-woodland-share.jpg" alt="Screenshot of Matt Woodland sharing WanderJest on Facebook">}}
+{{<img src="todd-therrien-share.jpg" alt="Screenshot of Todd Therrien sharing WanderJest on Facebook" has-border="false">}}
+{{<img src="matt-woodland-share.jpg" alt="Screenshot of Matt Woodland sharing WanderJest on Facebook" has-border="false">}}
 {{</gallery>}}
 
 That said, WanderJest is still far from being part of any performer's or show organizer's workflow. Even the most passionate WanderJest supporters still use Facebook events as their primary channel for promotion. I don't blame them, as event creation on WanderJest is still clunky &mdash; they have to fill out a [Typeform](https://typeform.com/), and then I add their show manually. I want to add enough features to the site that using WanderJest makes show organizers' lives easier than promoting a show without it.
@@ -143,8 +143,8 @@ Fancy features and promotions mean nothing unless I can demonstrate to show orga
 I've posted on my town's local Facebook group and two local subreddits: [/r/northampton](https://redd.it/evoo77) and [/r/springfield](https://redd.it/ey90il). The response to every post has been uniformly positive, with the /r/springfield subreddit even adding WanderJest to their permanent sidebar.
 
 {{<gallery caption="Response to WanderJest social media posts">}}
-{{<img src="fb-wanderjest-share.jpg" alt="Screenshot of WanderJest share on Facebook">}}
-{{<img src="reddit-wanderjest-share.jpg" alt="Screenshot of WanderJest share on Reddit" has-border="true">}}
+{{<img src="fb-wanderjest-share.jpg" alt="Screenshot of WanderJest share on Facebook" has-border="false">}}
+{{<img src="reddit-wanderjest-share.jpg" alt="Screenshot of WanderJest share on Reddit">}}
 {{</gallery>}}
 
 This is one of my value propositions to show organizers. Many of these social networks have rules against promoting individual events, but people view WanderJest as a helpful resource rather than an attempt to promote a particular show.
@@ -165,7 +165,7 @@ One of the most important lessons I've learned in launching new businesses is th
 
 Instead, with each project, I look for new ways to cut corners and launch faster. With WanderJest, I skipped the database &mdash; I just hardcoded all of my data right into the source code.
 
-{{<img src="wanderjest-data-in-code.jpg" alt="Screenshot of WanderJest source code with hardcoded data" caption="Hardcoding data into source code is ugly but effective for launching your first version quickly." max-width="650px">}}
+{{<img src="wanderjest-data-in-code.jpg" alt="Screenshot of WanderJest source code with hardcoded data" caption="Hardcoding data into source code is ugly but effective for launching your first version quickly." max-width="650px" has-border="false">}}
 
 I told myself that I'd migrate to a database when hardcoded data got too annoying, but I found that working with hardcoded data was, in fact, far easier. It meant that all the data in my dev environment stayed perfectly in sync with my prod environment. There were never issues where I only noticed after deploying that something didn't work (e.g., "Whoops, this looks horrendous when a title is longer than 80 characters!"). And because my code is under source control, my data is too, so I could jump back to any version of my site and know that I'm seeing both the code and data as it existed at that point in time.
 

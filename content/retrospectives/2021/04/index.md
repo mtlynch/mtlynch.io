@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 9"
-date: 2021-04-05T00:00:00-04:00
+date: 2021-04-05
 description: Using the sales lull to optimize processes.
 images:
   - /retrospectives/2021/04/og-cover.png
@@ -12,7 +12,7 @@ images:
 - TinyPilot's revenues continue to plummet, but I'm learning to accept it.
 - I'm inching ever closer to the freedom to take short vacations.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -39,7 +39,7 @@ Two YouTubers signed on as affiliates, and one more is interested but hasn't yet
 
 I published a [preview](https://tinypilotkvm.com/blog/rackmount) of the rack mount and solicited feedback from readers and customers. The feedback was positive in that people seem excited about it. It was also valuable in identifying some incorrect assumptions.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -69,11 +69,11 @@ Only two items need to wait until the order actually comes in. The first is the 
 
 So we couldn't completely pre-pack boxes, but we could do 95% of the work and leave the last 5% until shipping time.
 
-{{<img src="pre-packed-voyagers.jpg" alt="Photo of me holding A6-sized paper in my hand" caption="We now pre-pack our orders and add the commercial invoice and any add-ons at fulfillment time." max-width="620px">}}
+{{<img src="pre-packed-voyagers.jpg" alt="Photo of me holding A6-sized paper in my hand" caption="We now pre-pack our orders and add the commercial invoice and any add-ons at fulfillment time." max-width="620px" has-border="false">}}
 
 When discussing other bottlenecks, I was surprised to learn that _folding paper_ is a significant time-suck. The boxes we use for TinyPilot are 6x6x2", which means we have to fold normal 8.5x11" paper into quarters to fit into the box. My girlfriend realized that A6 paper is 4.1x5.9", which is the perfect size for our boxes, so we bought a ream:
 
-{{<img src="a6-paper.jpg" alt="Photo of me holding A6-sized paper in my hand" caption="Printing order documents on A6-sized paper means we don't have to waste time folding paper before placing it in the box." max-width="500px">}}
+{{<img src="a6-paper.jpg" alt="Photo of me holding A6-sized paper in my hand" caption="Printing order documents on A6-sized paper means we don't have to waste time folding paper before placing it in the box." max-width="500px" has-border="false">}}
 
 ## How can TinyPilot run while I'm on vacation?
 
@@ -85,7 +85,7 @@ My dream was to find some sort of "warehouse as a service" business, where I shi
 
 And then there's Fulfillment by Amazon, a service that lets me ship big batches of finished products to Amazon for fulfillment. That would sort of work, except that creating TinyPilots still requires a lot of physical labor. Parts are continuously arriving that need to be processed and assembled into working devices. Amazon wouldn't do any of that. Plus, I'm not quite ready to insert an enormous corporate machine between me and my customers.
 
-{{<img src="amazon-fba.png" has-border="true" max-width="600px" alt="Screenshot of Fulfillment by Amazon page" caption="Fulfillment by Amazon allows merchants to ship their products to Amazon warehouses for fulfillment.">}}
+{{<img src="amazon-fba.png" max-width="600px" alt="Screenshot of Fulfillment by Amazon page" caption="Fulfillment by Amazon allows merchants to ship their products to Amazon warehouses for fulfillment.">}}
 
 All signs were pointing to hiring local employees, which scared me. Based on the IRS' definition, a local worker who uses equipment I provide and follows instructions I give is unambiguously an "employee" rather than an "independent contractor." I've only ever hired contractors, and the process there is fairly lightweight. With real employees, there's _so_ much more paperwork. I have to give them a bunch of forms and notices and make sure I'm withholding all the right taxes.
 
@@ -102,8 +102,8 @@ I was planning to continue using my house as TinyPilot's central warehouse, but 
 I wasn't planning to begin searching yet, but I saw a "for lease" sign on an office park that's only a 15-minute walk from my house. I called for pricing, expecting something in the range of $1,200-$1,500/month plus utilities. It turns out it's $550/month, including utilities and Internet. And the last tenants didn't want their furniture anymore, so it comes furnished with decent desks.
 
 {{<gallery caption="TinyPilot's new official headquarters, potentially">}}
-{{<img src="office1.jpg" alt="Freelancer hours spreadsheet">}}
-{{<img src="office2.jpg" alt="Freelancer payment spreadsheet">}}
+{{<img src="office1.jpg" alt="Freelancer hours spreadsheet" has-border="false">}}
+{{<img src="office2.jpg" alt="Freelancer payment spreadsheet" has-border="false">}}
 {{</gallery>}}
 
 I'm going to try to get a 1-year lease and establish the first official TinyPilot headquarters.

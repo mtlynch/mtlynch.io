@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Echo commands to console.
 set -x
@@ -30,10 +30,13 @@ IGNORE_PATTERNS+=("/ark.intel.com/")
 IGNORE_PATTERNS+=("/calculator.aws/")
 IGNORE_PATTERNS+=("/community.bloggingfordevs.com/")
 IGNORE_PATTERNS+=("/docs.github.com/")
+IGNORE_PATTERNS+=("/fdc.nal.usda.gov/")
+IGNORE_PATTERNS+=("/feinternational.com/")
 IGNORE_PATTERNS+=("/github.com/")
 IGNORE_PATTERNS+=("/gusto.com/")
 IGNORE_PATTERNS+=("/help.shipstation.com/")
 IGNORE_PATTERNS+=("/indiebound.org/")
+IGNORE_PATTERNS+=("/isitketo.org/")
 IGNORE_PATTERNS+=("/mediagoblin-v5lmqis51k.herokuapp.com/")
 IGNORE_PATTERNS+=("/medium.com/")
 IGNORE_PATTERNS+=("/newegg.com/")
@@ -43,17 +46,28 @@ IGNORE_PATTERNS+=("/playwright.dev/")
 IGNORE_PATTERNS+=("/redd.it/")
 IGNORE_PATTERNS+=("/reddit.com/")
 IGNORE_PATTERNS+=("/servernope.com/")
-IGNORE_PATTERNS+=("/splashthat.com")
+IGNORE_PATTERNS+=("/splashthat.com/")
 IGNORE_PATTERNS+=("/typeform.com/")
 IGNORE_PATTERNS+=("/upwork.com/")
 IGNORE_PATTERNS+=("/vimeo.com/")
 IGNORE_PATTERNS+=("/vmware.com/")
+IGNORE_PATTERNS+=("/wpengine.com/")
 IGNORE_PATTERNS+=("/www.amd.com/")
 IGNORE_PATTERNS+=("/www.bls.gov/")
+IGNORE_PATTERNS+=("/www.buzzfeednews.com/")
+IGNORE_PATTERNS+=("/www.bhphotovideo.com/")
 IGNORE_PATTERNS+=("/www.digitalfaq.com/")
+IGNORE_PATTERNS+=("/www.kissmyketo.com/")
+IGNORE_PATTERNS+=("/www.irs.gov/")
+IGNORE_PATTERNS+=("/www.raspberrypi.com/")
+IGNORE_PATTERNS+=("/www.raspberrypi.org/")
 IGNORE_PATTERNS+=("/www.reddit.com/")
 IGNORE_PATTERNS+=("/www.sciencedirect.com/")
 IGNORE_PATTERNS+=("/www.servicenow.com/")
+IGNORE_PATTERNS+=("/www.usta.com/")
+
+# Ignore links to comments that only load in production.
+IGNORE_PATTERNS+=("/mtlynch.io\/.*#comment-.*/")
 
 URL_IGNORE="$(join_by , "${IGNORE_PATTERNS[@]}")"
 
@@ -79,8 +93,8 @@ htmlproofer \
   --swap-urls "https\://mtlynch.io/:/" \
   --ignore-urls "${URL_IGNORE}" \
   `# Some sites return HTTP 400/429 - No Error when HTMLProofer sends ` \
-  `# requests, so ignore those.` \
-  --ignore-status-codes "400,429" \
+  `# requests, so ignore those. Ignore 403s because it's mostly CI noise.` \
+  --ignore-status-codes "400,403,429" \
   --no-enforce-https \
   "$htmlproofer_args_extra" \
   "${BUILD_DIR}"

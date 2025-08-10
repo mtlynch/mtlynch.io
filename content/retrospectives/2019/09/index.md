@@ -13,7 +13,7 @@ date: "2019-09-06"
 - I finally got a high-ranking domain to link to Is It Keto, but the experience soured me on guest posts.
 - [Zestful](https://zestfuldata.com/) had its best month ever, earning $728 in revenue.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I [declare what I'd like to accomplish](/retrospectives/2019/08/#goals-for-next-month). Here's how I did against those goals:
 
@@ -31,7 +31,7 @@ I find myself "chasing the high" in wanting another hit article, as none of my b
 - **Result**: I abandoned this goal and focused instead on expanding Is It Keto.
 - **Grade**: F
 
-As I was writing my July retrospective, I [questioned my decision](/retrospectives/2019/08/#is-it-ketohttpsisitketoorg) to keep ignoring Is It Keto, given that it's my only successful project. I ended up thinking that thought more and decided to postpone the new product in favor of returning my focus to Is It Keto for a while.
+As I was writing my July retrospective, I [questioned my decision](/retrospectives/2019/08/#is-it-keto) to keep ignoring Is It Keto, given that it's my only successful project. I ended up thinking that thought more and decided to postpone the new product in favor of returning my focus to Is It Keto for a while.
 
 I'm still interested in pursuing the email tool idea, but I've deferred it to October at the earliest.
 
@@ -82,17 +82,17 @@ I [posted a thread](https://redd.it/cmslmx) about Is It Keto, and here were my k
 - Is It Keto's page titles should better match common search terms.
   - **Result**: I changed my page titles from the format of "\[Food\] - Is It Keto" to "Is \[Food\] Keto? - Is It Keto"
 
-{{<img src="page-titles.jpg" alt="Before and after comparison of Is It Keto in Google search results" caption="Changing Is It Keto page titles to better match search queries" max-width="800px" has-border="true">}}
+{{<img src="page-titles.jpg" alt="Before and after comparison of Is It Keto in Google search results" caption="Changing Is It Keto page titles to better match search queries" max-width="800px">}}
 
 - Is It Keto should have dropdowns navigation menus so that it's easier for users to browse different food categories.
   - **Result**: I added dropdown menus to the navigation bar.
 
-{{<img src="navbar.jpg" alt="Before and after screenshots of Is It Keto navbar" caption="Redesigned navbar on Is It Keto" max-width="600px" has-border="true">}}
+{{<img src="navbar.jpg" alt="Before and after screenshots of Is It Keto navbar" caption="Redesigned navbar on Is It Keto" max-width="600px">}}
 
 - I should promote Is It Keto on Pinterest.
   - **Result**: I created a [Pinterest page](https://pinterest.com/isitketo/) and added 14 pins, but it's time-consuming to create the graphics, and my referrals from Pinterest remain at nearly zero. I need help from someone who understands Pinterest, but I can't afford a Pinterest consultant at the moment.
 
-{{<img src="pinterest.jpg" alt="Screenshot of Is It Keto's Pinterest page" caption="Is It Keto's unsuccessful Pinterest page" max-width="500px">}}
+{{<img src="pinterest.jpg" alt="Screenshot of Is It Keto's Pinterest page" caption="Is It Keto's unsuccessful Pinterest page" max-width="500px" has-border="false">}}
 
 ## Finally a backlink for Is It Keto
 
@@ -102,7 +102,7 @@ This seemed sensible, but I had a tough time approaching it. The well-known site
 
 With the assumption that local fitness bloggers might be more friendly to a nearby blogger, I used search terms like "fitness western massachusetts." One of the sites I found was the local blog for a gym chain called [Fitness Together](https://fitnesstogether.com), with a 55/100 score from [Ahrefs](https://ahrefs.com/backlink-checker). Coincidentally, my sister had a contact there, so I reached out about writing a guest post for them. They agreed to the idea, I wrote a new article for them, and they published it a couple weeks later: ["Five Benefits of Strength Training."](https://fitnesstogether.com/northampton/blog/five-benefits-of-health-training)
 
-{{<img src="guest-post.jpg" alt="Screenshot of my blog post on Fitness Together's blog" caption="My guest post on the Fitness Together Northampton blog" max-width="600px" href="https://fitnesstogether.com/northampton/blog/five-benefits-of-health-training">}}
+{{<img src="guest-post.jpg" alt="Screenshot of my blog post on Fitness Together's blog" caption="My guest post on the Fitness Together Northampton blog" max-width="600px" href="https://fitnesstogether.com/northampton/blog/five-benefits-of-health-training" has-border="false">}}
 
 It's unclear if that new link makes any difference. The Fitness Together root domain is valuable, but Google may recognize that the [blog for a city-specific location](https://fitnesstogether.com/northampton/blog) is not as significant as Fitness Together's [main blog](https://fitnesstogether.com/blog).
 
@@ -130,13 +130,13 @@ Victor Zhou is a Facebook engineer who only began blogging in 2019 and already w
 
 My favorite of his posts is ["Minify Your SVGs"](https://victorzhou.com/blog/minify-svgs/). It does a great job of explaining the context of the problem and the tradeoffs of different solutions he considered.
 
-{{<img src="victor-zhou.jpg" alt="Screenshot of Victor Zhou's blog" caption="Victor is a talented software blogger with an emphasis on machine learning" max-width="450px" href="https://victorzhou.com/blog/minify-svgs/">}}
+{{<img src="victor-zhou.jpg" alt="Screenshot of Victor Zhou's blog" caption="Victor is a talented software blogger with an emphasis on machine learning" max-width="450px" href="https://victorzhou.com/blog/minify-svgs/" has-border="false">}}
 
 ### [Cory Zue's Solopreneur Side Project Dashboard](http://www.coryzue.com/open/)
 
 Cory Zue is a solo developer who writes publicly and transparently about his business projects. In August, he unveiled a dashboard that shows earnings and time investment for his different projects.
 
-{{<img src="solopreneur-dashboard.jpg" alt="Screenshot of Solopreneur Dashboard" caption="Cory Zue created a public dashboard to track his time investment and financial returns for each of his side businesses" max-width="450px" href="http://www.coryzue.com/open/">}}
+{{<img src="solopreneur-dashboard.jpg" alt="Screenshot of Solopreneur Dashboard" caption="Cory Zue created a public dashboard to track his time investment and financial returns for each of his side businesses" max-width="450px" href="http://www.coryzue.com/open/" has-border="false">}}
 
 Particularly interesting is his effective wage for each project. It shows how his businesses required substantial up-front investment but, over time, generated increasing amounts of revenue and demanded decreasing levels of maintenance.
 

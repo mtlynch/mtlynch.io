@@ -1,6 +1,6 @@
 ---
 title: "The Seven Habits of Highly Effective People by Stephen R. Covey"
-date: 2020-08-03T20:33:09-04:00
+date: 2020-08-03
 rating: 8
 purchase_url: https://www.indiebound.org/book/9781982137274
 custom_css: true
@@ -18,14 +18,14 @@ One example was his idea of the [circle of influence vs. the circle of concern](
 
 ---
 
-## What I Liked
+## What I liked
 
 - The author genuinely finds human behavior delightful and fascinating, and his writing shows it.
 - Lots of useful takeaways that I've been applying in my life.
 - It's genuinely funny and moving in parts.
   - He draws many stories from experiences with his family, and one of them made me tear up, while others made me laugh out loud.
 
-## What I Disliked
+## What I disliked
 
 - Certain topics could have been explained better.
   - e.g., the terms "character ethic" and "personality ethic" sound similar to me, but Covey uses them to represent opposite ideas.
@@ -33,7 +33,7 @@ One example was his idea of the [circle of influence vs. the circle of concern](
   - In particular, the chapters about ["win/win"](#habit-4-think-winwin) and ["synergy"](#habit-6-synergize) felt like obvious ideas wrapped in a lot of fluff.
 - It comes across a little tone-deaf in that the author seems to imply that unsuccessful people would be successful if they simply practiced better habits.
 
-## Key Takeaways
+## Key takeaways
 
 ### Character ethic vs. personality ethic
 
@@ -119,7 +119,7 @@ This closely mirrors the idea of ["choicelessness language" in _Nonviolent Commu
 - Circle of concern: the set of all things in the world that occupy your thoughts, whether or not you can change them.
 - Circle of influence: the subset of items in your circle of your concern over which you can have an actual impact.
 
-{{<img src="circles.png" max-width="600px" caption="Circle of Concern contains everything you think about. Circle of Influence contains the subset of those things that you can impact.">}}
+{{<img src="circles.png" max-width="600px" caption="Circle of Concern contains everything you think about. Circle of Influence contains the subset of those things that you can impact." has-border="false">}}
 
 - Proactive people focus their energy on their circle of influence.
   - They care most about things they can change, and doing so expands the set of things they influence.
@@ -186,6 +186,8 @@ Even if you have crystal clear principles, the concert example is still a diffic
 
 #### Time management matrix
 
+<!-- wordword-ignore-start -->
+
 <div id="quadrant-table">
   <div class="row">
     <div class="col">&nbsp;</div>
@@ -238,6 +240,8 @@ Even if you have crystal clear principles, the concert example is still a diffic
     </div>
   </div>
 </div>
+
+<!-- wordword-ignore-end -->
 
 - If we don't take the time to figure out what's important, we default to doing what's urgent.
 - People who focus their time on Quadrant I just learn to manage crisis after crisis.

@@ -1,6 +1,6 @@
 ---
 title: "Is It Keto: Month 13"
-date: 2020-07-02T00:00:00-04:00
+date: 2020-07-02
 description: My new product is building momentum just as I'm losing motivation on the old one.
 images:
   - /retrospectives/2020/07/kvmpi-assembled.jpg
@@ -8,11 +8,11 @@ images:
 
 ## Highlights
 
-- I sold my first pre-order for [KVM Pi](https://tinypilotkvm.com/?ref=mtlynch.io).
+- I sold my first pre-order for [KVM Pi](https://tinypilotkvm.com/).
 - Finding new ways to monetize [Is It Keto](https://isitketo.org) is proving more difficult than I expected.
 - I sold an Enterprise plan for [Zestful](https://zestfuldata.com).
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -36,7 +36,7 @@ I intentionally scaled down my output from [May's goal of 100 new articles](/ret
 
 ### Create a working Pi-based KVM over IP, controllable through the web browser
 
-- **Result**: Created [KVM Pi](https://tinypilotkvm.com/?ref=mtlynch.io), which works better than I expected
+- **Result**: Created [KVM Pi](https://tinypilotkvm.com/), which works better than I expected
 - **Grade**: A
 
 KVM Pi now works and is extremely usable. I thought the first version would be more finicky or brittle, but I've been using it to [manage my server](kvmpi-os-install.mp4) and [run demos](kvmpi-typing-demo.mp4), and it's all pretty smooth.
@@ -47,12 +47,12 @@ There are [a few bugs](https://github.com/tiny-pilot/tinypilot/milestone/2) I wa
 
 ### Revenue overview
 
-| Project                                            | May 2020    | June 2020     | Change                                        |
-| -------------------------------------------------- | ----------- | ------------- | --------------------------------------------- |
-| [Is It Keto](https://isitketo.org)                 | $221.53     | $180.66       | <font color="red">-$40.87 (-18%)</font>       |
-| [Zestful](https://zestfuldata.com)                 | $6.48       | $685.26       | <font color="green">+$678.78 (+10475%)</font> |
-| [KVM Pi](https://tinypilotkvm.com/?ref=mtlynch.io) | N/A         | $173.94       | N/A                                           |
-| **Total**                                          | **$228.01** | **$1,039.86** | <font color="green">+$811.85 (+356%)</font>   |
+| Project                             | May 2020    | June 2020     | Change                                        |
+| ----------------------------------- | ----------- | ------------- | --------------------------------------------- |
+| [Is It Keto](https://isitketo.org)  | $221.53     | $180.66       | <font color="red">-$40.87 (-18%)</font>       |
+| [Zestful](https://zestfuldata.com)  | $6.48       | $685.26       | <font color="green">+$678.78 (+10475%)</font> |
+| [KVM Pi](https://tinypilotkvm.com/) | N/A         | $173.94       | N/A                                           |
+| **Total**                           | **$228.01** | **$1,039.86** | <font color="green">+$811.85 (+356%)</font>   |
 
 ### [Is It Keto](https://isitketo.org)
 
@@ -79,19 +79,19 @@ One of my goals last month was to do something more substantial with Is It Keto'
 
 My first idea was something basically like [wip.chat](https://wip.chat). People could post photos and progress updates and encourage each other. I created a landing page that loosely described the idea:
 
-{{<img src="social-landing-page.png" alt="Screenshot of Cornerstone social network landing page" max-width="400px" caption="Landing page for my first idea: a keto social network">}}
+{{<img src="social-landing-page.png" alt="Screenshot of Cornerstone social network landing page" max-width="400px" caption="Landing page for my first idea: a keto social network" has-border="false">}}
 
 Of people who reached the landing page, 4.6% signed up, but only 20-30 users per day clicked the landing page at all. 1,500-2,200 people visit Is It Keto each day, and an average of one person signed up each day, so the page converted less than 0.1% of total visitors.
 
 Upon joining the mailing list, subscribers received an email that looked like this:
 
-{{<img src="cornerstone-welcome.png" alt="Screenshot of automatic email response" max-width="600px" has-border="true" caption="Automatic welcome email to people who signed up at the Cornerstone landing page">}}
+{{<img src="cornerstone-welcome.png" alt="Screenshot of automatic email response" max-width="600px" caption="Automatic welcome email to people who signed up at the Cornerstone landing page">}}
 
 Nobody replied or joined the Slack. I tried writing direct emails to people, but it's hard to convince people that you, a human, are writing a personalized letter to them when all you know is their email address. Nobody I reached out to replied, and I certainly didn't want to rush into building anything before I could talk to any users.
 
 After reaching out to users on Reddit, one woman told me that their primary keto community is a local [Telegram](https://telegram.org/) chat group. She said that her group of keto friends swap tips about local restaurants and grocery stores and share recipes. That sounded like an interesting idea, so I created a landing page to see if it clicked for other people.
 
-{{<img src="chat-landing-page.png" alt="Screenshot of Cornerstone group chat landing page" max-width="200px" caption="Landing page for my second idea: a keto-specialized local group chat app">}}
+{{<img src="chat-landing-page.png" alt="Screenshot of Cornerstone group chat landing page" max-width="200px" caption="Landing page for my second idea: a keto-specialized local group chat app" has-border="false">}}
 
 That landing page performed even worse, with only a 2% signup rate. I've since removed the links and ads for those landing pages until I have the bandwidth to test a new idea.
 
@@ -107,7 +107,7 @@ But it didn't go as planned.
 
 The first problem was that my messages had a terrible response rate. I reached out to 16 redditors and only got interviews with two of them. I tried to make the interview as convenient as possible, so I offered the choice of a scheduled timeslot or "just pop into Slack whenever." But this meant that _I_ had to constantly monitor my Slack channel all the time, which was a big focus-killer.
 
-{{<img src="cornerstone-cold-msg.jpg" alt="Screenshot of cold message to a redditor" has-border="true" caption="Example message I sent to a reddit user that yielded no response">}}
+{{<img src="cornerstone-cold-msg.jpg" alt="Screenshot of cold message to a redditor" caption="Example message I sent to a reddit user that yielded no response">}}
 
 The other issue was that if I spent the entire interview asking about product ideas, they'd sense that the interview was a farse, and I was just exploiting their time for market research. I did still ask them about how online communities influenced their experience with keto and what tools they used, but I only got to talk about it for a few minutes per interview. In an online chat, that's basically four or five sentences of feedback.
 
@@ -125,7 +125,7 @@ Lastly, I have to actually _write_ these interview articles. I estimate that eac
 
 In my last retrospective, I had this [fantastic revelation](/retrospectives/2020/06/#doing-more-with-is-it-ketos-audience) that with 50k+ monthly visitors, Is It Keto now has a large enough audience to make direct affiliate partnerships with keto companies. Instead of showing their ads through Google AdSense, I could cut out the middle man and earn much better payouts.
 
-A month later, I've come to realize that being an affiliate is kind of awful. If you depend on one affiliate, they have a ton of power over you, as I saw when the [Amazon Affiliates program](#is-it-ketohttpsisitketoorg) slashed my revenue by 60% overnight. Outside of Amazon, most of the keto merchants are pretty difficult to work with and have limited selections of products &mdash; generally less than 50.
+A month later, I've come to realize that being an affiliate is kind of awful. If you depend on one affiliate, they have a ton of power over you, as I saw when the [Amazon Affiliates program](#is-it-keto) slashed my revenue by 60% overnight. Outside of Amazon, most of the keto merchants are pretty difficult to work with and have limited selections of products &mdash; generally less than 50.
 
 Here's a paraphrased email exchange I had with one of the merchants whose affiliate program I joined:
 
@@ -167,13 +167,13 @@ I'm not sure if I just have unreasonable expectations or if the affiliate progra
 
 ## Selling my first hardware device
 
-Okay, I feel like this retrospective has been mostly negative, so now for some good news. I've been working on software to turn a Raspberry Pi into [a server administration device](https://tinypilotkvm.com/?ref=mtlynch.io). At the end of June, I received my first pre-order!
+Okay, I feel like this retrospective has been mostly negative, so now for some good news. I've been working on software to turn a Raspberry Pi into [a server administration device](https://tinypilotkvm.com/). At the end of June, I received my first pre-order!
 
-{{<img src="kvmpi-first-sale.jpg" alt="Screenshot of Stripe receipt for my first sale" has-border="true" caption="My first KVM Pi sale">}}
+{{<img src="kvmpi-first-sale.jpg" alt="Screenshot of Stripe receipt for my first sale" caption="My first KVM Pi sale">}}
 
 It's the first time I've ever sold a pre-order of anything, so it was pretty fun.
 
-{{<img src="kvmpi-assembled.jpg" alt="Photo of KVM Pi device" max-width="600px" caption="My KVM Pi demo device">}}
+{{<img src="kvmpi-assembled.jpg" alt="Photo of KVM Pi device" max-width="600px" caption="My KVM Pi demo device" has-border="false">}}
 
 Here was my process:
 
@@ -183,7 +183,7 @@ Here was my process:
 1. Created an "interested buyer" mailing list and linked to it from my blog post (I've since replaced it with a link to my sales page). I got 11 subscribers this way.
 1. Shared progress with my subscribers and [sent a Google Forms survey](kvmpi-survey.png) to gauge interest and price preferences
 1. Five of my 11 subscribers [responded to the survey](kvmpi-survey-results.png), and 60% (3 people) said they were happy with the $180 price I had in mind.
-1. Created a [sales page](https://tinypilotkvm.com/?ref=mtlynch.io) with photos and demo videos.
+1. Created a [sales page](https://tinypilotkvm.com/) with photos and demo videos.
 1. Announced the pre-sale to my subscribers.
    - 30 minutes later, I received my first pre-order.
 
@@ -215,7 +215,7 @@ I was nervous because I've found that customers who can't afford the standard ra
 
 ### What got done?
 
-- Created [a server administration device](https://tinypilotkvm.com/?ref=mtlynch.io) and sold my first unit.
+- Created [a server administration device](https://tinypilotkvm.com/) and sold my first unit.
 - Tested two ideas for sister products to Is It Keto (both duds).
 - Published ["Key Mime Pi: Turn Your Raspberry Pi into a Remote Keyboard"](https://mtlynch.io/key-mime-pi/).
 

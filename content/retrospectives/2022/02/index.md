@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 19"
-date: 2022-02-09T00:05:00-05:00
+date: 2022-02-09
 description: How can I manage TinyPilot on 20 hours per week?
 images:
   - /retrospectives/2022/02/tinypilot-rev.png
@@ -12,7 +12,7 @@ images:
 - TinyPilot sales continue running strong despite a delay in launching our next product.
 - I analyze how I'm spending my time and figure out ways to allocate my hours better.
 
-## Goal Grades
+## Goal grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
@@ -39,7 +39,7 @@ I was glad to publish this retrospective, as I'd been working on it for several 
 
 I was surprised the post didn't get more traction on Hacker News and reddit. Usually, my annual updates are popular there, but this year was a miss on both sites. As always, there's a lot of luck involved, so I can't draw too much from an individual post.
 
-## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
+## [TinyPilot](https://tinypilotkvm.com/) stats
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -95,7 +95,7 @@ Coordinating changes is one of the biggest places where I spend my time, and it'
 
 A recent example of change coordination involved making an adjustment to the Voyager 2's cases. TinyPilot's EU distributor emailed me to say that on about 10% of his Voyager 2 builds, the USB-C ports came out misaligned so badly that he couldn't plug in USB-C cables.
 
-{{<img src="port-skew.jpg" max-width="600px" alt="Photo of USB-C ports on Voyager 2 skewing right" caption="TinyPilot's EU distributor reported that he saw the USB-C ports skewing within the case on some builds.">}}
+{{<img src="port-skew.jpg" max-width="600px" alt="Photo of USB-C ports on Voyager 2 skewing right" caption="TinyPilot's EU distributor reported that he saw the USB-C ports skewing within the case on some builds." has-border="false">}}
 
 This was the sequence to get it sorted out:
 
