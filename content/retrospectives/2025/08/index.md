@@ -112,7 +112,7 @@ I also did some editing work this month, so that accounts for a few hours. I onl
 
 In 2019, I [tried to build a business called What Got Done](/retrospectives/2019/06/#what-got-done-business-or-hobby). It was an app that allowed teammates to write weekly summaries of their work and share them with each other. When I was at Google, they had an internal tool called Snippets that did the same thing. I loved it, and [kept writing weekly updates after leaving Google](/status-updates-to-nobody/), even when I was working by myself.
 
-I initially built What Got Done with Vue, Firestore, and AppEngine, and I've come to strongly dislike all of those technologies. I spent a long time [replacing Firestore with SQLite and AppEngine with fly.io](/retrospectives/2021/12/#migrating-my-side-projects-away-from-google-cloud-platform), but Vue stuck around, and it made development unpleasant.
+I never could find customers for What Got Done, so I maintained it as a hobby project for the last six years. I initially built What Got Done with Vue, Firestore, and AppEngine, and I've come to strongly dislike all of those technologies. I spent a long time [replacing Firestore with SQLite and AppEngine with fly.io](/retrospectives/2021/12/#migrating-my-side-projects-away-from-google-cloud-platform), but Vue stuck around, and it made development unpleasant.
 
 Every week when I'd post my updates to What Got Done, I'd think about how I actually prefer the authoring workflow of writing my blog posts in VS Code and publishing them with Hugo. So, one weekend, I just reimplemented What Got Done as a simple static site with Hugo, which I now host at [weeks.mtlynch.io](https://weeks.mtlynch.io).
 
