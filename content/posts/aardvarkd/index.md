@@ -5,9 +5,11 @@ date: 2023-09-08
 images:
   - aardvarkd/aardvarkd-cover.webp
 tags:
-  - software development
-  - entrepreneurship
-  - mvp
+  - software engineering
+  - fog creek
+  - joel spolsky
+  - paul-graham
+  - reddit
 discuss_urls:
   reddit: https://news.ycombinator.com/item?id=37433186#37434929
   hacker_news: https://news.ycombinator.com/item?id=37433186

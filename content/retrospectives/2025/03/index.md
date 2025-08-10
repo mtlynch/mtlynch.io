@@ -4,6 +4,10 @@ date: "2025-03-12"
 description: My first time raising money on Kickstarter
 images:
   - /retrospectives/2025/03/ks-dashboard.webp
+tags:
+  - refactoring-english
+  - kickstarter
+  - oracle-cloud
 ---
 
 ## Highlights

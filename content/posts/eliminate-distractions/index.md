@@ -4,11 +4,7 @@ description:
   Simple techniques for managing your apps instead of allowing them to
   manage you.
 tags:
-  - deep work
-  - email
-  - stackoverflow
-  - twitter
-  - facebook
+  - focus
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=21506107
   reddit: https://redd.it/dva6b3

@@ -5,7 +5,7 @@ discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=17186865
   indie_hackers: https://www.indiehackers.com/forum/i-quit-google-to-become-a-full-time-indie-hacker-four-months-later-2341bcb1f6
 tags:
-  - entrepreneurship
+  - bootstrapping
   - space duck
   - sia
   - google

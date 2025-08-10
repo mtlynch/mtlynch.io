@@ -4,6 +4,7 @@ date: 2024-05-29
 hero_image: cover.webp
 tags:
   - tinypilot
+  - bootstrapping
 description: Four years after starting TinyPilot from scratch, I've sold the company and handed complete control over to a new owner.
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=40512500

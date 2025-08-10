@@ -4,6 +4,13 @@ date: "2025-02-10"
 description: Should I be writing a book during an AI revolution?
 images:
   - /retrospectives/2025/02/fun-chapters.webp
+tags:
+  - writing
+  - ai
+  - refactoring-english
+  - homelab
+  - rss
+  - codeberg
 ---
 
 ## Highlights

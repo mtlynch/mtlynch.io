@@ -2,7 +2,7 @@
 title: Staying Motivated by Sending Status Updates to Nobody
 tags:
   - what got done
-  - startups
+  - focus
 description:
   Writing short entries in a plain textbox bolstered my motivation and
   miraculously made status meetings interesting.
@@ -80,6 +80,8 @@ I recorded my status updates in that private Google Doc every week for a year. N
 ## Creating yet another status update tool
 
 After writing private updates for a year, it still gave me satisfaction, but I missed writing for an audience. I saw the myriad of benefits I gained by [publishing my monthly retrospectives](/keep-growing-never-profit/#i-published-monthly-goals-and-stuck-to-them) and wanted to do the same thing for weekly updates.
+
+I never could find customers for What Got Done, so I maintained it as a hobby project for the last six years. I originally built What Got Done with AppEngine, Vue, and Firestore. I've grown to dislike all of those technologies, so I spent a lot of time
 
 One of [my 2019 goals](/solo-developer-year-1/#goals-for-year-two) was to gain expertise in a JavaScript framework, so that felt like a convenient excuse to create my own status sharing web app. It's called What Got Done:
 

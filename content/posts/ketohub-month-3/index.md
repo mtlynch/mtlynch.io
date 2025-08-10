@@ -2,9 +2,6 @@
 title: "KetoHub Update: Month 3"
 tags:
   - ketohub
-  - keto
-  - retention
-  - growth
 description:
   "I'm building a website. Here\u2019s what was good, bad, and learnable\
   \ about it last month."
