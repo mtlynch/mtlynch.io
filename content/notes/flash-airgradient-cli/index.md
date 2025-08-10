@@ -87,10 +87,13 @@ sudo adduser "$(whoami)" dialout
 # Current latest release, as of this writing.
 AIRGRADIENT_RELEASE='3.3.9'
 
-mkdir -p airgradient-one && \
+cd ~ && \
+  mkdir -p airgradient-one && \
   cd airgradient-one && \
-  git clone https://github.com/airgradienthq/arduino.git . &&
-  git checkout "${AIRGRADIENT_RELEASE}"
+  git clone --recurse-submodules \
+    https://github.com/airgradienthq/arduino.git . && \
+  git checkout "${AIRGRADIENT_RELEASE}" && \
+  git submodule update --recursive
 ```
 
 ## Prep
@@ -105,25 +108,26 @@ mkdir -p ./.venv && \
 ## Initialize Arduino CLI
 
 ```bash
+ARDUINO_ESP32_VERSION='3.2.0'
+
 arduino-cli config init \
   --additional-urls https://espressif.github.io/arduino-esp32/package_esp32_index.json && \
-  arduino-cli core install esp32:esp32
+  arduino-cli core install "esp32:esp32@${ARDUINO_ESP32_VERSION}"
 ```
+
+## Fix paths
 
 ## Flash sotware
 
 ```bash
-cd examples/OneOpenAir
-```
-
-```bash
-arduino-cli compile \
-  --verbose \
-  --fqbn esp32:esp32:lolin_c3_mini \
-  --upload \
-  --port "${AIRGRADIENT_PATH}" \
-  --verify \
-  OneOpenAir.ino
+cd ~/airgradient-one && \
+  arduino-cli compile \
+    --verbose \
+    --fqbn esp32:esp32:lolin_c3_mini \
+    --library . \
+    --upload \
+    --port "${AIRGRADIENT_PATH}" \
+    --verify examples/OneOpenAir/OneOpenAir.ino
 ```
 
 ## Stream
