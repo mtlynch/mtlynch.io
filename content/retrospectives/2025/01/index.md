@@ -4,6 +4,12 @@ date: "2025-01-09"
 description: I've published my first book chapter.
 images:
   - /retrospectives/2025/01/cover-ideas.webp
+tags:
+  - refactoring-english
+  - writing
+  - go
+  - sqlite
+  - picoshare
 ---
 
 ## Highlights

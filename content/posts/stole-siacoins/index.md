@@ -1,10 +1,9 @@
 ---
 title: How I Stole Your Siacoin
 tags:
-  - siacoin
+  - sia
   - cryptocurrency
   - security
-  - sia
 description: A lesson in Sia wallet seed safety
 aliases: [/stole-siacoin/]
 discuss_urls:

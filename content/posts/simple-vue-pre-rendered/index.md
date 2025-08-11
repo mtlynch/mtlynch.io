@@ -4,7 +4,7 @@ description: The easiest way to improve social sharing and SEO for a single-page
 tags:
   - vue
   - nuxt
-  - SPAs
+  - single page apps
 date: "2019-12-19"
 images:
   - simple-vue-pre-rendered/og-cover.jpg

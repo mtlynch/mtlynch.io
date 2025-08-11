@@ -3,7 +3,7 @@ title: "An Unsuccessful Experiment with Nemotron"
 date: 2024-10-29
 tags:
   - llama
-  - chatbots
+  - llms
   - ai
 ---
 

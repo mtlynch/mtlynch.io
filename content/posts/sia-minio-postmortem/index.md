@@ -1,7 +1,6 @@
 ---
 title: Sia-Minio Integration Postmortem
 tags:
-  - siacoin
   - cryptocurrency
   - sia
 description: An analysis of how Nebulous Labs can improve its bounty program for Sia

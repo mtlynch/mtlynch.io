@@ -1,13 +1,11 @@
 ---
 title: Automated Prosper Investing with ProsperBot
-tags:
-  - prosper
-  - lending
-  - p2p
-  - go
-  - golang
 description: An automated peer to peer lending bot
 date: "2016-11-26"
+tags:
+  - prosper
+  - peer-to-peer-lending
+  - go
 images:
   - prosperbot/prosperbot-frontend.png
 ---

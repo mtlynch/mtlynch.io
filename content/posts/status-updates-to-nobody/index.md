@@ -2,7 +2,7 @@
 title: Staying Motivated by Sending Status Updates to Nobody
 tags:
   - what got done
-  - startups
+  - focus
 description:
   Writing short entries in a plain textbox bolstered my motivation and
   miraculously made status meetings interesting.

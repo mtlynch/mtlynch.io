@@ -2,8 +2,6 @@
 title: How I Tricked Myself into Shipping Too Late
 tags:
   - zestful
-  - mvp
-  - startups
 description:
   I've heard dozens of stories of founders failing because they shipped
   too late. It seemed like an easy fate to avoid until I made the same mistake.

@@ -1,7 +1,6 @@
 ---
 title: How I Collected a Debt from an Unscrupulous Merchant
 tags:
-  - affiliate marketing
   - is it keto
   - conflict resolution
 date: "2020-08-13"

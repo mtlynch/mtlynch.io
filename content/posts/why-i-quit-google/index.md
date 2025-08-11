@@ -7,7 +7,7 @@ discuss_urls:
   reddit: https://redd.it/80whkc
   hacker_news: https://news.ycombinator.com/item?id=16483241
 tags:
-  - entrepreneurship
+  - bootstrapping
   - google
   - sia
 date: "2018-02-28"
