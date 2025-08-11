@@ -2,7 +2,6 @@
 title: "Educational Products: Month 10"
 date: "2025-08-08"
 description: TODO - One-line summary
-
 tags:
   - refactoring-english
   - gleam
