@@ -5,7 +5,7 @@ end_date: present
 blurb: A minimalist web app for sharing files that's easy to self-host.
 weight: 100
 technologies:
-  - golang
+  - go
   - sqlite
   - docker
   - litestream
