@@ -1,7 +1,7 @@
 ---
 title: "Educational Products: Month 10"
 date: "2025-08-11"
-description: TODO - One-line summary
+description: Perhaps not everyone wants to join my focus group.
 tags:
   - refactoring-english
   - gleam
@@ -26,7 +26,7 @@ Until I sat down to count, I thought I had a much worse response rate, but a lot
 ### Clear the backlog of my marketing ideas.
 
 - **Result**: Completed about 60% of what I intended to do
-- **Grade**: XX
+- **Grade**: C
 
 TODO
 
@@ -35,7 +35,7 @@ TODO
 - **Result**: Published ["Underused Techniques for Effective Emails"](https://refactoringenglish.com/chapters/techniques-for-writing-emails/)
 - **Grade**: A
 
-TODO
+I knew this chapter would be a gamble in terms of sharing it on social media. It got [a positive reception on Lobsters](https://lobste.rs/s/tfauzy/underused_techniques_for_effective) but [no traction on Hacker News](https://news.ycombinator.com/item?id=44625726).
 
 ## _Refactoring English_ metrics
 
@@ -47,8 +47,6 @@ Total revenue is down slightly, but it's just because I went from one paid consu
 
 ## What if everyone just likes the _feeling_ of buying a book?
 
-### "I haven't started reading it yet."
-
 As I reach out to readers and meet them on video calls, there's one piece of feedback I'm hearing over and over: "I haven't started reading it yet."
 
 I hear this from people who purchased a few days ago and from people who had access to the book for months.
@@ -59,13 +57,13 @@ Part of my motivation in [pre-selling the book](/my-6k-advance/) before writing 
 
 What if my book is the kind of thing people buy because it's a way to feel like they're investing in their writing without actually putting in time to do anything? What if it's like Planet Fitness, the popular gym franchise that supposedly makes most of its money from people who sign up and never use the gym?
 
-Even if I can be the Planet Fitness of books, that's not sustainable. For writing books to be financially viable, I'm banking on word of mouth recommendations. I'm hoping for popular bloggers to cite my book as a resource that helped them. When a developer says they want to improve their writing, I want my book to be the obvious thing people recommend.
+Even if I can be the Planet Fitness of books, that's not sustainable. For my book to be financially viable, I'm banking on word of mouth recommendations. I'm hoping for popular bloggers to cite my book as a resource that helped them. When a developer says they want to improve their writing, I want my book to be the obvious thing people recommend.
 
 ### Maybe customers don't want to be in my focus group
 
-Another reason I pre-sold the book was that I predicted that readers who pre-ordered would be especially enthusiastic about the book and want to be actively involved in giving feedback during the writing process.
+Another reason I pre-sold the book was that I predicted that readers who pre-ordered would be especially enthusiastic about giving feedback during the writing process.
 
-From talking to friends who are also customers, most of them say that they pre-purchased to support the project and want to read the book when it's done, but they don't necessarily want to be part of a focus group or beta testing cohort for a rough draft. They just want to read it when I have a good version, and that's totally fair.
+From talking to friends who are also customers, most of them say that they pre-purchased to support the project and want to read the book when it's done, but they don't necessarily want to participate in a focus group or beta test. They just want to read it when I have a good version, and that's totally fair.
 
 ### I should just keep reaching out to people one by one
 
@@ -85,15 +83,19 @@ So, let me look back and think about where my time is going when I'm not working
 
 A few months ago, I realized I was [spending too much time wordsmithing my writing](/retrospectives/2025/06/#becoming-less-precious-about-my-writing) rather than just getting chapters to readers when they were 80-90% perfect. My solution was to set time limits on each chapter and write whatever I could complete within my time budget.
 
-For the emails chapter I wrote in July, my budget was five hours, but I actually spent 17.5 hours on it. Part of that was intentional because I realized after I set the target that it would work well as a standalone excerpt on the website. It takes longer to write a standalone version and then fold it back into the book.
+For the emails chapter I wrote in July, my budget was five hours, but I actually spent 17.5 hours on it. Part of that was intentional because I realized after I set the target that it would work well as a standalone excerpt on the website. It takes longer to write a standalone excerpt and then fold it back into the book.
 
-But I'm also doing the same thing on the first chapter. I'm 6.5 hours into my 6-hour budget, and I probably have at least 3 hours of writing left before I'm comfortable sharing it with readers. I think this is both a problem of me polishing too much but also setting too low a budget for the first and most important chapter of the book.
+But I'm also doing the same thing on the chapter I'm currently working on. I'm 6.5 hours into my 6-hour budget, and I probably have at least 3 hours of writing left before I'm comfortable sharing it with readers. I think this is both a problem of me polishing too much but also setting too low a budget for the first and most important chapter of the book.
 
 ### Extracurricular blog posts
 
-Because I have so much unstructured time, it's tempting to just
+I like capturing what I learn soon after I learn it by writing blog posts, but I could actually spend 20 hours per week blogging and still not write all the blog posts I want to write.
 
-I also knew that writing my RAIDZ post wouldn't help with my book. It's not the kind of thing likely to make a big splash on Hacker News or reddit, and readers who care about ZFS don't have much overlap with readers who care about improving their writing. I told myself it would be quick. In reality, it took 7 hours.
+Some of my blog posts attract people who might read my book, and some blog posts don't. I have to be deliberate about how much time to invest in the "just for fun" blog posts.
+
+Last month, I published a new blog post, ["Migrating a ZFS pool from RAIDZ1 to RAIDZ2."](/raidz1-to-raidz2/) I knew it wouldn't help with the book, but I also thought it would be just a few hours of writing, and I'd be explaining something that I hadn't seen anyone else explain well.
+
+In reality, the ZFS post took 7 hours to write, so it was more investment than was sensible on a "just for fun" post, especially in a month where I didn't have a more crowdpleasing _Refactoring English_ chapter to share.
 
 ### Bad social media habits
 
@@ -105,7 +107,7 @@ I usually set aside a day to respond to comments if my article makes a big splas
 
 My toddler is sleeping poorly, which means my wife and I are sleeping poorly. That alone isn't such a big deal, but I also use it to justify bad habits, like skipping writing sessions or checking social media when I'm not feeling focused.
 
-### Editing work
+### Procrastinating paid editing work
 
 I also did some editing work this month, so that accounts for a few hours. I only spent about six hours writng the actual notes for the client, but I also procrastinated a lot because I find critiquing other people's writing even harder than writing. Because it's easy for me to say that I don't like something, but it's much harder to articulate what my issue is, and extremely hard for me to propose a solution that addresses my issue.
 
@@ -115,11 +117,19 @@ I also did some editing work this month, so that accounts for a few hours. I onl
 
 In 2019, I [tried to build a business called What Got Done](/retrospectives/2019/06/#what-got-done-business-or-hobby). It was an app that allowed teammates to write weekly summaries of their work and share them with each other. When I was at Google, they had an internal tool called Snippets that did the same thing. I loved it, and [kept writing weekly updates after leaving Google](/status-updates-to-nobody/), even when I was working by myself.
 
-I never could find customers for What Got Done, so I maintained it as a hobby project for the last six years. I initially built What Got Done with Vue, Firestore, and AppEngine, and I've come to strongly dislike all of those technologies. I spent a long time [replacing Firestore with SQLite and AppEngine with fly.io](/retrospectives/2021/12/#migrating-my-side-projects-away-from-google-cloud-platform), but Vue stuck around, and it made development unpleasant.
+{{<img src="whatgotdone-screenshot.webp" max-width="700px" caption="What Got Done was a website where people could share weekly updates about their work.">}}
+
+I never could find customers for What Got Done, so I maintained it as a hobby project for the last six years.
+
+I initially built What Got Done with Vue, Firestore, and AppEngine, and I've come to strongly dislike all of those technologies. I spent a long time [replacing Firestore with SQLite and AppEngine with fly.io](/retrospectives/2021/12/#migrating-my-side-projects-away-from-google-cloud-platform), but Vue stuck around, and it made development unpleasant.
 
 Every week when I'd post my updates to What Got Done, I'd think about how I actually prefer the authoring workflow of writing my blog posts in VS Code and publishing them with Hugo. So, one weekend, I just reimplemented What Got Done as a simple static site with Hugo, which I now host at [weeks.mtlynch.io](https://weeks.mtlynch.io).
 
-So, in six years, I probably spent about 300 hours implementing and maintaining What Got Done as a Go + Vue + SQLite + fly.io app, and it took me 10 hours to reimplement it as a static site with simple Markdown files and Hugo. And because it's now a just-for-me app, I can add hyper-personal features like [pre-populating my weekly updates from my git commits](https://github.com/mtlynch/weeks.mtlynch.io/blob/b7a79b5f7d8b6ed8d1ed93e19b221c2f889efc4b/dev-scripts/new-week). And of course, it's orders of magnitude simpler and cheaper to host, maintain, and back up because it's just a static site with source control instead of a full-blown web app with separate tech stacks for the frontend, backend, and database.
+{{<img src="weeks-mtlynch-screenshot.webp" max-width="400px" caption="I reimplemented What Got Done as a static site I can generate with Hugo.">}}
+
+So, in six years, I probably spent about 300 hours implementing and maintaining What Got Done as a Go + Vue + SQLite + fly.io app. It only took 10 hours to reimplement it as a static site with simple Markdown files and Hugo.
+
+Because the new version is a just-for-me app, I can add hyper-personal features like [pre-populating my weekly updates from my git commits](https://github.com/mtlynch/weeks.mtlynch.io/blob/b7a79b5f7d8b6ed8d1ed93e19b221c2f889efc4b/dev-scripts/new-week). And of course, it's orders of magnitude simpler and cheaper to host, maintain, and back up because it's just a static site with source control instead of a full-blown web app with separate tech stacks for the frontend, backend, and database.
 
 ### Sunsetting What Got Done
 
@@ -271,10 +281,7 @@ Functional programming nerds: am I cheating? Or is this the right way to pass ar
 
 - Published ["Underused Techniques for Effective Emails"](https://refactoringenglish.com/chapters/techniques-for-writing-emails/) and sent early access readers an expanded version.
 - Migrated the last of the web-only content of _Refactoring English_ into the ebook.
-  <<<<<<< Updated upstream
-- # Published ["Migrating a ZFS pool from RAIDZ1 to RAIDZ2."](https://mtlynch.io/raidz1-to-raidz2/)
 - Published ["Migrating a ZFS pool from RAIDZ1 to RAIDZ2"](https://mtlynch.io/raidz1-to-raidz2/)
-  > > > > > > > Stashed changes
 - Created a better [password reset flow for ScreenJournal](https://github.com/mtlynch/screenjournal/pull/429).
 - Added [file expiration options for guests on PicoShare](https://github.com/mtlynch/picoshare/pull/694).
 - Did unpaid editing on an upcoming blog post in exchange for publishing the feedback as marketing for my editing services.
