@@ -77,15 +77,17 @@ The most effective way I've found enthusiastic readers is to email them one by o
 
 [Every](/retrospectives/2022/02/#how-can-i-manage-tinypilot-with-only-20-hours-per-week) [year](/retrospectives/2023/07/#where-does-my-time-go) [or so](/retrospectives/2024/09/#caring-for-a-newborn-takes-longer-than-two-hours-per-day), I look back at what I accomplished in the previous month and think, "Wait, why is that all I did last month? What was I doing instead?"
 
-July was that kind of month. I worked my regular, full-time hours, but I'm looking back at the month thinking, "How did I only finish one new chapter?
+July was that kind of month. I worked my regular, full-time hours, but I'm looking back at the month thinking, "How did I only finish one new chapter?"
+
+So, let me look back and think about where my time is going when I'm not working on my monthly goals.
 
 ### Overinvesting in chapters
 
-A few months ago, I realized I was [spending too much time wordsmithing my writing](/retrospectives/2025/06/#becoming-less-precious-about-my-writing) rather than just getting 90% good chapters to readers. My solution was to set time limits up front on each chapter and write whatever I could complete within my time budget.
+A few months ago, I realized I was [spending too much time wordsmithing my writing](/retrospectives/2025/06/#becoming-less-precious-about-my-writing) rather than just getting chapters to readers when they were 80-90% perfect. My solution was to set time limits on each chapter and write whatever I could complete within my time budget.
 
 For the emails chapter I wrote in July, my budget was five hours, but I actually spent 17.5 hours on it. Part of that was intentional because I realized after I set the target that it would work well as a standalone excerpt on the website. It takes longer to write a standalone version and then fold it back into the book.
 
-But I'm also doing the same thing on the first chapter. I'm 6.5 hours into my 6-hour budget, and I probably have at least 3 hours of writing left before I'm comfortable sharing it with readers.
+But I'm also doing the same thing on the first chapter. I'm 6.5 hours into my 6-hour budget, and I probably have at least 3 hours of writing left before I'm comfortable sharing it with readers. I think this is both a problem of me polishing too much but also setting too low a budget for the first and most important chapter of the book.
 
 ### Extracurricular blog posts
 
@@ -95,7 +97,9 @@ I also knew that writing my RAIDZ post wouldn't help with my book. It's not the 
 
 ### Bad social media habits
 
-I spent almost an entire day responding to feedback about it. It turns out some people feel very strongly about storage safety and found my post offensive. But the upside was that the feedback led to a legitimately better solution than what I came up with.
+I'm also slipping into poor social media habits.
+
+I usually set aside a day to respond to comments if my article makes a big splash. But my ZFS post didn't even make a big splash, and I still spent the day engaging in comments. It turns out some people feel very strongly about data integrity and were offended by a recommendation that risks data loss, even when the risk is explicit. The upside was that the feedback led to [a legitimately better solution](/raidz1-to-raidz2/#update-a-safer-strategy) than what I came up with.
 
 ### Recovering from sleep disruptions
 
