@@ -1,6 +1,6 @@
 ---
 title: "Educational Products: Month 10"
-date: "2025-08-08"
+date: "2025-08-11"
 description: TODO - One-line summary
 tags:
   - refactoring-english
@@ -51,19 +51,19 @@ Total revenue is down slightly, but it's just because I went from one paid consu
 
 As I reach out to readers and meet them on video calls, there's one piece of feedback I'm hearing over and over: "I haven't started reading it yet."
 
-I hear this from people who purchased a few days prior and from people who had access to the book for months.
+I hear this from people who purchased a few days ago and from people who had access to the book for months.
 
-One of my biggest fears for this book is that it's a "vitamin rather than a painkiller." People see good writing as something that's [important but not urgent](/book-reports/7-habits-of-highly-effective-people/#time-management-matrix). In contrast, they might read a book called, "How to Double Your Instagram Followers Every Week," because they have an immediate need to grow their Instagram following.
+One of my biggest fears for this book is that it's a "vitamin rather than a painkiller." People see good writing as something that's [important but not urgent](/book-reports/7-habits-of-highly-effective-people/#time-management-matrix). They might read a book called, "How to Double Your Instagram Followers Every Week," because they have an immediate need to grow their Instagram following, but improving their writing is something they'll get to "someday."
 
 Part of my motivation in [pre-selling the book](/my-6k-advance/) before writing it was to see if there were enough people willing to pay for the book. There were, and people continue to buy it, but I'm worried that might not be as predictive a signal as I thought.
 
-What if my book is the kind of thing people buy because it's a way to feel like they're investing in their writing without actually putting in time to do anything. What if it's like Planet Fitness, the popular gym franchise that supposedly makes its money by attracting memberships from people who are least likely to ever use their facilities.
+What if my book is the kind of thing people buy because it's a way to feel like they're investing in their writing without actually putting in time to do anything? What if it's like Planet Fitness, the popular gym franchise that supposedly makes most of its money from people who sign up and never use the gym?
 
-Because even if I can be the Planet Fitness of books, that's not sustainable. For writing books to be financially viable, I'm banking on word of mouth recommendations where popular bloggers cite my book as a resource that helped them, and when a developer says they want to improve their writing, my book is the thing people recommend.
+Even if I can be the Planet Fitness of books, that's not sustainable. For writing books to be financially viable, I'm banking on word of mouth recommendations. I'm hoping for popular bloggers to cite my book as a resource that helped them. When a developer says they want to improve their writing, I want my book to be the obvious thing people recommend.
 
-### Maybe customers just want to read the book
+### Maybe customers don't want to be in my focus group
 
-Another reason I pre-sold the book was that I predicted that readers who pre-ordered would be especially enthusiastic about the book and want to be actively involved in giving feedback.
+Another reason I pre-sold the book was that I predicted that readers who pre-ordered would be especially enthusiastic about the book and want to be actively involved in giving feedback during the writing process.
 
 From talking to friends who are also customers, most of them say that they pre-purchased to support the project and want to read the book when it's done, but they don't necessarily want to be part of a focus group or beta testing cohort for a rough draft. They just want to read it when I have a good version, and that's totally fair.
 
@@ -75,7 +75,7 @@ The most effective way I've found enthusiastic readers is to email them one by o
 
 ## Where does my time go?
 
-[Every](/retrospectives/2022/02/#how-can-i-manage-tinypilot-with-only-20-hours-per-week) [year](/retrospectives/2023/07/) [or so](/retrospectives/2024/09/), I'll look back at what I accomplished in the past month and think, "Wait, why is that all I did last month? What was I doing instead?"
+[Every](/retrospectives/2022/02/#how-can-i-manage-tinypilot-with-only-20-hours-per-week) [year](/retrospectives/2023/07/#where-does-my-time-go) [or so](/retrospectives/2024/09/#caring-for-a-newborn-takes-longer-than-two-hours-per-day), I look back at what I accomplished in the previous month and think, "Wait, why is that all I did last month? What was I doing instead?"
 
 July was that kind of month. I worked my regular, full-time hours, but I'm looking back at the month thinking, "How did I only finish one new chapter?
 
