@@ -1,5 +1,5 @@
 diff --git c/examples/OneOpenAir/OneOpenAir.ino w/examples/OneOpenAir/OneOpenAir.ino
-index acd7ecf..983c11b 100644
+index acd7ecf..653574e 100644
 --- c/examples/OneOpenAir/OneOpenAir.ino
 +++ w/examples/OneOpenAir/OneOpenAir.ino
 @@ -36,9 +36,7 @@ CC BY-SA 4.0 Attribution-ShareAlike 4.0 International License
@@ -15,7 +15,7 @@ index acd7ecf..983c11b 100644
 @@ -48,14 +46,6 @@ CC BY-SA 4.0 Attribution-ShareAlike 4.0 International License
  #include <cstdint>
  #include <string>
-
+ 
 -#include "Libraries/airgradient-client/src/agSerial.h"
 -#include "Libraries/airgradient-client/src/cellularModule.h"
 -#include "Libraries/airgradient-client/src/cellularModuleA7672xx.h"
@@ -26,7 +26,7 @@ index acd7ecf..983c11b 100644
 -#include "Libraries/airgradient-ota/src/airgradientOtaCellular.h"
  #include "esp_system.h"
  #include "freertos/projdefs.h"
-
+ 
 @@ -64,23 +54,12 @@ CC BY-SA 4.0 Attribution-ShareAlike 4.0 International License
  #define WIFI_SERVER_CONFIG_SYNC_INTERVAL 1 * 60000     /** ms */
  #define WIFI_MEASUREMENT_INTERVAL 1 * 60000            /** ms */
@@ -42,32 +42,32 @@ index acd7ecf..983c11b 100644
  #define SENSOR_TEMP_HUM_UPDATE_INTERVAL 6000           /** ms */
  #define DISPLAY_DELAY_SHOW_CONTENT_MS 2000             /** ms */
 -#define FIRMWARE_CHECK_FOR_UPDATE_MS (60 * 60 * 1000)  /** ms */
--#define TIME_TO_START_POWER_CYCLE_CELLULAR_MODULE (1 * 60) /** minutes */
--#define TIMEOUT_WAIT_FOR_CELLULAR_MODULE_READY    (2 * 60) /** minutes */
+-#define TIME_TO_START_POWER_CYCLE_CELLULAR_MODULE (1 * 60) /** minutes */ 
+-#define TIMEOUT_WAIT_FOR_CELLULAR_MODULE_READY    (2 * 60) /** minutes */ 
 -
 -#define MEASUREMENT_TRANSMIT_CYCLE 3
 -#define MAXIMUM_MEASUREMENT_CYCLE_QUEUE 80
 -#define RESERVED_MEASUREMENT_CYCLE_CAPACITY 10
-
+ 
  /** I2C define */
  #define I2C_SDA_PIN 7
 @@ -94,8 +73,6 @@ CC BY-SA 4.0 Attribution-ShareAlike 4.0 International License
-
+ 
  #define MINUTES() ((uint32_t)(esp_timer_get_time() / 1000 / 1000 / 60))
-
+ 
 -static MqttClient mqttClient(Serial);
 -static TaskHandle_t mqttTask = NULL;
  static Configuration configuration(Serial);
  static Measurements measurements(configuration);
  static AirGradient *ag;
-@@ -107,71 +84,40 @@ static WifiConnector wifiConnector(oledDisplay, Serial, stateMachine,
+@@ -107,71 +84,39 @@ static WifiConnector wifiConnector(oledDisplay, Serial, stateMachine,
  static OpenMetrics openMetrics(measurements, configuration, wifiConnector);
  static LocalServer localServer(Serial, openMetrics, measurements, configuration,
                                 wifiConnector);
 -static AgSerial *agSerial;
 -static CellularModule *cellularCard;
- static AirgradientClient *agClient;
-
+-static AirgradientClient *agClient;
+ 
 -enum NetworkOption {
 -  UseWifi,
 -  UseCellular
@@ -75,12 +75,12 @@ index acd7ecf..983c11b 100644
 -NetworkOption networkOption;
  TaskHandle_t handleNetworkTask = NULL;
 -static bool firmwareUpdateInProgress = false;
-
+ 
  static uint32_t factoryBtnPressTime = 0;
  static AgFirmwareMode fwMode = FW_MODE_I_9PSL;
  static bool ledBarButtonTest = false;
 -static String fwNewVersion;
--static int lastCellSignalQuality = 99; // CSQ
+-static int lastCellSignalQuality = 99; // CSQ 
 -
 -// Default value is 0, indicate its not started yet
 -// In minutes
@@ -88,12 +88,12 @@ index acd7ecf..983c11b 100644
 -
 -SemaphoreHandle_t mutexMeasurementCycleQueue;
 -static std::vector<Measurements::Measures> measurementCycleQueue;
-
+ 
  static void boardInit(void);
  static void initializeNetwork();
  static void failedHandler(String msg);
 -static void configurationUpdateSchedule(void);
--static void configUpdateHandle(void);
+-static void configUpdateHandle(void); 
 +static void configUpdateHandle(void);
  static void updateDisplayAndLedBar(void);
  static void updateTvoc(void);
@@ -115,10 +115,10 @@ index acd7ecf..983c11b 100644
  static int calculateMaxPeriod(int updateInterval);
  static void setMeasurementMaxPeriod();
 -static void newMeasurementCycle();
--static void restartIfCeClientIssueOverTwoHours();
+-static void restartIfCeClientIssueOverTwoHours(); 
  static void networkSignalCheck();
  static void networkingTask(void *args);
-
+ 
  AgSchedule dispLedSchedule(DISP_UPDATE_INTERVAL, updateDisplayAndLedBar);
 -AgSchedule configSchedule(WIFI_SERVER_CONFIG_SYNC_INTERVAL,
 -                          configurationUpdateSchedule);
@@ -132,30 +132,115 @@ index acd7ecf..983c11b 100644
 -AgSchedule checkForUpdateSchedule(FIRMWARE_CHECK_FOR_UPDATE_MS, checkForFirmwareUpdate);
  AgSchedule networkSignalCheckSchedule(10000, networkSignalCheck);
  AgSchedule printMeasurementsSchedule(6000, printMeasurements);
-
-@@ -180,9 +126,6 @@ void setup() {
+ 
+@@ -180,25 +125,30 @@ void setup() {
    Serial.begin(115200);
    delay(100); /** For bester show log */
-
--  // Enable cullular module power board
+ 
+-  // Enable cullular module power board 
 -  pinMode(GPIO_EXPANSION_CARD_POWER, OUTPUT);
 -  digitalWrite(GPIO_EXPANSION_CARD_POWER, HIGH);
-
-   /** Print device ID into log */
-   Serial.println("Serial nr: " + ag->deviceId());
-@@ -259,7 +202,7 @@ void setup() {
+-
+-  /** Print device ID into log */
+-  Serial.println("Serial nr: " + ag->deviceId());
++  Serial.println("DEBUG 1: Serial initialized");
++  Serial.flush();
+ 
+   // Set reason why esp is reset
+   esp_reset_reason_t reason = esp_reset_reason();
+   measurements.setResetReason(reason);
+ 
++  Serial.println("DEBUG 2: Reset reason set");
++  Serial.flush();
++
+   /** Initialize local configure */
+   configuration.begin();
+   configuration.setConfigurationUpdatedCallback(configUpdateHandle);
+ 
++  Serial.println("DEBUG 3: Configuration initialized");
++  Serial.flush();
++
+   /** Init I2C */
+   Wire.begin(I2C_SDA_PIN, I2C_SCL_PIN);
+   delay(1000);
+ 
++  Serial.println("DEBUG 4: I2C initialized");
++  Serial.flush();
++
+   /** Detect board type: ONE_INDOOR has OLED display, Scan the I2C address to
+    * identify board type */
+   Wire.beginTransmission(OLED_I2C_ADDR);
+@@ -207,7 +157,8 @@ void setup() {
+   } else {
+     ag = new AirGradient(BoardType::OPEN_AIR_OUTDOOR);
    }
-
+-  Serial.println("Detected " + ag->getBoardName());
++  Serial.println("DEBUG 5: Board detected - " + ag->getBoardName());
++  Serial.flush();
+ 
+   configuration.setAirGradient(ag);
+   oledDisplay.setAirGradient(ag);
+@@ -217,12 +168,25 @@ void setup() {
+   localServer.setAirGraident(ag);
+   measurements.setAirGradient(ag);
+ 
++  Serial.println("DEBUG 6: AirGradient objects configured");
++  Serial.flush();
++
+   /** Init sensor */
+   boardInit();
++  Serial.println("DEBUG 7: Board initialization complete");
++  Serial.flush();
++
+   setMeasurementMaxPeriod();
++  Serial.println("DEBUG 8: Measurement periods set");
++  Serial.flush();
++
++  Serial.println("DEBUG 9: Starting offline mode check");
++  Serial.flush();
+ 
+   bool connectToNetwork = true;
+   if (ag->isOne()) { // Offline mode only available for indoor monitor
++    Serial.println("DEBUG 10: Indoor monitor detected, checking offline mode");
++    Serial.flush();
+     /** Show message confirm offline mode, should me perform if LED bar button
+      * test pressed */
+     if (ledBarButtonTest == false) {
+@@ -252,18 +216,28 @@ void setup() {
+     }
+   }
+ 
++  Serial.println("DEBUG 11: Offline mode check complete, connectToNetwork=" + String(connectToNetwork));
++  Serial.flush();
++
+   // Initialize networking configuration
+   if (connectToNetwork) {
+     oledDisplay.setText("Initialize", "network...", "");
++    Serial.println("DEBUG 12: Starting network initialization");
++    Serial.flush();
+     initializeNetwork();
++    Serial.println("DEBUG 13: Network initialization complete");
++    Serial.flush();
+   }
+ 
    /** Set offline mode without saving, cause wifi is not configured */
 -  if (wifiConnector.hasConfigurated() == false && networkOption == UseWifi) {
 +  if (wifiConnector.hasConfigurated() == false) {
      Serial.println("Set offline mode cause wifi is not configurated");
      configuration.setOfflineModeWithoutSave(true);
    }
-@@ -275,18 +218,6 @@ void setup() {
+ 
++  Serial.println("DEBUG 14: Starting display setup");
++  Serial.flush();
++
+   /** Show display Warning up */
+   if (ag->isOne()) {
+     oledDisplay.setText("Warming Up", "Serial Number:", ag->deviceId().c_str());
+@@ -274,31 +248,24 @@ void setup() {
+     delay(DISPLAY_DELAY_SHOW_CONTENT_MS);
    }
-
-
+ 
+-
 -  if (networkOption == UseCellular) {
 -    // If using cellular re-set scheduler interval
 -    configSchedule.setPeriod(CELLULAR_SERVER_CONFIG_SYNC_INTERVAL);
@@ -165,25 +250,45 @@ index acd7ecf..983c11b 100644
 -    // Queue now only applied for cellular
 -    // Allocate queue memory to avoid always reallocation
 -    measurementCycleQueue.reserve(RESERVED_MEASUREMENT_CYCLE_CAPACITY);
--    // Initialize mutex to access mesurementCycleQueue
+-    // Initialize mutex to access mesurementCycleQueue 
 -    mutexMeasurementCycleQueue = xSemaphoreCreateMutex();
 -  }
-
++  Serial.println("DEBUG 15: Starting task creation");
++  Serial.flush();
+ 
    // Only run network task if monitor is not in offline mode
    if (configuration.isOfflineMode() == false) {
-@@ -310,29 +241,12 @@ void setup() {
+     BaseType_t xReturned =
+-      xTaskCreate(networkingTask, "NetworkingTask", 4096, null, 5, &handleNetworkTask);
++      xTaskCreate(networkingTask, "NetworkingTask", 4096, NULL, 5, &handleNetworkTask);
+     if (xReturned == pdPASS) {
+       Serial.println("Success create networking task");
+     } else {
+-      assert("Failed to create networking task");
++      Serial.println("DEBUG ERROR: Failed to create networking task");
++      Serial.flush();
+     }
+   }
+ 
++  Serial.println("DEBUG 16: Setup complete, entering main loop");
++  Serial.flush();
++
+   // Log monitor mode for debugging purpose
+   if (configuration.isOfflineMode()) {
+     Serial.println("Running monitor in offline mode");
+@@ -310,29 +277,12 @@ void setup() {
  }
-
+ 
  void loop() {
 -  if (networkOption == UseCellular) {
 -    // Check if cellular client not ready until certain time
--    // Redundant check in both task to make sure its executed
+-    // Redundant check in both task to make sure its executed 
 -    restartIfCeClientIssueOverTwoHours();
 -  }
 -
    // Schedule to feed external watchdog
    watchdogFeedSchedule.run();
-
+ 
 -  if (firmwareUpdateInProgress) {
 -    // Firmare update currently in progress, temporarily disable running sensor schedules
 -    delay(10000);
@@ -192,7 +297,7 @@ index acd7ecf..983c11b 100644
 -
    // Schedule to update display and led
    dispLedSchedule.run();
-
+ 
 -  if (networkOption == UseCellular) {
 -    // Queue now only applied for cellular
 -    measurementSchedule.run();
@@ -201,10 +306,10 @@ index acd7ecf..983c11b 100644
    if (configuration.hasSensorS8) {
      co2Schedule.run();
    }
-@@ -410,60 +324,6 @@ static void mdnsInit(void) {
+@@ -410,60 +360,6 @@ static void mdnsInit(void) {
    MDNS.addServiceTxt("_airgradient", "_tcp", "vendor", "AirGradient");
  }
-
+ 
 -static void createMqttTask(void) {
 -  if (mqttTask) {
 -    vTaskDelete(mqttTask);
@@ -259,10 +364,10 @@ index acd7ecf..983c11b 100644
 -    Serial.println("Connection to MQTT broker failed");
 -  }
 -}
-
+ 
  static void factoryConfigReset(void) {
    if (ag->button.getState() == ag->button.BUTTON_PRESSED) {
-@@ -491,12 +351,6 @@ static void factoryConfigReset(void) {
+@@ -491,12 +387,6 @@ static void factoryConfigReset(void) {
            }
            count--;
            if (count == 0) {
@@ -274,11 +379,11 @@ index acd7ecf..983c11b 100644
 -
              /** Reset WIFI */
              WiFi.disconnect(true, true);
-
-@@ -565,186 +419,6 @@ static bool sgp41Init(void) {
+ 
+@@ -565,186 +455,6 @@ static bool sgp41Init(void) {
    return false;
  }
-
+ 
 -void checkForFirmwareUpdate(void) {
 -  if (configuration.isCloudConnectionDisabled()) {
 -    Serial.println("Cloud connection is disabled, skip firmware update");
@@ -439,7 +544,7 @@ index acd7ecf..983c11b 100644
 -      "task_led", 2048, NULL, 5, NULL);
 -
 -  delay(1500);
--
+-  
 -  // Build payload to check connection to airgradient server
 -  JSONVar root;
 -  root["wifi"] = wifiConnector.RSSI();
@@ -459,19 +564,19 @@ index acd7ecf..983c11b 100644
 -
 -  stateMachine.handleLeds(AgStateMachineNormal);
 -}
-
+ 
  void dispSensorNotFound(String ss) {
    ss = ss + " not found";
-@@ -965,28 +639,8 @@ static void failedHandler(String msg) {
+@@ -965,152 +675,39 @@ static void failedHandler(String msg) {
  }
-
+ 
  void initializeNetwork() {
 -  // Check if cellular module available
 -  agSerial = new AgSerial(Wire);
 -  agSerial->init(GPIO_IIC_RESET);
 -  if (agSerial->open()) {
 -    Serial.println("Cellular module found");
--    // Initialize cellular module and use cellular as agClient
+-    // Initialize cellular module and use cellular as agClient 
 -    cellularCard = new CellularModuleA7672XX(agSerial, GPIO_POWER_MODULE_PIN);
 -    agClient = new AirgradientCellularClient(cellularCard);
 -    networkOption = UseCellular;
@@ -483,24 +588,32 @@ index acd7ecf..983c11b 100644
 -    agClient = new AirgradientWifiClient;
 -    networkOption = UseWifi;
 -  }
--
+ 
 -  if (networkOption == UseCellular) {
--    // Enable serial stream debugging to check the AT command when doing registration
+-    // Enable serial stream debugging to check the AT command when doing registration 
 -    agSerial->setDebug(true);
 -  }
-+  // Use wifi as agClient
-+  agClient = new AirgradientWifiClient;
-
-   String httpDomain = configuration.getHttpDomain();
-   if (httpDomain != "") {
-@@ -1005,102 +659,41 @@ void initializeNetwork() {
-     ESP.restart();
-   }
-
--  // Provide openmetrics to have access to last transmission result
-+  // Provide openmetrics to have access to last transmission result
-   openMetrics.setAirgradientClient(agClient);
-
+-
+-  String httpDomain = configuration.getHttpDomain();
+-  if (httpDomain != "") {
+-    agClient->setHttpDomain(httpDomain.c_str());
+-    Serial.printf("HTTP domain name is set to: %s\n", httpDomain.c_str());
+-    oledDisplay.setText("HTTP domain name", "using local", "configuration");
+-    delay(2500);
+-  }
+-
+-  if (!agClient->begin(ag->deviceId().c_str())) {
+-    oledDisplay.setText("Client", "initialization", "failed");
+-    delay(5000);
+-    oledDisplay.showRebooting();
+-    delay(2500);
+-    oledDisplay.setText("", "", "");
+-    ESP.restart();
+-  }
+-
+-  // Provide openmetrics to have access to last transmission result 
+-  openMetrics.setAirgradientClient(agClient);
+-
 -  if (networkOption == UseCellular) {
 -    // Disabling it again
 -    agSerial->setDebug(false);
@@ -511,7 +624,7 @@ index acd7ecf..983c11b 100644
 -      Serial.println("Cannot initiate wifi connection");
 -      return;
 -    }
--
+-  
 -    if (!wifiConnector.isConnected()) {
 -      Serial.println("Failed connect to WiFi");
 -      if (wifiConnector.isConfigurePorttalTimeout()) {
@@ -520,17 +633,17 @@ index acd7ecf..983c11b 100644
 -        oledDisplay.setText("", "", "");
 -        ESP.restart();
 -      }
--
+-  
 -      // Directly return because the rest of the function applied if wifi is connect only
 -      return;
 -    }
--
+-  
 -    // Initiate local network configuration
 -    mdnsInit();
 -    localServer.begin();
 -    // Apply mqtt connection if configured
 -    initMqtt();
--
+-  
 -    // Ignore the rest if cloud connection to AirGradient is disabled
 -    if (configuration.isCloudConnectionDisabled()) {
 -      return;
@@ -549,7 +662,7 @@ index acd7ecf..983c11b 100644
 +    Serial.println("Cannot initiate wifi connection");
      return;
    }
-
+ 
 -  std::string config = agClient->httpFetchConfig();
 -  configSchedule.update();
 -  // Check if fetch configuration failed or fetch succes but parsing failed
@@ -577,7 +690,7 @@ index acd7ecf..983c11b 100644
 -    ledBarEnabledUpdate();
 -  }
 -}
-
+ 
 -static void configurationUpdateSchedule(void) {
 -  if (configuration.getConfigurationControl() ==
 -      ConfigurationControl::ConfigurationControlLocal) {
@@ -586,7 +699,7 @@ index acd7ecf..983c11b 100644
 +    // Directly return because the rest of the function applied if wifi is connect only
      return;
    }
-
+ 
 -  std::string config = agClient->httpFetchConfig();
 -  if (agClient->isLastFetchConfigSucceed()) {
 -    configuration.parse(config.c_str(), false);
@@ -598,26 +711,36 @@ index acd7ecf..983c11b 100644
 +  // Cloud connection is always disabled, so return early
 +  return;
  }
-
+ 
 +
  static void configUpdateHandle() {
    if (configuration.isUpdated() == false) {
      return;
    }
-
+ 
 -  String mqttUri = configuration.getMqttBrokerUri();
 -  if (mqttClient.isCurrentUri(mqttUri) == false) {
 -    mqttClient.end();
 -    initMqtt();
 -  }
 -
-   String httpDomain = configuration.getHttpDomain();
-   if (httpDomain != "") {
-     Serial.printf("HTTP domain name set to: %s\n", httpDomain.c_str());
-@@ -1185,44 +778,15 @@ static void updateDisplayAndLedBar(void) {
+-  String httpDomain = configuration.getHttpDomain();
+-  if (httpDomain != "") {
+-    Serial.printf("HTTP domain name set to: %s\n", httpDomain.c_str());
+-    agClient->setHttpDomain(httpDomain.c_str());
+-  } else {
+-    // Its empty, set to default
+-    Serial.println("HTTP domain name from configuration empty, set to default");
+-    agClient->setHttpDomainDefault();
+-  }
+-
+   if (configuration.hasSensorSGP) {
+     if (configuration.noxLearnOffsetChanged() ||
+         configuration.tvocLearnOffsetChanged()) {
+@@ -1185,44 +782,15 @@ static void updateDisplayAndLedBar(void) {
      return;
    }
-
+ 
 -  if (networkOption == UseWifi) {
 -    if (wifiConnector.isConnected() == false) {
 -      stateMachine.displayHandle(AgStateMachineWiFiLost);
@@ -635,7 +758,7 @@ index acd7ecf..983c11b 100644
 -  }
 -
 -  if (configuration.isCloudConnectionDisabled()) {
--    // Ignore API related check since cloud is disabled
+-    // Ignore API related check since cloud is disabled 
 -    stateMachine.displayHandle(AgStateMachineNormal);
 -    stateMachine.handleLeds(AgStateMachineNormal);
 +  if (wifiConnector.isConnected() == false) {
@@ -643,7 +766,7 @@ index acd7ecf..983c11b 100644
 +    stateMachine.handleLeds(AgStateMachineWiFiLost);
      return;
    }
-
+ 
 -  AgStateMachineState state = AgStateMachineNormal;
 -  if (agClient->isLastFetchConfigSucceed() == false) {
 -    state = AgStateMachineSensorConfigFailed;
@@ -663,12 +786,12 @@ index acd7ecf..983c11b 100644
 +  stateMachine.displayHandle(AgStateMachineNormal);
 +  stateMachine.handleLeds(AgStateMachineNormal);
  }
-
+ 
  static void updateTvoc(void) {
-@@ -1373,93 +937,6 @@ static void updatePm(void) {
+@@ -1373,93 +941,6 @@ static void updatePm(void) {
    }
  }
-
+ 
 -void postUsingWifi() {
 -  // Increment bootcount when send measurements data is scheduled
 -  int bootCount = measurements.bootCount() + 1;
@@ -691,7 +814,7 @@ index acd7ecf..983c11b 100644
 -void postUsingCellular(bool forcePost) {
 -  // Aquire queue mutex to get queue size
 -  xSemaphoreTake(mutexMeasurementCycleQueue, portMAX_DELAY);
--
+-  
 -  // Make sure measurement cycle available
 -  int queueSize = measurementCycleQueue.size();
 -  if (queueSize == 0) {
@@ -701,7 +824,7 @@ index acd7ecf..983c11b 100644
 -  }
 -
 -  // Check queue size if its ready to transmit
--  // It is ready if size is divisible by 3
+-  // It is ready if size is divisible by 3 
 -  if (!forcePost && (queueSize % MEASUREMENT_TRANSMIT_CYCLE) > 0) {
 -    Serial.printf("Not ready to transmit, queue size are %d\n", queueSize);
 -    xSemaphoreGive(mutexMeasurementCycleQueue);
@@ -722,7 +845,7 @@ index acd7ecf..983c11b 100644
 -
 -  // Attempt to send
 -  if (agClient->httpPostMeasures(payload) == false) {
--    // Consider network has a problem, retry in next schedule
+-    // Consider network has a problem, retry in next schedule 
 -    Serial.println("Post measures failed, retry in next schedule");
 -    return;
 -  }
@@ -756,19 +879,19 @@ index acd7ecf..983c11b 100644
 -    postUsingCellular(false);
 -  }
 -}
-
+ 
  static void tempHumUpdate(void) {
    delay(100);
-@@ -1527,171 +1004,28 @@ void setMeasurementMaxPeriod() {
-
+@@ -1527,171 +1008,28 @@ void setMeasurementMaxPeriod() {
+ 
  int calculateMaxPeriod(int updateInterval) {
    // 0.8 is 80% reduced interval for max period
--  // NOTE: Both network option use the same measurement interval
+-  // NOTE: Both network option use the same measurement interval 
 +  // NOTE: Both network option use the same measurement interval
    return (WIFI_MEASUREMENT_INTERVAL - (WIFI_MEASUREMENT_INTERVAL * 0.8)) / updateInterval;
  }
-
-
+ 
+ 
  void networkSignalCheck() {
 -  if (networkOption == UseWifi) {
 -    Serial.printf("WiFi RSSI %d\n", wifiConnector.RSSI());
@@ -781,7 +904,7 @@ index acd7ecf..983c11b 100644
 -    }
 -
 -    // Save last signal quality
--    lastCellSignalQuality = result.data;
+-    lastCellSignalQuality = result.data; 
 -
 -    if (result.data == 99) {
 -      // 99 indicate cellular not attached to network
@@ -793,9 +916,9 @@ index acd7ecf..983c11b 100644
 -  }
 +  Serial.printf("WiFi RSSI %d\n", wifiConnector.RSSI());
  }
-
+ 
 -/**
--* If in 2 hours cellular client still not ready, then restart system
+-* If in 2 hours cellular client still not ready, then restart system 
 -*/
 -void restartIfCeClientIssueOverTwoHours() {
 -  if (agCeClientProblemDetectedTime > 0 &&
@@ -818,7 +941,7 @@ index acd7ecf..983c11b 100644
 -    esp_restart();
 -  }
 -}
-
+ 
  void networkingTask(void *args) {
 -  // If cloud connection enabled, run first transmission to server at boot
 -  if (configuration.isCloudConnectionDisabled() == false) {
@@ -860,10 +983,10 @@ index acd7ecf..983c11b 100644
 -        }
 -
 -        // Enable at command debug
--        agSerial->setDebug(true);
+-        agSerial->setDebug(true); 
 -
 -        // Check if cellular client not ready until certain time
--        // Redundant check in both task to make sure its executed
+-        // Redundant check in both task to make sure its executed 
 -        restartIfCeClientIssueOverTwoHours();
 -
 -        // Power cycling cellular module due to network issues for more than 1 hour
@@ -902,7 +1025,7 @@ index acd7ecf..983c11b 100644
        delay(1000);
        continue;
      }
-
+ 
 -    // Run scheduler
 -    networkSignalCheckSchedule.run();
 -    configSchedule.run();
@@ -912,20 +1035,20 @@ index acd7ecf..983c11b 100644
 +    // Cloud connection is always disabled, so just delay
      delay(1000);
    }
-
+ 
    vTaskDelete(handleNetworkTask);
  }
 -
 -void newMeasurementCycle() {
 -  if (xSemaphoreTake(mutexMeasurementCycleQueue, portMAX_DELAY) == pdTRUE) {
--    // Make sure queue not overflow
+-    // Make sure queue not overflow 
 -    if (measurementCycleQueue.size() >= MAXIMUM_MEASUREMENT_CYCLE_QUEUE) {
 -      // Remove the oldest data from queue if queue reach max
 -      measurementCycleQueue.erase(measurementCycleQueue.begin());
 -    }
 -
 -    // Get current measures
--    auto mc = measurements.getMeasures();
+-    auto mc = measurements.getMeasures(); 
 -    mc.signal = cellularCard->csqToDbm(lastCellSignalQuality); // convert to RSSI
 -
 -    measurementCycleQueue.push_back(mc);
@@ -937,16 +1060,3 @@ index acd7ecf..983c11b 100644
 -  }
 -}
 -
-diff --git c/partitions.csv w/partitions.csv
-index 2854b60..855043e 100644
---- c/partitions.csv
-+++ w/partitions.csv
-@@ -1,7 +1,5 @@
- # Name   ,Type ,SubType  ,Offset   ,Size     ,Flags
- nvs      ,data ,nvs      ,0x9000   ,0x5000   ,
--otadata  ,data ,ota      ,0xe000   ,0x2000   ,
--app0     ,app  ,ota_0    ,0x10000  ,0x1E0000 ,
--app1     ,app  ,ota_1    ,0x1F0000 ,0x1E0000 ,
-+app0     ,app  ,factory  ,0xe000   ,0x3C2000 ,
- spiffs   ,data ,spiffs   ,0x3D0000 ,0x20000  ,
- coredump ,data ,coredump ,0x3F0000 ,0x10000  ,
