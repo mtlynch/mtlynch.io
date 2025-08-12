@@ -6,11 +6,26 @@ tags:
   - refactoring-english
   - gleam
   - what-got-done
+images:
+  - /retrospectives/2025/08/weeks-mtlynch-screenshot.webp
 ---
+
+{{<notice type="info">}}
+
+**New here?**
+
+Hi, I'm Michael. I'm a software developer and founder of small, indie tech businesses. I'm currently writing a book called [_Refactoring English: Effective Writing for Software Developers_](https://refactoringenglish.com).
+
+Every month, I publish a retrospective like this one to share how things are going with my book and my professional life overall.
+
+{{</notice>}}
 
 ## Highlights
 
--
+- I find that not every reader who purchases early access wants to give me feedback about rough drafts.
+- I figure out where all my time is going and think of ways to minimize time drains.
+- I spend 10 hours reimplementing a web app from scratch that originally took me 300 hours to build.
+- I continue to learn functional programming with Gleam, but I might be cheating.
 
 ## Goal grades
 
@@ -21,21 +36,23 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: Emailed seven readers, got three replies, had one live conversation
 - **Grade**: C
 
-Until I sat down to count, I thought I had a much worse response rate, but a lot of readers are responding. The issue is that I'm just not reaching out enough. I'm probably spending too long on each email trying to say something obviously not automated that I go down a rabbit hole of reading the person's blog for an hour.
+Until I sat down to count, I thought I had a much worse response rate, but a lot of readers are responding. The issue is that I'm just not reaching out enough.
 
-### Clear the backlog of my marketing ideas.
+I'm probably spending too long on each email trying to say something obviously not automated, but I go down a rabbit hole of reading the person's blog for an hour.
 
-- **Result**: Completed about 60% of what I intended to do
+### Clear the backlog of [my marketing ideas](/retrospectives/2025/07/#how-can-i-improve-marketing-for-the-book)
+
+- **Result**: Completed about 70% of what I intended to do
 - **Grade**: C
 
-TODO
+I got through most of these tasks, though I still haven't gotten around to publishing an interview I recorded a year ago, so I'd like to get that done.
 
 ### Publish a new chapter of _Refactoring English_
 
 - **Result**: Published ["Underused Techniques for Effective Emails"](https://refactoringenglish.com/chapters/techniques-for-writing-emails/)
 - **Grade**: A
 
-I knew this chapter would be a gamble in terms of sharing it on social media. It got [a positive reception on Lobsters](https://lobste.rs/s/tfauzy/underused_techniques_for_effective) but [no traction on Hacker News](https://news.ycombinator.com/item?id=44625726).
+I'm happy with how this chapter turned out, but I knew sharing it on social media would be a gamble. It got [a positive reception on Lobsters](https://lobste.rs/s/tfauzy/underused_techniques_for_effective) but [no traction on Hacker News](https://news.ycombinator.com/item?id=44625726).
 
 ## _Refactoring English_ metrics
 
@@ -51,11 +68,13 @@ As I reach out to readers and meet them on video calls, there's one piece of fee
 
 I hear this from people who purchased a few days ago and from people who had access to the book for months.
 
-One of my biggest fears for this book is that it's a "vitamin rather than a painkiller." People see good writing as something that's [important but not urgent](/book-reports/7-habits-of-highly-effective-people/#time-management-matrix). They might read a book called, "How to Double Your Instagram Followers Every Week," because they have an immediate need to grow their Instagram following, but improving their writing is something they'll get to "someday."
+My biggest fear for is that the book is a "vitamin rather than a painkiller." People see good writing as something that's [important but not urgent](/book-reports/7-habits-of-highly-effective-people/#time-management-matrix). They might read a book called, "How to Nail Your Next Coding Interview," because they have an immediate need to perform well in an interview, but improving their writing is something they'll get to "someday."
 
 Part of my motivation in [pre-selling the book](/my-6k-advance/) before writing it was to see if there were enough people willing to pay for the book. There were, and people continue to buy it, but I'm worried that might not be as predictive a signal as I thought.
 
-What if my book is the kind of thing people buy because it's a way to feel like they're investing in their writing without actually putting in time to do anything? What if it's like Planet Fitness, the popular gym franchise that supposedly makes most of its money from people who sign up and never use the gym?
+What if my book is the kind of thing people buy because it's a way to feel like they're investing in their writing without actually putting in time to do anything? What if it's like Planet Fitness, the popular gym franchise that supposedly makes its money from people who sign up and never use the gym?
+
+{{<img src="planet-fitness.webp" max-width="600px" caption="What if I'm writing the Planet Fitness of books?<br>*Photo [by Mike Mozart](https://www.flickr.com/photos/39160147@N03/14561958486), used under [CC-BY-2.0 license](https://creativecommons.org/licenses/by/2.0/deed.en)*">}}
 
 Even if I can be the Planet Fitness of books, that's not sustainable. For my book to be financially viable, I'm banking on word of mouth recommendations. I'm hoping for popular bloggers to cite my book as a resource that helped them. When a developer says they want to improve their writing, I want my book to be the obvious thing people recommend.
 
@@ -63,7 +82,7 @@ Even if I can be the Planet Fitness of books, that's not sustainable. For my boo
 
 Another reason I pre-sold the book was that I predicted that readers who pre-ordered would be especially enthusiastic about giving feedback during the writing process.
 
-From talking to friends who are also customers, most of them say that they pre-purchased to support the project and want to read the book when it's done, but they don't necessarily want to participate in a focus group or beta test. They just want to read it when I have a good version, and that's totally fair.
+From talking to friends who are also customers, most of them say that they pre-purchased to support the project and want to read the book when it's done, but they don't necessarily want to participate in a focus group or give feedback on a rough draft. They just want to read the finished version, and that's totally fair.
 
 ### I should just keep reaching out to people one by one
 
@@ -91,9 +110,9 @@ But I'm also doing the same thing on the chapter I'm currently working on. I'm 6
 
 ### Extracurricular blog posts
 
-I like capturing what I learn soon after I learn it by writing blog posts, but I could actually spend 20 hours per week blogging and still not write all the blog posts I want to write.
+I like capturing what I learn soon after I learn it by writing blog posts, but I could spend 20 hours per week blogging and still not write all the blog posts I want to write.
 
-Some of my blog posts attract people who might read my book, and some blog posts don't. I have to be deliberate about how much time to invest in the "just for fun" blog posts.
+Some of my blog posts attract people who might read my book, whereas others likely won't. I have to be deliberate about how much time to invest in the "just for fun" blog posts.
 
 Last month, I published a new blog post, ["Migrating a ZFS pool from RAIDZ1 to RAIDZ2."](/raidz1-to-raidz2/) I knew it wouldn't help with the book, but I also thought it would be just a few hours of writing, and I'd be explaining something that I hadn't seen anyone else explain well.
 
@@ -103,19 +122,19 @@ In reality, the ZFS post took seven hours to write, so it was more investment th
 
 ### Bad social media habits
 
-I'm slipping into poor social media habits. I find myself checking social media whenever I get bored or lacking motivation to think hard about a difficult piece of writing or software. And I'll tell myself I'll just check quickly and get back to work, but then I get sucked into an article or leave a comment, and then I keep getting sucked back in checking to see responses to my comment.
+I find myself checking social media whenever I get bored or lacking motivation to think hard about a difficult piece of writing or software. And I'll tell myself I'll just check quickly and get back to work, but then I get sucked into an article. If I write a comment, then I keep obsessively checking for responses.
 
-I usually set aside a day to respond to comments if my article makes a big splash. But my ZFS post didn't even make a big splash, and I still spent the day responding to comments. It turns out some people feel very strongly about data integrity and were offended by a recommendation that risks data loss, even when the risk is explicit. The upside was that the feedback led to [a legitimately better solution](/raidz1-to-raidz2/#update-a-safer-strategy) than what I came up with.
+I usually set aside a day to respond to comments if my article makes a big splash on Hacker News or reddit. My ZFS post didn't even make a big splash, but I still spent the day responding to comments. It turns out some people feel very strongly about data integrity and were offended that I recommended a strategy that risked data loss, even though I was clear about the risk. The upside was that the feedback led to [a legitimately better solution](/raidz1-to-raidz2/#update-a-safer-strategy) than what I came up with.
 
-At one point, I was using a browser extension called LeechBlockNG as a way to curb bad social media habits, but it seemed to leak memory and slow down my whole browser, so I disabled it. I'm trying it again and haven't noticed memory leaks, so maybe it can work this time.
+At one point, I was using a browser extension called LeechBlockNG as a way to curb bad social media habits, but it seemed to [leak memory and slow down my whole browser](https://github.com/proginosko/LeechBlockNG/issues/124), so I disabled it. I'm trying it again and haven't noticed memory leaks, so maybe it can work this time.
 
-**Solution**: Return to browser extensions to add more friction to unwanted timewaster sites.
+**Solution**: Give productivity browser extensions another try to add more friction to unwanted timewaster sites.
 
 ### Recovering from sleep disruptions
 
 My toddler is sleeping poorly, which means my wife and I are sleeping poorly.
 
-The sleep disruptions themselves are probably the smaller part of the problem. The other part is that I use sleep disruptions to justify lazy behavior, like skipping writing sessions or checking social media. I'll think, "I shouldn't have to work hard today. I had such terrible sleep last night!" In reality, I could work 80-90% as effectively as usual, but I use the wakeups to justify slacking off much more.
+The sleep disruptions themselves are probably the smaller part of the problem. The more significant bit is that I use sleep disruptions to justify lazy behavior, like skipping writing sessions or checking social media. I'll think, "I shouldn't have to work hard today. I had such terrible sleep last night!" In reality, I could work 80-90% as effectively as usual, but I use the wakeups to justify slacking off much more.
 
 **Solution**: Stop using sleep disruptions as an excuse to slack off.
 
@@ -123,9 +142,9 @@ The sleep disruptions themselves are probably the smaller part of the problem. T
 
 I've been doing editing work as part of [the services I offer](https://refactoringenglish.com/services/blog-editing/) for _Refactoring English_.
 
-I like editing other people's blogs, but I find it mentally draining. I find it mentally draining to edit my own writing, and it's even harder for me to edit for other people. With my own writing, I can often edit just by feel without having to explain why I'm making the edit. When I give editing notes to other bloggers, I have to articulate what weaknesses I see in their draft and why I think my suggestion is better.
+I like editing other people's blogs, but I find it mentally taxing. It's hard to edit my own writing, so it's even harder for me to edit for other people. With my own writing, I can edit by feel without having to explain why I'm making the edit. When I give editing notes to other bloggers, I have to articulate what weaknesses I see in their draft and why I think my suggestion is better.
 
-I've found myself procrastinating my editing work, so even if I have time to complete it in a day, I'll let it drag on for multiple days. And when I'm procrastinating editing work, I'm also procrastinating my own writing because I feel like if I'm going to be doing focused work, it should be the editing work.
+I've found myself procrastinating my editing work, so even if I have time to complete it in a day, I'll let it drag on for multiple days. And when I'm procrastinating editing work, I'm also procrastinating my own writing because I feel like if I'm going to be doing focused work, it should be the editing work that a client is waiting to receive.
 
 **Solution**: Recognize that procrastinating on editing eats up a lot of time and tackle it sooner.
 
@@ -133,23 +152,27 @@ I've found myself procrastinating my editing work, so even if I have time to com
 
 ### Replacing a 300-hour Vue app with a static site generator in 10 hours
 
-In 2019, I [tried to build a business called What Got Done](/retrospectives/2019/06/#what-got-done-business-or-hobby). It was an app that allowed teammates to write weekly summaries of their work and share them with each other. When I was at Google, they had an internal tool called Snippets that did the same thing. I loved it, and [kept writing weekly updates after leaving Google](/status-updates-to-nobody/), even when I was working by myself.
+In 2019, I [tried to build a business called What Got Done](/retrospectives/2019/06/#what-got-done-business-or-hobby). It was an app that allowed teammates to share weekly summaries of their work with one another.
 
 {{<img src="whatgotdone-screenshot.webp" max-width="700px" caption="What Got Done was a website where people could share weekly updates about their work.">}}
 
-I never could find customers for What Got Done, so I maintained it as a hobby project for the last six years.
+When I was at Google, they had an internal tool called Snippets that did the same thing. I loved it and [kept writing weekly updates after leaving Google](/status-updates-to-nobody/), even when I was working by myself.
+
+I never could find customers for What Got Done, so I [open-sourced it](https://github.com/mtlynch/whatgotdone) and maintained it as a hobby project for the last six years.
 
 I initially built What Got Done with Vue, Firestore, and AppEngine, and I've come to strongly dislike all of those technologies. I spent a long time [replacing Firestore with SQLite and AppEngine with fly.io](/retrospectives/2021/12/#migrating-my-side-projects-away-from-google-cloud-platform), but Vue stuck around, and it made development unpleasant.
 
-Every week when I'd post my updates to What Got Done, I'd think about how I actually prefer the authoring workflow of writing my blog posts in VS Code and publishing them with Hugo. So, one weekend, I just reimplemented What Got Done as a simple static site with Hugo, which I now host at [weeks.mtlynch.io](https://weeks.mtlynch.io).
+Every week, I'd post my updates to What Got Done and think about how I prefer the authoring workflow of writing my blog posts in VS Code and publishing them with Hugo. So, one weekend, I just reimplemented What Got Done as a simple static site with Hugo, which I now host at [weeks.mtlynch.io](https://weeks.mtlynch.io).
 
 {{<img src="weeks-mtlynch-screenshot.webp" max-width="400px" caption="I reimplemented What Got Done as a static site I can generate with Hugo.">}}
 
 So, in six years, I probably spent about 300 hours implementing and maintaining What Got Done as a Go + Vue + SQLite + fly.io app. It only took 10 hours to reimplement it as a static site with simple Markdown files and Hugo.
 
-Because the new version is a just-for-me app, I can add hyper-personal features like [pre-populating my weekly updates from my git commits](https://github.com/mtlynch/weeks.mtlynch.io/blob/b7a79b5f7d8b6ed8d1ed93e19b221c2f889efc4b/dev-scripts/new-week). And of course, it's orders of magnitude simpler and cheaper to host, maintain, and back up because it's just a static site with source control instead of a full-blown web app with separate tech stacks for the frontend, backend, and database.
+Because the new version is a just-for-me app, I can add personalized features like [pre-populating my weekly updates from my git commits](https://github.com/mtlynch/weeks.mtlynch.io/blob/b7a79b5f7d8b6ed8d1ed93e19b221c2f889efc4b/dev-scripts/new-week). And of course, it's orders of magnitude simpler and cheaper to host, maintain, and back up because it's just a static site with source control instead of a full-blown web app with separate tech stacks for the frontend, backend, and database.
 
 ### Sunsetting What Got Done
+
+I don't want to maintain What Got Done forever, especially now that I'm not even using it.
 
 Even though What Got Done only has a handful of active users, I hate abandoning people who started using something I offered, so I tried to make the offboarding experience on What Got Done nice:
 
@@ -215,13 +238,15 @@ I initially thought it was more proper and elegant to split the logs into a list
 ]
 ```
 
-But that meant I needed a secret first pass to split the string into substrings that the tokenizer could recognize like `["Session", " ", "Start"]`, and I had to implement my own string split logic because Gleam's built in libraries have no way of splitting a string by substring and then keeping the substring, too.
+But that meant I needed a secret first pass to split the string into substrings that the tokenizer could recognize like `["Session", " ", "Start"]`, and I had to implement my own string split logic because Gleam's built in libraries have no way of splitting a string by substring and then keeping the substring, too. For example, if I split by newlines then by spaces, then I'd have a list of strings, but I would lose track of whether the separators were spaces or newlines.
 
-It felt like I was actually parsing the input three times: once for the string splitting, once for the lexing, and once for the actual parser. I initially assumed it was because I don't know enough about functional languages or text parsers, and I'd find a more elegant way to lex and parse.
+It felt like I was actually parsing the input three times: [once for my custom string splitting](https://codeberg.org/mtlynch/gleam-chat-log-parser/src/commit/2474457033d4900631e4fb443981cd3f1d523f48/src/plaintext_tokenizer.gleam#L15-L73), [once for the lexing](https://codeberg.org/mtlynch/gleam-chat-log-parser/src/commit/2474457033d4900631e4fb443981cd3f1d523f48/src/plaintext_tokenizer.gleam#L75-L86), and [once for the actual parser](https://codeberg.org/mtlynch/gleam-chat-log-parser/src/commit/2474457033d4900631e4fb443981cd3f1d523f48/src/plaintext_parser.gleam#L27-L59). I initially assumed it was because I don't know enough about functional languages or text parsers, and I'd find a more elegant way to lex and parse.
 
-I used my confusion to justify finally purchasing a print copy of [_Crafting Interpreters_](https://craftinginterpreters.com/), the most well-designed software book I've ever seen. And after reading the lexing chapter of the book, I concluded that my AIM logs weren't structured enough for lexing.
+I used my confusion to justify finally purchasing a print copy of [_Crafting Interpreters_](https://craftinginterpreters.com/), the most beautifully-designed software book I've ever seen.
 
-I tried [collapsing everything down to a parser](https://codeberg.org/mtlynch/gleam-chat-log-parser/pulls/20) that reads the input character by character, and that felt simpler.
+{{<img src="crafting-interpreters.webp" max-width="390px" caption="My Gleam project finally gave me an excuse to buy a print copy of [_Crafting Interpreters_](https://craftinginterpreters.com/).">}}
+
+After reading the lexing chapter of the book, I concluded that my AIM logs weren't structured enough for lexing. I tried [collapsing everything down to a parser](https://codeberg.org/mtlynch/gleam-chat-log-parser/pulls/20) that reads the input character by character, and that felt simpler.
 
 The bummer of parsing character by character is that Gleam's pattern matching looks much uglier. In the old implementation, I could look for string patterns [like this](https://codeberg.org/mtlynch/gleam-chat-log-parser/src/commit/480c45c9e76117635ff7b0509f500799297eaa94/src/plaintext_tokenizer.gleam#L76-L79):
 
@@ -265,7 +290,7 @@ fn parse_tokens_with_messages(
 
 A bunch of my functions took the same parameters and had the same return value, and as I added more code, the list of parameters and return values grew larger.
 
-So, I created a `ParseState` type and passed that around instead:
+So, I created a `ParseState` type and [passed that around instead](https://codeberg.org/mtlynch/gleam-chat-log-parser/src/commit/926124b4a660adeea0795e10a2979f73cfa6dcb5/src/plaintext_parser.gleam):
 
 ```gleam
 type ParseState {
@@ -297,9 +322,9 @@ Functional programming nerds: am I cheating? Or is this the right way to pass ar
 
 ### What got done?
 
-- Published ["Underused Techniques for Effective Emails"](https://refactoringenglish.com/chapters/techniques-for-writing-emails/) and sent early access readers an expanded version.
+- Published ["Underused Techniques for Effective Emails"](https://refactoringenglish.com/chapters/techniques-for-writing-emails/) and sent an expanded version to early access readers.
 - Migrated the last of the web-only content of _Refactoring English_ into the ebook.
-- Published ["Migrating a ZFS pool from RAIDZ1 to RAIDZ2"](https://mtlynch.io/raidz1-to-raidz2/)
+- Published the blog post ["Migrating a ZFS pool from RAIDZ1 to RAIDZ2."](https://mtlynch.io/raidz1-to-raidz2/)
 - Created a better [password reset flow for ScreenJournal](https://github.com/mtlynch/screenjournal/pull/429).
 - Added [file expiration options for guests on PicoShare](https://github.com/mtlynch/picoshare/pull/694).
 - Did unpaid editing on an upcoming blog post in exchange for publishing the feedback as marketing for my editing services.
@@ -307,7 +332,8 @@ Functional programming nerds: am I cheating? Or is this the right way to pass ar
 
 ### Lessons learned
 
--
+- It's fine if not every early reader of _Refactoring English_ wants to give feedback. I can keep reaching out to readers to find the few that want to be more actively involved.
+- It's always useful to evaluate the ways I'm wasting time and think of ways to mitigate them.
 
 ### Goals for next month
 
