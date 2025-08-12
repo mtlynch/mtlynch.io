@@ -1,6 +1,6 @@
 ---
 title: "Educational Products: Month 10"
-date: "2025-08-11"
+date: "2025-08-12"
 description: Perhaps not everyone wants to join my focus group.
 tags:
   - refactoring-english
@@ -87,6 +87,8 @@ For the emails chapter I wrote in July, my budget was five hours, but I actually
 
 But I'm also doing the same thing on the chapter I'm currently working on. I'm 6.5 hours into my 6-hour budget, and I probably have at least 3 hours of writing left before I'm comfortable sharing it with readers. I think this is both a problem of me polishing too much but also setting too low a budget for the first and most important chapter of the book.
 
+**Solution**: Budget extra time for chapters that will have public excerpts, and constrain writing time to the defined limits.
+
 ### Extracurricular blog posts
 
 I like capturing what I learn soon after I learn it by writing blog posts, but I could actually spend 20 hours per week blogging and still not write all the blog posts I want to write.
@@ -95,21 +97,37 @@ Some of my blog posts attract people who might read my book, and some blog posts
 
 Last month, I published a new blog post, ["Migrating a ZFS pool from RAIDZ1 to RAIDZ2."](/raidz1-to-raidz2/) I knew it wouldn't help with the book, but I also thought it would be just a few hours of writing, and I'd be explaining something that I hadn't seen anyone else explain well.
 
-In reality, the ZFS post took 7 hours to write, so it was more investment than was sensible on a "just for fun" post, especially in a month where I didn't have a more crowdpleasing _Refactoring English_ chapter to share.
+In reality, the ZFS post took seven hours to write, so it was more investment than was sensible on a "just for fun" post, especially in a month where I didn't have a more crowdpleasing _Refactoring English_ chapter to share.
+
+**Solution**: Be more selective about non-book blog posts, and prioritize posts that attract readers who would also read my book.
 
 ### Bad social media habits
 
-I'm also slipping into poor social media habits.
+I'm slipping into poor social media habits. I find myself checking social media whenever I get bored or lacking motivation to think hard about a difficult piece of writing or software. And I'll tell myself I'll just check quickly and get back to work, but then I get sucked into an article or leave a comment, and then I keep getting sucked back in checking to see responses to my comment.
 
-I usually set aside a day to respond to comments if my article makes a big splash. But my ZFS post didn't even make a big splash, and I still spent the day engaging in comments. It turns out some people feel very strongly about data integrity and were offended by a recommendation that risks data loss, even when the risk is explicit. The upside was that the feedback led to [a legitimately better solution](/raidz1-to-raidz2/#update-a-safer-strategy) than what I came up with.
+I usually set aside a day to respond to comments if my article makes a big splash. But my ZFS post didn't even make a big splash, and I still spent the day responding to comments. It turns out some people feel very strongly about data integrity and were offended by a recommendation that risks data loss, even when the risk is explicit. The upside was that the feedback led to [a legitimately better solution](/raidz1-to-raidz2/#update-a-safer-strategy) than what I came up with.
+
+At one point, I was using a browser extension called LeechBlockNG as a way to curb bad social media habits, but it seemed to leak memory and slow down my whole browser, so I disabled it. I'm trying it again and haven't noticed memory leaks, so maybe it can work this time.
+
+**Solution**: Return to browser extensions to add more friction to unwanted timewaster sites.
 
 ### Recovering from sleep disruptions
 
-My toddler is sleeping poorly, which means my wife and I are sleeping poorly. That alone isn't such a big deal, but I also use it to justify bad habits, like skipping writing sessions or checking social media when I'm not feeling focused.
+My toddler is sleeping poorly, which means my wife and I are sleeping poorly.
+
+The sleep disruptions themselves are probably the smaller part of the problem. The other part is that I use sleep disruptions to justify lazy behavior, like skipping writing sessions or checking social media. I'll think, "I shouldn't have to work hard today. I had such terrible sleep last night!" In reality, I could work 80-90% as effectively as usual, but I use the wakeups to justify slacking off much more.
+
+**Solution**: Stop using sleep disruptions as an excuse to slack off.
 
 ### Procrastinating paid editing work
 
-I also did some editing work this month, so that accounts for a few hours. I only spent about six hours writng the actual notes for the client, but I also procrastinated a lot because I find critiquing other people's writing even harder than writing. Because it's easy for me to say that I don't like something, but it's much harder to articulate what my issue is, and extremely hard for me to propose a solution that addresses my issue.
+I've been doing editing work as part of [the services I offer](https://refactoringenglish.com/services/blog-editing/) for _Refactoring English_.
+
+I like editing other people's blogs, but I find it mentally draining. I find it mentally draining to edit my own writing, and it's even harder for me to edit for other people. With my own writing, I can often edit just by feel without having to explain why I'm making the edit. When I give editing notes to other bloggers, I have to articulate what weaknesses I see in their draft and why I think my suggestion is better.
+
+I've found myself procrastinating my editing work, so even if I have time to complete it in a day, I'll let it drag on for multiple days. And when I'm procrastinating editing work, I'm also procrastinating my own writing because I feel like if I'm going to be doing focused work, it should be the editing work.
+
+**Solution**: Recognize that procrastinating on editing eats up a lot of time and tackle it sooner.
 
 ## Side projects
 
