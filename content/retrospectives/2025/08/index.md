@@ -68,7 +68,7 @@ As I reach out to readers and meet them on video calls, there's one piece of fee
 
 I hear this from people who purchased a few days ago and from people who had access to the book for months.
 
-My biggest fear for is that the book is a "vitamin rather than a painkiller." People see good writing as something that's [important but not urgent](/book-reports/7-habits-of-highly-effective-people/#time-management-matrix). They might read a book called, "How to Nail Your Next Coding Interview," because they have an immediate need to perform well in an interview, but improving their writing is something they'll get to "someday."
+My biggest fear is that the book is a "vitamin rather than a painkiller." People see good writing as something that's [important but not urgent](/book-reports/7-habits-of-highly-effective-people/#time-management-matrix). They might read a book called, "How to Nail Your Next Coding Interview," because they have an immediate need to perform well in an interview, but improving their writing is something they'll get to "someday."
 
 Part of my motivation in [pre-selling the book](/my-6k-advance/) before writing it was to see if there were enough people willing to pay for the book. There were, and people continue to buy it, but I'm worried that might not be as predictive a signal as I thought.
 
@@ -116,7 +116,7 @@ Some of my blog posts attract people who might read my book, whereas others like
 
 Last month, I published a new blog post, ["Migrating a ZFS pool from RAIDZ1 to RAIDZ2."](/raidz1-to-raidz2/) I knew it wouldn't help with the book, but I also thought it would be just a few hours of writing, and I'd be explaining something that I hadn't seen anyone else explain well.
 
-In reality, the ZFS post took seven hours to write, so it was more investment than was sensible on a "just for fun" post, especially in a month where I didn't have a more crowdpleasing _Refactoring English_ chapter to share.
+In reality, the ZFS post took seven hours to write, so it was more investment than was sensible on a "just for fun" post, especially in a month where I didn't have a more crowd-pleasing _Refactoring English_ chapter to share.
 
 **Solution**: Be more selective about non-book blog posts, and prioritize posts that attract readers who would also read my book.
 
@@ -179,7 +179,7 @@ Even though What Got Done only has a handful of active users, I hate abandoning 
 - I [announced on the website](https://www.whatgotdone.com/shutdown-notice) that What Got Done would stop running at the end of the year.
 - I added a feature to [let users export their posts in Markdown format](https://github.com/mtlynch/whatgotdone/pull/963).
   - I needed to do this anyway to port my data to Hugo, so I figured it would be nice to build this feature into the web app itself so that any user could do it.
-- I added a feature that lets users to [set up a forwarding address for post-WhatGotDone shutdown](https://github.com/mtlynch/whatgotdone/pull/970).
+- I added a feature that lets users [set up a forwarding address for post-What Got Done shutdown](https://github.com/mtlynch/whatgotdone/pull/970).
   - For example, I've configured my profile page [whatgotdone.com/michael](https://whatgotdone.com/michael) to permanently redirect to [weeks.mtlynch.io](https://weeks.mtlynch.io).
 
 ### Progress on my AIM log parser in Gleam
