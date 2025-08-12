@@ -1,9 +1,7 @@
 ---
 title: A Beginner's Guide to Mining Siacoin
 tags:
-  - siacoin
   - cryptocurrency
-  - mining
   - sia
 description: A step-by-step guide from zero to mining automation
 lastmod: "2018-01-27T21:47:00-05:00"

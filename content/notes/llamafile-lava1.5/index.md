@@ -3,7 +3,7 @@ title: "Rough Experiments with Llamafile and LLaVA 1.5"
 date: 2023-12-02
 tags:
   - llava
-  - chatbots
+  - llms
   - ai
 ---
 

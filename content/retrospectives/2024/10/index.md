@@ -2,6 +2,11 @@
 title: "Paternity Leave: Month 2"
 date: 2024-10-15
 description: Not working is harder than I expected.
+tags:
+  - nix
+  - fuzzing
+  - security
+  - parenthood
 ---
 
 ## Highlights

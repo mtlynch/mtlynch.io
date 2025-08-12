@@ -3,7 +3,6 @@ title: How to Grow Quickly and Never Turn a Profit
 description: A eulogy for my failed online business.
 tags:
   - is it keto
-  - startups
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=20062264
   indie_hackers: https://www.indiehackers.com/post/37ea42382d

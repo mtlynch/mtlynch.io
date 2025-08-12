@@ -5,7 +5,7 @@ end_date: 2021
 blurb: A minimalist web app for receiving text log files. Kind of a precursor to PicoShare.
 weight: 97
 technologies:
-  - golang
+  - go
   - sqlite
   - docker
   - litestream

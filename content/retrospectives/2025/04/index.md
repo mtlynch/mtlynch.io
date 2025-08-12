@@ -4,6 +4,11 @@ date: "2025-04-09"
 description: I'm officially writing a book!
 images:
   - /retrospectives/2025/04/og-cover.webp
+tags:
+  - blogging
+  - kickstarter
+  - hacker-news
+  - refactoring-english
 ---
 
 ## Highlights

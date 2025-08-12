@@ -4,6 +4,11 @@ date: 2024-09-11
 description: I have a son!
 images:
   - /retrospectives/2024/09/baby-photo.webp
+tags:
+  - parenthood
+  - nix
+  - refactoring-english
+  - hacker-news
 ---
 
 ## Highlights

@@ -1,7 +1,7 @@
 ---
 title: How I Hired a Freelance Editor for My Blog
 tags:
-  - editing
+  - writing
   - blogging
   - meta
   - outsourcing

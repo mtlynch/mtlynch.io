@@ -4,7 +4,7 @@ date: 2025-01-08
 images:
   - if-got-want-improve-go-tests/og-cover.webp
 tags:
-  - golang
+  - go
   - testing
 discuss_urls:
   reddit: https://www.reddit.com/r/golang/comments/1hwl735/if_got_want_a_simple_way_to_write_better_go_tests/

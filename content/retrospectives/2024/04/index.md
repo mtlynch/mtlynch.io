@@ -4,6 +4,12 @@ date: 2024-04-11
 description: Thinking critically about deployments.
 images:
   - /retrospectives/2024/04/og-cover.webp
+tags:
+  - tinypilot
+  - security
+  - circleci
+  - zig
+  - ethereum
 ---
 
 {{<notice type="info">}}

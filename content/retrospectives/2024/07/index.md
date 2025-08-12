@@ -2,6 +2,12 @@
 title: "Educational Products: Month 1"
 date: 2024-07-11
 description: I'm coming back to my blogging course.
+tags:
+  - hit-the-front-page-of-hacker-news
+  - htmx
+  - screenjournal
+  - is-it-keto
+  - writing
 ---
 
 ## Highlights

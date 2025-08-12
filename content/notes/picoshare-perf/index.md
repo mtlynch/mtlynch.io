@@ -6,7 +6,7 @@ images:
   - /notes/picoshare-perf/oom-crash.png
 tags:
   - picoshare
-  - golang
+  - go
   - sqlite
   - debugging
 ---

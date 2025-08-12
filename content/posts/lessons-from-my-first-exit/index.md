@@ -5,6 +5,7 @@ description: My takeaways from selling TinyPilot
 hero_image: cover.webp
 tags:
   - tinypilot
+  - bootstrapping
 discuss_urls:
   hacker_news: http://news.ycombinator.com/item?id=42133864
 ---

@@ -4,6 +4,12 @@ date: 2024-08-07
 description: Improving my video recording workflow
 images:
   - /retrospectives/2024/08/og-cover.webp
+tags:
+  - blogging
+  - bootstrapping
+  - screenjournal
+  - is-it-keto
+  - hit-the-front-page-of-hacker-news
 ---
 
 ## Highlights

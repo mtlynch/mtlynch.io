@@ -3,6 +3,12 @@ title: "Notes from Simon Willison's Interview on Software Misadventures"
 date: 2025-05-23
 images:
   - /notes/simon-willison-software-misadventures/cover.webp
+tags:
+  - llms
+  - blogging
+  - software-engineering
+  - simon-willison
+  - software-misadventures-podcast
 ---
 
 I just finished listening to [Simon Willison's interview on the _Software Misadventures_ podcast](https://softwaremisadventures.com/p/simon-willison-llm-weird-intern). I learned a lot from the interview, so I wrote up my notes.
