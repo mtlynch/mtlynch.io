@@ -108,7 +108,8 @@ mkdir -p ./.venv && \
 ## Initialize Arduino CLI
 
 ```bash
-ARDUINO_ESP32_VERSION='3.2.0'
+#ARDUINO_ESP32_VERSION='3.1.3'
+ARDUINO_ESP32_VERSION='2.0.17'
 
 arduino-cli config init \
   --additional-urls https://espressif.github.io/arduino-esp32/package_esp32_index.json && \
@@ -123,39 +124,14 @@ arduino-cli config init \
 cd ~/airgradient-one && \
   arduino-cli compile \
     --verbose \
-    --fqbn esp32:esp32:lolin_c3_mini \
+    --fqbn esp32:esp32:esp32c3:CDCOnBoot=cdc,PartitionScheme=min_spiffs,DebugLevel=info,EraseFlash=all \
     --library . \
-    --upload \
     --port "${AIRGRADIENT_PATH}" \
-    --verify examples/OneOpenAir/OneOpenAir.ino
+    --verify \
+    --upload \
+    examples/OneOpenAir/OneOpenAir.ino
 ```
 
 ## Stream
 
-arduino-cli monitor --port /dev/ttyACM0
-
----
-
-## Install third-party libraries
-
-```bash
-arduino-cli lib install \
-  'Adafruit NeoPixel'@1.12.0 \
-  'arduino-sht'@1.2.3 \
-  'S8_UART'@1.0.1 \
-  'Sensirion Core'@0.6.0 \
-  'Sensirion Gas Index Algorithm'@3.2.2 \
-  'Sensirion I2C SGP41'@1.0.0 \
-  'U8g2'@2.34.22 \
-  'WiFiManager'@2.0.16-rc.2
-```
-
-The official PMS Arduino library is incompatible with the AirGradient ONE, so we need to install a modified version from Github.
-https://www.airgradient.com/blog/patching-pms-library-for-plantower-pms5003t/
-
-```bash
-arduino-cli config set library.enable_unsafe_install true
-arduino-cli lib install \
-  --git-url 'https://github.com/Ibuprofen/PMS.git#d972759f47a700b1c091d19b61eefdbfacb8b828'
-arduino-cli config set library.enable_unsafe_install false
-```
+arduino-cli monitor --port "${AIRGRADIENT_PATH}"
