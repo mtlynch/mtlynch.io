@@ -4,6 +4,16 @@ date: "{{ now.Format "2006-01-02" }}"
 description: TODO - One-line summary
 ---
 
+{{<notice type="info">}}
+
+**New here?**
+
+Hi, I'm Michael. I'm a software developer and founder of small, indie tech businesses. I'm currently working on a book called [_Refactoring English: Effective Writing for Software Developers_](https://refactoringenglish.com).
+
+Every month, I publish a retrospective like this one to share how things are going with my book and my professional life overall.
+
+{{</notice>}}
+
 ## Highlights
 
 -
@@ -32,6 +42,10 @@ TODO
 - **Grade**: XX
 
 TODO
+
+## _Refactoring English_ metrics
+
+{{<project-metrics project="refactoring_english">}}
 
 ## Topic 1
 

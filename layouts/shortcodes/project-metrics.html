@@ -19,12 +19,12 @@
 
 {{- /* Early return: Check if year and month were extracted */ -}}
 {{- if not (and $year $month) -}}
-  {{- errorf "Could not extract year and month from URL: %s. Expected format: /retrospectives/YYYY/MM/" $permalink -}}
+  {{- errorf "Could not extract year and month from URL: %s. Expected format: /retrospectives/YYYY/MM/. Path parts: %s" $permalink $pathParts -}}
 {{- end -}}
 
 {{- /* Early return: Validate year and month format */ -}}
 {{- $yearInt := int $year -}}
-{{- $monthInt := int $month -}}
+{{- $monthInt := int (strings.TrimLeft "0" $month) -}}
 {{- if not (and (ge $yearInt 2000) (le $yearInt 3000) (ge $monthInt 1) (le $monthInt 12)) -}}
   {{- errorf "Invalid year (%s) or month (%s) extracted from URL: %s. Year must be 2000-3000, month must be 1-12." $year $month $permalink -}}
 {{- end -}}
@@ -33,8 +33,8 @@
 {{- $retroDate := time (printf "%d-%02d-01" $yearInt $monthInt) -}}
 {{- $currentDate := $retroDate.AddDate 0 -1 0 -}}
 {{- $prevDate := $retroDate.AddDate 0 -2 0 -}}
-{{- $current := $currentDate.Format "200601" -}}
-{{- $prev := $prevDate.Format "200601" -}}
+{{- $current := $currentDate.Format "2006-01" -}}
+{{- $prev := $prevDate.Format "2006-01" -}}
 
 {{- $data := index .Site.Data "project_metrics" -}}
 {{- $projectData := index $data $project -}}
