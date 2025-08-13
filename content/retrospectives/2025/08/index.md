@@ -14,7 +14,7 @@ images:
 
 **New here?**
 
-Hi, I'm Michael. I'm a software developer and founder of small, indie tech businesses. I'm currently writing a book called [_Refactoring English: Effective Writing for Software Developers_](https://refactoringenglish.com).
+Hi, I'm Michael. I'm a software developer and founder of small, indie tech businesses. I'm currently working on a book called [_Refactoring English: Effective Writing for Software Developers_](https://refactoringenglish.com).
 
 Every month, I publish a retrospective like this one to share how things are going with my book and my professional life overall.
 
@@ -22,7 +22,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 ## Highlights
 
-- I find that not every reader who purchases early access wants to give me feedback about rough drafts.
+- I find that not every reader who purchases early access to my book wants to give me feedback about rough drafts.
 - I figure out where all my time is going and think of ways to minimize time drains.
 - I spend 10 hours reimplementing a web app from scratch that originally took me 300 hours to build.
 - I continue to learn functional programming with Gleam, but I might be cheating.
@@ -38,7 +38,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 Until I sat down to count, I thought I had a much worse response rate, but a lot of readers are responding. The issue is that I'm just not reaching out enough.
 
-I'm probably spending too long on each email trying to say something obviously not automated, but I go down a rabbit hole of reading the person's blog for an hour.
+I'm probably spending too long on each email trying to say something unique and conspicuously not AI-generated, but I go down a rabbit hole of reading the person's blog for an hour.
 
 ### Clear the backlog of [my marketing ideas](/retrospectives/2025/07/#how-can-i-improve-marketing-for-the-book)
 
@@ -68,15 +68,15 @@ As I reach out to readers and meet them on video calls, there's one piece of fee
 
 I hear this from people who purchased a few days ago and from people who had access to the book for months.
 
-My biggest fear is that the book is a "vitamin rather than a painkiller." People see good writing as something that's [important but not urgent](/book-reports/7-habits-of-highly-effective-people/#time-management-matrix). They might read a book called, "How to Nail Your Next Coding Interview," because they have an immediate need to perform well in an interview, but improving their writing is something they'll get to "someday."
+My biggest fear is that the book is a "vitamin rather than a painkiller." People see good writing as something that's [important but not urgent](/book-reports/7-habits-of-highly-effective-people/#time-management-matrix). They might read a book called, "How to Nail Your Next Coding Interview," ahead of an upcoming interview, but it's easy to defer indefinitely on improving writing.
 
 Part of my motivation in [pre-selling the book](/my-6k-advance/) before writing it was to see if there were enough people willing to pay for the book. There were, and people continue to buy it, but I'm worried that might not be as predictive a signal as I thought.
 
-What if my book is the kind of thing people buy because it's a way to feel like they're investing in their writing without actually putting in time to do anything? What if it's like Planet Fitness, the popular gym franchise that supposedly makes its money from people who sign up and never use the gym?
+What if my book is the kind of thing people buy because it's a way to feel like they're investing in their writing without actually putting in time to do anything? What if it's like Planet Fitness, the popular gym franchise that supposedly makes its money from people who sign up and then never use the gym?
 
 {{<img src="planet-fitness.webp" max-width="600px" caption="What if I'm writing the Planet Fitness of books?<br>*Photo [by Mike Mozart](https://www.flickr.com/photos/39160147@N03/14561958486), used under [CC-BY-2.0 license](https://creativecommons.org/licenses/by/2.0/deed.en)*">}}
 
-Even if I can be the Planet Fitness of books, that's not sustainable. For my book to be financially viable, I'm banking on word of mouth recommendations. I'm hoping for popular bloggers to cite my book as a resource that helped them. When a developer says they want to improve their writing, I want my book to be the obvious thing people recommend.
+Even if I can be the Planet Fitness of books, that's not sustainable. For my book to be financially viable, I'm banking on word of mouth recommendations from people who read the book and like it. I hope popular bloggers cite my book as a resource that helped them. When a developer says they want to improve their writing, I want my book to be the obvious thing people recommend.
 
 ### Maybe customers don't want to be in my focus group
 
@@ -86,7 +86,7 @@ From talking to friends who are also customers, most of them say that they pre-p
 
 ### I should just keep reaching out to people one by one
 
-What I've found from reaching out to customers one by one and arranging live calls is that _some_ readers are extremely enthusiastic and want to actively give feedback. I've only found a handful, but they've given me excellent feedback.
+What I've found from reaching out to customers one by one and arranging live calls is that _some_ readers are extremely enthusiastic and want to give feedback. I've only found a handful, but they've given me excellent feedback.
 
 The most effective way I've found enthusiastic readers is to email them one by one, so I'll keep doing that.
 
@@ -102,7 +102,7 @@ So, let me look back and think about where my time is going when I'm not working
 
 A few months ago, I realized I was [spending too much time wordsmithing my writing](/retrospectives/2025/06/#becoming-less-precious-about-my-writing) rather than just getting chapters to readers when they were 80-90% perfect. My solution was to set time limits on each chapter and write whatever I could complete within my time budget.
 
-For the emails chapter I wrote in July, my budget was five hours, but I actually spent 17.5 hours on it. Part of that was intentional because I realized after I set the target that it would work well as a standalone excerpt on the website. It takes longer to write a standalone excerpt and then fold it back into the book.
+For the emails chapter I wrote in July, my budget was five hours, but I actually spent 17.5 hours on it. Part of that was intentional because I realized after I set the target that it would work well as a standalone excerpt on the website. It takes longer to write an excerpt and then fold it back into the book.
 
 But I'm also doing the same thing on the chapter I'm currently working on. I'm 6.5 hours into my 6-hour budget, and I probably have at least 3 hours of writing left before I'm comfortable sharing it with readers. I think this is both a problem of me polishing too much but also setting too low a budget for the first and most important chapter of the book.
 
@@ -116,17 +116,17 @@ Some of my blog posts attract people who might read my book, whereas others like
 
 Last month, I published a new blog post, ["Migrating a ZFS pool from RAIDZ1 to RAIDZ2."](/raidz1-to-raidz2/) I knew it wouldn't help with the book, but I also thought it would be just a few hours of writing, and I'd be explaining something that I hadn't seen anyone else explain well.
 
-In reality, the ZFS post took seven hours to write, so it was more investment than was sensible on a "just for fun" post, especially in a month where I didn't have a more crowd-pleasing _Refactoring English_ chapter to share.
+In reality, the ZFS post took seven hours to write, so it was more investment than was sensible for a "just for fun" post, especially in a month where I didn't have a more crowd-pleasing _Refactoring English_ chapter to share.
 
 **Solution**: Be more selective about non-book blog posts, and prioritize posts that attract readers who would also read my book.
 
 ### Bad social media habits
 
-I find myself checking social media whenever I get bored or lacking motivation to think hard about a difficult piece of writing or software. And I'll tell myself I'll just check quickly and get back to work, but then I get sucked into an article. If I write a comment, then I keep obsessively checking for responses.
+I find myself checking social media whenever I feel bored or low on motivation to think hard about a difficult piece of writing or software. I tell myself I'll just check quickly and get back to work, but then I get sucked into an article. If I write a comment, then I keep obsessively checking for responses.
 
-I usually set aside a day to respond to comments if my article makes a big splash on Hacker News or reddit. My ZFS post didn't even make a big splash, but I still spent the day responding to comments. It turns out some people feel very strongly about data integrity and were offended that I recommended a strategy that risked data loss, even though I was clear about the risk. The upside was that the feedback led to [a legitimately better solution](/raidz1-to-raidz2/#update-a-safer-strategy) than what I came up with.
+I usually set aside a day to respond to comments if my article makes a big splash on Hacker News or reddit. My ZFS post didn't make a big splash, but I still spent the day responding to comments.
 
-At one point, I was using a browser extension called LeechBlockNG as a way to curb bad social media habits, but it seemed to [leak memory and slow down my whole browser](https://github.com/proginosko/LeechBlockNG/issues/124), so I disabled it. I'm trying it again and haven't noticed memory leaks, so maybe it can work this time.
+At one point, I was using a browser extension called LeechBlockNG to curb bad social media habits, but it seemed to [leak memory and slow down my whole browser](https://github.com/proginosko/LeechBlockNG/issues/124), so I disabled it. I'm trying it again and haven't noticed memory leaks, so maybe it can work this time.
 
 **Solution**: Give productivity browser extensions another try to add more friction to unwanted timewaster sites.
 
@@ -134,7 +134,7 @@ At one point, I was using a browser extension called LeechBlockNG as a way to cu
 
 My toddler is sleeping poorly, which means my wife and I are sleeping poorly.
 
-The sleep disruptions themselves are probably the smaller part of the problem. The more significant bit is that I use sleep disruptions to justify lazy behavior, like skipping writing sessions or checking social media. I'll think, "I shouldn't have to work hard today. I had such terrible sleep last night!" In reality, I could work 80-90% as effectively as usual, but I use the wakeups to justify slacking off much more.
+The sleep disruptions themselves are probably the smaller part of the problem. The more significant bit is that I use sleep disruptions to justify lazy behavior, like skipping writing sessions or checking social media. I'll think, "I shouldn't have to work hard today. I had such a bad night of sleep last night!" In reality, I could work 80-90% as effectively as usual, but I use poor sleep to justify slacking off.
 
 **Solution**: Stop using sleep disruptions as an excuse to slack off.
 
@@ -142,11 +142,11 @@ The sleep disruptions themselves are probably the smaller part of the problem. T
 
 I've been doing editing work as part of [the services I offer](https://refactoringenglish.com/services/blog-editing/) for _Refactoring English_.
 
-I like editing other people's blogs, but I find it mentally taxing. It's hard to edit my own writing, so it's even harder for me to edit for other people. With my own writing, I can edit by feel without having to explain why I'm making the edit. When I give editing notes to other bloggers, I have to articulate what weaknesses I see in their draft and why I think my suggestion is better.
+I like editing other people's blog posts, but I find it mentally taxing. It's hard to edit my own writing, so it's even harder for me to edit for other people. With my writing, I can edit by feel without having to explain why I'm making the edit. When I give editing notes to other bloggers, I have to articulate what weaknesses I see in their draft and why I think my suggestion is better.
 
-I've found myself procrastinating my editing work, so even if I have time to complete it in a day, I'll let it drag on for multiple days. And when I'm procrastinating editing work, I'm also procrastinating my own writing because I feel like if I'm going to be doing focused work, it should be the editing work that a client is waiting to receive.
+I've found myself procrastinating my editing work, so even if I have time to complete it in a day, I'll let it drag on for multiple days. And when I'm procrastinating editing work, I'm also procrastinating my own writing because I want to prioritize my clients' work ahead of my own.
 
-**Solution**: Recognize that procrastinating on editing eats up a lot of time and tackle it sooner.
+**Solution**: Recognize that procrastinating on editing eats up a lot of time, and tackle it sooner.
 
 ## Side projects
 
@@ -156,13 +156,13 @@ In 2019, I [tried to build a business called What Got Done](/retrospectives/2019
 
 {{<img src="whatgotdone-screenshot.webp" max-width="700px" caption="What Got Done was a website where people could share weekly updates about their work.">}}
 
-When I was at Google, they had an internal tool called Snippets that did the same thing. I loved it and [kept writing weekly updates after leaving Google](/status-updates-to-nobody/), even when I was working by myself.
+When I was at Google, they had an internal tool called Snippets that did the same thing as What Got Done. I loved it and [kept writing weekly updates after leaving Google](/status-updates-to-nobody/), even when I was working by myself.
 
 I never could find customers for What Got Done, so I [open-sourced it](https://github.com/mtlynch/whatgotdone) and maintained it as a hobby project for the last six years.
 
 I initially built What Got Done with Vue, Firestore, and AppEngine, and I've come to strongly dislike all of those technologies. I spent a long time [replacing Firestore with SQLite and AppEngine with fly.io](/retrospectives/2021/12/#migrating-my-side-projects-away-from-google-cloud-platform), but Vue stuck around, and it made development unpleasant.
 
-Every week, I'd post my updates to What Got Done and think about how I prefer the authoring workflow of writing my blog posts in VS Code and publishing them with Hugo. So, one weekend, I just reimplemented What Got Done as a simple static site with Hugo, which I now host at [weeks.mtlynch.io](https://weeks.mtlynch.io).
+Every week, I'd post updates to What Got Done and think about how I prefer my blog authoring workflow with VS Code and Hugo. So, one weekend, I just reimplemented What Got Done as a simple static site with Hugo, which I now host at [weeks.mtlynch.io](https://weeks.mtlynch.io).
 
 {{<img src="weeks-mtlynch-screenshot.webp" max-width="400px" caption="I reimplemented What Got Done as a static site I can generate with Hugo.">}}
 
@@ -223,9 +223,9 @@ I made progress in July, so the parser can now understand the timestamps, which 
 
 #### Collapsing lexing and parsing to a single step
 
-I also simplified the parser to basically a single pass instead of separate lexing and parsing.
+I also simplified the parser to do a single pass instead of separate lexing and parsing.
 
-I initially thought it was more proper and elegant to split the logs into a list of tokens then parse those tokens. So instead of the parser seeing a line like `Session Start (AIM - DumbAIMScreenName:Jane): Mon Sep 12 18:44:17 2005` and parsing it, I wanted the lexer to first change it to [a series of tokens](https://codeberg.org/mtlynch/gleam-chat-log-parser/src/commit/480c45c9e76117635ff7b0509f500799297eaa94/test/plaintext_tokenizer_test.gleam#L84) like this:
+I initially thought it was more proper and elegant to split the logs into a list of tokens then parse those tokens. So, instead of the parser seeing a line like `Session Start (AIM - DumbAIMScreenName:Jane): Mon Sep 12 18:44:17 2005` and parsing it, I wanted the lexer to first change it to [a series of tokens](https://codeberg.org/mtlynch/gleam-chat-log-parser/src/commit/480c45c9e76117635ff7b0509f500799297eaa94/test/plaintext_tokenizer_test.gleam#L84) like this:
 
 ```gleam
 [
@@ -240,7 +240,7 @@ I initially thought it was more proper and elegant to split the logs into a list
 
 But that meant I needed a secret first pass to split the string into substrings that the tokenizer could recognize like `["Session", " ", "Start"]`, and I had to implement my own string split logic because Gleam's built in libraries have no way of splitting a string by substring and then keeping the substring, too. For example, if I split by newlines then by spaces, then I'd have a list of strings, but I would lose track of whether the separators were spaces or newlines.
 
-It felt like I was actually parsing the input three times: [once for my custom string splitting](https://codeberg.org/mtlynch/gleam-chat-log-parser/src/commit/2474457033d4900631e4fb443981cd3f1d523f48/src/plaintext_tokenizer.gleam#L15-L73), [once for the lexing](https://codeberg.org/mtlynch/gleam-chat-log-parser/src/commit/2474457033d4900631e4fb443981cd3f1d523f48/src/plaintext_tokenizer.gleam#L75-L86), and [once for the actual parser](https://codeberg.org/mtlynch/gleam-chat-log-parser/src/commit/2474457033d4900631e4fb443981cd3f1d523f48/src/plaintext_parser.gleam#L27-L59). I initially assumed it was because I don't know enough about functional languages or text parsers, and I'd find a more elegant way to lex and parse.
+It felt like I was actually parsing the input three times: [once for my custom string splitting](https://codeberg.org/mtlynch/gleam-chat-log-parser/src/commit/2474457033d4900631e4fb443981cd3f1d523f48/src/plaintext_tokenizer.gleam#L15-L73), [once for the lexing](https://codeberg.org/mtlynch/gleam-chat-log-parser/src/commit/2474457033d4900631e4fb443981cd3f1d523f48/src/plaintext_tokenizer.gleam#L75-L86), and [once for the actual parser](https://codeberg.org/mtlynch/gleam-chat-log-parser/src/commit/2474457033d4900631e4fb443981cd3f1d523f48/src/plaintext_parser.gleam#L27-L59). I initially assumed it was because I didn't know enough about functional languages or text parsers, and I'd find a more elegant way to lex and parse.
 
 I used my confusion to justify finally purchasing a print copy of [_Crafting Interpreters_](https://craftinginterpreters.com/), the most beautifully-designed software book I've ever seen.
 
@@ -279,7 +279,7 @@ And now it's [a longer, messier pattern match](https://codeberg.org/mtlynch/glea
 
 #### Am I forcing classes into Gleam?
 
-As I progressed with my parser, I found that I was writing functions that had the same signature:
+As I progressed with my parser, I found that I was writing functions that had the same signature over and over:
 
 ```gleam
 fn parse_tokens_with_messages(
@@ -304,7 +304,7 @@ type ParseState {
 fn parse_graphemes(state: ParseState) -> ParseState {
 ```
 
-But I knew as I was doing it that I was essentially just writing object-oriented classes in Gleam. Because if this was Go, the code would look like this:
+But that felt like sneaking object-oriented classes into Gleam. Because if this was Go, the code would look like this:
 
 ```go
 type Parser struct {
