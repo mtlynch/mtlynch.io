@@ -1,6 +1,6 @@
 ---
 title: "Educational Products: Month 10"
-date: "2025-08-12"
+date: "2025-08-13"
 description: Perhaps not everyone wants to join my focus group.
 tags:
   - refactoring-english
