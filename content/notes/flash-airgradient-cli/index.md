@@ -20,6 +20,15 @@ Annoyingly, AirGradient doesn't publish official instructions for flashing softw
 - Python 3
 - Python 3 venv
 
+```bash
+sudo apt update && \
+  sudo apt install -y
+    git
+    curl
+    python3
+    python3-serial
+```
+
 ## Install arduino-cli
 
 ```bash
@@ -94,15 +103,6 @@ cd ~ && \
     https://github.com/airgradienthq/arduino.git . && \
   git checkout "${AIRGRADIENT_RELEASE}" && \
   git submodule update --recursive
-```
-
-## Prep
-
-```bash
-mkdir -p ./.venv && \
-  python3 -m venv ./.venv && \
-  . .venv/bin/activate && \
-  pip install pyserial
 ```
 
 ## Initialize Arduino CLI
