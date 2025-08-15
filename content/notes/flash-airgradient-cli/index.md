@@ -108,7 +108,6 @@ mkdir -p ./.venv && \
 ## Initialize Arduino CLI
 
 ```bash
-#ARDUINO_ESP32_VERSION='3.1.3'
 ARDUINO_ESP32_VERSION='2.0.17'
 
 arduino-cli config init \
@@ -124,7 +123,7 @@ arduino-cli config init \
 cd ~/airgradient-one && \
   arduino-cli compile \
     --verbose \
-    --fqbn esp32:esp32:esp32c3:CDCOnBoot=cdc,PartitionScheme=min_spiffs,DebugLevel=info,EraseFlash=all \
+    --fqbn esp32:esp32:esp32c3:CDCOnBoot=cdc,PartitionScheme=min_spiffs,DebugLevel=info \
     --library . \
     --port "${AIRGRADIENT_PATH}" \
     --verify \
