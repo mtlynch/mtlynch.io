@@ -93,8 +93,8 @@ sudo adduser "$(whoami)" dialout
 ## Get AirGradient source
 
 ```bash
-# Current latest release, as of this writing.
-AIRGRADIENT_RELEASE='3.3.9'
+# Current production release, as of this writing.
+AIRGRADIENT_RELEASE='3.3.8'
 
 cd ~ && \
   mkdir -p airgradient-one && \
