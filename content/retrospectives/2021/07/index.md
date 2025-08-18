@@ -17,7 +17,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Publish a new release of TinyPilot
 
-- **Result**: Published [TinyPilot 1.5.1](https://tinypilotkvm.com/blogs/news/whats-new-in-1-5-1)
+- **Result**: Published TinyPilot 1.5.1
 - **Grade**: A
 
 This release went well and came out on schedule. It didn't have any especially exciting new features, but we polished existing features and paid down technical debt.

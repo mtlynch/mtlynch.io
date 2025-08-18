@@ -28,7 +28,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: We published the release.
 - **Grade**: A
 
-We were trying to expose any release steps that were accidentally silo'ed with me, so this was the first release where I didn't perform any release steps directly. The team performed every step based on shared documentation, including things like writing [the changelist](https://tinypilotkvm.com/pro/changes#263) and the [release announcement](https://tinypilotkvm.com/blogs/news/whats-new-in-2024-03).
+We were trying to expose any release steps that were accidentally silo'ed with me, so this was the first release where I didn't perform any release steps directly. The team performed every step based on shared documentation, including things like writing [the changelist](https://tinypilotkvm.com/pro/changes#263) and the release announcement.
 
 ### Document TinyPilot Pro's release process internally
 
@@ -179,7 +179,7 @@ To be fair, my version only implements about 3% of Ethereum, so I have an unfair
 
 ### What got done?
 
-- Published [TinyPilot Pro 2.6.3](https://tinypilotkvm.com/blogs/news/whats-new-in-2024-03).
+- Published TinyPilot Pro 2.6.3.
 - Identified undocumented steps in TinyPilot's release process and documented most of them.
 
 ### Lessons learned

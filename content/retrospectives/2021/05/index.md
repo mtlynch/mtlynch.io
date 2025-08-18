@@ -95,7 +95,7 @@ We were already using the Zebra printer at home, so we just moved it to the offi
 
 At home, I have a Ubiquiti EdgeRouter 4, but Ubiquiti's been [going](https://krebsonsecurity.com/2021/03/whistleblower-ubiquiti-breach-catastrophic/) [downhill](https://www.reddit.com/r/sysadmin/comments/mgd2k5/ubiquity_starts_to_serve_selfpromotion_ads_in/) fast this year. pfSense is a popular alternative, but they seem to be [lying about being open-source](https://github.com/rapi3/pfsense-is-closed-source). I've heard from several sources that [OPNsense](https://opnsense.org/) is the "good citizen" fork of pfSense.
 
-The Qotom Q355G4 mini PC is a popular choice for running OPNsense, so I picked up one from Amazon. I, of course, installed the OS using only a TinyPilot, thanks to its new [virtual storage mounting feature](https://tinypilotkvm.com/blogs/news/whats-new-in-1-5#boot-into-a-virtual-disk-drive).
+The Qotom Q355G4 mini PC is a popular choice for running OPNsense, so I picked up one from Amazon. I, of course, installed the OS using only a TinyPilot, thanks to its new virtual storage mounting feature.
 
 I'm enjoying OPNsense so far. The complexity is higher than Ubiquiti, but it's much more intuitive than Microtik. I can find my way around, but I'm not yet comfortable fiddling with settings.
 

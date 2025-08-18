@@ -30,7 +30,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: Published TinyPilot Pro 2.5.0, which includes the new update system.
 - **Grade**: A
 
-The big change in this release is in how updates work. TinyPilot used to query a git server for updates and always attempted to update to the latest version. Now, we have a custom web service that TinyPilot [queries for the next version](https://github.com/tiny-pilot/tinypilot/blob/bf3c39302ecf643f288ec0e5da50c49e61a61944/bundler/README.md). The new update system gives us [more control](https://tinypilotkvm.com/blogs/news/whats-new-in-2022-10) over the update process and makes it easier for us to test new versions.
+The big change in this release is in how updates work. TinyPilot used to query a git server for updates and always attempted to update to the latest version. Now, we have a custom web service that TinyPilot [queries for the next version](https://github.com/tiny-pilot/tinypilot/blob/bf3c39302ecf643f288ec0e5da50c49e61a61944/bundler/README.md). The new update system gives us more control over the update process and makes it easier for us to test new versions.
 
 This release took five months, longer than any of us expected. Our usual release cadence is around two months. I expect the new version to help us iterate and test more quickly in the future.
 

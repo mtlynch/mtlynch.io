@@ -30,7 +30,7 @@ It's also fantastic to take myself out of the critical path on time-sensitive in
 - **Result**: I've paused development after a tepid user reception.
 - **Grade**: C-
 
-I [published a preview](https://tinypilotkvm.com/blogs/news/tinypilot-cloud-waitlist) of a service called TinyPilot Cloud and offered signups for early access. There wasn't enough interest from users, so I've paused the project for now.
+I published a preview of a service called TinyPilot Cloud and offered signups for early access. There wasn't enough interest from users, so I've paused the project for now.
 
 ### Complete TinyPilot's website rebrand
 
@@ -67,9 +67,9 @@ With the open-source tools and cloud vendors available, I estimated that it woul
 
 Now that we had a basic prototype, I wrote a requirements document and asked TinyPilot's senior developer to turn it into a design document. That also turned out to be more difficult than either of us expected. We had to evaluate authentication providers and map out a complex setup flow that balanced security with ease of use.
 
-As part of the design work, TinyPilot's senior developer created screenshots to mock up the user flow. I included them in a [teaser blog post](https://tinypilotkvm.com/blogs/news/tinypilot-cloud-waitlist) that invited readers to sign up for TinyPilot Cloud early access.
+As part of the design work, TinyPilot's senior developer created screenshots to mock up the user flow. I included them in a teaser blog post that invited readers to sign up for TinyPilot Cloud early access.
 
-{{<img src="cloud-preview-post.png" alt="Screenshot of TinyPilot blog post about TinyPilot Cloud" max-width="600px" caption="A teaser [blog post](https://tinypilotkvm.com/blogs/news/tinypilot-cloud-waitlist) I published about TinyPilot Cloud.">}}
+{{<img src="cloud-preview-post.png" alt="Screenshot of TinyPilot blog post about TinyPilot Cloud" max-width="600px" caption="A teaser blog post I published about TinyPilot Cloud.">}}
 
 I sent the announcement to TinyPilot's 450 mailing list subscribers. 94 of them clicked the link, which was a promising conversion rate.
 
