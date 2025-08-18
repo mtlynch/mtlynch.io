@@ -8,6 +8,8 @@ tags:
 hero_image: couples-email.webp
 ---
 
+<!-- markdownlint-disable no-bare-urls -->
+
 I've only been married for a few years, but I have a hot marriage tip that no book or couple's therapist will ever tell you: get a couple's email domain.
 
 ## What's a couple's email domain?
