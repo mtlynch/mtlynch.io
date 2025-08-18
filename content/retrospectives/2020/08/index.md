@@ -201,7 +201,7 @@ July was the strongest revenue month I've ever had. In fact, it's $200 higher th
 - Launched TinyPilot and sold 52 units.
 - Published the blog post ["TinyPilot: Build a KVM Over IP for Under $100,"](/tinypilot/) which led to a spike in TinyPilot sales.
 - Set up a sales and shipping workflow on top of Shopify.
-- Commissioned a [logo for TinyPilot](https://tinypilotkvm.com/images/og-logo.png).
+- Commissioned a [logo for TinyPilot](og-logo.png).
 
 ### Lessons learned
 

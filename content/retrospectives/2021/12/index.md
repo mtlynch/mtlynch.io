@@ -220,7 +220,7 @@ Zestful saw a big bump this month from a new customer who made around $700 in re
 
 ### What got done?
 
-- Published the [TinyPilot 2.3.1 release](https://tinypilotkvm.com/blog/whats-new-in-2021-11)
+- Published the TinyPilot 2.3.1 release
 - Prepared for the launch of Voyager 2
 - [Migrated What Got Done](https://github.com/mtlynch/whatgotdone/pull/639) from GCP and Firestore to fly.io, SQLite, and Litestream
 - Migrated this blog, Is It Keto, and a few other static sites from Google Firebase to Netlify

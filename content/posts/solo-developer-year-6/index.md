@@ -127,7 +127,7 @@ At the end of 2022, we were still making TinyPilot's cases with a fleet of seven
 
 {{<img src="voyager2-angled.webp" max-width="500px" caption="Before: TinyPilot's 3D-printed case" alt="TinyPilot in a black plastic 3D-printed case" has-border="false">}}
 
-In February 2023, we [switched to a metal case](https://tinypilotkvm.com/blog/introducing-voyager-2a).
+In February 2023, we [switched to a metal case](https://tinypilotkvm.com/blogs/news/introducing-tinypilot-voyager-2a).
 
 {{<img src="metal-case.webp" max-width="500px" caption="After: TinyPilot's metal case" alt="TinyPilot in a new metal case" has-border="false">}}
 
