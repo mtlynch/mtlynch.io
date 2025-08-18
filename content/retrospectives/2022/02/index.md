@@ -187,7 +187,7 @@ Zestful dipped a bit, slumping back under its $1k/month revenue, but clients are
 ### What got done?
 
 - Published my [fourth-year retrospective](/solo-developer-year-4/)
-- Released [TinyPilot 2.3.2](https://tinypilotkvm.com/blog/whats-new-in-2022-01)
+- Released [TinyPilot 2.3.2](https://tinypilotkvm.com/blogs/news/whats-new-in-2022-01)
 - Began transition process to my new electrical engineering vendor
 - Worked with an external consultant to create a [proof-of-concept WebRTC implementation](https://github.com/tiny-pilot/tinypilot/tree/experimental/h264) of TinyPilot's video streaming
 

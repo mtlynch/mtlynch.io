@@ -218,7 +218,7 @@ There was a big jump in Zestful usage this month, but I'm pretty sure it's fraud
 
 ### What got done?
 
-- Published a [new TinyPilot release](https://tinypilotkvm.com/blog/whats-new-in-2021-07)
+- Published a [new TinyPilot release](https://tinypilotkvm.com/blogs/news/whats-new-in-2021-07)
 - Found a developer to manage the TinyPilot website
 - Resumed progress on the TinyPilot PoE HAT and rack mount
 - Migrated to a managed inventory service

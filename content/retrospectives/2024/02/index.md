@@ -75,7 +75,7 @@ For the latest release, I challenged myself to refrain from performing any of th
 
 Before I could even ask a teammate to perform the first task, I realized how much of the process I'd been keeping silo'ed in my head. All of the steps in the release were documented, but there was nothing explaining how everything fit together.
 
-I also realized that some tasks in the process, like "update [the changelog](https://tinypilotkvm.com/pro/changes)" or "write [the release announcement](https://tinypilotkvm.com/blog/whats-new-in-2023-11)," were significantly more complicated than those short phrases implied. What features do we highlight in our announcements? What are the unwritten rules about how we explain features without getting bogged down in the boring details?
+I also realized that some tasks in the process, like "update [the changelog](https://tinypilotkvm.com/pro/changes)" or "write [the release announcement](https://tinypilotkvm.com/blogs/news/whats-new-in-2023-11)," were significantly more complicated than those short phrases implied. What features do we highlight in our announcements? What are the unwritten rules about how we explain features without getting bogged down in the boring details?
 
 The benefit of documenting my process is that it forces me to think deliberately about all of my decisions. There were a lot of cases where I looked through past releases and tried to extrapolate patterns, only to realize that my decisions had been inconsistent. In other cases, I'd done something consistently, but when I had to explain why, I realized there was a better strategy.
 

@@ -37,7 +37,7 @@ Two YouTubers signed on as affiliates, and one more is interested but hasn't yet
 - **Result**: Received feedback from 14 customers
 - **Grade**: A
 
-I published a [preview](https://tinypilotkvm.com/blog/rackmount) of the rack mount and solicited feedback from readers and customers. The feedback was positive in that people seem excited about it. It was also valuable in identifying some incorrect assumptions.
+I published a [preview](https://tinypilotkvm.com/blogs/news/rackmount) of the rack mount and solicited feedback from readers and customers. The feedback was positive in that people seem excited about it. It was also valuable in identifying some incorrect assumptions.
 
 ## [TinyPilot](https://tinypilotkvm.com/) stats
 
@@ -61,7 +61,7 @@ When I first started selling TinyPilots, the fulfillment process was a huge mess
 
 Most of the reason order surges are so painful is that we do just-in-time order packing. When an order comes in, we print the necessary documents and labels, grab the right parts, flash a disk with the latest TinyPilot software, pack everything into a box, and ship it out. That process takes 5-10 minutes per order.
 
-One of the biggest bottlenecks in the process was imaging the disk with TinyPilot software. We could have done it in advance, but I stubbornly refused. I couldn't bear the thought of shipping devices with bugfixes I'd already published. But in March, I released [TinyPilot 1.4.0](https://tinypilotkvm.com/blog/whats-new-in-1-4), which allows users to update their TinyPilots from the web UI. With updates easy and discoverable, I let go of my unreasonable restriction on flashing images the day of the order.
+One of the biggest bottlenecks in the process was imaging the disk with TinyPilot software. We could have done it in advance, but I stubbornly refused. I couldn't bear the thought of shipping devices with bugfixes I'd already published. But in March, I released [TinyPilot 1.4.0](https://tinypilotkvm.com/blogs/news/whats-new-in-1-4), which allows users to update their TinyPilots from the web UI. With updates easy and discoverable, I let go of my unreasonable restriction on flashing images the day of the order.
 
 That got us thinking: flashing the microSDs in advance allows us to _shift time_ productively. We moved a process that previously created a bottleneck at crunch time to a time where it wasn't a bottleneck. What else can we time-shift with microSDs no longer a blocker? It turned out that we could do a lot.
 
@@ -166,7 +166,7 @@ Zestful's still chugging along in the background, bringing in slightly more than
 - Created a TinyPilot [affiliate program](https://tinypilotkvm.com/affiliate-policy)
 - Published a blog post [explaining how I work with freelance developers](/freelancer-guidelines/)
 - Published two new releases of TinyPilot
-  - [TinyPilot 1.4.0](https://tinypilotkvm.com/blog/whats-new-in-1-4) adds easy updates, support for device renaming, and accessible logs.
+  - [TinyPilot 1.4.0](https://tinypilotkvm.com/blogs/news/whats-new-in-1-4) adds easy updates, support for device renaming, and accessible logs.
   - [TinyPilot 1.4.1](https://github.com/tiny-pilot/tinypilot/releases/tag/1.4.1) substantially improves UI
 
 ### Lessons learned

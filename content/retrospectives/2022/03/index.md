@@ -18,7 +18,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Launch Voyager 2: PoE Edition
 
-- **Result**: I finally [launched Voyager 2 PoE](https://tinypilotkvm.com/blog/voyager-2-poe)
+- **Result**: I finally [launched Voyager 2 PoE](https://tinypilotkvm.com/blogs/news/voyager-2-poe)
 - **Grade**: A
 
 Oh, boy. This took way longer than I expected. I looked back at the original design document that I wrote in early April 2021. I estimated that we'd have 200 units ready by May 15, 2021. In other words, I estimated six weeks, and it took 11 months.
@@ -286,7 +286,7 @@ I only started working on PicoShare a few weeks ago, so it's still rough. I don'
 
 ### What got done?
 
-- Launched [TinyPilot Voyager 2 PoE](https://tinypilotkvm.com/blog/voyager-2-poe)
+- Launched [TinyPilot Voyager 2 PoE](https://tinypilotkvm.com/blogs/news/voyager-2-poe)
 - Hired TinyPilot's first support engineer
 - Created [PicoShare](https://pico.rocks)
 
