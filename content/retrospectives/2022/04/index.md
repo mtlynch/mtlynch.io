@@ -21,7 +21,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: Released TinyPilot 2.4.0 on schedule
 - **Grade**: A
 
-The latest release [adds support for multiple users](https://tinypilotkvm.com/blog/whats-new-in-2022-03#credentials-for-multiple-users), which customers had requested for a while. We also [eliminated an annoying bug](https://tinypilotkvm.com/blog/whats-new-in-2022-03#improved-hardware-compatibility) that generated frequent support requests.
+The latest release adds support for multiple users, which customers had requested for a while. We also eliminated an annoying bug that generated frequent support requests.
 
 ### Wrap up design overhaul of the TinyPilot website
 
@@ -65,7 +65,7 @@ In February, I brainstormed how I could manage TinyPilot [with 20 hours per week
 
 One of the largest demands on my time was technical support, which took me 8 hours per week. That was the hardest responsibility to delegate because the hiring process took hundreds of hours. Even after I found a qualified engineer, training was time-consuming because I had two years of institutional knowledge trapped in my head.
 
-I'm happy to report that we're now over the hump. Diego, TinyPilot's first support engineer, is now answering all of the questions in our [support forum](https://forum.tinypilotkvm.com/), so I'm averaging less than 8 hours a week on support. He also published his first tutorial: a guide to [setting up Tailscale on TinyPilot](https://tinypilotkvm.com/blog/tailscale).
+I'm happy to report that we're now over the hump. Diego, TinyPilot's first support engineer, is now answering all of the questions in our [support forum](https://forum.tinypilotkvm.com/), so I'm averaging less than 8 hours a week on support. He also published his first tutorial: a guide to setting up Tailscale on TinyPilot.
 
 I've also been making an effort to let TinyPilot's local staff take on more responsibility. For example, this week, we found out that the model of screw we use to assemble the Voyager 2 is now out of stock everywhere.
 

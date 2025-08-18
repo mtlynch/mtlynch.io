@@ -158,7 +158,7 @@ Zestful is popping up from nowhere as a recurring revenue source. Historically, 
 ### What got done?
 
 - Hired a design firm to redesign the TinyPilot website.
-- Released the TinyPilot [September update](https://tinypilotkvm.com/blog/whats-new-in-2021-09).
+- Released the TinyPilot September update.
 - Moved TinyPilot's image build process to the cloud.
 - Moved TinyPilot's email support to [HelpScout](https://helpscout.com), a shared inbox service, which will help me scale customer support.
 

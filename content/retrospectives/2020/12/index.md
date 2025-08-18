@@ -57,7 +57,7 @@ TinyPilot had another month of strong growth, with a $2k increase in overall rev
 
 ## New products require new habits
 
-The biggest TinyPilot event this past month was [the release of TinyPilot Voyager](https://tinypilotkvm.com/blog/introducing-voyager). It's the new model that uses a higher-quality video capture device. I worked with a 3D printing lab to create a custom case that neatly packages together all the components.
+The biggest TinyPilot event this past month was [the release of TinyPilot Voyager](https://tinypilotkvm.com/blogs/news/introducing-voyager). It's the new model that uses a higher-quality video capture device. I worked with a 3D printing lab to create a custom case that neatly packages together all the components.
 
 {{<img src="voyager-angled.jpg" max-width="600px" alt="3/4 view photo of TinyPilot Voyager" caption="[Voyager](https://tinypilotkvm.com/product/tinypilot-voyager) is the new model of TinyPilot, aimed at business customers." has-border="false">}}
 

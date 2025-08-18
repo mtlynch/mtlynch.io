@@ -17,7 +17,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Publish a new release of TinyPilot
 
-- **Result**: Published [TinyPilot 1.5.1](https://tinypilotkvm.com/blog/whats-new-in-1-5-1)
+- **Result**: Published TinyPilot 1.5.1
 - **Grade**: A
 
 This release went well and came out on schedule. It didn't have any especially exciting new features, but we polished existing features and paid down technical debt.
@@ -97,7 +97,7 @@ I started a promising trial hire this week, so here's hoping that works out.
 
 ## Getting unstuck on hardware development
 
-The other dimension where I've felt perpetually stuck is in TinyPilot's hardware. For the first few months, I was rapidly iterating on TinyPilot's physical design. I created my first ever custom electrical component [in 26 days](/retrospectives/2020/10/#manufacturing-a-power-connector-from-start-to-finish) and designed a 3D-printed case for it in parallel. Two months later, I [launched Voyager](https://tinypilotkvm.com/blog/introducing-voyager), which was a huge step forward for the product and the company as a whole.
+The other dimension where I've felt perpetually stuck is in TinyPilot's hardware. For the first few months, I was rapidly iterating on TinyPilot's physical design. I created my first ever custom electrical component [in 26 days](/retrospectives/2020/10/#manufacturing-a-power-connector-from-start-to-finish) and designed a 3D-printed case for it in parallel. Two months later, I [launched Voyager](https://tinypilotkvm.com/blogs/news/introducing-voyager), which was a huge step forward for the product and the company as a whole.
 
 There haven't been any significant improvements to TinyPilot's hardware or physical design since then. I feel like I've been spinning my wheels for seven months.
 

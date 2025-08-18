@@ -212,7 +212,7 @@ I'll have to wait until I've reached feature parity with the Vue version, but I 
 ### What got done?
 
 - Completed TinyPilot's website redesign.
-- Published [a new TinyPilot release](https://tinypilotkvm.com/blog/whats-new-in-2022-05).
+- Published a new TinyPilot release.
 - Published a new blog post about my [homelab NAS server](/budget-nas/).
 - Hired a digital marketing freelancer.
 
