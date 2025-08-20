@@ -3,7 +3,13 @@ title: "Refactoring English Chapter Feedback"
 date: 2025-08-20
 ---
 
-<script src="/third-party/chart.js/4.5.0/chart.umd.js"></script>
+## The survey
+
+I was curious about how well my planned chapters match what readers of my book are interested in learning. I sent a survey to 1,644 people who had either purchased early access or subscribed to my mailing list for free updates and previews of the book. 265 of the 1,644 (16%) had purchased early access.
+
+Readers could rate each chapter on a scale from "Definitely won't read" to "Definitely will read":
+
+{{<img src="survey-question.webp">}}
 
 <div style="margin: 20px 0;">
   <div style="width: 100%; height: 800px;">
@@ -46,6 +52,8 @@ date: 2025-08-20
     <canvas id="disinterestChart"></canvas>
   </div>
 </div>
+
+<script src="/third-party/chart.js/4.5.0/chart.umd.js"></script>
 
 <script>
 // Parse CSV data
