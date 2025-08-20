@@ -15,7 +15,7 @@ date: 2025-08-20
       <select id="readerType" style="margin-left: 5px; padding: 2px 5px;">
         <option value="both">Show both</option>
         <option value="paid">Show only paid early access readers</option>
-        <option value="unpaid">Show only mailing list subscribers</option>
+        <option value="unpaid">Show only free mailing list subscribers</option>
       </select>
     </label>
     <label style="font-weight: bold;">
@@ -31,7 +31,7 @@ date: 2025-08-20
   </div>
 </div>
 
-## Which chapters have the biggest gap in interest between paid and unpaid?
+## Which chapters excite paid readers more than free readers?
 
 <div style="margin: 40px 0 20px 0;">
   <div style="width: 100%; height: 600px;">
@@ -39,7 +39,7 @@ date: 2025-08-20
   </div>
 </div>
 
-## Disinterest Gap Analysis
+## Which chapters bore paid readers more than free readers?
 
 <div style="margin: 40px 0 20px 0;">
   <div style="width: 100%; height: 600px;">
@@ -137,14 +137,12 @@ function countsToPercentages(counts) {
   return percentages;
 }
 
-// Calculate weighted interest score (definitely will + 0.4 * will probably)
+// Calculate interest score (only "definitely will read")
 function calculateInterestScore(counts) {
   const total = counts.total;
   if (total === 0) return 0;
   const definitelyWill = counts['Definitely will read'] || 0;
-  const willProbably = counts['Will probably read'] || 0;
-  const weightedScore = definitelyWill + (willProbably * 0.4);
-  return (weightedScore / total) * 100;
+  return (definitelyWill / total) * 100;
 }
 
 // Calculate percentage of "definitely won't read" responses
