@@ -189,7 +189,6 @@ function sortChapters(chapters, paidCounts, unpaidCounts, sortOrder) {
         return percentB - percentA; // Descending order (highest "won't read" first)
       });
 
-
     default:
       return originalOrder;
   }
