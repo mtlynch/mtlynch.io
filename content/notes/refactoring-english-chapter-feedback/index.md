@@ -12,7 +12,11 @@ Readers could rate each chapter on a scale from "Definitely won't read" to "Defi
 
 {{<img src="survey-question.webp">}}
 
-Here are the results
+Here are the results:
+
+TODO: Put aggregate chart here
+
+But I noticed an interesting result when I segregated the result based on whether the reader had paid for early access or not:
 
 <div style="margin: 20px 0;">
   <div style="width: 100%; height: 800px;">
