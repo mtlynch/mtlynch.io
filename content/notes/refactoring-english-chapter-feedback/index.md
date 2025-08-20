@@ -1,6 +1,7 @@
 ---
 title: "Refactoring English Chapter Feedback"
 date: 2025-08-20
+custom_css: true
 ---
 
 ## The survey
@@ -11,29 +12,33 @@ Readers could rate each chapter on a scale from "Definitely won't read" to "Defi
 
 {{<img src="survey-question.webp">}}
 
+Here are the results
+
 <div style="margin: 20px 0;">
   <div style="width: 100%; height: 800px;">
     <canvas id="chapterFeedbackChart"></canvas>
   </div>
-  <div style="margin: 15px 0;">
-    <label style="margin-right: 20px; font-weight: bold;">
-      Reader type:
-      <select id="readerType" style="margin-left: 5px; padding: 2px 5px;">
-        <option value="both">Show both</option>
-        <option value="paid">Show only paid early access readers</option>
-        <option value="unpaid">Show only free mailing list subscribers</option>
-      </select>
-    </label>
-    <label style="font-weight: bold;">
-      Order by:
-      <select id="sortOrder" style="margin-left: 5px; padding: 2px 5px;">
-        <option value="chapter-order">Chapter order</option>
-        <option value="most-interested-paid">Most interested, paid readers</option>
-        <option value="least-interested-paid">Most disinterested, paid readers</option>
-        <option value="most-interested-unpaid">Most interested, unpaid readers</option>
-        <option value="least-interested-unpaid">Most disinterested, unpaid readers</option>
-      </select>
-    </label>
+  <div class="chart-controls">
+    <div class="controls-container">
+      <div class="control-group">
+        <label class="control-label" for="readerType">Reader type:</label>
+        <select id="readerType" class="styled-select">
+          <option value="both">Show both</option>
+          <option value="paid">Show only paid early access readers</option>
+          <option value="unpaid">Show only free mailing list subscribers</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="sortOrder">Order by:</label>
+        <select id="sortOrder" class="styled-select">
+          <option value="chapter-order">Current chapter order</option>
+          <option value="most-interested-paid">Most interested, paid readers</option>
+          <option value="least-interested-paid">Most disinterested, paid readers</option>
+          <option value="most-interested-unpaid">Most interested, unpaid readers</option>
+          <option value="least-interested-unpaid">Most disinterested, unpaid readers</option>
+        </select>
+      </div>
+    </div>
   </div>
 </div>
 
