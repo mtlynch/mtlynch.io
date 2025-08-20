@@ -5,8 +5,44 @@ date: 2025-08-20
 
 <script src="/third-party/chart.js/4.5.0/chart.umd.js"></script>
 
-<div style="width: 100%; height: 800px; margin: 20px 0;">
-  <canvas id="chapterFeedbackChart"></canvas>
+<div style="margin: 20px 0;">
+  <div style="width: 100%; height: 800px;">
+    <canvas id="chapterFeedbackChart"></canvas>
+  </div>
+  <div style="margin: 15px 0;">
+    <label style="margin-right: 20px; font-weight: bold;">
+      Reader type:
+      <select id="readerType" style="margin-left: 5px; padding: 2px 5px;">
+        <option value="both">Show both</option>
+        <option value="paid">Show only paid early access readers</option>
+        <option value="unpaid">Show only mailing list subscribers</option>
+      </select>
+    </label>
+    <label style="font-weight: bold;">
+      Order by:
+      <select id="sortOrder" style="margin-left: 5px; padding: 2px 5px;">
+        <option value="chapter-order">Chapter order</option>
+        <option value="most-interested-paid">Most interested, paid readers</option>
+        <option value="least-interested-paid">Most disinterested, paid readers</option>
+        <option value="most-interested-unpaid">Most interested, unpaid readers</option>
+        <option value="least-interested-unpaid">Most disinterested, unpaid readers</option>
+      </select>
+    </label>
+  </div>
+</div>
+
+<div style="margin: 40px 0 20px 0;">
+  <h3>Interest Gap Analysis</h3>
+  <div style="width: 100%; height: 600px;">
+    <canvas id="gapAnalysisChart"></canvas>
+  </div>
+</div>
+
+<div style="margin: 40px 0 20px 0;">
+  <h3>Disinterest Gap Analysis</h3>
+  <div style="width: 100%; height: 600px;">
+    <canvas id="disinterestChart"></canvas>
+  </div>
 </div>
 
 <script>
@@ -99,9 +135,69 @@ function countsToPercentages(counts) {
   return percentages;
 }
 
+// Calculate weighted interest score (definitely will + 0.4 * will probably)
+function calculateInterestScore(counts) {
+  const total = counts.total;
+  if (total === 0) return 0;
+  const definitelyWill = counts['Definitely will read'] || 0;
+  const willProbably = counts['Will probably read'] || 0;
+  const weightedScore = definitelyWill + (willProbably * 0.4);
+  return (weightedScore / total) * 100;
+}
+
+// Calculate percentage of "definitely won't read" responses
+function calculateDefinitelyWontPercentage(counts) {
+  const total = counts.total;
+  if (total === 0) return 0;
+  const definitelyWont = counts['Definitely won\'t read'] || 0;
+  return (definitelyWont / total) * 100;
+}
+
+// Sort chapters based on selected criteria
+function sortChapters(chapters, paidCounts, unpaidCounts, sortOrder) {
+  const originalOrder = [...chapters];
+
+  switch (sortOrder) {
+    case 'chapter-order':
+      return originalOrder;
+
+    case 'most-interested-paid':
+      return [...chapters].sort((a, b) => {
+        const scoreA = calculateInterestScore(paidCounts[a]);
+        const scoreB = calculateInterestScore(paidCounts[b]);
+        return scoreB - scoreA; // Descending order
+      });
+
+    case 'least-interested-paid':
+      return [...chapters].sort((a, b) => {
+        const percentA = calculateDefinitelyWontPercentage(paidCounts[a]);
+        const percentB = calculateDefinitelyWontPercentage(paidCounts[b]);
+        return percentB - percentA; // Descending order (highest "won't read" first)
+      });
+
+    case 'most-interested-unpaid':
+      return [...chapters].sort((a, b) => {
+        const scoreA = calculateInterestScore(unpaidCounts[a]);
+        const scoreB = calculateInterestScore(unpaidCounts[b]);
+        return scoreB - scoreA; // Descending order
+      });
+
+    case 'least-interested-unpaid':
+      return [...chapters].sort((a, b) => {
+        const percentA = calculateDefinitelyWontPercentage(unpaidCounts[a]);
+        const percentB = calculateDefinitelyWontPercentage(unpaidCounts[b]);
+        return percentB - percentA; // Descending order (highest "won't read" first)
+      });
+
+
+    default:
+      return originalOrder;
+  }
+}
+
 // Create chart data
-function createChartData(paidPercentages, unpaidPercentages) {
-  const chapters = Object.keys(paidPercentages);
+function createChartData(paidPercentages, unpaidPercentages, sortedChapters = null) {
+  const chapters = sortedChapters || Object.keys(paidPercentages);
 
   // Create labels - one per chapter
   const labels = chapters;
@@ -157,7 +253,7 @@ function createChartData(paidPercentages, unpaidPercentages) {
     stack: 'unpaid'
   });
 
-  // Positive sentiments - paid group
+  // Positive sentiments - paid group (green tones)
   datasets.push({
     label: 'Paid - Definitely will read',
     data: paidDefinitely,
@@ -185,12 +281,12 @@ function createChartData(paidPercentages, unpaidPercentages) {
     stack: 'paid'
   });
 
-  // Positive sentiments - unpaid group
+  // Positive sentiments - unpaid group (blue tones)
   datasets.push({
     label: 'Unpaid - Definitely will read',
     data: unpaidDefinitely,
-    backgroundColor: '#388e3c',
-    borderColor: '#2e7d32',
+    backgroundColor: '#1565c0',
+    borderColor: '#0d47a1',
     borderWidth: 1,
     stack: 'unpaid'
   });
@@ -198,8 +294,8 @@ function createChartData(paidPercentages, unpaidPercentages) {
   datasets.push({
     label: 'Unpaid - Will probably read',
     data: unpaidProbably,
-    backgroundColor: '#66bb6a',
-    borderColor: '#43a047',
+    backgroundColor: '#1976d2',
+    borderColor: '#1565c0',
     borderWidth: 1,
     stack: 'unpaid'
   });
@@ -207,8 +303,8 @@ function createChartData(paidPercentages, unpaidPercentages) {
   datasets.push({
     label: 'Unpaid - Might read',
     data: unpaidMight,
-    backgroundColor: '#a5d6a7',
-    borderColor: '#66bb6a',
+    backgroundColor: '#64b5f6',
+    borderColor: '#1976d2',
     borderWidth: 1,
     stack: 'unpaid'
   });
@@ -216,7 +312,108 @@ function createChartData(paidPercentages, unpaidPercentages) {
   return { labels, datasets };
 }
 
-// Initialize chart
+// Create gap analysis chart data
+function createGapAnalysisChartData(paidCounts, unpaidCounts, sortedChapters = null) {
+  const chapters = sortedChapters || Object.keys(paidCounts);
+  const labels = chapters;
+  const gapData = [];
+
+  chapters.forEach(chapter => {
+    const paidScore = calculateInterestScore(paidCounts[chapter]);
+    const unpaidScore = calculateInterestScore(unpaidCounts[chapter]);
+    const gap = paidScore - unpaidScore;
+    gapData.push(gap);
+  });
+
+  const datasets = [{
+    label: 'Interest Gap (Paid - Unpaid)',
+    data: gapData,
+    backgroundColor: gapData.map(gap => gap >= 0 ? '#2e7d32' : '#1565c0'), // Green for paid advantage, blue for unpaid advantage
+    borderColor: gapData.map(gap => gap >= 0 ? '#1b5e20' : '#0d47a1'),
+    borderWidth: 1
+  }];
+
+  return { labels, datasets };
+}
+
+// Create disinterest gap analysis chart data
+function createDisinterestChartData(paidCounts, unpaidCounts, sortedChapters = null) {
+  const chapters = sortedChapters || Object.keys(paidCounts);
+  const labels = chapters;
+  const gapData = [];
+
+  chapters.forEach(chapter => {
+    const paidDisinterest = calculateDefinitelyWontPercentage(paidCounts[chapter]);
+    const unpaidDisinterest = calculateDefinitelyWontPercentage(unpaidCounts[chapter]);
+    const gap = paidDisinterest - unpaidDisinterest;
+    gapData.push(gap);
+  });
+
+  const datasets = [{
+    label: 'Disinterest Gap (Paid - Unpaid)',
+    data: gapData,
+    backgroundColor: gapData.map(gap => gap >= 0 ? '#d32f2f' : '#ef5350'), // Darker red for paid more disinterested, lighter red for unpaid more disinterested
+    borderColor: gapData.map(gap => gap >= 0 ? '#b71c1c' : '#d32f2f'),
+    borderWidth: 1
+  }];
+
+  return { labels, datasets };
+}
+
+// Global chart instances and data
+let standardChartInstance = null;
+let gapChartInstance = null;
+let disinterestChartInstance = null;
+let globalPaidCounts = null;
+let globalUnpaidCounts = null;
+let globalPaidPercentages = null;
+let globalUnpaidPercentages = null;
+let originalChapters = null;
+
+// Update chart visibility based on reader type dropdown
+function updateChartVisibility() {
+  if (!standardChartInstance) return;
+
+  const readerType = document.getElementById('readerType').value;
+
+  standardChartInstance.data.datasets.forEach((dataset, index) => {
+    const isPaidDataset = dataset.label.startsWith('Paid');
+    const isUnpaidDataset = dataset.label.startsWith('Unpaid');
+
+    if (readerType === 'both') {
+      dataset.hidden = false;
+    } else if (readerType === 'paid') {
+      dataset.hidden = isUnpaidDataset;
+    } else if (readerType === 'unpaid') {
+      dataset.hidden = isPaidDataset;
+    }
+  });
+
+  standardChartInstance.update('none');
+}
+
+// Update only the first chart based on sort order
+function updateChartSort() {
+  if (!standardChartInstance || !globalPaidCounts || !globalUnpaidCounts) return;
+
+  const sortOrder = document.getElementById('sortOrder').value;
+  const sortedChapters = sortChapters(originalChapters, globalPaidCounts, globalUnpaidCounts, sortOrder);
+
+  // Update standard chart only
+  const standardChartData = createChartData(globalPaidPercentages, globalUnpaidPercentages, sortedChapters);
+  standardChartInstance.data.labels = standardChartData.labels;
+  standardChartInstance.data.datasets.forEach((dataset, index) => {
+    dataset.data = standardChartData.datasets[index].data;
+  });
+
+  // Apply visibility settings to standard chart
+  updateChartVisibility();
+
+  // Update only the standard chart
+  standardChartInstance.update();
+}
+
+// Initialize charts
 async function initChart() {
   try {
     // Load both CSV files
@@ -233,14 +430,21 @@ async function initChart() {
     const paidPercentages = countsToPercentages(paidCounts);
     const unpaidPercentages = countsToPercentages(unpaidCounts);
 
-    // Create chart data
-    const chartData = createChartData(paidPercentages, unpaidPercentages);
+    // Store global data
+    globalPaidCounts = paidCounts;
+    globalUnpaidCounts = unpaidCounts;
+    globalPaidPercentages = paidPercentages;
+    globalUnpaidPercentages = unpaidPercentages;
+    originalChapters = Object.keys(paidPercentages);
 
-    // Create chart
-    const ctx = document.getElementById('chapterFeedbackChart').getContext('2d');
-    new Chart(ctx, {
+    // Create standard chart data
+    const standardChartData = createChartData(paidPercentages, unpaidPercentages);
+
+    // Create standard chart
+    const standardCtx = document.getElementById('chapterFeedbackChart').getContext('2d');
+    standardChartInstance = new Chart(standardCtx, {
       type: 'bar',
-      data: chartData,
+      data: standardChartData,
       options: {
         indexAxis: 'y',
         responsive: true,
@@ -255,8 +459,7 @@ async function initChart() {
             }
           },
           legend: {
-            display: true,
-            position: 'bottom'
+            display: false
           },
           tooltip: {
             callbacks: {
@@ -289,10 +492,6 @@ async function initChart() {
                 return Math.abs(value) + '%';
               }
             },
-            title: {
-              display: true,
-              text: '← Won\'t Read    |    Will Read →'
-            }
           },
           y: {
             stacked: true
@@ -306,6 +505,174 @@ async function initChart() {
       }
     });
 
+    // Sort chapters by biggest absolute gap for initial display
+    const initialSortedChapters = [...originalChapters].sort((a, b) => {
+      const gapA = Math.abs(calculateInterestScore(paidCounts[a]) - calculateInterestScore(unpaidCounts[a]));
+      const gapB = Math.abs(calculateInterestScore(paidCounts[b]) - calculateInterestScore(unpaidCounts[b]));
+      return gapB - gapA; // Descending order (biggest absolute gap first)
+    });
+
+    // Sort chapters by disinterest gap with paid reader deltas highest
+    const disinterestSortedChapters = [...originalChapters].sort((a, b) => {
+      const gapA = calculateDefinitelyWontPercentage(paidCounts[a]) - calculateDefinitelyWontPercentage(unpaidCounts[a]);
+      const gapB = calculateDefinitelyWontPercentage(paidCounts[b]) - calculateDefinitelyWontPercentage(unpaidCounts[b]);
+      return gapB - gapA; // Descending order (highest paid reader delta first, lowest unpaid reader delta last)
+    });
+
+    // Create gap analysis chart data with sorted chapters
+    const gapChartData = createGapAnalysisChartData(paidCounts, unpaidCounts, initialSortedChapters);
+
+    // Create gap analysis chart
+    const gapCtx = document.getElementById('gapAnalysisChart').getContext('2d');
+    gapChartInstance = new Chart(gapCtx, {
+      type: 'bar',
+      data: gapChartData,
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          title: {
+            display: false
+          },
+          legend: {
+            display: false
+          },
+          tooltip: {
+            callbacks: {
+              title: function(context) {
+                const chapter = context[0].label;
+                return `${chapter}`;
+              },
+              label: function(context) {
+                const gap = context.parsed.x;
+                const paidScore = calculateInterestScore(globalPaidCounts[context.label]);
+                const unpaidScore = calculateInterestScore(globalUnpaidCounts[context.label]);
+
+                return [
+                  `Gap: ${gap.toFixed(1)} points`,
+                  `Paid interest: ${paidScore.toFixed(1)}%`,
+                  `Unpaid interest: ${unpaidScore.toFixed(1)}%`
+                ];
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: {
+              drawOnChartArea: true,
+              color: function(context) {
+                return context.tick.value === 0 ? '#000' : '#e0e0e0';
+              },
+              lineWidth: function(context) {
+                return context.tick.value === 0 ? 2 : 1;
+              }
+            },
+            ticks: {
+              callback: function(value) {
+                return value.toFixed(1) + ' pts';
+              }
+            },
+            title: {
+              display: true,
+              text: 'Interest Gap (Paid - Unpaid)'
+            }
+          },
+          y: {
+            title: {
+              display: true,
+              text: 'Chapters'
+            }
+          }
+        },
+        elements: {
+          bar: {
+            borderWidth: 1
+          }
+        }
+      }
+    });
+
+    // Create disinterest chart data with sorted chapters (by disinterest gaps)
+    const disinterestChartData = createDisinterestChartData(paidCounts, unpaidCounts, disinterestSortedChapters);
+
+    // Create disinterest chart
+    const disinterestCtx = document.getElementById('disinterestChart').getContext('2d');
+    disinterestChartInstance = new Chart(disinterestCtx, {
+      type: 'bar',
+      data: disinterestChartData,
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          title: {
+            display: false
+          },
+          legend: {
+            display: false
+          },
+          tooltip: {
+            callbacks: {
+              title: function(context) {
+                const chapter = context[0].label;
+                return `${chapter}`;
+              },
+              label: function(context) {
+                const gap = context.parsed.x;
+                const paidDisinterest = calculateDefinitelyWontPercentage(globalPaidCounts[context.label]);
+                const unpaidDisinterest = calculateDefinitelyWontPercentage(globalUnpaidCounts[context.label]);
+
+                return [
+                  `Gap: ${gap.toFixed(1)} points`,
+                  `Paid disinterest: ${paidDisinterest.toFixed(1)}%`,
+                  `Unpaid disinterest: ${unpaidDisinterest.toFixed(1)}%`
+                ];
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: {
+              drawOnChartArea: true,
+              color: function(context) {
+                return context.tick.value === 0 ? '#000' : '#e0e0e0';
+              },
+              lineWidth: function(context) {
+                return context.tick.value === 0 ? 2 : 1;
+              }
+            },
+            ticks: {
+              callback: function(value) {
+                return value.toFixed(1) + ' pts';
+              }
+            },
+            title: {
+              display: true,
+              text: 'Disinterest Gap (Paid - Unpaid)'
+            }
+          },
+          y: {
+            title: {
+              display: true,
+              text: 'Chapters'
+            }
+          }
+        },
+        elements: {
+          bar: {
+            borderWidth: 1
+          }
+        }
+      }
+    });
+
+    // Add event listeners for dropdowns
+    document.getElementById('readerType').addEventListener('change', updateChartVisibility);
+    document.getElementById('sortOrder').addEventListener('change', updateChartSort);
+
   } catch (error) {
     console.error('Error loading chart data:', error);
     document.getElementById('chapterFeedbackChart').innerHTML =
@@ -316,21 +683,3 @@ async function initChart() {
 // Initialize when page loads
 document.addEventListener('DOMContentLoaded', initChart);
 </script>
-
-## About This Visualization
-
-This chart compares reading interest between paid pre-order customers and unpaid survey respondents for each chapter of "Refactoring English."
-
-**Key Features:**
-
-- **Horizontal bars** for better chapter title readability
-- **Diverging design**: Negative sentiment (red) extends left, positive sentiments (green shades) extend right
-- **Normalized percentages** to fairly compare groups despite different sample sizes (36 paid vs 96 unpaid)
-- **Stacked positive responses**: "Definitely will read" at base, "Will probably read" in middle, "Might read" on top
-
-**How to Read:**
-
-- Each chapter has two bars: one for paid readers, one for unpaid readers
-- Red bars show "Definitely won't read" percentages
-- Green bars show positive interest levels, with darker green indicating stronger interest
-- Hover over bars to see exact percentages
