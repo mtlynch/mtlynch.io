@@ -31,15 +31,17 @@ date: 2025-08-20
   </div>
 </div>
 
+## Which chapters have the biggest gap in interest between paid and unpaid?
+
 <div style="margin: 40px 0 20px 0;">
-  <h3>Interest Gap Analysis</h3>
   <div style="width: 100%; height: 600px;">
     <canvas id="gapAnalysisChart"></canvas>
   </div>
 </div>
 
+## Disinterest Gap Analysis
+
 <div style="margin: 40px 0 20px 0;">
-  <h3>Disinterest Gap Analysis</h3>
   <div style="width: 100%; height: 600px;">
     <canvas id="disinterestChart"></canvas>
   </div>
@@ -581,7 +583,7 @@ async function initChart() {
           },
           y: {
             title: {
-              display: true,
+              display: false,
               text: 'Chapters'
             }
           }
@@ -656,7 +658,7 @@ async function initChart() {
           },
           y: {
             title: {
-              display: true,
+              display: false,
               text: 'Chapters'
             }
           }
