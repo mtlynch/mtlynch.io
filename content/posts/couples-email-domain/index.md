@@ -28,7 +28,7 @@ We have a couple's email _domain_. We still send and receive email through our n
 
 If you email michael@shinytable.com or my wife's name, we both receive the email in our normal inboxes. We don't have a special @shinytable.com inbox we have to check separately. Similarly, we can both send emails as each other, if needed.
 
-You can get most of the same benefits by sharing an extra email account, but then you're stuck checking an extra inbox.
+You can get most of the same benefits by sharing an extra email account, but then you're stuck checking an extra inbox. With a shared inbox, the read/unread status ceases to be effective because it doesn't track who read the email.
 
 ## Why get a couple's email domain?
 
