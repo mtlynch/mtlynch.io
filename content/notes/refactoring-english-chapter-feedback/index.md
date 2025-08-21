@@ -91,6 +91,18 @@ Here are the results:
   </div>
 </div>
 
+## What does the data tell me?
+
+### Move up "Make Your Writing Sound Natural"
+
+"Get to the Point" is the most important chapter, so it has to be first, but almost everyone said they wanted to read it. The chapter is only two pages long, so in terms of giving the reader bang-for-their-buck, it's a no-brainer to put it up front where they can get the value immediately.
+
+### Demote "Write Useful Commit Messages"
+
+If I were just looking at free readers, I'd probably cut this chapter entirely. But I'm giving more weight to readers who have purchased, so I'll put it at the end.
+
+I thought it should come before emails because I figured people
+
 <script src="/third-party/chart.js/4.5.0/chart.umd.js"></script>
 
 <script>
