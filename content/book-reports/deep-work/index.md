@@ -2,6 +2,9 @@
 title: Deep Work by Cal Newport
 date: "2018-08-26"
 rating: 9
+tags:
+  - focus
+  - productivity
 purchase_url: https://www.indiebound.org/book/9781455586691
 ---
 
