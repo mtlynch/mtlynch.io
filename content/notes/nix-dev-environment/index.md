@@ -419,7 +419,7 @@ I explain this in more detail in ["Use a Nix Flake without Adding it to Git"](/n
 
 The biggest downside I've found with Nix dev environments is that the environment load times are slow. `cd`ing into a directory is normally something that happens in milliseconds, but if I need to load my Nix environment, it can take 5-10 seconds.
 
-Worse, the more dependencies you have, the slower the load time becomes. Nix has to maintain [a separate instance of `nixpkgs`](https://zimbatm.com/notes/1000-instances-of-nixpkgs) for each dependency, so every new dev tool I want available means I have to pay a penalty in directory load time.
+Worse, the more dependencies you have, the slower the load time becomes. Nix has to maintain [a separate instance of `nixpkgs`](https://web.archive.org/web/20250725140710/https://zimbatm.com/notes/1000-instances-of-nixpkgs) for each dependency, so every new dev tool I want available means I have to pay a penalty in directory load time.
 
 Unfortunately, I haven't found a workaround for this issue.
 
