@@ -14,7 +14,66 @@ Readers could rate each chapter on a scale from "Definitely won't read" to "Defi
 
 Here are the results:
 
-TODO: Put aggregate chart here
+<div style="margin: 20px 0;">
+  <div style="width: 100%; height: 600px;">
+    <canvas id="aggregateChart"></canvas>
+  </div>
+  <div class="chart-controls">
+    <div class="controls-container">
+      <div class="control-group">
+        <label class="control-label" for="aggregateOrderBy">Order by:</label>
+        <select id="aggregateOrderBy" class="styled-select">
+          <option value="most-interested">Definitely will read</option>
+          <option value="definitely-probably">Definitely will read + Will probably read</option>
+          <option value="will-read-any">Will read (any confidence)</option>
+          <option value="most-disinterested">Definitely won't read</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+## Paid readers only
+
+<div style="margin: 20px 0;">
+  <div style="width: 100%; height: 600px;">
+    <canvas id="paidOnlyChart"></canvas>
+  </div>
+  <div class="chart-controls">
+    <div class="controls-container">
+      <div class="control-group">
+        <label class="control-label" for="paidOrderBy">Order by:</label>
+        <select id="paidOrderBy" class="styled-select">
+          <option value="most-interested">Definitely will read</option>
+          <option value="definitely-probably">Definitely will read + Will probably read</option>
+          <option value="will-read-any">Will read (any confidence)</option>
+          <option value="most-disinterested">Definitely won't read</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+## Unpaid readers only
+
+<div style="margin: 20px 0;">
+  <div style="width: 100%; height: 600px;">
+    <canvas id="unpaidOnlyChart"></canvas>
+  </div>
+  <div class="chart-controls">
+    <div class="controls-container">
+      <div class="control-group">
+        <label class="control-label" for="unpaidOrderBy">Order by:</label>
+        <select id="unpaidOrderBy" class="styled-select">
+          <option value="most-interested">Definitely will read</option>
+          <option value="definitely-probably">Definitely will read + Will probably read</option>
+          <option value="will-read-any">Will read (any confidence)</option>
+          <option value="most-disinterested">Definitely won't read</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
 
 But I noticed an interesting result when I segregated the result based on whether the reader had paid for early access or not:
 
@@ -376,12 +435,161 @@ function createDisinterestChartData(paidCounts, unpaidCounts, sortedChapters = n
   return { labels, datasets };
 }
 
+// Aggregate responses from paid and unpaid readers
+function aggregateResponses(paidCounts, unpaidCounts) {
+  const aggregated = {};
+  const chapters = Object.keys(paidCounts);
+
+  chapters.forEach(chapter => {
+    const paid = paidCounts[chapter];
+    const unpaid = unpaidCounts[chapter];
+
+    aggregated[chapter] = {
+      'Definitely will read': paid['Definitely will read'] + unpaid['Definitely will read'],
+      'Will probably read': paid['Will probably read'] + unpaid['Will probably read'],
+      'Might read': paid['Might read'] + unpaid['Might read'],
+      'Definitely won\'t read': paid['Definitely won\'t read'] + unpaid['Definitely won\'t read'],
+      total: paid.total + unpaid.total
+    };
+  });
+
+  return aggregated;
+}
+
+// Create aggregate chart data
+function createAggregateChartData(aggregateCounts, sortedChapters = null) {
+  const chapters = sortedChapters || Object.keys(aggregateCounts);
+  const labels = chapters;
+
+  // Convert to percentages for display
+  const aggregatePercentages = countsToPercentages(aggregateCounts);
+
+  // Prepare data arrays
+  const negative = [];
+  const definitely = [];
+  const probably = [];
+  const might = [];
+
+  chapters.forEach(chapter => {
+    const data = aggregatePercentages[chapter];
+
+    // Negative values for "won't read"
+    negative.push(-data['Definitely won\'t read']);
+
+    // Positive values
+    definitely.push(data['Definitely will read']);
+    probably.push(data['Will probably read']);
+    might.push(data['Might read']);
+  });
+
+  const datasets = [
+    {
+      label: 'Won\'t read',
+      data: negative,
+      backgroundColor: '#d32f2f',
+      borderColor: '#b71c1c',
+      borderWidth: 1,
+      stack: 'aggregate'
+    },
+    {
+      label: 'Definitely will read',
+      data: definitely,
+      backgroundColor: '#2e7d32',
+      borderColor: '#1b5e20',
+      borderWidth: 1,
+      stack: 'aggregate'
+    },
+    {
+      label: 'Will probably read',
+      data: probably,
+      backgroundColor: '#43a047',
+      borderColor: '#2e7d32',
+      borderWidth: 1,
+      stack: 'aggregate'
+    },
+    {
+      label: 'Might read',
+      data: might,
+      backgroundColor: '#81c784',
+      borderColor: '#43a047',
+      borderWidth: 1,
+      stack: 'aggregate'
+    }
+  ];
+
+  return { labels, datasets };
+}
+
+// Calculate combined score for "definitely + probably will read"
+function calculateDefinitelyProbablyScore(counts) {
+  const total = counts.total;
+  if (total === 0) return 0;
+  const definitelyWill = counts['Definitely will read'] || 0;
+  const probablyWill = counts['Will probably read'] || 0;
+  return ((definitelyWill + probablyWill) / total) * 100;
+}
+
+// Calculate combined score for "will read any confidence" (all positive responses)
+function calculateWillReadAnyScore(counts) {
+  const total = counts.total;
+  if (total === 0) return 0;
+  const definitelyWill = counts['Definitely will read'] || 0;
+  const probablyWill = counts['Will probably read'] || 0;
+  const mightRead = counts['Might read'] || 0;
+  return ((definitelyWill + probablyWill + mightRead) / total) * 100;
+}
+
+// Sort chapters for aggregate chart
+function sortChaptersAggregate(chapters, aggregateCounts, sortOrder) {
+  const originalOrder = [...chapters];
+
+  switch (sortOrder) {
+    case 'chapter-order':
+      return originalOrder;
+
+    case 'most-interested':
+      return [...chapters].sort((a, b) => {
+        const scoreA = calculateInterestScore(aggregateCounts[a]);
+        const scoreB = calculateInterestScore(aggregateCounts[b]);
+        return scoreB - scoreA; // Descending order
+      });
+
+    case 'definitely-probably':
+      return [...chapters].sort((a, b) => {
+        const scoreA = calculateDefinitelyProbablyScore(aggregateCounts[a]);
+        const scoreB = calculateDefinitelyProbablyScore(aggregateCounts[b]);
+        return scoreB - scoreA; // Descending order
+      });
+
+    case 'will-read-any':
+      return [...chapters].sort((a, b) => {
+        const scoreA = calculateWillReadAnyScore(aggregateCounts[a]);
+        const scoreB = calculateWillReadAnyScore(aggregateCounts[b]);
+        return scoreB - scoreA; // Descending order
+      });
+
+    case 'most-disinterested':
+      return [...chapters].sort((a, b) => {
+        const percentA = calculateDefinitelyWontPercentage(aggregateCounts[a]);
+        const percentB = calculateDefinitelyWontPercentage(aggregateCounts[b]);
+        return percentB - percentA; // Descending order (highest "won't read" first)
+      });
+
+    default:
+      return originalOrder;
+  }
+}
+
 // Global chart instances and data
+let aggregateChartInstance = null;
+let paidOnlyChartInstance = null;
+let unpaidOnlyChartInstance = null;
 let standardChartInstance = null;
 let gapChartInstance = null;
 let disinterestChartInstance = null;
 let globalPaidCounts = null;
 let globalUnpaidCounts = null;
+let globalAggregateCounts = null;
 let globalPaidPercentages = null;
 let globalUnpaidPercentages = null;
 let originalChapters = null;
@@ -406,6 +614,58 @@ function updateChartVisibility() {
   });
 
   standardChartInstance.update('none');
+}
+
+
+// Update aggregate chart based on sort order
+function updateAggregateChartSort() {
+  if (!aggregateChartInstance || !globalAggregateCounts) return;
+
+  const sortOrder = document.getElementById('aggregateOrderBy').value;
+  const sortedChapters = sortChaptersAggregate(originalChapters, globalAggregateCounts, sortOrder);
+
+  // Update aggregate chart
+  const aggregateChartData = createAggregateChartData(globalAggregateCounts, sortedChapters);
+  aggregateChartInstance.data.labels = aggregateChartData.labels;
+  aggregateChartInstance.data.datasets.forEach((dataset, index) => {
+    dataset.data = aggregateChartData.datasets[index].data;
+  });
+
+  aggregateChartInstance.update();
+}
+
+// Update paid-only chart based on sort order
+function updatePaidOnlyChartSort() {
+  if (!paidOnlyChartInstance || !globalPaidCounts) return;
+
+  const sortOrder = document.getElementById('paidOrderBy').value;
+  const sortedChapters = sortChaptersAggregate(originalChapters, globalPaidCounts, sortOrder);
+
+  // Update paid-only chart
+  const paidOnlyChartData = createAggregateChartData(globalPaidCounts, sortedChapters);
+  paidOnlyChartInstance.data.labels = paidOnlyChartData.labels;
+  paidOnlyChartInstance.data.datasets.forEach((dataset, index) => {
+    dataset.data = paidOnlyChartData.datasets[index].data;
+  });
+
+  paidOnlyChartInstance.update();
+}
+
+// Update unpaid-only chart based on sort order
+function updateUnpaidOnlyChartSort() {
+  if (!unpaidOnlyChartInstance || !globalUnpaidCounts) return;
+
+  const sortOrder = document.getElementById('unpaidOrderBy').value;
+  const sortedChapters = sortChaptersAggregate(originalChapters, globalUnpaidCounts, sortOrder);
+
+  // Update unpaid-only chart
+  const unpaidOnlyChartData = createAggregateChartData(globalUnpaidCounts, sortedChapters);
+  unpaidOnlyChartInstance.data.labels = unpaidOnlyChartData.labels;
+  unpaidOnlyChartInstance.data.datasets.forEach((dataset, index) => {
+    dataset.data = unpaidOnlyChartData.datasets[index].data;
+  });
+
+  unpaidOnlyChartInstance.update();
 }
 
 // Update only the first chart based on sort order
@@ -452,6 +712,225 @@ async function initChart() {
     globalPaidPercentages = paidPercentages;
     globalUnpaidPercentages = unpaidPercentages;
     originalChapters = Object.keys(paidPercentages);
+
+    // Create aggregate data
+    globalAggregateCounts = aggregateResponses(paidCounts, unpaidCounts);
+
+    // Sort chapters by most interested for aggregate chart
+    const aggregateSortedChapters = sortChaptersAggregate(originalChapters, globalAggregateCounts, 'most-interested');
+
+    // Create aggregate chart data with sorted chapters
+    const aggregateChartData = createAggregateChartData(globalAggregateCounts, aggregateSortedChapters);
+
+    // Create aggregate chart
+    const aggregateCtx = document.getElementById('aggregateChart').getContext('2d');
+    aggregateChartInstance = new Chart(aggregateCtx, {
+      type: 'bar',
+      data: aggregateChartData,
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          title: {
+            display: true,
+            text: 'Chapter Reading Interest: All Readers Combined',
+            font: {
+              size: 16,
+              weight: 'bold'
+            }
+          },
+          legend: {
+            display: false
+          },
+          tooltip: {
+            callbacks: {
+              title: function(context) {
+                const chapter = context[0].label;
+                return `${chapter}`;
+              },
+              label: function(context) {
+                const value = Math.abs(context.parsed.x);
+                const sentiment = context.dataset.label;
+                const totalResponses = globalAggregateCounts[context.label].total;
+                return `${sentiment}: ${value.toFixed(1)}% (${Math.round(value * totalResponses / 100)} responses)`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            stacked: true,
+            grid: {
+              drawOnChartArea: true,
+              color: function(context) {
+                return context.tick.value === 0 ? '#000' : '#e0e0e0';
+              },
+              lineWidth: function(context) {
+                return context.tick.value === 0 ? 2 : 1;
+              }
+            },
+            ticks: {
+              callback: function(value) {
+                return Math.abs(value) + '%';
+              }
+            },
+          },
+          y: {
+            stacked: true
+          }
+        },
+        elements: {
+          bar: {
+            borderWidth: 1
+          }
+        }
+      }
+    });
+
+    // Sort chapters by most interested for paid readers
+    const paidSortedChapters = sortChaptersAggregate(originalChapters, paidCounts, 'most-interested');
+
+    // Create paid-only chart data with sorted chapters
+    const paidOnlyChartData = createAggregateChartData(paidCounts, paidSortedChapters);
+
+    // Create paid-only chart
+    const paidOnlyCtx = document.getElementById('paidOnlyChart').getContext('2d');
+    paidOnlyChartInstance = new Chart(paidOnlyCtx, {
+      type: 'bar',
+      data: paidOnlyChartData,
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          title: {
+            display: true,
+            text: 'Chapter Reading Interest: Paid Readers Only',
+            font: {
+              size: 16,
+              weight: 'bold'
+            }
+          },
+          legend: {
+            display: false
+          },
+          tooltip: {
+            callbacks: {
+              title: function(context) {
+                const chapter = context[0].label;
+                return `${chapter}`;
+              },
+              label: function(context) {
+                const value = Math.abs(context.parsed.x);
+                const sentiment = context.dataset.label;
+                const totalResponses = paidCounts[context.label].total;
+                return `${sentiment}: ${value.toFixed(1)}% (${Math.round(value * totalResponses / 100)} responses)`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            stacked: true,
+            grid: {
+              drawOnChartArea: true,
+              color: function(context) {
+                return context.tick.value === 0 ? '#000' : '#e0e0e0';
+              },
+              lineWidth: function(context) {
+                return context.tick.value === 0 ? 2 : 1;
+              }
+            },
+            ticks: {
+              callback: function(value) {
+                return Math.abs(value) + '%';
+              }
+            },
+          },
+          y: {
+            stacked: true
+          }
+        },
+        elements: {
+          bar: {
+            borderWidth: 1
+          }
+        }
+      }
+    });
+
+    // Sort chapters by most interested for unpaid readers
+    const unpaidSortedChapters = sortChaptersAggregate(originalChapters, unpaidCounts, 'most-interested');
+
+    // Create unpaid-only chart data with sorted chapters
+    const unpaidOnlyChartData = createAggregateChartData(unpaidCounts, unpaidSortedChapters);
+
+    // Create unpaid-only chart
+    const unpaidOnlyCtx = document.getElementById('unpaidOnlyChart').getContext('2d');
+    unpaidOnlyChartInstance = new Chart(unpaidOnlyCtx, {
+      type: 'bar',
+      data: unpaidOnlyChartData,
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          title: {
+            display: true,
+            text: 'Chapter Reading Interest: Unpaid Readers Only',
+            font: {
+              size: 16,
+              weight: 'bold'
+            }
+          },
+          legend: {
+            display: false
+          },
+          tooltip: {
+            callbacks: {
+              title: function(context) {
+                const chapter = context[0].label;
+                return `${chapter}`;
+              },
+              label: function(context) {
+                const value = Math.abs(context.parsed.x);
+                const sentiment = context.dataset.label;
+                const totalResponses = unpaidCounts[context.label].total;
+                return `${sentiment}: ${value.toFixed(1)}% (${Math.round(value * totalResponses / 100)} responses)`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            stacked: true,
+            grid: {
+              drawOnChartArea: true,
+              color: function(context) {
+                return context.tick.value === 0 ? '#000' : '#e0e0e0';
+              },
+              lineWidth: function(context) {
+                return context.tick.value === 0 ? 2 : 1;
+              }
+            },
+            ticks: {
+              callback: function(value) {
+                return Math.abs(value) + '%';
+              }
+            },
+          },
+          y: {
+            stacked: true
+          }
+        },
+        elements: {
+          bar: {
+            borderWidth: 1
+          }
+        }
+      }
+    });
 
     // Create standard chart data
     const standardChartData = createChartData(paidPercentages, unpaidPercentages);
@@ -686,6 +1165,9 @@ async function initChart() {
     });
 
     // Add event listeners for dropdowns
+    document.getElementById('aggregateOrderBy').addEventListener('change', updateAggregateChartSort);
+    document.getElementById('paidOrderBy').addEventListener('change', updatePaidOnlyChartSort);
+    document.getElementById('unpaidOrderBy').addEventListener('change', updateUnpaidOnlyChartSort);
     document.getElementById('readerType').addEventListener('change', updateChartVisibility);
     document.getElementById('sortOrder').addEventListener('change', updateChartSort);
 
