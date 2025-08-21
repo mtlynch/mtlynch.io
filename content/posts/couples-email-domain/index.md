@@ -56,7 +56,7 @@ When picking a couple's domain name, consider the experience of saying your emai
   - e.g., don't use a word like "scent" because people might think you meant "sent" or "cent."
   - e.g., don't use a word like "accommodate" because only six people can spell it correctly on their first try.
 - Choose words that sound distinct from other words, especially in sequence
-  - e.g., if you choose "queen dish," people will probably mishear it as "clean dish."
+  - e.g., if you choose "clean ditch," people will probably mishear it as "clean dish."
 
 So, shinytable.com is not our real domain, but it would be a good one because most English speakers can spell the words "shiny" and "table," and it's hard to mishear "shiny table dot com" as something else.
 
