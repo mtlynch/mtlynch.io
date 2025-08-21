@@ -66,7 +66,7 @@ The Voyager 2 brings a tidier form factor. The Voyager 1 had an external power c
 {{<img src="voyager2-angled.jpg" alt="TinyPilot's new logo" max-width="400px" has-border="false">}}
 {{</gallery>}}
 
-Honestly, the launch felt a little anticlimactic. While it's more convenient to eliminate the external power connector, I struggled to write [the announcement](https://tinypilotkvm.com/blogs/news/introducing-tinypilot-voyager-2) in a way that sounded exciting. It felt silly to say, "Brand new version! It's exactly the same except without a separate box!"
+Honestly, the launch felt a little anticlimactic. While it's more convenient to eliminate the external power connector, I struggled to write [the announcement](https://tinypilotkvm.com/blogs/news/introducing-voyager-2) in a way that sounded exciting. It felt silly to say, "Brand new version! It's exactly the same except without a separate box!"
 
 But it does simplify things. The Voyager 1 came with six distinct parts &mdash; the Voyager 2 requires only three. That improves the installation experience for the user and the fulfillment process for TinyPilot's staff.
 
@@ -165,7 +165,7 @@ It was a slow month for Hit the Front Page of Hacker News. Not a lot of technica
 
 ### What got done?
 
-- Launched [TinyPilot Voyager 2](https://tinypilotkvm.com/blogs/news/introducing-tinypilot-voyager-2).
+- Launched [TinyPilot Voyager 2](https://tinypilotkvm.com/blogs/news/introducing-voyager-2).
 - Debuted TinyPilot's new logo.
 - Migrated employee payroll from Justworks to Gusto.
 
