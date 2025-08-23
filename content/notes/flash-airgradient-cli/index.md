@@ -9,39 +9,35 @@ tags:
 
 I've purchased two AirGradient ONE indoor quality monitors to measure air quality in my home. AirGradient devices are open-source, so you can flash your own custom firmware onto your devices. The problem is that all the existing documentation for flashing firmware require you to use the Arduino IDE, a clunky GUI program.
 
-You can flash AirGradient devices using the command-line, except nobody has documented how to do it, so I've included the steps below.
+I couldn't find instructions for flashing AirGradient devices using the command-line, and it took me several hours to figure out, so I've included the steps below.
 
 ## Aside: I don't get the hype about AirGradient
 
-Every time I see AirGradient come up on forum discussions, everyone sounds excited about their products. I've found them to be mediocre, but they're the only company I've found that sells pre-made air quality monitors that are open-source.
+Every time I see AirGradient come up on forum discussions, everyone sounds excited about their products. I've found my AirGradient ONE to be mediocre. The software is extremely buggy and the documentation is sparse. But they're the only company I've found that sells pre-made air quality monitors that are open-source, so I bought a second AirGradient monitor.
 
-My biggest gripe is that the documentation is pretty bad. AirGradient advertises themselves as open-source and hackable, but they didn't bother to document the process of compiling the
-
-document how to reflash them.
-
-AirGradient by default pushes you to buy their paid dashboard product, but I don't want to buy a subscription to see my air quality, and I don't want to share with a third party detailed logs that effectively show when I'm in my house and when I leave.
-
-Annoyingly, AirGradient doesn't publish official instructions for flashing software onto your AirGradient ONE. I learned how to do it from these blog posts:
+For years, AirGradient never bothered to publish instructions for flashing software onto the AirGradient ONE. I learned how to do it from these blog posts:
 
 - https://www.jeffgeerling.com/blog/2021/airgradient-diy-air-quality-monitor-co2-pm25
 - https://www.cnx-software.com/2023/11/29/airgradient-one-kit-review-an-open-source-indoor-air-quality-monitor/
 
-And finally, AirGradient [published official instructions](https://github.com/airgradienthq/arduino/blob/eb8378adfa1faaf18fa04738ae460bcf542fef85/docs/howto-compile.md), but they're [a bit hidden](https://github.com/airgradienthq/arduino/issues/335).
+This year finally, AirGradient [published official flashing instructions](https://github.com/airgradienthq/arduino/blob/eb8378adfa1faaf18fa04738ae460bcf542fef85/docs/howto-compile.md), but they're still [a bit hidden](https://github.com/airgradienthq/arduino/issues/335).
 
-But all the instructions I've found require you to compile through the Arduino IDE. If you run servers without a GUI or you prefer the command-line, the Arduino IDE is a big pain.
+But all the instructions I've found require you to compile through the Arduino IDE. If you run servers without a GUI or you prefer the command-line, the Arduino IDE is a big pain. Ardunio makes a CLI tool that has most of the same functionality as the IDE, and I can flash using the CLI rather than the IDE.
 
-## Requirements
+## Environment
 
 I tested these steps on Debian 13.0, but they should work on any Linux system.
+
+## Install packages
 
 First, I install the base packages I need:
 
 ```bash
 sudo apt update && \
-  sudo apt install -y
-    git
-    curl
-    python3
+  sudo apt install -y \
+    git \
+    curl \
+    python3 \
     python3-serial
 ```
 
@@ -130,12 +126,22 @@ sudo adduser "$(whoami)" dialout
 
 ## Get AirGradient source
 
-Finally, it's time to get the AirGradient source code:
+Next, I check the [AirGradient factory flashing page](https://www.airgradient.com/documentation/factory/) to find out the latest production release.
 
 ```bash
 # Current production release, as of this writing.
 AIRGRADIENT_RELEASE='3.3.8'
+```
 
+{{<notice type="warning">}}
+
+**Warning**: The latest version on AirGradient's website does not match the latest release tag on [AirGradient's GitHub repo](https://github.com/airgradienthq/arduino/releases/tag/3.3.9). When I tested 3.3.9, both of my devices failed to measure CO2 and temperature, so I'm not sure if 3.3.9 is a known-buggy release.
+
+{{</notice>}}
+
+With the version number in hand, I grab the AirGradient source code from AirGradient's GitHub repo:
+
+```bash
 git clone --recurse-submodules \
   --branch "${AIRGRADIENT_RELEASE}" \
   --depth 1 \
@@ -143,7 +149,9 @@ git clone --recurse-submodules \
   ~/airgradient-one
 ```
 
-## Flash sotware
+## Flash firmware onto AirGradient ONE device
+
+Finally, it's time to flash the software to my device:
 
 ```bash
 cd ~/airgradient-one && \
@@ -157,6 +165,66 @@ cd ~/airgradient-one && \
     examples/OneOpenAir/OneOpenAir.ino
 ```
 
-## Stream
+{{<notice type="info">}}
+**Note**: To erase persistent data on the AirGradient ONE device (i.e., a hard reset, including configuration data), add `,EraseFlash=all` to the end of the `--fqbn` flag.
+{{</notice>}}
 
-arduino-cli monitor --port "${AIRGRADIENT_PATH}"
+If flashing was successful, I see my device reboot and this output at the end of the process:
+
+```text
+Wrote 1753792 bytes (967231 compressed) at 0x00010000 in 14.7 seconds (effective 952.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+```
+
+## Optional: View serial log output
+
+While my AirGradient is connected to my computer, I can view its log output through the serial port by using the `ardunio-cli monitor` command:
+
+```bash
+$ arduino-cli monitor --port "${AIRGRADIENT_PATH}"
+Using default monitor configuration for board: esp32:esp32:heltec_wifi_kit_32_V3
+Monitor port settings:
+  baudrate=9600
+  bits=8
+  dtr=on
+  parity=none
+  rts=on
+  stop_bits=1
+
+Connecting to /dev/ttyACM0. Press CTRL-C to exit.
+ard Particle PM 1.0 = 5.83 ug/m3
+[1] Standard Particle PM 2.5 = 7.00 ug/m3
+[1] Particle Count 0.3 = 1298.5
+[1] Particle Count 0.5 = 383.5
+[1] Particle Count 1.0 = 39.7
+[1] Particle Count 2.5 = 2.0
+[1] Particle Count 5.0 = 2.0
+[1] Particle Count 10 = 0.0
+```
+
+## Alternative: Nix flake
+
+If you're a Nix nerd, you might want to do this the Nix way. I've created a Nix flake to automate all the above steps:
+
+- [My AirGradient ONE dev Nix flake](https://github.com/mtlynch/airgradient-arduino/blob/6c22d4d5f617d13492a573d5f74541328af89550/flake.nix)
+
+When I want to flash my repo, I just run:
+
+```bash
+nix run .#flash
+```
+
+And when I want to view serial output, I run:
+
+```bash
+nix run .#monitor
+```
+
+I'm not sure how well my Nix flake works across systems, so you'll probably have to tinker a little bit to get it to work for your system.
+
+## Conclusion
+
+I hope these instructions make it easier for you to flash your AirGradient ONE device and customize your firmware as you see fit.
