@@ -1,6 +1,6 @@
 ---
-title: "Flash AirGradient from the Command Line"
-date: 2025-08-11
+title: "Flash an AirGradient ONE from the Command Line"
+date: 2025-08-24
 ---
 
 I've purchased two AirGradient ONE indoor quality monitors. Everyone is pretty excited about them. I think they're kinda okay.
