@@ -74,7 +74,7 @@ On group threads with you and your spouse, you do still have to watch out for th
 
 To prevent this, just make sure to cc or bcc your spouse (or yourself) on all replies.
 
-In practice, this has rarely been a problem. If we're both on an email thread with a vendor, typically one of us is actively managing the project and the other just wants to be looped in. Even if we forget to cc each other, we're still seeing all the responses from the vendor.
+In practice, this has rarely been a problem. If we're both on an email thread with a vendor, typically one of us is actively managing the project and the other is just following along. Even if we forget to cc each other, we're still seeing all the responses from the vendor.
 
 ## Don't give your couple's email address to friends and family
 
