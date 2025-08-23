@@ -1,13 +1,21 @@
 ---
 title: "Flash an AirGradient ONE from the Command Line"
-date: 2025-08-24
+date: 2025-08-23
+images:
+  - /notes/flash-airgradient-cli/airgradient-one.webp
 tags:
   - home-automation
   - homelab
   - airgradient
 ---
 
-I've purchased two AirGradient ONE indoor quality monitors to measure air quality in my home. AirGradient devices are open-source, so you can flash your own custom firmware onto your devices. The problem is that all the existing documentation for flashing firmware require you to use the Arduino IDE, a clunky GUI program.
+I've purchased two AirGradient ONE indoor quality monitors to measure air quality in my home. AirGradient devices are open-source, so you can flash your own custom firmware and collect your air data locally rather than sending it to AirGradient's proprietary cloud dashboard.
+
+{{<img src="airgradient-one.webp" has-border="false" max-width="300px" caption="I keep an AirGradient ONE air quality monitor in my office to measure CO2 and pollution.">}}
+
+The existing documentation for flashing firmware requires you to use the Arduino IDE, a clunky GUI program:
+
+{{<img src="arduino-ide.webp" has-border="false"  max-width="700px" caption="Existing instructions for flashing AirGradient ONE rely on the Arduino IDE, a clunky GUI program.">}}
 
 I couldn't find instructions for flashing AirGradient devices using the command-line, and it took me several hours to figure out, so I've included the steps below.
 
@@ -17,16 +25,14 @@ Every time I see AirGradient come up on forum discussions, everyone sounds excit
 
 For years, AirGradient never bothered to publish instructions for flashing software onto the AirGradient ONE. I learned how to do it from these blog posts:
 
-- https://www.jeffgeerling.com/blog/2021/airgradient-diy-air-quality-monitor-co2-pm25
-- https://www.cnx-software.com/2023/11/29/airgradient-one-kit-review-an-open-source-indoor-air-quality-monitor/
+- ["Monitoring my home's air quality (CO2, PM2.5, Temp/Humidity) with AirGradient's DIY sensor"](https://www.jeffgeerling.com/blog/2021/airgradient-diy-air-quality-monitor-co2-pm25) by Jeff Geerling
+- ["AirGradient ONE Kit Review – An open-source indoor air quality monitor"](https://www.cnx-software.com/2023/11/29/airgradient-one-kit-review-an-open-source-indoor-air-quality-monitor/) by CNX Software
 
 This year finally, AirGradient [published official flashing instructions](https://github.com/airgradienthq/arduino/blob/eb8378adfa1faaf18fa04738ae460bcf542fef85/docs/howto-compile.md), but they're still [a bit hidden](https://github.com/airgradienthq/arduino/issues/335).
 
-But all the instructions I've found require you to compile through the Arduino IDE. If you run servers without a GUI or you prefer the command-line, the Arduino IDE is a big pain. Ardunio makes a CLI tool that has most of the same functionality as the IDE, and I can flash using the CLI rather than the IDE.
-
 ## Environment
 
-I tested these steps on Debian 13.0, but they should work on any Linux system.
+I tested these steps on Debian 13.0, but they should work on any Debian/Ubuntu-like system.
 
 ## Install packages
 
@@ -181,7 +187,7 @@ Hard resetting via RTS pin...
 
 ## Optional: View serial log output
 
-While my AirGradient is connected to my computer, I can view its log output through the serial port by using the `ardunio-cli monitor` command:
+While my AirGradient is connected to my computer, I can view its log output through the serial port by using the `arduino-cli monitor` command:
 
 ```bash
 $ arduino-cli monitor --port "${AIRGRADIENT_PATH}"
@@ -195,7 +201,6 @@ Monitor port settings:
   stop_bits=1
 
 Connecting to /dev/ttyACM0. Press CTRL-C to exit.
-ard Particle PM 1.0 = 5.83 ug/m3
 [1] Standard Particle PM 2.5 = 7.00 ug/m3
 [1] Particle Count 0.3 = 1298.5
 [1] Particle Count 0.5 = 383.5
