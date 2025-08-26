@@ -1,5 +1,6 @@
 ---
 title: "Give Your Spouse the Gift of a Couple's Email Domain"
+description: The brilliant relationship tip you won't find anywhere else.
 date: 2025-08-26
 tags:
   - email
