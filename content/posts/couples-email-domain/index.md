@@ -10,13 +10,13 @@ hero_image: couples-email.webp
 
 <!-- markdownlint-disable no-bare-urls -->
 
-I've only been married for a few years, but I have a fantastic marriage tip you can't find in any book or marriage counselor's office:
+I've only been married for a few years, but I have a fantastic marriage tip you won't find in any book or marriage counselor's office:
 
 - Get a couple's email domain
 
 ## What's a couple's email domain?
 
-My wife and I share a .com domain name for shared email. I'm not going to reveal our real domain name, but pretend it's this:
+My wife and I share a .com domain name for email. I'm not going to reveal our real domain name, but pretend it's this:
 
 - @shinytable.com
 
@@ -24,13 +24,13 @@ Emails to michael@shinytable.com go to both me and my wife, and the same for her
 
 ## No, not a shared Gmail account
 
-When I tell people that my wife and I have a couple's email domain, they think I mean that I registered a Gmail account like michaelandhiswife25@gmail.com, and we both check that account in addition to our regular email accounts. That's not what I mean.
+When I tell people that my wife and I have a couple's email domain, they think I registered a Gmail account like michaelandhiswife25@gmail.com, and we share access to that account. That's not what I mean.
 
 We have a couple's email _domain_. We still send and receive email through our normal email accounts.
 
 If you email michael@shinytable.com or my wife's name, we both receive the email in our normal inboxes. We don't have a special @shinytable.com inbox we have to check separately. Similarly, we can both send emails as each other, if needed.
 
-You can get most of the same benefits by sharing an extra email account, but then you're stuck checking an extra inbox and messing up each other's read/unread status.
+You can get most of the same benefits by sharing an extra email account, but then you're stuck managing an extra inbox and messing up each other's read/unread status.
 
 ## Why get a couple's email domain?
 
@@ -44,13 +44,13 @@ By switching to a couple's email domain, we made it impossible for vendors to ac
 
 ### Shared online accounts
 
-As a married couple, my wife and I have a lot of shared online accounts: insurance, tax bills, grocery delivery, etc.
+As a married couple, my wife and I share lots of online accounts: insurance, tax bills, grocery delivery, etc.
 
 We sign up for all shared services using our couple's email domain and save the credentials in our shared password manager, [Bitwarden](https://bitwarden.com/). That way, we both receive all notices related to our shared accounts. If we ever have to do a password reset, either of us can do it.
 
 ## Picking a good domain name
 
-When you pick a couple's domain name, consider the experience of saying your email address on phone calls, especially to support reps who may not have strong English skills:
+When you pick a couple's domain name, consider the experience of saying your email address over the phone, especially to support reps who may not speak English natively:
 
 - Choose words that have easy, unambiguous spelling
   - e.g., don't use a word like "scent" because people might think you meant "sent" or "cent."
@@ -58,29 +58,29 @@ When you pick a couple's domain name, consider the experience of saying your ema
 - Choose words that sound distinct from other words, especially in sequence
   - e.g., if you choose "clean ditch," people will probably mishear it as "clean dish."
 
-So, shinytable.com is not our real domain, but it would be a good one because most English speakers can spell the words "shiny" and "table," and it's hard to mishear "shiny table dot com" as something else.
+So, shinytable.com is not our real domain, but it would be a good couple's domain because most English speakers can spell the words "shiny" and "table," and it's hard to mishear "shiny table dot com" as something else.
 
 ## How to set up a couple's email domain
 
 ### Buy a domain name
 
-To set this up for you and your spouse, the first step is to buy a domain name.
+To set up a couple's domain for you and your spouse, the first step is to buy a domain name.
 
-Some email providers let you buy a domain name within their service. I prefer to buy from a dedicated domain registrar so that I have more flexibility with the domain name, but you can buy the domain name from your email vendor if you prefer the simpler solution.
+Some email providers let you buy a domain name within their service. I prefer to buy my domains from a dedicated domain registrar. The prices are generally better, and I have the freedom to switch email providers. You can buy the domain name from your email vendor if you prefer the simpler solution.
 
 ### Connect your custom domain to your email account
 
-Next, you need to connect your domain name with your email account. You'll connect your spouse's soon after.
+Next, you need to connect your domain name to your email account. You'll connect your spouse's soon after.
 
 I use Fastmail, and they support custom domain names particularly well. So, once I've purchased the domain, I go to Settings > Domains to connect `shinytable.com` to my Fastmail account.
 
 {{<img src="fastmail-add-domain.webp" max-width="600px">}}
 
-You can also connect a custom domain to [a basic, free Gmail account](https://andykong.org/blog/freebusinessemail/), but Google makes it a somewhat tedious process to push you into paying for the feature as part of Google Workspace.
+You can also connect a custom domain to [a basic, free Gmail account](https://andykong.org/blog/freebusinessemail/), but Google makes this process somewhat tedious process because they want you to pay for the feature in Google Workspace.
 
 ### Forward mail to your spouse
 
-Once you're able to send and receive email with your custom domain name in your email account, the next step is to configure your email to send a copy of all emails to your couple's domain to your spouse.
+Once you're able to send and receive email with your custom domain name, the next step is automatically forwarding your spouse all emails to your couple's domain.
 
 If you use Gmail, create a filter with your domain name and configure it to forward emails to your spouse's email address:
 
@@ -122,9 +122,9 @@ These days, if I order a $7 spatula online, the merchant immediately starts spam
 
 To prevent spam, I go a step further with my couple's email domain and give each vendor a unique email address. So, instead of entering michael@shinytable.com as my email address at checkout, I'd use the vendor's name, like cheapspatulasdirect@shinytable.com. If I start receiving spam, I just block emails from cheapspatulasdirect@shinytable.com.
 
-Per-service email addresses are fine when I'm just typing the address into a web form, but if I tell Jane the dogwalker that my email address is jane.the.dogwalker@shinytable.com, she gets confused or weirded out. In those cases, I'll say Michael but add a semi-random suffix like michael.dw5@shinytable.com, where "dw" is for dogwalker and the 5 is in case I've used "dw" as a suffix before.
+Per-service email addresses are fine when I'm typing the address into a web form, but if I tell Jane the dogwalker that my email address is jane.the.dogwalker@shinytable.com, she gets confused or weirded out. In those cases, I'll say Michael but add a semi-random suffix like michael.dw5@shinytable.com, where "dw" is for dogwalker and the 5 is in case I've used "dw" as a suffix before.
 
-I use the same technique to obscure the vendor's name for services that are aggressive at fraud prevention. I once signed up for a food delivery service, and as soon as I placed my first order, they flagged my account as fraudulent and canceled my order. I strongly suspect that it was because I used their name as my email address. So, now, if I sign up with a service that might be sensitive to fraud, I do my name plus some random numbers.
+I use the same technique to obscure the vendor's name for services that are aggressive at fraud prevention. I once signed up for a food delivery service, and as soon as I placed my first order, they flagged my account for fraud and canceled my order. I suspect the reason was that the vendor's name appeared in my email address. So, now, if I sign up with a service that might be sensitive to fraud, I do my name plus some random numbers.
 
 Per-service email domains work especially well with Fastmail, as they allow unlimited email addresses and support wildcard ("catch-all") addresses (`*@shinytable.com`). You can do this with Gmail as well, and it works fine for receiving mail, but if you ever need to send mail from cheapspatulasdirect@shinytable.com, you have to go through the tedious process of adding it to your Gmail account. With Fastmail, you can send from any email address within your domain with zero configuration.
 
