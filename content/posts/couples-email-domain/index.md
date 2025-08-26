@@ -20,7 +20,7 @@ My wife and I share a .com domain name for shared email. I'm not going to reveal
 
 - @shinytable.com
 
-Emails to michael@shinytable.com go to both me and my wife, and same for her name.
+Emails to michael@shinytable.com go to both me and my wife, and the same for her name.
 
 ## No, not a shared Gmail account
 
