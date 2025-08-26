@@ -5,6 +5,7 @@ description:
   manage you.
 tags:
   - focus
+  - productivity
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=21506107
   reddit: https://redd.it/dva6b3
