@@ -14,7 +14,7 @@ discuss_urls:
 
 <!-- markdownlint-disable no-bare-urls -->
 
-I've only been married for a few years, but I have a fantastic marriage tip you won't find in any book or marriage counselor's office:
+I've only been married for a few years, but I have a fantastic marriage tip you won't hear from any marriage counselor or book:
 
 - Get a couple's email domain
 
