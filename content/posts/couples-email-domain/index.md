@@ -7,6 +7,9 @@ tags:
   - focus
   - productivity
 hero_image: couples-email.webp
+discuss_urls:
+  hacker_news: https://news.ycombinator.com/item?id=45027481
+  reddit: https://www.reddit.com/r/fastmail/comments/1n0o6ku/how_i_use_fastmail_to_share_a_custom_domain_name/
 ---
 
 <!-- markdownlint-disable no-bare-urls -->
