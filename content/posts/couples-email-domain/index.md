@@ -90,9 +90,9 @@ If you use Gmail, create a filter with your domain name and configure it to forw
 
 {{<img src="gmail-rule.webp">}}
 
-If you use Fastmail, create a custom rule for your custom domain where the action is "Send a copy to" with your spouse's email.
+If you use Fastmail, got to Settings > Users & Sharing > Aliases and then click your couple's domain name. Click "Show advanced preferences" to add a second recipient. Then, add your spouse's email to the alias and hit "Save."
 
-{{<img src="fastmail-rule.webp">}}
+{{<img src="fastmail-alias.webp">}}
 
 Once your spouse can receive emails to that domain, they need to do the same thing you did above to send emails using the custom domain.
 
