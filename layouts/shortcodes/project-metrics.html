@@ -98,6 +98,144 @@
 {{- $prevMonth := $prevDate.Format "January 2006" -}}
 {{- $currentMonth := $currentDate.Format "January 2006" -}}
 
+{{- /* Prepare data for the chart */ -}}
+{{- $chartData := slice -}}
+{{- $chartLabels := slice -}}
+{{- range $dateKey, $monthData := $projectData -}}
+  {{- $dateObj := time (printf "%s-01" $dateKey) -}}
+  {{- if le $dateObj $currentDate -}}
+    {{- $totalRevenue := add (add ($monthData.revenue_pre_orders | default 0.0 | float) ($monthData.revenue_consulting | default 0.0 | float)) ($monthData.revenue_sponsors | default 0.0 | float) -}}
+    {{- $chartData = $chartData | append (dict "date" $dateKey "visitors" ($monthData.unique_visitors | default 0 | int) "revenue" $totalRevenue) -}}
+    {{- $chartLabels = $chartLabels | append ($dateObj.Format "Jan 2006") -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Sort the data by date */ -}}
+{{- $sortedData := sort $chartData "date" -}}
+{{- $sortedLabels := slice -}}
+{{- $visitorsData := slice -}}
+{{- $revenueData := slice -}}
+{{- range $sortedData -}}
+  {{- $dateObj := time (printf "%s-01" .date) -}}
+  {{- $sortedLabels = $sortedLabels | append ($dateObj.Format "Jan 2006") -}}
+  {{- $visitorsData = $visitorsData | append .visitors -}}
+  {{- $revenueData = $revenueData | append .revenue -}}
+{{- end -}}
+
+<div class="project-metrics-chart" style="margin-bottom: 2rem; height: 400px;">
+  <canvas id="{{ $project }}-metrics-chart"
+          data-labels="{{ $sortedLabels | jsonify }}"
+          data-visitors="{{ $visitorsData | jsonify }}"
+          data-revenue="{{ $revenueData | jsonify }}"></canvas>
+</div>
+
+<script>
+(function() {
+  const ctx = document.getElementById('{{ $project }}-metrics-chart');
+  if (!ctx) return;
+
+  const labels = JSON.parse(ctx.dataset.labels);
+  const visitorsData = JSON.parse(ctx.dataset.visitors);
+  const revenueData = JSON.parse(ctx.dataset.revenue);
+
+  const dollarFormat = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  });
+
+  const visitorFormat = new Intl.NumberFormat("en-US");
+
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: labels,
+      datasets: [{
+        label: 'Unique Visitors',
+        data: visitorsData,
+        borderColor: '#3b82f6',
+        backgroundColor: 'rgba(59, 130, 246, 0.1)',
+        yAxisID: 'y-axis-1',
+        fill: false,
+        lineTension: 0
+      }, {
+        label: 'Total Revenue',
+        data: revenueData,
+        borderColor: '#10b981',
+        backgroundColor: 'rgba(16, 185, 129, 0.1)',
+        yAxisID: 'y-axis-2',
+        fill: false,
+        lineTension: 0
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      title: {
+        display: true,
+        text: 'Project Metrics Over Time'
+      },
+      tooltips: {
+        mode: 'index',
+        intersect: false,
+        callbacks: {
+          label: function(tooltipItem, data) {
+            const label = data.datasets[tooltipItem.datasetIndex].label || '';
+            if (label === 'Unique Visitors') {
+              return label + ': ' + visitorFormat.format(tooltipItem.yLabel);
+            } else {
+              return label + ': ' + dollarFormat.format(tooltipItem.yLabel);
+            }
+          }
+        }
+      },
+      scales: {
+        xAxes: [{
+          display: true,
+          scaleLabel: {
+            display: true,
+            labelString: 'Month'
+          }
+        }],
+        yAxes: [{
+          id: 'y-axis-1',
+          type: 'linear',
+          display: true,
+          position: 'left',
+          scaleLabel: {
+            display: true,
+            labelString: 'Unique Visitors'
+          },
+          ticks: {
+            callback: function(value) {
+              return visitorFormat.format(value);
+            }
+          }
+        }, {
+          id: 'y-axis-2',
+          type: 'linear',
+          display: true,
+          position: 'right',
+          scaleLabel: {
+            display: true,
+            labelString: 'Total Revenue'
+          },
+          gridLines: {
+            drawOnChartArea: false,
+          },
+          ticks: {
+            callback: function(value) {
+              return dollarFormat.format(value);
+            }
+          }
+        }]
+      }
+    }
+  });
+})();
+</script>
+
 <table>
   <thead>
     <tr>
