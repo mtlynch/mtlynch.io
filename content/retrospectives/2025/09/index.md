@@ -136,11 +136,9 @@ So, I spent a lot of time on this transcript making it accurate, interactive, an
 
 ## Helping Tyler Cipriani reach #1 on Hacker News
 
-Giving feedback to real writers helps me write my book, so I've been doing [freelance editing](https://refactoringenglish.com/services/blog-editing/) for other indie dev bloggers.
+Sometimes, a plan just comes together way better than I even hoped.
 
-I really try to wow clients by putting a lot of effort into my notes, and I wanted some way of conveying that to potential clients other than just saying, "Trust me! My notes are really good!" I wanted to show a real example of the type of notes I write.
-
-One of my past clients probably would have given me permission to publish their notes if I'd asked, but it felt unprofessional to use work they'd paid for as my own marketing, and I didn't want to negotiate a, "I'll give you back this much money if you let me," deal.
+Giving feedback to real writers helps me write my book, so I've been doing [freelance editing](https://refactoringenglish.com/services/blog-editing/) for other indie dev bloggers. On the page explaining my editing services, I wanted to include a sample of my editing work, but I didn't want to ask one of my paying clients to use work they paid for as my own marketing.
 
 So, my plan was to find someone who would let me edit their post for free in exchange for me publishing the notes and them crediting me as the editor in the article.
 
@@ -148,9 +146,23 @@ My stretch goal was that their article would be popular in places where potentia
 
 A few months ago, Tyler Cipriani hired me for [a high-level review](https://refactoringenglish.com/services/blog-review/) of his blog. He seemed happy with the results, so I pitched him my free editing idea, and he agreed.
 
-Tyler's article reached the #1 spot [on Hacker News](https://news.ycombinator.com/item?id=44916783), [Lobsters](https://lobste.rs/s/vew3ph/future_large_files_git_is_git), and [reddit](https://www.reddit.com/r/git/comments/1mrukfp/the_future_of_large_files_in_git_is_git/).
+I worked with Tyler on a few rounds of feedback for his article, ["The future of large files in Git is Git,"](https://tylercipriani.com/blog/2025/08/15/git-lfs/) and everything went perfectly. We enjoyed working together, and it gave me good ideas for the book. My bonus goal was just for Tyler's goal to reach the front page of Hacker News, but it got [all the way to #1 on Hacker News](https://news.ycombinator.com/item?id=44916783), [Lobsters](https://lobste.rs/s/vew3ph/future_large_files_git_is_git), and [reddit](https://www.reddit.com/r/git/comments/1mrukfp/the_future_of_large_files_in_git_is_git/).
 
-One of the biggest takeaways for both of us was the importance of tuning the writing for an audience.
+One of the biggest takeaways for both of us was the importance of tuning the writing for the target audience. Earlier drafts of Tyler's post assumed that the reader was familiar with Git LFS and how it worked. I argued that the average Git user has maybe heard of Git LFS and knows that it's for large files, but they don't know anything beyond that.
+
+As part of trying to convince Tyler, I wrote a list of everything I knew about Git LFS
+
+> I can tell you my own context for git LFS as a git user for 10+ years. Here’s what I knew about Git LFS before reading your article:
+>
+> - If I have large files in my git repo or I frequently update binary data in my git repo, I’m supposed to use git LFS
+> - I’ve never used git LFS
+>   - I’ve maybe worked on 1-2 open-source projects that use Git LFS, but I never touched any of the LFS parts.
+> - I don’t know what the size limits are for various forges, but I assumed that if I hit it, the forge would give me grief, and I’d deal with it then
+>   - If I ever want to store a file >5 MB in a git repo, I start looking for ways to avoid it
+> - I thought Git LFS was a forge-agnostic feature I could use anywhere.
+> - I thought Git LFS is a 10+ year old technology and is mature and stable
+> - I didn’t know your repo is stuck with Git LFS once you start using it
+> - I’d be interested in ways to store large files in git, and I’d click a story about it on HN/Lobsters, but it’s not a problem I’d think about and try to solve proactively unless I ran into a situation where I really wanted to store large files in a git repo.
 
 ## Side projects
 
@@ -161,7 +173,7 @@ One of the biggest takeaways for both of us was the importance of tuning the wri
 - Published ["Give Your Spouse the Gift of a Couple's Email Domain"](/couples-email-domain/)
 - Published a [tutorial on flashing an AirGradient air quality monitor](/notes/flash-airgradient-cli/) from the command line.
 - Published ["Reader Feedback about my Chapter List"](https://refactoringenglish.com/blog/chapter-interest-results/)
-- Went back to using LeechBlockNG
+- Went back to using LeechBlockNG to protect focus during the day.
 
 ### Lessons learned
 
