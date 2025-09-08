@@ -286,7 +286,7 @@ To use these options, I created the following `.coveragerc` file:
 
 {{<inline-file filename="coveragerc" language="ini">}}
 
-My new solution ran the `coverage` command within the Docker container, then executed the [`coverage combine` feature](https://coverage.readthedocs.io/en/latest/cmd.html#cmd-combining) in the Travis environment, which canonicalized all of the paths to the Travis filesystem.
+My new solution ran the `coverage` command within the Docker container, then executed the [`coverage combine` feature](https://web.archive.org/web/20240301053044/https://coverage.readthedocs.io/en/latest/cmd.html#combining-data-files-coverage-combine) in the Travis environment, which canonicalized all of the paths to the Travis filesystem.
 
 After applying this solution, the `after_success` section of my [Travis configuration](https://github.com/mtlynch/ingredient-phrase-tagger/blob/9e66f28b07de290b77b1ec0b84baf14f3e7330a0/.travis.yml) looked like this:
 
