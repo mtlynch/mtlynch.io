@@ -265,7 +265,7 @@ The items below are generic electronics tools and components that you can use fo
 - [Assorted resistors](https://smile.amazon.com/gp/product/B00FVT8I22/)
 - [Wire stripper](https://smile.amazon.com/gp/product/B000JNPQZW/)
 - [Soldering stand](https://smile.amazon.com/gp/product/B00LQG47V0/)
-- [Jumper wires](https://smile.amazon.com/gp/product/B01GK2Q4ZQ/)
+- [Jump wire](https://en.wikipedia.org/wiki/Jump_wire)
 - [Heat shrink tubing](https://smile.amazon.com/gp/product/B01461R89O/) (to cover solder joints)
 - [Wire cutters](https://smile.amazon.com/gp/product/B00FZPDG1K/)
 - [Solderless breadboard, 830 tie-points](https://smile.amazon.com/gp/product/B0195V3682/) (for testing)
