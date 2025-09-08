@@ -59,7 +59,7 @@ Profits are lower than last month despite sales because my dev costs were atypic
 
 ## The TinyPilot Cloud flop
 
-One of the most common requests I hear from users is for access to their TinyPilot devices over the Internet. There are a few [third-party solutions](https://tinypilotkvm.com/faq/cloud-access), but they're either slow or inconvenient.
+One of the most common requests I hear from users is for access to their TinyPilot devices over the Internet. There are a few [third-party solutions](https://web.archive.org/web/20230606130531/https://tinypilotkvm.com/faq/cloud-access), but they're either slow or inconvenient.
 
 Naturally, this led to the idea for TinyPilot Cloud, a paid service that offers customers simple and performant cloud access to their devices. It would be a great selling point because no other KVM over IP device offers this natively. The service fits in with TinyPilot's brand of making everything dead-simple while preserving performance and security. Best of all, it would provide a consistent stream of income, unlike the bursty nature of eCommerce.
 

@@ -94,7 +94,7 @@ Whoops, now I can't reach the post-hiring state because I don't have available s
 
 The delay in switching to a 3PL vendor made me realize I need a better early warning system for running out of spare capacity.
 
-My best idea is to be more conscientious about balancing everyone's short- and long-term tasks. For example, the support engineers' urgent responsibility is responding to customer support requests on the TinyPilot help forum and on our CRM platform. Support volume ebbs and flows, so when the support engineers have spare time, they look for recurring patterns in support requests and publish [help articles](https://tinypilotkvm.com/faq) or investigate deeper bugfixes.
+My best idea is to be more conscientious about balancing everyone's short- and long-term tasks. For example, the support engineers' urgent responsibility is responding to customer support requests on the TinyPilot help forum and on our CRM platform. Support volume ebbs and flows, so when the support engineers have spare time, they look for recurring patterns in support requests and publish [help articles](https://web.archive.org/web/20230606130531/https://tinypilotkvm.com/faq) or investigate deeper bugfixes.
 
 Everyone at TinyPilot has a mix of short- and long-term tasks:
 
