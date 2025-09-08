@@ -182,9 +182,29 @@ Tyler said that this list was the "ah-ha" moment for him. He had resisted the fe
 
 The neat thing about Tyler's realization was that he could have written my list without me. He had the same predictions as I did about what his target reader would know; he just had to think one level deeper about what it means for the reader to "know about" a technology.
 
-- [My editing notes for Tyler Cipriani's blog post, "The future of lerge files in Git is Git"](https://refactoringenglish.com/services/blog-editing/sample-future-of-git/)
+- [My editing notes for Tyler Cipriani's blog post, "The future of large files in Git is Git"](https://refactoringenglish.com/services/blog-editing/sample-future-of-git/)
 
 ## Side projects
+
+### Switching [Hacker News Observer](/retrospectives/2025/05/#side-project-hacker-news-observer) to a time-series database
+
+Over the past few years, I've heard people talk about "time-series databases," but I never understood what they do or how they differ from regular relational database. I even used InfluxDB for a side project last year because I needed a data store that was compatible with Grafana, and InfluxDB seemed like the simplest. But I still didn't understand what made it a "time series" database or why it couldn't just be SQLite.
+
+I was talking to another developer recently, and he mentioned using a time-series database for different views of his data, like seconds-level granularity vs. days-level. And he didn't even explain beyond that, but a lightbulb went off, and I thought, "Oh! That must be what time-series databases are for!"
+
+Hacker News Observer is a side-project that queries Hacker News every minute and records upvotes, comments, and rank of every story from the last few weeks. I hope to dig deeper and find interesting patterns, but for now I've just been looking at high-level aggregates, like total upvotes and comments on the front page:
+
+{{<img src="hn-observer-aggregate.webp">}}
+
+I initially implemented it with SQLite, and that page would take about two minutes to render. And that makes sense because there are thousands of stories per day, thousands of snapshots of each story, and then I have to find the top 30 (front page) in each snapshot, then put those into hour-level buckets. SQLite doesn't have any special functions for aggregating that per-minute data into per-hour data, so it was a lot of expensive queries.
+
+Once I got the idea of time-series databases, I asked an LLM for database options that were similar to SQLite, and it recommended DuckDB. And then I just had the LLM migrate my database from SQLite to DuckDB, and without me having to do anything myself, the load time on the aggregates page went from two minutes to 250ms, a speedup of about 500x.
+
+### Chipping away at old logs with [Gleam Chat Log Parser](https://codeberg.org/mtlynch/gleam-chat-log-parser)
+
+I made only little bits of progress on my chat log parser project to help me learn the [Gleam programming language](https://gleam.run).
+
+I handled logs [that contain away messages](https://codeberg.org/mtlynch/gleam-chat-log-parser/pulls/34) and logs that had Windows-style line endings (`\r\n`). Strangely, in Erlang (and therefore also in Gleam), [`\r\n` counts as a single character](https://www.erlang.org/docs/23/man/string), which tripped me up for a while.
 
 ## Wrap up
 
@@ -204,6 +224,7 @@ The neat thing about Tyler's realization was that he could have written my list 
 ### Goals for next month
 
 -
+- Write personalized emails to 20 readers I haven't spoken to before
 
 ### Requests for help
 
