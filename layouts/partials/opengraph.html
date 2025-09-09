@@ -29,39 +29,18 @@
   {{ end }}"
 />
 <meta property="og:url" content="{{ .Permalink }}" />
-{{ if and $.Params.hero_image (not $.Params.images) }}
-  <meta
-    property="og:image"
-    content="{{ printf "%s%s" .Permalink $.Params.hero_image }}"
-  />
-{{ else if and .IsPage (eq .Type "book-reports") }}
-  <meta
-    property="og:image"
-    content="{{ printf "%s%s" .Permalink "cover.jpg" }}"
-  />
-{{ else }}
-  {{ with $.Params.images }}
-    {{ range first 6 . -}}
-      <meta property="og:image" content="{{ . | absURL }}" />
-    {{ end }}
-  {{ else -}}
-    {{- $images := $.Resources.ByType "image" -}}
-    {{- $featured := $images.GetMatch "*feature*" -}}
-    {{- if not $featured }}
-      {{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}
-    {{ end -}}
-    {{- with $featured -}}
-      <meta property="og:image" content="{{ $featured.Permalink }}" />
-    {{ else -}}
-      {{- with $.Site.Params.images -}}
-        <meta property="og:image" content="{{ index . 0 | absURL }}" />
-      {{ end }}
+{{- $ogImage := "" -}}
+{{- if $.Params.banner_image -}}
+  {{- $ogImage = printf "%s%s" .Permalink $.Params.banner_image -}}
+{{- else if $.Params.hero_image -}}
+  {{- $ogImage = printf "%s%s" .Permalink $.Params.hero_image -}}
+{{- else if and .IsPage (eq .Type "book-reports") -}}
+  {{- $ogImage = printf "%s%s" .Permalink "cover.jpg" -}}
+{{- end -}}
 
-    {{ end }}
-
-  {{ end }}
-
-{{ end }}
+{{- with $ogImage -}}
+  <meta property="og:image" content="{{ . }}" />
+{{- end -}}
 
 {{- $iso8601 := "2006-01-02T15:04:05-07:00" -}}
 {{- if .IsPage }}

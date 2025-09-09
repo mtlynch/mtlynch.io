@@ -2,8 +2,7 @@
 title: "An Unexpected Reset Month"
 date: 2020-04-02
 description: I'm safe and healthy, but my businesses have taken a tumble.
-images:
-  - /retrospectives/2020/04/og-image.jpg
+banner_image: og-image.jpg
 ---
 
 ## Highlights

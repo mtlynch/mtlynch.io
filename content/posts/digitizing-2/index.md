@@ -9,8 +9,7 @@ tags:
   - gcsfuse
   - nginx
   - google cloud storage
-images:
-  - digitizing-2/mediagoblin-home.png
+banner_image: mediagoblin-home.png
 description: How I used MediaGoblin and Google Cloud Storage to create a private media server for less than $1/month.
 discuss_urls:
   reddit: https://redd.it/gqxvxb

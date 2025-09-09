@@ -2,8 +2,7 @@
 title: "TinyPilot: Month 15"
 date: 2021-10-07
 description: What to do when a competitor raises $800k overnight?
-images:
-  - /retrospectives/2021/10/cover.png
+banner_image: cover.png
 ---
 
 ## Highlights

@@ -6,8 +6,7 @@ tags:
   - zig
   - vscode
   - nix
-images:
-  - /notes/zig-vscode-nix/vscode-zig-working.webp
+banner_image: vscode-zig-working.webp
 ---
 
 I finally found a solution that makes VS Code work consistently with Zig, so I'm sharing my setup in the hope that it saves someone else a headache.

@@ -5,8 +5,7 @@ description: The joy and misery of editing a video interview
 tags:
   - refactoring-english
   - blogging
-images:
-  - /retrospectives/2025/09/graph.webp
+banner_image: graph.webp
 ---
 
 {{<notice type="info">}}

@@ -2,8 +2,7 @@
 title: "goHardDrive Leaked Personal Data for Thousands of Customers"
 description: How goHardDrive exposed tens of thousands of customer records to anyone with a web browser.
 date: 2025-07-02
-images:
-  - goharddrive-leak/ghd-rma.webp
+banner_image: ghd-rma.webp
 ---
 
 I recently returned a product to goHardDrive, a merchant that specializes in selling used hard drives. During the return process, I discovered that they were accidentally publishing details about thousands of their customers, including their full names, mailing addresses, email addresses, and order details.

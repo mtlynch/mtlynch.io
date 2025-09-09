@@ -1,8 +1,7 @@
 ---
 title: "A Survey of Applicant Tracking Systems for Bootstrapped Businesses"
 date: 2022-08-12
-images:
-  - /notes/bootstrapper-ats/ats-cover.png
+banner_image: ats-cover.png
 ---
 
 I'm a bootstrapped founder of [a six-person company](https://tinypilotkvm.com), and I spent this week testing different tools for hiring candidates.

@@ -2,8 +2,7 @@
 title: "TinyPilot: Month 31"
 date: 2023-02-17
 description: Some transitions are smoother than others.
-images:
-  - /retrospectives/2023/02/og-cover.png
+banner_image: og-cover.png
 ---
 
 {{<notice type="info">}}

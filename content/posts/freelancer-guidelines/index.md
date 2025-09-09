@@ -4,8 +4,7 @@ description: I provide this document when advertising dev jobs, and I pay freela
 date: "2021-03-12"
 hero_image: cover.jpg
 custom_css: true
-images:
-  - freelancer-guidelines/og-cover.jpg
+banner_image: og-cover.jpg
 tags:
   - culture
   - outsourcing

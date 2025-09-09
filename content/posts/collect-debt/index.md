@@ -4,8 +4,7 @@ tags:
   - is it keto
   - conflict resolution
 date: "2020-08-13"
-images:
-  - collect-debt/cover.png
+banner_image: cover.png
 description: Within two emails, a merchant went from blatant dismissal to full payment, and I owe it to The Organized Professional Method.
 ---
 

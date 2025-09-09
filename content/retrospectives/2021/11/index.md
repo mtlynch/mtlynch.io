@@ -2,8 +2,7 @@
 title: "TinyPilot: Month 16"
 date: 2021-11-11
 description: The TinyPilot Cloud flop
-images:
-  - /retrospectives/2021/11/sales-trends.png
+banner_image: sales-trends.png
 ---
 
 ## Highlights

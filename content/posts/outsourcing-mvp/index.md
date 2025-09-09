@@ -9,8 +9,7 @@ description:
   "A few months ago, I had a brilliant idea for a website. Then, I had
   an even brillianter idea: build the website, but outsource all the work."
 date: "2017-12-06"
-images:
-  - outsourcing-mvp/wireframe-v1.jpg
+banner_image: wireframe-v1.jpg
 ---
 
 A few months ago, I had a brilliant idea for a website. Then, I had an even _brillianter_ idea: build the website, but outsource all the work.

@@ -6,8 +6,7 @@ tags:
   - truenas
   - tinypilot
 description: How I chose parts, built, and configured my first custom home storage server.
-images:
-  - budget-nas/og-cover.jpg
+banner_image: og-cover.jpg
 date: 2022-05-23
 lastmod: 2025-05-13
 discuss_urls:

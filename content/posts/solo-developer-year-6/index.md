@@ -6,8 +6,7 @@ tags:
 date: 2024-02-16
 custom_css: true
 hero_image: cover.webp
-images:
-  - solo-developer-year-6/og-cover.webp
+banner_image: og-cover.webp
 description: Six years ago, I quit my job as a developer at Google to create my own self-funded software business. This is a review of my last year and what I've learned so far about bootstrapping software businesses.
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=39398009

@@ -6,8 +6,7 @@ tags:
   - refactoring-english
   - gleam
   - what-got-done
-images:
-  - /retrospectives/2025/08/weeks-mtlynch-screenshot.webp
+banner_image: weeks-mtlynch-screenshot.webp
 ---
 
 {{<notice type="info">}}

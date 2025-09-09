@@ -1,8 +1,7 @@
 ---
 title: Is It Keto - Month 10
 description: Quickly made my first sale, then struggled to make more.
-images:
-  - /retrospectives/2019/11/first-payment.jpg
+banner_image: first-payment.jpg
 date: "2019-11-08"
 ---
 

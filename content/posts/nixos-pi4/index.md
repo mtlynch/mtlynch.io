@@ -6,8 +6,7 @@ tags:
   - nix
   - raspberry pi
 description: A beginner-friendly tutorial for installing NixOS on a Raspberry Pi 4.
-images:
-  - nixos-pi4/plasma-desktop2.webp
+banner_image: plasma-desktop2.webp
 ---
 
 [Nix](https://nixos.org/) is a tool that allows you to define your software environment from code. Nix has several components to it, and one of the most interesting to me is NixOS, which lets you use Nix tooling to define your entire OS configuration using plaintext files.

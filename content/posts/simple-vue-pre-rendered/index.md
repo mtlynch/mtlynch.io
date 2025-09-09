@@ -6,8 +6,7 @@ tags:
   - nuxt
   - single page apps
 date: "2019-12-19"
-images:
-  - simple-vue-pre-rendered/og-cover.jpg
+banner_image: og-cover.jpg
 ---
 
 In this post, I'll show you how to pre-render pages using Vue and Nuxt. This method combines the convenient development experience of Vue without forfeiting critical features like social sharing or search engine optimization.

@@ -2,8 +2,7 @@
 title: "TinyPilot: Month 39"
 date: 2023-10-17
 description: Working around manufacturing delays
-images:
-  - /retrospectives/2023/10/chipping-paint.webp
+banner_image: chipping-paint.webp
 ---
 
 {{<notice type="info">}}

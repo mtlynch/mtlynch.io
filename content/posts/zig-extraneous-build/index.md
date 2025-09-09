@@ -1,8 +1,7 @@
 ---
 title: "Why does an extraneous build step make my Zig app 10x faster?"
 date: 2024-03-19
-images:
-  - zig-extraneous-build/count-bytes-zig-run.webp
+banner_image: count-bytes-zig-run.webp
 tags:
   - zig
   - ethereum

@@ -1,8 +1,7 @@
 ---
 title: What Got Done - Month 2
 description: The conversation should be about thousands of dollars not, tens of dollars.
-images:
-  - /retrospectives/2019/07/whatgotdone-metrics.jpg
+banner_image: whatgotdone-metrics.jpg
 date: "2019-07-03"
 ---
 

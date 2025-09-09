@@ -1,8 +1,7 @@
 ---
 title: What Got Done - Month 1
 description: While figuring out my next project, I launched a different product.
-images:
-  - /retrospectives/2019/06/email-diff.png
+banner_image: email-diff.png
 date: "2019-06-07"
 ---
 

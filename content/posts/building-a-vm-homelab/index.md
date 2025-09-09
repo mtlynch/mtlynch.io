@@ -8,8 +8,7 @@ tags:
 description: I built a home server to host my development VMs and went a bit overboard.
 date: "2020-10-06"
 lastmod: "2021-12-04"
-images:
-  - building-a-vm-homelab/build-components.jpg
+banner_image: build-components.jpg
 discuss_urls:
   reddit: https://www.reddit.com/r/homelab/comments/j64za2/building_a_homelab_vm_server/
   hacker_news: https://news.ycombinator.com/item?id=25061823

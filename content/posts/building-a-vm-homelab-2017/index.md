@@ -7,8 +7,7 @@ tags:
   - kvm
 description: Taking my development VMs to the next level
 date: "2017-05-07"
-images:
-  - building-a-vm-homelab-2017/vm-server-parts.jpg
+banner_image: vm-server-parts.jpg
 ---
 
 {{<notice type="info">}}

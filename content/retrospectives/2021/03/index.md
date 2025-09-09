@@ -2,8 +2,7 @@
 title: "TinyPilot: Month 8"
 date: 2021-03-03
 description: My growth streak had to end somewhere.
-images:
-  - /retrospectives/2021/03/og-cover.png
+banner_image: og-cover.png
 ---
 
 ## Highlights

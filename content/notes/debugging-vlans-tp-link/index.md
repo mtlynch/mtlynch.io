@@ -1,8 +1,7 @@
 ---
 title: "Debugging VLANs on my TP-Link Managed Switch"
 date: 2023-07-04
-images:
-  - /notes/debugging-vlans-tp-link/managed-network.webp
+banner_image: managed-network.webp
 tags:
   - vlans
   - networking

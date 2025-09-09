@@ -8,8 +8,7 @@ discuss_urls:
   indie_hackers: https://www.indiehackers.com/post/37ea42382d
   reddit: https://redd.it/bvap1u
 date: "2019-05-31"
-images:
-  - keep-growing-never-profit/cover.jpg
+banner_image: cover.jpg
 ---
 
 {{<img src="cover.jpg" alt="How to Keep Growing and Never Turn a Profit (cover image)" max-width="1000px" has-border="false">}}

@@ -5,8 +5,7 @@ tags:
   - privacy
   - portfolio rebalancer
 date: "2020-04-21"
-images:
-  - stripe-recording-its-customers/og-image.jpg
+banner_image: og-image.jpg
 description: An investigation into how Stripe tracks your users and what you can do to prevent it
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=22936818

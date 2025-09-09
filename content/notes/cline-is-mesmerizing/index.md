@@ -1,8 +1,7 @@
 ---
 title: "The Cline AI Assistant is Mesmerizing"
 date: 2025-02-01
-images:
-  - notes/cline-is-mesmerizing/og-photo.webp
+banner_image: og-photo.webp
 tags:
   - llms
   - zig

@@ -2,8 +2,7 @@
 title: "TinyPilot: Month 20"
 date: 2022-03-08
 description: Hiring TinyPilot's first support engineer
-images:
-  - /retrospectives/2022/03/og-image.png
+banner_image: og-image.png
 ---
 
 ## Highlights

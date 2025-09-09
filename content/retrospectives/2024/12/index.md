@@ -7,8 +7,7 @@ tags:
   - nix
   - fuzzing
   - writing
-images:
-  - /retrospectives/2024/12/og-image.webp
+banner_image: og-image.webp
 ---
 
 ## Highlights

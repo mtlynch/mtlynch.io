@@ -2,8 +2,7 @@
 title: "TinyPilot: Month 32"
 date: 2023-03-09
 description: My longest vacation from TinyPilot
-images:
-  - /retrospectives/2023/03/og-cover.jpg
+banner_image: og-cover.jpg
 ---
 
 {{<notice type="info">}}

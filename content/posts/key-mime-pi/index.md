@@ -6,8 +6,7 @@ tags:
   - python
   - ansible
 description: Using the Pi as a USB gadget, I can impersonate a keyboard and make it type whatever I want through the web browser.
-images:
-  - key-mime-pi/cover.jpg
+banner_image: cover.jpg
 discuss_urls:
   reddit: https://redd.it/h0yg3d
 ---

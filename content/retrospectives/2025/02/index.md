@@ -2,8 +2,7 @@
 title: "Educational Products: Month 4"
 date: "2025-02-10"
 description: Should I be writing a book during an AI revolution?
-images:
-  - /retrospectives/2025/02/fun-chapters.webp
+banner_image: fun-chapters.webp
 tags:
   - writing
   - ai

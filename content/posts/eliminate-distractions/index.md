@@ -10,8 +10,7 @@ discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=21506107
   reddit: https://redd.it/dva6b3
 date: "2019-11-11"
-images:
-  - eliminate-distractions/ideal-facebook.jpg
+banner_image: ideal-facebook.jpg
 ---
 
 You open Gmail to write a note to your friend. Before you begin, you notice that you've received six new messages. It pains you to leave emails unopened, so you read them immediately. Two hours later, you realize that you never wrote that note to your friend.

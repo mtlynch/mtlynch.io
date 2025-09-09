@@ -2,8 +2,7 @@
 title: "Migrating a ZFS pool from RAIDZ1 to RAIDZ2"
 date: 2025-07-23
 lastmod: 2025-07-25
-images:
-  - raidz1-to-raidz2/og-cover.webp
+banner_image: og-cover.webp
 tags:
   - homelab
   - truenas

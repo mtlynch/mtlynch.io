@@ -1,8 +1,7 @@
 ---
 title: "GUIs are Antisocial"
 date: 2024-07-12
-images:
-  - /notes/guis-are-antisocial/excerpt.webp
+banner_image: excerpt.webp
 ---
 
 Last week, I was listening to the CoRecursive podcast [interview with PowerShell's lead architect, Jeffrey Snover](https://corecursive.com/building-powershell-with-jeffrey-snover/).

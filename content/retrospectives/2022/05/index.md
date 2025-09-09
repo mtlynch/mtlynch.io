@@ -2,8 +2,7 @@
 title: "TinyPilot: Month 22"
 date: 2022-05-12
 description: Where is all of my money going?
-images:
-  - /retrospectives/2022/05/expenses-pie.png
+banner_image: expenses-pie.png
 ---
 
 ## Highlights

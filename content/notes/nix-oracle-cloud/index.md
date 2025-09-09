@@ -3,8 +3,7 @@ title: "Install NixOS on a Free Oracle Cloud VM"
 date: 2025-02-07
 tags:
   - nix
-images:
-  - /notes/nix-oracle-cloud/internal-shell.webp
+banner_image: internal-shell.webp
 ---
 
 Oracle is not a very popular cloud hosting service, but they have an unusually attractive [free tier offering](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm). You can run the following two VMs for free 24/7:

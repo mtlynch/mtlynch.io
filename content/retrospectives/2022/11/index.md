@@ -2,8 +2,7 @@
 title: "TinyPilot: Month 28"
 date: 2022-11-15
 description: Scrambling to meet demand
-images:
-  - /retrospectives/2022/11/cn-prototype-1.jpg
+banner_image: cn-prototype-1.jpg
 ---
 
 {{<notice type="info">}}
