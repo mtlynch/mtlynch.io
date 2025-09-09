@@ -16,7 +16,9 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 ## Highlights
 
--
+- I got useful feedback from early readers by surveying them about my chapter list.
+- I found editing the video of an interview frustrating but enjoyed creating a written transcript.
+- My plan to promote my freelance blog editing services went better than I expected.
 
 ## Goal grades
 
@@ -24,24 +26,26 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Write personalized emails to 20 readers I haven't spoken to before
 
-- **Result**: Decided to do a [chapter survey](https://refactoringenglish.com/blog/chapter-interest-results/) instead
+- **Result**: Decided to do a [chapter survey](#interpreting-reader-feedback-about-my-chapter-list) instead
 - **Grade**: N/A
 
-I bumped this in
+From talking to a few readers, I realized a better strategy at this point would be to do [a broad survey of all readers](#interpreting-reader-feedback-about-my-chapter-list).
 
 ### Publish a new chapter of _Refactoring English_
 
 - **Result**: Published "Get to the Point"
 - **Grade**: A
 
-TODO
+I finally finished my chapter on introductions. This was the hardest chapter to write because writing introductions is the part of writing I find most difficult.
+
+I also went way over-budget on this chapter. I initially [budgeted just six hours](/retrospectives/2025/08/#overinvesting-in-chapters) to complete it, but I ended up spending 19 hours writing it.
 
 ### Complete [my remaining marketing tasks](/retrospectives/2025/07/#how-can-i-improve-marketing-for-the-book)
 
 - **Result**: I finished the interview but not the call-to-action
 - **Grade**: B+
 
-I finished editing the interview, which
+I finished editing the interview, which was the big task. I still haven't gotten around to adjusting the design to call more attention to purchasing early access rather than subscribing to the free mailing list.
 
 ## _Refactoring English_ metrics
 
@@ -53,9 +57,25 @@ Since then, I've added graphs for my metrics, and now I see a different pattern.
 
 My takeaway is that I actually _do_ need to keep publishing new things to the book's website to continue finding new readers, especially readers who are willing to pay for the book.
 
+## Interpreting reader feedback about my chapter list
+
+In individual conversaionts with readers, there was a lot of variety in what chapters they found relevant. I felt like a better way to find out which chapters readers cared most about would be to send out a survey.
+
+I wasn't sure how many people would respond, as I've asked for feedback on the mailing list before and only gotten a handful of responses. I was surprised that readers were much more enthusiastic about this survey, with 133 responses in two weeks.
+
+{{<img src="paying-readers.webp" max-width="800px">}}
+
+I did a detailed analysis of the responses on the book's website:
+
+- [Reader Feedback about my Chapter List](https://refactoringenglish.com/blog/chapter-interest-results/)
+
+The short version is that I got useful feedback, and it prompted me to reorder the chapters and rename one of the chapters that was getting a tepid response.
+
+It was also interesting to see the difference in response rate here compared to previous requests for feedback. In the past, I'd asked for feedback after sending out a sample chapter, and I think the difference is the amount I'm asking the reader to invest. For this survey, you can do it in a few minutes, whereas to give feedback on a chapter, you have to spend 30 minutes reading the chapter and thinking about it, and maybe you're not ready to do that when you receive the survey.
+
 ## The surprising difficulty of editing a 30-minute video interview
 
-Back in July 2024, I recorded an interview with [Adam Gordon Bell](https://adamgordonbell.com/) as part of my reboot of _Hit the Front Page of Hacker News_. I ended up not being able to finish recording the course before I took paternity leave, so I shelved the reboot indefinitely.
+Back in July 2024, I recorded an interview with [Adam Gordon Bell](https://adamgordonbell.com/) as part of my reboot of my blogging video course, [_Hit the Front Page of Hacker News_](https://hitthefrontpage.com/). I ended up not finishing the course before I took paternity leave, so I shelved the reboot indefinitely.
 
 That left me in an awkward spot with this interview. Adam was kind enough to volunteer his time to me, so I felt guitly not publishing the interview at all.
 
@@ -67,7 +87,7 @@ It ended up not being like that.
 
 ### The return of the plague of audio skew
 
-I recorded the interview using a service called Riverside. After the call, Riverside generated video files for both ends of the call and a merged, sync'ed version of the conversation. I spot-checked the videos to verify they worked but never watched them start to finish.
+I recorded the interview using a service called Riverside. After the call, Riverside generated video files for both ends of the call and a merged, sync'ed version of the conversation. I spot-checked the videos at the time to verify they worked but never watched them from start to finish.
 
 I thought the work would just be taking the merged version and throwing it up on YouTube. Maybe if there were interruptions or long digressions, I'd trim them out, but I figured the video was nearly done.
 
@@ -97,32 +117,39 @@ What?!?
 
 I've edited hundreds of media files using other tools, and I've never seen any of them insert pops when I split a clip.
 
-I tried other open-source video editing tools for Linux. Kdenlive crashed a few minutes into me trying to edit. Flowblade couldn't load at all, but I eventually found [a workaround](https://github.com/jliljebl/flowblade/blob/af9610bdc12c453ac9bd03bd1b97f68ab6a0482e/README.md). And Flowblade seemed like a simpler version of Shotcut, so I started over in the editing process in Flowblade and had to figure out how to create side-by-side video in Flowblade.
+I tried other open-source video editing tools for Linux. Kdenlive crashed a few minutes into me trying to edit. Flowblade couldn't load at all, but I eventually found [a workaround](https://github.com/jliljebl/flowblade/blob/af9610bdc12c453ac9bd03bd1b97f68ab6a0482e/README.md). And Flowblade seemed like a simpler version of Shotcut, so I started the editing process again in Flowblade and had to figure out how to create side-by-side video.
 
 After about an hour of editing in Flowblade, I tried exporting the video, and the pops were back. They [had a bug about it, too](https://github.com/jliljebl/flowblade/issues/799), and their understanding of it was [based on an explanation from Dan Dennedy](https://github.com/jliljebl/flowblade/issues/799#issuecomment-634252961), who is... the author of Shotcut. And it seemed like Flowblade was built on top of MLT, the same media framework that powers Shotcut. So, I was back to the exact same bug.
 
 Anyway, this recounting of my editing adventure is already too long and boring, so to skip to the end: I eventually worked around the pops by converting the audio sampling rate on the videos from 44.1 kHz to 48 kHz. That eliminated the pop artifacts, but I don't know why.
 
-I ran into lots of other bugs, but they're too tedious to recount here.
+I ran into lots of other bugs while editing the video, but they're too tedious to recount here.
 
 ### Takeaways for editing video
 
 - Do as much pre-processing as possible using ffmpeg scripts.
 - Save the ffmpeg scripts in case you need to tweak the pre-processing later.
   - Even if you're _so_ confident you won't need to do any pre-processing again, save the scripts, ideally with source control.
+- Test the ffmpeg scripts with extreme values to confirm they're doing what you think.
+  - I tried correcting the audio skew by shifting audio 200ms, but it still was out of sync. Then I tried 300ms, and it was still out of sync. Then, 400ms. I finally skipped to 2000ms and realized there had to be a bug in my script because the 200ms and 2000ms corrections were exactly the same.
+- When you're not sure of the right setting, script ffmpeg to produce several different versions so you can see options.
+  - I did this to test different strategies for eliminating background noise from my end of the conversation.
 - An audio sampling rate of 44.1 kHz apparently causes problems in editing, whereas I don't have any issues if I convert the rate to 48 kHz during pre-processing.
   - I have no idea why.
 - Try exporting video soon into editing to examine the final output.
 - Apply video/audio editing filters at the track level rather than at the clip level.
-  - Even if you just have one giant clip, once you start editing, you have dozens of clips with independent filter settings. If you realize you got a filter wrong, you're stuck re-doing it in every clip.
+  - Even if you just have one giant clip, once you start editing, you have dozens of clips with independent filter settings.
+  - If you realize you got a filter wrong, you're stuck re-doing it in every clip.
 
 ## Having too much fun with an interview transcript
 
 When I finished editing the video with Adam Gordon Bell, that should have been it, right? I spent so much time editing the video that surely I must have been eager to publish it and call it a day.
 
-No! Once I finished editing the video, it was time to obsess over the transcript. Except, I actually had fun doing that part.
+Wrong!
 
-I feel like every interview transcript I read online, the designer was like, "Wow, it's so fun and exciting to read a courtroom transcript from a 1960s typewriter. How can I recreate that exact experience for the web?"
+Once I finished editing the video, it was time to obsess over the transcript. Except, I actually had fun doing that part.
+
+I feel like every interview transcript I read online, the designer was like, "Let's take a typewritten court transcript from 60 years ago and bring that exact experience to the web."
 
 {{<img src="courtroom-transcript.webp" max-width="450px" caption="What if we could somehow use the web browser to make conversation transcripts more interesting?">}}
 
@@ -132,15 +159,15 @@ Come on! Let's take advantage of the web to do stuff that's not possible on a ty
 - Make it easy to jump from the written transcript to the same moment in the video.
 - Link to URLs the same way you would in a blog post.
 
-Another common issue in transcripts is that the person transcribing the audio doesn't know anything about the subject, so there are mistakes from mishearing or misunderstanding words. For example, a transcriber who isn't familiar with programming terms would probably transcribe, "It broke my Go Ansible role," as, "It broke my slow aunt Cybil's roll."
+Another common issue in transcripts is that the person transcribing the audio doesn't know anything about the subject, so there are mistakes from mishearing or misunderstanding words. For example, a transcriber who isn't familiar with programming terms would probably mishear, "It broke my Go Ansible role," as something like, "It broke my slow aunt Cybil's roll."
 
-So, I spent a lot of time on this transcript making it accurate, interactive, and fun to read:
+So, I generated an initial transcript with [whisper-ctranslate2](https://github.com/Softcatala/whisper-ctranslate2) and spent a lot of time making it accurate, interactive, and fun to read:
 
 {{<img src="transcript.webp" max-width="600px" caption="I added mini-features to the interview transcript to make it fun to read.">}}
 
-- Each end of the conversation appears in a distinct color of speech bubble, so it's easy to track who's talking.
+- Each end of the conversation appears in a distinct color of speech bubble, so you can see at a glacnce who's talking.
 - There are little play button icons in each speech bubble that jump to the video and start playback at the moment from the transcript.
-- I pulled out my favorite quotes into big blockquotes.
+- I pulled out my favorite quotes into callouts.
 - I added headings to help frame the structure of the discussion.
 - I reviewed the text for transcription errors.
 
@@ -148,11 +175,11 @@ I haven't published the video yet because I just sent the book mailing list subs
 
 ## Helping Tyler Cipriani reach #1 on Hacker News
 
-Sometimes, a plan just comes together way better than I even hoped.
+Sometimes, a plan just comes together better than I even hoped.
 
 Giving feedback to real writers helps me write my book, so I've been doing [freelance editing](https://refactoringenglish.com/services/blog-editing/) for other indie dev bloggers. On the page explaining my editing services, I wanted to include a sample of my editing work, but I didn't want to ask one of my paying clients to use work they already paid for as my own marketing.
 
-So, my plan was to find someone who would let me edit their post for free in exchange for me publishing the notes and them crediting me as the editor in the article.
+So, my plan was to find someone who would let me edit their post for free in exchange for publishing the notes and them crediting me as the editor in the article.
 
 My stretch goal was that the article would gain traction in places where potential readers of my book might hang out, like Hacker News, Lobsters, and reddit. If the reader reached the end of the post and saw, "Edited by _Refactoring English_," they'd think, "Hey, what's that?"
 
@@ -160,11 +187,13 @@ It also looks good to potential clients if I can point to a past client and say,
 
 A few months ago, Tyler Cipriani hired me for [a high-level review](https://refactoringenglish.com/services/blog-review/) of his blog. He seemed happy with the results, so I pitched him my free editing idea, and he agreed.
 
-I worked with Tyler on a few rounds of feedback for his article, ["The future of large files in Git is Git,"](https://tylercipriani.com/blog/2025/08/15/git-lfs/) and everything went perfectly. We enjoyed working together, and it gave me good ideas for the book. My bonus goal was just for the post to reach the front page of Hacker News, but it exceeded even that and got [all the way to #1 on Hacker News](https://news.ycombinator.com/item?id=44916783), [Lobsters](https://lobste.rs/s/vew3ph/future_large_files_git_is_git), and [reddit](https://www.reddit.com/r/git/comments/1mrukfp/the_future_of_large_files_in_git_is_git/).
+I worked with Tyler on a few rounds of feedback for his article, ["The future of large files in Git is Git."](https://tylercipriani.com/blog/2025/08/15/git-lfs/) We enjoyed working together, and it gave me good ideas for the book.
+
+My bonus goal was just for the post to reach the front page of Hacker News, but it exceeded even that and got [all the way to #1 on Hacker News](https://news.ycombinator.com/item?id=44916783), [Lobsters](https://lobste.rs/s/vew3ph/future_large_files_git_is_git), and [reddit](https://www.reddit.com/r/git/comments/1mrukfp/the_future_of_large_files_in_git_is_git/).
 
 One of the biggest takeaways for both of us was the importance of tuning the writing for the target audience. Earlier drafts of Tyler's post assumed that the reader was familiar with [Git LFS](https://git-lfs.com/), a Git extension for managing large files.
 
-I argued that the average Git user may have heard of Git LFS and knows that it's for large files, but they don't know anything beyond that. Tyler pushed back, as he felt like the average Git user who has dealt with large files must know Git LFS.
+I suggested that the average Git user didn't necessarily know Git LFS well enough to understand everything in the article. Tyler pushed back, as he felt like the average Git user who has dealt with large files must know Git LFS.
 
 As part of trying to convince Tyler to assume the reader knows less about Git LFS than his article assumed, I listed my knowledge and experience of Git LFS:
 
@@ -178,9 +207,11 @@ As part of trying to convince Tyler to assume the reader knows less about Git LF
 > - I didn’t know your repo is stuck with Git LFS once you start using it
 > - I’d be interested in ways to store large files in git, and I’d click a story about it on HN/Lobsters, but it’s not a problem I’d think about and try to solve proactively unless I ran into a situation where I really wanted to store large files in a git repo.
 
-Tyler said that this list was the "ah-ha" moment for him. He had resisted the feedback before because he felt confident that his readers would know about Git LFS, but seeing the list made him realize he hadn't thought through _what_ he expected the reader to know about Git LFS.
+Tyler said that this list was the "ah-ha" moment for him. He had resisted the feedback before because he felt confident that his readers would know about Git LFS. Seeing my list made him realize that even if his readers were superficially aware of Git LFS and what it's for, they might not know how it works.
 
-The neat thing about Tyler's realization was that he could have written my list without me. He had the same predictions as I did about what his target reader would know; he just had to think one level deeper about what it means for the reader to "know about" a technology.
+The neat thing about Tyler's realization was that he could have written my list himself. He had the same predictions about what his target reader would know; he just had to think one level deeper about what it means for the reader to "know" a technology.
+
+If you're curious, you can read my notes for the first draft of Tyler's article below:
 
 - [My editing notes for Tyler Cipriani's blog post, "The future of large files in Git is Git"](https://refactoringenglish.com/services/blog-editing/sample-future-of-git/)
 
@@ -188,23 +219,25 @@ The neat thing about Tyler's realization was that he could have written my list 
 
 ### Switching [Hacker News Observer](/retrospectives/2025/05/#side-project-hacker-news-observer) to a time-series database
 
-Over the past few years, I've heard people talk about "time-series databases," but I never understood what they do or how they differ from regular relational database. I even used InfluxDB for a side project last year because I needed a data store that was compatible with Grafana, and InfluxDB seemed like the simplest. But I still didn't understand what made it a "time series" database or why it couldn't just be SQLite.
+Over the past few years, I've heard people talk about "time-series databases," but I never understood what they do or how they differ from regular relational database. I even used InfluxDB for a side project last year because I needed something compatible with Grafana. But I still didn't understand what made it a "time series" database or why it couldn't just be SQLite.
 
 I was talking to another developer recently, and he mentioned using a time-series database for different views of his data, like seconds-level granularity vs. days-level. And he didn't even explain beyond that, but a lightbulb went off, and I thought, "Oh! That must be what time-series databases are for!"
 
 Hacker News Observer is a side-project that queries Hacker News every minute and records upvotes, comments, and rank of every story from the last few weeks. I hope to dig deeper and find interesting patterns, but for now I've just been looking at high-level aggregates, like total upvotes and comments on the front page:
 
-{{<img src="hn-observer-aggregate.webp">}}
+{{<img src="hn-observer-aggregate.webp" caption="Switching to DuckDB sped up this page by 500x">}}
 
-I initially implemented it with SQLite, and that page would take about two minutes to render. And that makes sense because there are thousands of stories per day, thousands of snapshots of each story, and then I have to find the top 30 (front page) in each snapshot, then put those into hour-level buckets. SQLite doesn't have any special functions for aggregating that per-minute data into per-hour data, so it was a lot of expensive queries.
+I initially used SQLite as the database, and the graph above took two minutes to render. And that makes sense because there are thousands of stories per day, thousands of snapshots of each story, and then I have to find the top 30 (front page) in each snapshot, then put those into hour-level buckets. SQLite doesn't have any special functions for aggregating per-minute data into hour-level views, so it was a lot of expensive queries.
 
-Once I got the idea of time-series databases, I asked an LLM for database options that were similar to SQLite, and it recommended DuckDB. And then I just had the LLM migrate my database from SQLite to DuckDB, and without me having to do anything myself, the load time on the aggregates page went from two minutes to 250ms, a speedup of about 500x.
+Once I got the idea of time-series databases, I asked an LLM for database options that were similar to SQLite, and it recommended DuckDB. And then I just had the LLM migrate my database from SQLite to DuckDB. That migration alone reduced the load time for the graph from two minutes to 250ms, a speedup of about 500x.
+
+So, I guess that's what time-series databases are for.
 
 ### Chipping away at old logs with [Gleam Chat Log Parser](https://codeberg.org/mtlynch/gleam-chat-log-parser)
 
 I made only little bits of progress on my chat log parser project to help me learn the [Gleam programming language](https://gleam.run).
 
-I handled logs [that contain away messages](https://codeberg.org/mtlynch/gleam-chat-log-parser/pulls/34) and logs that had Windows-style line endings (`\r\n`). Strangely, in Erlang (and therefore also in Gleam), [`\r\n` counts as a single character](https://www.erlang.org/docs/23/man/string), which tripped me up for a while.
+I handled logs [that contain away messages](https://codeberg.org/mtlynch/gleam-chat-log-parser/pulls/34) and logs that had [Windows-style line endings (`\r\n`)](https://codeberg.org/mtlynch/gleam-chat-log-parser/pulls/30). Strangely, in Erlang (and therefore also in Gleam), [`\r\n` counts as a single character](https://www.erlang.org/docs/23/man/string), which tripped me up for a while.
 
 ## Wrap up
 
@@ -219,13 +252,12 @@ I handled logs [that contain away messages](https://codeberg.org/mtlynch/gleam-c
 
 ### Lessons learned
 
--
+- Be [more disciplined about editing video](/retrospectives/2025/09/#takeaways-for-editing-video)
+- Editing the video of an interview is tedious, but editing and styling the transcript is fun.
+- An order of magnitude more customers are willing to give feedback if it requires only a few minutes of work rather than 30 minutes of work.
 
 ### Goals for next month
 
--
-- Write personalized emails to 20 readers I haven't spoken to before
-
-### Requests for help
-
-TODO
+- Publish something that attracts new readers to the _Refactoring English_ website.
+- Publish a new chapter of _Refactoring English_.
+- Write personalized emails to 20 readers I haven't spoken to before.
