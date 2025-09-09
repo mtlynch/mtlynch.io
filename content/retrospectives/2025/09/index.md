@@ -2,6 +2,11 @@
 title: "Educational Products: Month 11"
 date: "2025-09-09"
 description: The joy and misery of editing a video interview
+tags:
+  - refactoring-english
+  - blogging
+images:
+  - /retrospectives/2025/09/graph.webp
 ---
 
 {{<notice type="info">}}
