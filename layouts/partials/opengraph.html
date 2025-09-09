@@ -30,12 +30,12 @@
 />
 <meta property="og:url" content="{{ .Permalink }}" />
 {{- $ogImage := "" -}}
-{{- if $.Params.banner_image -}}
-  {{- $ogImage = printf "%s%s" .Permalink $.Params.banner_image -}}
-{{- else if $.Params.hero_image -}}
+{{- if $.Params.hero_image -}}
   {{- $ogImage = printf "%s%s" .Permalink $.Params.hero_image -}}
 {{- else if and .IsPage (eq .Type "book-reports") -}}
   {{- $ogImage = printf "%s%s" .Permalink "cover.jpg" -}}
+{{- else if $.Params.banner_image -}}
+  {{- $ogImage = printf "%s%s" .Permalink $.Params.banner_image -}}
 {{- end -}}
 
 {{- with $ogImage -}}
