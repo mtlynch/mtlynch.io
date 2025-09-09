@@ -1,7 +1,7 @@
 {{ $imageResource := "" }}
 {{ $imageFilename := "" }}
 {{ if .Page.Params.hero_image }}
-  {{ $imageFilename = path.Base .Page.Params.hero_image }}
+  {{ $imageFilename = .Page.Params.hero_image }}
 {{ else if .Page.Params.banner_image }}
   {{ $imageFilename = .Page.Params.banner_image }}
 {{ end }}
