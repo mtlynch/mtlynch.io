@@ -147,7 +147,7 @@ Okay, so I have to convince 7.8% of existing customers to purchase renewing lice
 
 ### Forced factory resets
 
-Earlier this year, we had to switch TinyPilot's base OS from Debian Buster to Debian Bullseye. The Raspberry Pi OS doesn't have a supported way to do major version upgrades, so we had to [force every user to manually reflash their microSD](https://tinypilotkvm.com/faq/update-to-bullseye) to make the migration.
+Earlier this year, we had to switch TinyPilot's base OS from Debian Buster to Debian Bullseye. The Raspberry Pi OS doesn't have a supported way to do major version upgrades, so we had to [force every user to manually reflash their microSD](https://web.archive.org/web/20230606130531/https://tinypilotkvm.com/faq/update-to-bullseye) to make the migration.
 
 I hated pushing that cost onto users, but we weren't able to find any other option. One positive side effect was that it ended the "free forever" update train. If a user's license was expired, they had to pay for a new 12-month license to continue receiving updates.
 
