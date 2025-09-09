@@ -1,8 +1,7 @@
 ---
 title: "Configure a Git Shell Prompt Under Nix"
 date: 2024-07-03
-images:
-  - /notes/nix-git-bash-shell/git-prompt.webp
+banner_image: git-prompt.webp
 tags:
   - nix
   - git

@@ -1,8 +1,7 @@
 ---
 title: "Designing the Ideal Bootstrapped Business"
 date: 2023-03-26
-images:
-  - /notes/designing-the-ideal-bootstrapped-business/og-cover.jpg
+banner_image: og-cover.jpg
 ---
 
 Jason Cohen's 2013 Microconf talk, [_Designing the Ideal Bootstrapped Business with Jason Cohen_](https://www.youtube.com/watch?v=otbnC2zE2rw), is one of the most valuable resources I've found for bootstrapped founders. I watched it for the first time [in 2020](/solo-developer-year-3/#you-can-build-a-successful-business-without-being-available-247), and I've revisited it repeatedly since then.

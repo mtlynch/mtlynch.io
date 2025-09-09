@@ -4,8 +4,7 @@ date: 2024-10-23
 tags:
   - nix
   - fuzzing
-images:
-  - nix-fuzz-testing-2/hfuzz-cover.webp
+banner_image: hfuzz-cover.webp
 ---
 
 This is the second half of a post about [using Nix to automate a fuzz testing workflow](/nix-fuzz-testing-1/).

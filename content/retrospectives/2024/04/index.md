@@ -2,8 +2,7 @@
 title: "TinyPilot: Month 45"
 date: 2024-04-11
 description: Thinking critically about deployments.
-images:
-  - /retrospectives/2024/04/og-cover.webp
+banner_image: og-cover.webp
 tags:
   - tinypilot
   - security

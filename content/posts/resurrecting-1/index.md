@@ -13,8 +13,7 @@ discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=17600798
   reddit: https://www.reddit.com/r/programming/comments/91heln/resurrecting_a_dead_library_resuscitation/
 date: "2018-07-24"
-images:
-  - resurrecting-1/cover.jpg
+banner_image: cover.jpg
 ---
 
 When I arrived on the scene, it wasn't a pretty sight.

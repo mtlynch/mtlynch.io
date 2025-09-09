@@ -11,8 +11,7 @@ tags:
   - google
   - sia
 date: "2018-02-28"
-images:
-  - why-i-quit-google/spoiled-coder.webp
+banner_image: spoiled-coder.webp
 ---
 
 For the past four years, I've worked as a software developer at Google. On February 1st, I quit. It was because they refused to buy me a Christmas present.

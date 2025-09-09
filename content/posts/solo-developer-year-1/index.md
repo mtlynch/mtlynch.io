@@ -17,8 +17,7 @@ discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=19054150
   indie_hackers: https://www.indiehackers.com/mtlynch/post/c514bf6b33
 date: "2019-02-01"
-images:
-  - solo-developer-year-1/cover.jpg
+banner_image: cover.jpg
 ---
 
 {{<img src="cover.jpg" alt="My first year as a solo developer (cover image)" max-width="1000px" has-border="false">}}

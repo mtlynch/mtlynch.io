@@ -11,8 +11,7 @@ discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=17698145
   reddit: https://www.reddit.com/r/programming/comments/95219m/resurrecting_a_dead_library_stabilization/
 date: "2018-08-06"
-images:
-  - resurrecting-2/cover.jpg
+banner_image: cover.jpg
 ---
 
 In this post, I demonstrate how to retrofit automated tests onto an untested legacy library.

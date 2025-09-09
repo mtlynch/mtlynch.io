@@ -2,8 +2,7 @@
 title: "TinyPilot: Month 12"
 date: 2021-07-08
 description: I'm feeling stuck and scrambling for more time.
-images:
-  - /retrospectives/2021/07/cover.png
+banner_image: cover.png
 ---
 
 ## Highlights

@@ -1,8 +1,7 @@
 ---
 title: "Hiring: Freelance Blog Cartoonist"
 date: 2024-04-29
-images:
-  - /notes/hiring-a-blog-illustrator/og-cover.webp
+banner_image: og-cover.webp
 ---
 
 ## Applications closed

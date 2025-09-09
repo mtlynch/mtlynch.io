@@ -10,8 +10,7 @@ discuss_urls:
   reddit: https://redd.it/cpthai
   hacker_news: https://news.ycombinator.com/item?id=20685783
 date: "2019-08-13"
-images:
-  - dumbest-task-i-ever-outsourced/cover.jpg
+banner_image: cover.jpg
 ---
 
 {{<img src="cover.jpg" alt="The Dumbest Task I Ever Outsourced (cover image)" max-width="1000px" has-border="false">}}

@@ -2,8 +2,7 @@
 title: "Educational Products: Month 5"
 date: "2025-03-12"
 description: My first time raising money on Kickstarter
-images:
-  - /retrospectives/2025/03/ks-dashboard.webp
+banner_image: ks-dashboard.webp
 tags:
   - refactoring-english
   - kickstarter

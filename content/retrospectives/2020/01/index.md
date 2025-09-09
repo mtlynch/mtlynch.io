@@ -2,8 +2,7 @@
 title: Pursuing a Business I'll Love
 description: Two of my businesses had record-setting months, and I'm finally building the app I've always wanted.
 date: "2020-01-06"
-images:
-  - /retrospectives/2020/01/wanderjest.png
+banner_image: wanderjest.png
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=21990409
 ---

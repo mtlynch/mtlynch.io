@@ -1,8 +1,7 @@
 ---
 title: "My Book's Pre-Sale Just Barely Succeeded"
 date: 2025-03-31
-images:
-  - book-pre-sale-just-barely-succeeded/og-cover.webp
+banner_image: og-cover.webp
 tags:
   - refactoring-english
   - hacker-news

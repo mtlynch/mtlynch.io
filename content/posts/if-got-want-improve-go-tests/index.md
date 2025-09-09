@@ -1,8 +1,7 @@
 ---
 title: "if got, want: A Simple Way to Write Better Go Tests"
 date: 2025-01-08
-images:
-  - if-got-want-improve-go-tests/og-cover.webp
+banner_image: og-cover.webp
 tags:
   - go
   - testing

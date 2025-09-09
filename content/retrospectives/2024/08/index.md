@@ -2,8 +2,7 @@
 title: "Educational Products: Month 2"
 date: 2024-08-07
 description: Improving my video recording workflow
-images:
-  - /retrospectives/2024/08/og-cover.webp
+banner_image: og-cover.webp
 tags:
   - blogging
   - bootstrapping

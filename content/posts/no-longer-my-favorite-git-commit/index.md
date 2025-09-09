@@ -1,8 +1,7 @@
 ---
 title: "No Longer My Favorite Git Commit"
 date: 2025-03-19
-images:
-  - no-longer-my-favorite-git-commit/one-char-diff.webp
+banner_image: one-char-diff.webp
 tags:
   - software engineering
   - commit messages

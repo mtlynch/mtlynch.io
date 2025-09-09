@@ -9,8 +9,7 @@ discuss_urls:
   reddit: https://redd.it/a9zsj6
   hacker_news: https://news.ycombinator.com/item?id=18769664
 date: "2018-12-27"
-images:
-  - upwork-scammer/profile-stitching.png
+banner_image: profile-stitching.png
 ---
 
 For years, I've hired freelancers through a site called Upwork. The site attracts many different professionals, so I've used it to find everything from [cartoonists](/how-to-hire-a-cartoonist/) to software developers to [copy editors](/editor/). Some were great, some were disastrous, but none of them had ever tried to scam me outright.

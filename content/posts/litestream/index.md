@@ -8,8 +8,7 @@ tags:
   - logpaste
 description: I've always hated maintaining database servers. Litestream offers a simple alternative without sacrificing reliability or security.
 custom_css: true
-images:
-  - litestream/og-cover.jpg
+banner_image: og-cover.jpg
 discuss_urls:
   reddit: https://www.reddit.com/r/golang/comments/n15ikk/how_litestream_eliminated_my_database_server_for/
   hacker_news: https://news.ycombinator.com/item?id=26981239

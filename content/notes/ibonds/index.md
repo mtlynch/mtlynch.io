@@ -1,8 +1,7 @@
 ---
 title: "Should I Invest in iBonds?"
 date: 2022-10-16
-images:
-  - /notes/ibonds/pays-his-debts.jpg
+banner_image: pays-his-debts.jpg
 ---
 
 In a recent [Hacker News thread](https://news.ycombinator.com/item?id=33040211) about preparing financially for a possible recession, a commenter suggested investing in iBonds.

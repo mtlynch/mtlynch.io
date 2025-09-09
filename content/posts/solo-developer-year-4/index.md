@@ -10,8 +10,7 @@ description: Four years ago today, I quit my job as a developer at Google to cre
 date: "2022-02-01"
 hero_image: cover.jpg
 custom_css: true
-images:
-  - solo-developer-year-4/og-cover.jpg
+banner_image: og-cover.jpg
 discuss_urls:
   reddit: https://www.reddit.com/r/programming/comments/shvsqy/my_fourth_year_as_a_bootstrapped_founder/
   hacker_news: https://news.ycombinator.com/item?id=30162509

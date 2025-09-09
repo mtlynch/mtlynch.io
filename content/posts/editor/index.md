@@ -8,8 +8,7 @@ tags:
 description: It's surprisingly easy to hire a blog editor, and it provides tremendous value.
 date: "2017-07-25"
 lastmod: "2020-11-28T00:00:00-04:00"
-images:
-  - editor/stole-siacoin-stats.png
+banner_image: stole-siacoin-stats.png
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=25262272
 ---

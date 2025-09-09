@@ -2,8 +2,7 @@
 title: "TinyPilot: Month 34"
 date: 2023-05-11
 description: 'Getting out of "urgent mode"'
-images:
-  - /retrospectives/2023/05/price-profit-usb-c.webp
+banner_image: price-profit-usb-c.webp
 ---
 
 {{<notice type="info">}}

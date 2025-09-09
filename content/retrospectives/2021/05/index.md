@@ -2,8 +2,7 @@
 title: "TinyPilot: Month 10"
 date: 2021-05-11
 description: TinyPilot gets its first real office.
-images:
-  - /retrospectives/2021/05/move-in-day.jpg
+banner_image: move-in-day.jpg
 ---
 
 ## Highlights

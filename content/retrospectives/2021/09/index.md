@@ -2,8 +2,7 @@
 title: "TinyPilot: Month 14"
 date: 2021-09-08
 description: Returning focus to the bottom line.
-images:
-  - /retrospectives/2021/09/cover.png
+banner_image: cover.png
 ---
 
 ## Highlights

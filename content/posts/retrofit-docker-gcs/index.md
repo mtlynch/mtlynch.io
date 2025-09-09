@@ -12,8 +12,7 @@ description:
 discuss_urls:
   reddit: https://redd.it/a3206o
 date: "2018-12-04"
-images:
-  - retrofit-docker-gcs/full-architecture.jpg
+banner_image: full-architecture.jpg
 ---
 
 I recently installed a media sharing app to one of my servers. It was simple to install, but it hid a dastardly trap for long-term maintenance.

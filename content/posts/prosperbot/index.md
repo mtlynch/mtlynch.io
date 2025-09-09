@@ -6,8 +6,7 @@ tags:
   - prosper
   - peer-to-peer-lending
   - go
-images:
-  - prosperbot/prosperbot-frontend.png
+banner_image: prosperbot-frontend.png
 ---
 
 ## Overview

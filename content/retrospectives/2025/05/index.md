@@ -2,8 +2,7 @@
 title: "Educational Products: Month 7"
 date: "2025-05-08"
 description: How do I stop myself from rewriting the same chapter fifty times?
-images:
-  - /retrospectives/2025/05/og-cover.webp
+banner_image: og-cover.webp
 tags:
   - writing
   - refactoring-english

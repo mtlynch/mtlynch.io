@@ -1,8 +1,7 @@
 ---
 title: What Got Done - Month 3
 description: Ending the What Got Done experiment.
-images:
-  - /retrospectives/2019/08/whatgotdone-new-users-2019-07.jpg
+banner_image: whatgotdone-new-users-2019-07.jpg
 date: "2019-08-02"
 ---
 

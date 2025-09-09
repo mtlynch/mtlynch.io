@@ -4,8 +4,7 @@ date: 2024-10-23
 tags:
   - nix
   - fuzzing
-images:
-  - nix-fuzz-testing-1/hfuzz-cover.webp
+banner_image: hfuzz-cover.webp
 ---
 
 Fuzz testing is a technique for automatically uncovering bugs in software. The problem is that it's a pain to set up. Read any fuzz testing tutorial, and the first task is an hour of building tools from source and chasing down dependencies upon dependencies.

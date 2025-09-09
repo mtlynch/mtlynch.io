@@ -2,8 +2,7 @@
 title: "TinyPilot: Month 5"
 date: 2020-12-02
 description: Launching a new product and my very first course.
-images:
-  - /retrospectives/2020/12/voyager-angled.jpg
+banner_image: voyager-angled.jpg
 ---
 
 ## Highlights

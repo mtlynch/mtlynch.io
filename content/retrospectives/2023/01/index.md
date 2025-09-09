@@ -2,8 +2,7 @@
 title: "TinyPilot: Month 30"
 date: 2023-01-10
 description: Handling an eight-month supply shortage
-images:
-  - /retrospectives/2023/01/og-cover.png
+banner_image: og-cover.png
 ---
 
 {{<notice type="info">}}

@@ -6,8 +6,7 @@ tags:
   - docker
 description: An Ansible role love story
 date: "2016-09-06"
-images:
-  - ansible-role-clipbucket/clipbucket-install-complete.png
+banner_image: clipbucket-install-complete.png
 ---
 
 ## Overview

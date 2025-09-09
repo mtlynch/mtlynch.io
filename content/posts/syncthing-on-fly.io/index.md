@@ -4,8 +4,7 @@ date: 2023-05-29
 tags:
   - syncthing
   - fly.io
-images:
-  - syncthing-on-fly.io/syncthing-dashboard.png
+banner_image: syncthing-dashboard.png
 description: How to deploy Syncthing on a Fly.io cloud VM and configure it using built-in tools.
 ---
 

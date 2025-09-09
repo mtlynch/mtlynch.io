@@ -2,8 +2,7 @@
 title: "My Seventh Year as a Bootstrapped Founder"
 date: 2025-02-03
 hero_image: cover.webp
-images:
-  - solo-developer-year-7/cover.webp
+banner_image: cover.webp
 tags:
   - annual review
 description: It's now been seven years since I quit my job at Google to become an indie founder. In the past year, I sold my company, started a family, and learned several new technologies.

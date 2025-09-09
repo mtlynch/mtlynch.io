@@ -4,8 +4,7 @@ tags:
   - stripe
   - privacy
 date: "2020-04-30"
-images:
-  - stripe-update/og-image.png
+banner_image: og-image.png
 description: Stripe has made several significant, positive changes to its user tracking and privacy policies in the last week.
 discuss_urls:
   reddit: https://redd.it/gb2c08

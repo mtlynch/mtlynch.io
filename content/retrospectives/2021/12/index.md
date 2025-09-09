@@ -2,8 +2,7 @@
 title: "TinyPilot: Month 17"
 date: 2021-12-06
 description: How removing a single link generated a 62% sales increase
-images:
-  - /retrospectives/2021/12/tp-sales-consolidated.png
+banner_image: tp-sales-consolidated.png
 ---
 
 ## Highlights

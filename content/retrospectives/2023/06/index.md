@@ -2,8 +2,7 @@
 title: "TinyPilot: Month 35"
 date: 2023-06-13
 description: How do I come up with $250k in cash?
-images:
-  - /retrospectives/2023/06/og-cover.webp
+banner_image: og-cover.webp
 ---
 
 {{<notice type="info">}}

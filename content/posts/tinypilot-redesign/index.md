@@ -2,8 +2,7 @@
 title: "I Regret My $46k Website Redesign"
 date: 2022-07-21
 description: Mistakes I made working with my first design agency.
-images:
-  - tinypilot-redesign/og-cover.webp
+banner_image: og-cover.webp
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=32179563
   reddit: https://www.reddit.com/r/web_design/comments/w4ir7r/i_regret_my_46k_website_redesign/

@@ -14,8 +14,7 @@ discuss_urls:
 lastmod: "2020-04-16T00:00:00-04:00"
 date: "2019-05-01"
 hero_image: cover.jpg
-images:
-  - painless-web-app-testing/cover.jpg
+banner_image: cover.jpg
 ---
 
 Okay, I know you're skeptical. Other guides have promised you painless web app tests only to reveal that their solution requires some hyper-specific tech stack or a paid third-party service. I won't do that to you.

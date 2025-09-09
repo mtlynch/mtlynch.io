@@ -2,8 +2,7 @@
 title: "Aardvark'd: The Fog Creek Documentary, 18 Years Later"
 description: Not many people remember this 2005 documentary featured early interviews with Paul Graham, Aaron Swartz, Alexis Ohanian, and Steve Huffman.
 date: 2023-09-08
-images:
-  - aardvarkd/aardvarkd-cover.webp
+banner_image: aardvarkd-cover.webp
 tags:
   - software engineering
   - fog creek

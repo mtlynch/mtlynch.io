@@ -7,8 +7,7 @@ description:
   A complete walkthrough of how I find freelance writers, screen them,
   and train them to work with me.
 date: "2019-09-30"
-images:
-  - hiring-content-writers/cover.jpg
+banner_image: cover.jpg
 ---
 
 {{<img src="cover.jpg" alt="Hiring Content Writers A Guide for Small Businesses (cover image)" max-width="1000px" has-border="false">}}

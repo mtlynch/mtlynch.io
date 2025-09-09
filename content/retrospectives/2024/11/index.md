@@ -2,8 +2,7 @@
 title: "Paternity Leave: Month 3"
 date: 2024-11-19
 description: Easing back into work.
-images:
-  - retrospectives/2024/11/movie-or-tv.webp
+banner_image: movie-or-tv.webp
 tags:
   - blogging
   - git

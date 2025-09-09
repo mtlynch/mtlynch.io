@@ -10,8 +10,7 @@ discuss_urls:
   reddit: https://www.reddit.com/r/CryptoCurrency/comments/6hm4w0/how_i_stole_your_siacoin/
   hacker_news: https://news.ycombinator.com/item?id=14568558
 date: "2017-06-16"
-images:
-  - stole-siacoins/american-psycho.webp
+banner_image: american-psycho.webp
 ---
 
 ## A seedy reddit post

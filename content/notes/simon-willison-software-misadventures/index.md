@@ -1,8 +1,7 @@
 ---
 title: "Notes from Simon Willison's Interview on Software Misadventures"
 date: 2025-05-23
-images:
-  - /notes/simon-willison-software-misadventures/cover.webp
+banner_image: cover.webp
 tags:
   - llms
   - blogging

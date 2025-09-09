@@ -6,8 +6,7 @@ tags:
   - docker
 description: A way to perform strong tests on Ansible web app roles
 date: "2016-09-25"
-images:
-  - testing-ansible-selenium/bunny-film-error.png
+banner_image: bunny-film-error.png
 ---
 
 ## Overview

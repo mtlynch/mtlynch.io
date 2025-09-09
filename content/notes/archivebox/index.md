@@ -1,8 +1,7 @@
 ---
 title: "ArchiveBox is Super Cool"
 date: 2024-01-13
-images:
-  - /notes/archivebox/archivebox-overview.png
+banner_image: archivebox-overview.png
 ---
 
 Have you ever used archive.org's [Internet Wayback Machine](https://web.archive.org/)? It's a free tool that's been archiving the web since 1996. So, if you want to see what Google looked like in 1999, [they've got it](https://web.archive.org/web/19990422191353/http://google.com/).

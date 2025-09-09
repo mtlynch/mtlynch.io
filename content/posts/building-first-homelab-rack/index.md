@@ -4,8 +4,7 @@ date: 2024-04-05
 description: What I learned building a rack for my home server infrastructure.
 tags:
   - homelab
-images:
-  - building-first-homelab-rack/og-cover.webp
+banner_image: og-cover.webp
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=39942350
   reddit: https://www.reddit.com/r/homelab/comments/1bwikka/building_my_first_homelab_server_rack/

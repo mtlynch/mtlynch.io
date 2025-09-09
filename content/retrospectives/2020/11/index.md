@@ -2,8 +2,7 @@
 title: "TinyPilot: Month 4"
 date: 2020-11-03
 description: My first $10k month.
-images:
-  - /retrospectives/2020/11/shopify-dashboard.png
+banner_image: shopify-dashboard.png
 ---
 
 ## Highlights

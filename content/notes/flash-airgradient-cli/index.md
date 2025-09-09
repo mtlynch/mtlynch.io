@@ -1,8 +1,7 @@
 ---
 title: "Flash an AirGradient ONE from the Command Line"
 date: 2025-08-23
-images:
-  - /notes/flash-airgradient-cli/airgradient-one.webp
+banner_image: airgradient-one.webp
 tags:
   - home-automation
   - homelab

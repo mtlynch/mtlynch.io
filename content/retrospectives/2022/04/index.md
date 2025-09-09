@@ -2,8 +2,7 @@
 title: "TinyPilot: Month 21"
 date: 2022-04-06
 description: Should I build more or optimize what I have?
-images:
-  - /retrospectives/2022/04/og-image.png
+banner_image: og-image.png
 ---
 
 ## Highlights

@@ -2,8 +2,7 @@
 title: "TinyPilot: Month 24"
 date: 2022-07-06
 description: "How can I keep TinyPilot sales sustainable?"
-images:
-  - /retrospectives/2022/07/og-cover.png
+banner_image: og-cover.png
 ---
 
 ## Highlights

@@ -13,8 +13,7 @@ description:
   \ own cloud storage web app, similar to Dropbox or Google Drive, but with substantially\
   \ lower costs."
 date: "2017-08-06"
-images:
-  - sia-nextcloud/nextcloud-complete.png
+banner_image: nextcloud-complete.png
 ---
 
 <!-- markdownlint-disable blanks-around-fences blanks-around-lists -->

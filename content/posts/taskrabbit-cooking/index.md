@@ -6,8 +6,7 @@ tags:
   - taskrabbit
 description: Hiring a personal chef on the cheap
 date: "2017-01-11"
-images:
-  - taskrabbit-cooking/IMG_20161115_212108.webp
+banner_image: IMG_20161115_212108.webp
 ---
 
 ## Overview

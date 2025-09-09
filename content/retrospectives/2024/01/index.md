@@ -2,8 +2,7 @@
 title: "TinyPilot: Month 42"
 date: 2024-01-09
 description: How can I delegate more?
-images:
-  - /retrospectives/2024/01/csat-v-dev-cost.webp
+banner_image: csat-v-dev-cost.webp
 tags:
   - nix
   - zig

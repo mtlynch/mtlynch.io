@@ -2,8 +2,7 @@
 title: "TinyPilot: Month 13"
 date: 2021-08-05
 description: A month of delegation.
-images:
-  - /retrospectives/2021/08/notion-todo.png
+banner_image: notion-todo.png
 ---
 
 ## Highlights
