@@ -16,7 +16,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 ## Highlights
 
-- I got useful feedback from early readers by surveying them about my chapter list.
+- I got useful feedback from early readers about my chapter list.
 - I found it frustrating to edit video of an interview but had fun creating a written transcript.
 - My plan to promote my freelance blog editing services went better than I expected.
 
@@ -36,9 +36,9 @@ From talking to a few readers, I realized a better strategy at this point would 
 - **Result**: Published "Get to the Point"
 - **Grade**: A
 
-I finally finished my chapter on introductions. This was the hardest chapter to write because introductions are the most difficult things for me to write. So, this was both an introduction and my attempt to reverse engineer how I write introductions.
+I finally finished my chapter on introductions. This was the hardest chapter to write because introductions are the part of writing I find most challenging. So, this was both an introduction and my attempt to reverse engineer how I write introductions.
 
-I also went way over-budget on this chapter. I initially [budgeted just six hours](/retrospectives/2025/08/#overinvesting-in-chapters) to complete it, but I ended up spending 19 hours on it.
+I also went way over-budget on this chapter. I initially [budgeted just six hours](/retrospectives/2025/08/#overinvesting-in-chapters) to complete it, but I ended up working on it for 19 hours.
 
 ### Complete [my remaining marketing tasks](/retrospectives/2025/07/#how-can-i-improve-marketing-for-the-book)
 
@@ -53,15 +53,15 @@ I finished editing the interview, which was the big unfinished task. I still hav
 
 Last month, I thought metrics for the book were healthy. Website visits and revenue were both up despite not having any popular new posts.
 
-Since then, I've added graphs for my metrics, and now I see a different pattern. Revenue for the book does seem to correlate pretty closely with visitors to the book's website. And even though I thought I didn't have any popular posts in July, metrics cratered in August when I didn't publish anything to the book's website, so it seems like I can't rest on my laurels forever.
+Since then, I've added graphs for my metrics, and now I see a different pattern. Revenue for the book seems to correlate closely with visitors to the book's website. And even though I thought I didn't have any popular posts in July, metrics cratered in August when I didn't publish anything to the book's website.
 
-My takeaway is that I actually _do_ need to keep publishing new things to the book's website to continue finding new readers, especially readers who are willing to pay for the book.
+My takeaway is that I actually _do_ need to keep publishing new things to the website to continue finding new readers, especially readers who are willing to pay for the book.
 
 ## Interpreting reader feedback about my chapter list
 
-In individual conversations with readers, there was a lot of variety in what chapters they found relevant. I felt like a better way to find out which chapters readers cared most about would be to send out a survey.
+In individual conversations with readers, there was a lot of variety in what chapters they found relevant. I felt like a better way to find out which chapters readers cared about most would be to send out a survey.
 
-I wasn't sure how many people would respond, as I've asked for feedback on the mailing list before and only gotten a handful of responses. I was surprised that readers were much more enthusiastic about this survey, with 133 responses in two weeks.
+I expected a low response rate, as I've asked for feedback on the mailing list before and only gotten a handful of responses. I was surprised that readers were much more enthusiastic about this survey, with 133 responses in two weeks.
 
 {{<img src="paying-readers.webp" max-width="800px">}}
 
@@ -69,13 +69,13 @@ I did a detailed analysis of the responses on the book's website:
 
 - [Reader Feedback about my Chapter List](https://refactoringenglish.com/blog/chapter-interest-results/)
 
-The short version is that I got useful feedback, and it prompted me to reorder the chapters and reframe one of the chapters that readers disliked.
+The short version is that I got useful feedback, and it prompted me to reorder the chapters and reframe a chapter that readers disliked.
 
-It was also interesting to see the difference in response rate here compared to previous requests for feedback. In the past, I'd asked for feedback after sending out a sample chapter, and I think the difference is the amount I'm asking the reader to invest. For this survey, you can do it in a few minutes, whereas to give feedback on a chapter, you have to spend 30 minutes reading the chapter and thinking about it, and maybe you're not ready to do that when you receive the survey.
+It was also interesting to see the difference in response rate here compared to previous requests for feedback. In the past, I'd asked for feedback after sending out a sample chapter, and I think the difference is the amount of work I'm asking of the reader. For this survey, you can do it in a few minutes, whereas to give feedback on a chapter, you'd have to spend 30 minutes reading the chapter and thinking about it, and maybe you're not ready to do that when you receive the survey.
 
 ## The surprising difficulty of editing a 30-minute video interview
 
-Back in July 2024, I recorded an interview with [Adam Gordon Bell](https://adamgordonbell.com/) as part of my reboot of my blogging video course, [_Hit the Front Page of Hacker News_](https://hitthefrontpage.com/). I ended up not finishing the course before I took paternity leave, so I shelved the reboot indefinitely.
+Back in July 2024, I recorded an interview with [Adam Gordon Bell](https://adamgordonbell.com/) as part of rebooting my blogging course, [_Hit the Front Page of Hacker News_](https://hitthefrontpage.com/). I ended up not finishing the course before I took paternity leave, so I shelved the reboot indefinitely.
 
 That left me in an awkward spot with this interview. Adam was kind enough to volunteer his time to me, so I felt guilty not publishing the interview at all.
 
@@ -87,11 +87,11 @@ It ended up not being like that.
 
 ### The return of the plague of audio skew
 
-I recorded the interview using a service called Riverside. After the call, Riverside generated video files for both ends of the call and a merged, synced version of the conversation. I spot-checked the videos at the time to verify they worked but never watched them from start to finish.
+I recorded the interview using a service called Riverside. After the call, Riverside generated video files for both ends of the call and a merged, synced version of the conversation. I spot-checked the videos at the time to verify they worked but never watched them carefully.
 
 I thought the work would just be taking the merged version and throwing it up on YouTube. Maybe if there were interruptions or long digressions, I'd trim them out, but I figured the video was nearly done.
 
-When I finally sat down to watch the video carefully a year after recording it, I realized that the audio and video were [out of sync](/digitizing-1/#the-pernicious-plague-of-audio-skew). You could hear our voices before our lips moved in the video.
+When I finally sat down to watch the video carefully a year after recording it, I realized the audio and video were [out of sync](/digitizing-1/#the-pernicious-plague-of-audio-skew). You could hear our voices before our lips moved in the video.
 
 {{<video src="bad-sync.mp4" caption="In the video Riverside generated, the audio and video were slightly out of sync.">}}
 
@@ -101,17 +101,17 @@ Nope, it turned out that the audio skew was different on either end of the conve
 
 ### Searching for a usable open-source video editor
 
-My standard tool for editing video used to be Adobe Premiere, but I switched to Linux last year, and Premiere isn't available for Linux. Plus, I'm sick of Adobe as a company at this point.
+My standard tool for editing video used to be Adobe Premiere, but I switched to Linux last year, and Premiere isn't available for Linux. Plus, I'm [sick of Adobe as a company](https://www.ftc.gov/news-events/news/press-releases/2024/06/ftc-takes-action-against-adobe-executives-hiding-fees-preventing-consumers-easily-cancelling) at this point.
 
 I started editing the videos in Shotcut, a video editor I'd been learning last summer. It took a while to figure out how to even arrange videos side-by-side in Shotcut, but I eventually hacked something together with zoom and crop filters.
 
 When I edited in Shotcut, playback was incredibly choppy because even on my [fairly new, high-end desktop](/retrospectives/2024/12/#building-my-new-development-desktop), it was choking while merging two 1080p videos. So, to hear how the video actually sounded, I had to export the video. And Shotcut doesn't support exporting only a portion of a video, so I was exporting the full 30 minutes, which took several hours each time. Sidenote: I eventually discovered you can downscale playback in Shotcut for faster performance during editing.
 
-When I watched the video Shotcut exported, I noticed that every time I split a clip, Shotcut would insert a loud pop. Even if I didn't actually cut anything at the split point, it still happened. The mere act of splitting one contiguous clip into two adjacent clips created the pop artifact.
+I noticed after exporting that every time I split a clip, Shotcut would insert a loud pop. Even if I didn't actually cut anything at the split point, it still happened. The mere act of splitting one contiguous clip into two adjacent clips created the pop artifact.
 
 {{<img src="shotcut-split.webp" has-border="false" caption="Just splitting a clip without making any change to it created a &ldquo;pop&rdquo; in the audio.">}}
 
-I discovered the pops are [a known issue in Shotcut](https://forum.shotcut.org/t/splitting-audio-adds-pops-clicks/24903), which I couldn't believe. How can anyone edit video when every split in the video adds a distracting audio artifact? But a lot of commenters said that _every_ video or audio editing tool has this same problem.
+I discovered the pops were [a known issue in Shotcut](https://forum.shotcut.org/t/splitting-audio-adds-pops-clicks/24903), which I couldn't believe. How can anyone edit video when every split adds a distracting audio artifact? But a lot of commenters said that _every_ video or audio editing tool has this same problem.
 
 What?!?
 
@@ -131,10 +131,11 @@ I ran into lots of other bugs while editing the video, but they're too tedious t
 - Save the FFmpeg scripts in case you need to tweak the pre-processing later.
   - Even if you're _so_ confident you won't need to do any pre-processing again, save the scripts, ideally under source control.
 - Test the FFmpeg scripts with extreme values to confirm they're doing what you think.
-  - I tried correcting the audio skew by shifting audio 200ms, but it still was out of sync. Then I tried 300ms, and it was still out of sync. Then, 400ms. I finally skipped to 2000ms and realized there had to be a bug in my script because the 200ms and 2000ms corrections were exactly the same.
-- When you're not sure of the right setting, script FFmpeg to produce several different versions so you can see options.
+  - I tried correcting the audio skew by shifting audio 200ms, but it still was out of sync. Then I tried 300ms, and it was still out of sync. Then, 400ms. I finally skipped to 2000ms and realized there had to be a bug in my script because the 200ms and 2000ms corrections sounded exactly the same.
+- When you're not sure of the right setting, script FFmpeg to produce several different versions so you can compare options.
   - I did this to test different strategies for eliminating background noise from my end of the conversation.
-- An audio sampling rate of 44.1 kHz apparently causes problems in editing, whereas I don't have any issues if I convert the rate to 48 kHz during pre-processing.
+- An audio sampling rate of 44.1 kHz apparently causes problems in editing.
+  - Converting the rate to 48 kHz during pre-processing fixed the pop artifacts.
   - I have no idea why.
 - Try exporting video soon into editing to examine the final output.
 - Apply video/audio editing filters at the track level rather than at the clip level.
@@ -159,13 +160,13 @@ So, I generated an initial transcript with [whisper-ctranslate2](https://github.
 
 {{<img src="transcript.webp" max-width="600px" caption="I added mini-features to the interview transcript to make it fun to read.">}}
 
-- Each end of the conversation appears in a distinct color of speech bubble, so you can see at a glance who's talking.
-- There are little play button icons in each speech bubble that jump to the video and start playback at the moment from the transcript.
+- Each end of the conversation appears in a distinctly-colored speech bubble, so you can see who's talking at a glance.
+- There are little play button icons in each speech bubble. When you click the icon, the page scrolls to the video and plays from that moment from the transcript.
 - I pulled out my favorite quotes into callouts.
 - I added headings to help frame the structure of the discussion.
 - I reviewed the text for transcription errors.
 
-I haven't published the video yet because I just sent the book mailing list subscribers a new chapter on Friday, so I'm waiting until the end of the week, but it will be up on [the book's blog](https://refactoringenglish.com/blog/) by the end of this week (by 2025-09-12).
+I haven't published the video yet because I just sent a new chapter to the mailing list subscribers on Friday.It will be up on [the book's blog](https://refactoringenglish.com/blog/) by the end of this week (by 2025-09-12).
 
 ## Helping Tyler Cipriani reach #1 on Hacker News
 
@@ -173,7 +174,7 @@ Sometimes, a plan just comes together better than I even hoped.
 
 Giving feedback to real writers helps me write my book, so I've been doing [freelance editing](https://refactoringenglish.com/services/blog-editing/) for other indie dev bloggers. On the page explaining my editing services, I wanted to include a sample of my editing work, but I didn't want to ask one of my paying clients to use work they already paid for as my own marketing.
 
-So, my plan was to find someone who would let me edit their post for free in exchange for publishing the notes and them crediting me as the editor in the article.
+So, my plan was to find someone who would let me edit their post for free in exchange for publishing the notes and them crediting me as the editor.
 
 My stretch goal was that the article would gain traction in places where potential readers of my book might hang out, like Hacker News, Lobsters, and reddit. If the reader reached the end of the post and saw, "Edited by _Refactoring English_," they'd think, "Hey, what's that?"
 
@@ -185,11 +186,11 @@ I worked with Tyler on a few rounds of feedback for his article, ["The future of
 
 My bonus goal was just for the post to reach the front page of Hacker News, but it exceeded even that and got [all the way to #1 on Hacker News](https://news.ycombinator.com/item?id=44916783), [Lobsters](https://lobste.rs/s/vew3ph/future_large_files_git_is_git), and [reddit](https://www.reddit.com/r/git/comments/1mrukfp/the_future_of_large_files_in_git_is_git/).
 
-One of the biggest takeaways for both of us was the importance of tuning the writing for the target audience. Earlier drafts of Tyler's post assumed that the reader was familiar with [Git LFS](https://git-lfs.com/), a Git extension for managing large files.
+One of the biggest takeaways for both of us was the importance of tuning the writing to the target audience. Earlier drafts of Tyler's post assumed that the reader was familiar with [Git LFS](https://git-lfs.com/), a Git extension for managing large files.
 
 I suggested that the average Git user didn't necessarily know Git LFS well enough to understand everything in the article. Tyler pushed back, as he felt like the average Git user who has dealt with large files must know Git LFS.
 
-As part of trying to convince Tyler to assume the reader knows less about Git LFS than his article assumed, I listed my knowledge and experience of Git LFS:
+To convince Tyler that the reader knows less about Git LFS than his article assumed, I listed my knowledge and experience of Git LFS:
 
 > - If I have large files in my git repo or I frequently update binary data in my git repo, I’m supposed to use git LFS
 > - I’ve never used git LFS
@@ -213,25 +214,23 @@ If you're curious, you can read my notes for the first draft of Tyler's article 
 
 ### Switching [Hacker News Observer](/retrospectives/2025/05/#side-project-hacker-news-observer) to a time-series database for a 500x speedup
 
-Over the past few years, I've heard people talk about "time-series databases," but I never understood what they do or how they differ from regular relational database. I even used InfluxDB for a side project last year because I needed something compatible with Grafana. But I still didn't understand what made it a "time series" database or why it couldn't just be SQLite.
+Over the past few years, I've heard people talk about "time-series databases," but I never understood what they do or how they differ from regular relational databases. I even used InfluxDB for a side project last year because I needed something compatible with Grafana. But I still didn't understand what made it a "time series" database or why it couldn't just be SQLite.
 
-I was talking to another developer recently, and he mentioned using a time-series database for different views of his data, like seconds-level granularity vs. days-level. And he didn't even explain beyond that, but a lightbulb went off, and I thought, "Oh! That must be what time-series databases are for!"
+I was talking to another developer recently, and he mentioned using a time-series database for different views of his data, like seconds-level granularity vs. days-level. And he didn't even explain beyond that, but a lightbulb went off in my head, and I thought, "Oh! That must be what time-series databases are for!"
 
-Hacker News Observer is a side-project that queries Hacker News every minute and records upvotes, comments, and rank of every story from the last few weeks. I hope to dig deeper and find interesting patterns, but for now I've just been looking at high-level aggregates, like total upvotes and comments on the front page:
+Hacker News Observer is a side-project that queries Hacker News every minute and records the upvotes, comments, and rank of every story from the last few weeks. I hope to dig deeper and find interesting patterns, but for now I've just been looking at high-level aggregates, like total upvotes and comments on the front page:
 
 {{<img src="hn-observer-aggregate.webp" caption="Switching to DuckDB sped up this page by 500x">}}
 
 I initially used SQLite as the database, and the graph above took two minutes to render. And that makes sense because there are thousands of stories per day, thousands of snapshots of each story, and then I have to find the top 30 (front page) in each snapshot, then put those into hour-level buckets. SQLite doesn't have any special functions for aggregating per-minute data into hour-level views, so it was a lot of expensive queries.
 
-Once I got the idea of time-series databases, I asked an LLM for database options that were similar to SQLite, and it recommended DuckDB. And then I just had the LLM migrate my database from SQLite to DuckDB. That migration alone reduced the load time for the graph from two minutes to 250ms, a speedup of about 500x.
+Once I got the idea of time-series databases, I asked an LLM for time-series database options that were similar to SQLite, and it recommended DuckDB. And then I just had the LLM migrate my database from SQLite to DuckDB. That migration alone reduced the load time for the graph from two minutes to 250ms, a speedup of about 500x.
 
 So, I guess that's what time-series databases are for.
 
 ### Chipping away at old logs with [Gleam Chat Log Parser](https://codeberg.org/mtlynch/gleam-chat-log-parser)
 
-I made only little bits of progress on my chat log parser project to help me learn the [Gleam programming language](https://gleam.run).
-
-I handled logs [that contain away messages](https://codeberg.org/mtlynch/gleam-chat-log-parser/pulls/34) and logs that had [Windows-style line endings (`\r\n`)](https://codeberg.org/mtlynch/gleam-chat-log-parser/pulls/30). Strangely, in Erlang (and therefore also in Gleam), [`\r\n` counts as a single character](https://www.erlang.org/docs/23/man/string), which tripped me up for a while.
+I made only little bits of progress on my chat log parser project. I handled logs [that contain away messages](https://codeberg.org/mtlynch/gleam-chat-log-parser/pulls/34) and logs that had [Windows-style line endings (`\r\n`)](https://codeberg.org/mtlynch/gleam-chat-log-parser/pulls/30). Strangely, in Erlang (and therefore also in Gleam), [`\r\n` counts as a single character](https://www.erlang.org/docs/23/man/string), which tripped me up for a while.
 
 ## Wrap up
 
