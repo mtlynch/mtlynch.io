@@ -1,7 +1,7 @@
 ---
 title: "Educational Products: Month 11"
 date: "2025-09-09"
-description: TODO - One-line summary
+description: The joy and misery of editing a video interview
 ---
 
 {{<notice type="info">}}
@@ -17,7 +17,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 ## Highlights
 
 - I got useful feedback from early readers by surveying them about my chapter list.
-- I found editing the video of an interview frustrating but enjoyed creating a written transcript.
+- I found it frustrating to edit video of an interview but had fun creating a written transcript.
 - My plan to promote my freelance blog editing services went better than I expected.
 
 ## Goal grades
@@ -36,16 +36,16 @@ From talking to a few readers, I realized a better strategy at this point would 
 - **Result**: Published "Get to the Point"
 - **Grade**: A
 
-I finally finished my chapter on introductions. This was the hardest chapter to write because writing introductions is the part of writing I find most difficult.
+I finally finished my chapter on introductions. This was the hardest chapter to write because introductions are the most difficult things for me to write. So, this was both an introduction and my attempt to reverse engineer how I write introductions.
 
-I also went way over-budget on this chapter. I initially [budgeted just six hours](/retrospectives/2025/08/#overinvesting-in-chapters) to complete it, but I ended up spending 19 hours writing it.
+I also went way over-budget on this chapter. I initially [budgeted just six hours](/retrospectives/2025/08/#overinvesting-in-chapters) to complete it, but I ended up spending 19 hours on it.
 
 ### Complete [my remaining marketing tasks](/retrospectives/2025/07/#how-can-i-improve-marketing-for-the-book)
 
 - **Result**: I finished the interview but not the call-to-action
 - **Grade**: B+
 
-I finished editing the interview, which was the big task. I still haven't gotten around to adjusting the design to call more attention to purchasing early access rather than subscribing to the free mailing list.
+I finished editing the interview, which was the big unfinished task. I still haven't gotten around to adjusting my book's website design to focus on purchasing early access rather than subscribing to the free mailing list.
 
 ## _Refactoring English_ metrics
 
@@ -59,7 +59,7 @@ My takeaway is that I actually _do_ need to keep publishing new things to the bo
 
 ## Interpreting reader feedback about my chapter list
 
-In individual conversaionts with readers, there was a lot of variety in what chapters they found relevant. I felt like a better way to find out which chapters readers cared most about would be to send out a survey.
+In individual conversations with readers, there was a lot of variety in what chapters they found relevant. I felt like a better way to find out which chapters readers cared most about would be to send out a survey.
 
 I wasn't sure how many people would respond, as I've asked for feedback on the mailing list before and only gotten a handful of responses. I was surprised that readers were much more enthusiastic about this survey, with 133 responses in two weeks.
 
@@ -69,7 +69,7 @@ I did a detailed analysis of the responses on the book's website:
 
 - [Reader Feedback about my Chapter List](https://refactoringenglish.com/blog/chapter-interest-results/)
 
-The short version is that I got useful feedback, and it prompted me to reorder the chapters and rename one of the chapters that was getting a tepid response.
+The short version is that I got useful feedback, and it prompted me to reorder the chapters and reframe one of the chapters that readers disliked.
 
 It was also interesting to see the difference in response rate here compared to previous requests for feedback. In the past, I'd asked for feedback after sending out a sample chapter, and I think the difference is the amount I'm asking the reader to invest. For this survey, you can do it in a few minutes, whereas to give feedback on a chapter, you have to spend 30 minutes reading the chapter and thinking about it, and maybe you're not ready to do that when you receive the survey.
 
@@ -77,7 +77,7 @@ It was also interesting to see the difference in response rate here compared to 
 
 Back in July 2024, I recorded an interview with [Adam Gordon Bell](https://adamgordonbell.com/) as part of my reboot of my blogging video course, [_Hit the Front Page of Hacker News_](https://hitthefrontpage.com/). I ended up not finishing the course before I took paternity leave, so I shelved the reboot indefinitely.
 
-That left me in an awkward spot with this interview. Adam was kind enough to volunteer his time to me, so I felt guitly not publishing the interview at all.
+That left me in an awkward spot with this interview. Adam was kind enough to volunteer his time to me, so I felt guilty not publishing the interview at all.
 
 When I started offering early access to _Refactoring English_, I thought it would be a good time to release the interview. If people liked the interview, maybe they'd check out the book.
 
@@ -87,7 +87,7 @@ It ended up not being like that.
 
 ### The return of the plague of audio skew
 
-I recorded the interview using a service called Riverside. After the call, Riverside generated video files for both ends of the call and a merged, sync'ed version of the conversation. I spot-checked the videos at the time to verify they worked but never watched them from start to finish.
+I recorded the interview using a service called Riverside. After the call, Riverside generated video files for both ends of the call and a merged, synced version of the conversation. I spot-checked the videos at the time to verify they worked but never watched them from start to finish.
 
 I thought the work would just be taking the merged version and throwing it up on YouTube. Maybe if there were interruptions or long digressions, I'd trim them out, but I figured the video was nearly done.
 
@@ -95,7 +95,7 @@ When I finally sat down to watch the video carefully a year after recording it, 
 
 {{<video src="bad-sync.mp4" caption="In the video Riverside generated, the audio and video were slightly out of sync.">}}
 
-Okay, no problem. I could reprocess the video with ffmpeg to shift the audio slightly.
+Okay, no problem. I could reprocess the video with [FFmpeg](https://ffmpeg.org/) to shift the audio slightly.
 
 Nope, it turned out that the audio skew was different on either end of the conversation. Adam's end was shifted about 425ms, while mine was about 150ms. That meant I had to go back to the original, unmerged videos of each end of our conversation, fix the skew in those, then re-merge them myself.
 
@@ -117,7 +117,7 @@ What?!?
 
 I've edited hundreds of media files using other tools, and I've never seen any of them insert pops when I split a clip.
 
-I tried other open-source video editing tools for Linux. Kdenlive crashed a few minutes into me trying to edit. Flowblade couldn't load at all, but I eventually found [a workaround](https://github.com/jliljebl/flowblade/blob/af9610bdc12c453ac9bd03bd1b97f68ab6a0482e/README.md). And Flowblade seemed like a simpler version of Shotcut, so I started the editing process again in Flowblade and had to figure out how to create side-by-side video.
+I tried other open-source video editing tools for Linux. [Kdenlive](https://kdenlive.org/) crashed a few minutes into me trying to edit. [Flowblade](https://jliljebl.github.io/flowblade/) couldn't load at all, but I eventually found [a workaround](https://github.com/jliljebl/flowblade/blob/af9610bdc12c453ac9bd03bd1b97f68ab6a0482e/README.md). And Flowblade seemed like a simpler version of Shotcut, so I started the editing process again in Flowblade and had to figure out how to create side-by-side video.
 
 After about an hour of editing in Flowblade, I tried exporting the video, and the pops were back. They [had a bug about it, too](https://github.com/jliljebl/flowblade/issues/799), and their understanding of it was [based on an explanation from Dan Dennedy](https://github.com/jliljebl/flowblade/issues/799#issuecomment-634252961), who is... the author of Shotcut. And it seemed like Flowblade was built on top of MLT, the same media framework that powers Shotcut. So, I was back to the exact same bug.
 
@@ -127,12 +127,12 @@ I ran into lots of other bugs while editing the video, but they're too tedious t
 
 ### Takeaways for editing video
 
-- Do as much pre-processing as possible using ffmpeg scripts.
-- Save the ffmpeg scripts in case you need to tweak the pre-processing later.
-  - Even if you're _so_ confident you won't need to do any pre-processing again, save the scripts, ideally with source control.
-- Test the ffmpeg scripts with extreme values to confirm they're doing what you think.
+- Do as much pre-processing as possible using FFmpeg scripts.
+- Save the FFmpeg scripts in case you need to tweak the pre-processing later.
+  - Even if you're _so_ confident you won't need to do any pre-processing again, save the scripts, ideally under source control.
+- Test the FFmpeg scripts with extreme values to confirm they're doing what you think.
   - I tried correcting the audio skew by shifting audio 200ms, but it still was out of sync. Then I tried 300ms, and it was still out of sync. Then, 400ms. I finally skipped to 2000ms and realized there had to be a bug in my script because the 200ms and 2000ms corrections were exactly the same.
-- When you're not sure of the right setting, script ffmpeg to produce several different versions so you can see options.
+- When you're not sure of the right setting, script FFmpeg to produce several different versions so you can see options.
   - I did this to test different strategies for eliminating background noise from my end of the conversation.
 - An audio sampling rate of 44.1 kHz apparently causes problems in editing, whereas I don't have any issues if I convert the rate to 48 kHz during pre-processing.
   - I have no idea why.
@@ -149,23 +149,17 @@ Wrong!
 
 Once I finished editing the video, it was time to obsess over the transcript. Except, I actually had fun doing that part.
 
-I feel like every interview transcript I read online, the designer was like, "Let's take a typewritten court transcript from 60 years ago and bring that exact experience to the web."
+I feel like every interview transcript I read online, the designer was like, "Let's take a typewritten court transcript from 60 years ago and bring exactly that level of fun and interactivity to the web."
 
 {{<img src="courtroom-transcript.webp" max-width="450px" caption="What if we could somehow use the web browser to make conversation transcripts more interesting?">}}
 
-Come on! Let's take advantage of the web to do stuff that's not possible on a typewriter:
-
-- Use colors and formatting to make it obvious who's speaking.
-- Make it easy to jump from the written transcript to the same moment in the video.
-- Link to URLs the same way you would in a blog post.
-
-Another common issue in transcripts is that the person transcribing the audio doesn't know anything about the subject, so there are mistakes from mishearing or misunderstanding words. For example, a transcriber who isn't familiar with programming terms would probably mishear, "It broke my Go Ansible role," as something like, "It broke my slow aunt Cybil's roll."
+Come on! Let's use the web to do stuff that's not possible on a typewriter.
 
 So, I generated an initial transcript with [whisper-ctranslate2](https://github.com/Softcatala/whisper-ctranslate2) and spent a lot of time making it accurate, interactive, and fun to read:
 
 {{<img src="transcript.webp" max-width="600px" caption="I added mini-features to the interview transcript to make it fun to read.">}}
 
-- Each end of the conversation appears in a distinct color of speech bubble, so you can see at a glacnce who's talking.
+- Each end of the conversation appears in a distinct color of speech bubble, so you can see at a glance who's talking.
 - There are little play button icons in each speech bubble that jump to the video and start playback at the moment from the transcript.
 - I pulled out my favorite quotes into callouts.
 - I added headings to help frame the structure of the discussion.
@@ -217,7 +211,7 @@ If you're curious, you can read my notes for the first draft of Tyler's article 
 
 ## Side projects
 
-### Switching [Hacker News Observer](/retrospectives/2025/05/#side-project-hacker-news-observer) to a time-series database
+### Switching [Hacker News Observer](/retrospectives/2025/05/#side-project-hacker-news-observer) to a time-series database for a 500x speedup
 
 Over the past few years, I've heard people talk about "time-series databases," but I never understood what they do or how they differ from regular relational database. I even used InfluxDB for a side project last year because I needed something compatible with Grafana. But I still didn't understand what made it a "time series" database or why it couldn't just be SQLite.
 
