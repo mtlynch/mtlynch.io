@@ -4,7 +4,7 @@ date: 2025-09-11
 banner_image: oldnewthing-mention.webp
 ---
 
-I'm a pretty humble guy, so most people aren't aware of this extremely impressive fact about me: I was once [mentioned](https://devblogs.microsoft.com/oldnewthing/20090724-00/?p=17373) on Raymond Chen's classic Windows blog, _The Old New Thing_.
+I'm a pretty humble guy, so most people aren't aware of this extremely impressive fact about me: Raymond Chen once [mentioned me](https://devblogs.microsoft.com/oldnewthing/20090724-00/?p=17373) on his classic Windows blog, _The Old New Thing_.
 
 No, he didn't mention me by name nor did he provide any way to identify me as the subject of the post, but it's amazing nonetheless. I deserve a great deal of credit for how little I boast about this achievement.
 
@@ -14,11 +14,11 @@ No, he didn't mention me by name nor did he provide any way to identify me as th
 
 Raymond described me in the post as "a customer," but I was actually his fellow Microsoft employee at the time.
 
-I worked on BitLocker, the part of Windows that does full drive encryption. We were starting development on Windows 8, and my project was to make BitLocker's group policy settings less confusing.
+I worked on BitLocker, the feature of Windows that encrypts disk drives. We were starting development on Windows 8, and my project was to make BitLocker's configuration settings less confusing.
 
-BitLocker had a strangely high number of knobs and switches that admins could configure through Group Policy, so they could say things like, "Everyone's BitLocker passphrase has to be at least 12 characters long."
+BitLocker had a strangely high number of knobs and switches that admins could configure through organization-level settings ("Group Policy," in Windows terms). An IT admin could say something like, "Everyone's BitLocker passphrase has to be at least 12 characters long," and enforce that across all of the computers under their control.
 
-One of the problems was that the error messages were bad. So, if the admin tried to say that every employee's BitLocker passphrase had to be at least 1000 characters long, BitLocker would throw an error like, "No, that's too long," but it wouldn't tell you what the limit was.
+One of BitLocker's configuration headaches was that the error messages were bad. So, if you tried to configure your organization so that every employee's BitLocker passphrase had to be at least 1000 characters long, BitLocker would throw an error like, "No, that's too long," but it wouldn't tell you what the limit was.
 
 On Windows, at least on my team, you couldn't have user-facing messages in your C++ code because then the localization team couldn't translate the messages to other languages. So, all user-facing messages were in `.mc` files that looked like this:
 
@@ -29,7 +29,7 @@ The BitLocker minimum passphrase length is too high.
 SymbolicName=...
 ```
 
-And then somewhere in the C++ code, we'd have a check that was like this:
+And then somewhere in the C++ code, we'd have a check that looked like this:
 
 ```c++
 #define MAX_PASSPHRASE_MINIMUM 20
@@ -44,18 +44,18 @@ So, I wanted the user to see an error message like this:
 
 > The BitLocker minimum passphrase length cannot exceed **20**.
 
-But I didn't want to just copy the value of `20` from the C++ code because then the error message could go out of sync if we ever changed the value.
+But I didn't want to just copy the value of `20` from the C++ code because then the error message could go out of sync if we ever changed the value of `MAX_PASSPHRASE_MINIMUM` and forgot to update the `.mc` file to match.
 
 ## How Raymond Chen got involved
 
-I couldn't figure out how to reference C++ constants or preprocessor directives in a `.mc` file, but I thought there had to be some solution, so I emailed some internal Windows development mailing list to ask if that I could write the `.mc` file like this:
+I couldn't figure out how to reference C++ constants or preprocessor directives in a `.mc` file, so I emailed some Microsoft-internal Windows development mailing list to ask if that I could write the `.mc` file like this:
 
 ```text
 SymbolicName=ERROR_BITLOCKER_PASSPHRASE_MINIMUM_TOO_LONG
 The BitLocker minimum passphrase length cannot exceed ${MAX_PASSPHRASE_MINIMUM}.
 ```
 
-If I recall correctly, Raymond Chen replied to the thread just saying, "There's no law saying you can't use the precompiler," and an example of generating the `.mc` file with the precompiler command.
+If I recall correctly, Raymond Chen sent a terse reply to the thread, saying, "There's no law saying you can't use the precompiler," and an example of generating the `.mc` file with the precompiler command.
 
 It took me a while to figure out what he was even trying to tell me because I didn't even know you could run a C++ compiler in "just the preprocessor" mode.
 
