@@ -1,5 +1,5 @@
 ---
-title: "Educational Products: Month 7"
+title: "Refactoring English: Month 5"
 date: "2025-05-08"
 description: How do I stop myself from rewriting the same chapter fifty times?
 banner_image: og-cover.webp
