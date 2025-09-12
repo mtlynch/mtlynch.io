@@ -3,13 +3,15 @@ title: "My Cameo on Old New Thing"
 date: 2025-09-11
 ---
 
-I remembered today that I was once featured, anonymously, in a post on Raymond Chen's classic Windows blog, _The Old New Thing_:
+I'm a pretty humble guy, so most people aren't aware of this extremely impressive fact about me: I was mentioned on Raymond Chen's classic Windows blog, _The Old New Thing_.
+
+No, he didn't mention me by name nor provide any way to recognize me, but it's amazing nonetheless, and I deserve a great deal of credit for how little I boast about it.
 
 - ["If you wished a language supported the preprocessor, you know, you can fix that"](https://devblogs.microsoft.com/oldnewthing/20090724-00/?p=17373) by Raymond Chen, on _The Old New Thing_
 
-Raymond described me in the post as "a customer," but I was actually a fellow Microsoft employee at the time. I worked in the same (enormous) Windows subdivision of Microsoft as Raymond.
+## The context
 
-## My question
+Raymond described me in the post as "a customer," but I was actually a fellow Microsoft employee at the time. I worked in the same (enormous) Windows subdivision of Microsoft as Raymond.
 
 At the time, I was doing C++ development on Windows 8. I worked on the BitLocker team, which had strangely complex set of knobs through Group Policy. So, I was working on making error messages clearer when an admin picked an invalid Group Policy value or set conflicting Group Policy settings.
 
