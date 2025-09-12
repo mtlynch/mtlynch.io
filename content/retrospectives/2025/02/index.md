@@ -1,5 +1,5 @@
 ---
-title: "Educational Products: Month 4"
+title: "Refactoring English: Month 2"
 date: "2025-02-10"
 description: Should I be writing a book during an AI revolution?
 banner_image: fun-chapters.webp

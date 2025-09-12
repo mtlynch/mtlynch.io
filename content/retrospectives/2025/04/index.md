@@ -1,5 +1,5 @@
 ---
-title: "Educational Products: Month 6"
+title: "Refactoring English: Month 4"
 date: "2025-04-09"
 description: I'm officially writing a book!
 banner_image: og-cover.webp

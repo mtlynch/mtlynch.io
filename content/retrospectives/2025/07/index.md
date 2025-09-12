@@ -1,5 +1,5 @@
 ---
-title: "Educational Products: Month 9"
+title: "Refactoring English: Month 7"
 date: "2025-07-11"
 description: Juggling too many half-finished tasks.
 tags:

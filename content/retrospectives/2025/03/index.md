@@ -1,5 +1,5 @@
 ---
-title: "Educational Products: Month 5"
+title: "Refactoring English: Month 3"
 date: "2025-03-12"
 description: My first time raising money on Kickstarter
 banner_image: ks-dashboard.webp

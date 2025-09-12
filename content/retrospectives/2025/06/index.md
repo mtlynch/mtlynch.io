@@ -1,5 +1,5 @@
 ---
-title: "Educational Products: Month 8"
+title: "Refactoring English: Month 6"
 date: "2025-06-04"
 description: I just need to focus for one hour per day.
 banner_image: time-remaining.webp
