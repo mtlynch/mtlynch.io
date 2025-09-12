@@ -76,7 +76,7 @@ Because we deleted the task in our playbook that creates a symlink to ffmpeg, Cl
 
 We'd like to create an automated test for this, but uploading a video is difficult to script with simple command-line tools. The user first has to log in (which means that the script needs to manage cookies across requests), then they have to navigate the web UI to upload a video. This would be very difficult to do in a series of `curl` commands.
 
-Fortunately, we can use [Selenium](http://docs.seleniumhq.org/). Selenium is a web testing tool that allows us to perform web browser actions programmatically.
+Fortunately, we can use [Selenium](https://www.selenium.dev/). Selenium is a web testing tool that allows us to perform web browser actions programmatically.
 
 ## Setting Up Selenium
 
