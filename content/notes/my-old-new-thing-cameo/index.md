@@ -13,7 +13,7 @@ Raymond described me in the post as "a customer," but I was actually a fellow Mi
 
 At the time, I was doing C++ development on Windows 8. I worked on the BitLocker team, which had strangely complex set of knobs through Group Policy. So, I was working on making error messages clearer when an admin picked an invalid Group Policy value or set conflicting Group Policy settings.
 
-And part of that was putting values in the
+And part of that was putting values in the error messages.
 
 trying to improve error messages
 
