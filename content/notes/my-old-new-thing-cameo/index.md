@@ -1,6 +1,6 @@
 ---
 title: "I Once Appeared in The Old New Thing"
-date: 2025-09-11
+date: 2025-09-14
 banner_image: oldnewthing-mention.webp
 ---
 
@@ -12,15 +12,15 @@ No, he didn't mention me by name nor did he provide any way to identify me as th
 
 ## Some background
 
-Raymond described me in the post as "a customer," but I was actually his fellow Microsoft employee at the time.
+Raymond described me in the post as "a customer," but, at the time, I was actually his fellow Microsoft employee.
 
-I worked on BitLocker, the feature of Windows that encrypts disk drives. We were starting development on Windows 8, and my project was to make BitLocker's configuration settings less confusing.
+I worked on [BitLocker](https://en.wikipedia.org/wiki/BitLocker), the feature of Windows that encrypts disk drives. We were starting development on Windows 8, and my project was to improve BitLocker's configuration experience.
 
-BitLocker had a strangely high number of knobs and switches that admins could configure through organization-level settings ("Group Policy," in Windows terms). An IT admin could say something like, "Everyone's BitLocker passphrase has to be at least 12 characters long," and enforce that across all of the computers under their control.
+BitLocker had many knobs and switches that admins could configure through organization-level settings ([Group Policy](https://en.wikipedia.org/wiki/Group_Policy), in Windows terms). An IT admin could enforce a rule across their organization like, "Everyone's BitLocker passphrase has to be at least 12 characters long."
 
 One of BitLocker's configuration headaches was that the error messages were bad. So, if you tried to configure your organization so that every employee's BitLocker passphrase had to be at least 1000 characters long, BitLocker would throw an error like, "No, that's too long," but it wouldn't tell you what the limit was.
 
-On Windows, at least on my team, you couldn't have user-facing messages in your C++ code because then the localization team couldn't translate the messages to other languages. So, all user-facing messages were in `.mc` files that looked like this:
+At Microsoft, your C++ code couldn't contain user-facing messages because the localization team had to translate all user-facing text into other languages. So, all the messages the user might see were in `.mc` files that looked like this:
 
 ```text
 SymbolicName=ERROR_BITLOCKER_PASSPHRASE_MINIMUM_TOO_LONG
@@ -34,41 +34,63 @@ And then somewhere in the C++ code, we'd have a check that looked like this:
 ```c++
 #define MAX_PASSPHRASE_MINIMUM 20
 
-int minimumPassphraseLength = readGroupPolicy(GP_BITLOCKER_MINIMUM_PASSPHRASE_LENGTH);
+int minimumPassphraseLength = ReadGroupPolicy(GP_BITLOCKER_MINIMUM_PASSPHRASE_LENGTH);
 if (minimumPassphraseLength > MAX_PASSPHRASE_MINIMUM) {
-  return ERROR_BITLOCKER_PASSPHRASE_MINIMUM_TOO_LONG
+  ShowError(ERROR_BITLOCKER_PASSPHRASE_MINIMUM_TOO_LONG);
 }
 ```
 
-So, I wanted the user to see an error message like this:
+I wanted to change our error messages so that they gave the user specific information about why the error occurred. So, instead of seeing this:
 
-> The BitLocker minimum passphrase length cannot exceed **20**.
+> The BitLocker minimum passphrase length **is too high**.
 
-But I didn't want to just copy the value of `20` from the C++ code because then the error message could go out of sync if we ever changed the value of `MAX_PASSPHRASE_MINIMUM` and forgot to update the `.mc` file to match.
+I wanted the user to see this:
+
+> The BitLocker minimum passphrase length **cannot exceed 20**.
+
+I didn't want to copy the value of `20` from the C++ code into the `.mc` file. If I did that and we later changed the value of `MAX_PASSPHRASE_MINIMUM`, it would go out of sync with the `.mc` file and make the error message incorrect.
 
 ## How Raymond Chen got involved
 
-I couldn't figure out how to reference C++ constants or preprocessor directives in a `.mc` file, so I emailed some Microsoft-internal Windows development mailing list to ask if that I could write the `.mc` file like this:
+I didn't know a lot about the Message Compiler tool that consumed `.mc` files. I couldn't find any examples of anyone referencing C++ values in `.mc` files, but I felt like there had to be some way of doing it.
+
+I emailed some Microsoft-internal Windows development mailing list to ask if that I could write the `.mc` file like this:
 
 ```text
 SymbolicName=ERROR_BITLOCKER_PASSPHRASE_MINIMUM_TOO_LONG
 The BitLocker minimum passphrase length cannot exceed ${MAX_PASSPHRASE_MINIMUM}.
 ```
 
-If I recall correctly, Raymond Chen sent a terse reply to the thread, saying, "There's no law saying you can't use the precompiler," and an example of generating the `.mc` file with the precompiler command.
+Raymond Chen posted frequently on these mailing lists. Even in 2009, he had been at Microsoft forever and had an encyclopedic knowledge of everything related to Windows development. His replies were helpful but often snarky if he thought you didn't do enough research before asking the question.
 
-It took me a while to figure out what he was even trying to tell me because I didn't even know you could run a C++ compiler in "just the preprocessor" mode.
+If I recall correctly, Raymond sent a terse reply to my thread, saying, "There's no law saying you can't use the precompiler," and an example of generating the `.mc` file with the precompiler command.
 
-## I still wouldn't know to do this
+It took me a while to figure out what he was even trying to tell me. I didn't even know you _could_ run a C++ compiler in "just the preprocessor" mode.
 
-It's funny looking back on this exchange because at the time I felt like, "Wow, I'm dumb for not knowing I could use the preprocessor like this." But 16 years later, Raymond's solution to run the C preprocessor on a non-C/C++ file still strikes me as unexpected/hacky.
+## Wasting Raymond Chen's time
 
-If it weren't for this exchange, I'd never even know you could tell Visual C++ (or any C compiler for that matter) to run only the preprocessor step.
+The shameful part of this story is that even though I got advice from the great Raymond Chen, I chickened out of using it.
 
-## This wouldn't happen at Google
+In Raymond Chen's blog post, he shows how easy it is to change a few lines in your Makefile so that your source file is a `.mcp` file instead of a `.mc` file. Easy peasy!
 
-It's also weird looking back on this and seeing that this was a problem I was trying to solve myself. But, why? This doesn't at all feel like an unusu
+Except the Windows build system was infinitely more complicated than a Makefile. I don't remember what it looked like except that I found it scary and confusing.
 
-## How I've grown
+Worse, if you messed up the build, you might not find out until the next morning when you get an email saying that the nightly build is broken for your team, and now dozens or hundreds of people don't have that day's build of Windows because of you.
 
-I'd like to say that the Michael of today wouldn't be so surprised becuase I'd be more familiar with my tools and my build system, but I'm actually still not.
+I had the choice between being the first person to try a new thing in the build system and risk burning a week or two on fixing unexpected issues. Or I could pretend I never had the idea to put specific numbers into BitLocker's error messages and focus on other ways to make the configuration easier.
+
+I chose the latter.
+
+## I still wouldn't know to do this today
+
+At the time, I remember thinking, "Wow, I'm dumb for not knowing I could use the preprocessor like this."
+
+Most of the time, when I look back at a software problem I struggled with years ago, the solution is more obvious to me today. Usually, I can even think of a better solution.
+
+But 16 years later, Raymond's solution to run the C preprocessor on a non-C/C++ file still feels unexpected. If I had all of my professional experience except this one memory of Raymond Chen, and you told me to solve the problem again, I'd struggle just as much as I did in 2009.
+
+The difference today is that I don't feel dumb for not knowing how to solve this problem. I now see it as a weakness in the Windows team's internal tooling. It's silly that there wasn't already an obvious solution at Microsoft on the Windows team for letting developers reference constant values in both error messages and C++ code. That's not the kind of problem for which I'd expect a junior developer to have to invent their own solution.
+
+As a software engineer, there are some problems that you find unpleasant but you grit your teeth and practice until you get better. And there are some problems that you just avoid, by carefully picking what jobs and projects and you take on.
+
+Understanding arcane build systems is one of the problems I've avoided, and I'm fine with that. [Except when I use Nix](/solo-developer-year-7/#nix).
