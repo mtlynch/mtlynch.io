@@ -1,7 +1,11 @@
 ---
 title: "I Once Appeared in The Old New Thing"
-date: 2025-09-14
+date: 2025-09-15
 banner_image: oldnewthing-mention.webp
+tags:
+  - microsoft
+  - c++
+  - bitlocker
 ---
 
 I'm a pretty humble guy, so most people aren't aware of this extremely impressive fact about me: Raymond Chen once [mentioned me](https://devblogs.microsoft.com/oldnewthing/20090724-00/?p=17373) on his classic Windows blog, _The Old New Thing_.
@@ -18,9 +22,9 @@ I worked on [BitLocker](https://en.wikipedia.org/wiki/BitLocker), the feature of
 
 BitLocker had many knobs and switches that admins could configure through organization-level settings ([Group Policy](https://en.wikipedia.org/wiki/Group_Policy), in Windows terms). An IT admin could enforce a rule across their organization like, "Everyone's BitLocker passphrase has to be at least 12 characters long."
 
-One of BitLocker's configuration headaches was that the error messages were bad. So, if you tried to configure your organization so that every employee's BitLocker passphrase had to be at least 1000 characters long, BitLocker would throw an error like, "No, that's too long," but it wouldn't tell you what the limit was.
+One of BitLocker's configuration headaches was that the error messages were vague. If you tried to configure your organization so that every employee's BitLocker passphrase had to be at least 1000 characters long, BitLocker would throw an error like, "No, that's too long," but it wouldn't tell you what the limit was.
 
-At Microsoft, your C++ code couldn't contain user-facing messages because the localization team had to translate all user-facing text into other languages. So, all the messages the user might see were in `.mc` files that looked like this:
+At Microsoft, your C++ code couldn't contain user-facing messages because the localization team had to translate all user-facing text into other languages. So, all user-facing text lived in its own file with the `.mc` extension that looked like this:
 
 ```text
 SymbolicName=ERROR_BITLOCKER_PASSPHRASE_MINIMUM_TOO_LONG
@@ -48,20 +52,20 @@ I wanted the user to see this:
 
 > The BitLocker minimum passphrase length **cannot exceed 20**.
 
-I didn't want to copy the value of `20` from the C++ code into the `.mc` file. If I did that and we later changed the value of `MAX_PASSPHRASE_MINIMUM`, it would go out of sync with the `.mc` file and make the error message incorrect.
+I didn't want to copy the value of `20` from the C++ code into the `.mc` file because if we later changed the value of `MAX_PASSPHRASE_MINIMUM`, it would go out of sync with the `.mc` file and make the error message incorrect.
 
 ## How Raymond Chen got involved
 
 I didn't know a lot about the Message Compiler tool that consumed `.mc` files. I couldn't find any examples of anyone referencing C++ values in `.mc` files, but I felt like there had to be some way of doing it.
 
-I emailed some Microsoft-internal Windows development mailing list to ask if that I could write the `.mc` file like this:
+I emailed some Microsoft-internal Windows development mailing list to ask if I could write the `.mc` file like this:
 
 ```text
 SymbolicName=ERROR_BITLOCKER_PASSPHRASE_MINIMUM_TOO_LONG
 The BitLocker minimum passphrase length cannot exceed ${MAX_PASSPHRASE_MINIMUM}.
 ```
 
-Raymond Chen posted frequently on these mailing lists. Even in 2009, he had been at Microsoft forever and had an encyclopedic knowledge of everything related to Windows development. His replies were helpful but often snarky if he thought you didn't do enough research before asking the question.
+Raymond Chen posted frequently on these mailing lists. Even in 2009, he had been at Microsoft forever and had an encyclopedic knowledge of everything related to Windows development. His replies were helpful and authoritative but often snarky if he thought you didn't do enough research before asking the question.
 
 If I recall correctly, Raymond sent a terse reply to my thread, saying, "There's no law saying you can't use the precompiler," and an example of generating the `.mc` file with the precompiler command.
 
@@ -83,14 +87,14 @@ I chose the latter.
 
 ## I still wouldn't know to do this today
 
-At the time, I remember thinking, "Wow, I'm dumb for not knowing I could use the preprocessor like this."
+At the time, I remember thinking, "Wow, I'm dumb for not knowing I could use the C preprocessor like this."
 
 Most of the time, when I look back at a software problem I struggled with years ago, the solution is more obvious to me today. Usually, I can even think of a better solution.
 
 But 16 years later, Raymond's solution to run the C preprocessor on a non-C/C++ file still feels unexpected. If I had all of my professional experience except this one memory of Raymond Chen, and you told me to solve the problem again, I'd struggle just as much as I did in 2009.
 
-The difference today is that I don't feel dumb for not knowing how to solve this problem. I now see it as a weakness in the Windows team's internal tooling. It's silly that there wasn't already an obvious solution at Microsoft on the Windows team for letting developers reference constant values in both error messages and C++ code. That's not the kind of problem for which I'd expect a junior developer to have to invent their own solution.
+The difference today is that I don't feel dumb for not knowing how to solve this problem. I now see it as a weakness in the Windows team's internal tooling. It's silly that there wasn't already an obvious solution at Microsoft on the Windows team for letting developers reference constant values in both error messages and C++ code.
 
-As a software engineer, there are some problems that you find unpleasant but you grit your teeth and practice until you get better. And there are some problems that you just avoid, by carefully picking what jobs and projects and you take on.
+As a software engineer, there are some problems that you find unpleasant, but you grit your teeth and practice until you get better. And there are some problems that you just avoid, by carefully picking what jobs and projects and you take on.
 
 Understanding arcane build systems is one of the problems I've avoided, and I'm fine with that. [Except when I use Nix](/solo-developer-year-7/#nix).
