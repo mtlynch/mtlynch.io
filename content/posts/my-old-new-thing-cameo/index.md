@@ -92,7 +92,7 @@ I chose the latter.
 
 At the time, I remember thinking, "Wow, I'm dumb for not knowing I could use the C preprocessor like this."
 
-Most of the time, when I look back at a software problem I struggled with years ago, the solution is more obvious to me today. Usually, I can even think of a better solution.
+Most of the time, when I look back at a software problem I struggled with years ago, the solution is more obvious to me today. Usually, I can think of a better solution.
 
 But 16 years later, Raymond's solution to run the C preprocessor on a non-C/C++ file still feels unexpected. If I had all of my professional experience except this one memory of Raymond Chen, and you told me to solve the problem again, I'd struggle just as much as I did in 2009.
 
