@@ -9,19 +9,21 @@ tags:
   - bitlocker
 ---
 
-I'm a pretty humble guy, so most people aren't aware of this extremely impressive fact about me: Raymond Chen once [mentioned me](https://devblogs.microsoft.com/oldnewthing/20090724-00/?p=17373) on his classic Windows blog, _The Old New Thing_.
+I'm a pretty humble guy, so most people don't know this extremely impressive fact about me: Raymond Chen once [mentioned me](https://devblogs.microsoft.com/oldnewthing/20090724-00/?p=17373) on his classic Windows blog, _The Old New Thing_.
 
-No, he didn't mention me by name nor did he provide any way to identify me, but it's amazing nonetheless. I deserve a great deal of credit for how little I boast about this achievement.
+No, he didn't mention me by name nor did he provide any way to identify me, but it's amazing nonetheless.
 
 {{<img src="oldnewthing-mention.webp" max-width="600px" caption="In 2009, Raymond Chen [mentioned me](https://devblogs.microsoft.com/oldnewthing/20090724-00/?p=17373) in an issue of *The Old New Thing*.">}}
 
-## Some background
+## The problem I was trying to solve
 
-Raymond described me in the post as "a customer," but, at the time, I was actually his fellow Microsoft employee. I was 23 and coming up on two years as a developer at Microsoft, my first job out of college.
+Raymond described me in the post as "a customer," but I was actually his fellow Microsoft employee. I was 23 and coming up on two years as a developer at Microsoft, my first job out of college.
 
 I worked on [BitLocker](https://en.wikipedia.org/wiki/BitLocker), the feature of Windows that encrypts disk drives. We were starting development on Windows 8, and my project was to improve BitLocker's configuration experience.
 
 BitLocker had many knobs and dials that admins could configure through organization-level settings ([Group Policy](https://en.wikipedia.org/wiki/Group_Policy), in Windows terms). An IT admin could enforce a rule across their organization like, "Everyone's BitLocker passphrase has to be at least 12 characters long," and then BitLocker would force users to create passphrases that were at least 12 characters.
+
+{{<img src="bitlocker-group-policy.webp" max-width="800px" caption="BitLocker's configuration options, viewed through the Window Group Policy editor">}}
 
 One of BitLocker's configuration headaches was that the error messages were vague. If you tried to configure a rule that said passphrases had to be at least 1000 characters, BitLocker would throw an error like, "No, that's too long," but it wouldn't tell you what the limit was.
 
@@ -59,7 +61,7 @@ I didn't want to copy the value of `20` from the C++ code into the `.mc` file be
 
 I didn't know a lot about the Message Compiler tool that consumed `.mc` files. I couldn't find any examples of anyone referencing C++ values in `.mc` files, but I felt like there had to be some way of doing it.
 
-I emailed a Microsoft-internal Windows development mailing list to ask if I could write the `.mc` file like this:
+I asked on a company-internal mailing list if I could write the `.mc` file like this:
 
 ```text
 SymbolicName=ERROR_BITLOCKER_PASSPHRASE_MINIMUM_TOO_LONG
