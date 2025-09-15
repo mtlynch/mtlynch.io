@@ -4,6 +4,7 @@ date: "2020-05-26T00:00:01Z"
 tags:
   - digitizing
   - mediagoblin
+  - nostalgia
   - clipbucket
   - docker
   - gcsfuse

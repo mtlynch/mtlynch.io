@@ -7,6 +7,7 @@ tags:
   - microsoft
   - c++
   - bitlocker
+  - nostalgia
 ---
 
 I'm a pretty humble guy, so most people don't know this extremely impressive fact about me: Raymond Chen once [mentioned me](https://devblogs.microsoft.com/oldnewthing/20090724-00/?p=17373) on his classic Windows blog, _The Old New Thing_.
