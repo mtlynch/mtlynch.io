@@ -17,7 +17,7 @@ No, he didn't mention me by name nor did he provide any way to identify me, but 
 
 ## Some background
 
-Raymond described me in the post as "a customer," but, at the time, I was actually his fellow Microsoft employee.
+Raymond described me in the post as "a customer," but, at the time, I was actually his fellow Microsoft employee. I was 23 and coming up on two years as a developer at Microsoft, my first job out of college.
 
 I worked on [BitLocker](https://en.wikipedia.org/wiki/BitLocker), the feature of Windows that encrypts disk drives. We were starting development on Windows 8, and my project was to improve BitLocker's configuration experience.
 
