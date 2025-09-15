@@ -1,6 +1,7 @@
 ---
 title: "I Once Appeared in The Old New Thing"
 date: 2025-09-15
+description: "I'm a pretty humble guy, so most people aren't aware of this extremely impressive fact about me: Raymond Chen once mentioned me on his classic Windows blog, The Old New Thing."
 banner_image: oldnewthing-mention.webp
 tags:
   - microsoft
@@ -10,7 +11,7 @@ tags:
 
 I'm a pretty humble guy, so most people aren't aware of this extremely impressive fact about me: Raymond Chen once [mentioned me](https://devblogs.microsoft.com/oldnewthing/20090724-00/?p=17373) on his classic Windows blog, _The Old New Thing_.
 
-No, he didn't mention me by name nor did he provide any way to identify me as the subject of the post, but it's amazing nonetheless. I deserve a great deal of credit for how little I boast about this achievement.
+No, he didn't mention me by name nor did he provide any way to identify me, but it's amazing nonetheless. I deserve a great deal of credit for how little I boast about this achievement.
 
 {{<img src="oldnewthing-mention.webp" max-width="600px" caption="In 2009, Raymond Chen [mentioned me](https://devblogs.microsoft.com/oldnewthing/20090724-00/?p=17373) in an issue of *The Old New Thing*.">}}
 
@@ -38,7 +39,7 @@ And then somewhere in the C++ code, we'd have a check that looked like this:
 ```c++
 #define MAX_PASSPHRASE_MINIMUM 20
 
-int minimumPassphraseLength = ReadGroupPolicy(GP_BITLOCKER_MINIMUM_PASSPHRASE_LENGTH);
+UINT32 minimumPassphraseLength = ReadGroupPolicy(GP_BITLOCKER_MINIMUM_PASSPHRASE_LENGTH);
 if (minimumPassphraseLength > MAX_PASSPHRASE_MINIMUM) {
   ShowError(ERROR_BITLOCKER_PASSPHRASE_MINIMUM_TOO_LONG);
 }
