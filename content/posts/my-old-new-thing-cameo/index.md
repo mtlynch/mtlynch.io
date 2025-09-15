@@ -24,11 +24,11 @@ I worked on [BitLocker](https://en.wikipedia.org/wiki/BitLocker), the feature of
 
 BitLocker had many knobs and dials that admins could configure through organization-level settings ([Group Policy](https://en.wikipedia.org/wiki/Group_Policy), in Windows terms). An IT admin could enforce a rule across their organization like, "Everyone's BitLocker passphrase has to be at least 12 characters long," and then BitLocker would force users to create passphrases that were at least 12 characters.
 
-{{<img src="bitlocker-group-policy.webp" max-width="800px" caption="BitLocker's configuration options, viewed through the Window Group Policy editor">}}
+{{<img src="bitlocker-group-policy.webp" max-width="800px" caption="BitLocker's configuration options, viewed through the Windows Group Policy editor">}}
 
 One of BitLocker's configuration headaches was that the error messages were vague. If you tried to configure a rule that said passphrases had to be at least 1000 characters, BitLocker would throw an error like, "No, that's too long," but it wouldn't tell you what the limit was.
 
-At Microsoft, C++ code couldn't contain error messages because the localization team had to translate all user-facing text into other languages. So, all user-facing text lived in a `.mc` file that looked like this:
+At Microsoft, C++ code couldn't contain error messages because the localization team had to translate all user-facing text into other languages. So, all user-facing text lived in `.mc` files that looked like this:
 
 ```text
 SymbolicName=ERROR_BITLOCKER_PASSPHRASE_MINIMUM_TOO_LONG
@@ -99,6 +99,6 @@ But 16 years later, Raymond's solution to run the C preprocessor on a non-C/C++ 
 
 The difference today is that I don't feel dumb for not knowing how to solve this problem. I now see it as a weakness in Microsoft's internal tooling. At Microsoft, on their flagship product, how was there no standard way for developers to reference constant values in both error messages and C++ code?
 
-As a software engineer, there are some problems that you find unpleasant, but you grit your teeth and practice until you get better. Other problems, you just avoid by carefully picking what jobs and projects and you take on.
+As a software engineer, there are some problems that you find unpleasant, but you grit your teeth and practice until you get better. Other problems, you just avoid by carefully picking what jobs and projects you take on.
 
 Understanding arcane build systems is one of the problems I've avoided, and I'm fine with that. [Except when I use Nix](/solo-developer-year-7/#nix).
