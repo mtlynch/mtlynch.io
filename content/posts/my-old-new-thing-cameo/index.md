@@ -8,6 +8,8 @@ tags:
   - c++
   - bitlocker
   - nostalgia
+discuss_urls:
+  hacker_news: https://news.ycombinator.com/item?id=45250901
 ---
 
 I'm a pretty humble guy, so most people don't know this extremely impressive fact about me: Raymond Chen once [mentioned me](https://devblogs.microsoft.com/oldnewthing/20090724-00/?p=17373) on _The Old New Thing_, the classic Windows development blog.
