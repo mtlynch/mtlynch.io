@@ -73,7 +73,7 @@ The BitLocker minimum passphrase length cannot exceed ${MAX_PASSPHRASE_MINIMUM}.
 
 Raymond Chen posted frequently on these mailing lists. Even in 2009, he had been at Microsoft forever and had an encyclopedic knowledge of everything related to Windows development. His replies were helpful and authoritative but snarky if he thought you didn't do enough research before asking the question.
 
-If I recall correctly, Raymond sent a terse reply to my thread, saying, "There's no law saying you can't use the precompiler," and an example of generating the `.mc` file with the precompiler command.
+If I recall correctly, Raymond sent a terse reply to my thread, saying, "There's no law saying you can't use the preprocessor," and an example of generating the `.mc` file with the preprocessor command.
 
 It took me a while to even understand what he was trying to tell me. I didn't know you _could_ tell a C++ compiler to only run the preprocessing step.
 
