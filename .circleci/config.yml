@@ -159,7 +159,7 @@ jobs:
           command: find public -name "*.html" -exec sed -i -e 's/<base[^>]*>//g' {} +
       - run:
           name: Install netlify CLI
-          command: npm install netlify-cli --save-dev
+          command: npm install netlify-cli@23.7.3 --save-dev
       - run:
           name: Print netlify version
           command: ./node_modules/.bin/netlify version
@@ -174,7 +174,7 @@ jobs:
           at: ./
       - run:
           name: Install netlify CLI
-          command: npm install netlify-cli --save-dev
+          command: npm install netlify-cli@23.7.3 --save-dev
       - run:
           name: Print netlify version
           command: ./node_modules/.bin/netlify version
