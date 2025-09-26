@@ -7,6 +7,8 @@ This is a list of all the xkcd cartoons that are available in 2x resolution, as 
 
 See the accompanying post, ["Get xkcd Cartoons at 2x Resolution,"](/notes/xkcd-2x-resolution/) for an explanation.
 
+<!-- markdownlint-disable no-bare-urls -->
+
 - 1: No higher res available
 - 2: No higher res available
 - 3: No higher res available
