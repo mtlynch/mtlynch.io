@@ -161,6 +161,9 @@ jobs:
           name: Install netlify CLI
           command: npm install netlify-cli --save-dev
       - run:
+          name: Print netlify version
+          command: ./node_modules/.bin/netlify version
+      - run:
           name: Deploy a live draft
           command: ./node_modules/.bin/netlify deploy --dir=public --site="${NETLIFY_SITE_ID}"
   deploy:
@@ -172,6 +175,9 @@ jobs:
       - run:
           name: Install netlify CLI
           command: npm install netlify-cli --save-dev
+      - run:
+          name: Print netlify version
+          command: ./node_modules/.bin/netlify version
       - run:
           name: Deploy to production
           command: ./node_modules/.bin/netlify deploy --dir=public --site="${NETLIFY_SITE_ID}" --prod
