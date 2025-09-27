@@ -37,7 +37,7 @@ Not every xkcd is availble in 2x resolution.
 
 I vibe-coded [a Python script](check_xkcd_2x.py) to check which cartoons have a 2x-resolution version and published the current list:
 
-- [List of 2x-resolution xkcd Cartoons](/notes/xkcd-2x-resolution/2x-list/)
+- [List of 2x-resolution xkcd Cartoons](/notes/xkcd-2x-resolution-list/)
 
 The earliest version with 2x available is [#124, "Blogofractal"](https://xkcd.com/124/) ([2x version](https://imgs.xkcd.com/comics/blogofractal_2x.png)).
 
