@@ -1,6 +1,6 @@
 ---
 title: "List of 2x-resolution xkcd Cartoons"
-date: 2025-09-26
+date: 2025-09-27
 ---
 
 This is a list of all the xkcd cartoons that are available in 2x resolution, as of today's date.

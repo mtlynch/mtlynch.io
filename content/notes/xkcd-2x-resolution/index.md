@@ -1,6 +1,8 @@
 ---
 title: "Get xkcd Cartoons at 2x Resolution"
-date: 2025-09-26
+date: 2025-09-27
+description: xkcd has an undocumented way to get images of the cartoons at double their normal resolution.
+images: data_trap_2x.png
 tags:
   - cartoons
   - python
