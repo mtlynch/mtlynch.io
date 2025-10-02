@@ -49,6 +49,8 @@ TODO
 
 ## Trying bunts
 
+17 hours on "The Software Essays that Shaped Me," four hours on ["I Once Appeared in The Old New Thing"](/my-old-new-thing-cameo/).
+
 ## Adjusting approach to freelance editing
 
 ## Topic 3
