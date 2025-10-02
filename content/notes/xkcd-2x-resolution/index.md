@@ -56,4 +56,6 @@ The earliest version with 2x available is [#124, "Blogofractal"](https://xkcd.co
 
 Starting with [#1084, "Server Problem"](https://xkcd.com/1084/) ([2x version](https://imgs.xkcd.com/comics/server_problem_2x.png)), almost every xkcd is available at 2x-resolution.
 
-##
+## Easter eggs
+
+- [#1683 "Digital Data"](https://xkcd.com/1683/): The [2x version](https://imgs.xkcd.com/comics/digital_data_2x.png) is lower quality than [the original](https://imgs.xkcd.com/comics/digital_data.png).
