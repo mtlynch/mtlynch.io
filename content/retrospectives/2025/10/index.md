@@ -41,7 +41,7 @@ TODO
 - **Result**: Emails two new readers
 - **Grade**: D
 
-I was going to write this off and say that I'm not learning anything anymore by reaching out to customers, but then someone just emailed me this week to say that they used what they learned from my book to get their first article on the front page of Hacker News.
+I was going to write this off and say that I'm not learning anything anymore by reaching out to customers, but then someone just emailed me this week to say that they used what they learned from my book to get their first article on the front page of Hacker News for the first time. That scoundrel!
 
 ## _Refactoring English_ metrics
 
