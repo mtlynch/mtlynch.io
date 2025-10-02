@@ -99,6 +99,8 @@ And I'm kind of sucked into Jellyfin development now, so I'm trying to act on so
 
 I initially thought I had a bug that overcounted the success rate, as the percentage of Hacker News submissions that reach the front page feels lower than 12% in my experience. But then I looked at some random slices from the last few days, and it seems to match up. If I browse `/newest`, there will typically be 2-5 stories that reached the front page. I found [a 30-minute slice from a few days ago](https://news.ycombinator.com/newest?next=45440276&n=1081) where 27% of submissions reached the front page, which is surprising.
 
+I thought that success rate would be significantly higher on the weekends, when there are fewer submissions. It turns out that's true, but the effect is much smaller than I thought. 12.0% of submissions reach the front page on weekdays, whereas 13.7% make it on weekends. I thought it was going to be a 2-3x difference.
+
 ## Wrap up
 
 ### What got done?
