@@ -41,7 +41,9 @@ TODO
 - **Result**: Emails two new readers
 - **Grade**: D
 
-I was going to write this off and say that I'm not learning anything anymore by reaching out to customers, but then someone just emailed me this week to say that they used what they learned from my book to get their first article on the front page of Hacker News for the first time. That scoundrel!
+I was going to write this off and say that I'm not learning anything anymore by reaching out to customers, but then a reader I reached out to in August followed up and said he used what he learned from my book to get his first article on the front page of Hacker News for the first time.
+
+This is the third time I've set this goal and missed by a large margin, so I'm going to try just setting a lower goal. I think 20 is too intimidating, and I get too far behind and know I won't catch up. But if I add a reminder to myself to email one customer a day, that's more attainable.
 
 ## _Refactoring English_ metrics
 
@@ -50,6 +52,8 @@ I was going to write this off and say that I'm not learning anything anymore by 
 ## Experimenting with bunts
 
 17 hours on "The Software Essays that Shaped Me," four hours on ["I Once Appeared in The Old New Thing"](/my-old-new-thing-cameo/).
+
+Got to the front page and forgot to include an ad for the book. So like 8,000 readers saw it and had no idea I'm writing a book about this. D'oh! But lesson learned. I made it so that the ad is part of my template, so it appears by default rather than me having to remember to add it.
 
 ## Adjusting my approach to freelance editing
 
@@ -90,6 +94,10 @@ So, I finally questioned whether this was a bug in the Jellyfin client source co
 After spending several hours debugging it, I noticed that Roku had a bunch of options around transcoding. I adjusted all of them to eliminate bitrate limits and attempt to play videos natively rather than transcode, and it worked! Videos worked again on my old Roku, too. If only I'd found that first before buying a whole new Roku and CPU. But now I can watch
 
 And I'm kind of sucked into Jellyfin development now, so I'm trying to act on some opportunities for improvement that I noticed while debugging my issue.
+
+### Breaking down Hacker News success by the hour
+
+I initially thought I had a bug that overcounted the success rate, as the percentage of Hacker News submissions that reach the front page feels lower than 12% in my experience. But then I looked at some random slices from the last few days, and it seems to match up. If I browse `/newest`, there will typically be 2-5 stories that reached the front page. I found [a 30-minute slice from a few days ago](https://news.ycombinator.com/newest?next=45440276&n=1081) where 27% of submissions reached the front page, which is surprising.
 
 ## Wrap up
 
