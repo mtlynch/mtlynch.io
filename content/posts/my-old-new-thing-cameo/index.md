@@ -30,7 +30,7 @@ BitLocker had many knobs and dials that admins could configure through organizat
 
 One of BitLocker's configuration headaches was that the error messages were vague. If you tried to configure a rule that said passphrases had to be at least 1000 characters, BitLocker would throw an error like, "No, that's too long," but it wouldn't tell you what the limit was.
 
-At Microsoft, C++ code couldn't contain error messages because the localization team had to translate all user-facing text into other languages. So, all user-facing text lived in `.mc` files that looked like this:
+At Microsoft, <span style="white-space: nowrap;">C++</span> code couldn't contain error messages because the localization team had to translate all user-facing text into other languages. So, all user-facing text lived in `.mc` files that looked like this:
 
 ```text
 SymbolicName=ERROR_BITLOCKER_PASSPHRASE_MINIMUM_TOO_LONG
@@ -39,7 +39,7 @@ The BitLocker minimum passphrase length is too high.
 SymbolicName=...
 ```
 
-And then somewhere in the C++ code, we'd have a check that looked like this:
+And then somewhere in the <span style="white-space: nowrap;">C++</span> code, we'd have a check that looked like this:
 
 ```c++
 #define MAX_PASSPHRASE_MINIMUM 20
@@ -58,11 +58,11 @@ I wanted the user to see this:
 
 > The BitLocker minimum passphrase length **cannot exceed 20**.
 
-I didn't want to copy the value of `20` from the C++ code into the `.mc` file because if we later changed the value of `MAX_PASSPHRASE_MINIMUM`, it would go out of sync with the `.mc` file and make the error message incorrect.
+I didn't want to copy the value of `20` from the <span style="white-space: nowrap;">C++</span> code into the `.mc` file because if we later changed the value of `MAX_PASSPHRASE_MINIMUM`, it would go out of sync with the `.mc` file and make the error message incorrect.
 
 ## How Raymond Chen got involved
 
-I didn't know a lot about the Message Compiler tool that consumed `.mc` files. I couldn't find any examples of anyone referencing C++ values in `.mc` files, but I felt like there had to be some way of doing it.
+I didn't know a lot about the Message Compiler tool that consumed `.mc` files. I couldn't find any examples of anyone referencing <span style="white-space: nowrap;">C++</span> values in `.mc` files, but I felt like there had to be some way of doing it.
 
 I asked on a company-internal mailing list if I could write the `.mc` file like this:
 
@@ -75,7 +75,7 @@ Raymond Chen posted frequently on these mailing lists. Even in 2009, he had been
 
 If I recall correctly, Raymond sent a terse reply to my thread, saying, "There's no law saying you can't use the preprocessor," and an example of generating the `.mc` file with the preprocessor command.
 
-It took me a while to even understand what he was trying to tell me. I didn't know you _could_ tell a C++ compiler to only run the preprocessing step.
+It took me a while to even understand what he was trying to tell me. I didn't know you _could_ tell a <span style="white-space: nowrap;">C++</span> compiler to only run the preprocessing step.
 
 ## Wasting Raymond Chen's time
 
@@ -97,9 +97,9 @@ At the time, I remember thinking, "Wow, I'm dumb for not knowing I could use the
 
 Most of the time, when I look back at a software problem I struggled with years ago, the solution is more obvious to me today. Usually, I can think of a better solution.
 
-But 16 years later, Raymond's solution to run the C preprocessor on a non-C/C++ file still feels unexpected. If I had all of my professional experience except this one memory of Raymond Chen, and you told me to solve the problem again, I'd still struggle just as much as I did in 2009.
+But 16 years later, Raymond's solution to run the C preprocessor on a non-C/<span style="white-space: nowrap;">C++</span> file still feels unexpected. If I had all of my professional experience except this one memory of Raymond Chen, and you told me to solve the problem again, I'd still struggle just as much as I did in 2009.
 
-The difference today is that I don't feel dumb for not knowing how to solve this problem. I now see it as a weakness in Microsoft's internal tooling. At Microsoft, on their flagship product, how was there no standard way for developers to reference constant values in both error messages and C++ code?
+The difference today is that I don't feel dumb for not knowing how to solve this problem. I now see it as a weakness in Microsoft's internal tooling. At Microsoft, on their flagship product, how was there no standard way for developers to reference constant values in both error messages and <span style="white-space: nowrap;">C++</span> code?
 
 As a software engineer, there are some problems that you find unpleasant, but you grit your teeth and practice until you get better. Other problems, you just avoid by carefully picking what jobs and projects you take on.
 
