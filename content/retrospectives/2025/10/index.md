@@ -106,7 +106,13 @@ Whenever I get these emails, I dig around in Stripe to look for a setting to cus
 
 Last month, I finally sat down and searched through Stripe's documentation and forum posts, and I can't find any way to customize the email Stripe sends after a customer completes a one-time payment. As far as I can tell, the only option is to spin up your own web server to listen for Stripe webhooks, then send your own emails from your own email provider. All because Stripe can't be bothered to let merchants customize any text in the payment completion emails...
 
-Setting up a web server to respond to web hooks isn't _that_ hard, but it's a much bigger hassle than I'd like. I decided to do it with Netlify functions, which I've never used before. I was originally going to send the emails with Postmark, as I've [done that before](https://github.com/mtlynch/screenjournal/tree/ef234562c4157cebcb41d3d2647ca20678444da4/email), but it takes a surprising amount of Go code to send emails with SMTP. And that's not even getting into creating the emails to beging with.
+Setting up a web server to respond to web hooks isn't _that_ hard, but it's a much bigger hassle than I'd like. I decided to do it with Netlify functions, which I've never used before.
+
+I was originally going to send the emails with Postmark. I've [done that on other projects](https://github.com/mtlynch/screenjournal/tree/ef234562c4157cebcb41d3d2647ca20678444da4/email), but it takes a surprising amount of Go code to send emails with SMTP. And then even doing a minimal amount of text formatting is another layer of complexity. I've also been less enthusiastic about Postmark since it was sold from Wildbit (a company I admire) to ActiveCampaign (a spam company).
+
+I decided partway into coding it that it's simpler if I automatically add the customer to Buttondown, my mailing list manager, and then I set up Buttondown to automatically send users a post-purchase email when I add them to the list. That way, I'm outsourcing the email design, formatting, and sending to Buttondown. It keeps my webhook simple because all it has to do is receive a notification from Stripe, verify it's for the right product, and then POST a request to Buttondown to add the user to the list. I'd been wanting to set up something to automatically sync to Buttondown anyway so that all customers get new chapter announcements.
+
+But I still feel like it's silly that Stripe doesn't let me just customize my post-purchase emails...
 
 ## Side projects
 
