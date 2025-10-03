@@ -24,26 +24,24 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Publish something that attracts new readers to the _Refactoring English_ website
 
-- **Result**: XX
+- **Result**: Published ["The Software Essays that Shaped Me"](https://refactoringenglish.com/blog/software-essays-that-shaped-me/), which attracted 16k readers in the first three days
 - **Grade**: B+
 
 TODO
 
 ### Publish a new chapter of _Refactoring English_
 
-- **Result**: XX
+- **Result**: Didn't publish anything new
 - **Grade**: F
 
-TODO
+I wrote a first draft of a new chapter, but I didn't end up publishing it. I ended up spending more time than I planned on "The Software Essays that Shaped Me" and freelance editing clients.
 
 ### Write personalized emails to 20 readers I haven't spoken to before
 
-- **Result**: Emails two new readers
+- **Result**: Emailed two new readers
 - **Grade**: D
 
-I was going to write this off and say that I'm not learning anything anymore by reaching out to customers, but then a reader I reached out to in August followed up and said he used what he learned from my book to get his first article on the front page of Hacker News for the first time.
-
-This is the third time I've set this goal and missed by a large margin, so I'm going to try just setting a lower goal. I think 20 is too intimidating, and I get too far behind and know I won't catch up. But if I add a reminder to myself to email one customer a day, that's more attainable.
+I was going to write this off and say that I'm not learning anything anymore by reaching out to customers. Then, a few days ago, a reader I reached out to in August followed up to say he used what he learned from my book to get an article on the front page of Hacker News for the first time. So, that was pretty indisputably valuable and tells me I should be doing more of this.
 
 ## _Refactoring English_ metrics
 
@@ -51,19 +49,54 @@ This is the third time I've set this goal and missed by a large margin, so I'm g
 
 ## Experimenting with bunts
 
+In baseball, a bunt is when you hold the bat in place to hit the ball rather than taking a swing and possibly missing. The upside is that you're less likely to miss the ball, but the downside is that you won't hit the ball very far. The best you can hope for with a bunt is making it to first base, but a bunt is almost never going to be a homerun.
+
+Most of my blog posts are "swing for the fences" type posts where I'm trying for a homerun. I'm putting in a lot of effort because I'm hoping to reach #1 on Hacker News, reddit, or search results.
+
+The problem is that my "swing for the fences" posts take me about a month to write, so I'd have to put my book on hold for a month every time I write one. I've been thinking about whether I could do some "bunt" posts instead. That way, I can only put my book on hold for a week rather than the whole month.
+
+I don't want to take a topic that deserves a lot of effort and just do a low-effort version of it. Rather, I want to take a topic that's easy to cover and just see how it does.
+
 17 hours on "The Software Essays that Shaped Me," four hours on ["I Once Appeared in The Old New Thing"](/my-old-new-thing-cameo/).
 
-Got to the front page and forgot to include an ad for the book. So like 8,000 readers saw it and had no idea I'm writing a book about this. D'oh! But lesson learned. I made it so that the ad is part of my template, so it appears by default rather than me having to remember to add it.
+Previously, when I had posts do well on Hacker News, a noticeable portion of readers [purchased the book](/my-6k-advance/#publishing-book-excerpts). This time, only one person purchased. Maybe everyone seeing it on Hacker News has already seen that I'm writing the book, so everyone who's interested has already bought?
+
+I woke up the morning after it had already fallen off the front page of Hacker News and suddenly realized: I never included the ad for the book!
+
+All the sample chapters on the book's website include a little self-ad to tell the reader I'm writing a book on this topic, and they can buy early access.
+
+TODO: Screenshot
+
+I forgot to include the self-ad for the blog post, so 14k readers saw my post and had no idea I'm writing a book about this.
 
 ## Adjusting my approach to freelance editing
 
+As I write my book, I also decided to offer freelance editing to help other developers improve writing on their blogs. My idea was that it's an opportunity to make sure the way I explain concepts in the book makes sense to real people.
+
+At the beginning, freelance editing did give me good ideas for my book. But as I do more jobs, I'm getting fewer ideas for my book.
+
 Two new clients hired me for editing this month, prompting me to think more about my strategy with editing.
 
-My initial idea with taking on editing clients was that it's an opportunity to make sure the way I explain concepts in the book makes sense to real people. And at the beginning, the work gave me good ideas for my book. But as I do more jobs, I find that all the feedback I give is stuff I've already said in my book.
+And there's also a pretty high cost to the editing. Each job takes me between four to seven hours, and it eats up my "hard thinking" of the day, so it's hard for me to do my own writing in the same day. I also feel a time pressure, even though nobody has asked me to hurry. But just knowing my own writing process, it sucks to have gates where you're stuck for days waiting for feedback.
 
-And there's also a pretty high cost to the editing. I put a lot of work into the editing, so I find that it eats up my "hard thinking" of the day, which conflicts with me doing other types of writing. With individual posts especially, I feel a time pressure, even though nobody has asked me to hurry. But just knowing my own writing process, it sucks to have gates where you're stuck for days waiting for feedback.
+So, what I really wanted is some way to keep doing the editing, but _only_ for people who have read the book. I've doubled my normal rates for everyone, but I'm planning to email book customers and say that they get 90% off the listed rates if they pinky promise that they've read everything I've published so far and accompany their draft with a one-page addendum explaining what they were able to apply to their writing and what they didn't understand or struggled to put into practice.
 
-So, what I really wanted is some way to keep doing the editing, but _only_ for people who have read the book. I've doubled my normal rates for everyone, but I'm planning to email book customers and say that they get 80% off the listed rates if they pinky promise that they've read everything I've published so far.
+I don't care that much about the money because I hope that whatever I could charge in the short term would be insignificant relative to what I'd make long-term from writing a better book. But there's value in clients paying so that they feel like they have skin in the game, too.
+
+## Why do I keep skipping out on reader outreach?
+
+I keep setting this goal and missing, and I'm not sure why. On its face, it doesn't seem that hard, but it never seems like the most important thing, so I keep deferring it.
+
+There are other tasks I procrastinate because I don't enjoy doing it, but I actually do enjoy reaching out to readers. It's fun to see what different readers are up to and how they might apply my techniques.
+
+Emailing readers also requires a lot of activation energy because I have to:
+
+1. Go to my list of pre-paid readers
+1. Look for ones that have a website (so I can say something personalized)
+1. Read through their website to learn more about them
+1. Write an email and word it carefully to avoid sounding AI-generated
+
+This is the third time I've set this goal and missed by a large margin, so I'm going to try just setting a lower goal. I'm also going to try to reduce the activation energy by first gathering a list of customers to email and their websites. That way, when I'm in the mood to reach out, so I'm not starting from scratch every time.
 
 ## The hassle of sending post-purchase emails with Stripe
 
@@ -113,7 +146,7 @@ I thought that success rate would be significantly higher on the weekends, when 
 
 ### Goals for next month
 
--
+- Set up editing discounts for readers who have read the book
 
 ### Requests for help
 
