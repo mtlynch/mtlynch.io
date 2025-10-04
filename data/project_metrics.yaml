@@ -15,7 +15,12 @@ refactoring_english:
     revenue_consulting: 0.0
     revenue_sponsors: 48.25
   "2025-08":
-    unique_visitors: 2951
+    unique_visitors: 2863
     revenue_pre_orders: 312.63
     revenue_consulting: 0.0
+    revenue_sponsors: 48.25
+  "2025-09":
+    unique_visitors: 7283
+    revenue_pre_orders: 484.71
+    revenue_consulting: 429.60
     revenue_sponsors: 48.25

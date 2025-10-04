@@ -34,7 +34,7 @@ buildFuture = true
     info = "By day, a simple software engineer. By night, also a software engineer."
     description = "Updates about my life and what I learn about creating software"
     twitter = "deliberatecoder"
-    currentproject = "Educational Products"
+    currentproject = "Refactoring English"
     keywords = "blog,developer,personal"
     avatarurl = "images/avatar.jpg"
 
