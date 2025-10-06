@@ -16,7 +16,8 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 ## Highlights
 
--
+- I'm experimenting with low-investment, low-payoff style blog posts.
+- I've concocted a scheme to offer freelance editing without interfering with writing my book.
 
 ## Goal grades
 
@@ -27,7 +28,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: Published ["The Software Essays that Shaped Me"](https://refactoringenglish.com/blog/software-essays-that-shaped-me/), which attracted 16k readers in the first three days
 - **Grade**: B+
 
-TODO
+I did complete this successfully, but I think I spent too long on the post and felt somewhat underwhelmed by what I wrote.
 
 ### Publish a new chapter of _Refactoring English_
 
@@ -46,6 +47,8 @@ I was going to write this off and say that I'm not learning anything anymore by 
 ## _Refactoring English_ metrics
 
 {{<project-metrics project="refactoring_english">}}
+
+September had a nice bump in website visitors and pre-orders. I'd like to get to the point where there's a virtuous cycle of readers referring other readers, but I don't think I'm there yet. Still, nice to make almost $1k for the month.
 
 ## Experimenting with bunts
 
@@ -76,9 +79,9 @@ The posts did well. They both reached the front page of Hacker News, though they
 | ["The Software Essays that Shaped Me"](https://refactoringenglish.com/blog/software-essays-that-shaped-me/) | 17            | 20.2k          | [307](https://news.ycombinator.com/item?id=45425568) | [85](https://lobste.rs/s/rouky6/software_essays_shaped_me)     | [125](https://www.reddit.com/r/programming/comments/1nug0oo/the_software_essays_that_shaped_me/)  |
 | ["I Once Appeared in The Old New Thing"](/my-old-new-thing-cameo/)                                          | 4             | 3.8k           | [49](https://news.ycombinator.com/item?id=45274779)  | [49](https://lobste.rs/s/pulpod/i_once_appeared_old_new_thing) | [28](https://www.reddit.com/r/programming/comments/1nx8l6q/i_once_appeared_in_the_old_new_thing/) |
 
-### Screwing up my self-ad
+### Screwing up my time on Hacker News
 
-Previously, when one of my _Refactoring English_ posts did well on Hacker News, a noticeable portion of readers [purchased the book](/my-6k-advance/#publishing-book-excerpts). This time, only one person purchased. Maybe everyone seeing it on Hacker News has already seen that I'm writing the book, so everyone who's interested has already bought?
+Previously, when one of my _Refactoring English_ posts did well on Hacker News, there was a noticeable uptick in readers [purchasing the book](/my-6k-advance/#publishing-book-excerpts). This time, “The Software Essays that Shaped Me” [reached #2](https://hnrankings.info/45425568/) and stayed on the front page for 11 hours, but only one person purchased. Maybe everyone seeing it on Hacker News has already seen that I'm writing the book, so everyone who's interested has already bought?
 
 I woke up the morning after it had already fallen off the front page of Hacker News and suddenly realized: I never included the ad for the book!
 
@@ -137,9 +140,13 @@ The other benefit of offloading the work to Buttondown is that I'd already wante
 
 ### Breaking down Hacker News success by the hour
 
-I initially thought I had a bug that overcounted the success rate, as the percentage of Hacker News submissions that reach the front page feels lower than 12% in my experience. But then I looked at some random slices from the last few days, and it seems to match up. If I browse `/newest`, there will typically be 2-5 stories that reached the front page. I found [a 30-minute slice from a few days ago](https://news.ycombinator.com/newest?next=45440276&n=1081) where 27% of submissions reached the front page, which is surprising.
+I'm still tinkering with Hacker News Observer, a product that I still haven't released and don't know what to do with. For now, I'm just gathering data and using it to satisfy some curiosities about success on Hacker News.
+
+One curiosity I've had for a long time is whether there are times of day when it's easier for a post to reach the front page of Hacker News, so I aggregated what percentage of posts reach the front page over the course of a day:
 
 {{<img src="hourly-aggregates.webp" max-width="800px" caption="I created a view in Hacker News observer to show front page stats by hour">}}
+
+I initially thought I had a bug that overcounted the success rate, as the percentage of Hacker News submissions that reach the front page feels lower than 12% in my experience. But then I looked at some random slices from the last few days, and it seems to match up. If I browse [`/newest`](https://news.ycombinator.com/newest), there will typically be 2-5 stories that reached the front page. I found [a 30-minute slice from a few days ago](https://news.ycombinator.com/newest?next=45440276&n=1081) where 27% of submissions reached the front page, which is surprising.
 
 I thought that success rate would be significantly higher on the weekends, when there are fewer submissions. Weekend posts are more likely to reach the front page, but the effect is much smaller than I thought.
 
@@ -154,18 +161,18 @@ I'd like to try limiting the data to personal blogs [like I do on HN Popularity 
 
 ### What got done?
 
--
+- Published ["The Software Essays that Shaped Me"](https://refactoringenglish.com/blog/software-essays-that-shaped-me/)
+- Published ["I Once Appeared in The Old New Thing"](/my-old-new-thing-cameo/)
+- Added "success by hour of day" feature to Hacker News observer
 
 ### Lessons learned
 
--
+- Stop to consider bailing if a low-investment post turns out to be high-investment.
+- Stripe does not allow you to customize post-purchase emails.
+  - You have to do a bunch of other stuff to send your customers an email.
 
 ### Goals for next month
 
 - Set up editing discounts for readers who have read the book
 - Create a list of early access customers to reach out to
 - Publish a new chapter of the book
-
-### Requests for help
-
-TODO
