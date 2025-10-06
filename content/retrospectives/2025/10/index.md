@@ -49,15 +49,30 @@ I was going to write this off and say that I'm not learning anything anymore by 
 
 ## Experimenting with bunts
 
-In baseball, a bunt is when you hold the bat in place to hit the ball rather than taking a swing and possibly missing. The upside is that you're less likely to miss the ball, but the downside is that you won't hit the ball very far. The best you can hope for with a bunt is making it to first base, but a bunt is almost never going to be a homerun.
+In baseball, a bunt is when you hit the ball by just holding the bat in the ball's path rather than swinging. The upside is that you're less likely to miss, but the downside is that you won't hit the ball very far. The best you can hope for with a bunt is making it to first base, but a bunt is almost never going to be a homerun.
 
 Most of my blog posts are "swing for the fences" type posts where I'm trying for a homerun. I'm putting in a lot of effort because I'm hoping to reach #1 on Hacker News, reddit, or search results.
 
-The problem is that my "swing for the fences" posts take me about a month to write, so I'd have to put my book on hold for a month every time I write one. I've been thinking about whether I could do some "bunt" posts instead. That way, I can only put my book on hold for a week rather than the whole month.
+The problem is that my "swing for the fences" posts take me about a month to write, so if I'm publishing blog posts as I write my book, I'd have to put my book on hold for a month every time I write a blog post. I've been thinking about whether I could do some "bunt" posts instead. That way, I can only put my book on hold for a week rather than the whole month.
 
 I don't want to take a topic that deserves a lot of effort and just do a low-effort version of it. Rather, I want to take a topic that's easy to cover and just see how it does.
 
-17 hours on "The Software Essays that Shaped Me," four hours on ["I Once Appeared in The Old New Thing"](/my-old-new-thing-cameo/).
+My first bunt was ["I Once Appeared in The Old New Thing."](/my-old-new-thing-cameo/) It was about an experience I had when I was 22 and working at my first real job at Microsoft. I didn't have a lot of insightful things to say about it, but I thought it was an interesting story. I was able to write it in about four hours, and it felt complete.
+
+My next bunt was ["The Software Essays that Shaped Me."](https://refactoringenglish.com/blog/software-essays-that-shaped-me/) I've seen other people share lists of their favorite software blog posts, and I thought it would be an easy, fun thing to do. Best of all, I felt like the people who appreciate good software writing would also find my book interesting.
+
+As I started to write "The Software Essays that Shaped Me," it turned into more than just a bunt. I ended up spending almost my entire writing time in September on it.
+
+I originally thought I'd list my favorite blog posts and call it a day, but that felt too boring. So, I tried to write a bit of commentary about each, but then I got carried away and ended up writing commentary that was longer than the originals themselves, in some cases. It took me several drafts before I found a way to write about these posts that felt interesting, and I still don't feel like I quite succeeded.
+
+I think it's interesting to people who know me. If someone whose work I liked published a list of the articles that influenced them, I'd find that interesting. But seeing random lists of blog posts: not so interesting.
+
+| Post                                                                                                        | Writing Hours | Unique Readers | Hacker News score                                    | Lobsters score                                                 | reddit score                                                                                      |
+| ----------------------------------------------------------------------------------------------------------- | ------------- | -------------- | ---------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| ["The Software Essays that Shaped Me"](https://refactoringenglish.com/blog/software-essays-that-shaped-me/) | 17            | 20.2k          | [307](https://news.ycombinator.com/item?id=45425568) | [85](https://lobste.rs/s/rouky6/software_essays_shaped_me)     | [125](https://www.reddit.com/r/programming/comments/1nug0oo/the_software_essays_that_shaped_me/)  |
+| ["I Once Appeared in The Old New Thing"](/my-old-new-thing-cameo/)                                          | 4             | 3.8k           | [49](https://news.ycombinator.com/item?id=45274779)  | [49](https://lobste.rs/s/pulpod/i_once_appeared_old_new_thing) | [28](https://www.reddit.com/r/programming/comments/1nx8l6q/i_once_appeared_in_the_old_new_thing/) |
+
+I posted it and then people started sharing their lists of essays that were important to them, and I had no interest in reading them. Granted, a lot of people just shared links without any context, and I put a lot more effort into pitching my resources, but I still feel like it's
 
 Previously, when I had posts do well on Hacker News, a noticeable portion of readers [purchased the book](/my-6k-advance/#publishing-book-excerpts). This time, only one person purchased. Maybe everyone seeing it on Hacker News has already seen that I'm writing the book, so everyone who's interested has already bought?
 
@@ -67,21 +82,29 @@ All the sample chapters on the book's website include a little self-ad to tell t
 
 TODO: Screenshot
 
-I forgot to include the self-ad for the blog post, so 14k readers saw my post and had no idea I'm writing a book about this.
+I forgot to include the self-ad for the blog post, so the first 14k readers saw my post and had no idea I'm writing a book about this.
 
 ## Adjusting my approach to freelance editing
 
-As I write my book, I also decided to offer freelance editing to help other developers improve writing on their blogs. My idea was that it's an opportunity to make sure the way I explain concepts in the book makes sense to real people.
+A few months ago, I decided to offer freelance editing services to help other developers improve writing on their blogs. My idea was that it's an opportunity to make sure the way I explain concepts in my book makes sense to real people.
 
-At the beginning, freelance editing did give me good ideas for my book. But as I do more jobs, I'm getting fewer ideas for my book.
+At the beginning, freelance editing gave me good ideas for my book, but as I do more jobs, I'm getting fewer ideas for my book. I feel like a lot of the feedback I write is basically rewriting things I've already written for my book.
 
-Two new clients hired me for editing this month, prompting me to think more about my strategy with editing.
-
-And there's also a pretty high cost to the editing. Each job takes me between four to seven hours, and it eats up my "hard thinking" of the day, so it's hard for me to do my own writing in the same day. I also feel a time pressure, even though nobody has asked me to hurry. But just knowing my own writing process, it sucks to have gates where you're stuck for days waiting for feedback.
+There's also a pretty high cost to the editing. Each job takes me between four to seven hours, and it eats up my "hard thinking" of the day, so it's hard for me to do my own writing in the same day. I also feel a time pressure, even though nobody has asked me to hurry. But just knowing my own writing process, it sucks to have gates where you're stuck for days waiting for feedback.
 
 So, what I really wanted is some way to keep doing the editing, but _only_ for people who have read the book. I've doubled my normal rates for everyone, but I'm planning to email book customers and say that they get 90% off the listed rates if they pinky promise that they've read everything I've published so far and accompany their draft with a one-page addendum explaining what they were able to apply to their writing and what they didn't understand or struggled to put into practice.
 
 I don't care that much about the money because I hope that whatever I could charge in the short term would be insignificant relative to what I'd make long-term from writing a better book. But there's value in clients paying so that they feel like they have skin in the game, too.
+
+I also find that once I start reading a draft, there are questions that I wish I'd asked the developer beforehand, so I need to adjust my process to include these questions up front:
+
+- Who is the audience for this post?
+  - e.g., beginner Python developers, mid-level tech managers
+- What benefit does the reader get from reading the post?
+  - e.g., learn a new technique, enjoy a fun rant
+- What level of technical expertise is required to read this post?
+  - What terms and concepts should the reader understand to be a good match for this post?
+  - What terms and concepts in the post do you expect to be unfamiliar to the reader?
 
 ## Why do I keep skipping out on reader outreach?
 
@@ -116,29 +139,18 @@ But I still feel like it's silly that Stripe doesn't let me just customize my po
 
 ## Side projects
 
-### I just want to watch TV on my Roku
-
-Recently, I noticed that when I tried to use the Jellyfin streaming app on my Roku to watch TV shows and movies from my storage server, the video would take a long time to load and then hang every few minutes. I felt like I was back in the "Bufferring..." era of streaming video with RealPlayer back in the 90s.
-
-I checked my storage server's metrics and noticed that the CPU was pegged to 100% when I tried to watch. I figured maybe the CPU I bought in XX wasn't cutting it anymore, so I found the fastest compatible version and bought it used on eBay for $130. It arrived with bent pins, but I fortunately was able to realign them with a utility knife and get the CPU working.
-
-I tried streaming video again, and it was still pegging the CPU. So much for the new CPU.
-
-Then, I thought, "Why is this pegging the CPU at all? If the Roku needs the video in another format, can't I just re-encode it to that format offline?" I save most of my media in H.264, which plays natively in web browsers without transcoding. The [Roku specs](https://developer.roku.com/docs/specs/media/streaming-specifications.md) say that Roku devices support H.264 natively, and they suggested that this was true even for my ancient 2016 model Roku Premiere. I tried encoding videos to different formats, and they all had the same skipping issue.
-
-Fortunately, streaming devices have come down a lot in price since I last bought one, which I fear is due to Roku finding other ways to monetize me as a customer. But it was only $30 to buy a Roku Streaming Stick Plus, so I upgraded to that. And I got everything set up and... videos still stuttered.
-
-So, I finally questioned whether this was a bug in the Jellyfin client source code. Fortunately, it's open source, so I could peek in. I looked at recent bugs and found that someone had reported subtitles were always on, something I also noticed.
-
-After spending several hours debugging it, I noticed that Roku had a bunch of options around transcoding. I adjusted all of them to eliminate bitrate limits and attempt to play videos natively rather than transcode, and it worked! Videos worked again on my old Roku, too. If only I'd found that first before buying a whole new Roku and CPU. But now I can watch
-
-And I'm kind of sucked into Jellyfin development now, so I'm trying to act on some opportunities for improvement that I noticed while debugging my issue.
-
 ### Breaking down Hacker News success by the hour
 
 I initially thought I had a bug that overcounted the success rate, as the percentage of Hacker News submissions that reach the front page feels lower than 12% in my experience. But then I looked at some random slices from the last few days, and it seems to match up. If I browse `/newest`, there will typically be 2-5 stories that reached the front page. I found [a 30-minute slice from a few days ago](https://news.ycombinator.com/newest?next=45440276&n=1081) where 27% of submissions reached the front page, which is surprising.
 
-I thought that success rate would be significantly higher on the weekends, when there are fewer submissions. It turns out that's true, but the effect is much smaller than I thought. 12.0% of submissions reach the front page on weekdays, whereas 13.7% make it on weekends. I thought it was going to be a 2-3x difference.
+I thought that success rate would be significantly higher on the weekends, when there are fewer submissions. Weekend posts are more likely to reach the front page, but the effect is much smaller than I thought.
+
+- Weekdays: 12.0% of submissions reach the front page.
+- Weekdends: 13.7% of submissions reach the front page.
+
+I thought it was going to be like 5% on weekdays vs. 20% on weekends. It makes submitting on the weekend less attractive because there are substantially fewer readers, and you only have a small increase in chance to reach the front page.
+
+I'd like to try limiting the data to personal blogs [like I do on HN Popularity Contest](https://refactoringenglish.com/tools/hn-popularity/methodology/), as I'm curious to see if personal blogs have better chances at certain times.
 
 ## Wrap up
 
