@@ -2,6 +2,7 @@
 title: "Refactoring English: Month 10"
 date: "2025-10-07"
 description: Instead of swinging for the fences, what if I bunt?
+banner_image: og-cover.webp
 ---
 
 {{<notice type="info">}}
