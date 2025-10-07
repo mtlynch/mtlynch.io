@@ -55,7 +55,7 @@ September had a nice bump in website visitors and pre-orders. I'd like to get to
 
 ## Experimenting with bunts
 
-In baseball, a bunt is when you hold the bat in the ball's path rather than swinging the bat. The upside is that you're less likely to miss, but the downside is that you won't hit the ball very far. The best you can hope for with a bunt is making it to first base, but a bunt is almost never going to be a homerun.
+In baseball, a bunt is when you hold the bat in the ball's path rather than swinging the bat. The upside is that you're less likely to miss, but the downside is that you won't hit the ball very far. The best you can hope for with a bunt is making it to first base, but a bunt is almost never going to be a home run.
 
 Most of my blog posts are "swing for the fences" posts. I put in a lot of effort because I want to reach #1 on Hacker News, reddit, or search results.
 
@@ -65,7 +65,7 @@ I've been thinking about whether I could do some "bunt" posts instead. That way,
 
 I don't want to take a topic that deserves a lot of care and just do a lazy version of it. Rather, I want to take a topic that's easy to cover and just see how it does.
 
-My first bunt was, ["I Once Appeared in The Old New Thing."](/my-old-new-thing-cameo/) It was about an experience when I had at 22 at my first real job. I didn't have a lot of insightful things to say about it, but I thought it was an interesting story. I was able to write it in about four hours, and it felt complete for what it was.
+My first bunt was, ["I Once Appeared in The Old New Thing."](/my-old-new-thing-cameo/) It was about an experience I had at 22 at my first real job. I didn't have a lot of insightful things to say about it, but I thought it was an interesting story. I was able to write it in about four hours, and it felt complete for what it was.
 
 My next bunt was, ["The Software Essays that Shaped Me."](https://refactoringenglish.com/blog/software-essays-that-shaped-me/) I've seen other people share lists of their favorite software blog posts, and I thought it would be an easy, fun thing to do. Best of all, the people who appreciate good software writing might also find my book interesting.
 
@@ -96,7 +96,7 @@ I woke up the morning after my article had already fallen off the front page of 
 
 All the sample chapters on the book's website include a little self-ad to tell the reader I'm writing a book on this topic, and they can buy early access.
 
-{{<img src="self-blurb.webp" max-width="700px" caption="All the pages on the *Refactoring English* are supposed to have a little self-ad on them for the book.">}}
+{{<img src="self-blurb.webp" max-width="700px" caption="All the pages on the *Refactoring English* website are supposed to have a little self-ad on them for the book.">}}
 
 I forgot to include the self-ad for the blog post, so the first 14k readers saw my post and had no idea I'm writing a book. D'oh!
 
@@ -114,7 +114,7 @@ I want to keep doing the editing, but _only_ for authors who have read my book. 
 
 At a 90% discount, it's almost not worth charging at all, but I want clients to pay _some_ amount so that they feel like they have skin in the game, too.
 
-I'll continue to take on clients that haven't read the book, but I want to charge enough that I feel like it's worth the tradeoff of taking time from my book. $400 might still be too low, but we'll see.
+I'll continue to take on clients who haven't read the book, but I want to charge enough that I feel like it's worth the tradeoff of taking time from my book. $400 might still be too low, but we'll see.
 
 ## Why do I keep skipping reader outreach?
 
@@ -145,7 +145,7 @@ Here are the gotchas I've hit so far:
 
 - Stripe's [Go client library](https://github.com/stripe/stripe-go) is compatible with _exactly_ one version of the Stripe webhook API.
   - No, the documentation doesn't say which one. Run it and find out from the webhook failures!
-- If you update your Stripe account to use the latest webhook API version and then resend a webhook for a previous event, Stripe still uses old API version even though it claims to use the new version.
+- If you update your Stripe account to use the latest webhook API version and then resend a webhook for a previous event, Stripe still uses the old API version even though it claims to use the new version.
 - Netlify silently converts HTTP header names to lowercase, so if you're looking for the `Stripe-Signature:` header, you have to look for `stripe-signature`.
 - Instead of a normal [v2 Go module](https://go.dev/blog/v2-go-modules), Stripe for some reason decided to make every package upgrade a source change as well, so when I upgrade from v83 to v84, I have to replace `"github.com/stripe/stripe-go/v83"` in every file that imports the Stripe package.
   - Normally, you'd upgrade the version in one place without affecting imports.
