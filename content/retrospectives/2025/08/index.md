@@ -167,7 +167,7 @@ Every week, I'd post updates to What Got Done and think about how I prefer my bl
 
 So, in six years, I probably spent about 300 hours implementing and maintaining What Got Done as a Go + Vue + SQLite + fly.io app. It only took 10 hours to reimplement it as a static site with simple Markdown files and Hugo.
 
-Because the new version is a just-for-me app, I can add personalized features like [pre-populating my weekly updates from my git commits](https://github.com/mtlynch/weeks.mtlynch.io/blob/b7a79b5f7d8b6ed8d1ed93e19b221c2f889efc4b/dev-scripts/new-week). And of course, it's orders of magnitude simpler and cheaper to host, maintain, and back up because it's just a static site with source control instead of a full-blown web app with separate tech stacks for the frontend, backend, and database.
+Because the new version is a just-for-me app, I can add personalized features like [pre-populating my weekly updates from my git commits](https://github.com/mtlynch/weeks.mtlynch.io-old/blob/b7a79b5f7d8b6ed8d1ed93e19b221c2f889efc4b/dev-scripts/new-week). And of course, it's orders of magnitude simpler and cheaper to host, maintain, and back up because it's just a static site with source control instead of a full-blown web app with separate tech stacks for the frontend, backend, and database.
 
 ### Sunsetting What Got Done
 
