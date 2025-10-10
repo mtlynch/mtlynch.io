@@ -1,6 +1,10 @@
 ---
 title: "Read My Blog With Javascript"
 date: 2025-10-10
+description: I'm not sure why you'd want to, but you can.
+tags:
+  - javascript
+  - rss
 ---
 
 You can now read my blog with client-side JavaScript. I'm not sure why you'd want to, but you can.
