@@ -37,7 +37,7 @@ Refactoring English: Month 9
 
 I got the idea from [a recent comment Simon Willison made on Lobsters](https://lobste.rs/s/nr9t3s/rss_server_side_reader#c_kzwi8v).
 
-## How do I let JavaScript to read my site?
+## How do I let JavaScript read my site?
 
 The only thing I had to change to enable JavaScript access was to set [Cross-Origin Resource Sharing (CORS) HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS) for my RSS feeds. Typically, the thing that prevents other sites from reading each other's content with client-side JavaScript is [same-origin policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy).
 
