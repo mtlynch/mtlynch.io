@@ -147,9 +147,9 @@ Here are the gotchas I've hit so far:
 - Stripe's [Go client library](https://github.com/stripe/stripe-go) is compatible with _exactly_ one version of the Stripe webhook API.
   - No, the documentation doesn't say which one. Run it and find out from the webhook failures!
 - If you update your Stripe account to use the latest webhook API version and then resend a webhook for a previous event, Stripe still uses the old API version even though it claims to use the new version.
+- Stripe's webhook requests for `checkout.session.completed` don't actually contain `line_items` even though it's present in the docs.
+  - This is a pain because it means you can't figure out what the customer purchased unless you make a separate API call.
 - Netlify silently converts HTTP header names to lowercase, so if you're looking for the `Stripe-Signature:` header, you have to look for `stripe-signature`.
-- Instead of a normal [v2 Go module](https://go.dev/blog/v2-go-modules), Stripe for some reason decided to make every package upgrade a source change as well, so when I upgrade from v83 to v84, I have to replace `"github.com/stripe/stripe-go/v83"` in every file that imports the Stripe package.
-  - Normally, you'd upgrade the version in one place without affecting imports.
 - The Stripe webhook signing secret is different from your Stripe API key.
 
 ## Side projects
