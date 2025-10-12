@@ -12,6 +12,7 @@ date: 2025-10-11
 
 - Add QR code doesn't work
   - If I scan, nothing happens.
+- Lots of times where I'm not actually allowed to do something, but I don't find out until I try, but it could have known in advance.
 
 Nix config, so you can flash with:
 
