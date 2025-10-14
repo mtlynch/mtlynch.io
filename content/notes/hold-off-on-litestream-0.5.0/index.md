@@ -105,7 +105,7 @@ I checked the source and saw that the folder creation logic had disappeared in t
 
 ### Success!
 
-With my fork of Litestream with the final `mkdir` fix applied, What Got Done was back up and running!
+With [my fork of Litestream](https://github.com/mtlynch/whatgotdone/pull/985) with the final `mkdir` fix applied, What Got Done was back up and running!
 
 ## Reflections
 
