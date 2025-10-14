@@ -32,7 +32,7 @@ There are two tasks that are intentional in upgrading from previous versions of 
 
 Litestream has published a [helpful migration guide](https://litestream.io/docs/migration/) with more details.
 
-One of the benefits of Litestream 0.5.0 is that there's now an [official litestream Docker image](https://hub.docker.com/r/litestream/litestream). All of my previous Docker containers required a lot of boilerplate [to download the correct version of Litestream](https://github.com/mtlynch/whatgotdone/blob/2d5085fb9480d7b6e19fc65e0c08895ae236e784/Dockerfile#L24-L49) and make it available in my container, but now it reduces to a single Dockerfile line:
+One of the benefits of Litestream 0.5.0 is that there's now an [official litestream Docker image](https://hub.docker.com/r/litestream/litestream). (**Edit**: Reader placardloop [points out](https://news.ycombinator.com/item?id=45583321) that the Docker image is not new; I just never noticed it.) All of my previous Docker containers required a lot of boilerplate [to download the correct version of Litestream](https://github.com/mtlynch/whatgotdone/blob/2d5085fb9480d7b6e19fc65e0c08895ae236e784/Dockerfile#L24-L49) and make it available in my container, but now it reduces to a single Dockerfile line:
 
 ```Dockerfile
 COPY --from=litestream/litestream:0.5.0 /usr/local/bin/litestream /app/litestream
