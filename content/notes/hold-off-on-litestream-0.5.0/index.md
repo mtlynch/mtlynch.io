@@ -13,6 +13,12 @@ I tried out Litestream 0.5.0, but I caution other Litestream users to give it an
 
 {{<notice type="info">}}
 
+**Update**: Litestream [0.5.1](https://github.com/benbjohnson/litestream/releases/tag/v0.5.1) is now available and fixes most (but not all) of the issues I encountered.
+
+{{</notice>}}
+
+{{<notice type="info">}}
+
 **Note**: I'm not complaining about Litestream. I love Litestream, and I'm glad to see renewed development. I'm just hoping to save other Litestream users from running into the same bugs I'm hitting.
 
 {{</notice>}}
