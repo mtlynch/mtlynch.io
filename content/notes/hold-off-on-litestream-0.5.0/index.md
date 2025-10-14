@@ -130,7 +130,7 @@ I was able to get Litestream 0.5.x working with a pre-release fork, but I'm goin
 - [CRITICAL: Restore fails with 'nonsequential page numbers' after checkpoint during Litestream downtime #752](https://github.com/benbjohnson/litestream/issues/752)
 - [Local LTX Level 0 files are never compacted/removed #784](https://github.com/benbjohnson/litestream/issues/784)
 
-And there are several other serious bugs that they've fixed in the development version but are not yet in a production release:
+And there are several other serious bugs that they've fixed in the development version but are ~~not yet in a production release~~ (**Update**: these are now fixed in [0.5.1](https://github.com/benbjohnson/litestream/releases/tag/v0.5.1)):
 
 - [Restore does not update LTX ID information #781](https://github.com/benbjohnson/litestream/issues/781)
 - [Age encryption configuration silently ignored in v0.5.0+ #790](https://github.com/benbjohnson/litestream/issues/790)
