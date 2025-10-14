@@ -7,9 +7,15 @@ tags:
 
 [Litestream](https://litestream.io/) is an open-source tool that backs up SQLite databases to cloud storage in real time. I love it and use it in all of my projects.
 
-Litestream [is owned by Fly.io](https://news.ycombinator.com/item?id=31320032), and they paused development on Litestream for almost two years in favor of an alternative project called LiteFS. Two weeks ago, Ben Johnson, Litestream's creator and lead developer, [announced](https://fly.io/blog/litestream-v050-is-here/) that they were shifting focus back to Litestream and had just published a new release, 0.5.0.
+Litestream [is owned by Fly.io](https://news.ycombinator.com/item?id=31320032), and they paused development on Litestream for almost two years in favor of an alternative project called LiteFS. Two weeks ago, Ben Johnson, Litestream's creator and lead developer, [announced](https://fly.io/blog/litestream-v050-is-here/) that they were shifting focus back to Litestream and had just published a new release, [0.5.0](https://github.com/benbjohnson/litestream/tree/v0.5.0).
 
 I tried out Litestream 0.5.0, but I caution other Litestream users to give it another release and more extensive testing before deploying it in production. I had a bumpy experience migrating to the new version of Litestream.
+
+{{<notice type="info">}}
+
+**Update**: Litestream [0.5.1](https://github.com/benbjohnson/litestream/releases/tag/v0.5.1) is now available and fixes most (but not all) of the issues I encountered.
+
+{{</notice>}}
 
 {{<notice type="info">}}
 
