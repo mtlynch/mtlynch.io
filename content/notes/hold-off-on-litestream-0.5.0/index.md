@@ -47,7 +47,17 @@ To start the migration, I downloaded the latest copy of my data using Litestream
 error" db=store.db replica=s3 error="write ltx file: s3: upload to db/0000/0000000000000001-0000000000000001.ltx: operation error S3: PutObject, resolve auth scheme: resolve endpoint: endpoint rule error, Custom endpoint `s3.us-west-002.backblazeb2.com` was not a valid URI"
 ```
 
-The exact same definition had worked in previous versions, so I was a bit puzzled.
+The same replica definition had worked in previous versions, so I was a bit puzzled.
+
+```yaml
+access-key-id: ${LITESTREAM_ACCESS_KEY_ID}
+secret-access-key: ${LITESTREAM_SECRET_ACCESS_KEY}
+dbs:
+  - path: ${DB_PATH}
+    replica:
+      url: s3://${LITESTREAM_BUCKET}/db
+      endpoint: ${LITESTREAM_ENDPOINT}
+```
 
 I tried several alternative ways of specifying the Backblaze S3 endpoint, but Litestream rejected them all as configuration errors before even attempting to back up. The configuration I had was the only one that Litestream accepted as valid configuration, but it failed to back up.
 
