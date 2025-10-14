@@ -119,3 +119,9 @@ And there are several other serious bugs that they've fixed in the development v
 - [Restore does not update LTX ID information #781](https://github.com/benbjohnson/litestream/issues/781)
 - [Age encryption configuration silently ignored in v0.5.0+ #790](https://github.com/benbjohnson/litestream/issues/790)
 - [\[Regression\] LTX transactions get deleted in 0.5.0, cannot restore more than a few seconds #771](https://github.com/benbjohnson/litestream/issues/771)
+
+{{<notice type="info">}}
+
+**Note**: Again, this is not a criticism of Litestream. Streaming replication is hard to do correctly, and what they're doing is way more robust than what I'd be able to produce. I'm grateful to the Litestream team for responding to bug reports and fixing issues so quickly.
+
+{{</notice>}}
