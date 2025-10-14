@@ -36,7 +36,7 @@ COPY --from=litestream/litestream:0.5.0 /usr/local/bin/litestream /app/litestrea
 
 To test out Litestream 0.5.0, I tried deploying it on my project, [What Got Done](https://www.whatgotdone.com/). This is a good project for testing because:
 
-1. I already announced that I was shutting down this service, so users have stopped using the site.
+1. I already announced that I was [shutting down this service](https://www.whatgotdone.com/shutdown-notice), so users have stopped using the site.
 1. The server kept failing due to [a bug in Litestream 0.3.13](https://github.com/benbjohnson/litestream/issues/688) that was fixed in 0.5.0.
 
 ### Uploading to Backblaze backends no longer works
