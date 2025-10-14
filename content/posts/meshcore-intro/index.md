@@ -17,5 +17,17 @@ date: 2025-10-11
 Nix config, so you can flash with:
 
 ```bash
-pio run -e Heltec_v3_companion_radio_ble -t upload --upload-port /dev/ttyUSB0
+pio run \
+  --environment Heltec_v3_companion_radio_ble \
+  --target upload \
+  --upload-port /dev/ttyUSB0
+```
+
+# USB
+
+```bash
+pio run \
+  --environment Heltec_v3_companion_radio_usb \
+  --target upload \
+  --upload-port /dev/ttyUSB0
 ```
