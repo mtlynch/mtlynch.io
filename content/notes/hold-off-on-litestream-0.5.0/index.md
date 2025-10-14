@@ -39,7 +39,7 @@ To test out Litestream 0.5.0, I tried deploying it on my project, [What Got Done
 1. I already announced that I was shutting down this service, so users have stopped using the site.
 1. The server kept failing due to [a bug in Litestream 0.3.13](https://github.com/benbjohnson/litestream/issues/688) that was fixed in 0.5.0.
 
-### Uploading to backblaze backends no longer works
+### Uploading to Backblaze backends no longer works
 
 To start the migration, I downloaded the latest copy of my data using Litestream 0.3.13 and then tried to use Litestream 0.5.0 to upload it back to Backblaze's cloud storage in Litestream's new format. But I hit this error:
 
@@ -57,7 +57,7 @@ Now that I was able to upload data to Backblaze in Litestream's new format, I wa
 
 ### `-if-replica-exists` disappeared
 
-I deployed [Litestream 0.5.0 to WhatGotDone](https://github.com/mtlynch/whatgotdone/pull/982), but the server failed to boot with this error:
+I deployed [Litestream 0.5.0 to What Got Done](https://github.com/mtlynch/whatgotdone/pull/982), but the server failed to boot with this error:
 
 ```text
 flag provided but not defined: -if-replica-exists
@@ -119,3 +119,9 @@ And there are several other serious bugs that they've fixed in the development v
 - [Restore does not update LTX ID information #781](https://github.com/benbjohnson/litestream/issues/781)
 - [Age encryption configuration silently ignored in v0.5.0+ #790](https://github.com/benbjohnson/litestream/issues/790)
 - [\[Regression\] LTX transactions get deleted in 0.5.0, cannot restore more than a few seconds #771](https://github.com/benbjohnson/litestream/issues/771)
+
+{{<notice type="info">}}
+
+**Note**: Again, this is not a criticism of Litestream. Streaming replication is hard to do correctly, and what they're doing is way more robust than what I'd be able to produce. I'm grateful to the Litestream team for responding to bug reports and fixing issues so quickly.
+
+{{</notice>}}
