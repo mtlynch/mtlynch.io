@@ -525,7 +525,7 @@ I replaced it with another 8 TB Seagate IronWolf and haven't had any issues sinc
 
 A year after building my NAS, I [purchased a server rack](/building-first-homelab-rack/) and began migrating all of my infrastructure to the rack.
 
-For my NAS, I purchased a [Sliger CX3701 10-bay server chassis](https://www.sliger.com/products/rackmount/3u/cx3701/). I like the chassis and would recommend it as long as you're certain you'll use your motherboard's only PCI slot to gain more SATA ports. If you need the PCI slot for graphics or 10 G networking, you can only use four of the 10 drive bays, as a mini-ITX motherboard typically only has four SATA ports.
+For my NAS, I purchased a [Sliger CX3701 10-bay server chassis](https://www.sliger.com/products/cx3701). I like the chassis and would recommend it as long as you're certain you'll use your motherboard's only PCI slot to gain more SATA ports. If you need the PCI slot for graphics or 10 G networking, you can only use four of the 10 drive bays, as a mini-ITX motherboard typically only has four SATA ports.
 
 When I switched to the Sliger server chassis, I also needed a new PSU, as the Sliger only supports SFX and SFX-L form factor PSUs. I went with the [SilverStone 300W 80 Plus Bronze ST30SF-V2](https://www.silverstonetek.com/en/product/info/power-supplies/ST30SF/). I was glad to reduce from a 500 W PSU, as my system only draws about 150 W at peak.
 
