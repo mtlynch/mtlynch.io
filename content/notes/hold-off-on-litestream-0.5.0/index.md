@@ -1,6 +1,7 @@
 ---
 title: "Hold Off on Litestream 0.5.0"
 date: 2025-10-14
+lastmod: 2025-10-17
 tags:
   - litestream
 ---
