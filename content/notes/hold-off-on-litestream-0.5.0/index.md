@@ -1,6 +1,7 @@
 ---
 title: "Hold Off on Litestream 0.5.0"
 date: 2025-10-14
+lastmod: 2025-10-17
 tags:
   - litestream
 ---
@@ -14,6 +15,12 @@ I tried out Litestream 0.5.0, but I caution other Litestream users to give it an
 {{<notice type="info">}}
 
 **Update**: Litestream [0.5.1](https://github.com/benbjohnson/litestream/releases/tag/v0.5.1) is now available and fixes most (but not all) of the issues I encountered.
+
+{{</notice>}}
+
+{{<notice type="info">}}
+
+**Update 2** (2025-10-17): Litestream [0.5.2](https://github.com/benbjohnson/litestream/releases/tag/v0.5.2) wraps up all the bugs I ran into, so I plan to roll it out to my SQLite-based apps.
 
 {{</notice>}}
 
