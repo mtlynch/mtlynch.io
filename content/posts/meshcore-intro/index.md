@@ -32,6 +32,15 @@ pio run \
   --upload-port /dev/ttyUSB0
 ```
 
+## SEEED t1000e_companion_radio_ble
+
+```bash
+pio run \
+  --environment t1000e_companion_radio_ble \
+  --target upload \
+  --upload-port /dev/ttyACM0
+```
+
 # T-Deck USB
 
 Confusing buttons. No on / off label?
@@ -48,3 +57,11 @@ pio run \
 Seems to be the wrong thing because can't change frequency.
 
 Sometimes had to hold down trackpad and hit reset. Sometimes had to hold trackpad and turn on power.
+
+## CLI
+
+```bash
+nix run github:meshcore-dev/meshcore-cli#meshcore-cli -- \
+  -s /dev/ttyUSB0 \
+  infos
+```
