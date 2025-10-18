@@ -46,3 +46,5 @@ pio run \
 ```
 
 Seems to be the wrong thing because can't change frequency.
+
+Sometimes had to hold down trackpad and hit reset. Sometimes had to hold trackpad and turn on power.
