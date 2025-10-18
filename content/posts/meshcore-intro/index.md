@@ -65,3 +65,11 @@ nix run github:meshcore-dev/meshcore-cli#meshcore-cli -- \
   -s /dev/ttyUSB0 \
   infos
 ```
+
+```bash
+nix run github:meshcore-dev/meshcore-cli#meshcore-cli -- \
+  -s /dev/ttyUSB0 \
+  chat
+```
+
+Confusing because it looks like it's a table but it's actually a list.
