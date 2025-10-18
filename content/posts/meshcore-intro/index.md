@@ -31,3 +31,18 @@ pio run \
   --target upload \
   --upload-port /dev/ttyUSB0
 ```
+
+# T-Deck USB
+
+Confusing buttons. No on / off label?
+
+Got stuck in Programming Mode (Meshtastic). To get out, had to select the bluetooth icon and hold the trackpad.
+
+```bash
+pio run \
+  --environment LilyGo_TDeck_companion_radio_usb \
+  --target upload \
+  --upload-port /dev/ttyACM0
+```
+
+Seems to be the wrong thing because can't change frequency.
