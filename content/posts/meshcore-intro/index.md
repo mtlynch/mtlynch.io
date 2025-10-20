@@ -114,8 +114,19 @@ nix run github:meshcore-dev/meshcore-cli#meshcore-cli -- \
 
 Confusing because it looks like it's a table but it's actually a list.
 
+## What's open-source
+
+| Product                    | Open-source? | Free to use?                         |
+| -------------------------- | ------------ | ------------------------------------ |
+| Core community firmware    | Yes          | Yes                                  |
+| Web-based firmware flasher | Yes          | Yes                                  |
+| Official mobile app        | No           | Yes                                  |
+| Official web app           | No           | Yes                                  |
+| T-Deck firmware            | No           | Yes, but some features are paywalled |
+
 ## What I like
 
 ## What I dislike
 
 - It's too difficult to use except by enthusiasts.
+- Website pushes you to platforms that have closed-source / paid software.
