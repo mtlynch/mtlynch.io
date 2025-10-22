@@ -35,7 +35,7 @@ I had a fantasy vision of convincing neighbors throughout my town to install Mes
 
 ## Heltec v3: The cheapest introduction to MeshCore
 
-The MeshCore website lists a few different types of LoRa hardware that they support well. The cheapest was the Heltec v3, which is only $XX/unit. I decided to start there just to get a sense of how MeshCore worked.
+The MeshCore website lists a few different types of LoRa hardware that they support well. The cheapest was the Heltec v3, which is only $XX/unit. I decided to order two just to get a sense of how MeshCore worked.
 
 The Heltec v3 comes in a small box with no instructions. It includes XX for plugging it into a breadboard, and wires for connecting it to a battery. I edned up throwing those away because I had no plans to do that.
 
