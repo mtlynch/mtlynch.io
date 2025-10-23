@@ -2,6 +2,9 @@
 title: "My First Impressions of Gleam"
 date: 2025-06-22
 description: What I've learned in my first few hours using Gleam for a small project.
+tags:
+  - gleam
+  - first-impressions
 ---
 
 I'm [looking for a new programming language](/notes/which-new-language/) to learn this year, and [Gleam](https://gleam.run) looks like the most fun. It's an Elixir-like language that supports static typing.
