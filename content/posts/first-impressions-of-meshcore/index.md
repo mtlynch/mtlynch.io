@@ -175,6 +175,14 @@ pio run \
 
 ## The firmware doesn't do anything?
 
+Confusing buttons. No on / off label?
+
+Got stuck in Programming Mode (Meshtastic). To get out, had to select the bluetooth icon and hold the trackpad.
+
+Seems to be the wrong thing because can't change frequency.
+
+Sometimes had to hold down trackpad and hit reset. Sometimes had to hold trackpad and turn on power.
+
 ## Using the Ripple firmware
 
 ## Wait, this isn't open-source?
@@ -185,25 +193,15 @@ But I realized it's actually not open-core because none of the MeshCore T-Deck f
 
 I wondered about the license for the web app I was using, and I realized that's closed-source as well. It's a Flutter app, so the web, Android, and iOS apps all share the same closed-source codebase.
 
-So, nobody tricked me. I went back to the MeshCore website and realized that they never advertise the product as open-source. It was my mistaken assumption, but it was disappointing.
+In fairness, nobody tricked me. I went back to the MeshCore website and realized that they never advertise the product as open-source. It just felt so much like an open-source project that I assumed, but I was terribly disappointed to discover that critical parts of the project are closed-source and proprietary.
 
-| Product                     | Open-source? | Free to use?                         |
-| --------------------------- | ------------ | ------------------------------------ |
-| Core community firmware     | Yes          | Yes                                  |
-| Web-based firmware flasher  | Yes          | Yes                                  |
-| Official Android / iOS apps | No           | Yes                                  |
-| Official web app            | No           | Yes                                  |
-| T-Deck firmware             | No           | Yes, but some features are paywalled |
-
-## T-Deck USB
-
-Confusing buttons. No on / off label?
-
-Got stuck in Programming Mode (Meshtastic). To get out, had to select the bluetooth icon and hold the trackpad.
-
-Seems to be the wrong thing because can't change frequency.
-
-Sometimes had to hold down trackpad and hit reset. Sometimes had to hold trackpad and turn on power.
+| Product                              | Open-source? | Free to use?                         |
+| ------------------------------------ | ------------ | ------------------------------------ |
+| Core MeshCore firmware               | Yes          | Yes                                  |
+| Web-based MeshCore firmware flasher  | Yes          | Yes                                  |
+| Official Android / iOS MeshCore apps | No           | Yes                                  |
+| Official MeshCore web app            | No           | Yes                                  |
+| T-Deck MeshCore firmware             | No           | Yes, but some features are paywalled |
 
 ## CLI
 
@@ -227,9 +225,11 @@ First test, I tested it while walking away from my house with the SenseCAP and t
 
 I read online that the Heltecs have a particularl weak modem, so I tried again with the SenseCAP at home and the T-Deck with me.
 
+From exploring more, it seems like what I actually might need is a MeshCore repeater. If I want to communicate with friends more than a few blocks away, I might have to get a beefy device with a big antenna, though I couldn't find documentation on how far I should expect the range of my devices to work.
+
 ## Summary
 
-For it to be viable for me, I want something like the T-Deck where it's an all-in-one device where I can . If I'm relying on these in an emergency, I don't want to worry about keeping both my phone and radio powered and connected over Bluetooth.
+For it to be viable for me, I want something like the T-Deck where it's an all-in-one device where I can . If I'm relying on these in an emergency, I don't want to worry about keeping both my phone and radio powered and connected over Bluetooth. There are just too many failure points. And especially if I'm giving devices to less tech-savvy friends to use in an emergency where they can't ask me for help, I want it to be dead simple. It's fine if I have to preconfigure it for them, but I don't want them to pull it out in an emergency and realize they uninstalled the companion app from their phone and are now stuck.
 
 ### What I like about MeshCore
 
