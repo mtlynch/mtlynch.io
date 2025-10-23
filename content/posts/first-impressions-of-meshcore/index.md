@@ -84,13 +84,16 @@ Oh...
 
 This seems like an odd design choice. If device 1 broadcasted its identifier, why can't I talk to it?
 
-## Gotchas
+This is also a frustrating user experience. You knew I couldn't send the message before I started typing, but you let me do it anyway. And then you threw away my message...
 
-- Must add contacts bidirectionally.
+## Flashing custom firmware
 
-## Bugs
+This part was easy
 
-- Lots of times where I'm not actually allowed to do something, but I don't find out until I try, but it could have known in advance.
+```bash
+LATEST_COMPANION_RELEASE='1.9.0'
+git checkout "companion-${LATEST_COMPANION_RELEASE}"
+```
 
 Nix config, so you can flash with:
 
@@ -101,7 +104,7 @@ pio run \
   --upload-port /dev/ttyUSB0
 ```
 
-## USB
+### USB
 
 ```bash
 pio run \
@@ -110,7 +113,25 @@ pio run \
   --upload-port /dev/ttyUSB0
 ```
 
-## SEEED t1000e_companion_radio_ble
+## Exploring the source code
+
+I was a bit disappointed in the source code. There were no automated tests for the codebase, so I decided to try writing a simple unit test.
+
+The code doesn't have consistent format despite a `.clang-format` configuration. The developers closed the issue as, "Everyone should just turn off auto-formatting in their editor." But why? Why in 2025 do I have to think about where to place my curly braces to match the style of this particular file? Just configure a linter and call it a day.
+
+## Ordering more MeshCore devices
+
+The Heltec v3 boards were a good way to experiment with MeshCore, but they felt impractical. If I wanted to try a realistic test, I'd have to either wire up a battery to the board or carry around my giant USB-C power brick. I hoped I could just power it with my phone with a USB-C to USB-C cable, but the Heltec board wouldn't power up from my phone.
+
+So, I just ordered the other two devices that MeshCore recommends on their website.
+
+## Testing the SenseCAP T-1000e
+
+I liked the SenseCAP a lot. It's nice and light. It's the kind of thing you could toss into a backpack and not notice is there.
+
+The downside is that it uses a custom charging cable, so I can't just plug in an off-the-shelf USB cable.
+
+But I like that it's self-contained and has its own battery and antenna, which reduces a lot of complexity relative to the Heltec v3.
 
 https://wiki.seeedstudio.com/sensecap_t1000_e/
 
@@ -121,11 +142,29 @@ pio run \
   --upload-port /dev/ttyACM0
 ```
 
-## T-Deck USB
+## Testing the LilyGo T-Deck
 
-Confusing buttons. No on / off label?
+I was particularly excited about the LilyGo T-Deck because it looked like a 2000s era Blackberry. What a world! Cutting edge technology of 2005 is now available for $80 and friendly to custom software!
 
-Got stuck in Programming Mode (Meshtastic). To get out, had to select the bluetooth icon and hold the trackpad.
+I got it, and my berry was burst. It was not a Blackberry at all.
+
+It's big and clunky. There's an unlabeled button on the left side, and an unlabled toggle on the right side. I powered it up and it loaded up Meshtastic, as the device was pre-loaded with Meshtastic.
+
+I had a hard time even finding instructions for how to reflash it. I found this long Jeff Geerling video where he expresses frustration with how long it took him to reflash his, and then he never explains how he did it!
+
+### Putting the LilyGo T-Deck Plus into DFU mode for flashing
+
+This is what worked for me:
+
+1. Disconnect the T-Deck
+1. Power off the T-Deck
+1. Connect the T-Deck to your computer via the USB-C port
+1. Hold down the thumbwheel in the center
+1. Power on the device
+
+Confusingly, there's no indication that the device is in DFU mode. I guess the fact that the screen doesn't load is sort of an indication. On my system, I also see `dmesg` logs indicating a connection.
+
+From there, I flashed the MeshCore firmware with this command:
 
 ```bash
 pio run \
@@ -133,6 +172,34 @@ pio run \
   --target upload \
   --upload-port /dev/ttyACM0
 ```
+
+## The firmware doesn't do anything?
+
+## Using the Ripple firmware
+
+## Wait, this isn't open-source?
+
+I'd seen that they fund development by selling a premium version of the T-Deck software with higher resolution maps. That seemed fine and a reasonable way to fund the project. I like open-core and that's how my previous business worked as well.
+
+But I realized it's actually not open-core because none of the MeshCore T-Deck firmware is open-source. The firmware that I installed by mistake is the "core" firmware, but it doesn't have any client features that support messaging. The actual working firmware for the T-Deck is a whole other piece of software called Ripple, which is closed-source software on top of MeshCore.
+
+I wondered about the license for the web app I was using, and I realized that's closed-source as well. It's a Flutter app, so the web, Android, and iOS apps all share the same closed-source codebase.
+
+So, nobody tricked me. I went back to the MeshCore website and realized that they never advertise the product as open-source. It was my mistaken assumption, but it was disappointing.
+
+| Product                     | Open-source? | Free to use?                         |
+| --------------------------- | ------------ | ------------------------------------ |
+| Core community firmware     | Yes          | Yes                                  |
+| Web-based firmware flasher  | Yes          | Yes                                  |
+| Official Android / iOS apps | No           | Yes                                  |
+| Official web app            | No           | Yes                                  |
+| T-Deck firmware             | No           | Yes, but some features are paywalled |
+
+## T-Deck USB
+
+Confusing buttons. No on / off label?
+
+Got stuck in Programming Mode (Meshtastic). To get out, had to select the bluetooth icon and hold the trackpad.
 
 Seems to be the wrong thing because can't change frequency.
 
@@ -154,23 +221,22 @@ nix run github:meshcore-dev/meshcore-cli#meshcore-cli -- \
 
 Confusing because it looks like it's a table but it's actually a list.
 
-## What's open-source
+## Range testing
 
-| Product                    | Open-source? | Free to use?                         |
-| -------------------------- | ------------ | ------------------------------------ |
-| Core community firmware    | Yes          | Yes                                  |
-| Web-based firmware flasher | Yes          | Yes                                  |
-| Official mobile app        | No           | Yes                                  |
-| Official web app           | No           | Yes                                  |
-| T-Deck firmware            | No           | Yes, but some features are paywalled |
+First test, I tested it while walking away from my house with the SenseCAP and the Heltec v3 listening at home. It stopped transmitting after two blocks, which was way less than I expected.
 
-## What I like
+I read online that the Heltecs have a particularl weak modem, so I tried again with the SenseCAP at home and the T-Deck with me.
+
+## Summary
+
+For it to be viable for me, I want something like the T-Deck where it's an all-in-one device where I can . If I'm relying on these in an emergency, I don't want to worry about keeping both my phone and radio powered and connected over Bluetooth.
+
+### What I like about MeshCore
 
 - The firmware repository is built around Nix, which made it easy to build and flash onto my devices from source.
 
-## What I dislike
+### What I dislike about MeshCore
 
 - All of the official MeshCore clients are closed source and proprietary.
--
 - It's too difficult to use except by enthusiasts.
 - Website pushes you to platforms that have closed-source / paid software.
