@@ -263,7 +263,7 @@ Confusing because it looks like it's a table but it's actually a list.
 
 First test, I tested it while walking away from my house with the SenseCAP and the Heltec v3 listening at home. It stopped transmitting after two blocks, which was way less than I expected.
 
-I read online that the Heltecs have a particularl weak modem, so I tried again with the SenseCAP at home and the T-Deck with me.
+I read online that the Heltecs have a particularl weak modem, so I tried again with the SenseCAP at home and the T-Deck with me. After about five blocks, I could no longer send messages back to the SenseCAP.
 
 From exploring more, it seems like what I actually might need is a MeshCore repeater. If I want to communicate with friends more than a few blocks away, I might have to get a beefy device with a big antenna, though I couldn't find documentation on how far I should expect the range of my devices to work.
 
