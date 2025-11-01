@@ -171,6 +171,8 @@ I liked the SenseCAP a lot. It's nice and light. It's the kind of thing you coul
 
 The downside is that it uses a custom charging cable, so I can't just plug in an off-the-shelf USB cable.
 
+I don't know how to turn it off.
+
 But I like that it's self-contained and has its own battery and antenna, which reduces a lot of complexity relative to the Heltec v3.
 
 https://wiki.seeedstudio.com/sensecap_t1000_e/
