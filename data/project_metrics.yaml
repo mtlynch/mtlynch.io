@@ -24,3 +24,8 @@ refactoring_english:
     revenue_pre_orders: 484.71
     revenue_consulting: 429.60
     revenue_sponsors: 48.25
+  "2025-10":
+    unique_visitors: 22398
+    revenue_pre_orders: 570.75
+    revenue_consulting: 0.0
+    revenue_sponsors: 48.25
