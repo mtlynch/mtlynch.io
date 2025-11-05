@@ -1,4 +1,10 @@
 refactoring_english:
+  "2025-03":
+    unique_visitors: 60327
+  "2025-04":
+    unique_visitors: 14269
+    revenue_pre_orders: 6421.12
+    revenue_sponsors: 47.88
   "2025-05":
     unique_visitors: 2986
     revenue_pre_orders: 193.2
