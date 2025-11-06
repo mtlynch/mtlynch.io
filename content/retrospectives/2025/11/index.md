@@ -1,7 +1,7 @@
 ---
-title: "Refactoring English: Month XX"
-date: "2025-11-10"
-description: TODO - One-line summary
+title: "Refactoring English: Month 11"
+date: "2025-11-06"
+description: I'm officially running late
 ---
 
 {{<notice type="info">}}
@@ -47,10 +47,10 @@ Basically, I'm looking for the readers whose websites I can look at to allow me 
 
 ### Publish a new chapter of the book
 
-- **Result**: I published three new chapters
+- **Result**: I published 2.5 new chapters
 - **Grade**: A
 
-I published ["How to Get Meaningful Feedback on Your Design Document,"](https://refactoringenglish.com/chapters/useful-feedback-on-design-docs/) "Verbs Drive the Sentence," and "Stay Positive." The design docs one is technically half a chapter. The excerpt on the website talks a little about writing but mostly about reviews. In the actual book, I'm going to have a section on writing the design doc and a section on reviewing it.
+I published ["How to Get Meaningful Feedback on Your Design Document,"](https://refactoringenglish.com/chapters/useful-feedback-on-design-docs/) "Verbs Drive the Sentence," and "Stay Positive." The design docs one is technically half a chapter, as I plan to expand it for the actual book with more details about what goes into a design doc.
 
 ## _Refactoring English_ metrics
 
@@ -58,27 +58,37 @@ I published ["How to Get Meaningful Feedback on Your Design Document,"](https://
 
 Visits to the website are way up. Visitors to the website in October were highest since [my big Kickstarter blitz in March](/retrospectives/2025/04/#blogging-like-my-livelihood-depends-on-it). There were 22.3k unique visitors. Of those, 93% came through ["The Software Essays that Shaped Me"](https://refactoringenglish.com/blog/software-essays-that-shaped-me/).
 
-I wish pre-orders scaled a bit more linearly with visitors, but I'm still happy to see that blog posts helps new readers find the book.
+I wish pre-orders scaled a bit more linearly with visitors, but I'm still happy that my blog posts let new readers find my book.
 
 ## I'm running late
 
-19.8 weeks completed and 11.6 weeks remaining. There are only about 8 weeks left in the year, so I probably won't finish by December.
+When I started writing the book, I felt confident I'd be done by October. I announced that the book would be done by December, just to give myself some padding, but I doubted I'd need it.
 
-My estimates were wrong, but I had chapters that I overestimated and underestimated, so on net, my estimate of total hours has been accurate. I've been inaccurate in how many hours I spend on writing the book in a given week. I generally can only write for about an hour per day. I can write for longer, but my productivity goes down a lot, so I feel like my second hour of writing is about 20% as productive as the first. I can sometimes squeeze in a second hour in the afternoon, but that generally doesn't work.
+Well, it turns out, I need it and then some.
 
-But in addition to writing the book, I also write blog posts, monthly retrospectives, and occasional notes. Those usually eat up my hour of writing for the day as well. I also didn't take into account:
+Back in May, I wrote down estimates of [how long I expected to spend writing each chapter of my book](/retrospectives/2025/06/#becoming-less-precious-about-my-writing). Six months later, how accurate was I? I underestimated the effort by about 40%.
 
+I originally thought I'd finish the book in 114 hours, but my current estimate (after 99 hours of writing) is 157 hours, meaning I estimate 58 hours remaining.
+
+I also estimated that I could write the book for five hours per week, but that was incorrect as well, as 99 hours over six months works out to about 3.8 hours per week.
+
+I generally can only write for a maximum of an hour per day. I can write for longer, but my productivity goes way down, so I feel like my second hour of writing is about 20% as productive as the first. I can sometimes squeeze in a second hour in the afternoon, but that's rare.
+
+I also didn't take into account regular occurrences that prevent me from getting a good writing session in:
+
+- Non-book writing
+  - e.g., blog posts, retrospectives, notes
+- Childcare change-ups
+  - Our family normally helps out with childcare, but if someone is sick or unavailable, and we can't find a replacement, my wife or I take time off to cover.
 - Freelance editing work
-  - I find it hard to [do both in the same day](/retrospectives/2025/10/#adjusting-my-approach-to-freelance-editing)
+  - I find it hard to [do both in the same day](/retrospectives/2025/10/#adjusting-my-approach-to-freelance-editing).
 - Sick days
 - Time off
 - Days where I just can't get motivated to write.
 
-I made the estimates on May 1, which was six months ago. I estimated that I would write for an average of 5 hours per week. In reality, I've written 99 hours over six months (26 weeks), so I actually only write my book for about 3.8 hours per week.
+If I assume I keep going at a rate of around 3.8 hours per week, my remaining 58 hours of writing should take 15.3 weeks, which brings me to mid-February 2026. For padding, I'm going to say I'm aiming to finish the book by the end of March 2026.
 
-If I assume the 58 remaining hours should take 15.3 weeks, which would mean I finish around mid-February 2026. For padding, I'm going to say I'm aiming to finish the book by the end of March 2026.
-
-I also feel more confident about the timelines for the remaining chapters. The early chapters of the book were harder to write because I had rough ideas but I needed to refine them a lot. But remaining chapters like explaining my writing routine are easier because it's more concrete, and there's less for me to figure out.
+I feel more confident about the timelines for the remaining chapters. Early chapters of the book like "Get to the Point" (about writing compelling introductions) are challenging because I have to formalize and refine a thought process that's mushy in my head. But topics about my personal writing process or hiring an editor are easier to explain because it's easier to explain concrete actions I take rather than how I think.
 
 ## Topic 2
 
@@ -91,14 +101,18 @@ I also feel more confident about the timelines for the remaining chapters. The e
 The best article I read last month was Evan Hahn's, ["Scripts I wrote that I use all the time."](https://evanhahn.com/scripts-i-wrote-that-i-use-all-the-time/) Evan shares several dozens of scripts that make life easier as a developer. My favorites were:
 
 - [`copy`](https://codeberg.org/EvanHahn/dotfiles/src/commit/843b9ee13d949d346a4a73ccee2a99351aed285b/home/bin/bin/copy): Read from stdin and store it in the system clipboard.
+  - I'm embarrassed to admit I never thought to do this, and I've always copied from the terminal with my mouse like a savage.
 - [`pasta`](https://codeberg.org/EvanHahn/dotfiles/src/commit/843b9ee13d949d346a4a73ccee2a99351aed285b/home/bin/bin/pasta): Print from the system clipboard to stdout.
 - [`pastas`](https://codeberg.org/EvanHahn/dotfiles/src/commit/843b9ee13d949d346a4a73ccee2a99351aed285b/home/bin/bin/pastas): Watch the system clipboard and print to stdout every time it changes.
-  - I missed this on my first read, but it's really clever. You can run `pastas | wget --input-file=/dev/stdin`, and it will just download all the URLs you copy to your clipboard.
+  - The first time I read the post, I overlooked [just how clever this script is](/notes/guis-are-antisocial/).
+  - You can run `pastas | wget --input-file=/dev/stdin` in one terminal and then in a browser, just keep copying URLs to your clipboard, and the `pastas` command will download every URL you copy without you having to switch back and forth.
 - [`emoji`](https://codeberg.org/EvanHahn/dotfiles/src/commit/843b9ee13d949d346a4a73ccee2a99351aed285b/home/bin/bin/emoji): Search for emoji by text. Like `emoji cool` prints out all the emoji that are associated with the idea of "cool."
 
-I loved Evan's article because so many of his scripts were great ideas that I immediately adopted. But I liked the meta-idea of it that I should be looking for more scripts to remove friction from my common workflows.
+So many of Evan's scripts were great ideas that I immediately adopted.
 
-It inspired me to add a `chat` script to my path to ask questions to a locally-hosted LLM. I often find myself going to the browser to look up semantics for command-line tools, so I can instead stay on the command line and just type it to `chat`:
+More importantly, I liked the meta-idea of Evan's post: developers should think about scripts that remove friction from their typical workflows. It also expanded my perception of what could even be a script. Like `emoji`, I wouldn't have thought to make a script because I don't have a list of every emoji and a description, but after reading Evan's post, I realized I could have generated it just like Evan did.
+
+It inspired me to add a `chat` script to my path to ask questions to a locally-hosted LLM. I often find myself going to the web browser to look up semantics for command-line tools, so I can instead stay on the command line and just type it to `chat`:
 
 ```bash
 #!/usr/bin/env bash
@@ -129,20 +143,21 @@ convert input.png -resize 1600x output.png
 
 And it's super fast! That prompt completed on my system in 265ms, so it's much faster than me switching to a browser, searching, clicking for an answer, then switching back to my task.
 
-Evan's companion article, ["Why 'alias' is my last resort for aliases"](https://evanhahn.com/why-alias-is-my-last-resort-for-aliases/) dovetails well with his scripts, as it argues that putting convenience scripts in `PATH` (e.g., under `~/.local/bin`) affords you much more flexibility than using shell aliases.
+Evan's companion article, ["Why 'alias' is my last resort for aliases"](https://evanhahn.com/why-alias-is-my-last-resort-for-aliases/) dovetails well with his scripts, as it argues that putting convenience scripts in a folder under your `PATH` (e.g., under `~/.local/bin`) affords you much more flexibility than using shell aliases.
 
 ### _Oxygen Not Included_
 
-I'm not an active gamer, but I buy one computer game per year. I typically only play each game for 10-20 hours before I get bored, but it's fun to pop into a new game every once in a while.
+I'm not an active gamer, but I buy one computer game per year. I typically only play each game for 10-20 hours before I get bored, but I consider the $15-50 I spend to be good value for 10-20 hours of entertainment. Some games, I get really into and play for 25-100 hours (_Stardew Valley_, _XCOM2_, _Cypberpunk 2077_).
 
-_Oxygen Not Included_ been on my mind for almost a year since I saw [Andrew Kelly and Mitchell Hashimoto talking about](https://phanpy.social/#/mastodon.social/s/113602735590180420) how it's so good for practicing systems thinking that it should be its own required course in elementary school.
+_Oxygen Not Included_ been on my mind for almost a year since I saw [Andrew Kelly and Mitchell Hashimoto talking about](https://phanpy.social/#/mastodon.social/s/113602735590180420) how much they love it. Andrew Kelly declared it so good at teaching systems thinking that it should be its own required course in elementary school.
 
-{{<img src="oxygen-not-included.webp" max-width="800px">}}
+{{<img src="oxygen-not-included.webp" max-width="800px" caption="My space colony in _Oxygen Not Included_">}}
 
-I started playing _Oxygen Not Included_ in October, and it's really fun. I've seen it compared to Factorio and Rimworld, but I've never played those games. The game it most reminds me of is _Stardew Valley_, specifically the farming part of the game.
+I started playing _Oxygen Not Included_ in October, and it's really fun. I've seen it compared to Factorio and Rimworld, but I've never played those games. The game it most reminds me of is _Stardew Valley_, specifically the farming part of the game. In both games, you're trying to build a system that produces something. In the beginning, you have rudimentary tools that force you to do a lot of tasks manually, but as you progress, you get more powerful tools that allow you to automate more of the work and scale up productivity.
 
-- It's pretty fun!
-- The biggest problem is that it's pretty difficult to learn, as it's not obvious how to use most of the objects in the game.
+The biggest challenge of _Oxygen Not Included_ is that it's hard to learn. There are in-game explanations of some concepts, but a lot of stuff, I've had to learn from trial and error. There are YouTube tutorials, but they're bizarrely long. Like, you eventually get to a point where you can build plumbing, but I didn't understand how it worked, so I looked up tutorials on YouTube, and they're all an 60+ minutes! But it's because they're explaining some super complicated version of plumbing that scales to a million, when all I want to do is build one toilet.
+
+The best tutorial I've found so far is [this written guide by a player named Jahws](https://steamcommunity.com/sharedfiles/filedetails/?id=1359110726).
 
 If you're an _Oxygen Not Included_ fan, tell me the dumb things I'm [doing with my colony](oxygen-not-included.webp).
 
@@ -150,7 +165,10 @@ If you're an _Oxygen Not Included_ fan, tell me the dumb things I'm [doing with 
 
 ### What got done?
 
--
+- Published ["How to Get Meaningful Feedback on Your Design Document,"](https://refactoringenglish.com/chapters/useful-feedback-on-design-docs/)
+- Published two new chapters: "Verbs Drive the Sentence" and "Stay Positive."
+- Published ["Hold Off on Litestream 0.5.0"](/notes/hold-off-on-litestream-0.5.0/)
+- Published ["Read My Blog With Javascript"](/notes/read-my-blog-with-javascript/)
 
 ### Lessons learned
 
