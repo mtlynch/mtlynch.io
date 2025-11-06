@@ -1,7 +1,7 @@
 ---
 title: "Refactoring English: Month 11"
 date: "2025-11-06"
-description: I'm officially running late
+description: I'm officially running late.
 ---
 
 {{<notice type="info">}}
@@ -16,7 +16,9 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 ## Highlights
 
--
+- I'm running late on my book.
+- I was inspired to think more about convenience shell scripts.
+- The game _Oxygen Not Included_ is fun.
 
 ## Goal grades
 
@@ -52,6 +54,8 @@ Basically, I'm looking for the readers whose websites I can look at to allow me 
 
 I published ["How to Get Meaningful Feedback on Your Design Document,"](https://refactoringenglish.com/chapters/useful-feedback-on-design-docs/) "Verbs Drive the Sentence," and "Stay Positive." The design docs one is technically half a chapter, as I plan to expand it for the actual book with more details about what goes into a design doc.
 
+"How to Get Meaningful Feedback on Your Design Document" was my biggest whiff in a while, getting almost no traction anywhere I posted it. I wasn't 100% confident it would land, but I thought it had a 90% shot. Design doc writing was [one of the top topics readers were interested in](https://refactoringenglish.com/blog/chapter-interest-results/#full-results), so I expected there to be more of an audience for this.
+
 ## _Refactoring English_ metrics
 
 {{<project-metrics project="refactoring_english">}}
@@ -62,7 +66,7 @@ I wish pre-orders scaled a bit more linearly with visitors, but I'm still happy 
 
 ## I'm running late
 
-When I started writing the book, I felt confident I'd be done by October. I announced that the book would be done by December, just to give myself some padding, but I doubted I'd need it.
+When I started writing the book, I felt confident I'd be done by October 2025. I announced that the book would be done by December, just to give myself some padding, but I doubted I'd need it.
 
 Well, it turns out, I need it and then some.
 
@@ -84,15 +88,11 @@ I also didn't take into account regular occurrences that prevent me from getting
   - I find it hard to [do both in the same day](/retrospectives/2025/10/#adjusting-my-approach-to-freelance-editing).
 - Sick days
 - Time off
-- Days where I just can't get motivated to write.
+- Days where I can't get motivated to write
 
 If I assume I keep going at a rate of around 3.8 hours per week, my remaining 58 hours of writing should take 15.3 weeks, which brings me to mid-February 2026. For padding, I'm going to say I'm aiming to finish the book by the end of March 2026.
 
 I feel more confident about the timelines for the remaining chapters. Early chapters of the book like "Get to the Point" (about writing compelling introductions) are challenging because I have to formalize and refine a thought process that's mushy in my head. But topics about my personal writing process or hiring an editor are easier to explain because it's easier to explain concrete actions I take rather than how I think.
-
-## Topic 2
-
-## Topic 3
 
 ## Recommendations
 
@@ -127,7 +127,8 @@ PROMPT+=' Optimize for the simplest possible response.'
 PROMPT+=' If there are multiple methods, show me the simplest one.'
 PROMPT+=' If possible, show me just a code snippet with no additional explanation.'
 
-MODEL='llama3.2:1b'
+# Use a default LLM model but allow the user to override it.
+MODEL="${MODEL:-llama3.2:1b}"
 
 ollama run $MODEL "$PROMPT"
 ```
@@ -149,32 +150,34 @@ Evan's companion article, ["Why 'alias' is my last resort for aliases"](https://
 
 I'm not an active gamer, but I buy one computer game per year. I typically only play each game for 10-20 hours before I get bored, but I consider the $15-50 I spend to be good value for 10-20 hours of entertainment. Some games, I get really into and play for 25-100 hours (_Stardew Valley_, _XCOM2_, _Cypberpunk 2077_).
 
-_Oxygen Not Included_ been on my mind for almost a year since I saw [Andrew Kelly and Mitchell Hashimoto talking about](https://phanpy.social/#/mastodon.social/s/113602735590180420) how much they love it. Andrew Kelly declared it so good at teaching systems thinking that it should be its own required course in elementary school.
+_Oxygen Not Included_ has been on my mind for almost a year since I saw [Andrew Kelly and Mitchell Hashimoto talking about](https://phanpy.social/#/mastodon.social/s/113602735590180420) how much they love it. Andrew Kelly declared it so good at teaching systems thinking that it should be its own required course in elementary school.
 
 {{<img src="oxygen-not-included.webp" max-width="800px" caption="My space colony in _Oxygen Not Included_">}}
 
 I started playing _Oxygen Not Included_ in October, and it's really fun. I've seen it compared to Factorio and Rimworld, but I've never played those games. The game it most reminds me of is _Stardew Valley_, specifically the farming part of the game. In both games, you're trying to build a system that produces something. In the beginning, you have rudimentary tools that force you to do a lot of tasks manually, but as you progress, you get more powerful tools that allow you to automate more of the work and scale up productivity.
 
-The biggest challenge of _Oxygen Not Included_ is that it's hard to learn. There are in-game explanations of some concepts, but a lot of stuff, I've had to learn from trial and error. There are YouTube tutorials, but they're bizarrely long. Like, you eventually get to a point where you can build plumbing, but I didn't understand how it worked, so I looked up tutorials on YouTube, and they're all an 60+ minutes! But it's because they're explaining some super complicated version of plumbing that scales to a million, when all I want to do is build one toilet.
+The biggest challenge of _Oxygen Not Included_ is that it's hard to learn. There are in-game explanations of some concepts, but a lot of stuff, I've had to learn from trial and error. There are YouTube tutorials, but they're bizarrely long. Like, you eventually get to a point where you can build plumbing, but I didn't understand how it worked, so I looked up tutorials on YouTube, and they're all 60+ minutes! But it's because they're explaining some super complicated version of plumbing that scales to a million, when all I want to do is build one toilet.
 
 The best tutorial I've found so far is [this written guide by a player named Jahws](https://steamcommunity.com/sharedfiles/filedetails/?id=1359110726).
 
-If you're an _Oxygen Not Included_ fan, tell me the dumb things I'm [doing with my colony](oxygen-not-included.webp).
+If you're a good _Oxygen Not Included_ player, tell me the dumb things I'm [doing with my colony](oxygen-not-included.webp).
 
 ## Wrap up
 
 ### What got done?
 
 - Published ["How to Get Meaningful Feedback on Your Design Document,"](https://refactoringenglish.com/chapters/useful-feedback-on-design-docs/)
+- Hosted a live video session for Early Access readers about design docs.
 - Published two new chapters: "Verbs Drive the Sentence" and "Stay Positive."
 - Published ["Hold Off on Litestream 0.5.0"](/notes/hold-off-on-litestream-0.5.0/)
-- Published ["Read My Blog With Javascript"](/notes/read-my-blog-with-javascript/)
+- Published ["Read My Blog With JavaScript"](/notes/read-my-blog-with-javascript/)
 
 ### Lessons learned
 
--
+- I can't write my book for five hours per week.
+  - I can easily do five hours in a week where I'm only writing my book, and I have no other conflicts, but there are many things that could conflict with me writing my book in a given week.
 
 ### Goals for next month
 
 - Publish two new book chapters
--
+- Reach out to 10 readers
