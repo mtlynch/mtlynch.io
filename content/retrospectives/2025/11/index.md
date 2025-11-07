@@ -1,6 +1,6 @@
 ---
 title: "Refactoring English: Month 11"
-date: "2025-11-06"
+date: "2025-11-07"
 description: I'm officially running late.
 ---
 
