@@ -17,7 +17,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 ## Highlights
 
 - I'm running late on my book.
-- I was inspired to think more about convenience shell scripts.
+- A great blog post inspired me to think more about convenience shell scripts.
 - The game _Oxygen Not Included_ is fun.
 
 ## Goal grades
@@ -29,9 +29,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: Created a page explaining discounts
 - **Grade**: A
 
-I'm intentionally not advertising it as a perk of early access. My goal is to do editing work with people who are already enthusiastic about the book. I'm not trying to entice people to early access by promising discounts for editing.
-
-I am revealing the discount publicly here because if you're interested enough in my work to read these monthly updates, you're also the kind of person I'd like to take on as a freelance editing client.
+I created the page, but I'm intentionally not advertising it as a perk of early access. My goal is to work with people who are already enthusiastic about the book rather than entice new customers. I'm revealing the discount here in this retrospective because if you're interested enough in my work to read these monthly updates, you're also the kind of person I'd like to take on as a freelance editing client.
 
 There have been no freelance editing customers since I doubled my standard rate and added a discount for early access customers, but that's actually fine. I've had more writing output as a result, and I'd like the numbers to work out so that if freelance editing pulls me away from writing, the financial compensation makes me feel like it's a good tradeoff.
 
@@ -40,12 +38,12 @@ There have been no freelance editing customers since I doubled my standard rate 
 - **Result**: Created a list of 63 customers I can contact
 - **Grade**: A
 
-I keep setting a goal to reach out more to readers one on one. I realized there was a lot of friction to finding customers to reach out to, so I simplified my goal to just create a list of customers that are a good match for me to reach out to, according to this criteria:
+I keep setting a goal to reach out to more readers one on one. I realized there was a lot of friction to finding customers to reach out to, so I simplified my goal to just create a list of customers that are a good match for me to reach out to, according to this criteria:
 
-1. Their email address isn't Gmail/Yahoo/Hotmail or another email-only domain
-1. The domain name from their email address serves a website that responds to HTTP requests
+1. Their email address isn't Gmail/Yahoo/Hotmail or another email-only domain.
+1. The domain name from their email address serves a real website.
 
-Basically, I'm looking for the readers whose websites I can look at to allow me to say something unique and personal to them. I reached out to three customers based on this list. Two of them responded, and one attended last month's live session. I suspect the personalized email was a factor in their attendance. So, I continue to get positive results on this 1:1 outreach; I just need to do it more.
+Basically, I'm looking for readers whose websites I can look at to allow me to say something unique and personal to them. I reached out to three customers based on this list. Two of them responded, including one who subsequently attended last month's live session. I suspect the personalized email was a factor in their attendance. So, I continue to get positive results on this 1:1 outreach; I just need to do it more.
 
 ### Publish a new chapter of the book
 
@@ -60,9 +58,9 @@ I published ["How to Get Meaningful Feedback on Your Design Document,"](https://
 
 {{<project-metrics project="refactoring_english">}}
 
-Visits to the website are way up. Visitors to the website in October were highest since [my big Kickstarter blitz in March](/retrospectives/2025/04/#blogging-like-my-livelihood-depends-on-it). There were 22.3k unique visitors. Of those, 93% came through ["The Software Essays that Shaped Me"](https://refactoringenglish.com/blog/software-essays-that-shaped-me/).
+Visitors to the website in October were the highest they've been since [my big Kickstarter blitz in March](/retrospectives/2025/04/#blogging-like-my-livelihood-depends-on-it). There were 22.3k unique visitors. Of those, 93% came through ["The Software Essays that Shaped Me,"](https://refactoringenglish.com/blog/software-essays-that-shaped-me/) the article I published last month that I felt [didn't come out as I'd hoped](/retrospectives/2025/10/#experimenting-with-bunts).
 
-I wish pre-orders scaled a bit more linearly with visitors, but I'm still happy that my blog posts let new readers find my book.
+I wish pre-orders scaled a bit more linearly with visitors, but I'm still happy that my blog posts bring new readers to my book.
 
 ## I'm running late
 
@@ -70,9 +68,9 @@ When I started writing the book, I felt confident I'd be done by October 2025. I
 
 Well, it turns out, I need it and then some.
 
-Back in May, I wrote down estimates of [how long I expected to spend writing each chapter of my book](/retrospectives/2025/06/#becoming-less-precious-about-my-writing). Six months later, how accurate was I? I underestimated the effort by about 40%.
+Back in May, I wrote down estimates of [how much writing time I expected each chapter to take](/retrospectives/2025/06/#becoming-less-precious-about-my-writing). Six months later, how accurate was I? I underestimated the effort by about 40%.
 
-I originally thought I'd finish the book in 114 hours, but my current estimate (after 99 hours of writing) is 157 hours, meaning I estimate 58 hours remaining.
+I originally thought I'd finish the book in 114 hours, but my current estimate (after 99 hours of writing) is 157 hours, meaning I think I'll need another 58 hours to finish.
 
 I also estimated that I could write the book for five hours per week, but that was incorrect as well, as 99 hours over six months works out to about 3.8 hours per week.
 
@@ -92,16 +90,16 @@ I also didn't take into account regular occurrences that prevent me from getting
 
 If I assume I keep going at a rate of around 3.8 hours per week, my remaining 58 hours of writing should take 15.3 weeks, which brings me to mid-February 2026. For padding, I'm going to say I'm aiming to finish the book by the end of March 2026.
 
-I feel more confident about the timelines for the remaining chapters. Early chapters of the book like "Get to the Point" (about writing compelling introductions) are challenging because I have to formalize and refine a thought process that's mushy in my head. But topics about my personal writing process or hiring an editor are easier to explain because it's easier to explain concrete actions I take rather than how I think.
+I feel more confident about the timelines for the remaining chapters. Early chapters of the book like "Get to the Point" (about writing compelling introductions) are challenging because I have to formalize and refine a thought process that's mushy in my head. But topics like my personal writing process or hiring an editor are easier to explain because they're concrete actions I take rather than how I think.
 
 ## Recommendations
 
 ### Evan Hahn's convenience scripts
 
-The best article I read last month was Evan Hahn's, ["Scripts I wrote that I use all the time."](https://evanhahn.com/scripts-i-wrote-that-i-use-all-the-time/) Evan shares several dozens of scripts that make life easier as a developer. My favorites were:
+The best article I read last month was Evan Hahn's, ["Scripts I wrote that I use all the time."](https://evanhahn.com/scripts-i-wrote-that-i-use-all-the-time/) Evan shares several dozens of scripts he's written to make his life easier as a developer. My favorites were:
 
 - [`copy`](https://codeberg.org/EvanHahn/dotfiles/src/commit/843b9ee13d949d346a4a73ccee2a99351aed285b/home/bin/bin/copy): Read from stdin and store it in the system clipboard.
-  - I'm embarrassed to admit I never thought to do this, and I've always copied from the terminal with my mouse like a savage.
+  - I'm embarrassed to admit I never thought to do this. I've always copied from the terminal with my mouse like a savage.
 - [`pasta`](https://codeberg.org/EvanHahn/dotfiles/src/commit/843b9ee13d949d346a4a73ccee2a99351aed285b/home/bin/bin/pasta): Print from the system clipboard to stdout.
 - [`pastas`](https://codeberg.org/EvanHahn/dotfiles/src/commit/843b9ee13d949d346a4a73ccee2a99351aed285b/home/bin/bin/pastas): Watch the system clipboard and print to stdout every time it changes.
   - The first time I read the post, I overlooked [just how clever this script is](/notes/guis-are-antisocial/).
@@ -110,7 +108,7 @@ The best article I read last month was Evan Hahn's, ["Scripts I wrote that I use
 
 So many of Evan's scripts were great ideas that I immediately adopted.
 
-More importantly, I liked the meta-idea of Evan's post: developers should think about scripts that remove friction from their typical workflows. It also expanded my perception of what could even be a script. Like `emoji`, I wouldn't have thought to make a script because I don't have a list of every emoji and a description, but after reading Evan's post, I realized I could have generated it just like Evan did.
+More importantly, I liked the meta-idea of Evan's post: developers should think about scripts that remove friction from their typical workflows. It also expanded my perception of what could even be a script. Like `emoji`, I wouldn't have thought to make a script because I don't have a list of every emoji and a description, but after reading Evan's post, I realized I could have generated the list the same way Evan did.
 
 It inspired me to add a `chat` script to my path to ask questions to a locally-hosted LLM. I often find myself going to the web browser to look up semantics for command-line tools, so I can instead stay on the command line and just type it to `chat`:
 
@@ -135,16 +133,11 @@ ollama run $MODEL "$PROMPT"
 
 For example, I used it yesterday to remember how to resize an image:
 
-````bash
-$ chat 'how do I use imagemagick to resize an image to 1600px in width?'
-```bash
-convert input.png -resize 1600x output.png
-```
-````
+{{<video src="chat-session.mp4">}}
 
-And it's super fast! That prompt completed on my system in 265ms, so it's much faster than me switching to a browser, searching, clicking for an answer, then switching back to my task.
+It's super fast! That prompt completed on my system in 265ms, so it's much faster than me switching to a browser, searching, clicking for an answer, then switching back to my task.
 
-Evan's companion article, ["Why 'alias' is my last resort for aliases"](https://evanhahn.com/why-alias-is-my-last-resort-for-aliases/) dovetails well with his scripts, as it argues that putting convenience scripts in a folder under your `PATH` (e.g., under `~/.local/bin`) affords you much more flexibility than using shell aliases.
+Evan's companion article, ["Why 'alias' is my last resort for aliases"](https://evanhahn.com/why-alias-is-my-last-resort-for-aliases/) dovetails well with his scripts, as it argues that putting convenience scripts in a folder under your `PATH` (e.g., under `~/.local/bin`) affords you more flexibility than using shell aliases.
 
 ### _Oxygen Not Included_
 
@@ -175,9 +168,10 @@ If you're a good _Oxygen Not Included_ player, tell me the dumb things I'm [doin
 ### Lessons learned
 
 - I can't write my book for five hours per week.
-  - I can easily do five hours in a week where I'm only writing my book, and I have no other conflicts, but there are many things that could conflict with me writing my book in a given week.
+  - I can easily do five hours in a week where I'm only writing my book, but there are many potential interrupts and competing priorities.
 
 ### Goals for next month
 
-- Publish two new book chapters
-- Reach out to 10 readers
+- Publish two new book chapters.
+- Reach out to 10 readers.
+- Create a tool or blog post that brings people to the _Refactoring English_ website.
