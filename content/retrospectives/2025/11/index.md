@@ -38,7 +38,7 @@ There have been no freelance editing customers since I doubled my standard rate 
 - **Result**: Created a list of 63 customers I can contact
 - **Grade**: A
 
-I keep setting a goal to reach out to more readers one on one. I realized there was a lot of friction to finding customers to reach out to, so I simplified my goal to just create a list of customers that are a good match for me to reach out to, according to this criteria:
+I keep setting a goal to reach out to more readers one on one. I realized there was a lot of friction to finding customers to reach out to, so I simplified my goal to just create a list of customers that are a good match for me to reach out to, according to these criteria:
 
 1. Their email address isn't Gmail/Yahoo/Hotmail or another email-only domain.
 1. The domain name from their email address serves a real website.
@@ -96,7 +96,7 @@ I feel more confident about the timelines for the remaining chapters. Early chap
 
 ### Evan Hahn's convenience scripts
 
-The best article I read last month was Evan Hahn's, ["Scripts I wrote that I use all the time."](https://evanhahn.com/scripts-i-wrote-that-i-use-all-the-time/) Evan shares several dozens of scripts he's written to make his life easier as a developer. My favorites were:
+The best article I read last month was Evan Hahn's ["Scripts I wrote that I use all the time."](https://evanhahn.com/scripts-i-wrote-that-i-use-all-the-time/) Evan shares several scripts he's written to make his life easier as a developer. My favorites were:
 
 - [`copy`](https://codeberg.org/EvanHahn/dotfiles/src/commit/843b9ee13d949d346a4a73ccee2a99351aed285b/home/bin/bin/copy): Read from stdin and store it in the system clipboard.
   - I'm embarrassed to admit I never thought to do this. I've always copied from the terminal with my mouse like a savage.
