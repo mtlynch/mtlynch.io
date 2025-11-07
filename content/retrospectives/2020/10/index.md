@@ -175,7 +175,7 @@ The dominant cost was the electrical engineers' person-hours during assembly. Be
 
 Long-term, it's obviously suboptimal to pay highly-trained electrical engineers to manufacture circuit boards by hand. Now that I have some breathing room in my inventory, we're evaluating cost optimizations, including automating and outsourcing more of the manufacturing process.
 
-In contrast, my 3D printing expenses are fantastically low. My state has [a government subsidy](https://www.uml.edu/research/crf/state-voucher-program.aspx) for locally-incorporated small businesses that pays 75% of 3D printing costs through state universities. Without it, I would have had to pay $20 per case!
+In contrast, my 3D printing expenses are fantastically low. My state has [a government subsidy](https://web.archive.org/web/20201027203826/https://www.uml.edu/research/crf/state-voucher-program.aspx) for locally-incorporated small businesses that pays 75% of 3D printing costs through state universities. Without it, I would have had to pay $20 per case!
 
 ## Inventory shortages and the thundering herd problem
 
