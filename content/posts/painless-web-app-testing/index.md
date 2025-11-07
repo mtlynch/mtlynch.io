@@ -278,7 +278,7 @@ This guide provided a basic introduction to Cypress. For more advanced functiona
 - [Introduction to Cypress](https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html)
 - [Writing Your First Test](https://docs.cypress.io/guides/getting-started/writing-your-first-test.html)
 
-**Update (2019-05-02)**: In response to this post, the Cypress team published [an official Docker image](https://hub.docker.com/r/cypress/included) that has Cypress pre-installed. I've revised this tutorial to integrate their new image. Check out [the Cypress blog post](https://www.cypress.io/blog/2019/05/02/run-cypress-with-a-single-docker-command/) for additional details about their images and more tricks for using Cypress and Docker together.
+**Update (2019-05-02)**: In response to this post, the Cypress team published [an official Docker image](https://hub.docker.com/r/cypress/included) that has Cypress pre-installed. I've revised this tutorial to integrate their new image. Check out [the Cypress blog post](https://www.cypress.io/blog/run-cypress-with-a-single-docker-command) for additional details about their images and more tricks for using Cypress and Docker together.
 
 ---
 

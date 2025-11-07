@@ -115,7 +115,7 @@ Cypress makes it easy to get up and running with basic end-to-end tests, but I'v
 
 For example, I'd add a file upload feature and then realize that Cypress can't exercise file upload functionality. I'd stop what I'm doing and go find a third-party Cypress plugin to fill the gap.
 
-As I was writing this, I discovered that Cypress [added native support for file uploads](https://www.cypress.io/blog/2022/01/19/uploading-files-with-selectfile/) earlier this year, but it's a bit of a headscratcher that [it took them seven years](https://github.com/cypress-io/cypress/issues/170) to support an extremely common scenario.
+As I was writing this, I discovered that Cypress [added native support for file uploads](https://web.archive.org/web/20250708213204/https://www.cypress.io/blog/uploading-files-with-selectfile) earlier this year, but it's a bit of a headscratcher that [it took them seven years](https://github.com/cypress-io/cypress/issues/170) to support an extremely common scenario.
 
 Similarly, if you want to simulate mouse hovering, a feature present in almost every web UI framework, [Cypress can't do it](https://github.com/cypress-io/cypress/issues/10). That bug has been open for almost eight years.
 
@@ -383,7 +383,7 @@ await page
 
 I have a personal appreciation for Cypress as an open-source company, and in particular, Gleb Bahmutov, their VP of Engineering. Gleb publishes high-quality [blog posts](https://glebbahmutov.com/blog/), and he's an excellent conference speaker.
 
-When I wrote [a blog post about Cypress](https://mtlynch.io/painless-web-app-testing/), Gleb was gracious in sharing feedback to improve the post. After I published it, Cypress promoted my article on [their blog](https://www.cypress.io/blog/2019/05/02/run-cypress-with-a-single-docker-command/).
+When I wrote [a blog post about Cypress](https://mtlynch.io/painless-web-app-testing/), Gleb was gracious in sharing feedback to improve the post. After I published it, Cypress promoted my article on [their blog](https://www.cypress.io/blog/run-cypress-with-a-single-docker-command).
 
 Microsoft, on the other hand, has historically has been hostile to open-source. They're in a period of friendliness now, but if the winds change, and they realize they can make more money by crushing open-source, they probably will.
 
