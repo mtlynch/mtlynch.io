@@ -1,5 +1,5 @@
 ---
-title: "Read My Blog With Javascript"
+title: "Read My Blog With JavaScript"
 date: 2025-10-10
 description: I'm not sure why you'd want to, but you can.
 tags:
