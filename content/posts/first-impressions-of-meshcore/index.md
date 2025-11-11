@@ -116,37 +116,58 @@ Okay, they can finally see each other! They can both publish messages to the pub
 
 If I communicate with friends over MeshCore, I don't want to broadcast our whole conversation over the public channel, so it was time to test out direct messaging.
 
-I was expecting some way to view a contact in the public channel and send them a direct message, but I can't. Clicking their name does nothing. There's a "Participants" view, but the only option is to block, not send a direct message. This seems like an odd design choice. If device 1 broadcasted its identifier, why can't I talk to it?
+I was expecting some way to view a contact in the public channel and send them a direct message, but I can't. Clicking their name does nothing. There's a "Participants" view, but the only option is to block, not send a direct message.
+
+{{<img src="participants-view.webp" max-width="300px" has-border="true">}}
+
+This seems like an odd design choice. If device 1 broadcasted its identifier, why can't I talk to it?
 
 I eventually figured out that I have to "Advert." There are three options: "Zero Hop," "Flood Routed," and "To Clipboard." I don't know what any of these mean, but I figure "flood" sounds kind of rude, whereas "Zero Hop" sounds elegant, so I do a "Zero Hop."
 
-Great! Device 2 can now see device 1. Let's say hi to Device 1 from.
+{{<gallery>}}
 
-And the message goes through three sending attempts and ultimately fails:
+{{<img src="advert-options.webp" max-width="300px" has-border="true">}}
+{{<img src="advert-sent.webp" max-width="300px" has-border="true">}}
 
-Maybe I need to "Advert" from Device 2 as well, so I do, and voila! Messages now work.
+{{</gallery>}}
 
-This is also a frustrating user experience. If I have to advert from both ends, why did MeshCore let me send a message on a half-completed handshake? Why do a handshake at all for public key encryption? I don't understand why "advert" is an explicit step rather than something that happens implicitly when I post to a public channel or attempt to send someone a direct message.
+Great! Device 2 can now see device 1. Let's say hi to Device 1 from Device 2.
+
+{{<img src="dm-failed.webp" max-width="300px" has-border="true">}}
+
+Whoops, what's wrong? Maybe I need to "Advert" from Device 2 as well?
+
+Okay, I do, and voila! Messages now work.
+
+{{<img src="dm-succeeded.webp" max-width="300px" has-border="true">}}
+
+This is a frustrating user experience. If I have to advert from both ends, why did MeshCore let me send a message on a half-completed handshake?
+
+I don't understand why "advert" is an explicit step rather than something that happens implicitly when I post to a public channel or attempt to send someone a direct message.
 
 Anyway, I can talk to myself in both public channels and DMs.
 
-## Browsing MeshCore's source code
-
-I was a bit disappointed in the source code. There were no automated tests for the codebase, so I [offered a simple unit test](https://github.com/meshcore-dev/MeshCore/pull/925), but nobody from the MeshCore team has replied to it yet.
-
-The code doesn't have consistent format despite a `.clang-format` configuration. The developers closed the issue as, "Everyone should just turn off auto-formatting in their editor." But why? Why in 2025 do I have to think about where to place my curly braces to match the style of this particular file? Just configure a linter and call it a day.
-
 ## Ordering more MeshCore devices
 
-The Heltec v3 boards were a good way to experiment with MeshCore, but they felt impractical. If I wanted to try a realistic test, I'd have to either wire up a battery to the board or carry around my giant USB-C power brick. I hoped I could just power it with my phone with a USB-C to USB-C cable, but the Heltec board wouldn't power up from my phone.
+The Heltec v3 boards were a good way to experiment with MeshCore, but they felt impractical for anything real.The Heltec boards require their own power source and a phone to pair. I hoped I could just power it with my phone with a USB-C to USB-C cable, but the Heltec board wouldn't power up from my phone. In a real emergency, that's too many points of failure.
 
-So, I just ordered the other two devices that MeshCore recommends on their website.
+The MeshCore website recommends two other MeshCore-compatible devices, so I ordered those and got them a few days later: the Seeed SenseCAP T-1000e and the Lilygo T-Deck+.
+
+{{<gallery caption="I bought the Seeed SenseCAP T-1000e and the Lilygo T-Deck+ to continue experimenting with MeshCore.">}}
+
+{{<img src="lilygo-unboxing.webp" max-width="300px">}}
+
+{{<img src="t1000-unboxing.webp" max-width="300px">}}
+
+{{</gallery>}}
 
 ## Testing the SenseCAP T-1000e
 
 I liked the SenseCAP a lot. It's nice and light. It's the kind of thing you could toss into a backpack and not notice is there.
 
-The downside is that it uses a custom charging cable, so I can't just plug in an off-the-shelf USB cable.
+The downside is that it uses a custom USB cable, so I can't just plug in an off-the-shelf cable.
+
+{{<img src="t1000-cable.webp" max-width="400px" caption="The Seeed T-10000e uses a custom USB cable for charging and flashing.">}}
 
 I don't know how to turn it off.
 
@@ -204,7 +225,7 @@ Sometimes had to hold down trackpad and hit reset. Sometimes had to hold trackpa
 
 ## Using the Ripple firmware
 
-## Wait, this isn't open-source?
+## Wait, MeshCore isn't open-source?
 
 I'd seen that they fund development by selling a premium version of the T-Deck software with higher resolution maps. That seemed fine and a reasonable way to fund the project. I like open-core and that's how my previous business worked as well.
 
@@ -212,7 +233,7 @@ But I realized it's actually not open-core because none of the MeshCore T-Deck f
 
 I wondered about the license for the web app I was using, and I realized that's closed-source as well. It's a Flutter app, so the web, Android, and iOS apps all share the same closed-source codebase.
 
-In fairness, nobody tricked me. I went back to the MeshCore website and realized that they never advertise the product as open-source. It just felt so much like an open-source project that I assumed, but I was terribly disappointed to discover that critical parts of the project are closed-source and proprietary.
+In fairness, the mistake was mine. I went back to the MeshCore website and realized that they never advertise the product as open-source. It just felt so much like an open-source project that I assumed, but I was terribly disappointed to discover that every MeshCore client app is closed-source and proprietary.
 
 | Product                              | Open-source? | Free to use?                         |
 | ------------------------------------ | ------------ | ------------------------------------ |
@@ -221,6 +242,20 @@ In fairness, nobody tricked me. I went back to the MeshCore website and realized
 | Official Android / iOS MeshCore apps | No           | Yes                                  |
 | Official MeshCore web app            | No           | Yes                                  |
 | T-Deck MeshCore firmware             | No           | Yes, but some features are paywalled |
+
+## Range testing
+
+First test, I tested it while walking away from my house with the SenseCAP and the Heltec v3 listening at home. It stopped transmitting after two blocks, which was way less than I expected.
+
+I read online that the Heltecs have a particularl weak modem, so I tried again with the SenseCAP at home and the T-Deck with me. After about five blocks, I could no longer send messages back to the SenseCAP.
+
+From exploring more, it seems like what I actually might need is a MeshCore repeater. If I want to communicate with friends more than a few blocks away, I might have to get a beefy device with a big antenna, though I couldn't find documentation on how far I should expect the range of my devices to work.
+
+## Browsing MeshCore's source code
+
+I was a bit disappointed in the source code. There were no automated tests for the codebase, so I [offered a simple unit test](https://github.com/meshcore-dev/MeshCore/pull/925), but nobody from the MeshCore team has replied to it yet.
+
+The code doesn't have consistent format despite a `.clang-format` configuration. The developers closed the issue as, "Everyone should just turn off auto-formatting in their editor." But why? Why in 2025 do I have to think about where to place my curly braces to match the style of this particular file? Just configure a linter and call it a day.
 
 ## CLI
 
@@ -237,14 +272,6 @@ nix run github:meshcore-dev/meshcore-cli#meshcore-cli -- \
 ```
 
 Confusing because it looks like it's a table but it's actually a list.
-
-## Range testing
-
-First test, I tested it while walking away from my house with the SenseCAP and the Heltec v3 listening at home. It stopped transmitting after two blocks, which was way less than I expected.
-
-I read online that the Heltecs have a particularl weak modem, so I tried again with the SenseCAP at home and the T-Deck with me. After about five blocks, I could no longer send messages back to the SenseCAP.
-
-From exploring more, it seems like what I actually might need is a MeshCore repeater. If I want to communicate with friends more than a few blocks away, I might have to get a beefy device with a big antenna, though I couldn't find documentation on how far I should expect the range of my devices to work.
 
 ## Summary
 
