@@ -128,62 +128,7 @@ Maybe I need to "Advert" from Device 2 as well, so I do, and voila! Messages now
 
 This is also a frustrating user experience. If I have to advert from both ends, why did MeshCore let me send a message on a half-completed handshake? Why do a handshake at all for public key encryption? I don't understand why "advert" is an explicit step rather than something that happens implicitly when I post to a public channel or attempt to send someone a direct message.
 
-Anyway, I can talk to myself in both public channels and DMs. Let's try something more exciting: flashing firmware from source.
-
-## Flashing custom firmware
-
-What fun is it to play with open-source hardware if you can't flash the firmware yourself from source?
-
-This part was refreshingly easy. I run NixOS, and the MeshCore project has a Nix configuration with direnv, so I was able to just clone the repo
-
-```bash
-git clone https://github.com/meshcore-dev/MeshCore.git .
-direnv allow
-```
-
-From there, Nix installed pio, the PlatformIO CLI for me:
-
-```bash
-$ pio --version
-PlatformIO Core, version 6.1.18
-```
-
-The latest stable MeshCore release as of this writing is 1.9.0, so I switch to that release:
-
-```bash
-LATEST_COMPANION_RELEASE='1.9.0'
-git checkout "companion-v${LATEST_COMPANION_RELEASE}"
-```
-
-And then I was able to re-flash from source:
-
-```bash
-# On my system, I can see this from running dmesg after I plug in my Heltec v3
-# device.
-MESHCORE_DEVICE_PATH='/dev/ttyUSB0'
-
-pio run \
-  --environment Heltec_v3_companion_radio_ble \
-  --target upload \
---upload-port "${MESHCORE_DEVICE_PATH}"
-```
-
-It runs for about a minute and ends with this output:
-
-```text
-Writing at 0x0013acda... (100 %)
-Wrote 1234336 bytes (760969 compressed) at 0x00010000 in 17.3 seconds (effective 572.3 kbit/s)...
-Hash of data verified.
-
-Leaving...
-Hard resetting via RTS pin...
-================================================ [SUCCESS] Took 87.91 seconds ================================================
-
-Environment                    Status    Duration
------------------------------  --------  ------------
-Heltec_v3_companion_radio_ble  SUCCESS   00:01:27.912
-================================================ 1 succeeded in 00:01:27.912 ================================================
-```
+Anyway, I can talk to myself in both public channels and DMs.
 
 ## Browsing MeshCore's source code
 
