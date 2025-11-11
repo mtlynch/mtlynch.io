@@ -76,9 +76,11 @@ Then, I used the MeshCore web app to pair the Heltec with my phone.
 
 ## Fumbling around the MeshCore web app
 
-Okay, I've paired my phone with my MeshCore device, but... now what? The app doesn't help you out much in terms of onboarding.
+Okay, I've paired my phone with my MeshCore device, but... now what?
 
 {{<img src="paired.webp" max-width="304px"  has-border="true">}}
+
+The app doesn't help you out much in terms of onboarding.
 
 Let's try the Map to see if there are any other MeshCore users nearby.
 
@@ -88,7 +90,7 @@ Okay, that's just a map of New Zealand. I live in the US, so that's a bit surpri
 
 But seeing New Zealand reminded me that different countries use different radio frequencies for LoRa, and if the app defaults to a location in New Zealand, it's probably defaulting to New Zealand broadcast frequencies as well, so I should fix that.
 
-So, I went to settings and saw fields for "Radio Settings" and I clicked them expecting a dropdown, but it's just a field for putting in arbitrary numbers. And then I noticed a subtl "Choose Preset" button, which listed presets for different countries that were "suggested by the community." I had no idea what any of them meant, but who am I to argue with the community? I chose "USA/Canada (Recommended)."
+So, I went to settings and saw fields for "Radio Settings" and I clicked them expecting a dropdown, but it's just a field for putting in arbitrary numbers. And then I noticed a subtle "Choose Preset" button, which listed presets for different countries that were "suggested by the community." I had no idea what any of them meant, but who am I to argue with the community? I chose "USA/Canada (Recommended)."
 
 {{<gallery>}}
 
@@ -102,7 +104,7 @@ I also noticed that the settings let me change my device name, so that seemed us
 
 {{<img src="device-name.webp" max-width="300px" has-border="true">}}
 
-It seemed like there were no other MeshCore users within range of me, which was unsurprising, since this is pretty niche technology. That's why I bought the second Heltec.
+It seemed like there were no other MeshCore users within range of me, which I expected. That's why I bought the second Heltec.
 
 {{<img src="no-contacts.webp" max-width="300px" has-border="true">}}
 
@@ -114,48 +116,78 @@ Okay, they can finally see each other! They can both publish messages to the pub
 
 If I communicate with friends over MeshCore, I don't want to broadcast our whole conversation over the public channel, so it was time to test out direct messaging.
 
-I was expecting some way to view a contact in the public channel and send them a direct message, but I can't.
+I was expecting some way to view a contact in the public channel and send them a direct message, but I can't. Clicking their name does nothing. There's a "Participants" view, but the only option is to block, not send a direct message. This seems like an odd design choice. If device 1 broadcasted its identifier, why can't I talk to it?
 
 I eventually figured out that I have to "Advert." There are three options: "Zero Hop," "Flood Routed," and "To Clipboard." I don't know what any of these mean, but I figure "flood" sounds kind of rude, whereas "Zero Hop" sounds elegant, so I do a "Zero Hop."
 
 Great! Device 2 can now see device 1. Let's say hi to Device 1 from.
 
-Oh...
+And the message goes through three sending attempts and ultimately fails:
 
-This seems like an odd design choice. If device 1 broadcasted its identifier, why can't I talk to it?
+Maybe I need to "Advert" from Device 2 as well, so I do, and voila! Messages now work.
 
-This is also a frustrating user experience. You knew I couldn't send the message before I started typing, but you let me do it anyway. And then you threw away my message...
+This is also a frustrating user experience. If I have to advert from both ends, why did MeshCore let me send a message on a half-completed handshake? Why do a handshake at all for public key encryption? I don't understand why "advert" is an explicit step rather than something that happens implicitly when I post to a public channel or attempt to send someone a direct message.
+
+Anyway, I can talk to myself in both public channels and DMs. Let's try something more exciting: flashing firmware from source.
 
 ## Flashing custom firmware
 
-This part was easy
+What fun is it to play with open-source hardware if you can't flash the firmware yourself from source?
+
+This part was refreshingly easy. I run NixOS, and the MeshCore project has a Nix configuration with direnv, so I was able to just clone the repo
+
+```bash
+git clone https://github.com/meshcore-dev/MeshCore.git .
+direnv allow
+```
+
+From there, Nix installed pio, the PlatformIO CLI for me:
+
+```bash
+$ pio --version
+PlatformIO Core, version 6.1.18
+```
+
+The latest stable MeshCore release as of this writing is 1.9.0, so I switch to that release:
 
 ```bash
 LATEST_COMPANION_RELEASE='1.9.0'
-git checkout "companion-${LATEST_COMPANION_RELEASE}"
+git checkout "companion-v${LATEST_COMPANION_RELEASE}"
 ```
 
-Nix config, so you can flash with:
+And then I was able to re-flash from source:
 
 ```bash
+# On my system, I can see this from running dmesg after I plug in my Heltec v3
+# device.
+MESHCORE_DEVICE_PATH='/dev/ttyUSB0'
+
 pio run \
   --environment Heltec_v3_companion_radio_ble \
   --target upload \
-  --upload-port /dev/ttyUSB0
+--upload-port "${MESHCORE_DEVICE_PATH}"
 ```
 
-### USB
+It runs for about a minute and ends with this output:
 
-```bash
-pio run \
-  --environment Heltec_v3_companion_radio_usb \
-  --target upload \
-  --upload-port /dev/ttyUSB0
+```text
+Writing at 0x0013acda... (100 %)
+Wrote 1234336 bytes (760969 compressed) at 0x00010000 in 17.3 seconds (effective 572.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+================================================ [SUCCESS] Took 87.91 seconds ================================================
+
+Environment                    Status    Duration
+-----------------------------  --------  ------------
+Heltec_v3_companion_radio_ble  SUCCESS   00:01:27.912
+================================================ 1 succeeded in 00:01:27.912 ================================================
 ```
 
-## Exploring the source code
+## Browsing MeshCore's source code
 
-I was a bit disappointed in the source code. There were no automated tests for the codebase, so I decided to try writing a simple unit test.
+I was a bit disappointed in the source code. There were no automated tests for the codebase, so I [offered a simple unit test](https://github.com/meshcore-dev/MeshCore/pull/925), but nobody from the MeshCore team has replied to it yet.
 
 The code doesn't have consistent format despite a `.clang-format` configuration. The developers closed the issue as, "Everyone should just turn off auto-formatting in their editor." But why? Why in 2025 do I have to think about where to place my curly braces to match the style of this particular file? Just configure a linter and call it a day.
 
