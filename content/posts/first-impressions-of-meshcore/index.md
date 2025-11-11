@@ -151,7 +151,7 @@ Anyway, I can talk to myself in both public channels and DMs.
 
 The Heltec v3 boards were a good way to experiment with MeshCore, but they felt impractical for anything real.The Heltec boards require their own power source and a phone to pair. I hoped I could just power it with my phone with a USB-C to USB-C cable, but the Heltec board wouldn't power up from my phone. In a real emergency, that's too many points of failure.
 
-The MeshCore website recommends two other MeshCore-compatible devices, so I ordered those and got them a few days later: the Seeed SenseCAP T-1000e and the Lilygo T-Deck+.
+The MeshCore website recommends two other MeshCore-compatible devices, so I ordered those and got them a few days later: the Seeed SenseCAP T-1000e ($XX) and the Lilygo T-Deck+ ($XX).
 
 {{<gallery caption="I bought the Seeed SenseCAP T-1000e and the Lilygo T-Deck+ to continue experimenting with MeshCore.">}}
 
@@ -163,15 +163,13 @@ The MeshCore website recommends two other MeshCore-compatible devices, so I orde
 
 ## Testing the SenseCAP T-1000e
 
-I liked the SenseCAP a lot. It's nice and light. It's the kind of thing you could toss into a backpack and not notice is there.
+I liked the SenseCAP a lot. It's nice and light. It's the kind of thing you could toss into a backpack and not notice is there. But I like that it's self-contained and has its own battery and antenna, which reduces a lot of complexity relative to the Heltec v3.
 
 The downside is that it uses a custom USB cable, so I can't just plug in an off-the-shelf cable.
 
 {{<img src="t1000-cable.webp" max-width="400px" caption="The Seeed T-10000e uses a custom USB cable for charging and flashing.">}}
 
 I don't know how to turn it off.
-
-But I like that it's self-contained and has its own battery and antenna, which reduces a lot of complexity relative to the Heltec v3.
 
 https://wiki.seeedstudio.com/sensecap_t1000_e/
 
@@ -184,13 +182,19 @@ pio run \
 
 ## Testing the LilyGo T-Deck
 
+Now it was time to test the LilyGo T-Deck+.
+
+I'll be honest, this was the part I was most looking forward to of this whole experience. It looked like a 2000s era Blackberry. I thought I'd be able to pre-configure these, hand them out to nearby friends to throw into a closet, and then if a disaster ever struck, we'd be able to chat together on our hacker Blackberries.
+
 I was particularly excited about the LilyGo T-Deck because it looked like a 2000s era Blackberry. What a world! Cutting edge technology of 2005 is now available for $80 and friendly to custom software!
 
 I got it, and my berry was burst. It was not a Blackberry at all.
 
 It's big and clunky. There's an unlabeled button on the left side, and an unlabled toggle on the right side. I powered it up and it loaded up Meshtastic, as the device was pre-loaded with Meshtastic.
 
-I had a hard time even finding instructions for how to reflash it. I found this long Jeff Geerling video where he expresses frustration with how long it took him to reflash his, and then he never explains how he did it!
+That's not to say that LilyGo is opposed to labels. There's a big ugly label on top that looks like my IT department printed it out an provisioned to me.
+
+I had a hard time even finding instructions for how to reflash it. I found this [long Jeff Geerling video](https://www.youtube.com/watch?v=2Ry-ck0fhfw) where he expresses frustration with how long it took him to reflash his, and then he never explains how he did it!
 
 ### Putting the LilyGo T-Deck Plus into DFU mode for flashing
 
