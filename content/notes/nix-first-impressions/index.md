@@ -5,6 +5,7 @@ discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=36387874
 tags:
   - nix
+  - first-impressions
 ---
 
 [Nix](https://nix.dev/) is a tool for configuring software environments according to source files. I've been hearing more and more about Nix on Hacker News and Twitter. The idea of it appeals to me, so I've been tinkering with it over the past few weeks.
