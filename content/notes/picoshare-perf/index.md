@@ -22,7 +22,7 @@ I didn't have time to debug the crash, so I just increased the server's memory f
 
 It's unsatisfying to fix a crash by just throwing more RAM at the problems, so for the past two weeks, I've been debugging the crashes and sharing my progress on Twitter.
 
-{{<x user="deliberatecoder" id="1552438652537835521">}}
+{{<tweet 1552438652537835521>}}
 
 At this point, I've fixed all the issues that were causing crashes and learned some useful lessons along the way about Go, SQLite, and debugging.
 

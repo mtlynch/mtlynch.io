@@ -1,0 +1,62 @@
+{{- $text := .text -}}
+{{- $entities := .entities -}}
+
+{{/* Build a slice of all entity replacements */}}
+{{- $replacements := slice -}}
+
+{{/* Process URLs */}}
+{{- with $entities.urls -}}
+  {{- range . -}}
+    {{- $start := index .indices 0 -}}
+    {{- $end := index .indices 1 -}}
+    {{- $replacement := printf `<a href="%s">%s</a>` .expanded_url .display_url -}}
+    {{- $replacements = $replacements | append (dict "start" $start "end" $end "text" .url "replacement" $replacement) -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* Process hashtags */}}
+{{- with $entities.hashtags -}}
+  {{- range . -}}
+    {{- $start := index .indices 0 -}}
+    {{- $end := index .indices 1 -}}
+    {{- $hashtagText := printf "#%s" .text -}}
+    {{- $replacement := printf `<a href="https://twitter.com/hashtag/%s">%s</a>` .text $hashtagText -}}
+    {{- $replacements = $replacements | append (dict "start" $start "end" $end "text" $hashtagText "replacement" $replacement) -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* Process user mentions */}}
+{{- with $entities.user_mentions -}}
+  {{- range . -}}
+    {{- $start := index .indices 0 -}}
+    {{- $end := index .indices 1 -}}
+    {{- $mentionText := printf "@%s" .screen_name -}}
+    {{- $replacement := printf `<a href="https://twitter.com/%s">%s</a>` .screen_name $mentionText -}}
+    {{- $replacements = $replacements | append (dict "start" $start "end" $end "text" $mentionText "replacement" $replacement) -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* Process media URLs (remove them from text) */}}
+{{- with $entities.media -}}
+  {{- range . -}}
+    {{- $start := index .indices 0 -}}
+    {{- $end := index .indices 1 -}}
+    {{- $replacements = $replacements | append (dict "start" $start "end" $end "text" .url "replacement" "") -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* Sort replacements by start index (descending to avoid position shifts) */}}
+{{- $sortedReplacements := sort $replacements "start" "desc" -}}
+
+{{/* Apply replacements */}}
+{{- $processedText := $text -}}
+{{- range $sortedReplacements -}}
+  {{- $before := substr $processedText 0 .start -}}
+  {{- $after := substr $processedText .end -}}
+  {{- $processedText = printf "%s%s%s" $before .replacement $after -}}
+{{- end -}}
+
+{{/* Convert newlines to <br> */}}
+{{- $processedText = $processedText | replaceRE "\n" "<br>" -}}
+
+{{- $processedText -}}

@@ -1,0 +1,61 @@
+{{- $tweetID := .Get 0 -}}
+
+{{- if not $tweetID -}}
+  <div class="tweet-error">
+    <p>Error: No tweet ID provided</p>
+  </div>
+{{- else -}}
+
+{{- $cacheFile := printf "tweet-data/%v.json" $tweetID -}}
+
+{{/* Try to get cached version from assets */}}
+{{- $cachedResource := resources.Get $cacheFile -}}
+{{- $tweetData := "" -}}
+
+{{- if $cachedResource -}}
+  {{/* Use cached data */}}
+  {{- warnf "[tweet %v] Using cached data from %s" $tweetID $cacheFile -}}
+  {{- $tweetData = $cachedResource | transform.Unmarshal -}}
+{{- else -}}
+  {{/* Fetch from Twitter syndication API */}}
+  {{- $token := mod (now.Unix) 10000 -}}
+  {{- $apiURL := printf "https://cdn.syndication.twimg.com/tweet-result?id=%v&lang=en&token=%v" $tweetID $token -}}
+  {{- warnf "[tweet %v] Cache miss - fetching from API: %s" $tweetID $apiURL -}}
+
+  {{/* Configure options with timeout */}}
+  {{- $opts := dict "method" "get" "timeout" "30s" -}}
+
+  {{- with try (resources.GetRemote $apiURL $opts) -}}
+    {{- with .Err -}}
+      {{- warnf "[tweet %v] Failed to fetch: %s" $tweetID . -}}
+    {{- else with .Value -}}
+      {{- warnf "[tweet %v] Successfully fetched from API" $tweetID -}}
+      {{- $tweetData = . | transform.Unmarshal -}}
+      {{/* Save to assets for future builds */}}
+      {{- if $tweetData -}}
+        {{- $json := $tweetData | jsonify -}}
+        {{- $newResource := resources.FromString $cacheFile $json -}}
+        {{- $_ := $newResource.RelPermalink -}}
+        {{- warnf "[tweet %v] Saved to cache: %s" $tweetID $cacheFile -}}
+      {{- end -}}
+    {{- else -}}
+      {{- warnf "[tweet %v] Unable to get remote resource" $tweetID -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* Check if tweet was deleted */}}
+{{- if eq $tweetData.__typename "TweetTombstone" -}}
+  <div class="tweet-deleted">
+    <p>This tweet was deleted by the author.</p>
+  </div>
+{{- else if $tweetData -}}
+  {{/* Process and render the tweet */}}
+  {{- partial "render-tweet.html" (dict "data" $tweetData "id" $tweetID) -}}
+{{- else -}}
+  <div class="tweet-error">
+    <p>Could not load tweet {{ $tweetID }}</p>
+  </div>
+{{- end -}}
+
+{{- end -}}

@@ -71,3 +71,126 @@
   background-image: url("/images/social/indie-hackers.svg");
   background-position: center;
 }
+
+/* Tweet embed styles */
+.social-embed {
+  all: unset;
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid #e1e8ed;
+  width: 550px;
+  max-width: 100%;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: #fff;
+  color: #000;
+}
+
+.social-embed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.social-embed-user {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.social-embed-avatar {
+  width: 48px;
+  height: 48px;
+  margin-right: 0.75rem;
+}
+
+.social-embed-avatar-circle {
+  border-radius: 50%;
+}
+
+.social-embed-avatar-square {
+  border-radius: 4px;
+}
+
+.social-embed-user-names-name {
+  font-weight: 700;
+  margin: 0 0 2px 0;
+}
+
+.social-embed-logo {
+  width: 24px;
+  height: 24px;
+}
+
+.social-embed-text {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.social-embed-text a {
+  color: #1d9bf0;
+  text-decoration: none;
+}
+
+.social-embed-text a:hover {
+  text-decoration: underline;
+}
+
+.social-embed-reply {
+  display: block;
+  color: #536471;
+  margin-bottom: 0.5rem;
+}
+
+.social-embed-media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2px;
+  margin-top: 0.75rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.social-embed-media,
+.social-embed-video {
+  width: 100%;
+  object-fit: cover;
+}
+
+.social-embed-hr {
+  all: unset;
+  display: block;
+  height: 1px;
+  background: #e1e8ed;
+  margin: 1rem 0;
+}
+
+.social-embed-footer {
+  font-size: 14px;
+}
+
+.social-embed-footer a {
+  color: #536471;
+  text-decoration: none;
+}
+
+.social-embed-footer a:hover {
+  text-decoration: underline;
+}
+
+.tweet-deleted,
+.tweet-error {
+  border: 1px solid #e1e8ed;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: #f7f9fa;
+  color: #536471;
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 550px;
+}
