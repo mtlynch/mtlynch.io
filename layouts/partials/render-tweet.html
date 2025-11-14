@@ -1,58 +1,28 @@
 {{- $tweet := .data -}}
 {{- $tweetID := .id -}}
-
-{{/* Extract tweet information */}}
-{{- $userName := $tweet.user.name -}}
-{{- $userHandle := $tweet.user.screen_name -}}
-{{- $userAvatar := $tweet.user.profile_image_url_https -}}
-{{- $avatarShape := $tweet.user.profile_image_shape | default "Circle" -}}
-{{- $tweetText := $tweet.text -}}
-{{- $createdAt := $tweet.created_at -}}
-{{- $lang := $tweet.lang | default "en" -}}
-{{- $tweetURL := printf "https://twitter.com/%s/status/%s" $userHandle $tweetID -}}
-
-{{/* Process the tweet text with entities */}}
-{{- $processedText := partial "process-tweet-entities.html" (dict "text" $tweetText "entities" $tweet.entities) -}}
-
-{{/* Format the date */}}
-{{- $tweetTime := time $createdAt -}}
-{{- $formattedTime := $tweetTime | time.Format "3:04 PM · Jan 2, 2006" -}}
-
-{{/* Avatar shape class */}}
-{{- $avatarClass := "social-embed-avatar-circle" -}}
-{{- if eq $avatarShape "Square" -}}
-  {{- $avatarClass = "social-embed-avatar-square" -}}
-{{- end -}}
-
-{{/* Check for reply */}}
-{{- $replyHTML := "" -}}
-{{- if $tweet.in_reply_to_screen_name -}}
-  {{- $replyTo := $tweet.in_reply_to_screen_name -}}
-  {{- $replyID := $tweet.in_reply_to_status_id_str | default "" -}}
-  {{- $replyLink := printf "https://twitter.com/%s" $replyTo -}}
-  {{- if $replyID -}}
-    {{- $replyLink = printf "https://twitter.com/%s/status/%s" $replyTo $replyID -}}
-  {{- end -}}
-  {{- $replyHTML = printf `<small class="social-embed-reply"><a href="%s">Replying to @%s</a></small>` $replyLink $replyTo -}}
-{{- end -}}
+{{- $tweetURL := printf "https://twitter.com/%s/status/%s" $tweet.user.screen_name $tweetID -}}
+{{- $avatarClass := cond (eq ($tweet.user.profile_image_shape | default "Circle") "Square") "social-embed-avatar-square" "social-embed-avatar-circle" -}}
 
 
 <blockquote
   class="social-embed"
   id="social-embed-{{ $tweetID }}"
-  lang="{{ $lang }}"
+  lang="{{ $tweet.lang | default "en" }}"
 >
   <header class="social-embed-header">
-    <a href="https://twitter.com/{{ $userHandle }}" class="social-embed-user">
+    <a
+      href="https://twitter.com/{{ $tweet.user.screen_name }}"
+      class="social-embed-user"
+    >
       <img
         class="social-embed-avatar {{ $avatarClass }}"
-        src="{{ $userAvatar }}"
-        alt="{{ $userName }}"
+        src="{{ .profileImageBase64 | safeURL }}"
+        alt="{{ $tweet.user.name }}"
         loading="lazy"
       />
       <div class="social-embed-user-names">
-        <p class="social-embed-user-names-name">{{ $userName }}</p>
-        @{{ $userHandle }}
+        <p class="social-embed-user-names-name">{{ $tweet.user.name }}</p>
+        @{{ $tweet.user.screen_name }}
       </div>
     </a>
     <svg class="social-embed-logo" viewBox="0 0 24 24" aria-label="Twitter">
@@ -64,47 +34,16 @@
   </header>
 
   <section class="social-embed-text">
-    {{ $replyHTML | safeHTML }}
-    {{ $processedText | safeHTML }}
-
-    {{/* Add media if present */}}
-    {{- with $tweet.mediaDetails -}}
-      <div class="social-embed-media-grid">
-        {{- range . -}}
-          {{- if .video_info -}}
-            {{/* Video */}}
-            <video
-              class="social-embed-video"
-              controls
-              poster="{{ .media_url_https }}:small"
-              width="550"
-            >
-              <source
-                src="{{ index .video_info.variants 0 "url" }}"
-                type="video/mp4"
-              />
-            </video>
-          {{- else -}}
-            {{/* Image */}}
-            <a href="{{ .media_url_https }}" class="social-embed-media-link">
-              <img
-                class="social-embed-media"
-                src="{{ .media_url_https }}:small"
-                alt="{{ .ext_alt_text | default "" }}"
-                loading="lazy"
-              />
-            </a>
-          {{- end -}}
-        {{- end -}}
-      </div>
-    {{- end -}}
+    {{ partial "process-tweet-entities.html" (dict "text" $tweet.text "entities" $tweet.entities) | safeHTML }}
   </section>
 
   <hr class="social-embed-hr" />
 
   <footer class="social-embed-footer">
     <a href="{{ $tweetURL }}">
-      <time datetime="{{ $createdAt }}">{{ $formattedTime }}</time>
+      <time datetime="{{ $tweet.created_at }}"
+        >{{ time $tweet.created_at | time.Format "3:04 PM · Jan 2, 2006" }}</time
+      >
     </a>
   </footer>
 </blockquote>
