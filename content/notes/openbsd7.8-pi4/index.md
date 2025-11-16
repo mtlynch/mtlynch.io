@@ -23,4 +23,6 @@ Not sure about default IPv4 gateway
 
 Unable to get list from openbsd.org
 
-Started install at 11:16am
+Started install at 11:16am. Screen went black after 50 mins or so.
+
+Started again at 12:18pm
