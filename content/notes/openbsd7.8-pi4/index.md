@@ -25,4 +25,30 @@ Unable to get list from openbsd.org
 
 Started install at 11:16am. Screen went black after 50 mins or so.
 
-Started again at 12:18pm
+Started again at 12:18pm, disappeared at 12:45pm. Probably forgot to do set tty...
+
+## Working
+
+1. Ctrl+C immediately, drops into U-Boot prompt
+1. Type: `boot`
+1. Ctrl+C as soon as there's new console output
+1. Type: `set tty fb0`
+1. Type: `bsd.rd`
+
+Takes about 25 mins.
+
+## Installation
+
+Can't go backwards in install if you mess up networking.
+
+Couldn't get a DHCP lease, so I configured 10.0.0.201 as the IP and did 10.0.0.1 as default IPv4 route and DNS server.
+
+Kept getting stuck.
+
+## Tried on my Dell Optiplex 7040
+
+Had to upgrade the BIOS.
+
+Doesn't eject the media at the end, so keeps booting back in.
+
+Had to enable legacy ROM support.
