@@ -81,3 +81,13 @@ caligula burn -z none --root always --hash skip ~/scratch/miniroot75-arm64.img
 
 1. Type: `set tty fb0`
 1. Type: `boot`
+
+Seemed like slightly faster boot.
+
+Still couldn't get any network connectivity.
+
+## Last idea
+
+Try dd instead of caligula?
+
+use `lsblk`
