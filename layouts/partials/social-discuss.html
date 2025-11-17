@@ -13,6 +13,17 @@
       </a>
     {{ end }}
 
+    {{ if .Params.discuss_urls.lobsters }}
+      <a
+        href="{{ .Params.discuss_urls.lobsters }}"
+        class="btn btn-lobsters btn-social"
+        title="Discuss on Lobsters"
+      >
+        <span class="lobsters-icon" aria-hidden="true">L</span>
+        <span>Lobsters</span>
+      </a>
+    {{ end }}
+
     {{ if .Params.discuss_urls.reddit }}
       <a
         href="{{ .Params.discuss_urls.reddit }}"
