@@ -12,9 +12,9 @@ When my wife saw me playing with my new encrypted radio, she asked what it was f
 
 She wasn't impressed.
 
-TODO: Show photo of T-1000 + phone
-
 "It also works if phone lines are down due to a power outage... or societal collapse." Still nothing.
+
+{{<img src="off-grid-messaging.webp" max-width="700px">}}
 
 "If we're not within radio range of each other, we can route our messages through a mesh network of our neighbors' radios. But don't worry! There's end-to-end encryption, so nobody else can snoop on our conversation." She'd left the room by this point.
 
