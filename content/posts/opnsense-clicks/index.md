@@ -46,23 +46,3 @@ My dream interface is for OPNsense to make a simple VLAN easy.
 - Assume that I want to enable DHCP and use all available IPs in the /24.
 
 I'm happy for all the other options to be under an "Advanced" section, but why not just use sensible defaults? Every guide I can find for setting up VLANs in OPNsense uses these settings, so why not just default to them?
-
-I use OPNsense as my firewall, and one of the things I
-
-```bash
-sudo virt-install \
-  --name opnsense \
-  --memory 4096 \
-  --vcpus 2 \
-  --disk size=20 \
-  --cdrom /home/mike/scratch/OPNsense-25.7-dvd-amd64.iso \
-  --network network=default,model=virtio \
-  --network network=default,model=virtio \
-  --graphics vnc \
-  --os-variant freebsd13.0 \
-  --boot uefi
-```
-
-Log in as `installer` / `opnsense`.
-
-Can disable all firewall under settings somewhere. If you do `pfctl -d`, it keeps turning back on.
