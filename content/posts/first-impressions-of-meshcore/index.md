@@ -143,7 +143,7 @@ Okay, I do, and voila! Messages now work.
 
 This is a frustrating user experience. If I have to advert from both ends, why did MeshCore let me send a message on a half-completed handshake?
 
-I don't understand why "advert" is an explicit step rather than something that happens implicitly when I post to a public channel or attempt to send someone a direct message.
+I'm assuming "Advert" is me announcing my device's public key, but I don't understand why that's an explicit step I have to do ahead of time. Why can't it just happen implicitly when I post to a public channel or attempt to send someone a direct message?
 
 Anyway, I can talk to myself in both public channels and DMs.
 
@@ -153,25 +153,21 @@ The Heltec v3 boards were a good way to experiment with MeshCore, but they felt 
 
 The MeshCore website recommends two other MeshCore-compatible devices, so I ordered those and got them a few days later: the Seeed SenseCAP T-1000e ($XX) and the Lilygo T-Deck+ ($XX).
 
-{{<gallery caption="I bought the Seeed SenseCAP T-1000e and the Lilygo T-Deck+ to continue experimenting with MeshCore.">}}
-
-{{<img src="lilygo-unboxing.webp" max-width="300px">}}
-
-{{<img src="t1000-unboxing.webp" max-width="300px">}}
-
-{{</gallery>}}
+{{<img src="t1000-and-lilygo.webp" max-width="600px" caption="I bought the Seeed SenseCAP T-1000e (left) and the Lilygo T-Deck+ (right) to continue experimenting with MeshCore.">}}
 
 ## Testing the SenseCAP T-1000e
 
-I liked the SenseCAP a lot. It's nice and light. It's the kind of thing you could toss into a backpack and not notice is there. But I like that it's self-contained and has its own battery and antenna, which reduces a lot of complexity relative to the Heltec v3.
+I liked the SenseCAP a lot. It's nice and light. It's the kind of thing you could toss into a backpack and not notice is there.
 
-The downside is that it uses a custom USB cable, so I can't just plug in an off-the-shelf cable.
+The T-1000e is self-contained and has its own battery and antenna, which reduces a lot of complexity relative to the Heltec v3, which is just a bare circuit board that requires external power.
+
+One drawback is that it uses a custom USB cable, so I can't just plug in an off-the-shelf cable.
+
+I'm also not sure what secures the device. There's no screen, so it can't generate a random passcode to authenticate pairing. Does that mean anyone within Bluetooth range can just take over my T-1000e and read all my messages?
 
 {{<img src="t1000-cable.webp" max-width="400px" caption="The Seeed T-10000e uses a custom USB cable for charging and flashing.">}}
 
-I don't know how to turn it off.
-
-https://wiki.seeedstudio.com/sensecap_t1000_e/
+I also don't know how to turn it off. There are [some instructions](https://wiki.seeedstudio.com/sensecap_t1000_e/) on the Seeed website, and the way they explain turning it off is to just leave it unplugged for a few days until the battery runs out, so I guess there's no "off" switch, which is somewhen undesirable in a broadcasting device.
 
 ```bash
 pio run \
@@ -184,7 +180,7 @@ pio run \
 
 Now it was time to test the LilyGo T-Deck+.
 
-I'll be honest, this was the part I was most looking forward to of this whole experience. It looked like a 2000s era Blackberry. I thought I'd be able to pre-configure these, hand them out to nearby friends to throw into a closet, and then if a disaster ever struck, we'd be able to chat together on our hacker Blackberries.
+I'll be honest, this was the part I was most looking forward to of this whole experience. It looked like a 2000s era Blackberry. I thought I'd be able to pre-configure these, hand them out to nearby friends to throw into a closet, and then if a disaster ever struck, we'd be able to chat together on our hacker doomsday Blackberries.
 
 I was particularly excited about the LilyGo T-Deck because it looked like a 2000s era Blackberry. What a world! Cutting edge technology of 2005 is now available for $80 and friendly to custom software!
 
