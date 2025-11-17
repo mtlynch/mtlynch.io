@@ -13,7 +13,7 @@ Nothing fancy. Just your regular, basic VLAN with its own IPv4 range.
 
 How many clicks should that take? Maybe two or three? Five if we're real wild?
 
-Every time I add a new VLAN to OPNsense, the process feels strangely tedious, so I decided to measure exactly how many clicks it takes to add a simple VLAN to my firewall.
+Every time I add a new VLAN to OPNsense, the process feels strangely tedious, so I decided to [measure exactly how many clicks](https://codeberg.org/mtlynch/count-clicks) it takes to add a simple VLAN to my firewall.
 
 {{<video src="add-vlan-opnsense.mp4" max-width="850px">}}
 
