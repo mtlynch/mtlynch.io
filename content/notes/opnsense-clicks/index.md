@@ -5,6 +5,9 @@ banner_image: cover.webp
 tags:
   - networking
   - opnsense
+discuss_urls:
+  reddit: https://www.reddit.com/r/opnsense/comments/1ozsgxh/add_a_vlan_to_opnsense_in_just_26_clicks_across_6/?
+  lobsters: https://lobste.rs/s/jrvtgn/add_vlan_opnsense_just_26_clicks_across_6
 ---
 
 How many clicks does it take to add a new VLAN to an OPNsense firewall?

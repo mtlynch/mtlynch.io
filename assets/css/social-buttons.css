@@ -71,3 +71,19 @@
   background-image: url("/images/social/indie-hackers.svg");
   background-position: center;
 }
+
+.btn-lobsters {
+  background-color: #ac282b;
+}
+
+.btn-lobsters:hover {
+  background-color: #8a1f22;
+}
+
+.lobsters-icon {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.2em;
+  width: 1.25em;
+  text-align: center;
+}
