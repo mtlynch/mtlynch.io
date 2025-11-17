@@ -1,6 +1,7 @@
 ---
 title: "Add a VLAN to OPNsense in Just 26 Clicks Across 6 Screens"
 date: 2025-11-17
+banner_image: cover.webp
 tags:
   - networking
   - opnsense
@@ -31,13 +32,13 @@ I could have traded some of those clicks for keystrokes with the Tab key, but I 
 
 There are so many steps in the process where I just want to ask OPNsense, "Why couldn't you have figured this out on your own?"
 
-Every time I add a VLAN to my OPNsense router, I have to say, "Actually, I'd like it on my _LAN interface_, not the random, disconnected interface you chose by default because its name is first alphabetically:
+Every time I add a VLAN to my OPNsense router, I have to say, "Actually, I'd like it on my _LAN interface_, not the random, disconnected interface you chose by default because its name is first alphabetically":
 
 {{<img src="default-parent.webp" max-width="500px">}}
 
 ### Don't make me type prefixes for you
 
-If I dare enter an arbitrary VLAN name, whines and OPNsense insists I prefix it with `vlan`:
+If I dare enter an arbitrary VLAN name, OPNsense whines and insists I prefix the name with `vlan`:
 
 {{<img src="vlan-prefix.webp" max-width="500px">}}
 
@@ -86,5 +87,5 @@ But I'm thinking it might be time for me to leave the nest and run OpenBSD or Fr
 
 ```bash
 $ ./add-vlan --name='guest' --tag=10
-Created VLAN "guest" with tag 10 and IP range 192.168.1.1 to 192.168.1.254
+Created VLAN "guest" with tag 10 and IP range 192.168.10.1 to 192.168.10.254
 ```
