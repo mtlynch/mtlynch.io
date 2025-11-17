@@ -91,3 +91,17 @@ Still couldn't get any network connectivity.
 Try dd instead of caligula?
 
 use `lsblk`
+
+```bash
+sudo dd if=/home/mike/scratch/miniroot75-arm64.img of=/dev/sdb bs=1M status=progress
+```
+
+Install is taking 90+ mins.
+
+Accidentally interrupted it at around 120mins.
+
+## Try install75?
+
+```bash
+sudo dd if=/home/mike/scratch/install75-arm64.img of=/dev/sdb bs=1M status=progress
+```
