@@ -53,8 +53,31 @@ Doesn't eject the media at the end, so keeps booting back in.
 
 Had to enable legacy ROM support.
 
+Both static and autoconf worked immediately after the step in install.
+
+Full install worked.
+
 ## Tried again on Pi with full
 
 Tried with `install78.img`
 
 Couldn't get it to boot with `bsd.rd`. Might work if I try again.
+
+## Tried on a different Pi 4
+
+```bash
+caligula burn -z none --root always --hash skip ~/scratch/miniroot78-arm64.img
+```
+
+Same, slow boot. Couldn't get IP from DHCP. Tried static IP of 10.0.0.203 and no ping response from squish.
+
+## Tried downgrading to 7.5
+
+It's what the blog guy said worked.
+
+```bash
+caligula burn -z none --root always --hash skip ~/scratch/miniroot75-arm64.img
+```
+
+1. Type: `set tty fb0`
+1. Type: `boot`
