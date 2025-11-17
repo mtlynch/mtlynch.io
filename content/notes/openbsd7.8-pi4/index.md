@@ -52,3 +52,9 @@ Had to upgrade the BIOS.
 Doesn't eject the media at the end, so keeps booting back in.
 
 Had to enable legacy ROM support.
+
+## Tried again on Pi with full
+
+Tried with `install78.img`
+
+Couldn't get it to boot with `bsd.rd`. Might work if I try again.
