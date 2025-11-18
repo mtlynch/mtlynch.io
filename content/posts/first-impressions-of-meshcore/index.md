@@ -250,6 +250,8 @@ Why? Why in 2025 do I have to think about where to place my curly braces to matc
 
 ## Wait, MeshCore isn't open-source?
 
+I wanted to look at the source code for the mobile app or the T-Deck client, and I couldn't find it.
+
 I'd seen that they fund development by selling a premium version of the T-Deck software with higher resolution maps. That seemed fine and a reasonable way to fund the project. I like open-core and that's how my previous business worked as well.
 
 But I realized it's actually not open-core because none of the MeshCore T-Deck firmware is open-source. The firmware that I installed by mistake is the "core" firmware, but it doesn't have any client features that support messaging. The actual working firmware for the T-Deck is a whole other piece of software called Ripple, which is closed-source software on top of MeshCore.
