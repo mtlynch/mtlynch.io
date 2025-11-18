@@ -240,6 +240,8 @@ Sometimes had to hold down trackpad and hit reset. Sometimes had to hold trackpa
 
 {{<img src="web-flasher-t-deck.webp" max-width="600px">}}
 
+There are three ways to "click" a UI element. You can click the trackball, push Enter, or tap the screen.
+
 ## Browsing MeshCore's source code
 
 I was a bit disappointed in the source code. There were no automated tests for the codebase, so I [offered a simple unit test](https://github.com/meshcore-dev/MeshCore/pull/925) over a month ago, but nobody from the MeshCore team has replied to it yet.
