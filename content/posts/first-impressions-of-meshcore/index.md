@@ -248,22 +248,6 @@ The code doesn't have consistent format despite a `.clang-format` configuration.
 
 Why? Why in 2025 do I have to think about where to place my curly braces to match the style of this particular file? Just [set up a linter](/human-code-reviews-1/#let-computers-do-the-boring-parts) so I don't have to think about mundane style issues anymore.
 
-## CLI
-
-```bash
-nix run github:meshcore-dev/meshcore-cli#meshcore-cli -- \
-  -s /dev/ttyUSB0 \
-  infos
-```
-
-```bash
-nix run github:meshcore-dev/meshcore-cli#meshcore-cli -- \
-  -s /dev/ttyUSB0 \
-  chat
-```
-
-Confusing because it looks like it's a table but it's actually a list.
-
 ## Wait, MeshCore isn't open-source?
 
 I'd seen that they fund development by selling a premium version of the T-Deck software with higher resolution maps. That seemed fine and a reasonable way to fund the project. I like open-core and that's how my previous business worked as well.
