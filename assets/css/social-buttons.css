@@ -13,6 +13,11 @@
   display: none;
 }
 
+/* Lobsters needs a special rule since it's not in FontAwesome. */
+.btn-social span.lobsters-icon {
+  display: inline-block;
+}
+
 @media screen and (min-width: 768px) {
   .btn-social span {
     display: inline-block;
