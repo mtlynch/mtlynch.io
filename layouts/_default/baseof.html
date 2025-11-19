@@ -38,8 +38,6 @@
       | resources.Concat "assets/css/bundle.css"
     }}
     {{ if hugo.IsProduction }}
-      <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen" />
-    {{ else }}
       {{ $styles := $styles | minify | fingerprint }}
       <link
         rel="stylesheet"
@@ -48,6 +46,8 @@
         crossorigin="anonymous"
         media="screen"
       />
+    {{ else }}
+      <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen" />
     {{ end }}
 
 

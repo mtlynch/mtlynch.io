@@ -138,7 +138,7 @@ First, I call [`mkDerivation`](https://nixos.org/manual/nixpkgs/stable/#sec-usin
 
 The other required field in `mkDerivation` is a `src` property, which specifies how Nix should retrieve the inputs for the build. In the case of xpdf, the source tarball is located at this URL:
 
-- <https://dl.xpdfreader.com/xpdf-4.05.tar.gz>
+- <https://web.archive.org/web/20250919084601/https://dl.xpdfreader.com/xpdf-4.05.tar.gz>
 
 I specify xpdf's tarball URL using the `pname` and `version` variables so that when the version number changes in the future, the URL will still work:
 
