@@ -238,11 +238,11 @@ I had a hard time even finding instructions for how to reflash the T-Deck+. I fo
 
 This is what worked for me:
 
-1. Disconnect the T-Deck
-1. Power off the T-Deck
-1. Connect the T-Deck to your computer via the USB-C port
-1. Hold down the thumbwheel in the center
-1. Power on the device
+1. Disconnect the T-Deck from USB-C.
+1. Power off the T-Deck.
+1. Connect the T-Deck to your computer via the USB-C port.
+1. Hold down the thumbwheel in the center.
+1. Power on the device.
 
 Confusingly, there's no indication that the device is in DFU mode. I guess the fact that the screen doesn't load is sort of an indication. On my system, I also see `dmesg` logs indicating a connection.
 
@@ -254,25 +254,33 @@ I read that the Heltecs have a particularly weak antenna, so I tried again by le
 
 From exploring more, it seems like what I actually might need is a MeshCore repeater. If I want to communicate with friends more than a few blocks away, I might have to get a beefy device with a big antenna, though I couldn't find documentation on how far I should expect the range of my devices to work.
 
-## Browsing MeshCore's source code
+## Inspecting MeshCore's source code
 
-I was a bit disappointed in the source code. There were no automated tests for the codebase, so I [offered a simple unit test](https://github.com/meshcore-dev/MeshCore/pull/925) over a month ago, but nobody from the MeshCore team has replied to it yet.
+I took a look at MeshCore's.
 
-The code doesn't have consistent format despite a `.clang-format` configuration. The lead developer [closed the issue](https://github.com/meshcore-dev/MeshCore/issues/276#issuecomment-3295460688) with the guidance, "Just make sure your own IDE isn't making unnecessary changes when you do a commit."
+I was a bit disappointed in the source code. There were no automated tests for the codebase, so I [offered a simple unit test](https://github.com/meshcore-dev/MeshCore/pull/925) over a month ago, but nobody from the MeshCore team has acknowledged it.
+
+I didn't do a thorough audit of the code, but from casually browsing around, I'd say it's a bit messy, but I didn't see anything egregious. One code smell I'll point out is that my unit test was to call a function that converted raw bytes to a hex string, and that function depends on the headers for two crypto libraries, even though the function does no cryptographic operations. It's the kind of intertwining of code that you avoid when you write unit tests for each component in isolation.
+
+My other gripe was that the code doesn't have consistent style conventions. Someone [proposed](https://github.com/meshcore-dev/MeshCore/issues/276) actually using [the `.clang-format` file that's already there](https://github.com/meshcore-dev/MeshCore/blob/companion-v1.10.0/.clang-format), but the lead developer [closed the issue](https://github.com/meshcore-dev/MeshCore/issues/276#issuecomment-3295460688) with the guidance, "Just make sure your own IDE isn't making unnecessary changes when you do a commit."
 
 Why? Why in 2025 do I have to think about where to place my curly braces to match the style of this particular file? Just [set up a linter](/human-code-reviews-1/#let-computers-do-the-boring-parts) so I don't have to think about mundane style issues anymore.
 
 ## Wait, MeshCore isn't open-source?
 
-I wanted to look at the source code for the mobile app or the T-Deck client, and I couldn't find it.
+I wanted to take a look at the source code for the mobile app or the T-Deck client, and I couldn't find it.
 
-I'd seen that they fund development by selling a premium version of the T-Deck software with higher resolution maps. That seemed fine and a reasonable way to fund the project. I like open-core and that's how my previous business worked as well.
+And then I realized: it's all closed source. All of the official MeshCore client implementations are closed-source and proprietary.
 
-But I realized it's actually not open-core because none of the MeshCore T-Deck firmware is open-source. The firmware that I installed by mistake is the "core" firmware, but it doesn't have any client features that support messaging. The actual working firmware for the T-Deck is a whole other piece of software called Ripple, which is closed-source software on top of MeshCore.
+What!?! They'd advertised this as open-source! How could they lie?
 
-I wondered about the license for the web app I was using, and I realized that's closed-source as well. It's a Flutter app, so the web, Android, and iOS apps all share the same closed-source codebase.
+And then I went back to the MeshCore website, and realized they never say "open-source" anywhere.
 
-In fairness, the mistake was mine. I went back to the MeshCore website and realized that they never advertise the product as open-source. It just felt so much like an open-source project that I assumed, but I was terribly disappointed to discover that every MeshCore client app is closed-source and proprietary except the command-line tool.
+I guess I just imagined it was open-source. It just _seems_ like such an open-source thing that I just assumed without ever checking. But I was hugely disappointed and that
+
+I don't think every piece of software is obligated to be open-source, but I find it far less compelling to participate in a community software ecosystem where so much of it is closed-source.
+
+Some parts of the ecosystem are indeed open-source and liberally licensed, but critically the T-Deck firmware and the web app and mobile apps are all closed-source and proprietary. So, you can't use MeshCore with open-source tools unless you write your own.
 
 | Product                                                    | Open-source? | Free to use?                         |
 | ---------------------------------------------------------- | ------------ | ------------------------------------ |
