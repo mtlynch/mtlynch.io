@@ -60,9 +60,7 @@ The MeshCore firmware can run on a couple dozen devices, but the official websit
 
 {{<img src="heltecv3.webp" max-width="600px" caption="At $27, the Heltec v3 is the cheapest MeshCore-compatible device I could find.">}}
 
-The Heltec v3 comes in a small box with no instructions. It includes XX for plugging it into a breadboard, and wires for connecting it to a battery. I don't have a breadboard or a compatible battery, so I had no use for them.
-
-I plugged the Heltec v3 in to my computer and used the [web flasher](https://flasher.meshcore.co.uk/) to flash MeshCore software onto it. I selected "Heltec v3" as my device, "Companion Bluetooth" as the mode, and "v1.9.0" as the version. I clicked "Erase device" since this was a fresh install.
+I plugged the Heltec v3 in to my computer via USB-C and used the [web flasher](https://flasher.meshcore.co.uk/) to flash MeshCore software onto it. I selected "Heltec v3" as my device, "Companion Bluetooth" as the mode, and "v1.9.0" as the version. I clicked "Erase device" since this was a fresh install.
 
 {{<img src="heltec-web-flasher.webp" max-width="500px" has-border="false">}}
 
@@ -126,7 +124,7 @@ I was expecting some way to view a contact in the public channel and send them a
 
 {{<img src="participants-view.webp" max-width="300px" has-border="true">}}
 
-This seems like an odd design choice. If device 1 broadcasted its identifier, why can't I talk to it?
+This seems like an odd design choice. If a MeshCore user to the public channel, why can't I talk to them?
 
 I eventually figured out that I have to "Advert." There are three options: "Zero Hop," "Flood Routed," and "To Clipboard." I don't know what any of these mean, but I figure "flood" sounds kind of rude, whereas "Zero Hop" sounds elegant, so I do a "Zero Hop."
 
@@ -163,16 +161,21 @@ The MeshCore website recommends two other MeshCore-compatible devices, so I orde
 
 ## Testing the SenseCAP T-1000e
 
-Compared to the Heltec v3, I liked the SenseCAP a lot. It's self-contained and has its own battery and antenna, which feels simpler and more robust. It's also nice and light. You could toss it into a backpack and not notice it's there.
+Compared to the Heltec v3, I liked the T-1000e a lot. It's self-contained and has its own battery and antenna, which feels simpler and more robust. It's also nice and light. You could toss it into a backpack and not notice it's there.
+
+{{<img src="t1000-hand.webp" max-width="600px" caption="The T-1000e feels like a more user-friendly product compared to the bare circuit board of the Heltec v3.">}}
 
 I used the web flasher for the Heltec, but I decided to try flashing
 
 ```bash
+git checkout https://github.com/meshcore-dev/MeshCore.git
+
+# Latest firmware version at the time I tested.
 FIRMWARE_VERSION='companion-v1.9.0'
 git checkout $FIRMWARE_VERSION
 ```
 
-I use Nix, and the repo conveniently has a `default.nix`, so the dependencies installed automatically. I then flashed the firmware for the T-1000 like this:
+I use Nix, and the repo conveniently has a `default.nix`, so the dependencies installed automatically with `direnv`. I then flashed the firmware for the T-1000 like this:
 
 ```bash
 # Specify the device settings, from variants/t1000-e/platformio.ini.
@@ -197,15 +200,41 @@ Now it was time to test the LilyGo T-Deck+.
 
 I'll be honest, this was the part of MeshCore I'd been excited about since the beginning. If I handed my non-techy friends a device like the T-1000e, there were too many things that could go wrong in an actual emergency. "Oh, you uninstalled the app? Oh, you're having trouble pairing it with your phone? Oh, your phone battery is dead?"
 
-The T-Deck looked like a 2000s era Blackberry! It seemed dead simple to use because it was all in one. No separate battery, no phone pairing, no app to download. I wanted to buy a bunch, hand them out to nearby friends to throw into a closet. If disaster struck, we'd be able to chat together on our hacker doomsday Blackberries.
+The T-Deck looked like a 2000s era Blackberry! It seemed dead simple to use because it was an all-in-one device. No phone pairing, no app to download, built-in antenna. I wanted to buy a bunch, hand them out to nearby friends to throw into a closet. If disaster struck, we'd be able to chat together on our doomsday hacker Blackberries.
 
-As soon as I turned it on, my berry was burst. This was not a Blackberry at all.
+### This is not a Blackberry
 
-It's big and clunky. There's an unlabeled button on the left side, and an unlabled toggle on the right side.
+As soon as I turned on my T-Deck, my berry was burst. This was not a Blackberry at all.
 
-I had a hard time even finding instructions for how to reflash it. I found this [long Jeff Geerling video](https://www.youtube.com/watch?v=2Ry-ck0fhfw) where he expresses frustration with how long it took him to reflash his, and then he never explains how he did it!
+{{<img src="tdeck-first-screen-cropped.webp" max-width="600px">}}
 
-### Putting the LilyGo T-Deck Plus into DFU mode for flashing
+As a reminder, _this_ is what a Blackberry looked like in 2003:
+
+{{<gallery caption="A Blackberry in 2003 (left) vs. a LilyGo T-Deck+ in 2025">}}
+
+{{<img src="blackberry-2003.webp" max-width="290px">}}
+
+{{<img src="tdeck-hand.webp" max-width="600px">}}
+
+{{</gallery>}}
+
+Before I even get to the UI, the device itself is so big and clunky. We can't match the quality of a hardware product that we produced _23 years ago_?
+
+Right off the bat, the T-Deck was a pain to use. You navigate the UI by clicking a flimsy little thumbwheel in the center of the device, but it's temperamental and ignores half of my scrolls.
+
+{{<video src="flaky-scroll.mp4">}}
+
+And the touchscreen misses half my taps:
+
+{{<video src="flaky-taps.mp4">}}
+
+There are three ways to "click" a UI element. You can click the trackball, push Enter, or tap the screen. Which one does a particular UI element expect? You just have to try each one to find out!
+
+{{<video src="how-to-interact.mp4">}}
+
+### Sidenote: Putting the LilyGo T-Deck+ into DFU mode for flashing
+
+I had a hard time even finding instructions for how to reflash the T-Deck+. I found this [long Jeff Geerling video](https://www.youtube.com/watch?v=2Ry-ck0fhfw) where he expresses frustration with how long it took him to reflash his, and then he never explains how he did it!
 
 This is what worked for me:
 
@@ -217,30 +246,13 @@ This is what worked for me:
 
 Confusingly, there's no indication that the device is in DFU mode. I guess the fact that the screen doesn't load is sort of an indication. On my system, I also see `dmesg` logs indicating a connection.
 
-From there, I flashed the MeshCore firmware with this command:
+## Testing MeshCore in the field
 
-```bash
-pio run \
-  --environment LilyGo_TDeck_companion_radio_usb \
-  --target upload \
-  --upload-port /dev/ttyACM0
-```
+First test, I tested it while riding in a car away from my house with the SenseCAP and the Heltec v3 listening in my office at home. Communication back to the Heltec v3 in my office failed after three blocks, which was much lower than I expected.
 
-## The firmware doesn't do anything?
+I read that the Heltecs have a particularly weak antenna, so I tried again by leaving my T-1000e at home and taking the T-Deck out with me. After about five blocks, I could no longer send messages back to the T-1000e.
 
-Confusing buttons. No on / off label?
-
-Got stuck in Programming Mode (Meshtastic). To get out, had to select the bluetooth icon and hold the trackpad.
-
-Seems to be the wrong thing because can't change frequency.
-
-Sometimes had to hold down trackpad and hit reset. Sometimes had to hold trackpad and turn on power.
-
-## Using the Ripple firmware
-
-{{<img src="web-flasher-t-deck.webp" max-width="600px">}}
-
-There are three ways to "click" a UI element. You can click the trackball, push Enter, or tap the screen.
+From exploring more, it seems like what I actually might need is a MeshCore repeater. If I want to communicate with friends more than a few blocks away, I might have to get a beefy device with a big antenna, though I couldn't find documentation on how far I should expect the range of my devices to work.
 
 ## Browsing MeshCore's source code
 
@@ -270,14 +282,6 @@ In fairness, the mistake was mine. I went back to the MeshCore website and reali
 | Official Android / iOS MeshCore apps                       | No           | Yes                                  |
 | Official MeshCore web app                                  | No           | Yes                                  |
 | T-Deck MeshCore firmware                                   | No           | Yes, but some features are paywalled |
-
-## Range testing
-
-First test, I tested it while walking away from my house with the SenseCAP and the Heltec v3 listening at home. It stopped transmitting after two blocks, which was way less than I expected.
-
-I read online that the Heltecs have a particularl weak modem, so I tried again with the SenseCAP at home and the T-Deck with me. After about five blocks, I could no longer send messages back to the SenseCAP.
-
-From exploring more, it seems like what I actually might need is a MeshCore repeater. If I want to communicate with friends more than a few blocks away, I might have to get a beefy device with a big antenna, though I couldn't find documentation on how far I should expect the range of my devices to work.
 
 ## Summary
 
