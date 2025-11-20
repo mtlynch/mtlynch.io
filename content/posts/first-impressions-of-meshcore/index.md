@@ -26,15 +26,15 @@ The technology I was pitching so unsuccessfully to my wife was, of course, MeshC
 
 ## What's MeshCore?
 
-MeshCore is software that runs on inexpensive [long-range (LoRA) radios](https://en.wikipedia.org/wiki/LoRa). LoRa radios can transmit up to XX miles in cities and XX miles in rural environments. Unlike HAM radios, you don't need a license to broadcast over LoRa frequencies in the US, so anyone can pick up a LoRA radio and start chatting.
+MeshCore is software that runs on inexpensive [long-range (LoRA) radios](https://en.wikipedia.org/wiki/LoRa). LoRa radios can transmit several miles depending on how clear the path is between radios. Unlike HAM radios, you don't need a license to broadcast over LoRa frequencies in the US, so anyone can pick up a LoRA radio and start chatting.
 
-MeshCore is more than just sending messages over radio. The "mesh" in the name is because MeshCore users form a mesh network. If I want to send a message to my friend Charlie, but he's out of range of my radio, I can route my message through other MeshCore users in my neighborhood, and they'll forward my message on to Bob. It's a simpler form of how routing on the Internet works without centralized control.
+MeshCore is more than just sending messages over radio. The "mesh" in the name is because MeshCore users form a mesh network. If I want to send a message to my friend Charlie, but he's out of range of my radio, I can route my message through other MeshCore users in my neighborhood, and they'll forward my message on to Charlie. It's a simpler form of how routing on the Internet works without centralized control.
 
 ## My dream for off-grid communication
 
 I'm not exactly a doomsday prepper, but I try to plan for realistic disaster scenarios like extended power outages, food shortages, and droughts.
 
-When I heard about MeshCore, I thought it would be neat to give some devices to my local friends so we could communicate in an emergency. And if it turned out that we're out of radio range of each other, maybe I could convince some of my neighbors to get involved as well, and we could form a mini messaging network that's robust against power failures.
+When I heard about MeshCore, I thought it would be neat to give some devices to my local friends so we could communicate in an emergency. And if it turned out that we're out of radio range of each other, maybe I could convince some of my neighbors to get involved as well. We could form a mini messaging network that's robust against power failures and phone outages.
 
 ## Why not Meshtastic?
 
@@ -248,9 +248,29 @@ Confusingly, there's no indication that the device is in DFU mode. I guess the f
 
 ## Testing MeshCore in the field
 
+### T-1000e to Heltec from 1 mile away
+
+I can message myself all I want in my home office, but that's not going to be so useful in an actual emergency when phones are down. I wanted to
+
+I took my T-1000e to my friend's house about a mile away and tried messaging my Heltec back in my home office. No luck. The message failed. I expected that since I live in a suburban neighborhood, and there were lots of houses, trees, and cars between the two radios.
+
+### T-1000e to Heltec from a car
+
+To test the limit, I tried messaging my Heltec device while riding in a car leaving my house.
+
+From one block away, messages succeeded.
+
+Three blocks away, still working.
+
+I tried a third message from five blocks away: failure. And then I couldn't
+
 First test, I tested it while riding in a car away from my house with the SenseCAP and the Heltec v3 listening in my office at home. Communication back to the Heltec v3 in my office failed after three blocks, which was much lower than I expected.
 
+### T-Deck to T-1000e on a bike
+
 I read that the Heltecs have a particularly weak antenna, so I tried again by leaving my T-1000e at home and taking the T-Deck out with me. After about five blocks, I could no longer send messages back to the T-1000e.
+
+## Do I need a repeater?
 
 From exploring more, it seems like what I actually might need is a MeshCore repeater. If I want to communicate with friends more than a few blocks away, I might have to get a beefy device with a big antenna, though I couldn't find documentation on how far I should expect the range of my devices to work.
 
@@ -262,7 +282,7 @@ I was a bit disappointed in the source code. There were no automated tests for t
 
 I didn't do a thorough audit of the code, but from casually browsing around, I'd say it's a bit messy, but I didn't see anything egregious. One code smell I'll point out is that my unit test was to call a function that converted raw bytes to a hex string, and that function depends on the headers for two crypto libraries, even though the function does no cryptographic operations. It's the kind of intertwining of code that you avoid when you write unit tests for each component in isolation.
 
-My other gripe was that the code doesn't have consistent style conventions. Someone [proposed](https://github.com/meshcore-dev/MeshCore/issues/276) actually using [the `.clang-format` file that's already there](https://github.com/meshcore-dev/MeshCore/blob/companion-v1.10.0/.clang-format), but the lead developer [closed the issue](https://github.com/meshcore-dev/MeshCore/issues/276#issuecomment-3295460688) with the guidance, "Just make sure your own IDE isn't making unnecessary changes when you do a commit."
+My other gripe was that the code doesn't have consistent style conventions. Someone [proposed](https://github.com/meshcore-dev/MeshCore/issues/276) actually using [the `.clang-format` file that's already there](https://github.com/meshcore-dev/MeshCore/blob/companion-v1.10.0/.clang-format), but a maintainer [closed the issue](https://github.com/meshcore-dev/MeshCore/issues/276#issuecomment-3295460688) with the guidance, "Just make sure your own IDE isn't making unnecessary changes when you do a commit."
 
 Why? Why in 2025 do I have to think about where to place my curly braces to match the style of this particular file? Just [set up a linter](/human-code-reviews-1/#let-computers-do-the-boring-parts) so I don't have to think about mundane style issues anymore.
 
@@ -270,7 +290,7 @@ Why? Why in 2025 do I have to think about where to place my curly braces to matc
 
 I wanted to take a look at the source code for the mobile app or the T-Deck client, and I couldn't find it.
 
-And then I realized: it's all closed source. All of the official MeshCore client implementations are closed-source and proprietary.
+And then I realized: it's all closed-source. All of the official MeshCore client implementations are closed-source and proprietary.
 
 What!?! They'd advertised this as open-source! How could they lie?
 
@@ -293,14 +313,20 @@ Some parts of the ecosystem are indeed open-source and liberally licensed, but c
 
 ## Summary
 
+My ideal scenario is that I can convince a handful of neighbors to
+
 For it to be viable for me, I want something like the T-Deck where it's an all-in-one device where I can . If I'm relying on these in an emergency, I don't want to worry about keeping both my phone and radio powered and connected over Bluetooth. There are just too many failure points. And especially if I'm giving devices to less tech-savvy friends to use in an emergency where they can't ask me for help, I want it to be dead simple. It's fine if I have to preconfigure it for them, but I don't want them to pull it out in an emergency and realize they uninstalled the companion app from their phone and are now stuck.
 
 ### What I like about MeshCore
 
-- The firmware repository is built around Nix, which made it easy to build and flash onto my devices from source.
+- The idea of it delights the part of my brain that likes being prepared for disasters.
+- MeshCore works on a wide variety of low-cost devices, many of which also work for Meshtastic.
+- The firmware repository uses Nix, which made it easy to build and flash onto my devices from source.
 
 ### What I dislike about MeshCore
 
 - All of the official MeshCore clients are closed source and proprietary.
-- It's too difficult to use except by enthusiasts.
-- Website pushes you to platforms that have closed-source / paid software.
+- The user experience is too brittle for me to rely on in an emergency, especially for people using the technology for the first time.
+- Most of the hardware assumes you'll pair it with your mobile phone over Bluetooth, which introduces many more points of failure and complexity.
+- There's no simple getting started guide.
+  - There's [a FAQ](https://github.com/meshcore-dev/MeshCore/blob/repeater-v1.10.0/docs/faq.md), but it's a hodgepodge of details without much organization.
