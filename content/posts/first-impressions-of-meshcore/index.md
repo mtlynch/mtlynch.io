@@ -313,20 +313,24 @@ Some parts of the ecosystem are indeed open-source and liberally licensed, but c
 
 ## Summary
 
-My ideal scenario is that I can convince a handful of neighbors to
-
-For it to be viable for me, I want something like the T-Deck where it's an all-in-one device where I can . If I'm relying on these in an emergency, I don't want to worry about keeping both my phone and radio powered and connected over Bluetooth. There are just too many failure points. And especially if I'm giving devices to less tech-savvy friends to use in an emergency where they can't ask me for help, I want it to be dead simple. It's fine if I have to preconfigure it for them, but I don't want them to pull it out in an emergency and realize they uninstalled the companion app from their phone and are now stuck.
-
 ### What I like about MeshCore
 
-- The idea of it delights the part of my brain that likes being prepared for disasters.
-- MeshCore works on a wide variety of low-cost devices, many of which also work for Meshtastic.
-- The firmware repository uses Nix, which made it easy to build and flash onto my devices from source.
+- The concept delights the part of my brain that likes being prepared for disasters
+- MeshCore runs on a wide variety of low-cost devices, many of which also work for Meshtastic
+- There's an active, enthusiastic community around it.
 
 ### What I dislike about MeshCore
 
-- All of the official MeshCore clients are closed source and proprietary.
-- The user experience is too brittle for me to rely on in an emergency, especially for people using the technology for the first time.
+- All of the official MeshCore clients are closed-source and proprietary.
+  - This is the dealbreaker for me.
+- The user experience is too brittle for me to rely on in an emergency, especially if my peers are MeshCore beginners.
 - Most of the hardware assumes you'll pair it with your mobile phone over Bluetooth, which introduces many more points of failure and complexity.
-- There's no simple getting started guide.
+- No simple getting started guide.
   - There's [a FAQ](https://github.com/meshcore-dev/MeshCore/blob/repeater-v1.10.0/docs/faq.md), but it's a hodgepodge of details without much organization.
+  - There's a good [video intro](https://www.youtube.com/watch?v=t1qne8uJBAc).
+
+### Final thoughts
+
+My ideal scenario is that I can convince a handful of neighbors to
+
+For it to be viable for me, I want something like the T-Deck where it's an all-in-one device where I can . If I'm relying on these in an emergency, I don't want to worry about keeping both my phone and radio powered and connected over Bluetooth. There are just too many failure points. And especially if I'm giving devices to less tech-savvy friends to use in an emergency where they can't ask me for help, I want it to be dead simple. It's fine if I have to preconfigure it for them, but I don't want them to pull it out in an emergency and realize they uninstalled the companion app from their phone and are now stuck.
