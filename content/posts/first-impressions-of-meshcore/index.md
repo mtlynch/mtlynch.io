@@ -324,7 +324,7 @@ What!?! They'd advertised this as open-source! How could they lie?
 
 And then I went back to the MeshCore website, and realized they never say "open-source" anywhere.
 
-{{<img src="meshcore-website.webp">}}
+{{<img src="meshcore-website.webp" max-width="300px" caption="I must have dreamed the part where they advertised MeshCore as open-source.">}}
 
 I guess I just imagined it was open-source. It just _seems_ like such an open-source thing that I just assumed without ever checking. But I was hugely disappointed and that
 
@@ -352,7 +352,6 @@ Some parts of the ecosystem are indeed open-source and liberally licensed, but c
 ### What I dislike about MeshCore
 
 - All of the official MeshCore clients are closed-source and proprietary.
-  - This is the dealbreaker for me.
 - The user experience is too brittle for me to rely on in an emergency, especially if my peers are MeshCore beginners.
 - Most of the hardware assumes you'll pair it with your mobile phone over Bluetooth, which introduces many more points of failure and complexity.
 - No simple getting started guide.
