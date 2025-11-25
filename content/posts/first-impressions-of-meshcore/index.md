@@ -1,6 +1,6 @@
 ---
 title: "My First Impressions of MeshCore Off-Grid Messaging"
-date: 2025-10-11
+date: 2025-12-03
 tags:
   - first-impressions
   - meshcore
@@ -190,7 +190,7 @@ One drawback is that it uses a custom USB cable, so I can't just plug in an off-
 
 {{<img src="t1000-cable.webp" max-width="400px" caption="The Seeed T-10000e uses a custom USB cable for charging and flashing.">}}
 
-From there, I paired it with my phone the same way I did with the Heltec. The only difference was that the Heltec displayed a random password that secured the Bluetooth pairing, but the T-1000e has no screen, so it defaults to the password of `123456`. Does that mean anyone within Bluetooth range can just take over my T-1000e and read all my messages?
+From there, I paired the T-1000e with my phone, and it was basically the same as using the Heltec. The only difference was that the Heltec displayed a random password that secured the Bluetooth pairing, but the T-1000e has no screen, so it defaults to the password of `123456`. Does that mean anyone within Bluetooth range can just take over my T-1000e and read all my messages?
 
 It also seems impossible to turn off the T-1000e, which is undesirable for a broadcasting device. The [instructions on the Seeed website](https://wiki.seeedstudio.com/sensecap_t1000_e/) advise users to power off the device by just leaving it unplugged for several days until the battery runs out.
 
@@ -210,25 +210,21 @@ As soon as I turned on my T-Deck, my berry was burst. This was not a Blackberry 
 
 As a reminder, _this_ is what a Blackberry looked like in 2003:
 
-{{<gallery caption="A Blackberry in 2003 (left) vs. a LilyGo T-Deck+ in 2025">}}
+{{<img src="blackberry-2003.webp" caption="A Blackberry in 2003 (left) vs. a LilyGo T-Deck+ in 2025" max-width="290px">}}
 
-{{<img src="blackberry-2003.webp" max-width="290px">}}
+Before I even get to the T-Deck software experience, the hardware itself is so big and clunky. We can't match the quality of a hardware product that we produced _22 years ago_?
 
 {{<img src="tdeck-hand.webp" max-width="600px">}}
-
-{{</gallery>}}
-
-Before I even get to the UI, the device itself is so big and clunky. We can't match the quality of a hardware product that we produced _23 years ago_?
 
 Right off the bat, the T-Deck was a pain to use. You navigate the UI by clicking a flimsy little thumbwheel in the center of the device, but it's temperamental and ignores half of my scrolls.
 
 {{<video src="flaky-scroll.mp4">}}
 
-And the touchscreen misses half my taps:
+But good news: there's a touchscreen. But the touchscreen misses half my taps:
 
 {{<video src="flaky-taps.mp4">}}
 
-There are three ways to "click" a UI element. You can click the trackball, push Enter, or tap the screen. Which one does a particular UI element expect? You just have to try each one to find out!
+There are three ways to "click" a UI element. You can click the trackball, push the "Enter" key, or tap the screen. Which one does a particular UI element expect? You just have to try each one to find out!
 
 {{<video src="how-to-interact.mp4">}}
 
@@ -246,70 +242,104 @@ This is what worked for me:
 
 Confusingly, there's no indication that the device is in DFU mode. I guess the fact that the screen doesn't load is sort of an indication. On my system, I also see `dmesg` logs indicating a connection.
 
+## Messaging with the T-Deck
+
+Once I figured out how to navigate the T-Deck, I tried messaging, and the experience didn't improve. For example, guess what screen I'm on here:
+
+{{<img src="tdeck-mystery-screen.webp" max-width="300px">}}
+
+If you guessed "chat for Public channel," you're a better guesser than I am, because the screen looks like nothing to me, and remains kind of unclear even when it displays chat messages:
+
+{{<img src="tdeck-public-chat.webp" max-width="300px">}}
+
+I encountered lots of other instances of confusing UX, and I'm not going to complain about them all here.
+
+The tragic upshot for me is that this is not a device I'd feel comfortable handing to another person unless they happened to be a MeshCore enthusiast. There are so many gotchas and dead-ends in the UX that would prevent us from communicating in an emergency.
+
 ## Testing MeshCore in the field
+
+Even though the T-Deck broke my heart, I still held out hope that I could make MeshCore work with a different device. But for it to make sense at all, I needed to see how these devices worked in the real world rather than a few inches away from each other on my desk.
 
 ### T-1000e to Heltec from 1 mile away
 
-I can message myself all I want in my home office, but that's not going to be so useful in an actual emergency when phones are down. I wanted to
+First, I took my T-1000e to my friend's house about a mile away and tried messaging the Heltec back in my home office. The message failed, as it seemed the two devices couldn't see each other at all from that distance.
 
-I took my T-1000e to my friend's house about a mile away and tried messaging my Heltec back in my home office. No luck. The message failed. I expected that since I live in a suburban neighborhood, and there were lots of houses, trees, and cars between the two radios.
+I had low hopes, given that I live in a suburban neighborhood, and there were lots of houses, trees, and cars between the two radios.
 
-### T-1000e to Heltec from a car
+### T-1000e to Heltec from a few blocks away
 
-To test the limit, I tried messaging my Heltec device while riding in a car leaving my house.
+The next time I was riding in a car away from my house, I took along my T-1000e and tried messaging the Heltec v3 in my office.
 
-From one block away, messages succeeded.
+One block away: messages succeeded.
 
-Three blocks away, still working.
+Three blocks away: still working.
 
-I tried a third message from five blocks away: failure. And then I couldn't
+Five blocks away: failure.
 
-First test, I tested it while riding in a car away from my house with the SenseCAP and the Heltec v3 listening in my office at home. Communication back to the Heltec v3 in my office failed after three blocks, which was much lower than I expected.
+And then I was never able to reach my home device until returning home later that day.
 
-### T-Deck to T-1000e on a bike
+### T-Deck to T-1000e from a few blocks away
 
-I read that the Heltecs have a particularly weak antenna, so I tried again by leaving my T-1000e at home and taking the T-Deck out with me. After about five blocks, I could no longer send messages back to the T-1000e.
+I read that the Heltecs have a particularly weak antenna, so I tried again by leaving my T-1000e at home and taking the T-Deck out with me.
+
+I could successfully message my T-1000e from my T-Deck from about five blocks away, but everything failed after that.
 
 ## Do I need a repeater?
 
+The other part of the MeshCore ecosystem I haven't mentioned yet is repeaters.
+
+MeshCore repeaters are like WiFi extenders. Repeaters are dedicated devices whose whole job is to receive MeshCore messages and re-broadcast them. Repeaters are what create the "mesh" in meshcore, as they form a network among . If you're using a device like a Heltec v3 or a T-1000e to send messages over MeshCore, they don't re-broadcast the messages they receive. You can't use the repeaters to send or receive messages directly, but you can send messages over the repeater to extend the range of your device.
+
+I wasn't sure how much of a difference a repeater would make. At this point, I wasn't so excited about MeshCore that I'd go mount a repeater on my roof, but I might try attaching one to a fencepost. But I had too little confidence in the technology at this point, and if it turned out to not work, I didn't want an extra $100 device sitting in the back of my closet.
+
 From exploring more, it seems like what I actually might need is a MeshCore repeater. If I want to communicate with friends more than a few blocks away, I might have to get a beefy device with a big antenna, though I couldn't find documentation on how far I should expect the range of my devices to work.
+
+{{<img src="sensecap-solar-p1-pro.webp" max-width="600px" has-border="false">}}
+
+[SenseCAP Solar P1-Pro](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html)
+
+https://github.com/meshcore-dev/MeshCore/blob/repeater-v1.10.0/variants/sensecap_solar/platformio.ini
 
 ## Inspecting MeshCore's source code
 
-I took a look at MeshCore's.
+MeshCore's firmware is open-source, so I took a look to see if there was anything I could do to improve the sorry state of user experience on the T-Deck.
 
-I was a bit disappointed in the source code. There were no automated tests for the codebase, so I [offered a simple unit test](https://github.com/meshcore-dev/MeshCore/pull/925) over a month ago, but nobody from the MeshCore team has acknowledged it.
+I was a bit disappointed in the source code. There were no automated tests for the codebase, so I [offered a simple unit test](https://github.com/meshcore-dev/MeshCore/pull/925) almost two months ago, but nobody from the MeshCore team has responded to my proposal.
 
-I didn't do a thorough audit of the code, but from casually browsing around, I'd say it's a bit messy, but I didn't see anything egregious. One code smell I'll point out is that my unit test was to call a function that converted raw bytes to a hex string, and that function depends on the headers for two crypto libraries, even though the function does no cryptographic operations. It's the kind of intertwining of code that you avoid when you write unit tests for each component in isolation.
+I didn't do a thorough audit of the code, but from casually browsing around, it seems a bit messy, but I didn't see anything egregious. One code smell I'll point out is that my unit test was to call a function that converted raw bytes to a hex string, and that function depends on the headers for two crypto libraries, even though the function does no cryptographic operations. It's the kind of intertwining of code that you avoid when you write unit tests for each component in isolation.
 
-My other gripe was that the code doesn't have consistent style conventions. Someone [proposed](https://github.com/meshcore-dev/MeshCore/issues/276) actually using [the `.clang-format` file that's already there](https://github.com/meshcore-dev/MeshCore/blob/companion-v1.10.0/.clang-format), but a maintainer [closed the issue](https://github.com/meshcore-dev/MeshCore/issues/276#issuecomment-3295460688) with the guidance, "Just make sure your own IDE isn't making unnecessary changes when you do a commit."
+My other petty gripe was that the code doesn't have consistent style conventions. Someone [proposed](https://github.com/meshcore-dev/MeshCore/issues/276) actually using [the `.clang-format` file that's already there](https://github.com/meshcore-dev/MeshCore/blob/companion-v1.10.0/.clang-format), but a maintainer [closed the issue](https://github.com/meshcore-dev/MeshCore/issues/276#issuecomment-3295460688) with the guidance, "Just make sure your own IDE isn't making unnecessary changes when you do a commit."
 
 Why? Why in 2025 do I have to think about where to place my curly braces to match the style of this particular file? Just [set up a linter](/human-code-reviews-1/#let-computers-do-the-boring-parts) so I don't have to think about mundane style issues anymore.
 
 ## Wait, MeshCore isn't open-source?
 
-I wanted to take a look at the source code for the mobile app or the T-Deck client, and I couldn't find it.
+The problem was that I looked through the MeshCore source, and I couldn't find the code that controlled the T-Deck UI. I couldn't find the source to the Android or web apps either.
 
 And then I realized: it's all closed-source. All of the official MeshCore client implementations are closed-source and proprietary.
+
+{{<img src="faq-open-source.webp" caption="Reading the [MeshCore FAQ](https://github.com/meshcore-dev/MeshCore/blob/repeater-v1.10.0/docs/faq.md#57-q-is-meshcore-open-source), I realized critical components are closed-source.">}}
 
 What!?! They'd advertised this as open-source! How could they lie?
 
 And then I went back to the MeshCore website, and realized they never say "open-source" anywhere.
 
+{{<img src="meshcore-website.webp">}}
+
 I guess I just imagined it was open-source. It just _seems_ like such an open-source thing that I just assumed without ever checking. But I was hugely disappointed and that
 
 I don't think every piece of software is obligated to be open-source, but I find it far less compelling to participate in a community software ecosystem where so much of it is closed-source.
 
-Some parts of the ecosystem are indeed open-source and liberally licensed, but critically the T-Deck firmware and the web app and mobile apps are all closed-source and proprietary. So, you can't use MeshCore with open-source tools unless you write your own.
+Some parts of the ecosystem are indeed open-source and liberally licensed, but critically the T-Deck firmware, the web app, and the mobile apps are all closed-source and proprietary. So, the radio firmware is open-source, but you can't send or receive messages over MeshCore without a client, and there are no open-source clients.
 
-| Product                                                    | Open-source? | Free to use?                         |
-| ---------------------------------------------------------- | ------------ | ------------------------------------ |
-| Core MeshCore firmware                                     | Yes          | Yes                                  |
-| Web-based MeshCore firmware flasher                        | Yes          | Yes                                  |
-| [CLI client](https://github.com/meshcore-dev/meshcore-cli) | Yes          | Yes                                  |
-| Official Android / iOS MeshCore apps                       | No           | Yes                                  |
-| Official MeshCore web app                                  | No           | Yes                                  |
-| T-Deck MeshCore firmware                                   | No           | Yes, but some features are paywalled |
+| Product                                                                  | Open-source? | Free to use?                         |
+| ------------------------------------------------------------------------ | ------------ | ------------------------------------ |
+| [MeshCore radio firmware](https://github.com/meshcore-dev/MeshCore)      | Yes          | Yes                                  |
+| [Web-based MeshCore firmware flasher](https://flasher.meshcore.co.uk/)   | Yes          | Yes                                  |
+| [CLI client](https://github.com/meshcore-dev/meshcore-cli)               | Yes          | Yes                                  |
+| [Official Android / iOS MeshCore apps](https://meshcore.co.uk/apps.html) | No           | Yes, but some features are paywalled |
+| [Official MeshCore web app](https://meshcore.co.uk/apps.html)            | No           | Yes, but some features are paywalled |
+| [T-Deck MeshCore firmware](https://buymeacoffee.com/ripplebiz)           | No           | Yes, but some features are paywalled |
 
 ## Summary
 
@@ -327,7 +357,7 @@ Some parts of the ecosystem are indeed open-source and liberally licensed, but c
 - Most of the hardware assumes you'll pair it with your mobile phone over Bluetooth, which introduces many more points of failure and complexity.
 - No simple getting started guide.
   - There's [a FAQ](https://github.com/meshcore-dev/MeshCore/blob/repeater-v1.10.0/docs/faq.md), but it's a hodgepodge of details without much organization.
-  - There's a good [video intro](https://www.youtube.com/watch?v=t1qne8uJBAc).
+  - There's a good [video intro](https://www.youtube.com/watch?v=t1qne8uJBAc), but I prefer text documentation.
 
 ### Final thoughts
 
