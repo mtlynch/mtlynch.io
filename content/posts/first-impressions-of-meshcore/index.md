@@ -14,15 +14,19 @@ She wasn't impressed.
 
 "It also works if phone lines are down due to a power outage... or societal collapse." Still nothing.
 
-{{<img src="off-grid-messaging.webp" max-width="700px">}}
+{{<img src="off-grid-messaging.webp" max-width="550px">}}
 
-"If we're not within radio range of each other, we can route our messages through a mesh network of our neighbors' radios. But don't worry! There's end-to-end encryption, so nobody else can snoop on our conversation." By this point, she'd left the room.
+"If we're not within radio range of each other, we can route our messages through a mesh network of our neighbors' radios. But don't worry! The radios encrypt our messages end-to-end, so nobody else can read what we're saying." By this point, she'd left the room.
 
 My wife has many wonderful qualities, but, if I'm being honest, "enthusiasm for encrypted off-grid messaging" has never been one of them
 
 The technology I was pitching so unsuccessfully to my wife was, of course, MeshCore.
 
 {{<img src="meshcore-logo-black.webp" max-width="350px">}}
+
+## tl; dr - What did I think?
+
+If you'd like to skip to the end, check out [the summary](#summary).
 
 ## What's MeshCore?
 
