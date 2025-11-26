@@ -340,14 +340,13 @@ I'm not an open-source zealot, and I think it's fine for software to be propriet
 
 Some parts of the ecosystem are indeed open-source and liberally licensed, but critically the T-Deck firmware, the web app, and the mobile apps are all closed-source and proprietary. So, the radio firmware is open-source, but you can't send or receive messages over MeshCore without a client, and there are no open-source clients.
 
-| Product                                                                  | Open-source? | Free to use?                         |
-| ------------------------------------------------------------------------ | ------------ | ------------------------------------ |
-| [MeshCore radio firmware](https://github.com/meshcore-dev/MeshCore)      | Yes          | Yes                                  |
-| [Web-based MeshCore firmware flasher](https://flasher.meshcore.co.uk/)   | Yes          | Yes                                  |
-| [CLI client](https://github.com/meshcore-dev/meshcore-cli)               | Yes          | Yes                                  |
-| [Official Android / iOS MeshCore apps](https://meshcore.co.uk/apps.html) | No           | Yes, but some features are paywalled |
-| [Official MeshCore web app](https://meshcore.co.uk/apps.html)            | No           | Yes, but some features are paywalled |
-| [T-Deck MeshCore firmware](https://buymeacoffee.com/ripplebiz)           | No           | Yes, but some features are paywalled |
+| Product                                                                  | Open-source?                   | Free to use?                                                         |
+| ------------------------------------------------------------------------ | ------------------------------ | -------------------------------------------------------------------- |
+| [MeshCore radio firmware](https://github.com/meshcore-dev/MeshCore)      | <font color="green">Yes</font> | <font color="green">Yes</font>                                       |
+| [Web-based MeshCore firmware flasher](https://flasher.meshcore.co.uk/)   | <font color="green">Yes</font> | <font color="green">Yes</font>                                       |
+| [Official Android / iOS MeshCore apps](https://meshcore.co.uk/apps.html) | <font color="red">No</font>    | <font color="darkorange">Yes, but some features are paywalled</font> |
+| [Official MeshCore web app](https://meshcore.co.uk/apps.html)            | <font color="red">No</font>    | <font color="darkorange">Yes, but some features are paywalled</font> |
+| [T-Deck MeshCore firmware](https://buymeacoffee.com/ripplebiz)           | <font color="red">No</font>    | <font color="darkorange">Yes, but some features are paywalled</font> |
 
 ## Summary
 
@@ -360,11 +359,11 @@ Some parts of the ecosystem are indeed open-source and liberally licensed, but c
 ### What I dislike about MeshCore
 
 - All of the official MeshCore clients are closed-source and proprietary.
-- The user experience is too brittle for me to rely on in an emergency, especially if my peers are MeshCore beginners.
+- The user experience is too brittle for me to rely on in an emergency, especially if I'm trying to communicate with MeshCore beginners.
 - Most of the hardware assumes you'll pair it with your mobile phone over Bluetooth, which introduces many more points of failure and complexity.
-- No simple getting started guide.
+- There's no written getting started guide.
   - There's [a FAQ](https://github.com/meshcore-dev/MeshCore/blob/repeater-v1.10.0/docs/faq.md), but it's a hodgepodge of details without much organization.
-  - There's a good [video intro](https://www.youtube.com/watch?v=t1qne8uJBAc), but I prefer text documentation.
+  - There's a good unofficial [intro video](https://www.youtube.com/watch?v=t1qne8uJBAc), but I prefer text documentation.
 
 ### Final thoughts
 
