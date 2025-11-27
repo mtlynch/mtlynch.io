@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+set -eux
+
+# Set up environment variables
+BRIDGE='pftest-br0'
+TAP_VLAN10='pftest-vlan10'
+TAP_VLAN20='pftest-vlan20'
+
+# Create bridge with VLAN filtering enabled
+sudo ip link add name "${BRIDGE}" type bridge vlan_filtering 1 && \
+  sudo ip link set "${BRIDGE}" up
+
+# Verify VLAN filtering is enabled
+ip --details link show "${BRIDGE}" | \
+  grep --color=auto 'vlan_filtering'
+
+# TAP for Firecracker VM A (VLAN 10)
+sudo ip tuntap add "${TAP_VLAN10}" mode tap && \
+  sudo ip link set "${TAP_VLAN10}" up
+
+# TAP for Firecracker VM B (VLAN 20)
+sudo ip tuntap add "${TAP_VLAN20}" mode tap && \
+  sudo ip link set "${TAP_VLAN20}" up
+
+# Add TAPs to bridge
+sudo ip link set "${TAP_VLAN10}" master "${BRIDGE}" && \
+  sudo ip link set "${TAP_VLAN20}" master "${BRIDGE}"
+
+# Configure TAP_VLAN10 as access port on VLAN 10
+sudo bridge vlan del vid 1 dev "${TAP_VLAN10}" && \
+  sudo bridge vlan add vid 10 dev "${TAP_VLAN10}" pvid untagged
+
+# Configure TAP_VLAN20 as access port on VLAN 20
+sudo bridge vlan del vid 1 dev "${TAP_VLAN20}" && \
+  sudo bridge vlan add vid 20 dev "${TAP_VLAN20}" pvid untagged

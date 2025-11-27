@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+set -ux
+
+VM_NAME='pftest-freebsd-router'
+BRIDGE='pftest-br0'
+TAP_VLAN10='pftest-vlan10'
+TAP_VLAN20='pftest-vlan20'
+
+# Stop and remove VM
+virsh destroy "${VM_NAME}"
+virsh undefine "${VM_NAME}"
+
+# Remove TAP devices
+sudo ip link set "${TAP_VLAN10}" nomaster
+sudo ip link set "${TAP_VLAN20}" nomaster
+sudo ip link delete "${TAP_VLAN10}"
+sudo ip link delete "${TAP_VLAN20}"
+
+# Remove bridge
+sudo ip link delete "${BRIDGE}"
