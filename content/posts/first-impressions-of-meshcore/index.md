@@ -356,6 +356,12 @@ Some parts of the MeshCore ecosystem are indeed open-source and liberally licens
 
 ## Summary
 
+### Final thoughts
+
+I still love the idea of MeshCore, but it doesn't yet feel practical for communicating in an emergency. The software is too difficult to use, and I've been unable to send messages farther than five blocks (about 0.3 miles).
+
+I'm open to revisiting MeshCore, but I'd need to see open-source clients and for the usability to improve to the point that a regular person can use a MeshCore device (even if I have to pre-configure it for them).
+
 ### What I like about MeshCore
 
 - The concept delights the part of my brain that enjoys disaster prep.
@@ -371,9 +377,3 @@ Some parts of the MeshCore ecosystem are indeed open-source and liberally licens
 - There's no written getting started guide.
   - There's [a FAQ](https://github.com/meshcore-dev/MeshCore/blob/repeater-v1.10.0/docs/faq.md), but it's a hodgepodge of details without much organization.
   - There's a good unofficial [intro video](https://www.youtube.com/watch?v=t1qne8uJBAc), but I prefer text documentation.
-
-### Final thoughts
-
-My ideal scenario is that I can convince a handful of neighbors to
-
-I want to support it, but with so much of the ecosystem closed-source and proprietary, I don't see a reason to get on board.
