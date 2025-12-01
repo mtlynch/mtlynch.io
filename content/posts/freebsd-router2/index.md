@@ -86,21 +86,24 @@ client20                  running (libvirt)
 
 ---
 
-## Verify Network Configuration
+## Verify Configuration
 
 The Vagrantfile includes provisioners that automatically configure:
 
-- **FreeBSD Router**: Network interfaces (vtnet1, vtnet2) and IP forwarding
+- **FreeBSD Router**: Network interfaces (vtnet1, vtnet2), IP forwarding, and PF firewall
 - **Alpine Clients**: Static IPs on eth1 and routes to the other network
 
 You can verify the configuration:
 
 ```bash
-# On the router
+# On the router - check network interfaces
 vagrant ssh router
 ifconfig vtnet1
 ifconfig vtnet2
 sysctl net.inet.ip.forwarding
+
+# Check PF is running
+sudo pfctl -sr
 ```
 
 ```bash
@@ -116,6 +119,14 @@ vagrant ssh client20
 ip addr show eth1
 ip route
 ```
+
+---
+
+## PF Configuration
+
+The provisioner installs this PF configuration to `/etc/pf.conf`:
+
+{{<inline-file filename="pf.conf" language="pf">}}
 
 ---
 
@@ -151,83 +162,6 @@ From the router:
 
 ```bash
 netstat -rn
-```
-
----
-
-## Configure PF Firewall
-
-### Enable PF on FreeBSD
-
-```bash
-vagrant ssh router
-```
-
-```bash
-sudo sysrc pf_enable="YES"
-sudo sysrc pf_rules="/etc/pf.conf"
-sudo sysrc pflog_enable="YES"
-```
-
-### Create PF Rules
-
-```bash
-sudo vim /etc/pf.conf
-```
-
-Basic PF configuration:
-
-```pf
-# Macros
-ext_if = "vtnet0"
-vlan10_if = "vtnet1"
-vlan20_if = "vtnet2"
-
-vlan10_net = "192.168.10.0/24"
-vlan20_net = "192.168.20.0/24"
-
-# Options
-set skip on lo0
-set skip on $ext_if
-set block-policy drop
-
-# Scrub
-scrub in all
-
-# Default deny
-block all
-
-# Allow traffic on internal interfaces
-pass on $vlan10_if inet proto icmp all
-pass on $vlan20_if inet proto icmp all
-
-# Allow network 10 to reach network 20
-pass in on $vlan10_if from $vlan10_net to $vlan20_net
-
-# Allow network 20 to reach network 10
-pass in on $vlan20_if from $vlan20_net to $vlan10_net
-
-# Allow established connections
-pass out on $vlan10_if from $vlan10_net
-pass out on $vlan20_if from $vlan20_net
-
-```
-
-### Load PF Kernel Module and Rules
-
-```bash
-# Load PF kernel modules
-sudo kldload pf
-sudo kldload pflog
-
-# Check syntax
-sudo pfctl -n -f /etc/pf.conf
-
-# Enable PF and load rules
-sudo pfctl -ef /etc/pf.conf
-
-# Verify rules loaded
-sudo pfctl -sr
 ```
 
 ---
