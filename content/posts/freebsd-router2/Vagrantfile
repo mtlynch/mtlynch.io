@@ -26,6 +26,15 @@ Vagrant.configure("2") do |config|
       libvirt__network_name: "pf_vlan20",
       libvirt__dhcp_enabled: false,
       libvirt__forward_mode: "none"
+
+    # Configure network interfaces and enable IP forwarding
+    router.vm.provision "shell", inline: <<-SHELL
+      sysrc ifconfig_vtnet1="inet 192.168.10.2 netmask 255.255.255.0"
+      sysrc ifconfig_vtnet2="inet 192.168.20.2 netmask 255.255.255.0"
+      sysrc gateway_enable="YES"
+      service netif restart
+      sysctl net.inet.ip.forwarding=1
+    SHELL
   end
 
   # Alpine Client on Network 10
@@ -43,6 +52,13 @@ Vagrant.configure("2") do |config|
       libvirt__network_name: "pf_vlan10",
       libvirt__dhcp_enabled: false,
       libvirt__forward_mode: "none"
+
+    # Configure static IP and route to network 20
+    client.vm.provision "shell", inline: <<-SHELL
+      ip addr add 192.168.10.10/24 dev eth1 2>/dev/null || true
+      ip link set eth1 up
+      ip route add 192.168.20.0/24 via 192.168.10.2 2>/dev/null || true
+    SHELL
   end
 
   # Alpine Client on Network 20
@@ -60,5 +76,12 @@ Vagrant.configure("2") do |config|
       libvirt__network_name: "pf_vlan20",
       libvirt__dhcp_enabled: false,
       libvirt__forward_mode: "none"
+
+    # Configure static IP and route to network 10
+    client.vm.provision "shell", inline: <<-SHELL
+      ip addr add 192.168.20.10/24 dev eth1 2>/dev/null || true
+      ip link set eth1 up
+      ip route add 192.168.10.0/24 via 192.168.20.2 2>/dev/null || true
+    SHELL
   end
 end

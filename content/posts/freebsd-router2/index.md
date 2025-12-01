@@ -86,78 +86,33 @@ client20                  running (libvirt)
 
 ---
 
-## Configure the FreeBSD Router
+## Verify Network Configuration
 
-### Connect to the Router
+The Vagrantfile includes provisioners that automatically configure:
+
+- **FreeBSD Router**: Network interfaces (vtnet1, vtnet2) and IP forwarding
+- **Alpine Clients**: Static IPs on eth1 and routes to the other network
+
+You can verify the configuration:
 
 ```bash
+# On the router
 vagrant ssh router
-```
-
-### Configure Network Interfaces
-
-The FreeBSD VM has three interfaces:
-- `vtnet0`: NAT management interface (DHCP from Vagrant)
-- `vtnet1`: Connected to pf_vlan10 network
-- `vtnet2`: Connected to pf_vlan20 network
-
-Configure the interfaces:
-
-```bash
-# Configure interfaces using sysrc
-sudo sysrc ifconfig_vtnet1="inet 192.168.10.2 netmask 255.255.255.0"
-sudo sysrc ifconfig_vtnet2="inet 192.168.20.2 netmask 255.255.255.0"
-sudo sysrc gateway_enable="YES"
-
-# Apply configuration
-sudo service netif restart
-sudo sysctl net.inet.ip.forwarding=1
-```
-
-### Verify Interface Configuration
-
-```bash
 ifconfig vtnet1
 ifconfig vtnet2
 sysctl net.inet.ip.forwarding
 ```
 
-Expected output shows both interfaces with their assigned IPs and forwarding enabled (`net.inet.ip.forwarding: 1`).
-
----
-
-## Configure Alpine Clients
-
-### Configure Client on Network 10
-
 ```bash
+# On client10
 vagrant ssh client10
-```
-
-```bash
-# Configure static IP
-sudo ip addr add 192.168.10.10/24 dev eth1
-sudo ip link set eth1 up
-sudo ip route add 192.168.20.0/24 via 192.168.10.2
-
-# Verify
 ip addr show eth1
 ip route
 ```
 
-### Configure Client on Network 20
-
 ```bash
+# On client20
 vagrant ssh client20
-```
-
-```bash
-# Configure static IP
-sudo ip addr add 192.168.20.10/24 dev eth1
-sudo ip link set eth1 up
-sudo ip route add 192.168.10.0/24 via 192.168.20.2
-
-# Verify
 ip addr show eth1
 ip route
 ```
