@@ -30,7 +30,7 @@ If you'd like to skip to the end, check out [the summary](#summary).
 
 ## What's MeshCore?
 
-MeshCore is software that runs on inexpensive [long-range (LoRA) radios](https://en.wikipedia.org/wiki/LoRa). LoRa radios can transmit several miles depending on how clear the path is between radios. Unlike HAM radios, you don't need a license to broadcast over LoRa frequencies in the US, so anyone can pick up a LoRA radio and start chatting.
+MeshCore is software that runs on inexpensive [long-range (LoRa) radios](https://en.wikipedia.org/wiki/LoRa). LoRa radios can transmit several miles depending on how clear the path is between radios. Unlike HAM radios, you don't need a license to broadcast over LoRa frequencies in the US, so anyone can pick up a LoRa radio and start chatting.
 
 MeshCore is more than just sending messages over radio. The "mesh" in the name is because MeshCore users form a mesh network. If Alice wants to send a message to her friend Charlie, but Charlie's out of range of her radio, she can route her message through Bob, another MeshCore user in her area, and Bob will forward the message to Charlie.
 
@@ -130,7 +130,7 @@ I was expecting some way to view a contact in the public channel and send them a
 
 {{<img src="participants-view.webp" max-width="300px" has-border="true">}}
 
-This seems like an odd design choice. If a MeshCore user to the public channel, why can't I talk to them?
+This seems like an odd design choice. If a MeshCore user posts to the public channel, why can't I talk to them?
 
 I eventually figured out that I have to "Advert." There are three options: "Zero Hop," "Flood Routed," and "To Clipboard." I don't know what any of these mean, but I figure "flood" sounds kind of rude, whereas "Zero Hop" sounds elegant, so I do a "Zero Hop."
 
@@ -175,12 +175,12 @@ Compared to the Heltec v3, I liked the T-1000e a lot. It's self-contained and ha
 
 Annoyingly, the T-1000e uses a custom USB cable, so I can't just charge it or flash it from my computer with one of my standard USB cables:
 
-{{<img src="t1000-cable.webp" max-width="400px" caption="The Seeed T-10000e uses a custom USB cable for charging and flashing.">}}
+{{<img src="t1000-cable.webp" max-width="400px" caption="The Seeed T-1000e uses a custom USB cable for charging and flashing.">}}
 
 I used the web flasher for the Heltec, but I decided to try flashing the T-1000e directly from source:
 
 ```bash
-git checkout https://github.com/meshcore-dev/MeshCore.git
+git clone https://github.com/meshcore-dev/MeshCore.git
 
 # Latest firmware version at the time I tested.
 FIRMWARE_VERSION='companion-v1.9.0'
@@ -354,7 +354,7 @@ And then I went back to the MeshCore website, and realized they never say "open-
 
 {{<img src="meshcore-website.webp" max-width="300px" caption="I must have dreamed the part where they advertised MeshCore as open-source.">}}
 
-It just _seems_ like such an open-source thing that I just assumed without. But I was severely disappointed to discover that critical parts of MeshCore are proprietary.
+It just _seems_ like such an open-source thing that I just assumed. But I was severely disappointed to discover that critical parts of MeshCore are proprietary.
 
 Without open-source clients, MeshCore doesn't work for me.
 
