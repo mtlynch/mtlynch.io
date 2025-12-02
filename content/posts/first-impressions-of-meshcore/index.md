@@ -369,13 +369,14 @@ I'm not an open-source zealot, and I think it's fine for software to be propriet
 
 Some parts of the MeshCore ecosystem are indeed open-source and liberally licensed, but critically the T-Deck firmware, the web app, and the mobile apps are all closed-source and proprietary. The firmware I flashed to my Heltec v3 and T-1000e is open-source, but the mobile and Android apps (clients) I used to use the radios were closed-source and proprietary. As far as I see, there are no open-source MeshCore clients aside from [the development CLI](https://github.com/meshcore-dev/meshcore-cli).
 
-| Product                                                                  | Open-source?                   | Free to use?                                                         |
-| ------------------------------------------------------------------------ | ------------------------------ | -------------------------------------------------------------------- |
-| [MeshCore radio firmware](https://github.com/meshcore-dev/MeshCore)      | <font color="green">Yes</font> | <font color="green">Yes</font>                                       |
-| [Web-based MeshCore firmware flasher](https://flasher.meshcore.co.uk/)   | <font color="green">Yes</font> | <font color="green">Yes</font>                                       |
-| [Official Android / iOS MeshCore apps](https://meshcore.co.uk/apps.html) | <font color="red">No</font>    | <font color="darkorange">Yes, but some features are paywalled</font> |
-| [Official MeshCore web app](https://meshcore.co.uk/apps.html)            | <font color="red">No</font>    | <font color="darkorange">Yes, but some features are paywalled</font> |
-| [T-Deck MeshCore firmware](https://buymeacoffee.com/ripplebiz)           | <font color="red">No</font>    | <font color="darkorange">Yes, but some features are paywalled</font> |
+| Product                                                                                     | Open-source?                   | Free to use?                                                         |
+| ------------------------------------------------------------------------------------------- | ------------------------------ | -------------------------------------------------------------------- |
+| [MeshCore radio firmware](https://github.com/meshcore-dev/MeshCore)                         | <font color="green">Yes</font> | <font color="green">Yes</font>                                       |
+| [MeshCore protocol](https://github.com/meshcore-dev/MeshCore/wiki/Companion-Radio-Protocol) | <font color="green">Yes</font> | <font color="green">Yes</font>                                       |
+| [Web-based MeshCore firmware flasher](https://flasher.meshcore.co.uk/)                      | <font color="green">Yes</font> | <font color="green">Yes</font>                                       |
+| [Official Android / iOS MeshCore apps](https://meshcore.co.uk/apps.html)                    | <font color="red">No</font>    | <font color="darkorange">Yes, but some features are paywalled</font> |
+| [Official MeshCore web app](https://meshcore.co.uk/apps.html)                               | <font color="red">No</font>    | <font color="darkorange">Yes, but some features are paywalled</font> |
+| [T-Deck MeshCore firmware](https://buymeacoffee.com/ripplebiz)                              | <font color="red">No</font>    | <font color="darkorange">Yes, but some features are paywalled</font> |
 
 ## Summary
 
