@@ -10,6 +10,7 @@ discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=46121411
   lobsters: https://lobste.rs/s/fd2j1n/my_first_impressions_meshcore_off_grid
   reddit: https://www.reddit.com/r/meshcore/comments/1pc9nuw/my_first_impressions_of_meshcore/
+description: Using low-cost radio hardware to keep texting when there's no phone or Internet service.
 ---
 
 When my wife saw me playing with my new encrypted radio, she asked what it was for.
