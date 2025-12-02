@@ -207,6 +207,8 @@ From there, I paired the T-1000e with my phone, and it was basically the same as
 
 It also seems impossible to turn off the T-1000e, which is undesirable for a broadcasting device. The manufacturer [advises users](https://wiki.seeedstudio.com/sensecap_t1000_e/) to just leave it unplugged for several days until the battery runs out.
 
+**Update**: MeshCore contributor [Frieder Schrempf](https://fris.de/) just [fixed this](https://mastodon.social/@frisch/115651352440724135) in commit [07e7e2d](https://github.com/meshcore-dev/MeshCore/commit/07e7e2d44bfd68abbe87f73a853b04d76b37ddf5), which is included in the v.1.11.0 MeshCore firmware. You can now power off the device by holding down the button at the top of the T-1000e.
+
 ## Testing the Lilygo T-Deck
 
 Now it was time to test the Lilygo T-Deck.
