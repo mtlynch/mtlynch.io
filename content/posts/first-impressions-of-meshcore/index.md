@@ -1,9 +1,11 @@
 ---
 title: "My First Impressions of MeshCore Off-Grid Messaging"
 date: 2025-12-02
+banner_image: og-cover.webp
 tags:
   - first-impressions
   - meshcore
+  - lora
 ---
 
 When my wife saw me playing with my new encrypted radio, she asked what it was for.
@@ -30,7 +32,7 @@ If you'd like to skip to the end, check out [the summary](#summary).
 
 ## What's MeshCore?
 
-MeshCore is software that runs on inexpensive [long-range (LoRa) radios](https://en.wikipedia.org/wiki/LoRa). LoRa radios can transmit several miles depending on how clear the path is. Unlike HAM radios, you don't need a license to broadcast over LoRa frequencies in the US, so anyone can pick up a LoRa radio and start chatting.
+MeshCore is software that runs on inexpensive [long-range (LoRa) radios](https://en.wikipedia.org/wiki/LoRa). LoRa radios transmit up to several miles depending on how clear the path is. Unlike HAM radios, you don't need a license to broadcast over LoRa frequencies in the US, so anyone can pick up a LoRa radio and start chatting.
 
 MeshCore is more than just sending messages over radio. The "mesh" in the name is because MeshCore users form a mesh network. If Alice wants to send a message to her friend Charlie, but Charlie's out of range of her radio, she can route her message through Bob, another MeshCore user in her area, and Bob will forward the message to Charlie.
 
@@ -40,7 +42,7 @@ MeshCore is more than just sending messages over radio. The "mesh" in the name i
 
 I'm not exactly a doomsday prepper, but I plan for realistic disaster scenarios like extended power outages, food shortages, and droughts.
 
-When I heard about MeshCore, I thought it would be neat to give some devices to friends nearby so we could communicate in an emergency. And if it turned out that we're out of radio range of each other, maybe I could convince some of my neighbors to get involved as well. We could form a messaging network that's robust against power failures and phone outages.
+When I heard about MeshCore, I thought it would be neat to give some devices to friends nearby so we could communicate in an emergency. And if it turned out that we're out of radio range of each other, maybe I could convince a few neighbors to get involved as well. We could form a messaging network that's robust against power failures and phone outages.
 
 ## Why not Meshtastic?
 
@@ -50,7 +52,7 @@ I first heard about Meshtastic from [Tyler Cipriani's 2022 blog post](https://ty
 
 I have no particular allegiance to MeshCore or Meshtastic, as I've never tried either. Some people I follow on Mastodon have been excited about MeshCore, so I thought I'd check it out. Most MeshCore-compatible devices are also compatible with Meshtastic, so I can easily experiment with one and later try the other.
 
-I only have a limited understanding of the differences between Meshtastic and MeshCore, but what I gather is that MeshCore's key differentiator is preserving bandwidth. Apparently, Meshtastic can hit scaling issues when many users are located close to each other. The Meshtastic protocol is chattier than MeshCore, so I've seen complaints that Meshtastic chatter can flood the airwaves and interfere with message delivery. MeshCore attempts to solve that problem by minimizing network chatter.
+I only have a limited understanding of the differences between Meshtastic and MeshCore, but what I gather is that MeshCore's key differentiator is preserving bandwidth. Apparently, Meshtastic hits scaling issues when many users are located close to each other. The Meshtastic protocol is chattier than MeshCore, so I've seen complaints that Meshtastic chatter floods the airwaves and interferes with message delivery. MeshCore attempts to solve that problem by minimizing network chatter.
 
 ## I'm not a radio guy
 
@@ -62,7 +64,7 @@ I'm a tech-savvy software developer, but I know nothing about radio communicatio
 
 ## Heltec v3: The cheapest introduction to MeshCore
 
-The MeshCore firmware can run on a couple dozen devices, but the official website recommends three devices in particular. The cheapest one is the Heltec v3. I bought two for $27/ea.
+The MeshCore firmware runs on a couple dozen devices, but the official website recommends three devices in particular. The cheapest one is the Heltec v3. I bought two for $27/ea.
 
 {{<img src="heltecv3.webp" max-width="600px" caption="At $27, the Heltec v3 is the cheapest MeshCore-compatible device I could find.">}}
 
@@ -94,11 +96,11 @@ I try clicking "Map" to see if there are any other MeshCore users nearby.
 
 {{<img src="map-nz.webp" max-width="304px" has-border="true">}}
 
-Okay, that's just a map of New Zealand. I live in the US, so that's a bit surprising. Even if I explore the map, I don't see any MeshCore activity anywhere, so I don't know what the map is supposed to do.
+Okay, that's a map of New Zealand. I live in the US, so that's a bit surprising. Even if I explore the map, I don't see any MeshCore activity anywhere, so I don't know what the map is supposed to do.
 
 The map of New Zealand reminded me that different countries use different radio frequencies for LoRa, and if the app defaults to New Zealand's location, it's probably defaulting to New Zealand broadcast frequencies as well.
 
-I went to settings and saw fields for "Radio Settings," and I clicked them expecting a dropdown, but it's just a field for putting in arbitrary numbers. And then I noticed a subtle "Choose Preset" button, which listed presets for different countries that were "suggested by the community." I had no idea what any of them meant, but who am I to argue with the community? I chose "USA/Canada (Recommended)."
+I went to settings and saw fields for "Radio Settings," and I clicked them expecting a dropdown, but it expects me to enter a number. And then I noticed a subtle "Choose Preset" button, which listed presets for different countries that were "suggested by the community." I had no idea what any of them meant, but who am I to argue with the community? I chose "USA/Canada (Recommended)."
 
 {{<gallery>}}
 
@@ -118,7 +120,7 @@ It seemed like there were no other MeshCore users within range of me, which I ex
 
 I repeated the process with an old phone and my second Heltec v3, but they couldn't see each other. I eventually realized that I'd forgotten to configure my second device for the US frequency. This is another reason I wish the MeshCore app took initial onboarding more seriously.
 
-Okay, they can finally see each other! They can both publish messages to the public channel.
+Okay, they finally see each other! They can both publish messages to the public channel.
 
 {{<img src="public-channel.webp" max-width="280px" caption="My devices could finally talk to each other over a public channel.">}}
 
@@ -141,7 +143,7 @@ I eventually figured out that I have to "Advert." There are three options: "Zero
 
 {{</gallery>}}
 
-Great! Device 2 can now see device 1. Let's say hi to Device 1 from Device 2.
+Great! Device 2 now sees device 1. Let's say hi to Device 1 from Device 2.
 
 {{<img src="dm-failed.webp" max-width="300px" has-border="true">}}
 
@@ -153,25 +155,25 @@ Okay, I do, and voila! Messages now work.
 
 This is a frustrating user experience. If I have to advert from both ends, why did MeshCore let me send a message on a half-completed handshake?
 
-I'm assuming "Advert" is me announcing my device's public key, but I don't understand why that's an explicit step I have to do ahead of time. Why can't it just happen implicitly when I post to a public channel or attempt to send someone a direct message?
+I'm assuming "Advert" is me announcing my device's public key, but I don't understand why that's an explicit step I have to do ahead of time. Why can't MeshCore do that implicitly when I post to a public channel or attempt to send someone a direct message?
 
 Anyway, I can talk to myself in both public channels and DMs. Onward!
 
 ## Ordering more MeshCore devices
 
-The Heltec v3 boards were a good way to experiment with MeshCore, but they're impractical for real-world scenarios. They require their own power source, and a phone to pair. I hoped I could just power it from my phone with a USB-C to USB-C cable, but the Heltec board wouldn't power up from my phone. In a real emergency, that's too many points of failure.
+The Heltec v3 boards were a good way to experiment with MeshCore, but they're impractical for real-world scenarios. They require their own power source, and a phone to pair. I wanted to power it from my phone with a USB-C to USB-C cable, but the Heltec board wouldn't power up from my phone. In a real emergency, that's too many points of failure.
 
-The MeshCore website recommends two other MeshCore-compatible devices, so I ordered those and got them a few days later: the Seeed SenseCAP T-1000e ($40) and the Lilygo T-Deck+ ($100).
+The MeshCore website recommends two other MeshCore-compatible devices, so I ordered those: the Seeed SenseCAP T-1000e ($40) and the Lilygo T-Deck+ ($100).
 
 {{<img src="t1000-and-lilygo.webp" max-width="600px" caption="I bought the Seeed SenseCAP T-1000e (left) and the Lilygo T-Deck+ (right) to continue experimenting with MeshCore.">}}
 
 ## Testing the SenseCAP T-1000e
 
-Compared to the Heltec v3, I liked the T-1000e a lot. It's self-contained and has its own battery and antenna, which feels simpler and more robust. It's also nice and light. You could toss it into a backpack and not notice it's there.
+The T-1000e was a clear improvement over the Heltec v3. It's self-contained and has its own battery and antenna, which feels simpler and more robust. It's also nice and light. You could toss it into a backpack and not notice it's there.
 
 {{<img src="t1000-hand.webp" max-width="600px" caption="The T-1000e feels like a more user-friendly product compared to the bare circuit board of the Heltec v3.">}}
 
-Annoyingly, the T-1000e uses a custom USB cable, so I can't just charge it or flash it from my computer with one of my standard USB cables:
+Annoyingly, the T-1000e uses a custom USB cable, so I can't charge it or flash it from my computer with one of my standard USB cables:
 
 {{<img src="t1000-cable.webp" max-width="400px" caption="The Seeed T-1000e uses a custom USB cable for charging and flashing.">}}
 
@@ -196,7 +198,7 @@ pio run \
   --upload-port /dev/ttyACM0
 ```
 
-From there, I paired the T-1000e with my phone, and it was basically the same as using the Heltec. The only difference was that the T-1000e has no screen, so it defaults to the Bluetooth pairing password of `123456`. Does that mean anyone within Bluetooth range can just take over my T-1000e and read all my messages?
+From there, I paired the T-1000e with my phone, and it was basically the same as using the Heltec. The only difference was that the T-1000e has no screen, so it defaults to the Bluetooth pairing password of `123456`. Does that mean anyone within Bluetooth range can trivially take over my T-1000e and read all my messages?
 
 It also seems impossible to turn off the T-1000e, which is undesirable for a broadcasting device. The manufacturer [advises users](https://wiki.seeedstudio.com/sensecap_t1000_e/) to just leave it unplugged for several days until the battery runs out.
 
@@ -308,7 +310,7 @@ Repeaters are what create the "mesh" in MeshCore. The repeaters send messages to
 
 There are some technologically cool repeaters available. They're solar powered with an internal battery, so they run independently and can survive a few days without sun.
 
-The problem was that I didn't know how much difference a repeater would make. A repeater with a strong antenna would broadcast messages well, but does that solve my problem? If my T-Deck can't send messages to my T-1000e from six blocks away, how is it going to reach the repeater?
+The problem was that I didn't know how much difference a repeater makes. A repeater with a strong antenna would broadcast messages well, but does that solve my problem? If my T-Deck can't send messages to my T-1000e from six blocks away, how is it going to reach the repeater?
 
 By this point, my enthusiasm for MeshCore had waned, and I didn't want to spend another $100 and mount a broadcasting device to my house when I didn't know how much it would improve my experience.
 
@@ -316,9 +318,9 @@ By this point, my enthusiasm for MeshCore had waned, and I didn't want to spend 
 
 MeshCore's [firmware is open-source](https://github.com/meshcore-dev/MeshCore), so I took a look to see if there was anything I could do to improve the user experience on the T-Deck.
 
-The first surprise with the source code was that there were no automated tests. I [wrote some simple unit tests](https://github.com/meshcore-dev/MeshCore/pull/925), but nobody from the MeshCore team has responded to my proposal, and it's been about two months.
+The first surprise with the source code was that there were no automated tests. I [wrote simple unit tests](https://github.com/meshcore-dev/MeshCore/pull/925), but nobody from the MeshCore team has responded to my proposal, and it's been about two months.
 
-From casually browsing, the codebase feels messy but not outrageously so. It's written in C++, and most of the classes have a large surface area with 20+ non-private functions and fields.
+From casually browsing, the codebase feels messy but not outrageously so. It's written in C++, and most of the classes have a large surface area with 20+ non-private functions and fields, but that's what I see in a lot of embedded software projects.
 
 Another code smell was that my unit test calls the `toHex` function, which [encodes raw bytes to a hex string](https://github.com/meshcore-dev/MeshCore/pull/925/files#diff-3e0cb09133a928bbf14276af63f5c0c5cffca33c6dc64bcdc32b4c68e878fa70R14).
 
