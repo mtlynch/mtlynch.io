@@ -1,4 +1,8 @@
 refactoring_english:
+  "2025-01":
+    unique_visitors: 21824
+  "2025-02":
+    unique_visitors: 1593
   "2025-03":
     unique_visitors: 60327
   "2025-04":
@@ -33,5 +37,10 @@ refactoring_english:
   "2025-10":
     unique_visitors: 22398
     revenue_pre_orders: 570.75
+    revenue_consulting: 0.0
+    revenue_sponsors: 48.25
+  "2025-11":
+    unique_visitors: 7608
+    revenue_pre_orders: 1018.48
     revenue_consulting: 0.0
     revenue_sponsors: 48.25
