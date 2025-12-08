@@ -29,7 +29,12 @@
     wordword-pkg,
   } @ inputs:
     flake-utils.lib.eachDefaultSystem (system: let
+      hugo-pkgs-unfree = import hugo-nixpkgs {
+        inherit system;
+        config.allowUnfreePredicate = pkg: builtins.elem (hugo-nixpkgs.legacyPackages.${system}.lib.getName pkg) ["vagrant"];
+      };
       hugo = hugo-nixpkgs.legacyPackages.${system}.hugo;
+      vagrant = hugo-pkgs-unfree.vagrant;
       nodejs = nodejs-nixpkgs.legacyPackages.${system}.nodejs_24;
       html-proofer = html-proofer-nixpkgs.legacyPackages.${system}.html-proofer;
       markdownlint = markdown-lint-nixpkgs.legacyPackages.${system}.markdownlint-cli2;
@@ -40,6 +45,7 @@
       devShells.default = hugo-nixpkgs.legacyPackages.${system}.mkShell {
         packages = [
           exiftool
+          vagrant
           hugo
           libxml2
           nodejs
@@ -55,6 +61,7 @@
           markdownlint-cli2 | head -n 1
           echo "node" "$(node --version)"
           hugo version
+          vagrant --version
         '';
       };
 
