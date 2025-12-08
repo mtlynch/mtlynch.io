@@ -37,7 +37,7 @@ If you'd like to skip to the end, check out [the summary](#summary).
 
 ## What's MeshCore?
 
-MeshCore is software that runs on inexpensive [long-range (LoRa) radios](https://en.wikipedia.org/wiki/LoRa). LoRa radios transmit up to several miles depending on how clear the path is. Unlike HAM radios, you don't need a license to broadcast over LoRa frequencies in the US, so anyone can pick up a LoRa radio and start chatting.
+MeshCore is software that runs on inexpensive [long-range (LoRa) radios](https://en.wikipedia.org/wiki/LoRa). LoRa radios transmit up to several miles depending on how clear the path is. Unlike ham radios, you don't need a license to broadcast over LoRa frequencies in the US, so anyone can pick up a LoRa radio and start chatting.
 
 MeshCore is more than just sending messages over radio. The "mesh" in the name is because MeshCore users form a mesh network. If Alice wants to send a message to her friend Charlie, but Charlie's out of range of her radio, she can route her message through Bob, another MeshCore user in her area, and Bob will forward the message to Charlie.
 
@@ -63,7 +63,7 @@ I only have a limited understanding of the differences between Meshtastic and Me
 
 I should say at this point that I'm not a radio guy.
 
-It seems like many people in the LoRa community are radio enthusiasts who have experience with HAM radios or other types of radio broadcasting.
+It seems like many people in the LoRa community are radio enthusiasts who have experience with ham radios or other types of radio broadcasting.
 
 I'm a tech-savvy software developer, but I know nothing about radio communication. If I have an incorrect mental model of radio transmission, that's why.
 
