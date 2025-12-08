@@ -134,14 +134,13 @@ The provisioner installs this PF configuration to `/etc/pf.conf`:
 
 ### Test 1: Gateway Connectivity
 
-From client10:
 ```bash
-ping -c 3 192.168.10.2
-```
+vagrant ssh client10 --command 'ping -c 3 192.168.10.2'
+vagrant ssh client10 --command 'ping -c 3 192.168.20.10'
 
-From client20:
+
 ```bash
-ping -c 3 192.168.20.2
+vagrant ssh client20 --command 'ping -c 3 192.168.20.2'
 ```
 
 ### Test 2: Cross-Network Connectivity
@@ -180,7 +179,7 @@ ping -c 3 192.168.20.10
 Modify PF rules to block traffic from network 10 to network 20:
 
 ```bash
-sudo vim /etc/pf.conf
+vagrant ssh router --command 'sudo vim /etc/pf.conf'
 ```
 
 Change the rule:
@@ -194,17 +193,18 @@ pass in on $vlan20_if from $vlan20_net to $vlan10_net
 
 Reload:
 ```bash
-sudo pfctl -f /etc/pf.conf
+vagrant ssh router --command 'sudo pfctl -f /etc/pf.conf'
 ```
 
 Test from client10 (should fail):
+
 ```bash
-ping -c 3 192.168.20.10
+vagrant ssh client10 --command 'ping -c 3 192.168.20.10'
 ```
 
 Test from client20 (should succeed):
 ```bash
-ping -c 3 192.168.10.10
+vagrant ssh client20 --command 'ping -c 3 192.168.10.10'
 ```
 
 ### Monitor PF Activity
