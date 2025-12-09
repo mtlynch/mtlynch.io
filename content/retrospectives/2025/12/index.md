@@ -109,6 +109,8 @@ At this point, it was obvious I was wasting tons of screen real estate and wasti
 
 My friend who navigates his computer most efficiently is okay. He uses xmonad, and he suggested I try the Awesome Window Manager.
 
+https://oky.moe/a-philosophy-for-window-management/
+
 So, I've created single-purpose desktops
 
 Here's what it looks like on the desktop for my blog:
