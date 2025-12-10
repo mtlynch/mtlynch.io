@@ -16,7 +16,9 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 ## Highlights
 
--
+- I'm working on a game to predict which posts will reach the front page of Hacker News.
+- I'm creating a family photo sharing app out of spite.
+- I switched to a keyboard-first window manager.
 
 ## Goal grades
 
@@ -25,33 +27,37 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 ### Publish two new book chapters
 
 - **Result**: Published one new chapter
-- **Grade**: XX
+- **Grade**: C
 
-TODO
+I'm stuck on my chapter on design docs, as there's a lot I want to cover, and I'm having trouble articulating some of it and deciding how much of it belongs in the book. Part of the problem is that the chapter is so long, so I'm planning to break it into smaller sections and focus on those one at a time. I think this is my last "hard" chapter, as I have a better sense of what I want to say in the remaining chapters.
 
 ### Reach out to 10 readers
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: I only reached out to two readers (one responded).
+- **Grade**: D
 
-TODO
+I keep procrastinating on this even though I enjoy doing it and get useful responses. I keep automating more of it in the hopes that reducing initial friction will motivate me to do it more.
 
 ### Create a tool or blog post that brings people to the _Refactoring English_ website
 
 - **Result**: Published ["What Makes the Intro to Crafting Interpreters so Good?"](https://refactoringenglish.com/blog/crafting-interpreters-intro/)
-- **Grade**: XX
+- **Grade**: B
 
-3,508 people read the post, so it was a good. The author of _Crafting Interpreters_ [liked my article](https://lobste.rs/s/jlf6y8/what_makes_intro_crafting_interpreters#c_8kxvys), which was gratifying.
+3,508 people read the post, so it was somewhat successful at attracting new readers. Bob Nystrom, the author of _Crafting Interpreters_, [liked my article](https://lobste.rs/s/jlf6y8/what_makes_intro_crafting_interpreters#c_8kxvys), which was gratifying. I figured even if my article flopped, at least it would let Bob Nystrom know how much I appreciated his work.
 
 ## _Refactoring English_ metrics
 
 {{<project-metrics project="refactoring_english">}}
 
-I did a Black Friday / Cyber Monday discount for 30% off. 18 customers purchased for a total of $359.41.
+November was a good month in terms of visits and sales. Visits were down slightly from October but were still one of the best months of the year.
+
+I did a Black Friday / Cyber Monday discount for 30% off. I only advertised it to pre-order customers, as I always feel a bit strange broadcasting a sale so much. But the announcement was successful, as 18 customers purchased for a total of $359.41.
+
+[Peter Spiess-Knafl](https://spiessknafl.at/peter/), co-founder of [zeitkapsl](https://zeitkapsl.eu/), wrote [a blog post](https://nobloat.org/articles/2025-07-01-hello-blog.html) talking about _Refactoring English_. The post [reached #1 on Lobsters](https://lobste.rs/s/wkuvhx/hello_blog). That's a positive sign, as my plan for the book has always been for it to help readers write successful blog posts and be happy enough about the book that they recommend it.
 
 ## "Will it Hit the Front Page?" the game
 
-I worked on a second thing to attract users to the Refactoring English website. I feel like I read so much Hacker News that I'd be really good at predicting what makes it to the front page. So, I made a game to test myself.
+I feel like I read so much Hacker News that I'd be really good at predicting what makes it to the front page. So, I made a game to test myself.
 
 The biggest problem is that it takes an entire day to verify whether a prediction was right or wrong. Waiting 24 hours for any feedback really sucks the fun out of the game.
 
@@ -105,6 +111,8 @@ The only functionality I care about in TinyBeans is:
 
 How hard could that be? 20 hours of dev work? The TinyBeans web and Android apps suck anyway, so I'll be glad to move away from them.
 
+I'm not starting a company to compete with TinyBeans. I just want to make a web app that replaces TinyBeans' functionality and make it available to people who care about privacy of family photos.
+
 ## Switching to Awesome Window Manager
 
 My shameful secret is that I'm sloppy about managing windows on my computer desktop. I compensate by overusing my mouse, even though I know it's slow and inefficient.
@@ -134,26 +142,28 @@ Here's what it looks like on the desktop for my blog:
 ## Misc
 
 - Firefox recently improved their [Enhanced Tracking Protection](https://blog.mozilla.org/en/firefox/fingerprinting-protections/), a feature I didn't realize existed. I turned it on, and it blocks trackers and had any false positives.
-- I just discovered ["Rich Friend, Poor Friend"](https://www.jenn.site/rich-friend-poor-friend/) from 2022 and found it describes me. I feel like I'm maybe in the worst part of the curve where I'm wealthy enough to not want to ask friends to help me move but not so wealthy that I have a separate guest house to make it easy to host friends.
+- I just discovered ["Rich Friend, Poor Friend"](https://www.jenn.site/rich-friend-poor-friend/) from 2022 and [the follow up](https://www.jenn.site/contra-contra-rich-friend-poor-friend/) from a few weeks ago. I definitely relate to wanting to spend money rather than ask friends for favors. I'm maybe in the worst part of the curve where I'm wealthy enough to not want to ask friends to help me move but not so wealthy that I have a separate guest house to make it easy to host friends.
 
 ## Wrap up
 
 ### What got done?
 
-- Published [What Makes the Intro to Crafting Interpreters so Good?](https://refactoringenglish.com/blog/crafting-interpreters-intro/)
-- Published [My First Impressions of MeshCore Off-Grid Messaging](/first-impressions-of-meshcore/)
-- Published [Add a VLAN to OPNsense in Just 26 Clicks Across 6 Screens](/notes/opnsense-clicks/)
+- Published ["What Makes the Intro to Crafting Interpreters so Good?"](https://refactoringenglish.com/blog/crafting-interpreters-intro/)
+- Published ["My First Impressions of MeshCore Off-Grid Messaging"](/first-impressions-of-meshcore/).
+- Published ["Add a VLAN to OPNsense in Just 26 Clicks Across 6 Screens"](/notes/opnsense-clicks/)
+- Created a tiny Zig utility called [count-clicks](https://codeberg.org/mtlynch/count-clicks) to count clicks and keystrokes on an x11 system.
 - Got [Awesome Window Manager](https://awesomewm.org/) working
 
 ### Lessons learned
 
--
+- TinyBeans actually has a lot of ads, even on the paid version.
 
 ### Goals for next month
 
 - Publish a game that attracts people to the _Refactoring English_ website.
+- Publish two chapters of _Refactoring English_.
 - Create a just-for-fun family photo sharing app.
 
 ### Requests for help
 
-- If you're interested in beta testing the, "Will it Hit the Front Page?" game email me.
+- If you're interested in beta testing the, "Will it Hit the Front Page?" game, [reach out](/about).
