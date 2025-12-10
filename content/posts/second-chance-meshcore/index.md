@@ -7,6 +7,14 @@ Bought the wrong antenna for the repeater, but works on the pocket.
 
 Default antenna for pocket looks identical to heltec v3.
 
+## Why try again?
+
+People told me it's a different experience with the repeater.
+
+Frieder Schrempf made the point that even if the clients are closed right now, the protocol is still documented and open.
+
+They don't have a huge moat. Kind of like IRC. Even if IRC clients were closed-source, we can build open-source alternatives and continue talking to anyone on IRC.
+
 ## WisMesh pocket
 
 ```bash
@@ -34,3 +42,7 @@ pio run \
 ```
 
 WisMesh actually includes instructions.
+
+## Repeater experience
+
+You can actually ping and get diagnostics. Tells you a lot more than succeeded/failed.
