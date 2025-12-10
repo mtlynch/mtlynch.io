@@ -133,7 +133,13 @@ At that point, it was obvious I was wasting tons of screen real estate and wasti
 
 The fastest person I've ever seen navigate their computer is [my friend okay zed](https://oky.moe). I asked him for advice, and he explained [his approach to window management](https://oky.moe/a-philosophy-for-window-management/). His strategy is to use many virtual desktops where windows are almost always full screen within the desktop. He uses xmonad, but he suggested I try Awesome Window Manager.
 
+Here's my current config:
+
+- [rc.lua](rc.lua)
+
 So, I've created single-purpose desktops
+
+I didn't like any of the default desktop modes, so I had to [roll my own](singlerow_flex.lua). It gives each window 25% of my screen's width, and if I open more than four, it squishes everything to fit. I can also manually expand or contract windows with
 
 Here's what it looks like on the desktop for my blog:
 
@@ -148,6 +154,10 @@ Here's what it looks like on the desktop for my blog:
   - The documenation is all text, which is bizarre for software designed specifically around graphics.
   - The configuration is fairly low-level, so you have to write your own logic for filling and not overflowing the viewport.
   - If you accidentally define conflicting hotkeys, Awesome doesn't warn you anywhere.
+- What I still need to figure out
+  - How to implement "scratchpad" functionality. Like if I want to pull up my password manager as a floating window or summon the calculator for a quick calculation.
+  - How to
+  - How to put more widgets into the status bar like network connectivity and resource usage.
 
 ## Interesting links
 
