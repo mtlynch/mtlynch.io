@@ -124,7 +124,9 @@ The only functionality I care about in TinyBeans is:
 - My family members can subscribe to receive new photos and videos via email.
 - My family members can comment or give emoji reactions to photos.
 
-How hard could that be? 20 hours of dev work? The TinyBeans web and Android apps suck anyway, so I'll be glad to move away from them. And because the experience is mostly email-based, I can replace TinyBeans with my own app without my family noticing or caring.
+How hard could that be? 20 hours of dev work?
+
+The TinyBeans web and Android apps suck anyway, so I'll be glad to move away from them. And because the experience is mostly email-based, I can replace TinyBeans with my own app without my family having to do any work as part of the migration.
 
 I'm not starting a company to compete with TinyBeans. I just want to make a web app that replaces TinyBeans' functionality.
 
