@@ -222,7 +222,7 @@ As an unhappy former Deel customer, I'm happy to see them get their comeuppance.
 
 - Publish a game that attracts people to the _Refactoring English_ website.
 - Publish two chapters of _Refactoring English_.
-- Create a just-for-fun family photo sharing app.
+- Write a design doc for a just-for-fun family photo sharing app.
 
 ### Requests for help
 
