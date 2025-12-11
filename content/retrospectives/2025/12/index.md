@@ -1,6 +1,6 @@
 ---
 title: "Refactoring English: Month 12"
-date: "2025-12-10"
+date: "2025-12-11"
 description: Fine, then I'll just make my own app for sharing baby photos.
 ---
 
