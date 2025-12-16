@@ -50,3 +50,7 @@ You can actually ping and get diagnostics. Tells you a lot more than succeeded/f
 ```bash
 $ nix run .#meshcore-cli -- -s /dev/ttyUSB0 req_telemetry 'WisMesh Repeater Mini' 2> /dev/null | nix-shell -p jq --command 'jq .lpp[0].value'
 ```
+
+## Range
+
+Got 835m at 910.525 MHz, 500 kHz, 11 SF, 5 CR, 22 dBm
