@@ -46,3 +46,7 @@ WisMesh actually includes instructions.
 ## Repeater experience
 
 You can actually ping and get diagnostics. Tells you a lot more than succeeded/failed.
+
+```bash
+$ nix run .#meshcore-cli -- -s /dev/ttyUSB0 req_telemetry 'WisMesh Repeater Mini' 2> /dev/null | nix-shell -p jq --command 'jq .lpp[0].value'
+```
