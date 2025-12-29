@@ -131,7 +131,7 @@ I gave Gary a 3-star review across the board. I didn't think he was awful, but j
 
 ### My DIY book cover
 
-With Gary out of the picture, I decided to try making my own cover. I found [a royalty-free image on Unsplash](https://unsplash.com/photos/shallow-focus-photo-gray-balance-stone-HWRAHxoBlpU) that captured the spirit of quiet, careful work, and I added some text.
+With Gary out of the picture, I decided to try making my own cover. I found [a royalty-free image on Unsplash](https://web.archive.org/web/20240630163155/https://unsplash.com/photos/shallow-focus-photo-gray-balance-stone-HWRAHxoBlpU) that captured the spirit of quiet, careful work, and I added some text.
 
 {{<img src="refactoring-english-cover-800px.webp" max-width="350px">}}
 

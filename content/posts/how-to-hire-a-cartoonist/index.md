@@ -151,7 +151,7 @@ But I had to break up the text somehow. It was either this, pay for stock photos
 
 I did briefly attempt to use stock photos, but it felt a bit like this:
 
-{{<img src="pawel-janiak-114499.jpg" alt="Person searching" caption="Photo by [Pawel Janiak](https://unsplash.com/photos/dxFi8Ea670E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)" max-width="750px" has-border="false">}}
+{{<img src="pawel-janiak-114499.jpg" alt="Person searching" caption="Photo by [Pawel Janiak](https://web.archive.org/web/20241203111941/https://unsplash.com/photos/woman-wearing-black-jacket-sitting-on-gray-rock-and-using-binoculrs-dxFi8Ea670E) on Unsplash" max-width="750px" has-border="false">}}
 
 See? It's something to look at, but it's not quite right.
 
