@@ -270,8 +270,8 @@ It's probably not worth implementing CSP solely to hobble Stripe, but if you hav
 
 To see Stripe's behavior on a live site, I created a minimal Vue app that demonstrates this behavior:
 
-- [Vulnerable site](https://frosty-banach-185455.netlify.app/) [(source)](https://github.com/mtlynch/stripe-snooping-example)
-- [Site with mitigations](https://5e9db0c5ea0e3200062c02ea--frosty-banach-185455.netlify.app/) [(source)](https://github.com/mtlynch/stripe-snooping-example/pull/1/files#diff-6d8c4c1f8080f58cb36a900829a76f43)
+- [Vulnerable site](https://web.archive.org/web/20250730195506/https://5e9db0c5ea0e3200062c02ea--frosty-banach-185455.netlify.app/) [(source)](https://github.com/mtlynch/stripe-snooping-example)
+- [Site with mitigations](https://web.archive.org/web/20250227144611/https://frosty-banach-185455.netlify.app/) [(source)](https://github.com/mtlynch/stripe-snooping-example/pull/1/files#diff-6d8c4c1f8080f58cb36a900829a76f43)
 
 ## Summary
 
