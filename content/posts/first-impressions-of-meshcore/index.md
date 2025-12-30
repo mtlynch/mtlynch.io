@@ -41,7 +41,7 @@ MeshCore is software that runs on inexpensive [long-range (LoRa) radios](https:/
 
 MeshCore is more than just sending messages over radio. The "mesh" in the name is because MeshCore users form a mesh network. If Alice wants to send a message to her friend Charlie, but Charlie's out of range of her radio, she can route her message through Bob, another MeshCore user in her area, and Bob will forward the message to Charlie.
 
-{{<img src="mesh-network.webp" max-width="600px" has-border="false" caption="If Alice is within radio range of Bob but not Charlie, she can tell Bob's MeshCore radio to forward her message to Charlie.">}}
+{{<img src="mesh-network.webp" max-width="500px" has-border="false" caption="If Alice is within radio range of Bob but not Charlie, she can tell Bob's MeshCore radio to forward her message to Charlie.">}}
 
 ## My dream for off-grid communication
 
