@@ -182,7 +182,7 @@ I'm also curious to see how this affects the ratio of sales between the PoE vers
 
 - Published two new blog posts: ["I Regret My $46k Website Redesign"](/tinypilot-redesign/) and ["Back Up Encrypted ZFS Data without Unlocking It"](/zfs-encrypted-backups/)
 - Added more functionality to Gatekeeper, the new TinyPilot web service that manages access to software updates
-- Fixed [several performance issues](https://twitter.com/deliberatecoder/status/1552438652537835521) in [PicoShare](https://pico.rocks)
+- Fixed [several performance issues](https://twitter.com/deliberatecoder/status/1552438652537835521) in [PicoShare](https://github.com/mtlynch/picoshare)
 
 ### Lessons learned
 
