@@ -158,7 +158,7 @@ If I were to do it again, I'd buy one 30-hour block as a trial hire for the agen
 
 ## Side projects
 
-### [PicoShare](https://demo.pico.rocks/)
+### [PicoShare](https://demo.github.com/mtlynch/picoshare/)
 
 PicoShare is an open-source, minimalist file-sharing tool I created in February.
 
@@ -180,7 +180,7 @@ Open-source developers made cool code contributions as well:
 
 I added support for multiarch Docker images, so now you can run the PicoShare Docker image on ARM-based systems like the Raspberry Pi. The process of creating multiarch builds is [surprisingly simple](https://github.com/mtlynch/picoshare/pull/164/files), but it was so hard to find instructions because the process keeps changing.
 
-I also created a [live demo](https://demo.pico.rocks/) server. I avoided it at first because I didn't want to deal with people uploading illegal content or exhausting bandwidth. Then, I realized I could add a limitation to the demo server where users can only access files that were uploaded from their own IP. That allows people to play with the service, but it limits the amount they can abuse it.
+I also created a [live demo](https://demo.github.com/mtlynch/picoshare/) server. I avoided it at first because I didn't want to deal with people uploading illegal content or exhausting bandwidth. Then, I realized I could add a limitation to the demo server where users can only access files that were uploaded from their own IP. That allows people to play with the service, but it limits the amount they can abuse it.
 
 ## Wrap up
 

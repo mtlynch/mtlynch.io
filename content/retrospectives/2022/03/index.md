@@ -265,7 +265,7 @@ I'm not sure where Lenny will go as a project. I might release it as a free, ope
 I just realized as I'm writing this that the [Lenny telemarketing bot](https://www.lennytroll.com/) author seems to be building a business around his chatbot, so I'll probably have to change the name.
 {{</notice>}}
 
-### [PicoShare](http://pico.rocks)
+### [PicoShare](http://github.com/mtlynch/picoshare)
 
 PicoShare is a simple tool for sharing files.
 
@@ -287,7 +287,7 @@ I only started working on PicoShare a few weeks ago, so it's still rough. I don'
 
 - Launched [TinyPilot Voyager 2 PoE](https://tinypilotkvm.com/blogs/news/voyager-2-poe)
 - Hired TinyPilot's first support engineer
-- Created [PicoShare](https://pico.rocks)
+- Created [PicoShare](https://github.com/mtlynch/picoshare)
 
 ### Lessons learned
 

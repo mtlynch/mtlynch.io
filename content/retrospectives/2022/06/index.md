@@ -152,7 +152,7 @@ TinyPilot's new digital marketing consultant reviewed my Google Ads account and 
 
 ## Side projects
 
-### [PicoShare](https://pico.rocks/)
+### [PicoShare](https://github.com/mtlynch/picoshare/)
 
 PicoShare is the open-source tool I [released in March](/retrospectives/2022/04/#picoshare) that facilitates sharing files that are too big for email.
 
