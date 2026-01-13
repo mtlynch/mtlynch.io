@@ -29,7 +29,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: Published [The Most Popular Blogs of Hacker News in 2025](https://refactoringenglish.com/blog/2025-hn-top-5/) instead
 - **Grade**: B
 
-The blog post was a risky bet because it _only_ could reach new readers if it hit the front page of Hacker News, and its only chance of that is the first couple weeks of the 2026.
+The blog post was a risky bet because it _only_ could reach new readers if it hit the front page of Hacker News, and its only chance of that is the first couple weeks of 2026.
 
 Fortunately, the post reached #1 on Hacker News and remained on the front page for almost 22 hours. It continues my strategy of finding readers by [highlighting](https://refactoringenglish.com/blog/software-essays-that-shaped-me/) [other](https://refactoringenglish.com/blog/interview-adam-gordon-bell/) [successful tech writers](https://refactoringenglish.com/blog/crafting-interpreters-intro/), a strategy I like because it feels like a win-win for me, readers, and the writers I showcase.
 
@@ -47,7 +47,7 @@ Ironically, the chapters I'm working on are about motivation and focus, but I ke
 - **Result**: Got 80% through a [design doc draft](https://codeberg.org/mtlynch/little-moments/src/branch/design-doc/DESIGN.md)
 - **Grade**: C
 
-Again, I got distracted by MeshCore experiments in December and didn't make as much progress as I wanted. I love design docs and find them helpful but they're also incredibly boring to write, so it was always tempting to shelve the design doc for something with more instant gratifaction.
+Again, I got distracted by MeshCore experiments in December and didn't make as much progress as I wanted. I love design docs and find them helpful but they're also incredibly boring to write, so it was always tempting to shelve the design doc for something with more instant gratification.
 
 ## _Refactoring English_ metrics
 
@@ -71,7 +71,7 @@ Even without native Stripe support for regional pricing, it seemed like it would
 
 Sebastien shared a lot of technical details, but his solution was heavy on React, whereas my site is vanilla HTML and JavaScript. He also relied on discount codes, which I don't like because it means most customers see that there's a special deal they're _not_ getting.
 
-I spent a few hours implementing a solution around a cloud function that determines the right price on the fly and dynamically creates a Stripe checkout link. Then, I realized I could do precompute everything and eliminate the need for server-side logic, so I got to delete my cloud function.
+I spent a few hours implementing a solution around a cloud function that determines the right price on the fly and dynamically creates a Stripe checkout link. Then, I realized I could precompute everything and eliminate the need for server-side logic, so I got to delete my cloud function.
 
 My implementation looks like this:
 
@@ -81,7 +81,7 @@ My implementation looks like this:
    - e.g., the PPP of Brazil is 54% lower than the US, so they get a 54% discount.
 1. Filter out countries where the PPP is within 15% of the US (too small a discount to bother)
 1. Filter out countries where the discount would be negative.
-   - Othwerise, customers in Luxembourg would have to [pay double](https://www.youtube.com/watch?v=yi8IZAyN5IA).
+   - Otherwise, customers in Luxembourg would have to [pay double](https://www.youtube.com/watch?v=yi8IZAyN5IA).
 1. Limit the discount to a maximum of 75%
    - Otherwise the price in someplace like Egypt would be US$4, meaning I'd get like $3.50 after conversion fees.
 1. Automatically generate country-specific Stripe price objects and Stripe payment links for each country remaining in the list.
@@ -123,7 +123,7 @@ That worked, but every step was clunkier than I anticipated:
 - I couldn't keep the Playwright tests constant because Flutter actually doesn't emit semantic HTML for web apps. It creates its own Flutter-specific HTML dialect and draws everything on an HTML canvas. Most Playwright element locators still work somehow, but I had to make a lot of Flutter-specific changes to the tests.
 - It took a long time, even with an LLM, to figure out how to [build an Android package](https://codeberg.org/mtlynch/howdy-neighbor/pulls/15) with Flutter.
   - Gradle, Android's build system, is buggy on NixOS. I kept running into situations where it was failing with mysterious errors that eventually turned out to be stale data it had cached in my home directory.
-- Flutter makes it surprisingly difficult to communicate over Bluetooth. On the web (at least on Chrome), you essentially just get it for free by calling [`navigator.bluetooth.requestDevice`](https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/requestDevice`), but with Flutter, you have to use a [proprietary third-party library](https://pub.dev/packages/flutter_blue_plus) and roll your own device picker UI.
+- Flutter makes it surprisingly difficult to communicate over Bluetooth. On the web (at least on Chrome), you essentially just get it for free by calling [`navigator.bluetooth.requestDevice`](https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/requestDevice), but with Flutter, you have to use a [proprietary third-party library](https://pub.dev/packages/flutter_blue_plus) and roll your own device picker UI.
 
 I thought it would be a quick weekend project I could whip together in a few hours. 30 hours and $200 in LLM credits later, I finally got it working.
 
