@@ -123,7 +123,7 @@ I thought it would be a quick weekend project I could whip together in a few hou
 
 But the day I got my Flutter implementation to feature parity with the prototype, I went to share it on Reddit and saw someone had just shared [meshcore-open](https://github.com/zjs81/meshcore-open), a MeshCore client implementation in Flutter. It was the same idea I had but with far better execution.
 
-I was a bit disappointed, but it's fine. From my brief experience working with Flutter, I was eager to stop. I really only wanted to make a proof of concept hoping someone else would pick it up, so I'm happy that there's now an open-source, feature-rich MeshCore client implementation.
+I was a bit disappointed to get scooped, but it's fine. From my brief experience working with Flutter, I was eager to get far away from Flutter. I only wanted to make a proof of concept hoping someone else would pick it up, so I'm happy that there's now an open-source, feature-rich MeshCore client implementation.
 
 ## Maybe what MeshCore needs is a cross-platform library
 
