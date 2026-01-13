@@ -63,7 +63,7 @@ I collect payments through Stripe, and I couldn't find any option for regional p
 
 So, Stripe advocates for regional pricing, but they don't actually offer it as an option. It was a helpful reminder that Stripe is the worst payment processor [except for all those other payment processors](https://winstonchurchill.org/resources/quotes/the-worst-form-of-government/).
 
-So, for my Argentinian customer, I used a one-off process where I manually created a custom payment link for him at a discounted price. And when I went through the process, I realized I could set the price in Argentine pesos so he wouldn't have to pay a currncy conversion fee. I set the price to 22,000 ARS (about US$15), and he seemed happy with the price and the checkout experience.
+So, for my Argentinian customer, I used a one-off process where I manually created a custom payment link for him at a discounted price. And when I went through the process, I realized I could set the price in Argentine pesos so he wouldn't have to pay a currency conversion fee. I set the price to 22,000 ARS (about US$15), and he seemed happy with the price and the checkout experience.
 
 The reader suggested I publicly offer regional pricing, at least for countries like Brazil and India, which have high numbers of developers but relatively low purchasing power.
 
@@ -151,7 +151,7 @@ What I notice about those implementations:
 - None of them have automated tests for their parsers.
 - They're dragging unnecessary low-level work into high-level languages. For example, everyone is storing `outPath` and `outPathLen` variables. That's an artifact of the C implementation, where arrays don't know their size. You don't have to manually track an array's size in languages like JavaScript, Python, or Dart.
 - They don't check data carefully, so they'll happily pass on garbage data like a negative path length or GPS coordinates that are outside of Earth's bounds.
-- They all ignore the flags field even though the flags are supposed to indicate [which fields are populated](https://github.com/meshcore-dev/MeshCore/blob/6b52fb32301c273fc78d96183501eb23ad33c5bb/docs/payloads.md?plain=1#L54-L57). Or at least they're supposed to in peer-to-peer messages. For device-to-client messages, they seem to be meaningless.
+- They all ignore the flags field even though the flags are supposed to indicate [which fields are populated](https://github.com/meshcore-dev/MeshCore/blob/6b52fb32301c273fc78d96183501eb23ad33c5bb/docs/payloads.md?plain=1#L54-L57). Or at least they're supposed to in the peer-to-peer messages. For device-to-client messages, they seem to be meaningless.
 
 My first thought was to rewrite the logic using a protocol library like [protobuf](https://protobuf.dev/) or [Cap'n Proto](https://capnproto.org/), but I don't see a backwards-compatible way of integrating a third-party library at this point.
 
