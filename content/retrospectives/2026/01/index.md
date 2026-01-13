@@ -1,7 +1,7 @@
 ---
 title: "Refactoring English: Month 13"
 date: "2026-01-14"
-description: TODO - One-line summary
+description: Getting distracted while writing about focus
 ---
 
 {{<notice type="info">}}
