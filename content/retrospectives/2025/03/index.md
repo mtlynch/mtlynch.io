@@ -128,7 +128,7 @@ If you have suggestions for fun projects that my server should run, let me know 
 - Launched pre-orders for _Refactoring English_ [on Kickstarter](https://www.kickstarter.com/projects/mtlynch/refactoring-english)
 - Published ["How to Write Useful Commit Messages"](https://refactoringenglish.com/chapters/commit-messages/)
 - Published [My Zig Configuration for VS Code](/notes/zig-vscode-nix/) and created a [Zig dev flake](https://codeberg.org/mtlynch/zig-vscode-flake)
-- Published [my notes for _Never Pay The First Bill_](/book-reports/never-pay-the-first-bill/)
+- Published [my notes for _Never Pay The First Bill_](/notes/book-reports/never-pay-the-first-bill/)
 
 ### Lessons learned
 

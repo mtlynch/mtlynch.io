@@ -15,7 +15,11 @@
     {{ partial "opengraph.html" . }}
 
     {{ if .Permalink }}
-      <base href="{{ .Permalink }}" />
+      {{ if hugo.IsServer }}
+        <base href="{{ .RelPermalink }}" />
+      {{ else }}
+        <base href="{{ .Permalink }}" />
+      {{ end }}
     {{ end }}
     <title>{{ block "title" . }}{{- .Site.Title -}}{{ end }}</title>
 
@@ -119,7 +123,11 @@
       {{ partial "navbar.html" . }}
 
 
-      <div class="content {{ .Type }}">
+      {{- $contentClass := .Type -}}
+      {{- if and .File (in .File.Path "notes/book-reports/") -}}
+        {{- $contentClass = printf "%s book-reports" $contentClass -}}
+      {{- end -}}
+      <div class="content {{ $contentClass }}">
         {{ block "content" . }}{{ end }}
       </div>
 

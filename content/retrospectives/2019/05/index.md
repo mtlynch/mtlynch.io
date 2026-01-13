@@ -78,7 +78,7 @@ If you know a writer or copy editor who might be interested, please ask them to 
 
 ## An app for rocks
 
-One idea I liked from the book [_Start Small, Stay Small_](/book-reports/start-small-stay-small/) was the "market-first approach." Instead of picking a product and trying to sell it to a particular market, you pick an underserved market, find out what they need, then build that.
+One idea I liked from the book [_Start Small, Stay Small_](/notes/book-reports/start-small-stay-small/) was the "market-first approach." Instead of picking a product and trying to sell it to a particular market, you pick an underserved market, find out what they need, then build that.
 
 I [live in Western Massachusetts](/solo-developer-year-1/#so-i-bought-a-house), so I've been thinking about businesses that are exclusive to this area. One such business is quarries that mine Goshen stone, a popular stone for home landscaping. These businesses have millions in revenue but seem to do most of their business through paper orders and phone calls, so I suspect there's opportunity for automation.
 

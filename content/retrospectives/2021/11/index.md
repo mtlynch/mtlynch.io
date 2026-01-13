@@ -193,7 +193,7 @@ The person who [expressed interest in acquiring Zestful](/retrospectives/2021/09
 - Paused development on TinyPilot Cloud.
 - Retired the TinyPilot Hobbyist Kit and focused the site around the Voyager.
 - Published [episode 1 of "Deliberate Programming."](https://www.youtube.com/watch?v=RKpaccCmxwQ)
-  - I started a project about looking for ways of applying [deliberate practice](/book-reports/badass/#building-expertise) to software development.
+  - I started a project about looking for ways of applying [deliberate practice](/notes/book-reports/badass/#building-expertise) to software development.
 
 ### Lessons learned
 

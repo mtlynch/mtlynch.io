@@ -130,8 +130,8 @@ $ wordword ./content/
 ./content/posts/ansible-role-clipbucket/index.md:83: a
 ./content/posts/solo-developer-year-1/index.md:177: NOW
 ./content/posts/solo-developer-year-1/index.md:177: NOW
-./content/book-reports/chaos-monkeys/index.md:8: names
-./content/book-reports/go-programming-blueprints/index.md:50: of
+./content/notes/book-reports/chaos-monkeys/index.md:8: names
+./content/notes/book-reports/go-programming-blueprints/index.md:50: of
 212 total files checked
 15 total errors found
 ```
