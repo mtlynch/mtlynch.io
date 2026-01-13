@@ -4,7 +4,7 @@ aliases:
   - /book-reports/bowling-alone/
 date: 2020-11-14
 rating: 3
-purchase_url: https://www.indiebound.org/book/9780743203043
+purchase_url: https://bookshop.org/p/books/bowling-alone-revised-and-updated-the-collapse-and-revival-of-american-community-robert-d-putnam/0a3388f210d22ad0
 ---
 
 The idea of social capital has interested me for a long time, but when I finally sat down to read this book, it was painfully dry. It offers an eye-opening investigation into the many ways that civic engagement has declined in the US, but it was a real slog to get through.
