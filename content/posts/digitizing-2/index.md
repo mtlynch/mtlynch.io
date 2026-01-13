@@ -57,7 +57,7 @@ There were two features I needed that weren't available in the pre-built image:
   - Any time you upload a video, MediaGoblin attempts to re-encode it for optimal streaming. For videos that are already streaming-friendly, this step degrades quality and wastes processing cycles.
   - MediaGoblin offers [configuration options to skip transcoding](https://wiki.mediagoblin.org/Configure_MediaGoblin#Disable_transcoding), but the existing Docker image was non-configurable.
 
-No problem. The Docker image was [open-source](https://notabug.org/dachary/mediagoblin-docker), so I could [rebuild it myself](https://github.com/mtlynch/mediagoblin-docker).
+No problem. The Docker image was [open-source](https://web.archive.org/web/20251026210700/https://notabug.org/dachary/mediagoblin-docker), so I could [rebuild it myself](https://github.com/mtlynch/mediagoblin-docker).
 
 Sadly, the Docker image no longer built against the current [MediaGoblin repository](https://savannah.gnu.org/git/?group=mediagoblin). I tried syncing it to the version that matched the last successful build, but that failed as well. Even though I was building with the exact same code, MediaGoblin's external dependencies had changed out from under it, breaking the build. Dozens of hours later, after sitting through MediaGoblin's 10+ minute build process over and over again, I finally got it working.
 
