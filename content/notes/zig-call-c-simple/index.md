@@ -15,7 +15,7 @@ Because Zig is designed to replace C, one of the first-class features is that yo
 
 I found a few articles that described how to call C code from Zig. They all had useful information, but they were either too abstract or described scenarios that were more complex than what I was trying to accomplish:
 
-- ["C/C++/Zig"](https://zig.news/kristoff/compile-a-c-c-project-with-zig-368j) by Loris Cro
+- ["C/C++/Zig"](https://web.archive.org/web/20251208191603/https://zig.news/kristoff/compile-a-c-c-project-with-zig-368j) by Loris Cro
   - This is a great tutorial, but it's complex. It's not just calling into a C library &mdash; it's figuring out how to build a huge C application with Zig and then writing a new function that both calls the original C code and receives calls from the C code.
   - I learned a lot from the tutorial, but I had a hard time figuring out from this series how to call C from Zig in a simpler scenario.
   - This tutorial was also written for Zig 0.8.1, and the code no longer compiles with Zig 0.14.0.
