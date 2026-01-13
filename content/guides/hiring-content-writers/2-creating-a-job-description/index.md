@@ -151,4 +151,4 @@ By this point, you've created a job description and shown it to potential writer
 
 ---
 
-_Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for offering insight to help me create this guide. Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide me with feedback._
+_Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for offering insight to help me create this guide. Special thanks to Alexis Grant of *The Write Life* for volunteering her time to provide me with feedback._
