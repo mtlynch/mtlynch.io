@@ -1,6 +1,7 @@
 ---
 title: "My First Impressions of MeshCore Off-Grid Messaging"
 date: 2025-12-02
+lastmod: 2026-01-13
 banner_image: og-cover.webp
 tags:
   - first-impressions
@@ -367,6 +368,12 @@ It just _seems_ like such an open-source thing that I assumed it was. But I was 
 
 Without open-source clients, MeshCore doesn't work for me.
 
+{{<notice type="info">}}
+
+**Update (2026-01-13)**: There is now [an unofficial open-source client](https://github.com/zjs81/meshcore-open).
+
+{{</notice>}}
+
 I'm not an open-source zealot, and I think it's fine for software to be proprietary, but the whole point of off-grid communication is decentralization and technology freedom, so I can't get on board with a closed-source solution.
 
 Some parts of the MeshCore ecosystem are indeed open-source and liberally licensed, but critically the T-Deck firmware, the web app, and the mobile apps are all closed-source and proprietary. The firmware I flashed to my Heltec v3 and T-1000e is open-source, but the mobile and Android apps (clients) I used to use the radios were closed-source and proprietary. As far as I see, there are no open-source MeshCore clients aside from [the development CLI](https://github.com/meshcore-dev/meshcore-cli).
@@ -398,6 +405,7 @@ I'm open to revisiting MeshCore, but I'm waiting on open-source clients and impr
 ### What I dislike about MeshCore
 
 - All of the official MeshCore clients are closed-source and proprietary.
+  - **Update (2026-01-13)**: There is now [an unofficial open-source client](https://github.com/zjs81/meshcore-open)
 - The user experience is too brittle for me to rely on in an emergency, especially if I'm trying to communicate with MeshCore beginners.
 - Most of the hardware assumes you'll pair it with your mobile phone over Bluetooth, which introduces many more points of failure and complexity.
 - The only official standalone device is the T-Deck+, but I found it confusing and frustrating to use.
