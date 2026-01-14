@@ -181,8 +181,8 @@ I desperately wanted the core implementation to be Zig rather than C, but I saw 
 - I got most of the way through writing two new chapters of _Refactoring English_.
 - I got most of the way through writing the [design doc](https://codeberg.org/mtlynch/little-moments/src/branch/design-doc/DESIGN.md) for my photo sharing app idea.
 - I published ["The Most Popular Blogs of Hacker News in 2025."](https://refactoringenglish.com/blog/2025-hn-top-5/)
-- I created my first Flutter app.
-- I created my first cross-language library.
+- I created my first [Flutter app](https://codeberg.org/mtlynch/howdy-neighbor).
+- I created my first [cross-language library](https://codeberg.org/mtlynch/libmeshcore-client).
 - I made some [contributions](https://github.com/meshcore-dev/meshcore.js/pull/10) [to](https://github.com/meshcore-dev/meshcore.js/issues/12) [MeshCore](https://github.com/meshcore-dev/meshcore.js/pull/9) [meshcore.js](https://github.com/meshcore-dev/meshcore.js/pull/11).
   - Most of which, the maintainers are ignoring.
 
