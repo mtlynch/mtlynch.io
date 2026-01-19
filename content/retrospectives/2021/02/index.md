@@ -191,7 +191,7 @@ Here are some brief updates on projects that I still maintain but are not the pr
 
 _Hit the Front Page of Hacker News_, my course about blogging for developer audiences, finally launched in January. There was a jump in sales around the launch, but it was significantly less than I expected. My goal for the course was to earn $20k by the end of the year. That's looking unlikely.
 
-When I told [Cory Zue](https://www.coryzue.com/) that I was disappointed in sales so far, he teased me about how much TinyPilot's earnings have jaded me. The course earned more in January alone than I earned [my whole first year](/solo-developer-year-1/#how-i-made-and-spent-money) as an indie developer.
+When I told [Cory Zue](https://www.coryzue.com/) that I was disappointed in sales so far, he teased me about how much TinyPilot's earnings have jaded me. The course earned more in January alone than I earned [my whole first year](/bootstrapped-founder-year-1/#how-i-made-and-spent-money) as an indie developer.
 
 I'm planning to write a retrospective later this month that's focused entirely on what I learned from recording and marketing the course, so stay tuned for a more detailed discussion.
 

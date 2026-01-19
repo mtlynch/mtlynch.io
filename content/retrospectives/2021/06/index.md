@@ -161,7 +161,7 @@ TinyPilot is easy to use if you're on the same local network as the device, but 
 
 This would be a nice software as a service subscription opportunity, which would provide a complement to TinyPilot's hardware offerings at a higher profit margin.
 
-Still, I want to avoid hosting a service [where I have to be on-call](/solo-developer-year-3/#you-can-build-a-successful-business-without-being-available-247). I'm exploring the possibility of working with a vendor that can manage the operational aspects of the service.
+Still, I want to avoid hosting a service [where I have to be on-call](/bootstrapped-founder-year-3/#you-can-build-a-successful-business-without-being-available-247). I'm exploring the possibility of working with a vendor that can manage the operational aspects of the service.
 
 ### Talk to a lawyer who specializes in open-source licensing
 

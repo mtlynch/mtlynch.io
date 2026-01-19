@@ -76,7 +76,7 @@ When discussing other bottlenecks, I was surprised to learn that _folding paper_
 
 ## How can TinyPilot run while I'm on vacation?
 
-One of my goals for 2021 is to reach the point where my girlfriend and I can [take a two-week vacation](/solo-developer-year-3/#automate-tinypilot-management) without interrupting TinyPilot's operations. If we did that right now, fulfillment would completely stop until we came back. Customers would be displeased at the two-week delay in their orders.
+One of my goals for 2021 is to reach the point where my girlfriend and I can [take a two-week vacation](/bootstrapped-founder-year-3/#automate-tinypilot-management) without interrupting TinyPilot's operations. If we did that right now, fulfillment would completely stop until we came back. Customers would be displeased at the two-week delay in their orders.
 
 My girlfriend will return to grad school in June, at which point, she won't have time to work with me on TinyPilot. I definitely need to prepare for that. She once left for a week to visit her family, and I barely got anything done that week outside of packing orders.
 

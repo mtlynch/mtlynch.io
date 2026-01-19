@@ -7,6 +7,7 @@ tags:
   - is it keto
   - zestful
 description: Four years ago today, I quit my job as a developer at Google to create my own self-funded software business. This is a review of my fourth year and what I've learned so far about bootstrapping software businesses.
+aliases: [/bootstrapped-founder-year-4/]
 date: "2022-02-01"
 hero_image: cover.jpg
 custom_css: true
@@ -26,9 +27,9 @@ In this post, I'll share what I've learned from TinyPilot about being a bootstra
 
 Previous updates:
 
-- [My First Year as a Solo Developer](/solo-developer-year-1/)
-- [My Second Year as a Solo Developer](/solo-developer-year-2/)
-- [My Third Year as a Solo Developer](/solo-developer-year-3/)
+- [My First Year as a Solo Developer](/bootstrapped-founder-year-1/)
+- [My Second Year as a Solo Developer](/bootstrapped-founder-year-2/)
+- [My Third Year as a Solo Developer](/bootstrapped-founder-year-3/)
 
 ## My first year of profit
 
@@ -46,7 +47,7 @@ After running in the red for the first few years, this is my first cashflow posi
 
 **How can you afford to live on so little money?**
 
-I went into more detail [in my year two retrospective](/solo-developer-year-2/#how-can-you-afford-to-keep-losing-money), but the short answer is: low cost of living, significant savings from my Google days, and passive investment income.
+I went into more detail [in my year two retrospective](/bootstrapped-founder-year-2/#how-can-you-afford-to-keep-losing-money), but the short answer is: low cost of living, significant savings from my Google days, and passive investment income.
 
 {{</notice>}}
 
@@ -113,7 +114,7 @@ Aside from UI changes, we've added several major features, including:
 
 ### _Refactoring English_
 
-In building this blog over the past five years, I've learned several techniques that have made my writing clearer, more interesting, and better at attracting readers. One of my [2021 goals](/solo-developer-year-3/#publish-six-blog-posts-and-one-book) was to share what I've learned in a book called [_Refactoring English_](https://refactoringenglish.com). It would teach writing skills specifically to software developers.
+In building this blog over the past five years, I've learned several techniques that have made my writing clearer, more interesting, and better at attracting readers. One of my [2021 goals](/bootstrapped-founder-year-3/#publish-six-blog-posts-and-one-book) was to share what I've learned in a book called [_Refactoring English_](https://refactoringenglish.com). It would teach writing skills specifically to software developers.
 
 My great shame of the year is that I made almost no progress on the book.
 
@@ -252,11 +253,11 @@ As soon as Eric began working on the support queue, I realized we should have do
 
 Eric was surprised at how much he enjoyed taking over customer service. Talking to our customers has made him feel more invested in the business and gives him more insight into how his work benefits them.
 
-And remember my big insight about [consolidating TinyPilot to a single product](/solo-developer-year-4/#sell-just-one-thing)? That happened the same month that Eric started sharing customer support with me. It's no coincidence. Ceding that task gave me back several hours per week of free time, allowing me to think critically about the way customers see TinyPilot.
+And remember my big insight about [consolidating TinyPilot to a single product](/bootstrapped-founder-year-4/#sell-just-one-thing)? That happened the same month that Eric started sharing customer support with me. It's no coincidence. Ceding that task gave me back several hours per week of free time, allowing me to think critically about the way customers see TinyPilot.
 
 ## Grading last year's goals
 
-At the start of last year, I [set three high-level goals](/solo-developer-year-3/#goals-for-year-four).
+At the start of last year, I [set three high-level goals](/bootstrapped-founder-year-3/#goals-for-year-four).
 
 ### Grow TinyPilot to $600k in annual revenue
 

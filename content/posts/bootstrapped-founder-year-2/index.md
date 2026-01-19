@@ -7,6 +7,7 @@ tags:
   - is it keto
   - wanderjest
   - what got done
+aliases: [/bootstrapped-founder-year-2/]
 date: "2020-01-31"
 banner_image: cover.jpg
 description: Two years ago, I quit my developer job at Google to build my own software business. A year later, I posted an update about my finances, happiness, and lessons learned. Today marks the end of my second full year, so it's time for another update.
@@ -17,7 +18,7 @@ discuss_urls:
 
 {{<img src="cover.jpg" alt="My second year as a solo developer (cover image)" has-border="false">}}
 
-Two years ago, I [quit my developer job at Google](/why-i-quit-google/) to build my own software business. A year later, I [posted an update](/solo-developer-year-1/) about my finances, happiness, and lessons learned. Today marks the end of my second year, so it's time for another update.
+Two years ago, I [quit my developer job at Google](/why-i-quit-google/) to build my own software business. A year later, I [posted an update](/bootstrapped-founder-year-1/) about my finances, happiness, and lessons learned. Today marks the end of my second year, so it's time for another update.
 
 ## How I made and spent money
 
@@ -129,7 +130,7 @@ Overall, I still lost money, but try not to get too hung up on that. I tripled r
 
 My long-term unprofitability often perplexes people. They assume I fund my money-losing endeavors with freelance work, but the truth is that 100% of my working hours go into my non-lucrative businesses. This is possible due to three main factors:
 
-- **Low expenses**: I have no children and [live in an inexpensive area](/solo-developer-year-1/#so-i-bought-a-house) where my costs are ~$2k/month.
+- **Low expenses**: I have no children and [live in an inexpensive area](/bootstrapped-founder-year-1/#so-i-bought-a-house) where my costs are ~$2k/month.
 - **High savings**: It's hard to work for big software companies for 11 years without building a decent nest egg.
 - **Lucky investments**: Throughout my career, most of my money has been in the S&P 500 during periods of especially strong market runs. My small bets on [cryptocurrency](/tags/sia/) also paid off well.
 
@@ -141,7 +142,7 @@ My long-term unprofitability often perplexes people. They assume I fund my money
 
 Zestful launched in mid-2018 as my first attempt at a software-as-a-service (SaaS) business. It allows food apps to recognize the structure of recipe ingredients. Given an ingredient like, "2 1/2 tablespoons finely chopped parsley," Zestful infers that `2.5` is the quantity, `tablespoons` is the unit of measure, `parsley` is the product, and `finely chopped` is a preparation step.
 
-After earning [a big fat zero](/solo-developer-year-1/#zestful) last year, Zestful finally realized significant revenue throughout 2019. [A single enterprise sale in December](/retrospectives/2020/01/#zestful) accounted for 79% of its annual revenue. That sale also represented 53% of total revenue across all my businesses.
+After earning [a big fat zero](/bootstrapped-founder-year-1/#zestful) last year, Zestful finally realized significant revenue throughout 2019. [A single enterprise sale in December](/retrospectives/2020/01/#zestful) accounted for 79% of its annual revenue. That sale also represented 53% of total revenue across all my businesses.
 
 | Income/Expense | 2018        | 2019        | Change                                      |
 | -------------- | ----------- | ----------- | ------------------------------------------- |
@@ -293,7 +294,7 @@ I'd do this forever.
 
 ## Grading my goals
 
-In last year's update, I [gave myself four goals](/solo-developer-year-1/#goals-for-year-two) for the year:
+In last year's update, I [gave myself four goals](/bootstrapped-founder-year-1/#goals-for-year-two) for the year:
 
 ### Achieve $500/month in revenue across my businesses
 
@@ -354,8 +355,8 @@ Here's what I hope to accomplish in my third year as a solo developer:
 
 ## Updates
 
-- **Update (Feb. 1, 2021)**: [My Third Year as a Solo Developer](/solo-developer-year-3/)
-- **Update (Feb. 1, 2022)**: [My Fourth Year as a Bootstrapped Founder](/solo-developer-year-4/)
+- **Update (Feb. 1, 2021)**: [My Third Year as a Solo Developer](/bootstrapped-founder-year-3/)
+- **Update (Feb. 1, 2022)**: [My Fourth Year as a Bootstrapped Founder](/bootstrapped-founder-year-4/)
 
 ---
 

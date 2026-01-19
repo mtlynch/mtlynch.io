@@ -3,6 +3,7 @@ title: "My Sixth Year as a Bootstrapped Founder"
 tags:
   - annual review
   - tinypilot
+aliases: [/bootstrapped-founder-year-6/]
 date: 2024-02-16
 custom_css: true
 hero_image: cover.webp
@@ -32,11 +33,11 @@ In this post, I'll share what I've learned about being a bootstrapped founder fr
 
 ## Previous updates
 
-- [My First Year as a Solo Developer](/solo-developer-year-1/)
-- [My Second Year as a Solo Developer](/solo-developer-year-2/)
-- [My Third Year as a Solo Developer](/solo-developer-year-3/)
-- [My Fourth Year as a Bootstrapped Founder](/solo-developer-year-4/)
-- [My Fifth Year as a Bootstrapped Founder](/solo-developer-year-5/)
+- [My First Year as a Solo Developer](/bootstrapped-founder-year-1/)
+- [My Second Year as a Solo Developer](/bootstrapped-founder-year-2/)
+- [My Third Year as a Solo Developer](/bootstrapped-founder-year-3/)
+- [My Fourth Year as a Bootstrapped Founder](/bootstrapped-founder-year-4/)
+- [My Fifth Year as a Bootstrapped Founder](/bootstrapped-founder-year-5/)
 
 ## TinyPilot became 20x more profitable
 
@@ -116,7 +117,7 @@ The local team seemed to have flexibility already because they could come in whe
 
 Switching to the 3PL eliminated the daily deadline of mail pickup. Instead, our only deadline was to ship assembled products to our warehouse once a week.
 
-The increase in flexibility reduced a lot of stress. If an employee wanted to take a four-day weekend, they could shift their schedule around and still work their normal 15 hours that week. Or they could take a few days off and [not feel like it was overloading the rest of the team](/solo-developer-year-5/#run-at-50-capacity).
+The increase in flexibility reduced a lot of stress. If an employee wanted to take a four-day weekend, they could shift their schedule around and still work their normal 15 hours that week. Or they could take a few days off and [not feel like it was overloading the rest of the team](/bootstrapped-founder-year-5/#run-at-50-capacity).
 
 ## Making TinyPilot look like a real product
 
@@ -188,7 +189,7 @@ So, I haven't figured out a way for us to go significantly faster, but I've lear
 
 ### Most support escalation can happen asynchronously
 
-I try to give the TinyPilot team [as much autonomy as possible](/solo-developer-year-4/#good-leadership-means-helping-teammates-grow). At the same time, I want to make sure everyone feels comfortable asking me for help when they get stuck.
+I try to give the TinyPilot team [as much autonomy as possible](/bootstrapped-founder-year-4/#good-leadership-means-helping-teammates-grow). At the same time, I want to make sure everyone feels comfortable asking me for help when they get stuck.
 
 The problem was that when support tickets escalated to me, they felt particularly stressful.
 
@@ -204,7 +205,7 @@ In the minority of cases where I had a better idea for solving a support issue, 
 
 ## Grading last year's goals
 
-Last year, I set [three high-level goals](/solo-developer-year-5/#goals-for-year-six) that I wanted to achieve during the year. Here's how I did against those goals:
+Last year, I set [three high-level goals](/bootstrapped-founder-year-5/#goals-for-year-six) that I wanted to achieve during the year. Here's how I did against those goals:
 
 ### Manage TinyPilot on 20 hours per week
 
@@ -239,11 +240,11 @@ If the handyman knocked on my door tomorrow to announce that some disaster destr
 
 ### Manage TinyPilot on 20 hours per week
 
-I know I set this as a goal in [2022](/solo-developer-year-4/#manage-tinypilot-on-20-hours-per-week) and again in [2023](/solo-developer-year-5/#manage-tinypilot-on-20-hours-per-week), but the third time's the charm! My management time is trending downward, so this could be my year.
+I know I set this as a goal in [2022](/bootstrapped-founder-year-4/#manage-tinypilot-on-20-hours-per-week) and again in [2023](/bootstrapped-founder-year-5/#manage-tinypilot-on-20-hours-per-week), but the third time's the charm! My management time is trending downward, so this could be my year.
 
 ### Publish a course or book
 
-In 2021, I [said](/solo-developer-year-3/#publish-six-blog-posts-and-one-book) I'd [write a book](https://refactoringenglish.com/) to help developers improve their writing. I got 80% through the first chapter, and then TinyPilot absorbed all of my free time that year.
+In 2021, I [said](/bootstrapped-founder-year-3/#publish-six-blog-posts-and-one-book) I'd [write a book](https://refactoringenglish.com/) to help developers improve their writing. I got 80% through the first chapter, and then TinyPilot absorbed all of my free time that year.
 
 I still want to write that book, so if I reduce my management time, hopefully, I can use the free time to write more.
 

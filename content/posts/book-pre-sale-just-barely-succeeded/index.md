@@ -32,7 +32,7 @@ The thing that saved me was a lucky post on Hacker News.
 
 ## Before the pre-sale
 
-I started working on _Refactoring English_ back in 2021. As soon as I started, my main business grew unexpectedly, and I spent so much time managing my company that I [never had time to work on the book](/solo-developer-year-4/#refactoring-english).
+I started working on _Refactoring English_ back in 2021. As soon as I started, my main business grew unexpectedly, and I spent so much time managing my company that I [never had time to work on the book](/bootstrapped-founder-year-4/#refactoring-english).
 
 Until 2025, all I had of the book was a rough table of contents and a signup form for email updates about the book.
 
@@ -64,7 +64,7 @@ But that was okay. I still had other ideas for marketing my book.
 
 Even though my book's pre-sale started slower than I'd hoped, I secretly had an ace up my sleeve.
 
-A month earlier, I'd written a blog post called ["My Seventh Year as a Bootstrapped Founder."](/solo-developer-year-7/) I [submitted it to Hacker News](https://news.ycombinator.com/item?id=42932492), and it immediately shot to the #1 position on the front page. It had 45 upvotes and was growing quickly.
+A month earlier, I'd written a blog post called ["My Seventh Year as a Bootstrapped Founder."](/bootstrapped-founder-year-7/) I [submitted it to Hacker News](https://news.ycombinator.com/item?id=42932492), and it immediately shot to the #1 position on the front page. It had 45 upvotes and was growing quickly.
 
 Sadly, within minutes, the Hacker News moderators removed my post.
 

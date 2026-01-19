@@ -3,6 +3,7 @@ title: "My Fifth Year as a Bootstrapped Founder"
 tags:
   - annual review
   - tinypilot
+aliases: [/bootstrapped-founder-year-5/]
 date: 2023-02-10
 custom_css: true
 hero_image: cover.webp
@@ -28,10 +29,10 @@ In this post, I'll share what I've learned about being a bootstrapped founder fr
 
 ## Previous updates
 
-- [My First Year as a Solo Developer](/solo-developer-year-1/)
-- [My Second Year as a Solo Developer](/solo-developer-year-2/)
-- [My Third Year as a Solo Developer](/solo-developer-year-3/)
-- [My Fourth Year as a Bootstrapped Founder](/solo-developer-year-4/)
+- [My First Year as a Solo Developer](/bootstrapped-founder-year-1/)
+- [My Second Year as a Solo Developer](/bootstrapped-founder-year-2/)
+- [My Third Year as a Solo Developer](/bootstrapped-founder-year-3/)
+- [My Fourth Year as a Bootstrapped Founder](/bootstrapped-founder-year-4/)
 
 ## Highlights from the year
 
@@ -167,7 +168,7 @@ Debian packages have accelerated our development. The tooling catches expensive 
 
 ## Grading last year's goals
 
-Last year, I set [three high-level goals](/solo-developer-year-4/#goals-for-year-four) that I wanted to achieve during the year. Here's how I did against those goals:
+Last year, I set [three high-level goals](/bootstrapped-founder-year-4/#goals-for-year-four) that I wanted to achieve during the year. Here's how I did against those goals:
 
 ### Grow TinyPilot to $1M in annual revenue
 
