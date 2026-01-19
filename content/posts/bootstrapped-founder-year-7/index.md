@@ -1,6 +1,7 @@
 ---
 title: "My Seventh Year as a Bootstrapped Founder"
-aliases: [/solo-developer-year-7/]
+aliases:
+  - /solo-developer-year-7/
 date: 2025-02-03
 hero_image: cover.webp
 banner_image: cover.webp

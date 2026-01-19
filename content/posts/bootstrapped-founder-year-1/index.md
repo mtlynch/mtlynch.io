@@ -12,7 +12,8 @@ tags:
 description:
   Exactly one year ago, I quit my job at Google, so it's time to reflect
   on how the decision has affected my finances, lifestyle, and happiness.
-aliases: [/solo-developer-year-1/]
+aliases:
+  - /solo-developer-year-1/
 discuss_urls:
   reddit: https://redd.it/am2i0o
   hacker_news: https://news.ycombinator.com/item?id=19054150

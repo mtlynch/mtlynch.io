@@ -8,7 +8,8 @@ tags:
   - wanderjest
 hero_image: cover.jpg
 description: Today is the third anniversary of me quitting my job at Google to build my own software business. I posted updates at the end of my first and second years, so it's time for another update.
-aliases: [/solo-developer-year-3/]
+aliases:
+  - /solo-developer-year-3/
 banner_image: og-cover.jpg
 date: "2021-02-01"
 discuss_urls:
