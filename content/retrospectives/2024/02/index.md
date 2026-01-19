@@ -22,7 +22,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Publish annual retrospective
 
-- **Result**: Published ["My Sixth Year as a Bootstrapped Founder"](/solo-developer-year-6/)
+- **Result**: Published ["My Sixth Year as a Bootstrapped Founder"](/bootstrapped-founder-year-6/)
 - **Grade**: A
 
 I published this a few weeks late, but I was happy with how it came out.
@@ -141,7 +141,7 @@ I don't know how far I'll take the project, but it's serving as a practical way 
 
 ### What got done?
 
-- Published ["My Sixth Year as a Bootstrapped Founder"](/solo-developer-year-6/), which reached [the #1 spot on Hacker News](https://news.ycombinator.com/item?id=39398009) for the day.
+- Published ["My Sixth Year as a Bootstrapped Founder"](/bootstrapped-founder-year-6/), which reached [the #1 spot on Hacker News](https://news.ycombinator.com/item?id=39398009) for the day.
 - Began documenting TinyPilot's release process.
 
 ### Lessons learned

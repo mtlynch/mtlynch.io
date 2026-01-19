@@ -192,7 +192,7 @@ I've been in talks with a startup trying to build a competitor to [RapidAPI](htt
 
 ### WakaTime
 
-After the blog post about [my second anniversary as a solo developer](/solo-developer-year-2/), Alan Hamlett emailed me offering a free premium account for his service, [WakaTime](https://wakatime.com/). It's a plugin that records metrics about the way that you develop software, so it reports how long you spend writing code vs. compiling.
+After the blog post about [my second anniversary as a solo developer](/bootstrapped-founder-year-2/), Alan Hamlett emailed me offering a free premium account for his service, [WakaTime](https://wakatime.com/). It's a plugin that records metrics about the way that you develop software, so it reports how long you spend writing code vs. compiling.
 
 At first, WakaTime didn't sound like something I'd want, but then I realized it could answer a question I've had for a long time: how long do I spend writing this blog? I find writing to be incredibly valuable, but I also need to be mindful of its significant time cost.
 

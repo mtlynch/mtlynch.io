@@ -61,7 +61,7 @@ I had complicated taxes this year because it's my first year married filing join
 
 March was TinyPilot's strongest month of sales revenue in history, narrowly beating [our previous record](/retrospectives/2022/12/#tinypilot-stats) by $600. Profit at the one-month granularity is down, but the three-month average is the more meaningful metric, and that's looking strong.
 
-Visits are down from last month but only because February had an atypical surge in visits from my [year six review](/solo-developer-year-6/) post.
+Visits are down from last month but only because February had an atypical surge in visits from my [year six review](/bootstrapped-founder-year-6/) post.
 
 ## Tightening access to TinyPilot's production secrets
 

@@ -8,6 +8,8 @@ tags:
   - wanderjest
 hero_image: cover.jpg
 description: Today is the third anniversary of me quitting my job at Google to build my own software business. I posted updates at the end of my first and second years, so it's time for another update.
+aliases:
+  - /solo-developer-year-3/
 banner_image: og-cover.jpg
 date: "2021-02-01"
 discuss_urls:
@@ -15,11 +17,11 @@ discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=25989010
 ---
 
-Today is the third anniversary of [quitting my job at Google](/why-i-quit-google/) to build my own software business. I posted updates at the end of my [first](/solo-developer-year-1/) and [second](/solo-developer-year-2/) years, so it's time to share my progress.
+Today is the third anniversary of [quitting my job at Google](/why-i-quit-google/) to build my own software business. I posted updates at the end of my [first](/bootstrapped-founder-year-1/) and [second](/bootstrapped-founder-year-2/) years, so it's time to share my progress.
 
 ## The year things clicked into place
 
-In my first two years working for myself, I earned less than $10k total. [My goal](/solo-developer-year-2/#goals-for-year-three) for the third year was to earn $20k in revenue.
+In my first two years working for myself, I earned less than $10k total. [My goal](/bootstrapped-founder-year-2/#goals-for-year-three) for the third year was to earn $20k in revenue.
 
 Halfway through the year, it looked like I'd fall short. My businesses collectively generated about $300/month, and none of my new ideas were working.
 
@@ -35,7 +37,7 @@ I sell a physical product now, so my income lags my expenses by two or three mon
 
 **Wait, how can you afford to keep losing money?**
 
-I went into more detail about this [in last year's retrospective](/solo-developer-year-2/#how-can-you-afford-to-keep-losing-money), but the short version is: low cost of living, significant savings from my Google days, and passive investment income.
+I went into more detail about this [in last year's retrospective](/bootstrapped-founder-year-2/#how-can-you-afford-to-keep-losing-money), but the short version is: low cost of living, significant savings from my Google days, and passive investment income.
 
 {{</notice>}}
 
@@ -139,7 +141,7 @@ This small bit of planning made a huge difference in my readership. In 2019, my 
 
 ## Failed projects
 
-One of the most important lessons I learned last year was that pursuing the right ideas means [rejecting the wrong ones](/solo-developer-year-2/#pursuing-the-right-idea-means-rejecting-the-wrong-ones). After six to eight weeks, if a business fails to generate meaningful revenue, I either pivot to focus on different customers or move on to an entirely new project.
+One of the most important lessons I learned last year was that pursuing the right ideas means [rejecting the wrong ones](/bootstrapped-founder-year-2/#pursuing-the-right-idea-means-rejecting-the-wrong-ones). After six to eight weeks, if a business fails to generate meaningful revenue, I either pivot to focus on different customers or move on to an entirely new project.
 
 ### [Is It Keto](https://isitketo.org)
 
@@ -239,7 +241,7 @@ I've been getting better at easing the pressure on myself and separating work fr
 
 ## Grading last year's goals
 
-At the start of last year, I [set three high-level goals](/solo-developer-year-2/#goals-for-year-three).
+At the start of last year, I [set three high-level goals](/bootstrapped-founder-year-2/#goals-for-year-three).
 
 ### Earn $20k in revenue across my businesses
 
@@ -302,7 +304,7 @@ Once again, I feel incredibly fortunate to be working for myself, and I hope to 
 
 ## Updates
 
-- **Update (Feb. 1, 2022)**: [My Fourth Year as a Bootstrapped Founder](/solo-developer-year-4/)
+- **Update (Feb. 1, 2022)**: [My Fourth Year as a Bootstrapped Founder](/bootstrapped-founder-year-4/)
 
 ---
 

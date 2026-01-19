@@ -84,7 +84,7 @@ I have other ideas for marketing the course, but I'd like there to be a large ov
 
 I found it hard to record videos before, but now that I have a baby, it's even harder. The thing that's feeling more appealing is to try circling back to [_Refactoring English_](https://refactoringenglish.com).
 
-Longtime readers of this blog may recognize _Refactoring English_ as my oft-promised, never-delivered book about how developers can improve their writing. I [promised to write in 2021](/solo-developer-year-3/#publish-six-blog-posts-and-one-book), but then my business swallowed all of my time, and the book has been sitting on hold ever since.
+Longtime readers of this blog may recognize _Refactoring English_ as my oft-promised, never-delivered book about how developers can improve their writing. I [promised to write in 2021](/bootstrapped-founder-year-3/#publish-six-blog-posts-and-one-book), but then my business swallowed all of my time, and the book has been sitting on hold ever since.
 
 My plan next month is to change my blog self-ad to be about _Refactoring English_ and see if more people visit.
 

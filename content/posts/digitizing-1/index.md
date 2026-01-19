@@ -143,7 +143,7 @@ Invariably, I'd give up, disconnect everything, and banish the equipment to my c
 
 ### Surrendering to digitization professionals
 
-Fast forward to 2018. I had dragged these videotapes and tons of equipment to four different apartments, and I was preparing to [move from New York City to Massachusetts](/solo-developer-year-1/#so-i-bought-a-house). I couldn't justify moving this stuff again when it had become clear that I'd never finish the project on my own.
+Fast forward to 2018. I had dragged these videotapes and tons of equipment to four different apartments, and I was preparing to [move from New York City to Massachusetts](/bootstrapped-founder-year-1/#so-i-bought-a-house). I couldn't justify moving this stuff again when it had become clear that I'd never finish the project on my own.
 
 I asked my family if they'd be comfortable with me sending the tapes to a digitization company. Fortunately, nobody minded &mdash; they were all much more interested in seeing the footage again.
 

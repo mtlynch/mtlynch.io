@@ -54,13 +54,13 @@ It's exciting to see that the site is still growing even though I stopped workin
 
 [Zestful](https://zestfuldata.com), the ingredient parsing service I built last year, earned $123.85 of revenue in May. That's the first time its monthly earnings have been more than a couple of dollars.
 
-Almost the full amount comes from a single customer who needed Zestful for a one-time project, so it's unlikely to repeat for long, but it's fun to get a bit of money back on a project that [cost me ~$8k](/solo-developer-year-1/#zestful).
+Almost the full amount comes from a single customer who needed Zestful for a one-time project, so it's unlikely to repeat for long, but it's fun to get a bit of money back on a project that [cost me ~$8k](/bootstrapped-founder-year-1/#zestful).
 
 ## What Got Done: business or hobby?
 
 {{<img src="whatgotdone.jpg" alt="What Got Done screenshot" caption="My [What Got Done entry](https://weeks.mtlynch.io/2019-06-07) for last week" max-width="800px" has-border="false">}}
 
-I'm not sure what to do with What Got Done. I built it primarily to get practical experience with [Vue.js](https://vuejs.org/), as learning a web framework was one of my [goals for 2019](/solo-developer-year-1/#goals-for-year-two). As a tool, it's useful for me because I like logging my tasks to close out the week. I never thought it was my most promising business idea, but I figured it wouldn't be that much more work to see if it had potential as a paid product.
+I'm not sure what to do with What Got Done. I built it primarily to get practical experience with [Vue.js](https://vuejs.org/), as learning a web framework was one of my [goals for 2019](/bootstrapped-founder-year-1/#goals-for-year-two). As a tool, it's useful for me because I like logging my tasks to close out the week. I never thought it was my most promising business idea, but I figured it wouldn't be that much more work to see if it had potential as a paid product.
 
 Now that I've launched it and found that nobody is interested in paying for premium features, I'm considering two options:
 

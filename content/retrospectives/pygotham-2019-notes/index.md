@@ -205,7 +205,7 @@ Some takeaways:
 
 ### Three conferences per year is a good goal
 
-At the beginning of the year, I [set a goal](/solo-developer-year-1/#goals-for-year-two) to speak at three conferences in 2019. PyGotham completes that goal:
+At the beginning of the year, I [set a goal](/bootstrapped-founder-year-1/#goals-for-year-two) to speak at three conferences in 2019. PyGotham completes that goal:
 
 1. [NERD Summit 2019](https://2019.nerdsummit.org/)
 1. [PyTexas 2019](https://2019.pytexas.org/) ([my notes](/retrospectives/pytexas-2019-notes/))
