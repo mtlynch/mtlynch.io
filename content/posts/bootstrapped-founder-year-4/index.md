@@ -7,7 +7,7 @@ tags:
   - is it keto
   - zestful
 description: Four years ago today, I quit my job as a developer at Google to create my own self-funded software business. This is a review of my fourth year and what I've learned so far about bootstrapping software businesses.
-aliases: [/bootstrapped-founder-year-4/]
+aliases: [/solo-developer-year-4/]
 date: "2022-02-01"
 hero_image: cover.jpg
 custom_css: true

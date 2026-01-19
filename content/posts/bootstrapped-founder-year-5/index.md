@@ -3,7 +3,7 @@ title: "My Fifth Year as a Bootstrapped Founder"
 tags:
   - annual review
   - tinypilot
-aliases: [/bootstrapped-founder-year-5/]
+aliases: [/solo-developer-year-5/]
 date: 2023-02-10
 custom_css: true
 hero_image: cover.webp

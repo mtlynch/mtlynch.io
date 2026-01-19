@@ -3,7 +3,7 @@ title: "My Sixth Year as a Bootstrapped Founder"
 tags:
   - annual review
   - tinypilot
-aliases: [/bootstrapped-founder-year-6/]
+aliases: [/solo-developer-year-6/]
 date: 2024-02-16
 custom_css: true
 hero_image: cover.webp

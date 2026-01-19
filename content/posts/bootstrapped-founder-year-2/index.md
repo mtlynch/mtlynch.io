@@ -7,7 +7,7 @@ tags:
   - is it keto
   - wanderjest
   - what got done
-aliases: [/bootstrapped-founder-year-2/]
+aliases: [/solo-developer-year-2/]
 date: "2020-01-31"
 banner_image: cover.jpg
 description: Two years ago, I quit my developer job at Google to build my own software business. A year later, I posted an update about my finances, happiness, and lessons learned. Today marks the end of my second full year, so it's time for another update.
