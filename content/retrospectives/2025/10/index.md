@@ -85,7 +85,7 @@ Both posts did well. They both reached the front page of Hacker News, though the
 | ["The Software Essays that Shaped Me"](https://refactoringenglish.com/blog/software-essays-that-shaped-me/) | 17            | 20.2k          | [307](https://news.ycombinator.com/item?id=45425568) | [85](https://lobste.rs/s/rouky6/software_essays_shaped_me)     | [125](https://www.reddit.com/r/programming/comments/1nug0oo/the_software_essays_that_shaped_me/)  |
 | ["I Once Appeared in The Old New Thing"](/my-old-new-thing-cameo/)                                          | 4             | 3.8k           | [49](https://news.ycombinator.com/item?id=45274779)  | [49](https://lobste.rs/s/pulpod/i_once_appeared_old_new_thing) | [28](https://www.reddit.com/r/programming/comments/1nx8l6q/i_once_appeared_in_the_old_new_thing/) |
 
-It's interesting that the results scaled almost linearly with the effort I invested, which I typically [don't find to be the case](/solo-developer-year-7/#i-worked-on-educational-products).
+It's interesting that the results scaled almost linearly with the effort I invested, which I typically [don't find to be the case](/bootstrapped-founder-year-7/#i-worked-on-educational-products).
 
 ## Squandering my moment of glory
 

@@ -124,7 +124,7 @@ The Voyager 2 is on track to ship in a month or two. My original plan was to sel
 
 ## Taking a test vacation
 
-One of my goals for this year is to [systematize enough of TinyPilot's business operations that I can take a two-week vacation](/solo-developer-year-3/#automate-tinypilot-management). I haven't tested that much because it's not so appealing to travel during a global pandemic. Now that vaccines have rolled out, I've taken a few trips.
+One of my goals for this year is to [systematize enough of TinyPilot's business operations that I can take a two-week vacation](/bootstrapped-founder-year-3/#automate-tinypilot-management). I haven't tested that much because it's not so appealing to travel during a global pandemic. Now that vaccines have rolled out, I've taken a few trips.
 
 In August, I took a three-day weekend to attend a friend's wedding. That went smoothly, but I was essentially just taking a Friday off work, so there's very little that could have gone wrong.
 

@@ -39,7 +39,7 @@ Sadly, once we started working with the 3PL, we found serious gaps in their work
 
 ### Write my fifth [annual retrospective](/tags/annual-review/)
 
-- **Result**: I [published it](/solo-developer-year-5/) 10 days late, but I'm happy with the result.
+- **Result**: I [published it](/bootstrapped-founder-year-5/) 10 days late, but I'm happy with the result.
 - **Grade**: A-
 
 I had a tough time writing my annual review this year. The final post was 2.5k words, but I probably threw out 5-8k words in rejected drafts. I kept finding myself writing long sections only to realize the story required 1,500 words of boring background information for 200 words of reflection.
@@ -62,7 +62,7 @@ I felt like the version I published did a good job of covering the major topics 
 
 Sales are down from our peak at the end of last year, but that's intentional. I'm scaling back advertising and keeping prices high on Amazon to compensate for our supply shortage and to reduce load on TinyPilot's fulfillment staff while we transition to our new product.
 
-TinyPilot's three-month average trailing profit has been positive for five straight months, its longest streak ever. I'm especially excited about January's numbers because we had a healthy profit despite several major one-time costs and slower sales than I anticipate for the rest of the year. $8.5k/month puts me almost perfectly on track for [my 2023 goal of $100k/yr in profit](/solo-developer-year-5/#earn-100k-in-profit).
+TinyPilot's three-month average trailing profit has been positive for five straight months, its longest streak ever. I'm especially excited about January's numbers because we had a healthy profit despite several major one-time costs and slower sales than I anticipate for the rest of the year. $8.5k/month puts me almost perfectly on track for [my 2023 goal of $100k/yr in profit](/bootstrapped-founder-year-5/#earn-100k-in-profit).
 
 ## Increasing production from 140 to 200 devices per month
 
@@ -164,7 +164,7 @@ When I ran into the edge case scenarios with my first 3PL, I followed up with my
 ### What got done?
 
 - Launched [TinyPilot Voyager 2a](https://tinypilotkvm.com/product/tinypilot-voyager2a)
-- Published my [fifth annual retrospective](/solo-developer-year-5/)
+- Published my [fifth annual retrospective](/bootstrapped-founder-year-5/)
 - Canceled my 3PL vendor contract
 
 ### Lessons learned

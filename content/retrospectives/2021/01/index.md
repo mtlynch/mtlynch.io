@@ -56,7 +56,7 @@ I got this in just under the wire, sending out the last video at 5 PM on New Yea
 | Donations         | $0.00          | $9.00          | <font color="green">+$9.00 (+inf%)</font>        |
 | **Total Revenue** | **$12,313.25** | **$15,367.05** | **<font color="green">+$3,053.80 (+25%)</font>** |
 
-TinyPilot had another strong month, growing by 25% in revenue. It's crazy to think that [my goal for 2020](/solo-developer-year-2/#goals-for-year-three) was to make $20k in revenue for the _year_, and I'm earning that almost every month now.
+TinyPilot had another strong month, growing by 25% in revenue. It's crazy to think that [my goal for 2020](/bootstrapped-founder-year-2/#goals-for-year-three) was to make $20k in revenue for the _year_, and I'm earning that almost every month now.
 
 Despite the growth, I still feel like I'm fumbling on TinyPilot. I did no marketing in December aside from failed attempts to get reviews from YouTubers. Even development work slowed because of how little bandwidth I had. I've decided that revenues are strong enough that I can afford to bring on a part-time developer, and I've already begun the search process.
 
@@ -136,7 +136,7 @@ At the same time, I started working on [my first-ever video course](https://hitt
 
 I _vastly_ underestimated the work required to complete the course. It's probably going to take 150-200 hours to create this course, and it's been draining tons of time from TinyPilot.
 
-And if that wasn't enough, I have a tradition of publishing a [yearly](/solo-developer-year-1/) [retrospective](/solo-developer-year-2/) on February 1st, the anniversary of when I [quit Google to work for myself](/why-i-quit-google/). I want to keep up that tradition, as it always draws a big response. But that means I need the blog post ready by February 1st.
+And if that wasn't enough, I have a tradition of publishing a [yearly](/bootstrapped-founder-year-1/) [retrospective](/bootstrapped-founder-year-2/) on February 1st, the anniversary of when I [quit Google to work for myself](/why-i-quit-google/). I want to keep up that tradition, as it always draws a big response. But that means I need the blog post ready by February 1st.
 
 So, in a one-month timespan, I gave myself four aggressive deadlines without realizing it. I'm definitely going to be more conservative about publicly declaring deadlines in the future.
 

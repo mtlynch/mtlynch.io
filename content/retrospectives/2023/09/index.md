@@ -85,7 +85,7 @@ My options at this point are:
 
 ## Making TinyPilot less configurable
 
-One of the biggest sources of technical debt for TinyPilot is [our use of Ansible](/solo-developer-year-5/#ansible-and-git-are-not-software-distribution-tools). When I created TinyPilot, I didn't know how to distribute software on Linux. I knew how to use Ansible, so TinyPilot's installer was a minimal shell script that started Ansible and then used Ansible to do the heavy lifting of the installation.
+One of the biggest sources of technical debt for TinyPilot is [our use of Ansible](/bootstrapped-founder-year-5/#ansible-and-git-are-not-software-distribution-tools). When I created TinyPilot, I didn't know how to distribute software on Linux. I knew how to use Ansible, so TinyPilot's installer was a minimal shell script that started Ansible and then used Ansible to do the heavy lifting of the installation.
 
 Over time, it became clear that Ansible was the wrong tool for the job. The more subtle mistake was that I'd made the installer too _configurable_.
 
@@ -131,7 +131,7 @@ The problem is that these numbers are hard to balance. Every new line of code in
 
 Granted, the 20% investment in eliminating complexity should reduce maintenance costs, but it won't always offset the load from new features. Last year we added support for H.264 video, but we had to integrate [Janus](https://janus.conf.meetecho.com/), a third-party WebRTC server. WebRTC is extremely complicated, so that single feature increased our maintenance burden by 20-30% overnight.
 
-Thinking about this more, maybe this is a good opportunity for [my 50% rule](/solo-developer-year-5/#run-at-50-capacity). We should spend 50% of our time improving the product, then perform necessary maintenance, then spend whatever's left over on automation and reducing complexity.
+Thinking about this more, maybe this is a good opportunity for [my 50% rule](/bootstrapped-founder-year-5/#run-at-50-capacity). We should spend 50% of our time improving the product, then perform necessary maintenance, then spend whatever's left over on automation and reducing complexity.
 
 Revisiting the last release through that lens, we had:
 

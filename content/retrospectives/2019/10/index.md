@@ -106,7 +106,7 @@ One of the most valuable skills I've learned is the ability to distinguish betwe
 
 ## Thinking bigger
 
-At the start of the year, I set a goal for myself to [earn $500 per month](/solo-developer-year-1/#goals-for-year-two) from my businesses. Is It Keto is bringing me close to that target, and selling meal plans might put me over the bar.
+At the start of the year, I set a goal for myself to [earn $500 per month](/bootstrapped-founder-year-1/#goals-for-year-two) from my businesses. Is It Keto is bringing me close to that target, and selling meal plans might put me over the bar.
 
 As I think about my next project and what I want to accomplish in 2020, I'm thinking bigger. Two people, in particular, drove this.
 
