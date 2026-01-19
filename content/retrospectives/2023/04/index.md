@@ -61,7 +61,7 @@ In order to transition to the 3PL, we needed to free up the local team's workloa
 
 Switching TinyPilot's case from plastic to metal dramatically increased demand. Even as I increase prices and reduce marketing to near zero, sales volume keeps increasing.
 
-My goal for the year is to [reach $100k in profit](/solo-developer-year-5/#earn-100k-in-profit), but we're already 75% there. At this rate, we'll hit $100k in annual profit before the end of April.
+My goal for the year is to [reach $100k in profit](/bootstrapped-founder-year-5/#earn-100k-in-profit), but we're already 75% there. At this rate, we'll hit $100k in annual profit before the end of April.
 
 ## The hiccups in transitioning to a 3PL vendor
 

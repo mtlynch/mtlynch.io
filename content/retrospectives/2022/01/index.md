@@ -107,7 +107,7 @@ The design firm took it well. They said they typically work on larger projects w
 
 ## The last unfilled role: tech support
 
-One of my goals for 2021 was to systematize enough of TinyPilot that [I could take a two-week vacation](/solo-developer-year-3/#automate-tinypilot-management) without impacting operations.
+One of my goals for 2021 was to systematize enough of TinyPilot that [I could take a two-week vacation](/bootstrapped-founder-year-3/#automate-tinypilot-management) without impacting operations.
 
 Over the December holidays, I took a one-week vacation where I didn't read any TinyPilot email. Everything went smoothly, but it took me several days to get through the backlog of technical support requests when I got back.
 

@@ -63,7 +63,7 @@ We're in a strange position of growing revenues despite me trying to constrain s
 
 I expect we could reach $90k in monthly revenue once we shift fulfillment to a 3PL vendor. We're currently limited by fulfillment capacity, but once we transition to a 3PL, that bottleneck disappears.
 
-We're in our seventh consecutive month of positive profit (well, the trailing three-month average, since our profits are bursty). At this rate, we'll comfortably exceed [my 2023 goal for $100k in profit](/solo-developer-year-5/#earn-100k-in-profit).
+We're in our seventh consecutive month of positive profit (well, the trailing three-month average, since our profits are bursty). At this rate, we'll comfortably exceed [my 2023 goal for $100k in profit](/bootstrapped-founder-year-5/#earn-100k-in-profit).
 
 ## "Are you the TinyPilot guy?"
 
@@ -147,7 +147,7 @@ I've been working for the past few years to give the dev team more autonomy and 
 
 ## Proactive work from the team generates reactive work for the founder
 
-Over the last few months, I've been thinking a lot about the balance between [reactive and proactive work](/solo-developer-year-5/#run-at-50-capacity) at TinyPilot.
+Over the last few months, I've been thinking a lot about the balance between [reactive and proactive work](/bootstrapped-founder-year-5/#run-at-50-capacity) at TinyPilot.
 
 Answering a support ticket is a good example of reactive work. It's time-sensitive, but it's low-impact as it only helps one user who sent the email. A proactive task would be fixing the product or improving documentation so that users don't need to file a support ticket to solve their problem.
 

@@ -1,5 +1,7 @@
 ---
 title: "My Seventh Year as a Bootstrapped Founder"
+aliases:
+  - /solo-developer-year-7/
 date: 2025-02-03
 hero_image: cover.webp
 banner_image: cover.webp
@@ -211,7 +213,7 @@ If I sell another company, I'll [offer incentives to attract a buyer with cash o
 
 ## Grading last year's goals
 
-Last year, I set [three high-level goals](/solo-developer-year-6/#goals-for-year-seven) that I wanted to achieve during the year. Here's how I did against those goals:
+Last year, I set [three high-level goals](/bootstrapped-founder-year-6/#goals-for-year-seven) that I wanted to achieve during the year. Here's how I did against those goals:
 
 ### Manage TinyPilot on 20 hours per week
 
@@ -244,7 +246,7 @@ Across all of my products, I want to earn $50k in profit. It doesn't have to be 
 
 ### Publish a course or book
 
-I've had an annual goal of publishing a book [since 2021](/solo-developer-year-3/#publish-six-blog-posts-and-one-book). I've never done it, but this feels like my year.
+I've had an annual goal of publishing a book [since 2021](/bootstrapped-founder-year-3/#publish-six-blog-posts-and-one-book). I've never done it, but this feels like my year.
 
 ### Learn a new programming language
 

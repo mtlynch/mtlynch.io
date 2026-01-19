@@ -240,7 +240,7 @@ This month, another customer had a big spike in usage, and this one seems legiti
 
 These past two months bring me to an exciting Zestful milestone: I've earned back my investment!
 
-I [spent $7.4k](/solo-developer-year-1/#zestful) hiring a freelancer to help me launch the first version, and I had a few other smaller costs leading to a total cost of $8k. Including August, my lifetime revenue from Zestful is now $8,246, so the project has officially turned a profit. Of course, this was possible because I paid myself $0. On an hourly basis, Zestful has probably earned me about a nickel per hour.
+I [spent $7.4k](/bootstrapped-founder-year-1/#zestful) hiring a freelancer to help me launch the first version, and I had a few other smaller costs leading to a total cost of $8k. Including August, my lifetime revenue from Zestful is now $8,246, so the project has officially turned a profit. Of course, this was possible because I paid myself $0. On an hourly basis, Zestful has probably earned me about a nickel per hour.
 
 Lastly, a company reached out in August about potentially acquiring Zestful. I was upfront with them that its earnings are small, but if they want to acquire my solution instead of rolling their own, I'm open to it. We had a preliminary call, and they requested some historical data from me. They said they're considering an offer. I'm not getting my hopes up, but it will be a nice bonus if it happens.
 
