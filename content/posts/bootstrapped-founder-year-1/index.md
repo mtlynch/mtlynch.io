@@ -230,11 +230,7 @@ Speaking of goals, here's what I hope to accomplish in my second year as a solo 
 - Publish 12 blog posts.
 - Gain comfort with a JavaScript framework (e.g., [Vue](https://vuejs.org/), [Angular](https://angular.io/), [React](https://reactjs.org/)).
 
-## Updates
-
-- **Update (Jan. 31, 2020)**: [My Second Year as a Solo Developer](/bootstrapped-founder-year-2/)
-- **Update (Feb. 1, 2021)**: [My Third Year as a Solo Developer](/bootstrapped-founder-year-3/)
-- **Update (Feb. 1, 2022)**: [My Fourth Year as a Bootstrapped Founder](/bootstrapped-founder-year-4/)
+{{<annual-updates>}}
 
 ---
 

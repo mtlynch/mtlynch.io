@@ -354,10 +354,7 @@ Here's what I hope to accomplish in my third year as a solo developer:
 - Learn one new technology.
   - Learning a totally new language or framework tends to improve my overall thinking about software, and I've been looking for an excuse to learn [Rust](https://www.rust-lang.org).
 
-## Updates
-
-- **Update (Feb. 1, 2021)**: [My Third Year as a Solo Developer](/bootstrapped-founder-year-3/)
-- **Update (Feb. 1, 2022)**: [My Fourth Year as a Bootstrapped Founder](/bootstrapped-founder-year-4/)
+{{<annual-updates>}}
 
 ---
 

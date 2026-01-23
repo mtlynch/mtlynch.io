@@ -254,6 +254,8 @@ Every time I learn a new programming language, it gives me insights I can apply 
 
 A lot of my favorite bloggers are excited about [Elixir](https://elixir-lang.org/) and [Phoenix](https://hexdocs.pm/phoenix/), so I'm curious to try that tech stack.
 
+{{<annual-updates>}}
+
 ---
 
 _Illustrations by [Piotr Letachowicz](https://cartoony.eu) (except for the terrible stick figure one)._
