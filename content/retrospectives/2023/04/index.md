@@ -138,7 +138,7 @@ In retrospect, I still think the Shopify Advanced plan is worth it. I really did
 
 ## How elastic is the demand for TinyPilot?
 
-TinyPilot's current [constraint](/book-reports/the-goal/#two-types-of-resources) is manufacturing capacity. We're still assembling devices in-house, but orders are coming in about as quickly as TinyPilot's staff can build devices.
+TinyPilot's current [constraint](/notes/book-reports/the-goal/#two-types-of-resources) is manufacturing capacity. We're still assembling devices in-house, but orders are coming in about as quickly as TinyPilot's staff can build devices.
 
 If we're going to transition all of our products to the 3PL, it's not enough to keep up with orders. We need to build up at least a week's worth of surplus Voyager 2a devices to send to the 3PL's warehouse. To slow down sales, I tried increasing TinyPilot's pricing, which yielded some interesting data.
 

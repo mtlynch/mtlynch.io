@@ -315,7 +315,7 @@ I enjoy feeling like I run a real business. Before TinyPilot, my businesses typi
 
 With TinyPilot, there's enough money coming in to hire teammates where it makes sense. After three years of coding by myself, I appreciate working with a talented dev team again. I pay $200/month for dev tooling and continuous integration because eliminating that gruntwork is obviously a net positive. In my previous businesses, those tools would consume most of my revenue.
 
-I'm pleased to have a company culture that matches what I always wanted to see from my employers. Everyone has flexible hours. There are no tight deadlines, so we don't have to compromise on quality. Almost all of our work is asynchronous, so everyone has the space to do [deep, focused work](/book-reports/deep-work/).
+I'm pleased to have a company culture that matches what I always wanted to see from my employers. Everyone has flexible hours. There are no tight deadlines, so we don't have to compromise on quality. Almost all of our work is asynchronous, so everyone has the space to do [deep, focused work](/notes/book-reports/deep-work/).
 
 The hardest part for me about running a business with thousands of real customers is being responsible for failure. We're a team, but the buck ultimately stops with me. When I ship a serious bug or fail to launch a new product by the date I predicted, I find it painful and personally embarrassing. It's a completely different experience from being a developer at Microsoft or Google, where I shared responsibility with teammates who reviewed my work, and we were all eight layers removed from real customers.
 
