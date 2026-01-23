@@ -199,7 +199,7 @@ All the tools have [a steep learning curve](https://twitter.com/deliberatecoder/
   - Two work 10-15 hours/week on the product, and one works 3-5 hours/week on the website
 - Created a TinyPilot support forum and FAQ
 - Reached feature complete on TinyPilot's next release
-- Published ["My Third Year as a Solo Developer,"](/solo-developer-year-3/) which reached #1 on [/r/programming](https://www.reddit.com/r/programming/comments/la4hfq/my_third_year_as_a_solo_developer/) and [#7 on Hacker News](https://news.ycombinator.com/item?id=25989010)
+- Published ["My Third Year as a Solo Developer,"](/bootstrapped-founder-year-3/) which reached #1 on [/r/programming](https://www.reddit.com/r/programming/comments/la4hfq/my_third_year_as_a_solo_developer/) and [#7 on Hacker News](https://news.ycombinator.com/item?id=25989010)
 - Appeared as a guest on two podcasts:
   - [The Hexdevs Podcast](https://www.hexdevs.com/posts/why-michael-lynch-left-his-job-at-google-to-become-a-solo-founder/), where I talked about financial independence
   - [The Entrepreneurial Coder Podcast](https://www.ecpodcast.io/episodes/42-michael-lynch-how-to-hit-the-front-page-of-hacker-news), where I talked about blogging and Hacker News

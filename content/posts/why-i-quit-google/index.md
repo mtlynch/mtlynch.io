@@ -182,12 +182,12 @@ Google was a great place to work, and I learned valuable skills during my time t
 
 ## Updates
 
-- **Update (Feb. 1, 2019)**: [My First Year as a Solo Developer](/solo-developer-year-1/)
-- **Update (Jan. 31, 2020)**: [My Second Year as a Solo Developer](/solo-developer-year-2/)
-- **Update (Feb. 1, 2021)**: [My Third Year as a Solo Developer](/solo-developer-year-3/)
-- **Update (Feb. 1, 2022)**: [My Fourth Year as a Bootstrapped Founder](/solo-developer-year-4/)
-- **Update (Feb. 10, 2023)**: [My Fifth Year as a Bootstrapped Founder](/solo-developer-year-5/)
-- **Update (Feb. 10, 2024)**: [My Sixth Year as a Bootstrapped Founder](/solo-developer-year-6/)
+- **Update (Feb. 1, 2019)**: [My First Year as a Solo Developer](/bootstrapped-founder-year-1/)
+- **Update (Jan. 31, 2020)**: [My Second Year as a Solo Developer](/bootstrapped-founder-year-2/)
+- **Update (Feb. 1, 2021)**: [My Third Year as a Solo Developer](/bootstrapped-founder-year-3/)
+- **Update (Feb. 1, 2022)**: [My Fourth Year as a Bootstrapped Founder](/bootstrapped-founder-year-4/)
+- **Update (Feb. 10, 2023)**: [My Fifth Year as a Bootstrapped Founder](/bootstrapped-founder-year-5/)
+- **Update (Feb. 10, 2024)**: [My Sixth Year as a Bootstrapped Founder](/bootstrapped-founder-year-6/)
 
 ---
 

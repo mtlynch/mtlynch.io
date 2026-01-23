@@ -80,7 +80,7 @@ I recorded my status updates in that private Google Doc every week for a year. N
 
 After writing private updates for a year, it still gave me satisfaction, but I missed writing for an audience. I saw the myriad of benefits I gained by [publishing my monthly retrospectives](/keep-growing-never-profit/#i-published-monthly-goals-and-stuck-to-them) and wanted to do the same thing for weekly updates.
 
-One of [my 2019 goals](/solo-developer-year-1/#goals-for-year-two) was to gain expertise in a JavaScript framework, so that felt like a convenient excuse to create my own status sharing web app. It's called What Got Done:
+One of [my 2019 goals](/bootstrapped-founder-year-1/#goals-for-year-two) was to gain expertise in a JavaScript framework, so that felt like a convenient excuse to create my own status sharing web app. It's called What Got Done:
 
 {{<img src="whatgotdone-screenshot.jpg" alt="Screenshot of Monday.com feature page" caption="My [most recent update](https://weeks.mtlynch.io/2019-06-21) on What Got Done" max-width="800px" has-border="false">}}
 

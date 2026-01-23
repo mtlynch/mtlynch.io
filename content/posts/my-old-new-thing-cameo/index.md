@@ -103,4 +103,4 @@ The difference today is that I don't feel dumb for not knowing how to solve this
 
 As a software engineer, there are some problems that you find unpleasant, but you grit your teeth and practice until you get better. Other problems, you just avoid by carefully picking what jobs and projects you take on.
 
-Understanding arcane build systems is one of the problems I've avoided, and I'm fine with that. [Except when I use Nix](/solo-developer-year-7/#nix).
+Understanding arcane build systems is one of the problems I've avoided, and I'm fine with that. [Except when I use Nix](/bootstrapped-founder-year-7/#nix).

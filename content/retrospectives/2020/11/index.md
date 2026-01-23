@@ -7,7 +7,7 @@ banner_image: shopify-dashboard.png
 
 ## Highlights
 
-- TinyPilot hit $10k in revenue. That's a record high for me and [exceeds my total revenue for all of 2019](/solo-developer-year-2/#how-i-made-and-spent-money).
+- TinyPilot hit $10k in revenue. That's a record high for me and [exceeds my total revenue for all of 2019](/bootstrapped-founder-year-2/#how-i-made-and-spent-money).
 - I interviewed several IT consultants and business owners about what TinyPilot features would be useful to them.
 - I tested several new marketing channels and realized I'm failing to measure results accurately.
 

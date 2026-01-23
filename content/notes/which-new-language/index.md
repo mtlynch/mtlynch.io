@@ -27,7 +27,7 @@ Here's what I'm looking for:
 - There's a good ebook available.
   - Paid books are fine.
 - Low abstraction / limited "magic."
-  - I find languages like Angular and Vue to be too "magical" in that there's a bunch of Node.js packages in the mix that I don't understand. And starting out, it feels fine, but once I get beyond trivial programs, I realize [the abstractions are leaky](https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/), and there are complicated systems under the covers that I don't understand. The other end of the spectrum is Zig, which feels [extremely easy to reason about](/solo-developer-year-7/#zig).
+  - I find languages like Angular and Vue to be too "magical" in that there's a bunch of Node.js packages in the mix that I don't understand. And starting out, it feels fine, but once I get beyond trivial programs, I realize [the abstractions are leaky](https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/), and there are complicated systems under the covers that I don't understand. The other end of the spectrum is Zig, which feels [extremely easy to reason about](/bootstrapped-founder-year-7/#zig).
 - Static typing
 
 ## Non-goals

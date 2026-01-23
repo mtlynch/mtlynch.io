@@ -209,6 +209,6 @@ Beyond the monetary cost, it was expensive in terms of time. It's a two-day conf
 
 ## Conclusion: Keep attending, but strategically
 
-At the beginning of the year, I [set a goal](/solo-developer-year-1/#goals-for-year-two) to speak at three conferences in 2019. PyTexas was conference #2, so I think one more for the year will be a good amount.
+At the beginning of the year, I [set a goal](/bootstrapped-founder-year-1/#goals-for-year-two) to speak at three conferences in 2019. PyTexas was conference #2, so I think one more for the year will be a good amount.
 
 The benefits for me are meeting new people, hearing about tools and techniques that I otherwise wouldn't be exposed to, and getting practice public speaking. One of the biggest takeaways was learning about Penflip, which was wholly unexpected but could save me tons of time and money in avoiding their mistakes.

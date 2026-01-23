@@ -59,7 +59,7 @@ I ended up getting sidetracked by the TinyPilot release, so I haven't filed yet.
 | Total Revenue            | $103,612.79    | $86,181.77     | <font color="red">-$17,431.02 (-17%)</font>     |
 | **Profit**               | **$79,764.14** | **$24,199.09** | **<font color="red">-$55,565.05 (-70%)</font>** |
 
-We saw a big surge in visitors due to the attention [my annual review](/solo-developer-year-6/) generated, but it didn't seem to impact TinyPilot sales much. There was a 17% drop in sales, but that's mainly due to January being an atypically strong month. $75-95k/month in sales is our typical range.
+We saw a big surge in visitors due to the attention [my annual review](/bootstrapped-founder-year-6/) generated, but it didn't seem to impact TinyPilot sales much. There was a 17% drop in sales, but that's mainly due to January being an atypically strong month. $75-95k/month in sales is our typical range.
 
 I need a new way to report monthly profit because switching to the contract manufacturer has made our cash profit numbers basically meaningless at the one-month resolution. Our profit each month is dominated by the timing of manufacturing bills I pay every three to four months.
 

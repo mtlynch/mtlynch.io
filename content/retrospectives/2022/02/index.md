@@ -7,7 +7,7 @@ banner_image: tinypilot-rev.png
 
 ## Highlights
 
-- I published my [fourth annual retrospective](/solo-developer-year-4/) about being a bootstrapped founder.
+- I published my [fourth annual retrospective](/bootstrapped-founder-year-4/) about being a bootstrapped founder.
 - TinyPilot sales continue running strong despite a delay in launching our next product.
 - I analyze how I'm spending my time and figure out ways to allocate my hours better.
 
@@ -31,7 +31,7 @@ This is one of those things that I keep deprioritizing because it's [important b
 
 ### Publish my fourth [annual retrospective](/tags/annual-review/)
 
-- **Result**: Published my [annual retrospective](/solo-developer-year-4/)
+- **Result**: Published my [annual retrospective](/bootstrapped-founder-year-4/)
 - **Grade**: A
 
 I was glad to publish this retrospective, as I'd been working on it for several weeks. It's one of the few things I do that has a strict deadline, as I like the tradition of posting on my quit-iversary.
@@ -58,7 +58,7 @@ I'm still cash flow negative and probably will be for the next month or two. Now
 
 ## How can I manage TinyPilot with only 20 hours per week?
 
-One of my goals for this year is to [manage TinyPilot with only 20 hours per week](/solo-developer-year-4/#manage-tinypilot-on-20-hours-per-week). I'm currently spending about 45 hours per week on TinyPilot. I don't have a good way of measuring my time rigorously, but here's how I think the hours break down vs how I want to spend those hours:
+One of my goals for this year is to [manage TinyPilot with only 20 hours per week](/bootstrapped-founder-year-4/#manage-tinypilot-on-20-hours-per-week). I'm currently spending about 45 hours per week on TinyPilot. I don't have a good way of measuring my time rigorously, but here's how I think the hours break down vs how I want to spend those hours:
 
 | Task                                            | Hours per week | Ideal hours/wk |
 | ----------------------------------------------- | -------------- | -------------- |
@@ -185,7 +185,7 @@ Zestful dipped a bit, slumping back under its $1k/month revenue, but clients are
 
 ### What got done?
 
-- Published my [fourth-year retrospective](/solo-developer-year-4/)
+- Published my [fourth-year retrospective](/bootstrapped-founder-year-4/)
 - Released TinyPilot 2.3.2
 - Began transition process to my new electrical engineering vendor
 - Worked with an external consultant to create a [proof-of-concept WebRTC implementation](https://github.com/tiny-pilot/tinypilot/tree/experimental/h264) of TinyPilot's video streaming

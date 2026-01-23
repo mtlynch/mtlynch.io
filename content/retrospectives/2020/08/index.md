@@ -191,7 +191,7 @@ Revenue-wise, July was an outlier month for the blog because many readers purcha
 | mtlynch.io | $39.02        | $649.45       | <font color="green">$610.43 (+1564%)</font>       |
 | **Total**  | **$1,078.88** | **$9,778.78** | **<font color="green">+$8,699.90 (+806%)</font>** |
 
-July was the strongest revenue month I've ever had. In fact, it's $200 higher than [my revenue from all of 2018 and 2019, combined](/solo-developer-year-2/#how-i-made-and-spent-money). It brings me to $13.1k for 2020, and makes my goal of [$20k in revenue by the end of 2020](/solo-developer-year-2/#goals-for-year-three) seem very possible.
+July was the strongest revenue month I've ever had. In fact, it's $200 higher than [my revenue from all of 2018 and 2019, combined](/bootstrapped-founder-year-2/#how-i-made-and-spent-money). It brings me to $13.1k for 2020, and makes my goal of [$20k in revenue by the end of 2020](/bootstrapped-founder-year-2/#goals-for-year-three) seem very possible.
 
 ## Wrap up
 

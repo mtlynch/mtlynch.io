@@ -24,7 +24,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Publish my 2024 [annual review](/tags/annual-review/) blog post
 
-- **Result**: I published [My Seventh Year as a Bootstrapped Founder](/solo-developer-year-7/)
+- **Result**: I published [My Seventh Year as a Bootstrapped Founder](/bootstrapped-founder-year-7/)
 - **Grade**: A
 
 I was happy with how this came out. I had a hard time figuring out what to include because the year felt fragmented from different major events that I'd already written about. I felt like the result was a good summary of the year.
@@ -126,12 +126,12 @@ $ wordword ./content/
 ./content/notes/nix-git-bash-shell/index.md:78: time
 ./content/notes/cypress-vs-playwright/index.md:278: makes
 ./content/posts/simple-vue-pre-rendered/index.md:36: for
-./content/posts/solo-developer-year-6/index.md:132: case
+./content/posts/bootstrapped-founder-year-6/index.md:132: case
 ./content/posts/ansible-role-clipbucket/index.md:83: a
-./content/posts/solo-developer-year-1/index.md:177: NOW
-./content/posts/solo-developer-year-1/index.md:177: NOW
-./content/notes/book-reports/chaos-monkeys/index.md:8: names
-./content/notes/book-reports/go-programming-blueprints/index.md:50: of
+./content/posts/bootstrapped-founder-year-1/index.md:177: NOW
+./content/posts/bootstrapped-founder-year-1/index.md:177: NOW
+./content/book-reports/chaos-monkeys/index.md:8: names
+./content/book-reports/go-programming-blueprints/index.md:50: of
 212 total files checked
 15 total errors found
 ```
@@ -224,7 +224,7 @@ Another gotcha: if you buy the Rackstuds Duo, they only work on components that 
 ### What got done?
 
 - I published the ["Passive Voice Considered Harmful"](https://refactoringenglish.com/chapters/passive-voice-considered-harmful/) chapter of _Refactoring English_ and an accompanying [interactive exercise](https://refactoringenglish.com/exercises/recognize-passive-voice/).
-- I published [My Seventh Year as a Bootstrapped Founder](/solo-developer-year-7/).
+- I published [My Seventh Year as a Bootstrapped Founder](/bootstrapped-founder-year-7/).
 - I published five short note posts:
   - [The Cline AI Assistant is Mesmerizing](/notes/cline-is-mesmerizing/)
   - [Increase Your Reply Rate on Cold Emails to Me](/notes/emailing-me/)

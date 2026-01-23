@@ -79,7 +79,7 @@ I felt fine with $110/unit until I did the math on the total. The contract manuf
 
 Including the Raspberry Pis for the first batch, I'd need to come up with about $250k in cash to pay for this order.
 
-To be clear, this is money I'd be spending anyway. Last year, I spent [$334k](/solo-developer-year-5/#tinypilot-grew-annual-revenue-to-812k) on raw materials, but I paid for everything in small chunks throughout the year. With the shift to the contract manufacturer, I'd be consolidating most of my materials and manufacturing costs, but I'd be paying six to eight months of it at once.
+To be clear, this is money I'd be spending anyway. Last year, I spent [$334k](/bootstrapped-founder-year-5/#tinypilot-grew-annual-revenue-to-812k) on raw materials, but I paid for everything in small chunks throughout the year. With the shift to the contract manufacturer, I'd be consolidating most of my materials and manufacturing costs, but I'd be paying six to eight months of it at once.
 
 Where was I going to get $250k in cash?
 

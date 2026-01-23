@@ -20,7 +20,7 @@ I [blogged about creating TinyPilot](/tinypilot/), and I could tell right away t
 
 I started offering pre-packaged kits so my readers could build their own TinyPilots, and they immediately sold out. With every other project, I had to beg and plead with people even to try my product. With TinyPilot, there was so much demand that I struggled for months to keep the product stocked.
 
-For the next four years, I focused full-time on building TinyPilot into a business and improving the product. I grew the company to a team of seven people and [$1M in annual revenue](/solo-developer-year-6/#tinypilot-became-20x-more-profitable).
+For the next four years, I focused full-time on building TinyPilot into a business and improving the product. I grew the company to a team of seven people and [$1M in annual revenue](/bootstrapped-founder-year-6/#tinypilot-became-20x-more-profitable).
 
 A month ago, I sold the company for $600k.
 
@@ -91,7 +91,7 @@ One of the most difficult parts of TinyPilot was hardware revisions. We were alw
 
 The other source of complexity was TinyPilot's office. We were still doing everything in-house: managing inventory, assembling devices, and fulfilling orders. I worked with TinyPilot's in-person team to migrate the office's core functions to external vendors. It was a major challenge to outsource so many delicate processes, but it eliminated an enormous amount of management overhead and stress.
 
-The happy side-effect of making TinyPilot easier to manage was that it also made the company more attractive to potential buyers. When I stopped pouring $100k/year into hardware improvements, the company became [substantially more profitable](/solo-developer-year-6/#tinypilot-became-20x-more-profitable). And without an office and custom in-house manufacturing, a prospective owner could run TinyPilot from anywhere in the world.
+The happy side-effect of making TinyPilot easier to manage was that it also made the company more attractive to potential buyers. When I stopped pouring $100k/year into hardware improvements, the company became [substantially more profitable](/bootstrapped-founder-year-6/#tinypilot-became-20x-more-profitable). And without an office and custom in-house manufacturing, a prospective owner could run TinyPilot from anywhere in the world.
 
 ## Part 2: Starting the sales process
 

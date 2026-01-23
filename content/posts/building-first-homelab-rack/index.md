@@ -262,7 +262,7 @@ It took me a long time to figure out [how to configure VLANs](/notes/debugging-v
 
 - Grade: A
 
-I only have a handful of PoE devices, so I originally planned to power them with a small 5-port PoE switch on a shelf. Late last year, I began [prepping my work office for our move-out](/solo-developer-year-6/#close-the-tinypilot-office), and I decided to adopt the Netgear GS116LP switch from there.
+I only have a handful of PoE devices, so I originally planned to power them with a small 5-port PoE switch on a shelf. Late last year, I began [prepping my work office for our move-out](/bootstrapped-founder-year-6/#close-the-tinypilot-office), and I decided to adopt the Netgear GS116LP switch from there.
 
 As an unmanaged switch, it does what I need. It powers my devices, it was easy to install, and it's silent.
 
