@@ -14,8 +14,14 @@
         {{- end -}}
         <li>
           <span class="date">{{ .Date.Format .Site.Params.dateFormat }}</span>
-          <a class="title" href="{{ .Params.ExternalLink | default .RelPermalink }}"
-            >{{ if $isBookReport }}{{ printf "Book Report: %s" .Title }}{{ else }}{{ .Title }}{{ end }}</a
+          <a
+            class="title"
+            href="{{ .Params.ExternalLink | default .RelPermalink }}"
+            >{{ if $isBookReport }}
+              {{ printf "Book Report: %s" .Title }}
+            {{ else }}
+              {{ .Title }}
+            {{ end }}</a
           >
         </li>
       {{ end }}

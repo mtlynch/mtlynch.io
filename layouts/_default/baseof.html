@@ -122,7 +122,6 @@
     <main class="wrapper">
       {{ partial "navbar.html" . }}
 
-
       {{- $contentClass := .Type -}}
       {{- if and .File (in .File.Path "notes/book-reports/") -}}
         {{- $contentClass = printf "%s book-reports" $contentClass -}}
