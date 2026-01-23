@@ -256,6 +256,8 @@ A lot of my favorite bloggers are excited about [Elixir](https://elixir-lang.org
 
 <blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:5rmuptxnl562svleoywqf7fe/app.bsky.feed.post/3lhbtp6mekk2s" data-bluesky-cid="bafyreig3gtz2njqsbw7tich3tt77yqyrtg6fvwtx2y2rxja55ip6iqfcjy"><p lang="en">This week marks 7 years since I quit my job as a developer at Google to form my own bootstrapped software company. Every year, I post an update about how that&#x27;s going and what my life is like as a bootstrapped founder. This year, I sold my company and became a father. mtlynch.io/solo-develop...<br><br><a href="https://bsky.app/profile/did:plc:5rmuptxnl562svleoywqf7fe/post/3lhbtp6mekk2s?ref_src=embed">[image or embed]</a></p>&mdash; Michael Lynch (<a href="https://bsky.app/profile/did:plc:5rmuptxnl562svleoywqf7fe?ref_src=embed">@mtlynch.io</a>) <a href="https://bsky.app/profile/did:plc:5rmuptxnl562svleoywqf7fe/post/3lhbtp6mekk2s?ref_src=embed">February 3, 2025 at 10:19 AM</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
 
+{{<annual-updates>}}
+
 ---
 
 _Illustrations by [Piotr Letachowicz](https://cartoony.eu) (except for the terrible stick figure one)._

@@ -1,0 +1,22 @@
+{{- $dateFormat := (.Get "dateFormat") | default "Jan. 2, 2006" -}}
+{{- $tag := (.Get "tag") | default "annual review" -}}
+{{- $pages := where .Site.RegularPages "Section" "posts" -}}
+{{- $pages = where $pages "Params.tags" "intersect" (slice $tag) -}}
+{{- $pages = sort $pages "Date" -}}
+
+{{- if gt (len $pages) 0 -}}
+<h2>All annual reviews</h2>
+<ul>
+  {{- range $pages -}}
+    {{- $isCurrent := eq .RelPermalink $.Page.RelPermalink -}}
+    <li>
+      {{- if $isCurrent -}}
+        {{ .Title }}
+      {{- else -}}
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{- end -}}
+      - {{ .Date.Format $dateFormat }}
+    </li>
+  {{- end -}}
+</ul>
+{{- end -}}

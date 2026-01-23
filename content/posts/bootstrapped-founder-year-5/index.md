@@ -230,6 +230,8 @@ That said, there were certainly many things to appreciate about the year. I had 
 
 I still prefer working for myself to having an employer. I still feel grateful for the freedom to have my own company. And I still want to do it forever.
 
+{{<annual-updates>}}
+
 ---
 
 _Cover image by Loraine Yow. Thanks to my lovely fiancé and the [Blogging for Devs community](https://bloggingfordevs.com/) for providing early feedback on this post._
