@@ -36,16 +36,22 @@ jobs:
           command: ./dev-scripts/lint-markdown
   check_duplicate_words:
     docker:
-      - image: nixos/nix:2.26.1
+      - image: cimg/base:current
+    environment:
+      WORDWORD_VERSION: "0.1.2"
+      WORDWORD_PLATFORM: "linux"
     steps:
       - checkout
       - run:
           name: Install wordword
           command: |
-            nix \
-              --extra-experimental-features 'nix-command flakes' \
-              profile \
-              install git+https://codeberg.org/mtlynch/wordword
+            case "$(uname -m)" in
+              x86_64)  WORDWORD_ARCH="amd64" ;;
+              aarch64) WORDWORD_ARCH="arm64" ;;
+              *) echo "Unsupported architecture: $(uname -m)"; exit 1 ;;
+            esac
+            curl -fsSL "https://codeberg.org/mtlynch/wordword/releases/download/${WORDWORD_VERSION}/wordword-v${WORDWORD_VERSION}-${WORDWORD_PLATFORM}-${WORDWORD_ARCH}.tar.gz" | tar xz
+            sudo mv wordword /usr/local/bin/
       - run:
           name: Verify wordword installation
           command: wordword --version
