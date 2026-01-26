@@ -302,9 +302,7 @@ Once again, I feel incredibly fortunate to be working for myself, and I hope to 
 
 {{<x user="deliberatecoder" id="1356256679231434753">}}
 
-## Updates
-
-- **Update (Feb. 1, 2022)**: [My Fourth Year as a Bootstrapped Founder](/bootstrapped-founder-year-4/)
+{{<annual-updates>}}
 
 ---
 

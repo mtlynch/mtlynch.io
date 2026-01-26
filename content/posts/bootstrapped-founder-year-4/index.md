@@ -26,12 +26,6 @@ Halfway through my third year, I created a network administration device called 
 
 In this post, I'll share what I've learned from TinyPilot about being a bootstrapped founder.
 
-Previous updates:
-
-- [My First Year as a Solo Developer](/bootstrapped-founder-year-1/)
-- [My Second Year as a Solo Developer](/bootstrapped-founder-year-2/)
-- [My Third Year as a Solo Developer](/bootstrapped-founder-year-3/)
-
 ## My first year of profit
 
 After running in the red for the first few years, this is my first cashflow positive year. I earned a total of $14k in profit in 2021. Although TinyPilot generated the vast majority of revenue, most of my profit came from old projects running in the background.
@@ -320,6 +314,8 @@ I'm pleased to have a company culture that matches what I always wanted to see f
 The hardest part for me about running a business with thousands of real customers is being responsible for failure. We're a team, but the buck ultimately stops with me. When I ship a serious bug or fail to launch a new product by the date I predicted, I find it painful and personally embarrassing. It's a completely different experience from being a developer at Microsoft or Google, where I shared responsibility with teammates who reviewed my work, and we were all eight layers removed from real customers.
 
 Overall, I'm still happy to be working for myself, and I hope to sustain it for the rest of my working life.
+
+{{<annual-updates>}}
 
 ---
 
