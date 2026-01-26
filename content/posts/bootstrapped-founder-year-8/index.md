@@ -76,9 +76,8 @@ It replaces things I dislike:
 
 - Reading API documentation
 - Searching through forum posts
-
 - Port my old site from a Vue SPA to a simpler vanilla HTML site generated with Hugo
-- Generate visualizations from this raw data
+- Generate visualizations from raw data
 - Replace the Bulma CSS library with Bootstrap
 - Figure out how to build this open-source repo from source and capture it in a Nix flake
 
@@ -89,6 +88,12 @@ I found it joyless.
 My favorite year. Aligning the things I like. And my wife and I work from home, and our families help out with childcare during the day, so anytime I want, I can take a break to go play with my son.
 
 ## Lessons learned
+
+### Writing a book takes longer than you expect
+
+[Hofstadter's law](https://en.wikipedia.org/wiki/Hofstadter%27s_law)
+
+> Hofstadter's law: It always takes longer than you expect, even when you take into account Hofstadter's law.
 
 ## Grading last year's goals
 
@@ -117,11 +122,13 @@ TODO
 
 ## Goals for next year
 
-### Create a profitable SaaS business
+### Earn five positive citations of my book
+
+I'd like to find successful developer authors who publicly cite my book as a resource that helped them.
 
 ### Earn $75k in profit
 
-### TODO
+### Create a profitable SaaS business
 
 ---
 
