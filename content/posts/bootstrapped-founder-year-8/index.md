@@ -103,27 +103,6 @@ Wrote more than I ever have before:
 - 12 [monthly retrospectives](/retrospectives/)
 - 12 [notes](/notes/) (shorter, less polished blog posts)
 
-## Finding a balance with AI
-
-I would still describe my usage of AI to program as mostly "begrudging" but I've found a balance where I can enjoy what AI replaces for me without getting lost in resentment toward AI for doing something I liked (and stealing everyone's work to do it).
-
-When I first started using AI, it felt like a slight productivity boost but it wasn't anything Earth-changing. I enjoy programming and didn't like the idea of.
-
-I was also surprised to discover how often I actually don't care about the code. If it works and matches my expectations, I don't need to read the code. I don't do this for high-stakes things, but for creating a visualization, I don't read the code if the visualization looks right.
-
-As LLMs have improved, they've gotten better than me at a lot of things. And suddenly in the last month, everyone is excited about LLM sandboxes, and I've embraced that. I'd always micromanaged my LLMs because I didn't want to let them run wild on my system. But in a sandbox, I don't care, and I can shift more work onto the LLMs, which makes a surprising amount of difference.
-
-It replaces things I dislike:
-
-- Piecing technical information together through dozens of scattered forum posts
-- Port my old site from a Vue SPA to a simpler vanilla HTML site generated with Hugo
-- Generate visualizations from raw data
-- Replace the Bulma CSS library with Bootstrap
-- Figure out how to build this open-source repo from source and capture it in a Nix flake
-- Make a simple diagram without me having to learn an entire domain-specific language
-
-I found it joyless.
-
 ## Do I still love it?
 
 My favorite year. Aligning the things I like. And my wife and I work from home, and our families help out with childcare during the day, so anytime I want, I can take a break to go play with my son.
