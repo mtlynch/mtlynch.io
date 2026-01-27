@@ -13,11 +13,12 @@ Last year, I sold my first profitable business, so I've been trying to figure ou
 
 ## How finances went
 
-TODO: Graph of revenue / profit for the year
+<canvas id="monthly-finances-chart" style="margin-bottom: 50px;"></canvas>
 
-Mostly from pre-sales for my book. I still have one customer of Zestful that pays me $150-250/month to keep the service going.
+<canvas id="annual-finances-chart" style="margin-bottom: 50px;"></canvas>
 
-TODO: Graph of revenue / profit for previous years
+<script src="/third-party/chart.js/2.9.4/Chart.min.js"></script>
+<script src="script.js"></script>
 
 ## Can I succeed again?
 
