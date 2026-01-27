@@ -67,17 +67,12 @@ For contrast, one of the first businesses I created was a website called Is It K
 - Profitability: The site was not profitable.
 - User-founder alignment: I made money if users clicked ads and ordered keto products online, but they would have been better off buying [real food](https://realfood.gov/) at the grocery store.
 
-- Enjoyment: I'm passionate about clear writing and enjoy teaching techniques to other developers.
-- Competence: I feel especially qualified to write about clear writing for software developers I've been blogging for several years, and writing played a key role in all of my businesses.
-- Profitability: The site was not profitable.
-- User-founder alignment: I made money if users clicked ads and ordered keto products online, but they would have been better off buying [real food](https://realfood.gov/) at the grocery store.
-
 Writing my book, everything just feels aligned with what I'm interested in and what I'm good at:
 
-- I'm passionate about clear writing.
-  - I enjoy helping other developers improve their writing.
-- I find readers for the book by publishing blog posts about the things I'm interested in.
-  - People who read my writing get something useful even if they have no interest in my book.
+- Enjoyment: I'm passionate about clear writing and enjoy teaching techniques to other developers.
+- Competence: I feel especially qualified to write about clear writing for software developers I've been blogging for several years, and writing played a key role in all of my businesses.
+- Profitability: I've made $XXk from pre-sales which is not profitable enough to be sustainable.
+- User-founder alignment: I find readers for the book by publishing blog posts about the things I'm interested in. People who read my writing get something useful even if they have no interest in my book.
 
 I'm not totally nailing the "money" pillar. And I feel like I'm doing well, but I definitely want to improve. I'll feel more confident I'm succeeding if I hear readers tell me that my book has helped them and gotten results (e.g., they're getting better feedback on their documentation or blog posts)
 
@@ -107,6 +102,20 @@ Wrote more than I ever have before:
 
 My favorite year. Aligning the things I like. And my wife and I work from home, and our families help out with childcare during the day, so anytime I want, I can take a break to go play with my son.
 
+At the end of [my first year as a founder](/bootstrapped-founder-year-1/), I wrote:
+
+> As someone who has always valued independence, I love being a solo developer. It makes a world of difference to wake up whenever I want and make my own choices about how to spend my entire day.
+>
+> ...
+>
+> My friends with children tell me that kids won't complicate this at all.
+
+When I wrote that, I was single. I met my wife a few weeks after publishing that, and we had our first child in 2024. It's surprising that it's still true.
+
+Kids and a family mean I can't do whatever I want _all_ day, but I still feel like I do whatever I want from 9-5 every day.
+
+That's still pretty true.
+
 A book is extremely friendly to work-life balance. Nobody's ever paged me at 2 AM to say that says my servers are down, and customers are panicking because they can't read my book.
 
 And even my work setup is super nice. My family comes over to help out with childcare while my wife and I work, so whenever I want a break from work, I get to play with my son, and he's always delighted to see me.
@@ -115,7 +124,7 @@ And even my work setup is super nice. My family comes over to help out with chil
 
 ### Writing a book takes longer than you expect
 
-[Hofstadter's law](https://en.wikipedia.org/wiki/Hofstadter%27s_law)
+This is kind of an extension of [Hofstadter's law](https://en.wikipedia.org/wiki/Hofstadter%27s_law):
 
 > Hofstadter's law: It always takes longer than you expect, even when you take into account Hofstadter's law.
 
@@ -153,6 +162,8 @@ I'd like to find successful developer authors who publicly cite my book as a res
 ### Earn $75k in profit
 
 ### Create a profitable SaaS business
+
+{{<annual-updates>}}
 
 ---
 
