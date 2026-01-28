@@ -17,6 +17,8 @@ I know people are interested in how the money works, so I'll start there. Here's
 
 <canvas id="monthly-finances-chart"></canvas>
 
+16.3k in revenue and 8.2k in profit
+
 My main source of revenue was my book. I did a Kickstarter for it in March, which gave me [$6k in pre-sales](/my-6k-advance/). I continued to sell discounted early access to readers as I wrote my book. XX readers have purchased the book in early access so far, for which I'm grateful.
 
 I also have an [old business](/bootstrapped-founder-year-1/#zestful) that makes $100-200/month without me touching it.
