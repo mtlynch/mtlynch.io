@@ -22,14 +22,16 @@ Chart.scaleService.registerScaleType(
     buildTicks: function () {
       var me = this;
       var min = me.min;
-      var max = me.max;
+
+      // Force max to $1M
+      me.max = 1000000;
 
       // Generate nice tick values spanning the range
       var ticks = [];
       var tickValues = [-50000, -25000, 0, 25000, 100000, 250000, 500000, 750000, 1000000];
 
       tickValues.forEach(function (val) {
-        if (val >= min && val <= max) {
+        if (val >= min && val <= me.max) {
           ticks.push({ value: val });
         }
       });
