@@ -543,13 +543,15 @@ Some people are creative and buy different colors to represent different functio
 
 ## Choosing fiber cables
 
-### Ethernet, DAC, or fiber?
+### Twisted pair, DAC, or fiber?
 
-If you're building a 1 Gbps network, you can buy regular RJ45 Ethernet cables and call it a day.
+If you're building a 1 Gbps network, you can buy regular twisted-pair Ethernet cables with RJ45 connectors and call it a day.
 
-If you go above 1 Gbps speeds, you have to choose between Ethernet and fiber cables.
+{{<img src="twisted-pair.webp" max-width="500px" caption="Most networks use simple twisted-pair Ethernet cables with RJ45 connectors.">}}
 
-With Ethernet, it's simple. Your Ethernet adapter has an Ethernet port, so you plug in an Ethernet cable. Easy peasy!
+If you go above 1 Gbps speeds, you have to choose between twisted pair and fiber cables.
+
+With twisted-pair Ethernet cables, it's simple. If you're building a network with twisted pair Ethernet ports, buy networking devices with RJ45 ports, and use standard twisted-pair Ethernet cables everywhere. Easy peasy!
 
 With fiber, cabling is more complicated.
 
@@ -565,7 +567,7 @@ My network switch and 10G NICs all had SFP+ ports, so I knew the connections had
 
 I'd need to convert SFP+ to something else to connect the two ends. The options were:
 
-1. RJ45 (Ethernet)
+1. RJ45 (Twisted pair)
 1. LC (Fiber)
 1. DAC (Copper)
 
@@ -573,22 +575,22 @@ The connection had to run through my patch panel. I found patch keys for Etherne
 
 That reduced my options to just to just RJ45 or LC.
 
-### Ethernet vs. fiber
+### Twisted pair vs. fiber
 
-I couldn't find many practical differences between RJ45 and LC. LC is thinner, so I find it a bit more visually appealing, but it means a different type of cable than all my other components, which are Ethernet.
+I couldn't find many practical differences between RJ45 and LC. LC is thinner, so I find it a bit more visually appealing, but it means a different type of cable than all my other components, which are twisted pair.
 
-I was surprised at the difference in pricing between Ethernet and fiber. SFP+ to RJ45 transceivers were significantly more expensive than SFP+ to fiber, but Ethernet cables are cheaper than fiber cables.
+I was surprised at the difference in pricing between twisted pair and fiber. SFP+ to RJ45 transceivers were significantly more expensive than SFP+ to fiber, but twisted pair cables are cheaper than fiber cables.
 
 When I priced everything out, cost was significantly lower for fiber:
 
-| Component                                                       | Ethernet price | Fiber price |
-| --------------------------------------------------------------- | -------------- | ----------- |
-| Three transceivers (for my switch, desktop, and storage server) | $150           | $60         |
-| One 16' cable (desktop to switch)                               | $9             | $15         |
-| One 3' cable (storage server to switch)                         | $7             | $10         |
-| Two 7" patch cables                                             | $0\*           | $30         |
-| Four patch keys                                                 | $0\*           | $19         |
-| **Total**                                                       | **$163**       | **$134**    |
+| Component                                                       | Twisted pair price | Fiber price |
+| --------------------------------------------------------------- | ------------------ | ----------- |
+| Three transceivers (for my switch, desktop, and storage server) | $150               | $60         |
+| One 16' cable (desktop to switch)                               | $9                 | $15         |
+| One 3' cable (storage server to switch)                         | $7                 | $10         |
+| Two 7" patch cables                                             | $0\*               | $30         |
+| Four patch keys                                                 | $0\*               | $19         |
+| **Total**                                                       | **$163**           | **$134**    |
 
 \* These effectively would cost no extra money because I had to buy these for the rest of the ports in my switch.
 
