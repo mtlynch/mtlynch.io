@@ -13,7 +13,13 @@ Last year, I sold my first profitable business, so I've been trying to figure ou
 
 ## How finances went
 
+I know people are interested in how the money works, so I'll start there. Here's what my revenue and profit looked like every month.
+
 <canvas id="monthly-finances-chart" style="margin-bottom: 50px;"></canvas>
+
+My main source of revenue was my book. I did a Kickstarter for it in March, which gave me $XXk in pre-sales, and then I continued to sell discounted early access to readers as I wrote the book.
+
+I also have an [old business](/bootstrapped-founder-year-1/#zestful) that makes $100-200/month without me touching it.
 
 <canvas id="annual-finances-chart" style="margin-bottom: 50px;"></canvas>
 
