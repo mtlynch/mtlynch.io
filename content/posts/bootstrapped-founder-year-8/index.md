@@ -15,13 +15,23 @@ Last year, I sold my first profitable business, so I've been trying to figure ou
 
 I know people are interested in how the money works, so I'll start there. Here's what my revenue and profit looked like every month.
 
-<canvas id="monthly-finances-chart" style="margin-bottom: 50px;"></canvas>
+<canvas id="monthly-finances-chart"></canvas>
 
-My main source of revenue was my book. I did a Kickstarter for it in March, which gave me $XXk in pre-sales, and then I continued to sell discounted early access to readers as I wrote the book.
+My main source of revenue was my book. I did a Kickstarter for it in March, which gave me [$6k in pre-sales](/my-6k-advance/). I continued to sell discounted early access to readers as I wrote my book. XX readers have purchased the book in early access so far, for which I'm grateful.
 
 I also have an [old business](/bootstrapped-founder-year-1/#zestful) that makes $100-200/month without me touching it.
 
-<canvas id="annual-finances-chart" style="margin-bottom: 50px;"></canvas>
+My main expenses were LLMs, XX, and XX. I don't use AI to write, but I use it for a lot of the accessory tasks like making supporting web apps. And also just fun experiments.
+
+Here's how 2025 compared to previous years:
+
+<canvas id="annual-finances-chart"></canvas>
+
+The years I was running TinyPilot dominate the chart. Still, 2025 my fourth most profitable year.
+
+My goal for the year was $50k in profit, so I fell quite short.
+
+The book took more time than I expected. I thought I'd complete the book by about August and have time throughout the year to try several software businesses alongside the book. Instead, I spent all my time on the book, and I'm still not done.
 
 <script src="/third-party/chart.js/2.9.4/Chart.min.js"></script>
 <script src="script.js"></script>
@@ -30,11 +40,11 @@ I also have an [old business](/bootstrapped-founder-year-1/#zestful) that makes 
 
 Making $XX on a book is pretty good for a first-time author, but it's obviously not a sustainable income, so one of the things on my mind a lot this year is: can I create a successful business again?
 
-When I went off on my own, I thought, "What's the worst that could happen? I just go get another software job." With today's software job market, I'm not even sure that safety net exists for me anymore. And even if it does, I'd feel crushed having a boss that expects me to do profitable things rather than blog about why I hate the passive voice.
+When I went off on my own, I thought, "What's the worst that could happen? I just go get another software job." With today's software job market, I'm not even sure that safety net exists for me anymore. And even if it does, I'd feel crushed having a boss that expects me to do profitable things rather than blog about [why I hate the passive voice](https://refactoringenglish.com/chapters/passive-voice-considered-harmful/).
 
 {{<notice type="info">}}
 
-**Note**: If you're an employer reading my blog because I've folded and applied for a job, the preceding paragraph was a joke. I love being managed, no matter how dumb the boss or wrongheaded the project. I certainly will never long for the freedom of self-employment.
+**Note**: If you're an employer reading my blog because I've caved and applied for a job, the preceding paragraph was a joke. I love being managed, no matter how dumb my boss is or how wrongheaded company incentives are. I certainly will never long for the freedom of self-employment.
 
 {{</notice>}}
 
@@ -141,7 +151,7 @@ Last year, I set [three high-level goals](/bootstrapped-founder-year-7/#goals-fo
 
 ### Earn $50k in profit
 
-- **Result**: Earned $XXk in profit
+- **Result**: Earned $8.2k in profit
 - **Grade**: D
 
 TODO
