@@ -5,6 +5,60 @@ const dollarFormatter = new Intl.NumberFormat("en-US", {
   maximumFractionDigits: 0,
 });
 
+// Square root scale: signed sqrt for compression
+// Less aggressive than log, handles negatives
+function signedSqrt(x) {
+  return Math.sign(x) * Math.sqrt(Math.abs(x));
+}
+
+function signedSqrtInverse(y) {
+  return Math.sign(y) * y * y;
+}
+
+// Register custom sqrt scale with Chart.js
+Chart.scaleService.registerScaleType(
+  "sqrt",
+  Chart.scaleService.getScaleConstructor("linear").extend({
+    buildTicks: function () {
+      var me = this;
+      var min = me.min;
+      var max = me.max;
+
+      // Generate nice tick values spanning the range
+      var ticks = [];
+      var tickValues = [-50000, -25000, 0, 25000, 100000, 250000, 500000, 750000, 1000000];
+
+      tickValues.forEach(function (val) {
+        if (val >= min && val <= max) {
+          ticks.push({ value: val });
+        }
+      });
+
+      me.ticks = ticks;
+      return ticks;
+    },
+    getPixelForValue: function (value) {
+      var me = this;
+      var minSqrt = signedSqrt(me.min);
+      var maxSqrt = signedSqrt(me.max);
+      var valueSqrt = signedSqrt(value);
+      var range = maxSqrt - minSqrt;
+      var pixel =
+        me.bottom - ((valueSqrt - minSqrt) / range) * (me.bottom - me.top);
+      return pixel;
+    },
+    getValueForPixel: function (pixel) {
+      var me = this;
+      var minSqrt = signedSqrt(me.min);
+      var maxSqrt = signedSqrt(me.max);
+      var range = maxSqrt - minSqrt;
+      var valueSqrt = minSqrt + ((me.bottom - pixel) / (me.bottom - me.top)) * range;
+      return signedSqrtInverse(valueSqrt);
+    },
+  }),
+  { position: "left" }
+);
+
 var monthlyFullLabels = [];
 
 const defaultTooltips = {
@@ -28,12 +82,24 @@ const monthlyTooltips = {
   },
 };
 
-function drawRevenueProfit(canvasId, labels, revenue, profit, tooltips) {
+function drawRevenueProfit(canvasId, labels, revenue, profit, tooltips, useSymlog) {
   const ctx = document.getElementById(canvasId);
   if (!ctx) {
     return;
   }
   ctx.height = 400;
+
+  var yAxisConfig = {
+    ticks: {
+      callback: function (value) {
+        return dollarFormatter.format(value);
+      },
+    },
+  };
+
+  if (useSymlog) {
+    yAxisConfig.type = "sqrt";
+  }
 
   new Chart(ctx, {
     type: "bar",
@@ -43,7 +109,7 @@ function drawRevenueProfit(canvasId, labels, revenue, profit, tooltips) {
         {
           label: "Revenue",
           data: revenue,
-          backgroundColor: "#047a15",
+          backgroundColor: "#999999",
           xAxisID: "x1",
           categoryPercentage: 0.8,
           barPercentage: 0.9,
@@ -53,7 +119,7 @@ function drawRevenueProfit(canvasId, labels, revenue, profit, tooltips) {
           label: "Profit",
           data: profit,
           backgroundColor: profit.map(function (v) {
-            return v >= 0 ? "#5dadec" : "#d9534f";
+            return v >= 0 ? "#047a15" : "#d9534f";
           }),
           xAxisID: "x2",
           categoryPercentage: 0.8,
@@ -85,15 +151,7 @@ function drawRevenueProfit(canvasId, labels, revenue, profit, tooltips) {
             },
           },
         ],
-        yAxes: [
-          {
-            ticks: {
-              callback: function (value) {
-                return dollarFormatter.format(value);
-              },
-            },
-          },
-        ],
+        yAxes: [yAxisConfig],
       },
     },
   });
@@ -120,6 +178,7 @@ fetch("annual-summary.json")
       data.map(function (d) { return String(d.year); }),
       data.map(function (d) { return d.revenue; }),
       data.map(function (d) { return d.profit; }),
-      defaultTooltips
+      defaultTooltips,
+      true // use symlog scale
     );
   });
