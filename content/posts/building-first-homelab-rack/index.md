@@ -596,7 +596,7 @@ When I priced everything out, cost was significantly lower for fiber:
 
 {{<notice type="info">}}
 
-**Gotcha**: If you use fiber, make sure that your cables and transceivers match in "mode." You [can't mix single mode fiber with multimode fiber](https://community.fs.com/article/single-mode-cabling-cost-vs-multimode-cabling-cost.html). I recommend building a multimode system, as it supports 10 Gbps speeds and is significantly less expensive than single mode.
+**Gotcha**: If you use fiber, make sure that your cables and transceivers have compatible "modes." You [can't mix single mode fiber cables with multimode cables or transceivers](https://community.fs.com/article/single-mode-cabling-cost-vs-multimode-cabling-cost.html). I recommend building a multimode system, as it supports 10 Gbps speeds and is significantly less expensive than single mode.
 
 {{</notice>}}
 
