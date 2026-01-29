@@ -36,7 +36,7 @@ The book took longer to write than I expected. I thought I'd complete the book b
 <script src="/third-party/chart.js/2.9.4/Chart.min.js"></script>
 <script src="script.js"></script>
 
-## Why does it take so long to write a book?
+## How can writing a book be a job?
 
 When I tell other software developers that I'm writing a book, they usually say something like, "Oh, great!" And then they pause, a little confused, "To give you time for freelance dev work?" And I have to say, "No, I'm _just_ writing a book. That's my whole job."
 
@@ -48,9 +48,7 @@ But if I'm being honest, I understand their confusion. How can writing a book be
 
 So, what am I doing all the other hours?
 
-I typically write about 10 full-length blog posts per year, by writing for about an hour a day. And a book is like 10-12 blog posts, so if I just write a book instead of a blog, I should be done in about a year. Except, it should be even faster because I only spend about an hour a day on my blog, so if I have eight hours to write, I could write a book in a few months.
-
-It turns out that even if I spend all day writing, I can still only write for about an hour a day. After that, I feel too tired and unfocused.
+## Why does it take so long to write a book?
 
 The other thing is that I can't _just_ write my book. I also need to do things to try to find readers for my book, both so I can actually make money from it and so I can get feedback to know whether I'm writing something useful.
 
@@ -63,6 +61,10 @@ Wrote more than I ever have before:
 - 13 blog posts (8 on [my personal blog](/posts/) and 5 on [my book's blog](https://refactoringenglish.com/blog/))
 - 12 [monthly retrospectives](/retrospectives/)
 - 12 [notes](/notes/) (shorter, less polished blog posts)
+
+I typically write about 10 full-length blog posts per year, by writing for about an hour a day. And a book is like 10-12 blog posts, so if I just write a book instead of a blog, I should be done in about a year. Except, it should be even faster because I only spend about an hour a day on my blog, so if I have eight hours to write, I could write a book in a few months.
+
+It turns out that even if I spend all day writing, I can still only write for about an hour a day. After that, I feel too tired and unfocused.
 
 ## Can I succeed again?
 
