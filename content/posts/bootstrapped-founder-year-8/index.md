@@ -9,19 +9,17 @@ tags:
 
 Eight years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own bootstrapped software company. Every year, I [post an update](/tags/annual-review/) about how that's going and what my life is like as an indie founder.
 
-Last year, I sold my first profitable business, so I've been trying to figure out how to
+Last year, I [sold my first profitable business](/i-sold-tinypilot/) and became a father (TODO: link), so I've been trying to figure out what I can do to make money and balance my work with family time.
 
 ## How finances went
 
-I know people are interested in how the money works, so I'll start there. Here's what my revenue and profit looked like every month.
+People are always most interested in how the money works, so I'll start there. Here's what my revenue and profit looked like every month.
 
 <canvas id="monthly-finances-chart"></canvas>
 
-16.3k in revenue and 8.2k in profit
+In total, I had $8.2k in profit on $16.3k in revenue. That was my total income for the year, which is obviously not enough to support a family, but my wife also works, and we have savings.
 
-My main source of revenue was my book. I did a Kickstarter for it in March, which gave me [$6k in pre-sales](/my-6k-advance/). I continued to sell discounted early access to readers as I wrote my book. XX readers have purchased the book in early access so far, for which I'm grateful.
-
-I also have an [old business](/bootstrapped-founder-year-1/#zestful) that makes $100-200/month without me touching it.
+My main source of revenue was my book. I'm writing a book to teach developers to improve their writing. I did a Kickstarter for it in March, which gave me [$6k in pre-sales](/my-6k-advance/). As I wrote, I continued to sell discounted early access to the book. In total, XX readers purchased early access to the book, for which I'm grateful. I also have an [old business](/bootstrapped-founder-year-1/#zestful) that makes $100-200/month without me touching it.
 
 My main expenses were LLMs, XX, and XX. I don't use AI to write, but I use it for a lot of the accessory tasks like making supporting web apps. And also just fun experiments.
 
@@ -29,7 +27,7 @@ Here's how 2025 compared to previous years:
 
 <canvas id="annual-finances-chart"></canvas>
 
-The years I was running TinyPilot dominate the chart. Still, 2025 my fourth most profitable year.
+The years I was running TinyPilot dominate the chart. Still, 2025 was my fourth most profitable year as a founder.
 
 My goal for the year was $50k in profit, so I fell quite short.
 
@@ -38,17 +36,39 @@ The book took more time than I expected. I thought I'd complete the book by abou
 <script src="/third-party/chart.js/2.9.4/Chart.min.js"></script>
 <script src="script.js"></script>
 
+## Why does it take so long to write a book?
+
+When I tell other software developers that I'm writing a book, they usually say something like, "Oh, great!" And then they pause, a little confused, "To give you time for freelance dev work?" And I have to say, "No, I'm _just_ writing a book. That's my whole job."
+
+When I tell friends and family I'm working on a book, they say, "Oh, so you're still on paternity leave?"
+
+No! I'm writing a book. It's a real job!
+
+But if I'm being honest, I understand their confusion. How can you write a book as your job unless you're a novelist or something? It's even harder to convince them it's a real job when I admit that I typically only write for about an hour a day.
+
+So, what am I doing all the other hours?
+
+I typically write about 10 full-length blog posts per year, by writing for about an hour a day. And a book is like 10-12 blog posts, so if I just write a book instead of a blog, I should be done in about a year. Except, it should be even faster because I only spend about an hour a day on my blog, so if I have eight hours to write, I could write a book in a few months.
+
+It turns out that even if I spend all day writing, I can still only write for about an hour a day. After that, I feel too tired and unfocused.
+
+The other thing is that I can't _just_ write my book. I also need to do things to try to find readers for my book, both so I can actually make money from it and so I can get feedback to know whether I'm writing something useful.
+
+- [Hacker News Popularity Contest](https://refactoringenglish.com/tools/hn-popularity/)
+- Edited blog posts for XX authors, including [helping Tyler Cipriani](https://refactoringenglish.com/services/blog-editing/sample-future-of-git/) reach [#1 on Hacker News](https://news.ycombinator.com/item?id=44916783)
+
+Wrote more than I ever have before:
+
+- 150 pages of my book (plus a lot more that I cut)
+- 13 blog posts (8 on [my personal blog](/posts/) and 5 on [my book's blog](https://refactoringenglish.com/blog/))
+- 12 [monthly retrospectives](/retrospectives/)
+- 12 [notes](/notes/) (shorter, less polished blog posts)
+
 ## Can I succeed again?
 
-Making $XX on a book is pretty good for a first-time author, but it's obviously not a sustainable income, so one of the things on my mind a lot this year is: can I create a successful business again?
+Making $XX on a book is pretty good for a first-time author, but it's obviously not a sustainable income, so one of the questions I've been asking myself a lot this year is: can I create a successful business again?
 
 When I went off on my own, I thought, "What's the worst that could happen? I just go get another software job." With today's software job market, I'm not even sure that safety net exists for me anymore. And even if it does, I'd feel crushed having a boss that expects me to do profitable things rather than blog about [why I hate the passive voice](https://refactoringenglish.com/chapters/passive-voice-considered-harmful/).
-
-{{<notice type="info">}}
-
-**Note**: If you're an employer reading my blog because I've caved and applied for a job, the preceding paragraph was a joke. I love being managed, no matter how dumb my boss is or how wrongheaded company incentives are. I certainly will never long for the freedom of self-employment.
-
-{{</notice>}}
 
 With TinyPilot, I made money, but I also got incredibly lucky in a lot of ways.
 
@@ -74,48 +94,26 @@ The major reason is finding alignment between these things:
 
 1. What I enjoy doing
 1. What I do well
-1. What serves my users
 1. What earns money
+1. What serves my users
 
 This is similar to the Japanese concept of Ikigai, which founders have started talking about the last few years.
+
+TODO: Make this a table
 
 For contrast, one of the first businesses I created was a website called Is It Keto. It explained why certain foods did or did not fit the keto diet
 
 - Enjoyment: I didn't care about the keto diet.
 - Competence: I wasn't good at finding users or convincing them to buy things.
+- Utility to users: I made money if users clicked ads and ordered keto products online, but they would have been better off buying [real food](https://realfood.gov/) at the grocery store.
 - Profitability: The site was not profitable.
-- User-founder alignment: I made money if users clicked ads and ordered keto products online, but they would have been better off buying [real food](https://realfood.gov/) at the grocery store.
 
-Writing my book, everything just feels aligned with what I'm interested in and what I'm good at:
+Writing my book, everything feels a lot more aligned with what I'm interested in and what I'm good at, though I'm still working on the money and utility parts:
 
 - Enjoyment: I'm passionate about clear writing and enjoy teaching techniques to other developers.
 - Competence: I feel especially qualified to write about clear writing for software developers I've been blogging for several years, and writing played a key role in all of my businesses.
 - Profitability: I've made $XXk from pre-sales which is not profitable enough to be sustainable.
-- User-founder alignment: I find readers for the book by publishing blog posts about the things I'm interested in. People who read my writing get something useful even if they have no interest in my book.
-
-I'm not totally nailing the "money" pillar. And I feel like I'm doing well, but I definitely want to improve. I'll feel more confident I'm succeeding if I hear readers tell me that my book has helped them and gotten results (e.g., they're getting better feedback on their documentation or blog posts)
-
-## Why does it take so long to write a book?
-
-When I tell people that I'm writing a book, they're usually a bit confused. They ask something like, "Oh, like to give you time for freelance dev work?" And I have to be like, "No, I'm just writing a book. That's all I'm doing."
-
-But honestly, I'm surprised at how long it's taking me to write this book.
-
-I typically write about 10 full-length blog posts per year, by writing for about an hour a day. And a book is like 10-12 blog posts, so if I just write a book instead of a blog, I should be done in about a year. Except, it should be even faster because I only spend about an hour a day on my blog, so if I have eight hours to write, I could write a book in a few months.
-
-It turns out that even if I spend all day writing, I can still only write for about an hour a day. After that, I feel too tired and unfocused.
-
-The other thing is that I can't _just_ write my book. I also need to do things to try to find readers for my book, both so I can actually make money from it and so I can get feedback to know whether I'm writing something useful.
-
-- [Hacker News Popularity Contest](https://refactoringenglish.com/tools/hn-popularity/)
-- Edited blog posts for XX authors, including [helping Tyler Cipriani](https://refactoringenglish.com/services/blog-editing/sample-future-of-git/) reach [#1 on Hacker News](https://news.ycombinator.com/item?id=44916783)
-
-Wrote more than I ever have before:
-
-- 150 pages of my book (plus a lot more that I cut)
-- 13 blog posts (8 on [my personal blog](/posts/) and 5 on [my book's blog](https://refactoringenglish.com/blog/))
-- 12 [monthly retrospectives](/retrospectives/)
-- 12 [notes](/notes/) (shorter, less polished blog posts)
+- Utility to users: I hear positive things about the book from readers as they read new chapters, but I want to make sure readers are getting tangible results (e.g., they're getting better feedback or results on their own writing) from the book and not just pseudolearning.
 
 ## Do I still love it?
 
