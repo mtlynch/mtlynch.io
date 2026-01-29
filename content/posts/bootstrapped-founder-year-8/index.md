@@ -31,7 +31,7 @@ The years I was running TinyPilot dominate the chart. Still, 2025 was my fourth 
 
 My goal for the year was $50k in profit, so I fell quite short.
 
-The book took more time than I expected. I thought I'd complete the book by about August and have time throughout the year to try several software businesses alongside the book. Instead, I spent all my time on the book, and I'm still not done.
+The book took longer to write than I expected. I thought I'd complete the book by August and have time to try several software businesses alongside the book. Instead, I spent all my time on the book, and I'm still not done.
 
 <script src="/third-party/chart.js/2.9.4/Chart.min.js"></script>
 <script src="script.js"></script>
@@ -44,7 +44,7 @@ When I tell friends and family I'm working on a book, they say, "Oh, so you're s
 
 No! I'm writing a book. It's a real job!
 
-But if I'm being honest, I understand their confusion. How can you write a book as your job unless you're a novelist or something? It's even harder to convince them it's a real job when I admit that I typically only write for about an hour a day.
+But if I'm being honest, I understand their confusion. How can writing a book be your job unless you're a novelist or something? It's even harder to convince them it's a real job when I admit that I typically only write for about an hour a day.
 
 So, what am I doing all the other hours?
 
