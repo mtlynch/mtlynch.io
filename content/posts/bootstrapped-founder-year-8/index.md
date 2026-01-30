@@ -19,7 +19,7 @@ People are always most interested in how the money works, so I'll start there. H
 
 In total, I had $8.2k in profit on $16.3k in revenue. That was my total income for the year, which is obviously not enough to support a family, but my wife also works, and we have savings.
 
-My main source of revenue was my book. I'm writing a book to teach developers to improve their writing. I did a Kickstarter for it in March, which gave me [$6k in pre-sales](/my-6k-advance/). As I wrote, I continued to sell discounted early access to the book. In total, XX readers purchased early access to the book, for which I'm grateful. I also have an [old business](/bootstrapped-founder-year-1/#zestful) that makes $100-200/month without me touching it.
+My main source of revenue was my book. I'm writing a book to teach developers to improve their writing. I did a Kickstarter for it in March, which gave me [$6k in pre-sales](/my-6k-advance/). As I wrote, I continued to sell discounted early access to the book. In total, 422 readers purchased early access to the book, for which I'm grateful. I also have an [old business](/bootstrapped-founder-year-1/#zestful) that makes $100-200/month without me touching it.
 
 My main expenses were computer hardware ($2.1k) and LLMs ($1.9k). I don't use AI to write, but I use it for a lot of the accessory tasks like fixing formatting and improving the website. I also use it for [my open-source projects](https://codeberg.org/mtlynch?tab=repositories).
 
