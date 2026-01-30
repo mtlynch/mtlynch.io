@@ -36,7 +36,7 @@ The book took longer to write than I expected. I thought I'd complete the book b
 <script src="/third-party/chart.js/2.9.4/Chart.min.js"></script>
 <script src="script.js"></script>
 
-## How can writing a book be a job?
+## Why does it take so long to write a book?
 
 When I tell other software developers that I'm writing a book, they usually say something like, "Oh, great!" And then they pause, a little confused, "To give you time for freelance dev work?" And I have to say, "No, I'm _just_ writing a book. That's my whole job."
 
@@ -44,13 +44,23 @@ When I tell friends and family I'm working on a book, they say, "Oh, so you're s
 
 No! I'm writing a book. It's a real job!
 
-But if I'm being honest, I understand their confusion. How can writing a book be your job unless you're a novelist or something? It's even harder to convince them it's a real job when I admit that I typically only write for about an hour a day.
+But if I'm being honest, I understand their confusion. How can writing a book be your job unless you're a novelist or something? And why has it taken me more than a year to write a non-fiction book that requires almost no research beyond what I already know?
+
+I thought I'd be done in four to six months. I typically write about a book's worth of blog posts per year, and that's just from writing for an hour a day. If I have nothing to do but write a book, I should be done in 1/8th the time!
+
+The problem is that even when all I have to do is write, I can still only write for about an hour per day.
+
+Before I started my book, I reasoned that when I write for an hour every morning, I typically produce 10 full-length blog posts per year. That's about the length of a non-fiction book, so I could just pause my blog for a year and write a book instead. Or, I could take a
+
+It's even harder to convince them it's a real job when I admit that I typically only write for about an hour a day.
 
 So, what am I doing all the other hours?
 
 ## Why does it take so long to write a book?
 
-The other thing is that I can't _just_ write my book. I also need to do things to try to find readers for my book, both so I can actually make money from it and so I can get feedback to know whether I'm writing something useful.
+The other thing is that I can't _just_ write my book. I also need to do things so that people who might potentially want to read my book become aware of my book. Or more simply, "marketing."
+
+to find readers for my book, both so I can actually make money from it and so I can get feedback to know whether I'm writing something useful.
 
 - [Hacker News Popularity Contest](https://refactoringenglish.com/tools/hn-popularity/)
 - Edited blog posts for XX authors, including [helping Tyler Cipriani](https://refactoringenglish.com/services/blog-editing/sample-future-of-git/) reach [#1 on Hacker News](https://news.ycombinator.com/item?id=44916783)
@@ -63,8 +73,6 @@ Wrote more than I ever have before:
 - 12 [notes](/notes/) (shorter, less polished blog posts)
 
 I typically write about 10 full-length blog posts per year, by writing for about an hour a day. And a book is like 10-12 blog posts, so if I just write a book instead of a blog, I should be done in about a year. Except, it should be even faster because I only spend about an hour a day on my blog, so if I have eight hours to write, I could write a book in a few months.
-
-It turns out that even if I spend all day writing, I can still only write for about an hour a day. After that, I feel too tired and unfocused.
 
 ## Can I succeed again?
 
