@@ -9,11 +9,11 @@ tags:
 
 Eight years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own bootstrapped software company. Every year, I [post an update](/tags/annual-review/) about how that's going and what my life is like as an indie founder.
 
-Last year, I [sold my first profitable business](/i-sold-tinypilot/) and became a father (TODO: link), so I've been trying to figure out what I can do to make money and balance my work with family time.
+Last year, I [sold my first profitable business](/i-sold-tinypilot/) and [became a father](/bootstrapped-founder-year-7/#i-became-a-new-parent), so I've been trying to figure out what I can do to make money and balance my work with family time.
 
 ## How finances went
 
-People are always most interested in how the money works, so I'll start there. Here's what my revenue and profit looked like every month.
+People are always most interested in how the money works, so I'll start there. Here's what my revenue and profit looked like every month this year.
 
 <canvas id="monthly-finances-chart"></canvas>
 
@@ -71,11 +71,11 @@ This has been my favorite year of being a founder since I went off on my own eig
 1. It facilitates work-life balance
 1. It serves my users
 
-This is similar to the Japanese concept of Ikigai, which founders have started talking about the last few years.
+The more popular version of this idea is the Japanese concept of [Ikigai](https://en.wikipedia.org/wiki/Ikigai), overlaps with most of my categories.
 
 As a concrete example, one of my first businesses back in 2019 was a website called Is It Keto. It was a simple website that explained why certain foods did or did not fit the keto diet.
 
-TODO: Screenshot
+{{<img src="isitketo-screenshot.webp" alt="Screenshot of Is It Keto website" max-width="450px" caption="One of my first businesses, Is It Keto, which told readers which foods fit the keto diet.">}}
 
 Here's how Is It Keto scored on my rubric:
 
@@ -87,7 +87,7 @@ Here's how Is It Keto scored on my rubric:
 
 | Pillar            | Score | Notes                                                                                                                                                                                                       |
 | ----------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
-| Enjoyment         | 🔴    | I enjoyed programming but didn't care about the keto diet.                                                                                                                                                  |
+| Enjoyment         | 🔴    | I enjoyed programming but didn't care about the keto diet enough to enjoy writing about it so much.                                                                                                         |
 | Competence        | 🔴    | I wasn't good at building websites, finding users, or convincing anyone to buy things.                                                                                                                      |
 | Profitability     | 🔴    | The site was [not profitable](/retrospectives/2020/07/#is-it-keto).                                                                                                                                         |
 | Work-Life balance | 🟢    | The site was easy to keep online 24/7. Even if there had been an outage, the stakes were so low that I'd only be losing a few dollars of ad revenue per day.                                                |
