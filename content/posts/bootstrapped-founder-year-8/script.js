@@ -118,7 +118,33 @@ function drawRevenueProfit(canvasId, labels, revenue, profit, tooltips, useSymlo
   var chartOptions = {
     responsive: true,
     maintainAspectRatio: false,
-    legend: { display: false },
+    legend: {
+      display: true,
+      labels: {
+        generateLabels: function () {
+          return [
+            {
+              text: "Revenue",
+              fillStyle: "#999999",
+              strokeStyle: "#999999",
+              lineWidth: 0,
+            },
+            {
+              text: "Profit",
+              fillStyle: "#047a15",
+              strokeStyle: "#047a15",
+              lineWidth: 0,
+            },
+            {
+              text: "Loss",
+              fillStyle: "#d9534f",
+              strokeStyle: "#d9534f",
+              lineWidth: 0,
+            },
+          ];
+        },
+      },
+    },
     tooltips: tooltips,
     scales: {
       xAxes: [
