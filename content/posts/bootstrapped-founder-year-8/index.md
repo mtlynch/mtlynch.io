@@ -72,24 +72,23 @@ This has been my favorite year of being a founder since I went off on my own eig
 
 This is similar to the Japanese concept of Ikigai, which founders have started talking about the last few years.
 
-TODO: Make this a table
-
 As a concrete example, one of my first businesses back in 2019 was a website called Is It Keto. It was a simple website that explained why certain foods did or did not fit the keto diet.
 
-| Pillar    | Score | Notes                                                      |
-| --------- | ----- | ---------------------------------------------------------- |
-| Enjoyment | 🔴    | I enjoyed programming but didn't care about the keto diet. |
-
-- Competence: 🔴 - I wasn't good at building websites, finding users, or convincing anyone to buy things.
-- Utility to users: 🔴 - I made money if users clicked ads and ordered keto products online, but they would have been better off buying [real food](https://realfood.gov/) at the grocery store.
-- Profitability: 🔴 - The site was not profitable.
+| Pillar           | Score | Notes                                                                                                                                                                   |
+| ---------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enjoyment        | 🔴    | I enjoyed programming but didn't care about the keto diet.                                                                                                              |
+| Competence       | 🔴    | I wasn't good at building websites, finding users, or convincing anyone to buy things.                                                                                  |
+| Utility to users | 🔴    | I made money if users clicked ads and ordered keto products online, but they would have been better off buying [real food](https://realfood.gov/) at the grocery store. |
+| Profitability    | 🔴    | The site was not profitable.                                                                                                                                            |
 
 Writing my book, everything feels a lot more aligned with what I'm interested in and what I'm good at, though I'm still working on the money and utility parts:
 
-- Enjoyment: 🟢 I'm passionate about clear writing and enjoy teaching techniques to other developers.
-- Competence: 🟢 I feel especially qualified to write about clear writing for software developers I've been blogging for several years, and writing played a key role in all of my businesses.
-- Profitability: 🟡 I've made $XXk from pre-sales which is not profitable enough to be sustainable.
-- Utility to users: 🟡 I hear positive things about the book from readers as they read new chapters, but I want to make sure readers are getting tangible results (e.g., they're getting better feedback or results on their own writing) from the book and not just pseudolearning.
+| Pillar           | Score | Notes                                                                                                                                                                                                                                                         |
+| ---------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enjoyment        | 🟢    | I'm passionate about clear writing and enjoy teaching techniques to other developers.                                                                                                                                                                         |
+| Competence       | 🟢    | I feel especially qualified to write about clear writing for software developers I've been blogging for several years, and writing played a key role in all of my businesses.                                                                                 |
+| Profitability    | 🟡    | I've made $XXk from pre-sales which is not profitable enough to be sustainable.                                                                                                                                                                               |
+| Utility to users | 🟡    | I hear positive things about the book from readers as they read new chapters, but I want to make sure readers are getting tangible results (e.g., they're getting better feedback or results on their own writing) from the book and not just pseudolearning. |
 
 ## Can I succeed again?
 
