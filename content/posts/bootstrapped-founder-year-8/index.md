@@ -44,35 +44,52 @@ When I tell friends and family I'm working on a book, they say, "Oh, so you're s
 
 No! I'm writing a book. It's a real job!
 
-But if I'm being honest, I understand their confusion. How can writing a book be your job unless you're a novelist or something? And why has it taken me more than a year to write a non-fiction book that requires almost no research beyond what I already know?
+But if I'm being honest, I understand their confusion. How can writing a book be my job? I'm not a professional author. And why has it taken me more than a year to write a non-fiction book?
 
-I thought I'd be done in four to six months. I typically write about a book's worth of blog posts per year, and that's just from writing for an hour a day. If I have nothing to do but write a book, I should be done in 1/8th the time!
+When I started the book, I thought I'd be done in six months. I typically write a short book's worth of blog posts per year, and that's just from writing for an hour a day. If I have nothing to do but write a book, I should be done in 1/8th the time!
 
-The problem is that even when all I have to do is write, I can still only write for about an hour per day.
+It turns out that even when all I have to do is write, I can still only write for about an hour per day before I feel drained.
 
-Before I started my book, I reasoned that when I write for an hour every morning, I typically produce 10 full-length blog posts per year. That's about the length of a non-fiction book, so I could just pause my blog for a year and write a book instead. Or, I could take a
+I also can't _just_ write a book. I need to find people to actually read the book, so I also wrote blog posts and published chapter excerpts. I ended up writing far more in the past year than I ever have before:
 
-It's even harder to convince them it's a real job when I admit that I typically only write for about an hour a day.
-
-So, what am I doing all the other hours?
-
-## Why does it take so long to write a book?
-
-The other thing is that I can't _just_ write my book. I also need to do things so that people who might potentially want to read my book become aware of my book. Or more simply, "marketing."
-
-to find readers for my book, both so I can actually make money from it and so I can get feedback to know whether I'm writing something useful.
-
-- [Hacker News Popularity Contest](https://refactoringenglish.com/tools/hn-popularity/)
-- Edited blog posts for XX authors, including [helping Tyler Cipriani](https://refactoringenglish.com/services/blog-editing/sample-future-of-git/) reach [#1 on Hacker News](https://news.ycombinator.com/item?id=44916783)
-
-Wrote more than I ever have before:
-
-- 150 pages of my book (plus a lot more that I cut)
 - 13 blog posts (8 on [my personal blog](/posts/) and 5 on [my book's blog](https://refactoringenglish.com/blog/))
 - 12 [monthly retrospectives](/retrospectives/)
 - 12 [notes](/notes/) (shorter, less polished blog posts)
+- 150 pages of my book, including seven chapters I adapted into [free excerpts](https://refactoringenglish.com/chapters/)
 
-I typically write about 10 full-length blog posts per year, by writing for about an hour a day. And a book is like 10-12 blog posts, so if I just write a book instead of a blog, I should be done in about a year. Except, it should be even faster because I only spend about an hour a day on my blog, so if I have eight hours to write, I could write a book in a few months.
+I spent a lot of time editing blog posts for other developers. That helped me discover other developers' writing pain points and what advice they found effective. I worked with XX clients, and in the process [helped Tyler Cipriani](https://refactoringenglish.com/services/blog-editing/sample-future-of-git/) reach [#1 on Hacker News](https://news.ycombinator.com/item?id=44916783).
+
+And then there's just a bunch of administrative tasks around writing and selling a book like setting up mailing lists, dealing with Stripe, debugging PDF/epub rendering issues, etc. (TODO: links)
+
+## Finding alignment with my business
+
+This has been my favorite year of being a founder since I went off on my own eight years ago. It took me several years to figure out that I feel most fulfilled when I'm doing something that ticks all of these boxes:
+
+1. I enjoy doing it
+1. I do it well
+1. It earns money
+1. It serves my users
+
+This is similar to the Japanese concept of Ikigai, which founders have started talking about the last few years.
+
+TODO: Make this a table
+
+As a concrete example, one of my first businesses back in 2019 was a website called Is It Keto. It was a simple website that explained why certain foods did or did not fit the keto diet.
+
+| Pillar    | Score | Notes                                                      |
+| --------- | ----- | ---------------------------------------------------------- |
+| Enjoyment | 🔴    | I enjoyed programming but didn't care about the keto diet. |
+
+- Competence: 🔴 - I wasn't good at building websites, finding users, or convincing anyone to buy things.
+- Utility to users: 🔴 - I made money if users clicked ads and ordered keto products online, but they would have been better off buying [real food](https://realfood.gov/) at the grocery store.
+- Profitability: 🔴 - The site was not profitable.
+
+Writing my book, everything feels a lot more aligned with what I'm interested in and what I'm good at, though I'm still working on the money and utility parts:
+
+- Enjoyment: 🟢 I'm passionate about clear writing and enjoy teaching techniques to other developers.
+- Competence: 🟢 I feel especially qualified to write about clear writing for software developers I've been blogging for several years, and writing played a key role in all of my businesses.
+- Profitability: 🟡 I've made $XXk from pre-sales which is not profitable enough to be sustainable.
+- Utility to users: 🟡 I hear positive things about the book from readers as they read new chapters, but I want to make sure readers are getting tangible results (e.g., they're getting better feedback or results on their own writing) from the book and not just pseudolearning.
 
 ## Can I succeed again?
 
@@ -96,35 +113,6 @@ Cloud computing increased the power of a single engineer. To deploy a production
 
 I did a Kickstarter for the book, and it succeeded by a hair.
 
-## Finding alignment with my business
-
-This has been my favorite year of being a founder since I went off on my own eight years ago.
-
-The major reason is finding alignment between these things:
-
-1. What I enjoy doing
-1. What I do well
-1. What earns money
-1. What serves my users
-
-This is similar to the Japanese concept of Ikigai, which founders have started talking about the last few years.
-
-TODO: Make this a table
-
-For contrast, one of the first businesses I created was a website called Is It Keto. It explained why certain foods did or did not fit the keto diet
-
-- Enjoyment: I didn't care about the keto diet.
-- Competence: I wasn't good at finding users or convincing them to buy things.
-- Utility to users: I made money if users clicked ads and ordered keto products online, but they would have been better off buying [real food](https://realfood.gov/) at the grocery store.
-- Profitability: The site was not profitable.
-
-Writing my book, everything feels a lot more aligned with what I'm interested in and what I'm good at, though I'm still working on the money and utility parts:
-
-- Enjoyment: I'm passionate about clear writing and enjoy teaching techniques to other developers.
-- Competence: I feel especially qualified to write about clear writing for software developers I've been blogging for several years, and writing played a key role in all of my businesses.
-- Profitability: I've made $XXk from pre-sales which is not profitable enough to be sustainable.
-- Utility to users: I hear positive things about the book from readers as they read new chapters, but I want to make sure readers are getting tangible results (e.g., they're getting better feedback or results on their own writing) from the book and not just pseudolearning.
-
 ## Do I still love it?
 
 My favorite year. Aligning the things I like. And my wife and I work from home, and our families help out with childcare during the day, so anytime I want, I can take a break to go play with my son.
@@ -137,7 +125,7 @@ At the end of [my first year as a founder](/bootstrapped-founder-year-1/), I wro
 >
 > My friends with children tell me that kids won't complicate this at all.
 
-When I wrote that, I was single. I met my wife a few weeks after publishing that, and we had our first child in 2024. It's surprising that it's still true.
+When I wrote that, I was single and in my early thirties. A few weeks after publishing that, I'd meet my wife. We had our first child in 2024. It's surprising that it's still true.
 
 Kids and a family mean I can't do whatever I want _all_ day, but I still feel like I do whatever I want from 9-5 every day.
 
