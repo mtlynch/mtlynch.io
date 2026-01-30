@@ -21,7 +21,7 @@ In total, I had $8.2k in profit on $16.3k in revenue. That was my total income f
 
 My main source of revenue was my book. I'm writing a book to teach developers to improve their writing. I did a Kickstarter for it in March, which gave me [$6k in pre-sales](/my-6k-advance/). As I wrote, I continued to sell discounted early access to the book. In total, XX readers purchased early access to the book, for which I'm grateful. I also have an [old business](/bootstrapped-founder-year-1/#zestful) that makes $100-200/month without me touching it.
 
-My main expenses were LLMs, XX, and XX. I don't use AI to write, but I use it for a lot of the accessory tasks like making supporting web apps. And also just fun experiments.
+My main expenses were computer hardware ($2.1k) and LLMs ($1.9k). I don't use AI to write, but I use it for a lot of the accessory tasks like fixing formatting and improving the website. I also use it for [my open-source projects](https://codeberg.org/mtlynch?tab=repositories).
 
 Here's how 2025 compared to previous years:
 
@@ -101,13 +101,13 @@ Writing my book, everything feels a lot more aligned with what I'm interested in
 
 </div>
 
-| Pillar            | Score | Notes                                                                                                                                                                                                                                                          |
-| ----------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Enjoyment         | 🟢    | I'm passionate about clear writing and enjoy teaching techniques to other developers.                                                                                                                                                                          |
-| Competence        | 🟢    | I feel especially qualified to write about clear writing for software developers I've been blogging for several years, and writing played a key role in all of my businesses.                                                                                  |
-| Profitability     | 🟡    | I've made $XXk from pre-sales which feels good for a first-time author, but it's not yet profitable enough to be sustainable.                                                                                                                                  |
-| Work-Life balance | 🟢    | Few businesses beat an ebook in terms work-life balance. I can comfortably step away from the book and ignore emails for weeks without it bothering anyone. I've never been paged at 2 AM because my servers are down and users urgently need to read my book. |
-| Utility to users  | 🟡    | I hear positive things about the book from readers as they read new chapters, but I want to make sure readers are getting tangible results (e.g., they're getting better feedback or results on their own writing) from the book and not just pseudolearning.  |
+| Pillar            | Score | Notes                                                                                                                                                                                                                                                         |
+| ----------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enjoyment         | 🟢    | I'm passionate about clear writing and enjoy teaching techniques to other developers.                                                                                                                                                                         |
+| Competence        | 🟢    | I feel especially qualified to write about clear writing for software developers I've been blogging for several years, and writing played a key role in all of my businesses.                                                                                 |
+| Profitability     | 🟡    | I've made $11.8k from pre-sales, which feels good for a first-time author, but it's not yet profitable enough to be sustainable.                                                                                                                              |
+| Work-Life balance | 🟢    | It's hard to beat an ebook in terms work-life balance. I can comfortably step away from the book and ignore emails for weeks without it bothering anyone. I've never been paged at 2 AM because my servers are down and users urgently need to read my book.  |
+| Utility to users  | 🟡    | I hear positive things about the book from readers as they read new chapters, but I want to make sure readers are getting tangible results (e.g., they're getting better feedback or results on their own writing) from the book and not just pseudolearning. |
 
 ## Do I still love it?
 
@@ -131,11 +131,19 @@ After several years of [just "enjoying" life](/bootstrapped-founder-year-6/#do-i
 
 ## Lessons learned
 
-### Writing a book takes longer than you expect
+### Writing a book takes longer than I expect
 
 This is kind of an extension of [Hofstadter's law](https://en.wikipedia.org/wiki/Hofstadter%27s_law):
 
 > Hofstadter's law: It always takes longer than you expect, even when you take into account Hofstadter's law.
+
+Teiva Harsanyi thought he'd be done in eight months, but it actually [took 20](https://www.thecoder.cafe/p/100-go-mistakes). Austin Henley started writing a book in 2023 and it dragged on for about two years before he got tired of working with his publisher and [canceled his book deal](https://austinhenley.com/blog/canceledbookdeal.html).
+
+### I enjoy my work more when I can align the things I care about
+
+### I can be a bootstrapped founder and a parent
+
+TODO
 
 ## Grading last year's goals
 
