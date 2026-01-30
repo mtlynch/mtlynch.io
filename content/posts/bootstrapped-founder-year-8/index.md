@@ -109,30 +109,6 @@ Writing my book, everything feels a lot more aligned with what I'm interested in
 | Work-Life balance | 🟢    | Few businesses beat an ebook in terms work-life balance. I can comfortably step away from the book and ignore emails for weeks without it bothering anyone. I've never been paged at 2 AM because my servers are down and users urgently need to read my book. |
 | Utility to users  | 🟡    | I hear positive things about the book from readers as they read new chapters, but I want to make sure readers are getting tangible results (e.g., they're getting better feedback or results on their own writing) from the book and not just pseudolearning.  |
 
-A book is extremely friendly to work-life balance. Nobody's ever paged me at 2 AM to say that says my servers are down, and customers are panicking because they can't read my book.
-
-## Can I succeed again?
-
-Making $XX on a book is pretty good for a first-time author, but it's obviously not a sustainable income, so one of the questions I've been asking myself a lot this year is: can I create a successful business again?
-
-When I went off on my own, I thought, "What's the worst that could happen? I just go get another software job." With today's software job market, I'm not even sure that safety net exists for me anymore. And even if it does, I'd feel crushed having a boss that expects me to do profitable things rather than blog about [why I hate the passive voice](https://refactoringenglish.com/chapters/passive-voice-considered-harmful/).
-
-With TinyPilot, I made money, but I also got incredibly lucky in a lot of ways.
-
-There were probably 100 catastrophes that could have occurred to sink the company, and I'm fortunate to live one of the few timelines where none of them occurred. it took me XX years to become reach profitability.
-
-Even the product itself, it wasn't like I recognized that COVID would drive increased demand in remote administration devices and smartly jumped on the opportunity. It was just dumb luck that I happened to be tinkering with something that the market wanted.
-
-I actually have a lot of optimism. It feels like the stars have aligned again to give me an unfair advantage:
-
-- There are an enormous number of useful software products that are now viable to create using AI that would have been too costly to implement before.
-- AI is extremely powerful, but it's still at the stage where the only people who can use it to its full potential are senior-level generalist software engineers.
-- Other senior software developers who could use AI to build companies either lack motivation or experience in entrepreneurship, whereas I have eight years of experience.
-
-Cloud computing increased the power of a single engineer. To deploy a production-grade web app, you no longer needed a server admin and a software developer: you could just have the . With AI, you can get specialty expertise without hiring an expert. I know I'm not going to have AI. Four years ago, when I wanted to add H.264 video encoding to my app, I had to find an engineer with video encoding experience to implement it. I think I spent $3-5k to show a proof of concept just because nobody on the team was familiar with the APIs. It would have been even more expensive to But today, that's the kind of thing I could just
-
-I did a Kickstarter for the book, and it succeeded by a hair.
-
 ## Do I still love it?
 
 At the end of [my first year as a founder](/bootstrapped-founder-year-1/), I wrote:
