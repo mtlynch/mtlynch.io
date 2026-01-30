@@ -5,6 +5,18 @@ const dollarFormatter = new Intl.NumberFormat("en-US", {
   maximumFractionDigits: 0,
 });
 
+// Map years to their blog posts and finance section anchors
+const yearLinks = {
+  2018: "/bootstrapped-founder-year-1/#how-i-made-and-spent-money",
+  2019: "/bootstrapped-founder-year-2/#how-i-made-and-spent-money",
+  2020: "/bootstrapped-founder-year-3/#the-year-things-clicked-into-place",
+  2021: "/bootstrapped-founder-year-4/#tinypilot-finances",
+  2022: "/bootstrapped-founder-year-5/#tinypilot-grew-annual-revenue-to-812k",
+  2023: "/bootstrapped-founder-year-6/#tinypilot-became-20x-more-profitable",
+  2024: "/bootstrapped-founder-year-7/",
+  // 2025 is the current year, no link needed
+};
+
 // Square root scale: signed sqrt for compression
 // Less aggressive than log, handles negatives
 function signedSqrt(x) {
@@ -84,7 +96,7 @@ const monthlyTooltips = {
   },
 };
 
-function drawRevenueProfit(canvasId, labels, revenue, profit, tooltips, useSymlog) {
+function drawRevenueProfit(canvasId, labels, revenue, profit, tooltips, useSymlog, yearData) {
   const ctx = document.getElementById(canvasId);
   if (!ctx) {
     return;
@@ -101,6 +113,59 @@ function drawRevenueProfit(canvasId, labels, revenue, profit, tooltips, useSymlo
 
   if (useSymlog) {
     yAxisConfig.type = "sqrt";
+  }
+
+  var chartOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    legend: { display: false },
+    tooltips: tooltips,
+    scales: {
+      xAxes: [
+        {
+          id: "x1",
+          type: "category",
+          offset: true,
+        },
+        {
+          id: "x2",
+          type: "category",
+          display: false,
+          offset: true,
+          gridLines: {
+            display: false,
+            drawOnChartArea: false,
+          },
+        },
+      ],
+      yAxes: [yAxisConfig],
+    },
+  };
+
+  // Add click and hover handlers for annual chart with year links
+  if (yearData) {
+    chartOptions.onClick = function (evt, elements) {
+      if (elements.length > 0) {
+        var index = elements[0]._index;
+        var year = yearData[index].year;
+        if (yearLinks[year]) {
+          window.location.href = yearLinks[year];
+        }
+      }
+    };
+    chartOptions.onHover = function (evt, elements) {
+      if (elements.length > 0) {
+        var index = elements[0]._index;
+        var year = yearData[index].year;
+        if (yearLinks[year]) {
+          evt.target.style.cursor = "pointer";
+        } else {
+          evt.target.style.cursor = "default";
+        }
+      } else {
+        evt.target.style.cursor = "default";
+      }
+    };
   }
 
   new Chart(ctx, {
@@ -130,32 +195,7 @@ function drawRevenueProfit(canvasId, labels, revenue, profit, tooltips, useSymlo
         },
       ],
     },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      legend: { display: false },
-      tooltips: tooltips,
-      scales: {
-        xAxes: [
-          {
-            id: "x1",
-            type: "category",
-            offset: true,
-          },
-          {
-            id: "x2",
-            type: "category",
-            display: false,
-            offset: true,
-            gridLines: {
-              display: false,
-              drawOnChartArea: false,
-            },
-          },
-        ],
-        yAxes: [yAxisConfig],
-      },
-    },
+    options: chartOptions,
   });
 }
 
@@ -181,6 +221,7 @@ fetch("annual-summary.json")
       data.map(function (d) { return d.revenue; }),
       data.map(function (d) { return d.profit; }),
       defaultTooltips,
-      true // use symlog scale
+      true, // use symlog scale
+      data  // pass year data for click handling
     );
   });
