@@ -68,27 +68,48 @@ This has been my favorite year of being a founder since I went off on my own eig
 1. I enjoy doing it
 1. I do it well
 1. It earns money
+1. It facilitates work-life balance
 1. It serves my users
 
 This is similar to the Japanese concept of Ikigai, which founders have started talking about the last few years.
 
 As a concrete example, one of my first businesses back in 2019 was a website called Is It Keto. It was a simple website that explained why certain foods did or did not fit the keto diet.
 
-| Pillar           | Score | Notes                                                                                                                                                                   |
-| ---------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Enjoyment        | 🔴    | I enjoyed programming but didn't care about the keto diet.                                                                                                              |
-| Competence       | 🔴    | I wasn't good at building websites, finding users, or convincing anyone to buy things.                                                                                  |
-| Utility to users | 🔴    | I made money if users clicked ads and ordered keto products online, but they would have been better off buying [real food](https://realfood.gov/) at the grocery store. |
-| Profitability    | 🔴    | The site was not profitable.                                                                                                                                            |
+TODO: Screenshot
+
+Here's how Is It Keto scored on my rubric:
+
+<div style="text-align: center">
+
+### Is It Keto
+
+</div>
+
+| Pillar            | Score | Notes                                                                                                                                                                                                       |
+| ----------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| Enjoyment         | 🔴    | I enjoyed programming but didn't care about the keto diet.                                                                                                                                                  |
+| Competence        | 🔴    | I wasn't good at building websites, finding users, or convincing anyone to buy things.                                                                                                                      |
+| Profitability     | 🔴    | The site was [not profitable](/retrospectives/2020/07/#is-it-keto).                                                                                                                                         |
+| Work-Life balance | 🟢    | The site was easy to keep online 24/7. Even if there had been an outage, the stakes were so low that I'd only be losing a few dollars of ad revenue per day.                                                |
+| Utility to users  | 🟡    | Users found it useful, but I only made money if users clicked ads or ordered keto products online. They probably would have been better off buying [real food](https://realfood.gov/) at the grocery store. |     |
 
 Writing my book, everything feels a lot more aligned with what I'm interested in and what I'm good at, though I'm still working on the money and utility parts:
 
-| Pillar           | Score | Notes                                                                                                                                                                                                                                                         |
-| ---------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Enjoyment        | 🟢    | I'm passionate about clear writing and enjoy teaching techniques to other developers.                                                                                                                                                                         |
-| Competence       | 🟢    | I feel especially qualified to write about clear writing for software developers I've been blogging for several years, and writing played a key role in all of my businesses.                                                                                 |
-| Profitability    | 🟡    | I've made $XXk from pre-sales which is not profitable enough to be sustainable.                                                                                                                                                                               |
-| Utility to users | 🟡    | I hear positive things about the book from readers as they read new chapters, but I want to make sure readers are getting tangible results (e.g., they're getting better feedback or results on their own writing) from the book and not just pseudolearning. |
+<div style="text-align: center">
+
+### _Refactoring English_ (my book)
+
+</div>
+
+| Pillar            | Score | Notes                                                                                                                                                                                                                                                          |
+| ----------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enjoyment         | 🟢    | I'm passionate about clear writing and enjoy teaching techniques to other developers.                                                                                                                                                                          |
+| Competence        | 🟢    | I feel especially qualified to write about clear writing for software developers I've been blogging for several years, and writing played a key role in all of my businesses.                                                                                  |
+| Profitability     | 🟡    | I've made $XXk from pre-sales which feels good for a first-time author, but it's not yet profitable enough to be sustainable.                                                                                                                                  |
+| Work-Life balance | 🟢    | Few businesses beat an ebook in terms work-life balance. I can comfortably step away from the book and ignore emails for weeks without it bothering anyone. I've never been paged at 2 AM because my servers are down and users urgently need to read my book. |
+| Utility to users  | 🟡    | I hear positive things about the book from readers as they read new chapters, but I want to make sure readers are getting tangible results (e.g., they're getting better feedback or results on their own writing) from the book and not just pseudolearning.  |
+
+A book is extremely friendly to work-life balance. Nobody's ever paged me at 2 AM to say that says my servers are down, and customers are panicking because they can't read my book.
 
 ## Can I succeed again?
 
@@ -114,8 +135,6 @@ I did a Kickstarter for the book, and it succeeded by a hair.
 
 ## Do I still love it?
 
-My favorite year. Aligning the things I like. And my wife and I work from home, and our families help out with childcare during the day, so anytime I want, I can take a break to go play with my son.
-
 At the end of [my first year as a founder](/bootstrapped-founder-year-1/), I wrote:
 
 > As someone who has always valued independence, I love being a solo developer. It makes a world of difference to wake up whenever I want and make my own choices about how to spend my entire day.
@@ -124,15 +143,15 @@ At the end of [my first year as a founder](/bootstrapped-founder-year-1/), I wro
 >
 > My friends with children tell me that kids won't complicate this at all.
 
-When I wrote that, I was single and in my early thirties. A few weeks after publishing that, I'd meet my wife. We had our first child in 2024. It's surprising that it's still true.
+I wrote that in 2019, when I was in my early thirties and single.
 
-Kids and a family mean I can't do whatever I want _all_ day, but I still feel like I do whatever I want from 9-5 every day.
+A few weeks later, I met my wife, and we've been together ever since. We had our first child in 2024. And, surprisingly, my life is still how I described it seven years ago.
 
-That's still pretty true.
+Okay, my life isn't _exactly_ what I described in 2019. My toddler decides when I wake up, and it's not always the time his independence-loving father would choose. But I still feel the joy of spending my work days on whatever I choose.
 
-A book is extremely friendly to work-life balance. Nobody's ever paged me at 2 AM to say that says my servers are down, and customers are panicking because they can't read my book.
+I joked back then about how much kids would complicate my life as an indie founder, but it's actually less complicated than I expected. Plus, it's more fun. My wife and I work from home, and our families come over to do childcare during working hours. Anytime I want, I can take a break from work to go play with my son.
 
-And even my work setup is super nice. My family comes over to help out with childcare while my wife and I work, so whenever I want a break from work, I get to play with my son, and he's always delighted to see me.
+After several years of [just "enjoying" life](/bootstrapped-founder-year-6/#do-i-still-love-it) as a bootstrapped founder, I'm happy to say that I love it again. I still want to do it forever.
 
 ## Lessons learned
 
@@ -148,15 +167,15 @@ Last year, I set [three high-level goals](/bootstrapped-founder-year-7/#goals-fo
 
 ### Earn $50k in profit
 
-- **Result**: Earned $8.2k in profit
+- **Result**: I earned $8.2k in profit.
 - **Grade**: D
 
 TODO
 
 ### Publish a course or book
 
-- **Result**: TODO
-- **Grade**: TODO
+- **Result**: I'm about 80% done with my book.
+- **Grade**: C
 
 TODO
 
@@ -169,13 +188,13 @@ TODO
 
 ## Goals for next year
 
-### Earn five positive citations of my book
+### Earn five book citations
 
 I'd like to find successful developer authors who publicly cite my book as a resource that helped them achieve something.
 
 ### Earn $75k in profit
 
-### Create a profitable SaaS business
+### Create a profitable software business
 
 {{<annual-updates>}}
 

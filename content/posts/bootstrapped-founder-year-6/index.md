@@ -263,7 +263,7 @@ I hope that by outsourcing and delegating more of TinyPilot's operational side, 
 
 Every year, when I write these blog posts, I ask myself whether I still love what I'm doing.
 
-2022 remains the toughest year I've had. I still preferred it to working for an employer, but it was a massive challenge to onboard new teammates while navigating [the global chip shortage](<https://en.wikipedia.org/wiki/Global_chip_shortage_(2020%E2%80%932023)>).
+2022 remains [the toughest year I've had](/bootstrapped-founder-year-5/#do-i-still-love-it). I still preferred it to working for an employer, but it was a massive challenge to onboard new teammates while navigating [the global chip shortage](<https://en.wikipedia.org/wiki/Global_chip_shortage_(2020%E2%80%932023)>).
 
 2023 was a major improvement from the previous year. There were fewer fires to put out, and it felt good to shift critical workflows to specialized vendors.
 
