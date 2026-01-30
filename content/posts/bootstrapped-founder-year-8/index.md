@@ -57,7 +57,7 @@ I also can't _just_ write a book. I need to find people to actually read the boo
 - 12 [notes](/notes/) (shorter, less polished blog posts)
 - 150 pages of my book, including seven chapters I adapted into [free excerpts](https://refactoringenglish.com/chapters/)
 
-I spent a lot of time editing blog posts for other developers. That helped me discover other developers' writing pain points and what advice they found effective. I worked with XX clients, and in the process [helped Tyler Cipriani](https://refactoringenglish.com/services/blog-editing/sample-future-of-git/) reach [#1 on Hacker News](https://news.ycombinator.com/item?id=44916783).
+I spent a lot of time editing blog posts for other developers. That helped me discover other developers' writing pain points and what advice they found effective. I worked with seven clients, one of which was [Tyler Cipriani](https://tylercipriani.com/) on [a post](https://refactoringenglish.com/services/blog-editing/sample-future-of-git/) that reached [#1 on Hacker News](https://news.ycombinator.com/item?id=44916783).
 
 And then there's just a bunch of administrative tasks around writing and selling a book like setting up mailing lists, dealing with Stripe, debugging PDF/epub rendering issues, etc. (TODO: links)
 
