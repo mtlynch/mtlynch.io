@@ -151,7 +151,7 @@ This is kind of an extension of [Hofstadter's law](https://en.wikipedia.org/wiki
 
 ### I enjoy my work when it feels aligned with me
 
-Early in my time as an indie founder, I thought I'd enjoy whatever business earned me money as long as I was writing software. With more experience, I've found that #finding-alignment-with-my-business
+As much as I love writing code, programming alone isn't enough to make me enjoy my work. I need to find a business that matches my interests, ethics, and skills.
 
 ### I can be a bootstrapped founder and a parent
 
