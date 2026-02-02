@@ -75,9 +75,9 @@ Over several years, I found that a business fulfills me most when it meets these
 1. I do it well
 1. It earns money
 1. It facilitates work-life balance
-1. It serves my users
+1. It aligns interests between me and my users
 
-As a concrete example, one of my first businesses back in 2019 was a website called Is It Keto. It was a simple website that explained why certain foods did or did not fit the keto diet.
+As a concrete example, one of my first businesses back in 2019 was called Is It Keto. It was a simple website that explained whether certain foods fit the keto diet.
 
 {{<img src="isitketo-screenshot.webp" alt="Screenshot of Is It Keto website" max-width="450px" caption="One of my first businesses, Is It Keto, which told readers which foods fit the keto diet.">}}
 
@@ -125,13 +125,13 @@ At the end of [my first year as a founder](/bootstrapped-founder-year-1/), I wro
 >
 > My friends with children tell me that kids won't complicate this at all.
 
-When I wrote that in 2019, I was in my early thirties and single, living alone.
+When I wrote that in 2019, I was in my early thirties, single, and living alone.
 
-A few weeks after writing that post, I had my first date with the woman I'd marry a few years later. We had our first child in 2024. Different members of our extended family come to our house every weekday to help with childcare.
+A few weeks after writing that post, I had a first date with woman. We moved in together at the end of that year, married a few years later, and had our first child in 2024. Now, there are a lot more people in my house, as my wife and I work from home, and members of our extended family come over every weekday to help with childcare.
 
 Despite all of those changes, my life is still how I described it seven years ago.
 
-Okay, things aren't _exactly_ the same as they were in 2019. My toddler decides when I wake up, and it's not always the time his independence-loving father would choose. But I still feel the joy of spending my work days on whatever I choose.
+Okay, things aren't _exactly_ the same. My toddler decides when I wake up, and it's not always the time his independence-loving father would choose. But I still feel the joy of spending my work days on whatever I choose.
 
 I joked back then how much kids would complicate my life as an indie founder, but it's actually less complicated than I expected. My workdays mostly look the same. Except they're more fun because anytime I want, I can take a break from work to go play with my son.
 
@@ -143,17 +143,19 @@ After several years of [just "enjoying" life](/bootstrapped-founder-year-6/#do-i
 
 I originally thought I'd finish the book in six months, but I'm [13 months in](/retrospectives/2026/01/) and still have about 20% left.
 
-From reading about other developers' experience writing about books, underestimating seems to be the norm. Teiva Harsanyi thought he'd be done in eight months, but it actually [took 20](https://www.thecoder.cafe/p/100-go-mistakes). Austin Henley started writing a book in 2023 and it dragged on for about two years before he got tired of working with his publisher and [canceled his book deal](https://austinhenley.com/blog/canceledbookdeal.html).
+From reading about other developers' experience writing about books, underestimating time seems to be the norm. Teiva Harsanyi thought he'd be done in eight months, but it actually [took 20](https://www.thecoder.cafe/p/100-go-mistakes). Austin Henley started writing a book in 2023 and it dragged on for about two years before he got tired of working with his publisher and [canceled his book deal](https://austinhenley.com/blog/canceledbookdeal.html).
 
 This is kind of an extension of [Hofstadter's law](https://en.wikipedia.org/wiki/Hofstadter%27s_law):
 
 > It always takes longer than you expect, even when you take into account Hofstadter's law.
 
-### I enjoy my work more when I can align the things I care about
+### I enjoy my work when it feels aligned with me
+
+Early in my time as an indie founder, I thought I'd enjoy whatever business earned me money as long as I was writing software. With more experience, I've found that #finding-alignment-with-my-business
 
 ### I can be a bootstrapped founder and a parent
 
-TODO
+Before I became a parent, I . And in my first few months as a parent, I panicked that parenting takes up so much time that I [wouldn't have time for any work](/retrospectives/2024/10/#ill-be-okay-if-i-dont-work-for-a-bit), much less running my own business.
 
 ## Grading last year's goals
 
@@ -175,26 +177,28 @@ I'm still not sure how the book is going to look financially once I complete it.
 - **Result**: I'm about 80% done with my book.
 - **Grade**: C
 
-Okay, okay! I didn't finish the book! Enough of your nagging, me from a year ago.
+Okay, okay! I didn't finish the book! Enough of your cruel judgment, me from a year ago.
 
 ### Learn a new programming language
 
 - **Result**: I experimented with Gleam but didn't reach competence
 - **Grade**: D
 
-I [played around with Gleam](/notes/gleam-first-impressions/) and appreciated some aspects of it, but I never got deep enough to feel productive in the language.
+I [played around with Gleam](/notes/gleam-first-impressions/) and appreciated some aspects of it, but I never got deep enough to feel productive in the language. I tend to learn new languages and technologies when I can match it to a project I'm excited about, but I couldn't think of any project where Gleam was a better fit than other languages I know well like Go or Python.
 
 ## Goals for next year
 
 ### Earn five book citations
 
-I'd like to find successful developer authors who publicly cite my book as a resource that helped them achieve something.
+I'd like to find at least five examples of readers who cite my book as a resource that helped them achieve something tangible (e.g., grow their blog readership, get a promotion).
 
 ### Earn $75k in profit
 
+I earned $8.2k this year, so I just have to do 9x as well next year. But honestly, I think this is doable if I can keep finding new readers for the book and try a few business ideas.
+
 ### Create a profitable software business
 
-Even if the book is successful enough to get me to $75k on its own, I'd love to get back to software as a business.
+I've enjoyed a year of writing, but I'd like to do more software development, as that's still what I find most exciting.
 
 {{<annual-updates>}}
 
