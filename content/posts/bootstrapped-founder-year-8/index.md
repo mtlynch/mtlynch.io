@@ -127,13 +127,13 @@ At the end of [my first year as a founder](/bootstrapped-founder-year-1/), I wro
 
 When I wrote that in 2019, I was in my early thirties, single, and living alone.
 
-A few weeks after writing that post, I had a first date with woman. We moved in together at the end of that year, married a few years later, and had our first child in 2024. Now, there are a lot more people in my house, as my wife and I work from home, and members of our extended family come over every weekday to help with childcare.
+A few weeks after writing that post, I met someone. We moved in together at the end of that year, married a few years later, and had our first child in 2024. Now, there are a lot more people in my house, as my wife and I work from home, and members of our extended family come over every weekday to help with childcare.
 
 Despite all of those changes, my life is still how I described it seven years ago.
 
 Okay, things aren't _exactly_ the same. My toddler decides when I wake up, and it's not always the time his independence-loving father would choose. But I still feel the joy of spending my work days on whatever I choose.
 
-I joked back then how much kids would complicate my life as an indie founder, but it's actually less complicated than I expected. My workdays mostly look the same. Except they're more fun because anytime I want, I can take a break from work to go play with my son.
+I joked back in 2019 about how much kids would complicate my life as an indie founder, but it's actually less complicated than I expected. My workdays mostly look the same. Except they're more fun because anytime I want, I can take a break from work to go play with my son.
 
 After several years of [just "enjoying" life](/bootstrapped-founder-year-6/#do-i-still-love-it) as a bootstrapped founder, I'm happy to say that I love it again. I still want to do it forever.
 
@@ -143,9 +143,9 @@ After several years of [just "enjoying" life](/bootstrapped-founder-year-6/#do-i
 
 I originally thought I'd finish the book in six months, but I'm [13 months in](/retrospectives/2026/01/) and still have about 20% left.
 
-From reading about other developers' experience writing about books, underestimating time seems to be the norm. Teiva Harsanyi thought he'd be done in eight months, but it actually [took 20](https://www.thecoder.cafe/p/100-go-mistakes). Austin Henley started writing a book in 2023 and it dragged on for about two years before he got tired of working with his publisher and [canceled his book deal](https://austinhenley.com/blog/canceledbookdeal.html).
+From reading about other developers' experience writing about books, underestimating time seems to be the norm. Teiva Harsanyi thought he'd be done in eight months, but it actually [took 20](https://www.thecoder.cafe/p/100-go-mistakes). [Austin Henley](https://austinhenley.com/) started writing a book in 2023 and it dragged on for about two years before he got tired of working with his publisher and [canceled his book deal](https://austinhenley.com/blog/canceledbookdeal.html).
 
-This is kind of an extension of [Hofstadter's law](https://en.wikipedia.org/wiki/Hofstadter%27s_law):
+The pattern seems to be proof of [Hofstadter's law](https://en.wikipedia.org/wiki/Hofstadter%27s_law):
 
 > It always takes longer than you expect, even when you take into account Hofstadter's law.
 
@@ -155,7 +155,9 @@ As much as I love writing code, programming alone isn't enough to make me enjoy 
 
 ### I can be a bootstrapped founder and a parent
 
-Before I became a parent, I . And in my first few months as a parent, I panicked that parenting takes up so much time that I [wouldn't have time for any work](/retrospectives/2024/10/#ill-be-okay-if-i-dont-work-for-a-bit), much less running my own business.
+Before I became a parent, I worried I wouldn't have the flexibility to be a founder. In the first few months after my son arrived, I panicked that parenting takes up so much time that I [wouldn't have time for any work](/retrospectives/2024/10/#ill-be-okay-if-i-dont-work-for-a-bit), much less running my own business.
+
+Fortunately, I've been able to find a comfortable balance where I still spend my workdays as a founder while still showing up for my son as a father.
 
 ## Grading last year's goals
 
@@ -166,25 +168,27 @@ Last year, I set [three high-level goals](/bootstrapped-founder-year-7/#goals-fo
 - **Result**: I earned $8.2k in profit.
 - **Grade**: D
 
-I wasn't confident I'd earn $50k from the book, but I thought I'd have more time for side businesses as I wrote. I also expected to complete the book in just six months, giving me even more time for new business ideas in the second half of the year.
+I wasn't confident I'd earn $50k from the book, but I thought I'd have time while writing to launch side businesses. I also expected to complete the book in just six months, giving me even more time for new business ideas in the second half of the year.
 
 Instead, I spent the full year on the book. It made $11.8k, which feels good for a first-time author but is less than I hoped to earn this year.
 
-I'm still not sure how the book is going to look financially once I complete it. The optimistic outcome is that completing the book increases sales, as there's more demand for a finished book than an almost-finished book. And if I've done my job well, developers will recommend this book to others as something that improved their writing.
+I'm still not sure how the book is going to look financially once I complete it. My optimistic vision is for sales to increase when I complete the book, as there's more demand for a finished book than an almost-finished book. And if I've done my job well, developers will recommend this book to others as something that improved their writing.
 
 ### Publish a course or book
 
 - **Result**: I'm about 80% done with my book.
 - **Grade**: C
 
-Okay, okay! I didn't finish the book! Enough of your cruel judgment, me from a year ago.
+Okay, okay! I didn't finish the book! Enough of your cruel judgment, Michael from a year ago.
 
 ### Learn a new programming language
 
 - **Result**: I experimented with Gleam but didn't reach competence
 - **Grade**: D
 
-I [played around with Gleam](/notes/gleam-first-impressions/) and appreciated some aspects of it, but I never got deep enough to feel productive in the language. I tend to learn new languages and technologies when I can match it to a project I'm excited about, but I couldn't think of any project where Gleam was a better fit than other languages I know well like Go or Python.
+I [played around with Gleam](/notes/gleam-first-impressions/) and appreciated some aspects of it, but I never got deep enough to feel productive in the language.
+
+I learn best when I can find a project where a new technology is the best tool, but I couldn't think of anything where Gleam was especially better than languages I know well like Go or Python.
 
 ## Goals for next year
 
