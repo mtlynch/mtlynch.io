@@ -5,6 +5,7 @@ hero_image: cover.webp
 banner_image: cover.webp
 tags:
   - annual review
+description: In year 8, I discovered it takes longer than I think to write a book, found alignment with my business, and regained my love for life as an indie founder.
 ---
 
 Eight years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own bootstrapped software company. Every year, I [post an update](/tags/annual-review/) about how that's going and what my life is like as an indie founder.
