@@ -100,11 +100,11 @@ Here's how Is It Keto scored on my rubric:
 
 | Pillar                 | Score | Notes                                                                                                                                                                            |
 | ---------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
-| Enjoyment              | 🔴    | I didn't care about the keto diet.                                                                                                                                               |
-| Competence             | 🔴    | I wasn't good at building websites, finding users, or convincing anyone to buy things.                                                                                           |
-| Profitability          | 🔴    | The site was [not profitable](/retrospectives/2020/07/#is-it-keto).                                                                                                              |
-| Work-life balance      | 🟢    | The site was easy to keep online 24/7. Even if there had been an outage, the stakes were so low that I'd only be losing a few dollars of ad revenue per day.                     |
-| Founder-user alignment | 🔴    | I only made money if users clicked ads or ordered keto products online. They probably would have been better off buying [real food](https://realfood.gov/) at the grocery store. |     |
+| Enjoyment              | <span title="Bad">❌</span>  | I didn't care about the keto diet.                                                                                                                                               |
+| Competence             | <span title="Bad">❌</span>  | I wasn't good at building websites, finding users, or convincing anyone to buy things.                                                                                           |
+| Profitability          | <span title="Bad">❌</span>  | The site was [not profitable](/retrospectives/2020/07/#is-it-keto).                                                                                                              |
+| Work-life balance      | <span title="Good">✅</span> | The site was easy to keep online 24/7. Even if there had been an outage, the stakes were so low that I'd only be losing a few dollars of ad revenue per day.                     |
+| Founder-user alignment | <span title="Bad">❌</span>  | I only made money if users clicked ads or ordered keto products online. They probably would have been better off buying [real food](https://realfood.gov/) at the grocery store. |     |
 
 Now, let me compare Is It Keto to writing my book:
 
@@ -116,11 +116,11 @@ Now, let me compare Is It Keto to writing my book:
 
 | Pillar                 | Score | Notes                                                                                                                                                                                                                                    |
 | ---------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Enjoyment              | 🟢    | I'm passionate about clear writing and enjoy teaching techniques to other developers.                                                                                                                                                    |
-| Competence             | 🟢    | I feel especially qualified to write about the topic, as I've been blogging for several years, and writing played a key role at every stage in my career.                                                                                |
-| Profitability          | 🟡    | I've made $11.8k from pre-sales, which feels good for a first-time author but is not yet profitable enough to be sustainable.                                                                                                            |
-| Work-life balance      | 🟢    | It's hard to beat an ebook in terms of work-life balance. I can comfortably disappear for weeks without negatively impacting anyone. I've never been paged at 2 AM because my servers are down and users urgently need to read my book.  |
-| Founder-user alignment | 🟢    | My incentives are aligned with my readers because I [only make money if they enjoy the book](https://refactoringenglish.com/early-access/#satisfaction-guarantee), and the book only becomes popular if readers recommend it to friends. |
+| Enjoyment              | <span title="Good">✅</span> | I'm passionate about clear writing and enjoy teaching techniques to other developers.                                                                                                                                                    |
+| Competence             | <span title="Good">✅</span> | I feel especially qualified to write about the topic, as I've been blogging for several years, and writing played a key role at every stage in my career.                                                                                |
+| Profitability          | <span title="Okay">⚠️</span> | I've made $11.8k from pre-sales, which feels good for a first-time author but is not yet profitable enough to be sustainable.                                                                                                            |
+| Work-life balance      | <span title="Good">✅</span> | It's hard to beat an ebook in terms of work-life balance. I can comfortably disappear for weeks without negatively impacting anyone. I've never been paged at 2 AM because my servers are down and users urgently need to read my book.  |
+| Founder-user alignment | <span title="Good">✅</span> | My incentives are aligned with my readers because I [only make money if they enjoy the book](https://refactoringenglish.com/early-access/#satisfaction-guarantee), and the book only becomes popular if readers recommend it to friends. |
 
 The book doesn't check all my boxes perfectly, but it aligns better with my five criteria than any business I've created before.
 
