@@ -98,8 +98,8 @@ Here's how Is It Keto scored on my rubric:
 
 </div>
 
-| Pillar                 | Score | Notes                                                                                                                                                                            |
-| ---------------------- | :---: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| Pillar                 |            Score             | Notes                                                                                                                                                                            |
+| ---------------------- | :--------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
 | Enjoyment              | <span title="Bad">❌</span>  | I didn't care about the keto diet.                                                                                                                                               |
 | Competence             | <span title="Bad">❌</span>  | I wasn't good at building websites, finding users, or convincing anyone to buy things.                                                                                           |
 | Profitability          | <span title="Bad">❌</span>  | The site was [not profitable](/retrospectives/2020/07/#is-it-keto).                                                                                                              |
@@ -114,8 +114,8 @@ Now, let me compare Is It Keto to writing my book:
 
 </div>
 
-| Pillar                 | Score | Notes                                                                                                                                                                                                                                    |
-| ---------------------- | :---: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Pillar                 |            Score             | Notes                                                                                                                                                                                                                                    |
+| ---------------------- | :--------------------------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Enjoyment              | <span title="Good">✅</span> | I'm passionate about clear writing and enjoy teaching techniques to other developers.                                                                                                                                                    |
 | Competence             | <span title="Good">✅</span> | I feel especially qualified to write about the topic, as I've been blogging for several years, and writing played a key role at every stage in my career.                                                                                |
 | Profitability          | <span title="Okay">⚠️</span> | I've made $11.8k from pre-sales, which feels good for a first-time author but is not yet profitable enough to be sustainable.                                                                                                            |
