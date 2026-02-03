@@ -77,7 +77,7 @@ It turns out bootstrapped founders don't spend that much writing code. Especiall
 
 Over several years, I found that there are five criteria that determine how much I enjoy a business:
 
-1. I enjoy doing domain and relate to the customers
+1. I enjoy the domain and relate to the customers
 1. It leverages my skills
 1. It earns money
 1. It facilitates work-life balance
@@ -116,7 +116,7 @@ Now, let me compare Is It Keto to writing my book:
 | Enjoyment              | 🟢    | I'm passionate about clear writing and enjoy teaching techniques to other developers.                                                                                                                                                    |
 | Competence             | 🟢    | I feel especially qualified to write about the topic, as I've been blogging for several years, and writing played a key role at every stage in my career.                                                                                |
 | Profitability          | 🟡    | I've made $11.8k from pre-sales, which feels good for a first-time author but is not yet profitable enough to be sustainable.                                                                                                            |
-| Work-life balance      | 🟢    | It's hard to beat an ebook in terms work-life balance. I can comfortably disappear for weeks without negatively impacting anyone. I've never been paged at 2 AM because my servers are down and users urgently need to read my book.     |
+| Work-life balance      | 🟢    | It's hard to beat an ebook in terms of work-life balance. I can comfortably disappear for weeks without negatively impacting anyone. I've never been paged at 2 AM because my servers are down and users urgently need to read my book.  |
 | Founder-user alignment | 🟢    | My incentives are aligned with my readers because I [only make money if they enjoy the book](https://refactoringenglish.com/early-access/#satisfaction-guarantee), and the book only becomes popular if readers recommend it to friends. |
 
 The book doesn't check all my boxes perfectly, but it aligns better with my five criteria than any business I've created before.
