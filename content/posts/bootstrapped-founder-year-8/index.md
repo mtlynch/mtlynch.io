@@ -9,9 +9,9 @@ tags:
 
 Eight years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own bootstrapped software company. Every year, I [post an update](/tags/annual-review/) about how that's going and what my life is like as an indie founder.
 
-## Previously
+## Previously on...
 
-I don't expect you to go back and read seven prior years of annual updates. Here's all you need to know:
+I don't expect you to go back and read my last seven updates. Here's all you need to know:
 
 - 2018 - 2020 - [Quit my job](/why-i-quit-google/) and created several unprofitable businesses.
 - 2020 - 2024 - Created [a product called TinyPilot](/tinypilot) that let people control their computers remotely.
@@ -25,9 +25,9 @@ People are always most interested in how money works as an indie founder, so I'l
 
 In total, I had $8.2k in profit on $16.3k in revenue. That was my total income for the year, which is obviously not enough to support a family, but my wife also works, and we have savings/investments.
 
-My main source of revenue was my book. I'm writing [a book to teach developers to improve their writing](https://refactoringenglish.com). I did a Kickstarter for it in March, which gave me [$6k in pre-sales](/my-6k-advance/). As I worked on the book, I offered discounted early access. In total, 422 readers purchased early access, for which I'm grateful. I also have an [old business](/bootstrapped-founder-year-1/#zestful) that makes $100-200/month without me touching it.
+My main source of revenue was my book. I'm writing [a book to teach developers to improve their writing](https://refactoringenglish.com). I did a Kickstarter for it in March, which gave me [$6k in pre-sales](/my-6k-advance/). As I worked on the book, I offered paid early access. In total, 422 readers purchased early access, for which I'm grateful. I also have an [old business](/bootstrapped-founder-year-1/#zestful) that makes $100-200/month without me touching it.
 
-My main expenses were computer hardware ($2.1k) and LLMs ($1.9k). I don't use AI to write, but I use it for a lot of the accessory tasks like fixing rendering/layout and improving the website. I also use it for [my open-source projects](https://codeberg.org/mtlynch?tab=repositories).
+My main expenses were computer hardware ($2.1k) and LLMs ($1.9k). I don't use AI to write, but I use it for a lot of the accessory tasks like fixing rendering/layout issues and improving the website. I also use it for [my open-source projects](https://codeberg.org/mtlynch?tab=repositories).
 
 Here's how 2025 compared to previous years:
 
@@ -35,7 +35,7 @@ Here's how 2025 compared to previous years:
 
 The years I was running TinyPilot dominate the chart. Still, 2025 was my fourth most profitable year as a founder.
 
-My goal for the year was $50k in profit, so I fell quite short (more on that [below](#earn-50k-in-profit)).
+My goal for the year was $50k in profit, so I fell quite short (more on that [later](#earn-50k-in-profit)).
 
 <script src="/third-party/chart.js/2.9.4/Chart.min.js"></script>
 <script src="script.js"></script>
@@ -44,7 +44,7 @@ My goal for the year was $50k in profit, so I fell quite short (more on that [be
 
 When I tell other software developers that I'm writing a book, they usually say something like, "Oh, great!"
 
-Then, they pause, a little confused, "To give you time for freelance dev work?" And I have to say, "No, I'm _just_ writing a book. That's my whole job."
+Then, they pause, a little confused, "To give you time to freelance?" And I have to say, "No, I'm _just_ writing a book. That's my whole job."
 
 When I tell friends and family I'm working on a book, they innocently ask, "Oh, so you're still on paternity leave?"
 
@@ -59,8 +59,8 @@ It turns out that even when all I have to do is write, I can still only write fo
 I also can't _just_ write a book. I also need to find people to read the book, so I've been writing blog posts and sharing chapter excerpts. I normally write 5-10 blog posts per year, but I ended up writing far more in the past year than I ever have before:
 
 - 13 blog posts (8 on [my personal blog](/posts/) and 5 on [my book's blog](https://refactoringenglish.com/blog/))
-- 12 [monthly retrospectives](/retrospectives/)
 - 12 [notes](/notes/) (shorter, less polished blog posts)
+- 12 [monthly retrospectives](/retrospectives/)
 - 150 pages of my book, including seven chapters I adapted into [free excerpts](https://refactoringenglish.com/chapters/)
 
 I also started editing blog posts for other developers. That helped me discover other developers' writing pain points and what advice they found effective. I worked with seven clients, one of which was [Tyler Cipriani](https://tylercipriani.com/) on [a post](https://refactoringenglish.com/services/blog-editing/sample-future-of-git/) that reached [#1 on Hacker News](https://news.ycombinator.com/item?id=44916783).
@@ -71,14 +71,14 @@ And then there's just a bunch of administrative tasks around writing and selling
 
 This has been my favorite year of being a founder since I went off on my own eight years ago. There are a few factors, but the biggest is that I found a business that aligns with me.
 
-When I first started as a founder, I didn't think the particulars of a business mattered. I just pursued any opportunity I saw, even if it was a market I didn't care about. I'd still get to write software, so wouldn't that be all I needed?
+When I first started as a founder, I didn't think the particulars of a business mattered. I just pursued any opportunity I saw, even if it was a market I didn't care about. I'd still get to write software, so wouldn't that make me happy?
 
-The problem is that most of my time as a bootstrapped founder is not writing code. Especially at the beginning, I have to find customers and talk to them, which is hard when I don't actually care about the market beyond the technical challenge of building something.
+It turns out bootstrapped founders don't spend that much writing code. Especially at the beginning, I have to find customers and talk to them, which is hard when I don't particularly care about the market beyond the technical challenge of building something.
 
-Over several years, I found that there are five criteria that determine how much I enjoy running a business:
+Over several years, I found that there are five criteria that determine how much I enjoy a business:
 
-1. I enjoy doing it
-1. I do it well
+1. I enjoy doing domain and relate to the customers
+1. It leverages my skills
 1. It earns money
 1. It facilitates work-life balance
 1. It aligns interests between me and my users
@@ -111,15 +111,15 @@ Now, let me compare Is It Keto to writing my book:
 
 </div>
 
-| Pillar                 | Score | Notes                                                                                                                                                                                                                                                  |
-| ---------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Enjoyment              | 🟢    | I'm passionate about clear writing and enjoy teaching techniques to other developers.                                                                                                                                                                  |
-| Competence             | 🟢    | I feel especially qualified to write about the topic, as I've been blogging for several years, and writing played a key role at every stage of my career.                                                                                              |
-| Profitability          | 🟡    | I've made $11.8k from pre-sales, which feels good for a first-time author but is not yet profitable enough to be sustainable.                                                                                                                          |
-| Work-life balance      | 🟢    | It's hard to beat an ebook in terms work-life balance. I can comfortably disappear and ignore emails for weeks without negatively impacting anyone. I've never been paged at 2 AM because my servers are down and users urgently need to read my book. |
-| Founder-user alignment | 🟢    | My incentives are aligned with my readers because I [only make money if they enjoy the book](https://refactoringenglish.com/early-access/#satisfaction-guarantee), and the book only becomes popular if readers recommend it to friends.               |
+| Pillar                 | Score | Notes                                                                                                                                                                                                                                    |
+| ---------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enjoyment              | 🟢    | I'm passionate about clear writing and enjoy teaching techniques to other developers.                                                                                                                                                    |
+| Competence             | 🟢    | I feel especially qualified to write about the topic, as I've been blogging for several years, and writing played a key role at every stage in my career.                                                                                |
+| Profitability          | 🟡    | I've made $11.8k from pre-sales, which feels good for a first-time author but is not yet profitable enough to be sustainable.                                                                                                            |
+| Work-life balance      | 🟢    | It's hard to beat an ebook in terms work-life balance. I can comfortably disappear for weeks without negatively impacting anyone. I've never been paged at 2 AM because my servers are down and users urgently need to read my book.     |
+| Founder-user alignment | 🟢    | My incentives are aligned with my readers because I [only make money if they enjoy the book](https://refactoringenglish.com/early-access/#satisfaction-guarantee), and the book only becomes popular if readers recommend it to friends. |
 
-The book doesn't check all my boxes perfectly, but it aligns better with my values than any business I've created before.
+The book doesn't check all my boxes perfectly, but it aligns better with my five criteria than any business I've created before.
 
 ## Do I still love it?
 
@@ -133,11 +133,11 @@ At the end of [my first year as a founder](/bootstrapped-founder-year-1/), I wro
 
 When I wrote that in 2019, I was in my early thirties, single, and living alone.
 
-A few weeks after writing that post, I met someone. We moved in together at the end of that year, married a few years later, and had our first child in 2024. Now, there are lots of people around, as my wife and I work from home, and members of our extended family come over every weekday to help with childcare.
+A few weeks after writing that post, I met someone. We moved in together at the end of that year, married a few years later, and had our first child in 2024. Now, there are lots of people in our house, as my wife and I work from home, and members of our extended family come over every weekday to help with childcare.
 
 Despite all of those changes, my life is still how I described it seven years ago.
 
-Okay, things aren't _exactly_ the same. My toddler decides when I wake up, and it's not always the time his independence-loving father would choose. But I still feel the joy of spending my work days on whatever I choose.
+Okay, things aren't _exactly_ the same. My toddler decides when I wake up, and it's not always the time his independence-loving father would choose. But I still feel the joy of spending my workdays on whatever I choose.
 
 I joked back in 2019 about how much kids would complicate my life as an indie founder, but it's actually less complicated than I expected. My workdays mostly look the same. Except they're more fun because anytime I want, I can take a break from work to go play with my son.
 
@@ -145,25 +145,21 @@ After several years of [just "enjoying" life](/bootstrapped-founder-year-6/#do-i
 
 ## Lessons learned
 
-### Writing a book takes longer than I expect
+### Writing a book takes longer than I expected
 
 I originally thought I'd finish the book in six months, but I'm [13 months in](/retrospectives/2026/01/) and still have about 20% left.
 
-From reading about other developers' experience writing about books, underestimating time seems to be the norm. Teiva Harsanyi thought he'd be done in eight months, but it actually took him [almost two years](https://www.thecoder.cafe/p/100-go-mistakes). Austin Henley started writing a book in 2023 and it dragged on for about two years before he got tired of working with his publisher and [canceled his book deal](https://austinhenley.com/blog/canceledbookdeal.html).
-
-The pattern seems to be proof of [Hofstadter's law](https://en.wikipedia.org/wiki/Hofstadter%27s_law):
-
-> It always takes longer than you expect, even when you take into account Hofstadter's law.
+From reading about other developers' experience writing books, underestimating time seems to be the norm. Teiva Harsanyi thought he'd be done in eight months, but it actually took him [almost two years](https://www.thecoder.cafe/p/100-go-mistakes). Austin Henley started writing a book in 2023 and it dragged on for about two years before he got tired of working with his publisher and [canceled his book deal](https://austinhenley.com/blog/canceledbookdeal.html).
 
 ### I enjoy my work when it feels aligned with me
 
-As much as I love writing code, programming itself isn't enough to make me enjoy my work. I need to find a business that matches my interests, ethics, and skills.
+As much as I love writing code, programming itself isn't enough to make me enjoy my work. I need to find a business that matches my interests, values, and skills.
 
 ### I can be a bootstrapped founder and a parent
 
-Before I became a parent, I worried I wouldn't have the flexibility to be a founder. In the first few months after my son arrived, I panicked that parenting would take up so much time that I [wouldn't have time for any work](/retrospectives/2024/10/#ill-be-okay-if-i-dont-work-for-a-bit), much less running my own business.
+Before I became a parent, I worried that I wouldn't have the flexibility to be a founder. In the first few months after my son arrived, I panicked that parenting would take up so much time that I [couldn't work at all](/retrospectives/2024/10/#ill-be-okay-if-i-dont-work-for-a-bit), much less run my own business.
 
-Fortunately, I've been able to find a comfortable balance where I still spend my workdays as a founder while still being the parent I want to be.
+Fortunately, I've been able to find a comfortable balance where I spend my workdays as a founder while still being the parent I want to be.
 
 ## Grading last year's goals
 
@@ -177,8 +173,6 @@ Last year, I set [three high-level goals](/bootstrapped-founder-year-7/#goals-fo
 I wasn't confident I'd earn $50k from the book, but I thought I'd have time while writing to launch side businesses. I also expected to complete the book in just six months, giving me even more time for new business ideas in the second half of the year.
 
 Instead, I spent the full year on the book. It made $11.8k, which I'm proud of as pre-sales for a first-time author, but it's less than I hoped to earn this year.
-
-I'm still not sure how the book is going to look financially once I complete it. My optimistic vision is for sales to increase when I complete the book, as there's more demand for a finished book than an almost-finished book. And if I've done my job well, developers will recommend this book to others as something that improved their writing.
 
 ### Publish a course or book
 
@@ -194,7 +188,7 @@ Okay, okay! I didn't finish the book! Enough of your cruel judgment, [Michael fr
 
 I [played around with Gleam](/notes/gleam-first-impressions/) and appreciated some aspects of it, but I never got deep enough to feel productive in the language.
 
-I learn best when I can find a project that takes advantage of a new technology, but I couldn't think of anything where Gleam was especially better than languages I know well like Go or Python.
+I learn best when I can find a project that takes advantage of a new technology, but I couldn't think of anything where Gleam had a compelling edge over languages I know well like Go or Python.
 
 ## Goals for next year
 
