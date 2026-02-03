@@ -40,7 +40,9 @@ Chart.scaleService.registerScaleType(
 
       // Generate nice tick values spanning the range
       var ticks = [];
-      var tickValues = [-50000, -25000, 0, 25000, 100000, 250000, 500000, 750000, 1000000];
+      var tickValues = [
+        -50000, -25000, 0, 25000, 100000, 250000, 500000, 750000, 1000000,
+      ];
 
       tickValues.forEach(function (val) {
         if (val >= min && val <= me.max) {
@@ -66,11 +68,12 @@ Chart.scaleService.registerScaleType(
       var minSqrt = signedSqrt(me.min);
       var maxSqrt = signedSqrt(me.max);
       var range = maxSqrt - minSqrt;
-      var valueSqrt = minSqrt + ((me.bottom - pixel) / (me.bottom - me.top)) * range;
+      var valueSqrt =
+        minSqrt + ((me.bottom - pixel) / (me.bottom - me.top)) * range;
       return signedSqrtInverse(valueSqrt);
     },
   }),
-  { position: "left" }
+  { position: "left" },
 );
 
 var monthlyFullLabels = [];
@@ -79,7 +82,9 @@ const defaultTooltips = {
   callbacks: {
     label: function (tooltipItems, data) {
       var label = data.datasets[tooltipItems.datasetIndex].label;
-      return dollarFormatter.format(parseFloat(tooltipItems.yLabel)) + " " + label;
+      return (
+        dollarFormatter.format(parseFloat(tooltipItems.yLabel)) + " " + label
+      );
     },
   },
 };
@@ -91,12 +96,22 @@ const monthlyTooltips = {
     },
     label: function (tooltipItems, data) {
       var label = data.datasets[tooltipItems.datasetIndex].label;
-      return dollarFormatter.format(parseFloat(tooltipItems.yLabel)) + " " + label;
+      return (
+        dollarFormatter.format(parseFloat(tooltipItems.yLabel)) + " " + label
+      );
     },
   },
 };
 
-function drawRevenueProfit(canvasId, labels, revenue, profit, tooltips, useSymlog, yearData) {
+function drawRevenueProfit(
+  canvasId,
+  labels,
+  revenue,
+  profit,
+  tooltips,
+  useSymlog,
+  yearData,
+) {
   const ctx = document.getElementById(canvasId);
   if (!ctx) {
     return;
@@ -226,28 +241,46 @@ function drawRevenueProfit(canvasId, labels, revenue, profit, tooltips, useSymlo
 }
 
 fetch("monthly-2025.json")
-  .then(function (res) { return res.json(); })
+  .then(function (res) {
+    return res.json();
+  })
   .then(function (data) {
-    monthlyFullLabels = data.map(function (d) { return d.month + " 2025"; });
+    monthlyFullLabels = data.map(function (d) {
+      return d.month + " 2025";
+    });
     drawRevenueProfit(
       "monthly-finances-chart",
-      data.map(function (d) { return d.month.slice(0, 3); }),
-      data.map(function (d) { return d.revenue; }),
-      data.map(function (d) { return d.revenue - d.expenses; }),
-      monthlyTooltips
+      data.map(function (d) {
+        return d.month.slice(0, 3);
+      }),
+      data.map(function (d) {
+        return d.revenue;
+      }),
+      data.map(function (d) {
+        return d.revenue - d.expenses;
+      }),
+      monthlyTooltips,
     );
   });
 
 fetch("annual-summary.json")
-  .then(function (res) { return res.json(); })
+  .then(function (res) {
+    return res.json();
+  })
   .then(function (data) {
     drawRevenueProfit(
       "annual-finances-chart",
-      data.map(function (d) { return String(d.year); }),
-      data.map(function (d) { return d.revenue; }),
-      data.map(function (d) { return d.profit; }),
+      data.map(function (d) {
+        return String(d.year);
+      }),
+      data.map(function (d) {
+        return d.revenue;
+      }),
+      data.map(function (d) {
+        return d.profit;
+      }),
       defaultTooltips,
       true, // use symlog scale
-      data  // pass year data for click handling
+      data, // pass year data for click handling
     );
   });

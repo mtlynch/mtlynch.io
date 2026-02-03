@@ -1,10 +1,58 @@
 [
-  { "year": 2018, "label": "Year 1", "revenue":   2262, "expenses":  23133, "profit": -20871 },
-  { "year": 2019, "label": "Year 2", "revenue":   7254, "expenses":   9657, "profit":  -2402 },
-  { "year": 2020, "label": "Year 3", "revenue":  63477, "expenses":  67441, "profit":  -3964 },
-  { "year": 2021, "label": "Year 4", "revenue": 478638, "expenses": 464071, "profit":  14518 },
-  { "year": 2022, "label": "Year 5", "revenue": 811785, "expenses": 805807, "profit":   5979 },
-  { "year": 2023, "label": "Year 6", "revenue": 996976, "expenses": 777179, "profit": 235568 },
-  { "year": 2024, "label": "Year 7", "revenue": 948417, "expenses": 267207, "profit": 681210 },
-  { "year": 2025, "label": "Year 8", "revenue":  16339, "expenses":   8105, "profit":   8234 }
+  {
+    "year": 2018,
+    "label": "Year 1",
+    "revenue": 2262,
+    "expenses": 23133,
+    "profit": -20871
+  },
+  {
+    "year": 2019,
+    "label": "Year 2",
+    "revenue": 7254,
+    "expenses": 9657,
+    "profit": -2402
+  },
+  {
+    "year": 2020,
+    "label": "Year 3",
+    "revenue": 63477,
+    "expenses": 67441,
+    "profit": -3964
+  },
+  {
+    "year": 2021,
+    "label": "Year 4",
+    "revenue": 478638,
+    "expenses": 464071,
+    "profit": 14518
+  },
+  {
+    "year": 2022,
+    "label": "Year 5",
+    "revenue": 811785,
+    "expenses": 805807,
+    "profit": 5979
+  },
+  {
+    "year": 2023,
+    "label": "Year 6",
+    "revenue": 996976,
+    "expenses": 777179,
+    "profit": 235568
+  },
+  {
+    "year": 2024,
+    "label": "Year 7",
+    "revenue": 948417,
+    "expenses": 267207,
+    "profit": 681210
+  },
+  {
+    "year": 2025,
+    "label": "Year 8",
+    "revenue": 16339,
+    "expenses": 8105,
+    "profit": 8234
+  }
 ]

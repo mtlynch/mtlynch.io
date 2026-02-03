@@ -1,14 +1,14 @@
 [
-  { "month": "January",   "revenue":   58.17, "expenses": 1347.86 },
-  { "month": "February",  "revenue":  333.91, "expenses":  459.58 },
-  { "month": "March",     "revenue":  687.42, "expenses":  448.82 },
-  { "month": "April",     "revenue": 7107.21, "expenses":  606.36 },
-  { "month": "May",       "revenue":  925.24, "expenses": 1333.35 },
-  { "month": "June",      "revenue": 1455.50, "expenses":  385.65 },
-  { "month": "July",      "revenue": 1270.89, "expenses":  594.81 },
-  { "month": "August",    "revenue":  408.42, "expenses":  625.77 },
-  { "month": "September", "revenue": 1169.06, "expenses":  456.71 },
-  { "month": "October",   "revenue": 1261.48, "expenses":  655.04 },
-  { "month": "November",  "revenue":  625.89, "expenses":  837.78 },
-  { "month": "December",  "revenue": 1036.05, "expenses":  353.70 }
+  { "month": "January", "revenue": 58.17, "expenses": 1347.86 },
+  { "month": "February", "revenue": 333.91, "expenses": 459.58 },
+  { "month": "March", "revenue": 687.42, "expenses": 448.82 },
+  { "month": "April", "revenue": 7107.21, "expenses": 606.36 },
+  { "month": "May", "revenue": 925.24, "expenses": 1333.35 },
+  { "month": "June", "revenue": 1455.5, "expenses": 385.65 },
+  { "month": "July", "revenue": 1270.89, "expenses": 594.81 },
+  { "month": "August", "revenue": 408.42, "expenses": 625.77 },
+  { "month": "September", "revenue": 1169.06, "expenses": 456.71 },
+  { "month": "October", "revenue": 1261.48, "expenses": 655.04 },
+  { "month": "November", "revenue": 625.89, "expenses": 837.78 },
+  { "month": "December", "revenue": 1036.05, "expenses": 353.7 }
 ]
