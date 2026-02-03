@@ -41,7 +41,7 @@ My goal for the year was $50k in profit, so I fell quite short (more on that [la
 <script src="/third-party/chart.js/2.9.4/Chart.min.js"></script>
 <script src="script.js"></script>
 
-## Why does it take so long to write a book?
+## So you're still taking a break?
 
 When I tell other software developers that I'm writing a book, they usually say something like, "Oh, great!"
 
