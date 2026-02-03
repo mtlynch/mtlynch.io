@@ -45,7 +45,7 @@ My goal for the year was $50k in profit, so I fell quite short (more on that [la
 
 When I tell other software developers that I'm writing a book, they usually say something like, "Oh, great!"
 
-Then, they pause, a little confused, "To give you time to freelance?" And I have to say, "No, I'm _just_ writing a book. That's my whole job."
+Then, they pause, a little confused. "To give you time to freelance?" And I have to say, "No, I'm _just_ writing a book. That's my whole job."
 
 When I tell friends and family I'm working on a book, they innocently ask, "Oh, so you're still on paternity leave?"
 
@@ -64,7 +64,7 @@ I also can't _just_ write a book. I also need to find people to read the book, s
 - 12 [monthly retrospectives](/retrospectives/)
 - 150 pages of my book, including seven chapters I adapted into [free excerpts](https://refactoringenglish.com/chapters/)
 
-I also started editing blog posts for other developers. That helped me discover other developers' writing pain points and what advice they found effective. I worked with seven clients, one of which was [Tyler Cipriani](https://tylercipriani.com/) on [a post](https://refactoringenglish.com/services/blog-editing/sample-future-of-git/) that reached [#1 on Hacker News](https://news.ycombinator.com/item?id=44916783).
+I also started editing blog posts for other developers. That helped me discover other developers' writing pain points and what advice they found effective. I worked with seven clients, including [Tyler Cipriani](https://tylercipriani.com/) on [a post](https://refactoringenglish.com/services/blog-editing/sample-future-of-git/) that reached [#1 on Hacker News](https://news.ycombinator.com/item?id=44916783).
 
 And then there's just a bunch of administrative tasks around writing and selling a book like [setting up mailing lists](/retrospectives/2025/10/#the-hassle-of-sending-post-purchase-emails-with-stripe), [dealing with Stripe](/retrospectives/2026/01/#adding-regional-pricing-for-my-book), [debugging PDF/epub rendering issues](/retrospectives/2025/05/#asciidoctor-so-far-so-good), etc.
 
@@ -74,7 +74,7 @@ This has been my favorite year of being a founder since I went off on my own eig
 
 When I first started as a founder, I didn't think the particulars of a business mattered. I just pursued any opportunity I saw, even if it was a market I didn't care about. I'd still get to write software, so wouldn't that make me happy?
 
-It turns out bootstrapped founders don't spend that much writing code. Especially at the beginning, I have to find customers and talk to them, which is hard when I don't particularly care about the market beyond the technical challenge of building something.
+It turns out bootstrapped founders don't spend much time writing code. Especially at the beginning, I have to find customers and talk to them, which is hard when I don't particularly care about the market beyond the technical challenge of building something.
 
 Over several years, I found that there are five criteria that determine how much I enjoy a business:
 
@@ -140,7 +140,7 @@ Despite all of those changes, my life is still how I described it seven years ag
 
 Okay, things aren't _exactly_ the same. My toddler decides when I wake up, and it's not always the time his independence-loving father would choose. But I still feel the joy of spending my workdays on whatever I choose.
 
-I joked back in 2019 about how much kids would complicate my life as an indie founder, but it's actually less complicated than I expected. My workdays mostly look the same. Except they're more fun because anytime I want, I can take a break from work to go play with my son.
+I joked back in 2019 about how kids would complicate my life as an indie founder, but it's actually less complicated than I expected. My workdays mostly look the same. Except they're more fun because anytime I want, I can take a break from work to go play with my son.
 
 After several years of [just "enjoying" life](/bootstrapped-founder-year-6/#do-i-still-love-it) as a bootstrapped founder, I'm happy to say that I love it again. I still want to do it forever.
 
@@ -158,7 +158,7 @@ As much as I love writing code, programming itself isn't enough to make me enjoy
 
 ### I can be a bootstrapped founder and a parent
 
-Before I became a parent, I worried that I wouldn't have the flexibility to be a founder. In the first few months after my son arrived, I panicked that parenting would take up so much time that I [couldn't work at all](/retrospectives/2024/10/#ill-be-okay-if-i-dont-work-for-a-bit), much less run my own business.
+Before I became a parent, I worried that I wouldn't have the flexibility to be a founder. In the first few months after my son arrived, I worried that parenting would take up so much time that I [couldn't work at all](/retrospectives/2024/10/#ill-be-okay-if-i-dont-work-for-a-bit), much less run my own business.
 
 Fortunately, I've been able to find a comfortable balance where I spend my workdays as a founder while still being the parent I want to be.
 
