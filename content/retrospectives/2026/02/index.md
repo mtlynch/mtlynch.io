@@ -82,10 +82,15 @@ You have to be very defensive and have a pipeline where code only moves through 
 
 Maybe I'll write a longer blog post, but I noticed that AI is really good at solving problems where:
 
+1. The definition of success is objective and easy to define.
+1.
+
 Some examples of this:
 
 - Refactoring code that has automated tests
 - Porting code to match the behavior of the original
+- Compile this codebase, installing any necessary dependencies
+- Fix this broken test
 
 Porting code falls into this category, especially if you have implementation-independent tests.
 
