@@ -82,8 +82,9 @@ You have to be very defensive and have a pipeline where code only moves through 
 
 Maybe I'll write a longer blog post, but I noticed that AI is really good at solving problems where:
 
-1. The definition of success is objective and easy to define.
-1.
+1. Success is objective and easy to define.
+1. The problem is not unique or novel.
+1. A junior developer human could solve the problem through trial and error and searching online.
 
 Some examples of this:
 
