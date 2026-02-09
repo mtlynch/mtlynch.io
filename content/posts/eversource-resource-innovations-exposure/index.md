@@ -1,9 +1,11 @@
 ---
 title: "Eversource EV Rebate Program Exposed Massachusetts Customer Data"
-date: 2026-02-05
+date: 2026-02-09
+banner_image: login.webp
+description: I recently claimed a rebate for an EV charger, only to discover that Eversource, my power supplier, was publicly exposing personal information of customers who applied.
 ---
 
-Massachusetts has a program that partially reimburses homeowners for installing an electric vehicle (EV) charger. So, I bought an EV charger and claimed the rebate only to discover that Eversource, my power company, was publicly exposing personal information of customers who applied, including:
+I recently claimed a rebate for installing an electric vehicle (EV) charger, only to discover that Eversource, my power supplier, was publicly exposing personal information of customers who applied, including:
 
 - Full names
 - Vehicle registration certificates (including plate number and vehicle identification number)
@@ -30,12 +32,10 @@ As I progressed through the form, they started asking me even more irrelevant qu
 - How much did I pay?
 - Where's my vehicle registration?
 - Who installed my EV charger?
-- What is their address?
+- What is my electrician's address?
 - Where, exactly, on my house is the charger?
 
-Why do you need any of this to confirm I bought an EV charger?
-
-The process was far more complicated than what Eversource advertises as their ["four-step rebate process."](https://www.eversource.com/residential/save-money-energy/clean-energy-options/electric-vehicles/charging-stations/ev-rebate-process)
+Why do you need any of this to confirm I bought an EV charger? The process was far more complicated than what Eversource advertises as their ["four-step rebate process."](https://www.eversource.com/residential/save-money-energy/clean-energy-options/electric-vehicles/charging-stations/ev-rebate-process)
 
 ## We need your charger's MAC address
 
@@ -51,7 +51,9 @@ A week after submitting all of my documents, I got this email from Eversource:
 
 {{<img src="rejection-email.webp" max-width="550px" caption="Eversource claims the photos and documents I uploaded with my application are incorrect.">}}
 
-They didn't like the invoices I uploaded from my electrician because they weren't marked "Paid in full." It's rare for any contractor to give me a "paid in full" invoice after payment, so I had to go pester my busy electrician to generate new invoices.
+Apparently, I filled out the application incorrectly.
+
+Eversource didn't like the invoices I uploaded from my electrician because they weren't marked "Paid in full." It's rare for any contractor to give me a "paid in full" invoice after payment, so I had to go pester my busy electrician to generate new invoices.
 
 Did I miss that requirement in the form? Nope, I went back to the portal and looked at what they say about the invoice. All they said was, "Contractor's invoice for wiring upgrade." No mention of "Paid in full."
 
@@ -59,7 +61,7 @@ Did I miss that requirement in the form? Nope, I went back to the portal and loo
 
 And what was wrong with my photos? Did I forget to upload the photo of my charger?
 
-I went back into the application and saw that the photo was there. And the charger was clear as day. The photo of the serial number was also plainly legible. Did they think I could photograph a MAC address?
+No, the photo was there in my application. The charger was clear as day. The photo of the serial number was also plainly legible. Did they think I could photograph a MAC address?
 
 I emailed them asking what was wrong with the photos, explaining that it was impossible for me to photograph a MAC address.
 
@@ -69,7 +71,7 @@ I got a response a week later. They didn't explain why they'd rejected my other 
 
 Something felt fishy about Eversource's rebate program. Every step seemed designed to burden me with needless paperwork and subtle gotchas.
 
-Is there something rotten in the state of Massachusetts? Does Eversource get to keep the money they don't distribute in rebates?
+Is there something rotten in the state of Massachusetts? Does Eversource get to keep the money that doesn't get distributed in rebates?
 
 I called the Massachusetts Department of Utilities (DPU), who oversees the EV rebate program and asked what was going on. Why was Eversource making it so hard to claim a rebate?
 
@@ -83,9 +85,9 @@ The rep at the DPU explained that Eversource wants people to buy EVs. If MA resi
 
 And then it started to make sense: Eversource doesn't want customer rebate claims to fail; they just don't care about them at all.
 
-By the time a customer requests a rebate from Eversource, the customer has already purchased an EV. The customer is now locked in to buy extra electricity from Eversource for the next several years. At that point, Eversource has everything they want from the deal and no incentive to spend another penny on the customer.
+By the time a customer requests a rebate from Eversource, the customer has already purchased an EV. The customer is now locked in to buy extra electricity from Eversource for the next several years. At that point, Eversource has everything they want from the customer, and the customer has no leverage to get Eversource to honor their end of the deal.
 
-I asked the Massachusetts DPU rep if they keep metrics on how many people apply for this rebate vs. the number who actually complete it. Eversource only tells the DPU how many people complete the process. Eversource could be rejecting 99% of rebate applicants, and the DPU would never know.
+I asked the Massachusetts DPU rep if they keep metrics on how many people apply for EV charging rebate vs. the number who actually complete it. Eversource only tells the DPU how many people complete the process. Eversource could be rejecting 99% of rebate applicants, and the DPU would never know.
 
 ## Eversource leaking customer records
 
@@ -129,11 +131,11 @@ Content-Length: 27
 {"programId":8,"formId":60}
 ```
 
-The thing that caught my eye was that the URL path contained the words `public` and `guest`, which typically appear in URLs that are publicly accessible without a login.
+The thing that caught my eye was that the URL path contained the words `public` and `guest`, which typically appear in URLs that don't require a login.
 
 The request from my browser was authenticated. The `Cookie` line was telling the server my login ID. But was the server even checking my login status?
 
-To test whether the rebate portal server was checking logins, I made the exact same request but removed the `Cookie`. The rebate portal still returned all my private data. Uh oh.
+To test whether the rebate portal server was checking logins, I made the exact same request but removed the `Cookie` line. The rebate portal still returned all my private data. Uh oh. Eversource wasn't checking logins.
 
 My application ID is only six numeric digits, meaning less than 1 million possibilties. And I bet they're sequential, so anyone who visits the rebate portal can guess my project ID and see all of the information I submitted, including my name, phone number, mailing address, and vehicle identification number (VIN).
 
@@ -143,7 +145,7 @@ It's bad enough that the Eversource rebate portal leaks my personal information,
 
 {{<img src="login.webp" max-width="500px" caption="The Eversource rebate portal allows me to log in with just my email address, zip code, and a six-digit application number.">}}
 
-The insecure URL that dumps all of my data includes all of those fields. A malicious user can grab my application number, email address and zip code from the vulnerable URL, and then log in to my application as me. They could access all of my information, including the photos or documents I uploaded.
+The insecure URL that dumps all of my data includes all of those fields. A malicious user can grab my application number, email address and zip code from the vulnerable URL and then log in to the rebate portal as me. They could access all of my information, including the photos or documents I uploaded.
 
 Worse, a malicious user can _change_ information in my rebate application, such as sending my rebate check to a different mailing address
 
@@ -165,9 +167,9 @@ There's a lot to complain about here in terms of Eversource and Resource Innovat
 
 ### Reporting timeline
 
-- 2025-01-27 - I report to Eversource, Resource Innovations, and the Department of Public Utilities that I found a vulnerability I'd like to report.
+- 2025-01-27 - I report to Eversource, Resource Innovations, and the Massachusetts Department of Public Utilities that I found a vulnerability I'd like to report.
 - 2025-01-28 - Resource Innovations responds asking for details.
-- 2025-01-28 - I share details of the vulnerability.
+- 2025-01-28 - I share details of the vulnerability with Resource Innovations.
 - 2025-01-29 - Resource Innovations reports that they have remediated the issue.
 - 2025-02-05 - I report the same issue on another rebate portal URL to Resource Innovations.
 - 2025-02-05 - Resource Innovations reports that they will begin work to remediate the issue.
@@ -185,9 +187,9 @@ There will also a public hearing on Zoom about Eversource's proposal this Wednes
 
 For context: Eversource is not a neighborhood mom and pop electric company. They're a Fortune 500 company, reporting $1.3 billion in profit in the last 12 months.
 
-Based on my experience with Eversource's current EV rebate program, they seem to be use public funds from Massachusetts residents and then shift as much work as possible onto those same residents.
+Based on my experience with Eversource's current EV rebate program, they use public funds from Massachusetts residents and then shift as much work as possible onto those same residents.
 
-The EV rebate application should be a 5-10 minute process where I submit a proof of purchase and wait for my check in the mail. Instead, it's taken me several hours over two months, and I still don't even know if my application will be approved. The vast majority of my work has been collecting documents and details that feel totally irrelevant to the program's purpose.
+The EV rebate application should be a 5-10 minute process where I submit a proof of purchase and wait for my check in the mail. Instead, it's taken me several hours over two months, and I still don't know if Eversource will approve my application. The vast majority of my work has been collecting documents and details that feel totally irrelevant to the program's purpose.
 
 The fundamental problem is that what gets measured gets managed, but nobody is measuring the time Massachusetts residents spend dealing with Eversource's rebate program. As a result, Eversource minimizes their investment into the program, wasting residents' time and exposing their personal information.
 
@@ -204,8 +206,8 @@ Here what I'd like to see in Eversource's new EV rebate program:
   - Eversource must provide these audit results to the MA DPU and fix any issues rated High or Critical within six weeks.
 - Eversource must publish the following metrics quarterly:
   - The number of customers that begin the rebate application,
-  - The number of customers that receive one or more claim rejections (regardless of eventual outcome),
-  - The number of customers who successfully claim their rebate.
+  - The number of customers that receive one or more claim rejection (regardless of eventual outcome),
+  - The number of customers who successfully claim their rebate and receive payment.
 - Throughout the application process, Eversource must display the contact information for the specific Massachusetts DPU office that oversees the EV rebate program.
   - The contact information must be conspicuously displayed in rebate claim denials, allowing residents to appeal an incorrect rejection.
 - The MA DPU must have the ability to audit EV charger rebate applications.
