@@ -141,57 +141,37 @@ I tried changing the project ID in the URL, and the rebate portal showed me all 
 
 Anyone who visits the rebate portal can guess my six-digit project ID and see all of the information I submitted, including my name, phone number, mailing address, and vehicle identification number (VIN).
 
-## It gets worse
+## What if a malicious user changes my application?
 
-The Eversource rebate portal's insecure URL only returned the text responses I'd filled in but not any of the photos or documents I uploaded. So, at least that's something.
-
-Except, oh wait, here's what the login form looks like for the rebate portal:
+It's bad enough that the Eversource rebate portal leaks my personal information, but it gets worse. Here's what the login form looks like to access my application:
 
 {{<img src="login.webp" max-width="500px" caption="The Eversource rebate portal allows me to log in with just my email address, zip code, and a six-digit application number.">}}
 
-Does the rebate portal leak that information to anyone who asks? Yes, here it is in the server's response above.
+The insecure URL that dumps all of my data includes all of those fields. A malicious user can log in to my application as me and access all of my information, including the photos or documents I uploaded.
 
-```text
-"appId": "<my application number>",
-...
-[
-  {
-      "label": "Bill Zip/Postal Code",
-      "value": "<my zip code>",
-      ...
-  },
-  {
-      "label": "Customer Email",
-      "value": "<my email address>",
-      ...
-  },
-  ...
-]
-```
-
-With an application number, zip code, and email, a malicious user could log in to my account and see everything I entered into my rebate application. Worse, a maliciou user can _change_ information in my rebate form, such as sending my rebate check to a different mailing address
+Worse, a malicious user can _change_ information in my rebate form, such as sending my rebate check to a different mailing address
 
 ## Reporting the vulnerability
 
-The company that manages Eversource's rebate portal is called Resource Innovations, and it looks like they run similar programs for [a bunch of electric utilities in other cities](https://kagi.com/search?q=site%3Adsmcentral.com%2Ftraksmart4&r=us&sh=f00VrZjIgxNXTRgLgLxsSA).
+The company that manages Eversource's rebate portal is called [Resource Innovations](https://www.resource-innovations.com/), and it looks like they run similar programs for [a bunch of electric utilities in other cities](https://kagi.com/search?q=site%3Adsmcentral.com%2Ftraksmart4&r=us&sh=f00VrZjIgxNXTRgLgLxsSA).
 
-I emailed Resource Innovations first, explaining that I had found a serious vulnerability and wanted to connect with their security team to share details. I tried to find a security contact at Eversource, but I couldn't find any, so I emailed Christopher Leigh, Eversource's Chief Information Security Officer.
+I emailed Resource Innovations' privacy@ email, explaining that I had found a serious vulnerability and wanted to connect with their security team to share details. I couldn't find a publicly listed security mailbox at Eversource, so I emailed Christopher Leigh, Eversource's Chief Information Security Officer.
 
 I got a response back the next day from Desireee Robinson, a VP of Information Security at Resource Innovations. She offered to meet me immediately on a video call to review the vulnerability, but the issue was so simple that we didn't even need to meet. I just emailed her an example of the HTTP request that worked without authentication. She responded the following day to say she'd fixed the issue, and I confirmed I could no longer access the vulnerable URL without a valid login token.
 
-Christopher Leigh never got back to me, but I did hear back from Karla Pickett from Eversource's "Executive Inquiry office." She said the vendor was "currently working to resolve this issue."
+Christopher Leigh, Eversource's CISO, never got back to me, but I did hear back from Karla Pickett from Eversource's "Executive Inquiry office." She said the vendor was "currently working to resolve this issue."
 
 I asked both Karla Pickett and Desiree Robinson if they could share more details about what protections they put in place to better protect customers in the future. I also asked if they offered [bug bounties](https://en.wikipedia.org/wiki/Bug_bounty_program) for people who offer them coordinated disclosure of security issues. Neither of them responded to my follow-up questions.
 
-As I was preparing screenshot for this blog post, I noticed another URL on the same UI flow of the rebate portal was _also_ exposing customer data without checking authentication. This time, it _only_ exposed my full name, home address, and application number. I reached out to Desiree Robinson again to report it. She responded seven minutes later to say she was investigating. I tried the URL the next day and saw that it was correctly checking authentication.
+As I was preparing screenshot for this blog post, I noticed another URL on the same UI flow was also exposing customer data without checking authentication. This time, it _only_ exposed my full name, home address, and application number. I reached out to Desiree Robinson again to report it. She responded seven minutes later to say she was investigating. I tried the URL the next day and saw that it was correctly checking authentication.
 
-There's a lot to complain about here in terms of Eversource and Resource Innovations' engineering and security, but I will give them credit for one thing: they were extremely responsive. Except when I asked about security bounties.
+There's a lot to complain about here in terms of Eversource and Resource Innovations' engineering and security, but I will give them credit for one thing: they were extremely responsive. Except when I ask about security bounties.
 
 ### Reporting timeline
 
 - 2025-01-27 - I report to Eversource, Resource Innovations, and the Department of Public Utilities that I found a serious vulnerability I'd like to report in Eversource's EV charger rebate portal.
 - 2025-01-28 - Resource Innovations responds asking for details.
-- 2025-01-28 - I share details
+- 2025-01-28 - I share details of the vulnerability.
 - 2025-01-29 - Resource Innovations reports that they have remediated the issue.
 - 2025-02-05 - I report the same issue on another rebate portal URL.
 - 2025-02-05 - Resource Innovations reports that they will begin work to remediate the issue.
@@ -201,23 +181,36 @@ There's a lot to complain about here in terms of Eversource and Resource Innovat
 
 As it happens, Eversource is in the process of [requesting taxpayer money to fund a new EV rebate program](https://eeaonline.eea.state.ma.us/dpu/fileroom/#/dockets/docket/12810).
 
-Massachusetts residents may submit comments about Eversource's proposal. According to the DPU, comments from MA residents carry weight in these filings, so if you care about EV programs, I encourage you to [submit a public comment](https://fileservice.eea.comacloud.net/V3.1.0/FileService.Api/file/aeiceiice?cwx+darBxD+W5AUrurWiy2+/gw0Qt7CkXyVPBodK3Q+PcSxI+blU344Khxm+qpOeg0hKFj9M9l/xQR8+/8GqPvdGgrFe6XR6ngIfa80wd3rxFD8G4j981M2Rna9aVTXA) by February 18, 2026 (see "Any person interested in commenting on this matter...").
+Massachusetts residents may submit comments to the state about Eversource's proposal. According to the DPU, comments from MA residents carry weight in these filings, so if you care about EV programs, I encourage you to [submit a public comment](https://fileservice.eea.comacloud.net/V3.1.0/FileService.Api/file/aeiceiice?cwx+darBxD+W5AUrurWiy2+/gw0Qt7CkXyVPBodK3Q+PcSxI+blU344Khxm+qpOeg0hKFj9M9l/xQR8+/8GqPvdGgrFe6XR6ngIfa80wd3rxFD8G4j981M2Rna9aVTXA) by February 18, 2026 (see "Any person interested in commenting on this matter...").
+
+There will also a public hearing on Zoom about Eversource's proposal this Wednesday (February 11).
 
 ### My wish list for the EV rebate program
 
-Eversource is a Fortune 500 company. They reported $1.3 billion in profit in the last 12 months. It's absurd that they're requesting public funds to shift their work onto Massachusetts customers with another poorly administered rebate program.
+For context: Eversource is not a neighborhood mom and pop electric company. They're a Fortune 500 company, reporting $1.3 billion in profit in the last 12 months.
 
-Here are the points I plan to cover in my public comment on Eversource's new EV program.
+Based on my experience with Eversource's current EV rebate program, they seem to be using public funds from Massachusetts residents and then shifting as much of their own work onto those same residents. The EV rebate application should be a 5-10 minute process where I submit a receipt and wait for my check in the mail. Instead, it's taken me several hours over two months, and I still don't even know if my application will be approved. The vast majority of my work has been collecting documents and details that feel totally irrelevant to the program's purpose.
+
+The fundamental problem is that what gets measured gets managed, but nobody is measuring the time Massachusetts residents spend having to deal with Eversource's rebate program. As a result, Eversource has minimizes their investment into the program, wasting residents' time and exposing their personal information.
+
+Here what I'd like to see in Eversource's new EV rebate program:
 
 - Eversource cannot require customers to create new online accounts as a requirement of the rebate.
-  - The rebate form must be available through the standard Eversource customer portal. A third-party vendor may administer the rebate portal, but the vendor must implement a secure single sign-on (SSO) flow so that customers don't need new accounts.
+  - The rebate form must be available through the standard Eversource customer portal.
+  - A third-party vendor may administer the rebate portal, but the vendor must implement a secure [single sign-on (SSO)](https://en.wikipedia.org/wiki/Single_sign-on) flow so that customers don't need new accounts.
   - Eversource must pre-populate the rebate form with information they already have about the customer, such as their name, address, and account number.
+- For homeowners who claim an EV charging rebate for their own primary residence, the only required documentation should be (1) the make, model, and serial number of the charger, and (2) a receipt or invoice for the charger and electrical work.
+  - The invoice does not need to be marked as paid.
+  - The resident should not need to prove ownership of an EV, as it makes no sense to install an EV charger at a loss when you don't have an EV.
 - Eversource must hire, at their own expense, a Massachusetts-based web security firm to conduct an annual security audit of the rebate portal.
-  - The audit results must be made available to the MA DPU.
+  - Eversource must provide these audit results to the MA DPU and fix any issues rated High or Critical.
+- Eversource must publish the following metrics quarterly:
+  - The number of customers that begin the rebate application,
+  - The number of customers that receive one or more claim rejections (regardless of eventual outcome),
+  - The number of customers who successfully claim their rebate.
 - Throughout the application process, Eversource must display the contact information for the specific Massachusetts DPU office that oversees the EV rebate program.
-  - The contact information must be conspicuously displayed in claim denials.
-- Eversource must publicly report the number of customers that begin the application, the number of customers that receive one or more claim rejections (regardless of eventual outcome), and the number of customers who successfully claim their rebate.
-- The MA DPU must have the ability to audit rebate applications.
+  - The contact information must be conspicuously displayed in rebate claim denials, allowing residents to appeal an incorrect rejection.
+- The MA DPU must have the ability to audit EV charger rebate applications.
 - If Eversource rejects an application and the DPU determines it was an invalid rejection, Eversource must pay the customer 150% of the requested rebate amount.
   - DPU must not reimburse Eversource for claims that involved an invalid rejection, even if they were later approved.
 
