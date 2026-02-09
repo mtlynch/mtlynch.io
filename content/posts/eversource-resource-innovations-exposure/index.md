@@ -137,7 +137,7 @@ The request from my browser was authenticated. The `Cookie` line was telling the
 
 To test whether the rebate portal server was checking logins, I made the exact same request but removed the `Cookie` line. The rebate portal still returned all my private data. Uh oh. Eversource wasn't checking logins.
 
-My application ID is only six numeric digits, meaning less than 1 million possibilties. And I bet they're sequential, so anyone who visits the rebate portal can guess my project ID and see all of the information I submitted, including my name, phone number, mailing address, and vehicle identification number (VIN).
+My application ID is only six numeric digits, meaning less than 1 million possibilities. And I bet they're sequential, so anyone who visits the rebate portal can guess my project ID and see all of the information I submitted, including my name, phone number, mailing address, and vehicle identification number (VIN).
 
 ## What if a malicious user changes my application?
 
@@ -147,7 +147,7 @@ It's bad enough that the Eversource rebate portal leaks my personal information,
 
 The insecure URL that dumps all of my data includes all of those fields. A malicious user can grab my application number, email address and zip code from the vulnerable URL and then log in to the rebate portal as me. They could access all of my information, including the photos or documents I uploaded.
 
-Worse, a malicious user can _change_ information in my rebate application, such as sending my rebate check to a different mailing address
+Worse, a malicious user can _change_ information in my rebate application, such as sending my rebate check to a different mailing address.
 
 ## Reporting the vulnerability
 
@@ -155,7 +155,7 @@ The company that manages Eversource's rebate portal is called [Resource Innovati
 
 I emailed Resource Innovations' privacy@ email, explaining that I had found a serious vulnerability and wanted to connect with their security team to share details. I couldn't find a publicly listed security mailbox at Eversource, so I emailed Christopher Leigh, Eversource's Chief Information Security Officer.
 
-I got a response the next day from Desireee Robinson, a VP of Information Security at Resource Innovations. She offered to meet me immediately on a video call to review the vulnerability, but the issue was so simple that we didn't even need a call. I just emailed her an example of the HTTP request that worked without authentication. She responded the following day to say they'd fixed the issue, and I confirmed I could no longer access the vulnerable URL without a valid login token.
+I got a response the next day from Desiree Robinson, a VP of Information Security at Resource Innovations. She offered to meet me immediately on a video call to review the vulnerability, but the issue was so simple that we didn't even need a call. I just emailed her an example of the HTTP request that worked without authentication. She responded the following day to say they'd fixed the issue, and I confirmed I could no longer access the vulnerable URL without a valid login token.
 
 Christopher Leigh, Eversource's CISO, never got back to me, but I did hear back from Karla Pickett from Eversource's "Executive Inquiry office." She said the vendor was "currently working to resolve this issue."
 
@@ -181,7 +181,7 @@ As it happens, Eversource is in the process of [requesting taxpayer money to fun
 
 Massachusetts residents may submit comments to the state about Eversource's proposal. According to the DPU, comments from MA residents carry weight in these filings, so if you care about EV programs, I encourage you to [submit a public comment](https://fileservice.eea.comacloud.net/V3.1.0/FileService.Api/file/aeiceiice?cwx+darBxD+W5AUrurWiy2+/gw0Qt7CkXyVPBodK3Q+PcSxI+blU344Khxm+qpOeg0hKFj9M9l/xQR8+/8GqPvdGgrFe6XR6ngIfa80wd3rxFD8G4j981M2Rna9aVTXA) by February 18, 2026 (see "Any person interested in commenting on this matter...").
 
-There will also a public hearing on Zoom about Eversource's proposal this Wednesday (February 11).
+There will also be a public hearing on Zoom about Eversource's proposal this Wednesday (February 11).
 
 ### My wish list for the EV rebate program
 
@@ -193,7 +193,7 @@ The EV rebate application should be a 5-10 minute process where I submit a proof
 
 The fundamental problem is that what gets measured gets managed, but nobody is measuring the time Massachusetts residents spend dealing with Eversource's rebate program. As a result, Eversource minimizes their investment into the program, wasting residents' time and exposing their personal information.
 
-Here what I'd like to see in Eversource's new EV rebate program:
+Here is what I'd like to see in Eversource's new EV rebate program:
 
 - Eversource cannot require customers to create new online accounts as a requirement of the rebate.
   - The rebate form must be available through the standard Eversource customer portal.
@@ -206,7 +206,7 @@ Here what I'd like to see in Eversource's new EV rebate program:
   - Eversource must provide these audit results to the MA DPU and fix any issues rated High or Critical within six weeks.
 - Eversource must publish the following metrics quarterly:
   - The number of customers that begin the rebate application,
-  - The number of customers that receive one or more claim rejection (regardless of eventual outcome),
+  - The number of customers that receive one or more claim rejections (regardless of eventual outcome),
   - The number of customers who successfully claim their rebate and receive payment.
 - Throughout the application process, Eversource must display the contact information for the specific Massachusetts DPU office that oversees the EV rebate program.
   - The contact information must be conspicuously displayed in rebate claim denials, allowing residents to appeal an incorrect rejection.
