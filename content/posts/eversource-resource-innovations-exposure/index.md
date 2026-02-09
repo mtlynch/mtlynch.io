@@ -3,6 +3,9 @@ title: "Eversource EV Rebate Program Exposed Massachusetts Customer Data"
 date: 2026-02-09
 banner_image: login.webp
 description: I recently claimed a rebate for an EV charger, only to discover that Eversource, my power supplier, was publicly exposing personal information of customers who applied.
+tags:
+  - security
+  - privacy
 ---
 
 I recently claimed a rebate for installing an electric vehicle (EV) charger, only to discover that Eversource, my power supplier, was publicly exposing personal information of customers who applied, including:
