@@ -269,6 +269,16 @@
 })();
 </script>
 
+<style>
+  .project-metrics-change--positive {
+    color: green;
+  }
+
+  .project-metrics-change--negative {
+    color: red;
+  }
+</style>
+
 <table>
   <thead>
     <tr>
@@ -286,12 +296,12 @@
       <td>
         {{- if gt $uniqueVisitorsChange 0 -}}
           {{- if le $prevUniqueVisitors 0 -}}
-            <span style="color: green;">+{{ $uniqueVisitorsChange | lang.FormatNumber 0 }} (+inf%)</span>
+            <span class="project-metrics-change--positive">+{{ $uniqueVisitorsChange | lang.FormatNumber 0 }} (+inf%)</span>
           {{- else -}}
-            <span style="color: green;">+{{ $uniqueVisitorsChange | lang.FormatNumber 0 }} (+{{ printf "%.0f" $uniqueVisitorsPercent }}%)</span>
+            <span class="project-metrics-change--positive">+{{ $uniqueVisitorsChange | lang.FormatNumber 0 }} (+{{ printf "%.0f" $uniqueVisitorsPercent }}%)</span>
           {{- end -}}
         {{- else if lt $uniqueVisitorsChange 0 -}}
-          <span style="color: red;">{{ $uniqueVisitorsChange | lang.FormatNumber 0 }} ({{ printf "%.0f" $uniqueVisitorsPercent }}%)</span>
+          <span class="project-metrics-change--negative">{{ $uniqueVisitorsChange | lang.FormatNumber 0 }} ({{ printf "%.0f" $uniqueVisitorsPercent }}%)</span>
         {{- else -}}
           0 (0%)
         {{- end -}}
@@ -304,12 +314,12 @@
       <td>
         {{- if gt $preOrdersChange 0 -}}
           {{- if le $prevPreOrders 0 -}}
-            <span style="color: green;">+${{ $preOrdersChange | lang.FormatNumber 2 }} (+inf%)</span>
+            <span class="project-metrics-change--positive">+${{ $preOrdersChange | lang.FormatNumber 2 }} (+inf%)</span>
           {{- else -}}
-            <span style="color: green;">+${{ $preOrdersChange | lang.FormatNumber 2 }} (+{{ printf "%.0f" $preOrdersPercent }}%)</span>
+            <span class="project-metrics-change--positive">+${{ $preOrdersChange | lang.FormatNumber 2 }} (+{{ printf "%.0f" $preOrdersPercent }}%)</span>
           {{- end -}}
         {{- else if lt $preOrdersChange 0 -}}
-          <span style="color: red;">-${{ (mul $preOrdersChange -1) | lang.FormatNumber 2 }} ({{ printf "%.0f" $preOrdersPercent }}%)</span>
+          <span class="project-metrics-change--negative">-${{ (mul $preOrdersChange -1) | lang.FormatNumber 2 }} ({{ printf "%.0f" $preOrdersPercent }}%)</span>
         {{- else -}}
           $0.00 (0%)
         {{- end -}}
@@ -322,12 +332,12 @@
       <td>
         {{- if gt $consultingChange 0 -}}
           {{- if le $prevConsulting 0 -}}
-            <span style="color: green;">+${{ $consultingChange | lang.FormatNumber 2 }} (+inf%)</span>
+            <span class="project-metrics-change--positive">+${{ $consultingChange | lang.FormatNumber 2 }} (+inf%)</span>
           {{- else -}}
-            <span style="color: green;">+${{ $consultingChange | lang.FormatNumber 2 }} (+{{ printf "%.0f" $consultingPercent }}%)</span>
+            <span class="project-metrics-change--positive">+${{ $consultingChange | lang.FormatNumber 2 }} (+{{ printf "%.0f" $consultingPercent }}%)</span>
           {{- end -}}
         {{- else if lt $consultingChange 0 -}}
-          <span style="color: red;">-${{ (mul $consultingChange -1) | lang.FormatNumber 2 }} ({{ printf "%.0f" $consultingPercent }}%)</span>
+          <span class="project-metrics-change--negative">-${{ (mul $consultingChange -1) | lang.FormatNumber 2 }} ({{ printf "%.0f" $consultingPercent }}%)</span>
         {{- else -}}
           $0.00 (0%)
         {{- end -}}
@@ -340,12 +350,12 @@
       <td>
         {{- if gt $sponsorsChange 0 -}}
           {{- if le $prevSponsors 0 -}}
-            <span style="color: green;">+${{ $sponsorsChange | lang.FormatNumber 2 }} (+inf%)</span>
+            <span class="project-metrics-change--positive">+${{ $sponsorsChange | lang.FormatNumber 2 }} (+inf%)</span>
           {{- else -}}
-            <span style="color: green;">+${{ $sponsorsChange | lang.FormatNumber 2 }} (+{{ printf "%.0f" $sponsorsPercent }}%)</span>
+            <span class="project-metrics-change--positive">+${{ $sponsorsChange | lang.FormatNumber 2 }} (+{{ printf "%.0f" $sponsorsPercent }}%)</span>
           {{- end -}}
         {{- else if lt $sponsorsChange 0 -}}
-          <span style="color: red;">-${{ (mul $sponsorsChange -1) | lang.FormatNumber 2 }} ({{ printf "%.0f" $sponsorsPercent }}%)</span>
+          <span class="project-metrics-change--negative">-${{ (mul $sponsorsChange -1) | lang.FormatNumber 2 }} ({{ printf "%.0f" $sponsorsPercent }}%)</span>
         {{- else -}}
           $0.00 (0%)
         {{- end -}}
@@ -358,12 +368,12 @@
       <td>
         {{- if gt $totalChange 0 -}}
           {{- if le $prevTotal 0 -}}
-            <span style="color: green;">+${{ $totalChange | lang.FormatNumber 2 }} (+inf%)</span>
+            <span class="project-metrics-change--positive">+${{ $totalChange | lang.FormatNumber 2 }} (+inf%)</span>
           {{- else -}}
-            <span style="color: green;">+${{ $totalChange | lang.FormatNumber 2 }} (+{{ printf "%.0f" $totalPercent }}%)</span>
+            <span class="project-metrics-change--positive">+${{ $totalChange | lang.FormatNumber 2 }} (+{{ printf "%.0f" $totalPercent }}%)</span>
           {{- end -}}
         {{- else if lt $totalChange 0 -}}
-          <span style="color: red;">-${{ (mul $totalChange -1) | lang.FormatNumber 2 }} ({{ printf "%.0f" $totalPercent }}%)</span>
+          <span class="project-metrics-change--negative">-${{ (mul $totalChange -1) | lang.FormatNumber 2 }} ({{ printf "%.0f" $totalPercent }}%)</span>
         {{- else -}}
           $0.00 (0%)
         {{- end -}}
