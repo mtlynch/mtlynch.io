@@ -1,4 +1,25 @@
-{{- $sign := cond (gt .change 0) "positive" (cond (lt .change 0) "negative" "neutral") -}}
+{{/*
+Usage:
+  partial "project-metrics/change-cell.html" (dict
+    "prev" <number>
+    "current" <number>
+    "decimals" <int>
+    "currency" <bool>
+  )
+
+Computes change and percent from prev/current and renders:
+- neutral: 0 (or $0.00)
+- positive/negative: signed amount and signed percent
+- positive from prev <= 0: +inf%
+*/}}
+
+{{- $change := sub .current .prev -}}
+{{- $percent := 0.0 -}}
+{{- if gt .prev 0 -}}
+  {{- $percent = div (mul (float $change) 100.0) (float .prev) -}}
+{{- end -}}
+
+{{- $sign := cond (gt $change 0) "positive" (cond (lt $change 0) "negative" "neutral") -}}
 {{- if eq $sign "neutral" -}}
   {{- if .currency -}}
     $0.00 (0%)
@@ -6,7 +27,7 @@
     0 (0%)
   {{- end -}}
 {{- else -}}
-  {{- $changeAbs := cond (lt .change 0) (mul .change -1) .change -}}
+  {{- $changeAbs := cond (lt $change 0) (mul $change -1) $change -}}
   {{- $amount := printf "%s%s"
     (cond .currency "$" "")
     ($changeAbs | lang.FormatNumber .decimals)
@@ -18,7 +39,7 @@
   {{- $percentText := cond
     (and (eq $sign "positive") (le .prev 0))
     "+inf%"
-    (printf "%+.0f%%" .percent)
+    (printf "%+.0f%%" $percent)
   -}}
   <span class="project-metrics-change-{{ $sign }}">{{ $signedAmount }} ({{ $percentText }})</span>
 {{- end -}}
