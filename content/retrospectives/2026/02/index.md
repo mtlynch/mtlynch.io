@@ -40,15 +40,19 @@ TODO
 
 {{<project-metrics project="refactoring_english">}}
 
-January was the most popular and highest revenue month since the Kickstarter last year.
+I published ["The Most Popular Blogs of Hacker News in 2025"](https://refactoringenglish.com/blog/2025-hn-top-5/) at the beginning of January, and it did far better than I expected. It gave January the book's highest visitors and revenue since the Kickstarter last year.
+
+The new owner of TinyPilot wrapped up their sponsorship of the book in 2025, so that monthly payment is done. I'm not planning to pursue any more professional sponsors because the companies don't seem that interested.
 
 ## Success by writing about other writers
 
-January was so successful because of the blog post [The Most Popular Blogs of Hacker News in 2025](https://refactoringenglish.com/blog/2025-hn-top-5/). But it's really a continuation of a strategy I've been exploring for about six months that basically boils down to: showcase other writers.
+["The Most Popular Blogs of Hacker News in 2025"](https://refactoringenglish.com/blog/2025-hn-top-5/) is a continuation of a strategy I've been exploring for about six months that basically boils down to celebrating other software writers.
 
-Over the summer, I was at a party and met a professional romance novelist. Even though we wrote about wildly different topics, a lot of our problems were the same. She also self-published.
+Over the summer, I was at a party and met a professional romance novelist. Even though we were working on quite different books, we had many similar problems.
 
-I asked her how she found readers, and she said, "That's the question!" But she said that one of the best ways that she's found new readers for her book is that she started a newsletter where she reviews other romance novels, primarily by indie authors. And it created a virtuous cycle for everyone involved because:
+I asked her how she found readers, and she said, "That's the question!"
+
+She told me that her most successful strategy for finding readers was that she started a newsletter where she reviews other romance novels, primarily by indie authors. And it created a virtuous cycle for everyone involved because:
 
 1. New readers buy her book after discovering her reviews
 1. Her subscribers discover other interesting novels through her newsletter
@@ -82,16 +86,17 @@ You have to be very defensive and have a pipeline where code only moves through 
 
 Maybe I'll write a longer blog post, but I noticed that AI is really good at solving problems where:
 
-1. Success is objective and easy to define.
+1. Success is objective and definable.
+   - e.g. "Find the cause of this crash" is objective and definable whereas "make this landing page better" is not.
 1. The problem is not unique or novel.
-1. A junior developer human could solve the problem through trial and error and searching online.
+1. A human with junior-level software knowledge could solve the problem with a search engine, experimentation, and patience.
 
 Some examples of this:
 
 - Refactoring code that has automated tests
-- Porting code to match the behavior of the original
-- Compile this codebase, installing any necessary dependencies
-- Fix this broken test
+- Porting code from one language/technology to another while preserving behavior
+- Compiling a project from source, installing any necessary dependencies
+- Fixing code to make a test pass
 
 Porting code falls into this category, especially if you have implementation-independent tests.
 
