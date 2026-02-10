@@ -1,26 +1,91 @@
+{{- $prevDate := .currentDate.AddDate 0 -1 0 -}}
+{{- $prev := $prevDate.Format "2006-01" -}}
+{{- $current := .currentDate.Format "2006-01" -}}
+{{- $prevData := index .projectData $prev -}}
+{{- $currentData := index .projectData $current -}}
+
+{{- if not (and $prevData $currentData) -}}
+  {{- errorf
+    "Could not find data for project \"%s\" with months \"%s\" and \"%s\". Available data: %s"
+    .project
+    $prev
+    $current
+    .projectData
+  -}}
+{{- end -}}
+
+{{- $prevMonth := $prevDate.Format "January 2006" -}}
+{{- $currentMonth := .currentDate.Format "January 2006" -}}
+
+{{- $prevUniqueVisitors := $prevData.unique_visitors | default 0 | int -}}
+{{- $currentUniqueVisitors := $currentData.unique_visitors | default 0 | int -}}
+{{- $uniqueVisitorsChange := sub $currentUniqueVisitors $prevUniqueVisitors -}}
+{{- $uniqueVisitorsPercent := 0.0 -}}
+{{- if gt $prevUniqueVisitors 0 -}}
+  {{- $uniqueVisitorsPercent = div
+    (mul (float $uniqueVisitorsChange) 100.0)
+    (float $prevUniqueVisitors)
+  -}}
+{{- end -}}
+
+{{- $prevPreOrders := $prevData.revenue_pre_orders | default 0.0 | float -}}
+{{- $prevConsulting := $prevData.revenue_consulting | default 0.0 | float -}}
+{{- $prevSponsors := $prevData.revenue_sponsors | default 0.0 | float -}}
+{{- $prevTotal := add (add $prevPreOrders $prevConsulting) $prevSponsors -}}
+
+{{- $currentPreOrders := $currentData.revenue_pre_orders | default 0.0 | float -}}
+{{- $currentConsulting := $currentData.revenue_consulting | default 0.0 | float -}}
+{{- $currentSponsors := $currentData.revenue_sponsors | default 0.0 | float -}}
+{{- $currentTotal := add (add $currentPreOrders $currentConsulting) $currentSponsors -}}
+
+{{- $preOrdersChange := sub $currentPreOrders $prevPreOrders -}}
+{{- $consultingChange := sub $currentConsulting $prevConsulting -}}
+{{- $sponsorsChange := sub $currentSponsors $prevSponsors -}}
+{{- $totalChange := sub $currentTotal $prevTotal -}}
+
+{{- $preOrdersPercent := 0.0 -}}
+{{- if gt $prevPreOrders 0 -}}
+  {{- $preOrdersPercent = div (mul $preOrdersChange 100) $prevPreOrders -}}
+{{- end -}}
+
+{{- $consultingPercent := 0.0 -}}
+{{- if gt $prevConsulting 0 -}}
+  {{- $consultingPercent = div (mul $consultingChange 100) $prevConsulting -}}
+{{- end -}}
+
+{{- $sponsorsPercent := 0.0 -}}
+{{- if gt $prevSponsors 0 -}}
+  {{- $sponsorsPercent = div (mul $sponsorsChange 100) $prevSponsors -}}
+{{- end -}}
+
+{{- $totalPercent := 0.0 -}}
+{{- if gt $prevTotal 0 -}}
+  {{- $totalPercent = div (mul $totalChange 100) $prevTotal -}}
+{{- end -}}
+
 <table>
   <thead>
     <tr>
       <th>Metric</th>
-      <th>{{ .prevMonth }}</th>
-      <th>{{ .currentMonth }}</th>
+      <th>{{ $prevMonth }}</th>
+      <th>{{ $currentMonth }}</th>
       <th>Change</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Unique visitors</td>
-      <td>{{ .prevUniqueVisitors | lang.FormatNumber 0 }}</td>
-      <td>{{ .currentUniqueVisitors | lang.FormatNumber 0 }}</td>
+      <td>{{ $prevUniqueVisitors | lang.FormatNumber 0 }}</td>
+      <td>{{ $currentUniqueVisitors | lang.FormatNumber 0 }}</td>
       <td>
-        {{- if gt .uniqueVisitorsChange 0 -}}
-          {{- if le .prevUniqueVisitors 0 -}}
-            <span style="color: green;">+{{ .uniqueVisitorsChange | lang.FormatNumber 0 }} (+inf%)</span>
+        {{- if gt $uniqueVisitorsChange 0 -}}
+          {{- if le $prevUniqueVisitors 0 -}}
+            <span style="color: green;">+{{ $uniqueVisitorsChange | lang.FormatNumber 0 }} (+inf%)</span>
           {{- else -}}
-            <span style="color: green;">+{{ .uniqueVisitorsChange | lang.FormatNumber 0 }} (+{{ printf "%.0f" .uniqueVisitorsPercent }}%)</span>
+            <span style="color: green;">+{{ $uniqueVisitorsChange | lang.FormatNumber 0 }} (+{{ printf "%.0f" $uniqueVisitorsPercent }}%)</span>
           {{- end -}}
-        {{- else if lt .uniqueVisitorsChange 0 -}}
-          <span style="color: red;">{{ .uniqueVisitorsChange | lang.FormatNumber 0 }} ({{ printf "%.0f" .uniqueVisitorsPercent }}%)</span>
+        {{- else if lt $uniqueVisitorsChange 0 -}}
+          <span style="color: red;">{{ $uniqueVisitorsChange | lang.FormatNumber 0 }} ({{ printf "%.0f" $uniqueVisitorsPercent }}%)</span>
         {{- else -}}
           0 (0%)
         {{- end -}}
@@ -28,17 +93,17 @@
     </tr>
     <tr>
       <td>Revenue from pre-orders</td>
-      <td>${{ .prevPreOrders | lang.FormatNumber 2 }}</td>
-      <td>${{ .currentPreOrders | lang.FormatNumber 2 }}</td>
+      <td>${{ $prevPreOrders | lang.FormatNumber 2 }}</td>
+      <td>${{ $currentPreOrders | lang.FormatNumber 2 }}</td>
       <td>
-        {{- if gt .preOrdersChange 0 -}}
-          {{- if le .prevPreOrders 0 -}}
-            <span style="color: green;">+${{ .preOrdersChange | lang.FormatNumber 2 }} (+inf%)</span>
+        {{- if gt $preOrdersChange 0 -}}
+          {{- if le $prevPreOrders 0 -}}
+            <span style="color: green;">+${{ $preOrdersChange | lang.FormatNumber 2 }} (+inf%)</span>
           {{- else -}}
-            <span style="color: green;">+${{ .preOrdersChange | lang.FormatNumber 2 }} (+{{ printf "%.0f" .preOrdersPercent }}%)</span>
+            <span style="color: green;">+${{ $preOrdersChange | lang.FormatNumber 2 }} (+{{ printf "%.0f" $preOrdersPercent }}%)</span>
           {{- end -}}
-        {{- else if lt .preOrdersChange 0 -}}
-          <span style="color: red;">-${{ (mul .preOrdersChange -1) | lang.FormatNumber 2 }} ({{ printf "%.0f" .preOrdersPercent }}%)</span>
+        {{- else if lt $preOrdersChange 0 -}}
+          <span style="color: red;">-${{ (mul $preOrdersChange -1) | lang.FormatNumber 2 }} ({{ printf "%.0f" $preOrdersPercent }}%)</span>
         {{- else -}}
           $0.00 (0%)
         {{- end -}}
@@ -46,17 +111,17 @@
     </tr>
     <tr>
       <td>Revenue from consulting</td>
-      <td>${{ .prevConsulting | lang.FormatNumber 2 }}</td>
-      <td>${{ .currentConsulting | lang.FormatNumber 2 }}</td>
+      <td>${{ $prevConsulting | lang.FormatNumber 2 }}</td>
+      <td>${{ $currentConsulting | lang.FormatNumber 2 }}</td>
       <td>
-        {{- if gt .consultingChange 0 -}}
-          {{- if le .prevConsulting 0 -}}
-            <span style="color: green;">+${{ .consultingChange | lang.FormatNumber 2 }} (+inf%)</span>
+        {{- if gt $consultingChange 0 -}}
+          {{- if le $prevConsulting 0 -}}
+            <span style="color: green;">+${{ $consultingChange | lang.FormatNumber 2 }} (+inf%)</span>
           {{- else -}}
-            <span style="color: green;">+${{ .consultingChange | lang.FormatNumber 2 }} (+{{ printf "%.0f" .consultingPercent }}%)</span>
+            <span style="color: green;">+${{ $consultingChange | lang.FormatNumber 2 }} (+{{ printf "%.0f" $consultingPercent }}%)</span>
           {{- end -}}
-        {{- else if lt .consultingChange 0 -}}
-          <span style="color: red;">-${{ (mul .consultingChange -1) | lang.FormatNumber 2 }} ({{ printf "%.0f" .consultingPercent }}%)</span>
+        {{- else if lt $consultingChange 0 -}}
+          <span style="color: red;">-${{ (mul $consultingChange -1) | lang.FormatNumber 2 }} ({{ printf "%.0f" $consultingPercent }}%)</span>
         {{- else -}}
           $0.00 (0%)
         {{- end -}}
@@ -64,17 +129,17 @@
     </tr>
     <tr>
       <td>Revenue from sponsors</td>
-      <td>${{ .prevSponsors | lang.FormatNumber 2 }}</td>
-      <td>${{ .currentSponsors | lang.FormatNumber 2 }}</td>
+      <td>${{ $prevSponsors | lang.FormatNumber 2 }}</td>
+      <td>${{ $currentSponsors | lang.FormatNumber 2 }}</td>
       <td>
-        {{- if gt .sponsorsChange 0 -}}
-          {{- if le .prevSponsors 0 -}}
-            <span style="color: green;">+${{ .sponsorsChange | lang.FormatNumber 2 }} (+inf%)</span>
+        {{- if gt $sponsorsChange 0 -}}
+          {{- if le $prevSponsors 0 -}}
+            <span style="color: green;">+${{ $sponsorsChange | lang.FormatNumber 2 }} (+inf%)</span>
           {{- else -}}
-            <span style="color: green;">+${{ .sponsorsChange | lang.FormatNumber 2 }} (+{{ printf "%.0f" .sponsorsPercent }}%)</span>
+            <span style="color: green;">+${{ $sponsorsChange | lang.FormatNumber 2 }} (+{{ printf "%.0f" $sponsorsPercent }}%)</span>
           {{- end -}}
-        {{- else if lt .sponsorsChange 0 -}}
-          <span style="color: red;">-${{ (mul .sponsorsChange -1) | lang.FormatNumber 2 }} ({{ printf "%.0f" .sponsorsPercent }}%)</span>
+        {{- else if lt $sponsorsChange 0 -}}
+          <span style="color: red;">-${{ (mul $sponsorsChange -1) | lang.FormatNumber 2 }} ({{ printf "%.0f" $sponsorsPercent }}%)</span>
         {{- else -}}
           $0.00 (0%)
         {{- end -}}
@@ -82,17 +147,17 @@
     </tr>
     <tr style="font-weight: bold;">
       <td>Total Revenue</td>
-      <td>${{ .prevTotal | lang.FormatNumber 2 }}</td>
-      <td>${{ .currentTotal | lang.FormatNumber 2 }}</td>
+      <td>${{ $prevTotal | lang.FormatNumber 2 }}</td>
+      <td>${{ $currentTotal | lang.FormatNumber 2 }}</td>
       <td>
-        {{- if gt .totalChange 0 -}}
-          {{- if le .prevTotal 0 -}}
-            <span style="color: green;">+${{ .totalChange | lang.FormatNumber 2 }} (+inf%)</span>
+        {{- if gt $totalChange 0 -}}
+          {{- if le $prevTotal 0 -}}
+            <span style="color: green;">+${{ $totalChange | lang.FormatNumber 2 }} (+inf%)</span>
           {{- else -}}
-            <span style="color: green;">+${{ .totalChange | lang.FormatNumber 2 }} (+{{ printf "%.0f" .totalPercent }}%)</span>
+            <span style="color: green;">+${{ $totalChange | lang.FormatNumber 2 }} (+{{ printf "%.0f" $totalPercent }}%)</span>
           {{- end -}}
-        {{- else if lt .totalChange 0 -}}
-          <span style="color: red;">-${{ (mul .totalChange -1) | lang.FormatNumber 2 }} ({{ printf "%.0f" .totalPercent }}%)</span>
+        {{- else if lt $totalChange 0 -}}
+          <span style="color: red;">-${{ (mul $totalChange -1) | lang.FormatNumber 2 }} ({{ printf "%.0f" $totalPercent }}%)</span>
         {{- else -}}
           $0.00 (0%)
         {{- end -}}

@@ -46,75 +46,9 @@
 {{- /* Create a time object for the retrospective date and calculate previous months using Go's time functions */ -}}
 {{- $retroDate := time (printf "%d-%02d-01" $yearInt $monthInt) -}}
 {{- $currentDate := $retroDate.AddDate 0 -1 0 -}}
-{{- $prevDate := $retroDate.AddDate 0 -2 0 -}}
-{{- $current := $currentDate.Format "2006-01" -}}
-{{- $prev := $prevDate.Format "2006-01" -}}
 
 {{- $data := index .Site.Data "project_metrics" -}}
 {{- $projectData := index $data $project -}}
-
-{{- $prevData := index $projectData $prev -}}
-{{- $currentData := index $projectData $current -}}
-
-{{- /* Shared validation and metric calculations used by both graph and table */ -}}
-{{- if not (and $prevData $currentData) -}}
-  {{- errorf
-    "Could not find data for project \"%s\" with months \"%s\" and \"%s\". Available data: %s"
-    $project
-    $prev
-    $current
-    $projectData
-  -}}
-{{- end -}}
-
-{{- $prevMonth := $prevDate.Format "January 2006" -}}
-{{- $currentMonth := $currentDate.Format "January 2006" -}}
-
-{{- $prevUniqueVisitors := $prevData.unique_visitors | default 0 | int -}}
-{{- $currentUniqueVisitors := $currentData.unique_visitors | default 0 | int -}}
-{{- $uniqueVisitorsChange := sub $currentUniqueVisitors $prevUniqueVisitors -}}
-{{- $uniqueVisitorsPercent := 0.0 -}}
-{{- if gt $prevUniqueVisitors 0 -}}
-  {{- $uniqueVisitorsPercent = div
-    (mul (float $uniqueVisitorsChange) 100.0)
-    (float $prevUniqueVisitors)
-  -}}
-{{- end -}}
-
-{{- $prevPreOrders := $prevData.revenue_pre_orders | default 0.0 | float -}}
-{{- $prevConsulting := $prevData.revenue_consulting | default 0.0 | float -}}
-{{- $prevSponsors := $prevData.revenue_sponsors | default 0.0 | float -}}
-{{- $prevTotal := add (add $prevPreOrders $prevConsulting) $prevSponsors -}}
-
-{{- $currentPreOrders := $currentData.revenue_pre_orders | default 0.0 | float -}}
-{{- $currentConsulting := $currentData.revenue_consulting | default 0.0 | float -}}
-{{- $currentSponsors := $currentData.revenue_sponsors | default 0.0 | float -}}
-{{- $currentTotal := add (add $currentPreOrders $currentConsulting) $currentSponsors -}}
-
-{{- $preOrdersChange := sub $currentPreOrders $prevPreOrders -}}
-{{- $consultingChange := sub $currentConsulting $prevConsulting -}}
-{{- $sponsorsChange := sub $currentSponsors $prevSponsors -}}
-{{- $totalChange := sub $currentTotal $prevTotal -}}
-
-{{- $preOrdersPercent := 0.0 -}}
-{{- if gt $prevPreOrders 0 -}}
-  {{- $preOrdersPercent = div (mul $preOrdersChange 100) $prevPreOrders -}}
-{{- end -}}
-
-{{- $consultingPercent := 0.0 -}}
-{{- if gt $prevConsulting 0 -}}
-  {{- $consultingPercent = div (mul $consultingChange 100) $prevConsulting -}}
-{{- end -}}
-
-{{- $sponsorsPercent := 0.0 -}}
-{{- if gt $prevSponsors 0 -}}
-  {{- $sponsorsPercent = div (mul $sponsorsChange 100) $prevSponsors -}}
-{{- end -}}
-
-{{- $totalPercent := 0.0 -}}
-{{- if gt $prevTotal 0 -}}
-  {{- $totalPercent = div (mul $totalChange 100) $prevTotal -}}
-{{- end -}}
 
 {{- partial "project-metrics/graph.html" (dict
   "project" $project
@@ -123,26 +57,7 @@
 ) -}}
 
 {{- partial "project-metrics/table.html" (dict
-  "prevMonth" $prevMonth
-  "currentMonth" $currentMonth
-  "prevUniqueVisitors" $prevUniqueVisitors
-  "currentUniqueVisitors" $currentUniqueVisitors
-  "uniqueVisitorsChange" $uniqueVisitorsChange
-  "uniqueVisitorsPercent" $uniqueVisitorsPercent
-  "prevPreOrders" $prevPreOrders
-  "currentPreOrders" $currentPreOrders
-  "preOrdersChange" $preOrdersChange
-  "preOrdersPercent" $preOrdersPercent
-  "prevConsulting" $prevConsulting
-  "currentConsulting" $currentConsulting
-  "consultingChange" $consultingChange
-  "consultingPercent" $consultingPercent
-  "prevSponsors" $prevSponsors
-  "currentSponsors" $currentSponsors
-  "sponsorsChange" $sponsorsChange
-  "sponsorsPercent" $sponsorsPercent
-  "prevTotal" $prevTotal
-  "currentTotal" $currentTotal
-  "totalChange" $totalChange
-  "totalPercent" $totalPercent
+  "project" $project
+  "projectData" $projectData
+  "currentDate" $currentDate
 ) -}}
