@@ -323,6 +323,16 @@
 })();
 </script>
 
+<style>
+  .project-metrics-change--positive {
+    color: green;
+  }
+
+  .project-metrics-change--negative {
+    color: red;
+  }
+</style>
+
 <table>
   <thead>
     <tr>
@@ -351,33 +361,34 @@
           {{- end -}}
         </td>
         <td>
-          {{- if gt $row.change 0 -}}
-            {{- if le $row.prev 0 -}}
-              {{- if $row.currency -}}
-                <span style="color: green;">+${{ $row.change | lang.FormatNumber $row.decimals }} (+inf%)</span>
-              {{- else -}}
-                <span style="color: green;">+{{ $row.change | lang.FormatNumber $row.decimals }} (+inf%)</span>
-              {{- end -}}
-            {{- else -}}
-              {{- if $row.currency -}}
-                <span style="color: green;">+${{ $row.change | lang.FormatNumber $row.decimals }} (+{{ printf "%.0f" $row.percent }}%)</span>
-              {{- else -}}
-                <span style="color: green;">+{{ $row.change | lang.FormatNumber $row.decimals }} (+{{ printf "%.0f" $row.percent }}%)</span>
-              {{- end -}}
-            {{- end -}}
-          {{- else if lt $row.change 0 -}}
-            {{- if $row.currency -}}
-              <span style="color: red;">-${{ (mul $row.change -1) | lang.FormatNumber $row.decimals }} ({{ printf "%.0f" $row.percent }}%)</span>
-            {{- else -}}
-              <span style="color: red;">{{ $row.change | lang.FormatNumber $row.decimals }} ({{ printf "%.0f" $row.percent }}%)</span>
-            {{- end -}}
-          {{- else -}}
-            {{- if $row.currency -}}
-              $0.00 (0%)
-            {{- else -}}
-              0 (0%)
-            {{- end -}}
-          {{- end -}}
+          {{- $changeSign := cond
+            (gt $row.change 0)
+            "positive"
+            (cond (lt $row.change 0) "negative" "neutral")
+          -}}
+          {{- $changeAbs := cond (lt $row.change 0) (mul $row.change -1) $row.change -}}
+          {{- $changeNumber := $changeAbs | lang.FormatNumber $row.decimals -}}
+          {{- $amount := cond $row.currency (printf "$%s" $changeNumber) $changeNumber -}}
+          {{- $signedAmount := cond
+            (eq $changeSign "positive")
+            (printf "+%s" $amount)
+            (cond (eq $changeSign "negative") (printf "-%s" $amount) $amount)
+          -}}
+          {{- $percentText := cond
+            (eq $changeSign "neutral")
+            "0%"
+            (cond
+              (and (eq $changeSign "positive") (le $row.prev 0))
+              "+inf%"
+              (printf "%+.0f%%" $row.percent)
+            )
+          -}}
+          {{- $changeText := cond
+            (eq $changeSign "neutral")
+            (cond $row.currency "$0.00 (0%)" "0 (0%)")
+            (printf "%s (%s)" $signedAmount $percentText)
+          -}}
+          <span class="project-metrics-change project-metrics-change--{{ $changeSign }}">{{ $changeText }}</span>
         </td>
       </tr>
     {{- end -}}
