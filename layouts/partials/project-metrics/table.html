@@ -55,31 +55,31 @@
       <td>Unique visitors</td>
       <td>{{ $prevUniqueVisitors | lang.FormatNumber 0 }}</td>
       <td>{{ $currentUniqueVisitors | lang.FormatNumber 0 }}</td>
-      <td>{{- partial "project-metrics/change-cell.html" (dict "prev" $prevUniqueVisitors "current" $currentUniqueVisitors "currency" false) -}}</td>
+      <td>{{- partial "project-metrics/change-cell.html" (dict "prev" $prevUniqueVisitors "current" $currentUniqueVisitors "isCurrency" false) -}}</td>
     </tr>
     <tr>
       <td>Revenue from pre-orders</td>
       <td>${{ $prevPreOrders | lang.FormatNumber 2 }}</td>
       <td>${{ $currentPreOrders | lang.FormatNumber 2 }}</td>
-      <td>{{- partial "project-metrics/change-cell.html" (dict "prev" $prevPreOrders "current" $currentPreOrders "currency" true) -}}</td>
+      <td>{{- partial "project-metrics/change-cell.html" (dict "prev" $prevPreOrders "current" $currentPreOrders "isCurrency" true) -}}</td>
     </tr>
     <tr>
       <td>Revenue from consulting</td>
       <td>${{ $prevConsulting | lang.FormatNumber 2 }}</td>
       <td>${{ $currentConsulting | lang.FormatNumber 2 }}</td>
-      <td>{{- partial "project-metrics/change-cell.html" (dict "prev" $prevConsulting "current" $currentConsulting "currency" true) -}}</td>
+      <td>{{- partial "project-metrics/change-cell.html" (dict "prev" $prevConsulting "current" $currentConsulting "isCurrency" true) -}}</td>
     </tr>
     <tr>
       <td>Revenue from sponsors</td>
       <td>${{ $prevSponsors | lang.FormatNumber 2 }}</td>
       <td>${{ $currentSponsors | lang.FormatNumber 2 }}</td>
-      <td>{{- partial "project-metrics/change-cell.html" (dict "prev" $prevSponsors "current" $currentSponsors "currency" true) -}}</td>
+      <td>{{- partial "project-metrics/change-cell.html" (dict "prev" $prevSponsors "current" $currentSponsors "isCurrency" true) -}}</td>
     </tr>
     <tr style="font-weight: bold;">
       <td>Total Revenue</td>
       <td>${{ $prevTotal | lang.FormatNumber 2 }}</td>
       <td>${{ $currentTotal | lang.FormatNumber 2 }}</td>
-      <td>{{- partial "project-metrics/change-cell.html" (dict "prev" $prevTotal "current" $currentTotal "currency" true) -}}</td>
+      <td>{{- partial "project-metrics/change-cell.html" (dict "prev" $prevTotal "current" $currentTotal "isCurrency" true) -}}</td>
     </tr>
   </tbody>
 </table>

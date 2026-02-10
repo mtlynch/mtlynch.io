@@ -3,7 +3,7 @@ Usage:
   partial "project-metrics/change-cell.html" (dict
     "prev" <number>
     "current" <number>
-    "currency" <bool>
+    "isCurrency" <bool>
   )
 
 Computes change and percent from prev/current and renders:
@@ -13,7 +13,7 @@ Computes change and percent from prev/current and renders:
 */}}
 
 {{- $change := sub .current .prev -}}
-{{- $decimals := cond .currency 2 0 -}}
+{{- $decimals := cond .isCurrency 2 0 -}}
 {{- $percent := 0.0 -}}
 {{- if gt .prev 0 -}}
   {{- $percent = div (mul (float $change) 100.0) (float .prev) -}}
@@ -21,7 +21,7 @@ Computes change and percent from prev/current and renders:
 
 {{- $sign := cond (gt $change 0) "positive" (cond (lt $change 0) "negative" "neutral") -}}
 {{- if eq $sign "neutral" -}}
-  {{- if .currency -}}
+  {{- if .isCurrency -}}
     $0.00 (0%)
   {{- else -}}
     0 (0%)
@@ -29,7 +29,7 @@ Computes change and percent from prev/current and renders:
 {{- else -}}
   {{- $changeAbs := cond (lt $change 0) (mul $change -1) $change -}}
   {{- $amount := printf "%s%s"
-    (cond .currency "$" "")
+    (cond .isCurrency "$" "")
     ($changeAbs | lang.FormatNumber $decimals)
   -}}
   {{- $signedAmount := printf "%s%s"
