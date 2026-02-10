@@ -68,15 +68,19 @@ TODO: Visit stats, HN vots, Lobsters votes
 
 ## Discovering the power of LLM sandboxes
 
-I had a bit of a revelatory a year ago when [I first started using an AI agent](/notes/cline-is-mesmerizing/). At that point, I just let it edit files while I watched, and I thought that was a scary amount of control to give an LLM.
+I had a revelatory experience a year ago when [I first started using an AI agent](/notes/cline-is-mesmerizing/). At that point, I just let it edit files while I watched, and I thought that was a scary amount of control to give an LLM.
 
-For the past year, I've been coding with AI with the Cline extension in VS Code, and it sped up a lot of my workflows.
+For the past year, I've mostly been coding with Cline, an AI agent extension in VS Code. It sped up a lot of my workflows, but I also micromanaged it aggressively because I didn't trust it to perform arbitrary actions on my dev machine.
 
-But then my friend okay showed me his AI workflow where he lets Codex edit files and run commands without direct supervision. It made me realize how much time I've been wasting micromanaging my AI agents and dealing with hangs in Cline.
+A few weeks ago, [my friend okay](https://oky.moe) showed me his AI workflow where he lets Codex edit files and run commands without direct supervision. It made me realize how much time I've been wasting babysitting my AI agents and dealing with hangs in Cline.
 
-okay said that he sometimes lets Codex work unsupervised for an hour or more, and I couldn't believe it. I'd
+okay said that he sometimes lets Codex work unsupervised for an hour or more, and I couldn't believe it. If I gave Cline a task that would take more than 10 minutes, it would either go down the wrong path or explode my costs. But Codex is flat-fee rather than pay-per-token, so okay didn't have to think about costs.
 
-I still don't trust any AI agent enough to let it run on a real machine, so I set up a custom sandbox for running AI agents on my machine. I go to the directory for one of my projects and run my custom command: `sb`. It spins up a rootless podman container that has no access to my local network and only can see the current working directory. It has Codex and Claude Code pre-installed and authenticated with my accounts.
+I still don't trust any AI agent enough to let it run on a real machine, so I set up a custom sandbox for running AI agents on my machine. I go to the directory for one of my projects and run my custom command: `sb`. It spins up a [rootless Podman container](https://github.com/containers/podman/blob/main/docs/tutorials/rootless_tutorial.md) that has no access to my local network and only can see the current working directory. It has Codex and Claude Code pre-installed and authenticated with my accounts.
+
+Because the AI was in a sandbox, I felt comfortable giving it full permissions to edit files, install applications, etc. It can't hurt my main machine or files unless it turns evil and discovers a sandbox escape.
+
+Seeing an AI agent run with full permissions was another breakthrough moment for me. Because, previously, if I say, "Make a bar chart of my income from the last 8 years," it would sometimes get it wrong, and I'd have to check the result myself and say, "No, the y-axis is showing negative numbers. Fix it." But when the AI agent has full access, it can spin up a test server, view the page in the browser, and iterate itself until it completes its task correctly.
 
 There's something in the ether because after I started working on my sandbox, I've seen a new blog post almost every day about a new AI sandbox.
 
@@ -162,8 +166,4 @@ I lost my enthusiasm for the idea when I realized there are a few flaws:
 
 ### Goals for next month
 
--
-
-### Requests for help
-
-TODO
+- Finish two chapters of _Refactoring English_.
