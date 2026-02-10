@@ -90,8 +90,10 @@ I think the much more likely risk is actually incompetent AI that accidentally e
 
 From my experience, AI has the most impact in solving problems where:
 
-1. Success is objective and definable.
+1. You can objectively define the success criteria.
    - e.g. "Find the cause of this crash" is objective and definable whereas "make this landing page better" is not.
+1. The AI has a method of verifying success.
+   - e.g., "Visit the page in a browser and verify the background turns blue when you push the button."
 1. The problem is not unique or novel.
 1. A human with junior-level software knowledge could solve the problem with a search engine, experimentation, and patience.
 
@@ -102,22 +104,49 @@ Some examples of this:
 - Compiling a project from source, installing any necessary dependencies
 - Fixing code to make a test pass
 
-For the past couple of months, I've been using AI to port code, and it's worked extremely well. I maintain some codebases where I wish I'd made different choices about my tech stack but it would be too expensive to do a from-scratch rewrite. But with AI, the from scratch rewrite is inexpensive and fast.
+The one I've taken advantage of a lot recently is porting code. I have some codebases where I wish I'd made different choices about my tech stack, but it was always too time-consuming rewrite everything. But with AI, swapping pieces of my stack is inexpensive and fast.
 
 Here are some codebases I ported recently:
 
 - Converted the Zestful website [from Vue/Nuxt2 to vanilla HTML with Hugo](https://github.com/mtlynch/zestful-frontend2/pull/152)
   - I got a Github alert saying that I had some dumb vulnerability through a transitive Node.js library I'd never heard of, and I thought, "I'd love to never get another one of these alerts again." So I had AI rewrite the site in Hugo and plain HTML/JS/CSS.
 - Ported PicoShare's CSS framework [from Bulma to Bootstrap 5](https://github.com/mtlynch/picoshare/pull/718)
-  - When I started PicoShare, I wanted to try out Bulma as a CSS framework. It was fine, but I prefer Bootstrap, so I kept using it everywhere else and always had to switch gears when I worked on PicoShare.
+  - When I created PicoShare, I wanted to try out Bulma as a CSS framework. It was fine, but I prefer Bootstrap, so I kept using it everywhere else and always had to switch gears when I worked on PicoShare.
 - Converted LogPaste's e2e tests [from Cypress to Playwright](https://github.com/mtlynch/logpaste/pull/235)
   - I wrote the e2e tests before I discovered Playwright, and now I'm so used to Playwright that it's hard to go back to Cypress.
 - Converted the fusion RSS reader [from Svelte to vanilla HTML + Go templates](https://github.com/mtlynch/fusion/pull/3)
-  - This is just a proof of concept, as fusion isn't my project, but I'd like to fork it to use my preferred tech stack. AI did a good job converting all the Svelte.js code to vanilla HTML and Go templates.
+  - This is just a proof of concept, as fusion isn't my project, but I'd like to fork it to use my preferred tech stack. AI did a good job converting all the Svelte.js code to vanilla HTML and Go templates, but I'd want to get more test infrastructure in place if I were to port this for real.
 - Converted the MeshCore web app [from Vue.js to Flutter](/retrospectives/2026/01/#creating-my-first-flutter-app)
-  - This actually worked poorly because it's somewhat hard for AI to verify the result. I thought Flutter would emit semantic HTML for its web app output, but it actually generates a wonky Flutter-centric HTML dialect. The MeshCore app depends heavily on an external hardware device (the LoRa radio), so I had to be in the loop a lot.
+  - This actually worked poorly because it's missing the "AI can verify the result" step. I thought Flutter would emit semantic HTML for its web app output, but it actually generates a wonky Flutter-centric HTML dialect. And the MeshCore app depends heavily on an external hardware device (the LoRa radio), so I had to be in the loop a lot.
 
 ## Side projects
+
+### [StreamPreserve](https://codeberg.org/mtlynch/stream-preserve)
+
+I spent a couple of days vibe coding an app for instantly backing up videos, but I'm not sure what to do with it.
+
+I've thought about what I'd do in a situation where I was witnessing something I wanted to record on my phone, but there's a possibility of someone stealing my phone and deleting the footage or destroying my phone entirely.
+
+So, I made Stream Preserve, which is a web app that tries to move critical video as quickly as possible to a server I control.
+
+{{<img src="stream-preserve.webp" max-width="300px" caption="Stream Preserve captures important video and moves it to a remote server as quickly as possible.">}}
+
+Here's how it works:
+
+1. I open the StreamPreserve app and begin recording video.
+1. The app streams a low-to-medium-resolution video to the backend server, tuning the stream to the available bandwidth.
+1. The app records high-resolution video to browser storage in discrete chunks.
+1. With any spare bandwidth, the app uploads high-resolution video chunks to the server.
+1. When recording stops, save the high-resolution video as a download on the local device.
+1. When the app is open and no recording is in progress, sync all high-resolution footage to the server.
+
+So, the idea is if I record something and someone smashes my phone, I'd still have a low-resolution copy of the video on my server. And if they seize my phone to stop the recording, it uploads the high-resolution copy in the background.
+
+I lost my enthusiasm for the idea when I realized there are a few flaws:
+
+- It's a bad solution for recording hours of footage.
+- Having it be a web app rather than a native mobile app adds complexity and possibility of losing footage.
+- It's not a great task for AI because it depends on using the browser camera API, which is annoying to fake in an AI sandbox.
 
 ## Wrap up
 
