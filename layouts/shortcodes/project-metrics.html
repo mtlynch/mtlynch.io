@@ -155,219 +155,34 @@
   {{- $revenueData = $revenueData | append .revenue -}}
 {{- end -}}
 
-<div class="project-metrics-chart" style="margin-bottom: 2rem; height: 400px;">
-  <canvas id="{{ $project }}-metrics-chart"
-          data-labels="{{ $sortedLabels | jsonify }}"
-          data-visitors="{{ $visitorsData | jsonify }}"
-          data-revenue="{{ $revenueData | jsonify }}"></canvas>
-</div>
+{{- partial "project-metrics/graph.html" (dict
+  "project" $project
+  "sortedLabels" $sortedLabels
+  "visitorsData" $visitorsData
+  "revenueData" $revenueData
+) -}}
 
-<script>
-(function() {
-  const ctx = document.getElementById('{{ $project }}-metrics-chart');
-  if (!ctx) return;
-
-  const labels = JSON.parse(ctx.dataset.labels);
-  const visitorsData = JSON.parse(ctx.dataset.visitors);
-  const revenueData = JSON.parse(ctx.dataset.revenue);
-
-  const dollarFormat = new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  });
-
-  const visitorFormat = new Intl.NumberFormat("en-US");
-
-  new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: labels,
-      datasets: [{
-        label: 'Unique Visitors',
-        data: visitorsData,
-        borderColor: '#3b82f6',
-        backgroundColor: 'rgba(59, 130, 246, 0.1)',
-        yAxisID: 'y-axis-1',
-        fill: false,
-        lineTension: 0
-      }, {
-        label: 'Total Revenue',
-        data: revenueData,
-        borderColor: '#10b981',
-        backgroundColor: 'rgba(16, 185, 129, 0.1)',
-        yAxisID: 'y-axis-2',
-        fill: false,
-        lineTension: 0
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      title: {
-        display: true,
-        text: 'Project Metrics Over Time'
-      },
-      tooltips: {
-        mode: 'index',
-        intersect: false,
-        callbacks: {
-          label: function(tooltipItem, data) {
-            const label = data.datasets[tooltipItem.datasetIndex].label || '';
-            if (label === 'Unique Visitors') {
-              return label + ': ' + visitorFormat.format(tooltipItem.yLabel);
-            } else {
-              return label + ': ' + dollarFormat.format(tooltipItem.yLabel);
-            }
-          }
-        }
-      },
-      scales: {
-        xAxes: [{
-          display: true,
-          scaleLabel: {
-            display: true,
-            labelString: 'Month'
-          }
-        }],
-        yAxes: [{
-          id: 'y-axis-1',
-          type: 'linear',
-          display: true,
-          position: 'left',
-          scaleLabel: {
-            display: true,
-            labelString: 'Unique Visitors'
-          },
-          ticks: {
-            callback: function(value) {
-              return visitorFormat.format(value);
-            }
-          }
-        }, {
-          id: 'y-axis-2',
-          type: 'linear',
-          display: true,
-          position: 'right',
-          scaleLabel: {
-            display: true,
-            labelString: 'Total Revenue'
-          },
-          gridLines: {
-            drawOnChartArea: false,
-          },
-          ticks: {
-            callback: function(value) {
-              return dollarFormat.format(value);
-            }
-          }
-        }]
-      }
-    }
-  });
-})();
-</script>
-
-<table>
-  <thead>
-    <tr>
-      <th>Metric</th>
-      <th>{{ $prevMonth }}</th>
-      <th>{{ $currentMonth }}</th>
-      <th>Change</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Unique visitors</td>
-      <td>{{ $prevUniqueVisitors | lang.FormatNumber 0 }}</td>
-      <td>{{ $currentUniqueVisitors | lang.FormatNumber 0 }}</td>
-      <td>
-        {{- if gt $uniqueVisitorsChange 0 -}}
-          {{- if le $prevUniqueVisitors 0 -}}
-            <span style="color: green;">+{{ $uniqueVisitorsChange | lang.FormatNumber 0 }} (+inf%)</span>
-          {{- else -}}
-            <span style="color: green;">+{{ $uniqueVisitorsChange | lang.FormatNumber 0 }} (+{{ printf "%.0f" $uniqueVisitorsPercent }}%)</span>
-          {{- end -}}
-        {{- else if lt $uniqueVisitorsChange 0 -}}
-          <span style="color: red;">{{ $uniqueVisitorsChange | lang.FormatNumber 0 }} ({{ printf "%.0f" $uniqueVisitorsPercent }}%)</span>
-        {{- else -}}
-          0 (0%)
-        {{- end -}}
-      </td>
-    </tr>
-    <tr>
-      <td>Revenue from pre-orders</td>
-      <td>${{ $prevPreOrders | lang.FormatNumber 2 }}</td>
-      <td>${{ $currentPreOrders | lang.FormatNumber 2 }}</td>
-      <td>
-        {{- if gt $preOrdersChange 0 -}}
-          {{- if le $prevPreOrders 0 -}}
-            <span style="color: green;">+${{ $preOrdersChange | lang.FormatNumber 2 }} (+inf%)</span>
-          {{- else -}}
-            <span style="color: green;">+${{ $preOrdersChange | lang.FormatNumber 2 }} (+{{ printf "%.0f" $preOrdersPercent }}%)</span>
-          {{- end -}}
-        {{- else if lt $preOrdersChange 0 -}}
-          <span style="color: red;">-${{ (mul $preOrdersChange -1) | lang.FormatNumber 2 }} ({{ printf "%.0f" $preOrdersPercent }}%)</span>
-        {{- else -}}
-          $0.00 (0%)
-        {{- end -}}
-      </td>
-    </tr>
-    <tr>
-      <td>Revenue from consulting</td>
-      <td>${{ $prevConsulting | lang.FormatNumber 2 }}</td>
-      <td>${{ $currentConsulting | lang.FormatNumber 2 }}</td>
-      <td>
-        {{- if gt $consultingChange 0 -}}
-          {{- if le $prevConsulting 0 -}}
-            <span style="color: green;">+${{ $consultingChange | lang.FormatNumber 2 }} (+inf%)</span>
-          {{- else -}}
-            <span style="color: green;">+${{ $consultingChange | lang.FormatNumber 2 }} (+{{ printf "%.0f" $consultingPercent }}%)</span>
-          {{- end -}}
-        {{- else if lt $consultingChange 0 -}}
-          <span style="color: red;">-${{ (mul $consultingChange -1) | lang.FormatNumber 2 }} ({{ printf "%.0f" $consultingPercent }}%)</span>
-        {{- else -}}
-          $0.00 (0%)
-        {{- end -}}
-      </td>
-    </tr>
-    <tr>
-      <td>Revenue from sponsors</td>
-      <td>${{ $prevSponsors | lang.FormatNumber 2 }}</td>
-      <td>${{ $currentSponsors | lang.FormatNumber 2 }}</td>
-      <td>
-        {{- if gt $sponsorsChange 0 -}}
-          {{- if le $prevSponsors 0 -}}
-            <span style="color: green;">+${{ $sponsorsChange | lang.FormatNumber 2 }} (+inf%)</span>
-          {{- else -}}
-            <span style="color: green;">+${{ $sponsorsChange | lang.FormatNumber 2 }} (+{{ printf "%.0f" $sponsorsPercent }}%)</span>
-          {{- end -}}
-        {{- else if lt $sponsorsChange 0 -}}
-          <span style="color: red;">-${{ (mul $sponsorsChange -1) | lang.FormatNumber 2 }} ({{ printf "%.0f" $sponsorsPercent }}%)</span>
-        {{- else -}}
-          $0.00 (0%)
-        {{- end -}}
-      </td>
-    </tr>
-    <tr style="font-weight: bold;">
-      <td>Total Revenue</td>
-      <td>${{ $prevTotal | lang.FormatNumber 2 }}</td>
-      <td>${{ $currentTotal | lang.FormatNumber 2 }}</td>
-      <td>
-        {{- if gt $totalChange 0 -}}
-          {{- if le $prevTotal 0 -}}
-            <span style="color: green;">+${{ $totalChange | lang.FormatNumber 2 }} (+inf%)</span>
-          {{- else -}}
-            <span style="color: green;">+${{ $totalChange | lang.FormatNumber 2 }} (+{{ printf "%.0f" $totalPercent }}%)</span>
-          {{- end -}}
-        {{- else if lt $totalChange 0 -}}
-          <span style="color: red;">-${{ (mul $totalChange -1) | lang.FormatNumber 2 }} ({{ printf "%.0f" $totalPercent }}%)</span>
-        {{- else -}}
-          $0.00 (0%)
-        {{- end -}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{- partial "project-metrics/table.html" (dict
+  "prevMonth" $prevMonth
+  "currentMonth" $currentMonth
+  "prevUniqueVisitors" $prevUniqueVisitors
+  "currentUniqueVisitors" $currentUniqueVisitors
+  "uniqueVisitorsChange" $uniqueVisitorsChange
+  "uniqueVisitorsPercent" $uniqueVisitorsPercent
+  "prevPreOrders" $prevPreOrders
+  "currentPreOrders" $currentPreOrders
+  "preOrdersChange" $preOrdersChange
+  "preOrdersPercent" $preOrdersPercent
+  "prevConsulting" $prevConsulting
+  "currentConsulting" $currentConsulting
+  "consultingChange" $consultingChange
+  "consultingPercent" $consultingPercent
+  "prevSponsors" $prevSponsors
+  "currentSponsors" $currentSponsors
+  "sponsorsChange" $sponsorsChange
+  "sponsorsPercent" $sponsorsPercent
+  "prevTotal" $prevTotal
+  "currentTotal" $currentTotal
+  "totalChange" $totalChange
+  "totalPercent" $totalPercent
+) -}}
