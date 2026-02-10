@@ -299,17 +299,17 @@
     </tr>
     <tr>
       <td>Revenue from pre-orders</td>
-      <td>${{ printf "%.2f" $prevPreOrders }}</td>
-      <td>${{ printf "%.2f" $currentPreOrders }}</td>
+      <td>${{ $prevPreOrders | lang.FormatNumber 2 }}</td>
+      <td>${{ $currentPreOrders | lang.FormatNumber 2 }}</td>
       <td>
         {{- if gt $preOrdersChange 0 -}}
           {{- if le $prevPreOrders 0 -}}
-            <span style="color: green;">+${{ printf "%.2f" $preOrdersChange }} (+inf%)</span>
+            <span style="color: green;">+${{ $preOrdersChange | lang.FormatNumber 2 }} (+inf%)</span>
           {{- else -}}
-            <span style="color: green;">+${{ printf "%.2f" $preOrdersChange }} (+{{ printf "%.0f" $preOrdersPercent }}%)</span>
+            <span style="color: green;">+${{ $preOrdersChange | lang.FormatNumber 2 }} (+{{ printf "%.0f" $preOrdersPercent }}%)</span>
           {{- end -}}
         {{- else if lt $preOrdersChange 0 -}}
-          <span style="color: red;">-${{ printf "%.2f" (mul $preOrdersChange -1) }} ({{ printf "%.0f" $preOrdersPercent }}%)</span>
+          <span style="color: red;">-${{ (mul $preOrdersChange -1) | lang.FormatNumber 2 }} ({{ printf "%.0f" $preOrdersPercent }}%)</span>
         {{- else -}}
           $0.00 (0%)
         {{- end -}}
@@ -317,17 +317,17 @@
     </tr>
     <tr>
       <td>Revenue from consulting</td>
-      <td>${{ printf "%.2f" $prevConsulting }}</td>
-      <td>${{ printf "%.2f" $currentConsulting }}</td>
+      <td>${{ $prevConsulting | lang.FormatNumber 2 }}</td>
+      <td>${{ $currentConsulting | lang.FormatNumber 2 }}</td>
       <td>
         {{- if gt $consultingChange 0 -}}
           {{- if le $prevConsulting 0 -}}
-            <span style="color: green;">+${{ printf "%.2f" $consultingChange }} (+inf%)</span>
+            <span style="color: green;">+${{ $consultingChange | lang.FormatNumber 2 }} (+inf%)</span>
           {{- else -}}
-            <span style="color: green;">+${{ printf "%.2f" $consultingChange }} (+{{ printf "%.0f" $consultingPercent }}%)</span>
+            <span style="color: green;">+${{ $consultingChange | lang.FormatNumber 2 }} (+{{ printf "%.0f" $consultingPercent }}%)</span>
           {{- end -}}
         {{- else if lt $consultingChange 0 -}}
-          <span style="color: red;">-${{ printf "%.2f" (mul $consultingChange -1) }} ({{ printf "%.0f" $consultingPercent }}%)</span>
+          <span style="color: red;">-${{ (mul $consultingChange -1) | lang.FormatNumber 2 }} ({{ printf "%.0f" $consultingPercent }}%)</span>
         {{- else -}}
           $0.00 (0%)
         {{- end -}}
@@ -335,17 +335,17 @@
     </tr>
     <tr>
       <td>Revenue from sponsors</td>
-      <td>${{ printf "%.2f" $prevSponsors }}</td>
-      <td>${{ printf "%.2f" $currentSponsors }}</td>
+      <td>${{ $prevSponsors | lang.FormatNumber 2 }}</td>
+      <td>${{ $currentSponsors | lang.FormatNumber 2 }}</td>
       <td>
         {{- if gt $sponsorsChange 0 -}}
           {{- if le $prevSponsors 0 -}}
-            <span style="color: green;">+${{ printf "%.2f" $sponsorsChange }} (+inf%)</span>
+            <span style="color: green;">+${{ $sponsorsChange | lang.FormatNumber 2 }} (+inf%)</span>
           {{- else -}}
-            <span style="color: green;">+${{ printf "%.2f" $sponsorsChange }} (+{{ printf "%.0f" $sponsorsPercent }}%)</span>
+            <span style="color: green;">+${{ $sponsorsChange | lang.FormatNumber 2 }} (+{{ printf "%.0f" $sponsorsPercent }}%)</span>
           {{- end -}}
         {{- else if lt $sponsorsChange 0 -}}
-          <span style="color: red;">-${{ printf "%.2f" (mul $sponsorsChange -1) }} ({{ printf "%.0f" $sponsorsPercent }}%)</span>
+          <span style="color: red;">-${{ (mul $sponsorsChange -1) | lang.FormatNumber 2 }} ({{ printf "%.0f" $sponsorsPercent }}%)</span>
         {{- else -}}
           $0.00 (0%)
         {{- end -}}
@@ -353,17 +353,17 @@
     </tr>
     <tr style="font-weight: bold;">
       <td>Total Revenue</td>
-      <td>${{ printf "%.2f" $prevTotal }}</td>
-      <td>${{ printf "%.2f" $currentTotal }}</td>
+      <td>${{ $prevTotal | lang.FormatNumber 2 }}</td>
+      <td>${{ $currentTotal | lang.FormatNumber 2 }}</td>
       <td>
         {{- if gt $totalChange 0 -}}
           {{- if le $prevTotal 0 -}}
-            <span style="color: green;">+${{ printf "%.2f" $totalChange }} (+inf%)</span>
+            <span style="color: green;">+${{ $totalChange | lang.FormatNumber 2 }} (+inf%)</span>
           {{- else -}}
-            <span style="color: green;">+${{ printf "%.2f" $totalChange }} (+{{ printf "%.0f" $totalPercent }}%)</span>
+            <span style="color: green;">+${{ $totalChange | lang.FormatNumber 2 }} (+{{ printf "%.0f" $totalPercent }}%)</span>
           {{- end -}}
         {{- else if lt $totalChange 0 -}}
-          <span style="color: red;">-${{ printf "%.2f" (mul $totalChange -1) }} ({{ printf "%.0f" $totalPercent }}%)</span>
+          <span style="color: red;">-${{ (mul $totalChange -1) | lang.FormatNumber 2 }} ({{ printf "%.0f" $totalPercent }}%)</span>
         {{- else -}}
           $0.00 (0%)
         {{- end -}}
