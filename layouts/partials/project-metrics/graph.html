@@ -1,8 +1,40 @@
+{{- /* Prepare data for the chart */ -}}
+{{- $chartData := slice -}}
+{{- range $dateKey, $monthData := .projectData -}}
+  {{- $dateObj := time (printf "%s-01" $dateKey) -}}
+  {{- if le $dateObj .currentDate -}}
+    {{- $totalRevenue := add
+      (add
+        ($monthData.revenue_pre_orders | default 0.0 | float)
+        ($monthData.revenue_consulting | default 0.0 | float)
+      )
+      ($monthData.revenue_sponsors | default 0.0 | float)
+    -}}
+    {{- $chartData = $chartData | append (dict
+      "date" $dateKey
+      "visitors" ($monthData.unique_visitors | default 0 | int)
+      "revenue" $totalRevenue
+    ) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Sort by date and split into data arrays */ -}}
+{{- $sortedData := sort $chartData "date" -}}
+{{- $sortedLabels := slice -}}
+{{- $visitorsData := slice -}}
+{{- $revenueData := slice -}}
+{{- range $sortedData -}}
+  {{- $dateObj := time (printf "%s-01" .date) -}}
+  {{- $sortedLabels = $sortedLabels | append ($dateObj.Format "Jan 2006") -}}
+  {{- $visitorsData = $visitorsData | append .visitors -}}
+  {{- $revenueData = $revenueData | append .revenue -}}
+{{- end -}}
+
 <div class="project-metrics-chart" style="margin-bottom: 2rem; height: 400px;">
   <canvas id="{{ .project }}-metrics-chart"
-          data-labels="{{ .sortedLabels | jsonify }}"
-          data-visitors="{{ .visitorsData | jsonify }}"
-          data-revenue="{{ .revenueData | jsonify }}"></canvas>
+          data-labels="{{ $sortedLabels | jsonify }}"
+          data-visitors="{{ $visitorsData | jsonify }}"
+          data-revenue="{{ $revenueData | jsonify }}"></canvas>
 </div>
 
 <script>
