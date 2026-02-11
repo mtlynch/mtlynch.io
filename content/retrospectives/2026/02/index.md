@@ -1,7 +1,8 @@
 ---
 title: "Refactoring English: Month 14"
-date: "2026-02-11"
-description: TODO - One-line summary
+date: "2026-02-12"
+description: Discovering the power of AI sandboxes
+banner_image: cover.webp
 ---
 
 {{<notice type="info">}}
@@ -16,7 +17,9 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 ## Highlights
 
--
+- I'm seeing success with a strategy of finding new readers for my book by celebrating other software writers I like.
+- I had another AI breakthrough experience by letting an AI agent run in a sandbox.
+- I've been successfully using AI to port code and fix tech stack choices I regret.
 
 ## Goal grades
 
@@ -27,14 +30,14 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: Published two new chapters
 - **Grade**: B-
 
-TODO
+I'm still having the same problem as last month where I'm getting too excited about AI experiments and letting it eat into my writing time.
 
 ### Publish my 2025 [annual review](/tags/annual-review) (year 8)
 
 - **Result**: [Published it](/bootstrapped-founder-year-8/)
-- **Grade**: XX
+- **Grade**: A
 
-TODO
+It's done! I'm happy with how it turned out. I'm now finished with a string of posts I've had queued where I felt like I had to publish them by a certain date, either because they'd lose relevance later or because I have a tradition to publish on a certain day every year.
 
 ## _Refactoring English_ metrics
 
@@ -66,7 +69,7 @@ I love strategies where incentives align for everyone, so I started looking for 
 | [The Software Essays that Shaped Me](https://refactoringenglish.com/blog/software-essays-that-shaped-me/)                  | 25.6k          | 308               | 85             |
 | [What Makes the Intro to Crafting Interpreters so Good?](https://refactoringenglish.com/blog/crafting-interpreters-intro/) | 3.5k           | -                 | 137            |
 
-## Discovering the power of LLM sandboxes
+## Discovering the power of AI sandboxes
 
 I had a revelatory experience a year ago when [I first started using an AI agent](/notes/cline-is-mesmerizing/). At that point, I just let it edit files while I watched, and I thought that was a scary amount of control to give an LLM.
 
@@ -186,6 +189,7 @@ I lost my enthusiasm for the idea when I realized there are a few flaws:
 
 ### Lessons learned
 
+- Celebrating other software writers helps me find new readers.
 - AI agents are significantly more useful when they run in an environment where they have root access and can install applications and search the web.
 - AI is good at solving problems when you can define success criteria objectively, and the agent has a way of verifying success and self-correcting through iteration.
 - AI is great at porting code from one technology to another.
@@ -193,3 +197,4 @@ I lost my enthusiasm for the idea when I realized there are a few flaws:
 ### Goals for next month
 
 - Finish two chapters of _Refactoring English_.
+- Schedule a live event for _Refactoring English_ readers.
