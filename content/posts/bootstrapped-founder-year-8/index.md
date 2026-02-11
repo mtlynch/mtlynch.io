@@ -7,7 +7,7 @@ tags:
   - annual review
 description: In year 8, I discovered it takes longer than I think to write a book, found alignment with my business, and regained my love for life as an indie founder.
 discuss_urls:
-  hacker_news: https://news.ycombinator.com/item?id=46874578
+  hacker_news: https://news.ycombinator.com/item?id=46933444
 ---
 
 Eight years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own bootstrapped software company. Every year, I [post an update](/tags/annual-review/) about how that's going and what my life is like as an indie founder.
