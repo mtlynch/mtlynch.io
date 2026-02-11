@@ -125,8 +125,8 @@
 {{- $chartData := slice -}}
 {{- $chartLabels := slice -}}
 {{- range $dateKey, $monthData := $projectData -}}
-  {{- $dateObj := time (printf "%s-01" $dateKey) -}}
-  {{- if le $dateObj $currentDate -}}
+  {{- if le $dateKey $current -}}
+    {{- $dateObj := time (printf "%s-01" $dateKey) -}}
     {{- $totalRevenue := add
       (add
         ($monthData.revenue_pre_orders | default 0.0 | float)
