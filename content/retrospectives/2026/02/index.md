@@ -24,14 +24,14 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Publish three chapters of _Refactoring English_
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: Published two new chapters
+- **Grade**: B-
 
 TODO
 
 ### Publish my 2025 [annual review](/tags/annual-review) (year 8)
 
-- **Result**: XX
+- **Result**: [Published it](/bootstrapped-founder-year-8/)
 - **Grade**: XX
 
 TODO
@@ -42,11 +42,11 @@ TODO
 
 I published ["The Most Popular Blogs of Hacker News in 2025"](https://refactoringenglish.com/blog/2025-hn-top-5/) at the beginning of January, and it did far better than I expected. It gave January the book's highest visitors and revenue since the Kickstarter last year.
 
-The new owner of TinyPilot wrapped up their sponsorship of the book in 2025, so that monthly payment is done. I'm not planning to pursue any more professional sponsors because the companies don't seem that interested.
+The new owner of TinyPilot wrapped up their sponsorship of the book in 2025, so that monthly payment is done. I'm not planning to pursue any more professional sponsors because the companies don't seem that interested, and it's easier to focus on readers.
 
 ## Success by writing about other writers
 
-["The Most Popular Blogs of Hacker News in 2025"](https://refactoringenglish.com/blog/2025-hn-top-5/) is a continuation of a strategy I've been exploring for about six months that basically boils down to celebrating other software writers.
+["The Most Popular Blogs of Hacker News in 2025"](https://refactoringenglish.com/blog/2025-hn-top-5/) is a continuation of a strategy I've been exploring for about six months that basically boils down to: celebrate other software writers.
 
 Last summer, I met a professional romance novelist at a party, and it was interesting hearing about her work because she was also indie and self-published. Even though the subjects of our books were drastically different, we had many similar problems.
 
