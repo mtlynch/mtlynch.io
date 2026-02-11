@@ -48,23 +48,23 @@ The new owner of TinyPilot wrapped up their sponsorship of the book in 2025, so 
 
 ["The Most Popular Blogs of Hacker News in 2025"](https://refactoringenglish.com/blog/2025-hn-top-5/) is a continuation of a strategy I've been exploring for about six months that basically boils down to: celebrate other software writers.
 
-Last summer, I met a professional romance novelist at a party, and it was interesting hearing about her work because she was also indie and self-published. Even though the subjects of our books were drastically different, we had many similar problems.
+At a party last summer, I met a romance novelist who self-published. It was interesting hearing about her work because we had similar problems despite writing about drastically different topics.
 
 I asked her how she found readers, and she said, "That's the question!"
 
-She told me that she had great results by starting a newsletter to review other romance novels, primarily by indie authors. And it created a virtuous cycle for everyone involved because:
+She told me that she had great results by starting a newsletter to review other romance novels, primarily by indie authors. It created a virtuous cycle for everyone:
 
 1. Her subscribers discover other interesting novels through her newsletter.
-1. New readers buy her book after discovering her reviews.
-1. Other indie authors are excited about being reviewed, so they direct their own readers to her newsletter, which increases (2).
+1. Readers discover and buy her book after reading her newsletter.
+1. Other indie authors enjoy seeing reviews of their work, so they direct their own readers to her newsletter, which increases (2).
 
-I love strategies where incentives align for everyone, so I started looking for ways to apply that to my book.
+I love strategies where incentives align for everyone, so I started looking for ways to apply that to my book. I started writing about other bloggers and book authors that I enjoy and publishing those on my blog, and that's worked well:
 
-TODO: Visit stats, HN vots, Lobsters votes
-
-- [The Software Essays that Shaped Me](https://refactoringenglish.com/blog/software-essays-that-shaped-me/)
-- [What Makes the Intro to Crafting Interpreters so Good?](https://refactoringenglish.com/blog/crafting-interpreters-intro/)
-- [The Most Popular Blogs of Hacker News in 2025](https://refactoringenglish.com/blog/2025-hn-top-5/)
+| Post                                                                                                                       | Unique Readers | Hacker News score | Lobsters score |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------- | ----------------- | -------------- |
+| [The Most Popular Blogs of Hacker News in 2025](https://refactoringenglish.com/blog/2025-hn-top-5/)                        | 33.8k          | 692               | -              |
+| [The Software Essays that Shaped Me](https://refactoringenglish.com/blog/software-essays-that-shaped-me/)                  | 25.6k          | 308               | 85             |
+| [What Makes the Intro to Crafting Interpreters so Good?](https://refactoringenglish.com/blog/crafting-interpreters-intro/) | 3.5k           | -                 | 137            |
 
 ## Discovering the power of LLM sandboxes
 
@@ -72,49 +72,75 @@ I had a revelatory experience a year ago when [I first started using an AI agent
 
 For the past year, I've mostly been coding with Cline, an AI agent extension in VS Code. It sped up a lot of my workflows, but I also micromanaged it aggressively because I didn't trust it to perform arbitrary actions on my dev machine.
 
-A few weeks ago, [my friend okay](https://oky.moe) showed me his AI workflow where he lets Codex edit files and run commands without direct supervision. It made me realize how much time I've been wasting babysitting my AI agents and dealing with hangs in Cline.
+A few weeks ago, [my friend okay](https://oky.moe) showed me his AI workflow with Codex, OpenAI's terminal-based AI agent. He lets Codex edit files and run commands without direct supervision. It made me realize how much time I've been wasting babysitting my AI agents and dealing with hangs in Cline.
 
-okay said that he sometimes lets Codex work unsupervised for an hour or more, and I couldn't believe it. If I gave Cline a task that would take more than 10 minutes, it would either go down the wrong path or explode my costs. But Codex is flat-fee rather than pay-per-token, so okay didn't have to think about costs.
+okay said that he sometimes lets Codex work unsupervised for an hour or more, and I couldn't believe it. If I gave Cline a task that would take more than 10 minutes, it would either go down the wrong path or explode my costs. But Codex is flat-fee rather than pay-per-token, which means you stop thinking about costs.
 
-I still don't trust any AI agent enough to let it run on a real machine, so I set up a custom sandbox for running AI agents on my machine. I go to the directory for one of my projects and run my custom command: `sb`. It spins up a [rootless Podman container](https://github.com/containers/podman/blob/main/docs/tutorials/rootless_tutorial.md) that has no access to my local network and only can see the current working directory. It has Codex and Claude Code pre-installed and authenticated with my accounts.
+I still don't trust any AI agent to run amok on my real computer, so I set up a custom sandbox for running AI agents on my machine. I go to the directory for one of my projects and run my custom command: `sb`. It spins up a [rootless Podman container](https://github.com/containers/podman/blob/main/docs/tutorials/rootless_tutorial.md) that has no access to my local network and only can see the current working directory. It has Codex and Claude Code pre-installed and authenticated with my accounts.
 
-Because the AI was in a sandbox, I felt comfortable giving it full permissions to edit files, install applications, etc. It can't hurt my main machine or files unless it turns evil and discovers a sandbox escape.
+With AI in a sandbox, I was fine giving it full permissions to edit files, install applications, etc.
 
-Seeing an AI agent run with full permissions was another breakthrough moment for me. Because, previously, if I say, "Make a bar chart of my income from the last 8 years," it would sometimes get it wrong, and I'd have to check the result myself and say, "No, the y-axis is showing negative numbers. Fix it." But when the AI agent has full access, it can spin up a test server, view the page in the browser, and iterate itself until it completes its task correctly.
+And wow, what a difference!
 
-There's something in the ether because after I started working on my sandbox, I've seen a new blog post almost every day about a new AI sandbox.
+Seeing an AI agent run with full permissions was another breakthrough moment for me. Previously, if I said, "Make a bar chart of my income from the last 8 years," about 30% of the time, the AI agent would implement something partially wrong. I'd have to check the result myself and say, "No, the bars are misaligned. Fix it." But when the AI agent has root access in its own sandbox, it can spin up a test server, view the page in the browser, and iterate independently until it completes its task correctly.
 
-I don't think my particular sandbox is so great, so I'm not releasing it, but I think there's a good meta-lesson in building your own sandbox, so I might write more about that.
+And then I heard about [Ralph Loops](https://ghuntley.com/loop/). I still haven't found a good explanation, so I'm not sure if what I'm doing matches an "official" Ralph loop, but here's what mine looks like. I run a bash script called `ralph-loop` that contains this simple code:
 
-One of the biggest misunderstandings around AI sandboxes is what they protect you against and what they don't. I see people talking about how they can't use Docker because containers aren't a real security boundary, but then they have a VM-based sandbox that mounts their local directory, and then they proceed to run code their AI agent wrote. And obviously, if you're worried your AI will exploit Docker vulnerabilities to escape your container, you shouldn't be sharing git hooks with it or running code you let it generate.
+```bash
+#!/usr/bin/env bash
 
-I think the much more likely risk is actually incompetent AI that accidentally exfiltrates my private data to the vendor's servers or deletes data I didn't want it to touch. And for that, a container is fine.
+rm ALL-DONE.txt || true
+
+while true; do
+  cat AGENT-WORKFLOW.md | codex exec
+
+  if [[ -f "ALL-DONE.txt" ]]; then
+    echo "ALL-DONE.txt detected. Exiting."
+    exit 0
+  fi
+done
+```
+
+And `AGENT-WORKFLOW.md` looks like this:
+
+```markdown
+1. Pick the top task in TODO.md and begin work on it
+   - If no actions remain, write a file called ALL-DONE.txt to the current
+     directory, and exit.
+1. Complete the task and delete the entry from TODO.md.
+   - If the task is unachievable, explain why in the commit message.
+1. Commit the changes with a detailed commit message explaining what you
+   changed, why you changed it, and what impact it had.
+```
+
+And then I just create a `TODO.md` file with a list of tasks. Some of the tasks involve creating follow up tasks, so the list grows and shrinks with the agent's progress.
+
+The Ralph Loop has allowed me to run AI agent autonomously overnight for 4+ hours unsupervised. It's surreal to come back to my computer in the morning and see that the AI agent completed all the work I assigned it while I was sleeping.
 
 ## AI is great at porting code
 
-From my experience, AI has the most impact in solving problems where:
+From experimenting with AI for the past few months, AI has has the most impact when:
 
 1. You can objectively define the success criteria.
    - e.g. "Find the cause of this crash" is objective and definable whereas "make this landing page better" is not.
-1. The AI has a method of verifying success.
+1. The AI agent can verify success independently.
    - e.g., "Visit the page in a browser and verify the background turns blue when you push the button."
-1. The problem is not unique or novel.
-1. A human with junior-level software knowledge could solve the problem with a search engine, experimentation, and patience.
+1. The problem is such that a human with junior-level software knowledge could solve it with a search engine, experimentation, and patience.
 
-Some examples of this:
+Here are some classes of software tasks that meet these criteria:
 
 - Refactoring code that has automated tests
 - Porting code from one language/technology to another while preserving behavior
 - Compiling a project from source, installing any necessary dependencies
 - Fixing code to make a test pass
 
-The one I've taken advantage of a lot recently is porting code. I have some codebases where I wish I'd made different choices about my tech stack, but it was always too time-consuming rewrite everything. But with AI, swapping pieces of my stack is inexpensive and fast.
+Recently, I've been using AI to port code. I have some codebases where I wish I'd made different choices about my tech stack, but it was always too time-consuming rewrite everything. But with AI, swapping out pieces of my stack is inexpensive and fast.
 
-Here are some codebases I ported recently:
+I've successfully ported code in several of my projects:
 
 - Converted the Zestful website [from Vue/Nuxt2 to vanilla HTML with Hugo](https://github.com/mtlynch/zestful-frontend2/pull/152)
   - I got a Github alert saying that I had some dumb vulnerability through a transitive Node.js library I'd never heard of, and I thought, "I'd love to never get another one of these alerts again." So I had AI rewrite the site in Hugo and plain HTML/JS/CSS.
-- Ported PicoShare's CSS framework [from Bulma to Bootstrap 5](https://github.com/mtlynch/picoshare/pull/718)
+- Ported PicoShare's CSS framework [from Bulma to Bootstrap](https://github.com/mtlynch/picoshare/pull/718)
   - When I created PicoShare, I wanted to try out Bulma as a CSS framework. It was fine, but I prefer Bootstrap, so I kept using it everywhere else and always had to switch gears when I worked on PicoShare.
 - Converted LogPaste's e2e tests [from Cypress to Playwright](https://github.com/mtlynch/logpaste/pull/235)
   - I wrote the e2e tests before I discovered Playwright, and now I'm so used to Playwright that it's hard to go back to Cypress.
@@ -127,29 +153,27 @@ Here are some codebases I ported recently:
 
 ### [StreamPreserve](https://codeberg.org/mtlynch/stream-preserve)
 
-I spent a couple of days vibe coding an app for instantly backing up videos, but I'm not sure what to do with it.
-
 I've thought about what I'd do in a situation where I was witnessing something I wanted to record on my phone, but there's a possibility of someone stealing my phone and deleting the footage or destroying my phone entirely.
 
-So, I made Stream Preserve, which is a web app that tries to move critical video as quickly as possible to a server I control.
+So, I made Stream Preserve, a web app that tries to move critical video as quickly as possible to a remote, secure server.
 
 {{<img src="stream-preserve.webp" max-width="300px" caption="Stream Preserve captures important video and moves it to a remote server as quickly as possible.">}}
 
 Here's how it works:
 
 1. I open the StreamPreserve app and begin recording video.
-1. The app streams a low-to-medium-resolution video to the backend server, tuning the stream to the available bandwidth.
+1. The app streams a low-resolution video to the backend server, tuning the stream quality to the available bandwidth.
 1. The app records high-resolution video to browser storage in discrete chunks.
-1. With any spare bandwidth, the app uploads high-resolution video chunks to the server.
-1. When recording stops, save the high-resolution video as a download on the local device.
-1. When the app is open and no recording is in progress, sync all high-resolution footage to the server.
+1. With any spare bandwidth, the app uploads high-resolution video chunks to the server while low-resolution streaming is in progress.
+1. When recording stops, the app saves the high-resolution video as a download on the local device.
+1. When the app is open and no recording is in progress, it syncs all high-resolution footage from the device to the server.
 
-So, the idea is if I record something and someone smashes my phone, I'd still have a low-resolution copy of the video on my server. And if they seize my phone to stop the recording, it uploads the high-resolution copy in the background.
+So, the idea is if I record something and someone smashes my phone, I'd still have a low-resolution copy of the video on my server. And if they seize my phone to stop the recording, it still uploads the high-resolution copy in the background.
 
 I lost my enthusiasm for the idea when I realized there are a few flaws:
 
 - It's a bad solution for recording hours of footage.
-- Having it be a web app rather than a native mobile app adds complexity and possibility of losing footage.
+- Implementing it as a web app adds complexity and possibility of losing footage, but I [dislike mobile development](/retrospectives/2026/01/#creating-my-first-flutter-app).
 - It's not a great task for AI because it depends on using the browser camera API, which is annoying to fake in an AI sandbox.
 
 ## Wrap up
@@ -162,7 +186,9 @@ I lost my enthusiasm for the idea when I realized there are a few flaws:
 
 ### Lessons learned
 
--
+- AI agents are significantly more useful when they run in an environment where they have root access and can install applications and search the web.
+- AI is good at solving problems when you can define success criteria objectively, and the agent has a way of verifying success and self-correcting through iteration.
+- AI is great at porting code from one technology to another.
 
 ### Goals for next month
 
