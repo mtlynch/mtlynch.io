@@ -42,7 +42,7 @@ TODO
 
 I published ["The Most Popular Blogs of Hacker News in 2025"](https://refactoringenglish.com/blog/2025-hn-top-5/) at the beginning of January, and it did far better than I expected. It gave January the book's highest visitors and revenue since the Kickstarter last year.
 
-The new owner of TinyPilot wrapped up their sponsorship of the book in 2025, so that monthly payment is done. I'm not planning to pursue any more professional sponsors because the companies don't seem that interested, and it's easier to focus on readers.
+Other revenue is down, as I haven't had any editing clients, and the new owner of TinyPilot wrapped up their sponsorship of the book in 2025. I'm not planning to pursue any more professional sponsors because the companies don't seem that interested, and it's easier to focus on readers.
 
 ## Success by writing about other writers
 

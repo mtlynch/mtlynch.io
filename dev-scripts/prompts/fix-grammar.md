@@ -1,5 +1,5 @@
-Read the currently open file and identify any typos or grammar mistakes.
+Identify any typos or grammar mistakes in this file.
 
-In the Act phase, fix each issue one-by-one, and accompany the fix with an explanation in the chat of what you're fixing and why.
+Fix each issue one-by-one, and explain in the chat what you're fixing and why.
 
 Limit your fixes to errors in syntax. Do not suggest editorial or style changes or changes for the sake of clarity.
