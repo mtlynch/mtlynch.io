@@ -1,15 +1,14 @@
-{{/*
-Usage:
+{{/* Usage:
   partial "project-metrics/change-cell.html" (dict
-    "prev" <number>
-    "current" <number>
-    "isCurrency" <bool>
+  "prev" <number>
+  "current" <number>
+  "isCurrency" <bool>
   )
 
-Computes change and percent from prev/current and renders:
-- neutral: 0 (or $0.00)
-- positive/negative: signed amount and signed percent
-- positive from prev <= 0: +inf%
+  Computes change and percent from prev/current and renders:
+  - neutral: 0 (or $0.00)
+  - positive/negative: signed amount and signed percent
+  - positive from prev <= 0: +inf%
 */}}
 
 {{- $change := sub .current .prev -}}
@@ -41,5 +40,7 @@ Computes change and percent from prev/current and renders:
     "+inf%"
     (printf "%+.0f%%" $percent)
   -}}
-  <span class="project-metrics-change-{{ $sign }}">{{ $signedAmount }} ({{ $percentText }})</span>
+  <span class="project-metrics-change-{{ $sign }}"
+    >{{ $signedAmount }} ({{ $percentText }})</span
+  >
 {{- end -}}
