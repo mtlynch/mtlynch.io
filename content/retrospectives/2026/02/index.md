@@ -79,7 +79,7 @@ A few weeks ago, [my friend okay](https://oky.moe) showed me his AI workflow wit
 
 okay said that he sometimes lets Codex work unsupervised for an hour or more, and I couldn't believe it. If I gave Cline a task that would take more than 10 minutes, it would either hang the UI, go down the wrong path, or explode my costs. But Codex is flat-fee rather than pay-per-token, which means you stop thinking about costs.
 
-I still don't trust any AI agent to run amok on my real computer, so I set up a custom sandbox for running AI agents on my machine. I go to the directory for one of my projects and run my custom command: `sb`. It spins up a [rootless Podman container](https://github.com/containers/podman/blob/main/docs/tutorials/rootless_tutorial.md) that has no access to my local network and only can see the current working directory. It has Codex and Claude Code pre-installed and authenticated with my accounts.
+I still don't trust any AI agent to run amok on my real computer, so I set up a custom sandbox for running AI agents on my machine. I go to the directory for one of my projects and run my custom command: `sb`. It spins up a [rootless Podman container](https://github.com/containers/podman/blob/main/docs/tutorials/rootless_tutorial.md) that has no access to my local network and can only see the current working directory. It has Codex and Claude Code pre-installed and authenticated with my accounts.
 
 With AI in a sandbox, I was fine giving it full permissions to edit files, install applications, etc.
 
@@ -142,7 +142,7 @@ Recently, I've been using AI to port code. I have some codebases where I wish I'
 I've successfully ported code in several of my projects:
 
 - Converted the Zestful website [from Vue/Nuxt2 to vanilla HTML with Hugo](https://github.com/mtlynch/zestful-frontend2/pull/152)
-  - I got a Github alert saying that I had some dumb vulnerability through a transitive Node.js library I'd never heard of. I thought, "I'd love to never see these alerts again." So I had AI rewrite the site in Hugo and plain HTML/JS/CSS.
+  - I got a GitHub alert saying that I had some dumb vulnerability through a transitive Node.js library I'd never heard of. I thought, "I'd love to never see these alerts again." So I had AI rewrite the site in Hugo and plain HTML/JS/CSS.
 - Ported PicoShare's CSS framework [from Bulma to Bootstrap](https://github.com/mtlynch/picoshare/pull/718)
   - When I created PicoShare, I wanted to try out Bulma as a CSS framework. It was fine, but I prefer Bootstrap, so I kept using it everywhere else and always had to switch gears when I worked on PicoShare.
 - Converted LogPaste's e2e tests [from Cypress to Playwright](https://github.com/mtlynch/logpaste/pull/235)
@@ -176,7 +176,7 @@ So, the idea is if I record something and someone smashes my phone, my StreamPre
 I lost my enthusiasm for the idea when I realized there are a few flaws:
 
 - It's a bad solution for recording hours of footage.
-- Implementing it as a web app adds complexity and possibility of losing footage. It should be a native mobile app, but I [dislike mobile development](/retrospectives/2026/01/#creating-my-first-flutter-app).
+- Implementing it as a web app adds complexity and the possibility of losing footage. It should be a native mobile app, but I [dislike mobile development](/retrospectives/2026/01/#creating-my-first-flutter-app).
 - It's not a great task for AI because it depends on using the browser camera API, which is annoying to fake in an AI sandbox.
 
 ## Wrap up
