@@ -42,7 +42,7 @@ TODO
 
 TODO: Hide consulting / sponsors when all are zero
 
-## Topic 1
+## Bug bounty hunting
 
 ## Topic 2
 
