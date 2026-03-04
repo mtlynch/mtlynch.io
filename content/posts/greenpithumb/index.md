@@ -152,7 +152,7 @@ Soil refused to cooperate with us. In our initial build, the soil moisture readi
 
 {{<img src="v1-soil-moisture.png" alt="Soil moisture level" caption="Soil moisture readings, original moisture sensor" has-border="false">}}
 
-We originally used Dickson Chow's [Plant Friends soil probe](http://dickson.bigcartel.com/product/soil-probe-for-plant-friends), but we swapped it out for the [SparkFun soil sensor](https://www.sparkfun.com/products/13322). The new sensor got a reading of 82% in damp soil, and it would jump to 85% immediately after the soil was watered. Within a few hours, however, it would sink back down to 82% and remain there for days. The sensor seemed unable to distinguish between soil that was watered three hours ago and soil that hadn't been watered for five days.
+We originally used Dickson Chow's [Plant Friends soil probe](https://web.archive.org/web/20241203105410/https://dickson.bigcartel.com/product/soil-probe-for-plant-friends), but we swapped it out for the [SparkFun soil sensor](https://www.sparkfun.com/products/13322). The new sensor got a reading of 82% in damp soil, and it would jump to 85% immediately after the soil was watered. Within a few hours, however, it would sink back down to 82% and remain there for days. The sensor seemed unable to distinguish between soil that was watered three hours ago and soil that hadn't been watered for five days.
 
 {{<img src="soil-moisture-sparkfun.png" alt="Soil moisture level" caption="Soil moisture readings, SparkFun moisture sensor" has-border="false">}}
 
