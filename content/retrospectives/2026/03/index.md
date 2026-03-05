@@ -44,7 +44,15 @@ TODO: Hide consulting / sponsors when all are zero
 
 ## Bug bounty hunting
 
-## Topic 2
+I feel like what I'm doing is obvious, but at the same time, I don't want to reveal too much because if I'm wrong and I'm the first to think of it, I don't want to give up my advantage in getting bug bounties.
+
+## Getting sucked into AI
+
+I feel like it's about to make a huge amount of progress
+
+Tasks can take 5 seconds or 5 minutes, so I'm stuck watching.
+
+I feel like I'm going to forget context, so I have to watch.
 
 ## Topic 3
 
@@ -62,8 +70,9 @@ TODO: Hide consulting / sponsors when all are zero
 
 ### Goals for next month
 
--
+- Finish _Refactoring English_
+  - It won't be fully polished and edited, but I want to complete all the chapters.
 
 ### Requests for help
 
-TODO
+If you have experience with bug bounties, what should I be doing? What should I be reading? Are bug bounties just a sucker's route and there's some other path?
