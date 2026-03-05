@@ -25,6 +25,8 @@ I've found [several](https://mdleom.com/blog/2021/03/09/nixos-oracle/) [tutorial
 
 Prithu Goswami figured out [a clever shortcut](https://prithu.dev/notes/installing-nixos-on-oracle-cloud-arm-instance/) by using the NixOS installer through netboot, which simplifies things. Prithu's explanation was pretty terse, so I thought I'd share my complete walkthrough of his method.
 
+- **Update (2026-03-04)**: Erik Parawell wrote [a guide](https://erikparawell.com/oracle-cloud-nixos.html) that eliminates some of the manual steps required in my guide, though I haven't tested his solution yet personally.
+
 ## Requirements
 
 There are no pre-requisites except that you'll need an SSH client on your local system.
