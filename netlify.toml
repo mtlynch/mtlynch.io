@@ -1,8 +1,17 @@
-# Redirect from /feed.xml to the blog feed because several tools look
-# for an XML feed at the /feed.xml address.
+# Redirect common feed endpoints to the site's main RSS feed.
+[[redirects]]
+  from = "/feed"
+  to = "/index.xml"
+  status = 301
+  force = false
 [[redirects]]
   from = "/feed.xml"
-  to = "/posts/index.xml"
+  to = "/index.xml"
+  status = 301
+  force = false
+[[redirects]]
+  from = "/rss"
+  to = "/index.xml"
   status = 301
   force = false
 
