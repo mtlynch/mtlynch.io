@@ -2,6 +2,7 @@
 title: "Refactoring English: Month 15"
 date: "2026-03-11"
 description: TODO - One-line summary
+custom_css: true
 ---
 
 {{<notice type="info">}}
@@ -40,7 +41,59 @@ TODO
 
 {{<project-metrics project="refactoring_english">}}
 
-TODO: Hide consulting / sponsors when all are zero
+## Where are _Refactoring English_ customers located?
+
+<div class="sales-chart-group">
+  <div class="sales-chart" data-view="orders">
+    <canvas id="orders-by-country"></canvas>
+  </div>
+  <div class="sales-chart" data-view="revenue" hidden>
+    <canvas id="revenue-by-country"></canvas>
+  </div>
+  <div class="sales-chart-toggle">
+    <button class="active" data-view="orders">By order count</button>
+    <button data-view="revenue">By revenue</button>
+  </div>
+</div>
+
+<div class="sales-chart-group">
+  <div class="sales-chart" data-view="orders">
+    <canvas id="orders-english-split"></canvas>
+  </div>
+  <div class="sales-chart" data-view="revenue" hidden>
+    <canvas id="revenue-english-split"></canvas>
+  </div>
+  <div class="sales-chart-toggle">
+    <button class="active" data-view="orders">By order count</button>
+    <button data-view="revenue">By revenue</button>
+  </div>
+</div>
+
+<div class="sales-chart-group">
+  <div class="sales-chart" data-view="orders">
+    <canvas id="orders-per-visitor"></canvas>
+  </div>
+  <div class="sales-chart" data-view="revenue" hidden>
+    <canvas id="revenue-per-visitor"></canvas>
+  </div>
+  <div class="sales-chart-toggle">
+    <button class="active" data-view="orders">By order count</button>
+    <button data-view="revenue">By revenue</button>
+  </div>
+</div>
+
+<div class="sales-chart-group">
+  <div class="sales-chart" data-view="orders">
+    <canvas id="orders-vs-visitor-share"></canvas>
+  </div>
+  <div class="sales-chart" data-view="revenue" hidden>
+    <canvas id="revenue-vs-visitor-share"></canvas>
+  </div>
+  <div class="sales-chart-toggle">
+    <button class="active" data-view="orders">By order count</button>
+    <button data-view="revenue">By revenue</button>
+  </div>
+</div>
 
 ## Bug bounty hunting
 
@@ -76,3 +129,5 @@ I feel like I'm going to forget context, so I have to watch.
 ### Requests for help
 
 If you have experience with bug bounties, what should I be doing? What should I be reading? Are bug bounties just a sucker's route and there's some other path?
+
+<script src="script.js"></script>

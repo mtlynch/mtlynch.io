@@ -32,6 +32,12 @@
 
 
 <style>
+  .project-metrics-chart {
+    position: relative;
+    margin-bottom: 2rem;
+    height: 400px;
+  }
+
   .project-metrics-change-positive {
     color: green;
   }
@@ -59,6 +65,7 @@
         {{- partial "project-metrics/change-cell.html" (dict "prev" $prevUniqueVisitors "current" $currentUniqueVisitors "isCurrency" false) -}}
       </td>
     </tr>
+    {{- if or (ne $prevPreOrders 0.0) (ne $currentPreOrders 0.0) }}
     <tr>
       <td>Revenue from pre-orders</td>
       <td>${{ $prevPreOrders | lang.FormatNumber 2 }}</td>
@@ -67,6 +74,8 @@
         {{- partial "project-metrics/change-cell.html" (dict "prev" $prevPreOrders "current" $currentPreOrders "isCurrency" true) -}}
       </td>
     </tr>
+    {{- end }}
+    {{- if or (ne $prevConsulting 0.0) (ne $currentConsulting 0.0) }}
     <tr>
       <td>Revenue from consulting</td>
       <td>${{ $prevConsulting | lang.FormatNumber 2 }}</td>
@@ -75,6 +84,8 @@
         {{- partial "project-metrics/change-cell.html" (dict "prev" $prevConsulting "current" $currentConsulting "isCurrency" true) -}}
       </td>
     </tr>
+    {{- end }}
+    {{- if or (ne $prevSponsors 0.0) (ne $currentSponsors 0.0) }}
     <tr>
       <td>Revenue from sponsors</td>
       <td>${{ $prevSponsors | lang.FormatNumber 2 }}</td>
@@ -83,6 +94,7 @@
         {{- partial "project-metrics/change-cell.html" (dict "prev" $prevSponsors "current" $currentSponsors "isCurrency" true) -}}
       </td>
     </tr>
+    {{- end }}
     <tr style="font-weight: bold;">
       <td>Total Revenue</td>
       <td>${{ $prevTotal | lang.FormatNumber 2 }}</td>
