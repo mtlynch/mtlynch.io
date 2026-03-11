@@ -32,8 +32,8 @@ TODO
 
 ### Schedule a live event for _Refactoring English_ readers
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: Scheduled a discussion about design reviews
+- **Grade**: A
 
 TODO
 
@@ -42,6 +42,10 @@ TODO
 {{<project-metrics project="refactoring_english">}}
 
 ## Where are _Refactoring English_ customers located?
+
+I mentioned [in January](/retrospectives/2026/01/#adding-regional-pricing-for-my-book) that I added regional pricing for my book. When I receive Stripe notifications about new sales, I'm surprised to see that the majority of purchases seem to be outside the US, so I took a closer look at the data. I grabbed sales data starting January 15, 2026 when I announced regional pricing to readers until March 8, 2026.
+
+The first question was: is it really true that the majority of orders are with regional pricing now?
 
 <div class="sales-chart-group">
   <div class="sales-chart" data-view="orders">
@@ -103,11 +107,10 @@ I feel like what I'm doing is obvious, but at the same time, I don't want to rev
 
 I feel like it's about to make a huge amount of progress
 
-Tasks can take 5 seconds or 5 minutes, so I'm stuck watching.
-
-I feel like I'm going to forget context, so I have to watch.
-
-## Topic 3
+- Tasks can take 5 seconds or 5 minutes, so I'm stuck watching.
+- Sometimes I think I can leave it for an hour and it turned out that it stopped. Or it stopped because the next step would take a long time.
+- I feel like I'm going to forget context, so I have to watch.
+- Feel like I'm in the last year or two of software developer being a job.
 
 ## Side projects
 
