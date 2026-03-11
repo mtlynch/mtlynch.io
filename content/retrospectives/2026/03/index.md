@@ -60,6 +60,10 @@ The first question was: is it really true that the majority of orders are with r
   </div>
 </div>
 
+It's true. The majority of _Refactoring English_ customers are now outside of the US. The US accounts for only 28% of orders by volume and 40% by revenue.
+
+I was also surprised to see how many customers purchase from countries like India and Brazil, where English is not the primary language, so I checked English vs. non-English primary countries:
+
 <div class="sales-chart-group">
   <div class="sales-chart" data-view="orders">
     <canvas id="orders-english-split"></canvas>
@@ -73,18 +77,9 @@ The first question was: is it really true that the majority of orders are with r
   </div>
 </div>
 
-<div class="sales-chart-group">
-  <div class="sales-chart" data-view="orders">
-    <canvas id="orders-per-visitor"></canvas>
-  </div>
-  <div class="sales-chart" data-view="revenue" hidden>
-    <canvas id="revenue-per-visitor"></canvas>
-  </div>
-  <div class="sales-chart-toggle">
-    <button class="active" data-view="orders">By order count</button>
-    <button data-view="revenue">By revenue</button>
-  </div>
-</div>
+Surprisingly, the majority of orders for _Refactoring English_ come from countries where English is not the primary language, though English-speaking countries are a small majority revenue-wise.
+
+I was curious how order share compared with visitors to the website. Do readers from certain countries purchase more than others?
 
 <div class="sales-chart-group">
   <div class="sales-chart" data-view="orders">
@@ -92,6 +87,21 @@ The first question was: is it really true that the majority of orders are with r
   </div>
   <div class="sales-chart" data-view="revenue" hidden>
     <canvas id="revenue-vs-visitor-share"></canvas>
+  </div>
+  <div class="sales-chart-toggle">
+    <button class="active" data-view="orders">By order count</button>
+    <button data-view="revenue">By revenue</button>
+  </div>
+</div>
+
+Wow, there's a surprising disparity. Most of my readers are in the US, but a relatively low number of website visitors purchase the book.
+
+<div class="sales-chart-group">
+  <div class="sales-chart" data-view="orders">
+    <canvas id="orders-per-visitor"></canvas>
+  </div>
+  <div class="sales-chart" data-view="revenue" hidden>
+    <canvas id="revenue-per-visitor"></canvas>
   </div>
   <div class="sales-chart-toggle">
     <button class="active" data-view="orders">By order count</button>
