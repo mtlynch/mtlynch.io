@@ -454,17 +454,29 @@ window.addEventListener("load", function () {
     });
     shareData = shareData.slice(0, 10);
 
+    var revSorted = shareData.slice().sort(function (a, b) {
+      return (b.revenuePerVisitor || 0) - (a.revenuePerVisitor || 0);
+    });
+
     registerChart("revenue-vs-visitor-share", function () {
     new Chart(document.getElementById("revenue-vs-visitor-share"), {
       type: "bar",
       data: {
-        labels: shareData.map(function (e) {
+        labels: revSorted.map(function (e) {
           return countryNames[e.code];
         }),
         datasets: [
           {
+            label: "Revenue per 100 Visitors",
+            data: revSorted.map(function (e) {
+              return e.revenuePerVisitor !== null ? Math.round(e.revenuePerVisitor * 100 * 100) / 100 : null;
+            }),
+            backgroundColor: "#8b5cf6",
+            yAxisID: "rate",
+          },
+          {
             label: "Visitor Share",
-            data: shareData.map(function (e) {
+            data: revSorted.map(function (e) {
               return Math.round(e.visitorShare * 10000) / 100;
             }),
             backgroundColor: "#3b82f6",
@@ -472,19 +484,11 @@ window.addEventListener("load", function () {
           },
           {
             label: "Revenue Share",
-            data: shareData.map(function (e) {
+            data: revSorted.map(function (e) {
               return Math.round(e.revenueShare * 10000) / 100;
             }),
             backgroundColor: "#10b981",
             yAxisID: "share",
-          },
-          {
-            label: "Revenue per 100 Visitors",
-            data: shareData.map(function (e) {
-              return e.revenuePerVisitor !== null ? Math.round(e.revenuePerVisitor * 100 * 100) / 100 : null;
-            }),
-            backgroundColor: "#8b5cf6",
-            yAxisID: "rate",
           },
         ],
       },
@@ -497,7 +501,7 @@ window.addEventListener("load", function () {
           callbacks: {
             label: function (tooltipItem, data) {
               var label = data.datasets[tooltipItem.datasetIndex].label;
-              if (tooltipItem.datasetIndex === 2) {
+              if (tooltipItem.datasetIndex === 0) {
                 return tooltipItem.yLabel != null
                   ? label + ": " + dollarFormatter(tooltipItem.yLabel)
                   : null;
@@ -532,17 +536,29 @@ window.addEventListener("load", function () {
     });
     });
 
+    var orderSorted = shareData.slice().sort(function (a, b) {
+      return (b.ordersPerVisitor || 0) - (a.ordersPerVisitor || 0);
+    });
+
     registerChart("orders-vs-visitor-share", function () {
     new Chart(document.getElementById("orders-vs-visitor-share"), {
       type: "bar",
       data: {
-        labels: shareData.map(function (e) {
+        labels: orderSorted.map(function (e) {
           return countryNames[e.code];
         }),
         datasets: [
           {
+            label: "Orders per Visitor",
+            data: orderSorted.map(function (e) {
+              return e.ordersPerVisitor !== null ? Math.round(e.ordersPerVisitor * 10000) / 10000 : null;
+            }),
+            backgroundColor: "#8b5cf6",
+            yAxisID: "rate",
+          },
+          {
             label: "Visitor Share",
-            data: shareData.map(function (e) {
+            data: orderSorted.map(function (e) {
               return Math.round(e.visitorShare * 10000) / 100;
             }),
             backgroundColor: "#3b82f6",
@@ -550,19 +566,11 @@ window.addEventListener("load", function () {
           },
           {
             label: "Order Share",
-            data: shareData.map(function (e) {
+            data: orderSorted.map(function (e) {
               return Math.round(e.orderShare * 10000) / 100;
             }),
             backgroundColor: "#f59e0b",
             yAxisID: "share",
-          },
-          {
-            label: "Orders per Visitor",
-            data: shareData.map(function (e) {
-              return e.ordersPerVisitor !== null ? Math.round(e.ordersPerVisitor * 10000) / 10000 : null;
-            }),
-            backgroundColor: "#8b5cf6",
-            yAxisID: "rate",
           },
         ],
       },
@@ -575,7 +583,7 @@ window.addEventListener("load", function () {
           callbacks: {
             label: function (tooltipItem, data) {
               var label = data.datasets[tooltipItem.datasetIndex].label;
-              if (tooltipItem.datasetIndex === 2) {
+              if (tooltipItem.datasetIndex === 0) {
                 return tooltipItem.yLabel != null
                   ? label + ": " + (tooltipItem.yLabel * 100).toFixed(2) + "%"
                   : null;
