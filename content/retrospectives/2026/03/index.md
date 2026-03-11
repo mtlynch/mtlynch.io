@@ -109,6 +109,10 @@ Wow, there's a surprising disparity. Most of my readers are in the US, but a rel
   </div>
 </div>
 
+### Takeaways
+
+- I need to start pandering more to Canada. Maybe I should change all the Docker examples to hockey examples and praise Shopify more?
+
 ## Bug bounty hunting
 
 I feel like what I'm doing is obvious, but at the same time, I don't want to reveal too much because if I'm wrong and I'm the first to think of it, I don't want to give up my advantage in getting bug bounties.
