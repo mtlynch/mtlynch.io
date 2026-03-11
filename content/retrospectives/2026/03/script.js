@@ -438,11 +438,15 @@ window.addEventListener("load", function () {
       var visitorShare = visitorsByCountry[code] / totalVisitors;
       var revShare = totalRevenue > 0 ? (agg.revenue[code] || 0) / totalRevenue : 0;
       var orderShare = totalOrders > 0 ? (agg.orders[code] || 0) / totalOrders : 0;
+      var orders = agg.orders[code] || 0;
+      var revenue = agg.revenue[code] || 0;
       shareData.push({
         code: code,
         visitorShare: visitorShare,
         revenueShare: revShare,
         orderShare: orderShare,
+        ordersPerVisitor: visitorsByCountry[code] > 0 ? orders / visitorsByCountry[code] : null,
+        revenuePerVisitor: visitorsByCountry[code] > 0 ? revenue / visitorsByCountry[code] : null,
       });
     }
     shareData.sort(function (a, b) {
@@ -464,6 +468,7 @@ window.addEventListener("load", function () {
               return Math.round(e.visitorShare * 10000) / 100;
             }),
             backgroundColor: "#3b82f6",
+            yAxisID: "share",
           },
           {
             label: "Revenue Share",
@@ -471,6 +476,15 @@ window.addEventListener("load", function () {
               return Math.round(e.revenueShare * 10000) / 100;
             }),
             backgroundColor: "#10b981",
+            yAxisID: "share",
+          },
+          {
+            label: "Revenue per 100 Visitors",
+            data: shareData.map(function (e) {
+              return e.revenuePerVisitor !== null ? Math.round(e.revenuePerVisitor * 100 * 100) / 100 : null;
+            }),
+            backgroundColor: "#8b5cf6",
+            yAxisID: "rate",
           },
         ],
       },
@@ -483,6 +497,11 @@ window.addEventListener("load", function () {
           callbacks: {
             label: function (tooltipItem, data) {
               var label = data.datasets[tooltipItem.datasetIndex].label;
+              if (tooltipItem.datasetIndex === 2) {
+                return tooltipItem.yLabel != null
+                  ? label + ": " + dollarFormatter(tooltipItem.yLabel)
+                  : null;
+              }
               return label + ": " + tooltipItem.yLabel.toFixed(1) + "%";
             },
           },
@@ -490,11 +509,21 @@ window.addEventListener("load", function () {
         scales: {
           yAxes: [
             {
+              id: "share",
+              position: "left",
               ticks: {
                 beginAtZero: true,
                 callback: function (value) {
                   return value + "%";
                 },
+              },
+            },
+            {
+              id: "rate",
+              position: "right",
+              gridLines: { drawOnChartArea: false },
+              ticks: {
+                beginAtZero: true,
               },
             },
           ],
@@ -517,6 +546,7 @@ window.addEventListener("load", function () {
               return Math.round(e.visitorShare * 10000) / 100;
             }),
             backgroundColor: "#3b82f6",
+            yAxisID: "share",
           },
           {
             label: "Order Share",
@@ -524,6 +554,15 @@ window.addEventListener("load", function () {
               return Math.round(e.orderShare * 10000) / 100;
             }),
             backgroundColor: "#f59e0b",
+            yAxisID: "share",
+          },
+          {
+            label: "Orders per Visitor",
+            data: shareData.map(function (e) {
+              return e.ordersPerVisitor !== null ? Math.round(e.ordersPerVisitor * 10000) / 10000 : null;
+            }),
+            backgroundColor: "#8b5cf6",
+            yAxisID: "rate",
           },
         ],
       },
@@ -536,6 +575,11 @@ window.addEventListener("load", function () {
           callbacks: {
             label: function (tooltipItem, data) {
               var label = data.datasets[tooltipItem.datasetIndex].label;
+              if (tooltipItem.datasetIndex === 2) {
+                return tooltipItem.yLabel != null
+                  ? label + ": " + (tooltipItem.yLabel * 100).toFixed(2) + "%"
+                  : null;
+              }
               return label + ": " + tooltipItem.yLabel.toFixed(1) + "%";
             },
           },
@@ -543,11 +587,21 @@ window.addEventListener("load", function () {
         scales: {
           yAxes: [
             {
+              id: "share",
+              position: "left",
               ticks: {
                 beginAtZero: true,
                 callback: function (value) {
                   return value + "%";
                 },
+              },
+            },
+            {
+              id: "rate",
+              position: "right",
+              gridLines: { drawOnChartArea: false },
+              ticks: {
+                beginAtZero: true,
               },
             },
           ],
