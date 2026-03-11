@@ -314,12 +314,16 @@ window.addEventListener("load", function () {
     var orderEntries = sortedEntries(agg.orders);
     var revenueEntries = sortedEntries(agg.revenue);
 
+    var totalOrders = orderEntries.reduce(function (sum, e) { return sum + e.value; }, 0);
+    var totalRevenue = revenueEntries.reduce(function (sum, e) { return sum + e.value; }, 0);
+
     drawCountryPie(
       "orders-by-country",
       orderEntries,
       "Orders by Country",
       function (label, value) {
-        return label + ": " + value + " orders";
+        var pct = Math.round((value / totalOrders) * 100);
+        return label + ": " + value + " orders (" + pct + "%)";
       }
     );
 
@@ -328,7 +332,8 @@ window.addEventListener("load", function () {
       revenueEntries,
       "Revenue by Country",
       function (label, value) {
-        return label + ": " + dollarFormatter(value);
+        var pct = Math.round((value / totalRevenue) * 100);
+        return label + ": " + dollarFormatter(value) + " (" + pct + "%)";
       }
     );
 

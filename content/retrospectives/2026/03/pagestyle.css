@@ -13,11 +13,11 @@
   display: flex;
   justify-content: center;
   gap: 0;
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
 }
 
 .sales-chart-toggle button {
-  padding: 0.25rem 0.75rem;
+  padding: 0.4rem 1rem;
   border: 1px solid #ccc;
   background: #f5f5f5;
   cursor: pointer;
