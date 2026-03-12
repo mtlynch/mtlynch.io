@@ -585,7 +585,7 @@ window.addEventListener("load", function () {
               var label = data.datasets[tooltipItem.datasetIndex].label;
               if (tooltipItem.datasetIndex === 0) {
                 return tooltipItem.yLabel != null
-                  ? label + ": " + (tooltipItem.yLabel * 100).toFixed(2) + "%"
+                  ? label + ": " + (tooltipItem.yLabel * 100).toFixed(1) + "%"
                   : null;
               }
               return label + ": " + tooltipItem.yLabel.toFixed(1) + "%";
