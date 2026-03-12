@@ -197,7 +197,7 @@ function drawEnglishSplitPie(
           label: function (tooltipItem, data) {
             var label = data.labels[tooltipItem.index];
             var value = data.datasets[0].data[tooltipItem.index];
-            var pct = Math.round((value / total) * 100);
+            var pct = ((value / total) * 100).toFixed(1);
             return tooltipFormatter(label, value, pct);
           },
         },
@@ -322,7 +322,7 @@ window.addEventListener("load", function () {
       orderEntries,
       "Orders by Country",
       function (label, value) {
-        var pct = Math.round((value / totalOrders) * 100);
+        var pct = ((value / totalOrders) * 100).toFixed(1);
         return label + ": " + value + " orders (" + pct + "%)";
       }
     );
@@ -332,7 +332,7 @@ window.addEventListener("load", function () {
       revenueEntries,
       "Revenue by Country",
       function (label, value) {
-        var pct = Math.round((value / totalRevenue) * 100);
+        var pct = ((value / totalRevenue) * 100).toFixed(1);
         return label + ": " + dollarFormatter(value) + " (" + pct + "%)";
       }
     );
