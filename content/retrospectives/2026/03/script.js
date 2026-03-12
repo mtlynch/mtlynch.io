@@ -421,12 +421,15 @@ window.addEventListener("load", function () {
 
     // Revenue share vs visitor share
     var totalVisitors = 0;
+    var allVisitorCodes = Object.keys(visitorsByCountry);
+    for (var i = 0; i < allVisitorCodes.length; i++) {
+      totalVisitors += visitorsByCountry[allVisitorCodes[i]];
+    }
     var totalRevenue = 0;
     var totalOrders = 0;
     for (var i = 0; i < perVisitorCodes.length; i++) {
       var code = perVisitorCodes[i];
       if (!visitorsByCountry[code]) continue;
-      totalVisitors += visitorsByCountry[code];
       totalRevenue += agg.revenue[code] || 0;
       totalOrders += agg.orders[code] || 0;
     }
