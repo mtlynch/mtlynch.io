@@ -1,6 +1,6 @@
 ---
 title: "Refactoring English: Month 15"
-date: "2026-03-11"
+date: "2026-03-16"
 description: TODO - One-line summary
 custom_css: true
 ---
@@ -96,7 +96,7 @@ I was curious how order share compared with visitors to the website. Do readers 
 
 Wow! One out of every six readers in Kazakhstan purchase the book! I need to start advertising in Kazakhstan.
 
-Okay, the extreme Kazakhstan result is based on a single customer, so that's probably an outlier. I suspect most of the outliers are my analytics undercounting visitors from certain regions.
+Okay, the extreme Kazakhstan result is based on a single customer, so that's probably an outlier. And I bet my website analytics undercount visitors from Kazakhstan.
 
 What if I focus on the top countries based on website visitors?
 
@@ -113,62 +113,99 @@ What if I focus on the top countries based on website visitors?
   </div>
 </div>
 
-Most of my readers are in the US, but a relatively low share of website visitors (0.5%) purchase the book.
+The US is my top country for website visitors, but a relatively low share (0.5%) purchase the book.
 
-Indian readers purchase at the highest rate, with 2.5% of website visitors purchasing the book. Canadian readers purchase the most by revenue, as every additional 100 Canadian readers lead to about $47 in additional book sales.
+Indian readers purchase at the highest rate, with 2.5% of website visitors purchasing the book. Canadian readers purchase the most by revenue, with every Canadian reader giving me about $0.47 in additional book sales.
 
-Clearly, I need to start pandering more to India and Canada. I could change all the Docker examples to cricket examples and look for more opportunities to praise Shopify.
+Clearly, I need to start pandering more to India and Canada in the book. I could change all the Docker examples to cricket examples and look for more opportunities to praise Shopify.
 
 ### Fixing my regional discounts
 
 After the US, most website visitors come from China (5.9% of total), but I've had zero sales in China. At first, I thought buying ebooks was not so popular in China and wrote it off. But I just checked what regional discount I was offering in China and was surprised to find that I wasn't offering regional discount in China at all.
 
-I looked at my script for generating regional prices and discovered I made two mistakes that excluded tons of countries:
+I looked at my script for generating regional prices and discovered I made two mistakes that excluded a huge number of countries:
 
 - I only included countries where Stripe supports the local currency.
 - Even with this filter, I accidentally omitted a lot of countries where Stripe supports the local currency.
 
 The local currency thing is silly in retrospect because I can still offer a discount and just accept payment in USD. And I'm not sure how I ended up missing so many Stripe-supported countries. I even missed Kazakhstan, my new favorite country!
 
-I was only offering regional discounts in about 39 countries. After my fixes, the list grew to 156. Within 12 hours, I got a new order from Kazakhstan.
+I was only offering regional discounts in about 39 countries. After my fixes, the list grew to 156. And within 12 hours, I got a new order from Kazakhstan.
 
 ## Should I focus on non-native speakers?
 
-The more serious takeaway is how much I should focus on readers who speak English as a second language.
+With the majority of _Reafactoring English_ readers coming from countries where English is a second language, should I adjust the book to better serve non-native speakers?
 
-I've heard from a few readers that they'd like more advice for non-native speakers. I'd like to do that, but the problem is that I've never learned English as a non-native speaker.
+A few readers have asked about English tips for non-native speakers. I'd like to cover them, but I have no experience writing as a non-native speaker. I want everything in the book to be techniques I personally use rather than [describing techniques I've heard about secondhand](/book-reports/traction/).
 
-I want all the advice in the book to be based on real personal experience and not me just [repackaging things I've heard are true](/book-reports/traction/).
+My best idea is to find editing client who are non-native speakers and then look for patterns in their writing to include in the book. But right now, I'd like to get the v1 finished. The beauty of an ebook is that you can keep iterating on it and find ways to improve it even after official release.
 
-## Getting sucked into AI
+## AI-assisted coding is becoming a problem for me
 
-I feel like it's about to make a huge amount of progress
+I've been using AI for software development for about a year and a half, but there have been two major inflection points:
 
-### Unpredictable timing
+- In February 2025, when I [started using an AI agent integrated in my code editor](/notes/cline-is-mesmerizing/)
+- In December 2025, when I started [running AI agents with full permissions (within an isolated environment)](/retrospectives/2026/02/#discovering-the-power-of-ai-sandboxes)
 
-- Tasks can take 5 seconds or 5 minutes, so I'm stuck watching.
-- Sometimes I think I can leave it for an hour and it turned out that it stopped. Or it stopped because the next step would take a long time.
+Since December, I've been spending more and more time doing AI-assisted coding. I used to have a bad habit of checking email and social media excessively. During the past month, I've noticed on multiple days that it's 4pm, and I haven't checked email or social media at all that day. Except it's because I've fallen into an AI vortex, and forgot everything else.
 
-### Exciting
+Every month, I think, "Is this a problem?" And in the past few weeks, I've had to face the fact that, yes, it's a problem.
 
-Feels like setting up a rocket
+I generally start each workday by writing a simple schedule on a little notepad on my desk. I break the day into 30-minute blocks and write down how I'll spend that block. Historically, I stick to the schedule when I'm disciplined, but when I have less will power, I let fun tasks exceed their budgets by a block or two. With AI-assisted coding, I was getting to the point where it was pre-empting my entire schedule even though I recognized that it was less important than everything it was pre-empting.
+
+I wouldn't say that I have an "addiction" to AI in the way people develop addictions to drugs or alcohol. But I am letting AI-assisted coding distract from work that I recognize is more important, like finishing my book.
+
+There are a few factors that make AI especially compelling and easy for me to get sucked in.
+
+### It's exciting
+
+There are a lot of things I dislike about AI development, but I also feel like it offers an exciting amount of power. I feel like I can integrate any technology, write in any programming language, install any tool. There used to be an incredible amount of friction in using any new software, but now I can mostly just hand it to AI and ask it to figure out how to install it or debug it, and it just works.
+
+In the 90s, Microsoft was pushing this idea of "business at the speed of thought." AI still isn't there, but it's about 100x closer than it was then. I can have an idea for a feature and give the AI agent a brief explanation, and within a few minutes, the feature has materialized.
+
+### No natural limits
+
+I sometimes went down a rabbit hole with traditional development where I sat down expecting to spend an hour coding and instead spent three. But without AI, there are natural limits to how long you can code. After a few hours of development, my brain feels fried and the work becomes unpleasant, unproductive, or both.
+
+With AI, you can build a lot of useful software features without doing much deep thought. And even when something does require thought, AI makes it easier than ever to take on tech debt. It's easy to say that this is the wrong way, but I'm going to wait until tomorrow to fix it because AI doesn't mind wading through bad code. Or I just start an entirely new feature or project.
+
+### Variable rewards
+
+One of the things that makes gambling addictive is the variable rewards.
+
+TODO:
+
+I don't think that's an intentional feature of AI agents, but it definitely happens. I often don't know if a task will take 5 seconds or 20 minutes, so I sit there staring at it for a minute, then compulsively check it every few minutes, then start some other AI task while I'm waiting and now I'm cycling between multiple jobs that I don't even remember.
 
 ### Underestimating oversight required
 
-- I feel like I'm going to forget context, so I have to watch.
-- Especially with bug bounty, a vulnerability can be just around the corner worth $5k-$20k.
+One lie I find me telling myself over and over is, "AI will just do this in the background."
+
+One of the most maddening experiences I have with AI is when I've set up the AI agent to complete a long task, and I come back hours later to find the AI paused its work a few minutes after I left and asked, "Okay, the next step is to try a full build, but that will take 30-60 minutes. Would you like me to continue?" Yes! Yes, that's why I left the task to you!
+
+But then whenever I want to set AI to run in the background and forget about it, I rationalize my compulsive checks by saying, "Well, what if it's blocked and I need to unblock it?"
+
+### I have to keep all the context
+
+With AI assisted coding, I have a lot of tasks running in parallel. There's very much a "keep the plates spinning". With traditional software development, I'd file bugs, but that feels like too much friction. I feel like I have to .
+
+If I interrupt and point out the other thing, it will get distracted and not complete task A. Or I have another agent waiting on task A, then I can kick off tasks B and C.
+
+This is something that's definitely solveable. I think 2026 will likely be the year of orchestration where vendors . And we don't have to resort to Steve Yegge's fever dreams.
 
 ### Scarcity mindset
 
-- Feel like I'm in the last year or two of software developer being a job.
+It's hard to predict exactly what effect AI will have on the software industry, but I feel confident that it will completely upend the ecosystem. I think we're still in the early stages of a massive shake-up.
 
-## Bug bounty hunting
+Depending on how things turn out, there are paths forward for me as a software developer in an AI-dominated world, but I also think there's at least a 20% chance that we're in the last year or two of software developer being a job that requires any special knowledge or skill. It could be like what happened to [elevator operators](https://en.wikipedia.org/wiki/Elevator_operator).
 
-I feel like what I'm doing is obvious, but at the same time, I don't want to reveal too much because if I'm wrong and I'm the first to think of it, I don't want to give up my advantage in getting bug bounties.
+Right now, there are a few factors that make AI atypically beneficial to developers in my position:
 
-I read about stories where people descend into madness because the AI agents keep praising them, and I didn't relate at all because I felt like I don't have that relationship with AI, but now I'm like, "I spent four weeks building vulnerability discovery tools because AI told me it thought it would find valuable vulnerabilities and I found only simple crashes."
+- AI is helpful for junior engineers, but senior engineers are the ones who can use it best
+- There are multiple AI companies competing heavily on price, so costs are highly subsidized.
+  - I use flat-rate plans, but I consume the equivalent of about $4k/month in API costs, and even those rates are probably VC-subsidized.
 
-## Side projects
+I feel like this probably won't last. The AI bubble could burst, and I'll have to start paying the non-subsidized metered rate. Or AI will continue to improve to the point where I have no advantage over junior engineers or even people who have never coded before.
 
 ## Wrap up
 
@@ -184,9 +221,5 @@ I read about stories where people descend into madness because the AI agents kee
 
 - Finish _Refactoring English_
   - It won't be fully polished and edited, but I want to complete all the chapters.
-
-### Requests for help
-
-If you have experience with bug bounties, what should I be doing? What should I be reading? Are bug bounties just a sucker's route and there's some other path?
 
 <script src="script.js"></script>
