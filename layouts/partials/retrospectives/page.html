@@ -7,7 +7,7 @@
     {{ if not (hasPrefix .Title "Notes from") }}
       <h2>One-Line Summary</h2>
 
-      {{ .Params.description }}
+      {{ .Params.description | markdownify }}
     {{ end }}
 
     {{- with .Content -}}

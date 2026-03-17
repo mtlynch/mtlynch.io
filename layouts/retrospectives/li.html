@@ -4,6 +4,6 @@
     <a class="title" href="{{ .Params.ExternalLink | default .RelPermalink }}"
       >{{ .Title }}</a
     >
-    <p style="margin: 0">{{ .Page.Params.description }}</p>
+    <p style="margin: 0">{{ .Page.Params.description | markdownify }}</p>
   </div>
 </li>
