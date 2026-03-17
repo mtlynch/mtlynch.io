@@ -33,7 +33,7 @@
 {{- end -}}
 
 
-<div class="project-metrics-chart" style="margin-bottom: 2rem; height: 400px;">
+<div class="project-metrics-chart">
   <canvas
     id="{{ .project }}-metrics-chart"
     data-labels="{{ $sortedLabels | jsonify }}"

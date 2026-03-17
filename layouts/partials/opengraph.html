@@ -11,7 +11,7 @@
 <meta
   property="og:description"
   content="{{ with .Description }}
-    {{ . }}
+    {{ . | markdownify | plainify }}
   {{ else }}
     {{ if .IsPage }}
       {{ .Summary }}
