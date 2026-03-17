@@ -93,7 +93,7 @@ Next question: Do readers from certain countries purchase at a higher rate than 
   </div>
 </div>
 
-Wow! One out of every six readers in Kazakhstan purchase the book! I need to start advertising in Kazakhstan.
+Wow! One out of every six readers in Kazakhstan purchases the book! I need to start advertising in Kazakhstan.
 
 Okay, the extreme Kazakhstan result is based on a single customer, so that's probably an outlier. And I bet my website analytics undercount visitors from Kazakhstan.
 
@@ -133,18 +133,18 @@ I was only offering regional discounts in about 39 countries. After my fixes, th
 
 ## Should I focus on non-native speakers?
 
-With the majority of _Reafactoring English_ readers coming from countries where English is a second language, should I adjust the book to better serve non-native speakers?
+With the majority of _Refactoring English_ readers coming from countries where English is a second language, should I adjust the book to better serve non-native speakers?
 
 A few readers have asked about English tips for non-native speakers. I'd like to tackle the subject, but I have no experience writing as a non-native speaker. I want everything in the book to be techniques I personally use rather than [things I've heard secondhand](/book-reports/traction/).
 
-My best idea is to find editing client who are non-native speakers and look for patterns in their writing to include in the book. But right now, I'd like to get the v1 finished. The beauty of an ebook is that you can keep iterating on it and find ways to improve it even after official release.
+My best idea is to find editing clients who are non-native speakers and look for patterns in their writing to include in the book. But right now, I'd like to get the v1 finished. The beauty of an ebook is that you can keep iterating on it and find ways to improve it even after official release.
 
 ## AI-assisted coding is becoming a problem for me
 
 I've been using AI for software development for about a year and a half, but there have been two major inflection points:
 
 - In February 2025, I [started using an integrated AI agent in my code editor](/notes/cline-is-mesmerizing/)
-- In December 2025, when I started [running AI agents with full permissions (within isolated environments)](/retrospectives/2026/02/#discovering-the-power-of-ai-sandboxes)
+- In December 2025, I started [running AI agents with full permissions (within isolated environments)](/retrospectives/2026/02/#discovering-the-power-of-ai-sandboxes)
 
 Since December, I've been spending more and more time doing AI-assisted coding. It's become an ever-increasing part of my workday and non-work time.
 
@@ -174,7 +174,7 @@ With AI, you can build for hours without doing any deep thought. And even when s
 
 One of the things that makes gambling addictive is [variable rewards](https://www.nirandfar.com/want-to-hook-your-users-drive-them-crazy/). Our brains are more captivated by a system that gives you $10 at random intervals than one that delivers you money on a fixed, predictable schedule.
 
-Whether intentional or not, my experience with AI agents varies wildly. Sometimes, I point it at a 2,000 line log file and diagnose the issue before I've even asked a question. Other times, I give it a simple task, and it spends the next 20 minutes aimlessly roaming my codebase.
+Whether intentional or not, my experience with AI agents varies wildly. Sometimes, I point it at a 2,000 line log file and it diagnoses the issue before I've even asked a question. Other times, I give it a simple task, and it spends the next 20 minutes aimlessly roaming my codebase.
 
 Because I don't know if the wait will be 5 seconds or 20 minutes, I sit there staring at the agent for a minute, then compulsively check it every few minutes, then start some other AI task while I'm waiting. And then I'm cycling between multiple agents and don't even remember what they're all doing.
 
