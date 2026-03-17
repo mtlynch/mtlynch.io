@@ -2,6 +2,7 @@
 title: "Refactoring English: Month 15"
 date: "2026-03-17"
 description: Where do *Refactoring English* readers come from?
+banner_image: og-cover.webp
 custom_css: true
 ---
 
