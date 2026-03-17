@@ -1,3 +1,39 @@
+var pieSliceLabelPlugin = {
+  afterDraw: function (chart) {
+    if (chart.config.type !== "pie") return;
+    var ctx = chart.ctx;
+    var meta = chart.getDatasetMeta(0);
+    if (!meta || !meta.data || meta.data.length === 0) return;
+    var dataset = chart.config.data.datasets[0];
+    var total = dataset.data.reduce(function (sum, v) {
+      return sum + v;
+    }, 0);
+    if (total === 0) return;
+    ctx.save();
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillStyle = "#fff";
+    ctx.font = "bold 11px sans-serif";
+    for (var i = 0; i < meta.data.length; i++) {
+      var arc = meta.data[i];
+      var pct = dataset.data[i] / total;
+      if (pct < 0.08) continue;
+      var startAngle = arc._model.startAngle;
+      var endAngle = arc._model.endAngle;
+      var midAngle = (startAngle + endAngle) / 2;
+      var r = (arc._model.innerRadius + arc._model.outerRadius) / 2;
+      var x = arc._model.x + Math.cos(midAngle) * r;
+      var y = arc._model.y + Math.sin(midAngle) * r;
+      var label = chart.config.data.labels[i];
+      var pctText = (pct * 100).toFixed(0) + "%";
+      ctx.fillText(label, x, y - 7);
+      ctx.fillText(pctText, x, y + 7);
+    }
+    ctx.restore();
+  },
+};
+Chart.plugins.register(pieSliceLabelPlugin);
+
 var countryNames = {
   AR: "Argentina",
   BR: "Brazil",
