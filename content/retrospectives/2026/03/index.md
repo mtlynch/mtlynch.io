@@ -1,7 +1,7 @@
 ---
 title: "Refactoring English: Month 15"
-date: "2026-03-16"
-description: Where do _Refactoring English_ readers come from
+date: "2026-03-17"
+description: Where do *Refactoring English* readers come from?
 custom_css: true
 ---
 
@@ -210,15 +210,16 @@ I've found a few techniques for getting my AI usage back to a manageable place:
 ### What got done?
 
 - Published two new book chapters
+- Published ["Eversource EV Rebate Program Exposed Massachusetts Customer Data"](https://mtlynch.io/eversource-resource-innovations-exposure/) and [complained to the MA Department of Public Utilities](https://eeaonline.eea.state.ma.us/dpu/fileroom/#/dockets/docket/12810)
 
 ### Lessons learned
 
--
+- Don't start the day with an AI coding project.
+  - It's too distracting and too hard to switch to something harder but more important.
 
 ### Goals for next month
 
 - Finish _Refactoring English_
   - It won't be fully polished and edited, but I want to complete all the chapters.
-- Publish one new blog post
 
 <script src="script.js"></script>
