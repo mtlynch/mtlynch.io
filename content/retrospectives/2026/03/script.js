@@ -83,7 +83,10 @@ Chart.scaleService.registerScaleType(
     getPixelForValue: function (value) {
       var me = this;
       var range = Math.sqrt(me.max) - Math.sqrt(me.min);
-      return me.bottom - ((Math.sqrt(value) - Math.sqrt(me.min)) / range) * (me.bottom - me.top);
+      return (
+        me.bottom -
+        ((Math.sqrt(value) - Math.sqrt(me.min)) / range) * (me.bottom - me.top)
+      );
     },
     getValueForPixel: function (pixel) {
       var me = this;
@@ -94,7 +97,7 @@ Chart.scaleService.registerScaleType(
       return v * v;
     },
   }),
-  { position: "left" }
+  { position: "left" },
 );
 
 function aggregateByCountry(payments) {
@@ -121,47 +124,42 @@ function sortedEntries(obj) {
 
 function drawCountryPie(canvasId, entries, title, tooltipFormatter) {
   registerChart(canvasId, function () {
-  new Chart(document.getElementById(canvasId), {
-    type: "pie",
-    data: {
-      labels: entries.map(function (e) {
-        return countryNames[e.code];
-      }),
-      datasets: [
-        {
-          data: entries.map(function (e) {
-            return Math.round(e.value * 100) / 100;
-          }),
-          backgroundColor: entries.map(function (e) {
-            return countryColors[e.code];
-          }),
-        },
-      ],
-    },
-    options: {
-      responsive: true,
-      title: { display: true, text: title },
-      legend: { display: false },
-      tooltips: {
-        callbacks: {
-          label: function (tooltipItem, data) {
-            var label = data.labels[tooltipItem.index];
-            var value = data.datasets[0].data[tooltipItem.index];
-            return tooltipFormatter(label, value);
+    new Chart(document.getElementById(canvasId), {
+      type: "pie",
+      data: {
+        labels: entries.map(function (e) {
+          return countryNames[e.code];
+        }),
+        datasets: [
+          {
+            data: entries.map(function (e) {
+              return Math.round(e.value * 100) / 100;
+            }),
+            backgroundColor: entries.map(function (e) {
+              return countryColors[e.code];
+            }),
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        title: { display: true, text: title },
+        legend: { display: false },
+        tooltips: {
+          callbacks: {
+            label: function (tooltipItem, data) {
+              var label = data.labels[tooltipItem.index];
+              var value = data.datasets[0].data[tooltipItem.index];
+              return tooltipFormatter(label, value);
+            },
           },
         },
       },
-    },
-  });
+    });
   });
 }
 
-function drawEnglishSplitPie(
-  canvasId,
-  aggregated,
-  title,
-  tooltipFormatter
-) {
+function drawEnglishSplitPie(canvasId, aggregated, title, tooltipFormatter) {
   var english = 0;
   var nonEnglish = 0;
   var codes = Object.keys(aggregated);
@@ -174,84 +172,94 @@ function drawEnglishSplitPie(
   }
   var total = english + nonEnglish;
   registerChart(canvasId, function () {
-  new Chart(document.getElementById(canvasId), {
-    type: "pie",
-    data: {
-      labels: ["English-primary", "Non-English-primary"],
-      datasets: [
-        {
-          data: [
-            Math.round(english * 100) / 100,
-            Math.round(nonEnglish * 100) / 100,
-          ],
-          backgroundColor: ["#047a15", "#2196F3"],
-        },
-      ],
-    },
-    options: {
-      responsive: true,
-      title: { display: true, text: title },
-      legend: { display: true, position: "bottom" },
-      tooltips: {
-        callbacks: {
-          label: function (tooltipItem, data) {
-            var label = data.labels[tooltipItem.index];
-            var value = data.datasets[0].data[tooltipItem.index];
-            var pct = ((value / total) * 100).toFixed(1);
-            return tooltipFormatter(label, value, pct);
-          },
-        },
-      },
-    },
-  });
-  });
-}
-
-function drawCountryBar(canvasId, entries, title, tooltipFormatter, tickFormatter, scaleType) {
-  registerChart(canvasId, function () {
-  new Chart(document.getElementById(canvasId), {
-    type: "bar",
-    data: {
-      labels: entries.map(function (e) {
-        return countryNames[e.code];
-      }),
-      datasets: [
-        {
-          data: entries.map(function (e) {
-            return Math.round(e.value * 1000) / 1000;
-          }),
-          backgroundColor: entries.map(function (e) {
-            return countryColors[e.code];
-          }),
-          minBarLength: 2,
-        },
-      ],
-    },
-    options: {
-      responsive: true,
-      title: { display: true, text: title },
-      legend: { display: false },
-      scales: {
-        yAxes: [
+    new Chart(document.getElementById(canvasId), {
+      type: "pie",
+      data: {
+        labels: ["English-primary", "Non-English-primary"],
+        datasets: [
           {
-            type: scaleType || "linear",
-            ticks: {
-              beginAtZero: true,
-              callback: tickFormatter,
-            },
+            data: [
+              Math.round(english * 100) / 100,
+              Math.round(nonEnglish * 100) / 100,
+            ],
+            backgroundColor: ["#047a15", "#2196F3"],
           },
         ],
       },
-      tooltips: {
-        displayColors: false,
-        callbacks: {
-          label: function (tooltipItem) {
-            return tooltipFormatter(parseFloat(tooltipItem.yLabel), entries[tooltipItem.index]);
+      options: {
+        responsive: true,
+        title: { display: true, text: title },
+        legend: { display: true, position: "bottom" },
+        tooltips: {
+          callbacks: {
+            label: function (tooltipItem, data) {
+              var label = data.labels[tooltipItem.index];
+              var value = data.datasets[0].data[tooltipItem.index];
+              var pct = ((value / total) * 100).toFixed(1);
+              return tooltipFormatter(label, value, pct);
+            },
           },
         },
       },
-    },
+    });
   });
+}
+
+function drawCountryBar(
+  canvasId,
+  entries,
+  title,
+  tooltipFormatter,
+  tickFormatter,
+  scaleType,
+) {
+  registerChart(canvasId, function () {
+    new Chart(document.getElementById(canvasId), {
+      type: "bar",
+      data: {
+        labels: entries.map(function (e) {
+          return countryNames[e.code];
+        }),
+        datasets: [
+          {
+            data: entries.map(function (e) {
+              return Math.round(e.value * 1000) / 1000;
+            }),
+            backgroundColor: entries.map(function (e) {
+              return countryColors[e.code];
+            }),
+            minBarLength: 2,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        title: { display: true, text: title },
+        legend: { display: false },
+        scales: {
+          yAxes: [
+            {
+              type: scaleType || "linear",
+              ticks: {
+                beginAtZero: true,
+                callback: tickFormatter,
+              },
+            },
+          ],
+        },
+        tooltips: {
+          displayColors: false,
+          callbacks: {
+            label: function (tooltipItem) {
+              return tooltipFormatter(
+                parseFloat(tooltipItem.yLabel),
+                entries[tooltipItem.index],
+              );
+            },
+          },
+        },
+      },
+    });
   });
 }
 
@@ -314,8 +322,12 @@ window.addEventListener("load", function () {
     var orderEntries = sortedEntries(agg.orders);
     var revenueEntries = sortedEntries(agg.revenue);
 
-    var totalOrders = orderEntries.reduce(function (sum, e) { return sum + e.value; }, 0);
-    var totalRevenue = revenueEntries.reduce(function (sum, e) { return sum + e.value; }, 0);
+    var totalOrders = orderEntries.reduce(function (sum, e) {
+      return sum + e.value;
+    }, 0);
+    var totalRevenue = revenueEntries.reduce(function (sum, e) {
+      return sum + e.value;
+    }, 0);
 
     drawCountryPie(
       "orders-by-country",
@@ -324,7 +336,7 @@ window.addEventListener("load", function () {
       function (label, value) {
         var pct = ((value / totalOrders) * 100).toFixed(1);
         return label + ": " + value + " orders (" + pct + "%)";
-      }
+      },
     );
 
     drawCountryPie(
@@ -334,7 +346,7 @@ window.addEventListener("load", function () {
       function (label, value) {
         var pct = ((value / totalRevenue) * 100).toFixed(1);
         return label + ": " + dollarFormatter(value) + " (" + pct + "%)";
-      }
+      },
     );
 
     drawEnglishSplitPie(
@@ -343,7 +355,7 @@ window.addEventListener("load", function () {
       "Orders: English vs. Non-English Countries",
       function (label, value, pct) {
         return label + ": " + value + " orders (" + pct + "%)";
-      }
+      },
     );
 
     drawEnglishSplitPie(
@@ -352,7 +364,7 @@ window.addEventListener("load", function () {
       "Revenue: English vs. Non-English Countries",
       function (label, value, pct) {
         return label + ": " + dollarFormatter(value) + " (" + pct + "%)";
-      }
+      },
     );
 
     // Per-visitor charts: countries with purchases, plus China
@@ -396,11 +408,14 @@ window.addEventListener("load", function () {
       function (value, entry) {
         return [
           "Purchase rate: " + percentFormat(value),
-          entry.detail.orders + " orders / " + entry.detail.visitors.toLocaleString() + " visitors",
+          entry.detail.orders +
+            " orders / " +
+            entry.detail.visitors.toLocaleString() +
+            " visitors",
         ];
       },
       percentFormat,
-      "sqrt"
+      "sqrt",
     );
 
     drawCountryBar(
@@ -410,13 +425,16 @@ window.addEventListener("load", function () {
       function (value, entry) {
         return [
           "Revenue per 100 visitors: " + dollarFormatter(value),
-          dollarFormatter(Math.round(entry.detail.revenue * 100) / 100) + " revenue / " + entry.detail.visitors.toLocaleString() + " visitors",
+          dollarFormatter(Math.round(entry.detail.revenue * 100) / 100) +
+            " revenue / " +
+            entry.detail.visitors.toLocaleString() +
+            " visitors",
         ];
       },
       function (value) {
         return dollarFormatter(value);
       },
-      "sqrt"
+      "sqrt",
     );
 
     // Revenue share vs visitor share
@@ -439,8 +457,10 @@ window.addEventListener("load", function () {
       var code = perVisitorCodes[i];
       if (!visitorsByCountry[code]) continue;
       var visitorShare = visitorsByCountry[code] / totalVisitors;
-      var revShare = totalRevenue > 0 ? (agg.revenue[code] || 0) / totalRevenue : 0;
-      var orderShare = totalOrders > 0 ? (agg.orders[code] || 0) / totalOrders : 0;
+      var revShare =
+        totalRevenue > 0 ? (agg.revenue[code] || 0) / totalRevenue : 0;
+      var orderShare =
+        totalOrders > 0 ? (agg.orders[code] || 0) / totalOrders : 0;
       var orders = agg.orders[code] || 0;
       var revenue = agg.revenue[code] || 0;
       shareData.push({
@@ -448,8 +468,12 @@ window.addEventListener("load", function () {
         visitorShare: visitorShare,
         revenueShare: revShare,
         orderShare: orderShare,
-        ordersPerVisitor: visitorsByCountry[code] > 0 ? orders / visitorsByCountry[code] : null,
-        revenuePerVisitor: visitorsByCountry[code] > 0 ? revenue / visitorsByCountry[code] : null,
+        ordersPerVisitor:
+          visitorsByCountry[code] > 0 ? orders / visitorsByCountry[code] : null,
+        revenuePerVisitor:
+          visitorsByCountry[code] > 0
+            ? revenue / visitorsByCountry[code]
+            : null,
       });
     }
     shareData.sort(function (a, b) {
@@ -462,81 +486,86 @@ window.addEventListener("load", function () {
     });
 
     registerChart("revenue-vs-visitor-share", function () {
-    new Chart(document.getElementById("revenue-vs-visitor-share"), {
-      type: "bar",
-      data: {
-        labels: revSorted.map(function (e) {
-          return countryNames[e.code];
-        }),
-        datasets: [
-          {
-            label: "Revenue per 100 Visitors",
-            data: revSorted.map(function (e) {
-              return e.revenuePerVisitor !== null ? Math.round(e.revenuePerVisitor * 100 * 100) / 100 : null;
-            }),
-            backgroundColor: "#8b5cf6",
-            yAxisID: "rate",
-          },
-          {
-            label: "Visitor Share",
-            data: revSorted.map(function (e) {
-              return Math.round(e.visitorShare * 10000) / 100;
-            }),
-            backgroundColor: "#3b82f6",
-            yAxisID: "share",
-          },
-          {
-            label: "Revenue Share",
-            data: revSorted.map(function (e) {
-              return Math.round(e.revenueShare * 10000) / 100;
-            }),
-            backgroundColor: "#10b981",
-            yAxisID: "share",
-          },
-        ],
-      },
-      options: {
-        responsive: true,
-        title: { display: true, text: "Revenue Share vs. Visitor Share by Country" },
-        tooltips: {
-          mode: "index",
-          intersect: false,
-          callbacks: {
-            label: function (tooltipItem, data) {
-              var label = data.datasets[tooltipItem.datasetIndex].label;
-              if (tooltipItem.datasetIndex === 0) {
-                return tooltipItem.yLabel != null
-                  ? label + ": " + dollarFormatter(tooltipItem.yLabel)
+      new Chart(document.getElementById("revenue-vs-visitor-share"), {
+        type: "bar",
+        data: {
+          labels: revSorted.map(function (e) {
+            return countryNames[e.code];
+          }),
+          datasets: [
+            {
+              label: "Revenue per 100 Visitors",
+              data: revSorted.map(function (e) {
+                return e.revenuePerVisitor !== null
+                  ? Math.round(e.revenuePerVisitor * 100 * 100) / 100
                   : null;
-              }
-              return label + ": " + tooltipItem.yLabel.toFixed(1) + "%";
-            },
-          },
-        },
-        scales: {
-          yAxes: [
-            {
-              id: "share",
-              position: "left",
-              ticks: {
-                beginAtZero: true,
-                callback: function (value) {
-                  return value + "%";
-                },
-              },
+              }),
+              backgroundColor: "#8b5cf6",
+              yAxisID: "rate",
             },
             {
-              id: "rate",
-              position: "right",
-              gridLines: { drawOnChartArea: false },
-              ticks: {
-                beginAtZero: true,
-              },
+              label: "Visitor Share",
+              data: revSorted.map(function (e) {
+                return Math.round(e.visitorShare * 10000) / 100;
+              }),
+              backgroundColor: "#3b82f6",
+              yAxisID: "share",
+            },
+            {
+              label: "Revenue Share",
+              data: revSorted.map(function (e) {
+                return Math.round(e.revenueShare * 10000) / 100;
+              }),
+              backgroundColor: "#10b981",
+              yAxisID: "share",
             },
           ],
         },
-      },
-    });
+        options: {
+          responsive: true,
+          title: {
+            display: true,
+            text: "Revenue Share vs. Visitor Share by Country",
+          },
+          tooltips: {
+            mode: "index",
+            intersect: false,
+            callbacks: {
+              label: function (tooltipItem, data) {
+                var label = data.datasets[tooltipItem.datasetIndex].label;
+                if (tooltipItem.datasetIndex === 0) {
+                  return tooltipItem.yLabel != null
+                    ? label + ": " + dollarFormatter(tooltipItem.yLabel)
+                    : null;
+                }
+                return label + ": " + tooltipItem.yLabel.toFixed(1) + "%";
+              },
+            },
+          },
+          scales: {
+            yAxes: [
+              {
+                id: "share",
+                position: "left",
+                ticks: {
+                  beginAtZero: true,
+                  callback: function (value) {
+                    return value + "%";
+                  },
+                },
+              },
+              {
+                id: "rate",
+                position: "right",
+                gridLines: { drawOnChartArea: false },
+                ticks: {
+                  beginAtZero: true,
+                },
+              },
+            ],
+          },
+        },
+      });
     });
 
     var orderSorted = shareData.slice().sort(function (a, b) {
@@ -544,81 +573,86 @@ window.addEventListener("load", function () {
     });
 
     registerChart("orders-vs-visitor-share", function () {
-    new Chart(document.getElementById("orders-vs-visitor-share"), {
-      type: "bar",
-      data: {
-        labels: orderSorted.map(function (e) {
-          return countryNames[e.code];
-        }),
-        datasets: [
-          {
-            label: "Orders per Visitor",
-            data: orderSorted.map(function (e) {
-              return e.ordersPerVisitor !== null ? Math.round(e.ordersPerVisitor * 10000) / 10000 : null;
-            }),
-            backgroundColor: "#8b5cf6",
-            yAxisID: "rate",
-          },
-          {
-            label: "Visitor Share",
-            data: orderSorted.map(function (e) {
-              return Math.round(e.visitorShare * 10000) / 100;
-            }),
-            backgroundColor: "#3b82f6",
-            yAxisID: "share",
-          },
-          {
-            label: "Order Share",
-            data: orderSorted.map(function (e) {
-              return Math.round(e.orderShare * 10000) / 100;
-            }),
-            backgroundColor: "#f59e0b",
-            yAxisID: "share",
-          },
-        ],
-      },
-      options: {
-        responsive: true,
-        title: { display: true, text: "Order Share vs. Visitor Share by Country" },
-        tooltips: {
-          mode: "index",
-          intersect: false,
-          callbacks: {
-            label: function (tooltipItem, data) {
-              var label = data.datasets[tooltipItem.datasetIndex].label;
-              if (tooltipItem.datasetIndex === 0) {
-                return tooltipItem.yLabel != null
-                  ? label + ": " + (tooltipItem.yLabel * 100).toFixed(1) + "%"
+      new Chart(document.getElementById("orders-vs-visitor-share"), {
+        type: "bar",
+        data: {
+          labels: orderSorted.map(function (e) {
+            return countryNames[e.code];
+          }),
+          datasets: [
+            {
+              label: "Orders per Visitor",
+              data: orderSorted.map(function (e) {
+                return e.ordersPerVisitor !== null
+                  ? Math.round(e.ordersPerVisitor * 10000) / 10000
                   : null;
-              }
-              return label + ": " + tooltipItem.yLabel.toFixed(1) + "%";
-            },
-          },
-        },
-        scales: {
-          yAxes: [
-            {
-              id: "share",
-              position: "left",
-              ticks: {
-                beginAtZero: true,
-                callback: function (value) {
-                  return value + "%";
-                },
-              },
+              }),
+              backgroundColor: "#8b5cf6",
+              yAxisID: "rate",
             },
             {
-              id: "rate",
-              position: "right",
-              gridLines: { drawOnChartArea: false },
-              ticks: {
-                beginAtZero: true,
-              },
+              label: "Visitor Share",
+              data: orderSorted.map(function (e) {
+                return Math.round(e.visitorShare * 10000) / 100;
+              }),
+              backgroundColor: "#3b82f6",
+              yAxisID: "share",
+            },
+            {
+              label: "Order Share",
+              data: orderSorted.map(function (e) {
+                return Math.round(e.orderShare * 10000) / 100;
+              }),
+              backgroundColor: "#f59e0b",
+              yAxisID: "share",
             },
           ],
         },
-      },
-    });
+        options: {
+          responsive: true,
+          title: {
+            display: true,
+            text: "Order Share vs. Visitor Share by Country",
+          },
+          tooltips: {
+            mode: "index",
+            intersect: false,
+            callbacks: {
+              label: function (tooltipItem, data) {
+                var label = data.datasets[tooltipItem.datasetIndex].label;
+                if (tooltipItem.datasetIndex === 0) {
+                  return tooltipItem.yLabel != null
+                    ? label + ": " + (tooltipItem.yLabel * 100).toFixed(1) + "%"
+                    : null;
+                }
+                return label + ": " + tooltipItem.yLabel.toFixed(1) + "%";
+              },
+            },
+          },
+          scales: {
+            yAxes: [
+              {
+                id: "share",
+                position: "left",
+                ticks: {
+                  beginAtZero: true,
+                  callback: function (value) {
+                    return value + "%";
+                  },
+                },
+              },
+              {
+                id: "rate",
+                position: "right",
+                gridLines: { drawOnChartArea: false },
+                ticks: {
+                  beginAtZero: true,
+                },
+              },
+            ],
+          },
+        },
+      });
     });
 
     // Force Chart.js to recalculate dimensions for all charts.
