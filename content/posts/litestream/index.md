@@ -222,7 +222,7 @@ Users can upload to LogPaste from the command line, but it's also easy to integr
 <div id="error"></div>
 </div>
 
-<script src="https://logpaste.com/js/logpaste.js"></script>
+<script src="https://logpaste.com/static/js/logpaste.js"></script>
 <script>
 const baseUrl = 'https://logpaste.com';
 document.getElementById("upload").addEventListener("click", (evt) => {
@@ -254,7 +254,7 @@ The client-side code is less than 30 lines of HTML and JavaScript:
 <a id="result"></a>
 <div id="error"></div>
 
-<script src="https://logpaste.com/js/logpaste.js"></script>
+<script src="https://logpaste.com/static/js/logpaste.js"></script>
 <script>
   const baseUrl = "https://logpaste.com";
   document.getElementById("upload").addEventListener("click", (evt) => {
