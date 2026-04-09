@@ -1,7 +1,8 @@
 ---
 title: "Refactoring English: Month 16"
-date: "2026-04-08"
+date: "2026-04-09"
 description: Close to the finish line
+banner_image: og-cover.webp
 ---
 
 {{<notice type="info">}}
