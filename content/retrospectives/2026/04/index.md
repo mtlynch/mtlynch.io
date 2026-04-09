@@ -29,7 +29,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: Published a new chapter but still am not done
 - **Grade**: C
 
-I knew it was an ambitious goal to complete the last three chapters in a single month, but I thought it was deoable. I only finished one of the three, but the book is nearly complete.
+I knew it was an ambitious goal to complete the last three chapters in a single month, but I thought it was doable. I only finished one of the three, but the book is nearly complete.
 
 ## _Refactoring English_ metrics
 
@@ -37,7 +37,7 @@ I knew it was an ambitious goal to complete the last three chapters in a single 
 
 Visits and sales are down slightly this month, but I'm glad to see that there's still a steady flow of readers and customers even when I don't have a successful promotion.
 
-My only promotion this month was an article called, ["Which Design Doc Did a Human Write?"](https://refactoringenglish.com/blog/ai-vs-human-design-doc/) It did well [on Lobsters](https://lobste.rs/s/yeoe5q/which_design_doc_did_human_write) but [flopped on Hacker News](https://news.ycombinator.com/item?id=47521257). The /r/programming subreddit rejected it for being "AI-generated," even after I messaged the mods clarifying that the article itself was human-written.
+My only promotion this month was an article called ["Which Design Doc Did a Human Write?"](https://refactoringenglish.com/blog/ai-vs-human-design-doc/). It did well [on Lobsters](https://lobste.rs/s/yeoe5q/which_design_doc_did_human_write) but [flopped on Hacker News](https://news.ycombinator.com/item?id=47521257). The /r/programming subreddit rejected it for being "AI-generated," even after I messaged the mods clarifying that the article itself was human-written.
 
 I got the idea for the post from the last _Refactoring English_ live class. We discussed whether AI is good enough to write design docs, and I realized how easy it would be to generate alternate AI versions of the design doc I'd just written by hand. It was interesting reading people's guesses about the "tells" they identified in the different design docs about what revealed them as human vs. AI.
 
@@ -59,7 +59,7 @@ I looked online for discussion of Carlini's discovery and was surprised to find 
 
 It turned out I was right.
 
-I wrote [the article](/claude-code-found-linux-vulnerability/) in one three-hour sitting, much faster than my usual process of 10-30-hours over several weeks. The article has attracted 41k unique readers so far. It did well on [Hacker News](https://news.ycombinator.com/item?id=47633855) and [Lobsters](https://lobste.rs/s/lh9rmv/claude_code_found_linux_vulnerability). Despite me not even posting it to Twitter, almost half the readers found my article via Twitter.
+I wrote [the article](/claude-code-found-linux-vulnerability/) in one three-hour sitting, much faster than my usual process of 10-30 hours over several weeks. The article has attracted 41k unique readers so far. It did well on [Hacker News](https://news.ycombinator.com/item?id=47633855) and [Lobsters](https://lobste.rs/s/lh9rmv/claude_code_found_linux_vulnerability). Despite me not even posting it to Twitter, almost half the readers found my article via Twitter.
 
 In the past, when articles become popular on my personal blog, many of the readers dug deeper and discovered _Refactoring English_. That didn't happen this time, I guess because readers interested in AI are less interested in a book about writing without AI.
 
@@ -91,7 +91,7 @@ There isn't some greedy billion dollar company refusing to pay me for vulnerabil
 
 Eventually, we'll get back to an equilibrium where AI security tools are as cheap and convenient as static analysis tools are today. Vendors will use AI to catch security issues before they hit production.
 
-In the short-run, there are a lot of vulnerabilities that suddenly became low-hanging fruit; there's value for attackers to exploit them and not much value for honest researchers to fix them.
+In the short run, there are a lot of vulnerabilities that suddenly became low-hanging fruit; there's value for attackers to exploit them and not much value for honest researchers to fix them.
 
 ## Reaching the first Little Moments milestone
 
@@ -109,7 +109,7 @@ I find even this minimal implementation so exciting and can't wait to finish.
 
 If you've never used TinyBeans or PhotoCircle, it probably sounds strange that my extremely basic app prototype is exciting, but I can't emphasize to you how terrible the user experience is on those apps.
 
-Even the basic flow of seeing the next and previous photo doesn't work on TinyBeans. If you're viewing a photo, you have to navigate _back_ to the photo index, then find the next photo. And that's if you're on the mobile app. On the web app, you can't even see your photos in a sequence; you have to find them on a calendar. On top of that, there's ads and upsells everywhere, and everything is painfully slow.
+Even the basic flow of seeing the next and previous photo doesn't work on TinyBeans. If you're viewing a photo, you have to navigate _back_ to the photo index, then find the next photo. And that's if you're on the mobile app. On the web app, you can't even see your photos in a sequence; you have to find them on a calendar. On top of that, there are ads and upsells everywhere, and everything is painfully slow.
 
 Little Moments is super fast, and I added [keyboard shortcuts](https://codeberg.org/mtlynch/little-moments/pulls/44) and [mobile swipe gestures](https://codeberg.org/mtlynch/little-moments/pulls/54) to make navigation even easier. I'm excited to finish the app and stop using TinyBeans.
 
