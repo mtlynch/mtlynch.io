@@ -68,7 +68,7 @@ Next, download or copy this Nix flake, the file that defines the Nix development
 curl \
   --show-error \
   --fail \
-  {{<baseurl>}}notes/nixos-dev-environment/flake.nix \
+  {{<baseurl>}}notes/nix-dev-environment/flake.nix \
   > flake.nix
 ```
 
