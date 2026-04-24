@@ -3,7 +3,7 @@ title: 'Takeaways from Charles Marohn''s "Escaping the Housing Trap"'
 date: "2024-11-10"
 ---
 
-Last week, I stumbled upon a reddit post announcing that the author, Charles Marohn, was giving a free talk near my town the next morning. Marohn is the author of [_Strong Towns_](/book-reports/strong-towns/), one of my favorite books of the last few years. So, my wife and I attended the talk and enjoyed it.
+Last week, I stumbled upon a reddit post announcing that the author, Charles Marohn, was giving a free talk near my town the next morning. Marohn is the author of [_Strong Towns_](/notes/book-reports/strong-towns/), one of my favorite books of the last few years. So, my wife and I attended the talk and enjoyed it.
 
 The talk is based on ideas from Marohn's new book, [_Escaping the Housing Trap_](https://www.housingtrap.org/), which I haven't read yet, so these notes are from memory.
 

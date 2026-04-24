@@ -1,9 +1,13 @@
 {{- $openGraphTitle := .Title -}}
+{{- $isBookReport := false -}}
+{{- if and .IsPage .File -}}
+  {{- $isBookReport = in .File.Path "notes/book-reports/" -}}
+{{- end -}}
 {{- if and .IsPage (eq .Type "retrospectives") (not (hasPrefix .Title "Notes from")) }}
   {{ $previousMonth := (.Date.AddDate 0 -1 0) }}
   {{ $openGraphTitle = (printf `%s Retrospective: %s` ($previousMonth.Format "January 2006") .Title) }}
 {{ end }}
-{{- if and .IsPage (eq .Type "book-reports") }}
+{{- if $isBookReport }}
   {{ $openGraphTitle = (printf `Book Report: %s` .Title) }}
 {{ end }}
 {{- $iso8601 := "2006-01-02T15:04:05-07:00" -}}
@@ -32,7 +36,7 @@
 {{- $ogImage := "" -}}
 {{- if $.Params.hero_image -}}
   {{- $ogImage = printf "%s%s" .Permalink $.Params.hero_image -}}
-{{- else if and .IsPage (eq .Type "book-reports") -}}
+{{- else if $isBookReport -}}
   {{- $ogImage = printf "%s%s" .Permalink "cover.jpg" -}}
 {{- else if $.Params.banner_image -}}
   {{- $ogImage = printf "%s%s" .Permalink $.Params.banner_image -}}

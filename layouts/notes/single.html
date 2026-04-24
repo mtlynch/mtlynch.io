@@ -7,6 +7,19 @@
     <article>
       {{ partial "header.html" . }}
 
+      {{ if and .Params.rating .Params.purchase_url }}
+        <a href="{{ .Params.purchase_url }}">
+          <img src="cover.jpg" class="align-left book-cover" />
+        </a>
+
+        <ul class="book-summary">
+          <li>My rating: <strong>{{ .Params.rating }}</strong> / 10</li>
+          <li>
+            <a href="{{ .Params.purchase_url }}"> Purchase Link </a>
+          </li>
+        </ul>
+      {{ end }}
+
       {{- with .Content -}}
         <div>
           {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor"> 🔗&#xFE0E;</a> ${3}` | safeHTML }}

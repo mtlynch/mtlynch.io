@@ -114,7 +114,7 @@ I still see a great deal of potential in YouTube. Tons of YouTubers teach server
 
 ## Finding time for deep work
 
-For the past few months, I've felt extremely pressed for time. There are tons of things on my to-do list, and I often check off the [urgent things rather than the important things](/book-reports/7-habits-of-highly-effective-people/#time-management-matrix). I find myself spending the majority of my time responding to emails, focused on short-term tasks rather than [deep work](/book-reports/deep-work/#key-takeaways) that serves my long-term goals.
+For the past few months, I've felt extremely pressed for time. There are tons of things on my to-do list, and I often check off the [urgent things rather than the important things](/notes/book-reports/7-habits-of-highly-effective-people/#time-management-matrix). I find myself spending the majority of my time responding to emails, focused on short-term tasks rather than [deep work](/notes/book-reports/deep-work/#key-takeaways) that serves my long-term goals.
 
 On the other hand, I may be managing time optimally. I've been focusing on delegating more of my work, but hiring new people means I have less time for deep work in the short-term. I'm spending more time communicating with people and helping new hires get up to speed.
 

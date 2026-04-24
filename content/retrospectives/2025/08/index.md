@@ -67,7 +67,7 @@ As I reach out to readers and meet them on video calls, there's one piece of fee
 
 I hear this from people who purchased a few days ago and from people who had access to the book for months.
 
-My biggest fear is that the book is a "vitamin rather than a painkiller." People see good writing as something that's [important but not urgent](/book-reports/7-habits-of-highly-effective-people/#time-management-matrix). They might read a book called, "How to Nail Your Next Coding Interview," ahead of an upcoming interview, but it's easy to defer indefinitely on improving writing.
+My biggest fear is that the book is a "vitamin rather than a painkiller." People see good writing as something that's [important but not urgent](/notes/book-reports/7-habits-of-highly-effective-people/#time-management-matrix). They might read a book called, "How to Nail Your Next Coding Interview," ahead of an upcoming interview, but it's easy to defer indefinitely on improving writing.
 
 Part of my motivation in [pre-selling the book](/my-6k-advance/) before writing it was to see if there were enough people willing to pay for the book. There were, and people continue to buy it, but I'm worried that might not be as predictive a signal as I thought.
 

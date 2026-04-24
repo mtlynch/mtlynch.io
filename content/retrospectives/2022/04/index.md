@@ -72,7 +72,7 @@ I've also been making an effort to let TinyPilot's local staff take on more resp
 
 Normally, I would work with our case designer to find a replacement and try building with the new screw, but I caught myself before emailing him. This was a good opportunity for TinyPilot's local staff to take on more responsibility, so I asked them to take the lead.
 
-I noticed a significant difference in my time management throughout March. For the previous six months, I've ended most days feeling like I didn't finish everything and had to postpone [important but non-urgent tasks](/book-reports/7-habits-of-highly-effective-people/#time-management-matrix). In March, I often completed my urgent tasks by mid-afternoon and had free time to invest in marketing, automation, and delegation.
+I noticed a significant difference in my time management throughout March. For the previous six months, I've ended most days feeling like I didn't finish everything and had to postpone [important but non-urgent tasks](/notes/book-reports/7-habits-of-highly-effective-people/#time-management-matrix). In March, I often completed my urgent tasks by mid-afternoon and had free time to invest in marketing, automation, and delegation.
 
 I'm resisting the temptation to spend this newly available time on _adding_ things like hiring another person or finding new features for TinyPilot. I have to remind myself that those things are always more complicated than they first seem.
 

@@ -178,7 +178,7 @@ In addition to eliminating a time-consuming task from my workload, delegating QA
 
 ## Can I afford to keep writing?
 
-With the added time I gained from delegation, I'm doing more [important but non-urgent](/book-reports/7-habits-of-highly-effective-people/#time-management-matrix) things.
+With the added time I gained from delegation, I'm doing more [important but non-urgent](/notes/book-reports/7-habits-of-highly-effective-people/#time-management-matrix) things.
 
 - I'm spending more time reaching out to customers proactively rather than talking only to customers with support issues.
 - I'm exercising more regularly instead of cutting it out of my day because I feel too busy.

@@ -66,7 +66,7 @@ I'll give the ads another month. If performance doesn't improve, I'll book some 
 
 ## Where does my time go?
 
-At a recent indie founder meetup, I mentioned that my biggest challenge was finding time for [tasks that are important but not urgent](/book-reports/7-habits-of-highly-effective-people/#habit-3-put-first-things-first).
+At a recent indie founder meetup, I mentioned that my biggest challenge was finding time for [tasks that are important but not urgent](/notes/book-reports/7-habits-of-highly-effective-people/#habit-3-put-first-things-first).
 
 The other meetup attendees were surprised. Why couldn't I just automate or delegate everything? What required my attention specifically?
 

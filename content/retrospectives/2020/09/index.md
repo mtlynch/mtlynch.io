@@ -226,7 +226,7 @@ I'm not quite sold yet. One of my biggest issues with RapidAPI is that their ana
 - Set up eBay listings to sell TinyPilot internationally.
   - I'm in the process of figuring out how to do it all through Shopify, but eBay is an easy interim solution.
 - Published a new blog post: ["How I Collected a Debt from an Unscrupulous Merchant"](https://mtlynch.io/collect-debt/)
-  - And two new [book reports](/book-reports).
+  - And two new [book reports](/notes/book-reports/).
 
 ### Lessons learned
 

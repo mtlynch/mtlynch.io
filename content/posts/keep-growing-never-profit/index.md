@@ -87,7 +87,7 @@ Without explicit goals, the feature-happy version of me would have run rampant, 
 
 It was easy for me to rationalize the many daily visits I paid to my traffic and revenue dashboards. "Of _course_ I have to check my metrics. They're critical to understanding the health of my site." Many founders fall into the same trap.
 
-Checking metrics is ["shallow work"](/book-reports/deep-work/#key-takeaways): it doesn't require deep focus or critical thinking, but it _feels_ productive. It is, of course, useful for a site owner to know their traffic and revenue numbers, but not at the frequency that I was checking.
+Checking metrics is ["shallow work"](/notes/book-reports/deep-work/#key-takeaways): it doesn't require deep focus or critical thinking, but it _feels_ productive. It is, of course, useful for a site owner to know their traffic and revenue numbers, but not at the frequency that I was checking.
 
 {{<img src="google-analytics.jpg" alt="Google Analytics screenshot" caption="Is It Keto page views - March 2018 through April 2019" max-width="800px">}}
 
