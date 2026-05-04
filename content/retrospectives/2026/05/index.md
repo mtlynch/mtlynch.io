@@ -33,6 +33,8 @@ TODO
 
 {{<project-metrics project="refactoring_english">}}
 
+I shifted effort from marketing to [bug bounty hunting](http://squish:1313/retrospectives/2026/05/#bounty-hunting-for-fun-and-negative-profit), but going forward, I'm back to focusing on the book.
+
 ## Topic 1
 
 ## Bounty hunting for fun and negative profit
@@ -47,15 +49,23 @@ I was _almost_ spotted this trend early, but I got it slightly wrong. Back in Ja
 
 It turns out that what I was doing was way more work than necessary. It turns out that instead of asking AI to create a fuzz testing tool and evaluate the output, you can basically just ask AI, ["Hey, where are the vulnerabilities in this codebase?"](/claude-code-found-linux-vulnerability/#how-claude-code-found-the-bug)
 
-After I saw how good AI was at directly auditing source code, I switched from source auditing to fuzzing and found more bugs. I've now reported 10-20 bugs to five different bug bounty programs, and I have dozens more that I haven't reported yet. The problem is that I think everyone had the same idea, so all the bugs are sitting in a queue waiting for the vendor to investigate.
+After I saw how good AI was at directly auditing source code, I switched from source auditing to fuzzing and found more bugs. I've now reported 10-20 bugs to five different bug bounty programs, and I have dozens more that I haven't reported yet. Only one program confirmed that a bug I reported three weeks ago.
+
+I think everyone had the same idea, so all the bugs are sitting in a queue waiting for the vendor to investigate.
+
+It's fun to use AI to find security vulnerabilities, but it's also a time suck. I so easily get sucked in when an agent is running because it's exciting to see what it finds, so I keep wanting to check in or micromanage the agent. I've spent entire workdays just playing with AI security research even though there's no guarantee it will pay anything because there are potentially 100 people all using the same tools on the same targets generating the same reports.
+
+So, I've made $0 but I've spent about $350 on cloud services from renting bare metal machines to do fuzzing and compilation of some larger projects, so I've earned -$350 so far. I guess I've also spent $100/month on an Anthropic subscription, but I would have had that anyway.
+
+If you're interested in learning about using AI to find security issues, I'm considering a small cohort-based course. See [below](#requests-for-help).
+
+---
 
 Back in January, I had a hypothesis that AI tools would be disproportionately valuable for software security. Cybersecurity research involves a mix of mechanical, boring work and highly creative work, and AI seemed like it would do well at the boring parts.
 
 I started using AI to write fuzz test automation for the VLC media player. Within a week, I found a critical vulnerability. I spent several hours writing a proof of concept and a clear bug report for the maintainers. I've spent several more hours coordinating with them on rolling out a fix, as the problem affects several other open-source projects.
 
 It was exciting to find such an exciting bug in VLC, but then it quickly became clear why the bug is there. The cost of finding bugs is high, and there's no reward other than bragging rights. VLC has no bug bounty program, and when the European Commission briefly funded one on their behalf, [the VLC maintainers were annoyed](https://www.zdnet.com/article/bug-bounty-drives-vlcs-biggest-patch-but-attracts-a-holes-scriptkiddies-scammers/).
-
-Next, I focused on Firefox
 
 For example, with Meta, I'm confident I could find many more bugs with the same techniques, but I don't want to waste my time if they're ultimately going to dismiss them all and pay me nothing. But if I wait, maybe someone else swoops in and finds issues I could have found, and Facebook pays them $100k per finding. Or Meta just uses the same techniques themselves and finds the rest internally.
 
@@ -90,3 +100,5 @@ I'm thinking about making a course to teach the stuff I've learned about using A
 I'm not an AI security expert, and I haven't even gotten paid for any of my security findings, but I have successfully found critical issues in open-source projects using a process anyone can follow.
 
 If you're interested, sign up for my interest list. If there's enough interest, I'll put something together.
+
+- [Early interest list - Using AI to find security vulnerabilities](https://tally.so/r/jaGvQR)
