@@ -57,30 +57,6 @@ It was exciting to find such an exciting bug in VLC, but then it quickly became 
 
 Next, I focused on Firefox
 
-Then, Anthropic and Mozilla publicly disclosed that they were working together directly to . And then Carlini of
-
-- VLC
-  - I reported a critical issue in January. The maintainers said that they plan to fix it in VLC's 3.0.24 release.
-- Meta (Facebook)
-  - I reported eight issues in early April. They dismissed one as out of scope, but the rest are in some stage of triage or investigation.
-- SaaS app
-  - I reported 15 issues, including two critical issues.
-  - They were quick to investigate the first and confirm it qualifies for a bounty, but they haven't said how much. Since the first report, they've gotten slower, though the CTO responded to me directly to say they're investigating and taking it seriously.
-  - Sadly, I reported the first critical issue on a Monday, and they said they'd found it internally the preceding Friday.
-- Firedancer (cryptocurrency project)
-  - This was neat to look at because they have a unique architecture I've never seen before. The app is made up of loosely-coupled components that live in sandboxes that drop all but the component's necessary OS-level permissions.
-  - I only found a handful of medium- and low-severity issues, but their reporting process felt sketchy in that it required uploading a photo of my passport, and they had what felt like [intentionally confusing terms](https://immunefi.com/bug-bounty/firedancer/scope/) about what bugs they'd pay for, so I didn't bother reporting.
-- Cryptocurrency project A
-  - I reported one issue that I think is Critical/High.
-  - They triaged it and accepted it for further investigation but said they're behind on reports, so it will be several weeks before they can investigate.
-- Cryptocurrency project B
-  - I reported one issue, and they claimed they were aware of it, so they aren't paying anything.
-  - I found a few more medium-severity issues, but their bounty reporting process was so bad that I'm not bothering to report any more.
-- Google
-  - I tried to find something a vulnerability in Tensorflow but came up empty.
-
-The recurring theme is that vendors process bug bounty reports slowly. I'm not sure how to proceed because with Meta or the SaaS app.
-
 For example, with Meta, I'm confident I could find many more bugs with the same techniques, but I don't want to waste my time if they're ultimately going to dismiss them all and pay me nothing. But if I wait, maybe someone else swoops in and finds issues I could have found, and Facebook pays them $100k per finding. Or Meta just uses the same techniques themselves and finds the rest internally.
 
 With the SaaS app, I have about 40 more medium-severity findings I haven't reported to them yet, as it's not worth the time to report. That could change a lot depending on what they're willing to pay.
