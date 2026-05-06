@@ -37,19 +37,51 @@ I shifted effort from marketing to [bug bounty hunting](http://squish:1313/retro
 
 ## Topic 1
 
-## Bounty hunting for fun and negative profit
+## Should I keep dabbling in security research?
 
-At this point, it's clear that AI is extremely useful at finding security issues.
+For the past three months, I've been spending a lot of time using AI to find security vulnerabilities. I haven't talked about it publicly because I didn't want to attract competition to the limited supply of bug bounty programs. I wasn't sure if other people realized just how effective AI is at security research. At this point, I think [the cat is out of the bag](https://red.anthropic.com/2026/mythos-preview/).
 
-Firefox is a good example. Throughout 2025, there were 10-20 vulnerabilities discovered each month in Firefox from Mozilla employees or external researchers. In February 2026, Anthropic used Claude Opus to [find 22 vulnerabilities](https://www.anthropic.com/news/mozilla-firefox-security). And that was on top of the 30 other issues discovered that month, likely by other researchers using AI tools.
+If you haven't been following along with AI and security research, Firefox is an astonishing case study. Throughout 2025 (before AI was effective at security research) Mozilla and external researchers collectively found about 10-20 security vulnerabilities in Firefox each month.
 
-Two months later, Anthropic used Claude Mythos to find a whopping [271 more vulnerabilities](https://blog.mozilla.org/en/privacy-security/ai-security-zero-day-vulnerabilities/) in Firefox.
+In February 2026, Anthropic used Claude Opus to [find 22 vulnerabilities](https://www.anthropic.com/news/mozilla-firefox-security). In other words, Anthropic alone found more than everyone combined in any month of 2025. Two months later, Anthropic used Claude Mythos to find a whopping [271 more vulnerabilities](https://blog.mozilla.org/en/privacy-security/ai-security-zero-day-vulnerabilities/) in Firefox.
 
-I was _almost_ spotted this trend early, but I got it slightly wrong. Back in January, I noticed that AI could revolutionize cybersecurity research, but I thought the value was in creating specialized security tools. I was using AI to write fuzz testing tools and found a lot of vulnerabilities.
+I sort of spotted this early, but I got it slightly wrong. Back in January, I thought that AI might be able to revolutionize cybersecurity research, but I thought the value was in creating security tools. I was using AI to write fuzz testing tools and was amazed at how much faster I could perform fuzz testing than when I [did it by hand](/nix-fuzz-testing-1/).
 
-It turns out that what I was doing was way more work than necessary. It turns out that instead of asking AI to create a fuzz testing tool and evaluate the output, you can basically just ask AI, ["Hey, where are the vulnerabilities in this codebase?"](/claude-code-found-linux-vulnerability/#how-claude-code-found-the-bug)
+Despite the fact that I could fuzz code at 10-20x the speed I could previously, it turned out that my strategy was too complicated. Instead of asking AI to create a fuzz testing tool and evaluate its output, you can just ask AI, ["Hey, where are the vulnerabilities in this codebase?"](/claude-code-found-linux-vulnerability/#how-claude-code-found-the-bug)
 
-After I saw how good AI was at directly auditing source code, I switched from source auditing to fuzzing and found more bugs. I've now reported 10-20 bugs to five different bug bounty programs, and I have dozens more that I haven't reported yet. Only one program confirmed that a bug I reported three weeks ago.
+After I saw how good AI was at directly auditing source code, I stopped fuzzing and focused on source auditing. I've now reported 10-20 bugs to five different bug bounty programs and earned about $10k in bug bounties.
+
+## The bugs have gotten easier to find, but the bounty programs have gotten harder
+
+The problem is that while I've become good at using AI to find security vulnerabilities, I've not been as successful at finding companies willing to pay me to report them.
+
+Of the five programs I've submitted to in the last month, only two have reviewed my findings beyond a first-stage triage. And even among those, I'm sure there are dozens to hundreds of people doing the same thing I am, which reduces my chances of being first to report and qualifying for a payment.
+
+There are bug bounty programs with good reputations and attractive payouts, but that means lots of other people are submitting, and some of those programs are backed up for weeks triaging the flood of bugs. I'd heard that cryptocurrency projects had high payouts, but when I looked into it, a lot of them seem to have pretty sketchy rules, and it's easy for them to say, "No, we knew about that already." The check against that is that you say, "Okay, then I'll use the other one I found to exploit your cryptocurrency for profit," but you have to be a different kind of person than I am for that to work.
+
+## Maybe this is what I should be teaching?
+
+I'm considering a course. I'm not going to spend a year writing a book about it because by the time I'm done, the landscape will have
+
+---
+
+So, given that I made more in two weeks finding bugs that qualified for the one program that paid than I did with my book in 2025, I'm torn on how to allocate my time.
+
+Do I ignore the security stuff as a distraction and focus on the book. Nobody but me can write my book.
+
+But what if I can create a repeatable process that yields $10k/week from bug bounties?
+
+Because the shelf life on the security research is pretty short. Mythos already exists and can probably effortlessly do everything I've learned. Mythos is still not available to the general public, but I expect it to either be release publicly or someone else will create something equivalent in the next 12 months.
+
+$10k for a couple weeks of part-time work sounds good, but I also spent two months focused on fuzzing with nothing to show for my efforts except for some bugs that were too minor to qualify for any bug bounty program.
+
+The problem is that moonlighting as a security researcher definitely splits focus from my book, which I'm eager to complete.
+
+So far, I've earned about $10k in bug bounties. The problem is that thousands of people are now flooding these bug bounty programs with AI-generated submissions, so of the five vendors I've submitted reports to, only one has actually responded, and it took them almost three weeks to process my reports.
+
+had the same idea that I did, so all the bug bounty programs that pay researchers for their findings are overwhelmed with an avalanche of reports.
+
+and I have dozens more that I haven't reported yet. Only one program confirmed that a bug I reported three weeks ago.
 
 I think everyone had the same idea, so all the bugs are sitting in a queue waiting for the vendor to investigate.
 
@@ -91,6 +123,7 @@ For now, I'm putting the bug bounty hunting on hold and focusing on my regular w
 
 ### Goals for next month
 
+- Get _Refactoring English_ to "content complete."
 - Create a tool that allows _Refactoring English_ readers to give feedback as they read the book.
 
 ### Requests for help
