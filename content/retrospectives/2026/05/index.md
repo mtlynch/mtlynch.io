@@ -78,7 +78,7 @@ Here are my results so far:
   - When I started the bounty reporting process, I realized that they require researchers to upload their passport to a service I've never heard of, so I stopped there.
   - Their program rules are also sketchy in that they seem to contradict the rules of the bounty platform they're using.
 
-So, the $10k from vendor only took two weeks of part-time work. That would be a great return on investment had I not also spent 6+ weeks on bounty programs that paid nothing. It would also be great if I could find more vendors like vendor 4, but I don't know how to do that.
+So, the $10k from vendor 4 only took two weeks of part-time work. That would be a great return on investment had I not also spent 6+ weeks on bounty programs that paid nothing. It would also be great if I could find more vendors like vendor 4, but I don't know how to do that.
 
 ## Should I focus on the book or bug bounties?
 
@@ -87,7 +87,7 @@ I'm now torn on how to allocate my time between the book and bug bounties. Here'
 - Focus on my book
   - **Pro**: The book is nearly done, so if I focus on finishing, it will be complete and more valuable than a partially-finished book.
   - **Pro**: The book is something only I can create, whereas lots of people can participate in bug bounties.
-  - **Pro**: I'm already late on delivering the book, so finishing it makes me feel less guilty about the making readers wait.
+  - **Pro**: I'm already late on delivering the book, so finishing it makes me feel less guilty about making readers wait.
   - **Pro**: I can talk publicly about my book, and not only does it help me think out loud, it helps new readers discover the book.
   - **Con**: The expected value of the book feels lower than bounty hunting, at least in the short-term. In theory, I could find a $100k bug next week, whereas it's unlikely I could do anything that would drive $100k in book sales by next week.
 - Focus on bug bounties
@@ -123,13 +123,13 @@ A few weeks ago, I saw [a question on reddit](https://www.reddit.com/r/DataHoard
 
 Timelinize lets you import data you exported from Facebook, Google, Twitter, and similar services, and the app creates a unified timeline to explore your data. The creator is [Matt Holt](https://matt.life/), who also created [Caddy](https://caddyserver.com/), the popular reverse web proxy.
 
-Timelinize still feels pretty alpha stage, and I had to add a bunch of local patches to make it usable, but I like where it's going. I plan to upstream [more of my patches](https://github.com/timelinize/timelinize/commits?author=mtlynch) as I use it more.
+Timelinize still feels pretty alpha-stage, and I had to add a bunch of local patches to make it usable, but I like where it's going. I plan to upstream [more of my patches](https://github.com/timelinize/timelinize/commits?author=mtlynch) as I use it more.
 
 Whenever I find a local, offline solution for something that previously required a cloud service, it feels oddly refreshing. When I switched from streaming services to [Jellyfin](https://jellyfin.org/), I was surprised at how different it felt to just watch what I'm watching without a company watching me back for ways to squeeze money from me.
 
 The weird thing was, when I watched Netflix or HBO, I never consciously thought, "Oh no! I'm being monitored." But when I started exclusively watching TV and movies locally, it was as if I spent so much time in an office cubicle that I forgot that there's an outside at all. Then, I went outside and enjoyed fresh air and sunshine. Metaphorically, I mean. Literally, I was still sitting inside watching TV on my computer. But it was so much faster and freer than before!
 
-I had a similar "breathing fresh air" experience with Timelinize. Timelinize's interface is user-oriented, which makes me realize just how user-hostile the interface is on cloud platforms. Facebook and Twitter don't want you to just scroll through your old messages because that doesn't make money for them. To discourage you from reading your old messages, they make the experience subtly uncomfortable: they squeeze the view conversation into a tiny box, they force you to stop and wait for new messages to load every few seconds, and they constantly show you distracting notifications to lead you back to the new content they can monetize.
+I had a similar "breathing fresh air" experience with Timelinize. Timelinize's interface is user-oriented, which makes me realize just how user-hostile the interface is on cloud platforms. Facebook and Twitter don't want you to just scroll through your old messages because that doesn't make money for them. To discourage you from reading your old messages, they make the experience subtly uncomfortable: they squeeze the conversation into a tiny box, they force you to stop and wait for new messages to load every few seconds, and they constantly show you distracting notifications to lead you back to the new content they can monetize.
 
 With Timelinize, the reading experience is designed to let me just read my archive. There's nothing trying to steal my focus and check out what's new because Timelinize shows a historical snapshot. I find it fun to jump to a date 10 years ago and read what my conversations were at the time.
 
@@ -144,7 +144,7 @@ Last week, the two researchers who discovered React2Shell wrote about what happe
 - ["The React2Shell Story"](https://lachlan.nz/blog/the-react2shell-story) by Lachlan Davidson, the lead researcher on finding the vulnerability.
 - ["The React2Shell Story and What Happened Next.js"](https://sylvie.fyi/posts/react2shell/) by Sylvie Mayer, who assisted Lachlan in exploring the vulnerability, notifying vendors, and identifying bug bounty programs that would pay for the vulnerability.
 
-Lachlan's post got more attention, but I found Sylvie's more interesting, expecially given that she was a 20-year-old college student at the time.
+Lachlan's post got more attention, but I found Sylvie's more interesting, especially given that she was a 20-year-old college student at the time.
 
 Lachlan and Sylvie both realized they'd found a "nuclear bomb" that affected hundreds or thousands of major websites. After reporting the bug to Meta (who maintains React) and Vercel (who maintains Next.js), they wanted to identify other bug bounty programs that would pay them for their work on this massive bug.
 
