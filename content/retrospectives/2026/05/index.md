@@ -2,7 +2,7 @@
 title: "Refactoring English: Month 17"
 date: "2026-05-14"
 description: Should I focus on my book or chase bug bounties?
-banner_image: og-cover.webp
+banner_image: og-cover-1.webp
 ---
 
 {{<notice type="info">}}
