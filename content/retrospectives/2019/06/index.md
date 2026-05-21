@@ -112,7 +112,7 @@ Based on these conversations, I made [some sketches](https://www.dropbox.com/sh/
 {{<img src="email-diff.png" alt="Wireframe of diff view" has-border="false">}}
 {{</gallery>}}
 
-This was my first attempt at applying the "market-first approach" that Rob Walling describes in [_Start Small, Stay Small_](/book-reports/start-small-stay-small/). Instead of creating a product and convincing people to use it, you find a market with an unmet need, then build the product that satisfies their need.
+This was my first attempt at applying the "market-first approach" that Rob Walling describes in [_Start Small, Stay Small_](/notes/book-reports/start-small-stay-small/). Instead of creating a product and convincing people to use it, you find a market with an unmet need, then build the product that satisfies their need.
 
 I plan to pursue this idea further this month. The reasons I like it are:
 
@@ -136,7 +136,7 @@ If you know an email copywriter who might be interested, please ask them to [ema
 ### Lessons learned
 
 - It's easier to find customers and ask them what they need than to find customers who need your specific product.
-  - Credit: This is the "market-first approach," described in [_Start Small, Stay Small_](/book-reports/start-small-stay-small/)
+  - Credit: This is the "market-first approach," described in [_Start Small, Stay Small_](/notes/book-reports/start-small-stay-small/)
 - Copywriters are more open to cold outreach than quarry owners are.
   - Too small a sample size to generalize much, but I suspect that people in tech-focused jobs are more open to new technology offerings.
 
