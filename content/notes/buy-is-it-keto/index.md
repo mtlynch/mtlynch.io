@@ -83,7 +83,7 @@ I currently host Is It Keto on Netlify.
 - Transfer of isitketo.org domain
 - Transfer of admin of Google Analytics for isitketo.org domain
 - Transfer of admin of Google Search Console for isitketo.org domain
-- Is It Keto's [Twitter account](https://x.com/HeyIsItKeto)
+- Is It Keto's [Twitter account](https://twitter.com/HeyIsItKeto)
 - Is It Keto's [Pinterest account](https://www.pinterest.com/isitketo/)
 - Is It Keto web app git repository
 - [Keto Recipe Search](https://recipe-search.isitketo.org) git repositories

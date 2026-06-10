@@ -139,7 +139,7 @@ The sleep disruptions themselves are probably the smaller part of the problem. T
 
 ### Procrastinating paid editing work
 
-I've been doing editing work as part of [the services I offer](https://refactoringenglish.com/services/blog-editing/) for _Refactoring English_.
+I've been doing editing work as part of the services I offer for _Refactoring English_.
 
 I like editing other people's blog posts, but I find it mentally taxing. It's hard to edit my own writing, so it's even harder for me to edit for other people. With my writing, I can edit by feel without having to explain why I'm making the edit. When I give editing notes to other bloggers, I have to articulate what weaknesses I see in their draft and why I think my suggestion is better.
 

@@ -71,12 +71,12 @@ In practice, I've had a hard time connecting with readers. I've sent short surve
 
 I started doing live video sessions, and I've tried different things in those sessions including lectures, writing workshops, office hours, and book club-style discussions of popular software blog posts. The live sessions have been fun and the attendees have given me excellent feedback, but only a couple of readers attend each call, so it feels like I'm still only reaching a tiny sliver of readers.
 
-The other successful source of feedback has been clients who purchase [1:1 editing feedback](https://refactoringenglish.com/consulting/). I've only had three paying clients, but working with them helps me see what writing issues people in my target audience want help with.
+The other successful source of feedback has been clients who purchase 1:1 editing feedback. I've only had three paying clients, but working with them helps me see what writing issues people in my target audience want help with.
 
 Based on this, here are my ideas for talking more with readers:
 
 - Reach out to readers individually after they purchase to ask about what they want to learn from the book and whether it meets their expectations so far.
-- Polish [my writing consulting page](https://refactoringenglish.com/consulting/) a bit to make it more appealing.
+- Polish my writing consulting page a bit to make it more appealing.
 - Offer a discounted consulting option for people who are motivated to learn but can't afford the price.
 - Reach out to users on Hacker News who keep submitting articles but fail to gain traction to see if they're interested in hiring me for feedback.
 - Offer a "book me for your team" option so I can present a writing topic to someone's work team and answer their questions.

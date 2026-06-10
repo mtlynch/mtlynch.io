@@ -66,7 +66,7 @@ I also can't _just_ write a book. I also need to find people to read the book, s
 - 12 [monthly retrospectives](/retrospectives/)
 - 150 pages of my book, including seven chapters I adapted into [free excerpts](https://refactoringenglish.com/chapters/)
 
-I also started editing blog posts for other developers. That helped me discover other developers' writing pain points and what advice they found effective. I worked with seven clients, including [Tyler Cipriani](https://tylercipriani.com/) on [a post](https://refactoringenglish.com/services/blog-editing/sample-future-of-git/) that reached [#1 on Hacker News](https://news.ycombinator.com/item?id=44916783).
+I also started editing blog posts for other developers. That helped me discover other developers' writing pain points and what advice they found effective. I worked with seven clients, including [Tyler Cipriani](https://tylercipriani.com/) on a post that reached [#1 on Hacker News](https://news.ycombinator.com/item?id=44916783).
 
 And then there's just a bunch of administrative tasks around writing and selling a book like [setting up mailing lists](/retrospectives/2025/10/#the-hassle-of-sending-post-purchase-emails-with-stripe), [dealing with Stripe](/retrospectives/2026/01/#adding-regional-pricing-for-my-book), [debugging PDF/epub rendering issues](/retrospectives/2025/05/#asciidoctor-so-far-so-good), etc.
 
@@ -152,7 +152,7 @@ After several years of [just "enjoying" life](/bootstrapped-founder-year-6/#do-i
 
 I originally thought I'd finish the book in six months, but I'm [13 months in](/retrospectives/2026/01/) and still have about 20% left.
 
-From reading about other developers' experience writing books, underestimating time seems to be the norm. Teiva Harsanyi thought he'd be done in eight months, but it actually took him [almost two years](https://www.thecoder.cafe/p/100-go-mistakes). Austin Henley started writing a book in 2023 and it dragged on for about two years before he got tired of working with his publisher and [canceled his book deal](https://austinhenley.com/blog/canceledbookdeal.html).
+From reading about other developers' experience writing books, underestimating time seems to be the norm. Teiva Harsanyi thought he'd be done in eight months, but it actually took him [almost two years](https://read.thecoder.cafe/p/100-go-mistakes). Austin Henley started writing a book in 2023 and it dragged on for about two years before he got tired of working with his publisher and [canceled his book deal](https://austinhenley.com/blog/canceledbookdeal.html).
 
 ### I enjoy my work when it feels aligned with me
 

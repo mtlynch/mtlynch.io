@@ -41,7 +41,7 @@ So, I want to be upfront that I had advantages in my pre-sale:
   - During my pre-sale, an excerpt from my book reached [the #10 spot for the day on Hacker News](https://news.ycombinator.com/item?id=43503872).
 - I have 2.1k subscribers on my blog's mailing list and 1.5k subscribers on the book's mailing list.
   - There's surprisingly little overlap between the two, so it's about 3.5k unique subscribers.
-- I have 9.2k followers on [Twitter](https://x.com/deliberatecoder) and 600 followers on [Bluesky](https://bsky.app/profile/mtlynch.io).
+- I have 9.2k followers on [Twitter](https://twitter.com/deliberatecoder) and 600 followers on [Bluesky](https://bsky.app/profile/mtlynch.io).
 
 ## How does crowdfunding compare to an advance from a traditional publisher?
 
@@ -53,7 +53,7 @@ Most publishers don't disclose the deals they offer to first-time authors, so it
 - $5k advance, 12% royalties on print sales, 25% royalties on ebook sales
 - $8k advance, 10% royalties on print sales, 25% royalties on ebook sales
 
-Manning doesn't publish their rates, but Teiva Harsanyi [recently shared](https://www.thecoder.cafe/p/100-go-mistakes) his experience publishing with Manning as a first-time author. They paid him $2k upfront, $2k after delivering the first 1/3rd, and then 10% of sales. This earned him $47k over four years (11,452 copies sold).
+Manning doesn't publish their rates, but Teiva Harsanyi [recently shared](https://read.thecoder.cafe/p/100-go-mistakes) his experience publishing with Manning as a first-time author. They paid him $2k upfront, $2k after delivering the first 1/3rd, and then 10% of sales. This earned him $47k over four years (11,452 copies sold).
 
 By self-publishing, I get a better deal on my advance, I can continue selling pre-orders as I write the book, and I still have the option to publish a future edition with a traditional publisher.
 
@@ -121,7 +121,7 @@ I wrote [one new blog post](/no-longer-my-favorite-git-commit/) during the pre-s
 
 ### Sharing progress updates on Twitter
 
-According to Kickstarter's metrics, 4% of orders came from Twitter. I didn't invest a ton there &mdash; I just [created a thread announcing the pre-sale](https://x.com/deliberatecoder/status/1899106915126239720) and posted occasional updates on progress toward my goal amount.
+According to Kickstarter's metrics, 4% of orders came from Twitter. I didn't invest a ton there &mdash; I just [created a thread announcing the pre-sale](https://twitter.com/deliberatecoder/status/1899106915126239720) and posted occasional updates on progress toward my goal amount.
 
 {{<img src="twitter-post.webp" max-width="600px" caption="Sharing progress updates Twitter accounted for about 4% of sales" has-border="false">}}
 
