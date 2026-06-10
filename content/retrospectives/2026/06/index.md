@@ -1,7 +1,8 @@
 ---
 title: "Refactoring English: Month 18"
-date: "2026-06-09"
+date: "2026-06-10"
 description: The book is done! Well, sort of.
+banner_image: og-cover-1.webp
 ---
 
 {{<notice type="info">}}
