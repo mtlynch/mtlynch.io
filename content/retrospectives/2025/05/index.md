@@ -181,7 +181,3 @@ Vimeo's terms of service require binding arbitration, so if Vimeo does something
 - Publish two chapters of my book to pre-order readers.
 - Assign soft writing time limits to every chapter of my book.
 - Adapt [preview chapters](https://refactoringenglish.com/chapters/) of my book to Asciidoc.
-
-### Requests for help
-
-If you know any developers trying to improve their writing, especially bloggers, [send them my way](https://refactoringenglish.com/consulting/). I enjoy giving feedback to other developers, and working with real people helps me write my book.

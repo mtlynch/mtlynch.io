@@ -531,4 +531,4 @@ Read on below:
 
 ---
 
-_Thanks to [Antonio Morales](https://x.com/Nosoynadiemas) for creating the [Fuzzing101 tutorial series](https://github.com/antonio-morales/Fuzzing101) upon which this work is based._
+_Thanks to [Antonio Morales](https://twitter.com/Nosoynadiemas) for creating the [Fuzzing101 tutorial series](https://github.com/antonio-morales/Fuzzing101) upon which this work is based._

@@ -116,7 +116,7 @@ I've finished teaching all six sessions of my live version of the blogging cours
 
 ### Bringing in a guest speaker
 
-As I was preparing for the first lecture of the course, I saw Adam Gordon Bell [announce on Twitter](https://x.com/adamgordonbell/status/1805266602096574673) that his employer had laid him off. Adam is the host of [CoRecursive](https://corecursive.com/), one of my favorite software podcasts. He's also a blogger, and he was responsible for [the most popular blog posts](https://hn.algolia.com/?dateRange=all&page=0&prefix=true&query=earthly.dev&sort=byPopularity&type=story) at his former employer.
+As I was preparing for the first lecture of the course, I saw Adam Gordon Bell [announce on Twitter](https://twitter.com/adamgordonbell/status/1805266602096574673) that his employer had laid him off. Adam is the host of [CoRecursive](https://corecursive.com/), one of my favorite software podcasts. He's also a blogger, and he was responsible for [the most popular blog posts](https://hn.algolia.com/?dateRange=all&page=0&prefix=true&query=earthly.dev&sort=byPopularity&type=story) at his former employer.
 
 Adam had been part of the pilot group of students when I taught the same course in 2020. Seeing that his schedule had suddenly opened up, I asked if he'd like to return to the course as a special guest for a Q&A, and he graciously agreed to join the following week.
 

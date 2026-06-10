@@ -21,11 +21,11 @@ Base is supposed to appeal to developers who are new to the cryptocurrency world
 
 I started exploring Base, and I found that [it suffers from the same language barriers as most other cryptocurrency projects](/notes/im-still-confused-about-base/). I found the official documentation hard to follow, and it seemed to assume the reader had a deep understanding of the Ethereum blockchain.
 
-Jesse Pollak has responded to my feedback a [few](https://x.com/jessepollak/status/1823035258306277595) [times](https://x.com/jessepollak/status/1832504751038329300) to say it's helpful in understanding the non-crypto perspective, but then he continues doing exactly what he'd been doing before, so I lost interest in giving him feedback.
+Jesse Pollak has responded to my feedback a [few](https://twitter.com/jessepollak/status/1823035258306277595) [times](https://twitter.com/jessepollak/status/1832504751038329300) to say it's helpful in understanding the non-crypto perspective, but then he continues doing exactly what he'd been doing before, so I lost interest in giving him feedback.
 
 ## I'm summoned once again
 
-This week, [Steve Simkins](https://x.com/stevedylandev) [tagged me on Twitter](https://x.com/stevedylandev/status/1864392117281239077) to share an intro to Base that he'd made:
+This week, [Steve Simkins](https://twitter.com/stevedylandev) [tagged me on Twitter](https://twitter.com/stevedylandev/status/1864392117281239077) to share an intro to Base that he'd made:
 
 - [Hello Base](https://www.hellobase.dev/)
 
@@ -77,7 +77,7 @@ I'd love to see a Base intro that answers this question right off the bat:
 
 - What can I do on Base today that I can't do with any other technology?
 
-Jesse Pollak has given [examples of apps you can build on Base](https://x.com/jessepollak/status/1833661719711023421) that, to me, feel extremely uncompelling. It's not the easiest way to do authentication or to send payments, so we shouldn't pretend that it is.
+Jesse Pollak has given [examples of apps you can build on Base](https://twitter.com/jessepollak/status/1833661719711023421) that, to me, feel extremely uncompelling. It's not the easiest way to do authentication or to send payments, so we shouldn't pretend that it is.
 
 If I'm a web2 developer, why should I build on Base as opposed to any other tech stack available?
 
