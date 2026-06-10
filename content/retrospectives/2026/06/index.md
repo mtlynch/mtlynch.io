@@ -26,17 +26,17 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Get _Refactoring English_ to "content complete"
 
-- **Result**: I've completed all chapters
+- **Result**: I've completed all chapters.
 - **Grade**: A
 
 This has felt like it was a week away for six weeks, so I'm glad to finally have all the chapters done.
 
 ### Create a tool that allows _Refactoring English_ readers to give feedback as they read the book
 
-- **Result**: Tool is only about 40% complete.
+- **Result**: The tool is only about 40% complete.
 - **Grade**: C
 
-This seemed like it should basically be a 2-3 day project, but I realized it's more difficult than it seeemed, especially due to [the great blockade](#ai-projects-and-the-great-blockade)
+This seemed like it should basically be a 2-3-day project, but I realized it's more difficult than it seemed, especially due to [the great blockade](#ai-projects-and-the-great-blockade).
 
 ## _Refactoring English_ metrics
 
@@ -57,7 +57,7 @@ I submitted bugs to a few other programs to check if any are processing bug repo
 - KeePassXC - I submitted an RCE to Zero Day Initiative on May 18th, but I haven't heard any response.
   - For KeePassXC users, this isn't a zero-click attack or something that could compromise your database by just visiting a malicious website, so don't get too worried.
 - Cloudflare - I submitted a DoS / logic bypass via HackerOne on May 22nd. No response.
-- Proton - I submitted one low severity issue. They asked for a video proof of concept, so I made one on May 29th, and they said to wait to hear back.
+- Proton - I submitted one low-severity issue. They asked for a video proof of concept, so I made one on May 29th, and they said to wait to hear back.
 
 ## When is the book "done?"
 
@@ -91,8 +91,6 @@ I saw that Julia Evans [made her own reader feedback tool](https://jvns.ca/blog/
 
 {{<video src="feedback-app.mp4" max-width="700px" caption="I'm working on a web app to make it easier for readers to give me feedback about my book.">}}
 
-##
-
 ## AI projects and the great blockade
 
 Overall, I've found that AI makes me more productive when programming. There are certain tasks like resolving git merge conflicts, debugging unfamiliar code, or making simple tools where AI is a clear win.
@@ -117,7 +115,7 @@ Okay, easy fix: have the AI agent create the prototype in smaller pieces. Keep t
 
 That works fine until I get to a complex chunk, like authentication. AI creates a pull request that's 2-5k LOC of confusing code, and that becomes a huge wall. I can't think of a way to break down the feature any further, so I'm stuck with this massive PR, another great blockade.
 
-Not only does a 4k LOC change takes 20x as long to review as a 400 LOC change, but it also requires larger review windows. If I have a 20-minute block available, I can tackle the 400 LOC change, but if I have a 4k LOC change, I need 20 minutes just to build up context. To make meaningful progress on a 4k LOC change without wasting most of it on context friction, I need a 90-minute window, which is hard to come by especially for weekend projects.
+Not only does a 4k LOC change take 20x as long to review as a 400 LOC change, but it also requires larger review windows. If I have a 20-minute block available, I can tackle the 400 LOC change, but if I have a 4k LOC change, I need 20 minutes just to build up context. To make meaningful progress on a 4k LOC change without wasting most of it on context friction, I need a 90-minute window, which is hard to come by especially for weekend projects.
 
 ### Example: Implementing authentication for Little Moments
 
@@ -144,7 +142,7 @@ Now that I recognize how easy it is to generate huge, unmanageable PRs for compl
 - Published the last chapters of my book.
 - Created a partial prototype of a book feedback app.
 - Partially implemented authentication for Little Moments.
-- Cut two new releases of PicoShare
+- Cut two new releases of PicoShare.
 
 ### Lessons learned
 
