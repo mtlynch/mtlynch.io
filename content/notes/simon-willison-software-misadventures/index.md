@@ -161,7 +161,7 @@ _\[Editor's note: I also find it surprising that Simon uses the Substack domain 
 
 - In 2023, Simon published, a blog post called [Bing: “I will not harm you unless you harm me first”](https://simonwillison.net/2023/Feb/15/bing/).
   - The post aggregated surprising experiences people reported on social media with AI-powered Bing, which was later revealed to be an early preview of GPT-4.
-- Elon Musk [tweeted the article](https://x.com/elonmusk/status/1625936009841213440).
+- Elon Musk [tweeted the article](https://twitter.com/elonmusk/status/1625936009841213440).
 - It was one of the most popular articles of 2023 [on Hacker News](https://news.ycombinator.com/item?id=34804874).
 - The blog post received 1.4 million views.
 - The post led to Simon's [first TV interview](https://simonwillison.net/2023/Feb/19/live-tv/) by a news station in Chicago.

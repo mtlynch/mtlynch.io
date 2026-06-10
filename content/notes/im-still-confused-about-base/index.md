@@ -27,7 +27,7 @@ I've kept checking the Base website every few months, and I've interacted with J
 
 I wrote up some notes this week about [what I learned from watching Noah Bragg's livestream](/notes/noah-bragg-stokefire-1/) about build a new game on top of Base.
 
-My write-up [caught Jesse Pollak's attention](https://x.com/jessepollak/status/1832226332639686680), and he asked again where the disconnect is for me in the Base documentation, so I recorded a short video to explain what obstacles I see in learning about Base as a new developer:
+My write-up [caught Jesse Pollak's attention](https://twitter.com/jessepollak/status/1832226332639686680), and he asked again where the disconnect is for me in the Base documentation, so I recorded a short video to explain what obstacles I see in learning about Base as a new developer:
 
 <div style="position:relative;padding-top:56.25%;"><iframe src="https://iframe.mediadelivery.net/embed/304035/49e70f23-8074-404e-8adb-440a922996f6?autoplay=false&loop=false&muted=false&preload=true&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe></div>
 

@@ -176,7 +176,7 @@ I haven't published the video yet because I just sent a new chapter to the maili
 
 Sometimes, a plan just comes together better than I even hoped.
 
-Giving feedback to real writers helps me write my book, so I've been doing [freelance editing](https://refactoringenglish.com/services/blog-editing/) for other indie dev bloggers. On the page explaining my editing services, I wanted to include a sample of my editing work, but I didn't want to ask one of my paying clients to use work they already paid for as my own marketing.
+Giving feedback to real writers helps me write my book, so I've been doing freelance editing for other indie dev bloggers. On the page explaining my editing services, I wanted to include a sample of my editing work, but I didn't want to ask one of my paying clients to use work they already paid for as my own marketing.
 
 So, my plan was to find someone who would let me edit their post for free in exchange for publishing the notes and them crediting me as the editor.
 
@@ -184,7 +184,7 @@ My stretch goal was that the article would gain traction in places where potenti
 
 It also looks good to potential clients if I can point to a past client and say, "Look, this person hired me, and their article succeeded in the places where you want to succeed."
 
-A few months ago, Tyler Cipriani hired me for [a high-level review](https://refactoringenglish.com/services/blog-review/) of his blog. He seemed happy with the results, so I pitched him my free editing idea, and he agreed.
+A few months ago, Tyler Cipriani hired me for a high-level review of his blog. He seemed happy with the results, so I pitched him my free editing idea, and he agreed.
 
 I worked with Tyler on a few rounds of feedback for his article, ["The future of large files in Git is Git."](https://tylercipriani.com/blog/2025/08/15/git-lfs/) We enjoyed working together, and it gave me good ideas for the book.
 
@@ -209,10 +209,6 @@ To convince Tyler that the reader knows less about Git LFS than his article assu
 Tyler said that this list was the "ah-ha" moment for him. He had resisted the feedback before because he felt confident that his readers would know about Git LFS. Seeing my list made him realize that even if his readers were superficially aware of Git LFS and what it's for, they might not know how it works.
 
 The neat thing about Tyler's realization was that he could have written my list himself. He had the same predictions about what his target reader would know; he just had to think one level deeper about what it means for the reader to "know" a technology.
-
-If you're curious, you can read my notes for the first draft of Tyler's article below:
-
-- [My editing notes for Tyler Cipriani's blog post, "The future of large files in Git is Git"](https://refactoringenglish.com/services/blog-editing/sample-future-of-git/)
 
 ## Side projects
 
