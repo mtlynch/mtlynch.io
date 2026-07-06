@@ -207,7 +207,7 @@ This one just happened without me initiating it directly. I only realized it by 
 
 BIOS UIs typically have poor accessibility support, so there's no way for blind users to navigate the interface. Alex configured his TinyPilot so that his friend could access it over the Internet and describe to him what appeared on the screen during BIOS. This allowed Alex to customize his BIOS settings to take advantage of the advanced features his motherboard offers.
 
-If you're interested in [checking out the episode](https://www.blindbargains.com/bargains.php?m=22022), the TinyPilot discussion begins at 1:03:57.
+If you're interested in [checking out the episode](https://web.archive.org/web/20201023112506/https://www.blindbargains.com/bargains.php?m=22022), the TinyPilot discussion begins at 1:03:57.
 
 ### Self-hosting newsletter
 
