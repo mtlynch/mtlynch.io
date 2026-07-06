@@ -1,6 +1,7 @@
 ---
 title: "Install NixOS on a Free Oracle Cloud VM"
 date: 2025-02-07
+lastmod: 2026-07-04
 tags:
   - nix
 banner_image: internal-shell.webp
@@ -8,14 +9,14 @@ banner_image: internal-shell.webp
 
 Oracle is not a very popular cloud hosting service, but they have an unusually attractive [free tier offering](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm). You can run the following two VMs for free 24/7:
 
-- 4 CPU / 24 GB RAM Ampere A1 ARM VM
+- 2 CPU / 12 GB RAM Ampere A1 ARM VM
 - 1 CPU / 1 GB RAM AMD CPU
 
-The AMD one is not that exciting, but a 4-CPU / 24 GB system is more powerful than you'll find in the free tier of any other cloud vendor.
+{{<notice type="info">}}
 
-GCP's price for an equivalent 4-CPU ARM VM is $132/month and it has 30% less RAM than Oracle's.
+**Update (2026-07-04)**: When I originally wrote this in 2025, Oracle offered 4 ARM CPUs with 24 GB of RAM. They have since reduced this by half, so it's not as exciting a deal.
 
-{{<img src="gcp-price.webp" max-width="600px" caption="Google charges $132/month for a slightly worse VM than Oracle's free-tier ARM option.">}}
+{{</notice>}}
 
 ## The challenge: Install NixOS on an Oracle Cloud VM
 
@@ -25,7 +26,13 @@ I've found [several](https://mdleom.com/blog/2021/03/09/nixos-oracle/) [tutorial
 
 Prithu Goswami figured out [a clever shortcut](https://prithu.dev/notes/installing-nixos-on-oracle-cloud-arm-instance/) by using the NixOS installer through netboot, which simplifies things. Prithu's explanation was pretty terse, so I thought I'd share my complete walkthrough of his method.
 
-- **Update (2026-03-04)**: Erik Parawell wrote [a guide](https://erikparawell.com/oracle-cloud-nixos.html) that eliminates some of the manual steps required in my guide, though I haven't tested his solution yet personally.
+{{<notice type="danger">}}
+
+**Update (2026-07-04)**: My instructions no longer work. Oracle seems to have removed Cloud VM console access, which breaks my guide.
+
+Erik Parawell wrote [a guide](https://erikparawell.com/oracle-cloud-nixos.html) that eliminates some of the manual steps required in my guide, though I haven't tested his solution yet personally.
+
+{{</notice>}}
 
 ## Requirements
 
@@ -50,7 +57,7 @@ Once you're logged in to your Oracle Cloud account, create your free VM:
 1. Go to [Create compute instance](https://cloud.oracle.com/compute/instances/create).
 1. Change the name to whatever you want.
 1. Under "Image and shape," choose the image Ubuntu > `Canonical Ubuntu 24.04 Minimal aarch64`.
-1. Under "Image and shape," choose the shape `VM.Standard.A1.Flex` and increase the number of OCPUs to `4`. RAM should auto-update to `24` GB.
+1. Under "Image and shape," choose the shape `VM.Standard.A1.Flex` and increase the number of OCPUs to `2`. RAM should auto-update to `12` GB.
 
 The image and shape screen should look like this:
 
