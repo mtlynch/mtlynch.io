@@ -148,7 +148,8 @@ jobs:
 
             curl --fail --show-error --silent --location \
               "https://github.com/lycheeverse/lychee/releases/download/lychee-v${LYCHEE_VERSION}/lychee-${LYCHEE_ARCH}-unknown-linux-gnu.tar.gz" | \
-              sudo tar --extract --gzip --file - --directory /usr/local/bin lychee
+              sudo tar --extract --gzip --file - --directory /usr/local/bin --strip-components=1 --no-same-owner \
+                "lychee-${LYCHEE_ARCH}-unknown-linux-gnu/lychee"
             lychee --version
       - run:
           name: Check HTML and external links
