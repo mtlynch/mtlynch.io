@@ -86,6 +86,22 @@
         "type": "github"
       }
     },
+    "lychee-nixpkgs": {
+      "locked": {
+        "lastModified": 1782545840,
+        "narHash": "sha256-PkBPmP5ofNtunCU7/tfn6wi9OLlzFGcHAqqmY+/mwUI=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "3d46470bb3030020f7e1361f33514854f5bfa86d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "3d46470bb3030020f7e1361f33514854f5bfa86d",
+        "type": "github"
+      }
+    },
     "markdown-lint-nixpkgs": {
       "locked": {
         "lastModified": 1738422722,
@@ -154,6 +170,7 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "hugo-nixpkgs": "hugo-nixpkgs",
+        "lychee-nixpkgs": "lychee-nixpkgs",
         "markdown-lint-nixpkgs": "markdown-lint-nixpkgs",
         "nodejs-nixpkgs": "nodejs-nixpkgs",
         "wordword-pkg": "wordword-pkg"

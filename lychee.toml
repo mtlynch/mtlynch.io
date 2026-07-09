@@ -6,7 +6,8 @@ timeout = 5
 max_retries = 1
 max_concurrency = 32
 method = "get"
-include_fragments = true
+include_fragments = "anchor-only"
+index_files = ["index.html"]
 exclude_loopback = true
 
 exclude = [
@@ -66,5 +67,5 @@ exclude = [
   "//www\\.servicenow\\.com/",
   "//www\\.usta\\.com/",
   # Ignore links to comments that only load in production.
-  "^file://.*/#comment-.*",
+  "^file://.*#comment-.*",
 ]

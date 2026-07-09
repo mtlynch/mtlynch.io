@@ -10,6 +10,9 @@
     # 0.17.2
     markdown-lint-nixpkgs.url = "github:NixOS/nixpkgs/102a39bfee444533e6b4e8611d7e92aa39b7bec1";
 
+    # 0.24.2 release
+    lychee-nixpkgs.url = "github:NixOS/nixpkgs/3d46470bb3030020f7e1361f33514854f5bfa86d";
+
     # 0.147.5 release
     hugo-nixpkgs.url = "github:NixOS/nixpkgs/e0042dedfbc9134ef973f64e5c7f56a38cc5cc97";
 
@@ -21,13 +24,14 @@
     flake-utils,
     nodejs-nixpkgs,
     markdown-lint-nixpkgs,
+    lychee-nixpkgs,
     hugo-nixpkgs,
     wordword-pkg,
   } @ inputs:
     flake-utils.lib.eachDefaultSystem (system: let
       hugo = hugo-nixpkgs.legacyPackages.${system}.hugo;
       nodejs = nodejs-nixpkgs.legacyPackages.${system}.nodejs_24;
-      lychee = hugo-nixpkgs.legacyPackages.${system}.lychee;
+      lychee = lychee-nixpkgs.legacyPackages.${system}.lychee;
       markdownlint = markdown-lint-nixpkgs.legacyPackages.${system}.markdownlint-cli2;
       wordword = wordword-pkg.packages.${system}.default;
       libxml2 = hugo-nixpkgs.legacyPackages.${system}.libxml2;
