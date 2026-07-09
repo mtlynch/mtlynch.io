@@ -129,7 +129,7 @@ And here's what costs looked like when I was finished:
 
 HTTP load balancing was a big gotcha.
 
-On [What Got Done](https://whatgotdone.com) and [WanderJest](https://wanderjest.com), I let users upload images, and then I store the uploads in Google Cloud Storage (GCS) buckets. By default, GCS URLs are big, ugly messes like `https://storage.googleapis.com/whatgotdone-public/...`. I wanted a nice, tidy URL like `https://media.whatgotdone.com`.
+On What Got Done and [WanderJest](https://wanderjest.com), I let users upload images, and then I store the uploads in Google Cloud Storage (GCS) buckets. By default, GCS URLs are big, ugly messes like `https://storage.googleapis.com/whatgotdone-public/...`. I wanted a nice, tidy URL like `https://media.whatgotdone.com`.
 
 This simple [80-step process](https://cloud.google.com/storage/docs/hosting-static-website) explains the Google way of serving GCS files from a subdomain. It involves provisioning a static IPv4 address, setting up an HTTP load balancer, and generating a TLS certificate. I went through all those steps, not realizing that the load balancer would drive up my costs by about $18/mo per site.
 

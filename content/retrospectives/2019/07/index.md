@@ -7,7 +7,7 @@ date: "2019-07-03"
 
 ## Highlights
 
-- [What Got Done](https://whatgotdone.com) received 32 new user sign-ups (growth of about 5x since May)
+- What Got Done received 32 new user sign-ups (growth of about 5x since May)
 - [Zestful](https://zestfuldata.com) may be rising from the dead, with four new inbound customer inquiries.
 - [Is It Keto](https://isitketo.org) earned $184, and [Zestful](https://zestfuldata.com) earned $26, making it my highest revenue month since quitting my job.
 
@@ -84,7 +84,7 @@ At the end of the month, I changed my price from 0.3 cents per ingredient to 2 c
 
 ### A jumpstart for What Got Done
 
-Next is [What Got Done](https://whatgotdone.com), the weekly team status app I launched last month. I promoted it on [Twitter](https://twitter.com/deliberatecoder/status/1131998623531700225), [Indie Hackers](https://www.indiehackers.com/product/what-got-done/-LffBEPNwHYU02oXu2vM), and [Hacker News](https://news.ycombinator.com/item?id=20124288), but it didn't achieve much traction. Then, I published [a blog post about it](/status-updates-to-nobody/), and it jolted life into the product.
+Next is What Got Done, the weekly team status app I launched last month. I promoted it on [Twitter](https://twitter.com/deliberatecoder/status/1131998623531700225), [Indie Hackers](https://www.indiehackers.com/product/what-got-done/-LffBEPNwHYU02oXu2vM), and [Hacker News](https://news.ycombinator.com/item?id=20124288), but it didn't achieve much traction. Then, I published [a blog post about it](/status-updates-to-nobody/), and it jolted life into the product.
 
 What Got Done had almost zero sign-ups for a month, but ever since publishing the blog post, there have been three to eight sign-ups per day:
 
