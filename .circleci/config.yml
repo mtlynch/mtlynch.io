@@ -116,6 +116,7 @@ jobs:
       - persist_to_workspace:
           root: ./
           paths:
+            - lychee.toml
             - dev-scripts
             - public
             - netlify.toml
@@ -125,13 +126,37 @@ jobs:
             - resources
   lint_html:
     docker:
-      - image: mtlynch/htmlproofer:5.0.6
+      - image: cimg/base:current
+    environment:
+      LYCHEE_VERSION: "0.18.1"
     steps:
       - attach_workspace:
           at: ./
+      - restore_cache:
+          keys:
+            - lychee-v1-
+      - run:
+          name: Install lychee
+          command: |
+            set -x
+
+            case "$(uname -m)" in
+              x86_64)  LYCHEE_ARCH="x86_64" ;;
+              aarch64) LYCHEE_ARCH="aarch64" ;;
+              *) echo "Unsupported architecture: $(uname -m)"; exit 1 ;;
+            esac
+
+            curl --fail --show-error --silent --location \
+              "https://github.com/lycheeverse/lychee/releases/download/lychee-v${LYCHEE_VERSION}/lychee-${LYCHEE_ARCH}-unknown-linux-gnu.tar.gz" | \
+              sudo tar --extract --gzip --file - --directory /usr/local/bin lychee
+            lychee --version
       - run:
           name: Check HTML and external links
           command: ./dev-scripts/lint-html
+      - save_cache:
+          key: lychee-v1-{{ epoch }}
+          paths:
+            - .lycheecache
   lint_xml:
     docker:
       - image: alpine:3.21.2

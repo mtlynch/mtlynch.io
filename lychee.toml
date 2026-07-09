@@ -1,0 +1,70 @@
+cache = true
+max_cache_age = "14d"
+no_progress = true
+accept = ["100..=103", "200..=299", "403"]
+timeout = 5
+max_retries = 1
+max_concurrency = 32
+method = "get"
+include_fragments = true
+exclude_loopback = true
+
+exclude = [
+  # Ignore downloadable/page-bundle assets that Hugo does not publish into public/.
+  "\\.(css|js|png|jpe?g|gif|webp|svg|mp4|pdf|txt|xml|ya?ml|nix|lua|py)(\\?.*)?$",
+  "Dockerfile\\.(nextcloud|sia)$",
+  "^file://.*/collect-debt/full-emails/?$",
+  "^file://.*/notes/archivebox/reddit-singlefile\\.html$",
+  # Ignore local development-only URLs.
+  "^https?://(localhost|squish|raspberrypi)(:|/)",
+  # Ignore URLs that intermittently return bot-blocking responses in CI.
+  "//adage\\.com/",
+  "//ark\\.intel\\.com/",
+  "//calculator\\.aws/",
+  "//community\\.bloggingfordevs\\.com/",
+  "//cypress\\.io/",
+  "//docs\\.github\\.com/",
+  "//fdc\\.nal\\.usda\\.gov/",
+  "//feinternational\\.com/",
+  "//github\\.com/",
+  "//gitlab\\.gnome\\.org/",
+  "//gusto\\.com/",
+  "//help\\.shipstation\\.com/",
+  "//indiebound\\.org/",
+  "//isitketo\\.org/",
+  "//mediagoblin-v5lmqis51k\\.herokuapp\\.com/",
+  "//medium\\.com/",
+  "//newegg\\.com/",
+  "//opensource\\.org/",
+  "//pcpartpicker\\.com/",
+  "//playwright\\.dev/",
+  "//redd\\.it/",
+  "//reddit\\.com/",
+  "//servernope\\.com/",
+  "//splashthat\\.com/",
+  "//typeform\\.com/",
+  "//twitter\\.com/",
+  "//upwork\\.com/",
+  "//vimeo\\.com/",
+  "//vmware\\.com/",
+  "//wpengine\\.com/",
+  "//www\\.amd\\.com/",
+  "//www\\.bls\\.gov/",
+  "//www\\.buzzfeednews\\.com/",
+  "//www\\.bhphotovideo\\.com/",
+  "//www\\.digitalfaq\\.com/",
+  "//www\\.kissmyketo\\.com/",
+  "//www\\.investopedia\\.com/",
+  "//www\\.irs\\.gov/",
+  "//www\\.linkedin\\.com/",
+  "//www\\.nber\\.org/",
+  "//www\\.nccgroup\\.com/",
+  "//www\\.raspberrypi\\.com/",
+  "//www\\.raspberrypi\\.org/",
+  "//www\\.reddit\\.com/",
+  "//www\\.sciencedirect\\.com/",
+  "//www\\.servicenow\\.com/",
+  "//www\\.usta\\.com/",
+  # Ignore links to comments that only load in production.
+  "^file://.*/#comment-.*",
+]
