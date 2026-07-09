@@ -1,10 +1,14 @@
 cache = true
 max_cache_age = "14d"
+cache_exclude_status = "429, 500.."
 no_progress = true
 accept = ["100..=103", "200..=299", "403"]
 timeout = 5
 max_retries = 1
-max_concurrency = 32
+retry_wait_time = 10
+max_concurrency = 4
+host_concurrency = 1
+host_request_interval = "1s"
 method = "get"
 include_fragments = "anchor-only"
 index_files = ["index.html"]
@@ -69,3 +73,19 @@ exclude = [
   # Ignore links to comments that only load in production.
   "^file://.*#comment-.*",
 ]
+
+[hosts."news.ycombinator.com"]
+concurrency = 1
+request_interval = "10s"
+
+[hosts."archive.is"]
+concurrency = 1
+request_interval = "30s"
+
+[hosts."trends.google.com"]
+concurrency = 1
+request_interval = "30s"
+
+[hosts."web.archive.org"]
+concurrency = 1
+request_interval = "5s"
