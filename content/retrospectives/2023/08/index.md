@@ -191,7 +191,7 @@ It would be relatively easy to add a subscription button, and we likely wouldn't
 
 ## Side projects
 
-### [What Got Done](https://whatgotdone.com)
+### What Got Done
 
 I've been [experimenting with Nix](/tags/nix/) recently, and one of the features that interests me is `nix develop`. It lets you create a self-contained shell environment with exactly the dev tools you need to build and test your project.
 

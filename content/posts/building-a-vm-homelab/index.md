@@ -221,7 +221,7 @@ To manage my VMs, I'm using [Proxmox VE](https://www.proxmox.com/en/).
 
 After [Kimchi burned me](#2-pick-better-vm-management-software) on my last build, I was reluctant to try another free solution. [Proxmox](https://www.proxmox.com/en/) has been around for 12 years, so I felt like they were a safe enough bet. Graphics-wise, it's a huge step up from Kimchi, but it lags behind ESXi in slickness.
 
-The part of Proxmox that I most appreciate is its scriptability. One of my frequent tasks is creating a new VM from a template and then using [Ansible](https://docs.ansible.com/ansible/latest/index.html) to install additional software. With ESXi, I couldn't find a way to do this without manually clicking buttons in the web UI every time. With Proxmox, [their CLI](https://pve.proxmox.com/pve-docs/pve-admin-guide.html#_managing_virtual_machines_with_span_class_monospaced_qm_span) is powerful enough that I can script it down to just `./create-vm whatgotdone-dev` and my scripts create a fresh [What Got Done](https://whatgotdone.com) development VM.
+The part of Proxmox that I most appreciate is its scriptability. One of my frequent tasks is creating a new VM from a template and then using [Ansible](https://docs.ansible.com/ansible/latest/index.html) to install additional software. With ESXi, I couldn't find a way to do this without manually clicking buttons in the web UI every time. With Proxmox, [their CLI](https://pve.proxmox.com/pve-docs/pve-admin-guide.html#_managing_virtual_machines_with_span_class_monospaced_qm_span) is powerful enough that I can script it down to just `./create-vm whatgotdone-dev` and my scripts create a fresh What Got Done development VM.
 
 My biggest complaint is that Proxmox is unintuitive. I couldn't even figure out how to install it until I found [Craft Computing's installation tutorial](https://www.youtube.com/watch?v=azORbxrItOo). But once you learn your way around, it's easy to use.
 
@@ -267,7 +267,7 @@ My old VMs booted in 48 seconds. The few SSD VMs on my old system did a little b
 
 ### Run What Got Done end-to-end tests
 
-My weekly journaling app, [What Got Done](https://whatgotdone.com), has automated tests that exercise its functionality end-to-end. This is one of my most diverse workflows &mdash; it involves compiling a Go backend, compiling a Vue frontend, building a series of Docker containers, and automating Chrome to exercise my app. This was one of the workflows that exhausted resources on my old VM, so I expected substantial gains here.
+My weekly journaling app, What Got Done, has automated tests that exercise its functionality end-to-end. This is one of my most diverse workflows &mdash; it involves compiling a Go backend, compiling a Vue frontend, building a series of Docker containers, and automating Chrome to exercise my app. This was one of the workflows that exhausted resources on my old VM, so I expected substantial gains here.
 
 {{<video src="wgt-test.mp4" max-width="600px">}}
 

@@ -7,7 +7,7 @@ date: "2019-06-07"
 
 ## Highlights
 
-- I launched my [task journaling app](https://whatgotdone.com), but it hasn't attracted many users.
+- I launched my task journaling app, but it hasn't attracted many users.
 - Interviewing potential customers gave me a good idea for my next project.
 - I earned $107 from [Is It Keto](https://isitketo.org) and $123 from [Zestful](https://zestfuldata.com) without working on either.
 
@@ -15,7 +15,7 @@ date: "2019-06-07"
 
 ### Publish a minimum viable product version of What Got Done
 
-- **Result**: What Got Done is now [live](https://whatgotdone.com).
+- **Result**: What Got Done is now live.
 - **Grade**: A
 
 I launched What Got Done on [May 24th](https://weeks.mtlynch.io/2019-05-24). It hasn't gained much traction, so I'm debating whether to stick with it or focus on other ideas.
@@ -128,7 +128,7 @@ If you know an email copywriter who might be interested, please ask them to [ema
 
 ### What got done?
 
-- Launched [What Got Done](https://whatgotdone.com)
+- Launched What Got Done
 - Published a new blog post: ["How to Grow Quickly and Never Turn a Profit"](/keep-growing-never-profit/)
 - Paid in-person visits to three stone quarries for customer research (got one interview)
 - Reached out to seven content writers and copywriters for customer research (got four interviews)

@@ -168,7 +168,7 @@ Zestful had an odd jump in traffic because a Chinese blog published an unauthori
 
 Month-over-month sales increased, but Zestful is historically bursty. Anything from $0 to $100 in monthly revenue is normal.
 
-### [What Got Done](https://whatgotdone.com)
+### What Got Done
 
 What Got Done is my weekly work journaling app. I tried to build it into a business last year but relegated it to "hobby project" status after it [failed to gain traction](/retrospectives/2019/08/). I still use it regularly myself, and I sometimes add features on weekends or evenings.
 
