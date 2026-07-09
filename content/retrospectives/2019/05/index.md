@@ -94,7 +94,7 @@ If you know a stone quarry operator, please [email me](/about/) because I'd love
 
 I have a ritual to end each week where I write down short-form notes on everything I accomplished. For the past year, I did this in a giant Google Doc, but I always wished that I had a tool that was more purpose-built for the task and more easily shareable.
 
-My April goal was to learn Vue.js, and there's no better way to learn a new technology than to build a real product with it. So, I did! It's called [What Got Done](https://whatgotdone.com):
+My April goal was to learn Vue.js, and there's no better way to learn a new technology than to build a real product with it. So, I did! It's called What Got Done:
 
 {{<img src="whatgotdone.jpg" alt="What Got Done screenshot" caption="A first look at my new task journaling app, What Got Done" max-width="800px" has-border="false">}}
 
@@ -115,7 +115,7 @@ If you'd like to be a beta tester for What Got Done, [email me](/about/).
 - [Presented a talk](/retrospectives/pytexas-2019-notes/) at PyTexas
 - Published a new [blog post](/painless-web-app-testing/) about end-to-end testing
 - Created a [fake podcast](https://twitter.com/deliberatecoder/status/1112688989306318850) for April Fool's Day
-- Got a prototype of [What Got Done app](https://whatgotdone.com) almost working
+- Got a prototype of What Got Done app almost working
 - Reached out to 11 potential customers for future projects
 
 ### Lessons learned
