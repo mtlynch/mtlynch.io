@@ -127,7 +127,7 @@ According to [Ahrefs' backlink checker](https://ahrefs.com/backlink-checker), th
 
 ## I finally have an unfair advantage
 
-[_Startup_](https://gimletmedia.com/startup/) is one of my favorite podcasts, and I often think back to this moment in one of the early episodes where the podcast's host and founder was seeking investment from Chris Sacca, a well-known venture capital investor. Sacca asks the host:
+[_Startup_](https://web.archive.org/web/20210702221854/https://gimletmedia.com/shows/startup) is one of my favorite podcasts, and I often think back to this moment in one of the early episodes where the podcast's host and founder was seeking investment from Chris Sacca, a well-known venture capital investor. Sacca asks the host:
 
 > I want to invest in companies that have an unfair advantage. What's your unfair advantage?
 

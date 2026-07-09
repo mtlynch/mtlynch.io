@@ -31,6 +31,7 @@ exclude = [
   "//docs\\.github\\.com/",
   "//fdc\\.nal\\.usda\\.gov/",
   "//feinternational\\.com/",
+  "//forum\\.xpdfreader\\.com/",
   "//github\\.com/",
   "//gitlab\\.gnome\\.org/",
   "//gusto\\.com/",

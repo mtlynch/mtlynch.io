@@ -58,7 +58,7 @@ About ten years ago, when I was working as a security consultant, I used [fuzz t
 
 The tooling around fuzz testing has improved substantially in the last decade, so I've been curious to try out the latest state of the art.
 
-I found Antonio Morales' 2021 [fuzz testing tutorial series](https://github.com/antonio-morales/Fuzzing101). It uses [AFL++](https://github.com/AFLplusplus/AFLplusplus), which I sense is no longer the top fuzzing tool, but I started the series. The first tutorial demonstrates how to fuzz [xpdf](https://www.xpdfreader.com/), an open-source PDF processing tool. I modified the steps to target the latest version of xpdf, and I found a new out-of-bounds memory read bug, which was exciting.
+I found Antonio Morales' 2021 [fuzz testing tutorial series](https://github.com/antonio-morales/Fuzzing101). It uses [AFL++](https://github.com/AFLplusplus/AFLplusplus), which I sense is no longer the top fuzzing tool, but I started the series. The first tutorial demonstrates how to fuzz [xpdf](http://www.xpdfreader.com/), an open-source PDF processing tool. I modified the steps to target the latest version of xpdf, and I found a new out-of-bounds memory read bug, which was exciting.
 
 It turned out that someone else had [discovered the same vulnerability](https://forum.xpdfreader.com/viewtopic.php?t=44009) in September 2024, and that report was dismissed because it had been reported even earlier to the maintainer via private email. I suspect they found it by following the same tutorial I did. A few weeks after I found the series, it [appeared on the front page of Hacker News](https://news.ycombinator.com/item?id=41747979), so people seem to be randomly discovering that three-year-old tutorial somehow.
 
