@@ -22,6 +22,8 @@ exclude = [
   "^file://.*/notes/archivebox/reddit-singlefile\\.html$",
   # Ignore local development-only URLs.
   "^https?://(localhost|squish|raspberrypi)(:|/)",
+  # Ignore illustrative example domains.
+  "//([^.]+\\.)*example\\.com/",
   # Ignore URLs that intermittently return bot-blocking responses in CI.
   "//adage\\.com/",
   "//ark\\.intel\\.com/",
@@ -31,7 +33,6 @@ exclude = [
   "//docs\\.github\\.com/",
   "//fdc\\.nal\\.usda\\.gov/",
   "//feinternational\\.com/",
-  "//forum\\.xpdfreader\\.com/",
   "//github\\.com/",
   "//gitlab\\.gnome\\.org/",
   "//gusto\\.com/",
