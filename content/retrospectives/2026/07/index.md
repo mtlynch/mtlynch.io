@@ -55,6 +55,8 @@ This was a great month! It was the best month of book revenue since the initial 
 
 TODO: Look at sales from 100% to new blog post, compare to same time period. Within that time period, do americans in particular buy at higher rates?
 
+Declared complete on June 2.
+
 Do americans care more about a finished book?
 
 ## My custom book feedback tool
