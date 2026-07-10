@@ -51,11 +51,17 @@ TODO
 
 This was a great month! It was the best month of book revenue since the initial crowdfunding launch, beating out the previous #2 by about 30%.
 
+Here's what daily book sales looked like:
+
+<canvas id="book-sales-chart"></canvas>
+
 ## How much difference does the last 8% make?
 
 TODO: Look at sales from 100% to new blog post, compare to same time period. Within that time period, do americans in particular buy at higher rates?
 
 Declared complete on June 2.
+
+<canvas id="completion-revenue-chart"></canvas>
 
 Do americans care more about a finished book?
 
@@ -130,3 +136,6 @@ Book               1h34m   19.7%
 ### Goals for next month
 
 - Pitch to 5 podcasts.
+
+<script src="/third-party/chart.js/2.9.4/Chart.min.js"></script>
+<script src="script.js"></script>
