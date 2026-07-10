@@ -153,6 +153,7 @@ jobs:
             lychee --version
       - run:
           name: Check HTML and external links
+          no_output_timeout: 60m
           command: ./dev-scripts/lint-html
       - save_cache:
           key: lychee-v1-{{ epoch }}
