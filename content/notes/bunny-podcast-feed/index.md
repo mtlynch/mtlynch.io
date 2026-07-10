@@ -65,16 +65,16 @@ For example, if your podcast is called "My Awesome Dinosaur Podcast," then you c
 
 When you give out your podcast feed to listeners and podcast directories, it will be:
 
-- <https://feeds.dinosaurpodcast.example.com>
+- <https://feeds.myawesomedinosaurpodcast.com>
 
-If you switch podcast hosts, your listeners will never have to do anything as they'll still listen from your same `feeds.dinosaurpodcast.example.com` URL. They've never seen any Libsyn or Podbean URL at all.
+If you switch podcast hosts, your listeners will never have to do anything as they'll still listen from your same `feeds.myawesomedinosaurpodcast.com` URL. They've never seen any Libsyn or Podbean URL at all.
 
 ## Hosting your own RSS feed
 
 For this example, I'm going to use these example values:
 
 - `https://feeds.libsyn.com/12345/rss`: The RSS feed your podcast host told you to use.
-- `https://feeds.dinosaurpodcast.example.com`: The actual URL you'll use instead.
+- `https://feeds.myawesomedinosaurpodcast.com`: The actual URL you'll use instead.
 
 ### Create a BunnyCDN account
 
@@ -114,7 +114,7 @@ From the pull zone you created, go to General > Hostnames.
 
 Enter your podcast's domain like:
 
-- `feeds.dinosaurpodcast.example.com`
+- `feeds.myawesomedinosaurpodcast.com`
 
 {{<notice type="info">}}
 
@@ -152,7 +152,7 @@ One subtlety of the RSS feed is that it contains a `self` tag that looks like th
 <atom:link href="https://feeds.libsyn.com/12345/rss" rel="self" type="application/rss+xml"/>
 ```
 
-Even if you distribute your `https://feeds.dinosaurpodcast.example.com` URL, some podcast players will prefer the `self` tag to the original URL, which would bypass your CDN-hosted version.
+Even if you distribute your `https://feeds.myawesomedinosaurpodcast.com` URL, some podcast players will prefer the `self` tag to the original URL, which would bypass your CDN-hosted version.
 
 To prevent this, you'll need to use a custom Bunny edge script.
 
@@ -170,7 +170,7 @@ import * as BunnySDK from "https://esm.sh/@bunny.net/edgescript-sdk@0.11.2";
 const SOURCE_URL = "https://feeds.libsyn.com/12345/rss";
 
 // Replace with the domain name that you own.
-const TARGET_URL = "https://feeds.dinosaurpodcast.example.com";
+const TARGET_URL = "https://feeds.myawesomedinosaurpodcast.com";
 
 /**
  * Modifies the response from the origin to replace a specific URL.

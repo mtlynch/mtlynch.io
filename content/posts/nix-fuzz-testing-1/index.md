@@ -15,7 +15,7 @@ I used my Nix workflow to find an unpatched bug in a PDF renderer, even though I
 
 ## A preview of the solution
 
-Here's a preview of my final result: you can start fuzz testing [an open-source PDF reader](http://www.xpdfreader.com/) with a single command:
+Here's a preview of my final result: you can start fuzz testing [an open-source PDF reader](https://www.xpdfreader.com/) with a single command:
 
 ```bash
 nix run gitlab:mtlynch/fuzz-xpdf
@@ -69,7 +69,7 @@ To follow along, you'll only need two things:
 
 ## Selecting a fuzzing target
 
-The PDF reader I'm fuzz testing is called [xpdf](http://xpdfreader.com). It's a PDF viewer, but it ships with a suite of PDF utilities. One of the utilities, `pdftotext` is an attractive fuzzing target because it's so simple. It has no GUI; it just accepts a PDF as input and produces plaintext as output. It still exercises xpdf's complex PDF parsing code, so if I find a bug in `pdftotext`, it means I've probably found a bug in the whole xpdf suite.
+The PDF reader I'm fuzz testing is called [xpdf](https://xpdfreader.com). It's a PDF viewer, but it ships with a suite of PDF utilities. One of the utilities, `pdftotext` is an attractive fuzzing target because it's so simple. It has no GUI; it just accepts a PDF as input and produces plaintext as output. It still exercises xpdf's complex PDF parsing code, so if I find a bug in `pdftotext`, it means I've probably found a bug in the whole xpdf suite.
 
 ## Putting the Nix boilerplate in place
 

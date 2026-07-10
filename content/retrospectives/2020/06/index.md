@@ -96,7 +96,7 @@ This is why it's valuable to have an outsider's perspective. I tried approaching
 
 Through most of Is It Keto's life, performance has been an afterthought. Occasionally, I've fixed components that were causing noticeable slowdowns, but I rarely design for speed.
 
-Given that Google drives 90% of the site's visitors, and [Google uses performance as a metric in ranking search results](https://developers.google.com/web/updates/2018/07/search-ads-speed), I spent a few days identifying bottlenecks on Is It Keto. I use the [Gridsome](https://gridsome.org) framework for generating Is It Keto's contents, so [this article](https://web.archive.org/web/20260430115035/https://www.codegram.com/blog/improving-a-gridsome-website-performance/) helped me achieve a few performance gains.
+Given that Google drives 90% of the site's visitors, and [Google uses performance as a metric in ranking search results](https://developers.google.com/web/updates/2018/07/search-ads-speed), I spent a few days identifying bottlenecks on Is It Keto. I use the [Gridsome](https://gridsome.org) framework for generating Is It Keto's contents, so [this article](https://www.codegram.com/blog/improving-a-gridsome-website-performance/) helped me achieve a few performance gains.
 
 | Change                                                                                                                                                                                                                       | Performance impact |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
@@ -114,7 +114,7 @@ Everyone talks about using [webpack-bundle-analyzer](https://www.npmjs.com/packa
 1. ???
 1. Look at the useful visualization in your browser.
 
-But they never explain **how** you actually generate the visualization. I finally figured out that the missing step 2 is to plug webpack-bundle-analyzer into your build (varies by stack, but [here](https://web.archive.org/web/20260430115035/https://www.codegram.com/blog/improving-a-gridsome-website-performance/#avoid-enormous-network-payloads-and-minimize-main-thread-work) is how to do it on Gridsome). Then the next time you build your app, you'll see a line like this:
+But they never explain **how** you actually generate the visualization. I finally figured out that the missing step 2 is to plug webpack-bundle-analyzer into your build (varies by stack, but [here](https://www.codegram.com/blog/improving-a-gridsome-website-performance/#avoid-enormous-network-payloads-and-minimize-main-thread-work) is how to do it on Gridsome). Then the next time you build your app, you'll see a line like this:
 
 ```text
 Webpack Bundle Analyzer saved report to /home/user/isitketo/dist/report.html
