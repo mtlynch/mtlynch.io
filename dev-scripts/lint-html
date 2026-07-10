@@ -33,5 +33,6 @@ find "${TEST_DIR}" -type f -name "*.html" -print0 | \
 lychee \
   --config lychee.toml \
   --root-dir "${TEST_DIR}" \
+  --verbose \
   "${lychee_args[@]}" \
   "${TEST_DIR}/**/*.html"
