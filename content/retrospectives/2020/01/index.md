@@ -100,7 +100,7 @@ One of my most interesting interviews was with a shop owner who described himsel
 
 {{<img src="shoptech.png" alt="Screenshot of E2 ShopTech software" max-width="600px" caption="E2 ShopTech is a enterprise planning application for mid-sized machine shops.">}}
 
-The owner seemed satisfied with his software but said that he only used 2% of its features. My ears perked right up when I heard that. This is the exact scenario that books like [_Start Small, Stay Small_](/book-reports/start-small-stay-small/) describe. If a business uses bloated software because nobody caters to their specific niche, you can outcompete a larger vendor if you focus on the 2% of features that matter to your customer niche.
+The owner seemed satisfied with his software but said that he only used 2% of its features. My ears perked right up when I heard that. This is the exact scenario that books like [_Start Small, Stay Small_](/notes/book-reports/start-small-stay-small/) describe. If a business uses bloated software because nobody caters to their specific niche, you can outcompete a larger vendor if you focus on the 2% of features that matter to your customer niche.
 
 The owner had repeatedly said he didn't like dealing with software, so I thought offering a simpler solution would be a slam dunk:
 
