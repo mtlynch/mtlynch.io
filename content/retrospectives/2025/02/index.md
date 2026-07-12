@@ -171,7 +171,7 @@ The biggest downside of Codeberg is that there don't seem to be any managed cont
 - Drone: They support Forgejo/Gitea, but it seems like they only offer managed hosting for Enterprise.
 - Harness: This is a new Drone thing, it seems, but I can't figure out if they support Forgejo/Gitea.
 
-Codeberg officially recommends self-hosting Woodpecker CI, which sounded fun and impractical, so I spent a day setting that up on [my free Oracle cloud VM](/notes/nix-oracle-cloud/). Now, [I self-host CI for wordword](https://ci.mtlynch.io/repos/1) and a few of my other projects. But I don't trust myself to secure it as well as paid vendors, so I'm not willing to store secrets there. That severely limits how much I can use it as a real CI/CD solution.
+Codeberg officially recommends self-hosting Woodpecker CI, which sounded fun and impractical, so I spent a day setting that up on [my free Oracle cloud VM](/notes/nix-oracle-cloud/). Now, I self-host CI for wordword and a few of my other projects. But I don't trust myself to secure it as well as paid vendors, so I'm not willing to store secrets there. That severely limits how much I can use it as a real CI/CD solution.
 
 ### Got a 10 Gbps router
 
