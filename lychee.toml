@@ -39,6 +39,7 @@ exclude = [
   "//coursemaker\\.org/",
   "//cypress\\.io/",
   "//demo\\.nextcloud\\.com/",
+  "//([^.]+\\.)*example\\.com/",
   "//([^.]+\\.)*codegram\\.com/",
   "//([^.]+\\.)*facebook\\.com/",
   "//([^.]+\\.)*github\\.com/",
