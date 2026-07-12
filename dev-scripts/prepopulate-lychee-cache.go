@@ -26,6 +26,8 @@ const (
 	cachePath   = ".lycheecache"
 	cacheMaxAge = 45 * 24 * time.Hour
 	ccIndexURL  = "https://index.commoncrawl.org/collinfo.json"
+
+	maxConsecutiveIndexFailures = 3
 )
 
 type commonCrawlIndex struct {
@@ -102,16 +104,17 @@ func run() error {
 		log.Printf("Common Crawl index list unavailable; leaving lychee cache unchanged")
 		return nil
 	}
-	log.Printf("Using %d recent Common Crawl indexes: %s", len(indexes), strings.Join(indexIDs(indexes), ", "))
+	log.Printf("Using %d recent Common Crawl indexes: %s", len(indexes), strings.Join(indexDescriptions(indexes), ", "))
 
 	added := 0
 	skippedCached := 0
 	missed := 0
 	skippedUnavailable := 0
 	unavailableIndexes := map[string]bool{}
+	indexFailures := map[string]int{}
 	uncached := countUncachedLinks(links, cache)
 	log.Printf("Looking up up to %d uncached links in Common Crawl", uncached)
-	for _, link := range links {
+	for i, link := range links {
 		if _, ok := cache[link]; ok {
 			skippedCached++
 			continue
@@ -121,13 +124,20 @@ func run() error {
 			log.Printf("Common Crawl lookup progress: %d/%d uncached links processed, %d added, %d misses, %d skipped because indexes were unavailable", queried, uncached, added, missed, skippedUnavailable)
 		}
 
-		entry, ok, searched, err := lookupCommonCrawl(client, indexes, unavailableIndexes, link, cutoff)
+		entry, ok, searched, err := lookupCommonCrawl(client, indexes, unavailableIndexes, indexFailures, link, cutoff)
 		if err != nil {
 			return err
 		}
 		if !searched {
-			skippedUnavailable++
-			continue
+			if hasUsableIndexes(indexes, unavailableIndexes) {
+				skippedUnavailable++
+				continue
+			}
+			remaining := countUncachedLinks(links[i:], cache)
+			skippedCached += countCachedLinks(links[i:], cache)
+			skippedUnavailable += remaining
+			log.Printf("No usable recent Common Crawl indexes remain; skipping %d uncached links", remaining)
+			break
 		}
 		if !ok {
 			missed++
@@ -147,12 +157,12 @@ func run() error {
 	return nil
 }
 
-func indexIDs(indexes []commonCrawlIndex) []string {
-	ids := make([]string, 0, len(indexes))
+func indexDescriptions(indexes []commonCrawlIndex) []string {
+	descriptions := make([]string, 0, len(indexes))
 	for _, index := range indexes {
-		ids = append(ids, index.ID)
+		descriptions = append(descriptions, fmt.Sprintf("%s (%s)", index.ID, index.CDXAPI))
 	}
-	return ids
+	return descriptions
 }
 
 func countUncachedLinks(links []string, cache map[string]cacheEntry) int {
@@ -163,6 +173,25 @@ func countUncachedLinks(links []string, cache map[string]cacheEntry) int {
 		}
 	}
 	return uncached
+}
+
+func countCachedLinks(links []string, cache map[string]cacheEntry) int {
+	cached := 0
+	for _, link := range links {
+		if _, ok := cache[link]; ok {
+			cached++
+		}
+	}
+	return cached
+}
+
+func hasUsableIndexes(indexes []commonCrawlIndex, unavailableIndexes map[string]bool) bool {
+	for _, index := range indexes {
+		if !unavailableIndexes[index.ID] {
+			return true
+		}
+	}
+	return false
 }
 
 func prepareTestDir(testDir string) error {
@@ -396,7 +425,7 @@ func fetchRecentIndexes(client *http.Client, cutoff time.Time) ([]commonCrawlInd
 	return recent, nil
 }
 
-func lookupCommonCrawl(client *http.Client, indexes []commonCrawlIndex, unavailableIndexes map[string]bool, link string, cutoff time.Time) (cacheEntry, bool, bool, error) {
+func lookupCommonCrawl(client *http.Client, indexes []commonCrawlIndex, unavailableIndexes map[string]bool, indexFailures map[string]int, link string, cutoff time.Time) (cacheEntry, bool, bool, error) {
 	searched := false
 	for _, index := range indexes {
 		if unavailableIndexes[index.ID] {
@@ -405,13 +434,19 @@ func lookupCommonCrawl(client *http.Client, indexes []commonCrawlIndex, unavaila
 
 		record, ok, err := queryCommonCrawl(client, index, link)
 		if errors.Is(err, errCommonCrawlUnavailable) {
-			unavailableIndexes[index.ID] = true
-			log.Printf("Common Crawl index %s unavailable; skipping it: %v", index.ID, err)
+			indexFailures[index.ID]++
+			if indexFailures[index.ID] >= maxConsecutiveIndexFailures {
+				unavailableIndexes[index.ID] = true
+				log.Printf("Common Crawl index %s unavailable after %d consecutive failures; skipping %s: %v", index.ID, indexFailures[index.ID], index.CDXAPI, err)
+			} else {
+				log.Printf("Common Crawl index %s transient failure %d/%d querying %s: %v", index.ID, indexFailures[index.ID], maxConsecutiveIndexFailures, index.CDXAPI, err)
+			}
 			continue
 		}
 		if err != nil {
 			return cacheEntry{}, false, false, err
 		}
+		indexFailures[index.ID] = 0
 		searched = true
 		if !ok {
 			continue
