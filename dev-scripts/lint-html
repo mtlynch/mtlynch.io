@@ -11,9 +11,20 @@ readonly BUILD_DIR="public"
 readonly TEST_DIR="$(mktemp --directory)"
 
 lychee_args=()
-if [ "${1-}" = "--quick" ]; then
-  lychee_args+=("--offline")
-fi
+for arg in "$@"; do
+  case "${arg}" in
+    --quick)
+      lychee_args+=("--offline")
+      ;;
+    --verbose)
+      lychee_args+=("--verbose")
+      ;;
+    *)
+      echo "Unknown argument: ${arg}" >&2
+      exit 1
+      ;;
+  esac
+done
 
 function cleanup {
   rm --recursive --force "${TEST_DIR}"
@@ -33,6 +44,5 @@ find "${TEST_DIR}" -type f -name "*.html" -print0 | \
 lychee \
   --config lychee.toml \
   --root-dir "${TEST_DIR}" \
-  --verbose \
   "${lychee_args[@]}" \
   "${TEST_DIR}/**/*.html"
