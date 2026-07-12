@@ -40,7 +40,6 @@ exclude = [
   "//community\\.bloggingfordevs\\.com/",
   "//coursemaker\\.org/",
   "//cypress\\.io/",
-  "//danielvassallo\\.com/",
   "//datacommons\\.org/",
   "//demo\\.nextcloud\\.com/",
   "//docs\\.peer5\\.com/",
