@@ -145,6 +145,14 @@ func run() error {
 	skippedUnavailable := 0
 	uncached := countUncachedLinks(links, cache)
 	log.Printf("Looking up up to %d uncached links in Common Crawl with at least %s between API calls", uncached, commonCrawlRequestInterval)
+	if uncached > 0 {
+		log.Printf("Common Crawl URLs to query:")
+		for _, link := range links {
+			if _, ok := cache[link]; !ok {
+				log.Printf("Common Crawl URL: %s", link)
+			}
+		}
+	}
 	for i, link := range links {
 		if _, ok := cache[link]; ok {
 			skippedCached++
