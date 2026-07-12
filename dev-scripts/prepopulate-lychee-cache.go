@@ -155,7 +155,6 @@ func run() error {
 			log.Printf("Common Crawl lookup progress: %d/%d uncached links processed, %d added, %d misses, %d skipped because indexes were unavailable", queried, uncached, added, missed, skippedUnavailable)
 		}
 
-		log.Printf("Querying Common Crawl URL %d/%d: %s", queried, uncached, link)
 		entry, ok, searched, err := lookupCommonCrawl(client, indexes, link, cutoff)
 		if errors.Is(err, errStopCommonCrawl) {
 			remaining := countUncachedLinks(links[i:], cache)
@@ -180,13 +179,13 @@ func run() error {
 			break
 		}
 		if !ok {
-			log.Printf("Common Crawl result for %s: no cacheable record found", link)
+			log.Printf("Common Crawl result for %s (%d/%d): no cacheable record found", link, queried, uncached)
 			missed++
 			continue
 		}
 
 		cache[link] = entry
-		log.Printf("Common Crawl result for %s: status %d at %s; adding to lychee cache", link, entry.Status, time.Unix(entry.Timestamp, 0).UTC().Format(time.RFC3339))
+		log.Printf("Common Crawl result for %s (%d/%d): status %d at %s; adding to lychee cache", link, queried, uncached, entry.Status, time.Unix(entry.Timestamp, 0).UTC().Format(time.RFC3339))
 		added++
 	}
 
@@ -425,7 +424,6 @@ func newCommonCrawlClient() *commonCrawlClient {
 
 func (client *commonCrawlClient) get(rawURL string, cdx bool) (*http.Response, error) {
 	if wait := time.Until(client.lastRequest.Add(commonCrawlRequestInterval)); !client.lastRequest.IsZero() && wait > 0 {
-		log.Printf("Sleeping %s before next Common Crawl API request", wait.Round(time.Second))
 		time.Sleep(wait)
 	}
 
