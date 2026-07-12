@@ -126,7 +126,7 @@ jobs:
             - resources
   lint_html:
     docker:
-      - image: cimg/base:current
+      - image: cimg/go:1.24
     environment:
       LYCHEE_VERSION: "0.24.2"
     steps:
@@ -151,6 +151,10 @@ jobs:
               sudo tar --extract --gzip --file - --directory /usr/local/bin --strip-components=1 --no-same-owner \
                 "lychee-${LYCHEE_ARCH}-unknown-linux-gnu/lychee"
             lychee --version
+      - run:
+          name: Prepopulate lychee cache from Common Crawl
+          no_output_timeout: 60m
+          command: go run ./dev-scripts/prepopulate-lychee-cache.go
       - run:
           name: Check HTML and external links
           no_output_timeout: 60m

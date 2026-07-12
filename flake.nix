@@ -30,6 +30,7 @@
   } @ inputs:
     flake-utils.lib.eachDefaultSystem (system: let
       hugo = hugo-nixpkgs.legacyPackages.${system}.hugo;
+      go = hugo-nixpkgs.legacyPackages.${system}.go;
       nodejs = nodejs-nixpkgs.legacyPackages.${system}.nodejs_24;
       lychee = lychee-nixpkgs.legacyPackages.${system}.lychee;
       markdownlint = markdown-lint-nixpkgs.legacyPackages.${system}.markdownlint-cli2;
@@ -40,6 +41,7 @@
       devShells.default = hugo-nixpkgs.legacyPackages.${system}.mkShell {
         packages = [
           exiftool
+          go
           hugo
           libxml2
           nodejs
@@ -51,6 +53,7 @@
         shellHook = ''
           wordword --version
           echo "exiftool" "$(exiftool -ver)"
+          go version
           lychee --version
           markdownlint-cli2 | head -n 1
           echo "node" "$(node --version)"

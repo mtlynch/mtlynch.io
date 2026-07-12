@@ -1,5 +1,5 @@
 cache = true
-max_cache_age = "14d"
+max_cache_age = "45d"
 cache_exclude_status = "429, 500.."
 no_progress = true
 accept = ["100..=103", "200..=299", "403"]
