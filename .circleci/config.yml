@@ -131,8 +131,6 @@ jobs:
       LYCHEE_VERSION: "0.24.2"
     steps:
       - checkout
-      - attach_workspace:
-          at: ./
       - restore_cache:
           keys:
             - lychee-v1-
@@ -157,7 +155,7 @@ jobs:
           no_output_timeout: 60m
           command: go run ./dev-scripts/prepopulate-lychee-cache.go
       - run:
-          name: Check HTML and external links
+          name: Check Markdown links
           no_output_timeout: 60m
           command: ./dev-scripts/lint-html
       - save_cache:
@@ -233,9 +231,7 @@ workflows:
       - check_duplicate_words
       - check_exif_data
       - build
-      - lint_html:
-          requires:
-            - build
+      - lint_html
       - lint_xml:
           requires:
             - build

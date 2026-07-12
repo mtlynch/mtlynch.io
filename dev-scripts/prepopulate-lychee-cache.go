@@ -13,7 +13,6 @@ import (
 	"net/url"
 	"os"
 	"os/exec"
-	"path/filepath"
 	"regexp"
 	"sort"
 	"strconv"
@@ -22,9 +21,10 @@ import (
 )
 
 const (
-	buildDir    = "public"
 	cachePath   = ".lycheecache"
 	cacheMaxAge = 45 * 24 * time.Hour
+	baseURL     = "https://mtlynch.io/"
+	selfLinkRe  = "^https://mtlynch\\.io/"
 
 	ccIndexURL                    = "https://index.commoncrawl.org/collinfo.json"
 	commonCrawlIndexListCachePath = ".commoncrawl-collinfo.json"
@@ -90,19 +90,8 @@ func run() error {
 		return nil
 	}
 
-	testDir, err := os.MkdirTemp("", "lychee-commoncrawl-*")
-	if err != nil {
-		return err
-	}
-	defer os.RemoveAll(testDir)
-
-	log.Printf("Preparing temporary site copy in %s", testDir)
-	if err := prepareTestDir(testDir); err != nil {
-		return err
-	}
-
-	log.Printf("Extracting external links with lychee --dump")
-	links, err := dumpExternalLinks(testDir)
+	log.Printf("Extracting external links from Markdown with lychee --dump")
+	links, err := dumpExternalLinks()
 	if err != nil {
 		return err
 	}
@@ -226,92 +215,15 @@ func countCachedLinks(links []string, cache map[string]cacheEntry) int {
 	return cached
 }
 
-func prepareTestDir(testDir string) error {
-	if err := copyDir(buildDir, testDir); err != nil {
-		return err
-	}
-
-	for _, path := range []string{
-		filepath.Join(testDir, "collect-debt", "full-emails", "index.html"),
-		filepath.Join(testDir, "notes", "archivebox", "reddit-singlefile.html"),
-	} {
-		if err := os.Remove(path); err != nil && !errors.Is(err, os.ErrNotExist) {
-			return err
-		}
-	}
-
-	return filepath.WalkDir(testDir, func(path string, d os.DirEntry, err error) error {
-		if err != nil {
-			return err
-		}
-		if d.IsDir() || filepath.Ext(path) != ".html" {
-			return nil
-		}
-
-		contents, err := os.ReadFile(path)
-		if err != nil {
-			return err
-		}
-		contents = bytes.ReplaceAll(contents, []byte("https://mtlynch.io/"), []byte("/"))
-		return os.WriteFile(path, contents, 0o644)
-	})
-}
-
-func copyDir(src string, dst string) error {
-	return filepath.WalkDir(src, func(path string, d os.DirEntry, err error) error {
-		if err != nil {
-			return err
-		}
-
-		rel, err := filepath.Rel(src, path)
-		if err != nil {
-			return err
-		}
-		target := filepath.Join(dst, rel)
-
-		info, err := d.Info()
-		if err != nil {
-			return err
-		}
-
-		if d.IsDir() {
-			return os.MkdirAll(target, info.Mode().Perm())
-		}
-		if !info.Mode().IsRegular() {
-			return nil
-		}
-
-		input, err := os.Open(path)
-		if err != nil {
-			return err
-		}
-
-		output, err := os.OpenFile(target, os.O_CREATE|os.O_WRONLY|os.O_TRUNC, info.Mode().Perm())
-		if err != nil {
-			input.Close()
-			return err
-		}
-
-		_, copyErr := io.Copy(output, input)
-		closeInputErr := input.Close()
-		closeOutputErr := output.Close()
-		if copyErr != nil {
-			return copyErr
-		}
-		if closeInputErr != nil {
-			return closeInputErr
-		}
-		return closeOutputErr
-	})
-}
-
-func dumpExternalLinks(testDir string) ([]string, error) {
+func dumpExternalLinks() ([]string, error) {
 	cmd := exec.Command(
 		"lychee",
 		"--config", "lychee.toml",
-		"--root-dir", testDir,
+		"--base-url", baseURL,
+		"--exclude", selfLinkRe,
 		"--dump",
-		filepath.Join(testDir, "**", "*.html"),
+		"README.md",
+		"content/**/*.md",
 	)
 	output, err := cmd.Output()
 	if err != nil {

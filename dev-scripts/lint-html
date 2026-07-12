@@ -7,9 +7,9 @@ set -e
 # Exit on unset variable.
 set -u
 
-readonly BUILD_DIR="public"
-readonly TEST_DIR="$(mktemp --directory)"
+readonly BASE_URL="https://mtlynch.io/"
 readonly TARGET_BRANCH="master"
+readonly SELF_LINK_PATTERN="^https://mtlynch\\.io/"
 
 lychee_args=()
 for arg in "$@"; do
@@ -27,113 +27,65 @@ for arg in "$@"; do
   esac
 done
 
-function cleanup {
-  rm --recursive --force "${TEST_DIR}"
-}
-trap cleanup EXIT
-
 function add_target {
   local target="$1"
 
-  for existing_target in "${lychee_targets[@]}"; do
+  for existing_target in "${markdown_targets[@]}"; do
     if [[ "${existing_target}" == "${target}" ]]; then
       return
     fi
   done
 
-  lychee_targets+=("${target}")
+  markdown_targets+=("${target}")
 }
 
-function content_file_to_public_html {
-  local content_file="$1"
-  local output_path=""
-  local url=""
+function add_all_markdown_targets {
+  local markdown_file=""
 
-  url="$(grep --max-count=1 '^url: ' "${content_file}" | cut --delimiter=' ' --fields=2- || true)"
-  if [[ -n "${url}" ]]; then
-    url="${url#/}"
-    url="${url%/}"
-    output_path="${TEST_DIR}/${url}/index.html"
-  elif [[ "${content_file}" == content/posts/*/index.md ]]; then
-    output_path="${TEST_DIR}/${content_file#content/posts/}"
-    output_path="${output_path%/index.md}/index.html"
-  elif [[ "${content_file}" == content/*/_index.md ]]; then
-    output_path="${TEST_DIR}/${content_file#content/}"
-    output_path="${output_path%/_index.md}/index.html"
-  elif [[ "${content_file}" == content/*/index.md ]]; then
-    output_path="${TEST_DIR}/${content_file#content/}"
-    output_path="${output_path%/index.md}/index.html"
-  elif [[ "${content_file}" == content/*.md ]]; then
-    output_path="${TEST_DIR}/${content_file#content/}"
-    output_path="${output_path%.md}/index.html"
-  elif [[ "${content_file}" == content/* ]]; then
-    return
-  fi
+  mapfile -t markdown_files < <(git ls-files "*.md")
 
-  if [[ -n "${output_path}" && -f "${output_path}" ]]; then
-    add_target "${output_path}"
-  elif [[ -n "${url}" && -f "${TEST_DIR}/${url}.html" ]]; then
-    add_target "${TEST_DIR}/${url}.html"
-  else
-    echo "No generated HTML found for changed content file: ${content_file}" >&2
-  fi
+  for markdown_file in "${markdown_files[@]}"; do
+    add_target "${markdown_file}"
+  done
 }
 
 function add_changed_targets {
   local changed_file=""
 
-  mapfile -t changed_files < <(git diff --name-only --diff-filter=ACMRT "origin/${TARGET_BRANCH}...HEAD")
+  mapfile -t changed_files < <(git diff --name-only --diff-filter=ACMRT "origin/${TARGET_BRANCH}...HEAD" -- "*.md")
 
   if [[ "${#changed_files[@]}" -eq 0 ]]; then
     return
   fi
 
   for changed_file in "${changed_files[@]}"; do
-    case "${changed_file}" in
-      content/*.md|content/**/*.md)
-        content_file_to_public_html "${changed_file}"
-        ;;
-      *.md|*.html|*.htm)
-        if [[ -f "${changed_file}" ]]; then
-          add_target "${changed_file}"
-        fi
-        ;;
-      *)
-        ;;
-    esac
+    if [[ -f "${changed_file}" ]]; then
+      add_target "${changed_file}"
+    fi
   done
 }
 
-cp --archive "${BUILD_DIR}/." "${TEST_DIR}/"
-
-rm --force \
-  "${TEST_DIR}/collect-debt/full-emails/index.html" \
-  "${TEST_DIR}/notes/archivebox/reddit-singlefile.html"
-
-# Check same-site absolute URLs against the local build, not production.
-find "${TEST_DIR}" -type f -name "*.html" -print0 | \
-  xargs --null --no-run-if-empty sed --in-place 's|https://mtlynch\.io/|/|g'
-
-lychee_targets=()
+markdown_targets=()
 if [[ "${CIRCLE_BRANCH:-}" == "${TARGET_BRANCH}" ]]; then
-  lychee_targets=("${TEST_DIR}/**/*.html")
+  add_all_markdown_targets
 elif git rev-parse --verify --quiet "origin/${TARGET_BRANCH}" > /dev/null; then
   add_changed_targets
 else
-  echo "Unable to find origin/${TARGET_BRANCH}; checking all generated HTML" >&2
-  lychee_targets=("${TEST_DIR}/**/*.html")
+  echo "Unable to find origin/${TARGET_BRANCH}; checking all Markdown files" >&2
+  add_all_markdown_targets
 fi
 
-if [[ "${#lychee_targets[@]}" -eq 0 ]]; then
-  echo "No Markdown or HTML files changed compared to ${TARGET_BRANCH}; skipping lychee"
+if [[ "${#markdown_targets[@]}" -eq 0 ]]; then
+  echo "No Markdown files changed compared to ${TARGET_BRANCH}; skipping lychee"
   exit 0
 fi
 
-printf 'Checking links in files changed relative to %s:\n' "${TARGET_BRANCH}"
-printf '  %s\n' "${lychee_targets[@]}"
+printf 'Checking links in Markdown files changed relative to %s:\n' "${TARGET_BRANCH}"
+printf '  %s\n' "${markdown_targets[@]}"
 
 lychee \
   --config lychee.toml \
-  --root-dir "${TEST_DIR}" \
+  --base-url "${BASE_URL}" \
+  --exclude "${SELF_LINK_PATTERN}" \
   "${lychee_args[@]}" \
-  "${lychee_targets[@]}"
+  "${markdown_targets[@]}"
