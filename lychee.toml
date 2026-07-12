@@ -105,7 +105,7 @@ exclude = [
 
 [hosts."news.ycombinator.com"]
 concurrency = 1
-request_interval = "10s"
+request_interval = "30s"
 
 [hosts."archive.is"]
 concurrency = 1
