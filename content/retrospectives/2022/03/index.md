@@ -232,7 +232,7 @@ I'm replacing "Legacy projects" with "Side projects" so I can talk about the hob
 
 ## Side projects
 
-### [Lenny](https://lenny.email)
+### Lenny
 
 Lenny is a chatbot that responds to spam emails on my behalf.
 

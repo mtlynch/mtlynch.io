@@ -10,8 +10,8 @@
     # 0.17.2
     markdown-lint-nixpkgs.url = "github:NixOS/nixpkgs/102a39bfee444533e6b4e8611d7e92aa39b7bec1";
 
-    # 5.0.8 release
-    html-proofer-nixpkgs.url = "github:NixOS/nixpkgs/5ed627539ac84809c78b2dd6d26a5cebeb5ae269";
+    # 0.24.2 release
+    lychee-nixpkgs.url = "github:NixOS/nixpkgs/3d46470bb3030020f7e1361f33514854f5bfa86d";
 
     # 0.147.5 release
     hugo-nixpkgs.url = "github:NixOS/nixpkgs/e0042dedfbc9134ef973f64e5c7f56a38cc5cc97";
@@ -24,14 +24,15 @@
     flake-utils,
     nodejs-nixpkgs,
     markdown-lint-nixpkgs,
-    html-proofer-nixpkgs,
+    lychee-nixpkgs,
     hugo-nixpkgs,
     wordword-pkg,
   } @ inputs:
     flake-utils.lib.eachDefaultSystem (system: let
       hugo = hugo-nixpkgs.legacyPackages.${system}.hugo;
+      go = hugo-nixpkgs.legacyPackages.${system}.go;
       nodejs = nodejs-nixpkgs.legacyPackages.${system}.nodejs_24;
-      html-proofer = html-proofer-nixpkgs.legacyPackages.${system}.html-proofer;
+      lychee = lychee-nixpkgs.legacyPackages.${system}.lychee;
       markdownlint = markdown-lint-nixpkgs.legacyPackages.${system}.markdownlint-cli2;
       wordword = wordword-pkg.packages.${system}.default;
       libxml2 = hugo-nixpkgs.legacyPackages.${system}.libxml2;
@@ -40,18 +41,20 @@
       devShells.default = hugo-nixpkgs.legacyPackages.${system}.mkShell {
         packages = [
           exiftool
+          go
           hugo
           libxml2
           nodejs
           markdownlint
           wordword
-          html-proofer
+          lychee
         ];
 
         shellHook = ''
           wordword --version
           echo "exiftool" "$(exiftool -ver)"
-          echo "htmlproofer" "$(htmlproofer --version)"
+          go version
+          lychee --version
           markdownlint-cli2 | head -n 1
           echo "node" "$(node --version)"
           hugo version

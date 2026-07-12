@@ -466,10 +466,10 @@ The concept didn't click for me until I built my rack. In short, the patch panel
 
 ### Candidates
 
-| Brand          | Model                                                                                                                      | Price |
-| -------------- | -------------------------------------------------------------------------------------------------------------------------- | ----- |
-| NewYork Cables | [24-Port 1U](https://www.amazon.com/dp/B08LLDCRCV/ref=cm_sw_r_apan_glt_i_2AEKK799CAJQ591DCSWS?_encoding=UTF8&th=1)         | $19   |
-| Tripp Lite     | [16-Port 1U](https://tripplite.eaton.com/16-port-1u-rack-mount-unshielded-blank-keystone-multimedia-patch-panel~N062016KJ) | $13   |
+| Brand          | Model                                                                                                              | Price |
+| -------------- | ------------------------------------------------------------------------------------------------------------------ | ----- |
+| NewYork Cables | [24-Port 1U](https://www.amazon.com/dp/B08LLDCRCV/ref=cm_sw_r_apan_glt_i_2AEKK799CAJQ591DCSWS?_encoding=UTF8&th=1) | $19   |
+| Tripp Lite     | [16-Port 1U](https://www.eaton.com/us/en-us/skuPage.N062-016-KJ.html)                                              | $13   |
 
 ### Review: NewYork Cables 24-Port 1U Patch Panel
 
@@ -686,7 +686,7 @@ Maybe minimizing cable length is important in a data center where you're replica
 | Power strip                     | [Tripp Lite RS-1215-RA](https://www.newegg.com/black-tripp-lite-12-outlets-power-strip/p/N82E16812120265?Item=9SIAFVF75F0869)                                              | $78    | B+           |
 | Rack shelves                    | [Pyle PLRSTN62U 19" 2U](https://pyleusa.com/products/plrstn62u)                                                                                                            | $64    | A            |
 | Patch panel (24-port)           | [NewYork Cables 1U](https://www.amazon.com/dp/B08LLDCRCV/ref=cm_sw_r_apan_glt_i_2AEKK799CAJQ591DCSWS?_encoding=UTF8&th=1)                                                  | $19    | B+           |
-| Patch panel (16-port)           | [Tripp Lite 1U](https://tripplite.eaton.com/16-port-1u-rack-mount-unshielded-blank-keystone-multimedia-patch-panel~N062016KJ)                                              | $13    | A            |
+| Patch panel (16-port)           | [Tripp Lite 1U](https://www.eaton.com/us/en-us/skuPage.N062-016-KJ.html)                                                                                                   | $13    | A            |
 | Raspberry Pi rack mount         | [UCTRONICS Ultimate Rack with PoE Functionality](https://www.uctronics.com/raspberry-pi/1u-rack-mount/raspberry-pi-4b-rack-mount-19-inch-1u-with-poe-and-oled-screen.html) | $190   | C+           |
 | **Total**                       |                                                                                                                                                                            | $1,453 |              |
 

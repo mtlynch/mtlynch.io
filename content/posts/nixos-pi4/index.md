@@ -312,4 +312,4 @@ In creating this tutorial, I ran into a ton of paths that didn't work. I've coll
 
 ---
 
-_Thanks to [Alex Groleau](https://proof.construction/) from the NixOS documentation team for his help with this guide and his work on [the official NixOS Raspberry Pi tutorial](https://nix.dev/tutorials/nixos/installing-nixos-on-a-raspberry-pi)._
+_Thanks to [Alex Groleau](https://github.com/proofconstruction) from the NixOS documentation team for his help with this guide and his work on [the official NixOS Raspberry Pi tutorial](https://nix.dev/tutorials/nixos/installing-nixos-on-a-raspberry-pi)._

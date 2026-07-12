@@ -170,7 +170,7 @@ Right out of the box, uStreamer reduced my latency from 8 seconds to 500-600 mil
 
 {{<img src="ustreamer-1.jpg" alt="500 ms latency with uStreamer and the HDMI dongle" caption="uStreamer reduced my latency by a factor of 15." max-width="700px" has-border="false">}}
 
-Prior to uStreamer, I wasn't sure how to get video from ffmpeg into the user's browser, but I knew it was possible somehow. I tested this [mostly-accurate tutorial](https://docs.peer5.com/guides/setting-up-hls-live-streaming-server-using-nginx/) for piping video from ffmpeg to nginx using HLS, but it added even more latency. And it still left open problems like how to start and stop streaming on HDMI cable connects and disconnects and how to translate the video to a browser-friendly format.
+Prior to uStreamer, I wasn't sure how to get video from ffmpeg into the user's browser, but I knew it was possible somehow. I tested this [mostly-accurate tutorial](https://web.archive.org/web/20200219033123/https://docs.peer5.com/guides/setting-up-hls-live-streaming-server-using-nginx/) for piping video from ffmpeg to nginx using HLS, but it added even more latency. And it still left open problems like how to start and stop streaming on HDMI cable connects and disconnects and how to translate the video to a browser-friendly format.
 
 uStreamer solved all of this. It ran its own minimal HTTP server that served video in [Motion JPEG](https://en.wikipedia.org/wiki/Motion_JPEG), a format browsers play natively. I didn't have to bother with HLS streams or getting ffmpeg and nginx to talk to each other.
 

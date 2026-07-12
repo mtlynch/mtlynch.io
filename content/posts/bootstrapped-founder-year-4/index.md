@@ -228,9 +228,9 @@ I think the change eliminated friction and decision-making from the buying proce
 
 ### Good leadership means helping teammates grow
 
-{{<img src="jason-cohen-usual-saaspects.jpg" alt="Screenshot of Jason Cohen being interviewed on The Usual Saaspects podcast" max-width="800px" caption="Jason Cohen (left) speaking to Ch Daniel (right) on [*The Usual Saaspects* podcast](https://youtu.be/Sjs5gEUlZyU?t=3605)" has-border="false">}}
+{{<img src="jason-cohen-usual-saaspects.jpg" alt="Screenshot of Jason Cohen being interviewed on The Usual Saaspects podcast" max-width="800px" caption="Jason Cohen (left) speaking to Ch Daniel (right) on *The Usual Saaspects* podcast" has-border="false">}}
 
-In a [recent interview](https://youtu.be/Sjs5gEUlZyU?t=3605), [WPEngine](https://wpengine.com) founder Jason Cohen described leadership in a way that stuck with me:
+In a recent interview, [WPEngine](https://wpengine.com) founder Jason Cohen described leadership in a way that stuck with me:
 
 > With leadership, yes, you're trying to get the right answers, and goals, and decisions... You're also trying to build a team that's smarter and better, that's themselves making better decisions, themselves are coming up with better answers, themselves have better context...
 >

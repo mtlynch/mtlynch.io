@@ -43,7 +43,7 @@ I've been running virtual machines within my main Windows desktop with VirtualBo
 
 With a dedicated VM server, I can run a barebones Linux server OS on it. The less software running on a machine, the less frequently it requires reboots and the less likely it is to crash.
 
-There are also some peer-to-peer projects I think are neat (e.g. [OpenBazaar](https://openbazaar.org), [BitSquare](https://bitsquare.io/)), but they require running a server all the time. I've tried doing this through VirtualBox, but the hassles I mention above tend to make me lose interest in keeping these VMs running. If I could just spin up a VM once and leave it running, experimenting with these projects becomes a lot more attractive.
+There are also some peer-to-peer projects I think are neat (e.g. [OpenBazaar](https://openbazaar.org), [Bisq](https://bisq.network/)), but they require running a server all the time. I've tried doing this through VirtualBox, but the hassles I mention above tend to make me lose interest in keeping these VMs running. If I could just spin up a VM once and leave it running, experimenting with these projects becomes a lot more attractive.
 
 ## Choosing the parts
 

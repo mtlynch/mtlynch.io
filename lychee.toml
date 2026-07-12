@@ -1,0 +1,121 @@
+cache = true
+max_cache_age = "45d"
+cache_exclude_status = "429, 500.."
+no_progress = true
+accept = ["100..=103", "200..=299", "403"]
+timeout = 5
+max_retries = 1
+retry_wait_time = 10
+max_concurrency = 4
+host_concurrency = 1
+host_request_interval = "1s"
+method = "get"
+include_fragments = "anchor-only"
+index_files = ["index.html"]
+exclude_loopback = true
+
+exclude = [
+  # Ignore downloadable/page-bundle assets that Hugo does not publish into public/.
+  "\\.(css|js|png|jpe?g|gif|webp|svg|mp4|pdf|txt|xml|ya?ml|nix|lua|py|zst)(\\?.*)?$",
+  "Dockerfile\\.(nextcloud|sia)$",
+  "^file://.*/collect-debt/full-emails/?$",
+  "^file://.*/notes/archivebox/reddit-singlefile\\.html$",
+  # Ignore local development-only URLs.
+  "^https?://(localhost|raspberrypi)(:|/)",
+  # Ignore external URL fragments. Many sites use JavaScript hash routers or
+  # generated line anchors that lychee can't reliably verify.
+  "^https?://[^#]+#",
+  # Ignore URLs that intermittently return bot-blocking responses in CI.
+  "//([^.]+\\.)*aliexpress\\.us/",
+  "//([^.]+\\.)*amazon\\.com/",
+  "//([^.]+\\.)*archive\\.is/",
+  "//adage\\.com/",
+  "//ark\\.intel\\.com/",
+  "//blog\\.xirion\\.net/",
+  "//calculator\\.aws/",
+  "//chromium\\.googlesource\\.com/",
+  "//([^.]+\\.)*codeberg\\.org/",
+  "//community\\.bloggingfordevs\\.com/",
+  "//coursemaker\\.org/",
+  "//cypress\\.io/",
+  "//demo\\.nextcloud\\.com/",
+  "//([^.]+\\.)*example\\.com/",
+  "//([^.]+\\.)*codegram\\.com/",
+  "//([^.]+\\.)*facebook\\.com/",
+  "//([^.]+\\.)*github\\.com/",
+  "//docs\\.github\\.com/",
+  "//fdc\\.nal\\.usda\\.gov/",
+  "//feinternational\\.com/",
+  "//gimletmedia\\.com/",
+  "//([^.]+\\.)*gitlab\\.com/",
+  "//gitlab\\.gnome\\.org/",
+  "//gusto\\.com/",
+  "//help\\.shipstation\\.com/",
+  "//([^.]+\\.)*hellobase\\.dev/",
+  "//([^.]+\\.)*indiebound\\.org/",
+  "//isitketo\\.org/",
+  "//ketocornerstone\\.com/",
+  "//lauraroeder\\.com/",
+  "//([^.]+\\.)*linux-kvm\\.org/",
+  "//market\\.mashape\\.com/",
+  "//mediagoblin-v5lmqis51k\\.herokuapp\\.com/",
+  "//medium\\.com/",
+  "//newegg\\.com/",
+  "//newsletter\\.keto\\.fm/",
+  "//ninetyninedesigns\\.7eer\\.net/",
+  "//obelisk\\.tech/",
+  "//opensource\\.org/",
+  "//pcpartpicker\\.com/",
+  "//playwright\\.dev/",
+  "//redd\\.it/",
+  "//reddit\\.com/",
+  "//schleiss\\.io/",
+  "//([^.]+\\.)*servernope\\.com/",
+  "//shapeshift\\.io/",
+  "//siastats\\.info/",
+  "//splashthat\\.com/",
+  "//tmate\\.io/",
+  "//userkit\\.io/",
+  "//typeform\\.com/",
+  "//twitter\\.com/",
+  "//upwork\\.com/",
+  "//web\\.archive\\.org/web/20251026210700/https://notabug\\.org/dachary/mediagoblin-docker",
+  "//vimeo\\.com/",
+  "//vmware\\.com/",
+  "//wpengine\\.com/",
+  "//www\\.amd\\.com/",
+  "//www\\.bls\\.gov/",
+  "//www\\.buzzfeednews\\.com/",
+  "//www\\.bhphotovideo\\.com/",
+  "//www\\.digitalfaq\\.com/",
+  "//www\\.kissmyketo\\.com/",
+  "//www\\.investopedia\\.com/",
+  "//www\\.irs\\.gov/",
+  "//www\\.linkedin\\.com/",
+  "//www\\.nber\\.org/",
+  "//www\\.nccgroup\\.com/",
+  "//www\\.raspberrypi\\.com/",
+  "//www\\.raspberrypi\\.org/",
+  "//www\\.reddit\\.com/",
+  "//www\\.sciencedirect\\.com/",
+  "//www\\.servicenow\\.com/",
+  "//www\\.usta\\.com/",
+  # Ignore links to comments that only load in production.
+  "^file://.*#comment-.*",
+]
+
+[hosts."news.ycombinator.com"]
+concurrency = 1
+request_interval = "30s"
+
+[hosts."archive.is"]
+concurrency = 1
+request_interval = "30s"
+
+[hosts."trends.google.com"]
+concurrency = 1
+request_interval = "30s"
+
+[hosts."web.archive.org"]
+concurrency = 1
+request_interval = "5s"

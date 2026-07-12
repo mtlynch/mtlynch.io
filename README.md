@@ -28,11 +28,11 @@ If the PR fixes an issue, include the text "Fixes #XX" in the PR description, wh
 
 ## Build Failures
 
-### HTMLProofer
+### lychee
 
-If HTMLProofer fails on a broken link, we have three options: suppress the error, fix the link, or remove the link.
+If lychee fails on a broken link, we have three options: suppress the error, fix the link, or remove the link.
 
-You should suppress the error if the link works fine in a browser, but fails in CI occasionally. To do this, update the `IGNORE_PATTERNS` list in [`dev-scripts/lint-html`](./dev-scripts/lint-html). Add a comment above the entry to explain why we're adding this suppression.
+You should suppress the error if the link works fine in a browser, but fails in CI occasionally. To do this, update the `exclude` list in [`lychee.toml`](./lychee.toml). Add a comment above the entry to explain why we're adding this suppression.
 
 If the link is just permanently broken and does not load, even in a browser, either replace the link with another that achieves the same effect or remove the link entirely.
 
