@@ -8,3 +8,5 @@ config-preview.toml
 .netlify/state.json
 node_modules/
 .lycheecache
+.commoncrawl-collinfo.json
+.commoncrawl-cooldown

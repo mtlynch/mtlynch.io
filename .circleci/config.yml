@@ -163,6 +163,8 @@ jobs:
           key: lychee-v1-{{ epoch }}
           paths:
             - .lycheecache
+            - .commoncrawl-collinfo.json
+            - .commoncrawl-cooldown
   lint_xml:
     docker:
       - image: alpine:3.21.2
