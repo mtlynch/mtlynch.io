@@ -8,6 +8,7 @@ import (
 	"errors"
 	"fmt"
 	"io"
+	"log"
 	"net/http"
 	"net/url"
 	"os"
@@ -49,6 +50,8 @@ type cacheEntry struct {
 var errCommonCrawlUnavailable = errors.New("Common Crawl index unavailable")
 
 func main() {
+	log.SetFlags(log.LstdFlags | log.LUTC)
+
 	if err := run(); err != nil {
 		fmt.Fprintf(os.Stderr, "prepopulate lychee cache: %v\n", err)
 		os.Exit(1)
@@ -56,8 +59,10 @@ func main() {
 }
 
 func run() error {
+	started := time.Now()
 	now := time.Now().UTC()
 	cutoff := now.Add(-cacheMaxAge)
+	log.Printf("Prepopulating lychee cache from Common Crawl records newer than %s", cutoff.Format(time.RFC3339))
 
 	testDir, err := os.MkdirTemp("", "lychee-commoncrawl-*")
 	if err != nil {
@@ -65,43 +70,64 @@ func run() error {
 	}
 	defer os.RemoveAll(testDir)
 
+	log.Printf("Preparing temporary site copy in %s", testDir)
 	if err := prepareTestDir(testDir); err != nil {
 		return err
 	}
 
+	log.Printf("Extracting external links with lychee --dump")
 	links, err := dumpExternalLinks(testDir)
 	if err != nil {
 		return err
 	}
+	log.Printf("Found %d unique external links", len(links))
 
 	cache, err := loadCache(cachePath, cutoff)
 	if err != nil {
 		return err
 	}
+	log.Printf("Loaded %d fresh lychee cache entries from %s", len(cache), cachePath)
 
 	client := &http.Client{Timeout: 20 * time.Second}
+	log.Printf("Fetching Common Crawl index list from %s", ccIndexURL)
 	indexes, err := fetchRecentIndexes(client, cutoff)
+	if errors.Is(err, errCommonCrawlUnavailable) {
+		log.Printf("Common Crawl index list unavailable; leaving lychee cache unchanged: %v", err)
+		return nil
+	}
 	if err != nil {
 		return err
 	}
 	if len(indexes) == 0 {
-		fmt.Fprintln(os.Stderr, "Common Crawl index list unavailable; leaving lychee cache unchanged")
+		log.Printf("Common Crawl index list unavailable; leaving lychee cache unchanged")
 		return nil
 	}
+	log.Printf("Using %d recent Common Crawl indexes: %s", len(indexes), strings.Join(indexIDs(indexes), ", "))
 
 	added := 0
 	skippedCached := 0
 	missed := 0
+	skippedUnavailable := 0
 	unavailableIndexes := map[string]bool{}
+	uncached := countUncachedLinks(links, cache)
+	log.Printf("Looking up up to %d uncached links in Common Crawl", uncached)
 	for _, link := range links {
 		if _, ok := cache[link]; ok {
 			skippedCached++
 			continue
 		}
+		queried := added + missed + skippedUnavailable + 1
+		if queried == 1 || queried%25 == 0 {
+			log.Printf("Common Crawl lookup progress: %d/%d uncached links processed, %d added, %d misses, %d skipped because indexes were unavailable", queried, uncached, added, missed, skippedUnavailable)
+		}
 
-		entry, ok, err := lookupCommonCrawl(client, indexes, unavailableIndexes, link, cutoff)
+		entry, ok, searched, err := lookupCommonCrawl(client, indexes, unavailableIndexes, link, cutoff)
 		if err != nil {
 			return err
+		}
+		if !searched {
+			skippedUnavailable++
+			continue
 		}
 		if !ok {
 			missed++
@@ -112,12 +138,31 @@ func run() error {
 		added++
 	}
 
+	log.Printf("Writing %d lychee cache entries to %s", len(cache), cachePath)
 	if err := storeCache(cachePath, cache); err != nil {
 		return err
 	}
 
-	fmt.Printf("Common Crawl cache prepopulation: %d external links, %d already cached, %d added, %d misses\n", len(links), skippedCached, added, missed)
+	log.Printf("Common Crawl cache prepopulation complete in %s: %d external links, %d already cached, %d added, %d misses, %d skipped because indexes were unavailable", time.Since(started).Round(time.Second), len(links), skippedCached, added, missed, skippedUnavailable)
 	return nil
+}
+
+func indexIDs(indexes []commonCrawlIndex) []string {
+	ids := make([]string, 0, len(indexes))
+	for _, index := range indexes {
+		ids = append(ids, index.ID)
+	}
+	return ids
+}
+
+func countUncachedLinks(links []string, cache map[string]cacheEntry) int {
+	uncached := 0
+	for _, link := range links {
+		if _, ok := cache[link]; !ok {
+			uncached++
+		}
+	}
+	return uncached
 }
 
 func prepareTestDir(testDir string) error {
@@ -315,11 +360,11 @@ func storeCache(path string, cache map[string]cacheEntry) error {
 func fetchRecentIndexes(client *http.Client, cutoff time.Time) ([]commonCrawlIndex, error) {
 	resp, err := client.Get(ccIndexURL)
 	if err != nil {
-		return nil, nil
+		return nil, fmt.Errorf("%w: fetch %s: %v", errCommonCrawlUnavailable, ccIndexURL, err)
 	}
 	defer resp.Body.Close()
 	if resp.StatusCode == http.StatusTooManyRequests || resp.StatusCode >= 500 {
-		return nil, nil
+		return nil, fmt.Errorf("%w: fetch %s: %s", errCommonCrawlUnavailable, ccIndexURL, resp.Status)
 	}
 	if resp.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("fetch %s: %s", ccIndexURL, resp.Status)
@@ -351,7 +396,8 @@ func fetchRecentIndexes(client *http.Client, cutoff time.Time) ([]commonCrawlInd
 	return recent, nil
 }
 
-func lookupCommonCrawl(client *http.Client, indexes []commonCrawlIndex, unavailableIndexes map[string]bool, link string, cutoff time.Time) (cacheEntry, bool, error) {
+func lookupCommonCrawl(client *http.Client, indexes []commonCrawlIndex, unavailableIndexes map[string]bool, link string, cutoff time.Time) (cacheEntry, bool, bool, error) {
+	searched := false
 	for _, index := range indexes {
 		if unavailableIndexes[index.ID] {
 			continue
@@ -360,12 +406,13 @@ func lookupCommonCrawl(client *http.Client, indexes []commonCrawlIndex, unavaila
 		record, ok, err := queryCommonCrawl(client, index, link)
 		if errors.Is(err, errCommonCrawlUnavailable) {
 			unavailableIndexes[index.ID] = true
-			fmt.Fprintf(os.Stderr, "Common Crawl index %s unavailable; skipping it: %v\n", index.ID, err)
+			log.Printf("Common Crawl index %s unavailable; skipping it: %v", index.ID, err)
 			continue
 		}
 		if err != nil {
-			return cacheEntry{}, false, err
+			return cacheEntry{}, false, false, err
 		}
+		searched = true
 		if !ok {
 			continue
 		}
@@ -377,16 +424,16 @@ func lookupCommonCrawl(client *http.Client, indexes []commonCrawlIndex, unavaila
 
 		crawlTime, err := parseCommonCrawlTimestamp(record.Timestamp)
 		if err != nil {
-			return cacheEntry{}, false, err
+			return cacheEntry{}, false, false, err
 		}
 		if crawlTime.Before(cutoff) {
 			continue
 		}
 
-		return cacheEntry{URL: link, Status: status, Timestamp: crawlTime.Unix()}, true, nil
+		return cacheEntry{URL: link, Status: status, Timestamp: crawlTime.Unix()}, true, true, nil
 	}
 
-	return cacheEntry{}, false, nil
+	return cacheEntry{}, false, searched, nil
 }
 
 func queryCommonCrawl(client *http.Client, index commonCrawlIndex, link string) (commonCrawlRecord, bool, error) {
