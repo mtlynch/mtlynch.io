@@ -145,14 +145,6 @@ func run() error {
 	skippedUnavailable := 0
 	uncached := countUncachedLinks(links, cache)
 	log.Printf("Looking up up to %d uncached links in Common Crawl with at least %s between API calls", uncached, commonCrawlRequestInterval)
-	if uncached > 0 {
-		log.Printf("Common Crawl URLs to query:")
-		for _, link := range links {
-			if _, ok := cache[link]; !ok {
-				log.Printf("Common Crawl URL: %s", link)
-			}
-		}
-	}
 	for i, link := range links {
 		if _, ok := cache[link]; ok {
 			skippedCached++
@@ -163,6 +155,7 @@ func run() error {
 			log.Printf("Common Crawl lookup progress: %d/%d uncached links processed, %d added, %d misses, %d skipped because indexes were unavailable", queried, uncached, added, missed, skippedUnavailable)
 		}
 
+		log.Printf("Querying Common Crawl URL %d/%d: %s", queried, uncached, link)
 		entry, ok, searched, err := lookupCommonCrawl(client, indexes, link, cutoff)
 		if errors.Is(err, errStopCommonCrawl) {
 			remaining := countUncachedLinks(links[i:], cache)
@@ -187,11 +180,13 @@ func run() error {
 			break
 		}
 		if !ok {
+			log.Printf("Common Crawl result for %s: no cacheable record found", link)
 			missed++
 			continue
 		}
 
 		cache[link] = entry
+		log.Printf("Common Crawl result for %s: status %d at %s; adding to lychee cache", link, entry.Status, time.Unix(entry.Timestamp, 0).UTC().Format(time.RFC3339))
 		added++
 	}
 
