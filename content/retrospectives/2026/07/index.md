@@ -53,7 +53,7 @@ This was a great month! It was the best month of book revenue since the initial 
 
 ## How much difference does the last 8% make?
 
-For a long time,
+For the last few months, the _Refactoring English_ website has listed the book as _almost_ complete in early access. I was curious to see what the sales impact would be of going from almost complete to fully complete.
 
 <canvas id="book-sales-chart"></canvas>
 
