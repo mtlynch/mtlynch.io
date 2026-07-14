@@ -55,6 +55,8 @@ Here's what weekly book sales looked like:
 
 <canvas id="book-sales-chart"></canvas>
 
+<canvas id="all-currencies-completion-revenue-chart"></canvas>
+
 ## How much difference does the last 8% make?
 
 TODO: Look at sales from 100% to new blog post, compare to same time period. Within that time period, do americans in particular buy at higher rates?

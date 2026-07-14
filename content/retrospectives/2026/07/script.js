@@ -261,6 +261,7 @@
       ["After completion", "2026-06-03", "2026-06-23"],
     ];
     return periods.map(function (period) {
+      var allSummary = summarizePeriod(rows, period[0], period[1], period[2]);
       var summary = summarizePeriod(rows, period[0], period[1], period[2], null, "usd");
       var usdSummary = summarizePeriod(
         rows,
@@ -269,10 +270,86 @@
         period[2],
         "usd",
       );
+      summary.allAverage = allSummary.average;
+      summary.allOrders = allSummary.orders;
+      summary.allTotal = allSummary.total;
       summary.usdAverage = usdSummary.average;
       summary.usdOrders = usdSummary.orders;
       summary.usdTotal = usdSummary.total;
       return summary;
+    });
+  }
+
+  function drawAllCurrenciesCompletionRevenueChart(periods) {
+    var canvas = document.getElementById("all-currencies-completion-revenue-chart");
+    if (!canvas) {
+      return;
+    }
+    canvas.height = 260;
+
+    new Chart(canvas, {
+      type: "bar",
+      data: {
+        labels: ["All buyer currencies"],
+        datasets: [
+          {
+            label: periods[0].label,
+            data: [periods[0].allAverage],
+            backgroundColor: "#f6d98b",
+          },
+          {
+            label: periods[1].label,
+            data: [periods[1].allAverage],
+            backgroundColor: "#9fd8a8",
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        title: {
+          display: true,
+          text: "Average Daily Book Revenue, All Buyer Currencies",
+        },
+        tooltips: {
+          callbacks: {
+            label: function (tooltipItem) {
+              var period = periods[tooltipItem.datasetIndex];
+              return (
+                period.label +
+                ": " +
+                dollarFormatter.format(tooltipItem.yLabel) +
+                "/day"
+              );
+            },
+            afterLabel: function (tooltipItem) {
+              var period = periods[tooltipItem.datasetIndex];
+              return [
+                "Period: " + period.start + " to " + period.end,
+                "Total: " + dollarFormatter.format(period.allTotal),
+                "Orders: " + period.allOrders,
+                "Days: " + period.days,
+              ];
+            },
+          },
+        },
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
+                callback: function (value) {
+                  return dollarFormatter.format(value);
+                },
+              },
+              scaleLabel: {
+                display: true,
+                labelString: "Average net revenue per day",
+              },
+            },
+          ],
+        },
+      },
     });
   }
 
@@ -448,8 +525,10 @@
       })
       .then(function (csv) {
         var rows = parseSalesCsv(csv);
+        var completionRevenueComparison = buildCompletionRevenueComparison(rows);
         drawBookSalesChart(buildWeeklySales(rows));
-        drawCompletionRevenueChart(buildCompletionRevenueComparison(rows));
+        drawAllCurrenciesCompletionRevenueChart(completionRevenueComparison);
+        drawCompletionRevenueChart(completionRevenueComparison);
       });
   });
 })();
