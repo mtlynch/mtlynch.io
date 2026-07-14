@@ -63,7 +63,9 @@ But the thing I noticed anecdotally was that more _Americans_ were purchasing th
 
 <canvas id="completion-revenue-chart"></canvas>
 
-What about people who came because of the blog post?
+Interesting! Completing the book had no impact on sales for customers purchasing with regional pricing, but customers purchasing in USD purchased at a 20% higher rate in the three weeks after the book was complete compared with the three weeks before.
+
+I didn't include sales after I published my latest excerpt because that obviously changes the numbers a lot, but let's treat that as its own category:
 
 <canvas id="design-docs-excerpt-revenue-chart"></canvas>
 
