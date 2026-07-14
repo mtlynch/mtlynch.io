@@ -61,6 +61,32 @@
     return rows;
   }
 
+  function parseCountryVisitorsCsv(csv) {
+    var lines = csv.trim().split(/\r?\n/);
+    var usVisitors = 0;
+    var nonUsVisitors = 0;
+
+    for (var i = 1; i < lines.length; i++) {
+      var fields = parseCsvLine(lines[i]);
+      var visitors = parseInt(fields[1], 10);
+
+      if (isNaN(visitors)) {
+        continue;
+      }
+
+      if (fields[0] === "United States") {
+        usVisitors += visitors;
+      } else {
+        nonUsVisitors += visitors;
+      }
+    }
+
+    return {
+      usVisitors: usVisitors,
+      nonUsVisitors: nonUsVisitors,
+    };
+  }
+
   function addUtcDays(date, days) {
     date.setUTCDate(date.getUTCDate() + days);
   }
@@ -320,6 +346,35 @@
     summary.usdTotal = usdSummary.total;
     summary.label = "After new excerpt";
     return summary;
+  }
+
+  function revenuePerVisitor(revenue, visitors) {
+    if (visitors === 0) {
+      return 0;
+    }
+    return Math.round((revenue / visitors) * 10000) / 10000;
+  }
+
+  function buildRevenuePerVisitorComparison(periods, countryVisitors) {
+    return periods.map(function (period, i) {
+      return {
+        label: period.label,
+        start: period.start,
+        end: period.end,
+        nonUsdRevenue: period.total,
+        usdRevenue: period.usdTotal,
+        nonUsdVisitors: countryVisitors[i].nonUsVisitors,
+        usdVisitors: countryVisitors[i].usVisitors,
+        nonUsdRevenuePerVisitor: revenuePerVisitor(
+          period.total,
+          countryVisitors[i].nonUsVisitors,
+        ),
+        usdRevenuePerVisitor: revenuePerVisitor(
+          period.usdTotal,
+          countryVisitors[i].usVisitors,
+        ),
+      };
+    });
   }
 
   function drawAllCurrenciesCompletionRevenueChart(periods) {
@@ -659,21 +714,130 @@
     });
   }
 
+  function drawRevenuePerVisitorChart(periods) {
+    var canvas = document.getElementById("revenue-per-visitor-chart");
+    if (!canvas) {
+      return;
+    }
+    canvas.height = 300;
+
+    new Chart(canvas, {
+      type: "bar",
+      data: {
+        labels: ["Non-USD currencies", "Buyer currency USD"],
+        datasets: [
+          {
+            label: periods[0].label,
+            data: [periods[0].nonUsdRevenuePerVisitor, periods[0].usdRevenuePerVisitor],
+            backgroundColor: "#f6d98b",
+          },
+          {
+            label: periods[1].label,
+            data: [periods[1].nonUsdRevenuePerVisitor, periods[1].usdRevenuePerVisitor],
+            backgroundColor: "#9fd8a8",
+          },
+          {
+            label: periods[2].label,
+            data: [periods[2].nonUsdRevenuePerVisitor, periods[2].usdRevenuePerVisitor],
+            backgroundColor: "#9fc5e8",
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        title: {
+          display: true,
+          text: "Book Revenue per Visitor Before Completion vs. After Completion vs. New Excerpt",
+        },
+        tooltips: {
+          callbacks: {
+            title: function (tooltipItems) {
+              return tooltipItems[0].xLabel;
+            },
+            label: function (tooltipItem) {
+              var period = periods[tooltipItem.datasetIndex];
+              return (
+                period.label +
+                ": " +
+                dollarCentsFormatter.format(tooltipItem.yLabel) +
+                "/visitor"
+              );
+            },
+            afterLabel: function (tooltipItem) {
+              var period = periods[tooltipItem.datasetIndex];
+              var revenue = period.nonUsdRevenue;
+              var visitors = period.nonUsdVisitors;
+              if (tooltipItem.index === 1) {
+                revenue = period.usdRevenue;
+                visitors = period.usdVisitors;
+              }
+              return [
+                "Period: " + period.start + " to " + period.end,
+                "Revenue: " + dollarFormatter.format(revenue),
+                "Visitors: " + visitors,
+              ];
+            },
+          },
+        },
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
+                callback: function (value) {
+                  return dollarCentsFormatter.format(value);
+                },
+              },
+              scaleLabel: {
+                display: true,
+                labelString: "Net revenue per visitor",
+              },
+            },
+          ],
+        },
+      },
+    });
+  }
+
   window.addEventListener("load", function () {
-    fetch("book-sales.csv")
-      .then(function (res) {
+    Promise.all([
+      fetch("book-sales.csv").then(function (res) {
         return res.text();
-      })
-      .then(function (csv) {
-        var rows = parseSalesCsv(csv);
+      }),
+      fetch("countries-2026-05-12-to-2026-06-01.csv").then(function (res) {
+        return res.text();
+      }),
+      fetch("countries-2026-06-03-to-2026-06-23.csv").then(function (res) {
+        return res.text();
+      }),
+      fetch("countries-2026-06-24-to-2026-07-10.csv").then(function (res) {
+        return res.text();
+      }),
+    ]).then(function (csvs) {
+        var rows = parseSalesCsv(csvs[0]);
+        var countryVisitors = [
+          parseCountryVisitorsCsv(csvs[1]),
+          parseCountryVisitorsCsv(csvs[2]),
+          parseCountryVisitorsCsv(csvs[3]),
+        ];
         var completionRevenueComparison = buildCompletionRevenueComparison(rows);
+        var designDocsExcerptRevenueComparison = buildDesignDocsExcerptRevenueComparison(rows);
+        var allRevenuePeriods = [
+          completionRevenueComparison[0],
+          completionRevenueComparison[1],
+          designDocsExcerptRevenueComparison,
+        ];
         drawBookSalesChart(buildWeeklySales(rows));
         drawAllCurrenciesCompletionRevenueChart(completionRevenueComparison);
         drawCompletionRevenueChart(completionRevenueComparison);
         drawDesignDocsExcerptRevenueChart(
           completionRevenueComparison[0],
           completionRevenueComparison[1],
-          buildDesignDocsExcerptRevenueComparison(rows),
+          designDocsExcerptRevenueComparison,
+        );
+        drawRevenuePerVisitorChart(
+          buildRevenuePerVisitorComparison(allRevenuePeriods, countryVisitors),
         );
       });
   });
