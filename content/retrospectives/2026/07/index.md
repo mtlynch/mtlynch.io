@@ -69,6 +69,12 @@ I didn't include sales after I published my latest excerpt because that obviousl
 
 <canvas id="design-docs-excerpt-revenue-chart"></canvas>
 
+But that's always a little skewed because Americans make up my largest readers. What if I normalize it to per-visitor to the website?
+
+<canvas id="revenue-per-visitor-chart"></canvas>
+
+That's an interesting wrinkle. On a per-visitor basis, Americans were not more likely to buy after the book was completed, but there just happened to be more website visitors in that time. Outside the US, readers spent about 20% more on a per-visitor basis after I finished the book.
+
 ## My custom book feedback tool
 
 I thought I'd make a feedback tool, and it seemed so easy, but it's taken me XX months. I haven't been working on it full-time for XX months, but that's the problem: with AI, so many projects seem easy, but then I have five projects going at once and make too little progress on all of them.
