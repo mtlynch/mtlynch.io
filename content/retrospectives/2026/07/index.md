@@ -1,7 +1,7 @@
 ---
 title: "Refactoring English: Month 19"
-date: "2026-07-13"
-description: Apparently, people are more likely to be a complete book.
+date: "2026-07-15"
+description: Do people pay more for a finished book?
 ---
 
 {{<notice type="info">}}
@@ -36,30 +36,28 @@ TODO
 
 I adapted my chapter on design docs to [a free excerpt](https://refactoringenglish.com/excerpts/write-an-effective-design-doc/). It did well on [Lobsters](https://lobste.rs/s/kmx6wx/how_write_effective_software_design) and [reddit](https://www.reddit.com/r/programming/comments/1uevttg/how_to_write_an_effective_software_design_document/), but it flopped on Hacker News.
 
-I was surprised at how positive the reception was. Generally, when I talk to other developers about design docs, they have animosity toward the practice itself before I even get to anything about my specific views, but the comments on my post were refreshingly supportive of design docs in general and my recommendations in particular.
+I was surprised at how positive the reaction was to the design docs chapter. Generally, when I talk to developers about design docs, their main reaction is that they hate design docs and everything about them. The comments on my post were refreshingly supportive of design docs in general and my recommendations in particular.
 
 ### Complete my reader feedback tool
 
 - **Result**: The tool is up and running
 - **Grade**: A
 
-TODO
+I got stuck for a while on [the great AI blockade](/retrospectives/2026/06/#ai-projects-and-the-great-blockade), but I pushed through by thinking more critically about breaking up large features and being less precious about code quality, as "done is better than perfect" in this case.
 
 ## _Refactoring English_ metrics
 
 {{<project-metrics project="refactoring_english">}}
 
-This was a great month! It was the best month of book revenue since the initial crowdfunding launch, beating out the previous #2 by about 30%.
-
-Here's what weekly book sales looked like:
-
-<canvas id="book-sales-chart"></canvas>
+This was a great month! It was the best month of book revenue since the initial crowdfunding launch, beating out the previous #2 by about 30%. The increase in visitors came from publishing my [excerpt about design docs](https://refactoringenglish.com/excerpts/write-an-effective-design-doc/).
 
 <canvas id="all-currencies-completion-revenue-chart"></canvas>
 
 ## How much difference does the last 8% make?
 
-TODO: Look at sales from 100% to new blog post, compare to same time period. Within that time period, do americans in particular buy at higher rates?
+For a long time,
+
+<canvas id="book-sales-chart"></canvas>
 
 Declared complete on June 2.
 
@@ -69,7 +67,9 @@ Do americans care more about a finished book?
 
 ## My custom book feedback tool
 
-I've only had my feedback tool for a few days, but it does seem to encourage more feedback and questions.
+I thought I'd make a feedback tool, and it seemed so easy, but it's taken me XX months. I haven't been working on it full-time for XX months, but that's the problem: with AI, so many projects seem easy, but then I have five projects going at once and make too little progress on all of them.
+
+My feedback tool has only been live for a few days, but it does seem to encourage more feedback and questions.
 
 ## Topic 3
 
@@ -83,13 +83,13 @@ I was wishing that there was an open-source version of RescueTime, and then I th
 
 The problem is that it's way less polished than RescueTime. I couldn't understand what the web interface was trying to report to me at all:
 
-{{<img src="activitywatch-timeline.webp" max-width="600px">}}
+{{<img src="activitywatch-timeline.webp" max-width="600px" caption="I couldn't understand the timeline in the official ActivityWatch web interface.">}}
 
 And the process for adding categories through the web UI felt really confusing and coarsely-grained:
 
-{{<img src="activitywatch-categorize.webp" max-width="400px">}}
+{{<img src="activitywatch-categorize.webp" max-width="400px" caption="I found the categorization in the official ActivityWatch web UI difficult to use.">}}
 
-So, I was going to abandon ActivityWatch, and then I thought, "Well, the data collection part probably works. What if I quickly vibecode my own frontend?"
+So, I was going to abandon ActivityWatch, and then I thought, "Well, the data collection part probably works. What if I vibecode my own frontend?"
 
 And [I did](https://codeberg.org/mtlynch/aw-web-ng), and it was pretty easy. I create a config file that lets me categorize activities based on app name, window title, and/or URL (for browsers):
 
@@ -123,13 +123,16 @@ Book               1h34m   19.7%
   Writing            46m    9.7%
 ```
 
+I started with just a command-line app, but I'm working on a web version as well.
+
 ## Wrap up
 
 ### What got done?
 
 - Finished the _Refactoring English_ feedback tool.
 - Made fixes to _Refactoring English_ for consistency and EPUB compatibility.
-- Made a demo video for Little Moments.
+- Made a [demo video for Little Moments](https://refactoringenglish.com/excerpts/write-an-effective-design-doc/#an-example-design-doc).
+  - I'm quite proud of this.
 
 ### Lessons learned
 
@@ -137,7 +140,9 @@ Book               1h34m   19.7%
 
 ### Goals for next month
 
-- Pitch to 5 podcasts.
+- Pitch to 5 podcasts to talk about _Refactoring English_.
+- Attract 30k unique readers to the _Refactoring English_ website.
+- Wrap up early access, and declare the 1.0 release of my book.
 
 <script src="/third-party/chart.js/2.9.4/Chart.min.js"></script>
 <script src="script.js"></script>
