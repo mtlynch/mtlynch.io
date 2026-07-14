@@ -51,19 +51,21 @@ I got stuck for a while on [the great AI blockade](/retrospectives/2026/06/#ai-p
 
 This was a great month! It was the best month of book revenue since the initial crowdfunding launch, beating out the previous #2 by about 30%. The increase in visitors came from publishing my [excerpt about design docs](https://refactoringenglish.com/excerpts/write-an-effective-design-doc/).
 
-<canvas id="all-currencies-completion-revenue-chart"></canvas>
-
 ## How much difference does the last 8% make?
 
 For a long time,
 
 <canvas id="book-sales-chart"></canvas>
 
-Declared complete on June 2.
+<canvas id="all-currencies-completion-revenue-chart"></canvas>
+
+But the thing I noticed anecdotally was that more _Americans_ were purchasing the book after I declared it complete, so I checked the data to see if that was true:
 
 <canvas id="completion-revenue-chart"></canvas>
 
-Do americans care more about a finished book?
+What about people who came because of the blog post?
+
+<canvas id="design-docs-excerpt-revenue-chart"></canvas>
 
 ## My custom book feedback tool
 
