@@ -57,11 +57,15 @@ For the last few months, the _Refactoring English_ website has listed the book a
 
 <canvas id="book-sales-chart"></canvas>
 
-Declared complete on June 2.
+<canvas id="all-currencies-completion-revenue-chart"></canvas>
+
+But the thing I noticed anecdotally was that more _Americans_ were purchasing the book after I declared it complete, so I checked the data to see if that was true:
 
 <canvas id="completion-revenue-chart"></canvas>
 
-Do americans care more about a finished book?
+What about people who came because of the blog post?
+
+<canvas id="design-docs-excerpt-revenue-chart"></canvas>
 
 ## My custom book feedback tool
 

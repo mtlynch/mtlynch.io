@@ -5,6 +5,12 @@
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
   });
+  var dollarCentsFormatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
 
   function parseCsvLine(line) {
     var fields = [];
@@ -255,12 +261,23 @@
     };
   }
 
+  function latestDateKey(rows) {
+    var latest = rows[0].date;
+    for (var i = 1; i < rows.length; i++) {
+      if (rows[i].date > latest) {
+        latest = rows[i].date;
+      }
+    }
+    return latest;
+  }
+
   function buildCompletionRevenueComparison(rows) {
     var periods = [
       ["Before completion", "2026-05-12", "2026-06-01"],
       ["After completion", "2026-06-03", "2026-06-23"],
     ];
     return periods.map(function (period) {
+      var allSummary = summarizePeriod(rows, period[0], period[1], period[2]);
       var summary = summarizePeriod(rows, period[0], period[1], period[2], null, "usd");
       var usdSummary = summarizePeriod(
         rows,
@@ -269,10 +286,112 @@
         period[2],
         "usd",
       );
+      summary.allAverage = allSummary.average;
+      summary.allOrders = allSummary.orders;
+      summary.allTotal = allSummary.total;
       summary.usdAverage = usdSummary.average;
       summary.usdOrders = usdSummary.orders;
       summary.usdTotal = usdSummary.total;
       return summary;
+    });
+  }
+
+  function buildDesignDocsExcerptRevenueComparison(rows) {
+    var startKey = "2026-06-24";
+    var endKey = latestDateKey(rows);
+    var summary = summarizePeriod(
+      rows,
+      "Published design docs excerpt onward",
+      startKey,
+      endKey,
+      null,
+      "usd",
+    );
+    var usdSummary = summarizePeriod(
+      rows,
+      summary.label,
+      startKey,
+      endKey,
+      "usd",
+    );
+
+    summary.usdAverage = usdSummary.average;
+    summary.usdOrders = usdSummary.orders;
+    summary.usdTotal = usdSummary.total;
+    summary.label = "After new excerpt";
+    return summary;
+  }
+
+  function drawAllCurrenciesCompletionRevenueChart(periods) {
+    var canvas = document.getElementById("all-currencies-completion-revenue-chart");
+    if (!canvas) {
+      return;
+    }
+    canvas.height = 260;
+
+    new Chart(canvas, {
+      type: "bar",
+      data: {
+        labels: ["All buyer currencies"],
+        datasets: [
+          {
+            label: periods[0].label,
+            data: [periods[0].allAverage],
+            backgroundColor: "#f6d98b",
+          },
+          {
+            label: periods[1].label,
+            data: [periods[1].allAverage],
+            backgroundColor: "#9fd8a8",
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        title: {
+          display: true,
+          text: "Average Daily Book Revenue, All Buyer Currencies",
+        },
+        tooltips: {
+          callbacks: {
+            label: function (tooltipItem) {
+              var period = periods[tooltipItem.datasetIndex];
+              return (
+                period.label +
+                ": " +
+                dollarCentsFormatter.format(tooltipItem.yLabel) +
+                "/day"
+              );
+            },
+            afterLabel: function (tooltipItem) {
+              var period = periods[tooltipItem.datasetIndex];
+              return [
+                "Period: " + period.start + " to " + period.end,
+                "Total: " + dollarFormatter.format(period.allTotal),
+                "Orders: " + period.allOrders,
+                "Days: " + period.days,
+              ];
+            },
+          },
+        },
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
+                callback: function (value) {
+                  return dollarCentsFormatter.format(value);
+                },
+              },
+              scaleLabel: {
+                display: true,
+                labelString: "Average net revenue per day",
+              },
+            },
+          ],
+        },
+      },
     });
   }
 
@@ -400,7 +519,7 @@
               return (
                 period.label +
                 ": " +
-                dollarFormatter.format(tooltipItem.yLabel) +
+                dollarCentsFormatter.format(tooltipItem.yLabel) +
                 "/day"
               );
             },
@@ -427,7 +546,106 @@
               ticks: {
                 beginAtZero: true,
                 callback: function (value) {
-                  return dollarFormatter.format(value);
+                  return dollarCentsFormatter.format(value);
+                },
+              },
+              scaleLabel: {
+                display: true,
+                labelString: "Average net revenue per day",
+              },
+            },
+          ],
+        },
+      },
+    });
+  }
+
+  function drawDesignDocsExcerptRevenueChart(
+    beforeCompletionPeriod,
+    afterCompletionPeriod,
+    afterExcerptPeriod,
+  ) {
+    var canvas = document.getElementById("design-docs-excerpt-revenue-chart");
+    if (!canvas) {
+      return;
+    }
+    canvas.height = 300;
+
+    new Chart(canvas, {
+      type: "bar",
+      data: {
+        labels: ["Non-USD currencies", "Buyer currency USD"],
+        datasets: [
+          {
+            label: beforeCompletionPeriod.label,
+            data: [beforeCompletionPeriod.average, beforeCompletionPeriod.usdAverage],
+            backgroundColor: "#f6d98b",
+          },
+          {
+            label: afterCompletionPeriod.label,
+            data: [afterCompletionPeriod.average, afterCompletionPeriod.usdAverage],
+            backgroundColor: "#9fd8a8",
+          },
+          {
+            label: afterExcerptPeriod.label,
+            data: [afterExcerptPeriod.average, afterExcerptPeriod.usdAverage],
+            backgroundColor: "#9fc5e8",
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        title: {
+          display: true,
+          text: "Average Daily Book Revenue Before Completion vs. After Completion vs. New Excerpt",
+        },
+        tooltips: {
+          callbacks: {
+            title: function (tooltipItems) {
+              return tooltipItems[0].xLabel;
+            },
+            label: function (tooltipItem) {
+              var period = [
+                beforeCompletionPeriod,
+                afterCompletionPeriod,
+                afterExcerptPeriod,
+              ][tooltipItem.datasetIndex];
+              return (
+                period.label +
+                ": " +
+                dollarCentsFormatter.format(tooltipItem.yLabel) +
+                "/day"
+              );
+            },
+            afterLabel: function (tooltipItem) {
+              var period = [
+                beforeCompletionPeriod,
+                afterCompletionPeriod,
+                afterExcerptPeriod,
+              ][tooltipItem.datasetIndex];
+              var total = period.total;
+              var orders = period.orders;
+              if (tooltipItem.index === 1) {
+                total = period.usdTotal;
+                orders = period.usdOrders;
+              }
+              return [
+                "Period: " + period.start + " to " + period.end,
+                "Total: " + dollarFormatter.format(total),
+                "Orders: " + orders,
+                "Days: " + period.days,
+              ];
+            },
+          },
+        },
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
+                callback: function (value) {
+                  return dollarCentsFormatter.format(value);
                 },
               },
               scaleLabel: {
@@ -448,8 +666,15 @@
       })
       .then(function (csv) {
         var rows = parseSalesCsv(csv);
+        var completionRevenueComparison = buildCompletionRevenueComparison(rows);
         drawBookSalesChart(buildWeeklySales(rows));
-        drawCompletionRevenueChart(buildCompletionRevenueComparison(rows));
+        drawAllCurrenciesCompletionRevenueChart(completionRevenueComparison);
+        drawCompletionRevenueChart(completionRevenueComparison);
+        drawDesignDocsExcerptRevenueChart(
+          completionRevenueComparison[0],
+          completionRevenueComparison[1],
+          buildDesignDocsExcerptRevenueComparison(rows),
+        );
       });
   });
 })();
