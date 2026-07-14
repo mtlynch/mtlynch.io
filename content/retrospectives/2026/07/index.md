@@ -51,7 +51,7 @@ TODO
 
 This was a great month! It was the best month of book revenue since the initial crowdfunding launch, beating out the previous #2 by about 30%.
 
-Here's what daily book sales looked like:
+Here's what weekly book sales looked like:
 
 <canvas id="book-sales-chart"></canvas>
 

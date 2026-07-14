@@ -55,8 +55,8 @@
     return rows;
   }
 
-  function addUtcDay(date) {
-    date.setUTCDate(date.getUTCDate() + 1);
+  function addUtcDays(date, days) {
+    date.setUTCDate(date.getUTCDate() + days);
   }
 
   function formatDateKey(date) {
@@ -72,38 +72,155 @@
     });
   }
 
-  function buildDailySales(rows) {
-    var byDate = {};
+  function daysBetween(startKey, endKey) {
+    var start = new Date(startKey + "T00:00:00Z");
+    var end = new Date(endKey + "T00:00:00Z");
+    return Math.round((end - start) / 86400000);
+  }
+
+  function startOfWeekKey(dateKey) {
+    var date = new Date(dateKey + "T00:00:00Z");
+    var dayOfWeek = date.getUTCDay();
+    var daysSinceMonday = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
+    addUtcDays(date, -daysSinceMonday);
+    return formatDateKey(date);
+  }
+
+  function buildWeeklySales(rows) {
+    var byWeek = {};
     for (var i = 0; i < rows.length; i++) {
-      byDate[rows[i].date] = (byDate[rows[i].date] || 0) + rows[i].netRevenue;
+      var weekKey = startOfWeekKey(rows[i].date);
+      byWeek[weekKey] = (byWeek[weekKey] || 0) + rows[i].netRevenue;
     }
 
-    var dates = Object.keys(byDate).sort();
-    var start = new Date(dates[0] + "T00:00:00Z");
-    var end = new Date(dates[dates.length - 1] + "T00:00:00Z");
+    var weekStarts = Object.keys(byWeek).sort();
+    var start = new Date(weekStarts[0] + "T00:00:00Z");
+    var end = new Date(weekStarts[weekStarts.length - 1] + "T00:00:00Z");
     var labels = [];
     var fullLabels = [];
-    var dailyRevenue = [];
-    var cumulativeRevenue = [];
-    var cumulative = 0;
+    var weeklyRevenue = [];
 
-    for (var d = start; d <= end; addUtcDay(d)) {
+    for (var d = start; d <= end; addUtcDays(d, 7)) {
       var key = formatDateKey(d);
-      var revenue = byDate[key] || 0;
-      cumulative += revenue;
-      labels.push(formatShortDate(key));
-      fullLabels.push(key);
-      dailyRevenue.push(Math.round(revenue * 100) / 100);
-      cumulativeRevenue.push(Math.round(cumulative * 100) / 100);
+      var weekEnd = new Date(key + "T00:00:00Z");
+      addUtcDays(weekEnd, 6);
+      var weekEndKey = formatDateKey(weekEnd);
+      var revenue = byWeek[key] || 0;
+      labels.push(formatShortDate(key) + " - " + formatShortDate(weekEndKey));
+      fullLabels.push(key + " to " + weekEndKey);
+      weeklyRevenue.push(Math.round(revenue * 100) / 100);
     }
 
     return {
       labels: labels,
       fullLabels: fullLabels,
-      dailyRevenue: dailyRevenue,
-      cumulativeRevenue: cumulativeRevenue,
+      startKey: weekStarts[0],
+      weeklyRevenue: weeklyRevenue,
     };
   }
+
+  function chartXForDate(chart, startKey, dateKey) {
+    var xScale = chart.scales["x-axis-0"];
+    var daysFromStart = daysBetween(startKey, dateKey);
+    var weekIndex = Math.floor(daysFromStart / 7);
+    var daysIntoWeek = daysFromStart % 7;
+    var centerX = xScale.getPixelForTick(weekIndex);
+    var nextCenterX = xScale.getPixelForTick(
+      Math.min(weekIndex + 1, chart.config.data.labels.length - 1),
+    );
+    var stepWidth = nextCenterX - centerX;
+
+    if (stepWidth === 0 && weekIndex > 0) {
+      stepWidth = centerX - xScale.getPixelForTick(weekIndex - 1);
+    }
+
+    return centerX - stepWidth / 2 + (stepWidth * daysIntoWeek) / 7;
+  }
+
+  var bookSalesEventLabelPlugin = {
+    afterDatasetsDraw: function (chart) {
+      var events = chart.config.options.bookSalesEvents;
+      if (!events || !events.length) {
+        return;
+      }
+
+      var chartArea = chart.chartArea;
+      var labels = chart.config.data.labels;
+      if (!chartArea || !labels || !labels.length) {
+        return;
+      }
+
+      var ctx = chart.ctx;
+
+      ctx.save();
+      ctx.font = "bold 11px sans-serif";
+      ctx.textBaseline = "middle";
+
+      for (var i = 0; i < events.length; i++) {
+        var x = chartXForDate(chart, events[i].chartStartKey, events[i].date);
+
+        if (x < chartArea.left || x > chartArea.right) {
+          continue;
+        }
+
+        ctx.strokeStyle = "#8b3a00";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(x, chartArea.top);
+        ctx.lineTo(x, chartArea.bottom);
+        ctx.stroke();
+
+        var labelLines = events[i].labelLines || [events[i].label];
+        var labelPaddingX = 6;
+        var labelPaddingY = 4;
+        var lineHeight = 13;
+        var textWidth = 0;
+
+        for (var j = 0; j < labelLines.length; j++) {
+          textWidth = Math.max(textWidth, ctx.measureText(labelLines[j]).width);
+        }
+
+        var labelWidth = textWidth + labelPaddingX * 2;
+        var labelHeight = lineHeight * labelLines.length + labelPaddingY * 2;
+        var labelX = Math.max(
+          chartArea.left + 4,
+          Math.min(x - labelWidth / 2, chartArea.right - labelWidth - 4),
+        );
+        var textX = labelX + labelWidth / 2;
+        var textY = chartArea.top + 14 + (events[i].labelOffsetY || 0);
+
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(
+          labelX,
+          textY - labelHeight / 2,
+          labelWidth,
+          labelHeight,
+        );
+        ctx.strokeStyle = "#8b3a00";
+        ctx.lineWidth = 1;
+        ctx.strokeRect(
+          labelX,
+          textY - labelHeight / 2,
+          labelWidth,
+          labelHeight,
+        );
+        ctx.fillStyle = "#333333";
+        ctx.textAlign = "center";
+
+        for (var k = 0; k < labelLines.length; k++) {
+          ctx.fillText(
+            labelLines[k],
+            textX,
+            textY - ((labelLines.length - 1) * lineHeight) / 2 + k * lineHeight,
+          );
+        }
+      }
+
+      ctx.restore();
+    },
+  };
+
+  Chart.plugins.register(bookSalesEventLabelPlugin);
 
   function daysInclusive(startKey, endKey) {
     var start = new Date(startKey + "T00:00:00Z");
@@ -111,14 +228,15 @@
     return Math.round((end - start) / 86400000) + 1;
   }
 
-  function summarizePeriod(rows, label, startKey, endKey, currency) {
+  function summarizePeriod(rows, label, startKey, endKey, currency, excludedCurrency) {
     var total = 0;
     var orders = 0;
     for (var i = 0; i < rows.length; i++) {
       if (
         rows[i].date >= startKey &&
         rows[i].date <= endKey &&
-        (!currency || rows[i].currency === currency)
+        (!currency || rows[i].currency === currency) &&
+        (!excludedCurrency || rows[i].currency !== excludedCurrency)
       ) {
         total += rows[i].netRevenue;
         orders++;
@@ -143,7 +261,7 @@
       ["After completion", "2026-06-03", "2026-06-23"],
     ];
     return periods.map(function (period) {
-      var summary = summarizePeriod(rows, period[0], period[1], period[2]);
+      var summary = summarizePeriod(rows, period[0], period[1], period[2], null, "usd");
       var usdSummary = summarizePeriod(
         rows,
         period[0],
@@ -165,33 +283,38 @@
     }
     canvas.height = 360;
 
+    var eventLabels = [
+      {
+        chartStartKey: sales.startKey,
+        date: "2026-06-02",
+        label: "Marked book as complete",
+        labelLines: ["Marked book", "as complete"],
+      },
+      {
+        chartStartKey: sales.startKey,
+        date: "2026-06-24",
+        label: "Published design docs excerpt",
+        labelLines: ["Published design", "docs excerpt"],
+        labelOffsetY: 20,
+      },
+    ];
+
     new Chart(canvas, {
       type: "bar",
       data: {
         labels: sales.labels,
         datasets: [
           {
-            label: "Daily net revenue",
-            data: sales.dailyRevenue,
-            backgroundColor: "#047a15",
-            yAxisID: "daily",
-          },
-          {
-            label: "Cumulative net revenue",
-            data: sales.cumulativeRevenue,
-            borderColor: "#333333",
-            backgroundColor: "#333333",
-            fill: false,
-            lineTension: 0,
-            pointRadius: 0,
-            type: "line",
-            yAxisID: "cumulative",
+            label: "Weekly net revenue",
+            data: sales.weeklyRevenue,
+            backgroundColor: "#9fd8a8",
           },
         ],
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        bookSalesEvents: eventLabels,
         title: {
           display: true,
           text: "Refactoring English Book Sales",
@@ -219,8 +342,6 @@
           ],
           yAxes: [
             {
-              id: "daily",
-              position: "left",
               ticks: {
                 beginAtZero: true,
                 callback: function (value) {
@@ -229,24 +350,7 @@
               },
               scaleLabel: {
                 display: true,
-                labelString: "Daily net revenue",
-              },
-            },
-            {
-              id: "cumulative",
-              position: "right",
-              gridLines: {
-                drawOnChartArea: false,
-              },
-              ticks: {
-                beginAtZero: true,
-                callback: function (value) {
-                  return dollarFormatter.format(value);
-                },
-              },
-              scaleLabel: {
-                display: true,
-                labelString: "Cumulative net revenue",
+                labelString: "Weekly net revenue",
               },
             },
           ],
@@ -265,17 +369,17 @@
     new Chart(canvas, {
       type: "bar",
       data: {
-        labels: ["All buyer currencies", "Buyer currency USD"],
+        labels: ["Non-USD currencies", "Buyer currency USD"],
         datasets: [
           {
             label: periods[0].label,
             data: [periods[0].average, periods[0].usdAverage],
-            backgroundColor: "#999999",
+            backgroundColor: "#f6d98b",
           },
           {
             label: periods[1].label,
             data: [periods[1].average, periods[1].usdAverage],
-            backgroundColor: "#047a15",
+            backgroundColor: "#9fd8a8",
           },
         ],
       },
@@ -344,7 +448,7 @@
       })
       .then(function (csv) {
         var rows = parseSalesCsv(csv);
-        drawBookSalesChart(buildDailySales(rows));
+        drawBookSalesChart(buildWeeklySales(rows));
         drawCompletionRevenueChart(buildCompletionRevenueComparison(rows));
       });
   });
