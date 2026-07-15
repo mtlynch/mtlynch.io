@@ -222,12 +222,7 @@
         var textY = chartArea.top + 14 + (events[i].labelOffsetY || 0);
 
         ctx.fillStyle = "#ffffff";
-        ctx.fillRect(
-          labelX,
-          textY - labelHeight / 2,
-          labelWidth,
-          labelHeight,
-        );
+        ctx.fillRect(labelX, textY - labelHeight / 2, labelWidth, labelHeight);
         ctx.strokeStyle = "#8b3a00";
         ctx.lineWidth = 1;
         ctx.strokeRect(
@@ -260,7 +255,14 @@
     return Math.round((end - start) / 86400000) + 1;
   }
 
-  function summarizePeriod(rows, label, startKey, endKey, currency, excludedCurrency) {
+  function summarizePeriod(
+    rows,
+    label,
+    startKey,
+    endKey,
+    currency,
+    excludedCurrency,
+  ) {
     var total = 0;
     var orders = 0;
     for (var i = 0; i < rows.length; i++) {
@@ -304,7 +306,14 @@
     ];
     return periods.map(function (period) {
       var allSummary = summarizePeriod(rows, period[0], period[1], period[2]);
-      var summary = summarizePeriod(rows, period[0], period[1], period[2], null, "usd");
+      var summary = summarizePeriod(
+        rows,
+        period[0],
+        period[1],
+        period[2],
+        null,
+        "usd",
+      );
       var usdSummary = summarizePeriod(
         rows,
         period[0],
@@ -378,7 +387,9 @@
   }
 
   function drawAllCurrenciesCompletionRevenueChart(periods) {
-    var canvas = document.getElementById("all-currencies-completion-revenue-chart");
+    var canvas = document.getElementById(
+      "all-currencies-completion-revenue-chart",
+    );
     if (!canvas) {
       return;
     }
@@ -633,12 +644,18 @@
         datasets: [
           {
             label: beforeCompletionPeriod.label,
-            data: [beforeCompletionPeriod.average, beforeCompletionPeriod.usdAverage],
+            data: [
+              beforeCompletionPeriod.average,
+              beforeCompletionPeriod.usdAverage,
+            ],
             backgroundColor: "#f6d98b",
           },
           {
             label: afterCompletionPeriod.label,
-            data: [afterCompletionPeriod.average, afterCompletionPeriod.usdAverage],
+            data: [
+              afterCompletionPeriod.average,
+              afterCompletionPeriod.usdAverage,
+            ],
             backgroundColor: "#9fd8a8",
           },
           {
@@ -728,17 +745,26 @@
         datasets: [
           {
             label: periods[0].label,
-            data: [periods[0].nonUsdRevenuePerVisitor, periods[0].usdRevenuePerVisitor],
+            data: [
+              periods[0].nonUsdRevenuePerVisitor,
+              periods[0].usdRevenuePerVisitor,
+            ],
             backgroundColor: "#f6d98b",
           },
           {
             label: periods[1].label,
-            data: [periods[1].nonUsdRevenuePerVisitor, periods[1].usdRevenuePerVisitor],
+            data: [
+              periods[1].nonUsdRevenuePerVisitor,
+              periods[1].usdRevenuePerVisitor,
+            ],
             backgroundColor: "#9fd8a8",
           },
           {
             label: periods[2].label,
-            data: [periods[2].nonUsdRevenuePerVisitor, periods[2].usdRevenuePerVisitor],
+            data: [
+              periods[2].nonUsdRevenuePerVisitor,
+              periods[2].usdRevenuePerVisitor,
+            ],
             backgroundColor: "#9fc5e8",
           },
         ],
@@ -815,30 +841,31 @@
         return res.text();
       }),
     ]).then(function (csvs) {
-        var rows = parseSalesCsv(csvs[0]);
-        var countryVisitors = [
-          parseCountryVisitorsCsv(csvs[1]),
-          parseCountryVisitorsCsv(csvs[2]),
-          parseCountryVisitorsCsv(csvs[3]),
-        ];
-        var completionRevenueComparison = buildCompletionRevenueComparison(rows);
-        var designDocsExcerptRevenueComparison = buildDesignDocsExcerptRevenueComparison(rows);
-        var allRevenuePeriods = [
-          completionRevenueComparison[0],
-          completionRevenueComparison[1],
-          designDocsExcerptRevenueComparison,
-        ];
-        drawBookSalesChart(buildWeeklySales(rows));
-        drawAllCurrenciesCompletionRevenueChart(completionRevenueComparison);
-        drawCompletionRevenueChart(completionRevenueComparison);
-        drawDesignDocsExcerptRevenueChart(
-          completionRevenueComparison[0],
-          completionRevenueComparison[1],
-          designDocsExcerptRevenueComparison,
-        );
-        drawRevenuePerVisitorChart(
-          buildRevenuePerVisitorComparison(allRevenuePeriods, countryVisitors),
-        );
-      });
+      var rows = parseSalesCsv(csvs[0]);
+      var countryVisitors = [
+        parseCountryVisitorsCsv(csvs[1]),
+        parseCountryVisitorsCsv(csvs[2]),
+        parseCountryVisitorsCsv(csvs[3]),
+      ];
+      var completionRevenueComparison = buildCompletionRevenueComparison(rows);
+      var designDocsExcerptRevenueComparison =
+        buildDesignDocsExcerptRevenueComparison(rows);
+      var allRevenuePeriods = [
+        completionRevenueComparison[0],
+        completionRevenueComparison[1],
+        designDocsExcerptRevenueComparison,
+      ];
+      drawBookSalesChart(buildWeeklySales(rows));
+      drawAllCurrenciesCompletionRevenueChart(completionRevenueComparison);
+      drawCompletionRevenueChart(completionRevenueComparison);
+      drawDesignDocsExcerptRevenueChart(
+        completionRevenueComparison[0],
+        completionRevenueComparison[1],
+        designDocsExcerptRevenueComparison,
+      );
+      drawRevenuePerVisitorChart(
+        buildRevenuePerVisitorComparison(allRevenuePeriods, countryVisitors),
+      );
+    });
   });
 })();
