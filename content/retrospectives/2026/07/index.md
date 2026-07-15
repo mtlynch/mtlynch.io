@@ -37,7 +37,7 @@ I improved the website a bit, but it could use more polish.
 - **Result**: Got 17.5k unique readers.
 - **Grade**: B-
 
-I adapted my chapter on design docs to [a free excerpt](https://refactoringenglish.com/excerpts/write-an-effective-design-doc/). It did well on [Lobsters](https://lobste.rs/s/kmx6wx/how_write_effective_software_design) and [reddit](https://www.reddit.com/r/programming/comments/1uevttg/how_to_write_an_effective_software_design_document/), but it flopped on Hacker News.
+I adapted my chapter on design docs to [a free excerpt](https://refactoringenglish.com/excerpts/write-an-effective-design-doc/). It did well on [Lobsters](https://lobste.rs/s/kmx6wx/how_write_effective_software_design) and [Reddit](https://www.reddit.com/r/programming/comments/1uevttg/how_to_write_an_effective_software_design_document/), but it flopped on Hacker News.
 
 I was surprised at how positive the reaction was to the design docs chapter. Generally, when I talk to developers about design docs, their main reaction is that they hate design docs and everything about them. The comments on my post were refreshingly supportive of design docs in general and my recommendations in particular.
 
@@ -56,7 +56,7 @@ June was the best month of book revenue since the initial crowdfunding launch. T
 
 ## How much difference does the last 8% make?
 
-For the last few months, the _Refactoring English_ website has listed my book as _almost_ complete in early access. I was curious to see what the sales impact would be of going from almost complete book to fully complete, so I looked at weekly sales:
+For the last few months, the _Refactoring English_ website has listed my book as _almost_ complete in early access. I was curious to see what the sales impact would be of going from an almost complete book to a fully complete book, so I looked at weekly sales:
 
 <canvas id="book-sales-chart"></canvas>
 
@@ -76,11 +76,11 @@ I didn't include sales after I published my latest excerpt because that obviousl
 
 <canvas id="design-docs-excerpt-revenue-chart"></canvas>
 
-But that's always a little skewed because Americans make up the largest share of my readers. What if I normalize revenue per-visitor?
+But that's always a little skewed because Americans make up the largest share of my readers. What if I normalize revenue per visitor?
 
 <canvas id="revenue-per-visitor-chart"></canvas>
 
-Oh, that's a switcheroo. By normalizing per-visitor, it flips the story. Now, it's the Americans that buy at the same rate for a finished vs. unfinished book. The readers outside the US are the ones spending about 20% more per visitor on the completed book.
+Oh, that's a switcheroo. By normalizing per visitor, it flips the story. Now, it's the Americans that buy at the same rate for a finished vs. unfinished book. The readers outside the US are the ones spending about 20% more per visitor on the completed book.
 
 I'm not sure how to use this information, but it did satisfy my curiosity.
 
@@ -104,7 +104,7 @@ This time, I thought, "Maybe I should use a time tracking tool."
 
 About 15 years ago, I tried a time tracking tool called RescueTime. I didn't find it that useful, but I thought maybe I'd keep at it for a few weeks and see what happened. Then, I realized I was letting a random company collect data about every window that appeared on my screen, and I promptly uninstalled RescueTime.
 
-I was wishing for an open-source version of RescueTime, when then I thought, "Wait, there probably is one." And there is. It's called [ActivityWatch](https://activitywatch.net/). It's open-source and privacy-first. It records all your window and browsing activity, but the data all stays local to your machine.
+I was wishing for an open-source version of RescueTime, when I thought, "Wait, there probably is one." And there is. It's called [ActivityWatch](https://activitywatch.net/). It's open-source and privacy-first. It records all your window and browsing activity, but the data all stays local to your machine.
 
 The problem is that ActivityWatch is way less polished than RescueTime. I couldn't understand at all what the timeline was trying to show me:
 
@@ -157,7 +157,7 @@ So far, the data is interesting, but the biggest challenge is that it's hard to 
 ### What got done?
 
 - Finished the _Refactoring English_ feedback tool.
-- Made fixes to _Refactoring English_ ebook for consistency and EPUB compatibility.
+- Made fixes to the _Refactoring English_ ebook for consistency and EPUB compatibility.
 - Made a [demo video for Little Moments](https://refactoringenglish.com/excerpts/write-an-effective-design-doc/#an-example-design-doc).
   - I'm quite proud of the silly photos in this.
 
