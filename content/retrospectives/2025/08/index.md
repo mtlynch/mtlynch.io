@@ -175,11 +175,11 @@ I don't want to maintain What Got Done forever, especially now that I'm not even
 
 Even though What Got Done only has a handful of active users, I hate abandoning people who started using something I offered, so I tried to make the offboarding experience on What Got Done nice:
 
-- I [announced on the website](https://www.whatgotdone.com/shutdown-notice) that What Got Done would stop running at the end of the year.
+- I announced on the website that What Got Done would stop running at the end of the year.
 - I added a feature to [let users export their posts in Markdown format](https://github.com/mtlynch/whatgotdone/pull/963).
   - I needed to do this anyway to port my data to Hugo, so I figured it would be nice to build this feature into the web app itself so that any user could do it.
 - I added a feature that lets users [set up a forwarding address for post-What Got Done shutdown](https://github.com/mtlynch/whatgotdone/pull/970).
-  - For example, I've configured my profile page [whatgotdone.com/michael](https://whatgotdone.com/michael) to permanently redirect to [weeks.mtlynch.io](https://weeks.mtlynch.io).
+  - For example, I've configured my profile page `whatgotdone.com/michael` to permanently redirect to [weeks.mtlynch.io](https://weeks.mtlynch.io).
 
 ### Progress on my AIM log parser in Gleam
 
@@ -327,7 +327,7 @@ Functional programming nerds: am I cheating? Or is this the right way to pass ar
 - Created a better [password reset flow for ScreenJournal](https://github.com/mtlynch/screenjournal/pull/429).
 - Added [file expiration options for guests on PicoShare](https://github.com/mtlynch/picoshare/pull/694).
 - Did unpaid editing on an upcoming blog post in exchange for publishing the feedback as marketing for my editing services.
-- Created a [sunsetting plan for What Got Done](https://www.whatgotdone.com/shutdown-notice) and migrated my data to [weeks.mtlynch.io](https://weeks.mtlynch.io).
+- Created a sunsetting plan for What Got Done and migrated my data to [weeks.mtlynch.io](https://weeks.mtlynch.io).
 
 ### Lessons learned
 

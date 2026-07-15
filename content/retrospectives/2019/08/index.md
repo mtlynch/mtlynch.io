@@ -7,7 +7,7 @@ date: "2019-08-02"
 
 ## Highlights
 
-- I'm shelving [What Got Done](https://whatgotdone.com), as customers seem uninterested in the idea.
+- I'm shelving What Got Done, as customers seem uninterested in the idea.
 - [Zestful](https://zestfuldata.com) has become my greatest challenge in not sweating the small stuff.
 - [Is It Keto](https://isitketo.org) continues growing in the background, with a 22% increase in revenue and a 35% rise in traffic.
 

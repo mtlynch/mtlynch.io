@@ -1,7 +1,7 @@
 ---
 title: "Install NixOS on a Free Oracle Cloud VM"
 date: 2025-02-07
-lastmod: 2026-07-04
+lastmod: 2026-07-12
 tags:
   - nix
 banner_image: internal-shell.webp
@@ -26,11 +26,9 @@ I've found [several](https://mdleom.com/blog/2021/03/09/nixos-oracle/) [tutorial
 
 Prithu Goswami figured out [a clever shortcut](https://prithu.dev/notes/installing-nixos-on-oracle-cloud-arm-instance/) by using the NixOS installer through netboot, which simplifies things. Prithu's explanation was pretty terse, so I thought I'd share my complete walkthrough of his method.
 
-{{<notice type="danger">}}
+{{<notice type="info">}}
 
-**Update (2026-07-04)**: My instructions no longer work. Oracle seems to have removed Cloud VM console access, which breaks my guide.
-
-Erik Parawell wrote [a guide](https://erikparawell.com/oracle-cloud-nixos.html) that eliminates some of the manual steps required in my guide, though I haven't tested his solution yet personally.
+**Update (2026-03-04)**: Erik Parawell wrote [a guide](https://erikparawell.com/oracle-cloud-nixos.html) that eliminates some of the manual steps required in my guide, though I haven't tested his solution yet personally.
 
 {{</notice>}}
 
@@ -121,11 +119,13 @@ wget https://boot.netboot.xyz/ipxe/netboot.xyz-arm64.efi && \
 
 Go back to the VM page for your instance on Oracle Cloud in your web browser.
 
-Scroll down to the "Resources" section at the bottom of the VM page and click "Console connection"
+Click "OS management"
 
-{{<img src="console-connection.webp">}}
+{{<img src="os-management.webp">}}
 
-From there, click "Launch Cloud Shell connection."
+Scroll down, and click "Launch Cloud Shell connection."
+
+{{<img src="launch-shell.webp" max-width="500px">}}
 
 When the Cloud Shell is initialized, you should see this line:
 

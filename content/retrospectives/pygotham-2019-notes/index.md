@@ -185,7 +185,7 @@ After PyTexas earlier this year, I realized I was looking for a new project, and
 
 At PyGotham, I [ended my talk](https://youtu.be/ElzBGwyDzCc?t=1398) with an invitation to approach me about managed services people felt were missing in their job. And then, nothing.
 
-I thought that, at worst, I'd at least get some terrible ideas like, "We want MailChimp, except we want it to be free and unlimited." But no, nada. So maybe there isn't much value in that strategy. In the future, I might try to use the platform to attract some new users to [What Got Done](https://whatgotdone.com/).
+I thought that, at worst, I'd at least get some terrible ideas like, "We want MailChimp, except we want it to be free and unlimited." But no, nada. So maybe there isn't much value in that strategy. In the future, I might try to use the platform to attract some new users to What Got Done.
 
 ### It's enlightening to review CFPs
 

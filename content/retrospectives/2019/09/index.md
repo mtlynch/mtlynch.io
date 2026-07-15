@@ -163,7 +163,7 @@ I highly recommend watching this video because I can't convey the full experienc
 - Earned a backlink for Is It Keto from a website with a high domain ranking.
 - Added 10 new articles to Is It Keto.
 - Made various tweaks to Is It Keto's UI to improve usability and SEO.
-- Mostly completed prep for an open source release of [What Got Done](https://whatgotdone.com):
+- Mostly completed prep for an open source release of What Got Done:
   - Added [CSRF](https://portswigger.net/web-security/csrf) mitigation
   - Added automated daily backups
   - Pulled project secrets and hardcoded IDs out of source control
