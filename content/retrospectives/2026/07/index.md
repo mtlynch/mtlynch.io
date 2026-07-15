@@ -2,6 +2,7 @@
 title: "Refactoring English: Month 19"
 date: "2026-07-15"
 description: Do people pay more for a finished book?
+banner_image: og-cover.webp
 ---
 
 {{<notice type="info">}}
