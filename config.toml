@@ -1,6 +1,6 @@
 baseurl = "https://mtlynch.io"
 title = "mtlynch.io"
-languagecode = "en"
+locale = "en"
 defaultcontentlanguage = "en"
 
 timeout = 300000

@@ -47,7 +47,7 @@
 {{- $retroDate := time (printf "%d-%02d-01" $yearInt $monthInt) -}}
 {{- $currentDate := $retroDate.AddDate 0 -1 0 -}}
 
-{{- $data := index .Site.Data "project_metrics" -}}
+{{- $data := index hugo.Data "project_metrics" -}}
 {{- $projectData := index $data $project -}}
 
 {{- partial "project-metrics/graph.html" (dict

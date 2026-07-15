@@ -4,7 +4,7 @@
   </h1>
 
   <h2>Businesses</h2>
-  {{ range (sort .Site.Data.projects.businesses "weight" "desc") }}
+  {{ range (sort hugo.Data.projects.businesses "weight" "desc") }}
     <h3>
       <a href="{{ .external_url }}">{{ .title }}</a>
       ({{ partial "projects/date-range.html" . }})
@@ -15,7 +15,7 @@
 
 
   <h2>Educational</h2>
-  {{ range (sort .Site.Data.projects.educational "weight" "desc") }}
+  {{ range (sort hugo.Data.projects.educational "weight" "desc") }}
     <h3>
       <a href="{{ .external_url }}">{{ .title }}</a>
       ({{ partial "projects/date-range.html" . }})
@@ -26,7 +26,7 @@
 
 
   <h2>Open-Source Projects</h2>
-  {{ range (sort .Site.Data.projects.open_source "weight" "desc") }}
+  {{ range (sort hugo.Data.projects.open_source "weight" "desc") }}
     <h3>
       <a href="{{ .external_url }}">{{ .title }}</a>
       ({{ partial "projects/date-range.html" . }})

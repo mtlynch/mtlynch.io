@@ -91,7 +91,7 @@ One night, I read a blog post about [fuzzing a random open-source utility that F
 
 A few nights later, I spent a couple of hours [writing a fuzzer](https://gitlab.com/mtlynch/fuzz-openc2e) for [openc2e](https://openc2e.github.io/), the open-source reimplementation of the [_Creatures_ game series](<https://en.wikipedia.org/wiki/Creatures_(video_game_series)>).
 
-{{<img src="Openc2e-c1-april2008.jpg" max-width="600px" caption="[openc2e](https://openc2e.github.io/) is the open-source reimplementation of the [_Creatures_ game series](https://en.wikipedia.org/wiki/Creatures_(video_game_series))." has-border="false">}}
+{{<img src="Openc2e-c1-april2008.webp" max-width="600px" caption="[openc2e](https://openc2e.github.io/) is the open-source reimplementation of the [_Creatures_ game series](https://en.wikipedia.org/wiki/Creatures_(video_game_series))." has-border="false">}}
 
 The original _Creatures_ game from 1996 included a custom scripting language and corresponding virtual machine. The language is called [Creatures Agent Object Script (CAOS)](https://creatures.fandom.com/wiki/CAOS), and it lets players create custom add-ons for the game.
 

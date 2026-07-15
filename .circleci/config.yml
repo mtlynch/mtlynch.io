@@ -97,7 +97,7 @@ jobs:
             fi
   build:
     docker:
-      - image: hugomods/hugo:0.147.5
+      - image: hugomods/hugo:0.163.3
     steps:
       - checkout
       - attach_workspace:
@@ -112,7 +112,7 @@ jobs:
             if [[ "$CIRCLE_BRANCH" != "master" ]]; then
               export HUGO_ENV=dev
             fi
-            hugo --minify
+            hugo --minify --cleanDestinationDir
       - persist_to_workspace:
           root: ./
           paths:
