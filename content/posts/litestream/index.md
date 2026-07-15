@@ -315,8 +315,6 @@ I've written deployment instructions for a few different platforms:
 - [mtlynch/logpaste](https://github.com/mtlynch/logpaste): MIT-licensed source code and documentation for LogPaste.
 - [litestream-s6-example](https://github.com/benbjohnson/litestream-s6-example): A more advanced and robust method for running Litestream alongside your app in a Docker container. It uses [s6-overlay](https://github.com/just-containers/s6-overlay) to restart the Litestream instance on failure.
 
-{{<x user="deliberatecoder" id="1387768253854986247">}}
-
 ---
 
 _Architecture diagram by Loraine Yow._

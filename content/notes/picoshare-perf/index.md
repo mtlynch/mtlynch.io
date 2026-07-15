@@ -20,9 +20,7 @@ A few months ago, I started seeing my PicoShare server die every few days. When 
 
 I didn't have time to debug the crash, so I just increased the server's memory from 512 MB to 1 GB. And then I kept seeing crashes, so I increased it again to 2 GB.
 
-It's unsatisfying to fix a crash by just throwing more RAM at the problems, so for the past two weeks, I've been debugging the crashes and sharing my progress on Twitter.
-
-{{<x user="deliberatecoder" id="1552438652537835521">}}
+It's unsatisfying to fix a crash by just throwing more RAM at the problems, so for the past two weeks, I've been debugging the crashes and [sharing my progress on Twitter](https://web.archive.org/web/20220728070440/https://twitter.com/deliberatecoder/status/1552438652537835521).
 
 At this point, I've fixed all the issues that were causing crashes and learned some useful lessons along the way about Go, SQLite, and debugging.
 
@@ -285,7 +283,7 @@ I tested running the `VACUUM` command on my server and saw that it did indeed re
 
 At this point, Ben asked me why I need to `VACUUM` at all:
 
-{{<x user="benbjohnson" id="1556003355901603841">}}
+{{<img src="why-vacuum.webp">}}
 
 Yeah, why _am_ I doing that?
 
@@ -359,9 +357,7 @@ One useful technique I discovered during this investigation was to test each hyp
 
 {{<img src="named-branches.png" alt="Branch repro-no-tx has commit name 'Working - no OOM crashes with 3x parallel 600 MB uploads'">}}
 
-With so many different hypotheses flying around, it was difficult to remember what state the code was in when I tested each idea. For example, at one point, I was seeing crashes due to a new bug I had introduced while debugging:
-
-{{<x user="deliberatecoder" id="1552801134913458176">}}
+With so many different hypotheses flying around, it was difficult to remember what state the code was in when I tested each idea. For example, at one point, I was seeing crashes [due to a new bug I had introduced while debugging](https://web.archive.org/web/20220729041035/https://twitter.com/deliberatecoder/status/1552801134913458176).
 
 Having a record of what state the code was in and what I did to test it helped me organize my thoughts and avoid duplicating effort.
 
@@ -389,7 +385,7 @@ To test this theory, I used the `fio` disk benchmarking utility, which I'd never
 
 Kurt Mackey confirmed that the measurements were likely correct because Fly's local disks are Enterprise NVMe drives:
 
-{{<x user="mrkurt" id="1552495902190735360">}}
+{{<img src="enterprise-nvme.webp">}}
 
 ## Dead ends
 
@@ -413,9 +409,7 @@ That said, filing the issue against Litestream was useful because it forced me t
 
 When I couldn't reproduce the crashes on my local VMs or under Docker, I started to suspect that the problem was on Fly's end. It seemed unlikely because I wasn't doing anything very exotic, so it would be strange if none of Fly's other users had noticed their deployments dying from RAM starvation.
 
-Still, I wanted to eliminate Fly as a possibility. I deployed PicoShare to [Lightsail](https://aws.amazon.com/lightsail/), Amazon's managed Docker container service. They don't have a 256 MB RAM option, so I deployed to a 512 MB instance. Within a few minutes, I was able to reproduce the crash there, eliminating Fly as the culprit:
-
-{{<x user="deliberatecoder" id="1552466794971107328">}}
+Still, I wanted to eliminate Fly as a possibility. I deployed PicoShare to [Lightsail](https://aws.amazon.com/lightsail/), Amazon's managed Docker container service. They don't have a 256 MB RAM option, so I deployed to a 512 MB instance. Within a few minutes, I was able to reproduce the crash there, [eliminating Fly as the culprit](https://web.archive.org/web/20220728065510/https://twitter.com/deliberatecoder/status/1552466794971107328).
 
 ### /tmp is not a RAMdisk
 

@@ -300,8 +300,6 @@ As I finally see financial success with one of my businesses, there's more reven
 
 Once again, I feel incredibly fortunate to be working for myself, and I hope to continue doing it forever.
 
-{{<x user="deliberatecoder" id="1356256679231434753">}}
-
 {{<annual-updates>}}
 
 ---
