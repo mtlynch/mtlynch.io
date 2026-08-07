@@ -131,7 +131,7 @@ sudo adduser "$(whoami)" dialout
 
 ## Get AirGradient source
 
-Next, I check the [AirGradient factory flashing page](https://www.airgradient.com/documentation/factory/) to find out the latest production release.
+Next, I check the [AirGradient factory flashing page](https://www.airgradient.com/documentation/kb/kb-firmwares-airgradient-one-i-9psl-open-air-o-1pst-and-open-air-max-o-m-1ppst-firmware-versions) to find out the latest production release.
 
 ```bash
 # Current production release, as of this writing.
