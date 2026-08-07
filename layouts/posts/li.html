@@ -14,7 +14,30 @@
 <li>
   <a class="img-wrapper" href="{{ .RelPermalink }}">
     {{ if $imageResource }}
-      {{ partial "responsive-img.html" (dict "image" $imageResource "sizes" "(min-width: 768px) 400px, 98vw" "photoWidths" .Site.Params.photoWidths) }}
+      {{- /* The mobile slot is at most 768px minus 40px of container padding. */ -}}
+      {{ $mobileImageWidth := 728 }}
+      {{ if lt $imageResource.Width $mobileImageWidth }}
+        {{ $mobileImageWidth = $imageResource.Width }}
+      {{ end }}
+      {{ $desktopImageWidth := 280 }}
+      {{ if lt $imageResource.Width $desktopImageWidth }}
+        {{ $desktopImageWidth = $imageResource.Width }}
+      {{ end }}
+      {{ $heightLimitedWidth := div (add (mul 200 $imageResource.Width) (sub $imageResource.Height 1)) $imageResource.Height }}
+      {{ if lt $heightLimitedWidth $desktopImageWidth }}
+        {{ $desktopImageWidth = $heightLimitedWidth }}
+      {{ end }}
+      {{ $sizes := printf "(min-width: 768px) %dpx, calc(100vw - 4rem)" $desktopImageWidth }}
+      {{ if lt $mobileImageWidth 728 }}
+        {{ $sizes = printf "(min-width: 768px) %dpx, (min-width: %dpx) %dpx, calc(100vw - 4rem)" $desktopImageWidth (add $mobileImageWidth 40) $mobileImageWidth }}
+      {{ end }}
+      {{ partial "responsive-img.html" (dict
+        "image" $imageResource
+        "maxDisplayWidth" $mobileImageWidth
+        "photoWidths" .Site.Params.photoWidths
+        "sizes" $sizes
+        )
+      }}
     {{ end }}
   </a>
   <div>
