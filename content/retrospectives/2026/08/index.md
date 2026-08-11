@@ -133,6 +133,8 @@ As someone who only plays computer games every few months, I want something wher
 
 The problem is that I can't think of how to translate those ideas into a game. So, for now, I'm just exploring and seeing what feels fun. The two games I had in mind designing this prototype were Stardew Valley and Ultima Online, two games I've spent many hours playing.
 
+{{<video src="mikeville-gameplay.mp4" max-width="600px">}}
+
 The game is now available here, if you'd like to try it:
 
 TODO: Link
