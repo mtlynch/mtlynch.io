@@ -145,7 +145,7 @@ It's tedious to break up your code to find a subset that makes a working, intell
 
 The fastest way to ruin a code review is to take feedback personally. This is challenging, as many developers take pride in their work and see it as an extension of themselves. If your reviewer tactlessly frames their feedback [as a personal attack](/human-code-reviews-1/#never-say-you), it's even harder.
 
-As the author, [you ultimately control your reaction to feedback](/book-reports/7-habits-of-highly-effective-people/#habit-1-be-proactive). Treat your reviewer's notes as an objective discussion about the code, not your personal worth as a human. Responding defensively will only make things worse.
+As the author, [you ultimately control your reaction to feedback](/notes/book-reports/7-habits-of-highly-effective-people/#habit-1-be-proactive). Treat your reviewer's notes as an objective discussion about the code, not your personal worth as a human. Responding defensively will only make things worse.
 
 I try to interpret all notes as helpful lessons. When a reviewer catches an embarrassing bug in my code, my first instinct is to make excuses. Instead, I catch myself and praise my reviewer for their scrupulousness.
 

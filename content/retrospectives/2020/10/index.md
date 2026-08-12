@@ -38,7 +38,7 @@ With inventory so low, I decided to postpone marketing efforts. It didn't make s
 
 This was a big flop. The inventory squeeze was a legitimate reason to defer marketing, but customer research should have jumped up in priority during my downtime.
 
-The two conversations went positively, though. I stuck to [Rob Fitzpatrick's strategy](/book-reports/the-mom-test/) of gathering information instead of pitching my product. Both interviewees were interested in the idea of a low-cost KVM over IP and asked if they could participate in a demo when I had a product ready for them.
+The two conversations went positively, though. I stuck to [Rob Fitzpatrick's strategy](/notes/book-reports/the-mom-test/) of gathering information instead of pitching my product. Both interviewees were interested in the idea of a low-cost KVM over IP and asked if they could participate in a demo when I had a product ready for them.
 
 ## Stats
 
