@@ -56,7 +56,7 @@ The main reason for the jump in sales was that I ended the early access discount
 
 {{<img src="stripe-2026-07.webp" alt="Graph of sales showing a spike on July 20th and slow sales after">}}
 
-On the last day of the sale, I published a blog post called, ["Why I Stopped 'Creating Content,'"](https://refactoringenglish.com/blog/why-i-stopped-creating-content/), which reached the front page of Hacker News. And then it was [the top post of the day on bubbles.town](https://bubbles.town/entry/44752223), a Hacker News-style site that's more indie and less tech-centric.
+On the last day of the sale, I published a blog post called ["Why I Stopped 'Creating Content,'"](https://refactoringenglish.com/blog/why-i-stopped-creating-content/), which reached the front page of Hacker News. And then it was [the top post of the day on bubbles.town](https://bubbles.town/entry/44752223), a Hacker News-style site that's more indie and less tech-centric.
 
 There was a huge spike in sales on the last day of the sale, with over $1k in sales on that day alone.
 
@@ -94,7 +94,7 @@ I tried rate-limiting, but the lowest rate limit Bunny supports is 1 KB/s, and m
 
 Finally, I just blocked by IP range. I vibecoded a tool that scraped my Bunny logs for the specific user agent and collected all the IPs associated with the attack. That worked, but then the attack started up again a week later from new IPs and a new, slightly more recent user agent, so I just re-ran my script and updated my list of IPs to block, and that seems to be working.
 
-The weirdest thing about the attack is that the bots don't care about being blocked. They just keep hammering the server anyway. I'd expect them to be say, "Oh, no use wasting compute and bandwidth on requests that have 100% been blocked at the TCP level for the past two weeks," but they don't mind apparently.
+The weirdest thing about the attack is that the bots don't care about being blocked. They just keep hammering the server anyway. I'd expect them to say, "Oh, no use wasting compute and bandwidth on requests that have 100% been blocked at the TCP level for the past two weeks," but they don't mind apparently.
 
 {{<img src="netlify-attacks.webp" max-width="800px" caption="Even after I block the attackers' IPs, they just keep hammering away.">}}
 
@@ -113,7 +113,7 @@ I also considered just hosting on a VPS or a VPS + Bunny as a CDN, but I don't w
     - Run by a single person, so customer service is responsive and comprehensive
     - Focused mainly on static hosting without extra complexity
   - Cons
-    - Run by a single person, so increased outage risks
+    - Run by a single person, so an increased risk of outages
     - The upload process unconditionally uploads every file rather than an rsync-like sync of only the changed files, which is a pain for my large sites that only change incrementally
     - Bot scraper protection is not included
     - Bundles together site builds and hosting, but I only want hosting
@@ -123,7 +123,7 @@ I also considered just hosting on a VPS or a VPS + Bunny as a CDN, but I don't w
     - Focused exclusively on static hosting, which is exactly what I want
     - Unlimited bandwidth, so they assume the cost of scraper bot attacks
   - Cons
-    - Run by a single person (I think), so increased outage risks
+    - Run by a single person (I think), so an increased risk of outages
     - All management is through their terminal app. There's no web app
     - It doesn't look like they support multi-factor authentication
     - The upload process unconditionally uploads every file rather than an rsync-like sync of only the changed files, which is a pain for my large sites that only change incrementally
@@ -135,7 +135,7 @@ I also considered just hosting on a VPS or a VPS + Bunny as a CDN, but I don't w
   - Cons
     - Giant, complicated service
     - I have no reason to believe Vercel will treat me any better than Netlify does
-- Roll my own on solution on top of Bunny CDN
+- Roll my own solution on top of Bunny CDN
   - I considered this, but implementing incremental uploads and atomic deploys on Bunny would be its own complicated project
 
 ## Mikeville: My unfinished multiplayer browser game
