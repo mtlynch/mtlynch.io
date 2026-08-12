@@ -113,7 +113,7 @@ I also considered just hosting on a VPS or a VPS + Bunny as a CDN, but I don't w
     - Run by a single person, so customer service is responsive and comprehensive
     - Focused mainly on static hosting without extra complexity
   - Cons
-    - Run by a single person, so an increased risk of outages
+    - Run by a single person, so increased outage risks
     - The upload process unconditionally uploads every file rather than an rsync-like sync of only the changed files, which is a pain for my large sites that only change incrementally
     - Bot scraper protection is not included
     - Bundles together site builds and hosting, but I only want hosting
@@ -123,7 +123,7 @@ I also considered just hosting on a VPS or a VPS + Bunny as a CDN, but I don't w
     - Focused exclusively on static hosting, which is exactly what I want
     - Unlimited bandwidth, so they assume the cost of scraper bot attacks
   - Cons
-    - Run by a single person (I think), so an increased risk of outages
+    - Run by a single person (I think), so increased outage risks
     - All management is through their terminal app. There's no web app
     - It doesn't look like they support multi-factor authentication
     - The upload process unconditionally uploads every file rather than an rsync-like sync of only the changed files, which is a pain for my large sites that only change incrementally
