@@ -108,6 +108,15 @@ The obvious answer is "Cloudflare," but I'm alarmed at how much of the Internet'
 
 I also considered just hosting on a VPS or a VPS + Bunny as a CDN, but I don't want my site to go offline the day I'm on the front page of Hacker News because my VPS crashes or I misconfigure caching on Bunny. I want a solution where I just pay someone else to keep my site online.
 
+- [Surge](https://surge.sh/)
+  - Pros
+    - Focused exclusively on static hosting, which is exactly what I want
+    - Unlimited bandwidth, so they assume the cost of scraper bot attacks
+  - Cons
+    - Run by a single person (I think), so increased outage risks
+    - All management is through their terminal app. There's no web app
+    - It doesn't look like they support multi-factor authentication, though it looks like they're working on it
+    - The upload process unconditionally uploads every file rather than an rsync-like sync of only the changed files, which is a pain for my large sites that only change incrementally
 - [statichost](https://www.statichost.eu/)
   - Pros
     - Run by a single person, so customer service is responsive and comprehensive
@@ -118,16 +127,6 @@ I also considered just hosting on a VPS or a VPS + Bunny as a CDN, but I don't w
     - Bot scraper protection is not included
     - Bundles together site builds and hosting, but I only want hosting
     - A big selling point is being EU-centric, but I'm in the US
-- [Surge](https://surge.sh/)
-  - Pros
-    - Focused exclusively on static hosting, which is exactly what I want
-    - Unlimited bandwidth, so they assume the cost of scraper bot attacks
-  - Cons
-    - Run by a single person (I think), so increased outage risks
-    - All management is through their terminal app. There's no web app
-    - It doesn't look like they support multi-factor authentication
-    - The upload process unconditionally uploads every file rather than an rsync-like sync of only the changed files, which is a pain for my large sites that only change incrementally
-    - Their live chat is broken
 - [Vercel](https://vercel.com)
   - Pros
     - Claims to prevent DDoS / scraper bots
