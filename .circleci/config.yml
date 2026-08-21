@@ -52,7 +52,7 @@ jobs:
               aarch64) WORDWORD_ARCH="arm64" ;;
               *) echo "Unsupported architecture: $(uname -m)"; exit 1 ;;
             esac
-            curl -fsSL "https://codeberg.org/mtlynch/wordword/releases/download/${WORDWORD_VERSION}/wordword-v${WORDWORD_VERSION}-${WORDWORD_PLATFORM}-${WORDWORD_ARCH}.tar.gz" | tar xz
+            curl -fsSL "https://codefloe.com/mtlynch/wordword/releases/download/${WORDWORD_VERSION}/wordword-v${WORDWORD_VERSION}-${WORDWORD_PLATFORM}-${WORDWORD_ARCH}.tar.gz" | tar xz
             sudo mv wordword /usr/local/bin/
       - run:
           name: Verify wordword installation
