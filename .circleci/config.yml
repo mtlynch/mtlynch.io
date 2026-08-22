@@ -38,7 +38,7 @@ jobs:
     docker:
       - image: cimg/base:current
     environment:
-      WORDWORD_VERSION: "0.1.2"
+      WORDWORD_VERSION: "0.1.4"
       WORDWORD_PLATFORM: "linux"
     steps:
       - checkout
