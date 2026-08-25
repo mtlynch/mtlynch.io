@@ -9,31 +9,34 @@
 {{ $image := .Page.Resources.GetMatch $srcRaw }}
 {{ $src := $image.RelPermalink }}
 
-{{ $maxWidthPixels := $image.Width }}
+{{ $requestedMaxWidthPixels := $image.Width }}
 {{ if strings.HasSuffix $maxWidth "px" }}
-  {{ $maxWidthPixels = int (replace $maxWidth "px" "") }}
+  {{ $requestedMaxWidthPixels = int (replace $maxWidth "px" "") }}
 {{ end }}
 
+{{ $containerMaxWidthPixels := $requestedMaxWidthPixels }}
 {{- /* If maxWidth is set to match the image size, but it also has a border, add
   2px to the maxWidth to account for the 1px border on either side. */ -}}
-{{ if (and $hasBorder (eq $maxWidthPixels $image.Width)) }}
-  {{ $maxWidthPixels = add $maxWidthPixels 2 }}
+{{ if (and $hasBorder (eq $containerMaxWidthPixels $image.Width)) }}
+  {{ $containerMaxWidthPixels = add $containerMaxWidthPixels 2 }}
 {{ end }}
 
-{{ $maxWidth = printf "%dpx" $maxWidthPixels }}
+{{ $maxWidth = printf "%dpx" $containerMaxWidthPixels }}
 
 {{ $containerAttrs := printf `class="img%s"%s`
   (cond (ne $align "") (printf " align-%s" $align) "")
   (cond (ne $maxWidth "") (printf ` style="max-width: %s"` $maxWidth) "") | safeHTMLAttr }}
 
-{{ $srcset := "" }}
-{{ range $.Site.Params.photoWidths }}
-  {{- if ge $image.Width . }}
-    {{ $resized := $image.Resize (printf "%dx" .) }}
-    {{ $srcset = printf "%s%s %dw, " $srcset $resized.RelPermalink . }}
-  {{ end }}
+{{- /* The container is 900px wide with 20px of padding on each side. */ -}}
+{{ $maxDisplayWidth := $requestedMaxWidthPixels }}
+{{ if gt $maxDisplayWidth 860 }}
+  {{ $maxDisplayWidth = 860 }}
 {{ end }}
-{{ $srcset = printf "%s%s %dw" $srcset $image.RelPermalink $image.Width }}
+{{ if gt $maxDisplayWidth $image.Width }}
+  {{ $maxDisplayWidth = $image.Width }}
+{{ end }}
+{{ $sizes := printf "(min-width: %dpx) %dpx, calc(100vw - 4rem)" (add $maxDisplayWidth 40) $maxDisplayWidth }}
+{{ $imgClass := cond $hasBorder "img-border" "" }}
 
 {{ if $caption }}
 <figure {{ $containerAttrs }}>
@@ -43,11 +46,14 @@
 
 {{ if $src }}
   <a href="{{ if $href }}{{ $href }}{{ else }}{{ $src }}{{ end }}">
-    <img
-      {{ if $hasBorder }}class="img-border"{{ end }}
-      sizes="(min-width: 768px) {{ if $maxWidth }}{{ $maxWidth }}{{ else }}{{ index (last 1 $.Site.Params.photoWidths) 0 }}px{{ end }}, 98vw"
-      srcset='{{ $srcset }}'
-      src="{{ $src }}" alt="{{$altText}}" loading="lazy"/>
+    {{ partial "responsive-img.html" (dict
+      "image" $image
+      "maxDisplayWidth" $maxDisplayWidth
+      "photoWidths" $.Site.Params.photoWidths
+      "sizes" $sizes
+      "alt" $altText
+      "class" $imgClass
+    ) }}
   </a>
 {{ else }}
   {{ errorf "failed to find image %s: %s" $srcRaw .Position }}

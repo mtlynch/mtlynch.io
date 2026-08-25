@@ -1,30 +1,76 @@
 {{/* Partial for generating responsive images with srcset
   Parameters:
   - .image: Hugo image resource
-  - .sizes: sizes attribute value (optional, defaults to responsive)
+  - .maxDisplayWidth: maximum rendered image width in CSS pixels
+  - .photoWidths: configured responsive image widths
+  - .sizes: sizes attribute value
+  - .alt: alt attribute value (optional)
   - .class: CSS class for the img tag (optional)
   - .loading: loading attribute (optional, defaults to "lazy")
 */}}
 
 {{ $image := .image }}
-{{ $sizes := .sizes | default "(min-width: 768px) 400px, 98vw" }}
+{{ $maxDisplayWidth := int .maxDisplayWidth }}
+{{ if gt $maxDisplayWidth $image.Width }}
+  {{ $maxDisplayWidth = $image.Width }}
+{{ end }}
+{{ $maxCandidateWidth := mul $maxDisplayWidth 2 }}
+{{ if gt $maxCandidateWidth $image.Width }}
+  {{ $maxCandidateWidth = $image.Width }}
+{{ end }}
+
+{{ $sizes := .sizes }}
+{{ $alt := .alt | default "" }}
 {{ $class := .class | default "" }}
 {{ $loading := .loading | default "lazy" }}
 
-{{ $srcset := "" }}
-{{ range .photoWidths }}
-  {{- if le . $image.Width }}
+{{ $candidates := slice }}
+{{ $fallbackSrc := "" }}
+{{ range sort .photoWidths }}
+  {{- if and (lt . $image.Width) (le . $maxCandidateWidth) }}
     {{ $resized := $image.Resize (printf "%dx" .) }}
-    {{ $srcset = printf "%s%s %dw, " $srcset $resized.RelPermalink . }}
+    {{ $candidates = $candidates | append (dict "src" $resized.RelPermalink "width" .) }}
+    {{ if and (eq $fallbackSrc "") (ge . $maxDisplayWidth) }}
+      {{ $fallbackSrc = $resized.RelPermalink }}
+    {{ end }}
   {{ end }}
 {{ end }}
-{{ $srcset = printf "%s%s %dw" $srcset $image.RelPermalink $image.Width }}
+
+{{ $hasTerminalCandidate := false }}
+{{ range $candidates }}
+  {{ if eq .width $maxCandidateWidth }}
+    {{ $hasTerminalCandidate = true }}
+  {{ end }}
+{{ end }}
+
+{{ if not $hasTerminalCandidate }}
+  {{ $terminalImage := $image }}
+  {{ if lt $maxCandidateWidth $image.Width }}
+    {{ $terminalImage = $image.Resize (printf "%dx" $maxCandidateWidth) }}
+  {{ end }}
+  {{ $candidates = $candidates | append (dict "src" $terminalImage.RelPermalink "width" $maxCandidateWidth) }}
+  {{ if and (eq $fallbackSrc "") (ge $maxCandidateWidth $maxDisplayWidth) }}
+    {{ $fallbackSrc = $terminalImage.RelPermalink }}
+  {{ end }}
+{{ end }}
+
+{{ if eq $fallbackSrc "" }}
+  {{ range $candidates }}
+    {{ $fallbackSrc = .src }}
+  {{ end }}
+{{ end }}
+
+{{ $srcsetEntries := slice }}
+{{ range $candidates }}
+  {{ $srcsetEntries = $srcsetEntries | append (printf "%s %dw" .src .width) }}
+{{ end }}
 
 
 <img
   {{ if $class }}class="{{ $class }}"{{ end }}
-  src="{{ $image.RelPermalink }}"
-  srcset="{{ $srcset }}"
+  src="{{ $fallbackSrc }}"
+  srcset="{{ delimit $srcsetEntries ", " }}"
   sizes="{{ $sizes }}"
   loading="{{ $loading }}"
+  alt="{{ $alt }}"
 />
