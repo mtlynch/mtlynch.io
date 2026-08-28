@@ -231,7 +231,7 @@
 
       check-external-links = pkgs.writeShellApplication {
         name = "check-external-links";
-        runtimeInputs = [pkgs.coreutils html-proofer];
+        runtimeInputs = [pkgs.bash pkgs.coreutils html-proofer];
         text = ''
           work_directory="$(mktemp --directory)"
           trap 'rm --recursive --force "$work_directory"' EXIT
