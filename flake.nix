@@ -243,7 +243,7 @@
 
       deploy-to-surge = pkgs.writeShellApplication {
         name = "deploy-to-surge";
-        runtimeInputs = [pkgs.coreutils surge];
+        runtimeInputs = [pkgs.bash pkgs.coreutils surge];
         text = ''
           work_directory="$(mktemp --directory)"
           trap 'rm --recursive --force "$work_directory"' EXIT
