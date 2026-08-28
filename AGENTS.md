@@ -1,0 +1,2 @@
+- After every code change, run `dev-scripts/build-all-flake-targets` before presenting the solution to the user.
+- Do not modify any `index.md` files unless the user explicitly directs you to do so.
