@@ -5,8 +5,9 @@ resources/
 .sw?
 push-preview
 config-preview.toml
-.netlify/state.json
 node_modules/
+.pnpm-store/
+/result*
 
 # Files shared with AI agents.
 reference/

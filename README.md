@@ -1,11 +1,50 @@
 # mtlynch.io
 
-[![CircleCI](https://circleci.com/gh/mtlynch/mtlynch.io.svg?style=svg)](https://circleci.com/gh/mtlynch/mtlynch.io)
+[![NixCI](https://nix-ci.com/badge/gh:mtlynch:mtlynch.io)](https://nix-ci.com/gh:mtlynch:mtlynch.io)
 [![Creative Commons License CC-BY 4.0](https://i.creativecommons.org/l/by/4.0/80x15.png)](https://creativecommons.org/licenses/by/4.0/)
 
 ## Overview
 
 This is the source for https://mtlynch.io/.
+
+## Development
+
+Enter the development environment with:
+
+```bash
+nix develop
+```
+
+Build the production site with:
+
+```bash
+nix build .#site
+```
+
+Run the external-link check with:
+
+```bash
+nix run .#check-external-links
+```
+
+Build every flake package and upload the outputs to the NixCI cache with:
+
+```bash
+dev-scripts/build-all-flake-targets
+```
+
+NixCI builds every package exposed by `flake.nix`. It also runs the external-link check with network access.
+
+## Deployment
+
+NixCI deploys the `master` branch to Surge at https://mtlynch.io/. It publishes every other branch as a Surge preview revision.
+
+Deploy the production site manually with:
+
+```bash
+SURGE_TOKEN='your-token' \
+  nix run .#deploy-to-surge
+```
 
 ## Code style guides
 

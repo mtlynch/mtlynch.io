@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Uploads the given store paths to the NixCI cache.
+
+set -e
+set -o pipefail
+set -u
+set -x
+
+nix copy "$@" --to 'https://cache.nix-ci.com?compression=xz&parallel-compression=true'

@@ -14,7 +14,7 @@
     {{ partial "twitter-card.html" . }}
     {{ partial "opengraph.html" . }}
 
-    {{ if .Permalink }}
+    {{ if and hugo.IsProduction .Permalink }}
       <base href="{{ .Permalink }}" />
     {{ end }}
     <title>{{ block "title" . }}{{- .Site.Title -}}{{ end }}</title>

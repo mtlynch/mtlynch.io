@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+# Builds every package target exposed by flake.nix for the current system.
+
+set -e
+set -o pipefail
+set -u
+set -x
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+readonly SCRIPT_DIR
+cd "${SCRIPT_DIR}/.."
+
+system="$(nix eval --raw --impure --expr 'builtins.currentSystem')"
+readonly system
+
+set +x
+targets=()
+while IFS= read -r target || [ -n "${target}" ]; do
+  targets+=("${target}")
+done < <(
+  nix eval --raw ".#packages.${system}" \
+    --apply 'packages: builtins.concatStringsSep "\n" (map (name: ".#" + name) (builtins.attrNames packages))'
+)
+readonly targets
+set -x
+
+build_outputs=()
+while IFS= read -r output; do
+  build_outputs+=("${output}")
+done < <(nix build --print-out-paths "${targets[@]}")
+readonly build_outputs
+
+upload_script="${SCRIPT_DIR}/upload-to-nixci-cache"
+readonly upload_script
+if [ -e "${upload_script}" ]; then
+  "${upload_script}" "${build_outputs[@]}"
+fi

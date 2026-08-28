@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# Usage:
+#   SURGE_TOKEN='your-token' nix run .#deploy-to-surge
+
+set -e
+set -o pipefail
+set -u
+
+: "${SURGE_TOKEN:?SURGE_TOKEN must be set}"
+
+surge_args=(
+  --project ./public
+  --domain https://mtlynch.io
+)
+
+if [[ -n "${NIX_CI_GIT_BRANCH-}" && "${NIX_CI_GIT_BRANCH}" != master ]]; then
+  surge_args+=(
+    --preview
+    --message "${NIX_CI_GIT_BRANCH} at ${NIX_CI_GIT_COMMIT_SHA-unknown commit}"
+  )
+  printf 'Surge preview deployment:\n\n'
+else
+  printf 'Surge production deployment:\n\n'
+fi
+
+surge "${surge_args[@]}"
+printf '\n'
