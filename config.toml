@@ -102,14 +102,10 @@ resampleFilter = "Lanczos"
     weight = 3
     url = "/projects/"
 [[menu.main]]
-    name = "Book Reports"
-    weight = 4
-    url = "/book-reports/"
-[[menu.main]]
     name = "Notes"
-    weight = 5
+    weight = 4
     url = "/notes/"
 [[menu.main]]
     name = "About"
-    weight = 6
+    weight = 5
     url = "/about/"

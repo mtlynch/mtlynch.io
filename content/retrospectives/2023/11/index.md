@@ -139,7 +139,7 @@ The problem is that customer service still takes less than 50% of the local team
 
 The team has been discussing this problem since the beginning of the year. The most natural transition seems to be shifting from reactively responding to support requests to proactively reaching out to existing customers. Some companies call this role "customer success."
 
-The embarrassing truth is that I rarely reach out to customers. It's one of the [important but non-urgent tasks](/book-reports/7-habits-of-highly-effective-people/#time-management-matrix) that I always neglect. But if I can teach the local staff to do it, it's no longer limited by my available bandwidth.
+The embarrassing truth is that I rarely reach out to customers. It's one of the [important but non-urgent tasks](/notes/book-reports/7-habits-of-highly-effective-people/#time-management-matrix) that I always neglect. But if I can teach the local staff to do it, it's no longer limited by my available bandwidth.
 
 We're piloting a new customer success process that looks like this:
 

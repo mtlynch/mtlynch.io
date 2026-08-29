@@ -55,7 +55,7 @@ My profits are down but not as drastically as it appears. The Raspberry Pi is Ti
 
 ## Finding ways to free up time
 
-I recently read the book [_The Goal_](/book-reports/the-goal/), which is all about the "bottlenecks" of a business. The bottleneck is the limiting factor of a system. As an example, suppose you have a product that needs to go through two machines: machine A and machine B. If machine A can process 100 units per week, and machine B can process 500 units per week, machine A is the bottleneck. Even if you had more of machine B or increased its output, it would have no effect on your business because you can still only produce 100 units per week until you get more of machine A.
+I recently read the book [_The Goal_](/notes/book-reports/the-goal/), which is all about the "bottlenecks" of a business. The bottleneck is the limiting factor of a system. As an example, suppose you have a product that needs to go through two machines: machine A and machine B. If machine A can process 100 units per week, and machine B can process 500 units per week, machine A is the bottleneck. Even if you had more of machine B or increased its output, it would have no effect on your business because you can still only produce 100 units per week until you get more of machine A.
 
 Early in TinyPilot's life, I systematized the fulfillment process so that I wasn't the bottleneck. I hired an inventory manager who ensured that customer orders shipped out on a daily basis without me being involved.
 
@@ -63,7 +63,7 @@ Today, the bottleneck on fulfillment is just market demand. We usually ship one 
 
 Still, there are several areas of the business where I'm the bottleneck: marketing, customer support, management, software development, and hardware development, to name a few.
 
-As I realized last month, my [management responsibilities have ballooned up](/retrospectives/2021/06/#im-just-a-manager) to occupy almost all of my time. I'm staying afloat in other areas, but I don't feel like I'm improving them. And I neglect marketing because it's [important but not urgent](/book-reports/7-habits-of-highly-effective-people/#time-management-matrix).
+As I realized last month, my [management responsibilities have ballooned up](/retrospectives/2021/06/#im-just-a-manager) to occupy almost all of my time. I'm staying afloat in other areas, but I don't feel like I'm improving them. And I neglect marketing because it's [important but not urgent](/notes/book-reports/7-habits-of-highly-effective-people/#time-management-matrix).
 
 I'm continuing to look for ways to delegate more of my work to the people that work with me. Here's what I did last month:
 

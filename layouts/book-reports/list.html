@@ -3,13 +3,5 @@
   {{ .Site.Title }}
 {{ end }}
 {{ define "content" }}
-  <section class="container list">
-    <h1 class="title">{{ .Title }}</h1>
-
-    <ul class="blurb-list book-reports-list">
-      {{- range .Pages -}}
-        {{- .Render "li" -}}
-      {{- end -}}
-    </ul>
-  </section>
+  {{ partial "list.html" . }}
 {{ end }}
