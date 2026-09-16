@@ -84,3 +84,8 @@ refactoring_english:
     revenue_pre_orders: 3908.8
     revenue_consulting: 0.0
     revenue_sponsors: 0.0
+  "2026-08":
+    unique_visitors: 0
+    revenue_pre_orders: 0.0
+    revenue_consulting: 0.0
+    revenue_sponsors: 0.0
