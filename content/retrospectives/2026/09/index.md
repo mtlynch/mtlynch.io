@@ -82,9 +82,9 @@ I tried asking a local print shop. I reached out to one in July and never heard 
 
 Yikes!
 
-### Printing with an online print-on-demand vendor
-
 The color price was a total non-starter. If it costs $79 to print, I probably have to charge $90 to break even after all my costs, and that probably prices out too many potential readers. I asked what volume I'd have to hit for price breaks, and they admitted that they just aren't set up to print this kind of book inexpensively.
+
+### Printing with an online print-on-demand vendor
 
 I checked online for print on demand vendors and found more viable prices for color prints:
 
@@ -94,39 +94,76 @@ I checked online for print on demand vendors and found more viable prices for co
 
 ## How do I ship a self-published print book?
 
-- Order a bunch of books to my house and ship them out myself as orders come in.
-  - Fun and personal, but it's also probably 3-10 minutes of work per order, and books take up a lot of space.
-- Order a bunch of books to a 3PL (warehouse and shipping vendor) (TODO: link) and connect a Shopify or Woo store to the 3PL
-  - Pain
-- Sell on Amazon with Amazon's print on demand service
-  - I've hated working with Amazon on the seller side.
-  - I might sell on Amazon eventually, but I definitely don't want it to be the first place I try because they're 100x more complicated and merchant-hostile than everyone else.
-- Sell with a vendor that does print on demand + fulfillment
-  - This is like the Amazon option except you don't have to deal with Amazon.
+Printing the books is only half of it. Once I print the books, I to get them to the customer.
 
-Lulu seems to have added a lightweight option in the last few weeks called [Buy Button](https://www.lulu.com/sell/sell-on-your-site/buy-button) where it looks like they're using [Stripe Connect](https://stripe.com/connect) so the customer's payment goes directly to my Stripe account with some percentage re-routed to Lulu for their fee.
+1. Print a bunch of books, send them from the printer to my house, and ship out books myself as orders come in.
+   - Fun and personal, but it's also probably 3-10 minutes of work per order, and books take up a lot of space.
+1. Order a bunch of books to a 3PL (warehouse and shipping vendor) (TODO: link) and connect a Shopify or Woo store to the 3PL
+   - A lot of moving parts to manage.
+1. Sell on Amazon with Amazon's print on demand service
+   - I've hated working with Amazon on the seller side.
+   - I might sell on Amazon eventually, but I definitely don't want it to be the first place I try because they're 100x more complicated and merchant-hostile than everyone else.
+1. Sell with a vendor that does print on demand + fulfillment
+   - This is like the Amazon option except you don't have to deal with Amazon.
+
+Of these options (4) sounded like the best fit for me right.
+
+Lulu added an option I think just in the last few weeks called [Buy Button](https://www.lulu.com/sell/sell-on-your-site/buy-button) that seems low-complexity and low-fee. I think they're using [Stripe Connect](https://stripe.com/connect) so the customer's payment goes directly to my Stripe account with some fee taken out for Lulu.
 
 Lulu's Buy Button option seems like a great path for me at this point because I'm already selling the ebook through Stripe, and it's nice to have everything in a single payment platform.
 
 The downside I see is that Lulu forces me to give customers a mailing address for returns, which means either paying for a virtual mailbox or revealing my home address to customers.
 
+## Printing a test book
+
+I wrote my book using Asciidoctor. The syntax awkward and the features limit your layout options a lot, but one strong positive is that Asciidoctor can generate multiple output formats from the same source markup. I tinkered with my settings to adapt my ebook PDF to a print-optimized PDF.
+
+Asciidoctor's defaults for a print-optimized PDF were mostly good, though its standard method to adapt links for print looks terrible:
+
+{{<img src="print-urls.webp" max-width="650px" caption="Asciidoctor's default strategy for links in a print-optimized PDF is to just add them in brackets after the linked text.">}}
+
+I wanted to convert my links to footnotes, but Asciidoctor _only_ supports endnotes. I was able to vibecode an Asciidoctor extension that converted the links to proper footnotes.
+
+{{<gallery caption="The PDF version (left) uses links and includes a link to the table of contents in every page footer. The print version (right) uses smaller pages, converts links to footnotes, and excludes the table of contents link in the footer.">}}
+
+{{<img src="pdf-version.webp" max-width="450px">}}
+
+{{<img src="print-version.webp" max-width="420px">}}
+
+{{</gallery>}}
+
+I ordered my first print with Lulu, but it's going to take a couple of weeks to receive it.
+
 ## Side project: Mail Archiver
 
 I'm a [longtime data hoarder](https://mtlynch.io/budget-nas/#why-build-a-nas-server). I still have 20+ year old [AIM logs from my college days](/notes/gleam-first-impressions/#my-project-parsing-old-aim-logs) and an offline copy of all my emails since 2004 when I got an early Gmail account.
 
-I write so many emails, and I'm terrified of losing them, so I always keep a copy on whatever email service I use. Currently, I use Fastmail, and I use a strong password and two-factor auth, so I figure my email is safe. And then I realized LLMs could hack everything, and I successfully hacked into my own Fastmail account without my password or security key (blog post coming). I reported the bug to Fastmail, and they fixed it, but I realized I probably didn't find the _last_ serious security vulnerability in Fastmail, so maybe I shouldn't keep all my old private mail on a third-party cloud service.
+There's so much useful information in my email archives that even though I keep an offline copy, I also keep everything at my email host. For 15 years that was Gmail, and then I switched everything over to Fastmail a few years ago. I use Fastmail with 2FA, and it's the one account I'm so paranoid about that I don't even keep the password in my password manager.
 
-I started keeping an offline copy of my mail a long time ago with Thunderbird, but I found that my Thunderbird database would randomly get corrupted, something that's not so appealing for a backup. Then I found out about the [maildir format](https://en.wikipedia.org/wiki/Maildir), where every email is a plaintext file. That sounded great!
+This year, everyone discovered that LLMs could hack everything, and I successfully hacked into my own Fastmail account without my password or security key (blog post coming). I reported the bug to Fastmail, and they fixed it, but what are the odds that I found the _last_ serious security vulnerability in Fastmail?
 
-About two years ago, I started using offlineimap to sync my emails to my local computer, and that worked fine, though I was a little nervous that offlineimap has gone unmaintained for several years. And then XX years ago, I found out about a modern replacement for offlineimap called imapgoose, which is written in Go and has far better test coverage than offlineimap.
+After hacking into my own Fastmail account, I realized that the value of having all my email easily accessible in a cloud email service wasn't worth the risk of someone downloading 20+ years of my email, especially as that risk has increased so drastically in 2026.
 
-The first challenge was that when I compared offlineimap and imapgoose, they contained slightly different data. Whoops. So one of them had to be backing up incorrectly. I wrote a complicated maildir diffing tool to compare the two directories, but it turned out that they were essentially both correct:
+How do I move my mail offline but minimize the risk of losing any emails? The naive solution is to just run a program like offlineimap, trust that it got everything, and then delete whatever I want from my live email server. That felt too haphazard. What if I thought offlineimap had archived everything, but it actually didn't, and so I deleted emails where I don't have a backup?
 
-- offlineimap had stale copies of emails that had been moved
-- imapgoose and offlineimap sometimes had mail headers that were slightly different at a byte level but equivalent at a semantic level
-  - I'm still not 100% sure because offlineimap had the technically incorrect versions and imapgoose had the correct versions, but offlineimap has no logic to fix headers, so I think my mail server has gone through different phases of presenting incorrect headers exactly as the sender sent them or repairing them.
+I created a custom solution to archive my emails in a more defensive way:
 
-Once I confirmed imapgoose had correct backups, I dropped offlineimap and
+1. I back up all my emails to my local computer
+1. The app has a web UI that lets me view my local emails in a Gmail-like format
+   - The app is creating a view of my local backup, not what's available at Fastmail's IMAP server, though the two _should_ match.
+1. I can click any message and hit "Archive"
+1. The app checks Fastmail and finds the same email by `Message-ID` and verifies that my local copy matches the copy on Fastmail
+1. The app moves the email from my "live mirror" folder to my "offline backup" folder on my local computer.
+1. The app deletes the email from my Fastmail account
+1. The app confirms that the email disappears from the "live mirror" folder when imapgoose next syncs with Fastmail
+
+With this flow, I minimize the chances of deleting a message unless I confirm that there's a safe copy offline.
+
+The process gets more complicated as I scale up because I don't want to click "Archive" one by one on millions of emails, so I added support for archiving message threads in addition to individual messages. And then I added support for archiving sets of threads based on search criteria (e.g., all emails with label "PayPal" before 2023-12-31).
+
+There are lots of wacky corner around translating emails from the IMAP/JMAP representation with labels to the local maildir format with folders, but after a couple weeks of whack-a-mole, I seem to have it working.
+
+I also captured a snapshot of my "live" copy before I started deleting anything to make sure that if I find a bug later that a
 
 ## Wrap up
 
