@@ -36,89 +36,101 @@ I think I need to just recognize that the right podcast could have a huge impact
 - **Result**: Did zero promotion to the website, but still got 7.8k unique readers
 - **Grade**: F
 
-TODO
+I did a lot of polish on the book website to make it look nicer, but I didn't do much in terms of promotion. I'm working on a blog post that I think will attract readers, but I'm holding off until I'm ready to release.
 
 ### - Declare the 1.0 release of my book
 
 - **Result**: Announced the 1.0 version
 - **Grade**: A
 
-TODO
+The book is now at 1.0!
 
 ## _Refactoring English_ metrics
 
 {{<project-metrics project="refactoring_english">}}
 
+TODO
+
 ## I've reached 1.0 of the book
+
+I feel like I've had "finish the book" as my monthly goal for like a year now, but the book is finally done.
+
+Well, not "done." I want to treat this book kind of like software where I can improve it over time, but I'm ready to declare the 1.0 release of the book.
+
+I'm noticing a lot more people reading the book. A lot of readers had been holding off because they didn't want to read an early draft, so I'm now hearing from a lot of readers who purchased early access 12+ months ago but are now just beginning to read the book.
+
+I thought I'd do a big launch immediately after hitting 1.0 and then look into a print version later, but I saw another indie author sharing their sales figures, and they had something like a 70/30 split between the print version and the ebook, so it made me rethink a print version and defer the official 1.0 "launch."
 
 ## My fear of selling physical books
 
-When I started writing _Refactoring English_, I wanted to keep things simple and publish it just as a PDF. I was open to other formats, and I intentionally chose authoring tools that supported EPUB, HTML, and print just in case there was demand, but I wanted to wait until there was a critical mass of customers willing to pay for other formats.
+When I started writing _Refactoring English_, I wanted to keep things simple and publish it just as a PDF. I was open to other formats, and I intentionally chose authoring tools that was flexible on output formats, but I wanted to wait until there was a critical mass of customers willing to pay for other formats.
 
-The format I was least excited to support was print copies, like physical books. My only experience selling a physical product was with TinyPilot, and the physical parts were consistently the most stressful and tedious parts of the work for me. Among my memories of shipping physical products:
+The format I was least excited to support was print copies. My only experience selling a physical product was with TinyPilot, where manufacturing and shipping were consistently the most stressful and tedious parts of my work.
+
+When I think back to shipping physical products for TinyPilot, what comes to mind is:
 
 - In the early days of TinyPilot, never wanting to travel because nobody would be home to pack orders and leave them out for the mail carrier.
 - Customers who threatened to cancel their order or do a credit card chargeback if their order didn't ship the same day that they placed it.
 - Having to eat the cost of hundreds of dollars of merchandise each month for packages that customers reported lost or stolen.
 - Dealing with the complexity of syncing my website [with a third-party warehouse's internal logistics software](https://mtlynch.io/retrospectives/2023/04/#everyone-just-gives-us-their-admin-password).
 
-As I've gotten closer to the finish line on the book, I've realized a lot of the problems I remember with TinyPilot are either solvable or don't exist with the book.
+As I've gotten closer to the finish line with the book, I've realized a lot of the problems I remember with TinyPilot are either solvable or don't exist with a self-published book.
 
-- Customers expecting immediate shipping: Probably not so common for people buying self-published books from an indie author.
-- Eating the cost on products lost in the mail: The risk for a book is ~$20 in manufacturing costs and $3 in shipping as opposed to $150 + $20 for a hardware product
+- When customers buy a self-published book from an indie author, they probably don't expect it to arrive at their house the next day.
+- If a book gets lost in shipping, I lose \~$20 in manufacturing costs and $3 in postage as opposed to hundreds of dollars on a hardware product.
 
 ## How do you even print a book?
 
-I know a lot of self-published authors default to Amazon's print on demand service to create physical copies of their books, but dealing with Amazon is also high on my list of things I don't miss about selling a physical product. I want to avoid Amazon as long as possible.
+Most self-published authors default to Amazon's print on demand service to create physical copies of their books, but I hated working with Amazon last time I sold there. I want to avoid Amazon as long as possible.
 
 So, how do I print a book?
 
-### Printing with a local print shop
+First, I tried asking a local print shop. I reached out to one in July and never heard back. I assume they saw "initial run of 50-100 copies" and decided I wasn't worth the time.
 
-I tried asking a local print shop. I reached out to one in July and never heard back. I assume they saw "initial run of 50-100 copies" and decided I wasn't worth the time. A few weeks later, I tried calling a local print shop that mainly does flyers and business cards and asked if they do books, and they said definitely, and they said they could quote me 50-100 books, and a few days later, I received their quote:
+A few weeks later, I tried calling a different local print shop I've worked with before for flyers, and I asked if they do books. They said definitely and offered to quote me 50-100 books. A few days later, they sent the official quote:
 
 - Grayscale: $24.35/book @ 50 books
 - Color: $78.73/book @ 50 books
 
 Yikes!
 
-The color price was a total non-starter. If it costs $79 to print, I probably have to charge $90 to break even after all my costs, and that probably prices out too many potential readers. I asked what volume I'd have to hit for price breaks, and they admitted that they just aren't set up to print this kind of book inexpensively.
-
-### Printing with an online print-on-demand vendor
+The color price was a total non-starter. If it costs $78 to print, I probably have to charge $90 to break even after all my costs, and that probably prices out too many potential readers. I asked what volume I'd have to hit for price breaks, and they admitted that they just aren't set up to print this kind of book inexpensively.
 
 I checked online for print on demand vendors and found more viable prices for color prints:
 
 - IngramSpark: $12.91/book
-- Lulu: $19/book
+- Lulu: $18.85/book
 - Blurb: $25.17/book
+
+Okay, much more doable.
 
 ## How do I ship a self-published print book?
 
-Printing the books is only half of it. Once I print the books, I to get them to the customer.
+Printing the books is only half of it. Once I print the books, how do I get them to the customer?
 
-1. Print a bunch of books, send them from the printer to my house, and ship out books myself as orders come in.
+I found several options:
+
+1. Print a batch of 200+ books and ship them to my house. When customers place orders, I pack and ship the books myself.
    - Fun and personal, but it's also probably 3-10 minutes of work per order, and books take up a lot of space.
-1. Order a bunch of books to a 3PL (warehouse and shipping vendor) (TODO: link) and connect a Shopify or Woo store to the 3PL
-   - A lot of moving parts to manage.
+1. Order a bunch of books to a [3PL](/bootstrapped-founder-year-6/#outsourcing-order-fulfillment-and-reducing-stress) (warehouse and shipping vendor) and connect a Shopify or Woo store to the 3PL.
+   - A lot of moving parts to manage and [a frequent headache in the past](/retrospectives/2023/04/#everyone-just-gives-us-their-admin-password)
 1. Sell on Amazon with Amazon's print on demand service
    - I've hated working with Amazon on the seller side.
-   - I might sell on Amazon eventually, but I definitely don't want it to be the first place I try because they're 100x more complicated and merchant-hostile than everyone else.
+   - I might sell on Amazon eventually, but I definitely don't want it to be the first place I try. They're 10x more complicated and merchant-hostile than everyone else.
 1. Sell with a vendor that does print on demand + fulfillment
    - This is like the Amazon option except you don't have to deal with Amazon.
 
 Of these options (4) sounded like the best fit for me right.
 
-Lulu added an option I think just in the last few weeks called [Buy Button](https://www.lulu.com/sell/sell-on-your-site/buy-button) that seems low-complexity and low-fee. I think they're using [Stripe Connect](https://stripe.com/connect) so the customer's payment goes directly to my Stripe account with some fee taken out for Lulu.
+By luck, Lulu added an option in the last few weeks called [Buy Button](https://www.lulu.com/sell/sell-on-your-site/buy-button) that seems appealingly lightweight and simple. Lulu generates a URL to purchase my book, I link to it from my website, and customers can check out through Lulu, and Lulu prints and ships the book to the customer. I think Lulu is using [Stripe Connect](https://stripe.com/connect) so the customer's payment goes directly to my Stripe account with some fee taken out for Lulu.
 
-Lulu's Buy Button option seems like a great path for me at this point because I'm already selling the ebook through Stripe, and it's nice to have everything in a single payment platform.
-
-The downside I see is that Lulu forces me to give customers a mailing address for returns, which means either paying for a virtual mailbox or revealing my home address to customers.
+Lulu's Buy Button option seems like a great path for me at this point because I'm already selling the ebook through Stripe, so it will be nice to keep everything within a single payment platform.
 
 ## Printing a test book
 
-I wrote my book using Asciidoctor. The syntax awkward and the features limit your layout options a lot, but one strong positive is that Asciidoctor can generate multiple output formats from the same source markup. I tinkered with my settings to adapt my ebook PDF to a print-optimized PDF.
+I wrote my book using Asciidoctor. The syntax is awkward and the features severely limit the layout options, but one strong positive is that Asciidoctor can generate multiple output formats from the same source markup.
 
-Asciidoctor's defaults for a print-optimized PDF were mostly good, though its standard method to adapt links for print looks terrible:
+I tried adapting my Asciidoctor book settings to create a print-optimized PDF, and I was pleasantly surprised. Asciidoctor's defaults for a printed book were mostly good, though its standard method to adapt links for print looks terrible:
 
 {{<img src="print-urls.webp" max-width="650px" caption="Asciidoctor's default strategy for links in a print-optimized PDF is to just add them in brackets after the linked text.">}}
 
@@ -132,53 +144,61 @@ I wanted to convert my links to footnotes, but Asciidoctor _only_ supports endno
 
 {{</gallery>}}
 
-I ordered my first print with Lulu, but it's going to take a couple of weeks to receive it.
+One mystery to me was how Lulu knows what to put on the book's back cover and spine. My ebook has a front cover, and I guess I could add a page to the print version for the back cover, but how do I put a book spine into a PDF?
+
+It turns out that the way Lulu and I guess all print on demand publishers have you do it is that you upload two separate PDFs:
+
+1. The "shell" of your book that includes the front cover, back cover, and spine
+1. The inner pages of your book, which is all the printed pages aside from the front and back cover
+
+I worked with an LLM to use [Typst](https://typst.app/) to create the shell for my book:
+
+{{<img src="cover.webp" max-width="750px" caption="Print on demand vendors need a separate PDF for the back cover, book spine, and front cover. This is what *Refactoring English's* cover looks like.">}}
+
+I ordered my first print with Lulu, but the process is a bit slow. It takes 5-7 business days to print and then another 3-5 business days for shipping, so I expect it to arrive next week. If it looks good, I'll set the wheels in motion for the official book launch.
 
 ## Side project: Mail Archiver
 
-I'm a [longtime data hoarder](https://mtlynch.io/budget-nas/#why-build-a-nas-server). I still have 20+ year old [AIM logs from my college days](/notes/gleam-first-impressions/#my-project-parsing-old-aim-logs) and an offline copy of all my emails since 2004 when I got an early Gmail account.
+I'm a [longtime data hoarder](https://mtlynch.io/budget-nas/#why-build-a-nas-server). I still have 20+ year old [AIM logs from my college days](/notes/gleam-first-impressions/#my-project-parsing-old-aim-logs). I also never delete emails, so I have all my emails going back to 2004 when Gmail first came out.
 
-There's so much useful information in my email archives that even though I keep an offline copy, I also keep everything at my email host. For 15 years that was Gmail, and then I switched everything over to Fastmail a few years ago. I use Fastmail with 2FA, and it's the one account I'm so paranoid about that I don't even keep the password in my password manager.
+This year, we discovered that [LLMs can hack everything](/claude-code-found-linux-vulnerability/). Shortly after writing that post, I used an LLM to find a vulnerability that let me read any Fastmail user's complete email contents (blog post coming soon). I reported the bug to Fastmail, and they promptly fixed it, but what are the odds that I found the _last_ serious security vulnerability in Fastmail?
 
-This year, everyone discovered that LLMs could hack everything, and I successfully hacked into my own Fastmail account without my password or security key (blog post coming). I reported the bug to Fastmail, and they fixed it, but what are the odds that I found the _last_ serious security vulnerability in Fastmail?
+After hacking into my own Fastmail account, I started to re-evaluate the tradeoffs of keeping all of my mail on a third-party cloud service. On the one hand, it's convenient to have a professional vendor keep a copy of all my mail and make it easy to search. On the other hand, a cloud mail provider is an attractive target for attackers and has more attack surface than keeping my mail on my private computer.
 
-After hacking into my own Fastmail account, I realized that the value of having all my email easily accessible in a cloud email service wasn't worth the risk of someone downloading 20+ years of my email, especially as that risk has increased so drastically in 2026.
+Okay, so I want to move my email offline, but how do I do that? How do I move emails without accidentally losing some?
 
-How do I move my mail offline but minimize the risk of losing any emails? The naive solution is to just run a program like offlineimap, trust that it got everything, and then delete whatever I want from my live email server. That felt too haphazard. What if I thought offlineimap had archived everything, but it actually didn't, and so I deleted emails where I don't have a backup?
+The naïve way to move my emails offline is to just run a mail archiving tool like [imapgoose](https://git.sr.ht/~whynothugo/ImapGoose), trust that it got everything, and then delete whatever I want from my live email server. But what if imapgoose missed some subset of emails? Then, when I cleared the supposedly archived emails from Fastmail, I'd be deleting the sole copy.
 
-I created a custom solution to archive my emails in a more defensive way:
+Instead, I created a custom tool to archive my emails in a more defensive way:
 
-1. I back up all my emails to my local computer
+1. I use imapgoose to back up all my emails to my local computer
 1. The app has a web UI that lets me view my local emails in a Gmail-like format
    - The app is creating a view of my local backup, not what's available at Fastmail's IMAP server, though the two _should_ match.
 1. I can click any message and hit "Archive"
 1. The app checks Fastmail and finds the same email by `Message-ID` and verifies that my local copy matches the copy on Fastmail
 1. The app moves the email from my "live mirror" folder to my "offline backup" folder on my local computer.
-1. The app deletes the email from my Fastmail account
-1. The app confirms that the email disappears from the "live mirror" folder when imapgoose next syncs with Fastmail
+1. The app deletes the email from my Fastmail account via JMAP API calls.
+1. The app confirms that the email disappears from the "live mirror" folder when imapgoose next syncs with Fastmail.
 
-With this flow, I minimize the chances of deleting a message unless I confirm that there's a safe copy offline.
+This flow minimizes the risk of losing a message because the app won't delete anything unless it confirms there's an identical copy offline.
 
-The process gets more complicated as I scale up because I don't want to click "Archive" one by one on millions of emails, so I added support for archiving message threads in addition to individual messages. And then I added support for archiving sets of threads based on search criteria (e.g., all emails with label "PayPal" before 2023-12-31).
-
-There are lots of wacky corner around translating emails from the IMAP/JMAP representation with labels to the local maildir format with folders, but after a couple weeks of whack-a-mole, I seem to have it working.
-
-I also captured a snapshot of my "live" copy before I started deleting anything to make sure that if I find a bug later that a
+The process got a bit more complicated as I scaled from archiving individual messages to archiving message threads. And then more complexity in archiving sets of threads. And there are lots of wacky corner cases in my millions of emails, but after a couple weeks of whack-a-mole, I felt confident enough to delete messages for real from Fastmail, so now most of my personal email is offline.
 
 ## Wrap up
 
 ### What got done?
 
--
+- Declared 1.0 of my book
+- Created a print version of the book and ordered a test copy
+- Added options for buying discounted team licenses of the book
 
 ### Lessons learned
 
--
+- It's not so scary to sell a physical product.
+  - A lot of the unpleasant parts of selling a physical product I experienced with TinyPilot were unique to that business.
 
 ### Goals for next month
 
--
-
-### Requests for help
-
-TODO
+- Announce the official launch of the book.
+- Pitch to two podcasts.
+- Publish a new blog post that attracts readers to the book's website.
