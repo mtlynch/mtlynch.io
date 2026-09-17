@@ -41,7 +41,7 @@ I think I need to just recognize that the right podcast could have a huge impact
 
 I did a lot of polish on the book website to make it look nicer, but I didn't do much in terms of promotion. I'm working on a blog post that I think will attract readers, but I'm holding off until I'm ready to release.
 
-### - Declare the 1.0 release of my book
+### Declare the 1.0 release of my book
 
 - **Result**: Announced the 1.0 version
 - **Grade**: A
@@ -123,7 +123,7 @@ I found several options:
 1. Sell with a vendor that does print on demand + fulfillment
    - This is like the Amazon option except you don't have to deal with Amazon.
 
-Of these options (4) sounded like the best fit for me right.
+Of these options (4) sounded like the best fit for me right now.
 
 By luck, Lulu added an option in the last few weeks called [Buy Button](https://www.lulu.com/sell/sell-on-your-site/buy-button) that seems appealingly lightweight and simple. Lulu generates a URL to purchase my book, I link to it from my website, and customers can check out through Lulu, and Lulu prints and ships the book to the customer. I think Lulu is using [Stripe Connect](https://stripe.com/connect) so the customer's payment goes directly to my Stripe account with some fee taken out for Lulu.
 
@@ -149,10 +149,10 @@ I wanted to convert my links to footnotes, but Asciidoctor _only_ supports endno
 
 One mystery to me was how Lulu knows what to put on the book's back cover and spine. My ebook has a front cover, and I guess I could add a page to the print version for the back cover, but how do I put a book spine into a PDF?
 
-It turns out that the way Lulu and I guess all print on demand publishers have you do it is that you upload two separate PDFs:
+It turns out that the way Lulu and, I guess, all print on demand publishers have you do it is that you upload two separate PDFs:
 
 1. The "shell" of your book that includes the front cover, back cover, and spine
-1. The inner pages of your book, which is all the printed pages aside from the front and back cover
+1. The inner pages of your book, which are all the printed pages aside from the front and back covers
 
 I worked with an LLM to use [Typst](https://typst.app/) to create the shell for my book:
 
@@ -166,7 +166,7 @@ The thing I'm more excited about with a print version is that I can give copies 
 
 ## Side project: Mail Archiver
 
-I'm a [longtime data hoarder](https://mtlynch.io/budget-nas/#why-build-a-nas-server). I still have 20+ year old [AIM logs from my college days](/notes/gleam-first-impressions/#my-project-parsing-old-aim-logs). I also never delete emails, so I have all my emails going back to 2004 when Gmail first came out.
+I'm a [longtime data hoarder](https://mtlynch.io/budget-nas/#why-build-a-nas-server). I still have 20-plus-year-old [AIM logs from my college days](/notes/gleam-first-impressions/#my-project-parsing-old-aim-logs). I also never delete emails, so I have all my emails going back to 2004 when Gmail first came out.
 
 This year, we discovered that [LLMs can hack everything](/claude-code-found-linux-vulnerability/). Shortly after writing that post, I used an LLM to find a vulnerability in Fastmail that let me read any user's entire email contents (blog post coming soon). I reported the bug to Fastmail, and they promptly fixed it, but what are the odds that I found the _last_ serious security vulnerability in Fastmail?
 
@@ -197,7 +197,7 @@ Complexity grew as I scaled from archiving individual messages to archiving mess
 
 ### What got done?
 
-- Declared 1.0 release of my book
+- Declared the 1.0 release of my book
 - Created a print version of the book and ordered a test copy
 - Added options for buying discounted team licenses of the book
 
