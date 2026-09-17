@@ -2,6 +2,7 @@
 title: "Refactoring English: Month 21"
 date: "2026-09-21"
 description: Maybe I'll print physical books after all
+banner_image: cover.webp
 ---
 
 {{<notice type="info">}}
@@ -16,7 +17,9 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 ## Highlights
 
--
+- I'm making a print copy of my book
+- I'm facing my fears of selling a physical product again
+- I wrote a tool to keep most of my email offline
 
 ## Goal grades
 
@@ -29,7 +32,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 I keep skipping this because to pitch to a podcast, I want to actually listen to a full episode of the podcast so I'm not just spamming random podcasts. But after becoming a parent, I don't have many activities that I can do while listening to a podcast, so I almost never listen to podcasts. And then listening to a podcast never feels like the most important thing to do during a workday.
 
-I think I need to just recognize that the right podcast could have a huge impact on the book, so I
+I think I need to just recognize that the right podcast could have a huge impact on the book, so I need to allocate time to it even if it doesn't feel like work.
 
 ### Attract 30k unique readers to the _Refactoring English_ website
 
@@ -49,7 +52,7 @@ The book is now at 1.0!
 
 {{<project-metrics project="refactoring_english">}}
 
-TODO
+Metrics are down but still impressively healthy given that I didn't do any promotion. I hope to turn this around with next month's launch.
 
 ## I've reached 1.0 of the book
 
@@ -61,20 +64,20 @@ I'm noticing a lot more people reading the book. A lot of readers had been holdi
 
 I thought I'd do a big launch immediately after hitting 1.0 and then look into a print version later, but I saw another indie author sharing their sales figures, and they had something like a 70/30 split between the print version and the ebook, so it made me rethink a print version and defer the official 1.0 "launch."
 
-## My fear of selling physical books
+## My fear of selling a physical product
 
-When I started writing _Refactoring English_, I wanted to keep things simple and publish it just as a PDF. I was open to other formats, and I intentionally chose authoring tools that was flexible on output formats, but I wanted to wait until there was a critical mass of customers willing to pay for other formats.
+After I [sold TinyPilot](/i-sold-tinypilot/), my attitude toward selling a physical product was: never again.
 
-The format I was least excited to support was print copies. My only experience selling a physical product was with TinyPilot, where manufacturing and shipping were consistently the most stressful and tedious parts of my work.
-
-When I think back to shipping physical products for TinyPilot, what comes to mind is:
+When I think back to shipping physical products for TinyPilot, here are the memories that immediately spring to mind:
 
 - In the early days of TinyPilot, never wanting to travel because nobody would be home to pack orders and leave them out for the mail carrier.
-- Customers who threatened to cancel their order or do a credit card chargeback if their order didn't ship the same day that they placed it.
+- Customers threatening to do a credit card chargeback if their order didn't ship the same day that they placed it.
 - Having to eat the cost of hundreds of dollars of merchandise each month for packages that customers reported lost or stolen.
 - Dealing with the complexity of syncing my website [with a third-party warehouse's internal logistics software](https://mtlynch.io/retrospectives/2023/04/#everyone-just-gives-us-their-admin-password).
 
-As I've gotten closer to the finish line with the book, I've realized a lot of the problems I remember with TinyPilot are either solvable or don't exist with a self-published book.
+When I started writing _Refactoring English_, I wanted to keep things simple and publish it just as an ebook. If customers asked for a print version, I'd consider it, but I liked the simplicity of a fully digital product.
+
+And then customers started asking for a print version. It's the most common request I receive. I keep thinking, "Sure, if the book becomes really popular, I'll offer a print version," but as I've gotten closer to the finish line, I've warmed to the idea of a book more. A lot of the problems I remember with TinyPilot are either solvable or don't exist with a self-published book.
 
 - When customers buy a self-published book from an indie author, they probably don't expect it to arrive at their house the next day.
 - If a book gets lost in shipping, I lose \~$20 in manufacturing costs and $3 in postage as opposed to hundreds of dollars on a hardware product.
@@ -157,13 +160,17 @@ I worked with an LLM to use [Typst](https://typst.app/) to create the shell for 
 
 I ordered my first print with Lulu, but the process is a bit slow. It takes 5-7 business days to print and then another 3-5 business days for shipping, so I expect it to arrive next week. If it looks good, I'll set the wheels in motion for the official book launch.
 
+I initially thought the print version was going to be such a headache, but now I'm excited about it. People have said to me, "Wouldn't it be cool to have it on your shelf?" and I felt like, "Eh, not really."
+
+The thing I'm more excited about with a print version is that I can give copies to friends and family ~~and burden them with the task of reading my book~~. I could just send them the PDF, but it's more fun and feels more like a real gift to give people a physical copy.
+
 ## Side project: Mail Archiver
 
 I'm a [longtime data hoarder](https://mtlynch.io/budget-nas/#why-build-a-nas-server). I still have 20+ year old [AIM logs from my college days](/notes/gleam-first-impressions/#my-project-parsing-old-aim-logs). I also never delete emails, so I have all my emails going back to 2004 when Gmail first came out.
 
-This year, we discovered that [LLMs can hack everything](/claude-code-found-linux-vulnerability/). Shortly after writing that post, I used an LLM to find a vulnerability that let me read any Fastmail user's complete email contents (blog post coming soon). I reported the bug to Fastmail, and they promptly fixed it, but what are the odds that I found the _last_ serious security vulnerability in Fastmail?
+This year, we discovered that [LLMs can hack everything](/claude-code-found-linux-vulnerability/). Shortly after writing that post, I used an LLM to find a vulnerability in Fastmail that let me read any user's entire email contents (blog post coming soon). I reported the bug to Fastmail, and they promptly fixed it, but what are the odds that I found the _last_ serious security vulnerability in Fastmail?
 
-After hacking into my own Fastmail account, I started to re-evaluate the tradeoffs of keeping all of my mail on a third-party cloud service. On the one hand, it's convenient to have a professional vendor keep a copy of all my mail and make it easy to search. On the other hand, a cloud mail provider is an attractive target for attackers and has more attack surface than keeping my mail on my private computer.
+After hacking into my own Fastmail account, I started to re-evaluate the tradeoffs of keeping all of my mail on a third-party cloud service. On the one hand, it's convenient to have a professional vendor keep a copy of all my mail that's always available and searchable. On the other hand, a cloud mail provider is an attractive target for attackers and has more attack surface than keeping my mail on my private computer.
 
 Okay, so I want to move my email offline, but how do I do that? How do I move emails without accidentally losing some?
 
@@ -182,13 +189,15 @@ Instead, I created a custom tool to archive my emails in a more defensive way:
 
 This flow minimizes the risk of losing a message because the app won't delete anything unless it confirms there's an identical copy offline.
 
-The process got a bit more complicated as I scaled from archiving individual messages to archiving message threads. And then more complexity in archiving sets of threads. And there are lots of wacky corner cases in my millions of emails, but after a couple weeks of whack-a-mole, I felt confident enough to delete messages for real from Fastmail, so now most of my personal email is offline.
+{{<img src="mail-archiver.webp" max-width="650px" caption="An email in my local mail viewer, which lets me move emails from Fastmail to an offline store">}}
+
+Complexity grew as I scaled from archiving individual messages to archiving message threads. And then it increased when I went from archiving threads to sets of threads. And there are lots of wacky corner cases in my millions of emails, but after a couple weeks of whack-a-mole, I felt confident enough to delete messages for real from Fastmail, so now most of my personal email is offline.
 
 ## Wrap up
 
 ### What got done?
 
-- Declared 1.0 of my book
+- Declared 1.0 release of my book
 - Created a print version of the book and ordered a test copy
 - Added options for buying discounted team licenses of the book
 
