@@ -84,7 +84,7 @@ And then customers started asking for a print version. It's the most common requ
 
 ## How do you even print a book?
 
-Most self-published authors default to Amazon's print on demand service to create physical copies of their books. I hated working with Amazon last time I sold there, so I want to avoid Amazon as long as possible.
+Most self-published authors default to Amazon's print-on-demand service to create physical copies of their books. I hated working with Amazon last time I sold there, so I want to avoid Amazon as long as possible.
 
 So, how do I print a book?
 
@@ -99,7 +99,7 @@ Yikes!
 
 The color price was a total non-starter. If it costs $78 to print, I probably have to charge $90 to break even after all my costs. I asked what volume I'd have to hit for price breaks, and they admitted that they just aren't set up to print this kind of book inexpensively.
 
-I checked online for print on demand vendors and found more viable prices for color prints:
+I checked online for print-on-demand vendors and found more viable prices for color prints:
 
 - IngramSpark: $12.91/book
 - Lulu: $18.85/book
@@ -113,11 +113,11 @@ Printing the books is only half of it. Once I print the books, how do I get them
 
 I found several options:
 
-1. Print a batch of 200+ books and ship them to my house. When a customers orders, I pack and ship the book myself.
+1. Print a batch of 200+ books and ship them to my house. When a customer orders, I pack and ship the book myself.
    - Fun and personal, but it's also probably 3-10 minutes of work per order, and books take up a lot of space.
 1. Order a bunch of books to a [3PL](/bootstrapped-founder-year-6/#outsourcing-order-fulfillment-and-reducing-stress) (warehouse and shipping vendor) and connect a Shopify or Woo store to the 3PL.
    - A lot of moving parts to manage and [a frequent headache in the past](/retrospectives/2023/04/#everyone-just-gives-us-their-admin-password)
-1. Sell on Amazon with Amazon's print on demand service
+1. Sell on Amazon with Amazon's print-on-demand service
    - I've hated working with Amazon on the seller side.
    - I might sell on Amazon eventually, but I definitely don't want it to be the first place I try. They're 10x more complicated and merchant-hostile than everyone else.
 1. Sell with a vendor that does print on demand + fulfillment
@@ -149,14 +149,14 @@ I wanted to convert my links to footnotes, but Asciidoctor _only_ supports endno
 
 One mystery to me was how Lulu knows what to put on the book's back cover and spine. My ebook has a front cover, and I guess I could add a page to the print version for the back cover, but how do I put a book spine into a PDF?
 
-It turns out that the way Lulu and, I guess, all print on demand publishers work is that you upload two separate PDFs:
+It turns out that the way Lulu and, I guess, all print-on-demand publishers work is that you upload two separate PDFs:
 
 1. The "shell" of your book that includes the front cover, back cover, and spine
 1. The inner pages of your book, which are all the printed pages aside from the front and back covers
 
 I worked with an LLM to use [Typst](https://typst.app/) to create the shell for my book:
 
-{{<img src="cover.webp" max-width="750px" caption="Print on demand vendors need a separate PDF for the back cover, book spine, and front cover. This is what *Refactoring English's* cover looks like.">}}
+{{<img src="cover.webp" max-width="750px" caption="Print-on-demand vendors need a separate PDF for the back cover, book spine, and front cover. This is what *Refactoring English's* cover looks like.">}}
 
 I ordered my first print with Lulu, but the process is a bit slow. It takes 5-7 business days to print and then another 3-5 business days for shipping, so I expect it to arrive next week. If it looks good, I'll set the wheels in motion for the official book launch.
 
