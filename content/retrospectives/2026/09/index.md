@@ -1,6 +1,6 @@
 ---
 title: "Refactoring English: Month 21"
-date: "2026-09-21"
+date: "2026-09-18"
 description: Maybe I'll print physical books after all
 banner_image: cover.webp
 ---
