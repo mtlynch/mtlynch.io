@@ -71,6 +71,12 @@ I used to think it was great that harnesses have a
 - It maintains an ETA for task completion for subtasks and the task overall and continuously updates this estimate. (TODO: file explorer visits friends)
 - Agents can get reviews from other agents.
 
+## Why are they dumb?
+
+Okay, to answer the question in the title, I don't really know why. I mainly wanted to vent.
+
+If I had to guess, my guess would be that current benchmarks don't measure the things I care about. A lot of cool alternative harnesses are mostly just 1-2 person projects. I suspect nobody wants to invest more because they're worried that if they do, one of the major labs will steal their work and render them irrelevant.
+
 --
 
 If you time traveled to 2019 and showed me ChatGPT and then told me to guess what year it would be available, I'd probably say something like 2050. Talking with a computer in natural language felt so far away, and it was suddenly available and worked really well.
