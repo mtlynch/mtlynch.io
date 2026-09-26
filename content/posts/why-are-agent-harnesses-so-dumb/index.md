@@ -97,6 +97,10 @@ In fairness, the harnesses do a good job of mirroring actual human behavior here
 
 Claude now talks about storing stuff in memory, but I don't notice improvements. Also, when I ask to see Claude's memory, it can't show me, though this might be a problem with my sandboxing.
 
+## Agents are terrible managers
+
+Can't interrupt or redirect a subagent.
+
 ## My dream harness
 
 ### The basics
@@ -121,6 +125,7 @@ Claude now talks about storing stuff in memory, but I don't notice improvements.
 - It maintains an ETA for task completion for subtasks and the task overall and continuously updates this estimate. (TODO: file explorer visits friends)
 - Agents can get reviews from other agents.
 - Comes with a good language-aware diff view.
+- Let me drive the subagents, too. I should be able to jump into any agent sesssion and drive it or tell it to short-circuit and end early.
 
 ## Why are they dumb?
 
