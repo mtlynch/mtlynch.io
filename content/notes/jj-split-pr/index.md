@@ -165,6 +165,89 @@ of a rewritten bookmark. Forgejo updates the existing PR to the new commit.
 In Forgejo, open a PR from `add-one` into `master`. Retitle the original PR to
 "Add two section" since it now contains only that change.
 
+## Revise the first PR
+
+Suppose a reviewer on the `add-one` PR asks you to expand the `One` section.
+You want to push a second commit to `add-one` that changes the section to
+this:
+
+```text
+## One
+
+This is the first thing.
+
+It's a good thing!
+```
+
+The tempting move is `jj new --insert-after add-one`, which puts a new change
+between `add-one` and `add-one-and-two`. Don't do that. jj rebases
+`add-one-and-two` onto the new change and reports a conflict, because both
+changes insert text at the same spot in the file.
+
+Instead, repeat the pattern from before: make the edit at the tip, where the
+whole file lives, then derive the smaller change from it. Your working copy is
+still `add-one-and-two`, so edit `README.md` in place and add the new line
+under `One`:
+
+```bash
+$EDITOR README.md
+jj new add-one -m "Say that one is good"
+jj restore --from add-one-and-two README.md
+$EDITOR README.md
+jj diff
+```
+
+The second `$EDITOR` deletes the `## Two` section again, leaving `One` and its
+new line. The diff should show only the new line:
+
+```text
+Modified regular file README.md:
+    ...
+   3    3: ## One
+   4    4:
+   5    5: This is the first thing.
+        6:
+        7: It's a good thing!
+```
+
+This new change is a child of `add-one`, but the `add-one` bookmark hasn't
+moved, because jj bookmarks don't follow `jj new`. Move it forward and push:
+
+```bash
+jj bookmark set add-one -r @
+jj git push --bookmark add-one
+```
+
+The push prints `move forward`, and Forgejo shows the second commit on the
+`add-one` PR.
+
+`add-one-and-two` still sits on the old `add-one` commit, so rebuild it on top
+of the new one the same way as before:
+
+```bash
+jj new add-one -m "Add two section"
+jj restore --from add-one-and-two README.md
+jj abandon add-one-and-two
+jj bookmark set add-one-and-two -r @
+jj git push --bookmark add-one-and-two
+jj log
+```
+
+The remaining change now contains the reviewer's line in its parent and only
+the `Two` section in its diff:
+
+```text
+@  ptymqlqu mike@example.com 2026-09-28 01:42:50 add-one-and-two 00b44310
+│  Add two section
+○  xswnvtsp mike@example.com 2026-09-28 01:42:50 add-one 7d03784a
+│  Say that one is good
+○  lspumxlx mike@example.com 2026-09-28 01:42:50 bdfd67c3
+│  Add one section
+◆  vmxqpwuu mike@example.com 2026-09-28 01:42:50 master 7cc1d793
+│  init
+~
+```
+
 ## Merge the first PR, then rebase the second
 
 Merge the `add-one` PR in Forgejo. Then fetch the updated master and rebase
@@ -177,11 +260,12 @@ jj diff --revision add-one-and-two
 jj git push --bookmark add-one-and-two
 ```
 
-The rebase can't conflict: the change's parent already contained `One`, and
-so does master, so jj has nothing to reconcile. This holds whether Forgejo
-merged the first PR with a merge commit or a squash. The diff should still
-contain only the `Two` section, and the second PR is ready to merge.
+The rebase can't conflict: the change's parent already contained the finished
+`One` section, and so does master, so jj has nothing to reconcile. This holds
+whether Forgejo merged the first PR with a merge commit or a squash. The diff
+should still contain only the `Two` section, and the second PR is ready to
+merge.
 
-If Forgejo squash-merged the first PR, `jj log` shows a leftover
-`Add one section` commit with no bookmark. It's harmless. If it bothers you,
-abandon it using the change ID shown in `jj log`.
+If Forgejo squash-merged the first PR, `jj log` shows the two leftover
+`add-one` commits with no bookmark. They're harmless. If they bother you,
+abandon them using the change IDs shown in `jj log`.
