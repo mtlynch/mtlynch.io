@@ -1,51 +1,51 @@
 ---
-title: "Why Are Agent Harnesses So Dumb"
+title: "Why Are Coding Agents So Dumb?"
 date: 2026-09-23
 ---
 
-I started using AI agent harnesses in early 2025. I [started with Cline](/notes/cline-is-mesmerizing/) and found it a huge improvement from my previous workflow of copy/pasting to a chat window. It was janky and froze up a lot, but I figured it was early days. I tried Claude Code and Codex a few months later, and they were a major improvement because they weren't trying to shoehorn functionality into VS Code. I had a lot of annoyances with Claude Code and Codex, but it was early days, and those companies have infinite AI tokens. The harnesses surely would get better soon.
+The first time I used a coding agent, I [was mesmerized](/notes/cline-is-mesmerizing/). Previously, I'd been using AI for coding by copy/pasting into a chat window, so an agent that could edit files and fix test errors itself was a gamechanger.
 
-And then the harnesses just stayed bad. Claude Code came out XX months ago, and Codex came out XX months ago, and they still have most of the limitations that they launched with.
+Cline would hang a lot and get into weird states where it couldn't read or write any files until I reloaded VS Code. But, it was early days, and I figured that in six months, coding agents would be as technically impressive as the underlying LLMs.
 
-I've tried a couple of open-source alternatives, and I prefer OpenCode, but OpenCode copies most decisions from Claude or Codex, including their bad ones. I'm mainly going to be picking on because it's popular and not the work of an underpaid open-source developer.
+Two years later, coding agents just stayed bad. AI-assisted development has clearly advanced, but it's the models that are doing the heavy lifting, and the agents remain the bottleneck.
+
+I've used Claude Code, Codex, OpenCode, and Pi, and I have preferences among them, but I'm surprised that coding agents as a technology are advancing so slowly while the LLMs. It's like the AI labs have invented an car engine powerful enough to make cars fly and drive underwater, but the only
 
 ## "Harnesses are perfect if you just..."
 
-I'm going to list a bunch of complaints, and I know agent power users are going to tell me that I can solve all of my problems if I just install 200k lines of skill files from a random git repo. If everyone was excited about a new car that shipped with a wheel missing, it's still reasonable to point out that it would be better for the manufacturer to ship complete cars rather than relying on every customer to figure out how to source and install that fourth wheel.
+I know some of you are going to tell me that I can solve all of my problems if I just install 200k lines of skill files from a random git repo.
 
 I'm talking about my expectations of what agent harnesses should be able to do out of the box without me installing random plugins, skill files, or spending hours of tweaking the configuration.
 
 ## Limitations of current harnesses
 
-### Harnesses can't manage tasks
+### Agents can't manage tasks
 
-My biggest gripe with harnesses is how poorly they manage tasks.
+My biggest gripe with harnesses is how atrocious their task management skills are.
 
 For example, I have a web app that allows me to upload files and generate shareable links. I recently added support for [protecting links with a passphrase](https://github.com/mtlynch/picoshare/pull/807). It was a relatively simple change totalling about 1500 lines of new code. OpenCode dutifully broke down the feature into 10 subtasks, but then it just... did them all one by one:
 
 {{<img src="image-3.png" max-width="800px">}}
 
-Hey! You're a computer! You can do multiple things in parallel. That's a thing you do _way_ better than humans, so why are you doing it the human way?
+Umm... you're a _computer_! You're really good at multitasking. That's why we built you and keep giving you all those CPU cores. You can do multiple things in parallel and context switch millions of times faster than humans, so why are you doing these embarrassingly parallelizable tasks one by one?
 
-Claude Code is a little better at multitasking, but I still only see it run one or two tasks in parallel, and it has to wait for all tasks to resolve before moving on. I've watched Claude Code sit around for several minutes while my end-to-end tests run, and then only after the tests pass does it occur to the agent to start drafting a commit message. I see stuff like that all the time. Claude Code blocks on some task even though the next task does not depend on the previous work.
+Claude Code can multitask, but only a little. It will spin up a subagent or two, but it still waits for all of them to finish before moving on. Multiple times per day, I'll see Claude Code sit around for several minutes waiting for my end-to-end tests run, and then only after the tests pass does it say, "Hmm, now I should start drafting a commit message."
 
-### Harnesses can't delegate
+### Agents can't delegate
 
-Related to task management, harnesses don't stop to ask which agent would work best. If I'm using the most expensive model, and it needs to check 50k lines of code for a particular pattern, it never stops and thinks, "Wait, this is something another model could do faster and cheaper." It just consumes the expensive
+When I'm using Claude Code with Fable, and it needs to check 50k lines of code for a particular pattern, it never stops and says, "Wait, this is something another model could do faster and cheaper." It just plows on with slow, expensive model. And the lower-end models never say, "Hmm, I'm too dumb for this task. Let me tag in someone smarter."
 
-I find myself constantly burning tokens on the most expensive model because 5% of my task is hard, and I don't have a way to express to Claude Code, "Use Fable for this part and this
-
-For every task, I don't want to choose among 20 models and then select among four thinking levels. Do you need me to decide which CPU core it runs on and when to evict memory from cache too?
+The agents let me choose the model and thinking level, but maybe I just want to assign you a task and not decide which of the 20 models times 4-5 thinking levels the task requires. Do you need me to decide which CPU core it runs on and when to evict memory from cache too?
 
 You know what technology would be good at assigning a difficulty level to a task and then matching that requirement to a model? An LLM! Just ask the LLM to pick the cheapest, fastest model for accomplishing a task and assign it to that model.
 
-Most tasks don't require human-level intelligence. There are a lot of tasks where you're just doing gruntwork and can hand it off to a fast, cheap model. But because the agent can't manage tasks and doesn't even
+I constantly run into tasks where I know that 5% of the work is hard, but I still have to let the smartest model do the whole thing because it otherwise consumes too much of my time to chop up the task and delegate on the agent's behalf.
 
 {{<img src="image-2.png">}}
 
-### Harnesses don't know how harnesses work
+### Agents have never heard of agents
 
-Harnesses don't know anything about themselves. If
+Harnesses don't know anything about themselves. If I ask Claude how to use features of Claude, it responds as if it's never heard of Claude Code before. It's more comfortable answering questions about Microsoft Excel than it is answering questions about itself (in fairness, this is true of most human developers).
 
 ![alt text](image.png)
 
@@ -53,45 +53,47 @@ Harnesses don't know anything about themselves. If
 
 Uh... _you're_ Claude Code! You don't know any of your own freaking features? And you're just Googling instructions regardless of whether they match your version number? You have no problem downloading [13 GB install](https://www.reddit.com/r/ClaudeAI/comments/1rlc71n/claude_desktop_app_silently_downloads_a_13_gb/) for a feature the user has never used, but you can't spare 50 KB of gzipped text to explain your own features to you?
 
-Imagine if you asked your teammate for a code review, so they started furiously Googling to find out if that's in their job description. And then when you asked them for another code review two hours later, they did the same furious Googling.
+Imagine if you asked your teammate for a code review, and they started furiously Googling to find out if code reviews are something developers do. And then when you asked them for another code review two hours later, they ran back to Google and anxiously typed, `"do software engineers do code reviews?"`
 
-### Harnesses will take any excuse to stop working
+### Agents take any excuse to stop working
 
-The other night, I kicked off a long task in an agent harness before I went to bed. I came back the next morning to find that the agent hadn't even started working. It stopped two minutes after I left to ask me what it should name a git branch.
+The other night, I kicked off a long task in a coding agent before I went to bed. I came back the next morning to find that the agent hadn't even started working. It stopped two minutes after I left to ask me what it should name a git branch and then sat all night waiting on my answer.
 
 If I had a human employee tell me they sat idle their whole shift because they wanted my input on some superficial detail, I'd quickly fire them.
 
-### Harnesses suck at communicating plans
+### Agents suck at communicating plans
 
 I used to think it was great that most harnesses have a separate "Plan" and "Execute" mode. For complicated tasks, I'd have the agent create a plan, then I'd review it, suggest changes, and then let it execute.
 
-I noticed over time that I didn't like reading the plans and would often just skip and let it write the code. I thought I was letting the LLM make me lazy, but I realized recently that the agents are just awful at communicating plans.
+Over time, I noticed my aversion to reading the plans. I'd often skip reading the plan and let the agent write the code.
 
-When I talk to an effective software developer about implementing a feature, we start with a sketch of the high-level details and work our way down to the minutiae. The agents just instantly jump to the minutiae of how they'll commit things, which files they'll touch. They flood the plan with so much garbage that I often find it easier to just let them write the code and skim that than to try to deduce the architecture from their convoluted plans.
+I thought coding agents had made me lazy, but I realized recently that the stronger reason is that agents communicate their plans so poorly.
 
-### Harnesses don't manage risk
+Here's an example of me asking Codex + GPT6 Astra to add a feature to my web app:
 
-I've always cared about software security. In security in general, there's a principle of "least privilege." If you're a gardener in a military base, you shouldn't have an access key that lets you access nuclear weapons. You should have an access card that gives you the least privileges possible that still allow you to do your job, so maybe you need access to a tool shed but not the armory.
+{{<img src="image-4.png" caption="You can't just list a bunch of disparate details and call it a plan, Codex.">}}
 
-The software world has never been that good at embracing least privilege, but agent harnesses are really bad at it.
+That's not a plan! That's just a hodgepodge of low-level design decisions mixed with tasks.
 
-My first experience with LLMs was using web-based chatbots where they can only see the files that I'm pasting into the chat. I remember when I first started using Cline and was trying to control what the agent can see and being appalled that the security mechanism was, "Just write instructions as Markdown telling the agent what files it can access." And then immediately the agent would ignore those instructions, and I'd have to invalidate keys because an agent just exfiltrated them to an AI vendor I actively distrust.
+If I asked a competent developer to plan this feature, they'd either start with a high-level plan for UI changes and work their way down or think about how the data model would change and work their way up. If the developer started enumerating random facts about the feature, I'd assume they were brainstorming and come back later.
 
-I thought surely they'd fix that soon, but even today, the harnesses seem to only be usable if you give them access to everything, and the LLMs routinely break out of the harness sandbox. (TODO: link)
+### Agents are only useful when they take unnecessary risks
 
-This is so wildly unnecessary. I implemented my own sandbox so that my harness can only see its current directory, and it works fine. I never have to worry about agents exfiltrating my home directory or wiping critical files on my machine because it just doesn't have that access.
+When I started using Cline, I looked for the setting that controlled which files on my system the agent is allowed to access. Surely, there's some sort of filesystem permissions or limited chroot kind of protection that prevents a random and unpredictable piece of software from exploring my entire computer unfettered, right?
 
-The problem is that even if Claude or OpenAI got their acts together and took sandboxing seriously, I probably still wouldn't use their sandbox because I just don't trust them at this point. I think I need it to be a separate tool just so it's not the wolf guarding the henhouse.
+Not so. Cline's docs encouraged me to write the LLM a polite letter kindly requesting that it not read the following sensitive files or directories. I tried that, and Cline immediately ignored my request, exfiltrating my keys out to OpenAI and Anthropic.
 
-### Harnesses don't create reviewable work
+I thought surely they'd fix that soon, but even today, the harnesses seem to only be usable if you give them access to everything, and the agents routinely break out of the vendor's sandbox. (TODO: link)
 
-If I ask an agent to do something, it happily spits out 2000 lines of unreviewable code in a single commit.
+In security, there's a principle of "least privilege." If you're running a military base and you hire a gardener, you're not going to give them a skeleton key that opens every door on the base. You instead grant them the least privileges necessary to do their job. In the case of the gardener, that probably means an access key that gets them in the main entrance and the tool shed but not the room where they're 50 thousand grenades.
 
-I recently wrote a skill that tells the agent to break the work into a set of commits I can review, but why isn't this just the default?
+The software world has never been good at embracing least privilege, but agents are especially bad at it. They force you into a position where you have to either babysit every move the agent makes and hit "Allow" a million times a day or check a box that says, "I give the agent permission to do whatever it wants on my computer. If the agent decides to send malware to my whole contact list and brick my machine, then I agree it's my fault."
 
-### Harnesses make me wait until they're done
+What makes this so maddening is that we have sandboxing tools that meet the needs of coding agents. I [rolled my own sandbox](https://codeberg.org/mtlynch/llm-sandbox) so that agents can't explore my filesystem beyond the repo directory. I never have to worry about agents accidentally exfiltrating my home directory or wiping critical files on my machine because it just doesn't have access to do that.
 
-I either throw everything away or have to wait until it finally gets to my message.
+<!--
+
+
 
 ### Harnesses don't learn
 
@@ -107,7 +109,11 @@ In fairness, the harnesses do a good job of mirroring actual human behavior here
 
 Claude now talks about storing stuff in memory, but I don't notice improvements. Also, when I ask to see Claude's memory, it can't show me, though this might be a problem with my sandboxing.
 
-<!--
+### Harnesses don't create reviewable work
+
+If I ask an agent to do something, it happily spits out 2000 lines of unreviewable code in a single commit.
+
+I recently wrote a skill that tells the agent to break the work into a set of commits I can review, but why isn't this just the default?
 
 
 ### Harnesses can't follow simple instructions
@@ -116,25 +122,30 @@ Earlier this year, I was using AI to do cybersecurity research. A lot of that wo
 
 -->
 
-## My dream harness
+## My dream agent
 
 ### The basics
 
 - There's a web interface that shows me all agents and which ones require attention.
-- Deterministic sandboxing.
-  - Not regexing bash commands, actual sandboxing at the filesystem and network level.
+- It sandboxes LLM access deterministically.
+  - Not regexing bash commands, actual sandboxing with OS primitives at the filesystem and network level.
   - The agents run in a VM-like environment that can only see the current directory by default.
   - All access control code is deterministic, not humble suggestions that the agent is welcome to ignore.
-  - The sandboxing actually works and allows the LLMs to do useful work. You shouldn't have to choose between an agent that actually works and one that requires you to pass `--its-okay-if-you-brick-my-computer` to get any work done.
+  - The sandboxing actually works and allows the LLMs to do useful work.
 - Sandboxing is per-environment. Agents have access to a single repo by default. I can give the agent read-only or read-write access to other repos.
 - It can use any provider, including unlimited plans.
 - It's open-source and doesn't depend on the harness vendor's server's to run.
-- Support an AFK mode where I say I'm leaving, and you do your best without me. Don't block work to wait on me.
+- Support an AFK mode where I say I'm leaving, and you do your best without me.
+  - Don't ask a trivial question and then sit idle forever because I'm not around.
 - It can split requests into a series of tasks and assign each task to the appropriate model, optimizing for cost, speed, and correctness.
 
 ### Fancy
 
 - The web interface is mobile-friendly
+- LLMs don't have direct access to secrets.
+  - The agent makes external requests via [a proxy that substitutes dummy credentials](https://blog.exe.dev/http-proxy-secrets) for the real ones.
+  - The user specifies which domain is allowed to receive credentials, so a rogue agent can't just tell the proxy to use my AWS token to make a request to OpenAI.
+  - The user can restrict it so that the agent can push to a GitHub feature branch but not protected branches, even if the user associated with the token can.
 - It understands provider quotas and factors that into model selection.
   - e.g., if weekly quota resets in 3 hours and we still have 90% of quota avalable, stop optimizing for cost
 - I grant credentials by default in a proxy layer, and I can restrict what types of requests are allowed to use those credentials. For example, I can give you access to my CI, but you can only make GET requests.
@@ -142,21 +153,20 @@ Earlier this year, I was using AI to do cybersecurity research. A lot of that wo
 - Agents can get reviews from other agents.
 - Comes with a good language-aware diff view.
 - Let me drive the subagents, too. I should be able to jump into any agent sesssion and drive it or tell it to short-circuit and end early.
+-
 
 ## So, why are harnesses so dumb?
 
-Okay, to answer the question in the title, I don't really know why. I mainly wanted to vent.
+Okay, getting back to the question in the title, here are my theories:
 
-If I had to guess, my guess would be that current benchmarks don't measure the things I care about. The major benchmarks currently are single-model tests. I don't know of any benchmark that allows a model to delegate work to a cheaper or faster model. And the AI companies seem to be optimizing heavily for the benchmarks, as that's what seems to impress investors and executives making buying decisions.
+And the AI companies seem to be optimizing heavily for the benchmarks, as that's what seems to impress investors and executives making buying decisions. Current benchmarks don't measure the things I care about:
+
+- Benchmarks don't test scenarios where one model is allowed to delegate to a different model.
+  - TODO: Do they allow subagents?
+- Benchmarks don't measure the risks an agent imposes on the user.
+
+The major benchmarks currently are single-model tests. I don't know of any benchmark that allows a model to delegate work to a cheaper or faster model.
 
 I've used Codex and Claude, and they felt similar to me. I'd understand it if there was one absolutely dominant harness that effectively had a monopoly, but there's decent competition in the harness space, and nobody's doing what I want, so maybe I'm the weirdo.
 
 A lot of cool alternative harnesses are mostly just 1-2 person projects. I suspect nobody wants to invest more because they're worried that if they do, one of the major labs will steal their work and render them irrelevant. But there are harnesses like Cursor that [get acquired for $60B](https://www.cnbc.com/2026/06/16/spacex-spcx-cursor-acquisition-ipo.html), so it seems like there's money in being a good harness.
-
---
-
-If you time traveled to 2019 and showed me ChatGPT and then told me to guess what year it would be available, I'd probably say something like 2050. Talking with a computer in natural language felt so far away, and it was suddenly available and worked really well.
-
-If, on the other hand, you showed me Claude Code or OpenAI Codex and asked me what year it was created, I'd guess something like 2005.
-
-How do we have this incredibly powerful technology trapped inside such dumb harnesses? It would be like if the iPhone came out, but the only software it would run is a rotary phone emulator.
