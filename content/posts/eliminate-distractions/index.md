@@ -192,7 +192,7 @@ My solution has been to text less. As much as possible, I try to move text conve
 
 ## Replace online communities with real-life meetups
 
-I originally met my friend [David Toth](https://twitter.com/jupiterunknown) at an [Indie Hackers meetup](https://web.archive.org/web/20190112214755/https://www.indiehackers.com/meetups) I organized in Manhattan. When he told me that he had traveled three hours from Western Massachusetts to attend, I thought he was nuts. Later, I discovered that his long trip fit into a strikingly sensible strategy.
+I originally met my friend [David Toth](https://twitter.com/jupiterunknown) at an Indie Hackers meetup I organized in Manhattan. When he told me that he had traveled three hours from Western Massachusetts to attend, I thought he was nuts. Later, I discovered that his long trip fit into a strikingly sensible strategy.
 
 David loves meeting other tech founders, but he only has finite time to do it. He found that his in-person interactions were almost always richer and longer-lasting than relationships he formed online, so he dedicates nearly all of his networking time to real-life events.
 

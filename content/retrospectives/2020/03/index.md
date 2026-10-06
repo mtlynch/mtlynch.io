@@ -216,10 +216,10 @@ The video was tremendously valuable and turned up [13 new bugs](https://github.c
 
 ### Two good Indie Hackers podcast episodes
 
-In the span of two weeks, the [Indie Hackers podcast](https://web.archive.org/web/20170331111856/https://www.indiehackers.com/podcast) published two of my favorite episodes in recent memory:
+In the span of two weeks, the Indie Hackers podcast published two of my favorite episodes in recent memory:
 
-- [Maximizing Fun on the Path to Independence with Cory Zue of Place Card Me](https://web.archive.org/web/20200803142045/https://www.indiehackers.com/podcast/147-cory-zue-of-place-card-me)
-- [Acquiring the Experience to Make It as a Solo Founder with Jen Yip of Lunch Money](https://web.archive.org/web/20200803141340/https://www.indiehackers.com/podcast/150-jen-yip-of-lunch-money)
+- Maximizing Fun on the Path to Independence with Cory Zue of Place Card Me
+- Acquiring the Experience to Make It as a Solo Founder with Jen Yip of Lunch Money
 
 These episodes resonated with me because Cory and Jen are both solo developer founders, they both write publicly about their progress ([Cory's blog](http://www.coryzue.com/), [Jen's blog](https://lunchbag.ca)), and they both feel comfortable building their companies with slow, steady growth.
 
