@@ -98,7 +98,7 @@ I'm excited to start selling these plans. It feels much better to sell a product
 
 ## Hiring has made me better at hiring
 
-When I was hiring writers for Is It Keto [at the beginning of the year](https://www.indiehackers.com/forum/isitketo-month-4-my-first-dollar-of-revenue-03e572f661), I ran paid trials with several writers, and it took me a long time to decide whether any candidate would be a good permanent hire. In one case, I worked with a writer for eight articles, paying her $65/hr for a total cost of $400. This was a substantial amount of time and money to spend on someone who ultimately didn't work out.
+When I was hiring writers for Is It Keto [at the beginning of the year](https://web.archive.org/web/20190514014532/https://www.indiehackers.com/forum/isitketo-month-4-my-first-dollar-of-revenue-03e572f661), I ran paid trials with several writers, and it took me a long time to decide whether any candidate would be a good permanent hire. In one case, I worked with a writer for eight articles, paying her $65/hr for a total cost of $400. This was a substantial amount of time and money to spend on someone who ultimately didn't work out.
 
 In August and September, I was able to hire much more efficiently because I've gotten better at identifying bad matches early. I'm more selective in who I hire for paid trials because I can better predict people's paid work based on their writing samples. And I can generally eliminate a poor hire in three or fewer drafts of their first article.
 
@@ -114,7 +114,7 @@ The first is [Cory Zue](http://www.coryzue.com/), an Indie Hacker from whom I fr
 
 It's the same with hiring. If I wanted to hire an additional writer for ~$200/mo, they'd have to attract 20,000 new visitors each month (i.e., a 26% increase from my current traffic) to justify their cost. And that's disregarding the cost of finding and training them.
 
-The other person that got me thinking was [Justin Mares](https://twitter.com/jwmares), specifically his [recent interview on Indie Hackers](https://www.indiehackers.com/podcast/116-justin-mares-of-kettle-and-fire). He started selling bone broth online and made $2.8M in his first year. He started another business selling keto products and made $40k in his first 40 days.
+The other person that got me thinking was [Justin Mares](https://twitter.com/jwmares), specifically his [recent interview on Indie Hackers](https://web.archive.org/web/20200129232304/https://www.indiehackers.com/podcast/116-justin-mares-of-kettle-and-fire). He started selling bone broth online and made $2.8M in his first year. He started another business selling keto products and made $40k in his first 40 days.
 
 I knew that startups could achieve quick successes like that, but that had never been my goal. I was more interested in finding projects that generated small amounts of money and seeing how much I could grow them. By now, I've had that experience with Is It Keto. The site earned $1.20 in December 2018, and I've been slowly growing it to earn over $300/month today.
 

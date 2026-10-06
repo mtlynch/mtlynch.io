@@ -211,7 +211,7 @@ I now limit my focus to one business venture at a time and one blog post per mon
 
 At the end of each week, I spend 30-60 minutes writing down everything I accomplished. This exercise always makes me realize that I'm more productive than I feel. Often, I'll reach Friday afternoon thinking that I burned an entire week chasing down a single bug only to realize the bugfix took just two days. And then I'll remember that I shipped several new features but forgot about them because they felt like ages ago.
 
-This works on a monthly level as well. At the beginning of each month, I publish retrospectives in which I reassess my strategy and set objectives for the coming month (e.g., Is It Keto [Month 3](https://www.indiehackers.com/forum/isitketo-returning-to-a-site-that-grew-without-me-0a0fe3ef52) and [Month 4](https://www.indiehackers.com/forum/isitketo-month-4-my-first-dollar-of-revenue-03e572f661)).
+This works on a monthly level as well. At the beginning of each month, I publish retrospectives in which I reassess my strategy and set objectives for the coming month (e.g., Is It Keto [Month 3](https://web.archive.org/web/20190514014737/https://www.indiehackers.com/forum/isitketo-returning-to-a-site-that-grew-without-me-0a0fe3ef52) and [Month 4](https://web.archive.org/web/20190514014532/https://www.indiehackers.com/forum/isitketo-month-4-my-first-dollar-of-revenue-03e572f661)).
 
 Finally, every February, I write a riveting, wildly popular blog post reflecting on the past year (_**Note**: wild popularity still pending_).
 

@@ -15,11 +15,11 @@ banner_image: rejection.jpg
 
 Many software founders fail for a simple reason: they ship too late. They spend years developing a product in a vacuum only to see it crumble the first time a real customer touches it.
 
-The [Indie Hackers podcast](https://www.indiehackers.com/podcast) features many such stories. The show's stated mission is to help listeners learn from the mistakes of startup founders, but host Courtland Allen frequently expresses existential angst about whether this is even possible:
+The [Indie Hackers podcast](https://web.archive.org/web/20170331111856/https://www.indiehackers.com/podcast) features many such stories. The show's stated mission is to help listeners learn from the mistakes of startup founders, but host Courtland Allen frequently expresses existential angst about whether this is even possible:
 
 > ...there are things you can tell people over and over again until you’re blue in the face, and they still won’t listen to you or really understand what you’re saying until they go out and discover what you mean the hard way by making their own mistakes.
 >
-> -Courtland Allen, [_Indie Hackers Podcast_](https://www.indiehackers.com/podcast/049-josh-kaufman-of-the-personal-mba)
+> -Courtland Allen, [_Indie Hackers Podcast_](https://web.archive.org/web/20180605095821/https://www.indiehackers.com/podcast/049-josh-kaufman-of-the-personal-mba)
 
 I always thought, "No, Courtland. That sounds inefficient. I'll take the free lessons and _not_ make the costly mistakes, thank you."
 
