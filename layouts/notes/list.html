@@ -1,0 +1,30 @@
+{{ define "title" }}
+  {{- .Title }} ·
+  {{ .Site.Title -}}
+{{ end }}
+{{ define "content" }}
+  {{- $pages := .RegularPagesRecursive.ByDate.Reverse -}}
+  <section class="container list">
+    <h1 class="title">{{ .Title }}</h1>
+    <ul class="blurb-list">
+      {{ range $pages }}
+        {{- $isBookReport := false -}}
+        {{- if .File -}}
+          {{- $isBookReport = in .File.Path "notes/book-reports/" -}}
+        {{- end -}}
+        <li>
+          <span class="date">{{ .Date.Format .Site.Params.dateFormat }}</span>
+          <a
+            class="title"
+            href="{{ .Params.ExternalLink | default .RelPermalink }}"
+            >{{ if $isBookReport }}
+              {{ printf "Book Report: %s" .Title }}
+            {{ else }}
+              {{ .Title }}
+            {{ end }}</a
+          >
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+{{ end }}

@@ -104,7 +104,7 @@ I tend to overinvest in research because I go down the rabbit hole when research
 
 ### My interview strategy
 
-One of the lessons I took to heart after reading [_The Mom Test_](/book-reports/the-mom-test/) was that people have a bias to tell you they like your idea. For that reason, I never mentioned TinyPilot until the end of the interview. I set up the interviews from my @mtlynch.io email address and told interviewees that I was interested in remote access in scenarios where tools like SSH and Remote Desktop don't work.
+One of the lessons I took to heart after reading [_The Mom Test_](/notes/book-reports/the-mom-test/) was that people have a bias to tell you they like your idea. For that reason, I never mentioned TinyPilot until the end of the interview. I set up the interviews from my @mtlynch.io email address and told interviewees that I was interested in remote access in scenarios where tools like SSH and Remote Desktop don't work.
 
 ### What are people's remote access pain points?
 
