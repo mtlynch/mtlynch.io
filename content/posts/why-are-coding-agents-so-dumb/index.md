@@ -5,9 +5,9 @@ banner_image: cover.webp
 description: Models are getting better and better, while the agents that drive them languish.
 ---
 
-The first time I used a coding agent, I [was mesmerized](/notes/cline-is-mesmerizing/). Before using a dedicated coding agent, I was copy/pasting between my IDE and an AI chat window. It was amazing to see an agent edit files directly and fix its own compile and test errors.
+The first time I used a coding agent, I [was mesmerized](/notes/cline-is-mesmerizing/). Before the agent, I was copy/pasting between my IDE and an AI chat window. It was amazing to see an agent edit files directly and fix its own compile and test errors in real time.
 
-After a few days, the honeymoon wore off. I noticed lots of bugs, like how the agent would sometimes get completely stuck and wouldn't respond to new prompts until I restarted it. Workflows with agents felt limiting, and developers had to layer on silly hacks like [ralph loops](/retrospectives/2026/02/#discovering-the-power-of-ai-sandboxes).
+After a few days, the honeymoon wore off. I started hitting annoying bugs, like getting into a state where the agent would entirely stop respond to new prompts until I restarted it. Development workflows with agents felt stiflingly primitive, and the agents would often declare tasks finished when work had barely begun.
 
 This was in February 2025, so it was still early days for coding agents. I figured that in six months, coding agents would be as technically impressive as the underlying LLMs.
 
@@ -21,7 +21,7 @@ In all the hype around AI, the terms tend to get distorted. I see some
 
 When I say "model," I'm talking about large language models like GPT Astra or Claude Sonnet. Those are large language models that can generate text and images, and they're especially good at writing code.
 
-When I say "agent," I mean the software that connects models to actual codebases. These are tools like Anthropic's Claude Code or OpenAI's Codex.
+When I say "agent," I mean the software that connects models to actual codebases. These are tools like Anthropic's Claude Code or OpenAI's Codex. They include bundled prompts.
 
 As a simple analogy, the model is the brain that thinks but can't directly interact with the world, and the coding agent is the body that lets the model read and write files and run commands on a computer.
 
