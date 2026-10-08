@@ -2,7 +2,7 @@
 title: "Why Are Coding Agents So Dumb?"
 date: 2026-10-09
 banner_image: cover.webp
-descriptions: Models are doing the heavy lifting while the agents remain the bottleneck.
+description: Models are getting better and better, while the agents that drive them languish.
 ---
 
 The first time I used a coding agent, I [was mesmerized](/notes/cline-is-mesmerizing/). Before using a dedicated coding agent, I was copy/pasting between my IDE and an AI chat window. It was amazing to see an agent edit files directly and fix its own compile and test errors.
@@ -17,7 +17,7 @@ AI-assisted development has clearly advanced, but the models are doing the heavy
 
 ## The agent is not the model
 
-In all the hype around AI, the terms tend to get distorted.
+In all the hype around AI, the terms tend to get distorted. I see some
 
 When I say "model," I'm talking about large language models like GPT Astra or Claude Sonnet. Those are large language models that can generate text and images, and they're especially good at writing code.
 
@@ -156,7 +156,7 @@ Okay, getting back to the question in the title, I don't have a satisfying answe
 
 My best hypothesis is that underinvestment in coding agents is an example of [the principal-agent problem](https://en.wikipedia.org/wiki/Principal%E2%80%93agent_problem). The people setting the direction of AI tooling are executives at companies like Anthropic, OpenAI, and Google. Those executives are disconnected from the rank and file developers who use coding agents every day. Many of these executives are dreaming of a future where they can automate away human developers entirely.
 
-AI executives, as well as their largest customers and shareholders, pay attention to metrics that are legible to them, such as slick demos and benchmark scores. Security and efficient use of human developer time are irrelevant to the demos, and none of the benchmarks I've seen measure the agents themselves; they just measure the underlying models.
+AI executives, as well as their largest customers and shareholders, pay attention to metrics that are legible to them, such as slick demos and benchmark scores. Security and efficient use of human developer time are irrelevant to the demos, and barely any of the benchmarks I've seen measure the agents themselves; they just measure the underlying models.
 
 My hypothesis isn't satisfying because AI companies clearly care at least a little about coding agents. I see a lot of features being added to Claude and Codex every month, though I can't recall the last time one of them improved my life.
 
