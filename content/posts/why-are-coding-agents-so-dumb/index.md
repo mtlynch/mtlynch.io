@@ -33,7 +33,7 @@ My biggest gripe with coding agents is how atrociously they manage tasks.
 
 For example, I have [an open-source web app](https://github.com/mtlynch/picoshare) that generates shareable links for file uploads. I recently added support for [protecting links with a passphrase](https://github.com/mtlynch/picoshare/pull/807). It was a relatively simple change, totalling about 1500 lines of new code. OpenCode dutifully broke the feature into 10 subtasks, but then it just... did them all one by one:
 
-{{<img src="image-3.png" max-width="800px">}}
+{{<img src="opencode-task-list.webp" max-width="800px" caption="Why are you doing these [embarrassingly parallel](https://en.wikipedia.org/wiki/Embarrassingly_parallel) tasks one at a time?">}}
 
 Umm... you're a _computer_! You're really good at multitasking. That's why we built you and keep giving you all those CPU cores. You can do multiple things in parallel and context switch millions of times faster than humans. Why are you doing these [embarrassingly parallel](https://en.wikipedia.org/wiki/Embarrassingly_parallel) tasks one at a time?
 
@@ -49,15 +49,14 @@ You know what technology would be good at assigning a difficulty level to a task
 
 I constantly run into tasks that are 95%, but I still have to assign it to the smartest model because chopping up the task and delegate on the agent's behalf would take up too much of my time.
 
-{{<img src="image-2.png">}}
+{{<img src="why-not-sonnet.webp" caption="Thanks for telling me which is the default model, Claude.">}}
 
 ### Agents have never heard of agents
 
 Agents don't know anything about themselves. If I ask Claude how to use features of Claude, it has to search online to find out what this "Claude" thing is. It's more comfortable answering questions about C programming than about itself (in fairness, same with most human developers).
 
-![alt text](image.png)
-
-![alt text](image-1.png)
+{{<img src="claude-search-1.webp">}}
+{{<img src="claude-search-2.webp">}}
 
 Uh... _you're_ Claude Code! You don't know any of your own freaking features? And you're just Googling instructions regardless of whether they match your version number? You'll casually download [13 GB of files](https://www.reddit.com/r/ClaudeAI/comments/1rlc71n/claude_desktop_app_silently_downloads_a_13_gb/) for a feature the user has never used, but you can't spare 50 KB of gzipped text in your install package to explain your own features to you?
 
@@ -79,7 +78,7 @@ I thought coding agents had made me lazy, but I realized that agents just commun
 
 Here's an example of me asking Codex + GPT-6 Astra to add a feature to [my media journalling web app](https://www.thescreenjournal.com/):
 
-{{<img src="image-4.png" caption="You can't just list a bunch of disparate details and call it a plan, Codex.">}}
+{{<img src="screenjournal-drafts.webp" caption="You can't just list a bunch of disparate details and call it a plan, Codex.">}}
 
 That's not a plan! That's just a hodgepodge of low-level design decisions.
 
