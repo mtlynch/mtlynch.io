@@ -5,11 +5,11 @@ banner_image: cover.webp
 description: Models are getting better and better, while the agents that drive them languish.
 ---
 
-The first time I used a coding agent, I [was mesmerized](/notes/cline-is-mesmerizing/). Before the agent, I was copy/pasting between my IDE and an AI chat window. It was amazing to see an agent edit files directly and fix its own compile and test errors in real time.
+The first time I used a coding agent, I [was mesmerized](/notes/cline-is-mesmerizing/). Before the agent, I was copy/pasting between my IDE and an AI chat interface. It was amazing to see an agent edit files directly and fix its own compile and test errors in real time.
 
-After a few days, the honeymoon wore off. I started hitting annoying bugs, like getting into a state where the agent would entirely stop respond to new prompts until I restarted it. Development workflows with agents felt stiflingly primitive, and the agents would often declare tasks finished when work had barely begun.
+After a few days, the honeymoon wore off. I started hitting annoying bugs, like getting into a state where the agent would entirely stop responding until I restarted it. Development workflows felt stiflingly primitive, and the agents would often declare tasks finished when work had barely begun.
 
-This was in February 2025, so it was still early days for coding agents. I figured that in six months, coding agents would be as technically impressive as the underlying LLMs.
+This was in February 2025, so it was still early days for coding agents. I figured that in six months, agents would be as technically impressive as the underlying LLMs.
 
 Instead, coding agents just stayed bad.
 
@@ -17,13 +17,13 @@ AI-assisted development has clearly advanced, but the models are doing the heavy
 
 ## The agent is not the model
 
-In all the hype around AI, the terms tend to get distorted. I see some
+In all the hype around AI, the terms tend to get distorted. People are beginning to overload and mix terms like "model" and "agent."
 
-When I say "model," I'm talking about large language models like GPT Astra or Claude Sonnet. Those are large language models that can generate text and images, and they're especially good at writing code.
+When I say "model," I'm talking about large language models (LLMs) like GPT Astra or Claude Sonnet. Models generate text and images, and they're especially good at writing code.
 
-When I say "agent," I mean the software that connects models to actual codebases. These are tools like Anthropic's Claude Code or OpenAI's Codex. They include bundled prompts.
+When I say "agent," I mean the software that connects models to actual codebases. These are tools like Anthropic's Claude Code or OpenAI's Codex.
 
-As a simple analogy, the model is the brain that thinks but can't directly interact with the world, and the coding agent is the body that lets the model read and write files and run commands on a computer.
+As a simple analogy, the model is the brain, and the agent is the body. The model produces streams of text, and the agent acts as the glue that plugs that text into the right commands and files on the system.
 
 ## Limitations of current coding agents
 
@@ -37,17 +37,17 @@ For example, I have [an open-source web app](https://github.com/mtlynch/picoshar
 
 Umm... you're a _computer_! You're really good at multitasking. That's why we built you and keep giving you all those CPU cores. You can do multiple things in parallel and context switch millions of times faster than humans. Why are you doing these [embarrassingly parallel](https://en.wikipedia.org/wiki/Embarrassingly_parallel) tasks one at a time?
 
-Claude Code can multitask, but only a little. It will spin up a subagent or two, but it still waits for all of them to finish before moving on. Multiple times per day, I'll see Claude Code sit around for several minutes waiting for my end-to-end tests to finish, and then only after the tests pass does it say, "Hmm, now I should start drafting a commit message. Let me start looking at prior commit message to see what your conventions are."
+Claude Code can multitask, but only a little. It will spin up a subagent or two, but it still waits for all of them to finish before moving on. Multiple times per day, I'll see Claude Code sit around for several minutes waiting for my end-to-end tests to finish, and then only after the tests pass does it say, "Hmm, now I should start drafting a commit message. Let me start looking at the commit history to learn [your message conventions](https://refactoringenglish.com/excerpts/commit-messages/)."
 
 ### Agents can't delegate
 
-When I'm using a cutting edge model, and it needs to check 50k lines of code for a particular pattern, the agent never stops and says, "Wait, this is something another model could do faster and cheaper." It just plows on with the slow, expensive model. Conversely, the agent never says, "This model is too dumb for this task. Let me tag in a smarter one."
+When I'm using a cutting edge model, and it needs to check 50k lines of code for a particular pattern, the agent never stops and says, "Wait, this is something another model could do cheaper and faster." It just plows on with the slow, expensive model. Conversely, the agent never says, "This model is too dumb for this task. Let me tag in a smarter one."
 
 Of course, I can actively micromanage the task and keep switching the model and thinking level to match each subtask's difficulty, but why is that the human's job? Do you also need me to manage your thread pool? While I'm at it, how about you put me in charge of [freeing your unused RAM](https://github.com/anthropics/claude-code/issues/4953)?
 
 You know what technology would be good at assigning a difficulty level to a task and then matching that requirement to a model? An LLM! Just ask the LLM to pick the cheapest, fastest model for completing the task. Why do you need me to babysit you?
 
-I constantly run into tasks that are 95%, but I still have to assign it to the smartest model because chopping up the task and delegate on the agent's behalf would take up too much of my time.
+I constantly run into tasks that are 95% gruntwork, but I still have to assign it to the smartest model because chopping up the task and delegate on the agent's behalf would take up too much of my time.
 
 {{<img src="why-not-sonnet.webp" caption="Thanks for telling me which is the default model, Claude.">}}
 
