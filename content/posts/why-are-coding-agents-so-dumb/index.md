@@ -21,9 +21,9 @@ In all the hype around AI, the terms tend to get distorted. People are beginning
 
 When I say "model," I'm talking about large language models (LLMs) like GPT Astra, Claude Sonnet, and GLM-5.3. Models generate text and images, including pretty good software code.
 
-When I say "agent," I mean the software that connects models to actual codebases. These are tools like Anthropic's Claude Code or OpenAI's Codex.
+When I say "agent," I mean the software that connects models to codebases and computer systems. These are tools like Anthropic's Claude Code or OpenAI's Codex.
 
-As a simple analogy, the model is the brain, and the agent is the body. The model produces streams of text, and the agent acts as the glue that plugs that text into the right commands and files on the system.
+As a simple analogy, the model is the brain, and the agent is the body. The model produces a stream of text, and the agent acts as the glue that plugs the text into the right commands and files on the system.
 
 ## Limitations of current coding agents
 
