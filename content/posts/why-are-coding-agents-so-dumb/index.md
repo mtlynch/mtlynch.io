@@ -31,7 +31,7 @@ As a simple analogy, the model is the brain, and the agent is the body. The mode
 
 My biggest gripe with coding agents is how atrociously they manage tasks.
 
-For example, I have [an open-source web app](https://github.com/mtlynch/picoshare) that generates shareable links for file uploads. I recently added support for [protecting links with a passphrase](https://github.com/mtlynch/picoshare/pull/807). It was a relatively simple change, totalling about 1500 lines of new code. OpenCode dutifully broke the feature into 10 subtasks, but then it just... did them all one by one:
+For example, I have [an open-source web app](https://github.com/mtlynch/picoshare) that generates shareable links for file uploads. I recently added support for [protecting links with a passphrase](https://github.com/mtlynch/picoshare/pull/807). It was a relatively simple change, totalling about 1.5k lines of new code. OpenCode dutifully broke the feature into 10 subtasks, but then it just... did them all one by one:
 
 {{<img src="opencode-task-list.webp" max-width="800px" caption="Why are you doing these [embarrassingly parallel](https://en.wikipedia.org/wiki/Embarrassingly_parallel) tasks one at a time?">}}
 
