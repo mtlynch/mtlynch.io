@@ -41,13 +41,13 @@ Claude Code can multitask, but only a little. It will spin up a subagent or two,
 
 ### Agents can't delegate
 
-When I'm using a cutting edge model, and it needs to check 50k lines of code for a particular pattern, the agent never stops and says, "Wait, this is something another model could do cheaper and faster." It just plows on with the slow, expensive model. Conversely, the agent never says, "This model is too dumb for this task. Let me tag in a smarter one."
+When I'm using a cutting-edge model, and it needs to check 50k lines of code for a particular pattern, the agent never stops and says, "Wait, this is something another model could do cheaper and faster." It just plows on with the slow, expensive model. Conversely, the agent never says, "This model is too dumb for this task. Let me tag in a smarter one."
 
 Of course, I can actively micromanage the task and keep switching the model and thinking level to match each subtask's difficulty, but why is that the human's job? Do you also need me to manage your thread pool? While I'm at it, how about you put me in charge of [freeing your unused RAM](https://github.com/anthropics/claude-code/issues/4953)?
 
 You know what technology would be good at assigning a difficulty level to a task and then matching that requirement to a model? An LLM! Just ask the LLM to pick the cheapest, fastest model for completing the task. Why do you need me to babysit you?
 
-I constantly run into tasks that are 95% gruntwork, but I still have to assign it to the smartest model because chopping up the task and delegating on the agent's behalf would take up too much of my time.
+I constantly run into tasks that are 95% gruntwork, but I still have to assign them to the smartest model because chopping up the tasks and delegating on the agent's behalf would take up too much of my time.
 
 {{<img src="why-not-sonnet.webp" caption="Thanks for telling me which is the default model, Claude.">}}
 
@@ -92,13 +92,13 @@ Not so. The docs encouraged me to write the LLM a polite letter kindly requestin
 
 I thought that security boundaries would be one of the first things coding agents would implement, but even today, agents are only usable if you give them access to everything. Agents routinely [bypass their own vendors' sandboxes](https://www.sentinelone.com/vulnerability-database/cve-2026-21852/). The alternative is to sit there and click "Allow" 500 times a day, and that's not even reliable protection because you're bound to misclick eventually.
 
-What makes this so maddening is that we've had sandboxing tools for more than a decade that can limit the blast radius of mistakes from coding agents. I [rolled my own sandbox](https://codeberg.org/mtlynch/llm-sandbox) so that agents can't explore my filesystem beyond the repo directory. I never have to worry about agents accidentally exfiltrating my home directory or wiping critical files on my machine because it just doesn't have access to do that.
+What makes this so maddening is that we've had sandboxing tools for more than a decade that can limit the blast radius of mistakes from coding agents. I [rolled my own sandbox](https://codeberg.org/mtlynch/llm-sandbox) so that agents can't explore my filesystem beyond the repo directory. I never have to worry about agents accidentally exfiltrating my home directory or wiping critical files on my machine because they just don't have access to do that.
 
 ## "Coding agents are perfect if you just..."
 
 I know some readers will say that I can solve all of my problems if I just install 200k lines of skill files from random git repos or set some obscure feature flag in my config file.
 
-I'm talking about my expectations of what coding agents should be able to do out of the box without me installing random plugins, skill files, or spending hours of tweaking the configuration.
+I'm talking about my expectations of what coding agents should be able to do out of the box without me installing random plugins or skill files or spending hours tweaking the configuration.
 
 ## My dream agent
 
@@ -106,7 +106,7 @@ I'm talking about my expectations of what coding agents should be able to do out
 
 These are the basics that I think should be table stakes for coding agents in 2026.
 
-- The agent splits requests into a series of tasks and assign each task to the appropriate model.
+- The agent splits requests into a series of tasks and assigns each task to the appropriate model.
   - The agent optimizes for cost, speed, and correctness and allows the user to adjust the dials per task (e.g., spend more for a faster result).
 - The agent writes plans that optimize for human comprehension.
   - The agent starts at a high level of abstraction and [progresses toward the minutiae](https://refactoringenglish.com/blog/useful-feedback-on-design-docs/#write-an-introduction-that-makes-sense-to-everyone).
@@ -125,7 +125,7 @@ These are the basics that I think should be table stakes for coding agents in 20
 - If I don't answer a question in "Execute" mode, and I haven't interacted with the session in 30 minutes, the agent makes the decision independently.
   - The agent also offers an "AFK mode," which skips the 30-minute wait.
 - The agent lets me drive the subagents, too.
-  - I should be able to jump into any agent sesssion and drive it or tell it to short-circuit and end early.
+  - I should be able to jump into any agent session and drive it or tell it to short-circuit and end early.
 - If the agent tells me that [Fable is not available on my Max plan](https://github.com/anthropics/claude-code/issues/79341), the agent vendor's CEO must remain in stockades until the bug is fixed.
 
 ### Dreaming a little bigger
@@ -146,7 +146,7 @@ As long as I'm dreaming, here are some additional features I'd like to see, but 
 - The agent natively supports [a proxy for injecting secrets](https://blog.exe.dev/http-proxy-secrets) into network requests.
   - The agent can make requests that require credentials but can't exfiltrate the credentials to another host.
 - The agent considers provider quota limits when selecting an appropriate model.
-  - e.g., if my weekly quota resets in 3 hours, and we still have 90% of quota avalable, stop optimizing for cost.
+  - e.g., if my weekly quota resets in 3 hours, and we still have 90% of quota available, stop optimizing for cost.
 - For tasks above a configurable complexity threshold, the agent automatically requests a code review from another model.
   - The two models iterate on reviews until they converge on the fixes.
 
@@ -154,7 +154,7 @@ As long as I'm dreaming, here are some additional features I'd like to see, but 
 
 Okay, getting back to the question in the title, I don't have a satisfying answer.
 
-My best hypothesis is that underinvestment in coding agents is an example of [the principal-agent problem](https://en.wikipedia.org/wiki/Principal%E2%80%93agent_problem). The people setting the direction of AI tooling are executives at companies like Anthropic, OpenAI, and Google. Those executives are disconnected from the rank and file developers who use coding agents every day. Many of these executives are dreaming of a future where they can automate away human developers entirely.
+My best hypothesis is that underinvestment in coding agents is an example of [the principal-agent problem](https://en.wikipedia.org/wiki/Principal%E2%80%93agent_problem). The people setting the direction of AI tooling are executives at companies like Anthropic, OpenAI, and Google. Those executives are disconnected from the rank-and-file developers who use coding agents every day. Many of these executives are dreaming of a future where they can automate away human developers entirely.
 
 AI executives, as well as their largest customers and shareholders, pay attention to metrics that are legible to them, such as slick demos and benchmark scores. Security and efficient use of human developer time aren't relevant to the demos, and barely any of the benchmarks I've seen measure the agents themselves; they just measure the underlying models.
 
