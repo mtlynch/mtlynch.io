@@ -3,6 +3,9 @@ title: "Why Are Coding Agents So Dumb?"
 date: 2026-10-09
 banner_image: cover.webp
 description: Models are getting better and better, while the agents that drive them languish.
+discuss_urls:
+  hacker_news: https://news.ycombinator.com/item?id=50020947
+  lobsters: https://lobste.rs/s/t5htlf/why_are_coding_agents_so_dumb
 ---
 
 The first time I used a coding agent, I [was mesmerized](/notes/cline-is-mesmerizing/). Before the agent, I was copy/pasting between my IDE and an AI chat interface. It was amazing to see an agent edit files directly and fix its own errors in real time.
