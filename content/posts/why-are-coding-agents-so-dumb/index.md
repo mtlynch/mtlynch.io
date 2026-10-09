@@ -5,7 +5,7 @@ banner_image: cover.webp
 description: Models are getting better and better, while the agents that drive them languish.
 ---
 
-The first time I used a coding agent, I [was mesmerized](/notes/cline-is-mesmerizing/). Before the agent, I was copy/pasting between my IDE and an AI chat interface. It was amazing to see an agent edit files directly and fix its own compile and test errors in real time.
+The first time I used a coding agent, I [was mesmerized](/notes/cline-is-mesmerizing/). Before the agent, I was copy/pasting between my IDE and an AI chat interface. It was amazing to see an agent edit files directly and fix its own errors in real time.
 
 After a few days, the honeymoon wore off. I started hitting annoying bugs, like getting into a state where the agent would entirely stop responding until I restarted it. Development workflows felt stiflingly primitive, and the agents would often declare tasks finished when work had barely begun.
 
