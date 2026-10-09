@@ -47,30 +47,30 @@ Of course, I can actively micromanage the task and keep switching the model and 
 
 You know what technology would be good at assigning a difficulty level to a task and then matching that requirement to a model? An LLM! Just ask the LLM to pick the cheapest, fastest model for completing the task. Why do you need me to babysit you?
 
-I constantly run into tasks that are 95% gruntwork, but I still have to assign it to the smartest model because chopping up the task and delegate on the agent's behalf would take up too much of my time.
+I constantly run into tasks that are 95% gruntwork, but I still have to assign it to the smartest model because chopping up the task and delegating on the agent's behalf would take up too much of my time.
 
 {{<img src="why-not-sonnet.webp" caption="Thanks for telling me which is the default model, Claude.">}}
 
 ### Agents have never heard of agents
 
-Agents don't know anything about themselves. If I ask Claude how to use features of Claude, it has to search online to find out what this "Claude" thing is. It's more comfortable answering questions about C programming than about itself (in fairness, same with most human developers).
+Agents don't know anything about themselves. If I ask Claude how to use the features of Claude, it has to search online to figure out what this "Claude" thing is. Claude's more comfortable answering questions about C programming than talking about itself (in fairness, same with most human developers).
 
 {{<img src="claude-search-1.webp">}}
 {{<img src="claude-search-2.webp">}}
 
 Uh... _you're_ Claude Code! You don't know any of your own freaking features? And you're just Googling instructions regardless of whether they match your version number? You'll casually download [13 GB of files](https://www.reddit.com/r/ClaudeAI/comments/1rlc71n/claude_desktop_app_silently_downloads_a_13_gb/) for a feature the user has never used, but you can't spare 50 KB of gzipped text in your install package to explain your own features to you?
 
-Imagine if you asked your teammate for a [code review](/tags/code-review/), and they started furiously Googling to find out if code reviews are something developers do. And then when you asked them for another code review two hours later, they had no memory of your previous conversation and ran back to Google and anxiously typed, `"do software engineers do code reviews?"`
+Imagine if you asked your teammate for a [code review](/tags/code-review/), and they started furiously Googling to find out if code reviews are something developers do. And then when you asked them for another code review the next day, they had no memory of your previous conversation and ran back to Google and anxiously typed, `"do software engineers do code reviews?"`
 
 ### Agents take any excuse to stop working
 
-The other night, I kicked off a long task in a coding agent before I went to bed. I came back the next morning to find that the agent hadn't even started working. It stopped two minutes after I left to ask me what it should name a git branch and then sat all night waiting on my answer.
+The other night, I kicked off a long task in a coding agent before I went to bed. I came back the next morning to find that the agent hadn't even started working. It stopped two minutes after I left to ask me what it should name a git branch and then sat all night waiting for my answer.
 
 If I had a human employee tell me they sat idle their whole shift because they wanted my input on some superficial detail, I'd quickly fire them.
 
 ### Agents suck at communicating plans
 
-I used to love the agent UX feature of separate "Plan" and "Execute" modes. For complicated tasks, I'd ask the agent to create a plan, then I'd review it, suggest changes, and then delegate execution to a faster, cheaper agent.
+I used to love the agent UX feature of separate "Plan" and "Execute" modes. For complicated tasks, I'd ask the agent to create a plan, then I'd review it, suggest changes, and delegate execution to a faster, cheaper agent.
 
 Over time, I felt an aversion to reading the plans. I'd often skip my review and just let the agent move straight to implementation.
 
@@ -86,17 +86,17 @@ If I asked a competent developer to plan this feature, they'd either start with 
 
 ### Agents are only useful when they take unnecessary risks
 
-When I started using my first coding agent, I looked for the setting that controlled which files on my system the agent is allowed to access. Surely, there would be some sort of filesystem permissions or limited chroot kind of protection that prevents a random and unpredictable piece of software from exploring my entire computer unfettered, right?
+When I started using my first coding agent, I looked for the setting that controlled which files on my system the agent is allowed to access. Surely, there was some sort of filesystem permissions or limited chroot kind of protection that prevents a random and unpredictable piece of software from exploring my entire computer unfettered, right?
 
 Not so. The docs encouraged me to write the LLM a polite letter kindly requesting that it not read certain files or directories. I tried that, and the agent immediately ignored my request, exfiltrating private application keys to OpenAI and Anthropic.
 
-I thought that security boundaries be one of the first things coding agents would implement, but even today, agents are only usable if you give them access to everything. Agents routinely [bypass their own vendors' sandboxes](https://www.sentinelone.com/vulnerability-database/cve-2026-21852/). The alternative is to sit there and click "Allow" 500 times a day, and that's not even reliable protection because you're bound to misclick eventually.
+I thought that security boundaries would be one of the first things coding agents would implement, but even today, agents are only usable if you give them access to everything. Agents routinely [bypass their own vendors' sandboxes](https://www.sentinelone.com/vulnerability-database/cve-2026-21852/). The alternative is to sit there and click "Allow" 500 times a day, and that's not even reliable protection because you're bound to misclick eventually.
 
-What makes this so maddening is that we've had sandboxing tools for more than a decade that do exactly what we need to limit the blast radius of mistakes from coding agents. I [rolled my own sandbox](https://codeberg.org/mtlynch/llm-sandbox) so that agents can't explore my filesystem beyond the repo directory. I never have to worry about agents accidentally exfiltrating my home directory or wiping critical files on my machine because it just doesn't have access to do that.
+What makes this so maddening is that we've had sandboxing tools for more than a decade that can limit the blast radius of mistakes from coding agents. I [rolled my own sandbox](https://codeberg.org/mtlynch/llm-sandbox) so that agents can't explore my filesystem beyond the repo directory. I never have to worry about agents accidentally exfiltrating my home directory or wiping critical files on my machine because it just doesn't have access to do that.
 
 ## "Coding agents are perfect if you just..."
 
-I know some readers will say that I can solve all of my problems if I just install 200k lines of skill files from a random git repo or set some obscure feature flag in my config file.
+I know some readers will say that I can solve all of my problems if I just install 200k lines of skill files from random git repos or set some obscure feature flag in my config file.
 
 I'm talking about my expectations of what coding agents should be able to do out of the box without me installing random plugins, skill files, or spending hours of tweaking the configuration.
 
@@ -140,14 +140,14 @@ As long as I'm dreaming, here are some additional features I'd like to see, but 
   - The agent continuously updates this estimate as the task progresses.
   - The agent [tunes its estimation algorithm](https://xkcd.com/612/) based on the accuracy of its past estimates.
 - The agent reviews its own sessions and looks for opportunities to improve.
-  - e.g., "Wow, I blew through $1k/day in tokens the past five days trying to parse a 5 GB log file with ad-hoc commands. Let's build a custom tool to do this efficiently."
+  - e.g., "Wow, I blew through $1k/day in tokens the past five days trying to parse this 20 GB log file with ad-hoc commands. Let's build a custom tool to do this efficiently."
 - The agent comes with a good language-aware diff view.
   - I don't want to have to push to GitHub to see a useful diff of the agent's work.
 - The agent natively supports [a proxy for injecting secrets](https://blog.exe.dev/http-proxy-secrets) into network requests.
   - The agent can make requests that require credentials but can't exfiltrate the credentials to another host.
 - The agent considers provider quota limits when selecting an appropriate model.
-  - e.g., if weekly quota resets in 3 hours, and we still have 90% of quota avalable, stop optimizing for cost.
-- For tasks above a configurable complexity threshold, the agent automatically requests a code reviews from another model.
+  - e.g., if my weekly quota resets in 3 hours, and we still have 90% of quota avalable, stop optimizing for cost.
+- For tasks above a configurable complexity threshold, the agent automatically requests a code review from another model.
   - The two models iterate on reviews until they converge on the fixes.
 
 ## So, why are harnesses so dumb?
@@ -156,9 +156,9 @@ Okay, getting back to the question in the title, I don't have a satisfying answe
 
 My best hypothesis is that underinvestment in coding agents is an example of [the principal-agent problem](https://en.wikipedia.org/wiki/Principal%E2%80%93agent_problem). The people setting the direction of AI tooling are executives at companies like Anthropic, OpenAI, and Google. Those executives are disconnected from the rank and file developers who use coding agents every day. Many of these executives are dreaming of a future where they can automate away human developers entirely.
 
-AI executives, as well as their largest customers and shareholders, pay attention to metrics that are legible to them, such as slick demos and benchmark scores. Security and efficient use of human developer time are irrelevant to the demos, and barely any of the benchmarks I've seen measure the agents themselves; they just measure the underlying models.
+AI executives, as well as their largest customers and shareholders, pay attention to metrics that are legible to them, such as slick demos and benchmark scores. Security and efficient use of human developer time aren't relevant to the demos, and barely any of the benchmarks I've seen measure the agents themselves; they just measure the underlying models.
 
-My hypothesis isn't satisfying because AI companies clearly care at least a little about coding agents. I see a lot of features being added to Claude and Codex every month, though I can't recall the last time one of them improved my life.
+My hypothesis isn't satisfying because AI companies clearly care at least a little bit about coding agents. I see a lot of features being added to Claude and Codex every month, though I can't recall the last time one of them has improved my life.
 
 ## Is there a better coding agent for me?
 
