@@ -19,7 +19,7 @@ AI-assisted development has clearly advanced, but the models are doing the heavy
 
 In all the hype around AI, the terms tend to get distorted. People are beginning to overload and mix terms like "model" and "agent."
 
-When I say "model," I'm talking about large language models (LLMs) like GPT Astra or Claude Sonnet. Models generate text and images, and they're especially good at writing code.
+When I say "model," I'm talking about large language models (LLMs) like GPT Astra, Claude Sonnet, and GLM-5.3. Models generate text and images, and they're especially good at writing code.
 
 When I say "agent," I mean the software that connects models to actual codebases. These are tools like Anthropic's Claude Code or OpenAI's Codex.
 
