@@ -35,25 +35,25 @@ For example, I have [an open-source web app](https://github.com/mtlynch/picoshar
 
 {{<img src="opencode-task-list.webp" max-width="800px" caption="Why are you doing these [embarrassingly parallel](https://en.wikipedia.org/wiki/Embarrassingly_parallel) tasks one at a time?">}}
 
-Umm... you're a _computer_! You're really good at multitasking. That's why we built you and keep giving you all those CPU cores. You can do multiple things in parallel and context switch millions of times faster than humans. Why are you doing these [embarrassingly parallel](https://en.wikipedia.org/wiki/Embarrassingly_parallel) tasks one at a time?
+Umm... you're a _computer_! You're really good at multitasking. That's why we keep giving you all those CPU cores. You can do multiple things in parallel and context switch millions of times faster than humans. Why are you doing these [embarrassingly parallel](https://en.wikipedia.org/wiki/Embarrassingly_parallel) tasks one at a time?
 
-Claude Code can multitask, but only a little. It will spin up a subagent or two, but it still waits for all of them to finish before moving on. Multiple times per day, I'll see Claude Code sit around for several minutes waiting for my end-to-end tests to finish, and then only after the tests pass does it say, "Hmm, now I should start drafting a commit message. Let me start looking at the commit history to learn [your message conventions](https://refactoringenglish.com/excerpts/commit-messages/)."
+Claude Code multitasks, but only a little. It will spin up a subagent or two, but it still waits for all of them to finish before moving on. Multiple times per day, I'll see Claude Code sit around for several minutes waiting for my end-to-end tests to finish, and then only after the tests pass does it say, "Hmm, now I should start drafting a commit message. Let me look at the git history to learn [your commit message conventions](https://refactoringenglish.com/excerpts/commit-messages/)."
 
 ### Agents can't delegate
 
 When I'm using a cutting-edge model, and it needs to check 50k lines of code for a particular pattern, the agent never stops and says, "Wait, this is something another model could do cheaper and faster." It just plows on with the slow, expensive model. Conversely, the agent never says, "This model is too dumb for this task. Let me tag in a smarter one."
 
-Of course, I can actively micromanage the task and keep switching the model and thinking level to match each subtask's difficulty, but why is that the human's job? Do you also need me to manage your thread pool? While I'm at it, how about you put me in charge of [freeing your unused RAM](https://github.com/anthropics/claude-code/issues/4953)?
+Of course, I can actively micromanage the task and keep switching the model and thinking level to match each subtask's difficulty, but why is that my job? Do you also need me to manage your thread pool for you? Do you expect me [free your unused RAM](https://github.com/anthropics/claude-code/issues/4953) for you, too?
 
-You know what technology would be good at assigning a difficulty level to a task and then matching that requirement to a model? An LLM! Just ask the LLM to pick the cheapest, fastest model for completing the task. Why do you need me to babysit you?
+You know what technology would be good at assigning a difficulty level to a task and then matching those requirements to a model? An LLM! Just ask the LLM to pick the cheapest, fastest model for the task. Why do you need me to babysit you?
 
-I constantly run into tasks that are 95% gruntwork, but I still have to assign them to the smartest model because chopping up the tasks and delegating on the agent's behalf would take up too much of my time.
+I constantly run into tasks that are 95% gruntwork, but I still have to assign them to the smartest model because chopping up the task and delegating on the agent's behalf would take up too much of my time.
 
 {{<img src="why-not-sonnet.webp" caption="Thanks for telling me which is the default model, Claude.">}}
 
 ### Agents have never heard of agents
 
-Agents don't know anything about themselves. If I ask Claude how to use the features of Claude, it has to search online to figure out what this "Claude" thing is. Claude's more comfortable answering questions about C programming than talking about itself (in fairness, same with most human developers).
+Agents don't know anything about themselves. If I ask Claude how to use the features of Claude, it has to search online to figure out what this "Claude" thing is. Claude is more comfortable answering questions about C programming than talking about itself (in fairness, same with most human developers).
 
 {{<img src="claude-search-1.webp">}}
 {{<img src="claude-search-2.webp">}}
@@ -61,12 +61,6 @@ Agents don't know anything about themselves. If I ask Claude how to use the feat
 Uh... _you're_ Claude Code! You don't know any of your own freaking features? And you're just Googling instructions regardless of whether they match your version number? You'll casually download [13 GB of files](https://www.reddit.com/r/ClaudeAI/comments/1rlc71n/claude_desktop_app_silently_downloads_a_13_gb/) for a feature the user has never used, but you can't spare 50 KB of gzipped text in your install package to explain your own features to you?
 
 Imagine if you asked your teammate for a [code review](/tags/code-review/), and they started furiously Googling to find out if code reviews are something developers do. And then when you asked them for another code review the next day, they had no memory of your previous conversation and ran back to Google and anxiously typed, `"do software engineers do code reviews?"`
-
-### Agents take any excuse to stop working
-
-The other night, I kicked off a long task in a coding agent before I went to bed. I came back the next morning to find that the agent hadn't even started working. It stopped two minutes after I left to ask me what it should name a git branch and then sat all night waiting for my answer.
-
-If I had a human employee tell me they sat idle their whole shift because they wanted my input on some superficial detail, I'd quickly fire them.
 
 ### Agents suck at communicating plans
 
@@ -83,6 +77,12 @@ Here's an example of me asking Codex + GPT-6 Astra to add a feature to [my media
 That's not a plan! That's just a hodgepodge of low-level design decisions.
 
 If I asked a competent developer to plan this feature, they'd either start with a high-level plan for UI changes and work their way down or describe changes to the data model and work their way up. If the developer started enumerating random facts about the feature, I'd assume they were brainstorming and come back later.
+
+### Agents take any excuse to stop working
+
+The other night, I kicked off a long task in a coding agent before I went to bed. I came back the next morning to find that the agent hadn't even started working. It stopped two minutes after I left to ask me what it should name a git branch and then sat all night waiting for my answer.
+
+If I had a human employee tell me they sat idle their whole shift because they wanted my input on some superficial detail, I'd quickly fire them.
 
 ### Agents are only useful when they take unnecessary risks
 
