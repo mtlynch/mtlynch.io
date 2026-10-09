@@ -7,7 +7,7 @@ description: Models are getting better and better, while the agents that drive t
 
 The first time I used a coding agent, I [was mesmerized](/notes/cline-is-mesmerizing/). Before the agent, I was copy/pasting between my IDE and an AI chat interface. It was amazing to see an agent edit files directly and fix its own errors in real time.
 
-After a few days, the honeymoon wore off. I started hitting annoying bugs, like getting into a state where the agent would entirely stop responding until I restarted it. Development workflows felt stiflingly primitive, and the agents would often declare tasks finished when work had barely begun.
+After a few days, the honeymoon wore off as I encountered frequent bugs. The agent would stop responding entirely until I restarted it. Development workflows felt stiflingly primitive, and the agent would often declare tasks finished when work had barely begun.
 
 This was in February 2025, so it was still early days for coding agents. I figured that in six months, agents would be as technically impressive as the underlying LLMs.
 
