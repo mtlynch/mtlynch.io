@@ -9,8 +9,8 @@ config-preview.toml
 node_modules/
 
 # Files shared with AI agents.
-reference/
+/reference/
 # Screenshot shared with AI agents.
-image*.png
+/image*.png
 
 /result*
