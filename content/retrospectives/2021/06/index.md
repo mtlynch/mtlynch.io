@@ -89,7 +89,7 @@ These tasks primarily cross domains or roles, like managing tools that only my l
 
 I was lamenting recently to my girlfriend that there are likely easy solutions to many of my issues growing TinyPilot, but I'm unaware of them because I'm not in touch with people who run businesses like mine. She asked who I'd want advice from and pointed out that I could just think of people and email them.
 
-The first person who came to mind was [Mike Perham](https://www.mikeperham.com/), the founder of Sidekiq. Mike's [interview on Indie Hackers](https://www.indiehackers.com/podcast/016-mike-perham-of-sidekiq) is one of my favorites. I listened to it when I was still an employee at Google, and his business has always stuck with me as the ideal indie software business. He was earning ~$80k/month writing open-source software. Best of all, customers run Sidekiq on their own machines, so it's nearly impossible for an emergency to pop up that demands Mike's immediate attention.
+The first person who came to mind was [Mike Perham](https://www.mikeperham.com/), the founder of Sidekiq. Mike's interview on Indie Hackers is one of my favorites. I listened to it when I was still an employee at Google, and his business has always stuck with me as the ideal indie software business. He was earning ~$80k/month writing open-source software. Best of all, customers run Sidekiq on their own machines, so it's nearly impossible for an emergency to pop up that demands Mike's immediate attention.
 
 I don't know Mike, so I sent him an email introducing myself and asked if he had any advice about TinyPilot. He responded the next day with several generous suggestions. The part that most stuck out to me was his reaction to my finances:
 

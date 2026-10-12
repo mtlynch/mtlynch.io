@@ -212,7 +212,7 @@ If I had to do it over, I would have still offered the trade-ins, but with these
 
 ### Reimplementing a Zestful microservice in Go
 
-Back in 2018, when I was [launching Zestful](/retrospectives/2018/07/), my recipe ingredient parsing service, I wanted a low-friction way for prospective customers to try out the service. Other services required you to create an account or put in a credit card, but I wanted to offer a [no-friction demo](https://zestfuldata.com/demo) on the Zestful website:
+Back in 2018, when I was [launching Zestful](/shipping-too-late/), my recipe ingredient parsing service, I wanted a low-friction way for prospective customers to try out the service. Other services required you to create an account or put in a credit card, but I wanted to offer a [no-friction demo](https://zestfuldata.com/demo) on the Zestful website:
 
 {{<img src="zestful-demo.webp" alt="Screenshot of Zestful demo page" caption="Zestful offers a [no-friction demo](https://zestfuldata.com/demo) to allow potential customers to test the ingredient parsing functionality." max-width="600px">}}
 

@@ -29,6 +29,13 @@
 {{- $currentConsulting := $currentData.revenue_consulting | default 0.0 | float -}}
 {{- $currentSponsors := $currentData.revenue_sponsors | default 0.0 | float -}}
 {{- $currentTotal := add (add $currentPreOrders $currentConsulting) $currentSponsors -}}
+{{- /* If there's only a single revenue source, don't add a row for totals. */ -}}
+{{- $currentNonZeroRevenueSources := 0 -}}
+{{- range slice $currentPreOrders $currentConsulting $currentSponsors -}}
+  {{- if ne . 0.0 -}}
+    {{- $currentNonZeroRevenueSources = add $currentNonZeroRevenueSources 1 -}}
+  {{- end -}}
+{{- end -}}
 
 
 <style>
@@ -95,13 +102,15 @@
         </td>
       </tr>
     {{- end }}
-    <tr style="font-weight: bold;">
-      <td>Total Revenue</td>
-      <td>${{ $prevTotal | lang.FormatNumber 2 }}</td>
-      <td>${{ $currentTotal | lang.FormatNumber 2 }}</td>
-      <td>
-        {{- partial "project-metrics/change-cell.html" (dict "prev" $prevTotal "current" $currentTotal "isCurrency" true) -}}
-      </td>
-    </tr>
+    {{- if ne $currentNonZeroRevenueSources 1 }}
+      <tr style="font-weight: bold;">
+        <td>Total Revenue</td>
+        <td>${{ $prevTotal | lang.FormatNumber 2 }}</td>
+        <td>${{ $currentTotal | lang.FormatNumber 2 }}</td>
+        <td>
+          {{- partial "project-metrics/change-cell.html" (dict "prev" $prevTotal "current" $currentTotal "isCurrency" true) -}}
+        </td>
+      </tr>
+    {{- end }}
   </tbody>
 </table>

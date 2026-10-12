@@ -138,7 +138,7 @@ In the end, I wasn't able to get any new links to Is It Keto.
 
 Now, I'm shelving the site. It's a difficult decision because it has been growing consistently, and I'm sure I could get it to turn a profit if I kept working on it for another year. But of everything I could invest a year of effort into, I suspect this is not the one with the highest potential profit.
 
-Fortunately, the site can run fine on its own, [as it did for most of 2018](https://www.indiehackers.com/forum/isitketo-returning-to-a-site-that-grew-without-me-0a0fe3ef52). It just runs on AppEngine, so it will just chug along, and I never have to update any packages or reboot any servers.
+Fortunately, the site can run fine on its own, as it did for most of 2018. It just runs on AppEngine, so it will just chug along, and I never have to update any packages or reboot any servers.
 
 My hope is that the site will grow organically as people click Is It Keto links in Google results. If the site makes it to the #1 spot on Google for more keywords, traffic could be 10-100x what it is today. If revenues grow to $500+ per month, then I'll maybe pick it back up because that's the point where I can hire people to expand it and still turn a profit.
 

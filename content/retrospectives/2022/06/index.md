@@ -127,7 +127,6 @@ Here are the resources we found helpful for learning about Debian packages:
 - [Creating and hosting your own deb packages and apt repo](https://earthly.dev/blog/creating-and-hosting-your-own-deb-packages-and-apt-repo/)
 - [Building binary deb packages: a practical guide](https://www.internalpointers.com/post/build-binary-deb-package-practical-guide)
 - [Debian New Maintainers' Guide](https://www.debian.org/doc/manuals/maint-guide/)
-- [Official Debian Documentation](https://help.ubuntu.com/community/Repositories/Personal)
 - [Basic Overview of the debian/ Directory](https://packaging.ubuntu.com/html/debian-dir-overview.html)
 
 ## Search ads are leveling off

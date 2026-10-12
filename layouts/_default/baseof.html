@@ -73,13 +73,7 @@
       <script src="/js/retrospectives.js"></script>
     {{ end }}
 
-    {{ if hugo.IsProduction }}
-      <script
-        defer
-        data-domain="mtlynch.io"
-        src="https://plausible.io/js/plausible.js"
-      ></script>
-    {{ end }}
+    {{ partial "plausible-analytics.html" . }}
 
     {{ if and .Params.custom_css }}
       <link rel="stylesheet" href="pagestyle.css" />

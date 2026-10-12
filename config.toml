@@ -33,7 +33,6 @@ buildFuture = true
     author = "Michael Lynch"
     info = "By day, a simple software engineer. By night, also a software engineer."
     description = "Updates about my life and what I learn about creating software"
-    twitter = "deliberatecoder"
     currentproject = "Refactoring English"
     keywords = "blog,developer,personal"
     avatarurl = "images/avatar.jpg"
@@ -73,20 +72,10 @@ resampleFilter = "Lanczos"
 
 # Social links
 [[params.social]]
-    name = "GitHub"
-    icon = "fa-brands fa-github fa-2x"
-    weight = 1
-    url = "https://github.com/mtlynch/"
-[[params.social]]
     name = "Bluesky"
     icon = "fa-brands fa-bluesky fa-2x"
     weight = 2
     url = "https://bsky.app/profile/mtlynch.io"
-[[params.social]]
-    name = "Twitter"
-    icon = "fa-brands fa-twitter fa-2x"
-    weight = 3
-    url = "https://twitter.com/deliberatecoder/"
 
 # Menu links
 [[menu.main]]
