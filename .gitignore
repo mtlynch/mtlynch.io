@@ -8,9 +8,15 @@ config-preview.toml
 .netlify/state.json
 node_modules/
 
-# Files shared with AI agents.
-/reference/
+# Scratch files for sharing data with AI agents.
+/reference
+/tmp
+
+# Temporary screenshots I paste into the root for AI agents to see.
+/image*.png
+
 # Screenshot shared with AI agents.
 /image*.png
 
+# Nix build results.
 /result*
