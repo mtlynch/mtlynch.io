@@ -10,8 +10,7 @@ Michael is available for weddings, bar/bat mitzvahs, and other events that are l
 
 You can also find him through these channels:
 
-- Bluesky: [@mtlynch.io](https://bsky.app/profile/mtlynch.io)
 - Mastodon: [@michael@m.mtlynch.io](https://m.mtlynch.io/@michael)
-- Twitter: [@deliberatecoder](https://twitter.com/deliberatecoder)
+- Bluesky: [@mtlynch.io](https://bsky.app/profile/mtlynch.io)
 - Email: [hello@mtlynch.io](mailto:hello@mtlynch.io)
   - See [tips for writing emails I'll respond to](/notes/emailing-me/).
