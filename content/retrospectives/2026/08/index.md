@@ -151,12 +151,6 @@ For now, I'm exploring what vibecoded game development is like and seeing what f
 
 {{<video src="mikeville-gameplay.mp4" max-width="600px">}}
 
-The game is available if you'd like to play it in your browser:
-
-- [Mikeville Public Demo](https://mville.mtlynch.io/#password=i%20love%20unit%20tests)
-
-I'll be online a little today if you'd like to visit. Source is currently [on GitLab](https://gitlab.com/mtlynch/mikeville) until I find a better git forge.
-
 ## Blog posts I enjoyed
 
 - [Stripe Just Wants a Number](https://blog.exe.dev/billable-facts)
