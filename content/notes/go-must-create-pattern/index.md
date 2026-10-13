@@ -83,7 +83,7 @@ That worked okay, but it meant that I had to write a `MustCreateX` helper every 
 
 ## New solution: A single MustCreate with generics
 
-Go 1.XX added support for generics, so I was finally able to solve this more elegantly.
+In 2022, Go 1.18 [added support for generics](https://go.dev/doc/go1.18#generics), but I didn't see a lot of opportunities to use them. But I recently realized that Go generics offer a better solution to my `MustCreateX` problem.
 
 Instead of defining a helper `MustCreateX` for every type, I could define a single, generic `MustCreate` test helper, so my test becomes:
 
@@ -161,3 +161,7 @@ And the call looks similar to the simple case:
 ```go
 range := testutil.MustCreate2(t, models.NewRange, 0, 5)
 ```
+
+## Conclusion
+
+Nothing revolutionary, but it's helpful and it eliminates a lot of repetitive helper functions.
