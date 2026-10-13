@@ -14,9 +14,11 @@
     {{ partial "twitter-card.html" . }}
     {{ partial "opengraph.html" . }}
 
-    {{ if .Permalink }}
-      <base href="{{ .Permalink }}" />
+    {{ if .RelPermalink }}
+      <base href="{{ .RelPermalink }}" />
     {{ end }}
+
+
     <title>{{ block "title" . }}{{- .Site.Title -}}{{ end }}</title>
 
     {{ if .Params.canonical_url }}
