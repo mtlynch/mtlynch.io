@@ -3,7 +3,7 @@ title: "The mustCreate Pattern for Go Tests"
 date: 2026-10-13
 ---
 
-I recently discovered a solution for making my Go tests more concise and
+I recently discovered a solution for making my Go tests more less repetitive and more readable.
 
 ## Problem: Constructors that can fail
 
@@ -124,6 +124,8 @@ testutil.MustCreate[string, model.Username](t, model.NewUsername, "joe123")
 ```
 
 So, when I call `MustCreate` here, `RawInput` is `string` (the type of the raw username value), and `CreatedValue` is the created type.
+
+Benefit is that you can be confident that there's nothing hiding in the `MustCreate`. If you've read it once, you've read it for every function, whereas if there's a `MustCreateUsername` and `MustCreateDate`, and so on, then there's a chance something tricky is happening in one of the implementations that you might miss.
 
 ### Extending to multi-param constructors
 
