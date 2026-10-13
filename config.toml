@@ -9,10 +9,6 @@ timeout = 300000
 # deploying drafts of the site to alternate hosts.
 canonifyurls = false
 
-pygmentsstyle = "colorful"
-pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
-
 buildFuture = true
 
 [taxonomies]
@@ -20,7 +16,9 @@ buildFuture = true
 
 [markup]
   [markup.highlight]
-    style = "native"
+    style = "vs"
+    codeFences = true
+    guessSyntax = true
   [markup.goldmark.renderer]
     # Allow Markdown to include embedded HTML.
     unsafe= true

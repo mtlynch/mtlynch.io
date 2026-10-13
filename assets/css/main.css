@@ -148,6 +148,7 @@ pre {
   line-height: 2.6rem;
   margin: 2rem 0;
   padding: 2rem;
+  border: 1px solid var(--alt-bg-color);
   overflow-x: auto;
 
   /* Prevent Safari on iPhone from messing with text sizes. Michael has not
