@@ -56,7 +56,7 @@ This was the second best month of visitors.
   <figure>
     <a id="book-slide-link" href="/retrospectives/2026/10/timelapse/2026-09-07T15:50:13Z_afcd884f.webp">
       <img id="book-slide-image" src="/retrospectives/2026/10/timelapse/2026-09-07T15:50:13Z_afcd884f.webp" alt="Chapter 7, Verbs Drive the Sentence — Initial print version" width="2100" height="3000" loading="lazy">
-      <span id="book-slide-loading" role="status" hidden>Loading revision…</span>
+      <span id="book-slide-error" role="status" hidden>Image unavailable. Use Previous or Next to try another revision.</span>
     </a>
     <figcaption aria-live="polite" aria-atomic="true">
       <p id="book-slide-caption">Initial print version</p>
@@ -64,7 +64,6 @@ This was the second best month of visitors.
   </figure>
   <div id="book-slide-controls" hidden>
     <button id="book-slide-previous" type="button" aria-disabled="true">← Previous</button>
-    <span id="book-slide-position"></span>
     <button id="book-slide-next" type="button">Next →</button>
   </div>
   <noscript><p>Enable JavaScript to browse the remaining revisions.</p></noscript>
