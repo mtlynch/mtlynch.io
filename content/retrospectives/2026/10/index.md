@@ -52,10 +52,11 @@ This was the second best month of visitors.
 
 ## The launch delay cycle
 
-<div id="book-slideshow" role="region" aria-label="Book page revisions" tabindex="0">
+<div id="book-slideshow" role="region" aria-label="Book page revisions">
   <figure>
-    <a id="book-slide-link" href="timelapse/2026-09-07T15:50:13Z_afcd884f.png">
-      <img id="book-slide-image" src="timelapse/2026-09-07T15:50:13Z_afcd884f.png" alt="September 7 revision of Chapter 7, Verbs Drive the Sentence" width="2100" height="3000" loading="lazy">
+    <a id="book-slide-link" href="/retrospectives/2026/10/timelapse/2026-09-07T15:50:13Z_afcd884f.png">
+      <img id="book-slide-image" src="/retrospectives/2026/10/timelapse/2026-09-07T15:50:13Z_afcd884f.png" alt="Chapter 7, Verbs Drive the Sentence — September 7, 2026, 3:50 PM UTC" width="2100" height="3000" loading="lazy">
+      <span id="book-slide-loading" role="status" hidden>Loading revision…</span>
     </a>
     <figcaption aria-live="polite" aria-atomic="true">
       <p id="book-slide-caption">September 7, 2026, 3:50 PM UTC</p>
@@ -63,7 +64,7 @@ This was the second best month of visitors.
   </figure>
   <div id="book-slide-controls" hidden>
     <button id="book-slide-previous" type="button" aria-disabled="true">← Previous</button>
-    <span id="book-slide-position">1 / 30</span>
+    <span id="book-slide-position"></span>
     <button id="book-slide-next" type="button">Next →</button>
   </div>
   <noscript><p>Enable JavaScript to browse the remaining revisions.</p></noscript>

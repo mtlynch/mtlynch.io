@@ -2,6 +2,23 @@
   margin: 2rem 0;
 }
 
+#book-slide-link {
+  display: block;
+  position: relative;
+}
+
+#book-slide-loading {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+#book-slide-link[aria-busy="true"] img {
+  visibility: hidden;
+}
+
 #book-slide-image {
   display: block;
   width: 100%;
