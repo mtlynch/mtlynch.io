@@ -55,11 +55,11 @@ This was the second best month of visitors.
 <div id="book-slideshow" role="region" aria-label="Book page revisions">
   <figure>
     <a id="book-slide-link" href="/retrospectives/2026/10/timelapse/2026-09-07T15:50:13Z_afcd884f.webp">
-      <img id="book-slide-image" src="/retrospectives/2026/10/timelapse/2026-09-07T15:50:13Z_afcd884f.webp" alt="Chapter 7, Verbs Drive the Sentence — September 7, 2026, 3:50 PM UTC" width="2100" height="3000" loading="lazy">
+      <img id="book-slide-image" src="/retrospectives/2026/10/timelapse/2026-09-07T15:50:13Z_afcd884f.webp" alt="Chapter 7, Verbs Drive the Sentence — Initial print version" width="2100" height="3000" loading="lazy">
       <span id="book-slide-loading" role="status" hidden>Loading revision…</span>
     </a>
     <figcaption aria-live="polite" aria-atomic="true">
-      <p id="book-slide-caption">September 7, 2026, 3:50 PM UTC</p>
+      <p id="book-slide-caption">Initial print version</p>
     </figcaption>
   </figure>
   <div id="book-slide-controls" hidden>
