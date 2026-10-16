@@ -47,12 +47,42 @@ TODO
 
 {{<project-metrics project="refactoring_english">}}
 
+This was the second best month of visitors.
+
 ## The launch delay cycle
 
 ## Launch week
 
+I normally cover the previous month in these retros, but since I'm late and the October launch is fresh in my mind, I'll cover it here.
+
+So, a quick by the numbers comparing sales to the prior week for reference:
+
+| Metric               | Prior Week | Launch Week | Change |
+| -------------------- | ---------- | ----------- | ------ |
+| Unique visitors      | XX         | XX          | XX     |
+| Sale count (ebook)   | XX         | XX          | XX     |
+| Sale revenue (ebook) | XX         | XX          | XX     |
+| Profit (ebook)       | XX         | XX          | XX     |
+| Sale count (print)   | 0          | XX          | XX     |
+| Sale revenue (print) | XX         | XX          | XX     |
+| Profit (print)       | XX         | XX          | XX     |
+| Sale count (total)   | 0          | XX          | XX     |
+| Sale revenue (total) | XX         | XX          | XX     |
+| Profit (total)       | XX         | XX          | XX     |
+
+Here were my launch week promotional activities:
+
+- Launch announcement on Hacker News
+- Launch announcement to book email list
+- Launch announcement to mtlynch.io email list
 - Published [Anti-Patterns in Software Blogging](https://refactoringenglish.com/blog/anti-patterns-software-blogging/)
   - Went to #1 on [Lobsters](https://lobste.rs/s/rwdufq/anti_patterns_software_blogging), [/r/programming](https://www.reddit.com/r/programming/comments/1wzw4cw/antipatterns_in_software_blogging/) and peaked at #8 on [Hacker News](https://news.ycombinator.com/item?id=49992257)
+- Published ["Why are Agent Harnesses so Dumb?"](https://mtlynch.io/why-are-coding-agents-so-dumb/)
+  - It got a decent response on [Hacker News](https://news.ycombinator.com/item?id=50020947) and [Lobsters](https://lobste.rs/s/t5htlf/why_are_coding_agents_so_dumb)
+
+![alt text](image.png)
+
+An
 
 ## Converting my book from Asciidoc to Markdown
 
@@ -61,14 +91,32 @@ I got so tired of Asciidoc syntax that I spent the day writing (largely with AI)
 Before, to render an example callout like this, I had to write this gross Asciidoc:
 
 ```asciidoc
-TODO
+[.bad-example-block]
+--
+[.bad-example-header]
+× *BAD*
+
+> [.bad-example]#That was the critical piece for him: the final piece of the puzzle! After months of difficult work, it looked like he'd cracked it.#
+>
+> [.bad-example]#He called Jacobs and excitedly announced that he'd solved it. She couldn't believe how sudden it all was. "`It was just incredible hearing how quickly it all came together. He got it done in just two weeks, while my team had been on it for months!`"#
+
+--
 ```
 
 And it's especially annoying because the GOOD and the XX are the same in every good example, but Asciidoc doesn't offer any support for templates.
 
 So, I wrote my own Markdown compiler that supports Hugo-style templates. So, now, when I want to
 
-This was also helpful in situations where I want to mark a section as `[%unbreakable]`, which tells Asciidoc not to insert a page break within it. And also, whenever I write that, I hear the theme song to _Unbreakable Kimmy Schmidt_ in my head. But Asciidoc has annoying rules about how `[%unbreakable]` combines with other elements, so I didn't know a way to make an example and its preceding paragraph unbreakable. But then I just had AI figure out the semantics so I just write
+<!-- prettier-ignore -->
+```markdown
+{{</*example type="bad"*/>}}
+That was the critical piece for him: the final piece of the puzzle! After months of difficult work, it looked like he'd cracked it.
+
+He called Jacobs and excitedly announced that he'd solved it. She couldn't believe how sudden it all was. "It was just incredible hearing how quickly it all came together. He got it done in just two weeks, while my team had been on it for months!"
+{{</*/example*/>}}
+```
+
+This was also helpful in situations where I want to mark a section as `[%unbreakable]`, which tells Asciidoc not to insert a page break within it. And also, whenever I write that, I hear the theme song to _Unbreakable Kimmy Schmidt_ in my head. But Asciidoc has annoying rules about how `[%unbreakable]` combines with other elements, so I didn't know a way to make an example and its preceding paragraph unbreakable. But then I just had AI figure out the semantics so I just write:
 
 <!-- prettier-ignore -->
 ```markdown
