@@ -1,5 +1,5 @@
 (() => {
-  // Oldest first. Edit each caption here to describe that revision.
+  // Oldest first. Captions default to UTC timestamps; edit them individually here.
   const slides = [
     {
       src: "timelapse/2026-09-07T15:50:13Z_afcd884f.png",
@@ -130,7 +130,20 @@
   const position = document.getElementById("book-slide-position");
   const previous = document.getElementById("book-slide-previous");
   const next = document.getElementById("book-slide-next");
+  const loading = document.getElementById("book-slide-loading");
+  const upcomingImage = new Image();
   let current = 0;
+
+  image.addEventListener("load", () => {
+    link.setAttribute("aria-busy", "false");
+    loading.hidden = true;
+  });
+  image.addEventListener("error", () => {
+    link.setAttribute("aria-busy", "false");
+    loading.textContent =
+      "Image unavailable. Click to retry opening the revision.";
+    loading.hidden = false;
+  });
 
   function showSlide(index) {
     if (index < 0 || index >= slides.length) {
@@ -139,14 +152,22 @@
 
     current = index;
     const slide = slides[current];
-    image.src = slide.src;
+    const src = `/retrospectives/2026/10/${slide.src}`;
+    image.src = src;
     image.alt = `Chapter 7, Verbs Drive the Sentence — ${slide.caption}`;
-    link.href = slide.src;
+    link.href = src;
+    const isLoading = !(image.complete && image.naturalWidth > 0);
+    link.setAttribute("aria-busy", isLoading);
+    loading.textContent = "Loading revision…";
+    loading.hidden = !isLoading;
     caption.textContent = slide.caption;
     position.textContent = `${current + 1} / ${slides.length}`;
     // Keep boundary buttons focusable so arrow-key navigation still works.
     previous.setAttribute("aria-disabled", current === 0);
     next.setAttribute("aria-disabled", current === slides.length - 1);
+    if (current + 1 < slides.length) {
+      upcomingImage.src = `/retrospectives/2026/10/${slides[current + 1].src}`;
+    }
   }
 
   previous.addEventListener("click", () => showSlide(current - 1));
@@ -162,5 +183,6 @@
   });
 
   showSlide(0);
+  slideshow.tabIndex = 0;
   document.getElementById("book-slide-controls").hidden = false;
 })();
