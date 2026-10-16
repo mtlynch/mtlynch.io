@@ -23,21 +23,21 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
-### Goal 1
+### Announce the official launch of the book
 
 - **Result**: XX
 - **Grade**: XX
 
 TODO
 
-### Goal 2
+### Pitch to two podcasts
 
 - **Result**: XX
 - **Grade**: XX
 
 TODO
 
-### Goal 3
+### Publish a new blog post that attracts readers to the book's website
 
 - **Result**: XX
 - **Grade**: XX
@@ -50,7 +50,7 @@ TODO
 
 This was the second best month of visitors.
 
-## The launch delay cycle
+## The evolution of the print version
 
 <div id="book-slideshow" role="region" aria-label="Book page revisions">
   <figure>
@@ -77,18 +77,18 @@ I normally cover the previous month in these retros, but since I'm late and the 
 
 So, a quick by the numbers comparing sales to the prior week for reference:
 
-| Metric               | Prior Week | Launch Week | Change |
-| -------------------- | ---------- | ----------- | ------ |
-| Unique visitors      | XX         | XX          | XX     |
-| Sale count (ebook)   | XX         | XX          | XX     |
-| Sale revenue (ebook) | XX         | XX          | XX     |
-| Profit (ebook)       | XX         | XX          | XX     |
-| Sale count (print)   | 0          | XX          | XX     |
-| Sale revenue (print) | XX         | XX          | XX     |
-| Profit (print)       | XX         | XX          | XX     |
-| Sale count (total)   | 0          | XX          | XX     |
-| Sale revenue (total) | XX         | XX          | XX     |
-| Profit (total)       | XX         | XX          | XX     |
+| Metric               | Prior Week | Launch Week | Change           |
+| -------------------- | ---------- | ----------- | ---------------- |
+| Unique visitors      | 2,379      | 23,478      | {{<delta-cell>}} |
+| Sale count (ebook)   | 8          | 70          | {{<delta-cell>}} |
+| Sale revenue (ebook) | $355.56    | $1,897.41   | {{<delta-cell>}} |
+| Profit (ebook)       | $339.09    | $1,801.27   | {{<delta-cell>}} |
+| Sale count (print)   | 0          | 57          | {{<delta-cell>}} |
+| Sale revenue (print) | $0         | $1,772.42   | {{<delta-cell>}} |
+| Profit (print)       | $0         | $453.16     | {{<delta-cell>}} |
+| Sale count (total)   | XX         | XX          | {{<delta-cell>}} |
+| Sale revenue (total) | XX         | XX          | {{<delta-cell>}} |
+| Profit (total)       | XX         | XX          | {{<delta-cell>}} |
 
 Here were my launch week promotional activities:
 
@@ -108,17 +108,16 @@ An
 
 I got so tired of Asciidoc syntax that I spent the day writing (largely with AI) a Markdown to Asciidoc compiler.
 
-Before, to render an example callout like this, I had to write this gross Asciidoc:
+Before, to render an example callout like this, I had to write gross Asciidoc that looked like this:
 
 ```asciidoc
 [.bad-example-block]
 --
 [.bad-example-header]
-× *BAD*
+× *BAD*: Use confusing jargon.
 
-> [.bad-example]#That was the critical piece for him: the final piece of the puzzle! After months of difficult work, it looked like he'd cracked it.#
->
-> [.bad-example]#He called Jacobs and excitedly announced that he'd solved it. She couldn't believe how sudden it all was. "`It was just incredible hearing how quickly it all came together. He got it done in just two weeks, while my team had been on it for months!`"#
+> [.bad-example]#Go is an excellent programming language for beginners because
+> of its measured take on OO and its strong GC-based auto-memory management.#
 
 --
 ```
@@ -129,10 +128,9 @@ So, I wrote my own Markdown compiler that supports Hugo-style templates. So, now
 
 <!-- prettier-ignore -->
 ```markdown
-{{</*example type="bad"*/>}}
-That was the critical piece for him: the final piece of the puzzle! After months of difficult work, it looked like he'd cracked it.
-
-He called Jacobs and excitedly announced that he'd solved it. She couldn't believe how sudden it all was. "It was just incredible hearing how quickly it all came together. He got it done in just two weeks, while my team had been on it for months!"
+{{</*example type="bad" heading="Use confusing jargon."*/>}}
+Go is an excellent programming language for beginners because
+of its measured take on OO and its strong GC-based auto-memory management.
 {{</*/example*/>}}
 ```
 
@@ -146,8 +144,6 @@ Hello
 
 {{</*/unbreakable*/>}}
 ```
-
-## Side projects
 
 ## Recommendation: Atuin
 
@@ -177,6 +173,10 @@ home-manager.users.mike.programs.atuin = {
 The biggest decision I had to make was whether to let it take over my up arrow. I didn't realize Atuin took over the up arrow by default, so when it first started happening, I found it jarring. I spent a few days trying to get used to it to see it was a worse workflow or if it was just unfamiliar.
 
 I found that I prefer bash's default up arrow behavior to Atuin's. Usually, when I hit the up arrow in bash, I am trying to get to a recent command in that specific directory, but I still like having Atuin store my whole shell history because I can hit `Ctrl+R` to search when I'm looking for a command that wasn't in the local shell.
+
+## Recommendations
+
+- [Cryptic Comments on an NPR Spotify Show](https://www.thisamericanlife.org/897/transcript): This is a recent episode of _This American Life_ about a producer who found strange comments on an . I read the transcript and then listened to the audio, but I wish I'd listened to the audio first because it was more fun that way. Spoiler: it's the real-life manifestation of The Onion's 2014-but-still-timely video: ["Teens Migrating From Facebook To Comments Section Of Slow-Motion Deer Video."](https://www.youtube.com/watch?v=a4mMY2Kl3GY)
 
 ## Wrap up
 
