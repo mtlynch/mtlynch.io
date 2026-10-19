@@ -83,18 +83,18 @@ I normally cover the previous month in these retros, but since I'm late and the 
 
 So, a quick by the numbers comparing sales to the prior week for reference:
 
-| Metric               | Prior Week | Launch Week | Change           |
-| -------------------- | ---------- | ----------- | ---------------- |
-| Unique visitors      | 2,379      | 23,478      | {{<delta-cell>}} |
-| Sale count (ebook)   | 8          | 70          | {{<delta-cell>}} |
-| Sale revenue (ebook) | $355.56    | $1,897.41   | {{<delta-cell>}} |
-| Profit (ebook)       | $339.09    | $1,801.27   | {{<delta-cell>}} |
-| Sale count (print)   | 0          | 57          | {{<delta-cell>}} |
-| Sale revenue (print) | $0         | $1,772.42   | {{<delta-cell>}} |
-| Profit (print)       | $0         | $453.16     | {{<delta-cell>}} |
-| Sale count (total)   | 8          | 127         | {{<delta-cell>}} |
-| Sale revenue (total) | $355.56    | $3,669.83   | {{<delta-cell>}} |
-| Profit (total)       | $339.09    | $2,254.43   | {{<delta-cell>}} |
+| Metric               | Prior Week  | Launch Week   | Change               |
+| -------------------- | ----------- | ------------- | -------------------- |
+| Unique visitors      | 2,379       | 23,478        | {{<delta-cell>}}     |
+| Sale count (ebook)   | 8           | 70            | {{<delta-cell>}}     |
+| Sale revenue (ebook) | $355.56     | $1,897.41     | {{<delta-cell>}}     |
+| Profit (ebook)       | $339.09     | $1,801.27     | {{<delta-cell>}}     |
+| Sale count (print)   | 0           | 57            | {{<delta-cell>}}     |
+| Sale revenue (print) | $0          | $1,772.42     | {{<delta-cell>}}     |
+| Profit (print)       | $0          | $453.16       | {{<delta-cell>}}     |
+| Sale count (total)   | 8           | 127           | {{<delta-cell>}}     |
+| Sale revenue (total) | $355.56     | $3,669.83     | {{<delta-cell>}}     |
+| **Profit (total)**   | **$339.09** | **$2,254.43** | **{{<delta-cell>}}** |
 
 Here were my launch week promotional activities:
 
