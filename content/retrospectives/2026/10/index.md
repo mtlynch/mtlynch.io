@@ -92,9 +92,9 @@ So, a quick by the numbers comparing sales to the prior week for reference:
 | Sale count (print)   | 0          | 57          | {{<delta-cell>}} |
 | Sale revenue (print) | $0         | $1,772.42   | {{<delta-cell>}} |
 | Profit (print)       | $0         | $453.16     | {{<delta-cell>}} |
-| Sale count (total)   | XX         | XX          | {{<delta-cell>}} |
-| Sale revenue (total) | XX         | XX          | {{<delta-cell>}} |
-| Profit (total)       | XX         | XX          | {{<delta-cell>}} |
+| Sale count (total)   | 8          | 127         | {{<delta-cell>}} |
+| Sale revenue (total) | $355.56    | $3,669.83   | {{<delta-cell>}} |
+| Profit (total)       | $339.09    | $2,254.43   | {{<delta-cell>}} |
 
 Here were my launch week promotional activities:
 
