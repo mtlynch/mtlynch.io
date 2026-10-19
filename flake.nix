@@ -52,7 +52,7 @@
           wordword --version
           echo "exiftool" "$(exiftool -ver)"
           echo "htmlproofer" "$(htmlproofer --version)"
-          markdownlint-cli2 | head -n 1
+          (markdownlint-cli2 --help || test "$?" -eq 2) | sed -n '1p'
           echo "node" "$(node --version)"
           hugo version
         '';
