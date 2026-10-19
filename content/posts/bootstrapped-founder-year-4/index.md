@@ -11,7 +11,6 @@ aliases:
   - /solo-developer-year-4/
 date: "2022-02-01"
 hero_image: cover.jpg
-custom_css: true
 banner_image: og-cover.jpg
 discuss_urls:
   reddit: https://www.reddit.com/r/programming/comments/shvsqy/my_fourth_year_as_a_bootstrapped_founder/
