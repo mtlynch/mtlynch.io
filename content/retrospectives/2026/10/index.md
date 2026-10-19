@@ -32,10 +32,10 @@ TODO
 
 ### Pitch to two podcasts
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: Pitched to just one podcast
+- **Grade**: C
 
-TODO
+I ended up spending a lot more time than I expected touching up the print version, so I had less time to pitch to podcasts.
 
 ### Publish a new blog post that attracts readers to the book's website
 
@@ -48,7 +48,13 @@ TODO
 
 {{<project-metrics project="refactoring_english">}}
 
-This was the second best month of visitors.
+This was the second best month of visitors, though I didn't directly cause it. A reader submitted my XX post to both
+
+https://old.reddit.com/r/programming/comments/1wd1jt9/how_to_write_an_effective_software_design_document/
+
+https://old.reddit.com/r/programming/comments/1uevttg/how_to_write_an_effective_software_design_document/
+
+The same reader also submitted to Hacker News, and for whatever reason, this submission took off even though it had been submitted nine times before and never reached critical mass.
 
 ## The evolution of the print version
 
@@ -106,7 +112,7 @@ An
 
 ## Converting my book from Asciidoc to Markdown
 
-I got so tired of Asciidoc syntax that I spent the day writing (largely with AI) a Markdown to Asciidoc compiler.
+I got so tired of Asciidoc syntax that I spent a day writing (largely with AI) a Markdown to Asciidoc compiler.
 
 Before, to render an example callout like this, I had to write gross Asciidoc that looked like this:
 
@@ -122,9 +128,9 @@ Before, to render an example callout like this, I had to write gross Asciidoc th
 --
 ```
 
-And it's especially annoying because the GOOD and the XX are the same in every good example, but Asciidoc doesn't offer any support for templates.
+And it's especially annoying because the GOOD and the XX are the same in every good example, but Asciidoc doesn't support templates.
 
-So, I wrote my own Markdown compiler that supports Hugo-style templates. So, now, when I want to
+So, I wrote my own Markdown compiler that supports Hugo-style templates. So, now, when I want to generate a bad example callout, I write this simpler and more readable shortcode:
 
 <!-- prettier-ignore -->
 ```markdown
@@ -133,6 +139,8 @@ Go is an excellent programming language for beginners because
 of its measured take on OO and its strong GC-based auto-memory management.
 {{</*/example*/>}}
 ```
+
+Examples were the place where
 
 This was also helpful in situations where I want to mark a section as `[%unbreakable]`, which tells Asciidoc not to insert a page break within it. And also, whenever I write that, I hear the theme song to _Unbreakable Kimmy Schmidt_ in my head. But Asciidoc has annoying rules about how `[%unbreakable]` combines with other elements, so I didn't know a way to make an example and its preceding paragraph unbreakable. But then I just had AI figure out the semantics so I just write:
 
@@ -174,9 +182,12 @@ The biggest decision I had to make was whether to let it take over my up arrow. 
 
 I found that I prefer bash's default up arrow behavior to Atuin's. Usually, when I hit the up arrow in bash, I am trying to get to a recent command in that specific directory, but I still like having Atuin store my whole shell history because I can hit `Ctrl+R` to search when I'm looking for a command that wasn't in the local shell.
 
-## Recommendations
+## Blog posts I enjoyed
 
 - [Cryptic Comments on an NPR Spotify Show](https://www.thisamericanlife.org/897/transcript): This is a recent episode of _This American Life_ about a producer who found strange comments on an . I read the transcript and then listened to the audio, but I wish I'd listened to the audio first because it was more fun that way. Spoiler: it's the real-life manifestation of The Onion's 2014-but-still-timely video: ["Teens Migrating From Facebook To Comments Section Of Slow-Motion Deer Video."](https://www.youtube.com/watch?v=a4mMY2Kl3GY)
+- [Every layer of review makes you 10x slower](https://apenwarr.ca/log/20260316-every-layer-of-review-makes-you-10x-slower)
+  - This post is the best articulation I've found about the cognitive dissonance I feel about how much of a speedup I expect from AI vs. how much I experience in practice:
+    > Code a simple bug fix: 30 minutes. Get it code reviewed by the peer next to you: 5 hours... AI’s direct impact on this problem is minimal. Okay, so Claude can code it in 3 minutes instead of 30? That’s super, Claude, great work. Now you either get to spend 27 minutes reviewing the code yourself in a back-and-forth loop with the AI (this is actually kinda fun); or you save 27 minutes and submit unverified code to the code reviewer, who will still take 5 hours like before, but who will now be mad that you’re making them read the slop that you were too lazy to read yourself.
 
 ## Wrap up
 
