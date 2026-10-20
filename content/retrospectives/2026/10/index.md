@@ -115,6 +115,12 @@ Here were my launch week promotional activities, in decreasing order of impact o
 
 Here are some high-level metrics comparing launch week sales to the prior week for reference:
 
+<div id="launch-week-sales">
+  <canvas id="launch-week-sales-chart" role="img" aria-label="Copies sold on the left axis, and revenue and profit in US dollars on the right axis, comparing the prior week with launch week. Ebook and print are stacked to show totals. Exact values are in the table below."></canvas>
+</div>
+
+<script type="module" src="launch-week-sales.js"></script>
+
 | Metric               | Prior Week  | Launch Week   | Change               |
 | -------------------- | ----------- | ------------- | -------------------- |
 | Unique visitors      | 2,379       | 23,478        | {{<delta-cell>}}     |

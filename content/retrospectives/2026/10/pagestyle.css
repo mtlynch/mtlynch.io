@@ -87,3 +87,9 @@
   outline: 3px solid #1565c0;
   outline-offset: 3px;
 }
+
+#launch-week-sales {
+  position: relative;
+  height: 400px;
+  margin: 2rem 0;
+}
