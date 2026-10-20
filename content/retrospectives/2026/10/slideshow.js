@@ -112,17 +112,28 @@
   ];
 
   const slideshow = document.getElementById("book-slideshow");
-  const image = document.getElementById("book-slide-image");
-  const link = document.getElementById("book-slide-link");
-  const caption = document.getElementById("book-slide-caption");
+  const pair = slideshow.querySelector(".book-slide-pair");
+  const caption = pair.querySelector(".book-slide-caption");
+  const panels = Array.from(
+    pair.querySelectorAll(".book-slide-link"),
+    (link) => ({
+      image: link.querySelector(".book-slide-image"),
+      link,
+      errorMessage: link.querySelector(".book-slide-error"),
+      outgoingImage: null,
+    }),
+  );
+  const first = document.getElementById("book-slide-first");
   const previous = document.getElementById("book-slide-previous");
   const next = document.getElementById("book-slide-next");
-  const errorMessage = document.getElementById("book-slide-error");
+  const last = document.getElementById("book-slide-last");
+  const lastSlide = slides.length - 1;
   const preloadedImages = new Map();
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  let current = 0;
+  const mobile = window.matchMedia("(max-width: 768px)");
+  // Track the captioned revision: the right page on desktop, the only page on mobile.
+  let current = mobile.matches ? 0 : 1;
   let latestRequest = 0;
-  let outgoingImage = null;
 
   function getImage(index) {
     if (!preloadedImages.has(index)) {
@@ -135,7 +146,7 @@
 
   function preloadNearby() {
     const first = Math.max(0, current - 3);
-    const last = Math.min(slides.length - 1, current + 3);
+    const last = Math.min(slides.length - 1, current + 4);
     for (let index = first; index <= last; index++) {
       if (index !== current) {
         getImage(index);
@@ -143,80 +154,109 @@
     }
   }
 
-  async function showSlide(index) {
-    if (index < 0 || index >= slides.length || index === current) {
+  async function decodeImage(index) {
+    try {
+      await getImage(index).decode();
+      return true;
+    } catch (error) {
+      if (!(error instanceof DOMException && error.name === "EncodingError")) {
+        throw error;
+      }
+      // Allow a failed prefetch to be retried on a later visit.
+      preloadedImages.delete(index);
+      return false;
+    }
+  }
+
+  async function showSlides(index, refresh = false) {
+    const firstSlide = mobile.matches ? 0 : 1;
+    if (
+      index < firstSlide ||
+      index > lastSlide ||
+      (!refresh && index === current)
+    ) {
       return;
     }
 
     current = index;
     const request = ++latestRequest;
     // Keep boundary buttons focusable so arrow-key navigation still works.
-    previous.setAttribute("aria-disabled", current === 0);
-    next.setAttribute("aria-disabled", current === slides.length - 1);
-    link.setAttribute("aria-busy", "true");
-    errorMessage.hidden = true;
+    first.setAttribute("aria-disabled", current === firstSlide);
+    previous.setAttribute("aria-disabled", current === firstSlide);
+    next.setAttribute("aria-disabled", current === lastSlide);
+    last.setAttribute("aria-disabled", current === lastSlide);
+    pair.setAttribute("aria-busy", "true");
 
-    const slide = slides[index];
-    const src = `/retrospectives/2026/10/${slide.src}`;
-    const incomingImage = getImage(index);
     preloadNearby();
-    try {
-      await incomingImage.decode();
-    } catch (error) {
-      if (!(error instanceof DOMException && error.name === "EncodingError")) {
-        throw error;
-      }
-      if (request === latestRequest) {
-        link.setAttribute("aria-busy", "false");
-        // Allow a failed prefetch to be retried on a later visit.
-        preloadedImages.delete(index);
-        errorMessage.hidden = false;
-      }
-      return;
-    }
+    const indices = mobile.matches ? [null, index] : [index - 1, index];
+    const loaded = await Promise.all(
+      indices.map((slideIndex) =>
+        slideIndex === null ? false : decodeImage(slideIndex),
+      ),
+    );
     // Ignore images that finish loading after a newer navigation request.
     if (request !== latestRequest) {
       return;
     }
 
-    outgoingImage?.remove();
-    outgoingImage = null;
-    if (!reducedMotion.matches) {
-      outgoingImage = image.cloneNode();
-      outgoingImage.removeAttribute("id");
-      outgoingImage.className = "book-slide-outgoing";
-      outgoingImage.alt = "";
-      outgoingImage.setAttribute("aria-hidden", "true");
-      link.prepend(outgoingImage);
-      const overlay = outgoingImage;
-      overlay.animate([{ opacity: 1 }, { opacity: 0 }], {
-        duration: 220,
-        easing: "ease-in-out",
-      }).onfinish = () => overlay.remove();
-    }
+    panels.forEach((panel, offset) => {
+      const { image, link, errorMessage } = panel;
+      panel.outgoingImage?.remove();
+      panel.outgoingImage = null;
+      if (indices[offset] === null) {
+        return;
+      }
+      const slide = slides[indices[offset]];
+      const src = `/retrospectives/2026/10/${slide.src}`;
+      if (
+        !refresh &&
+        loaded[offset] &&
+        !image.hidden &&
+        !reducedMotion.matches
+      ) {
+        const overlay = image.cloneNode();
+        overlay.className = "book-slide-outgoing";
+        overlay.alt = "";
+        overlay.setAttribute("aria-hidden", "true");
+        link.prepend(overlay);
+        panel.outgoingImage = overlay;
+        overlay.animate([{ opacity: 1 }, { opacity: 0 }], {
+          duration: 220,
+          easing: "ease-in-out",
+        }).onfinish = () => overlay.remove();
+      }
 
-    image.src = src;
-    image.alt = `Chapter 7, Verbs Drive the Sentence — ${slide.caption}`;
-    link.href = src;
-    caption.textContent = slide.caption;
-    link.setAttribute("aria-busy", "false");
-    errorMessage.hidden = true;
+      image.src = src;
+      image.alt = `Chapter 7, Verbs Drive the Sentence — ${slide.caption}`;
+      image.hidden = !loaded[offset];
+      link.href = src;
+      errorMessage.hidden = loaded[offset];
+    });
+    caption.textContent = slides[index].caption;
+    pair.setAttribute("aria-busy", "false");
   }
 
-  previous.addEventListener("click", () => showSlide(current - 1));
-  next.addEventListener("click", () => showSlide(current + 1));
+  first.addEventListener("click", () => showSlides(mobile.matches ? 0 : 1));
+  previous.addEventListener("click", () => showSlides(current - 1));
+  next.addEventListener("click", () => showSlides(current + 1));
+  last.addEventListener("click", () => showSlides(lastSlide));
+  mobile.addEventListener("change", () => {
+    showSlides(Math.max(mobile.matches ? 0 : 1, current), true);
+  });
   slideshow.addEventListener("keydown", (event) => {
     if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) {
       return;
     }
     if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
       event.preventDefault();
-      showSlide(current + (event.key === "ArrowLeft" ? -1 : 1));
+      showSlides(current + (event.key === "ArrowLeft" ? -1 : 1));
+    } else if (event.key === "Home" || event.key === "End") {
+      event.preventDefault();
+      showSlides(event.key === "Home" ? (mobile.matches ? 0 : 1) : lastSlide);
     }
   });
 
-  preloadNearby();
-  next.setAttribute("aria-disabled", "false");
+  showSlides(current, true);
   slideshow.tabIndex = 0;
   document.getElementById("book-slide-controls").hidden = false;
 })();
