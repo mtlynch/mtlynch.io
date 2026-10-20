@@ -25,8 +25,8 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Announce the official launch of the book
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: Launched the book (though a week late)
+- **Grade**: A
 
 TODO
 
@@ -39,8 +39,8 @@ I ended up spending a lot more time than I expected touching up the print versio
 
 ### Publish a new blog post that attracts readers to the book's website
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: Published ["Anti-Patterns in Software Blogging"](https://refactoringenglish.com/blog/anti-patterns-software-blogging/) and ["Why are Agent Harnesses so Dumb?"](https://mtlynch.io/why-are-coding-agents-so-dumb/)
+- **Grade**: A
 
 TODO
 
@@ -48,22 +48,24 @@ TODO
 
 {{<project-metrics project="refactoring_english">}}
 
-This was the second best month of visitors for the book, though I didn't directly cause it.
+September was the second best month of visitors for the book, though I didn't directly cause it.
 
-A reader submitted my ["How to Write an Effective Software Design Document"](https://refactoringenglish.com/excerpts/write-an-effective-design-doc/) post to both /r/programming and Hacker News, and the post took off in both places. That was surprising because the post had been submitted to Hacker News [nine times before](https://hn.algolia.com/?dateRange=all&page=0&prefix=true&query=https%3A%2F%2Frefactoringenglish.com%2Fexcerpts%2Fwrite-an-effective-design-doc%2F&sort=byPopularity&type=story) and never took off, but the tenth time did it. And I'd [submitted the post](https://old.reddit.com/r/programming/comments/1uevttg/how_to_write_an_effective_software_design_document/) to /r/programming a few months ago, and it _did_ take off, but I guess everyone forgot or was happy to [read it again two months later](https://old.reddit.com/r/programming/comments/1wd1jt9/how_to_write_an_effective_software_design_document/)
+Most visitors arrived because a reader submitted my ["How to Write an Effective Software Design Document"](https://refactoringenglish.com/excerpts/write-an-effective-design-doc/) post to both /r/programming and Hacker News, and the post took off in both places.
+
+The post's success was surprising because the same article had been submitted to Hacker News [nine times before](https://hn.algolia.com/?dateRange=all&page=0&prefix=true&query=https%3A%2F%2Frefactoringenglish.com%2Fexcerpts%2Fwrite-an-effective-design-doc%2F&sort=byPopularity&type=story) and never took off. Tenth time's the charm, as they say. And I'd [submitted the post to /r/programming](https://old.reddit.com/r/programming/comments/1uevttg/how_to_write_an_effective_software_design_document/) a few months ago, and it _did_ take off, but I guess everyone forgot or was happy to [read it again two months later](https://old.reddit.com/r/programming/comments/1wd1jt9/how_to_write_an_effective_software_design_document/).
 
 ## The evolution of the print version
 
-I initially planned not to put much effort into the print version. The PDF version already looked pretty good, and customers have been buying it for over a year with no complaints about the design, so I wasn't about to become a typography expert to make a beautiful print version.
+I initially planned not to put much effort into the print version. The PDF version already looked pretty good, and customers have been buying it for over a year with no complaints about the design, so I wasn't planning to become a typography wonk over a print version.
 
-But then a reader named Alexey Zubkov reached out to me with a few suggestions and offered to work with me on the typography. And he pointed out all these things I never noticed, but then once he pointed them out, they felt like huge, glaring errors.
+Then, a reader named Alexey Zubkov reached out to me with a few suggestions and offered to work with me on my book's typography. Once Alexy pointed out the issues, they felt like huge, glaring errors, even though I'd been staring at this book for years and never noticed them.
 
-One of my blind spots was that I wasn't using my font's kerning. Without kerning, Asciidoctor just places letters with constant spacing from each other, but when it honors the font's kerning, it places letters according to what the font says looks good.
+One of my blind spots was that I wasn't using my font's kerning. Without kerning, Asciidoctor just places letters with constant spacing from each other. When it honors the font's kerning, it places letters according to what the font says looks good.
 
 {{<img src="kerning-absent.webp" max-width="600px">}}
 {{<img src="kerning-applied.webp" max-width="600px" caption="Without kerning (top) vs. with kerning (bottom)">}}
 
-With kerning, part of the "o" appeears directly under the "Y"
+Notice that with kerning, part of the "o" appeears directly under the "Y"
 
 {{<img src="yo-overlap.webp" max-width="300px">}}
 
@@ -100,7 +102,7 @@ I officially launched my book! Launch week was October 4th to 11th. I offered a 
 
 Here were my launch week promotional activities, in decreasing order of impact on sales:
 
-- Published [Anti-Patterns in Software Blogging](https://refactoringenglish.com/blog/anti-patterns-software-blogging/)
+- Published ["Anti-Patterns in Software Blogging"](https://refactoringenglish.com/blog/anti-patterns-software-blogging/)
   - Went to #1 on [Lobsters](https://lobste.rs/s/rwdufq/anti_patterns_software_blogging), [/r/programming](https://www.reddit.com/r/programming/comments/1wzw4cw/antipatterns_in_software_blogging/) and peaked at #8 on [Hacker News](https://news.ycombinator.com/item?id=49992257)
 - Published ["Why are Agent Harnesses so Dumb?"](https://mtlynch.io/why-are-coding-agents-so-dumb/)
   - It got a decent response on [Hacker News](https://news.ycombinator.com/item?id=50020947) and [Lobsters](https://lobste.rs/s/t5htlf/why_are_coding_agents_so_dumb)
@@ -131,6 +133,8 @@ Here are some high-level metrics comparing launch week sales to the prior week f
 | Sale count (total)   | 8           | 127           | {{<delta-cell>}}     |
 | Sale revenue (total) | $355.56     | $3,669.83     | {{<delta-cell>}}     |
 | **Profit (total)**   | **$339.09** | **$2,254.43** | **{{<delta-cell>}}** |
+
+I was happy with these results, especially given that a lot of the sales came from people who had read my blog posts that week. One of my selling points in the book is that you can integrate writing into your business because blogging is a way to help customers find you, and I think these results demonstrate that.
 
 ## My experience using Lulu Direct Buy Button
 
@@ -284,6 +288,8 @@ home-manager.users.mike.programs.atuin = {
 
 - Officially launched my book.
 - Improved a lot of design aspects of the book website, especially the purchase flow.
+- Published ["Anti-Patterns in Software Blogging"](https://refactoringenglish.com/blog/anti-patterns-software-blogging/)
+- Published ["Why are Agent Harnesses so Dumb?"](https://mtlynch.io/why-are-coding-agents-so-dumb/)
 
 ### Lessons learned
 
