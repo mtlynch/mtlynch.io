@@ -58,12 +58,22 @@ I initially planned not to put much effort into the print version. The PDF versi
 
 But then a reader named Alexey Zubkov reached out to me with a few suggestions and offered to work with me on the typography. And he pointed out all these things I never noticed, but then once he pointed them out, they felt like huge, glaring errors.
 
-One of the big things I didn't realize was that the font I was using supported kerning, but Asciidoctor wasn't using it. Asciidoctor can't read kerning from new style font formats, so I used AI to add a build step that calculated all the letter combinations in the book and then created a custom font file with XX in those.
+One of the big things I didn't realize was that the font I was using supported kerning, but Asciidoctor wasn't using it. Without kerning, Asciidoctor just places letters with constant margins from each other, but when it honors the font's kerning, it places letters according to what the font says looks good.
+
+Kerning's impact is most obvious in combinations like "Yo":
 
 {{<img src="kerning-absent.webp" max-width="600px">}}
-{{<img src="kerning-applied.webp" max-width="600px">}}
+{{<img src="kerning-applied.webp" max-width="600px" caption="Without kerning (top) vs. with kerning (bottom)">}}
 
-I made a little slideshow to show how a single page evolved over 30 separate typography improvements, and I'm not even showing the changes that didn't affect that particular page.
+With kerning, part of the "o" actually appeears directly under the "Y"
+
+{{<img src="yo-overlap.webp" max-width="600px">}}
+
+Thw two letters can share that space because the font designer knows the combination works, whereas if it was "yo," they couldn't overlap because then the letters would collide.
+
+And that's just one change!
+
+I made a little slideshow to show how a single page evolved over 30 separate typography improvements, and this still leaves out a lot of improvements that had no impact on the example page:
 
 <div id="book-slideshow" role="region" aria-label="Book page revisions">
   <figure>
