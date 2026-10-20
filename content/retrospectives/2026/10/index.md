@@ -111,6 +111,8 @@ Here were my launch week promotional activities, in decreasing order of impact o
 - Launch announcement to book email list
 - Launch announcement to mtlynch.io email list
 
+![alt text](image.png)
+
 Here are some high-level metrics comparing launch week sales to the prior week for reference:
 
 | Metric               | Prior Week  | Launch Week   | Change               |
@@ -126,15 +128,11 @@ Here are some high-level metrics comparing launch week sales to the prior week f
 | Sale revenue (total) | $355.56     | $3,669.83     | {{<delta-cell>}}     |
 | **Profit (total)**   | **$339.09** | **$2,254.43** | **{{<delta-cell>}}** |
 
-![alt text](image.png)
-
-An
-
 ## My experience using Lulu Direct Buy Button
 
 I'm selling the print copies of the book through Lulu, using a feature they recently added called Direct Buy Button. The basic idea is that you upload your book as a PDF, and they give you a link where people can buy a print version. It's a significantly more lightweight experience than something like Shopify or WooCommerce where you have to manage a whole ecommerce platform.
 
-My overall experience with Lulu has been
+My overall experience with Lulu has been okay. They deliver on the core promise, which is that they make it easy to sell an book through a link, but they're missing a lot of complementary features that would make the experience smooth.
 
 ### Positives
 
@@ -208,7 +206,7 @@ measured take on OO and its strong GC-based auto-memory management.
 {{</*/example*/>}}
 ```
 
-I also wrote Asciidoctor plugins to improve the rendering to look more like this:
+I also wrote an Asciidoctor plugin to improve the callouts to look like this instead of what I was limited to with native Asciidoctor:
 
 {{<img src="bad-example.webp">}}
 
