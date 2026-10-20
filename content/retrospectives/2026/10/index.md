@@ -67,13 +67,13 @@ Kerning's impact is most obvious in combinations like "Yo":
 
 With kerning, part of the "o" actually appeears directly under the "Y"
 
-{{<img src="yo-overlap.webp" max-width="600px">}}
+{{<img src="yo-overlap.webp" max-width="300px">}}
 
 Thw two letters can share that space because the font designer knows the combination works, whereas if it was "yo," they couldn't overlap because then the letters would collide.
 
 And that's just one change!
 
-I made a little slideshow to show how a single page evolved over 30 separate typography improvements, and this still leaves out a lot of improvements that had no impact on the example page:
+I made a little slideshow to show how a single page evolved over about 30 separate typography improvements, and this still leaves out a lot of improvements that had no impact on the example page:
 
 <div id="book-slideshow" role="region" aria-label="Book page revisions">
   <figure>
@@ -96,9 +96,22 @@ I made a little slideshow to show how a single page evolved over 30 separate typ
 
 ## My book's launch week
 
-I normally cover the previous month in these retros, but since I'm late and the October launch is fresh in my mind, I'll cover it here.
+I normally cover the previous month in these retros, which would be September, but since I'm late and the October launch is fresh in my mind, I'll cover it here.
 
-So, a quick by the numbers comparing sales to the prior week for reference:
+I officially launched my book! Launch week was October 4th to 11th. I offered a print version for the first time and offered a limited-time 30% discount on both the print and digital versions.
+
+Here were my launch week promotional activities, in decreasing order of impact on sales:
+
+- Published [Anti-Patterns in Software Blogging](https://refactoringenglish.com/blog/anti-patterns-software-blogging/)
+  - Went to #1 on [Lobsters](https://lobste.rs/s/rwdufq/anti_patterns_software_blogging), [/r/programming](https://www.reddit.com/r/programming/comments/1wzw4cw/antipatterns_in_software_blogging/) and peaked at #8 on [Hacker News](https://news.ycombinator.com/item?id=49992257)
+- Published ["Why are Agent Harnesses so Dumb?"](https://mtlynch.io/why-are-coding-agents-so-dumb/)
+  - It got a decent response on [Hacker News](https://news.ycombinator.com/item?id=50020947) and [Lobsters](https://lobste.rs/s/t5htlf/why_are_coding_agents_so_dumb)
+- Launch announcement [on Hacker News](https://news.ycombinator.com/item?id=49964837)
+  - Never made it to the front page
+- Launch announcement to book email list
+- Launch announcement to mtlynch.io email list
+
+Here are some high-level metrics comparing launch week sales to the prior week for reference:
 
 | Metric               | Prior Week  | Launch Week   | Change               |
 | -------------------- | ----------- | ------------- | -------------------- |
@@ -113,26 +126,63 @@ So, a quick by the numbers comparing sales to the prior week for reference:
 | Sale revenue (total) | $355.56     | $3,669.83     | {{<delta-cell>}}     |
 | **Profit (total)**   | **$339.09** | **$2,254.43** | **{{<delta-cell>}}** |
 
-Here were my launch week promotional activities, in decreasing order of impact on the book:
-
-- Published [Anti-Patterns in Software Blogging](https://refactoringenglish.com/blog/anti-patterns-software-blogging/)
-  - Went to #1 on [Lobsters](https://lobste.rs/s/rwdufq/anti_patterns_software_blogging), [/r/programming](https://www.reddit.com/r/programming/comments/1wzw4cw/antipatterns_in_software_blogging/) and peaked at #8 on [Hacker News](https://news.ycombinator.com/item?id=49992257)
-- Published ["Why are Agent Harnesses so Dumb?"](https://mtlynch.io/why-are-coding-agents-so-dumb/)
-  - It got a decent response on [Hacker News](https://news.ycombinator.com/item?id=50020947) and [Lobsters](https://lobste.rs/s/t5htlf/why_are_coding_agents_so_dumb)
-- Launch announcement [on Hacker News](https://news.ycombinator.com/item?id=49964837)
-  - Never made it to the front page
-- Launch announcement to book email list
-- Launch announcement to mtlynch.io email list
-
 ![alt text](image.png)
 
 An
 
+## My experience using Lulu Direct Buy Button
+
+I'm selling the print copies of the book through Lulu, using a feature they recently added called Direct Buy Button. The basic idea is that you upload your book as a PDF, and they give you a link where people can buy a print version. It's a significantly more lightweight experience than something like Shopify or WooCommerce where you have to manage a whole ecommerce platform.
+
+My overall experience with Lulu has been
+
+### Positives
+
+- Fees are transparent and clear.
+- Lulu handles fulfillment, so the book goes straight from the printer to the customer.
+- It's easy to get up and running.
+- The integration with Stripe Connect means authors don't pay double fees (rather than once to Lulu and once to Stripe for payout).
+- Customers haven't reported any issues checking out.
+- It's print-on-demand, so you can order in any quantity, down to a single book.
+- It's easy to update the contents of the book, and the changes go live instantly for all future orders.
+
+### Negatives
+
+- There's no programmatic way to see order information.
+  - Direct Buy Button doesn't support webhooks or any kind of order query API.
+  - I reached out to support to see if I was missing something, and they said that the dev team intentionally designed Lulu Direct Buy Button as "a closed ecosystem" but did not elaborate one why anyone would want that.
+  - This is the biggest headache because it means I can't programmatically react to purchases, like giving the customer access to the PDF version or the web version.
+  - Confusingly, there is an API for order status, but it only works for orders created by API, so I'd have to reimplement all the server-side logic of Buy Button myself.
+- Each product can have exactly one price.
+  - I wanted to offer a discounted price for customers who pre-ordered the ebook, but there's no way to offer different prices or discount codes.
+  - As a workaround, I had to create a second, identical book with its own price, but now it means any time I want to update the content of my book, I have to apply the change to two different products.
+- There's no way to order a test print.
+  - If I make a change to the book that could affect the print, I want to do a test print first, but I can't mark a draft as "not ready for customers." As soon as I update a draft, that's the draft that ships to customers.
+  - I worked around this by creating a _third_ copy of the book that I use for test prints.
+- Lulu's CSV export omits important information.
+  - You can export order information as a CSV, but you have to do that manually.
+  - I considered building code on top of this, because there's an undocumented GraphQL API for fetching the order CSV, but they invalidate sessions every day or so and make every login go through a CAPTCHA, so it would be a pain to try to call programmatically.
+  - Bizarrely, the order export has no information about when the orders occurred. There's no date or timestamp column.
+  - The CSV export also hides customer information like name and email unless the customer opted in to marketing. And I appreciate Lulu reducing spam, but it's also a bit annoying that Lulu views these as Lulu customers rather than my customers. And Lulu exposes this information anyway in the dashboard, but you just can't dump it in aggregate.
+- You need to provide a return address even if you don't accept returns.
+  - I ended up having to register a virtual mailbox, which is a whole other pain in the butt.
+  - I wish Lulu just offered a "recycle the book if you don't want it" refund option.
+  - The current setup means customers have to ship a book to me across the country, but I'm just going to recycle it because I can't do anything with a used copy of my book.
+- Lulu makes it hard for authors to understand their earnings.
+  - They show "Revenue" in a lot of places, but my earnings dashboard said I'd earned $0 even after $2k in sales.
+  - I was able to calculate it manually by downloading all my orders as a spreadsheet.
+- Support is pretty bad.
+  - It took several days to respond to my questions, and the answers were unsatisfying.
+
 ## Converting my book from Asciidoc to Markdown
 
-I got so tired of Asciidoc syntax that I spent a day writing (largely with AI) a Markdown to Asciidoc compiler.
+I wrote my book in Asciidoc because it was the only tool I'm aware of that outputs to PDF, EPUB, and HTML. But by the end, I got so tired of Asciidoc syntax that I spent a day writing (largely with AI) a Markdown to Asciidoc compiler.
 
-Before, to render an example callout like this, I had to write gross Asciidoc that looked like this:
+Here's an example of the difference. My book contains a lot of example callouts like this:
+
+{{<img src="bad-example-before.webp">}}
+
+Before, to render callout like the above, I had to write gross Asciidoc that looked like this:
 
 ```asciidoc
 [.bad-example-block]
@@ -146,19 +196,25 @@ Before, to render an example callout like this, I had to write gross Asciidoc th
 --
 ```
 
-And it's especially annoying because the GOOD and the XX are the same in every good example, but Asciidoc doesn't support templates.
+The syntax above is especially annoying because most of that is boilerplate that appears in every example, but Asciidoc doesn't support templates, so I have to repeat all the boilerplate every time.
 
 So, I wrote my own Markdown compiler that supports Hugo-style templates. So, now, when I want to generate a bad example callout, I write this simpler and more readable shortcode:
 
 <!-- prettier-ignore -->
 ```markdown
-{{</*example type="bad" heading="Use confusing jargon."*/>}}
-Go is an excellent programming language for beginners because
-of its measured take on OO and its strong GC-based auto-memory management.
+{{</*example type="bad" header="Use confusing jargon."*/>}}
+Go is an excellent programming language for beginners because of its
+measured take on OO and its strong GC-based auto-memory management.
 {{</*/example*/>}}
 ```
 
-The example callouts were where the Markdown syntax was most obviously cleaner, but it also allowed me to stop thinking about Asciidoc's confusing rules, like how Asciidoctor sometimes converts straight quotes to curly quotes, but sometimes it doesn't. With Markdown, I can just write straight quotes everywhere, and my Markdown-to-Asciidoc compiler makes sure they render as curly quotes in the final version.
+I also wrote Asciidoctor plugins to improve the rendering to look more like this:
+
+{{<img src="bad-example.webp">}}
+
+The example callouts were where the Markdown syntax was most obviously cleaner, but it also allowed me to stop thinking about Asciidoc's confusing rules.
+
+Asciidoc sometimes converts straight quotes to curly quotes, but sometimes it doesn't. With Markdown, I can just write straight quotes everywhere, and my Markdown-to-Asciidoc compiler makes sure they render as curly quotes in the final version.
 
 ## Tool recommendation: Atuin
 
@@ -203,11 +259,20 @@ home-manager.users.mike.programs.atuin = {
 
 ## Blog posts I enjoyed
 
-- [Cryptic Comments on an NPR Spotify Show](https://www.thisamericanlife.org/897/transcript): This is a recent episode of _This American Life_ about a producer who found strange comments on an . I read the transcript and then listened to the audio, but I wish I'd listened to the audio first because it was more fun that way. Spoiler: it's the real-life manifestation of The Onion's 2014-but-still-timely video: ["Teens Migrating From Facebook To Comments Section Of Slow-Motion Deer Video."](https://www.youtube.com/watch?v=a4mMY2Kl3GY)
+- [Cryptic Comments on an NPR Spotify Show](https://www.thisamericanlife.org/897/transcript)
+  - This is a recent episode of _This American Life_ about a producer who found strange comments on an interview with author Elizabeth Gilbert.
+  - I read the transcript and then listened to the audio, but I wish I'd listened to the audio first because it was more fun that way.
+  - Spoiler: it's the real-life manifestation of The Onion's 2014-but-still-timely video: ["Teens Migrating From Facebook To Comments Section Of Slow-Motion Deer Video."](https://www.youtube.com/watch?v=a4mMY2Kl3GY)
 - [Every layer of review makes you 10x slower](https://apenwarr.ca/log/20260316-every-layer-of-review-makes-you-10x-slower)
   - This post is the best articulation I've found about the cognitive dissonance I feel about how much of a speedup I expect from AI vs. how much I experience in practice:
     > Code a simple bug fix: 30 minutes. Get it code reviewed by the peer next to you: 5 hours... AI’s direct impact on this problem is minimal. Okay, so Claude can code it in 3 minutes instead of 30? That’s super, Claude, great work. Now you either get to spend 27 minutes reviewing the code yourself in a back-and-forth loop with the AI (this is actually kinda fun); or you save 27 minutes and submit unverified code to the code reviewer, who will still take 5 hours like before, but who will now be mad that you’re making them read the slop that you were too lazy to read yourself.
-- [A Marginal-Utility Case for Stealing My Grandmother’s Pain Pills](https://morewrong.lol/?post=marignal-utility-grandmothers-pain-pills) - This is a parody of LessWrong (popular rationalist site) that I thought was pretty funny. I then saw [JeffTK describe it as AI-written](https://news.ycombinator.com/item?id=50098276) and thought it was too funny to be AI-generated. The only thing that makes me think it's AI-written is the number of articles (68) that are on this site that seems to have appeared out of nowhere. It also links to a Substack parody called Smugstack featuring articles like ["I'm an Anti-Racist Educator. It's Not My Job to Educate You."](https://smugstack.lol/p/its-not-my-job-to-educate-you/) I don't know what to make of it because all the articles are like two or three orders of magnitude funnier than anything I've seen AI produce, but I can't imagine this author was privately writing stuff this good for this long, and nobody noticed until now. My best guess is that the author has a good sense of humor and is injecting the core jokes but is using AI to flesh out the specifics.
+- [A Marginal-Utility Case for Stealing My Grandmother’s Pain Pills](https://morewrong.lol/?post=marignal-utility-grandmothers-pain-pills)
+  - This is a parody of LessWrong (popular rationalist site) that I thought was pretty funny.
+  - I saw [JeffTK describe it as AI-written](https://news.ycombinator.com/item?id=50098276) and thought it was too funny to be AI-generated. The only thing that makes me think it's AI-written is the number of articles (68) that are on this site that seems to have appeared out of nowhere.
+  - It also links to a Substack parody called Smugstack featuring gems like ["I'm an Anti-Racist Educator. It's Not My Job to Educate You"](https://smugstack.lol/p/its-not-my-job-to-educate-you/):
+    > Another participant said he was confused by two slides that seemed to contradict each other. I thanked him for showing the group how quickly men become hostile when asked to hold complexity. He said he wasn’t hostile. I asked everyone to notice that he had now interrupted a woman twice. He put his hand down. I said withdrawal is also a form of domination. He put it up again. We took an unscheduled break so I could regulate after what he had put me through.
+  - I don't know what to make of the site because all the articles are like two or three orders of magnitude funnier than anything I've seen AI produce, which suggests human writing, but I can't imagine this author was privately writing stuff this good for this long, and nobody noticed until now.
+  - My best guess is that the author has a good sense of humor and is injecting the core jokes but is using AI to flesh out the specifics.
 
 ## Wrap up
 
