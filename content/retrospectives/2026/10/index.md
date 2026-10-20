@@ -58,18 +58,16 @@ I initially planned not to put much effort into the print version. The PDF versi
 
 But then a reader named Alexey Zubkov reached out to me with a few suggestions and offered to work with me on the typography. And he pointed out all these things I never noticed, but then once he pointed them out, they felt like huge, glaring errors.
 
-One of the big things I didn't realize was that the font I was using supported kerning, but Asciidoctor wasn't using it. Without kerning, Asciidoctor just places letters with constant margins from each other, but when it honors the font's kerning, it places letters according to what the font says looks good.
-
-Kerning's impact is most obvious in combinations like "Yo":
+One of my blind spots was that I wasn't using my font's kerning. Without kerning, Asciidoctor just places letters with constant spacing from each other, but when it honors the font's kerning, it places letters according to what the font says looks good.
 
 {{<img src="kerning-absent.webp" max-width="600px">}}
 {{<img src="kerning-applied.webp" max-width="600px" caption="Without kerning (top) vs. with kerning (bottom)">}}
 
-With kerning, part of the "o" actually appeears directly under the "Y"
+With kerning, part of the "o" appeears directly under the "Y"
 
 {{<img src="yo-overlap.webp" max-width="300px">}}
 
-Thw two letters can share that space because the font designer knows the combination works, whereas if it was "yo," they couldn't overlap because then the letters would collide.
+The two letters can share that space because the font designer knows the combination works, whereas if it was lowercase "yo," they couldn't overlap because then the letters would collide.
 
 And that's just one change!
 
