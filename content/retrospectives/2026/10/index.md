@@ -1,7 +1,7 @@
 ---
 title: "Refactoring English: Month 22"
 date: "2026-10-21"
-description: TODO - One-line summary
+description: I officially launched my book.
 custom_css: true
 ---
 
@@ -17,7 +17,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 ## Highlights
 
--
+- I officially launched my book.
 
 ## Goal grades
 
@@ -109,7 +109,7 @@ Here were my launch week promotional activities, in decreasing order of impact o
 - Launch announcement to book email list
 - Launch announcement to mtlynch.io email list
 
-![alt text](image.png)
+{{<img src="launch-timeline.webp">}}
 
 Here are some high-level metrics comparing launch week sales to the prior week for reference:
 
@@ -141,9 +141,10 @@ My overall experience with Lulu has been okay. They deliver on the core promise,
 ### Positives
 
 - Fees are transparent and clear.
+- Print quality is good.
 - Lulu handles fulfillment, so the book goes straight from the printer to the customer.
 - It's easy to get up and running.
-- The integration with Stripe Connect means authors don't pay double fees (rather than once to Lulu and once to Stripe for payout).
+- The integration with Stripe Connect means authors don't pay double fees for the sales platform and the payment platform.
 - Customers haven't reported any issues checking out.
 - It's print-on-demand, so you can order in any quantity, down to a single book.
 - It's easy to update the contents of the book, and the changes go live instantly for all future orders.
@@ -155,30 +156,31 @@ My overall experience with Lulu has been okay. They deliver on the core promise,
   - I reached out to support to see if I was missing something, and they said that the dev team intentionally designed Lulu Direct Buy Button as "a closed ecosystem" but did not elaborate one why anyone would want that.
   - This is the biggest headache because it means I can't programmatically react to purchases, like giving the customer access to the PDF version or the web version.
   - Confusingly, there is an API for order status, but it only works for orders created by API, so I'd have to reimplement all the server-side logic of Buy Button myself.
+  - There's an undocumented GraphQL API for fetching the orders as a CSV, but Lulu invalidates sessions daily and makes every login go through a CAPTCHA, so it would be a pain to try to build automation on top of that API.
 - Each product can have exactly one price.
   - I wanted to offer a discounted price for customers who pre-ordered the ebook, but there's no way to offer different prices or discount codes.
   - As a workaround, I had to create a second, identical book with its own price, but now it means any time I want to update the content of my book, I have to apply the change to two different products.
-- There's no way to order a test print.
-  - If I make a change to the book that could affect the print, I want to do a test print first, but I can't mark a draft as "not ready for customers." As soon as I update a draft, that's the draft that ships to customers.
+- There's no built-in support for ordering a test print before releasing a version to customers.
+  - If I make a change to the book that could affect the print, I want to do a test print first.
+  - I can't mark a draft as "not ready for customers." As soon as I update a draft, that's the draft that ships to customers.
   - I worked around this by creating a _third_ copy of the book that I use for test prints.
 - Lulu's CSV export omits important information.
   - You can export order information as a CSV, but you have to do that manually.
-  - I considered building code on top of this, because there's an undocumented GraphQL API for fetching the order CSV, but they invalidate sessions every day or so and make every login go through a CAPTCHA, so it would be a pain to try to call programmatically.
   - Bizarrely, the order export has no information about when the orders occurred. There's no date or timestamp column.
-  - The CSV export also hides customer information like name and email unless the customer opted in to marketing. And I appreciate Lulu reducing spam, but it's also a bit annoying that Lulu views these as Lulu customers rather than my customers. And Lulu exposes this information anyway in the dashboard, but you just can't dump it in aggregate.
+  - The CSV export also hides customer information like name and email unless the customer opted in to marketing. And I appreciate Lulu fighting spam, but it's annoying that Lulu views these as Lulu customers rather than my customers. And Lulu exposes this information anyway in the dashboard, but you just can't dump it in aggregate.
 - You need to provide a return address even if you don't accept returns.
   - I ended up having to register a virtual mailbox, which is a whole other pain in the butt.
   - I wish Lulu just offered a "recycle the book if you don't want it" refund option.
   - The current setup means customers have to ship a book to me across the country, but I'm just going to recycle it because I can't do anything with a used copy of my book.
 - Lulu makes it hard for authors to understand their earnings.
   - They show "Revenue" in a lot of places, but my earnings dashboard said I'd earned $0 even after $2k in sales.
-  - I was able to calculate it manually by downloading all my orders as a spreadsheet.
-- Support is pretty bad.
+  - I was able to calculate my earnings manually by downloading all my orders as a spreadsheet.
+- Customer support is pretty bad.
   - It took several days to respond to my questions, and the answers were unsatisfying.
 
 ## Converting my book from Asciidoc to Markdown
 
-I wrote my book in Asciidoc because it was the only tool I'm aware of that outputs to PDF, EPUB, and HTML. But by the end, I got so tired of Asciidoc syntax that I spent a day writing (largely with AI) a Markdown to Asciidoc compiler.
+I wrote my book in Asciidoc because it was the only tool I could find that outputs to PDF, EPUB, and HTML. But by the end, I got so tired of Asciidoc syntax that I spent a day writing (largely with AI) a Markdown to Asciidoc compiler so that I could stop writing in Asciidoc.
 
 Here's an example of the difference. My book contains a lot of example callouts like this:
 
@@ -200,7 +202,7 @@ Before, to render callout like the above, I had to write gross Asciidoc that loo
 
 The syntax above is especially annoying because most of that is boilerplate that appears in every example, but Asciidoc doesn't support templates, so I have to repeat all the boilerplate every time.
 
-So, I wrote my own Markdown compiler that supports Hugo-style templates. So, now, when I want to generate a bad example callout, I write this simpler and more readable shortcode:
+I wrote my own Markdown compiler that supports Hugo-style templates. Now, when I want to generate a bad example callout, I write this simpler and more readable shortcode:
 
 <!-- prettier-ignore -->
 ```markdown
@@ -214,15 +216,13 @@ I also wrote an Asciidoctor plugin to improve the callouts to look like this ins
 
 {{<img src="bad-example.webp">}}
 
-The example callouts were where the Markdown syntax was most obviously cleaner, but it also allowed me to stop thinking about Asciidoc's confusing rules.
-
-Asciidoc sometimes converts straight quotes to curly quotes, but sometimes it doesn't. With Markdown, I can just write straight quotes everywhere, and my Markdown-to-Asciidoc compiler makes sure they render as curly quotes in the final version.
+The example callouts were where the Markdown syntax was most obviously cleaner, but it also allowed me to stop thinking about Asciidoc's confusing and inconsistent rules like [when a straight quote becomes a curly quote](https://docs.asciidoctor.org/asciidoc/latest/text/quotation-marks-and-apostrophes/). I've set it up so that I just write straight quotes everywhere, and my compiler worries about translating them to the right Asciidoc syntax for curly quotes.
 
 ## Tool recommendation: Atuin
 
-Atuin has been on my list for like a year to check out. I like the idea of it. I don't know if deployment got easier since I last checked in because I recall a dependency on Postgres that I was dreading. But then when I finally set aside a couple of hours to install it, I was done in about five minutes.
+I've been meaning to try out [Atuin](https://atuin.sh/) for about a year. It's a tool that collects your full terminal history and can sync it across machines. Every time I'm struggling to remember a command I typed a few days ago and I've lost it to bash's confusing history management rules, I think, "I should really look into Atuin..." And then I keep putting it off.
 
-Installing Atuin was especially easy because I use NixOS, so a basic configuration just looked like this:
+I finally set aside a few hours to set up Atuin, and it took me less than five minutes to install. I use NixOS, so a basic configuration just looked like this:
 
 ```nix
 home-manager.users.mike.programs.atuin = {
@@ -237,6 +237,8 @@ Now, the way I search my shell history is:
 
 - `Up Arrow`: Triggers [`history-search-backward`](https://www.gnu.org/software/bash/manual/html_node/Commands-For-History.html#index-history_002dsearch_002dbackward-_0028_0029), bash's built in search for the current session
 - `Ctrl+R`: Triggers Atuin to search over all commands across all sessions.
+
+I'm enjoying Atuin. It does exactly what it says. If I know that I've ever typed a command on the terminal, Atuin lets me find it quickly.
 
 My final Atuin config looks like this:
 
@@ -280,16 +282,15 @@ home-manager.users.mike.programs.atuin = {
 
 ### What got done?
 
--
+- Officially launched my book.
+- Improved a lot of design aspects of the book website, especially the purchase flow.
 
 ### Lessons learned
 
--
+- Publishing print books is both harder and easier than I expected.
+  - It's easier in that print on demand eliminates a lot of the hassle I anticipated of having to carry inventory and manage logistics.
+  - It's harder in that it means integrating with another platform, and the options are either complex platforms with lots of integration options or simple platforms with no integration options.
 
 ### Goals for next month
 
 -
-
-### Requests for help
-
-TODO
