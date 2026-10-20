@@ -81,7 +81,7 @@ I made a little slideshow to show how a single page evolved over 30 separate typ
 
 <script src="slideshow.js" defer></script>
 
-## Launch week
+## My book's launch week
 
 I normally cover the previous month in these retros, but since I'm late and the October launch is fresh in my mind, I'll cover it here.
 
@@ -100,15 +100,16 @@ So, a quick by the numbers comparing sales to the prior week for reference:
 | Sale revenue (total) | $355.56     | $3,669.83     | {{<delta-cell>}}     |
 | **Profit (total)**   | **$339.09** | **$2,254.43** | **{{<delta-cell>}}** |
 
-Here were my launch week promotional activities:
+Here were my launch week promotional activities, in decreasing order of impact on the book:
 
-- Launch announcement on Hacker News
-- Launch announcement to book email list
-- Launch announcement to mtlynch.io email list
 - Published [Anti-Patterns in Software Blogging](https://refactoringenglish.com/blog/anti-patterns-software-blogging/)
   - Went to #1 on [Lobsters](https://lobste.rs/s/rwdufq/anti_patterns_software_blogging), [/r/programming](https://www.reddit.com/r/programming/comments/1wzw4cw/antipatterns_in_software_blogging/) and peaked at #8 on [Hacker News](https://news.ycombinator.com/item?id=49992257)
 - Published ["Why are Agent Harnesses so Dumb?"](https://mtlynch.io/why-are-coding-agents-so-dumb/)
   - It got a decent response on [Hacker News](https://news.ycombinator.com/item?id=50020947) and [Lobsters](https://lobste.rs/s/t5htlf/why_are_coding_agents_so_dumb)
+- Launch announcement [on Hacker News](https://news.ycombinator.com/item?id=49964837)
+  - Never made it to the front page
+- Launch announcement to book email list
+- Launch announcement to mtlynch.io email list
 
 ![alt text](image.png)
 
