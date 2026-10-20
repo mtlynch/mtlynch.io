@@ -60,6 +60,9 @@ But then a reader named Alexey Zubkov reached out to me with a few suggestions a
 
 One of the big things I didn't realize was that the font I was using supported kerning, but Asciidoctor wasn't using it. Asciidoctor can't read kerning from new style font formats, so I used AI to add a build step that calculated all the letter combinations in the book and then created a custom font file with XX in those.
 
+{{<img src="kerning-absent.webp" max-width="600px">}}
+{{<img src="kerning-applied.webp" max-width="600px">}}
+
 I made a little slideshow to show how a single page evolved over 30 separate typography improvements, and I'm not even showing the changes that didn't affect that particular page.
 
 <div id="book-slideshow" role="region" aria-label="Book page revisions">
