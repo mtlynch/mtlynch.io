@@ -17,7 +17,10 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 ## Highlights
 
-- I officially launched my book.
+- I launched my book.
+- I made lots of typography improvements to the book.
+- I've had mixed experiences with Lulu Direct Buy Button.
+- I created a Markdown to Asciidoc compiler so I can stop writing in Asciidoc.
 
 ## Goal grades
 
@@ -57,6 +60,46 @@ September was the second best month of visitors for the book, though I didn't di
 Most visitors arrived because a reader submitted my ["How to Write an Effective Software Design Document"](https://refactoringenglish.com/excerpts/write-an-effective-design-doc/) post to both /r/programming and Hacker News, and the post took off in both places.
 
 The post's success was surprising because the same article had been submitted to Hacker News [nine times before](https://hn.algolia.com/?dateRange=all&page=0&prefix=true&query=https%3A%2F%2Frefactoringenglish.com%2Fexcerpts%2Fwrite-an-effective-design-doc%2F&sort=byPopularity&type=story) and never took off. Tenth time's the charm, as they say. And I'd [submitted the post to /r/programming](https://old.reddit.com/r/programming/comments/1uevttg/how_to_write_an_effective_software_design_document/) a few months ago, and it _did_ take off, but I guess everyone forgot or was happy to [read it again two months later](https://old.reddit.com/r/programming/comments/1wd1jt9/how_to_write_an_effective_software_design_document/).
+
+## My book's launch week
+
+I normally cover the previous month in these retros, which would be September, but since I'm late and the October launch is fresh in my mind, I'll cover it here.
+
+I officially launched my book! Launch week was October 4th to 11th. I offered a print version for the first time and offered a limited-time 30% discount on both the print and digital versions.
+
+Here were my launch week promotional activities, in decreasing order of impact on sales:
+
+- Published ["Anti-Patterns in Software Blogging"](https://refactoringenglish.com/blog/anti-patterns-software-blogging/)
+  - Went to #1 on [Lobsters](https://lobste.rs/s/rwdufq/anti_patterns_software_blogging), [/r/programming](https://www.reddit.com/r/programming/comments/1wzw4cw/antipatterns_in_software_blogging/) and peaked at #8 on [Hacker News](https://news.ycombinator.com/item?id=49992257)
+- Published ["Why are Agent Harnesses so Dumb?"](https://mtlynch.io/why-are-coding-agents-so-dumb/)
+  - It got a decent response on [Hacker News](https://news.ycombinator.com/item?id=50020947) and [Lobsters](https://lobste.rs/s/t5htlf/why_are_coding_agents_so_dumb)
+- Launch announcement [on Hacker News](https://news.ycombinator.com/item?id=49964837)
+  - Never made it to the front page
+- Launch announcement to book email list
+- Launch announcement to mtlynch.io email list
+
+{{<img src="launch-timeline.webp" caption="Unique visitors to book site during launch week">}}
+
+Here are some high-level metrics comparing launch week sales to the prior week for reference:
+
+<div id="launch-week-sales">
+  <canvas id="launch-week-sales-chart" role="img" aria-label="Copies sold on the left axis, and revenue and profit in US dollars on the right axis, comparing the prior week with launch week. Ebook and print are stacked to show totals. Exact values are in the table below."></canvas>
+</div>
+
+<script type="module" src="launch-week-sales.js"></script>
+
+| Metric               | Prior Week  | Launch Week   | Change               |
+| -------------------- | ----------- | ------------- | -------------------- |
+| Unique visitors      | 2,379       | 23,478        | {{<delta-cell>}}     |
+| Sale count (ebook)   | 8           | 70            | {{<delta-cell>}}     |
+| Sale revenue (ebook) | $355.56     | $1,897.41     | {{<delta-cell>}}     |
+| Profit (ebook)       | $339.09     | $1,801.27     | {{<delta-cell>}}     |
+| Sale count (print)   | 0           | 57            | {{<delta-cell>}}     |
+| Sale revenue (print) | $0          | $1,772.42     | {{<delta-cell>}}     |
+| Profit (print)       | $0          | $453.16       | {{<delta-cell>}}     |
+| Sale count (total)   | 8           | 127           | {{<delta-cell>}}     |
+| Sale revenue (total) | $355.56     | $3,669.83     | {{<delta-cell>}}     |
+| **Profit (total)**   | **$339.09** | **$2,254.43** | **{{<delta-cell>}}** |
 
 ## The evolution of the print version
 
@@ -107,46 +150,6 @@ I made a little slideshow to show how a single page evolved over about 30 separa
 </div>
 
 <script src="slideshow.js" defer></script>
-
-## My book's launch week
-
-I normally cover the previous month in these retros, which would be September, but since I'm late and the October launch is fresh in my mind, I'll cover it here.
-
-I officially launched my book! Launch week was October 4th to 11th. I offered a print version for the first time and offered a limited-time 30% discount on both the print and digital versions.
-
-Here were my launch week promotional activities, in decreasing order of impact on sales:
-
-- Published ["Anti-Patterns in Software Blogging"](https://refactoringenglish.com/blog/anti-patterns-software-blogging/)
-  - Went to #1 on [Lobsters](https://lobste.rs/s/rwdufq/anti_patterns_software_blogging), [/r/programming](https://www.reddit.com/r/programming/comments/1wzw4cw/antipatterns_in_software_blogging/) and peaked at #8 on [Hacker News](https://news.ycombinator.com/item?id=49992257)
-- Published ["Why are Agent Harnesses so Dumb?"](https://mtlynch.io/why-are-coding-agents-so-dumb/)
-  - It got a decent response on [Hacker News](https://news.ycombinator.com/item?id=50020947) and [Lobsters](https://lobste.rs/s/t5htlf/why_are_coding_agents_so_dumb)
-- Launch announcement [on Hacker News](https://news.ycombinator.com/item?id=49964837)
-  - Never made it to the front page
-- Launch announcement to book email list
-- Launch announcement to mtlynch.io email list
-
-{{<img src="launch-timeline.webp" caption="Unique visitors to book site during launch week">}}
-
-Here are some high-level metrics comparing launch week sales to the prior week for reference:
-
-<div id="launch-week-sales">
-  <canvas id="launch-week-sales-chart" role="img" aria-label="Copies sold on the left axis, and revenue and profit in US dollars on the right axis, comparing the prior week with launch week. Ebook and print are stacked to show totals. Exact values are in the table below."></canvas>
-</div>
-
-<script type="module" src="launch-week-sales.js"></script>
-
-| Metric               | Prior Week  | Launch Week   | Change               |
-| -------------------- | ----------- | ------------- | -------------------- |
-| Unique visitors      | 2,379       | 23,478        | {{<delta-cell>}}     |
-| Sale count (ebook)   | 8           | 70            | {{<delta-cell>}}     |
-| Sale revenue (ebook) | $355.56     | $1,897.41     | {{<delta-cell>}}     |
-| Profit (ebook)       | $339.09     | $1,801.27     | {{<delta-cell>}}     |
-| Sale count (print)   | 0           | 57            | {{<delta-cell>}}     |
-| Sale revenue (print) | $0          | $1,772.42     | {{<delta-cell>}}     |
-| Profit (print)       | $0          | $453.16       | {{<delta-cell>}}     |
-| Sale count (total)   | 8           | 127           | {{<delta-cell>}}     |
-| Sale revenue (total) | $355.56     | $3,669.83     | {{<delta-cell>}}     |
-| **Profit (total)**   | **$339.09** | **$2,254.43** | **{{<delta-cell>}}** |
 
 ## My experience using Lulu Direct Buy Button
 
