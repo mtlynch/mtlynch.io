@@ -156,6 +156,11 @@ Lulu Direct Buy Button is a significantly more lightweight experience than somet
 
 My overall experience with Lulu has been okay. They deliver on the core promise, which is that they make it easy to sell an book through a link, but they're missing a lot of complementary features that would make the experience smooth.
 
+{{<gallery>}}
+{{<img src="refactoring-english-print.webp" max-width="295px">}}
+{{<img src="refactoring-english-print-open.webp" max-width="510px">}}
+{{</gallery>}}
+
 ### Positives
 
 - Fees are transparent and clear.
