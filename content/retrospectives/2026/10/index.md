@@ -33,7 +33,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 This is finally complete!
 
-I got caught in a loop because there's a one week turnaround between ordering a print and getting to see what a physical copy looks like. So, I'd order a print and make some improvements while I was waiting. By the time I received the test print, I wanted to include the last week of improvements, so I had to order another test print and wait another week. And while I was waiting, I made more improvements...
+I got caught in a loop because there's a one-week turnaround between ordering a print and getting to see what a physical copy looks like. So, I'd order a print and make some improvements while I was waiting. By the time I received the test print, I wanted to include the last week of improvements, so I had to order another test print and wait another week. And while I was waiting, I made more improvements...
 
 Finally, I had to decide that a version was good enough and that it was ready for customers, but I'm continuing to make small tweaks on a rolling release basis.
 
@@ -49,13 +49,13 @@ I ended up spending a lot more time than I expected touching up the print versio
 - **Result**: Published ["Anti-Patterns in Software Blogging"](https://refactoringenglish.com/blog/anti-patterns-software-blogging/) and ["Why are Agent Harnesses so Dumb?"](https://mtlynch.io/why-are-coding-agents-so-dumb/) during my book's launch week
 - **Grade**: A
 
-Both posts reached the front page of Hacker News, Lobsters, and /r/programming. I was happy with these results, especially because one of my selling points of the book is that you can writing helps customers find you. It was nice to prove that with blog posts that led readers to purchase the book.
+Both posts reached the front page of Hacker News, Lobsters, and /r/programming. I was happy with these results, especially because one of my selling points of the book is that writing helps customers find you. It was nice to prove that with blog posts that led readers to purchase the book.
 
 ## _Refactoring English_ metrics
 
 {{<project-metrics project="refactoring_english">}}
 
-September was the second best month of visitors for the book, though I didn't directly cause it.
+September was the second-best month of visitors for the book, though I didn't directly cause it.
 
 Most visitors arrived because a reader submitted my ["How to Write an Effective Software Design Document"](https://refactoringenglish.com/excerpts/write-an-effective-design-doc/) post to both /r/programming and Hacker News, and the post took off in both places.
 
@@ -70,7 +70,7 @@ I officially launched my book! Launch week was October 4th to 11th. I offered a 
 Here were my launch week promotional activities, in decreasing order of impact on sales:
 
 - Published ["Anti-Patterns in Software Blogging"](https://refactoringenglish.com/blog/anti-patterns-software-blogging/)
-  - Went to #1 on [Lobsters](https://lobste.rs/s/rwdufq/anti_patterns_software_blogging), [/r/programming](https://www.reddit.com/r/programming/comments/1wzw4cw/antipatterns_in_software_blogging/) and peaked at #8 on [Hacker News](https://news.ycombinator.com/item?id=49992257)
+  - Went to #1 on [Lobsters](https://lobste.rs/s/rwdufq/anti_patterns_software_blogging) and [/r/programming](https://www.reddit.com/r/programming/comments/1wzw4cw/antipatterns_in_software_blogging/) and peaked at #8 on [Hacker News](https://news.ycombinator.com/item?id=49992257)
 - Published ["Why are Agent Harnesses so Dumb?"](https://mtlynch.io/why-are-coding-agents-so-dumb/)
   - It got a decent response on [Hacker News](https://news.ycombinator.com/item?id=50020947) and [Lobsters](https://lobste.rs/s/t5htlf/why_are_coding_agents_so_dumb)
 - Submitted an announcement [to Hacker News](https://news.ycombinator.com/item?id=49964837)
@@ -112,7 +112,7 @@ One of my blind spots was that I wasn't using my font's pair-specific kerning. W
 {{<img src="kerning-absent.webp" max-width="600px">}}
 {{<img src="kerning-applied.webp" max-width="600px" caption="Without kerning (top) vs. with kerning (bottom)">}}
 
-Notice that with pair-specific kerning, part of the "o" appeears directly under the "Y"
+Notice that with pair-specific kerning, part of the "o" appears directly under the "Y."
 
 {{<img src="yo-overlap.webp" max-width="300px">}}
 
@@ -212,7 +212,7 @@ Here's an example of the difference. My book contains a lot of example callouts 
 
 {{<img src="bad-example-before.webp">}}
 
-Before, to render callout like the above, I had to write gross Asciidoc that looked like this:
+Before, to render a callout like the above, I had to write gross Asciidoc that looked like this:
 
 ```asciidoc
 [.bad-example-block]
@@ -261,7 +261,7 @@ The biggest decision I had to make was whether to let Atuin take over my up arro
 
 Now, the way I search my shell history is:
 
-- `Up Arrow`: Triggers [`history-search-backward`](https://www.gnu.org/software/bash/manual/html_node/Commands-For-History.html#index-history_002dsearch_002dbackward-_0028_0029), bash's built in search for the current session
+- `Up Arrow`: Triggers [`history-search-backward`](https://www.gnu.org/software/bash/manual/html_node/Commands-For-History.html#index-history_002dsearch_002dbackward-_0028_0029), bash's built-in search for the current session
 - `Ctrl+R`: Triggers Atuin to search over all commands across all sessions.
 
 I'm enjoying Atuin. It does exactly what it says. If I know that I've ever typed a command on the terminal, Atuin lets me find it quickly.
