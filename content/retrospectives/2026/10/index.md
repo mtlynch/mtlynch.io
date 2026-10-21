@@ -28,7 +28,11 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: Launched the book (though a week late)
 - **Grade**: A
 
-TODO
+This is finally complete!
+
+I got caught in a loop because there's a one week turnaround between ordering a print and getting to see what a physical copy looks like. So, I'd order a print, make some improvements while I was waiting. By the time I received the test print, I wanted to include the last week of improvements, so I had to order another test print and wait another week. And while I was waiting, I made more improvements...
+
+Finally, I had to decide that a version was good enough and that it was ready for customers, but I'm continuing to make small tweaks on a rolling release basis.
 
 ### Pitch to two podcasts
 
@@ -39,10 +43,10 @@ I ended up spending a lot more time than I expected touching up the print versio
 
 ### Publish a new blog post that attracts readers to the book's website
 
-- **Result**: Published ["Anti-Patterns in Software Blogging"](https://refactoringenglish.com/blog/anti-patterns-software-blogging/) and ["Why are Agent Harnesses so Dumb?"](https://mtlynch.io/why-are-coding-agents-so-dumb/)
+- **Result**: Published ["Anti-Patterns in Software Blogging"](https://refactoringenglish.com/blog/anti-patterns-software-blogging/) and ["Why are Agent Harnesses so Dumb?"](https://mtlynch.io/why-are-coding-agents-so-dumb/) during my book's launch week
 - **Grade**: A
 
-TODO
+Both posts reached the front page of Hacker News, Lobsters, and /r/programming. I was happy with these results, especially given that a lot of my launch week sales came from people who had read my blog posts that week. One of my selling points in the book is that you can integrate writing into your business because blogging is a way to help customers find you, so it was nice to be able to prove that with the book itself.
 
 ## _Refactoring English_ metrics
 
@@ -121,7 +125,7 @@ Here were my launch week promotional activities, in decreasing order of impact o
 - Launch announcement to book email list
 - Launch announcement to mtlynch.io email list
 
-{{<img src="launch-timeline.webp">}}
+{{<img src="launch-timeline.webp" caption="Unique visitors to book site during launch week">}}
 
 Here are some high-level metrics comparing launch week sales to the prior week for reference:
 
@@ -144,11 +148,11 @@ Here are some high-level metrics comparing launch week sales to the prior week f
 | Sale revenue (total) | $355.56     | $3,669.83     | {{<delta-cell>}}     |
 | **Profit (total)**   | **$339.09** | **$2,254.43** | **{{<delta-cell>}}** |
 
-I was happy with these results, especially given that a lot of the sales came from people who had read my blog posts that week. One of my selling points in the book is that you can integrate writing into your business because blogging is a way to help customers find you, and I think these results demonstrate that.
-
 ## My experience using Lulu Direct Buy Button
 
-I'm selling the print copies of the book through Lulu, using a feature they recently added called Direct Buy Button. The basic idea is that you upload your book as a PDF, and they give you a link where people can buy a print version. It's a significantly more lightweight experience than something like Shopify or WooCommerce where you have to manage a whole ecommerce platform.
+I'm selling the print copies of the book through Lulu, using a feature they recently added called Direct Buy Button. The basic idea is that you upload your book as a PDF, and they give you a link where people can buy a print version. Lulu offers print on demand, so they print a new copy for the customer and ship it directly to them.
+
+Lulu Direct Buy Button is a significantly more lightweight experience than something like Shopify or WooCommerce where you have to manage a whole ecommerce platform. It's probably closest to something like Amazon Kindle Direct Publishing, though without the pain of dealing with the giant Amazon machine.
 
 My overall experience with Lulu has been okay. They deliver on the core promise, which is that they make it easy to sell an book through a link, but they're missing a lot of complementary features that would make the experience smooth.
 
@@ -305,8 +309,9 @@ home-manager.users.mike.programs.atuin = {
 
 - Publishing print books is both harder and easier than I expected.
   - It's easier in that print on demand eliminates a lot of the hassle I anticipated of having to carry inventory and manage logistics.
-  - It's harder in that it means integrating with another platform, and the options are either complex platforms with lots of integration options or simple platforms with no integration options.
+  - It's harder in that selling a print copy means integrating with another sales platform, and the options are either complex platforms with lots of integration options or simple platforms with no integration options.
 
 ### Goals for next month
 
--
+- Finish remaining typography improvements for the book.
+- Publish one new blog post.
