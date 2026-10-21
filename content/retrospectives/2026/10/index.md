@@ -58,14 +58,14 @@ The post's success was surprising because the same article had been submitted to
 
 I initially planned not to put much effort into the print version. The PDF version already looked pretty good, and customers have been buying it for over a year with no complaints about the design, so I wasn't planning to become a typography wonk over a print version.
 
-Then, a reader named Alexey Zubkov reached out to me with a few suggestions and offered to work with me on my book's typography. Once Alexy pointed out the issues, they felt like huge, glaring errors, even though I'd been staring at this book for years and never noticed them.
+Then, a reader named Alexey Zubkov reached out to me with a few suggestions for my book and offered to help me with the typography. Once Alexey pointed out the issues, they felt like huge, glaring errors, even though I'd been staring at this book for years and never noticed them.
 
-One of my blind spots was that I wasn't using my font's kerning. Without kerning, Asciidoctor just places letters with constant spacing from each other. When it honors the font's kerning, it places letters according to what the font says looks good.
+One of my blind spots was that I wasn't using my font's pair-specific kerning. Without kerning, pair-specific kerning Asciidoctor gives each letter a fixed slot of horizontal space regardless of which letter follows it. When it honors pair-specific kerning, Asciidoctor places letters adjusts the horizontal spacing for certain combinations like "Yo":
 
 {{<img src="kerning-absent.webp" max-width="600px">}}
 {{<img src="kerning-applied.webp" max-width="600px" caption="Without kerning (top) vs. with kerning (bottom)">}}
 
-Notice that with kerning, part of the "o" appeears directly under the "Y"
+Notice that with pair-specific kerning, part of the "o" appeears directly under the "Y"
 
 {{<img src="yo-overlap.webp" max-width="300px">}}
 
