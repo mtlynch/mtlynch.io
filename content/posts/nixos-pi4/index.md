@@ -36,7 +36,7 @@ I recently attempted this process with a later build ([`nixos-image-sd-card-25.0
 
 ## Decompress the NixOS microSD image
 
-The NixOS team compresses their microSD images with a compression format called [Zstandard](https://facebook.github.io/zstd/), an open-source format from Facebook.
+The NixOS team compresses their microSD images with a compression format called [Zstandard](https://en.wikipedia.org/wiki/Zstd), an open-source format from Facebook.
 
 To decompress the NixOS image, download the latest Zstandard release for your platform:
 
