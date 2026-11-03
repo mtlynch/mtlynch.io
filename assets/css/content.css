@@ -155,10 +155,6 @@
     p {
       margin: 1.5rem 0;
     }
-
-    pre code {
-      font-size: 1em;
-    }
   }
 
   .notice.notice-info {
