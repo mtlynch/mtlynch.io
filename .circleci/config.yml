@@ -161,7 +161,7 @@ jobs:
           at: ./
       - run:
           name: Install Surge CLI
-          command: npm install --no-save --package-lock=false surge@0.43.0
+          command: npm install --no-save --package-lock=false surge@0.56.0
       - run:
           name: Print Surge version
           command: ./node_modules/.bin/surge --version
@@ -176,7 +176,7 @@ jobs:
           at: ./
       - run:
           name: Install Surge CLI
-          command: npm install --no-save --package-lock=false surge@0.43.0
+          command: npm install --no-save --package-lock=false surge@0.56.0
       - run:
           name: Print Surge version
           command: ./node_modules/.bin/surge --version

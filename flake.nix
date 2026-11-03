@@ -38,22 +38,22 @@
       libxml2 = hugo-nixpkgs.legacyPackages.${system}.libxml2;
       exiftool = hugo-nixpkgs.legacyPackages.${system}.exiftool;
 
-      # Surge 0.43.0 is not yet in nixpkgs, so package it directly from npm.
+      # Package Surge directly from npm to match the CircleCI version.
       surge = pkgs.buildNpmPackage {
         pname = "surge";
-        version = "0.43.0";
+        version = "0.56.0";
 
         src = pkgs.fetchurl {
-          url = "https://registry.npmjs.org/surge/-/surge-0.43.0.tgz";
-          hash = "sha512-I9X4//GQVTL/teTB/OcmO5wgIvFAv9O8Qq1PJWOIF7KZvpiN6Jd6UTaUXqOuTwH7cb00/IEhyLDUdf7d8LoiCQ==";
+          url = "https://registry.npmjs.org/surge/-/surge-0.56.0.tgz";
+          hash = "sha512-fbU0seoACH1jmXUDLGDibdHcwKoDBDDaSgOKjDmj5SFzKyWiTyJ5H8mhGbrYjg9Hboz7Si5+JpMVlUABuH7Plg==";
         };
         postPatch = ''
           cp ${pkgs.fetchurl {
-            url = "https://raw.githubusercontent.com/sintaxi/surge/v0.43.0/package-lock.json";
-            hash = "sha256-P6MXXH+3yuOSexcUv6ykTjSiEI6J2wnxqbBTaYYA9HI=";
+            url = "https://raw.githubusercontent.com/sintaxi/surge/v0.56.0/package-lock.json";
+            hash = "sha256-+eFTOkvh6Mkd2YbXXVkOpTRPAikBtD8REo0UGnbNLvw=";
           }} package-lock.json
         '';
-        npmDepsHash = "sha256-81FdvkEZm4J3AJwEAgZoZ3uWFRsDybsH8CAMNhRpVWw=";
+        npmDepsHash = "sha256-Kg9fLn+nx0kHSvfK2ew2v5y1gOTbSWnCDjAU1KHlKHk=";
         dontNpmBuild = true;
       };
     in {
