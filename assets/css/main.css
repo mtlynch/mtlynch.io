@@ -168,7 +168,6 @@ pre {
 code {
   font-family: var(--code-font);
   font-weight: 400;
-  background-color: var(--alt-bg-color);
   color: var(--fg-color);
   padding: 0.2rem 0.4rem;
 }
