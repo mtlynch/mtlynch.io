@@ -30,7 +30,7 @@ if got, want := GetUser(), "dummyUser"; got != want {
 }
 ```
 
-The `if got, want :=`: pattern works even better in [table-driven tests](https://go.dev/wiki/TableDrivenTests). Here's an example from [my library for parsing social media handles](https://github.com/mtlynch/social-go/blob/5348ed8e66e318651c646aea4d72ef62481c30fa/twitter_test.go):
+The `if got, want :=` pattern works even better in [table-driven tests](https://go.dev/wiki/TableDrivenTests). Here's an example from [my library for parsing social media handles](https://github.com/mtlynch/social-go/blob/5348ed8e66e318651c646aea4d72ef62481c30fa/twitter_test.go):
 
 ```go
 func TestParseTwitterHandle(t *testing.T) {
