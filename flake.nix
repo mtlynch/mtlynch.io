@@ -29,13 +29,33 @@
     wordword-pkg,
   } @ inputs:
     flake-utils.lib.eachDefaultSystem (system: let
-      hugo = hugo-nixpkgs.legacyPackages.${system}.hugo;
+      pkgs = hugo-nixpkgs.legacyPackages.${system};
+      hugo = pkgs.hugo;
       nodejs = nodejs-nixpkgs.legacyPackages.${system}.nodejs_24;
       html-proofer = html-proofer-nixpkgs.legacyPackages.${system}.html-proofer;
       markdownlint = markdown-lint-nixpkgs.legacyPackages.${system}.markdownlint-cli2;
       wordword = wordword-pkg.packages.${system}.default;
       libxml2 = hugo-nixpkgs.legacyPackages.${system}.libxml2;
       exiftool = hugo-nixpkgs.legacyPackages.${system}.exiftool;
+
+      # Surge 0.43.0 is not yet in nixpkgs, so package it directly from npm.
+      surge = pkgs.buildNpmPackage {
+        pname = "surge";
+        version = "0.43.0";
+
+        src = pkgs.fetchurl {
+          url = "https://registry.npmjs.org/surge/-/surge-0.43.0.tgz";
+          hash = "sha512-I9X4//GQVTL/teTB/OcmO5wgIvFAv9O8Qq1PJWOIF7KZvpiN6Jd6UTaUXqOuTwH7cb00/IEhyLDUdf7d8LoiCQ==";
+        };
+        postPatch = ''
+          cp ${pkgs.fetchurl {
+            url = "https://raw.githubusercontent.com/sintaxi/surge/v0.43.0/package-lock.json";
+            hash = "sha256-P6MXXH+3yuOSexcUv6ykTjSiEI6J2wnxqbBTaYYA9HI=";
+          }} package-lock.json
+        '';
+        npmDepsHash = "sha256-81FdvkEZm4J3AJwEAgZoZ3uWFRsDybsH8CAMNhRpVWw=";
+        dontNpmBuild = true;
+      };
     in {
       devShells.default = hugo-nixpkgs.legacyPackages.${system}.mkShell {
         packages = [
@@ -44,6 +64,7 @@
           libxml2
           nodejs
           markdownlint
+          surge
           wordword
           html-proofer
         ];
@@ -54,6 +75,7 @@
           echo "htmlproofer" "$(htmlproofer --version)"
           (markdownlint-cli2 --help || test "$?" -eq 2) | sed -n '1p'
           echo "node" "$(node --version)"
+          echo "surge" "$(surge --version)"
           hugo version
         '';
       };

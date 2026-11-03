@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# Usage (after building the site):
+#   SURGE_TOKEN='your-token' dev-scripts/deploy-to-surge
+
+set -e
+set -o pipefail
+set -u
+
+: "${SURGE_TOKEN:?SURGE_TOKEN must be set}"
+
+surge_args=(
+  --project ./public
+  --domain https://mtlynch.io
+)
+
+if [[ -n "${CIRCLE_BRANCH-}" && "${CIRCLE_BRANCH}" != master ]]; then
+  surge_args+=(
+    --preview
+    --message "${CIRCLE_BRANCH} at ${CIRCLE_SHA1-unknown commit}"
+  )
+  printf 'Surge preview deployment:\n\n'
+else
+  printf 'Surge production deployment:\n\n'
+fi
+
+surge "${surge_args[@]}"
+printf '\n'

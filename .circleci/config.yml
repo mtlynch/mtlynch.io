@@ -118,7 +118,6 @@ jobs:
           paths:
             - dev-scripts
             - public
-            - netlify.toml
       - save_cache:
           key: resources-gen-v{{ .Environment.RESOURCES_CACHE_VERSION }}
           paths:
@@ -161,14 +160,14 @@ jobs:
       - attach_workspace:
           at: ./
       - run:
-          name: Install netlify CLI
-          command: npm install netlify-cli@23.7.3 --save-dev
+          name: Install Surge CLI
+          command: npm install --no-save --package-lock=false surge@0.43.0
       - run:
-          name: Print netlify version
-          command: ./node_modules/.bin/netlify version
+          name: Print Surge version
+          command: ./node_modules/.bin/surge --version
       - run:
           name: Deploy a live draft
-          command: ./node_modules/.bin/netlify deploy --dir=public --site="${NETLIFY_SITE_ID}"
+          command: PATH="${PWD}/node_modules/.bin:${PATH}" ./dev-scripts/deploy-to-surge
   deploy:
     executor: node
     resource_class: small
@@ -176,14 +175,14 @@ jobs:
       - attach_workspace:
           at: ./
       - run:
-          name: Install netlify CLI
-          command: npm install netlify-cli@23.7.3 --save-dev
+          name: Install Surge CLI
+          command: npm install --no-save --package-lock=false surge@0.43.0
       - run:
-          name: Print netlify version
-          command: ./node_modules/.bin/netlify version
+          name: Print Surge version
+          command: ./node_modules/.bin/surge --version
       - run:
           name: Deploy to production
-          command: ./node_modules/.bin/netlify deploy --dir=public --site="${NETLIFY_SITE_ID}" --prod
+          command: PATH="${PWD}/node_modules/.bin:${PATH}" ./dev-scripts/deploy-to-surge
 workflows:
   version: 2
   test_deploy:

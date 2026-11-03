@@ -5,7 +5,21 @@
 
 ## Overview
 
-This is the source for https://mtlynch.io/.
+This is the source for <https://mtlynch.io/>.
+
+## Deployment
+
+CircleCI deploys the `master` branch to Surge at <https://mtlynch.io/>. It publishes every other branch as a Surge preview revision. Set `SURGE_TOKEN` in the CircleCI project's environment variables to authenticate deployments.
+
+The RSS redirects in `static/ROUTER` require Surge Pro. Provision Pro outside CI before deploying to avoid an interactive upgrade prompt.
+
+Build and deploy the production site manually with:
+
+```bash
+nix develop
+hugo --environment production --minify --cleanDestinationDir
+SURGE_TOKEN='your-token' dev-scripts/deploy-to-surge
+```
 
 ## Code style guides
 
