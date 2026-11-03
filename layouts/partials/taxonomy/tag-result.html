@@ -17,7 +17,8 @@
     <a
       class="tag-result-image"
       href="{{ $destination }}"
-      aria-label="{{ $.Title }}"
+      aria-hidden="true"
+      tabindex="-1"
     >
       {{ partial "responsive-img.html" (dict "image" . "sizes" "(min-width: 768px) 280px, calc(100vw - 4rem)" "photoWidths" $.Site.Params.photoWidths) }}
     </a>
