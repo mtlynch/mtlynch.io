@@ -12,19 +12,20 @@
 {{ $loading := .loading | default "lazy" }}
 
 {{ $srcset := "" }}
-{{ range .photoWidths }}
-  {{- if le . $image.Width }}
-    {{ $resized := $image.Resize (printf "%dx" .) }}
-    {{ $srcset = printf "%s%s %dw, " $srcset $resized.RelPermalink . }}
+{{ if reflect.IsImageResourceProcessable $image }}
+  {{ range .photoWidths }}
+    {{- if le . $image.Width }}
+      {{ $resized := $image.Resize (printf "%dx" .) }}
+      {{ $srcset = printf "%s%s %dw, " $srcset $resized.RelPermalink . }}
+    {{ end }}
   {{ end }}
+  {{ $srcset = printf "%s%s %dw" $srcset $image.RelPermalink $image.Width }}
 {{ end }}
-{{ $srcset = printf "%s%s %dw" $srcset $image.RelPermalink $image.Width }}
 
 
 <img
   {{ if $class }}class="{{ $class }}"{{ end }}
   src="{{ $image.RelPermalink }}"
-  srcset="{{ $srcset }}"
-  sizes="{{ $sizes }}"
+  {{ with $srcset }}srcset="{{ . }}" sizes="{{ $sizes }}"{{ end }}
   loading="{{ $loading }}"
 />

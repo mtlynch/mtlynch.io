@@ -92,7 +92,6 @@
     }
 
     code {
-      font-size: 1.5rem;
       background-color: unset;
       padding: 0;
     }
@@ -155,10 +154,6 @@
 
     p {
       margin: 1.5rem 0;
-    }
-
-    code {
-      font-size: 1em;
     }
   }
 

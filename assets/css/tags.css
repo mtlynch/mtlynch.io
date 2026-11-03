@@ -20,3 +20,69 @@
 .tag-notes {
   background-color: #f5ebfa;
 }
+
+.tag-results {
+  list-style: none;
+  margin: 3.2rem 0;
+  padding: 0;
+}
+
+.tag-result {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.6rem;
+  margin-bottom: 3.2rem;
+  font-size: 1.8rem;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 280px minmax(0, 1fr);
+    column-gap: 2.5rem;
+    align-items: start;
+
+    .tag-result-body {
+      grid-column: 2;
+    }
+  }
+}
+
+.tag-result-image {
+  display: flex;
+  justify-content: center;
+
+  img {
+    object-fit: contain;
+
+    @media screen and (min-width: 768px) {
+      max-height: 200px;
+    }
+  }
+}
+
+.tag-result-body {
+  overflow-wrap: anywhere;
+
+  h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.8rem;
+    line-height: 1.5;
+
+    a {
+      color: var(--fg-color);
+      font-weight: 700;
+
+      &:hover,
+      &:focus {
+        color: var(--link-color);
+      }
+    }
+  }
+
+  time {
+    display: block;
+  }
+
+  p,
+  .tag-result-description {
+    margin: 1rem 0 0;
+  }
+}
