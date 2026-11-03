@@ -1,0 +1,38 @@
+{{ $destination := .Params.ExternalLink | default .RelPermalink }}
+{{ $imageFilename := .Params.hero_image | default .Params.banner_image }}
+{{ if and (not $imageFilename) (eq .Type "book-reports") }}
+  {{ $imageFilename = "cover.jpg" }}
+{{ end }}
+{{ $image := false }}
+{{ if $imageFilename }}
+  {{ $image = .Resources.GetMatch $imageFilename }}
+  {{ if not $image }}
+    {{ errorf "Tag result for %s: image %q not found" .RelPermalink $imageFilename }}
+  {{ end }}
+{{ end }}
+
+
+<li class="tag-result">
+  {{ with $image }}
+    <a
+      class="tag-result-image"
+      href="{{ $destination }}"
+      aria-label="{{ $.Title }}"
+    >
+      {{ partial "responsive-img.html" (dict "image" . "sizes" "(min-width: 768px) 280px, calc(100vw - 4rem)" "photoWidths" $.Site.Params.photoWidths) }}
+    </a>
+  {{ end }}
+  <div class="tag-result-body">
+    <h2><a href="{{ $destination }}">{{ .Title }}</a></h2>
+    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+      {{ .Date.Format .Site.Params.dateFormat }}
+    </time>
+    {{ with .Params.description }}
+      <div class="tag-result-description">{{ . | markdownify }}</div>
+    {{ end }}
+    {{ if eq .Type "book-reports" }}
+      <p>My rating: <strong>{{ .Params.rating }}</strong> / 10</p>
+      {{ .Summary }}
+    {{ end }}
+  </div>
+</li>

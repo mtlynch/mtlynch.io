@@ -1,0 +1,14 @@
+{{ define "title" }}
+  {{ .Title }} ·
+  {{ .Site.Title }}
+{{ end }}
+{{ define "content" }}
+  <section class="container tag-page">
+    <h1>{{ .Title }}</h1>
+    <ul class="tag-results">
+      {{ range .Pages }}
+        {{ partial "taxonomy/tag-result.html" . }}
+      {{ end }}
+    </ul>
+  </section>
+{{ end }}
