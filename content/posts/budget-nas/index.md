@@ -199,7 +199,7 @@ In the 8 TB range, there aren't many drives below 7200 RPM, but you can go up to
 
 I initially tried checking [Backblaze's hard drive stats](https://www.backblaze.com/blog/backblaze-drive-stats-for-2021/) to avoid failure-prone disks, but they use drives on the pricier side. At one point, I was considering $400 drives for their impressively low 0.5% failure rate, but I realized it's irrational to spend twice as much to reduce the failure rate by a few percent.
 
-The last pitfall to avoid is shingled magnetic recording (SMR) technology. ZFS [performs poorly on SMR drives](https://www.servethehome.com/wd-red-smr-vs-cmr-tested-avoid-red-smr/), so if you're building a NAS, avoid [known SMR drives](https://www.truenas.com/community/resources/list-of-known-smr-drives.141/). If the drive is labeled as CMR, that's conventional magnetic recording, which is fine for ZFS.
+The last pitfall to avoid is shingled magnetic recording (SMR) technology. ZFS [performs poorly on SMR drives](https://www.servethehome.com/wd-red-smr-vs-cmr-tested-avoid-red-smr/), so if you're building a NAS, avoid [known SMR drives](https://web.archive.org/web/20261018011752/https://www.truenas.com/community/resources/list-of-known-smr-drives.141/). If the drive is labeled as CMR, that's conventional magnetic recording, which is fine for ZFS.
 
 I chose the [Toshiba N300](https://www.newegg.com/toshiba-n300-hdwg480xzsta-8tb/p/N82E16822149793) and the [Seagate IronWolf](https://www.newegg.com/seagate-ironwolf-st8000vn004-8tb/p/N82E16822184796). I saw positive reviews of both on the TrueNAS forums and reddit. Both models sold for $180-190, which was a good value for the storage space.
 

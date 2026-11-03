@@ -14,9 +14,11 @@
     {{ partial "twitter-card.html" . }}
     {{ partial "opengraph.html" . }}
 
-    {{ if .Permalink }}
-      <base href="{{ .Permalink }}" />
+    {{ if .RelPermalink }}
+      <base href="{{ .RelPermalink }}" />
     {{ end }}
+
+
     <title>{{ block "title" . }}{{- .Site.Title -}}{{ end }}</title>
 
     {{ if .Params.canonical_url }}
@@ -66,6 +68,10 @@
     />
     {{ if .HasShortcode "zestful-ad" }}
       <link rel="stylesheet" href="/css/zestful.css" media="screen" />
+    {{ end }}
+    {{ if .HasShortcode "delta-cell" }}
+      <link rel="stylesheet" href="/css/delta-cell.css" />
+      <script src="/js/delta-cell.js" defer></script>
     {{ end }}
 
     {{- if and .IsPage (eq .Type "retrospectives") (not (hasPrefix .Title "Notes from")) }}
