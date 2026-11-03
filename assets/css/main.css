@@ -162,6 +162,7 @@ pre {
     display: inline-block;
     background-color: inherit;
     color: inherit;
+    padding: 0.2rem 0.4rem;
   }
 }
 
@@ -169,15 +170,13 @@ code {
   font-family: var(--code-font);
   font-weight: 400;
   color: var(--fg-color);
-  padding: 0.2rem 0.4rem;
 }
 
 @supports (font-size-adjust: 1) {
   code:not(pre code) {
     /* 1ex takes the surrounding font's x-height; adjusting to 1 makes the
        code font's x-height equal to that size, regardless of its metrics.
-       em lengths and percentage font sizes use the unadjusted size, so keep
-       padding in rem. */
+       em lengths and percentage font sizes still use the unadjusted size. */
     font-size: 1ex;
     font-size-adjust: 1;
   }
