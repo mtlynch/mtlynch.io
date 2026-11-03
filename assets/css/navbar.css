@@ -51,8 +51,8 @@
       max-height: 0;
       width: 100%;
       background-color: var(--bg-color);
-      border-top: solid 2px var(--alt-bg-color);
-      border-bottom: solid 2px var(--alt-bg-color);
+      border-top: solid 2px var(--muted-color);
+      border-bottom: solid 2px var(--muted-color);
       transition:
         opacity 0.25s,
         max-height 0.15s linear;
@@ -83,7 +83,7 @@
 
     @media only screen and (max-width: 768px) {
       &:checked + label {
-        color: var(--alt-bg-color);
+        color: var(--muted-color);
       }
 
       &:checked + label + ul {
@@ -180,8 +180,8 @@
       max-height: 0;
       width: 100%;
       background-color: var(--bg-color);
-      border-top: solid 2px var(--alt-bg-color);
-      border-bottom: solid 2px var(--alt-bg-color);
+      border-top: solid 2px var(--muted-color);
+      border-bottom: solid 2px var(--muted-color);
       transition:
         opacity 0.25s,
         max-height 0.15s linear;
@@ -207,7 +207,7 @@
     }
 
     & #menu-toggle:checked + label {
-      color: var(--alt-bg-color);
+      color: var(--muted-color);
     }
 
     & #menu-toggle:checked + label + ul {
