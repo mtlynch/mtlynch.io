@@ -4,7 +4,7 @@
   --code-font: "Source Code Pro", "Lucida Console", monospace;
   --bg-color: #fafafa;
   --fg-color: #212121;
-  --alt-bg-color: #e0e0e0;
+  --muted-color: #e0e0e0;
   --alt-fg-color: #000;
   --link-color: #1565c0;
 }
@@ -148,7 +148,7 @@ pre {
   line-height: 2.6rem;
   margin: 2rem 0;
   padding: 2rem;
-  border: 1px solid var(--alt-bg-color);
+  border: 1px solid var(--muted-color);
   overflow-x: auto;
 
   /* Prevent Safari on iPhone from messing with text sizes. Michael has not
@@ -167,11 +167,20 @@ pre {
 
 code {
   font-family: var(--code-font);
-  font-size: 1.6rem;
   font-weight: 400;
-  background-color: var(--alt-bg-color);
   color: var(--fg-color);
   padding: 0.2rem 0.4rem;
+}
+
+@supports (font-size-adjust: 1) {
+  code:not(pre code) {
+    /* 1ex takes the surrounding font's x-height; adjusting to 1 makes the
+       code font's x-height equal to that size, regardless of its metrics.
+       em lengths and percentage font sizes use the unadjusted size, so keep
+       padding in rem. */
+    font-size: 1ex;
+    font-size-adjust: 1;
+  }
 }
 
 blockquote {
