@@ -13,12 +13,30 @@ CircleCI deploys the `master` branch to Surge at <https://mtlynch.io/>. It publi
 
 The RSS redirects in `static/ROUTER` require Surge Pro. Provision Pro outside CI before deploying to avoid an interactive upgrade prompt.
 
-Build and deploy the production site manually with:
+Without a mode flag, local deployments use the current Git branch: `master` deploys to production, and other branches deploy previews labeled with their branch and commit. A detached HEAD or missing Git checkout fails before publishing. The script does not use CircleCI environment variables to select a mode.
+
+Build and deploy the production site manually from `master` with:
 
 ```bash
 nix develop
+git switch master
 hugo --environment production --minify --cleanDestinationDir
 SURGE_TOKEN='your-token' dev-scripts/deploy-to-surge
+```
+
+On a feature branch, build and publish a preview with:
+
+```bash
+hugo --environment dev --minify --cleanDestinationDir
+SURGE_TOKEN='your-token' dev-scripts/deploy-to-surge
+```
+
+Callers without a Git checkout, including the CircleCI deployment jobs, must select `--preview` or `--production` explicitly. These flags deliberately override branch detection. An optional `--message MESSAGE` labels a preview revision. Invalid or conflicting arguments fail before publishing.
+
+Run the deployment regression tests without publishing with:
+
+```bash
+node --test dev-scripts/tests/deploy-to-surge.test.js
 ```
 
 ## Code style guides

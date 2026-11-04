@@ -63,6 +63,7 @@
           hugo
           libxml2
           nodejs
+          pkgs.git
           markdownlint
           surge
           wordword
