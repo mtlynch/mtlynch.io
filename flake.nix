@@ -316,8 +316,8 @@
           ];
 
           shellHook = ''
-            if [ ! -e node_modules ]; then
-              ln --symbolic --no-target-directory \
+            if [ -L node_modules ] || [ ! -e node_modules ]; then
+              ln --symbolic --force --no-target-directory \
                 ${pnpmDependencies}/node_modules node_modules
             fi
 

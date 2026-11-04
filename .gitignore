@@ -5,7 +5,7 @@ resources/
 .sw?
 push-preview
 config-preview.toml
-node_modules/
+node_modules
 .pnpm-store/
 
 # Scratch files for sharing data with AI agents.
