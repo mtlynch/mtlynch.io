@@ -11,7 +11,8 @@
   deploy.surge = {
     package = "packages.x86_64-linux.deploy-to-surge";
     system = "x86_64-linux";
-    branches = ":default";
+    branches = ":any";
+    in-repo = true;
     secrets = ["SURGE_TOKEN"];
   };
 }

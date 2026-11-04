@@ -7,6 +7,18 @@
 
 This is the source for https://mtlynch.io/.
 
+## Deployment
+
+NixCI deploys commits on `master` to https://mtlynch.io/ and publishes Surge previews for commits on other branches and pull requests. Preview deployment logs include the preview URL and a revision message identifying the Git ref and commit.
+
+Deployment requires the `SURGE_TOKEN` secret in NixCI. To deploy the current branch locally:
+
+```bash
+SURGE_TOKEN='your-token' nix run .#deploy-to-surge
+```
+
+Use `-- --preview` to force a preview without deploying to production.
+
 ## Code style guides
 
 New code should adhere to the appropriate Google Style guide for the given language:

@@ -50,27 +50,23 @@ done
 : "${SURGE_TOKEN:?SURGE_TOKEN must be set}"
 
 if [[ "${mode}" == auto ]]; then
-  branch="${NIX_CI_GIT_BRANCH:-}"
-  if [[ -z "${branch}" ]]; then
+  ref="${NIX_CI_GIT_REF:-}"
+  if [[ -z "${ref}" ]]; then
     branch="$(git branch --show-current)"
-  fi
-  if [[ -z "${branch}" ]]; then
-    printf 'Cannot select a deployment mode from a detached HEAD.\n' >&2
-    exit 1
+    if [[ -z "${branch}" ]]; then
+      printf 'Cannot select a deployment mode from a detached HEAD.\n' >&2
+      exit 1
+    fi
+    ref="refs/heads/${branch}"
   fi
 
-  if [[ "${branch}" == master ]]; then
+  if [[ "${ref}" == refs/heads/master ]]; then
     mode='production'
   else
     mode='preview'
     if [[ -z "${message}" ]]; then
-      if [[ -n "${NIX_CI_GIT_BRANCH:-}" ]]; then
-        : "${NIX_CI_GIT_COMMIT_SHA:?NIX_CI_GIT_COMMIT_SHA must be set}"
-        commit="${NIX_CI_GIT_COMMIT_SHA}"
-      else
-        commit="$(git rev-parse HEAD)"
-      fi
-      message="${branch} at ${commit}"
+      commit="$(git rev-parse HEAD)"
+      message="${ref} at ${commit}"
     fi
   fi
 fi
