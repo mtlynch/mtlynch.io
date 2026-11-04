@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 import subprocess
+import sys
 import tempfile
 import unittest
 
@@ -20,7 +21,7 @@ class LintXmlTests(unittest.TestCase):
         self.log = self.root / "xmllint.log"
         self.xmllint = self.bin / "xmllint"
         self.xmllint.write_text(
-            "#!/usr/bin/env python3\n"
+            f"#!{sys.executable}\n"
             "import os, sys\n"
             "with open(os.environ['XML_LOG'], 'a') as log:\n"
             "    log.write(sys.argv[-1] + '\\n')\n"

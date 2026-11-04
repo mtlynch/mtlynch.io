@@ -94,10 +94,6 @@
         path = ./dev-scripts/deploy-to-surge;
         name = "deploy-to-surge";
       };
-      checkExifDataScript = builtins.path {
-        path = ./dev-scripts/check-exif-data;
-        name = "check-exif-data";
-      };
       lintHtmlScript = builtins.path {
         path = ./dev-scripts/lint-html;
         name = "lint-html";
@@ -105,40 +101,44 @@
 
       exifMediaSource = pkgs.lib.fileset.toSource {
         root = ./.;
-        fileset = pkgs.lib.fileset.fileFilter (file:
-          builtins.any file.hasExt [
-            "avif"
-            "bmp"
-            "gif"
-            "heic"
-            "heif"
-            "jpeg"
-            "jpg"
-            "jxl"
-            "png"
-            "svg"
-            "tif"
-            "tiff"
-            "webp"
-            "3g2"
-            "3gp"
-            "asf"
-            "avi"
-            "flv"
-            "m2ts"
-            "m4v"
-            "mkv"
-            "mov"
-            "mp4"
-            "mpeg"
-            "mpg"
-            "mts"
-            "ogv"
-            "ts"
-            "webm"
-            "wmv"
-          ])
-        ./content;
+        fileset = pkgs.lib.fileset.unions [
+          ./dev-scripts/check-exif-data
+          (pkgs.lib.fileset.fileFilter (file:
+            builtins.any (extension: pkgs.lib.hasSuffix ".${extension}" (pkgs.lib.toLower file.name)) [
+              "avif"
+              "bmp"
+              "gif"
+              "heic"
+              "heif"
+              "jpeg"
+              "jpg"
+              "jxl"
+              "png"
+              "pdf"
+              "svg"
+              "tif"
+              "tiff"
+              "webp"
+              "3g2"
+              "3gp"
+              "asf"
+              "avi"
+              "flv"
+              "m2ts"
+              "m4v"
+              "mkv"
+              "mov"
+              "mp4"
+              "mpeg"
+              "mpg"
+              "mts"
+              "ogv"
+              "ts"
+              "webm"
+              "wmv"
+            ])
+          ./content)
+        ];
       };
 
       pnpmSource = pkgs.lib.fileset.toSource {
@@ -181,7 +181,6 @@
           buildPhase = ''
             export HOME="$TMPDIR/home"
             mkdir -p "$HOME"
-            export CI=1
             if [ -d ./dev-scripts ]; then
               patchShebangs ./dev-scripts
             fi
@@ -227,146 +226,113 @@
 
       deploy-to-surge = pkgs.writeShellApplication {
         name = "deploy-to-surge";
-        runtimeInputs = [pkgs.bash pkgs.coreutils pkgs.git surge];
+        runtimeInputs = [pkgs.bash pkgs.git surge];
         text = ''
-          if [[ "''${1-}" == --help ]]; then
-            bash ${deployToSurgeScript} "$@"
-            exit 0
-          fi
-
-          mode="''${1-}"
-          case "$mode" in
-            --production|--preview) shift ;;
-            *)
-              branch="''${NIX_CI_GIT_BRANCH-}"
-              if [[ -z "$branch" ]]; then
-                branch="$(git branch --show-current)"
-              fi
-              if [[ -z "$branch" ]]; then
-                echo 'Detached HEAD: select --preview or --production.' >&2
-                exit 1
-              fi
-              if [[ "$branch" == master ]]; then
-                mode=--production
-              else
-                mode=--preview
-                if [[ $# -eq 0 ]]; then
-                  if [[ -n "''${NIX_CI_GIT_BRANCH-}" ]]; then
-                    commit="''${NIX_CI_GIT_COMMIT_SHA:?NIX_CI_GIT_COMMIT_SHA must be set}"
-                  else
-                    commit="$(git rev-parse HEAD)"
-                  fi
-                  set -- --message "$branch at $commit"
-                fi
-              fi
-              ;;
-          esac
-
-          work_directory="$(mktemp --directory)"
-          trap 'rm --recursive --force "$work_directory"' EXIT
-          cd "$work_directory"
-          if [[ "$mode" == --preview ]]; then
-            ln --symbolic ${preview-site} public
-          else
-            ln --symbolic ${site} public
-          fi
-          bash ${deployToSurgeScript} "$mode" "$@"
+          exec bash ${deployToSurgeScript} \
+            --production-dir ${site} --preview-dir ${preview-site} "$@"
         '';
       };
-    in {
-      packages = {
-        inherit site preview-site check-external-links deploy-to-surge;
+    in
+      assert (builtins.fromJSON (builtins.readFile ./package.json)).packageManager == "pnpm@${pnpm.version}"; {
+        packages = {
+          inherit site preview-site check-external-links deploy-to-surge;
 
-        check-duplicate-words = mkBuildStep {
-          name = "check-duplicate-words";
-          command = "wordword --verbose ./content";
-          extraInputs = [wordword];
+          check-duplicate-words = mkBuildStep {
+            name = "check-duplicate-words";
+            command = "wordword --verbose ./content";
+            extraInputs = [wordword];
+          };
+          check-exif-data = mkBuildStep {
+            name = "check-exif-data";
+            command = "./dev-scripts/check-exif-data ./content";
+            extraInputs = [exiftool pkgs.findutils pkgs.gnugrep];
+            src = exifMediaSource;
+          };
+          check-dev-scripts = mkBuildStep {
+            name = "check-dev-scripts";
+            command = "python3 -B -m unittest discover --start-directory dev-scripts/tests";
+            extraInputs = [pkgs.python3 pkgs.findutils];
+          };
+          check-html = mkBuildStep {
+            name = "check-html";
+            command = ''
+              ln --symbolic ${site} public
+              ./dev-scripts/lint-html --quick
+            '';
+            extraInputs = [html-proofer];
+          };
+          check-markdown = mkBuildStep {
+            name = "check-markdown";
+            command = "./dev-scripts/lint-markdown";
+            extraInputs = [markdownlint];
+          };
+          check-prettier = mkBuildStep {
+            name = "check-prettier";
+            command = ''
+              ln --symbolic ${pnpmDependencies}/node_modules node_modules
+              ./dev-scripts/check-formatting
+            '';
+            extraInputs = [nodejs];
+          };
+          check-seo-metadata = mkBuildStep {
+            name = "check-seo-metadata";
+            command = ''
+              ln --symbolic ${site} public
+              ./dev-scripts/check-seo-metadata
+            '';
+            extraInputs = [pkgs.gnugrep];
+          };
+          check-trailing-newline = mkBuildStep {
+            name = "check-trailing-newline";
+            command = "./dev-scripts/check-trailing-newline";
+            extraInputs = [pkgs.git pkgs.findutils pkgs.gnugrep];
+            setup = ''
+              git init --quiet
+              git add --all
+            '';
+          };
+          check-trailing-whitespace = mkBuildStep {
+            name = "check-trailing-whitespace";
+            command = "./dev-scripts/check-trailing-whitespace";
+            extraInputs = [pkgs.gnugrep];
+          };
+          check-xml = mkBuildStep {
+            name = "check-xml";
+            command = ''
+              ln --symbolic ${site} public
+              ./dev-scripts/lint-xml
+            '';
+            extraInputs = [libxml2];
+          };
         };
-        check-exif-data = mkBuildStep {
-          name = "check-exif-data";
-          command = "bash ${checkExifDataScript} ./content";
-          extraInputs = [exiftool pkgs.findutils pkgs.gnugrep];
-          src = exifMediaSource;
-        };
-        check-html = mkBuildStep {
-          name = "check-html";
-          command = ''
-            ln --symbolic ${site} public
-            ./dev-scripts/lint-html --quick
-          '';
-          extraInputs = [html-proofer];
-        };
-        check-markdown = mkBuildStep {
-          name = "check-markdown";
-          command = "./dev-scripts/lint-markdown";
-          extraInputs = [markdownlint];
-        };
-        check-prettier = mkBuildStep {
-          name = "check-prettier";
-          command = ''
-            ln --symbolic ${pnpmDependencies}/node_modules node_modules
-            ./dev-scripts/check-formatting
-          '';
-          extraInputs = [nodejs];
-        };
-        check-seo-metadata = mkBuildStep {
-          name = "check-seo-metadata";
-          command = ''
-            ln --symbolic ${site} public
-            ./dev-scripts/check-seo-metadata
-          '';
-          extraInputs = [pkgs.gnugrep];
-        };
-        check-trailing-newline = mkBuildStep {
-          name = "check-trailing-newline";
-          command = "./dev-scripts/check-trailing-newline";
-          extraInputs = [pkgs.git pkgs.findutils pkgs.gnugrep];
-          setup = ''
-            git init --quiet
-            git add --all
-          '';
-        };
-        check-trailing-whitespace = mkBuildStep {
-          name = "check-trailing-whitespace";
-          command = "./dev-scripts/check-trailing-whitespace";
-          extraInputs = [pkgs.gnugrep];
-        };
-        check-xml = mkBuildStep {
-          name = "check-xml";
-          command = ''
-            ln --symbolic ${site} public
-            ./dev-scripts/lint-xml
-          '';
-          extraInputs = [libxml2];
-        };
-      };
 
-      devShells.default = pkgs.mkShell {
-        packages = [
-          exiftool
-          hugo
-          libxml2
-          nodejs
-          pnpm
-          pkgs.git
-          markdownlint
-          surge
-          wordword
-          html-proofer
-        ];
+        devShells.default = pkgs.mkShell {
+          packages = [
+            exiftool
+            hugo
+            libxml2
+            nodejs
+            pnpm
+            pkgs.python3
+            pkgs.git
+            markdownlint
+            surge
+            wordword
+            html-proofer
+          ];
 
-        shellHook = ''
-          wordword --version
-          echo "exiftool" "$(exiftool -ver)"
-          echo "htmlproofer" "$(htmlproofer --version)"
-          (markdownlint-cli2 --help || test "$?" -eq 2) | sed -n '1p'
-          echo "node" "$(node --version)"
-          echo "pnpm" "$(pnpm --version)"
-          echo "surge" "$(surge --version)"
-          hugo version
-        '';
-      };
+          shellHook = ''
+            wordword --version
+            echo "exiftool" "$(exiftool -ver)"
+            echo "htmlproofer" "$(htmlproofer --version)"
+            (markdownlint-cli2 --help || test "$?" -eq 2) | sed -n '1p'
+            echo "node" "$(node --version)"
+            echo "pnpm" "$(pnpm --version)"
+            echo "surge" "$(surge --version)"
+            hugo version
+          '';
+        };
 
-      formatter = hugo-nixpkgs.legacyPackages.${system}.alejandra;
-    });
+        formatter = hugo-nixpkgs.legacyPackages.${system}.alejandra;
+      });
 }

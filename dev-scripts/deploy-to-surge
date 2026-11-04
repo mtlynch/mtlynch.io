@@ -7,35 +7,53 @@ set -o pipefail
 set -u
 
 usage() {
-  printf 'Usage: %s [--preview|--production] [--message MESSAGE]\n' "$0"
+  printf 'Usage: %s [--preview|--production] [--message MESSAGE] [--production-dir DIR] [--preview-dir DIR] [--help]\n' "$0"
 }
 
-if [[ $# -eq 1 && "$1" == --help ]]; then
-  usage
-  exit 0
-fi
-
 mode='auto'
-case "${1-}" in
-  --preview) mode='preview'; shift ;;
-  --production) mode='production'; shift ;;
-esac
-
 message=''
-if [[ $# -eq 2 && "${1-}" == --message && -n "${2-}" ]]; then
-  message="$2"
-  shift 2
-fi
-
-if [[ $# -ne 0 ]]; then
-  usage >&2
-  exit 1
-fi
+production_dir='./public'
+preview_dir='./public'
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --preview|--production)
+      if [[ "${mode}" != auto ]]; then
+        usage >&2
+        exit 1
+      fi
+      mode="${1#--}"
+      shift
+      ;;
+    --message|--production-dir|--preview-dir)
+      if [[ -z "${2-}" || "${2-}" == --* ]]; then
+        usage >&2
+        exit 1
+      fi
+      case "$1" in
+        --message) message="$2" ;;
+        --production-dir) production_dir="$2" ;;
+        --preview-dir) preview_dir="$2" ;;
+      esac
+      shift 2
+      ;;
+    --help)
+      usage
+      exit 0
+      ;;
+    *)
+      usage >&2
+      exit 1
+      ;;
+  esac
+done
 
 : "${SURGE_TOKEN:?SURGE_TOKEN must be set}"
 
 if [[ "${mode}" == auto ]]; then
-  branch="$(git branch --show-current)"
+  branch="${NIX_CI_GIT_BRANCH:-}"
+  if [[ -z "${branch}" ]]; then
+    branch="$(git branch --show-current)"
+  fi
   if [[ -z "${branch}" ]]; then
     printf 'Cannot select a deployment mode from a detached HEAD.\n' >&2
     exit 1
@@ -46,7 +64,13 @@ if [[ "${mode}" == auto ]]; then
   else
     mode='preview'
     if [[ -z "${message}" ]]; then
-      message="${branch} at $(git rev-parse HEAD)"
+      if [[ -n "${NIX_CI_GIT_BRANCH:-}" ]]; then
+        : "${NIX_CI_GIT_COMMIT_SHA:?NIX_CI_GIT_COMMIT_SHA must be set}"
+        commit="${NIX_CI_GIT_COMMIT_SHA}"
+      else
+        commit="$(git rev-parse HEAD)"
+      fi
+      message="${branch} at ${commit}"
     fi
   fi
 fi
@@ -57,8 +81,13 @@ if [[ "${mode}" == production && -n "${message}" ]]; then
   exit 1
 fi
 
+project="${production_dir}"
+if [[ "${mode}" == preview ]]; then
+  project="${preview_dir}"
+fi
+
 surge_args=(
-  --project ./public
+  --project "${project}"
   --domain https://mtlynch.io
 )
 

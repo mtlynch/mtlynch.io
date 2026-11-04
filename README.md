@@ -31,7 +31,7 @@ dev-scripts/build-all-flake-targets
 
 Uploading requires [NixCI cache authentication](https://nix-ci.com/documentation/nix-ci-cache). To build without uploading, run `nix build` with the desired targets, such as `nix build .#site .#check-prettier`.
 
-NixCI builds all flake packages, development shells, and formatters for `x86_64-linux`. Package targets validate duplicate words, EXIF data, HTML, Markdown, formatting, SEO metadata, trailing newlines, trailing whitespace, and XML. The EXIF target checks all content media on every branch and is cached when media is unchanged.
+NixCI builds all flake packages, development shells, and formatters for `x86_64-linux`. Package targets validate duplicate words, EXIF data, HTML, Markdown, formatting, SEO metadata, trailing newlines, trailing whitespace, and XML. The EXIF target checks content media and PDFs on every branch and is cached when those files are unchanged.
 
 The network-enabled external-link check runs separately from sandboxed builds:
 
@@ -41,7 +41,7 @@ nix run .#check-external-links
 
 The flake also supports local builds on `aarch64-linux` and `aarch64-darwin`.
 
-Run the build-helper and deployment regression tests without uploading or publishing:
+NixCI runs the build-helper, deployment, and XML regression tests in the sandboxed `check-dev-scripts` package. Run them locally without uploading or publishing:
 
 ```bash
 python3 -B -m unittest discover --start-directory dev-scripts/tests
@@ -50,6 +50,8 @@ python3 -B -m unittest discover --start-directory dev-scripts/tests
 ## Deployment
 
 After all builds and tests pass, NixCI deploys `master` to https://mtlynch.io/ and publishes other branches as Surge preview revisions. Configure `SURGE_TOKEN` in the repository's NixCI secrets before enabling deployment.
+
+The external-link check gates deployment too: a third-party link failure can block production and preview publishing until the check passes.
 
 To deploy locally, set `SURGE_TOKEN` and run:
 

@@ -1,5 +1,6 @@
 .direnv
 flake.lock
+pnpm-lock.yaml
 node_modules/
 public/
 resources/
