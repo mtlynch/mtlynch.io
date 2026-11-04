@@ -25,7 +25,7 @@
     html-proofer-nixpkgs,
     hugo-nixpkgs,
   } @ inputs:
-    flake-utils.lib.eachSystem ["aarch64-darwin" "aarch64-linux" "x86_64-linux"] (system: let
+    flake-utils.lib.eachSystem ["x86_64-linux"] (system: let
       pkgs = hugo-nixpkgs.legacyPackages.${system};
       nodepkgs = nodejs-nixpkgs.legacyPackages.${system};
       hugo = pkgs.hugo;
@@ -36,26 +36,11 @@
       libxml2 = pkgs.libxml2;
       exiftool = pkgs.exiftool;
 
-      wordwordRelease =
-        {
-          aarch64-darwin = {
-            platform = "macos";
-            arch = "arm64";
-            hash = "sha256-4R9+7/p0TvxOIAX06BPXPtKzGJT0GWjxVhk8NPl2asE=";
-          };
-          aarch64-linux = {
-            platform = "linux";
-            arch = "arm64";
-            hash = "sha256-wgKF/uQLlR+XrgWKbwzCcohLKSyR2hRaDjh7h/FaQB4=";
-          };
-          x86_64-linux = {
-            platform = "linux";
-            arch = "amd64";
-            hash = "sha256-+CHzmQ08W7ZN47LWWo0lCVWkg7C6MX13UuAfV7+es3E=";
-          };
-        }.${
-          system
-        };
+      wordwordRelease = {
+        platform = "linux";
+        arch = "amd64";
+        hash = "sha256-+CHzmQ08W7ZN47LWWo0lCVWkg7C6MX13UuAfV7+es3E=";
+      };
       wordword = pkgs.stdenvNoCC.mkDerivation {
         pname = "wordword";
         version = "0.1.4";
