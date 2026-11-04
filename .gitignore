@@ -5,7 +5,6 @@ resources/
 .sw?
 push-preview
 config-preview.toml
-.netlify/state.json
 node_modules/
 
 # Scratch files for sharing data with AI agents.

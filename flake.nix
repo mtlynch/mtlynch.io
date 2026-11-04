@@ -29,13 +29,33 @@
     wordword-pkg,
   } @ inputs:
     flake-utils.lib.eachDefaultSystem (system: let
-      hugo = hugo-nixpkgs.legacyPackages.${system}.hugo;
+      pkgs = hugo-nixpkgs.legacyPackages.${system};
+      hugo = pkgs.hugo;
       nodejs = nodejs-nixpkgs.legacyPackages.${system}.nodejs_24;
       html-proofer = html-proofer-nixpkgs.legacyPackages.${system}.html-proofer;
       markdownlint = markdown-lint-nixpkgs.legacyPackages.${system}.markdownlint-cli2;
       wordword = wordword-pkg.packages.${system}.default;
       libxml2 = hugo-nixpkgs.legacyPackages.${system}.libxml2;
       exiftool = hugo-nixpkgs.legacyPackages.${system}.exiftool;
+
+      # Package Surge directly from npm to match the CircleCI version.
+      surge = pkgs.buildNpmPackage {
+        pname = "surge";
+        version = "0.56.0";
+
+        src = pkgs.fetchurl {
+          url = "https://registry.npmjs.org/surge/-/surge-0.56.0.tgz";
+          hash = "sha512-fbU0seoACH1jmXUDLGDibdHcwKoDBDDaSgOKjDmj5SFzKyWiTyJ5H8mhGbrYjg9Hboz7Si5+JpMVlUABuH7Plg==";
+        };
+        postPatch = ''
+          cp ${pkgs.fetchurl {
+            url = "https://raw.githubusercontent.com/sintaxi/surge/v0.56.0/package-lock.json";
+            hash = "sha256-+eFTOkvh6Mkd2YbXXVkOpTRPAikBtD8REo0UGnbNLvw=";
+          }} package-lock.json
+        '';
+        npmDepsHash = "sha256-Kg9fLn+nx0kHSvfK2ew2v5y1gOTbSWnCDjAU1KHlKHk=";
+        dontNpmBuild = true;
+      };
     in {
       devShells.default = hugo-nixpkgs.legacyPackages.${system}.mkShell {
         packages = [
@@ -43,7 +63,9 @@
           hugo
           libxml2
           nodejs
+          pkgs.git
           markdownlint
+          surge
           wordword
           html-proofer
         ];
@@ -54,6 +76,7 @@
           echo "htmlproofer" "$(htmlproofer --version)"
           (markdownlint-cli2 --help || test "$?" -eq 2) | sed -n '1p'
           echo "node" "$(node --version)"
+          echo "surge" "$(surge --version)"
           hugo version
         '';
       };
