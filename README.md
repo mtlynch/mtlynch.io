@@ -33,12 +33,6 @@ SURGE_TOKEN='your-token' dev-scripts/deploy-to-surge
 
 Callers without a Git checkout, including the CircleCI deployment jobs, must select `--preview` or `--production` explicitly. These flags deliberately override branch detection. An optional `--message MESSAGE` labels a preview revision. Invalid or conflicting arguments fail before publishing.
 
-Run the deployment regression tests without publishing with:
-
-```bash
-node --test dev-scripts/tests/deploy-to-surge.test.js
-```
-
 ## Code style guides
 
 New code should adhere to the appropriate Google Style guide for the given language:

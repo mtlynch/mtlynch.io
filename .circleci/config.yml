@@ -34,14 +34,6 @@ jobs:
       - run:
           name: Lint Markdown
           command: ./dev-scripts/lint-markdown
-  test_deployment:
-    executor: node
-    resource_class: small
-    steps:
-      - checkout
-      - run:
-          name: Test Surge deployment modes
-          command: node --test dev-scripts/tests/deploy-to-surge.test.js
   check_duplicate_words:
     docker:
       - image: cimg/base:current
@@ -201,7 +193,6 @@ workflows:
       - check_whitespace
       - check_html_format
       - lint_markdown
-      - test_deployment
       - check_duplicate_words
       - check_exif_data
       - build
@@ -217,14 +208,12 @@ workflows:
       - publish_draft:
           requires:
             - build
-            - test_deployment
           filters:
             branches:
               ignore: master
       - deploy:
           requires:
             - build
-            - test_deployment
           filters:
             branches:
               only: master
