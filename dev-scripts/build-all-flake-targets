@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# Builds every package for the current system and uploads its outputs to NixCI.
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+readonly SCRIPT_DIR
+cd "${SCRIPT_DIR}/.."
+
+system="$(nix eval --raw --impure --expr 'builtins.currentSystem')"
+target_names="$(nix eval --raw ".#packages.${system}" \
+  --apply 'packages: builtins.concatStringsSep "\n" (builtins.attrNames packages)')"
+targets=()
+while IFS= read -r name; do
+  targets+=(".#${name}")
+done <<< "${target_names}"
+
+output_paths="$(nix build --print-out-paths "${targets[@]}")"
+outputs=()
+while IFS= read -r output; do
+  outputs+=("${output}")
+done <<< "${output_paths}"
+
+"${SCRIPT_DIR}/upload-to-nixci-cache" "${outputs[@]}"

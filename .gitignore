@@ -6,6 +6,7 @@ resources/
 push-preview
 config-preview.toml
 node_modules/
+.pnpm-store/
 
 # Scratch files for sharing data with AI agents.
 /reference
