@@ -15,8 +15,6 @@
 
     # 0.163.3 release
     hugo-nixpkgs.url = "github:NixOS/nixpkgs/18b9261cb3294b6d2a06d03f96872827b8fe2698";
-
-    wordword-pkg.url = "git+https://codeberg.org/mtlynch/wordword.git";
   };
 
   outputs = {
@@ -26,17 +24,29 @@
     markdown-lint-nixpkgs,
     html-proofer-nixpkgs,
     hugo-nixpkgs,
-    wordword-pkg,
   } @ inputs:
-    flake-utils.lib.eachDefaultSystem (system: let
+    flake-utils.lib.eachSystem ["x86_64-linux"] (system: let
       pkgs = hugo-nixpkgs.legacyPackages.${system};
       hugo = pkgs.hugo;
       nodejs = nodejs-nixpkgs.legacyPackages.${system}.nodejs_24;
       html-proofer = html-proofer-nixpkgs.legacyPackages.${system}.html-proofer;
       markdownlint = markdown-lint-nixpkgs.legacyPackages.${system}.markdownlint-cli2;
-      wordword = wordword-pkg.packages.${system}.default;
       libxml2 = hugo-nixpkgs.legacyPackages.${system}.libxml2;
       exiftool = hugo-nixpkgs.legacyPackages.${system}.exiftool;
+
+      wordword = pkgs.stdenvNoCC.mkDerivation {
+        pname = "wordword";
+        version = "0.1.4";
+        src = pkgs.fetchurl {
+          url = "https://codefloe.com/mtlynch/wordword/releases/download/0.1.4/wordword-v0.1.4-linux-amd64.tar.gz";
+          hash = "sha256-+CHzmQ08W7ZN47LWWo0lCVWkg7C6MX13UuAfV7+es3E=";
+        };
+        sourceRoot = ".";
+        installPhase = ''
+          install --directory "$out/bin"
+          install --mode=0755 wordword "$out/bin/wordword"
+        '';
+      };
 
       # Package Surge directly from npm to match the CircleCI version.
       surge = pkgs.buildNpmPackage {
