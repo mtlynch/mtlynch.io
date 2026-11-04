@@ -9,12 +9,12 @@ set -e
 # Exit on unset variable.
 set -u
 
-if egrep \
+if grep --extended-regexp \
   "\s$" \
   --line-number \
   --binary-files=without-match \
   --dereference-recursive \
-  --exclude-dir={.git,public,themes,resources} \
+  --exclude-dir={.git,public,themes,resources,node_modules} \
   ./ ; then
   echo "ERROR: Found trailing whitespace";
   exit 1;

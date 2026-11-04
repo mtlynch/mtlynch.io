@@ -30,8 +30,10 @@
   } @ inputs:
     flake-utils.lib.eachDefaultSystem (system: let
       pkgs = hugo-nixpkgs.legacyPackages.${system};
+      nodepkgs = nodejs-nixpkgs.legacyPackages.${system};
       hugo = pkgs.hugo;
-      nodejs = nodejs-nixpkgs.legacyPackages.${system}.nodejs_24;
+      nodejs = nodepkgs.nodejs_24;
+      pnpm = nodepkgs.pnpm_10.override {inherit nodejs;};
       html-proofer = html-proofer-nixpkgs.legacyPackages.${system}.html-proofer;
       markdownlint = markdown-lint-nixpkgs.legacyPackages.${system}.markdownlint-cli2;
       wordword = wordword-pkg.packages.${system}.default;
@@ -56,31 +58,62 @@
         npmDepsHash = "sha256-Kg9fLn+nx0kHSvfK2ew2v5y1gOTbSWnCDjAU1KHlKHk=";
         dontNpmBuild = true;
       };
-    in {
-      devShells.default = hugo-nixpkgs.legacyPackages.${system}.mkShell {
-        packages = [
-          exiftool
-          hugo
-          libxml2
-          nodejs
-          pkgs.git
-          markdownlint
-          surge
-          wordword
-          html-proofer
-        ];
-
-        shellHook = ''
-          wordword --version
-          echo "exiftool" "$(exiftool -ver)"
-          echo "htmlproofer" "$(htmlproofer --version)"
-          (markdownlint-cli2 --help || test "$?" -eq 2) | sed -n '1p'
-          echo "node" "$(node --version)"
-          echo "surge" "$(surge --version)"
-          hugo version
+      pnpmSource = pkgs.lib.fileset.toSource {
+        root = ./.;
+        fileset = pkgs.lib.fileset.unions [./package.json ./pnpm-lock.yaml];
+      };
+      pnpmDeps = pnpm.fetchDeps {
+        pname = "mtlynch-io-pnpm-deps";
+        version = "0.0.0";
+        src = pnpmSource;
+        fetcherVersion = 2;
+        hash = "sha256-TwRdXkuczxFGoGqgSn0bk49SehuoQdQBnK9BzOxBcc0=";
+      };
+      pnpmDependencies = pkgs.stdenvNoCC.mkDerivation {
+        pname = "mtlynch-io-node-modules";
+        version = "0.0.0";
+        src = pnpmSource;
+        nativeBuildInputs = [nodejs pnpm pnpm.configHook];
+        inherit pnpmDeps;
+        dontBuild = true;
+        installPhase = ''
+          mkdir -p "$out"
+          cp --recursive node_modules "$out/node_modules"
         '';
       };
+    in
+      assert (builtins.fromJSON (builtins.readFile ./package.json)).packageManager == "pnpm@${pnpm.version}"; {
+        devShells.default = hugo-nixpkgs.legacyPackages.${system}.mkShell {
+          packages = [
+            exiftool
+            hugo
+            libxml2
+            nodejs
+            pnpm
+            pkgs.git
+            markdownlint
+            surge
+            wordword
+            html-proofer
+          ];
 
-      formatter = hugo-nixpkgs.legacyPackages.${system}.alejandra;
-    });
+          shellHook = ''
+            if [ -L node_modules ] || [ ! -e node_modules ]; then
+              ln --symbolic --force --no-target-directory \
+                ${pnpmDependencies}/node_modules node_modules
+            fi
+
+            wordword --version
+            echo "exiftool" "$(exiftool -ver)"
+            echo "htmlproofer" "$(htmlproofer --version)"
+            (markdownlint-cli2 --help || test "$?" -eq 2) | sed -n '1p'
+            echo "node" "$(node --version)"
+            echo "pnpm" "$(pnpm --version)"
+            echo "surge" "$(surge --version)"
+            hugo version
+          '';
+        };
+
+        formatter = hugo-nixpkgs.legacyPackages.${system}.alejandra;
+      });
 }

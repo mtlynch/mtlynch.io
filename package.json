@@ -1,6 +1,7 @@
 {
   "name": "mtlynch-io-dev",
   "version": "1.0.0",
+  "packageManager": "pnpm@10.13.1",
   "description": "mtlynch.io dev environment",
   "author": "Michael Lynch",
   "devDependencies": {
