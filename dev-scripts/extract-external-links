@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Run from a directory containing Markdown sources. Dump mode makes no requests.
+lychee \
+  --config "$1" \
+  --dump \
+  --scheme http --scheme https \
+  --base-url 'https://mtlynch.io/' \
+  --exclude '^https?://mtlynch\.io(:[0-9]+)?(/|$)' \
+  -- '**/*.md' | LC_ALL=C sort --unique

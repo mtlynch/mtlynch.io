@@ -10,8 +10,8 @@
     # 0.17.2
     markdown-lint-nixpkgs.url = "github:NixOS/nixpkgs/102a39bfee444533e6b4e8611d7e92aa39b7bec1";
 
-    # 5.0.8 release
-    html-proofer-nixpkgs.url = "github:NixOS/nixpkgs/5ed627539ac84809c78b2dd6d26a5cebeb5ae269";
+    # 0.24.2 release
+    lychee-nixpkgs.url = "github:NixOS/nixpkgs/3d46470bb3030020f7e1361f33514854f5bfa86d";
 
     # 0.163.3 release
     hugo-nixpkgs.url = "github:NixOS/nixpkgs/18b9261cb3294b6d2a06d03f96872827b8fe2698";
@@ -22,7 +22,7 @@
     flake-utils,
     nodejs-nixpkgs,
     markdown-lint-nixpkgs,
-    html-proofer-nixpkgs,
+    lychee-nixpkgs,
     hugo-nixpkgs,
   } @ inputs:
     flake-utils.lib.eachSystem ["x86_64-linux"] (system: let
@@ -31,7 +31,7 @@
       hugo = pkgs.hugo;
       nodejs = nodepkgs.nodejs_24;
       pnpm = nodepkgs.pnpm_10.override {inherit nodejs;};
-      html-proofer = html-proofer-nixpkgs.legacyPackages.${system}.html-proofer;
+      lychee = lychee-nixpkgs.legacyPackages.${system}.lychee;
       markdownlint = markdown-lint-nixpkgs.legacyPackages.${system}.markdownlint-cli2;
       libxml2 = pkgs.libxml2;
       exiftool = pkgs.exiftool;
@@ -79,9 +79,16 @@
         path = ./dev-scripts/deploy-to-surge;
         name = "deploy-to-surge";
       };
-      lintHtmlScript = builtins.path {
-        path = ./dev-scripts/lint-html;
-        name = "lint-html";
+      externalLinks = import ./nix/external-links.nix {
+        inherit pkgs lychee;
+        src = pkgs.lib.fileset.toSource {
+          root = ./.;
+          fileset = pkgs.lib.fileset.fileFilter (file: file.hasExt "md") ./.;
+        };
+        config = ./lychee.toml;
+        extractScript = ./dev-scripts/extract-external-links;
+        checkScript = ./dev-scripts/check-external-links;
+        refresh = "1";
       };
 
       exifMediaSource = pkgs.lib.fileset.toSource {
@@ -173,18 +180,6 @@
         environment = "dev";
       };
 
-      check-external-links = pkgs.writeShellApplication {
-        name = "check-external-links";
-        runtimeInputs = [pkgs.bash pkgs.coreutils html-proofer];
-        text = ''
-          work_directory="$(mktemp --directory)"
-          trap 'rm --recursive --force "$work_directory"' EXIT
-          cd "$work_directory"
-          ln --symbolic ${site} public
-          bash ${lintHtmlScript}
-        '';
-      };
-
       deploy-to-surge = pkgs.writeShellApplication {
         name = "deploy-to-surge";
         runtimeInputs = [pkgs.bash pkgs.git surge];
@@ -196,7 +191,9 @@
     in
       assert (builtins.fromJSON (builtins.readFile ./package.json)).packageManager == "pnpm@${pnpm.version}"; {
         packages = {
-          inherit site preview-site check-external-links deploy-to-surge;
+          inherit site preview-site deploy-to-surge;
+          external-urls = externalLinks.urls;
+          check-external-links = externalLinks.check;
 
           check-duplicate-words = mkBuildStep {
             name = "check-duplicate-words";
@@ -213,9 +210,10 @@
             name = "check-html";
             command = ''
               ln --symbolic ${site} public
-              ./dev-scripts/lint-html --quick
+              ./dev-scripts/lint-html
             '';
-            extraInputs = [html-proofer];
+            extraInputs = [lychee];
+            setup = ''export SSL_CERT_FILE=${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt'';
           };
           check-markdown = mkBuildStep {
             name = "check-markdown";
@@ -271,11 +269,12 @@
             libxml2
             nodejs
             pnpm
+            pkgs.python3
             pkgs.git
             markdownlint
             surge
             wordword
-            html-proofer
+            lychee
           ];
 
           shellHook = ''
@@ -286,7 +285,7 @@
 
             wordword --version
             echo "exiftool" "$(exiftool -ver)"
-            echo "htmlproofer" "$(htmlproofer --version)"
+            lychee --version
             (markdownlint-cli2 --help || test "$?" -eq 2) | sed -n '1p'
             echo "node" "$(node --version)"
             echo "pnpm" "$(pnpm --version)"

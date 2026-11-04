@@ -40,13 +40,19 @@ If the PR fixes an issue, include the text "Fixes #XX" in the PR description, wh
 
 ## Build Failures
 
-### HTMLProofer
+### Link checks
 
-If HTMLProofer fails on a broken link, we have three options: suppress the error, fix the link, or remove the link.
+lychee checks local links, fragments, and assets in the generated HTML with `nix build .#check-html`. External links are extracted from all Markdown files and checked separately with `nix build .#check-external-links`.
 
-You should suppress the error if the link works fine in a browser, but fails in CI occasionally. To do this, update the `IGNORE_PATTERNS` list in [`dev-scripts/lint-html`](./dev-scripts/lint-html). Add a comment above the entry to explain why we're adding this suppression.
+The external check uses a network-enabled fixed-output Nix derivation. Its successful output is a manifest of the sorted, unique URLs, the checker identity, the checking script, and the configuration. Prose-only edits rebuild extraction but reuse the successful check when this manifest is unchanged. Extraction happens during Nix evaluation (import from derivation), so evaluating the flake requires building or downloading the extractor and its inputs. NixCI explicitly enables this in `nix-ci.nix`.
+
+Successful checks do not expire automatically. Bump `externalLinks.refresh` in [`flake.nix`](./flake.nix) to revalidate unchanged links. An unsuccessful check publishes no result and will be retried on the next build. This caches the whole URL set, not individual URLs; adding a link checks the entire set again.
+
+If lychee fails on a broken link, either suppress the error, fix the link, or remove the link. Suppress errors only when the link works in a browser but intermittently fails in CI: update `exclude` in [`lychee.toml`](./lychee.toml) with a comment explaining why. Local checks have separate exclusions in [`lychee-local.toml`](./lychee-local.toml), so external asset exclusions do not disable local asset validation. External fragments are not validated, but their target pages are checked.
 
 If the link is just permanently broken and does not load, even in a browser, either replace the link with another that achieves the same effect or remove the link entirely.
+
+Run `nix develop --command python3 dev-scripts/test-link-checks.py` to test extraction, cache reuse/invalidation, failed-check retries, and local HTML validation against fixtures. These tests contact only a local HTTP server, not public websites.
 
 ## Compatibility targets
 

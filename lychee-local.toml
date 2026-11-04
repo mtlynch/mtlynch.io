@@ -1,0 +1,14 @@
+no_progress = true
+include_fragments = "anchor-only"
+index_files = ["index.html"]
+
+# These pages contain archived third-party HTML, not site-authored links.
+exclude_path = [
+  "/collect-debt/full-emails/index\\.html$",
+  "/notes/archivebox/reddit-singlefile\\.html$",
+]
+
+exclude = [
+  # Comments only load in production.
+  "^file://.*#comment-.*",
+]

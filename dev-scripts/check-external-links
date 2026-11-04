@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+config="$1"
+urls="$2"
+
+# Input is a plain URL text file, not --files-from (which would crawl the pages).
+# An empty URL list is a successful check without invoking lychee.
+if [ -s "$urls" ]; then
+  lychee --config "$config" --cache=false --default-extension txt -- "$urls"
+fi

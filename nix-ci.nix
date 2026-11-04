@@ -2,11 +2,9 @@
   systems = ["x86_64-linux"];
   timeout = 7200;
 
-  test.external-links = {
-    package = "packages.x86_64-linux.check-external-links";
-    system = "x86_64-linux";
-    branches = ":any";
-  };
+  # External URL extraction is read during evaluation to key the network-enabled
+  # fixed-output check by URL contents rather than the entire source tree.
+  allow-import-from-derivation = true;
 
   deploy.surge = {
     package = "packages.x86_64-linux.deploy-to-surge";
