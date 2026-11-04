@@ -2,6 +2,7 @@
 
 # Exit script on first failure.
 set -e
+set -o pipefail
 
 # Echo commands before executing them, by default to stderr.
 set -x
@@ -9,7 +10,7 @@ set -x
 # Exit on unset variable.
 set -u
 
-find public -type f -name "*.xml" -print0 | while IFS= read -r -d '' file; do
+find public/ -type f -name "*.xml" -print0 | while IFS= read -r -d '' file; do
   output=$(xmllint --noout "$file" 2>&1)
   if [[ -n "$output" ]]; then
     echo "$output"
