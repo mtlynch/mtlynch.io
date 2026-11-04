@@ -7,69 +7,6 @@
 
 This is the source for https://mtlynch.io/.
 
-## Development
-
-Enter the development environment and install formatting dependencies:
-
-```bash
-nix develop
-pnpm install --frozen-lockfile
-```
-
-Build the production site or a preview:
-
-```bash
-nix build .#site
-nix build .#preview-site
-```
-
-Build every flake package for the current system and upload the outputs to the NixCI cache:
-
-```bash
-dev-scripts/build-all-flake-targets
-```
-
-Uploading requires [NixCI cache authentication](https://nix-ci.com/documentation/nix-ci-cache). To build without uploading, run `nix build` with the desired targets, such as `nix build .#site .#check-prettier`.
-
-NixCI builds all flake packages, development shells, and formatters for `x86_64-linux`. Package targets validate duplicate words, EXIF data, HTML, Markdown, formatting, SEO metadata, trailing newlines, trailing whitespace, and XML. The EXIF target checks content media and PDFs on every branch and is cached when those files are unchanged.
-
-The network-enabled external-link check runs separately from sandboxed builds:
-
-```bash
-nix run .#check-external-links
-```
-
-The flake also supports local builds on `aarch64-linux` and `aarch64-darwin`.
-
-NixCI runs the build-helper, deployment, and XML regression tests in the sandboxed `check-dev-scripts` package. Run them locally without uploading or publishing:
-
-```bash
-python3 -B -m unittest discover --start-directory dev-scripts/tests
-```
-
-## Deployment
-
-After all builds and tests pass, NixCI deploys `master` to https://mtlynch.io/ and publishes other branches as Surge preview revisions. Configure `SURGE_TOKEN` in the repository's NixCI secrets before enabling deployment.
-
-The external-link check gates deployment too: a third-party link failure can block production and preview publishing until the check passes.
-
-To deploy locally, set `SURGE_TOKEN` and run:
-
-```bash
-nix run .#deploy-to-surge
-```
-
-Local deployments select production on `master` and previews on other branches. Previews include the branch and commit in the revision message. NixCI uses its supplied Git metadata instead of a local checkout.
-
-To override the deployment mode, including from a detached checkout:
-
-```bash
-nix run .#deploy-to-surge -- --production
-nix run .#deploy-to-surge -- --preview --message 'Manual preview'
-```
-
-Each mode uses the matching production or preview build. The existing `dev-scripts/deploy-to-surge` command remains available for deploying an already-built `./public` directory.
-
 ## Code style guides
 
 New code should adhere to the appropriate Google Style guide for the given language:

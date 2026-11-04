@@ -10,12 +10,17 @@ cd "${SCRIPT_DIR}/.."
 system="$(nix eval --raw --impure --expr 'builtins.currentSystem')"
 target_names="$(nix eval --raw ".#packages.${system}" \
   --apply 'packages: builtins.concatStringsSep "\n" (builtins.attrNames packages)')"
+if [[ -z "${target_names}" ]]; then
+  printf 'No package targets found.\n' >&2
+  exit 1
+fi
+
 targets=()
 while IFS= read -r name; do
   targets+=(".#${name}")
 done <<< "${target_names}"
 
-output_paths="$(nix build --print-out-paths "${targets[@]}")"
+output_paths="$(nix build --no-link --print-out-paths "${targets[@]}")"
 outputs=()
 while IFS= read -r output; do
   outputs+=("${output}")

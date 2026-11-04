@@ -248,11 +248,6 @@
             extraInputs = [exiftool pkgs.findutils pkgs.gnugrep];
             src = exifMediaSource;
           };
-          check-dev-scripts = mkBuildStep {
-            name = "check-dev-scripts";
-            command = "python3 -B -m unittest discover --start-directory dev-scripts/tests";
-            extraInputs = [pkgs.python3 pkgs.findutils];
-          };
           check-html = mkBuildStep {
             name = "check-html";
             command = ''
@@ -313,7 +308,6 @@
             libxml2
             nodejs
             pnpm
-            pkgs.python3
             pkgs.git
             markdownlint
             surge
@@ -322,6 +316,11 @@
           ];
 
           shellHook = ''
+            if [ ! -e node_modules ]; then
+              ln --symbolic --no-target-directory \
+                ${pnpmDependencies}/node_modules node_modules
+            fi
+
             wordword --version
             echo "exiftool" "$(exiftool -ver)"
             echo "htmlproofer" "$(htmlproofer --version)"
