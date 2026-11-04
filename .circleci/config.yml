@@ -21,8 +21,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Download npm packages
-          command: npm install
+          name: Download pinned pnpm packages
+          command: corepack pnpm install --frozen-lockfile
       - run:
           name: Check formatting
           command: ./dev-scripts/check-formatting
