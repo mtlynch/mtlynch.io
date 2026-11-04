@@ -1,8 +1,17 @@
 #!/usr/bin/env bash
 
 # Uploads all packages through checks.<system>.all to the NixCI cache.
-set -euo pipefail
+
+# Exit on first failure.
+set -e
+
+# Exit on unset variable.
+set -u
+
+# Echo commands before executing them, by default to stderr.
 set -x
+
+set -o pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 readonly SCRIPT_DIR
