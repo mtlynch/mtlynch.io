@@ -13,7 +13,8 @@ include_fragments = "none"
 exclude_loopback = true
 
 exclude = [
-  # Preserve the lychee branch's exclusions for downloadable/page-bundle assets.
+  # Skip downloadable assets: these checks focus on external web pages, while
+  # local HTML/assets are validated separately against the generated site.
   "\\.(css|js|png|jpe?g|gif|webp|svg|mp4|pdf|txt|xml|ya?ml|nix|lua|py|zst)(\\?.*)?$",
   "Dockerfile\\.(nextcloud|sia)$",
   # Local development-only URLs.
@@ -36,7 +37,6 @@ exclude = [
   "//([^.]+\\.)*codegram\\.com/",
   "//([^.]+\\.)*facebook\\.com/",
   "//([^.]+\\.)*github\\.com/",
-  "//docs\\.github\\.com/",
   "//fdc\\.nal\\.usda\\.gov/",
   "//feinternational\\.com/",
   "//gimletmedia\\.com/",
@@ -61,7 +61,7 @@ exclude = [
   "//pcpartpicker\\.com/",
   "//playwright\\.dev/",
   "//redd\\.it/",
-  "//reddit\\.com/",
+  "//(www\\.)?reddit\\.com/",
   "//schleiss\\.io/",
   "//([^.]+\\.)*servernope\\.com/",
   "//shapeshift\\.io/",
@@ -89,7 +89,6 @@ exclude = [
   "//www\\.nccgroup\\.com/",
   "//www\\.raspberrypi\\.com/",
   "//www\\.raspberrypi\\.org/",
-  "//www\\.reddit\\.com/",
   "//www\\.sciencedirect\\.com/",
   "//www\\.servicenow\\.com/",
   "//www\\.usta\\.com/",

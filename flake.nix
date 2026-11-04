@@ -213,6 +213,7 @@
               ./dev-scripts/lint-html
             '';
             extraInputs = [lychee];
+            # lychee constructs a TLS client even when checking offline.
             setup = ''export SSL_CERT_FILE=${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt'';
           };
           check-markdown = mkBuildStep {

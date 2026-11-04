@@ -44,9 +44,13 @@ If the PR fixes an issue, include the text "Fixes #XX" in the PR description, wh
 
 lychee checks local links, fragments, and assets in the generated HTML with `nix build .#check-html`. External links are extracted from all Markdown files and checked separately with `nix build .#check-external-links`.
 
-The external check uses a network-enabled fixed-output Nix derivation. Its successful output is a manifest of the sorted, unique URLs, the checker identity, the checking script, and the configuration. Prose-only edits rebuild extraction but reuse the successful check when this manifest is unchanged. Extraction happens during Nix evaluation (import from derivation), so evaluating the flake requires building or downloading the extractor and its inputs. NixCI explicitly enables this in `nix-ci.nix`.
+External links that appear only in templates or data files are not checked. Checking rendered external links instead would require building Hugo during Nix evaluation. Local links in those templates are still checked in the generated HTML.
+
+The external check uses a network-enabled fixed-output Nix derivation. Its successful output is a manifest of the sorted, unique URLs, the packaged runner identity (including lychee, configuration, checking script, and CA bundle), and an explicit refresh value. Prose-only edits rebuild extraction but reuse the successful check when this manifest is unchanged. Extraction happens during Nix evaluation (import from derivation), so evaluating the flake requires building or downloading the extractor and its inputs. NixCI explicitly enables this in `nix-ci.nix`.
 
 Successful checks do not expire automatically. Bump `externalLinks.refresh` in [`flake.nix`](./flake.nix) to revalidate unchanged links. An unsuccessful check publishes no result and will be retried on the next build. This caches the whole URL set, not individual URLs; adding a link checks the entire set again.
+
+Cold checks can be slow: the initial list had 107 unique Hacker News links, throttled to one request every 30 seconds, so those alone require roughly 54 minutes before retries. Rate limits are deliberately conservative to avoid overwhelming hosts. Updating the general nixpkgs pin also changes the runner's build tools and invalidates the external check.
 
 If lychee fails on a broken link, either suppress the error, fix the link, or remove the link. Suppress errors only when the link works in a browser but intermittently fails in CI: update `exclude` in [`lychee.toml`](./lychee.toml) with a comment explaining why. Local checks have separate exclusions in [`lychee-local.toml`](./lychee-local.toml), so external asset exclusions do not disable local asset validation. External fragments are not validated, but their target pages are checked.
 

@@ -13,6 +13,7 @@ import subprocess
 import tempfile
 import threading
 import unittest
+import uuid
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -22,6 +23,7 @@ class LinkChecks(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.requests = []
+        cls.run_id = uuid.uuid4().hex
         # Resolve the locked inputs once rather than snapshotting the site's
         # source tree for every small fixture build.
         inputs = subprocess.run(
@@ -40,8 +42,9 @@ class LinkChecks(unittest.TestCase):
             def do_GET(self):
                 cls.requests.append(self.path)
                 self.send_response(404 if self.path == "/missing" else 200)
+                self.send_header("Content-Type", "text/html")
                 self.end_headers()
-                self.wfile.write(b"fixture")
+                self.wfile.write(b'<a href="/must-not-crawl">not an input</a>')
 
             def log_message(self, *_args):
                 pass
@@ -86,7 +89,7 @@ class LinkChecks(unittest.TestCase):
             config = {self.config};
             extractScript = {ROOT}/dev-scripts/extract-external-links;
             checkScript = {self.check_script};
-            refresh = {json.dumps(refresh)};
+            refresh = {json.dumps(f"{self.run_id}:{refresh}")};
           }}).{attribute}
         """
         result = subprocess.run(
@@ -119,6 +122,7 @@ class LinkChecks(unittest.TestCase):
         self.requests.clear()
         first = self.nix_build("check")
         self.assertCountEqual(self.requests, ["/one", "/two"])
+        self.assertNotIn("/must-not-crawl", self.requests)
         self.assertEqual(json.loads(first.read_text())["urls"], urls.read_text())
 
         # Same URL set despite prose, order, and duplicate changes: no requests.
@@ -165,6 +169,23 @@ class LinkChecks(unittest.TestCase):
         (self.src / "README.md").write_text("No external links.\n")
         self.config.write_text("not valid TOML = [\n")
         self.nix_build("urls", success=False)
+
+    def test_shipped_external_config(self):
+        (self.src / "README.md").write_text(
+            "[normal](https://www.rust-lang.org/)\n"
+            "[excluded host](https://github.com/lycheeverse/lychee)\n"
+            "[excluded asset](https://www.rust-lang.org/test.png)\n"
+            "[self](https://mtlynch.io/about/)\n"
+            "[excluded Reddit](https://www.reddit.com/r/programming/)\n"
+            "[old Reddit remains checked](https://old.reddit.com/r/programming/)\n"
+        )
+        self.config = ROOT / "lychee.toml"
+        self.requests.clear()
+        self.assertEqual(
+            self.nix_build("urls").read_text(),
+            "https://old.reddit.com/r/programming/\nhttps://www.rust-lang.org/\n",
+        )
+        self.assertEqual(self.requests, [])
 
     def test_local_html_links_fragments_and_assets(self):
         shutil.copy(ROOT / "lychee-local.toml", self.directory)
