@@ -301,6 +301,8 @@
           };
         };
 
+        checks.all = pkgs.linkFarm "all-flake-targets" self.packages.${system};
+
         devShells.default = pkgs.mkShell {
           packages = [
             exiftool

@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 
-# Uploads the given store paths to the NixCI cache.
+# Uploads all packages through checks.<system>.all to the NixCI cache.
 set -euo pipefail
+set -x
 
-nix copy "$@" --to 'https://cache.nix-ci.com?compression=xz&parallel-compression=true'
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+readonly SCRIPT_DIR
+cd "${SCRIPT_DIR}/.."
+
+system="$(nix config show system)"
+readonly system
+nix copy ".#checks.${system}.all" \
+  --to 'https://cache.nix-ci.com?compression=xz&parallel-compression=true'
