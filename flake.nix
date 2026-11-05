@@ -1,5 +1,5 @@
 {
-  description = "Dev environment for mtlynch.io";
+  description = "Build and development environment for mtlynch.io";
 
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
@@ -33,15 +33,20 @@
       pnpm = nodepkgs.pnpm_10.override {inherit nodejs;};
       html-proofer = html-proofer-nixpkgs.legacyPackages.${system}.html-proofer;
       markdownlint = markdown-lint-nixpkgs.legacyPackages.${system}.markdownlint-cli2;
-      libxml2 = hugo-nixpkgs.legacyPackages.${system}.libxml2;
-      exiftool = hugo-nixpkgs.legacyPackages.${system}.exiftool;
+      libxml2 = pkgs.libxml2;
+      exiftool = pkgs.exiftool;
 
+      wordwordRelease = {
+        platform = "linux";
+        arch = "amd64";
+        hash = "sha256-+CHzmQ08W7ZN47LWWo0lCVWkg7C6MX13UuAfV7+es3E=";
+      };
       wordword = pkgs.stdenvNoCC.mkDerivation {
         pname = "wordword";
         version = "0.1.4";
         src = pkgs.fetchurl {
-          url = "https://codefloe.com/mtlynch/wordword/releases/download/0.1.4/wordword-v0.1.4-linux-amd64.tar.gz";
-          hash = "sha256-+CHzmQ08W7ZN47LWWo0lCVWkg7C6MX13UuAfV7+es3E=";
+          url = "https://codefloe.com/mtlynch/wordword/releases/download/0.1.4/wordword-v0.1.4-${wordwordRelease.platform}-${wordwordRelease.arch}.tar.gz";
+          inherit (wordwordRelease) hash;
         };
         sourceRoot = ".";
         installPhase = ''
@@ -50,7 +55,7 @@
         '';
       };
 
-      # Package Surge directly from npm to match the CircleCI version.
+      # Package Surge directly from npm.
       surge = pkgs.buildNpmPackage {
         pname = "surge";
         version = "0.56.0";
@@ -68,6 +73,35 @@
         npmDepsHash = "sha256-Kg9fLn+nx0kHSvfK2ew2v5y1gOTbSWnCDjAU1KHlKHk=";
         dontNpmBuild = true;
       };
+
+      source = pkgs.lib.cleanSource ./.;
+      deployToSurgeScript = builtins.path {
+        path = ./dev-scripts/deploy-to-surge;
+        name = "deploy-to-surge";
+      };
+      lintHtmlScript = builtins.path {
+        path = ./dev-scripts/lint-html;
+        name = "lint-html";
+      };
+
+      exifMediaSource = pkgs.lib.fileset.toSource {
+        root = ./.;
+        fileset = pkgs.lib.fileset.unions [
+          ./dev-scripts/check-exif-data
+          (pkgs.lib.fileset.fileFilter (file:
+            builtins.any (extension: pkgs.lib.hasSuffix ".${extension}" (pkgs.lib.toLower file.name)) [
+              "gif"
+              "jpg"
+              "mp4"
+              "pdf"
+              "png"
+              "svg"
+              "webp"
+            ])
+          ./content)
+        ];
+      };
+
       pnpmSource = pkgs.lib.fileset.toSource {
         root = ./.;
         fileset = pkgs.lib.fileset.unions [./package.json ./pnpm-lock.yaml];
@@ -91,9 +125,146 @@
           cp --recursive node_modules "$out/node_modules"
         '';
       };
+
+      mkBuildStep = {
+        name,
+        command,
+        extraInputs ? [],
+        setup ? "",
+        installCommand ? "echo ${name} > \"$out/done\"",
+        src ? source,
+      }:
+        pkgs.stdenvNoCC.mkDerivation {
+          pname = name;
+          version = "0.0.0";
+          inherit src;
+          nativeBuildInputs = [pkgs.bash] ++ extraInputs;
+          buildPhase = ''
+            export HOME="$TMPDIR/home"
+            mkdir -p "$HOME"
+            if [ -d ./dev-scripts ]; then
+              patchShebangs ./dev-scripts
+            fi
+            ${setup}
+            ${command}
+          '';
+          installPhase = ''
+            mkdir -p "$out"
+            ${installCommand}
+          '';
+        };
+
+      mkSite = {
+        name,
+        environment,
+      }:
+        mkBuildStep {
+          inherit name;
+          command = "hugo --environment ${environment} --minify --cleanDestinationDir";
+          extraInputs = [hugo];
+          installCommand = ''cp --recursive public/. "$out"'';
+        };
+      site = mkSite {
+        name = "site";
+        environment = "production";
+      };
+      preview-site = mkSite {
+        name = "preview-site";
+        environment = "dev";
+      };
+
+      check-external-links = pkgs.writeShellApplication {
+        name = "check-external-links";
+        runtimeInputs = [pkgs.bash pkgs.coreutils html-proofer];
+        text = ''
+          work_directory="$(mktemp --directory)"
+          trap 'rm --recursive --force "$work_directory"' EXIT
+          cd "$work_directory"
+          ln --symbolic ${site} public
+          bash ${lintHtmlScript}
+        '';
+      };
+
+      deploy-to-surge = pkgs.writeShellApplication {
+        name = "deploy-to-surge";
+        runtimeInputs = [pkgs.bash pkgs.git surge];
+        text = ''
+          exec bash ${deployToSurgeScript} \
+            --production-dir ${site} --preview-dir ${preview-site} "$@"
+        '';
+      };
     in
       assert (builtins.fromJSON (builtins.readFile ./package.json)).packageManager == "pnpm@${pnpm.version}"; {
-        devShells.default = hugo-nixpkgs.legacyPackages.${system}.mkShell {
+        packages = {
+          inherit site preview-site check-external-links deploy-to-surge;
+
+          check-duplicate-words = mkBuildStep {
+            name = "check-duplicate-words";
+            command = "wordword --verbose ./content";
+            extraInputs = [wordword];
+          };
+          check-exif-data = mkBuildStep {
+            name = "check-exif-data";
+            command = "./dev-scripts/check-exif-data ./content";
+            extraInputs = [exiftool pkgs.findutils pkgs.gnugrep];
+            src = exifMediaSource;
+          };
+          check-html = mkBuildStep {
+            name = "check-html";
+            command = ''
+              ln --symbolic ${site} public
+              ./dev-scripts/lint-html --quick
+            '';
+            extraInputs = [html-proofer];
+          };
+          check-markdown = mkBuildStep {
+            name = "check-markdown";
+            command = "./dev-scripts/lint-markdown";
+            extraInputs = [markdownlint];
+          };
+          check-prettier = mkBuildStep {
+            name = "check-prettier";
+            command = ''
+              ln --symbolic ${pnpmDependencies}/node_modules node_modules
+              ./dev-scripts/check-formatting
+            '';
+            extraInputs = [nodejs];
+          };
+          check-seo-metadata = mkBuildStep {
+            name = "check-seo-metadata";
+            command = ''
+              ln --symbolic ${site} public
+              ./dev-scripts/check-seo-metadata
+            '';
+            extraInputs = [pkgs.gnugrep];
+          };
+          check-trailing-newline = mkBuildStep {
+            name = "check-trailing-newline";
+            command = "./dev-scripts/check-trailing-newline";
+            extraInputs = [pkgs.git pkgs.findutils pkgs.gnugrep];
+            setup = ''
+              git init --quiet
+              git add --all
+            '';
+          };
+          check-trailing-whitespace = mkBuildStep {
+            name = "check-trailing-whitespace";
+            command = "./dev-scripts/check-trailing-whitespace";
+            extraInputs = [pkgs.gnugrep];
+          };
+          check-xml = mkBuildStep {
+            name = "check-xml";
+            command = ''
+              ln --symbolic ${site} public
+              ./dev-scripts/lint-xml
+            '';
+            extraInputs = [libxml2];
+          };
+        };
+
+        checks.all = pkgs.linkFarm "all-flake-targets" self.packages.${system};
+
+        devShells.default = pkgs.mkShell {
           packages = [
             exiftool
             hugo

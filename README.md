@@ -1,11 +1,23 @@
 # mtlynch.io
 
-[![CircleCI](https://circleci.com/gh/mtlynch/mtlynch.io.svg?style=svg)](https://circleci.com/gh/mtlynch/mtlynch.io)
+[![NixCI](https://nix-ci.com/badge/gh:mtlynch:mtlynch.io)](https://nix-ci.com/gh:mtlynch:mtlynch.io)
 [![Creative Commons License CC-BY 4.0](https://i.creativecommons.org/l/by/4.0/80x15.png)](https://creativecommons.org/licenses/by/4.0/)
 
 ## Overview
 
 This is the source for https://mtlynch.io/.
+
+## Deployment
+
+NixCI deploys commits on `master` to https://mtlynch.io/ and publishes Surge previews for commits on other branches and pull requests. Preview deployment logs include the preview URL and a revision message identifying the Git ref and commit.
+
+Deployment requires the `SURGE_TOKEN` secret in NixCI. To deploy the current branch locally:
+
+```bash
+SURGE_TOKEN='your-token' nix run .#deploy-to-surge
+```
+
+Use `-- --preview` to force a preview without deploying to production.
 
 ## Code style guides
 
